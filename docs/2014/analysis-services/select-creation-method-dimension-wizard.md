@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 291b0b2d-a03a-4df6-82f7-90ad92d4d1cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc05e073bdb57033e4e618eb85a9c04fda76f5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069595"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538226"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Выбор метода создания (мастер измерений)
   Страница **Выбор метода создания** используется, чтобы выбрать метод создания измерения.  
@@ -26,7 +25,7 @@ ms.locfileid: "66069595"
   
 -   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать существующую таблицу**  
  Создайте измерение из одной или нескольких таблиц источника данных. Какие атрибуты будут доступны для измерения, будет зависеть от структуры данных в таблице.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66069595"
 > [!NOTE]  
 >  Этот параметр доступен только при выбранном параметре **Создать в источнике данных таблицу, не содержащую время** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

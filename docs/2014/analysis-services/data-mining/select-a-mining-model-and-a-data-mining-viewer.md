@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ab24c6ccb8a87879cbab8439d06d625e304061
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082883"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520442"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Выбор модели интеллектуального анализа данных и средства просмотра интеллектуального анализа данных
   Модель интеллектуального анализа данных можно изучать с помощью одного из средств просмотра на вкладке **Средство просмотра моделей интеллектуального анализа данных** конструктора моделей интеллектуального анализа данных. Можно легко переключаться между моделями и менять используемое средство просмотра.  
@@ -40,7 +39,7 @@ ms.locfileid: "66082883"
   
  Выбранная модель интеллектуального анализа данных откроется в средстве просмотра, связанном с типом данной модели.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)  
   
   

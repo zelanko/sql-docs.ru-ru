@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Документация Майкрософт
-ms.date: 10/28/2015
+description: Добавляет подписку на публикацию и устанавливает состояние подписчика. Эта хранимая процедура выполняется на издателе в базе данных публикации.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833638"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627622"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*подписчик*'  
  Имя подписчика. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL.  
+
+> [!NOTE]
+> Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
  [ @destination_db =] "*destination_db*"  
  Имя целевой базы данных, в которую помещаются реплицированные данные. Аргумент *destination_db* имеет тип **sysname**и значение по умолчанию NULL. Если значение равно NULL, *destination_db* присваивается имя базы данных публикации. Для издателей Oracle *destination_db* должны быть указаны. Для подписчика, не являющегося SQL Server, укажите значение (назначение по умолчанию) для *destination_db*.  
@@ -133,7 +137,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
+|Да|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
 |NULL (по умолчанию)|Автоматически устанавливается значение true для подписчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и значение false для подписчика, не относящегося к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
@@ -159,8 +163,8 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|1|Первый|  
-|2|Секунда|  
+|1|First|  
+|2|Second|  
 |4|Третья|  
 |8|Четвертая|  
 |16|Последний|  
@@ -175,7 +179,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |Значение|Описание|  
 |-----------|-----------------|  
 |1|Однократно|  
-|2|Секунда|  
+|2|Second|  
 |4|Минута|  
 |8|Час|  
 |NULL||  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] "*пароль*"  
- Указывает пароль для резервной копии, если при создании резервной копии был задан пароль. Аргумент *Password*имеет тип **sysname**и значение по умолчанию NULL.  
+ Указывает пароль для резервной копии, если при создании резервной копии был задан пароль. Аргумент *Password* имеет тип **sysname**и значение по умолчанию NULL.  
   
  [ @fileidhint =] *fileidhint*  
  Определяет порядковый номер восстанавливаемого резервного набора данных. *fileidhint* имеет **тип int**и значение по умолчанию NULL.  
@@ -288,7 +292,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_addsubscription используется в репликации моментальных снимков и репликации транзакций.  
   
  При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнить [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для @job_login и @job_password . Дополнительные сведения см. в разделе [модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  

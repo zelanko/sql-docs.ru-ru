@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6b4df30ec422df0dd79b2fc9d58766e6dbcf7d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535046"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Панель мониторинга управления PowerPivot и данные об использовании
   Панель мониторинга управления PowerPivot представляет собой набор стандартных отчетов и веб-частей в центре администрирования SharePoint, предназначенный для администрирования развертывания SQL Server PowerPivot для SharePoint. Панель мониторинга управления предоставляет сведения о работоспособности серверов, действиях с книгой и обновлении данных. Панель мониторинга управления использует данные, полученные в процессе сбора данных об использовании SharePoint.  
   
- [Предварительные условия](#prereq)  
+ [Предварительные требования](#prereq)  
   
  [Общие сведения о разделах панели мониторинга](#items)  
   
@@ -148,7 +147,7 @@ ms.locfileid: "66071121"
   
     9. Рядом с полем «Задать запрос многомерных выражений» нажмите кнопку **Конструктор** , чтобы открыть конструктор запросов многомерных выражений для сбора данных, с которыми вы будете работать, а затем создайте отчет в виде сводной таблицы или сводной диаграммы для просмотра данных в Excel.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление данных PowerPivot с SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)   
  [Настройка сбора данных об использовании для &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   

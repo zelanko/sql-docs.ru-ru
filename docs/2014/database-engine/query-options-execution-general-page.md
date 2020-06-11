@@ -12,17 +12,17 @@ ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f862f2067a1a85663754ab795822f2859b6c416a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: defc499412d059542262ec978d47f4c93c8bac23
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000617"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858616"
 ---
 # <a name="query-options-execution-general-page"></a>Выполнение параметров запроса (страница «Общие»)
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для доступа к этому диалоговому окну щелкните правой кнопкой мыши тело окна "Редактор запросов", а затем щелкните **Параметры запроса**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **SET ROWCOUNT**  
  Значение по умолчанию, равное 0, указывает на то, что [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет продолжать ожидание результатов, пока все из них не будут получены. При установке значения больше 0 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] прервет запрос после получения указанного числа строк. Для выключения этого параметра (чтобы возвращались все строки) задайте SET ROWCOUNT 0.  
   

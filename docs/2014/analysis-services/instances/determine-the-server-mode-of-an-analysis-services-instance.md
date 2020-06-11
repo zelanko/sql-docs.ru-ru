@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 587205c3c3d25b8d513792aee58bf15b845df2ef
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080062"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543976"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
   Analysis Services можно установить в одном из трех режимов сервера: многомерные данные и интеллектуальный анализ данных (по умолчанию), PowerPivot для SharePoint и табличные. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
@@ -40,7 +39,7 @@ ms.locfileid: "66080062"
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Это значение по умолчанию. Оно задает многомерный режим, используемый для обслуживания многомерных баз данных с хранилищем MOLAP, HOLAP и ROLAP, а также с моделями интеллектуального анализа данных.|  
 |1|Указывает экземпляры служб Analysis Service, установленные в составе развертывания PowerPivot для SharePoint. Не следует изменять свойство режима развертывания экземпляра служб Analysis Services, который входит в состав установки PowerPivot для SharePoint. Если изменить режим, данные PowerPivot больше не будут выполняться на сервере.|  
@@ -48,7 +47,7 @@ ms.locfileid: "66080062"
   
  Это монопольные режимы. На сервере, где настроен табличный режим, не могут работать базы данных служб Analysis Services, содержащие кубы и измерения. Если позволяет оборудование компьютера, можно установить на одном компьютере несколько экземпляров служб Analysis Services и настроить для каждого экземпляра свой режим развертывания. Следует помнить, что службы Analysis Services являются ресурсоемким приложением. Развертывание нескольких экземпляров на одном компьютере рекомендуется только для мощных серверов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка Analysis Services в табличном режиме](install-windows/install-analysis-services.md)   
  [Установка Analysis Services в многомерном режиме и модели интеллектуального анализа данных](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   

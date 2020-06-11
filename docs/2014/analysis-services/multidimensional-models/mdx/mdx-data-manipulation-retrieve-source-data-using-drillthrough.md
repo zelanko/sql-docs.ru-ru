@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe0ab170-25a9-45a8-a377-f71a67f77018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b437016cc29b2e4a85f781e3a422fb40c70f37c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5601a3ddfa7075ed53330e12c260af88648db990
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074301"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546396"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Извлечение данных из источника с помощью функции DRILLTHROUGH (многомерные выражения)
   В языке многомерных выражений для извлечения набора строк из источника данных для ячейки куба используется инструкция [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough).  
@@ -55,7 +54,7 @@ From Stores
 RETURN [Department MeasureGroup].[Department Id], [Employee].[First Name]  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Манипулирование данными (многомерные выражения)](mdx-data-manipulation-manipulating-data.md)  
   
   

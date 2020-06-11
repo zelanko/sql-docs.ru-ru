@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081065"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544416"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Страница «Общие» (диалоговое окно «Свойства секции») (среда SSMS)
   Используйте страницу **Общие** диалогового окна **Свойства секции** в среде SQL Server Management Studio, чтобы установить общие свойства секции в группе мер для куба в базе данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
@@ -36,16 +35,16 @@ ms.locfileid: "66081065"
 |**Идентификатор**|Отображается идентификатор секции.|  
 |**Последняя обработка**|Отображает дату и время последней обработки секции.|  
 |**Последнее обновление схемы**|Отображает дату и время последнего обновления метаданных для секции.|  
-|**Имя**|Отображает имя секции.|  
+|**имя**;|Отображает имя секции.|  
 |**Режим обработки**|Выберите режим обработки для секции. Дополнительные сведения о режимах обработки для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] объектов см. в разделе [Обработка объектов многомерной модели](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**Идентификатор удаленного источника данных**|Отображает идентификатор удаленного источника данных, из которого получают данные для секции.<br /><br /> Примечание. Это свойство содержит значение только для удаленных секций.|  
 |**Срез**|Отображает выражение, которое определяет срез данных, представленных секцией.|  
-|**Источник**|Отображает таблицу или запрос, являющийся источником данных для секции.|  
+|**Source**|Отображает таблицу или запрос, являющийся источником данных для секции.|  
 |**Состояние**|Отображает текущее состояние обработки секции.|  
 |**Место хранения**|Отображает папку, в которой хранятся данные для секции.<br /><br /> Примечание. Это свойство содержит значение только в том случае, если место хранения отличается от установленного по умолчанию для экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Type**|Отображается тип секции.|  
+|**Тип**|Отображается тип секции.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Удаленные секции](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Диалоговое окно «Свойства секции» &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   

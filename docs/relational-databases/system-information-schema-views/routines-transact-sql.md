@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078526"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669464"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078526"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> ** \* \* Важно \* !** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Определенное имя схемы.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. ** \* \* \* \* ** INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Определенное имя каталога. Это имя совпадает с ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Имя каталога функции.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> ** \* \* Важно \* !** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Имя схемы, содержащей эту функцию.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. ** \* \* \* \* ** INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|Имя функции.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Возвращает значение PROCEDURE для хранимой процедуры и FUNCTION для функций.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Зарезервировано для последующего использования.|  

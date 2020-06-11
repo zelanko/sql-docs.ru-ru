@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771391"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627149"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,12 +48,15 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Аргументы  
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+
+> [!NOTE]
+> Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
 `[ @distribution_db = ] 'distribution_db'`Имя базы данных распространителя. Аргумент *distributor_db* имеет тип **sysname**и не имеет значения по умолчанию. Он используется агентами репликации для подключения к издателю.  
   
 `[ @security_mode = ] security_mode`Реализованный режим безопасности. Этот параметр используется только агентами репликации для соединения с издателем подписок, обновляемых посредством очередей, или с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателем, отличным от. *security_mode* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1** (по умолчанию)|Агенты репликации на распространителе используют для подключения к издателю проверку подлинности Windows.|  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли.  
   
-`[ @working_directory = ] 'working_directory'`Имя рабочего каталога, используемого для хранения файлов данных и схемы для публикации. *working_directory* имеет тип **nvarchar (255)**, а по умолчанию — папку ReplData для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. Имя должно быть задано в формате UNC.  
+`[ @working_directory = ] 'working_directory'`Имя рабочего каталога, используемого для хранения файлов данных и схемы для публикации. *working_directory* имеет тип **nvarchar (255)**, а по умолчанию — папку ReplData для этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . Имя должно быть задано в формате UNC.  
 
- Для базы данных SQL Azure используйте `\\<storage_account>.file.core.windows.net\<share>`.
+ Для базы данных SQL Azure используйте `\\<storage_account>.file.core.windows.net\<share>` .
 
 `[ @storage_connection_string = ] 'storage_connection_string'`Требуется для базы данных SQL. Используйте ключ доступа на портале Azure в разделе Параметры > хранилища.
 
@@ -77,16 +80,16 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`Параметр *encrypted_password* больше не поддерживается. Попытка присвоить этому параметру **bit** значение **1** приведет к ошибке.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`Имеет значение, когда издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имеет значение. *thirdparty_flag* имеет **бит**и может принимать одно из следующих значений.  
+`[ @thirdparty_flag = ] thirdparty_flag`Имеет значение, когда издатель имеет значение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* имеет **бит**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|База данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|База данных, отличная от базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-`[ @publisher_type = ] 'publisher_type'`Указывает тип издателя, если не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]является издателем. Аргумент *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
+`[ @publisher_type = ] 'publisher_type'`Указывает тип издателя, если не является издателем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аргумент *publisher_type* имеет тип sysname и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**<br /><br /> (по умолчанию).|Используется издатель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Задает стандартного издателя Oracle.|  
@@ -97,7 +100,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **sp_adddistpublisher** используется репликацией моментальных снимков, репликацией транзакций и репликацией слиянием.  
   
 ## <a name="example"></a>Пример  
@@ -106,7 +109,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistpublisher**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

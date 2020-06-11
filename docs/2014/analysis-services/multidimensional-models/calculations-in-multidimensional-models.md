@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c21b3459-9bef-45a2-aba5-c992eba5b66e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838e3a8d2df72d1589fdf76198671fee571e2e62
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83ecb7544152ec91f2f9428dcb8f5f5894c84722
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537174"
 ---
 # <a name="calculations-in-multidimensional-models"></a>Вычисления в многомерных моделях
   Для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений используется вкладка **Вычисления** конструктора кубов.  

@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b10a4a80b74bf64741784edc4fc1974dc0464805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30838d33cc6d4d71eaaaf820cd929a57f60f6e34
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070979"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547736"
 ---
 # <a name="the-trusted-location-where-the-workbook-is-stored-does-not-allow-external-data-connections-the-following-connections-failed-to-refresh-powerpivot-data"></a>Надежное расположение, в котором находится книга, не разрешает подключения к внешним данным. Следующие соединения не удалось обновить: данные PowerPivot
   Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные PowerPivot, если она не может подключиться к внедренным источникам данных.  
   
-## <a name="details"></a>Подробности  
+## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Область применения|PowerPivot для SharePoint|  
+|Применяется к|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина:|Служба Excel Services настроена так, чтобы отказывать в доступе к внешним данным.|  
+|Причина|Служба Excel Services настроена так, чтобы отказывать в доступе к внешним данным.|  
 |Текст сообщения|Надежное расположение, в котором находится книга, не разрешает подключения к внешним данным. Следующие соединения не удалось обновить: данные PowerPivot|  
   
 ## <a name="explanation"></a>Объяснение  

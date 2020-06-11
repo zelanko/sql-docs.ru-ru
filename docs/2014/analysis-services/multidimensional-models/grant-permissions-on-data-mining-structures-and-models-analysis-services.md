@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0008004-e2b7-47db-acad-5fe7e12b130f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25eb8fe00c523d4a94b7f6f0325bfd2c1f55e7be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0db849551bdb38615f280b123c98f0e9d3053d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074940"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546643"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)
   По умолчанию, только администратор сервера службы Analysis Services обладает разрешениями на просмотр интеллектуального анализа данных или моделей интеллектуального анализа данных в базе данных. Следуйте инструкциям, приведенным ниже, для предоставления разрешений пользователям без прав администратора.  
@@ -53,7 +52,7 @@ ms.locfileid: "66074940"
   
  Чтобы предоставить разрешения на чтение или на чтение и запись роли базы данных, пользователь должен быть членом роли сервера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которая обладает разрешениями «Полный контроль» (администратор).  
   
-1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]подключитесь к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], разверните узел **роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую роль базы данных).  
+1.  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , разверните узел **роли** для соответствующей базы данных в обозревателе объектов, а затем щелкните роль базы данных (или создайте новую роль базы данных).  
   
 2.  На вкладке **Интеллектуальный анализ** поместите модель интеллектуального анализа в список **Модели интеллектуального анализа** , а затем выберите **Чтение**, **Чтение/Запись**, **Детализация**или **Навигация** для данной модели интеллектуального анализа.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66074940"
 > [!NOTE]  
 >  По умолчанию выдача запросов расширений интеллектуального анализа данных с использованием OPENROWSET отключена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений администратора сервера &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Предоставление разрешений куба или модели &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Предоставление настраиваемого доступа к данным измерения &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   

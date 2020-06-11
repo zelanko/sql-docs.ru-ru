@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription_agent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 08/08/2019
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f0704ff7d6764ca06c7de37d0d02bfbcb9148ce7
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627432"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,6 +80,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Аргументы  
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+
+> [!NOTE]
+> Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
 `[ @publisher_db = ] 'publisher_db'_`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. *publisher_db* не учитываются издателями Oracle.  
   
@@ -126,7 +129,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  Не используйте пустые пароли. Выбирайте надежные пароли. По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. В случае необходимости хранения учетных данных в файле скрипта этот файл следует защищать во избежание несанкционированного доступа.  
   
-`[ @optional_command_line = ] 'optional_command_line'`— Необязательная Командная строка, предоставляемая агент распространения. Например, **-DefinitionFile** к:\дистдеф.ткст или **-CommitBatchSize** 10. *optional_command_line* имеет тип **nvarchar (4000)** и значение по умолчанию, равное пустой строке.  
+`[ @optional_command_line = ] 'optional_command_line'`— Необязательная Командная строка, предоставляемая агент распространения. Например, **-DefinitionFile** C:\Distdef.txt или **-CommitBatchSize** 10. *optional_command_line* имеет тип **nvarchar (4000)** и значение по умолчанию, равное пустой строке.  
   
 `[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент распространения. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
@@ -150,8 +153,8 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**1** (по умолчанию)|Первый|  
-|**2**|Секунда|  
+|**1** (по умолчанию)|First|  
+|**2**|Second|  
 |**4**|Третья|  
 |**8**|Четвертая|  
 |**глубин**|Последний|  
@@ -163,7 +166,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Однократно|  
-|**2**|Секунда|  
+|**2**|Second|  
 |**4**|Минута|  
 |**8**|Час|  
   
@@ -230,7 +233,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_addpullsubscription_agent** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="example"></a>Пример  

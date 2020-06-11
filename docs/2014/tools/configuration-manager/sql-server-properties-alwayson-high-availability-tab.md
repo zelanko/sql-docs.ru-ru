@@ -10,12 +10,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: daf3ed025405b753116bba267ce6f4c50d350601
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678455"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857746"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Свойства SQL Server (вкладка «Высокий уровень доступности AlwaysOn»)
   На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию «Группы доступности AlwaysOn» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Включение функции «Группы доступности AlwaysOn» является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  
@@ -48,7 +48,7 @@ ms.locfileid: "62678455"
     > [!TIP]  
     >  После отключения функции «Группы доступности AlwaysOn» необходимо удалить все локальные реплики доступности с экземпляра сервера. При удалении последней реплики для данной группы доступности будет также удалена и сама группа.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
   
 > [!NOTE]  
 >  Дополнительные сведения о действиях после отключения функции «Группы доступности AlwaysOn» и о том, как создать и настроить группы доступности, см. в электронной документации по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

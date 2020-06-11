@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0a7de676f5863187c2c137e056392a605af474f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075001"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546676"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Предоставление разрешений объекту источника данных (службы Analysis Services
   Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нет необходимости в доступе к источникам данных, которые обуславливают проект службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](/sql/dmx/source-data-query-openquery), либо предложение [OPENROWSET (DMX)](/sql/dmx/source-data-query-openrowset).  
@@ -53,7 +52,7 @@ ms.locfileid: "66075001"
   
      Если клиент не разрешает олицетворение (через значение уровня олицетворения в OLE DB и другие компоненты системы), служба [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытается создать анонимное соединение к базовому источнику данных. Анонимные соединения к удаленным источникам данных редко являются успешными, так как большинство источников данных не принимает анонимные соединения).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источники данных в многомерных моделях](data-sources-in-multidimensional-models.md)   
  [Свойства строки подключения &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
  [Методологии проверки подлинности, поддерживаемые Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   

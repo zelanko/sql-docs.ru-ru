@@ -1,7 +1,7 @@
 ---
 title: sp_addpushsubscription_agent (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22957ce497f47c56ace0f264cc2068014a2f43af
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627382"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,7 +72,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 `[ @publication = ] 'publication'`Имя публикации. Аргумент *publication* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @subscriber = ] 'subscriber'`Имя экземпляра подписчика или имя прослушивателя AG, если база данных подписчика является группой доступности. Аргумент *Subscriber* имеет тип **sysname**и значение по умолчанию NULL. 
-  
+
+> [!NOTE]
+> Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
+
 `[ @subscriber_db = ] 'subscriber_db'`Имя базы данных подписки. Аргумент *subscriber_db* имеет тип **sysname**и значение по умолчанию NULL. Для подписчика, не являющегося SQL Server, укажите значение **(назначение по умолчанию)** для *subscriber_db*.  
   
 `[ @subscriber_security_mode = ] subscriber_security_mode`Режим безопасности, используемый при соединении с подписчиком при синхронизации. *subscriber_security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. **1** указывает проверку подлинности Windows.  
@@ -118,8 +121,8 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|**1** (по умолчанию)|Первый|  
-|**2**|Секунда|  
+|**1** (по умолчанию)|First|  
+|**2**|Second|  
 |**4**|Третья|  
 |**8**|Четвертая|  
 |**глубин**|Последний|  
@@ -131,7 +134,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
-|**2**|Секунда|  
+|**2**|Second|  
 |**4** (по умолчанию)|Минута|  
 |**8**|Час|  
   
@@ -173,7 +176,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_addpushsubscription_agent** используется в репликации моментальных снимков и репликации транзакций.  
   
 ## <a name="example"></a>Пример  
@@ -182,7 +185,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** могут выполнять **sp_addpushsubscription_agent**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
  [Создание подписки для подписчика, не являющегося SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   

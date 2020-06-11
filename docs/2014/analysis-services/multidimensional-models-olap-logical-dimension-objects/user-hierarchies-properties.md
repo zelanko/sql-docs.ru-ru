@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 413272be4ac4ce913704494a26e9642666deeb92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4f40703f0e86874e8eef75a28696c63c4104526
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545056"
 ---
 # <a name="user-hierarchy-properties"></a>Свойства пользовательской иерархии
   В следующей таблице содержатся описания свойств пользовательской иерархии.  
@@ -32,9 +31,9 @@ ms.locfileid: "62727319"
 |DisplayFolder|Задает папку, в которой необходимо выдавать список иерархии для пользователей.|  
 |ID|Содержит уникальный идентификатор (ID) иерархии.|  
 |MemberNamesUnique|Определяет, должны ли быть уникальными имена элементов иерархии. Возможные значения: True и False. По умолчанию используется значение False.|  
-|name|Содержит имя иерархии.|  
+|Имя|Содержит имя иерархии.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские иерархии](user-hierarchies.md)   
  [Свойства уровня](user-hierarchies-level-properties.md)  
   

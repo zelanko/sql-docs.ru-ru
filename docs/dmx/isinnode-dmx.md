@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6e4c7df84bc7bf3a4804db76d952b1219100ef5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2966868205cdf06ddabf1a86245d2f53da5c82e5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008359"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670158"
 ---
 # <a name="isinnode-dmx"></a>IsInNode (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Тип Boolean.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **IsInNode** используется только в [&#62; модели SELECT &#60;. СЛУЧАИ &#40;&#41;расширений интеллектуального анализа данных](../dmx/select-from-model-cases-dmx.md) и [выбора &#60;&#62; модели. SAMPLE_CASES &#40;запросы DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md) .  
   
 ## <a name="examples"></a>Примеры  

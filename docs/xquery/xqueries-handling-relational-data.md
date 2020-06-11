@@ -1,5 +1,6 @@
 ---
 title: Запросы XQuery использующие обработка реляционных данных | Документация Майкрософт
+description: 'Узнайте, как привязать реляционные данные, отличные от XML, к XML с помощью расширений XQuery SQL: column () и SQL: variable ().'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946166"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689482"
 ---
 # <a name="xqueries-handling-relational-data"></a>Запросы XQuery, обрабатывающие реляционные данные
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

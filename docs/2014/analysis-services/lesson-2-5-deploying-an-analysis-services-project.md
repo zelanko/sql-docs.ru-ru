@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec7d1aa9a432b9d54e00427deb7b47ea5fd77fbc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078988"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543486"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Развертывание проекта служб Analysis Services
-  Чтобы просмотреть куб и данные измерения для объектов куба «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] » проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », необходимо развернуть проект на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выполнить обработку куба и его измерений. При *развертывании* [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта в экземпляре создаются определенные объекты [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. При*обработке* объектов в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данные из базовых источников данных копируются в объекты кубов. Дополнительные сведения см. в разделах [Развертывание проектов служб Analysis Services (среда SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md) и [Настройка свойств проекта служб Analysis Services (среда SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
+  Чтобы просмотреть куб и данные измерения для объектов куба «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] » проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », необходимо развернуть проект на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выполнить обработку куба и его измерений. При *развертывании* [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта в экземпляре создаются определенные объекты [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . При*обработке* объектов в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данные из базовых источников данных копируются в объекты кубов. Дополнительные сведения см. в разделах [Развертывание проектов служб Analysis Services (среда SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md) и [Настройка свойств проекта служб Analysis Services (среда SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
   
  На этой стадии процесса разработки развертывание куба обычно производится в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на сервере разработки. После завершения разработки проекта бизнес-аналитики обычно производится развертывание данных на рабочем сервере с помощью мастера развертывания служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделах [Развертывание решений многомерных моделей](multidimensional-models/multidimensional-model-solution-deployment.md) и [Развертывание решений модели с использованием мастера развертывания](multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66078988"
      Просмотрите свойства развертывания проекта. По умолчанию шаблон проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] настроен таким образом, что выполняется последовательное развертывание всех проектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для указанного по умолчанию экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере, создается база данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем проекта, а также выполняется обработка объектов с параметрами по умолчанию после завершения развертывания. Дополнительные сведения см. в разделах [Настройка свойств проекта служб Analysis Services (среда SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
   
     > [!NOTE]  
-    >  Если требуется развернуть проект в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] именованном экземпляре на локальном компьютере или на экземпляре на удаленном сервере, измените свойство **сервера** на соответствующее имя экземпляра, например \< *ServerName**>\\**имя_экземпляра * * >*.  
+    >  Если требуется развернуть проект в именованном экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере или на экземпляре на удаленном сервере, измените свойство **сервера** на соответствующее имя экземпляра, например \<*ServerName**> \\ < **instanceName**> *.  
   
 3.  Нажмите кнопку **ОК**.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66078988"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Просмотр куба](lesson-2-6-browsing-the-cube.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание проектов Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
  [Настройка свойств проекта служб Analysis Services (среда SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   

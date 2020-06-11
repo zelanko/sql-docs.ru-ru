@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95642654da9492087b3720e1b85c369131b55ed2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82836ab9b7d4d191f48895e215ffb9293f4ffe97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543953"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>Установка PowerPivot для SharePoint 2013
   В данном разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint 2013.  
@@ -24,9 +23,9 @@ ms.locfileid: "81487400"
   
  **В этом разделе:**  
   
- [Вводная информация](#bkmk_background)  
+ [Фон](#bkmk_background)  
   
- [Предварительные условия](#bkmk_prereq)  
+ [Предварительные требования](#bkmk_prereq)  
   
  [Шаг 1. Установка PowerPivot для SharePoint](#InstallSQL)  
   
@@ -65,14 +64,14 @@ ms.locfileid: "81487400"
   
 5.  Ознакомьтесь [с требованиями к оборудованию и программному обеспечению для Analysis Services Server в режиме интеграции с SharePoint &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
-6.  Заметки о выпуске см. в заметках [о выпуске пакета обновления 1 для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+6.  Заметки о выпуске см. в заметках [о выпуске пакета обновления 1 для SQL Server 2012](https://go.microsoft.com/fwlink/?LinkID=248389) ( https://go.microsoft.com/fwlink/?LinkID=248389) .  
   
 ###  <a name="sql-server-edition-requirements"></a><a name="bkmk_sqleditions"></a>Требования к выпуску SQL Server  
- Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Дополнительные сведения см. [в разделе функции, поддерживаемые различными выпускамиhttps://go.microsoft.com/fwlink/?linkid=232473) SQL Server 2012 (](https://go.microsoft.com/fwlink/?linkid=232473) и [выпусками и компонентами SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Не все функции бизнес-аналитики доступны во всех выпусках [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Дополнительные сведения см. [в разделе функции, поддерживаемые различными Выпусками https://go.microsoft.com/fwlink/?linkid=232473) SQL Server 2012 (](https://go.microsoft.com/fwlink/?linkid=232473) и [выпусками и компонентами SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md).  
   
- Текущие заметки о выпуске можно найти в [заметках о Выпуске SQL Server 2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
+ Текущие заметки о выпуске можно найти в [заметках о Выпуске SQL Server 2012 SP1](https://go.microsoft.com/fwlink/?LinkID=248389) ( https://go.microsoft.com/fwlink/?LinkID=248389) .  
   
- [Заметки о Выпускеhttps://go.microsoft.com/fwlink/?LinkId=236893)Microsoft SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
+ [Заметки о Выпуске https://go.microsoft.com/fwlink/?LinkId=236893) Microsoft SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
 ##  <a name="step-1-install-powerpivot-for-sharepoint"></a><a name="InstallSQL"></a>Шаг 1. Установка PowerPivot для SharePoint  
  На этом шаге запускается программа установки SQL Server Setup, чтобы установить сервер [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. На следующем шаге необходимо настроить службы Excel на использование данного сервера для моделей данных книги.  
@@ -261,11 +260,11 @@ ms.locfileid: "81487400"
   
  **Избыточность и загрузка сервера:** установка двух или более серверов [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме SharePoint обеспечивает избыточность функциональности сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Ввод в действие дополнительных серверов приводит к дальнейшему распределению нагрузки между серверами. Дополнительные сведения см. в следующих разделах:  
   
--   [Настройка Analysis Services для обработки моделей данных в службах Excel](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Настройка Analysis Services для обработки моделей данных в службах Excel](https://technet.microsoft.com/library/jj614437\(v=office.15\)) ( https://technet.microsoft.com/library/jj614437(v=office.15)) .  
   
--   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) ( https://technet.microsoft.com/library/jj219780(v=office.15)) .  
   
- ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Параметры SharePoint](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .  
   
 ## <a name="see-also"></a>См. также:  
  [Перенос PowerPivot в SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   

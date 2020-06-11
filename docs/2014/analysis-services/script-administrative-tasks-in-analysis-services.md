@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 106415df-81ff-4ec3-b2e1-ca66324f4cab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 69ccdaf9bf0f8b67309a1f88c0c44a90f3167b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 660f0d52d4057a9bdb9e2a0af0ed268d64a7747a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538862"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Создание скриптов для административных задач в службах Analysis Services
   Административные задачи служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] вы можете автоматизировать, написав или создав скрипты, которые можно выполнять вручную или планировать в агенте SQL Server. В следующей таблице описаны доступные параметры скриптов и даны ссылки на дополнительные сведения.  

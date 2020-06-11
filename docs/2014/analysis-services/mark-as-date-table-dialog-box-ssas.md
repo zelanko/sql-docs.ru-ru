@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 698b5ef1-b79b-4d76-9847-39669b4f5bb9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65c3dc2c084cdc426842cf822b1d65735030a9e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 271270034345d2f3f056c7791c5907429699f55f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077941"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541746"
 ---
 # <a name="mark-as-date-table-dialog-box-ssas"></a>Диалоговое окно «Пометить как таблицу дат» (службы SSAS)
   Для открытия диалогового окна **Пометить как таблицу дат** выберите меню **Таблица** , затем **Дата**и установите флажок **Пометить как таблицу дат**. Таблицы дат используются в логике операций со временем. Для создания связи с таблицей дат необходимо указать столбец с уникальными значениями, который будет служить уникальным идентификатором для таблицы.  

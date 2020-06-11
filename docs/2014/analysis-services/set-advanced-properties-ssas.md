@@ -12,17 +12,17 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068825"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858044"
 ---
 # <a name="set-advanced-properties-ssas"></a>Установка дополнительных свойств (SSAS)
   Эта страница **Мастера импорта таблиц** позволяет определить дополнительные параметры соединения с источником данных. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Поставщики**  
  Выберите поставщик, используемый для соединения с источником данных. Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик.  
   

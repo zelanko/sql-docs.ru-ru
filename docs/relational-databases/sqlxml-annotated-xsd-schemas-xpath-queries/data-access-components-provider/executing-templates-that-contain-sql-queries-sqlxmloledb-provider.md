@@ -1,5 +1,6 @@
 ---
 title: Выполнение шаблонов с помощью SQL-запросов (SQLXMLOLEDB)
+description: Просмотрите пример клиентского приложения ADO с помощью поставщика SQLXMLOLEDB, чтобы выполнить серверный XML-шаблон, содержащий SQL-запрос.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a1df48e97877aeca05e1aa72a248ec5bbcf659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82f770d8b17ee1ec93e33efa07b6658363b0de2d
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246667"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215657"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Выполнение шаблонов, содержащих SQL-запросы (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75246667"
   
  Так как свойство Клиентсидексмл имеет значение true, инструкция SELECT без предложения FOR XML отправляется на сервер. Сервер выполняет запрос и возвращает клиенту набор строк. Затем клиент применяет к набору строк преобразование FOR XML и создает XML-документ.  
   
- Шаблон XML предоставляет один корневой элемент верхнего уровня (\<корневой>) для СОЗДАВАЕМОГО XML-документа. Поэтому свойство Root XML не предоставляется.  
+ XML-шаблон предоставляет один корневой элемент верхнего уровня ( \<ROOT> ) для создаваемого XML-документа, поэтому свойство Root XML не предоставляется.  
   
  Для выполнения шаблонов XML должен быть указан диалект {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

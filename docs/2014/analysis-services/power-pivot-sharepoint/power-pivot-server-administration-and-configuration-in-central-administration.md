@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bea6bb558e6ccafefbbb068fa3799eddff748a5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071104"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547810"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>Настройка и администрирование сервера PowerPivot в центре администрирования
   Администрирование и настройка сервера PowerPivot осуществляется администраторами приложения службы SharePoint с помощью центра администрирования SharePoint.  
@@ -47,25 +46,25 @@ ms.locfileid: "66071104"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|Ссылка|Type|Описание задачи|  
+|Ссылка|Тип|Описание задачи|  
 |----------|----------|----------------------|  
-|[Развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Обязательный|В этом шаге выполняется установка файлов решения, при котором файлы программы и страницы приложения добавляются в ферму и в семейство веб-сайтов.|  
-|[Создание и настройка приложения службы PowerPivot в центре администрирования](create-and-configure-power-pivot-service-application-in-ca.md)|Обязательный|На этом шаге выполняется выделение системной службы PowerPivot.|  
-|[Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](activate-power-pivot-integration-for-site-collections-in-ca.md)|Обязательный|На этом шаге выполняется включение функций PowerPivot на уровне семейств веб-сайтов.|  
-|[Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Обязательный|На этом шаге поставщик OLE DB служб Analysis Services добавляется как надежный поставщик в службах Excel.|  
+|[Развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)|Обязательно|В этом шаге выполняется установка файлов решения, при котором файлы программы и страницы приложения добавляются в ферму и в семейство веб-сайтов.|  
+|[Создание и настройка приложения службы PowerPivot в центре администрирования](create-and-configure-power-pivot-service-application-in-ca.md)|Обязательно|На этом шаге выполняется выделение системной службы PowerPivot.|  
+|[Активация интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](activate-power-pivot-integration-for-site-collections-in-ca.md)|Обязательно|На этом шаге выполняется включение функций PowerPivot на уровне семейств веб-сайтов.|  
+|[Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Обязательно|На этом шаге поставщик OLE DB служб Analysis Services добавляется как надежный поставщик в службах Excel.|  
 |[Обновление данных PowerPivot с SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md)|Рекомендуемая|Использование обновления данных необязательно, но рекомендуется. Это позволяет задать расписание автоматических обновлений данных PowerPivot в опубликованных книгах Excel.|  
 |[Настройте учетную запись автоматического обновления данных PowerPivot &#40;PowerPivot для SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|Рекомендуемая|На этом шаге заводится специальная учетная запись, которая может быть использована для запуска заданий обновления данных на сервере.|  
-|[Настройка сбора данных об использовании для &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Необязательный|Сбор данных об использовании настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
-|[Настройка выделенного обновления данных или &#40;обработки только запросов PowerPivot для SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Необязательный|Можно выделить экземпляр PowerPivot только для заданий и запросов обновления данных. Кроме того, можно изменить настройки по умолчанию для параллельных заданий обновления данных.|  
-|[Указание учетных записей служб PowerPivot](configure-power-pivot-service-accounts.md)|Необязательный|Пояснение для обновления паролей или для изменения учетных записей, используемых службами.|  
-|[Подключение приложения службы PowerPivot к веб-приложению SharePoint в центре администрирования](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Необязательный|В этом разделе приведено описание изменения служебных параметров.|  
-|[Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Необязательный|В этой статье описано, как добавить галерею PowerPivot в качестве доверенного местоположения.|  
-|[Настройка и просмотр файлов журнала SharePoint и журнала диагностики &#40;PowerPivot для SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Необязательный|Запись событий в журнал настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
-|[Правила определения исправности PowerPivot — настройка](configure-power-pivot-health-rules.md)|Необязательный|Правила для определения исправности сервера настраиваются по умолчанию. Эти шаги помогут изменить некоторые настройки по умолчанию.|  
-|[создать и настроить галерею PowerPivot](create-and-customize-power-pivot-gallery.md)|Необязательный|Для установки, настраиваемой вручную, эта процедура описывает способ создания библиотеки галереи PowerPivot, в которой отображаются миниатюрные эскизы содержащихся книг PowerPivot.|  
-|[Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Необязательный|Описывает, как следует расширить библиотеку документов так, чтобы она поддерживала создание файлов связи семантической модели.|  
+|[Настройка сбора данных об использовании для &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Необязательно|Сбор данных об использовании настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
+|[Настройка выделенного обновления данных или &#40;обработки только запросов PowerPivot для SharePoint&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|Необязательно|Можно выделить экземпляр PowerPivot только для заданий и запросов обновления данных. Кроме того, можно изменить настройки по умолчанию для параллельных заданий обновления данных.|  
+|[Указание учетных записей служб PowerPivot](configure-power-pivot-service-accounts.md)|Необязательно|Пояснение для обновления паролей или для изменения учетных записей, используемых службами.|  
+|[Подключение приложения службы PowerPivot к веб-приложению SharePoint в центре администрирования](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Необязательно|В этом разделе приведено описание изменения служебных параметров.|  
+|[Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Необязательно|В этой статье описано, как добавить галерею PowerPivot в качестве доверенного местоположения.|  
+|[Настройка и просмотр файлов журнала SharePoint и журнала диагностики &#40;PowerPivot для SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md)|Необязательно|Запись событий в журнал настраивается по умолчанию. Эти шаги можно использовать для изменения настроек по умолчанию.|  
+|[Правила определения исправности PowerPivot — настройка](configure-power-pivot-health-rules.md)|Необязательно|Правила для определения исправности сервера настраиваются по умолчанию. Эти шаги помогут изменить некоторые настройки по умолчанию.|  
+|[создать и настроить галерею PowerPivot](create-and-customize-power-pivot-gallery.md)|Необязательно|Для установки, настраиваемой вручную, эта процедура описывает способ создания библиотеки галереи PowerPivot, в которой отображаются миниатюрные эскизы содержащихся книг PowerPivot.|  
+|[Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)|Необязательно|Описывает, как следует расширить библиотеку документов так, чтобы она поддерживала создание файлов связи семантической модели.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка PowerPivot для SharePoint 2010](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
  [Ссылка на параметр конфигурации &#40;PowerPivot для SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Аварийное восстановление в PowerPivot для SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=389570)  

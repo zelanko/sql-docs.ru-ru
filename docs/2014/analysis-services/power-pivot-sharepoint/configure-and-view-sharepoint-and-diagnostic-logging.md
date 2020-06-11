@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 85f62d29-cdc6-45b3-be1f-ff1182939858
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 360a8b93c20dd57d3dd3d382c843a2f65d5f3c27
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071847"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547586"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Настройка и просмотр файлов журнала SharePoint и журнала диагностики (PowerPivot для SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] регистрируются в файлах журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в статье [Настройка сбора данных об использовании для &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  В этом разделе:  
   
--   [Расположение файла журнала](#bkmk_filelocation)  
+-   [Расположение файлов журнала](#bkmk_filelocation)  
   
 -   [Изменение уровней диагностического ведения журнала для отдельных категорий событий](#bkmk_modifyloglevels)  
   
@@ -119,12 +118,12 @@ ms.locfileid: "66071847"
 |Процесс|Область|Категория|Level|Сообщение|Сведения|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Служба PowerPivot|Использование|Подробный|Отсутствует статистика по текущему запросу, данные не заносятся в журнал.|Отчеты службы с заранее определенными интервалами запрашивают статистику ответов в виде события использования, отправляемого в систему сбора данных об использовании. Данное сообщение показывает, что отсутствует статистика запросов для передачи.|  
-|w3wp.exe|Служба PowerPivot|Клиентский веб-интерфейс|Подробный|Начало поиска сервера приложений для источника данных =\<*path*>|Когда служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] получает запрос на соединение, она определяет доступный [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] для обработки запроса. Если в ферму входит только один сервер, то локальный сервер принимает запрос во всех случаях.|  
+|w3wp.exe|Служба PowerPivot|Клиентский веб-интерфейс|Подробный|Начинается поиск сервера приложений для источника данных =\<*path*>|Когда служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] получает запрос на соединение, она определяет доступный [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] для обработки запроса. Если в ферму входит только один сервер, то локальный сервер принимает запрос во всех случаях.|  
 |w3wp.exe|Служба PowerPivot|Клиентский веб-интерфейс|Подробный|Сервер приложений определен успешно.|Запрос передан в приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|w3wp.exe|Служба PowerPivot|Клиентский веб-интерфейс|Подробный|Перенаправление запроса для \< *источника поверпивотдата*> в [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|Запрос перенаправлен на [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Служба PowerPivot|Обработка запросов|Подробный|Перенаправление запроса на имя\<пользователя*SharePoint*> в базу данных|От имени пользователя SharePoint создано соединение с источником данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] путем олицетворения.|  
+|w3wp.exe|Служба PowerPivot|Клиентский веб-интерфейс|Подробный|Перенаправление запроса для на \<*PowerPivotdata source*> [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] .|Запрос перенаправлен на [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|  
+|w3wp.exe|Служба PowerPivot|Обработка запросов|Подробный|Перенаправление запроса имени пользователя \<*SharePoint user*> в базу данных|От имени пользователя SharePoint создано соединение с источником данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] путем олицетворения.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сбор данных об использовании PowerPivot](power-pivot-usage-data-collection.md)   
  [Просмотр и чтение файлов журнала установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Настройка сбора данных об использовании для &#40;PowerPivot для SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  

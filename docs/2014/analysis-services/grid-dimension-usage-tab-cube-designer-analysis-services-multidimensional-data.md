@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed63b1da-0fce-4f24-a722-5cff378831e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d14dced8054edc2f744d309e6c8f0d8d4966c79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080812"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544289"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Сетка (вкладка «Использование измерений», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Сетка** на вкладке **Использование измерений** в конструкторе кубов для просмотра и редактирования связей измерений между измерениями куба и группами мер. Каждая связь измерений представляется ячейкой в сетке, в которой группы мер представлены столбцами, а измерения представлены строками.  
@@ -39,10 +38,10 @@ ms.locfileid: "66080812"
 |**Копирование**|Примечание. Этот параметр отключен.|  
 |**Вставить**|Примечание. Этот параметр отключен.|  
 |**Удаление**|Щелкните, чтобы удалить из куба выбранное измерение куба, группу мер или связь измерений.|  
-|**Переименовать**|Щелкните, чтобы переименовать выбранное измерение куба, группу мер или связь измерений в кубе.|  
+|**Переименование**|Щелкните, чтобы переименовать выбранное измерение куба, группу мер или связь измерений в кубе.|  
 |**Свойства**|Щелкните для отображения окна **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранного измерения куба, группы мер или связи измерений.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Использование измерений &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md)   

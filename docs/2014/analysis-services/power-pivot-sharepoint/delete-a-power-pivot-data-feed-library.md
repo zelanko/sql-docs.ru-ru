@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 414dfff0d98d127d11c8fa0e01da78d8b723918d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071474"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540449"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>Удаление библиотеки каналов данных PowerPivot
   Удалить библиотеку каналов данных может только владелец сайта. Если в библиотеке содержатся элементы, они будут удалены вместе с библиотекой.  
@@ -30,11 +29,11 @@ ms.locfileid: "66071474"
   
 3.  В разделе «Администрирование сайта» выберите **Библиотеки и списки сайтов**.  
   
-4.  Щелкните **"настроить\<" имя библиотеки> "**  
+4.  Нажмите кнопку **" \<your library name> настроить"** .  
   
 5.  В разделе «Разрешения и управление» выберите **Удалить эту библиотеку**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-каналы данных PowerPivot](power-pivot-data-feeds.md)  
   
   

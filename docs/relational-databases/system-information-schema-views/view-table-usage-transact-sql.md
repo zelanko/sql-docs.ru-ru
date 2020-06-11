@@ -19,12 +19,12 @@ ms.assetid: 0aeefb3f-02ef-457e-8c42-84ddb26f1c88
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e691a52cebf3ca9de0454ca2ccd60b3f8daa43f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d7f3952dec669d5c85b9e8c8c5e5f8743264cff9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078376"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670314"
 ---
 # <a name="view_table_usage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68078376"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|Квалификатор представления.|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42; важно &#42;&#42;** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42; важно &#42;&#42;** только надежный способ найти схему объекта — запросить представление каталога sys. objects.|  
 |**VIEW_NAME**|**sysname**|Имя представления.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор таблицы.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей базовую таблицу.<br /><br /> **&#42;&#42; важно &#42;&#42;** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей базовую таблицу.<br /><br /> **&#42;&#42; важно &#42;&#42;** только надежный способ найти схему объекта — запросить представление каталога sys. objects.|  
 |**TABLE_NAME**|**sysname**|Базовая таблица, на которой базируется представление.|  
   
 ## <a name="see-also"></a>См. также:  

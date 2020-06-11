@@ -1,5 +1,6 @@
 ---
 title: Sequence и QName (XQuery) | Документация Майкрософт
+description: Сведения об основных понятиях последовательностей и QName в XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380785"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305823"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описаны следующие основные понятия XQuery.  
   
--   Последовательность  
+-   Sequence  
   
 -   QNames и стандартные пространства имен.  
   
-## <a name="sequence"></a>Последовательность  
+## <a name="sequence"></a>Sequence  
  Результат выражения в XQuery является последовательностью XML-узлов и экземпляров атомарных типов XSD. Отдельная запись последовательности называется элементом. Элемент последовательности может быть одним из следующих объектов.  
   
 -   Такой узел, как элемент, атрибут, текст, инструкция по обработке, комментарий или документ.  
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  В выражении (`/Root/a`) `Root` и `a` являются именами QName.  
   
- В следующем примере задается запрос к типизированному столбцу **XML** . Запрос выполняет итерацию всех \<элементов Step> в первом расположении воркцентер.  
+ В следующем примере задается запрос к типизированному столбцу **XML** . Запрос проходит по всем \<step> элементам в первом расположении воркцентер.  
   
 ```  
 SELECT Instructions.query('  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  Каждая создаваемая база данных содержит коллекцию XML-схем **sys** . Эти схемы зарезервированы, поэтому к ним можно обратиться из любой пользовательской коллекции XML-схем.  
   
 > [!NOTE]  
->  Эта реализация не поддерживает `local` префикс, как описано в спецификации XQuery в. http://www.w3.org/2004/07/xquery-local-functions  
+>  Эта реализация не поддерживает префикс, `local` как описано в спецификации XQuery в http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>См. также:  
  [Основы языка XQuery](../xquery/xquery-basics.md)  

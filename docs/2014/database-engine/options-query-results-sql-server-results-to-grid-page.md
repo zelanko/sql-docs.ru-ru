@@ -12,17 +12,17 @@ ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 914daa6a44df3410224616efbe8285598c95dbd3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9bde39c64fdf2fbabaec85772d4bfa44d86fd1da
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000764"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856666"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>Параметры (результаты запроса — страница «SQL Server-Results to Grid»)
   Используйте эту страницу, чтобы указать параметры отображения результирующего набора запроса в формате сетки. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] окне запроса и выберите пункт **Параметры запроса**. На левой панели диалогового окна **Параметры запроса** в списке **Результаты**выберите пункт **Сетка**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Включение запроса в результирующий набор**  
  Возвращает текст запроса как часть вывода запроса.  
   

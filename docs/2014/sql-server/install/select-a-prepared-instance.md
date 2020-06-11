@@ -10,20 +10,20 @@ ms.assetid: ba0d57b5-87cc-43f0-bfbb-f06123c546bd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d691c0f7712e70f9f9870ca737edf201b9b9f6c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092391"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858549"
 ---
 # <a name="select-a-prepared-instance"></a>Выбор подготовленного экземпляра
   На странице **Выбор подготовленного экземпляра** можно указать подготовленный экземпляр для завершения.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Поле **Выберите идентификатор экземпляра** содержит список подготовленных экземпляров. Выберите подготовленный экземпляр для завершения.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Выберите идентификатор экземпляра**  
  Список включает все подготовленные экземпляры, которые могут быть завершены на компьютере, где выполняется установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Выберите подготовленный экземпляр для завершения.  
   

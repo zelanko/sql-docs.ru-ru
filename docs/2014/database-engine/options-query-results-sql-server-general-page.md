@@ -16,17 +16,17 @@ ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000802"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856609"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Параметры (результаты запроса — страница «SQL Server-Общие»)
   На этой странице можно определить поведение запроса на панели «Результаты» по умолчанию. Чтобы отобразить эти параметры, в меню **Сервис** выберите пункт **Параметры**, откройте папку **Результаты запроса** и выберите раздел **SQL Server**, а затем пункт **Общие**. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить эти параметры для текущих запросов, в меню **Запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **По умолчанию сохранять результаты в**  
  В качестве адресата по умолчанию для результирующих наборов устанавливается текст, сетка на панели «Результаты» или файл.  
   

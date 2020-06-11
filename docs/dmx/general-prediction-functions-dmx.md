@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 57909c1bb4009ae85b7e1b38b8b3cf3fa0e70ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd9fb1243f083871c4ff35e70ac9ad835b99440c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892774"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669330"
 ---
 # <a name="general-prediction-functions-dmx"></a>Общие функции прогнозирования (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,14 +58,14 @@ ms.locfileid: "68892774"
   
  Общие сведения о функциях в DMX см. в разделе [расширения интеллектуального анализа данных &#40;DMX&#41; функции Reference](../dmx/data-mining-extensions-dmx-function-reference.md).  
   
-|Тип запроса|Поддерживаемые функции|Remarks|  
+|Тип запроса|Поддерживаемые функции|Комментарии|  
 |----------------|-------------------------|-------------|  
 |[Выберите DISTINCT из \<>модели](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;расширений интеллектуального анализа данных&#41;](../dmx/rangemax-dmx.md)|Эти функции используются для получения максимальных, минимальных и средних значений столбцов с числовыми данными любого типа — как непрерывными, так и дискретизированными.|  
-|[Выберите из \<> модели. СОДЕРЖАНИ](../dmx/select-from-model-content-dmx.md)<br /><br /> или диспетчер конфигурации служб<br /><br /> [Выберите из \<> модели. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant (расширения интеллектуального анализа данных)](../dmx/isdescendant-dmx.md)|Эта функция получает дочерние узлы указанного узла модели. Ее можно использовать, например, для просмотра всех узлов содержимого модели интеллектуального анализа данных. Порядок узлов в модели интеллектуального анализа данных зависит от типа модели. Сведения о структуре для каждого типа модели интеллектуального анализа данных см. в разделе [модель интеллектуального анализа содержимого &#40;Analysis Services-&#41;интеллектуального анализа ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Если содержимое модели интеллектуального анализа данных сохранено в виде измерения, можно использовать также другие существующие функции многомерных выражений (MDX) для запросов к иерархии атрибутов.|  
+|[Выберите из \<> модели. СОДЕРЖАНИ](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [Выберите из \<> модели. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant (расширения интеллектуального анализа данных)](../dmx/isdescendant-dmx.md)|Эта функция получает дочерние узлы указанного узла модели. Ее можно использовать, например, для просмотра всех узлов содержимого модели интеллектуального анализа данных. Порядок узлов в модели интеллектуального анализа данных зависит от типа модели. Сведения о структуре для каждого типа модели интеллектуального анализа данных см. в разделе [модель интеллектуального анализа содержимого &#40;Analysis Services-&#41;интеллектуального анализа ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> Если содержимое модели интеллектуального анализа данных сохранено в виде измерения, можно использовать также другие существующие функции многомерных выражений (MDX) для запросов к иерархии атрибутов.|  
 |[Выберите из \<> модели. СЛУЧАЯХ](../dmx/select-from-model-cases-dmx.md)|[IsInNode (расширения интеллектуального анализа данных)](../dmx/isinnode-dmx.md)<br /><br /> [Класс ClientSettingsGeneralFlag](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;расширений интеллектуального анализа данных&#41;](../dmx/istestcase-dmx.md)|Функция Lag поддерживается только для моделей временных рядов.<br /><br /> Функция IsTestCase поддерживается в моделях, основанных на структуре, созданной с помощью контрольного параметра, для создания набора проверочных данных. Если для структуры, на которой основана модель, не был создан набор проверочных данных с помощью параметров контрольных данных, все варианты считаются обучающими.|  
 |[Выберите из \<> модели. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode (расширения интеллектуального анализа данных)](../dmx/isinnode-dmx.md)|В этом контексте функция IsInNode возвращает вариант, принадлежащий набору идеальных примеров вариантов.|  
-|Выберите из \<> модели. СПЕЦИФИКАЦИ|неприменимо. Используйте вместо этого функции запросов XML.|Представления языка разметки прогнозирующей модели (PMML) поддерживаются только для следующих типов моделей:<br /><br /> алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);<br /><br /> алгоритм кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)]|  
-|[ВЫБОР из \<модели> ПРОГНОЗИРУЕМое соединение](../dmx/select-from-model-prediction-join-dmx.md)|Функции прогноза, характерные для алгоритма, который используется для построения модели.|Список прогнозирующих функций для каждого типа модели см. в разделе [запросы интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
+|Выберите из \<> модели. СПЕЦИФИКАЦИ|Неприменимо. Используйте вместо этого функции запросов XML.|Представления языка разметки прогнозирующей модели (PMML) поддерживаются только для следующих типов моделей:<br /><br /> алгоритм дерева принятия решений ([!INCLUDE[msCoName](../includes/msconame-md.md)]);<br /><br /> алгоритм кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)]|  
+|[ВЫБОР из \< модели> прогнозируемое соединение](../dmx/select-from-model-prediction-join-dmx.md)|Функции прогноза, характерные для алгоритма, который используется для построения модели.|Список прогнозирующих функций для каждого типа модели см. в разделе [запросы интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
 |[ВЫБОР из \<>модели](../dmx/select-from-model-dmx.md)|Функции прогноза, характерные для алгоритма, который используется для построения модели.|Список прогнозирующих функций для каждого типа модели см. в разделе [запросы интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/data-mining-queries).|  
   
 ## <a name="see-also"></a>См. также:  

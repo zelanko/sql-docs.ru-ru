@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bb78df367f59889f4665d9940880bf0ce49c462
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071374"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535246"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики PowerPivot (BISM)
   Соединение семантической модели бизнес-аналитики (BISM-файл) — это переносимое соединение, связывающее отчеты Excel или [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] с базой данных табличной модели [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или экземпляром [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] во многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
@@ -77,7 +76,7 @@ ms.locfileid: "66071374"
   
  [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение режима работы сервера для экземпляра Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Подключение к службам Analysis Services](../instances/connect-to-analysis-services.md)  
   

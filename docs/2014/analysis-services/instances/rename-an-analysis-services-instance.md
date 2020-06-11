@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f92fdd7ea01cb9a373bafc3357de65fd2e622add
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079620"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543786"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Переименование экземпляра служб Analysis Services
-  Существующий экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно переименовать с помощью диалогового окна « **Переименование экземпляра** ».  
+  Существующий экземпляр можно переименовать с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] помощью диалогового окна « **Переименование экземпляра** ».  
   
 > [!IMPORTANT]  
 >  При переименовании экземпляра средство переименования экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется с расширенными правами доступа, обновляя имя службы Windows, учетные записи безопасности и записи реестра, связанные с этим экземпляром. Чтобы обеспечить выполнение этих действий, не забудьте перед запуском средства выполнить вход от имени администратора локальной системы.  
@@ -35,7 +34,7 @@ ms.locfileid: "66079620"
   
 ### <a name="to-rename-an-instance-of-analysis-services"></a>Подключение к экземпляру служб Analysis Services  
   
-1.  Запустите средство **переименования экземпляра** **asinstancerename. exe**из папки C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
+1.  Запустите средство **переименования экземпляра** **asinstancerename.exe**из папки C:\Program Files\Microsoft SQL Server\110\Tools\Binn\ManagementStudio.  
   
 2.  В диалоговом окне **Переименование экземпляра** в списке **Экземпляр для переименования** выберите экземпляр, который необходимо переименовать.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66079620"
   
      Ниже приведен пример. Предположим, что вы установили сервер табличного режима как экземпляр с именем "табличный", используя виртуальную учетную запись по умолчанию, что приводит к следующей настройке:  
   
-    1.  Имя экземпляра = \<Server> \табулар  
+    1.  Имя экземпляра = \<server> \табулар  
   
     2.  Имя службы = MSOLAP$TABULAR  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079620"
   
      Теперь предположим, что вы переименуете экземпляр на «TAB2». В результате изменения имени конфигурация будет выглядеть следующим образом:  
   
-    1.  Имя экземпляра = \<Server> \TAB2  
+    1.  Имя экземпляра = \<server> \TAB2  
   
     2.  Имя службы = MSOLAP$TAB2  
   

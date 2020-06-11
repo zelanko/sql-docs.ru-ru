@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e6cbcdac00b4cd7497f53c9f3a13f4f7303b5154
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a2b9b62fae23932d1072ea319e1305a0853ca2d6
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81284346"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807537"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Escape-последовательности для значений даты, времени и отметок времени
 ODBC определяет escape-последовательности для литералов даты, времени и меток времени. Синтаксис этих escape-последовательностей выглядит следующим образом:  
@@ -34,23 +34,52 @@ ODBC определяет escape-последовательности для л�
   
  В нотации BNF синтаксис выглядит следующим образом:  
   
-```  
-  
-      ODBC-date-time-escape ::=  
+```bnf 
+ODBC-date-time-escape ::=  
      ODBC-date-escape  
      | ODBC-time-escape  
-     | ODBC-timestamp-escapeODBC-date-escape ::=  
-     ODBC-esc-initiator d 'date-value' ODBC-esc-terminatorODBC-time-escape ::=  
-     ODBC-esc-initiator t 'time-value' ODBC-esc-terminatorODBC-timestamp-escape ::=  
-     ODBC-esc-initiator ts 'timestamp-value' ODBC-esc-terminatorODBC-esc-initiator ::= {  
+     | ODBC-timestamp-escape
+
+ODBC-date-escape ::=  
+     ODBC-esc-initiator d 'date-value' ODBC-esc-terminator
+
+ODBC-time-escape ::=  
+     ODBC-esc-initiator t 'time-value' ODBC-esc-terminator
+
+ODBC-timestamp-escape ::=  
+     ODBC-esc-initiator ts 'timestamp-value' ODBC-esc-terminator
+
+ODBC-esc-initiator ::= {  
+
 ODBC-esc-terminator ::= }  
+
 date-value ::=   
-     years-value date-separator months-value date-separator days-valuetime-value ::=   
-     hours-value time-separator minutes-value time-separatorseconds-valuetimestamp-value ::= date-value timestamp-separator time-valuedate-separator ::= -  
+     years-value date-separator months-value date-separator days-value
+
+time-value ::=   
+     hours-value time-separator minutes-value time-separator seconds-value
+
+timestamp-value ::= date-value timestamp-separator time-value
+
+date-separator ::= -  
+
 time-separator ::= :  
+
 timestamp-separator ::=  
-     (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
+     (The blank character)
+
+years-value ::= digit digit digit digit
+
+months-value ::= digit digit
+
+days-value ::= digit digit
+
+hours-value ::= digit digit
+
+minutes-value ::= digit digit
+
+seconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Escape-последовательности литералов даты, времени и отметок времени поддерживаются, если источник данных поддерживает типы данных даты, времени и отметки времени. Приложение должно вызывать **SQLGetTypeInfo** , чтобы определить, поддерживаются ли эти типы данных.

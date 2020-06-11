@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13e33fbc80dc7253ee67dc55235765bcd1e6250c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071226"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535216"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Обновление данных PowerPivot с SharePoint 2013
-  Проектирование для обновления моделей [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных в SharePoint 2013 использует службы Excel в качестве основного компонента для загрузки и обновления моделей данных на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в режиме интеграции с SharePoint. Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работает на внешней ферме SharePoint.  
+  Проектирование для обновления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] моделей данных в SharePoint 2013 использует службы Excel в качестве основного компонента для загрузки и обновления моделей данных на экземпляре, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работающем в режиме интеграции с SharePoint. Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] работает на внешней ферме SharePoint.  
   
  Ранее использовавшаяся архитектура обновления данных при загрузке и обновлении моделей данных полагалась исключительно на системные службы PowerPivot экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускался локально на сервере приложений PowerPivot. В новой архитектуре появился новый метод поддержания актуальности информации в виде метаданных элемента книги, находящейся в библиотеке документов. Архитектура служб SharePoint 2013 Excel поддерживает как **интерактивное** , так и **плановое**обновление данных.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66071226"
   
 -   [Дополнительные сведения](#bkmk_moreinformation)  
   
-## <a name="background"></a>История  
+## <a name="background"></a>Историческая справка  
  SharePoint Server 2013 службы Excel управляют обновлением данных для книг Excel 2013 и запускает обработку модели данных на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] сервере, работающем в режиме интеграции с SharePoint. Для книг Excel 2010 службы Excel также управляют загрузкой и сохранением книг и моделей данных. Однако при этом службы Excel при отправке и обработке команд к модели данных полагаются на системные службы PowerPivot. В следующей таблице сведены компоненты, которые отправляют команды на обновление данных, в зависимости он версии книги. В качестве рабочей среды подразумевается ферма SharePoint 2013, настроенная на использование служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server в режиме интеграции с SharePoint.  
   
 ||||  
@@ -53,13 +52,13 @@ ms.locfileid: "66071226"
   
  В следующей таблице сведены поддерживаемые возможности обновления на ферме SharePoint 2013, настроенной на использование служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server в режиме интеграции с SharePoint.  
   
-|Книга создана в|плановое|Интерактивное обновление данных|  
+|Книга создана в|Обновление данных по расписанию|Интерактивное обновление данных|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 PowerPivot для Excel|Не поддерживается. Обновление книги **(\*)**|Не поддерживается. Обновление книги **(\*)**|  
-|2012 PowerPivot для Excel|Поддерживается|Не поддерживается. Обновление книги **(\*)**|  
+|2008 R2 PowerPivot для Excel|Не поддерживается. Обновление книги **( \* )**|Не поддерживается. Обновление книги **( \* )**|  
+|2012 PowerPivot для Excel|Поддерживается|Не поддерживается. Обновление книги **( \* )**|  
 |Excel 2013|Поддерживается|Поддерживается|  
   
- **(\*)** Дополнительные сведения об обновлении книги см. в статье [обновление книг и запланированное обновление данных &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+ **( \* )** Дополнительные сведения об обновлении книги см. в статье [обновление книг и запланированное обновление данных &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Интерактивное или ручное обновление данных в службах SharePoint Server 2013 Excel Services может обновить модели сведениями из оригинальных источников данных. Интерактивное обновление данных становится доступным после настройки приложения служб Excel путем регистрации сервера [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
@@ -114,7 +113,7 @@ ms.locfileid: "66071226"
   
 1.  На Analysis Services сервере, работающем в режиме интеграции с SharePoint, добавьте учетную запись службы Analysis Services в привилегию "**Работа в качестве части операционной системы**":  
   
-    1.  Выполните команду`secpol.msc`""  
+    1.  Выполните команду " `secpol.msc` "  
   
     2.  Выберите **Параметр локальной безопасности**, затем **Локальные политики**, а затем **Назначение прав пользователя**.  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66071226"
   
  Дополнительные сведения см. [в разделе Работа в составе операционной системы](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
-##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a>Запланированное обновление данных  
  **Основные особенности планового обновления данных**  
   
 -   Требует развертывания надстройки PowerPivot для SharePoint. Дополнительные сведения см. в разделе [Установка или удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
@@ -166,7 +165,7 @@ ms.locfileid: "66071226"
  ![управление контекстным меню обновления данных](../media/as-manage-datarefresh-sharepoint2013.gif "управление контекстным меню обновления данных")  
   
 > [!TIP]  
->  Сведения об обновлении книг из SharePoint Online см. в разделе [обновление книг Excel с внедренными моделями PowerPivot из SharePoint Online (технический документ)](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx).  
+>  Сведения об обновлении книг из SharePoint Online см. в разделе [обновление книг Excel с внедренными моделями PowerPivot из SharePoint Online (технический документ)](https://technet.microsoft.com/library/jj992650.aspx) ( https://technet.microsoft.com/library/jj992650.aspx) .  
   
 ##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>Архитектура запланированного обновления данных в SharePoint 2013  
  На следующем рисунке показана архитектура обновления данных для SharePoint 2013 и SQL Server 2012 с пакетом обновления 1 (SP1).  
@@ -234,7 +233,7 @@ ms.locfileid: "66071226"
   
  [Службы Excel в SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/). 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление книг и обновление данных по расписанию &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
  [Установка PowerPivot для SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   

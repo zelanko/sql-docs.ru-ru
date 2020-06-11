@@ -1,5 +1,6 @@
 ---
 title: sp_dropdistributiondb (Transact-SQL) | Документация Майкрософт
+description: Удаляет базу данных распространителя и используемые ею файлы, если они не используются другой базой данных. Эта хранимая процедура выполняется на распространителе в любой базе данных.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7171c1e80260f28f85e2b7490f7ac21bea217173
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff09552fcc8a79abcae877191b4456c0958d1ea2
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830178"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807752"
 ---
 # <a name="sp_dropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **sp_dropdistributiondb** используется во всех типах репликации.  
   
  Эту хранимую процедуру необходимо выполнить перед удалением распространителя, выполнив **sp_dropdistributor**.  
@@ -57,7 +58,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_dropdistributiondb**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889867"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669877"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ USING <algorithm> [(<parameter list>)]
  *дереве*  
  Имя структуры интеллектуального анализа данных, к которой будет добавлена модель.  
   
- *для базы данных модели*  
+ *model*  
  Уникальное имя модели интеллектуального анализа данных.  
   
  *Список определений столбцов*  
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  Имя алгоритма интеллектуального анализа данных, определенное поставщиком.  
   
 > [!NOTE]  
->  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Сведения о алгоритмах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], поддерживаемых в текущем экземпляре, см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
  Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
@@ -63,10 +63,10 @@ USING <algorithm> [(<parameter list>)]
  *критерии фильтра*  
  Критерий фильтра, применяющийся к столбцам таблицы вариантов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если структура интеллектуального анализа данных содержит составные ключи, то модель интеллектуального анализа данных должна включать в себя все ключевые столбцы, определенные в структуре.  
   
- Если для модели не требуется прогнозируемый столбец, например модели, построенные с помощью алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации последовательностей, не обязательно включать определение столбца в инструкцию. Все атрибуты в создаваемой модели будут рассматриваться как входы.  
+ Если для модели не требуется прогнозируемый столбец, например модели, построенные с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации последовательностей, не обязательно включать определение столбца в инструкцию. Все атрибуты в создаваемой модели будут рассматриваться как входы.  
   
  В предложении **with** , которое применяется к таблице вариантов, можно указать параметры фильтрации и детализации:  
   
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Пример 2. Добавление фильтрованной модели в структуру  
- В следующем примере в новую структуру интеллектуального `Naive Bayes Women`анализа **корреспонденции** добавляется модель интеллектуального анализа данных. У новой модели та же базовая структура, что и у модели интеллектуального анализа данных, добавленной в примере 1; однако эта модель ограничивается только теми вариантами из структуры интеллектуального анализа данных, в которых клиентами являются женщины старше 50 лет.  
+ В следующем примере в `Naive Bayes Women` новую структуру интеллектуального анализа **корреспонденции** добавляется модель интеллектуального анализа данных. У новой модели та же базовая структура, что и у модели интеллектуального анализа данных, добавленной в примере 1; однако эта модель ограничивается только теми вариантами из структуры интеллектуального анализа данных, в которых клиентами являются женщины старше 50 лет.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

@@ -1,5 +1,6 @@
 ---
 title: Выполнение шаблонов, содержащих запросы XPath (SQLXMLOLEDB)
+description: Просмотрите пример приложения ADO, которое использует поставщик SQLXMLOLEDB для выполнения шаблона, содержащего запросы XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d746b898aaf0ea050409585b88e8c6861b4fa2e
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257292"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215650"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "75257292"
   
 -   Схема сопоставления  
   
- В этом образце приложения ADO XML-шаблон, состоящий из запроса XPath (корневой), указан для схемы сопоставления XSD (MySchema. XML), описанной в разделе [выполнение запросов xpath &#40;&#41;поставщика SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ В этом примере приложения ADO XML-шаблон, состоящий из запроса XPath (root), указан для схемы сопоставления XSD (MySchema.xml), описанной в разделе [выполнение запросов xpath &#40;&#41;поставщика SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
  Свойство схемы сопоставления предоставляет схему сопоставления XSD, в которой выполняется запрос XPath. Свойство базового пути содержит путь к схеме сопоставления.  
   

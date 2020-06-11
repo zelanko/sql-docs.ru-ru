@@ -1,5 +1,6 @@
 ---
 title: Перенос баз данных DB2 в SQL Server (DB2ToSQL) | Документация Майкрософт
+description: Используйте этот рекомендуемый процесс для переноса баз данных DB2 в SQL Server или базу данных SQL Azure с помощью Помощник по миграции SQL Server (SSMA).
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 14d2e655-af7e-4aa5-ba28-0e3d0d025518
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 79cc961148add0bf2096a716b669199360a565b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a351723f12261e07c4cdbd1d707224278067522e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084656"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293681"
 ---
 # <a name="migrating-db2-databases-to-sql-server-db2tosql"></a>Перенос баз данных DB2 в SQL Server (DB2ToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для DB2 — это Комплексная среда, которая помогает быстро переносить базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных DB2 в или базу данных SQL Azure. Используя SSMA для DB2, вы можете просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных в службу SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure. Обратите внимание, что нельзя перенести схемы SYS и SYSTEM DB2.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для DB2 — это Комплексная среда, которая помогает быстро переносить базы данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure. Используя SSMA для DB2, вы можете просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure. Обратите внимание, что нельзя перенести схемы SYS и SYSTEM DB2.  
   
 ## <a name="recommended-migration-process"></a>Рекомендуемый процесс миграции  
-Чтобы успешно перенести объекты и данные из баз данных DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или базу данных SQL Azure, используйте следующую процедуру.  
+Чтобы успешно перенести объекты и данные из баз данных DB2 в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure, используйте следующую процедуру.  
   
 1.  [Новый проект SSMA](https://msdn.microsoft.com/66437b45-4686-4fc7-a91b-ebde45e0f1b0).  
   
@@ -40,7 +41,7 @@ ms.locfileid: "68084656"
   
     Это можно сделать одним из следующих способов:  
   
-    -   Сохраните скрипт и запустите его в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    -   Сохраните скрипт и запустите его в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Синхронизируйте объекты базы данных.  
   

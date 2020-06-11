@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 043201cc-fbef-4ed0-bde8-dc5e3a3e8bea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 61fb30ea21ea810eab8d30a3a040fac4a1bd2128
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9504ae981e301c6f602a5930eecef47fc6667630
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080525"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544206"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Импорт из реляционного источника данных (табличные службы SSAS)
   С помощью мастера импорта таблиц можно импортировать данные из разных реляционных баз данных: Этот мастер доступен в меню [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Модель **** . Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md).  
@@ -58,7 +57,7 @@ ms.locfileid: "66080525"
   
 3.  Выполните шаги мастера импорта таблиц. На последующих страницах можно будет выбрать отдельные таблицы и представления или применить фильтры на странице **Выбор таблиц и представлений** или с помощью создания SQL-запроса на странице **Указание SQL-запроса** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)   
  [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
   

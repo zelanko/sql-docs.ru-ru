@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084033"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522140"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации (Майкрософт)
   Этот раздел посвящен алгоритму кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в том числе параметрам, с помощью которых можно управлять поведением моделей кластеризации. В разделе также содержатся советы по ускорению создания и обработки моделей кластеризации.  
@@ -113,7 +112,7 @@ ms.locfileid: "66084033"
   
  Изменив этот параметр, можно изменить метод построения начальных кластеров, а затем сравнить модели, построенные на основании различных начальных значений. Если начальное значение изменилось, но получившиеся кластеры изменились незначительно, модель можно считать относительно устойчивой.  
   
- Значение по умолчанию — 0.  
+ Значение по умолчанию равно 0.  
   
  MINIMUM_SUPPORT  
  Задает минимальное число вариантов, нужных для построения кластера. Если число вариантов в кластере меньше этого значения, кластер считается пустым и отбрасывается.  
@@ -178,7 +177,7 @@ ms.locfileid: "66084033"
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации](clustering-model-query-examples.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  

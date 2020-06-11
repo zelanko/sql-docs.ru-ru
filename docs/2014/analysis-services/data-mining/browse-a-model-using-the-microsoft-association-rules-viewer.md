@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb289f4825dfbfdf55fdacb72229355f8cb815b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086156"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525422"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)
-  Средство [!INCLUDE[msCoName](../../includes/msconame-md.md)] просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в отображает модели интеллектуального анализа данных, [!INCLUDE[msCoName](../../includes/msconame-md.md)] построенные с помощью алгоритма взаимосвязей. Алгоритм ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] ― это алгоритм установления взаимосвязей для использования при создании моделей интеллектуального анализа данных, которые можно использовать для анализа покупательского поведения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Association Algorithm](microsoft-association-algorithm.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Средство просмотра правил взаимосвязи в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма взаимосвязей. Алгоритм ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] ― это алгоритм установления взаимосвязей для использования при создании моделей интеллектуального анализа данных, которые можно использовать для анализа покупательского поведения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Association Algorithm](microsoft-association-algorithm.md).  
   
  Ниже перечислены основные причины использования алгоритма ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66086156"
   
  [К началу](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   

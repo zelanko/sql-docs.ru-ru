@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76d57bb421a7f486983476a6549a5121ce88ee9b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545703"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>Объекты ASSL и характеристики объектов
   В языке ASSL объекты следуют специальным рекомендациям в отношении групп объектов, наследования, именования, расширения и обработки.  
   
 ## <a name="object-groups"></a>Группы объектов  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Все [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекты имеют XML-представление. Объекты разделены на две группы.  
+ Все [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объекты имеют XML-представление. Объекты разделены на две группы.  
   
  **Основные объекты**  
  Основные объекты можно создавать, изменять и удалять независимо. К основным объектам относятся следующие:  
@@ -47,7 +46,7 @@ ms.locfileid: "62736619"
   
 -   Секции  
   
--   перспективами  
+-   Перспективы  
   
 -   Модели интеллектуального анализа данных  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62736619"
   
 -   Атрибуты  
   
--   меры  
+-   Меры  
   
 -   Столбцы модели интеллектуального анализа данных  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62736619"
 ## <a name="object-expansion"></a>Раскрытие объектов  
  Ограничение `ObjectExpansion` используется для управления степенью раскрытия кода XML на языке ASSL, возвращаемого сервером. Параметры этого ограничения приведены в следующей таблице.  
   
-|Значение перечисления|Допускается для \<ALTER>|Описание|  
+|Значение перечисления|Разрешено для\<Alter>|Описание|  
 |-----------------------|---------------------------|-----------------|  
 |*референцеонли*|нет|Возвращает только имя, идентификатор и отметку времени для запрошенного объекта, а также рекурсивно для всех содержащихся в нем основных объектов.|  
 |*ObjectProperties*|да|Раскрывает запрошенные объект и содержащиеся в нем второстепенные объекты, но не возвращает содержащиеся в нем основные объекты.|  

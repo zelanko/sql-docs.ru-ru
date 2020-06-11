@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: bd22e41a-0931-4d32-888a-633a3046fc5e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc18a2c7111c71b62f77f5f52727a4a50a661ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9000b78601bfb4ea9abae5cd1c63387fe502256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071039"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547786"
 ---
 # <a name="the-data-connection-path-in-the-workbook-points-to-a-file-on-the-local-drive-or-is-an-invalid-uri-the-following-connections-failed-to-refresh-powerpivot-data"></a>В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI. Следующие соединения не удалось обновить: данные PowerPivot
   Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные PowerPivot, если она не может подключиться к внедренным источникам данных.  
   
-## <a name="details"></a>Подробности  
+## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Область применения|PowerPivot для SharePoint|  
+|Применяется к|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина:|Служба Excel Services настроена так, что разрешаются только соединения из файлов ODC, которые находятся в библиотеке доверенных подключений к данным.|  
+|Причина|Служба Excel Services настроена так, что разрешаются только соединения из файлов ODC, которые находятся в библиотеке доверенных подключений к данным.|  
 |Текст сообщения|В книге путь подключения к данным указывает на файл, находящийся на локальном жестком диске, или является недопустимым URI. Следующие соединения не удалось обновить: данные PowerPivot|  
   
 ## <a name="explanation"></a>Объяснение  

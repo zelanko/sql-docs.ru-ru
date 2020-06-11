@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9611bc9d922caee25f841b709ee8a743cd539357
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071031"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547756"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: данные PowerPivot
   Служба Excel Services возвращает эту ошибку для книг Excel, содержащих данные PowerPivot, если она не может подключиться к экземпляру сервера PowerPivot в SharePoint.  
   
-## <a name="details"></a>Подробности  
+## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Область применения|PowerPivot для SharePoint|  
+|Применяется к|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина:|Сбой соединения при попытке использовать поставщик данных PowerPivot.|  
+|Причина|Сбой соединения при попытке использовать поставщик данных PowerPivot.|  
 |Текст сообщения|Подключение к данным использует проверку подлинности Windows, а учетные данные нельзя делегировать. Следующие соединения не удалось обновить: данные PowerPivot|  
   
 ## <a name="explanation"></a>Объяснение  
@@ -59,7 +58,7 @@ ms.locfileid: "66071031"
   
     2.  Запустите службу Claims to Windows Token Service, если она не работает.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание учетных записей служб PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

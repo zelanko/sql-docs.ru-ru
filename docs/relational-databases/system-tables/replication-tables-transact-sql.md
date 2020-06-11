@@ -1,5 +1,6 @@
 ---
 title: Таблицы репликации (Transact-SQL) | Документация Майкрософт
+description: Системные таблицы репликации поддерживают топологию репликации. Репликация добавляет системные таблицы в базу данных, настроенную как издатель или подписчик.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 58fb3b54989dec45a56c057cb472e1107e9e4e48
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834177"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83808146"
 ---
 # <a name="replication-tables-transact-sql"></a>Таблицы репликации (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +139,7 @@ ms.locfileid: "82834177"
 |[MSmerge_settingshistory](msmerge-settingshistory-transact-sql.md)               |[systranschemas](../../relational-databases/system-views/systranschemas-transact-sql.md)| 
 | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  

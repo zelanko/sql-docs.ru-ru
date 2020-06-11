@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175693"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547716"
 ---
 # <a name="use-powerpivot-gallery"></a>использовать галерею PowerPivot
   Галерея [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это специальная библиотека документов SharePoint. Она предлагает широкие возможности просмотра документов и управления ими для опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные PowerPivot.
@@ -23,7 +22,7 @@ ms.locfileid: "78175693"
 > [!NOTE]
 >  В зависимости от конфигурации сервера в области предварительного просмотра для некоторых документов могут появляться предупреждения или сообщения об ошибках. Сообщения могут появляться, если для книги Excel задано автоматическое обновление данных при открытии. Сообщения с предупреждениями об обновлении данных отображаются в изображении предварительного просмотра, если в службе Excel настроена выдача таких предупреждений. Администратор фермы или службы может изменить параметры конфигурации, включив показ фактических листов при предварительном просмотре. Дополнительные сведения см. в разделе [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>В этом разделе
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> Содержание раздела
 
 -   [Значки в галерее PowerPivot](#icons)
 
@@ -41,7 +40,7 @@ ms.locfileid: "78175693"
 
 -   [Известные проблемы](#bkmk_known_issues)
 
- [Предварительные условия](#prereq)
+ [Предварительные требования](#prereq)
 
 ##  <a name="prerequisites"></a><a name="prereq"></a> Предварительные требования
 
@@ -146,16 +145,16 @@ ms.locfileid: "78175693"
 
 3.  Нажмите стрелку вниз справа и выберите **Изменить свойства**.
 
-4.  Выберите команду **Сохранить**. При сохранении документа служба моментальных снимков выполняет повторное создание эскиза.
+4.  Нажмите кнопку **Сохранить**. При сохранении документа служба моментальных снимков выполняет повторное создание эскиза.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>Известные проблемы
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> Известные проблемы
 
 ### <a name="document-type-is-not-supported"></a>Тип документа не поддерживается
  Тип содержимого **Документ галереи PowerPivot** не поддерживается. Если включить тип содержимого **Документ галереи PowerPivot** для библиотеки документов и попытаться создать новый документ этого типа, появится сообщение об ошибке, похожее на следующее:
 
 -   Для "нового документа" требуется приложение, совместимое с Microsoft SharePoint Foundation, и веб-браузер. Чтобы добавить документ в эту библиотеку документов, нажмите кнопку "отправить документ".
 
--   "Адрес Интернета" http://[имя сервера]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template. xlsx "является недопустимым." " Microsoft Excel не удается получить доступ к файлу "http://[имя сервера]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template. xlsx". Существует несколько возможных причин.
+-   "Адрес Интернета" http://[имя сервера]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template.xlsx "является недопустимым." " Microsoft Excel не удается получить доступ к файлу "http://[имя сервера]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template.xlsx". Существует несколько возможных причин.
 
  Тип содержимого **Документ галереи PowerPivot** не добавляется автоматически в библиотеки документов. Вы не столкнетесь с этой проблемой, если вручную не включите неподдерживаемый тип содержимого.
 

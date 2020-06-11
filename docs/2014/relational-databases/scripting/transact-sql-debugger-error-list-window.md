@@ -15,12 +15,12 @@ ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c88fb6beda0bef5a9e3d1980c1ffa78ed4944b70
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b4ee09b1cd960a58dbf26ecc1b1cc898af4fad96
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718404"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857851"
 ---
 # <a name="error-list-window-management-studio"></a>Окно «Список ошибок» (среда Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Список ошибок**среды** отображает синтаксические и семантические ошибки, полученные из кода IntelliSense в редакторе запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "82718404"
 > [!NOTE]  
 >  **Список ошибок** содержит только ошибки из редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . В него не включаются ошибки из редакторов многомерных выражений, расширений интеллектуального анализа данных и XML/A. Все ошибки многомерных выражений, расширений интеллектуального анализа данных и XML/A выводятся на вкладке **Сообщения** в соответствующих редакторах.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Если **Список ошибок** открыт, сведения отображаются в следующих столбцах.  
   
  **Порядок по умолчанию**  

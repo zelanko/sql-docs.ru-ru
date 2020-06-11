@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893852"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666791"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,11 +33,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Таблица.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Гистограмма формирует статистические столбцы. Структура столбца возвращаемой гистограммы зависит от типа ссылки на столбец, который используется с функцией **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Скалярные столбцы  
- Для> \<ссылки на скалярный столбец гистограмма, возвращаемая функцией **PredictHistogram** , состоит из следующих столбцов:  
+ Для \<> ссылки на скалярный столбец гистограмма, возвращаемая функцией **PredictHistogram** , состоит из следующих столбцов:  
   
 -   Прогнозируемое значение  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      Столбец **$AdjustedProbability** является [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширением [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для спецификации интеллектуального анализа данных.  
   
 ## <a name="cluster-columns"></a>Кластерные столбцы  
- Гистограмма, возвращаемая функцией **PredictHistogram** для ссылки \<на столбец кластера> состоит из следующих столбцов:  
+ Гистограмма, возвращаемая функцией **PredictHistogram** для \< ссылки на столбец кластера> состоит из следующих столбцов:  
   
 -   **$Cluster** (представляет имя кластера)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229432"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546386"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Основные сведения о порядке этапов и порядке вычисления (многомерные выражения)
   В ходе вычисления куба в скрипте многомерных выражений вычисление происходит за несколько шагов, в зависимости от того, для какой цели используются те или иные вычислительные функции. Каждый из этих шагов называется этапом вычисления.  
@@ -163,7 +162,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- или диспетчер конфигурации служб  
+ or  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  

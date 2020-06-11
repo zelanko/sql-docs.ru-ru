@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc38d7977e13fb76c33a0399fd6a7325783abb1e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541594"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Меры (вкладка «Структура куба», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Меры** для управления группами мер и элементами на вкладке **Структура куба** в конструкторе кубов.  
   
-## <a name="options"></a>Параметры  
- меры  
+## <a name="options"></a>Варианты  
+ Меры  
  Отображает группы мер и меры, включенные в куб, в зависимости от выбранного представления:  
   
  Дерево  
@@ -63,9 +62,9 @@ ms.locfileid: "66077914"
 |Параметр|Определение|  
 |------------|----------------|  
 |**Приклад**|Отображать группы мер и меры в виде дерева.|  
-|**Grid**|Отображать группы мер и меры в сетке.|  
+|**Сетка**|Отображать группы мер и меры в сетке.|  
   
- **Переименовать**  
+ **Переименование**  
  Выберите эту меру для переименования выбранной группы мер или меру.  
   
  **Удаление**  
@@ -89,7 +88,7 @@ ms.locfileid: "66077914"
  **Свойства**  
  Выберите для отображения окна **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранной группы мер или меры.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка свойств мер](multidimensional-models/configure-measure-properties.md)   
  [Меры и их группы](multidimensional-models/measures-and-measure-groups.md)  
   

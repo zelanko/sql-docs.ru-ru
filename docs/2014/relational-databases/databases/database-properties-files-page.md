@@ -12,17 +12,17 @@ ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871990"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858546"
 ---
 # <a name="database-properties-files-page"></a>Свойства базы данных (страница «Файлы»)
   Данная страница используется для создания новой базы данных или просмотра и изменения свойств выбранной базы данных. Данный раздел относится к странице **Свойства базы данных (страница "Файлы")** для существующих баз данных и к странице **Создание базы данных (страница "Общие")** .  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Имя базы данных**  
  Добавьте или отобразите имя базы данных.  
   

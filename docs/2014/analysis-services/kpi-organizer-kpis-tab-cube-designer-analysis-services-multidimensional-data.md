@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5693369574a7c7fc8ea357248347fb89dee0f214
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079395"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543650"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Организатор ключевых показателей (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Организатор ключевых показателей эффективности** на вкладке **Ключевые показатели эффективности** конструктора кубов используется для обеспечения доступа и переупорядочивания ключевых показателей эффективности, содержащихся в указанном кубе.  
@@ -25,7 +24,7 @@ ms.locfileid: "66079395"
 > [!NOTE]  
 >  Эта панель не отображается в представлении формы.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Список**  
  Отображает имя ключевого показателя эффективности.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66079395"
 |**Вниз**|Выберите для перемещения выбранного ключевого показателя эффективности на одну позицию вниз в **Организаторе ключевых показателей эффективности** и определения порядка, в котором ключевые показатели эффективности отображаются в **Обозревателе ключевых показателей эффективности**.<br /><br /> Примечание. Этот параметр недоступен, если выделенный ключевой показатель эффективности дальше переместить нельзя.|  
 |**Удаление**|Выберите для удаления выбранного ключевого показателя эффективности.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Ключевые показатели эффективности &#40;конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175663"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540256"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Настройка, восстановление или удаление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] с помощью средства настройки PowerPivot.
+  Настройка, восстановление или удаление с помощью [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] средства настройки PowerPivot.
 
  Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе приводится описание принципов использования обоих средств и различий между ними.
 
@@ -91,11 +90,11 @@ ms.locfileid: "78175663"
 
 1.  На **начальном** экране введите`powerpivot`
 
-     На **начальном** экране введите `powerpivot` или в меню **Пуск** последовательно выберите пункты **все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **средства настройки**и выберите один из следующих элементов:
+     На **начальном** экране введите `powerpivot` или в меню **Пуск** последовательно выберите пункты **все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , **средства настройки**и выберите один из следующих элементов:
 
     -   **Средство настройки PowerPivot**.
 
-    -   **НИ**
+    -   **OR**
 
     -   **Настройка PowerPivot для SharePoint 2013**.
 

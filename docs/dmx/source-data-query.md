@@ -1,24 +1,24 @@
 ---
-title: '&lt;запрос&gt; источника данных | Документация Майкрософт'
+title: '&lt;запрос источника данных &gt; | Документация Майкрософт'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892346"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670015"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;запрос источника данных&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Чтобы обучить модель интеллектуального анализа данных и создать прогнозы на основе модели интеллектуального анализа данных, необходимо получить доступ к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данным, которые являются внешними по отношению к базе данных. Для определения этих \<внешних данных используется предложение> запроса источника данных в расширениях интеллектуального анализа данных. [Вставка в &#40;&#41;расширений интеллектуального анализа данных ](../dmx/insert-into-dmx.md), [Выбор из &#60;модель&#62; прогнозирование соединений &#40;расширений интеллектуального анализа ](../dmx/select-from-model-prediction-join-dmx.md)данных&#41;DMX и [Выбор из выражений естественного прогнозирующего подключения](../dmx/select-from-model-prediction-join-dmx.md) все используют ** \<>запросов к исходным данным **.  
+  Чтобы обучить модель интеллектуального анализа данных и создать прогнозы на основе модели интеллектуального анализа данных, необходимо получить доступ к данным, которые являются внешними по отношению к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. \<Для определения этих внешних данных используется предложение> запроса источника данных в расширениях интеллектуального анализа данных. [Вставка в &#40;&#41;расширений интеллектуального анализа данных ](../dmx/insert-into-dmx.md), [Выбор из &#60;модель&#62; прогнозирование соединений &#40;расширений интеллектуального анализа ](../dmx/select-from-model-prediction-join-dmx.md)данных&#41;DMX и [Выбор из выражений естественного прогнозирующего подключения](../dmx/select-from-model-prediction-join-dmx.md) все используют ** \<>запросов к исходным данным **.  
   
 ## <a name="query-types"></a>Типы запросов  
  Тремя наиболее распространенными способами указания данных источника являются:   

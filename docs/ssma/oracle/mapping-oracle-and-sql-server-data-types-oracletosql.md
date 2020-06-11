@@ -1,5 +1,6 @@
 ---
 title: Сопоставление типов данных Oracle и SQL Server (OracleToSQL) | Документация Майкрософт
+description: Узнайте, как настроить SSMA для сопоставлений Oracle между типами данных Oracle и SQL Server или принять значение по умолчанию.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262961"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293841"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Сопоставление типов данных Oracle и SQL Server (OracleToSQL)
-Типы баз данных Oracle отличаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от типов баз данных. При преобразовании объектов базы данных Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в объекты необходимо указать, как сопоставлять типы данных из Oracle с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
+Типы баз данных Oracle отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов баз данных. При преобразовании объектов базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты необходимо указать, как сопоставлять типы данных из Oracle с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно принять сопоставления типов данных по умолчанию или настроить сопоставления, как показано в следующих разделах.  
   
 ## <a name="default-mappings"></a>Сопоставления по умолчанию  
 SSMA имеет набор сопоставлений типов данных по умолчанию. Список сопоставлений по умолчанию см. в разделе [Project Settings &#40;Type mapping&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -67,7 +68,7 @@ SSMA имеет набор сопоставлений типов данных п
   
 3.  Чтобы изменить сопоставление типов данных, выполните следующие действия.  
   
-    1.  Щелкните **Правка**.  
+    1.  Нажмите кнопку **Изменить**.  
   
     2.  В разделе **тип источника**выберите тип данных Oracle для отображения.  
   
@@ -87,7 +88,7 @@ SSMA имеет набор сопоставлений типов данных п
   
         Унаследованные сопоставления удалить нельзя. Однако унаследованные сопоставления переопределяются пользовательскими сопоставлениями для определенного объекта или категории объектов.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
 Следующим шагом процесса миграции является [Создание отчета оценки](assessing-oracle-schemas-for-conversion-oracletosql.md) или [Преобразование объектов базы данных Oracle в SQL Server синтаксис](converting-oracle-schemas-oracletosql.md). При создании отчета об оценке объекты Oracle автоматически преобразуются во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893919"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668192"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,12 +35,12 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  Возвращаемое значение содержит необработанное значение вероятности варианта, представляющее собой произведение вероятностей атрибутов варианта.  
   
 ## <a name="applies-to"></a>Применяется к  
- Модели, построенные с использованием алгоритмов [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации [!INCLUDE[msCoName](../includes/msconame-md.md)] и кластеризации последовательностей.  
+ Модели, построенные с использованием [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации последовательностей.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Число с плавающей запятой двойной точности в диапазоне от 0 до 1. Число, более близкое к 1, обозначает большую вероятность вхождения варианта в модель; число, близкое к 0, обозначает меньшую вероятность вхождения варианта в модель.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  По умолчанию результат функции **PredictCaseLikelihood** нормализован. Нормализованные значения, как правило, более эффективны, поскольку в варианте увеличивается число атрибутов и разница между необработанными вероятностями двух вариантов существенно уменьшается.  
   
  Следующее уравнение используется для вычисления нормализованных значений при заданных x и y:  

@@ -1,28 +1,28 @@
 ---
-title: Выберите из &lt;структуры&gt;. ВАРИАНТЫ | Документация Майкрософт
+title: Выберите из &lt; структуры &gt; . ВАРИАНТЫ | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928298"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670105"
 ---
-# <a name="select-from-ltstructuregtcases"></a>Выберите из &lt;структуры&gt;. СЛУЧАЯХ
+# <a name="select-from-ltstructuregtcases"></a>Выберите из &lt; структуры &gt; . СЛУЧАЯХ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Возвращает варианты, использованные для создания структуры интеллектуального анализа данных.  
   
  Если детализация для структуры не включена, выполнение данной инструкции завершится сбоем. Кроме того, выполнение инструкции завершится сбоем, если пользователь не имеет разрешений на детализацию на структуру интеллектуального анализа данных.  
   
- В [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]детализация по новым структурам интеллектуального анализа данных включена по умолчанию. Чтобы проверить, включена ли детализация для определенной структуры, проверьте, установлено ли для свойства **CacheMode** значение **KeepTrainingCases**.  
+ В [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Детализация по новым структурам интеллектуального анализа данных включена по умолчанию. Чтобы проверить, включена ли детализация для определенной структуры, проверьте, установлено ли для свойства **CacheMode** значение **KeepTrainingCases**.  
   
  Если значение **CacheMode** изменено на **ClearAfterProcessing**, то варианты структуры очищаются из кэша и нельзя использовать детализацию.  
   
@@ -55,7 +55,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если детализация включена как для модели, так и для структуры, то любой член роли, обладающей разрешениями на структуру или модель интеллектуального анализа данных, может возвращать столбцы структуры, которые не были включены в модель. Это делается с помощью следующего синтаксиса:  
   
 ```  

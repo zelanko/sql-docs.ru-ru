@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc1ae000166f075a3c6bac347cd7e3e8a605042b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893114"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670370"
 ---
 # <a name="usage-dmx"></a>Использование (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  При использовании расширений интеллектуального анализа данных (DMX) для определения новой модели интеллектуального анализа [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]данных в необходимо указать, как алгоритм интеллектуального анализа данных, создающий модель, будет использовать каждый столбец. Для столбца можно указать один из следующих типов:  
+  При использовании расширений интеллектуального анализа данных (DMX) для определения новой модели интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] необходимо указать, как алгоритм интеллектуального анализа данных, создающий модель, будет использовать каждый столбец. Для столбца можно указать один из следующих типов:  
   
 -   **Клавиша**  
   

@@ -10,17 +10,17 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774347"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858940"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Подробные сведения об управляемом экземпляре (служебная программа SQL Server)
   Представление «Сведения об управляемых экземплярах» проводника служебной программы отображает сведения об использовании для отдельных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], журнал использования ЦП, подробные сведения об использовании хранилища на уровне файлов, а также позволяет просматривать и обновлять пороговые значения политик. Пороговые значения политик могут быть изменены на уровне экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , для компьютера, для файлов баз данных и файлов журналов и на уровне томов хранилища. Также можно просмотреть подробные сведения о свойствах отдельных управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Режим списка  
  В представлении списка в верхней панели отображаются данные об отдельных экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , перечисленных в виде строк "Имя_компьютера\Имя_экземпляра".  
   
@@ -175,7 +175,7 @@ ms.locfileid: "62774347"
   
 -   Язык:  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сведения о развернутом приложении уровня данных &#40;служебная программа SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Панель мониторинга служебной программы &#40;служебная программа SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Наблюдение за экземплярами SQL Server в служебная программа SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   

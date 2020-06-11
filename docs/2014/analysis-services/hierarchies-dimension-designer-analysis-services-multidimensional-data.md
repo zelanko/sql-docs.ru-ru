@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b8fd9f9e4294e085f2bb7b100fc409f25adb818
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080791"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544306"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Иерархии (вкладка «Структура измерения», конструктор измерений) (службы Analysis Services — многомерные данные)
   Панель **Иерархии** используется для управления иерархиями и уровнями выбранного в текущий момент измерения. Дополнительные сведения см. в разделе [Создание пользовательских иерархий](multidimensional-models/user-defined-hierarchies-create.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "66080791"
   
 2.  Перейдите на вкладку **Структура измерения** , если она неактивна.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Иерархии**  
  Отображает созданные на данный момент иерархии. Внутри каждой иерархии имеются атрибуты, составляющие уровни этой иерархии. Также показаны связи атрибутов, но они доступны только для чтения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структура измерения &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Атрибуты &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   

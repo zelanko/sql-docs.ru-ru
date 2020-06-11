@@ -6,17 +6,17 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3e3993816d0811f7e23563b758ab2169240dc48
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: cd1ab44238077885ef1d4f2146c6a674d5708f52
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606836"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731970"
 ---
 # <a name="create-a-master-data-services-database"></a>Создание базы данных служб Master Data Services
 
@@ -30,7 +30,7 @@ ms.locfileid: "83606836"
   
 ### <a name="to-create-a-master-data-services-database"></a>Создание базы данных служб Master Data Services  
   
-1.  Откройте файл [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  На панели слева щелкните **Конфигурация базы данных**.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "83606836"
   
 -   Настройте план обслуживания для резервного копирования базы данных и журналов транзакций. Дополнительные сведения см. в разделе [Требования к базе данных (службы Master Data Services)](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

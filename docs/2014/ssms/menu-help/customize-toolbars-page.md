@@ -12,17 +12,17 @@ ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32e57b44b759ba36ea92cd7d08a600738ff2b4dd
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470011"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859236"
 ---
 # <a name="customize-toolbars-page"></a>Настройка (страница «Панели инструментов»)
   Вкладка **Панели инструментов** позволяет создавать, переименовывать, удалять и сбрасывать панели инструментов. Эту вкладку можно вызвать, выбрав пункт **Настройка** в меню **Сервис** , а затем выбрать вкладку **Панели инструментов**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Панели инструментов**  
  Позволяет отобразить встроенные и созданные панели инструментов. При отображении панели инструментов слева от нее в этом диалоговом окне отображается флажок.  
   

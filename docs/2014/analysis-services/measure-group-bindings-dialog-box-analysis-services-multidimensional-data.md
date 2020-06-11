@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d3d04692ac6576e76d2b630fb5cacb4f57db959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4fb4b20fcccdabdf29aaf57dab65b1604a80a9e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077858"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541606"
 ---
 # <a name="measure-group-bindings-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Привязки группы мер» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Привязки группы мер** для создания и изменения прямых связей между негранулярными атрибутами в измерении куба и столбцами в группе мер для связи обычного измерения, а также для указания параметров обработки значений NULL любого из атрибутов в измерении куба из диалогового окна **Задание связи** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Таблица группы мер**  
  Отображает имя таблицы фактов для выбранной группы мер.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66077858"
 |**Имя атрибута**|Показывает имя атрибута.|  
 |**Таблица измерений**|Отображает имя таблицы измерений, на которой основан атрибут.|  
   
- **Потом**  
+ **Связь**  
  Отображает сетку связей между столбцами таблицы измерений для выбранного атрибута и столбцами таблицы фактов для выбранной группы мер, а также параметр обработки NULL для связи. Сетка содержит следующие столбцы:  
   
 |Параметр|Определение|  
@@ -45,7 +44,7 @@ ms.locfileid: "66077858"
 |**Столбцы группы мер**|Выберите параметр **Унаследован от измерения** , чтобы использовать связь группы мер, унаследованную от измерения, или столбец из таблицы фактов, на котором основана группа мер, чтобы явно определить связь.|  
 |**Обработка NULL**|Выберите параметр обработки значения NULL ‎для атрибута. Дополнительные сведения о параметрах обработки значений NULL см. в разделе [Элемент NullProcessing (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/nullprocessing-element-assl).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Определение связи» &#40;Analysis Services многомерных данных&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

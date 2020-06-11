@@ -5,17 +5,17 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 03e4c5c55610a0a6ac76b1183ae3cc43e72d028e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5d4d302aae5bbfe813bcda328989440b118dee3
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729329"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730810"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Создание настраиваемого рабочего процесса (службы Master Data Services)
 
@@ -121,7 +121,7 @@ ms.locfileid: "73729329"
   
  Создайте бизнес-правило, которое будет запускать пользовательский рабочий процесс в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], выполнив следующие действия.  
   
-1.  В редакторе [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]бизнес-правил, после того как вы указали условия бизнес-правила, перетащите действие **запустить рабочий процесс** из списка **внешние действия** в метку **действия** панели **then** .  
+1.  В редакторе бизнес-правил [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , после того как вы указали условия бизнес-правила, перетащите действие **запустить рабочий процесс** из списка **внешние действия** в метку **действия** панели **then** .  
   
 2.  На панели **Изменение действия** в поле **Тип рабочего процесса** введите тег, который обозначает сборку обработчика рабочего процесса. Это тег, который был задан в файле конфигурации сборки, например, TEST.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5c5effed34dda946d3c65028aa5834f4fbddf7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad5674f576f7a6cf42b396d3e76db457f068e1ee
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077251"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544766"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Изменение свойства KeyColumn атрибута
   Свойство **KeyColumns** атрибута можно изменить. Например, в качестве ключа атрибута может потребоваться не одиночный ключ, а составной.  
@@ -34,7 +33,7 @@ ms.locfileid: "66077251"
   
          -или-  
   
-    -   В конструкторе кубов на вкладке **Структура куба** разверните измерение куба на панели **измерения** и нажмите кнопку ** \<изменить измерение>**.  
+    -   В конструкторе кубов на вкладке **Структура куба** разверните измерение куба на панели **измерения** и нажмите кнопку ** \<dimension> изменить **.  
   
 3.  На вкладке **Структура измерения** , на панели **Атрибуты** , щелкните атрибут, для которого нужно изменить свойство **KeyColumns** .  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66077251"
   
 8.  Чтобы изменить порядок ключевых столбцов, выберите столбец и нажмите кнопку **Вверх** или кнопку **Вниз** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по свойствам атрибута измерения](dimension-attribute-properties-reference.md)  
   
   

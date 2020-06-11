@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7288979fdba0752149d8bdc6491e8c51cdebedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071678"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547516"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Подключение приложения службы PowerPivot к веб-приложению SharePoint в центре администрирования
   Приложение службы PowerPivot может быть использовано неограниченным числом веб-приложений SharePoint в ферме. Чтобы приложение службы PowerPivot стало доступным, его необходимо добавить в список ассоциаций служб.  
@@ -23,7 +22,7 @@ ms.locfileid: "66071678"
 > [!IMPORTANT]  
 >  Наличие приложения службы PowerPivot в группе ассоциаций по умолчанию необходимо для правильной работы панели управления PowerPivot. Не добавляйте в группу по умолчанию более одного приложения службы PowerPivot. Добавление нескольких записей приложений службы одного типа не поддерживается, это может привести к возникновению ошибок. При создании дополнительных приложений службы добавляйте их в пользовательский список.  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Добавление приложения службы PowerPivot в группу по умолчанию](#default)  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66071678"
   
 6.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и настройка приложения службы PowerPivot в центре администрирования](create-and-configure-power-pivot-service-application-in-ca.md)   
  [PowerPivot для SharePoint &#40;начальной конфигурации&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)  
   

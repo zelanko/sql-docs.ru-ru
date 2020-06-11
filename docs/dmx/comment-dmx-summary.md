@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 71e6c616cef5a2f4945a1335e1297aa3ad3a2ce4
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68073088"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669372"
 ---
 # <a name="---comment-dmx-summary"></a>--(Комментарий) (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68073088"
  *Comment_Text*  
  Строка, содержащая текст комментария.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Этот оператор используется для однострочных или вложенных комментариев. Комментарии, вставляемые с помощью двойного дефиса, ограничиваются символом новой строки.  
   
  Длина комментариев не ограничена.  

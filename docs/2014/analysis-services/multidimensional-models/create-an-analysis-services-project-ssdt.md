@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076241"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536356"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Создание проекта служб Analysis Services (среда SSDT)
   Проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно определить либо с помощью шаблона проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , либо с помощью мастера импорта баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , считывающего содержимое базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если в настоящий момент в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]не загружено ни одно решение, при создании нового проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет автоматически создано новое решение. В противном случае новый проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет добавлен в существующее решение. При разработке решений рекомендуется создавать отдельные проекты для разных типов данных приложений и использовать одно решение в том случае, если проекты взаимосвязаны. Например, можно создать одно решение с различными проектами для пакетов служб Integration Services, баз данных служб Analysis Services и отчетов служб Reporting Services, используемых одним и тем же бизнес-приложением.  
   
  Проект служб Analysis Services содержит объекты, используемые в одной базе данных служб Analysis Services. Свойства развертывания проекта задают сервер и имя базы данных, в которой метаданные проекта будут развернуты как созданные экземпляры объектов.  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Создание нового проекта с помощью шаблона проекта служб Analysis Services](#bkmk_NewUsingTemplate)  
   
@@ -115,14 +114,14 @@ ms.locfileid: "66076241"
   
 |Папка|Описание|  
 |------------|-----------------|  
-|обозревателе решений|Содержит источники данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере источников данных и редактируются в конструкторе источников данных.|  
+|Data Sources|Содержит источники данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере источников данных и редактируются в конструкторе источников данных.|  
 |Представления источников данных|Содержит представления источников данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере представлений источников данных и редактируются в конструкторе представлений источников данных.|  
 |Кубы|Содержит кубы для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере кубов и редактируются в конструкторе кубов.|  
 |Измерения|Содержит измерения для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере измерений или мастере кубов и редактируются в конструкторе измерений.|  
 |Структуры интеллектуального анализа данных|Содержит структуры интеллектуального анализа данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти объекты создаются в мастере моделей интеллектуального анализа данных и редактируются в конструкторе моделей интеллектуального анализа данных.|  
 |Роли|Содержит роли базы данных для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Создание и управление ролями осуществляется в конструкторе ролей.|  
 |Сборки|Содержит ссылки на библиотеки COM и сборки платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ссылки создаются при помощи диалогового окна **Добавление ссылки** .|  
-|Прочее|Содержит все типы файлов, за исключением типов файлов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В эту папку проекта добавляются прочие файлы, например текстовые файлы, содержащие примечания по проекту.|  
+|Разное|Содержит все типы файлов, за исключением типов файлов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В эту папку проекта добавляются прочие файлы, например текстовые файлы, содержащие примечания по проекту.|  
   
 ##  <a name="analysis-services-file-types"></a><a name="bkmk_FileTypes"></a> Типы файлов служб Analysis Services  
  Решение в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] может содержать несколько типов файлов, в зависимости от того, какие проекты включены в решение и какие элементы включены в каждый из проектов этого решения. Обычно файлы для каждого проекта в решении среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] хранятся в папке решения, в отдельной папке для каждого проекта.  
@@ -153,13 +152,13 @@ ms.locfileid: "66076241"
 |Категория|Шаблон элемента|Описание|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Элементы проекта|Cube|Запускает «Мастер кубов» для добавления нового куба к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-||Источник данных|Запускает «Мастер источников данных», чтобы добавить новый источник данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||источника данных|Запускает «Мастер источников данных», чтобы добавить новый источник данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Представление источника данных|Запускает «Мастер представлений источников данных», чтобы добавить новое представление источника данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Роль базы данных|Добавляет новую роль базы данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем отображает «Конструктор ролей» для новой роли базы данных.|  
 ||Измерение|Запускает «Мастер измерений» для добавления измерения базы данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Структура интеллектуального анализа данных|Запускает «Мастер интеллектуального анализа данных», чтобы добавить новую структуру интеллектуального анализа данных и связанную с ней модель интеллектуального анализа данных к проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка Analysis Services свойств проекта &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Сборка Analysis Services проектов &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Развертывание проектов служб Analysis Services (среда SSDT)](deploy-analysis-services-projects-ssdt.md)  

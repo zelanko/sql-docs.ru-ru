@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fcbfb95070783db002d34870e5508df5322210d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 05bb9bc1ad4dfeed1cf2747a8d5bb854fec8d9af
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008200"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669699"
 ---
 # <a name="operators---comparison"></a>Операторы — сравнение
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Операторы сравнения можно использовать с скалярными данными в любом выражении расширений интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Результаты выполнения операторов сравнения принимают значения логического типа: TRUE или FALSE в зависимости от выполнения проверяемого условия.  
+  Операторы сравнения можно использовать с скалярными данными в любом выражении расширений интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Результаты выполнения операторов сравнения принимают значения логического типа: TRUE или FALSE в зависимости от выполнения проверяемого условия.  
   
  В следующей таблице приводятся операторы сравнения, поддерживаемые расширениями интеллектуального анализа данных.  
   

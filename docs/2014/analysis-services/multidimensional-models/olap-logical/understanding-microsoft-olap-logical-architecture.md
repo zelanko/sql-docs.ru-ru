@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93361fb14bc6544ffa7376439c2da0c8e06c3fb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725488"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545958"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>Логическая архитектура (службы Analysis Services — многомерные данные)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует как серверные, так и клиентские компоненты для предоставления функциональных возможностей OLAP и интеллектуального анализа данных для приложений бизнес- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] аналитики:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] использует как серверные, так и клиентские компоненты для предоставления функциональных возможностей OLAP и интеллектуального анализа данных для приложений бизнес-аналитики:  
   
--   Серверный компонент служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализован в виде службы Microsoft Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает несколько экземпляров на одном компьютере, при этом каждый экземпляр [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализуется как отдельный экземпляр службы Windows.  
+-   Серверный компонент служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализован в виде службы Microsoft Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]поддерживает несколько экземпляров на одном компьютере, при этом каждый экземпляр [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] реализуется как отдельный экземпляр службы Windows.  
   
 -   Клиенты обмениваются данными со службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с помощью общедоступного стандарта XML для аналитики (XMLA), который представляет собой протокол на базе SOAP для выполнения команд и получения ответов и предоставляется в виде веб-службы. Клиентские модели объектов также предоставляются через XML для аналитики, и доступ к ним производится через управляемый поставщик, например ADOMD.NET, или через собственный поставщик данных OLE DB.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62725488"
  **Безопасность доступа пользователей**  
  [Архитектура безопасности доступа пользователей](understanding-microsoft-olap-logical-architecture.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения об архитектуре Microsoft OLAP](../olap-physical/understanding-microsoft-olap-architecture.md)   
  [Физическая архитектура (службы Analysis Services — многомерные данные)](../olap-physical/understanding-microsoft-olap-physical-architecture.md)  
   

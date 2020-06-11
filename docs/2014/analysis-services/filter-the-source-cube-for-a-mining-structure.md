@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081151"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544456"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>отфильтровать исходный куб для структуры интеллектуального анализа данных
   При создании структуры интеллектуального анализа, основанной на данных в многомерной модели (кубе OLAP), можно выполнить *срез* Куба, на котором основана структура интеллектуального анализа данных. Создание сечения позволяет выделить подмножество данных, аналогично фильтрации данных, используемой для обучения модели интеллектуального анализа.  
   
 ### <a name="to-slice-a-cube"></a>Выполнение среза куба  
   
-1.  В конструкторе интеллектуального [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]анализа данных в выберите вкладку **Структура интеллектуального анализа** или **модели интеллектуального анализа** данных.  
+1.  В конструкторе интеллектуального анализа данных в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] выберите вкладку **Структура интеллектуального анализа** или **модели интеллектуального анализа** данных.  
   
 2.  В меню **модель интеллектуального анализа данных** выберите пункт **определить срез куба структуры интеллектуального анализа данных**.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66081151"
   
      Теперь исходный куб отфильтрован в соответствии с заданным срезом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](data-mining/mining-structure-tasks-and-how-tos.md)   
  [создать новую структуру интеллектуального анализа OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   
