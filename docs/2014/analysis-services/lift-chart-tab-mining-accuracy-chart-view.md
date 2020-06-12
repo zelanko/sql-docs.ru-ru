@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078095"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541896"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Вкладка «Диаграмма точности прогнозов» (представление диаграммы точности интеллектуального анализа данных)
   Панель **Диаграмма точности прогнозов** позволяет просмотреть диаграмму, в которой сравниваются все выбранные модели интеллектуального анализа данных, имеющиеся в выбранной структуре интеллектуального анализа данных.  
@@ -30,7 +29,7 @@ ms.locfileid: "66078095"
   
  Общие сведения о методах измерения точности моделей интеллектуального анализа данных см. в разделе [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](data-mining/lift-chart-analysis-services-data-mining.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Тип диаграммы**  
  Устанавливает тип отображаемой в окне просмотра диаграммы. Можно выбрать либо **Диаграмма точности прогнозов** , либо **Диаграмма роста прибыли**.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66078095"
  **Копирование**  
  Копирует диаграмму в буфер обмена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  

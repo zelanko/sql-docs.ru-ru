@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e750e286d7a58bee8c6979515fe163119175d529
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072863"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547340"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Поддерживаемые источники данных (многомерные службы SSAS)
   В этом разделе описываются типы источников данных, которые можно использовать в многомерной модели.  
@@ -46,7 +45,7 @@ ms.locfileid: "66072863"
   
  <sup>1</sup> источники данных ODBC не поддерживаются для многомерных решений. Хотя соединение будут обеспечивать сами службы Analysis Services, конструкторы в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , применяемые для создания решений, не могут подключаться к источнику данных ODBC, даже если используется драйвер MSDASQL. Если бизнес-требования включают источник данных ODBC, рассмотрите альтернативную возможность — создание табличного решения.  
   
- <sup>2</sup> дополнительные сведения см. в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]разделе на [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> дополнительные сведения см [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . в разделе на [Azure.Microsoft.com](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
  <sup>3</sup> дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] PDW см. в статье [SQL Server Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66072863"
   
  <sup>5</sup> для некоторых функций требуется SQL Server реляционной базы данных, которая работает в локальной среде. Это требуется для функции обратной записи и хранилища ROLAP — используемый источник данных должен быть реляционной базой данных SQL Server.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддерживаемые источники данных &#40;табличные&#41;SSAS](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Источники данных в многомерных моделях](data-sources-in-multidimensional-models.md)   
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 513873fdf808ff62058ad765983cb1ebd512cd2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073072"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545711"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Мастер формирования схем (службы Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает два метода работы с реляционными схемами при определении объектов OLAP в рамках проекта или базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В целом, определение объектов OLAP основано на модели логических данных, созданной в представлении источника данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Такое представление источника данных определяется на основе элементов схемы одного или более источников реляционных данных в соответствии с настройками представления источников данных.  
@@ -43,7 +42,7 @@ ms.locfileid: "66073072"
 |[Основные сведения о схемах баз данных](understanding-the-database-schemas.md)|Содержит описание схемы, формируемой для баз данных предметной области и промежуточной области.|  
 |[Основные сведения о добавочном создании](understanding-incremental-generation.md)|Содержит описание возможностей постепенного создания мастера формирования схем.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
  [Источники данных в многомерных моделях](data-sources-in-multidimensional-models.md)   
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c9da6edef576a6ab25c183cbc87ff95cc056845
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727760"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545384"
 ---
 # <a name="calling-stored-procedures"></a>Вызов хранимых процедур
   Хранимые процедуры можно вызывать на сервере или из клиентского приложения. В любом случае хранимые процедуры всегда выполняются на сервере либо в контексте сервера, либо в контексте базы данных. Для выполнения хранимой процедуры не нужны специальные разрешения. После того как хранимая процедура добавлена сборкой к контексту сервера или базы данных, любой пользователь может выполнить эту хранимую процедуру, если только роль для этого пользователя разрешает действия, выполняемые этой хранимой процедурой.  
@@ -81,7 +80,7 @@ Call MyStoredProcedure(a,b,c)
 CALL(MyVoidFunction)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками многомерной модели](../multidimensional-models/multidimensional-model-assemblies-management.md)   
  [Определение хранимых процедур](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

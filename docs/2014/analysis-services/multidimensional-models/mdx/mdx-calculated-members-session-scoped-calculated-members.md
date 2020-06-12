@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fe7a9f137d8b74eaa5bad104dbfdb471dd14588
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074553"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546466"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Создание вычисляемых элементов с областью действия сеанса (многомерные выражения)
   Для создания вычисляемых элементов, доступных в сеансе многомерных выражений, используется инструкция [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) . Вычисляемый элемент, созданный с помощью инструкции CREATE MEMBER, удаляется только при закрытии сеанса многомерных выражений.  
@@ -51,7 +50,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание вычисляемых элементов с областью действия запроса (многомерные выражения)](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

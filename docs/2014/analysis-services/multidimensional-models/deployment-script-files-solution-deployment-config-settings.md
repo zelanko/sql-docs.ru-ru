@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8addba32560e136f68e538240f4fce01f826355e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31f269e601900535c3d375ed6e76376fa2bcdf63
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075268"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546846"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Указание настроек конфигурации для развертывания решения
-  Мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания считывает параметры развертывания секций и ролей, которые используются в скрипте развертывания, из \<файла *Project Name*>. configsettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует параметры конфигурации текущего проекта для создания \< *имени проекта*> файл. configsettings.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Мастер развертывания считывает параметры развертывания секций и ролей, которые используются в скрипте развертывания из \<*project name*> файла configsettings. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует параметры конфигурации текущего проекта для создания \<*project name*> файла configsettings.  
   
 ## <a name="reviewing-the-configuration-settings-for-deployment"></a>Просмотр настроек конфигурации для развертывания  
- Ниже приведены параметры конфигурации, которые хранятся в \<файле *Project Name*>. configsettings:  
+ Ниже приведены параметры конфигурации, хранящиеся в \<*project name*> файле. configsettings:  
   
 -   **Data Source Connection Strings** . Это строки подключений для каждого источника данных, основанные на значениях, заданных в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Идентификатор пользователя и пароль всегда удаляются из строки соединения до того, как оставшаяся часть строки сохраняется в этом файле. Однако если мастер развертывания выполняет развертывание непосредственно в экземпляре служб Analysis Services, можно ввести нужный идентификатор пользователя и пароль в мастере, что обеспечит успешную обработку развертываемой базы данных. Эти сведения о соединении не сохраняются в самом скрипте развертывания, если он сохраняется мастером развертывания.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "66075268"
 -   **Report Server** . Этот параметр задает сервер отчетов и местоположение папки для каждого действия отчета, определенного в каждом кубе в базе данных.  
   
 ## <a name="modifying-the-configuration-settings-for-deployment"></a>Изменение настроек конфигурации для развертывания  
- В некоторых случаях может потребоваться развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проект, используя параметры конфигурации, \<отличные от параметров, хранящихся в файле *Project Name*>. configsettings. Например, может быть необходимо изменить строку соединения с одним или несколькими источниками данных или задать места хранения для конкретных секций или групп мер.  
+ В некоторых случаях может потребоваться развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проект, используя параметры конфигурации, отличные от параметров, хранящихся в \<*project name*> configsettings-файле. Например, может быть необходимо изменить строку соединения с одним или несколькими источниками данных или задать места хранения для конкретных секций или групп мер.  
   
- Чтобы изменить развертывание секций и ролей в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекте, необходимо изменить эти сведения в файле с \< *именем проекта*>. configsettings, как описано в следующей процедуре. Нельзя изменить параметры секций и ролей в проекте, так как [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] * \<* диалоговое окно **страницы свойств>свойства** в не отображает эти параметры.  
+ Чтобы изменить развертывание секций и ролей в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекте, необходимо изменить эти сведения в \<*project name*> файле. configsettings, как описано в следующей процедуре. Нельзя изменить параметры секций и ролей в проекте, так как *\<project name>* диалоговое окно **страницы свойств** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не отображает эти параметры.  
   
 > [!NOTE]  
->  Настройки конфигурации могут применяться ко всем объектам или только ко вновь созданным объектам. Применяйте параметры конфигурации ко вновь созданным объектам только при развертывании дополнительных объектов в ранее развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , если не нужно перезаписывать существующие объекты. Чтобы указать, применяются ли параметры конфигурации ко всем объектам или только к вновь созданным, установите этот параметр в \<файле *Project Name*>. deploymentoptions. Дополнительные сведения см. в статье [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md).  
+>  Настройки конфигурации могут применяться ко всем объектам или только ко вновь созданным объектам. Применяйте параметры конфигурации ко вновь созданным объектам только при развертывании дополнительных объектов в ранее развернутой базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , если не нужно перезаписывать существующие объекты. Чтобы указать, применяются ли параметры конфигурации ко всем объектам или только к вновь созданным, установите этот параметр в \<*project name*> файле. deploymentoptions. Дополнительные сведения см. в статье [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md).  
   
 #### <a name="to-change-configuration-settings-after-the-input-files-have-been-generated"></a>Изменение настройки конфигурации после формирования входных файлов  
   
@@ -57,9 +56,9 @@ ms.locfileid: "66075268"
   
      -или-  
   
--   \<Измените *имя проекта*>. configsettings с помощью любого текстового редактора.  
+-   Измените \<*project name*> файл configsettings с помощью любого текстового редактора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание целевого объекта установки](deployment-script-files-specifying-the-installation-target.md)   
  [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: bb62e3c9-462f-4ad2-ac8e-92e2f9e9cc28
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e149d5f7a6a8e14fbedc8e85ef31cbf42438b751
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543471"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Урок 2. Определение и развертывание куба
-  После определения представления источника данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекте можно приступать к определению исходного [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Куба.  
+  После определения представления источника данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекте можно приступать к определению исходного [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] куба.  
   
  Кроме того, можно определить куб и его измерения за один проход с помощью мастера кубов. Также можно определить одно или несколько измерений, а затем с помощью мастера кубов определить куб, в котором они будут использоваться. Разработку сложного решения обычно начинают с определения измерений. Дополнительные сведения см. в разделе [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md) или [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66078938"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 3. Изменение мер, атрибутов и иерархий](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
  [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   

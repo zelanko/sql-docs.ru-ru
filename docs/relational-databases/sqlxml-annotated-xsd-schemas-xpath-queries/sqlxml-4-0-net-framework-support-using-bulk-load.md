@@ -1,5 +1,6 @@
 ---
 title: Использование массовой загрузки SQLXML в среде .NET
+description: Узнайте, как использовать COM-объект групповой загрузки SQLXML 4,0 в среде .NET для выполнения групповой загрузки XML-данных в базу данных.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d60df5334b34061138852340e56876057e398c79
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252451"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529838"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Поддержка SQLXML 4.0 на платформе .NET Framework — использование массовой загрузки
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,13 +110,13 @@ ms.locfileid: "75252451"
     </ROOT>  
     ```  
   
-4.  Запустите среду Visual Studio.  
+4.  Запустите Visual Studio.  
   
-5.  Создайте приложение командной строки на языке C#.  
+5.  Создайте консольное приложение C#.  
   
 6.  В меню **проект** выберите команду **Добавить ссылку**.  
   
-7.  На вкладке **com** выберите **БИБЛИОТЕКУ типов Microsoft SQLXML Bulkload 4,0** (xblkld4. dll) и нажмите кнопку **ОК**. Вы увидите сборку **Interop. SQLXMLBULKLOADLib** , созданную в проекте.  
+7.  На вкладке **com** выберите **БИБЛИОТЕКУ типов Microsoft SQLXML Bulkload 4,0** (xblkld4.dll) и нажмите кнопку **ОК**. Вы увидите сборку **Interop. SQLXMLBULKLOADLib** , созданную в проекте.  
   
 8.  Замените метод Main() на следующий код. Обновите свойство **ConnectionString** и путь к файлу схемы и файлов данных.  
   

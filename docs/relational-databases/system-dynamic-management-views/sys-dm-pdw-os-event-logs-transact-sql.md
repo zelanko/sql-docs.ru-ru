@@ -3,8 +3,8 @@ title: sys. dm_pdw_os_event_logs (Transact-SQL) | Документация Ма�
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -12,12 +12,12 @@ ms.assetid: a0daa8cf-72e2-4349-8be1-d3cc0f9b1e02
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed27e25a1aa977c8fc78186ae2bc9f96ee0e231e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b410cd5a710e0f18bb7afa139e9ef08cfa466ae8
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819362"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627332"
 ---
 # <a name="sysdm_pdw_os_event_logs-transact-sql"></a>sys. dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "82819362"
   
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) . 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

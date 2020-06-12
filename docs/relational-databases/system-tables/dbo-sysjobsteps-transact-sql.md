@@ -1,5 +1,5 @@
 ---
-title: dbo. сисжобстепс (Transact-SQL) | Документация Майкрософт
+title: dbo.sysJobSteps (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d98b1ccc4dc8da3ba9d494a78bfea3727102da07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4bf7ed1c52aedb63ffe1e2e257022e004b327787
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827327"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423406"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "82827327"
 |**step_id**|**int**|Идентификатор этапа в задании.|  
 |**step_name**|**sysname**|Имя шага задания.|  
 |**подсистемы**|**nvarchar(40)**|Имя подсистемы, используемой агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения шага задания.|  
-|**кнопки**|**nvarchar(max)**|Команда, выполняемая **подсистемой**.|  
+|**command**|**nvarchar(max)**|Команда, выполняемая **подсистемой**.|  
 |**flags**|**int**|Зарезервировано.|  
 |**additional_parameters**|**ntext**|Зарезервировано.|  
 |**cmdexec_success_code**|**int**|Значение уровня ошибки, возвращаемое шагами подсистемы **CmdExec** для обозначения успеха.|  
-|**on_success_action**|**tinyint**|Действие, выполняемое в случае успешного завершения шага.|  
+|**on_success_action**|**tinyint**|Действие, выполняемое в случае успешного завершения шага.<br /><br /> **1** = (по умолчанию) выход с успешным выполнением<br /><br /> **2** = завершить с ошибкой<br /><br /> **3** = перейти к следующему шагу<br /><br /> **4** = перейти к шагу _on_success_step_id_|
 |**on_success_step_id**|**int**|Идентификатор следующего этапа, выполняемого в случае успешного завершения шага.|  
-|**on_fail_action**|**tinyint**|Действие, выполняемое в случае неуспешного завершения шага.|  
+|**on_fail_action**|**tinyint**|Действие, выполняемое в случае неуспешного завершения шага.<br /><br /> **1** = завершить успешно<br /><br /> **2** = (по умолчанию) выход с ошибкой<br /><br /> **3** = перейти к следующему шагу<br /><br /> **4** = перейти к шагу _on_fail_step_id_|
 |**on_fail_step_id**|**int**|Идентификатор следующего этапа, выполняемого в случае неуспешного завершения шага.|  
-|**сервером**|**sysname**|Зарезервировано.|  
+|**server**|**sysname**|Зарезервировано.|  
 |**database_name**|**sysname**|Имя базы данных, в которой выполняется **команда** , если в качестве **подсистемы** используется TSQL.|  
 |**database_user_name**|**sysname**|Имя пользователя базы данных, чья учетная запись будет использоваться для выполнения шага.|  
 |**retry_attempts**|**int**|Число попыток повтора при неуспешном завершении шага.|  
@@ -60,7 +60,7 @@ ms.locfileid: "82827327"
 |**proxy_id**|**int**|Учетная запись-посредник для шага задания.|  
 |**step_uid**|**uniqueidentifier**|Идентификатор шага задания.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агент SQL Serverные таблицы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/sql-server-agent-tables-transact-sql.md)  
   
   

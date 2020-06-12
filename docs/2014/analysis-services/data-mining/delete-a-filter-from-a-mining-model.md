@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 91220b21-adbc-49a9-b200-8bf0a724eff1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dec570bb4ef4a499c5f141d62b15467212d2ae
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084733"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522601"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>удалить фильтр из модели интеллектуального анализа данных
   При создании фильтра для модели интеллектуального анализа можно создавать модели для подмножества данных в представлении источника данных. Фильтры также полезны при тестировании точности модели на подмножестве исходных данных.  
@@ -58,7 +57,7 @@ ms.locfileid: "66084733"
   
 3.  Нажмите клавишу "BACKSPACE" или "DELETE".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Детализация до данных вариантов из модели интеллектуального анализа данных](drill-through-to-case-data-from-a-mining-model.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
  [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-models-analysis-services-data-mining.md)  

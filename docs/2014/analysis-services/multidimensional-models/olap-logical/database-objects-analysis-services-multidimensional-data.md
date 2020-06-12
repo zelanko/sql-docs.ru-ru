@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d61e3213356146e1cf9e452e0b62e02c96bd4902
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725660"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546046"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Объекты баз данных (службы Analysis Services — многомерные данные)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] объекты и сборки базы данных для использования с оперативной аналитической обработкой (OLAP) и интеллектуальным анализом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] данных.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Экземпляр содержит объекты и сборки базы данных для использования с оперативной аналитической обработкой (OLAP) и интеллектуальным анализом данных.  
   
 -   В базах данных содержатся объекты OLAP и интеллектуального анализа данных, такие как источники данных, представления источников данных, кубы, меры, группы мер, атрибуты, иерархии, структуры и модели интеллектуального анализа данных, а также роли.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62725660"
 |[Роли безопасности (службы Analysis Services — многомерные данные)](security-roles-analysis-services-multidimensional-data.md)|Содержит описание роли, механизма безопасности, используемого для управления доступом к объектам в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Управление сборками многомерной модели](../multidimensional-model-assemblies-management.md)|Содержит описание сборки, коллекции пользовательских функций, используемой для расширения языков многомерных выражений и для расширений интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](../supported-data-sources-ssas-multidimensional.md)   
  [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-model-solutions-ssas.md)   
  [Решения интеллектуального анализа данных](../../data-mining/data-mining-solutions.md)  

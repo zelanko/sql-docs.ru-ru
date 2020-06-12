@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071635"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547486"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot
   Сведения, приведенные в этом разделе, помогут настроить соединение семантической модели бизнес-аналитики, которое перенаправляет на книгу PowerPivot в той же ферме.  
@@ -32,14 +31,14 @@ ms.locfileid: "66071635"
   
  [Настройка разрешений SharePoint для книги](#bkmk_userdb)  
   
- [Дальнейшие действия](#bkmk_next)  
+ [Следующие шаги](#bkmk_next)  
   
-##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a> Проверка предварительных требований  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Проверка предварительных требований  
  Для создания файла соединения семантической модели бизнес-аналитики требуется разрешение «Участие» или выше.  
   
  Необходима библиотека, поддерживающая тип содержимого соединения семантической модели бизнес-аналитики. Дополнительные сведения см. в разделе [Добавление типа содержимого соединения семантической модели бизнес-аналитики в библиотеку &#40;PowerPivot для SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Необходимо ознакомиться с URL-адресом книги PowerPivot, для которой настраивается соединение семантической модели бизнес-аналитики (например http://adventure-works/shared , Documents/MyWorkbook. xlsx). Книга должна находиться в той же ферме.  
+ Необходимо указать URL-адрес книги PowerPivot, для которой настраивается соединение семантической модели бизнес-аналитики (например, http://adventure-works/shared Documents/myworkbook.xlsx). Книга должна находиться в той же ферме.  
   
  Все компьютеры и пользователи, участвующие в последовательности соединения, должны относиться к одному домену или находиться в доверенном домене (двустороннее доверие).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071635"
   
      ![Подменю «Создать документ» в библиотеке SharePoint](../media/ssas-bismconnection-new.gif "Подменю «Создать документ» в библиотеке SharePoint")  
   
-2.  Задайте для свойства **сервера** URL-адрес SharePoint книги PowerPivot (например, ** http://mysharepoint/shared Documents/myWorkbook. xlsx**). При развертывании PowerPivot для SharePoint данные могут быть загружены на любой сервер в ферме. По этой причине в соединениях с источниками данных PowerPivot указывается только путь к рабочей книге. Системная служба PowerPivot определяет, какой сервер загружает данные.  
+2.  Задайте для свойства **сервера** URL-адрес SharePoint книги PowerPivot (например, ** http://mysharepoint/shared Documents/myWorkbook.xlsx**. При развертывании PowerPivot для SharePoint данные могут быть загружены на любой сервер в ферме. По этой причине в соединениях с источниками данных PowerPivot указывается только путь к рабочей книге. Системная служба PowerPivot определяет, какой сервер загружает данные.  
   
      Не используйте свойство **базы данных** . Он не используется при указании расположения книги PowerPivot.  
   
@@ -96,7 +95,7 @@ ms.locfileid: "66071635"
 ##  <a name="next-steps"></a><a name="bkmk_next"></a> Дальнейшие действия  
  После создания и обеспечения безопасности соединения семантической модели бизнес-аналитики его можно указать в качестве источника данных. Дополнительные сведения см. в разделе [Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединение семантической модели бизнес-аналитики PowerPivot &#40;. BISM&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
  [Использование соединения семантической модели бизнес-аналитики в Excel или Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  

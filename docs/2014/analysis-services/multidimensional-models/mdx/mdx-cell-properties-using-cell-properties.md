@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8888414e3ceefa237cb4f2317d3d78926765d691
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074341"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546456"
 ---
 # <a name="using-cell-properties-mdx"></a>Свойства ячеек (многомерные выражения)
   Свойства ячеек в языке многомерных выражений содержат сведения о содержимом и формате ячеек многомерного источника данных, такого как куб.  
@@ -63,7 +62,7 @@ SELECT [<axis_specification>
 |`UPDATEABLE`|Значение, определяющее возможность обновления ячейки. Это свойство может принимать одно из следующих значений:<br /><br /> `MD_MASK_ENABLED`(0x00000000) ячейку можно обновить.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) ячейка не может быть обновлена.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) ячейка может быть обновлена в наборе ячеек.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) ячейку можно обновить с помощью инструкции UPDATE. Операция может не выполниться, если обновляемая конечная ячейка не доступна для записи.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) ячейка не может быть обновлена, поскольку в ее координатах ячейка имеет вычисляемый элемент; ячейка была извлечена с набором в предложении WHERE. Ячейку можно обновить, даже если значение ячейки зависит от формулы или от вычисляемого элемента (например, если она обрабатывается статистической функцией). В этом случае итоговое значение ячейки может не соответствовать обновленному значению, поскольку на результат влияют вычисления.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) ячейка не может быть обновлена, так как не удается обновить меры, не являющиеся суммами (Count, min, Max, Distinct Count, полуаддитивные).<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) ячейка не может быть обновлена, поскольку ячейка не существует, так как она находится на пересечении меры и элемента измерения, не связанного с группой мер меры.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) ячейка не может быть обновлена, так как ячейка защищена.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) зарезервировано для будущего использования.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) ячейка не может быть обновлена по внутренним причинам.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) ячейка не может быть обновлена, поскольку обновление не поддерживается в моделях интеллектуального анализа данных, косвенных размерах или измерениях интеллектуального анализа.|  
 |`VALUE`|Неформатированное значение ячейки.|  
   
- Для работы с ячейками требуются только свойства ячеек `CELL_ORDINAL`, `FORMATTED_VALUE` и `VALUE`. Все внутренние или предоставленные поставщиком свойства ячеек, включая их типы данных и поддержку поставщиками, определены в наборе строк схемы `PROPERTIES`. Дополнительные сведения о наборе `PROPERTIES` строк схемы см. в разделе [MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
+ Для работы с ячейками требуются только свойства ячеек `CELL_ORDINAL`, `FORMATTED_VALUE` и `VALUE`. Все внутренние или предоставленные поставщиком свойства ячеек, включая их типы данных и поддержку поставщиками, определены в наборе строк схемы `PROPERTIES`. Дополнительные сведения о `PROPERTIES` наборе строк схемы см. в разделе [MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset).  
   
  По умолчанию, если не используется ключевое слово `CELL PROPERTIES`, возвращаются свойства ячеек `VALUE`, `FORMATTED_VALUE` и `CELL_ORDINAL` (именно в этом порядке). Если используется ключевое слово `CELL PROPERTIES`, возвращаются свойства ячеек, явно перечисленные в ключевом слове.  
   
@@ -94,7 +93,7 @@ FROM [Adventure Works]
 CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)  
   
   

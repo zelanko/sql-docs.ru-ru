@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062441"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528040"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Сценарий учебника по службам Analysis Services
   Этот учебник основывается на вымышленной организации [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] — крупная транснациональная производственная компания, производящая и реализующая металлические и композитные велосипеды на рынках Северной Америки, Европы и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
@@ -62,7 +61,7 @@ ms.locfileid: "66062441"
   
  Занятия в учебнике по службам Analysis Services позволяют изучить создание базы данных куба, которая удовлетворяет всем этим требованиям. Чтобы приступить к изучению этого учебника, перейдите к первому занятию: [Занятие 1. Создание нового проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Многомерное моделирование (учебник по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

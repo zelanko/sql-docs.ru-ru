@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075226"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546836"
 ---
 # <a name="specifying-processing-options"></a>Указание параметров обработки
-  Мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания считывает параметры обработки из файла с \< *именем проекта*>. deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует параметры обработки, указанные на странице **развертывание** диалогового окна свойства * \<имя проекта>* диалоговом окне **страницы свойств** , чтобы создать \< *имя проекта*> файл. deploymentoptions.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Мастер развертывания считывает параметры обработки из \<*project name*> файла deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует параметры обработки, указанные на странице **развертывание** *\<project name>* диалогового окна **страницы свойств** , для создания \<*project name*> файла deploymentoptions.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Просмотр параметров обработки для развертывания  
- Параметры конфигурации, хранящиеся в \<файле с *именем проекта*>. deploymentoptions, выглядят следующим образом:  
+ Ниже приведены параметры конфигурации, хранящиеся в \<*project name*> файле deploymentoptions.  
   
 -   **Метод обработки** Эта настройка контролирует, обрабатываются ли развернутые объекты после развертывания, а также тип обработки, который будет выполнен. Существуют три параметра обработки.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66075226"
   
     -   Полная обработка.  
   
-    -   Отсутствуют  
+    -   None  
   
 -   **Параметры таблицы обратной записи.** Если включена обратная запись для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , то эта настройка определяет обработку обратной записи. Существуют три параметра таблицы обратной записи.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075226"
     -   Если значение этого параметра установлено равным `False`, то службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывают изменения метаданных в одной транзакции и развертывают каждую команду обработки в ее собственной транзакции.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Изменение параметров обработки для развертывания  
- Однако может потребоваться развернуть проект, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используя параметры обработки, отличные от параметров, \<хранящихся в файле *Project Name*>. deploymentoptions. Например может быть необходимо полностью обработать все объекты или обработать их с использованием параметра обработки по умолчанию, или не обрабатывать вообще. Если разрешена запись в кубы или измерения, то можно указать, будет ли использоваться новая или существующая таблица обратной записи.  
+ Однако может потребоваться развернуть [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проект, используя параметры обработки, отличные от тех, которые хранятся в \<*project name*> deploymentoptions-файле. Например может быть необходимо полностью обработать все объекты или обработать их с использованием параметра обработки по умолчанию, или не обрабатывать вообще. Если разрешена запись в кубы или измерения, то можно указать, будет ли использоваться новая или существующая таблица обратной записи.  
   
  Чтобы изменить параметры обработки во время развертывания, можно либо исправить и повторно собрать проект, либо изменить параметры обработки во входном файле, используя один из методов, описанных в следующей процедуре.  
   
@@ -66,9 +65,9 @@ ms.locfileid: "66075226"
   
      -или-  
   
--   \<Измените *имя проекта*>. deploymentoptions с помощью любого текстового редактора.  
+-   Измените \<*project name*> файл deploymentoptions с помощью любого текстового редактора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание целевого объекта установки](deployment-script-files-specifying-the-installation-target.md)   
  [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md)   
  [Указание настроек конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)  

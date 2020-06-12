@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbf379d1-0859-414a-a63f-ddc7f789b422
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0862091d6ac2039074c2bb79012c128a819e8c54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077781"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545476"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Конструктор диаграммы точности интеллектуального анализа данных (интеллектуальный анализ данных)
   Используйте представление **Диаграмма точности интеллектуального анализа данных** , чтобы сравнить эффективность выполнения моделей интеллектуального анализа данных, построенных на основе выбранной структуры интеллектуального анализа данных.  
@@ -56,7 +55,7 @@ ms.locfileid: "66077781"
   
 -   [Диалоговое окно "Фильтр набора данных" или "Фильтр модели"](data-set-filter-or-model-filter-dialog-box.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представление структуры интеллектуального анализа &#40;конструктора моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Представление моделей интеллектуального анализа данных в конструкторе моделей интеллектуального анализа &#40;&#41;](mining-models-view-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   

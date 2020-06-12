@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073293"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545826"
 ---
 # <a name="processing-analysis-services-objects"></a>Обработка объектов служб Analysis Services
   Обработка влияет на следующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] типы объектов: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных, Кубы, измерения, группы мер, секции, структуры и модели интеллектуального анализа данных. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "66073293"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a>Обработка измерения  
  При обработке измерения службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают и выполняют запрос, который возвращает из таблицы измерения данные, необходимые для обработки.  
   
-|Country|Регион продаж|Состояние|  
+|Страна или регион|Регион продаж|Состояние|  
 |-------------|------------------|-----------|  
 |США|West|Калифорния|  
 |США|West|Орегон|  
@@ -92,7 +91,7 @@ ms.locfileid: "66073293"
   
  Дополнительные сведения об обработке структур и моделей интеллектуального анализа данных см. в разделе [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](../data-mining/processing-requirements-and-considerations-data-mining.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства и подходы для обработки &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Пакетная обработка &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  

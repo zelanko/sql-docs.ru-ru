@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0f0212795adcaed220806f8cc1349f95c2a6f3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070483"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539577"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Запрос (надстройки интеллектуального анализа данных SQL Server)
   ![Кнопка «Модель запроса» на ленте «Интеллектуальный анализ данных»](media/dmc-query.gif "Кнопка «Модель запроса» на ленте «Интеллектуальный анализ данных»")  
@@ -50,7 +49,7 @@ ms.locfileid: "66070483"
 ### <a name="requirements"></a>Требования  
  Чтобы использовать **мастер запросов** , необходимо установить соединение с экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Кроме того, сервер должен содержать по меньшей мере одну модель интеллектуального анализа данных соответствующего типа. Если нет доступной модели интеллектуального анализа данных, ее можно создать с помощью мастеров клиента интеллектуального анализа данных для Excel. Сведения о создании нового режима интеллектуального анализа с помощью мастера см. в разделе [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание и масштабирование моделей интеллектуального анализа &#40;надстройки интеллектуального анализа данных для Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
  [Клиент интеллектуального анализа данных для Excel &#40;SQL Server надстройки интеллектуального анализа данных&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   

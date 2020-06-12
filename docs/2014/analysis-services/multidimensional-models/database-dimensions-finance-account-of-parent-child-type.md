@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28a7cf6b3a712144daead54d521fb3cc6936c99e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad3c9733003a22b2d75b483e792e097ae229233
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075920"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547136"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Создание учетной записи Finance с измерением типа «родитель-потомок»
-  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]службах измерение типа «счет» — это измерение, атрибуты которого представляют диаграмму счетов для целей финансовой отчетности.  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] службах измерение типа «счет» — это измерение, атрибуты которого представляют диаграмму счетов для целей финансовой отчетности.  
   
  Измерение счетов позволяет выборочно управлять поведением статистической обработки счетов во времени. Измерение счетов также позволяет использовать стандартный механизм разрешения большинства нестандартных проблем, связанных со статистическими выражениями, которые часто возникают в решениях бизнес-аналитики, обрабатывающих финансовые данные. Если такого стандартного механизма нет, то для решения нестандартных проблем, связанных со статистической обработкой, потребуются пользовательские формулы свертки, вычисляемые элементы или скрипты многомерных выражений.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66075920"
 ## <a name="adding-account-intelligence-with-the-business-intelligence-wizard"></a>Добавление логики операций со счетами при помощи мастера бизнес-аналитики  
  После определения измерения счетов и добавления измерения в куб можно добавить логику операций со счетами, например определение и сопоставление типов счетов, в измерение при помощи мастера бизнес-аналитики. Дополнительные сведения см. в разделе [Добавление логики операций со счетами к измерению](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справка F1 мастера бизнес-аналитики](../business-intelligence-wizard-f1-help.md)   
  [Типы измерений](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65f7c51f3bba2431ce78f6a9287aedeef0fff7b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073650"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546086"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Объединение секций в службах Analysis Services (SSAS — многомерные данные)
   Можно совмещать секции в существующей базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для объединения фактических данных из нескольких секций одной группы мер.  
@@ -117,7 +116,7 @@ ms.locfileid: "66073650"
   
 1.  В обозревателе объектов разверните узел **Группы мер** куба, содержащего секции, слияние которых необходимо осуществить, разверните узел **Секции**и щелкните правой кнопкой мыши секцию, которая является целью операции слияния. Например, если перемещаются квартальные фактические данные в секцию, которая хранит данные за год, выберите секцию, которая содержит годовые фактические данные.  
   
-2.  Нажмите кнопку **объединить секции** , чтобы открыть диалоговое окно **>\<имя раздела слияния** секций.  
+2.  Нажмите кнопку **объединить секции** , чтобы открыть диалоговое окно **слияние секции \<partition name> ** .  
   
 3.  В разделе **Исходные секции**установите флажок рядом с каждой исходной секцией, для которой необходимо слияние осуществить с целевой секцией, затем нажмите кнопку **ОК**.  
   
@@ -126,12 +125,12 @@ ms.locfileid: "66073650"
   
 4.  Щелкните правой кнопкой мыши секцию с объединенными данными и выберите **Свойства**.  
   
-5.  Откройте `Source` свойство и измените предложение WHERE таким образом, чтобы оно включало только что Объединенные данные секции. Вспомним `Source` , что свойство не обновляется автоматически. Если выполнить повторную обработку без предварительного обновления `Source`, то могут быть получены не все ожидаемые данные.  
+5.  Откройте `Source` свойство и измените предложение WHERE таким образом, чтобы оно включало только что Объединенные данные секции. Вспомним, что `Source` свойство не обновляется автоматически. Если выполнить повторную обработку без предварительного обновления `Source` , то могут быть получены не все ожидаемые данные.  
   
 ##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Как объединять секции с помощью XMLA  
  В этом разделе сведения см. в разделе [Слияние секций (XML)](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка объектов Analysis Services](processing-analysis-services-objects.md)   
  [Секции &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Создание локальной секции &#40;Analysis Services и управление ею&#41;](create-and-manage-a-local-partition-analysis-services.md)   

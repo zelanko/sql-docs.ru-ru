@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb3bc7d8-9d4d-4da9-979d-bdad5e27e526
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bcae1b3cb2f1ba25a810b409c8dc796cd6c6c25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086939"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526690"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диалоговые окна «Создание связи атрибутов» и «Изменение связи атрибутов» (вкладка «Конструктор связей», конструктор измерений) (службы Analysis Services — многомерные данные)
   Диалоговое окно **Создание связи атрибутов** используется, чтобы определить новые связи атрибутов, а диалоговое окно **Изменение связи атрибутов** — чтобы изменить связь атрибутов. Дополнительные сведения см. в разделе [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md).  
@@ -53,7 +52,7 @@ ms.locfileid: "66086939"
  **Тип отношений**  
  Указывает тип создаваемой связи — **гибкая (может изменяться со временем)** или **жесткая (не изменяется со временем)**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

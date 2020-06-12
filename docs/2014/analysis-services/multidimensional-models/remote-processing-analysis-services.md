@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 699cc312b2f4b0a716d08259daf189276551e5d4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073204"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545776"
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
   Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
   
 -   Если на каждом компьютере запущены разные версии SQL Server, то клиентские библиотеки должны иметь ту же версию, что и экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , обрабатывающий модель. Например, если обработка ведется в экземпляре [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , то компьютер, от которого исходит запрос, должен иметь клиентскую библиотеку, соответствующую [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]. Дополнительные сведения см. в разделе [Поставщики данных, используемые для соединений со службами Analysis Services](../instances/data-providers-used-for-analysis-services-connections.md).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66073204"
   
  Используйте следующие ссылки для указания разрешений:  
   
--   [Configure SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)  
+-   [Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
   
 -   Если предоставление разрешений[SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) не поддерживается, **SQL Server Agent Components** предлагает альтернативные предопределенные роли сервера.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66073204"
   
 2.  В качестве последнего шага измените задание так, чтобы оно выполнялось по вашему расписанию, добавив необходимые предупреждения и уведомления. Также, возможно, потребуется доработать скрипт обработки или создать несколько этапов в задании, чтобы объекты обрабатывались независимо.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты агент SQL Server](../../ssms/agent/sql-server-agent.md#Components)   
  [Планирование административных задач SSAS с помощью агент SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Пакетная обработка &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   

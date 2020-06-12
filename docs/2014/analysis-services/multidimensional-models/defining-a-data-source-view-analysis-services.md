@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546946"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Определение представления источников данных (службы Analysis Services)
   Представление источника данных содержит логическую модель схемы, используемой [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объектами многомерных баз данных, а именно Кубы, измерения и структуры интеллектуального анализа данных. Представление источника данных — это определение метаданных, хранящееся в формате XML, для элементов схемы, используемых в унифицированной многомерной модели (UDM) и структурах интеллектуального анализа данных. Представление источника данных:  
@@ -130,7 +129,7 @@ ms.locfileid: "66075402"
 > [!NOTE]  
 >  После завершения работы мастера представлений источников данных можно добавить или удалить связи на панели схем конструктора представлений источников данных. Дополнительные сведения см. в разделе [Определение логических связей в представлении источника данных (службы Analysis Services)](define-logical-relationships-in-a-data-source-view-analysis-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление или удаление таблиц или представлений в представлении источника данных &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)   
  [Определение логических первичных ключей в представлении источника данных &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)   
  [Определение именованных вычислений в представлении источника данных &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)   

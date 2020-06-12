@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175793"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536236"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Создание локальной секции и управление ей (Analysis Services)
   Для улучшения производительности обработки можно создать дополнительные секции для группы мер. Несколько секций позволяют разделять фактические данные между соответствующим числом файлов физических данных на локальном и удаленных серверах. В службах Analysis Services секции могут обрабатываться параллельно, что дает больше контроля над процессом обработки рабочих нагрузок на сервере.
@@ -27,7 +26,7 @@ ms.locfileid: "78175793"
  Секции могут создаваться во время разработки модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] или при развертывании решения с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или XMLA-скрипта. Рекомендуется выбрать и использовать только один подход. При использовании разных средств может возникнуть ситуация, когда изменения, внесенные в развернутую базу данных с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , будут перезаписаны последующим развертыванием решения из [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].
 
 ## <a name="before-you-start"></a>Перед началом работы
- Убедитесь, что у вас установлен выпуск Business Intelligence или Enterprise. Выпуск Standard не поддерживает работу с множественными секциями. Чтобы проверить выпуск, щелкните правой кнопкой мыши узел [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] сервера в и выберите **отчеты** | **Общие**. Дополнительные сведения о доступности функций см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Убедитесь, что у вас установлен выпуск Business Intelligence или Enterprise. Выпуск Standard не поддерживает работу с множественными секциями. Чтобы проверить выпуск, щелкните правой кнопкой мыши узел сервера в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выберите **отчеты**  |  **Общие**. Дополнительные сведения о доступности функций см. [в разделе функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  Важно понять, что секции должны иметь одинаковую агрегатную схему, если вы в будущем планируете выполнять их объединение. Объединять можно только секции с одними и теми же режимами хранения и агрегатными схемами.
 

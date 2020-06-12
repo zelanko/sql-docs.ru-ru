@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: e8a7fa59-bd94-4dab-8c7f-dca6669e97b3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d1546f9f708a32f6467b0f01c8b0644b610505e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2135a7a15acf999f506f91ef852935725bee5d0b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069968"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538619"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор скриптов (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Редактор скриптов** на вкладке **Вычисления** в конструкторе кубов для редактирования выражения команды скрипта (в представлении формы) или для редактирования текста всего скрипта куба (в представлении скрипта).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
 |**Выражение**|Введите выражения на языке многомерных выражений и инструкции в команду скрипта, выбранную на панели **Метаданные** (в представлении формы), или в текст скрипта куба (в представлении скрипта).<br /><br /> Перетащите выбранные элементы с панели **Средства вычисления** в данный параметр, чтобы присоединить синтаксическую структуру многомерного выражения для выбранного элемента.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Многомерные выражения &#40;Справочник по&#41; MDX](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   

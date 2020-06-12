@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe13ce8b-9369-4126-928a-9426f9119424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16174728ac57b0a6380f1780eb550f85e2191d39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29f1fcc8e63f688ea1769ee773957979ebef051
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543916"
 ---
 # <a name="install-or-uninstall-the-powerpivot-for-sharepoint-add-in-sharepoint-2013"></a>Установка или удаление надстройки PowerPivot для SharePoint (SharePoint 2013)
   [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] представляет собой набор компонентов сервера приложений и служб, которые обеспечивают доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] . Надстройка [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint (**spPowerpivot.msi**) — это пакет установщика, используемый для установки компонентов сервера приложений.
@@ -30,7 +29,7 @@ ms.locfileid: "81387844"
 
  **В этом разделе:**
 
--   [Вводная информация](#bkmk_background)
+-   [Фон](#bkmk_background)
 
 -   [Куда устанавливать spPowerPivot.msi?](#bkmk_where_to_install)
 
@@ -46,7 +45,7 @@ ms.locfileid: "81387844"
 
 -   **Сервер приложений:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint 2013 позволяют применять рабочие книги в качестве источников данных, планово обновлять данные, а также использовать панель управления [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .
 
-     [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]— Это [!INCLUDE[msCoName](../../../includes/msconame-md.md)] пакет установщик Windows (с помощью средства**PowerPivot. msi**), который развертывает клиентские библиотеки [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] Analysis Services и копирует файлы установки на компьютер. Установщик не разворачивает и не настраивает функции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint. По умолчанию устанавливаются следующие компоненты:
+     [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)]— Это [!INCLUDE[msCoName](../../../includes/msconame-md.md)] установщик Windows пакет (**spPowerpivot.msi**), который развертывает клиентские библиотеки Analysis Services и [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] копирует файлы установки на компьютер. Установщик не разворачивает и не настраивает функции [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в SharePoint. По умолчанию устанавливаются следующие компоненты:
 
     -   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013. Этот компонент содержит скрипты PowerShell (PS1-файлы), пакеты решения SharePoint (WSP-файлы) и средство настройки [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 для развертывания [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2013.
 
@@ -64,7 +63,7 @@ ms.locfileid: "81387844"
 
     -   [Удаление PowerPivot для SharePoint](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)
 
-##  <a name="where-to-install-sppowerpivotmsi"></a><a name="bkmk_where_to_install"></a>Где можно установить файл PowerPivot. msi?
+##  <a name="where-to-install-sppowerpivotmsi"></a><a name="bkmk_where_to_install"></a>Где можно установить spPowerPivot.msi?
  Рекомендуется устанавливать **spPowerPivot.msi** на всех серверах фермы SharePoint, чтобы обеспечить согласованность конфигурации, в том числе на серверы приложений и серверы веб-интерфейса. В пакет установщика входят поставщики данных служб Analysis Services, а также средство настройки [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] . При установке **spPowerPivot.msi** вы можете исключить определенные компоненты.
 
  **Поставщики данных.** Некоторые технологии SharePoint и SQL Server используют поставщики данных служб Analysis Services, включая службы Excel и PerformancePoint, а также Power View. Установка **spPowerPivot.msi** на всех серверах SharePoint обеспечивает полный набор поставщиков данных служб Analysis Services, а также имеется постоянная возможность подключения к PowerPivot по всей ферме.
@@ -109,7 +108,7 @@ ms.locfileid: "81387844"
 
  `Msiexec.exe /i SpPowerPivot.msi`.
 
- Чтобы создать журнал установки, можно использовать стандартные переключатели ведения журнала MsiExec. В следующем примере создается файл журнала "Install_Log. txt" с помощью параметра подробного ведения журнала "v".
+ Чтобы создать журнал установки, можно использовать стандартные переключатели ведения журнала MsiExec. В следующем примере создается файл журнала "Install_Log.txt" с помощью параметра подробного ведения журнала "v".
 
 ```cmd
 Msiexec.exe /i SpPowerPivot.msi /L v c:\test\Install_Log.txt

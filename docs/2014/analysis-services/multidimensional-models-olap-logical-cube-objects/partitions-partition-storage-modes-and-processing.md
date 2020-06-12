@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545327"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Режимы хранения и обработка секции
   Режим хранения секции определяет производительность выполнения запросов и обработки, требования к хранилищу и месту хранения секции, а также ее родительскую группу мер и куб. Кроме того, режим хранения влияет на выбор обработки.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727580"
   
 -   Гибридный OLAP (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает все три основных режима [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] хранения. Также поддерживается упреждающее кэширование, позволяющее совмещать характеристики хранилищ ROLAP и MOLAP для незамедлительного доступа к данным и высокой производительности запросов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает все три основных режима хранения. Также поддерживается упреждающее кэширование, позволяющее совмещать характеристики хранилищ ROLAP и MOLAP для незамедлительного доступа к данным и высокой производительности запросов. Дополнительные сведения см. в разделе [Упреждающее кэширование (секции)](partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  В режиме хранения MOLAP агрегаты секции и копия исходных данных при ее обработке сохраняются в многомерной структуре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В целях повышения производительности запросов структура MOLAP значительно оптимизирована. Местом хранения может быть либо компьютер, на котором определена секция, либо любой другой компьютер, на котором запущены службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Учитывая тот факт, что многомерные структуры содержат копию исходных данных, запрос может быть выполнен без обращения к секции исходных данных. При использовании статистической обработки время выполнения запроса может значительно возрасти. Данные в структуре секции MOLAP соответствуют последней обработке секции.  
@@ -83,7 +82,7 @@ ms.locfileid: "62727580"
   
  Секции с режимом хранения HOLAP меньше аналогичных секций MOLAP, потому что в них не содержится источник данных, а для запросов со сводными данными они имеют меньшее время отклика, чем в секциях ROLAP. Режим хранения HOLAP, как правило, подходит для секций в кубах, требующих малого времени ответа на запросы сводных данных из большого количества исходных данных. Однако если пользователи создают запросы к данным конечного уровня, например вычисление средних значений, более предпочтительно использовать режим MOLAP.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Упреждающее кэширование &#40;секций&#41;](partitions-proactive-caching.md)   
  [Синхронизация баз данных Analysis Services](../multidimensional-models/synchronize-analysis-services-databases.md)   
  [Секции (службы Analysis Services — многомерные данные)](partitions-analysis-services-multidimensional-data.md)  

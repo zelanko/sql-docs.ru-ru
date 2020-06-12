@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4529ed3a9c7bb2e4110435dfc9d6b9078e825a4e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538797"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Справка F1 мастера формирования схем (службы Analysis Services — многомерные данные)
   Мастер формирования схем используется для автоматического формирования реляционной схемы для базы данных предметной области, основанной на существующих кубах и измерениях. Кроме этого можно заполнить таблицы, сформированные мастером для измерений времени, и управлять соглашением об именах и параметрами базы данных предметной области.  
@@ -44,7 +43,7 @@ ms.locfileid: "66069948"
   
 -   [Завершение работы мастера &#40;мастера формирования схем&#41; &#40;Analysis Services многомерных данных&#41;](complete-schema-generation-wizard-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

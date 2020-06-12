@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b3dad28227547f88956f1ac49e2878b2940f91
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084583"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522550"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Детализация структур интеллектуального анализа данных
   *Детализация* — это возможность выполнять запросы к модели или структуре интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
@@ -38,7 +37,7 @@ ms.locfileid: "66084583"
   
 -   Детализация работает посредством получения информации об обучающих вариантах структуры интеллектуального анализа данных. Эта информация была кэширована при обработке структуры. Поэтому, если произвести удаление всех кэшированных данных изменением свойства <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> на `ClearAfterProcessing`, детализация работать не будет. Чтобы разрешить детализацию до столбцов структуры, нужно изменить значение свойства <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> на `KeepTrainingCases` а затем выполнить повторную обработку структуры.  
   
--   Убедитесь, что для `True`свойства [AllowDrillthrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) в качестве структуры интеллектуального анализа данных и модели интеллектуального анализа данных задано значение. Более того, необходимо быть членом роли, обладающей разрешением на детализацию как в структуре, так и в модели.  
+-   Убедитесь, что для свойства [AllowDrillthrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) в качестве структуры интеллектуального анализа данных и модели интеллектуального анализа данных задано значение `True` . Более того, необходимо быть членом роли, обладающей разрешением на детализацию как в структуре, так и в модели.  
   
 ## <a name="security-issues-for-drillthrough"></a>Вопросы безопасности, связанные с детализацией  
  Разрешения на детализацию устанавливаются отдельно для структуры и для модели. Разрешение на детализацию модели позволяет проводить детализацию на основе модели, даже если у пользователя нет разрешения на детализацию структуры. Разрешения на детализацию структуры предоставляют дополнительную возможность включать столбцы структуры в запросы детализации с помощью функции [StructureColumn (DMX)](/sql/dmx/structurecolumn-dmx).  
@@ -57,7 +56,7 @@ ms.locfileid: "66084583"
 |См. примеры запросов детализации для конкретных типов моделей.|[Запросы интеллектуального анализа данных](data-mining-queries.md)|  
 |Получите сведения о разрешениях, относящихся к конкретным структурам и моделям интеллектуального анализа данных.|[Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Детализация моделей интеллектуального анализа данных](drillthrough-on-mining-models.md)  
   
   

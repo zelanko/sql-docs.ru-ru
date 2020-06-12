@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b9f1863fc3d707614b7c957dc5ef49561272d6e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b625081a4b7cafaab537e91f9c2730578d37efab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073132"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545759"
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)
   В конструкторе представлений источников данных можно заменить таблицу, представление или именованный запрос в представлении источника данных на другую таблицу или представление из того же или из другого источника данных или на именованный запрос, определенный в представлении источника данных. При замене таблицы все другие объекты в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со ссылками на эту таблицу продолжают ссылаться на таблицу, так как идентификатор объекта для таблицы в представлении источника данных не изменился. Любые связи по-прежнему остаются действительными (на основе соответствия имен и типа столбцов). Если таблица удаляется, а затем добавляется, то ссылки и связи также удаляются, поэтому их необходимо создавать повторно.  
@@ -63,7 +62,7 @@ ms.locfileid: "66073132"
   
 6.  Сохраните измененное представление источника данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)  
   
   
