@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7136c984315714ba6726633522c8702b4c3a84f8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082348"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528920"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Представление источника данных (вкладка «Структура измерения» конструктора измерений) (службы Analysis Services — многомерные данные)
   Панель **Представление источника данных** используется для просмотра таблиц и столбцов в представлении источника данных, связанном с выбранным измерением. На панели можно создавать атрибуты, свойства элементов, иерархии и уровни, перетаскивая столбцы из панели **Представление источника данных** на панель **Атрибуты** или **Иерархии и уровни** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Представление источника данных**  
  Выводит представление источника данных, связанного с выбранным измерением.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66082348"
  **Копировать диаграмму из**  
  Выберите одну из диаграмм, включенных в это представление данных, связанное с выбранным измерением, для отображения на панели **Представление источника данных** .  
   
- **Масштабирование**  
+ **Масштаб**  
  Выберите доступный вариант масштаба.  
   
  **Свойства**  
@@ -130,7 +129,7 @@ ms.locfileid: "66082348"
  **Свойства**  
  Отображает окно **Свойства** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для выбранной связи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структура измерения &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)   
  [Атрибуты &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attributes-dimension-designer-analysis-services-multidimensional-data.md)   

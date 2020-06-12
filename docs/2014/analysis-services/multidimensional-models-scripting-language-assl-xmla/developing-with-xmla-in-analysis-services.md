@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27b143a9cc5c888c6e464d300d2ccfea114ef9bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f5455b71306b3dd75406f107e5c1e971f6b923b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380685"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545006"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Разработка с использованием XMLA в службах Analysis Services
   XML для аналитики (XMLA) — это XML-протокол, основанный на протоколе SOAP и специально предназначенный для обеспечения унифицированного доступа к данным в любом стандартном многомерном источнике данных, доступном через HTTP-соединение. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] XMLA является единственным протоколом для связи с клиентскими приложениями. Все клиентские библиотеки, поддерживаемые службами Analysis Services, в конечном итоге формируют запросы и ответы по протоколу XMLA.  
@@ -45,7 +44,7 @@ ms.locfileid: "80380685"
 |[Блокировка и разблокировка баз данных &#40;XMLA&#41;](locking-and-unlocking-databases-xmla.md)|Сведения об использовании команд [Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) и [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) для блокировки и разблокировки [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных.|  
 |[Обработка объектов (XMLA)](processing-objects-xmla.md)|Описывает использование команды [Process](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) для обработки [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекта.|  
 |[Слияние секций &#40;XMLA&#41;](merging-partitions-xmla.md)|Описывает использование команды [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) для слияния секций в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляре.|  
-|[Проектирование агрегатов &#40;XMLA&#41;](designing-aggregations-xmla.md)|Описывает использование команды [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) в итеративном или пакетном режиме для проектирования агрегатов для статистической схемы в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|[Проектирование агрегатов &#40;XMLA&#41;](designing-aggregations-xmla.md)|Описывает использование команды [DesignAggregations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/designaggregations-element-xmla) в итеративном или пакетном режиме для проектирования агрегатов для статистической схемы в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 |[Резервное копирование, восстановление и синхронизация баз данных (XMLA)](backing-up-restoring-and-synchronizing-databases-xmla.md)|Описывает использование команд [BACKUP](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) и [RESTORE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) для резервного копирования и восстановления [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных из файла резервной копии.<br /><br /> Также описывается использование команды [Synchronize](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) для синхронизации [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с существующей базой данных в том же экземпляре или на другом экземпляре.|  
 |[Вставка, обновление и удаление элементов &#40;XMLA&#41;](inserting-updating-and-dropping-members-xmla.md)|Описывает использование команд [INSERT](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [Update](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)и [Drop](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) для добавления, изменения или удаления элементов из измерения, доступного для записи.|  
 |[Обновление ячеек &#40;XMLA&#41;](updating-cells-xmla.md)|Описывает использование команды [UpdateCells](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/updatecells-element-xmla) для изменения значений ячеек в секции, доступной для записи.|  
@@ -60,9 +59,9 @@ ms.locfileid: "80380685"
 ## <a name="namespace-and-schema"></a>Пространство имен и схема  
   
 ### <a name="namespace"></a>Пространство имен  
- Схема, определенная в этой спецификации, использует пространство `https://schemas.microsoft.com/AnalysisServices/2003/Engine` имен XML и стандартную аббревиатуру "DDL".  
+ Схема, определенная в этой спецификации, использует пространство имен XML `https://schemas.microsoft.com/AnalysisServices/2003/Engine` и стандартную аббревиатуру "DDL".  
   
-### <a name="schema"></a>схема  
+### <a name="schema"></a>Схема  
  В основе определения схемы XSD для языка определения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] лежат определение элементов схемы и иерархии, приведенное в этом разделе.  
   
 ## <a name="extensibility"></a>Расширение среды  

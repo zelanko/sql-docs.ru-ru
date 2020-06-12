@@ -1,7 +1,7 @@
 ---
 title: sp_addpullsubscription (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c983f72d3ba08f3ffc70991a13e312947ee77378
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820659"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627120"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,6 +45,9 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Аргументы  
 `[ @publisher = ] 'publisher'`Имя издателя. параметр *Publisher* имеет тип **sysname**и не имеет значения по умолчанию.  
+
+> [!NOTE]
+> Имя сервера можно указать как `<Hostname>,<PortNumber>` . Может потребоваться указать номер порта для подключения, если SQL Server развертывается в Linux или Windows с помощью настраиваемого порта, а служба браузера отключена.
   
 `[ @publisher_db = ] 'publisher_db'`Имя базы данных издателя. Аргумент *publisher_db* имеет тип **sysname**и значение по умолчанию NULL. *publisher_db* не учитываются издателями Oracle.  
   
@@ -71,7 +74,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_addpullsubscription** используется в репликации моментальных снимков и репликации транзакций.  
   
 > [!IMPORTANT]  

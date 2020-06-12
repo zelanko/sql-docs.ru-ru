@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f302a41612b19e9412fc52fbe6813c4e8ee2d26
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811056"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547309"
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
   После первоначального формирования схемы при помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить определения куба и измерений, а затем вновь запустить мастер формирования схем. Мастер обновляет схему в базе данных предметной области и в соответствующем представлении источника данных для отражения изменений при сохранении данных, присутствующих в текущий момент в таблицах, подлежащих повторному формированию. При изменении таблиц после первоначального формирования мастер формирования схем по возможности сохраняет эти изменения, используя следующие правила.  

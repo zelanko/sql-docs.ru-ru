@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 829a4092e8a55e3b2581a09e4afcc8c826152179
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088078"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527530"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Выбор вычислений времени (мастер бизнес-аналитики)
   Используйте страницу **Выбор вычислений времени** для определения формата новых вычислений времени, которые будут созданы для существующей временной иерархии.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать следующую иерархию для анализа вычислений времени**  
  Выберите иерархию измерения времени, которая будет использована для создания новых вычислений времени.  
   
  **Доступные вычисления времени**  
  Выберите вычисления времени, которые будут созданы для выбранной иерархии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

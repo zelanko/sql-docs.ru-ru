@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 257f6decac024126228d0da2462bc1615be58d83
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547646"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Справка F1 мастера секционирования (службы Analysis Services — многомерные данные)
   Мастер секционирования можно использовать для определения секций для группы мер в кубе. По умолчанию для каждой группы мер в кубе определяется одна секция. Для крупных секций, однако, могут снизиться меры доступа и производительности обработки. Создавая несколько секций, каждая из которых содержит часть данных для группы мер, можно улучшить показатели доступа и производительности обработки для данной группы мер.  
@@ -47,7 +46,7 @@ ms.locfileid: "66072124"
   
 -   [Диалоговое окно «Выбор удаленной папки» &#40;Analysis Services многомерных данных&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

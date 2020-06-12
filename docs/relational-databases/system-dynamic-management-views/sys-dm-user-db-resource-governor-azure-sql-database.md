@@ -3,9 +3,9 @@ title: sys. dm_user_db_resource_governance (Transact-SQL) | Документац
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627403"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -61,7 +61,7 @@ ms.locfileid: "74165918"
 |**initial_db_file_size_in_mb**|BIGINT|Размер по умолчанию для нового файла данных в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|BIGINT|Размер по умолчанию для нового файла журнала в МБ. См. раздел [sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|INT|Только для внутреннего применения.|
-|**instance_max_log_rate**|BIGINT|Ограничение скорости создания журнала для экземпляра SQL Server, в байтах в секунду. Применяется ко всему журналу, созданному экземпляром `tempdb` , включая и другие системные базы данных. В эластичном пуле применяется к журналу, созданному всеми базами данных в пуле.|
+|**instance_max_log_rate**|BIGINT|Ограничение скорости создания журнала для экземпляра SQL Server, в байтах в секунду. Применяется ко всему журналу, созданному экземпляром, включая `tempdb` и другие системные базы данных. В эластичном пуле применяется к журналу, созданному всеми базами данных в пуле.|
 |**instance_max_worker_threads**|INT|Ограничение рабочего потока для экземпляра SQL Server.|
 |**replica_type**|INT|Тип реплики, где 0 — первичный, а 1 — вторичный.|
 |**max_transaction_size**|BIGINT|Максимальное пространство журнала, используемое любой транзакцией, в КБ.|
@@ -94,7 +94,7 @@ ms.locfileid: "74165918"
 
 Для этого представления необходимо разрешение VIEW DATABASE STATE.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 Описание руководства по управлению ресурсами в базе данных SQL Azure см. в разделе [ограничения ресурсов базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
 

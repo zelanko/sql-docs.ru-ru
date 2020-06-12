@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 500435a585ffed84a8f16e2b3bd1c4db14509103
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702279"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545088"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Резервное копирование, восстановление и синхронизация баз данных (XMLA)
   В XML для аналитики есть три команды для резервного копирования, восстановления и синхронизации баз данных.  
   
--   Команда [BACKUP](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) создает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] резервную копию базы данных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файла резервной копии (ABF), как описано в разделе [резервное копирование баз данных](#backing_up_databases).  
+-   Команда [BACKUP](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla) создает резервную копию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] файла резервной копии (ABF), как описано в разделе [резервное копирование баз данных](#backing_up_databases).  
   
 -   Команда [RESTORE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla) восстанавливает [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных из ABF файла, как описано в разделе [восстановление баз данных](#restoring_databases).  
   
@@ -59,16 +58,16 @@ ms.locfileid: "62702279"
   
  Значением свойства `Security` может быть только одна из строк в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из файла резервной копии.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в файл резервной копии.|  
 |*IgnoreSecurity*|Исключает определения безопасности из файла резервной копии.|  
   
 ### <a name="backing-up-remote-partitions"></a>Резервирование удаленных секций  
- Чтобы создать резервную копию удаленных секций в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базе данных, задайте для свойства [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) `Backup` команды значение true. C этим параметром команда `Backup` создает удаленный файл резервной копии для каждого удаленного источника данных, который используется для хранения удаленных секций базы данных.  
+ Чтобы создать резервную копию удаленных секций в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базе данных, [BackupRemotePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/backupremotepartitions-element-xmla) задайте для свойства BackupRemotePartitions `Backup` команды значение true. C этим параметром команда `Backup` создает удаленный файл резервной копии для каждого удаленного источника данных, который используется для хранения удаленных секций базы данных.  
   
- Для каждого удаленного источника данных, для которого создается резервная копия, можно указать соответствующий файл резервной копии, включив элемент [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) в свойство [Locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) `Backup` команды. Свойству `Location` элемента должно быть присвоено UNC-путь и имя файла удаленного файла резервной копии, а свойству DataSourceID — идентификатор удаленного источника данных, определенного в базе данных. [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) `File`  
+ Для каждого удаленного источника данных, для которого создается резервная копия, можно указать соответствующий файл резервной копии, включив элемент [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) в свойство [Locations](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) `Backup` команды. `Location`Свойству элемента должно быть `File` присвоено UNC-путь и имя файла удаленного файла резервной копии, а свойству [DataSourceID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) — идентификатор удаленного источника данных, определенного в базе данных.  
   
 ##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Восстановление баз данных  
  Команда `Restore` восстанавливает указанную базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из файла резервной копии. Команда `Restore` имеет различные свойства, позволяющие указывать базу данных для восстановления, файл резервной копии, метод восстановления определений безопасности, удаленные секции для хранения и объекты перемещения реляционной OLAP (ROLAP).  
@@ -89,7 +88,7 @@ ms.locfileid: "62702279"
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из базы данных.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в базу данных.|  
@@ -116,7 +115,7 @@ ms.locfileid: "62702279"
 >  Выполнять команду `Synchronize` могут только администраторы серверов и баз данных. Исходная и целевая базы данных должны иметь одинаковый уровень совместимости.  
   
 ### <a name="specifying-the-source-database"></a>Указание базы данных-источника  
- Свойство [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) `Synchronize` команды содержит два свойства: `ConnectionString` и. `Object` Свойство `ConnectionString` содержит строку соединения экземпляра, в котором находится база данных-источник, а свойство `Object` содержит идентификатор объекта для базы данных-источника.  
+ Свойство [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) `Synchronize` команды содержит два свойства: `ConnectionString` и `Object` . Свойство `ConnectionString` содержит строку соединения экземпляра, в котором находится база данных-источник, а свойство `Object` содержит идентификатор объекта для базы данных-источника.  
   
  Целевой базой данных является текущая база данных в сеансе, в рамках которого выполняется команда `Synchronize`.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62702279"
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |*SkipMembership*|Включает определения безопасности, но исключает сведения о членстве из целевой базы данных.|  
 |*CopyAll*|Включает определения безопасности и сведения о членстве в целевую базу данных.|  
@@ -136,7 +135,7 @@ ms.locfileid: "62702279"
 ### <a name="synchronizing-remote-partitions"></a>Синхронизация удаленных секций  
  Каждую удаленную секцию, связанную с каждым удаленным источником данных, существующим в базе данных-источнике, можно синхронизировать, включив элемент `Location` в свойство `Locations` команды `Synchronize`. Для каждого `Location` элемента `DataSourceType` свойство должно быть исключено или явно установлено в значение *Remote*.  
   
- Чтобы определить соединение с удаленным источником данных в целевой базе данных, команда `Synchronize` использует строку соединения, указанную в свойстве `ConnectionString` элемента `Location`. После этого команда `Synchronize` будет использовать свойство `DataSourceID` элемента `Location` для определения того, какие удаленные секции синхронизировать. `Synchronize`Команда синхронизирует удаленные секции в удаленном источнике данных, указанном в `DataSourceID` свойстве в базе данных источника, с удаленным источником данных, указанным `DataSourceID` в свойстве целевой базы данных.  
+ Чтобы определить соединение с удаленным источником данных в целевой базе данных, команда `Synchronize` использует строку соединения, указанную в свойстве `ConnectionString` элемента `Location`. После этого команда `Synchronize` будет использовать свойство `DataSourceID` элемента `Location` для определения того, какие удаленные секции синхронизировать. `Synchronize`Команда синхронизирует удаленные секции в удаленном источнике данных, указанном в `DataSourceID` свойстве в базе данных источника, с удаленным источником данных, указанным в `DataSourceID` свойстве целевой базы данных.  
   
  Кроме того, для каждой первоначальной папки, в которой хранятся удаленные секции в удаленном источнике данных базы данных-источника, можно указать элемент `Folder` в элементе `Location`. Элемент `Folder` указывает новую папку для целевой базы данных, в которой следует синхронизировать все удаленные секции, хранящиеся в первоначальной папке в удаленном источнике данных. Если элемент `Folder` не задан, команда Synchronize будет использовать первоначальные папки, указанные для удаленных секций, содержащихся в базе данных-источнике.  
   
@@ -145,7 +144,7 @@ ms.locfileid: "62702279"
   
  Элемент `Location` можно использовать в команде Synchronize для синхронизации объектов ROLAP. Для каждого `Location` элемента, используемого для перемещения источника данных, `DataSourceType` свойству необходимо явно присвоить значение *Local*. . Также необходимо задать строку подключения для нового расположения в свойстве `ConnectionString` элемента `Location`. Во время синхронизации команда `Synchronize` заменит строку соединения для источника данных, определенного свойством `DataSourceID` элемента `Location`, на значение свойства `ConnectionString` элемента `Location`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элемент Backup &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/backup-element-xmla)   
  [Элемент Restore &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/restore-element-xmla)   
  [Синхронизация элемента &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   

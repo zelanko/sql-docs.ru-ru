@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6a6c5cb8c8ca0492edf9798f972b458054ae5b58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c02d57e8d24e625dc0613f25d97765c9ae018803
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075740"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547046"
 ---
 # <a name="define-cube-attribute-properties"></a>Определение свойств атрибутов куба
   Свойства атрибутов куба позволяют указать уникальные настройки для атрибутов измерений в кубе на основании того же измерения базы данных. В следующей таблице приводится описание свойств атрибутов куба.  
@@ -30,7 +29,7 @@ ms.locfileid: "66075740"
 |`AttributeHierarchyVisible`|Указывает, видима ли иерархия атрибута в этом измерении куба. Это позволяет иерархии атрибутов быть видимой в определенных кубах или ролях измерения. Эта установка не имеет действия, если основная иерархия атрибутов не видима. Значение по умолчанию — `True`.|  
 |`AttributeID`|Содержит уникальный идентификатор атрибута.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение свойств измерения куба](define-cube-dimension-properties.md)   
  [Определение свойств иерархии куба](define-cube-hierarchy-properties.md)  
   

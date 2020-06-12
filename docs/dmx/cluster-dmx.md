@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c14bc8189bdea705ab37c66863d74bcef66e23c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071082"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669819"
 ---
 # <a name="cluster-dmx"></a>Cluster (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,10 +33,10 @@ Cluster()
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Функция **кластера** не требует параметров.  
   
- Функция **cluster** возвращает скалярное значение имени кластера. Однако при использовании этой функции в качестве аргумента другой функции ее необходимо рассматривать как ссылку на столбец \<кластера>.  
+ Функция **cluster** возвращает скалярное значение имени кластера. Однако при использовании этой функции в качестве аргумента другой функции ее необходимо рассматривать как \< ссылку на столбец кластера>.  
   
-## <a name="remarks"></a>Remarks  
- **Кластер** также можно использовать в качестве ссылки `<``>` на столбец кластера для функции **PredictHistogram** .  
+## <a name="remarks"></a>Комментарии  
+ **Кластер** также можно использовать в качестве `<` ссылки на столбец кластера `>` для функции **PredictHistogram** .  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используется одноэлементный запрос с функциями [PredictHistogram &#40;DMX&#41;](../dmx/predicthistogram-dmx.md) и Cluster, чтобы вернуть расстояние отдельного варианта от каждого кластера модели интеллектуального анализа данных с кластеризацией TM и вероятность того, что отдельный вариант будет существовать в каждом кластере.  

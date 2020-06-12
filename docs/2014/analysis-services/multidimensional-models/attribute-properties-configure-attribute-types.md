@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077413"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544796"
 ---
 # <a name="configure-attribute-types"></a>Настройка типов атрибутов
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]типы атрибутов помогают классифицировать атрибут в терминах бизнес-функциональности. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] типы атрибутов помогают классифицировать атрибут в терминах бизнес-функциональности. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> Установка типов атрибутов  
  Значение свойства `Type` для атрибута определяет тип этого атрибута. Некоторые мастера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливают типы атрибутов при определении измерений или атрибутов. Эти мастера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также устанавливают типы атрибутов при добавлении дополнительной функциональности к измерениям. Например, мастер бизнес-аналитики применяет несколько типов атрибутов к атрибутам в измерении при добавлении логики операций со счетами для идентификации атрибутов, содержащих имена, коды, номера и структуру счетов в измерении. Мастер бизнес-аналитики также использует типы атрибутов, например для конвертации валют. Дополнительные сведения см. в разделе [Создание измерения типа Currency](database-dimensions-create-a-currency-type-dimension.md).  
@@ -305,7 +304,7 @@ ms.locfileid: "66077413"
 |**WinterSummerSeason**|Указывает, является ли дата частью зимнего или летнего сезона.|  
 |`Years`|Представляет годы.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справочник по свойствам атрибута измерения](dimension-attribute-properties-reference.md)  
   

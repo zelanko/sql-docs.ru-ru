@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c55224b5590d23008de8b6caef7f120748f232bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35bc4a4fdb62373b7ae3fb42199c8717405ea14e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082894"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520540"
 ---
 # <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
   Процесс обеспечения безопасности [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
@@ -55,7 +54,7 @@ ms.locfileid: "66082894"
   
  При использовании пакетов служб Integration Services для очистки данных, обновления моделей интеллектуального анализа данных или для прогнозирования необходимо позаботиться о том, чтобы служба Integration Services имела соответствующие разрешения на работу с базой данных, в которой хранится модель, и соответствующие разрешения на работу с данными источника.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Роли и разрешения (службы Analysis Services)](../multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

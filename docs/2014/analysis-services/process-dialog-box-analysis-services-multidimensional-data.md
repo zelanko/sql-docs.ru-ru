@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6b9ab6db9fc50b09b752b5deaa59d42c4664bd5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539996"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Обработка» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Обработка** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для обработки объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно вызвать диалоговое окно **Обработка** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] следующим образом:  
@@ -32,14 +31,14 @@ ms.locfileid: "66070749"
   
 -   Щелкнув правой кнопкой мыши базу данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , куб, группу мер, секцию, измерение, структуру интеллектуального анализа данных или модель интеллектуального анализа в **обозревателе объектов** и выбрав пункт **Обработка**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Список объектов**  
  Выберите объекты служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которые должны быть обработаны, а также параметры обработки и установки, которые должны быть применены. Сетка содержит следующие столбцы:  
   
  **Имени объекта**  
  Отображает имя объекта, который должен быть обработан. Значок слева от имени указывает тип объекта.  
   
- **Type**  
+ **Тип**  
  Отображает тип объекта, который должен быть обработан.  
   
  **Параметры обработки**  
@@ -48,7 +47,7 @@ ms.locfileid: "66070749"
  **Параметры**  
  Отображает гиперссылку **Настроить** , если выбрана **Добавочная обработка** в **Параметрах обработки** для кубов, групп мер или секций. Щелкните ссылку **Настроить** для запуска диалогового окна **Добавочная обработка** . Дополнительные сведения о диалоговом окне **Добавочное обновление** см. в разделе [Диалоговое окно "Добавочное обновление" (службы Analysis Services — многомерные данные)](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Удалить**  
+ **Remove**  
  Щелкните, чтобы удалить выбранные пункты из **списка объектов**.  
   
  **Анализ влияния**  
@@ -60,10 +59,10 @@ ms.locfileid: "66070749"
  **Изменить параметры**  
  Выберите для открытия диалогового окна **Изменение настроек** и изменения настроек, которые управляют обработкой выделенных объектов, включая настройки пакетной обработки, настройки обратной записи и настройки ошибок ключа измерения. Дополнительные сведения о диалоговом окне **Изменение настроек** см. в разделе [Диалоговое окно "Изменение настроек" (службы Analysis Services — многомерные данные)](change-settings-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Запуска**  
+ **Выполнить**  
  Нажмите для обработки объектов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Диалоговое окно "Ход обработки" &#40;Analysis Services многомерных данных&#41;](process-progress-dialog-box-analysis-services-multidimensional-data.md)  
   

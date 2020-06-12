@@ -17,29 +17,28 @@ helpviewer_keywords:
 ms.assetid: 20e080cd-6a0e-4591-b022-ea4cd3638e36
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2eb377b29ef798b4cbdd02666b866c52eb8f8599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075404"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546882"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>Основные сведения о входных файлах, применяемых для создания скрипта развертывания
   При построении [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает XML-файлы для проекта. Среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] помещает эти XML-файлы в выходную папку проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. По умолчанию в качестве папки проекта используется \Bin. В следующей таблице перечислены XML-файлы, которые создает среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
 |XMLA-файл|Описание|  
 |---------------|-----------------|  
-|\<*имя проекта*>. asdatabase|Содержит декларативные определения всех объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта.|  
-|\<*имя проекта*>. deploymenttargets|Содержит имя экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и базы данных, в которой будут созданы объекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|\<*имя проекта*>. configsettings|Содержит параметры, которые относятся к окружению, например сведения о соединении с источником данных и о месте хранения объектов. Параметры в этом файле переопределяют параметры в \<файле с *именем проекта*>. asdatabase.|  
-|\<*имя проекта*>. deploymentoptions|Содержит параметры развертывания, которые указывают, является ли развертывание транзакционным и нужно ли обрабатывать объекты после развертывания.|  
+|\<*project name*>. asdatabase|Содержит декларативные определения всех объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта.|  
+|\<*project name*>. deploymenttargets|Содержит имя экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и базы данных, в которой будут созданы объекты служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|\<*project name*>. configsettings|Содержит параметры, которые относятся к окружению, например сведения о соединении с источником данных и о месте хранения объектов. Параметры в этом файле переопределяют параметры в \<*project name*> asdatabase файле.|  
+|\<*project name*>. deploymentoptions|Содержит параметры развертывания, которые указывают, является ли развертывание транзакционным и нужно ли обрабатывать объекты после развертывания.|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не хранит пароли в файлах проектов.  
   
 ## <a name="modifying-the-input-files"></a>Изменение входных файлов  
- Изменение значений во входных файлах или значений, полученных из входных файлов, позволяет изменить назначение развертывания, параметры конфигурации и параметры развертывания без изменения полного \< *имени проекта*>. asdatabase (или всего файла скрипта XMLA при создании скрипта из существующей [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных). Благодаря возможности редактирования отдельных файлов можно легко создавать различные скрипты развертывания для разных целей.  
+ Изменение значений во входных файлах или значений, полученных из входных файлов, позволяет изменить назначение развертывания, параметры конфигурации и параметры развертывания без изменения всего \<*project name*> файла. asdatabase (или всего файла скрипта XMLA при создании скрипта из существующей [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных). Благодаря возможности редактирования отдельных файлов можно легко создавать различные скрипты развертывания для разных целей.  
   
  Следующие разделы содержат сведения об изменении значений в различных входных файлах:  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66075404"
   
 -   [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск мастера развертывания Analysis Services](running-the-analysis-services-deployment-wizard.md)   
  [Основные сведения о скрипте развертывания служб Analysis Services](understanding-the-analysis-services-deployment-script.md)  
   

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 107ee872-3df2-4931-b56c-af11e38f6745
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a248721ee64ff815c1b5b73a81d3b29fc5d2b84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070220"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547406"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>Просмотр использования статистической обработки (мастер статистических схем)
   Используйте страницу **Просмотр использования статистической обработки** для настройки параметров статистической обработки.  
   
-## <a name="options"></a>Параметры  
- **Значение по умолчанию**  
+## <a name="options"></a>Варианты  
+ **Default**  
  Выберите, чтобы присвоить параметру статистической обработки атрибута значение «По умолчанию». Используя данный параметр, конструктор применяет правило по умолчанию, основанное на типе атрибута и измерения.  
   
  `Full`  
@@ -38,7 +37,7 @@ ms.locfileid: "66070220"
  **Установить все значения по умолчанию**  
  Выберите, чтобы присвоить для всех атрибутов настройки статистической обработки по умолчанию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

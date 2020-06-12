@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082283"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528872"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Пошаговое руководство по диаграмме дерева принятия решений (надстройки интеллектуального анализа данных)
   При создании модели дерева принятия решений, можно создать настраиваемую диаграмму в Visio при помощи либо фигуры дерева принятия решений, либо фигуры сети зависимостей. В этом разделе описываются настройки, которые можно выполнять с помощью формы **дерева принятия решений** и следующих элементов управления.  
@@ -40,7 +39,7 @@ ms.locfileid: "66082283"
   
 1.  Если в списке **фигур** не отображаются **фигуры интеллектуального анализа данных Майкрософт** , щелкните **другие фигуры**, выберите **Открыть набор элементов**и откройте шаблон из расположения установки по умолчанию.  
   
-     \<диск>: \Program Files (x85) \Microsoft SQL Server 2012 надстройки DM  
+     \<drive>: \Program Files (x85) \Microsoft SQL Server 2012 надстройки DM  
   
 2.  Перетащите на страницу фигуру **дерева принятия решений** .  
   
@@ -137,7 +136,7 @@ ms.locfileid: "66082283"
      **Развернуть дочерние узлы**  
      Отображает дочерние узлы выбранного узла.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Устранение неполадок диаграмм интеллектуального анализа данных Visio &#40;SQL Server надстроек интеллектуального анализа данных&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

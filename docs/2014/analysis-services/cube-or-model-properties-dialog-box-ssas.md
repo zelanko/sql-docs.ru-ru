@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adeb16a91ef4d7b540e09b5e1f8b5b004be472e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086601"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526260"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Диалоговое окно «Свойства куба или модели» (SSAS)
   Используйте диалоговое окно **Свойства базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для установки свойств куба или шаблона базы данных. Чтобы вызвать это диалоговое окно, необходимо щелкнуть правой клавишей мыши куб или модель в **обозревателе объектов** и выбрать пункт **Свойства**.  
@@ -30,11 +29,11 @@ ms.locfileid: "66086601"
   
 -   [Упреждающее кэширование &#40;диалоговое окно "Свойства секции"&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Имя**|Отображает имя куба или модели.|  
+|**имя**;|Отображает имя куба или модели.|  
 |**Идентификатор**|Отображает идентификатор куба или модели.|  
 |**Описание**|Отображает описание куба или модели.|  
 |**Отметка времени создания**|Отображает дату и время создания куба или модели.|  
@@ -45,7 +44,7 @@ ms.locfileid: "66086601"
 |**Состояние**|Отображает состояние обработки куба или модели. Дополнительные сведения о значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Отображает дату и время последней обработки куба или модели.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   

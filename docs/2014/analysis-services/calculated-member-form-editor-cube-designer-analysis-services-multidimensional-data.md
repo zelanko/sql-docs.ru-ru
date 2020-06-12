@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088373"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527661"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор форм вычисляемых элементов (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Редактор форм вычисляемых элементов** на вкладке **Вычисления** в конструкторе кубов для создания или изменения вычисляемого элемента.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088373"
   
  **Примечание.** Этот параметр доступен, если **Родительская иерархия** определяет иерархию, отличную от MEASURES.  
   
- **Смен**  
+ **Изменение**  
  Выберите для отображения диалоговое окно **Выбор родительского элемента** и выберите **Родительский элемент**. Дополнительные сведения о диалоговом окне **Выбор родительского элемента** см. в разделе [Диалоговое окно "Выбор родительского элемента" (службы Analysis Services — многомерные данные)](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Выражение**  
@@ -65,7 +64,7 @@ ms.locfileid: "66088373"
  Выберите имя меры, используемого для разрешения запросов NON EMPTY в многомерных выражениях для вычисляемого элемента. Если свойство **Установленное поведение** пусто, вычисляемые элементы должны быть повторно получены для определения того, что элемент пуст. Если свойство **Установленное поведение** содержит имя меры, вычисляемый элемент обрабатывается как пустой, если данное измерение пусто.  
   
 > [!WARNING]  
->  Это свойство является устаревшим. Не задавайте его. Дополнительные сведения см. [в статье нерекомендуемые Analysis Services функции в SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) .  
+>  Это свойство использовать не рекомендуется. Не задавайте его. Дополнительные сведения см. [в статье нерекомендуемые Analysis Services функции в SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) .  
   
  **Выражения цвета**  
  Развернуть для просмотра параметров **Цвет текста** и **Цвет фона** .  
@@ -108,7 +107,7 @@ ms.locfileid: "66088373"
   
  Нажмите кнопку выбора шрифта, чтобы открыть диалоговое окно **Шрифт** , и введите значения параметров выбранного шрифта в многомерное выражение. Дополнительные сведения о значениях свойств см. в разделе [Создание и использование значений свойств (многомерные выражения)](creating-and-using-property-values-mdx.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Времен](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Создание вычисляемых элементов](multidimensional-models/create-calculated-members.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   

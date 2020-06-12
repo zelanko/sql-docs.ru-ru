@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e3f47b6cfe97806f093ee4ac1c9c8574056042d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072852"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547356"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Синхронизация баз данных служб Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] имеют функцию синхронизации баз данных, которая делает две базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] идентичными, копируя данные и метаданные из базы данных на исходном сервере в базу данных на целевом сервере. Используйте функцию синхронизации баз данных для выполнения следующих задач:  
@@ -42,7 +41,7 @@ ms.locfileid: "66072852"
 > [!NOTE]  
 >  Следующие технические документы, написанные для предыдущих версий служб Analysis Services, продолжают действовать в отношении масштабируемых многомерных решений, построенных с помощью SQL Server 2012. Дополнительные сведения см. в разделах [Горизонтальное масштабирование запросов для служб Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) и [Горизонтальное масштабирование запросов для баз данных только для чтения в службах Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253137.).  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
  На сервере назначения (или целевом сервере), с которого инициируется синхронизация баз данных, необходимо быть членом роли администратора сервера служб Analysis Services. На исходном сервере учетная запись пользователя Windows должна иметь разрешения на полный доступ в базе данных-источнике. При синхронизации базы данных в интерактивном режиме помните, что синхронизация выполняется в контексте безопасности удостоверения пользователя Windows. Если у учетной записи нет доступа к отдельным объектам, эти объекты будут исключены из операции. Дополнительные сведения о ролях администратора сервера и разрешениях базы данных см. в статьях [предоставление разрешений администратора сервера &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) и [предоставление разрешений базы данных &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  Чтобы разрешить удаленные соединения между двумя экземплярами по умолчанию, TCP-порт 2383 должен быть открыт на обоих серверах. Дополнительные сведения о создании исключения в брандмауэре Windows см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
@@ -183,10 +182,10 @@ ms.locfileid: "66072852"
   
 8.  Для выполнения синхронизации нажмите кнопку **Готово** . После проверки параметров на странице **Завершение работы мастера** нажмите кнопку **Готово** еще раз.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Если синхронизация членства и ролей не выполняется, то сейчас необходимо указать разрешения доступа пользователя в целевой базе данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Синхронизация элемента &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Развертывание решений модели с помощью XMLA](deploy-model-solutions-using-xmla.md)   
  [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 03419c570b4982a19cf1a958ac6e0391de02fef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76f06cab4fba292e5295a4814816c36929c9f4a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076097"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547218"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Представления источников данных в многомерных моделях
   Представление источников данных представляет собой абстракцию реляционного источника данных, который становится основой кубов и измерений, создаваемых в многомерном проекте. Представление источника данных позволяет управлять структурами данных, используемыми в проекте, и независимо работать с базовыми источниками данных (например, можно переименовать или объединить столбцы без непосредственного изменения исходного источника данных).  
@@ -55,7 +54,7 @@ ms.locfileid: "66076097"
   
  [Обновление схемы в представлении источника данных (службы Analysis Services)](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мастер формирования схем &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](supported-data-sources-ssas-multidimensional.md)  
   

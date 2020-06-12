@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9cf77bf6c583a2f286c2b02d392314e9a2dad2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084722"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522570"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Развертывание решений интеллектуального анализа данных
   Последний шаг процесса интеллектуального анализа данных — это развертывание моделей в производственной среде. Процесс развертывания важен, так как делает модели доступными пользователям для решения любой из следующих задач.  
@@ -81,7 +80,7 @@ ms.locfileid: "66084722"
   
  Содержит общие сведения о развертывании проектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и описывает свойства, которые можно задать как часть конфигурации проекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка объектов многомерной модели](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Интерфейсы запросов интеллектуального анализа данных](data-mining-query-tools.md)   
  [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](processing-requirements-and-considerations-data-mining.md)  

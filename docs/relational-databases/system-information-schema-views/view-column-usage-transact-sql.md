@@ -19,12 +19,12 @@ ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9364cbf0a305ed50c992e360d6b951cd6d7c8693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6fdb0c5be9b509c2f801ad5728d40467cd349c2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078391"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670332"
 ---
 # <a name="view_column_usage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68078391"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|Квалификатор представления.|  
-|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42; важно &#42;&#42;** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42; важно &#42;&#42;** только надежный способ найти схему объекта — запросить представление каталога sys. objects.|  
 |**VIEW_NAME**|**sysname**|Имя представления.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор таблицы.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> **&#42;&#42; важно &#42;&#42;** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> **&#42;&#42; важно &#42;&#42;** только надежный способ найти схему объекта — запросить представление каталога sys. objects.|  
 |**TABLE_NAME**|**sysname**|Базовая таблица.|  
 |**COLUMN_NAME**|**sysname**|Имя столбца.|  
   

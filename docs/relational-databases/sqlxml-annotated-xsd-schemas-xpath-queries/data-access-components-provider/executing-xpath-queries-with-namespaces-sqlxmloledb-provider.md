@@ -1,5 +1,6 @@
 ---
 title: Выполнение запросов XPath с пространствами имен (SQLXMLOLEDB)
+description: Узнайте, как указать пространства имен в SQLXML 4,0 при выполнении запросов XPath с помощью поставщика SQLXMLOLEDB.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1559beee9838920c5e219c4e13e5a8b0c130b51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81d8b40501df0cd18765c684a4cce217d2b87ef2
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257297"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215862"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Выполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75257297"
   
  Так как использование символа-шаблона (*) не поддерживается в SQLXML 4.0, необходимо указать запрос XPath с помощью префикса пространства имен. Для разрешения этого префикса используйте свойство namespaces, чтобы указать привязку пространства имен.  
   
- В следующем примере запрос XPath задает пространства имен, используя подстановочный знак (\*) и функции XPath local-name () и Namespace-URI (). Этот запрос XPath возвращает все элементы, в которых локальным именем является **Contact** , а URI пространства имен — **urn: MySchema: Contacts**.  
+ В следующем примере запрос XPath задает пространства имен, используя подстановочный знак ( \* ) и функции XPath local-name () и Namespace-URI (). Этот запрос XPath возвращает все элементы, в которых локальным именем является **Contact** , а URI пространства имен — **urn: MySchema: Contacts**.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

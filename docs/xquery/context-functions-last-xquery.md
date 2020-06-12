@@ -1,5 +1,6 @@
 ---
 title: Функция Last (XQuery) | Документация Майкрософт
+description: Сведения о функции Last () языка XQuery, возвращающей целочисленный индекс последнего элемента последовательности.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039004"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529708"
 ---
 # <a name="context-functions---last-xquery"></a>Функции контекста — last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- В предыдущем запросе функция **Last ()** в/`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` возвращает число этапов производства. Это значение используется для получения последнего этапа производства на участке цеха.  
+ В предыдущем запросе функция **Last ()** в/ `/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` возвращает число этапов производства. Это значение используется для получения последнего этапа производства на участке цеха.  
   
  Результат:  
   

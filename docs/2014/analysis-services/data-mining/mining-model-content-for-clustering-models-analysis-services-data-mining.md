@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12f298a9368425c063bec3e730eab7e95cc9c9a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083683"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521570"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации (Майкрософт). Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
@@ -152,13 +151,13 @@ ms.locfileid: "66083683"
   
  **Узлы кластера** Имя кластера. Пример. Кластер 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется несколько методов создания модели кластеризации. Если неизвестно, какие методы использовались для создания модели, с которой происходит работа, метаданные модели можно получить программным путем, с помощью клиента ADOMD или объектов AMO, либо с помощью запроса к набору строк схемы интеллектуального анализа данных. Дополнительные сведения см. в разделе [Запрос параметров, используемых для создания модели интеллектуального анализа данных](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  Структура и содержимое модели остаются теми же, независимо от используемой модели кластеризации или параметров.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)   
  [Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)   

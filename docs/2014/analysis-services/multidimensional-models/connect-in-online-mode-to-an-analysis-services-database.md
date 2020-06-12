@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 33041234-7106-404f-a289-8e904f32aff2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37b28b6d4f15e29242d20b33bb5ade12460ded7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520bf86abe448b444c653f61849640f0b1a7789f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076573"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536986"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Подключение в режиме «в сети» к базе данных служб Analysis Services
   Можно напрямую подключаться к существующей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базе данных и изменять объекты непосредственно в этой базе данных. При прямом подсоединении к базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] изменения объектов происходят моментально и проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не создается в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "66076573"
   
      Теперь можно редактировать любой объект непосредственно в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с Analysis Services проектами и базами данных на этапе разработки](work-with-analysis-services-projects-and-databases-in-development.md)   
  [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   

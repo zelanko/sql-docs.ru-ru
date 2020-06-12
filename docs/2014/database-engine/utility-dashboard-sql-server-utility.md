@@ -10,19 +10,19 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773816"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857786"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Панель мониторинга программ (служебная программа SQL Server)
   Чтобы просмотреть данные на панели мониторинга служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], выберите верхний узел дерева обозревателя программ, который называется "Utility<Имя_UCP>\\(Имя_компьютера\UCP)". На панели мониторинга отображаются сводка и подробные данные всех управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и всех приложений уровня данных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы обновить данные на панели мониторинга, щелкните правой кнопкой мыши верхний узел в дереве обозревателя программ и выберите команду **Обновить**.  
   
  Дополнительные сведения о создании точки управления служебной программой см. в разделе [Создание точки управления служебной программы SQL Server (служебная программа SQL Server)](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Дополнительные сведения о добавлении экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в служебную программу [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в разделе [Регистрация экземпляра SQL Server (служебная программа SQL Server)](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Исправность управляемого экземпляра  
  Состояние исправности управляемых экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отображается на левой стороне панели содержимого обозревателя программ.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62773816"
  Использование хранилища служебной программы  
  В нижней правой части панели мониторинга в круговой диаграмме использования хранилища отображается отношение используемого пространства к свободному пространству в томах, размещенных на компьютерах, содержащих управляемые экземпляры [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Данные для этого отображения обновляются каждые 15 мин.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование обозревателя программ для управления служебная программа SQL Server](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
  [Регистрация экземпляра SQL Server &#40;служебная программа SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Изменение определения политики исправности ресурсов (служебная программа SQL Server)](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  

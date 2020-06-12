@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c728f865cb905414525048e5b4678005a1613a28
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087598"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527344"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Завершение работы мастера (мастер измерений)
   Используйте страницу **Завершение работы мастера** , чтобы выполнить следующие процедуры.  
@@ -45,7 +44,7 @@ ms.locfileid: "66087598"
 > [!NOTE]  
 >  Этот параметр отображается в случае, если на странице **Выбор метода создания** выбрана команда **Создать в источнике данных таблицу времени** или **Создать в источнике данных таблицу, не содержащую время**. Дополнительные сведения см. в разделе [Выбор метода создания (мастер измерений)](select-creation-method-dimension-wizard.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

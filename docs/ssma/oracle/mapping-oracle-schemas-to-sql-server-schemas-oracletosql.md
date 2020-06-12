@@ -1,5 +1,6 @@
 ---
 title: Сопоставление схем Oracle с SQL Server схемами (OracleToSQL) | Документация Майкрософт
+description: Узнайте, как настроить SSMA для сопоставлений Oracle между схемами Oracle и SQL Server или принять значение по умолчанию.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5639687a22749ccb8315262347807bb44ac79210
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262914"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293836"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Сопоставление схем Oracle со схемами SQL Server (OracleToSQL)
 В Oracle каждая база данных имеет одну или несколько схем. По умолчанию SSMA переносит все объекты в схеме Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных с именем для схемы. Однако можно настроить сопоставление между схемами и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базами данных Oracle.  
@@ -23,7 +24,7 @@ ms.locfileid: "68262914"
 ## <a name="oracle-and-sql-server-schemas"></a>Схемы Oracle и SQL Server  
 База данных Oracle содержит схемы. Экземпляр служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит несколько баз данных, каждый из которых может иметь несколько схем.  
   
-Концепция Oracle схемы сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] концепцией базы данных и одной из ее схем. Например, Oracle может иметь схему с именем **HR**. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может иметь базу данных с именем **HR**, а в этой базе данных — схемы. Одной из схем является схема **dbo** (или владелец базы данных). По умолчанию схема Oracle для схемы **HR** будет сопоставлена [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с базой данных и схемой **HR. dbo**. SSMA ссылается на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сочетание базы данных и схемы в качестве схемы.  
+Концепция Oracle схемы сопоставляется с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] концепцией базы данных и одной из ее схем. Например, Oracle может иметь схему с именем **HR**. Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может иметь базу данных с именем **HR**, а в этой базе данных — схемы. Одной из схем является схема **dbo** (или владелец базы данных). По умолчанию схема Oracle для схемы **HR** будет сопоставлена с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных и схемой **HR. dbo**. SSMA ссылается на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сочетание базы данных и схемы в качестве схемы.  
   
 Можно изменить сопоставление между Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемами.  
   
@@ -50,7 +51,7 @@ ms.locfileid: "68262914"
   
 -   Сопоставление с SQL Server  
   
-Базу данных источника можно сопоставлять с любой целевой базой данных. По умолчанию база данных-источник сопоставляется с целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных, к которой вы подключены с помощью SSMA. Если сопоставляемая Целевая база данных не является существующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], будет выведено сообщение **"база данных и (или) схема не существует в целевых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] метаданных. Он будет создан во время синхронизации. Вы хотите продолжить?»** Нажмите кнопку "Да". Аналогичным образом можно сопоставлять схему с несуществующей схемой в целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных, которая будет создана во время синхронизации.  
+Базу данных источника можно сопоставлять с любой целевой базой данных. По умолчанию база данных-источник сопоставляется с целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базой данных, к которой вы подключены с помощью SSMA. Если сопоставляемая Целевая база данных не является существующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , будет выведено сообщение **"база данных и (или) схема не существует в целевых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] метаданных. Он будет создан во время синхронизации. Вы хотите продолжить?»** Нажмите кнопку "Да". Аналогичным образом можно сопоставлять схему с несуществующей схемой в целевой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных, которая будет создана во время синхронизации.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Возврат к базе данных и схеме по умолчанию  
 Если вы настраиваете сопоставление между схемой Oracle и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] схемой, можно вернуть сопоставление к значениям по умолчанию.  
@@ -59,7 +60,7 @@ ms.locfileid: "68262914"
   
 1.  На вкладке Сопоставление схемы выберите любую строку и нажмите кнопку **восстановить значения по умолчанию** , чтобы вернуться к базе данных и схеме по умолчанию.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
 Если необходимо проанализировать преобразование объектов Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты, можно [создать отчет о преобразовании](assessing-oracle-schemas-for-conversion-oracletosql.md). В противном случае можно [преобразовать определения объектов базы данных Oracle](converting-oracle-schemas-oracletosql.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определения объектов.  
   
 ## <a name="see-also"></a>См. также:  

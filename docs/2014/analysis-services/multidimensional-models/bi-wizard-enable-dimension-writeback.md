@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2164c617bae69264dce2a237ca48a125b096765
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076851"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544546"
 ---
 # <a name="enable-dimension-writeback"></a>Разрешение обратной записи в измерение
   Добавьте расширение обратной записи в куб или измерение, чтобы пользователи могли вручную изменять структуру и элементы измерения. Обновления измерений, доступных для записи, записываются прямо в таблицу измерения. Это расширение изменяет настройку свойства `WriteEnabled` для измерения.  
@@ -40,7 +39,7 @@ ms.locfileid: "66076851"
 ## <a name="setting-dimension-writeback-capability"></a>Установка возможности обратной записи в измерение  
  На второй странице мастера — **Включение обратной записи в измерение** — непосредственно задается параметр **Включить обратную запись в измерение** . При выборе этого параметра свойство `WriteEnabled` измерения автоматически устанавливается равным `True`. При снятии этого флажка это свойство автоматически устанавливается равным `False`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  при создании нового элемента необходимо включить в измерение каждый атрибут. Нельзя вставить элемент, не указав значение ключевого атрибута измерения. Следовательно, на создание элементов оказывают влияние любые ограничения (такие как ключевые значения, отличные от NULL), установленные в таблице измерений; Необходимо также учитывать столбцы, дополнительно задаваемые такими свойствами измерения, как `CustomRollupColumn`, `CustomRollupPropertiesColumn` или `UnaryOperatorColumn`.  
   
 > [!WARNING]  
@@ -52,7 +51,7 @@ ms.locfileid: "66076851"
 >   
 >  Дополнительные сведения см. в разделе [Использование множественных активных результирующих наборов (MARS)](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Измерения, доступные для записи](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

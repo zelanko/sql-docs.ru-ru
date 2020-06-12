@@ -19,12 +19,12 @@ ms.assetid: 6119bc94-0b22-45d4-a34b-967afd810a9d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4e2a969450c2ec4593c7daec1b9c9b203b18410
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a24df8a9c4c85e94259f663b8319d1145a15b565
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078358"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670300"
 ---
 # <a name="views-transact-sql"></a>VIEWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078358"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор представления.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42; важно &#42;&#42;** Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей представление.<br /><br /> **&#42;&#42; важно &#42;&#42;** только надежный способ найти схему объекта — запросить представление каталога sys. objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Имя представления.|  
 |**VIEW_DEFINITION**|**nvarchar (** 4000 **)**|Если длина определения больше **nvarchar (** 4000 **)**, этот столбец имеет значение null. В противном случае этот столбец является текстом определения представления.|  
 |**CHECK_OPTION**|**varchar (** 7 **)**|Тип инструкции WITH CHECK OPTION. CASCADE, если первоначальное представление было создано с помощью инструкции WITH CHECK OPTION. Иначе возвращается значение NONE.|  

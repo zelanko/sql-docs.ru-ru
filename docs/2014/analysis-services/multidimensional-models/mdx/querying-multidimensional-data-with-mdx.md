@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: e0a5dd60-35a3-4a4f-b36f-52ecea814886
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6b04669080a9dedd84d3e7c218f6360486076fdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b7589a98636e56e8c592cef213785544e18f4ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073915"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546206"
 ---
 # <a name="querying-multidimensional-data-with-mdx"></a>Запрос многомерных данных с помощью многомерных выражений
-  МНОГОМЕРные выражения — это язык запросов, используемый для работы с многомерными данными и их получения в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Многомерное выражение основано на спецификации XML для аналитики (XMLA) с конкретными расширениями для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Многомерные выражения состоят из идентификаторов, значений, инструкций, функций и операторов, которые службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] могут вычислять для получения объекта (например, набора или элемента) или скалярного значения (например, строки или числа).  
+  МНОГОМЕРные выражения — это язык запросов, используемый для работы с многомерными данными и их получения в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Многомерное выражение основано на спецификации XML для аналитики (XMLA) с конкретными расширениями для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Многомерные выражения состоят из идентификаторов, значений, инструкций, функций и операторов, которые службы [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] могут вычислять для получения объекта (например, набора или элемента) или скалярного значения (например, строки или числа).  
   
- Запросы и выражения многомерных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] выражений в используются для следующих задач:  
+ Запросы и выражения многомерных выражений в используются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для следующих задач:  
   
--   Возврат данных клиентскому приложению из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Куба.  
+-   Возврат данных клиентскому приложению из [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] куба.  
   
 -   форматирование результатов запроса;  
   
@@ -41,11 +40,11 @@ ms.locfileid: "66073915"
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)|Многомерные выражения можно использовать для выполнения запросов к многомерным данным или для создания многомерных выражений для использования в Кубе, но сначала необходимо ознакомиться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] с основными понятиями и терминологией измерений.|  
+|[Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)|МНОГОМЕРные выражения можно использовать для выполнения запросов к многомерным данным или для создания МНОГОМЕРных выражений для использования в Кубе, но сначала необходимо ознакомиться с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] основными понятиями и терминологией измерений.|  
 |[Основные принципы запросов многомерных выражений (службы Analysis Services)](mdx-query-fundamentals-analysis-services.md)|Язык многомерных выражений позволяет обращаться с запросами к многомерным объектам (например, кубам) и возвращать многомерные наборы ячеек, содержащие данные куба. Этот раздел и его подразделы содержат общие сведения о многомерных запросах.|  
 |[Основные принципы создания скриптов многомерных выражений (службы Analysis Services)](mdx-scripting-fundamentals-analysis-services.md)|В службах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]скрипты многомерных выражений состоят из одного или нескольких многомерных выражений или инструкций, заполняющих куб вычислениями.<br /><br /> Скрипт многомерных выражений определяет процесс вычислений для куба. Скрипт многомерных выражений также считается частью самого куба. Поэтому изменение скрипта многомерных выражений, связанного с кубом, сразу изменяет процесс вычислений для куба.<br /><br /> Для создания скриптов многомерных выражений можно воспользоваться конструктором кубов в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элементы синтаксиса многомерных выражений &#40;&#41;многомерных выражений](/sql/mdx/mdx-syntax-elements-mdx)   
  [Справочник по языку многомерных выражений (многомерные выражения)](/sql/mdx/mdx-language-reference-mdx)  
   

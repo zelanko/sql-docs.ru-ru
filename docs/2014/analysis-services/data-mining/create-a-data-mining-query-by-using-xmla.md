@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77b65e8361287ba09fa7f28cd74dd5f88d188f97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085547"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523970"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Создание запроса интеллектуального анализа данных с помощью XMLA
   С помощью объектов AMO, инструкций DMX и языка XML/A можно создавать разнообразные запросы к объектам интеллектуального анализа данных.  
@@ -44,9 +43,9 @@ ms.locfileid: "66085547"
   
      На панели **Результаты** будет выведен список наборов строк схемы, содержащий имена наборов строк и столбцы наборов строк для всех наборов строк, доступных в данном экземпляре.  
   
-2.  На панели **запрос** поместите курсор после ** \<списка ограничений>** и нажмите клавишу ВВОД, чтобы добавить новую строку.  
+2.  На панели **запрос** поместите курсор после **\<Restriction List>** и нажмите клавишу ВВОД, чтобы добавить новую строку.  
   
-3.  Поместите курсор на пустую строку и введите ** \<SchemaName>DMSCHEMA_MINING_MODEL_CONTENT\</счеманаме>**  
+3.  Поместите курсор на пустую строку и введите ** \<SchemaName> DMSCHEMA_MINING_MODEL_CONTENT \</SchemaName> **  
   
      Весь раздел ограничений теперь должен выглядеть следующим образом.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66085547"
   
      введите следующую строку:  
   
-     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</рекуесттипе>**  
+     **\<RequestType>DMSCHEMA_MINING_MODEL_CONTENT\</RequestType>**  
   
 2.  Измените список ограничений, чтобы задать имя модели интеллектуального анализа данных, добавив новое условие к списку ограничений.  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66085547"
   
      На панели результатов выводится определение схемы и значения для заданной модели.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   

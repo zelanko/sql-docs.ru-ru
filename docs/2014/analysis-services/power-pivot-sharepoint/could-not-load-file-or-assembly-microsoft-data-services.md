@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9baec97f8d1e779a84f25e7ddbf437e0a40ef4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071669"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547496"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>Не удалось загрузить файл или сборку &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39;
   В среде SharePoint 2010, в которой установлен PowerPivot для SharePoint, эта ошибка возникает, если решение на уровне приложений для PowerPivot развернуто неправильно.  
   
-## <a name="details"></a>Подробности  
+## <a name="details"></a>Сведения  
   
 |||  
 |-|-|  
-|Область применения|PowerPivot для SharePoint|  
+|Применяется к|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина:|Решение Powerpivotwebapp не развернуто или развернуто неправильно.|  
+|Причина|Решение Powerpivotwebapp не развернуто или развернуто неправильно.|  
 |Текст сообщения|Не удалось загрузить файл или сборку Microsoft.AnalysisServices.SharePoint.Integration|  
   
 ## <a name="explanation"></a>Объяснение  
@@ -45,7 +44,7 @@ ms.locfileid: "66071669"
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
   
   

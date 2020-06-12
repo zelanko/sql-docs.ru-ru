@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ae3f5ca0-ecbf-4b52-8386-eb457719d854
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9750751a23e4322a4a48ec0c1c227cf2df16f1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24b587e8d8961161ea803915c31d117c11f7cf2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075427"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546926"
 ---
 # <a name="delete-a-data-source-view-analysis-services"></a>Удаление представления источников данных (службы Analysis Services)
   При отсутствии необходимости использования файла представления источников данных (DSV) в проекте OLAP его можно удалить из проекта среды [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
@@ -32,7 +31,7 @@ ms.locfileid: "66075427"
   
  ![Диалоговое окно «Удаление объектов»](../media/ssas-olapdsv-deleteobjects.gif "Диалоговое окно «Удаление объектов»")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
  [Изменение свойств в представлении источника данных (службы Analysis Services)](change-properties-in-a-data-source-view-analysis-services.md)  
   

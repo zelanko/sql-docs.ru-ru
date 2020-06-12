@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ffc45b255ef609d486f19cf18254ad9ed2937433
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dd8ac9a27d1bcf46ba14b5f49fee3cc9b3b3b4e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081450"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528460"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Изменение существующего соединения с источником данных (табличные службы SSAS)
   В этом разделе описано изменение свойств существующего соединения с источником данных в табличной модели.  
@@ -77,7 +76,7 @@ ms.locfileid: "66081450"
   
      При сохранении текущего набора свойств таблицы может появиться сообщение, указывающее на необходимость обработки таблиц. Чтобы загрузить обновленные данные в модель, нажмите кнопку **Обработать** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка данных &#40;табличные&#41;SSAS](process-data-ssas-tabular.md)   
  [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
   

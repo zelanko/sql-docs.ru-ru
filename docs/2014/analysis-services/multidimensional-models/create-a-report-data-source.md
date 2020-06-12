@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076337"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536266"
 ---
 # <a name="create-a-report-data-source"></a>Создание источника данных отчета
   Для подключения Power View к многомерной модели необходимо создать определение общего источника данных отчета (файл с расширением RSDS) в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
@@ -39,7 +38,7 @@ ms.locfileid: "66076337"
   
 1.  На ленте библиотек выберите вкладку **Документы** .  
   
-2.  Щелкните **создать документ** > **отчет источник данных**.  
+2.  Щелкните **создать документ**  >  **отчет источник данных**.  
   
     > [!NOTE]  
     >  Если элемент **Источник данных отчета** не отображается в меню, значит тип содержимого источника данных отчета не был включен для этой библиотеки. Дополнительные сведения см. в разделе [Добавление типов содержимого сервера отчетов в библиотеку &#40;Reporting Services в режиме интеграции с SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  

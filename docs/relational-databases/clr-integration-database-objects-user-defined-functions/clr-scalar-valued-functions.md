@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488439"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806772"
 ---
 # <a name="clr-scalar-valued-functions"></a>Скалярные функции среды CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Скалярная функция возвращает единственное значение, например строку, целочисленное или битовое значение. В управляемом коде можно создавать скалярные определяемые пользователем функции, используя любой язык программирования .NET Framework. Эти функции доступны для [!INCLUDE[tsql](../../includes/tsql-md.md)] и другого управляемого кода. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым [!INCLUDE[tsql](../../includes/tsql-md.md)]кодом и см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Скалярная функция возвращает единственное значение, например строку, целочисленное или битовое значение. В управляемом коде можно создавать скалярные определяемые пользователем функции, используя любой язык программирования .NET Framework. Эти функции доступны для [!INCLUDE[tsql](../../includes/tsql-md.md)] и другого управляемого кода. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Требования к скалярным функциям среды CLR  
  Скалярные функции .NET Framework реализуются в виде методов класса в сборке .NET Framework. Типами входных параметров и типом, возвращаемым скалярной функцией, могут быть любые типы данных, которые поддерживаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], за исключением **varchar**, **char**, **rowversion**, **text**, **ntext**, **image**, **timestamp**, **table**и **cursor**. Скалярные функции должны обеспечивать соответствие типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типа данных, возвращаемого методом реализации. Дополнительные сведения о преобразовании типов см. в разделе [сопоставление данных параметров CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
@@ -91,7 +91,7 @@ End Class
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -136,7 +136,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
   
  Ниже приведены запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] и образец вызова для регистрации сборки и определяемой пользователем функции.  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

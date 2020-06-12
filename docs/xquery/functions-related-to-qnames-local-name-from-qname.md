@@ -1,5 +1,6 @@
 ---
 title: local-name-from-QName (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию local-name-from-QName (), чтобы вернуть локальную часть имени QName.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26cee403b1ded39555662009fc0273a40f8bd644
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004568"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689369"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>Функции, связанные с QName — local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
  QName, из которого должно извлекаться локальное имя.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
  В следующем примере используется функция **local-name-from-QName ()** для получения локальных имен и частей URI пространства имен из значения типа QName. В примере выполняются следующие действия.  
   

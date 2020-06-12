@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 969a8f11926957ae19512e92b68e02d12011dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5fab8618e18b6a6983f98cca58bc2b2c55d63fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077283"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544752"
 ---
 # <a name="define-custom-member-formulas"></a>Определение нестандартных формул элементов
   Нестандартные формулы элемента — это многомерные выражения, предоставляющие значения для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
@@ -71,7 +70,7 @@ Time.[Quarter 3] * 1.5
   
  При одновременном использовании вычисляемых элементов и формул пользовательской свертки следует помнить о порядке вычислений. Вычисляемые элементы разрешаются до формул пользовательской свертки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Настройка нестандартных формул элементов для атрибутов в измерении](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc862bcad512123dd7c31ce59a8c777c2423bedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073164"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545739"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
   Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  
@@ -48,7 +47,7 @@ ms.locfileid: "66073164"
   
  [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
- [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
+ [Вычисление ограничения емкости по выпуску SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)  
   
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   

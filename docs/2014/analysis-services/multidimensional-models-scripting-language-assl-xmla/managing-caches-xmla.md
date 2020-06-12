@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdc5bcd2e0500749edfa298a871b6fec7243ddfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727590"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544988"
 ---
 # <a name="managing-caches-xmla"></a>Управление кэшами (XMLA)
   Для очистки кэша указанного измерения или секции можно использовать команду [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) в XML для АНАЛИТИКИ (XMLA). Очистка кэша приводит [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] к перестроению кэша для этого объекта.  
@@ -40,10 +39,10 @@ ms.locfileid: "62727590"
  Группа мер  
  Очищает кэш для всех секций, содержащихся в группе мер.  
   
- Секция  
+ Partition (Раздел)  
  Очищает кэш для указанной секции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

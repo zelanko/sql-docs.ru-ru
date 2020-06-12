@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58fe34478e718ef356c03c42b8c2149f9256f1a2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541256"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Редактор формы именованного набора (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Панель **Редактор формы именованных наборов** на вкладке **Вычисления** в конструкторе кубов позволяет создавать и изменять именованный набор.  
@@ -37,7 +36,7 @@ ms.locfileid: "66072345"
 > [!NOTE]  
 >  Этот параметр должен содержать допустимое выражение набора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Времен](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [Создание именованных наборов](multidimensional-models/create-named-sets.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59e4a78c9432c5ba8f75eb7bfaa6ab46a0b052cf
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892800"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670273"
 ---
 # <a name="export-dmx"></a>EXPORT (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,13 +34,13 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *имя объекта*  
  Необязательный параметр. Имя экспортируемого объекта.  
   
- *файлов*  
+ *filename*  
  Имя и расположение файла для экспорта (аргумент типа string).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если инструкция указывает модель интеллектуального анализа данных, итоговый файл также содержит связанную структуру интеллектуального анализа данных. Если инструкция указывает **с зависимостями**, все объекты, необходимые для обработки объекта (например, источник данных и представление источника данных), включаются в ABF-файл.  
   
- Для экспорта или импорта объектов из [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных необходимо быть администратором базы данных или сервера.  
+ Для экспорта или импорта объектов из базы данных необходимо быть администратором базы данных или сервера [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ## <a name="export-mining-structure-example"></a>Пример экспорта структуры интеллектуального анализа данных  
  В следующем примере структуры интеллектуального анализа данных Targeted Mailing и Forecasting, а также модель интеллектуального анализа данных Association экспортируются в определенный файл. Вследствие того, что модель Association является частью структуры интеллектуального анализа Market Basket, в примере также экспортируется структура Market Basket. Любые другие модели интеллектуального анализа данных, которые могут существовать как часть структуры интеллектуального анализа данных для рынка, не будут экспортированы, поскольку модель взаимосвязей была экспортирована с использованием **модели интеллектуального анализа**данных, а не **структуры интеллектуального анализа**  

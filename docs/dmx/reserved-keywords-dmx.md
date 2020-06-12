@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928459"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669650"
 ---
 # <a name="reserved-keywords-dmx"></a>Зарезервированные ключевые слова (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] резервирует определенные ключевые слова для монопольного использования. Эти ключевые слова не могут использоваться где-либо в инструкциях расширений интеллектуального анализа данных (DMX), кроме как в позициях, которые определены в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в справочнике по языку расширений интеллектуального анализа данных. Эти регламентируемые ключевые слова расширений интеллектуального анализа данных включают следующие элементы.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]резервирует определенные ключевые слова для монопольного использования. Эти ключевые слова не могут использоваться где-либо в инструкциях расширений интеллектуального анализа данных (DMX), кроме как в позициях, которые определены в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в справочнике по языку расширений интеллектуального анализа данных. Эти регламентируемые ключевые слова расширений интеллектуального анализа данных включают следующие элементы.  
   
 -   Все инструкции определения данных, перечисленные в разделе [инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "67928459"
   
  Если база данных содержит имена, совпадающие с зарезервированными ключевыми словами, для обращения к ее объектам необходимо использовать идентификаторы с разделителями. Дополнительные сведения см. в разделе [идентификаторы &#40;&#41;расширений интеллектуального анализа данных ](../dmx/identifiers-dmx.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические обозначения&#41; DMX](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

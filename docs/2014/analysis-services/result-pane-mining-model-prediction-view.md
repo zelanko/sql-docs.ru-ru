@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ec2b1ec7c4f9a3dc0053ad323fcc54cf36522da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070182"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547426"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Панель «Результаты» (представление прогнозирования модели интеллектуального анализа данных)
   Панель **Результаты** отображает результаты прогнозирующего запроса интеллектуального анализа данных, созданного в представлении **Проектирование** построителя прогнозирующих запросов. Можно скопировать выбранный элемент сетки или всю таблицу результатов в буфер обмена.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Переключиться в режим проектирования запросов**  
  Для переключения между панелями щелкните **Проект**, **Запрос**и **Результат** .  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66070182"
  **Обновить результаты запроса**  
  Обработать заново прогнозирующий запрос.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Прогнозирование конструктор запросов &#40;интеллектуального анализа данных&#41;](prediction-query-builder-data-mining.md)   
  [Интерфейсы запросов интеллектуального анализа данных](data-mining/data-mining-query-tools.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-statements)  

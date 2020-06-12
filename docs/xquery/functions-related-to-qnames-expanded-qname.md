@@ -1,5 +1,6 @@
 ---
 title: expanded-QName (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать расширенную функцию-QName (), чтобы получить URI пространства имен и часть локального имени QName.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004580"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689341"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Часть локального имени QName.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Следующее относится к **расширенной функции-QName ()** :  
   
 -   Если указанное значение *$paramLocal* не находится в правильной лексической форме для типа xs: NCName, возвращается пустая последовательность, представляющая динамическую ошибку.  
@@ -50,7 +51,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 -   Можно модифицировать или сравнить существующие значения типа QName. Например, `/root[1]/e[1] eq expanded-QName("http://nsURI" "myNS")` сравнивает значение элемента <`e`> с QName, возвращаемым **расширенной функцией-QName ()** .  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
 ### <a name="a-replacing-a-qname-type-node-value"></a>А) Замещение значения узла типа QName  
  Данный пример иллюстрирует изменение значения узла элемента типа QName. В примере выполняются следующие действия.  
@@ -98,7 +99,7 @@ go
 </Root>   
 ```  
   
- В следующем запросе значение элемента <`ElemQN`> заменяется методом **Modify ()** типа данных XML и замещения значения XML DML, как показано ниже.  
+ В следующем запросе `ElemQN` значение элемента <> заменяется методом **Modify ()** типа данных XML и ЗАМЕЩЕНИЯ значения XML DML, как показано ниже.  
   
 ```  
 -- the value.  
@@ -113,7 +114,7 @@ SELECT * from T
 go  
 ```  
   
- Результат. Обратите внимание, что `ElemQN` элемент <> типа QName теперь имеет новое значение:  
+ Результат. Обратите внимание, что элемент <`ElemQN`> типа QName теперь имеет новое значение:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -131,7 +132,7 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>Б) Работа с ограничениями при использовании функции expanded-QName()  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>Б. Работа с ограничениями при использовании функции expanded-QName()  
  **Развернутая функция-QName** не может использоваться в конструкции XML. Это показано в следующем примере. Чтобы обойти это ограничение пример сначала вставляет узел, затем изменяет его.  
   
 ```  
@@ -157,7 +158,7 @@ SELECT *
 FROM T  
 ```  
   
- Следующая попытка добавляет другой элемент `root` <>, но завершается ошибкой, поскольку Расширенная функция-QName () не поддерживается в конструкции XML.  
+ Следующая попытка добавляет другой `root` элемент <>, но завершается ошибкой, поскольку Расширенная функция-QName () не поддерживается в конструкции XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -165,7 +166,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Решением этой проблемы является сначала Вставка экземпляра со значением <`root`> элемента, а затем его изменение. В этом примере начальное значение nil используется при вставке элемента> `root` <. Коллекция XML-схем в этом примере допускает значение nil для элемента <`root`>.  
+ Решением этой проблемы является сначала Вставка экземпляра со значением <`root`> элемента, а затем его изменение. В этом примере начальное значение nil используется при `root` вставке элемента> <. Коллекция XML-схем в этом примере допускает значение nil для элемента <`root`>.  
   
 ```  
 update T SET xmlCol.modify('  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 40ab2360-efb6-4ba6-bf23-e84964e51008
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c1e5b046bfa57302baefc43a4da989be9c70e08
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731989"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528661"
 ---
 # <a name="xml-elements-xmla"></a>Элементы XML (XML для аналитики)
-  В следующих разделах описываются различные категории элементов XML для аналитики (XMLA), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]поддерживаемые.  
+  В следующих разделах описываются различные категории элементов XML для аналитики (XMLA), поддерживаемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>В этом разделе  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62731989"
 |[Объекты &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|Описывает самые верхние элементы, получаемые приложением в конверте SOAP от экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в ответ на вызов метода XMLA.|  
 |[Свойства &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|Описывает дочерние элементы для заголовков, методов, объектов или команд XMLA.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных XML &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
  [Разработка на языке ASSL (язык ASSL)](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   

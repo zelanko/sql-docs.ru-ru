@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543638"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>Ключевые показатели эффективности (конструктор кубов) (службы Analysis Services — многомерные данные)
   Вкладка **Ключевые показатели эффективности** в конструкторе кубов используется для просмотра и редактирования ключевых показателей эффективности для выбранного куба.  
@@ -43,7 +42,7 @@ ms.locfileid: "66079429"
 |**Редактор форм ключевых показателей эффективности**|Панель «Редактор форм ключевых показателей эффективности» в представлении формы используется для просмотра и редактирования ключевых показателей эффективности, содержащихся в кубе. Дополнительные сведения об этой панели см. в разделе [Редактор форм ключевых показателей эффективности (вкладка "Ключевые показатели эффективности", конструктор кубов) (службы Analysis Services — многомерные данные)](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Браузер ключевых показателей эффективности**|Панель «Браузер ключевых показателей эффективности» в виде обозревателя используется для просмотра результатов ключевых показателей эффективности, содержащихся в кубе. Дополнительные сведения об этой панели см. в разделе [Браузер ключевых показателей эффективности (вкладка "Ключевые показатели эффективности", конструктор кубов) (службы Analysis Services — многомерные данные)](kpi-browser-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ключевые показатели эффективности &#40;ключевые показатели эффективности&#41; в многомерных моделях](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)   
  [Основные принципы создания скриптов многомерных выражений &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)  

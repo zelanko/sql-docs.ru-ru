@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175737"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546686"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Предоставление разрешений базы данных (службы Analysis Services)
   Если вы подходите к администрированию базы данных службы Analysis Services с квалификацией в смежных базах данных, первое, что вам необходимо понять, с точки зрения доступа к данным, это то, что база данных не является первичным защищаемым объектом службы Analysis Services.
@@ -72,10 +71,10 @@ ms.locfileid: "78175737"
 5.  Нажмите **ОК** для завершения процесса создания роли.
 
 ## <a name="process-database"></a>Process Database
- При определении роли, предоставляющей разрешения базы данных, можно пропустить `Full Control` и выбрать только `Process Database`. Данное разрешение, установленное на уровне базы данных, позволяет обрабатывать все объекты в рамках базы данных. Дополнительные сведения см. в разделе [Предоставление разрешений на обработку (службы Analysis Services)](grant-process-permissions-analysis-services.md)
+ При определении роли, предоставляющей разрешения базы данных, можно пропустить `Full Control` и выбрать только `Process Database` . Данное разрешение, установленное на уровне базы данных, позволяет обрабатывать все объекты в рамках базы данных. Дополнительные сведения см. в разделе [Предоставление разрешений на обработку (службы Analysis Services)](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Read Definition
- Аналогично `Process Database`, `Read Definition` Установка разрешений на уровне базы данных имеет каскадный результат для других объектов в базе данных. Если вы хотите установить разрешения Чтение Описания на более детализированном уровне, вы должны удалить Чтение Описания в качестве свойства базы данных на вкладке Общие. Дополнительные сведения см. в разделе [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
+ Аналогично `Process Database` , установка `Read Definition` разрешений на уровне базы данных имеет каскадный результат для других объектов в базе данных. Если вы хотите установить разрешения Чтение Описания на более детализированном уровне, вы должны удалить Чтение Описания в качестве свойства базы данных на вкладке Общие. Дополнительные сведения см. в разделе [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
 
 ## <a name="see-also"></a>См. также:
  [Предоставление разрешений администратора сервера &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [предоставление разрешений на обработку &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)

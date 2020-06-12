@@ -1,5 +1,6 @@
 ---
 title: 'Исключение элементов схемы из XML-документа с помощью SQL: сопоставлено'
+description: 'Узнайте, как использовать заметку SQL: Map для создания элемента в схеме XSD, который не сопоставлен с таблицей (представлением) или столбцом базы данных.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +24,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257443"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689394"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Исключение элементов схемы из XML-документа с помощью sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "75257443"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>А) Задание заметки sql:mapped  
- Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
+ Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из элемента ** \< Person. Contact>** с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
   
  При сопоставлении этой схемы XSD с таблицей Person. Contact в базе данных AdventureWorks в атрибуте **HomeAddress** указывается значение **SQL:** mappingd, поскольку в таблице Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию. Элемент ** \<Person. Contact>** сопоставляется с таблицей Person. Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person. Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию. Элемент ** \< Person. Contact>** сопоставляется с таблицей Person. Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

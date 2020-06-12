@@ -1,5 +1,6 @@
 ---
 title: Подключение к MySQL (MySQLToSQL) | Документация Майкрософт
+description: Узнайте, как подключиться к целевой базе данных Имискл для переноса базы данных MySQL. SSMA получает метаданные о базах данных в базе данных SQL Azure.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d82a23735cde22773c693dce5f6e8dc86b9654b4
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103174"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293661"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Подключение к MySQL (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server или SQL Azure, необходимо подключиться к базе данных MySQL, которую требуется перенести. При подключении SSMA получает метаданные обо всех схемах MySQL, а затем отображает их на панели обозревателя метаданных MySQL. SSMA хранит сведения о сервере базы данных, но не сохраняет пароли.  

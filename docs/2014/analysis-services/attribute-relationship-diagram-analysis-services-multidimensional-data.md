@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f0e03c8d06d018390a3537ec15c4ab06c927bf4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063100"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527900"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Диаграмма связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services - многомерные данные)
   Используйте панель непосредственно под панелью инструментов на вкладке **Связи атрибутов** , чтобы просмотреть диаграмму связи атрибутов и создать, изменить и удалить связи атрибутов.  
@@ -60,7 +59,7 @@ ms.locfileid: "66063100"
 > [!NOTE]  
 >  Если установить этот флажок, конструктор измерений вернет фигуры на диаграмме связей атрибутов к виду, используемому по умолчанию.  
   
- **Масштабирование**  
+ **Масштаб**  
  Отображает список допустимых параметров масштаба.  
   
 ### <a name="attribute-shortcut-menu"></a>Контекстное меню атрибутов  
@@ -91,7 +90,7 @@ ms.locfileid: "66063100"
  **Свойства**  
  Отображает свойства связи в окне **Свойства** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка Конструктор связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Атрибуты &#40;вкладка конструктора связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

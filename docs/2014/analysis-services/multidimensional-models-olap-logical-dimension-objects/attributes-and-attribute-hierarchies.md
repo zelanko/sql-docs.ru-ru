@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be3912ffd41c12043007418a0d36f835dc0b60f7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545176"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Атрибуты и иерархии атрибутов
   Измерения — это коллекции атрибутов, которые в представлении источника данных привязаны к одному или нескольким столбцам таблицы или представления.  
@@ -46,7 +45,7 @@ ms.locfileid: "62727398"
 ## <a name="attribute-relationships-star-schemas-and-snowflake-schemas"></a>Связи атрибутов, схемы «звезда» и «снежинка»  
  По умолчанию в схеме «звезда» все атрибуты непосредственно связаны с ключевым атрибутом, который предоставляет пользователю возможность просматривать фактические данные в кубе на основе любой иерархии атрибута в измерении. В схеме «снежинка» атрибут либо непосредственно связан с ключевым атрибутом, если его базовая таблица непосредственно связана с таблицей фактов, либо связан косвенно через атрибут, привязанный к ключу в базовой таблице, которая связывает таблицу со схемой «снежинка» с непосредственно связанной таблицей.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание определяемых пользователем иерархий](../multidimensional-models/user-defined-hierarchies-create.md)   
  [Определение связей атрибутов](../multidimensional-models/attribute-relationships-define.md)   
  [Справочник по свойствам атрибута измерения](../multidimensional-models/dimension-attribute-properties-reference.md)  

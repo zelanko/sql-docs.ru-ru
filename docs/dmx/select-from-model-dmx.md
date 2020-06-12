@@ -1,21 +1,21 @@
 ---
-title: ВЫБОР из &lt;модели&gt; (расширения интеллектуального анализа данных) | Документация Майкрософт
+title: ВЫБОР из &lt; модели &gt; (расширения интеллектуального анализа данных) | Документация Майкрософт
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928331"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666660"
 ---
-# <a name="select-from-ltmodelgt-dmx"></a>ВЫБОР из &lt;модели&gt; (расширения интеллектуального анализа данных)
+# <a name="select-from-ltmodelgt-dmx"></a>ВЫБОР из &lt; модели &gt; (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Выполняет пустое прогнозируемое соединение и возвращает наиболее вероятные значения для указанных столбцов. Для создания прогноза используется только содержимое модели интеллектуального анализа данных.  
@@ -36,7 +36,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *n*  
  Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
- *для базы данных модели*  
+ *model*  
  Идентификатор модели.  
   
  *список условий*  
@@ -45,7 +45,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Столбцы в *списке выражений* должны быть определены только как прогнозируемые или прогнозируемые либо связаны с прогнозируемым столбцом.  
   
 ## <a name="naive-bayes-example"></a>Пример упрощенного алгоритма Байеса  

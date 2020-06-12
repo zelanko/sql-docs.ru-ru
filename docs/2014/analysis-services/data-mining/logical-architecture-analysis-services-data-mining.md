@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084266"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522321"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)
   Интеллектуальный анализ данных — это процесс, сопряженный с взаимодействием нескольких компонентов.  
@@ -101,7 +100,7 @@ ms.locfileid: "66084266"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка объектов многомерной модели](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
   

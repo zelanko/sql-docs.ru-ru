@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 42319d60-ccd0-46b8-af0b-f0968c390d8a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9314494230469cca5e8db9926ddf71cb790b96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1a2952c54974d924fdeca23d3173a690579d2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080644"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544246"
 ---
 # <a name="impersonation-information"></a>Сведения об олицетворении
   Страница **Сведений об олицетворении** служит для указания учетных данных, которые будут использоваться службами Analysis Services для соединения с источником данных.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать конкретное имя пользователя Windows и пароль**  
  Выберите этот параметр, чтобы объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] использовал учетные данные безопасности указанной пользовательской учетной записи Windows. Заданные учетные данные будут использоваться для обработки данных, запросов ROLAP, внешних привязок, локальных кубов, моделей интеллектуального анализа данных, удаленных секций, связанных объектов и синхронизации цели с источником. Однако для инструкций расширений интеллектуального анализа данных OPENQUERY этот параметр не используется. Будут применены учетные данные не указанного, а текущего пользователя.  
   
  **User name**  
  Введите домен и имя учетной записи пользователя для использования выбранным объектом служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Используйте следующий формат:  
   
- Доменное **\\** имя>* \<имя учетной записи пользователя>* * \<*  
+ *\<Domain name>* **\\** *\<User account name>*  
   
  Этот параметр будет включен только в случае выбора параметра **Использовать указанные имя пользователя и пароль** .  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66080644"
  **Следующих**  
  Выберите этот параметр, чтобы использовать режим работы олицетворения, определенный на том уровне базы данных, который был задан администратором сервера с помощью свойства базы данных `DataSourceImpersonation`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источники данных в многомерных моделях](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Поддерживаемые источники данных &#40;многомерные&#41;SSAS](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   

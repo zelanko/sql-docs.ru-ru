@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074815"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670394"
 ---
 # <a name="identifiers-dmx"></a>Идентификаторы (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   При использовании зарезервированных слов для имен объектов или их частей.  
   
-     Не рекомендуется использование зарезервированных ключевых слов в качестве имен объектов. Базы данных, которые можно обновить с предыдущих [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] версий, могут содержать идентификаторы, содержащие слова, которые не были зарезервированы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в более ранней версии,[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]но являются зарезервированными словами для. Идентификатор с разделителем может использоваться для ссылки на подобный объект до изменения его имени.  
+     Не рекомендуется использование зарезервированных ключевых слов в качестве имен объектов. Базы данных, которые можно обновить с предыдущих версий, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут содержать идентификаторы, содержащие слова, которые не были зарезервированы в более ранней версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , но являются зарезервированными словами для [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Идентификатор с разделителем может использоваться для ссылки на подобный объект до изменения его имени.  
   
 -   Использование символов, которые не указаны в качестве сложных идентификаторов.  
   

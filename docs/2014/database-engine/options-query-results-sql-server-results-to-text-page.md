@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000754"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856651"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Параметры (результаты запроса — SQL Server — результаты на текстовую страницу)
   Используйте эту страницу, чтобы задать параметры для представления результирующего набора запроса в текстовом формате. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] окне запроса и выберите пункт **Параметры запроса**. В области **Результаты** диалогового окна **Параметры запроса**нажмите **Текст**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Формат вывода**  
  По умолчанию выходные данные отображаются в столбцах, полученных дополнением результатов пробелами. Также для разделения столбцов можно использовать запятые, табуляцию или пробелы. Выберите **Другой** из раскрывающегося списка, чтобы задать другой символ разделителя в текстовом поле **Выберите разделитель**.  
   

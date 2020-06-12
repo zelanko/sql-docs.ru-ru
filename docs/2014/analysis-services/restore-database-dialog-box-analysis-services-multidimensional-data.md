@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3990d47-55e2-424e-8eac-87edc937e806
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42649fd9fe8284e89aebd37c2d9b668a3ac34a2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5007728a9af2032f83b71a7ea5b2aea19d0cf20
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070261"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539166"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Восстановление базы данных» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Восстановление базы данных** используется в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для восстановления базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] из файла резервной копии служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ABF).  
@@ -34,14 +33,14 @@ ms.locfileid: "66070261"
   
  Диалоговое окно **Восстановление базы данных** содержит следующие страницы.  
   
-## <a name="pages"></a>Страницы  
- **Общие сведения**  
+## <a name="pages"></a>Pages  
+ **Общие**  
  Эта страница используется для выбора базы данных, подлежащей восстановлению, файла резервной копии, а также общих параметров и пароля, который будет использоваться для восстановления базы данных. Дополнительные сведения об этой странице см. в разделе [Общие (диалоговое окно "Восстановление базы данных") (службы Analysis Services — многомерные данные)](general-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Секции**  
  Эта страница используется для восстановления локальных секций в заданном расположении и для восстановления удаленных секций из удаленных файлов резервных копий. Дополнительные сведения об этой странице см. в разделе [Секции (диалоговое окно "Восстановление базы данных") (службы Analysis Services — многомерные данные)](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

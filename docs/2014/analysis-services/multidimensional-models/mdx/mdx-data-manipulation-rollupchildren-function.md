@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03c624d4-f277-451d-9995-623a07ea2f86
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 341468d521cebe1fda33d73ea999f3b6571cb01e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074269"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546356"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Работа с функцией RollupChildren (многомерные выражения)
   Функция МНОГОМЕРных выражений [RollupChildren](/sql/mdx/rollupchildren-mdx) [скрипт для поиска и замена] выполняет сведение дочерних элементов элемента, применяя другой унарный оператор к каждому дочернему элементу, и возвращает значение этой свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
@@ -72,7 +71,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  Инструкция многомерных выражений анализирует унарный оператор дочернего элемента. Если унарный оператор применяется для вычитания (как в случае элементов с внутренними и внешними возвратами), то функция `IIf` заменяет унарный оператор тильду (~). В противном случае функция `IIf` использует унарный оператор дочернего элемента. Наконец вычисленное значение суммы свертки умножается на коэффициент 1,1 для получения значения прогнозируемых валовых внутренних и внешних продаж.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Манипулирование данными (многомерные выражения)](mdx-data-manipulation-manipulating-data.md)  
   
   

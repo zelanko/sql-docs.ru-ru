@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 63f5d9f5-c6b6-4ceb-94fe-7b6c396d10bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c564425b541ff61353b511ba09ca16fb5331ff10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727364"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545246"
 ---
 # <a name="remote-partitions"></a>Удаленные секции
   Данные удаленной секции хранятся на другом экземпляре Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , отличном от экземпляра, содержащего определения (метаданные) секции и ее родительского куба. Управление удаленной секцией выполняется на том же экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], на котором определены секция и ее родительский куб.  
   
 > [!NOTE]  
->  Чтобы сохранить удаленную секцию, на компьютере должен быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] установлен экземпляр и был запущен тот же уровень пакета обновления, что и у экземпляра, где определена секция. Удаленные секции экземпляров более ранних версий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не поддерживаются.  
+>  Чтобы сохранить удаленную секцию, на компьютере должен быть установлен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и был запущен тот же уровень пакета обновления, что и у экземпляра, где определена секция. Удаленные секции экземпляров более ранних версий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не поддерживаются.  
   
  При включении удаленных секций в группу мер происходит распределение памяти и загрузки ЦП по всем секциям группы мер. Например, во время обработки удаленной секции, отдельно или как часть процесса обработки ее родительского куба, максимальная загрузка памяти ЦП для данной секции приходится на удаленный экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62727364"
 ## <a name="archiving-and-restoring-remote-partitions"></a>Архивация и восстановление удаленных секций  
  Данные удаленных секций можно архивировать или восстанавливать, когда архивируется или восстанавливается хранящая их база данных. Если восстановление базы данных выполняется без восстановления удаленной секции, то прежде чем использовать данные секции, необходимо обработать удаленную секцию. Дополнительные сведения о архивировании и восстановлении баз данных см. в статье [резервное копирование и восстановление баз данных Analysis Services](../multidimensional-models/backup-and-restore-of-analysis-services-databases.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание &#40;Analysis Services удаленных секций и управление ими&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
  [Обработка объектов служб Analysis Services](../multidimensional-models/processing-analysis-services-objects.md)  
   

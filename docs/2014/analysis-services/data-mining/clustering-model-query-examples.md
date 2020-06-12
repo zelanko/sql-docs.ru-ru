@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085721"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524210"
 ---
 # <a name="clustering-model-query-examples"></a>Примеры запросов к модели кластеризации
   С помощью запроса к модели интеллектуального анализа данных можно получать метаданные о модели, а также, с помощью запросов к содержимому, подробную информацию о закономерностях, обнаруженных при анализе. Кроме того, можно создавать прогнозирующие запросы, которые на основе закономерностей модели создают прогнозы новых данных. Разные типы запросов предоставляют различные виды информации. Например, запрос к содержимому предоставит дополнительные сведения о найденных кластерах, а прогнозирующий запрос определит, к какому кластеру с наибольшей вероятностью будет относиться новая точка данных.  
@@ -77,7 +76,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Кластерная модель|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|Все|  
   
  Значение этих столбцов в модели кластеризации см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -192,7 +191,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  Пример результатов:  
   
-|Атрибуты|Значения|Частота|Поддержка|  
+|Атрибуты|Значения|Периодичность|Поддержка|  
 |----------------|------------|---------------|-------------|  
 |Количество детей в доме|0|0.999999829076798|899|  
 |Регион|Северная Америка|0.999852875241508|899|  
@@ -387,7 +386,7 @@ NATURAL PREDICTION JOIN
   
  Синтаксис отдельных функций см. в статье [Справочник по функциям расширений интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)   
  [Алгоритм кластеризации (Майкрософт)](microsoft-clustering-algorithm.md)  

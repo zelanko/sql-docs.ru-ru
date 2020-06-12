@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf560d489a1631e31f470134d497d3d897f6f35e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98b677aab756d4fd2b35c6751e925c463665441
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175683"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540476"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Доступность и аварийное восстановление PowerPivot (SQL Server 2014)
   Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, продолжительности простоя, приемлемой для различных компонентов, а также средств и методов работы, которые используются для поддержания доступности SharePoint. В этом разделе перечислены технологии и приведены примеры схем топологии, которые следует учитывать при планировании доступности и аварийного восстановления для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] развертывания.
@@ -47,7 +46,7 @@ ms.locfileid: "78175683"
 
 -   **(3)** Службы вычислений Excel выполняются на каждом сервере приложений, что позволяет приложению службы работать на разных серверах приложений. Поэтому, если один сервер приложений переходит в режим «вне сети», службы вычислений Excel останутся доступными.
 
--   **(4)** и **(6)** экземпляры [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] служб в режиме интеграции с SharePoint выполняются на серверах за пределами фермы SharePoint, включая службу Windows **SQL Server Analysis Services (PowerPivot)**. Каждый из этих экземпляров регистрируется в службах Excel **(3)**. Службы Excel обеспечивают балансировку нагрузки запросов к серверам [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Архитектура [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 позволяет иметь несколько серверов для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , поэтому по мере необходимости можно легко добавлять другие экземпляры. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).
+-   **(4)** и **(6)** экземпляры [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] служб в режиме интеграции с SharePoint выполняются на серверах за пределами фермы sharepoint, включая службу Windows **SQL Server Analysis Services (PowerPivot)**. Каждый из этих экземпляров регистрируется в службах Excel **(3)**. Службы Excel обеспечивают балансировку нагрузки запросов к серверам [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . Архитектура [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 позволяет иметь несколько серверов для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , поэтому по мере необходимости можно легко добавлять другие экземпляры. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\).aspx).
 
 -   **(5)** Базы данных SQL Server, используемые для содержимого, конфигурации и в качестве баз данных приложения. Сюда входит и база данных приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В плане аварийного восстановления следует учитывать уровень базы данных. В этом проекте базы данных выполняются на том же сервере, что и **(4)** один из экземпляров [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . **(4)** и **(5)** также могут находиться на разных серверах.
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175683"
 
 -   **(1)** Серверы клиентского веб-интерфейса. Установите поставщики данных на каждом сервере. Дополнительные сведения см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).
 
--   **(2)** две [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] общие службы и **(4)** SQL Server Analysis Services службы Windows **(PowerPivot)** установлены на серверах приложений SharePoint.
+-   **(2)** две [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Общие службы и **(4)** SQL Server Analysis Services службы Windows **(PowerPivot)** установлены на серверах приложений SharePoint.
 
      Системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] выполняется **на каждом** сервере приложений, что позволяет приложению службы работать **на нескольких** серверах приложений. Если один сервер приложений переходит в режим «вне сети», приложение службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] будет по-прежнему доступно.
 
@@ -80,9 +79,9 @@ ms.locfileid: "78175683"
 ||Комментарии|
 |-|--------------|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] в ферме для обеспечения доступности.|Поддерживается, но не рекомендуется. Рекомендуется использовать AlwaysOn в режиме синхронной фиксации.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] в режиме синхронной фиксации|Поддерживается и рекомендуется.|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]в режиме синхронной фиксации|Поддерживается и рекомендуется.|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] асинхронное зеркальное отображение или доставка журналов в другую ферму для аварийного восстановления.|Поддерживается.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] с асинхронной фиксацией для аварийного восстановления|Поддерживается|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]с асинхронной фиксацией для аварийного восстановления|Поддерживается|
 
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]
 
@@ -91,7 +90,7 @@ ms.locfileid: "78175683"
  Дополнительные сведения о планировании сценария холодного резерва с [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]см. в разделе [Аварийное восстановление PowerPivot](https://social.technet.microsoft.com/wiki/contents/articles/22137.sharepoint-powerpivot-disaster-recovery.aspx).
 
 ## <a name="verification"></a>Проверка
- Инструкции и сценарии, помогающие проверить [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] развертывание до и после цикла аварийного восстановления, см. в разделе [Контрольный список: использование PowerShell для проверки PowerPivot для SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).
+ Инструкции и сценарии, помогающие проверить [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] развертывание до и после цикла аварийного восстановления, см. [в разделе Контрольный список: использование PowerShell для проверки PowerPivot для SharePoint](../instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md).
 
 ##  <a name="links-to-more-information"></a><a name="bkmk_more_resources"></a>Ссылки на дополнительные сведения
 

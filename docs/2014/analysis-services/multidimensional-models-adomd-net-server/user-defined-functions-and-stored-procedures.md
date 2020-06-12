@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dcf79644ba3e9bc337b14e4ff28fe703e81564d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545436"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Определяемые пользователем функции и хранимые процедуры
-  С помощью объектов ADOMD.NET Server можно создать определяемую пользователем функцию (UDF) или хранимые процедуры [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для взаимодействия с метаданными и данными с сервера. Эти внутрипроцессные методы вызываются при помощи инструкций на языке MDX или DMX для предоставления дополнительных функциональных возможностей без задержек, связанных с обменом данными по сети.  
+  С помощью объектов ADOMD.NET Server можно создать определяемую пользователем функцию (UDF) или хранимые процедуры для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] взаимодействия с метаданными и данными с сервера. Эти внутрипроцессные методы вызываются при помощи инструкций на языке MDX или DMX для предоставления дополнительных функциональных возможностей без задержек, связанных с обменом данными по сети.  
   
 ## <a name="udf-examples"></a>Примеры определяемых пользователем функций  
  Определяемая пользователем функция — это метод, который можно вызывать в контексте инструкции MDX или DMX; он может принимать любое количество параметров и возвращать данные любого типа.  

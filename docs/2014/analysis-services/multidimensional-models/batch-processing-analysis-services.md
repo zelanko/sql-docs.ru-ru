@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb5ef5f0f9d662f66b9fb3203e518316d87c21b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076944"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544626"
 ---
 # <a name="batch-processing-analysis-services"></a>Пакетная обработка (службы Analysis Services)
   В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]вы можете использовать команду «Пакет», чтобы отправить несколько команд обработки на сервер в одном запросе. Пакетная обработка позволяет выбирать объекты для обработки и управлять порядком их обработки. Кроме того, пакет можно выполнить как серию изолированных заданий или как транзакцию, в которой сбой одного из процессов влечет за собой откат всего пакета.  
@@ -74,7 +73,7 @@ ms.locfileid: "66076944"
   
  Пошаговые инструкции см. в **примере 2** в разделе [Планирование административных задач SSAS с помощью агент SQL Server](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка объектов многомерной модели](processing-a-multidimensional-model-analysis-services.md)  
   
   

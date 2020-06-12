@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075357"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546890"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Развертывание решений моделей с использованием программы развертывания
   Программа **Microsoft.AnalysisServices.Deployment** позволяет запустить механизм развертывания служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
@@ -60,7 +59,7 @@ ms.locfileid: "66075357"
 > [!NOTE]  
 >  Аргумент **/d** используется только в режиме вывода. Этот аргумент не будет учитываться, если указан режим ответов или режим без вывода сообщений. Дополнительные сведения о режимах см. в подразделе [Режимы](#Modes)далее в этом разделе.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Программа **Microsoft.AnalysisServices.Deployment** использует набор файлов, которые содержат определения объектов, адресаты развертывания, параметры развертывания и параметры настройки конфигурации, и пытается развернуть определения объекта на указанные адресаты развертывания с помощью указанных параметров развертывания и параметров настройки конфигурации. Эта программа может предоставить пользовательский интерфейс, если будет вызвана в режиме файлов ответов или в режиме вывода. Дополнительные сведения о том, как использовать пользовательский интерфейс, предоставляемый этой программой для создания файлов ответов, см. в разделе [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md).  
   
  Эта программа находится в папке «\Program files (x86)\Microsoft SQL Server\110\Binn\ManagementStudio».  
@@ -85,7 +84,7 @@ ms.locfileid: "66075357"
   
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
-## <a name="see-also"></a>См. также  
- [Справочник по программе командной строки (компонент Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>См. также:  
+ [Справочник по программе командной строки (Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Функция string-length (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию XQuery string-length ().
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004650"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689250"
 ---
 # <a name="functions-on-string-values---string-length"></a>Функции со строковыми значениями — string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +40,14 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Строка источника, длина которой подлежит вычислению.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если значение *$arg* является пустой последовательностью, возвращается значение **xs: integer** , равное 0.  
   
  Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных. Если уровень совместимости 110 или выше, каждая суррогатная пара рассматривается как один символ. При более низких уровнях совместимости они рассматриваются как два символа. Дополнительные сведения см. в разделе [уровень совместимости ALTER database &#40;&#41;Transact-SQL](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) , а [Параметры сортировки и поддержка Юникода](../relational-databases/collations/collation-and-unicode-support.md).  
   
  Если значение содержит 4-байтовый символ в Юникоде, представленный двумя суррогатными символами, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет подсчитывать суррогатные символы по отдельности.  
   
- **Строку-Length ()** без параметра можно использовать только внутри предиката. Например, следующий запрос возвращает элемент> <`ROOT` :  
+ **Строку-Length ()** без параметра можно использовать только внутри предиката. Например, следующий запрос возвращает `ROOT` элемент> <:  
   
 ```  
 DECLARE @x xml;  
@@ -61,7 +62,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>А) Использование функции string-length() языка XQuery для получения продуктов с длинными сводными описаниями  
- Для продуктов, сводное описание которых превышает 50 символов, следующий запрос получает идентификатор продукта, длину сводного описания и саму сводку, элемент> <`Summary` .  
+ Для продуктов, сводное описание которых превышает 50 символов, следующий запрос получает идентификатор продукта, длину сводного описания и саму сводку, `Summary` элемент> <.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -98,10 +99,10 @@ Result
 ...  
 ```  
   
-### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>Б) Использование функции string-length() языка XQuery для получения продуктов с короткими описаниями гарантии  
- Для продуктов, описание гарантии которых содержит менее 20 символов, следующий запрос извлекает XML, содержащий идентификатор продукта, длину, гарантийное описание и сам элемент <`Warranty`>.  
+### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>Б. Использование функции string-length() языка XQuery для получения продуктов с короткими описаниями гарантии  
+ Для продуктов, описание гарантии которых содержит менее 20 символов, следующий запрос извлекает XML, содержащий идентификатор продукта, длину, гарантийное описание и `Warranty` сам элемент <>.  
   
- Гарантия — это одна из характеристик продукта. Необязательный `Warranty` <дочерний элемент> следует `Features` за элементом <>.  
+ Гарантия — это одна из характеристик продукта. Необязательный <`Warranty` дочерний элемент> следует за `Features` элементом <>.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -129,7 +130,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **PD** и **WM** — это префиксы пространства имен, используемые в этом запросе. Они определяют то же пространство имен, что используется в запрашиваемом документе;  
   
--   XQuery указывает вложенный цикл FOR. Требуется внешний цикл FOR, так как необходимо получить атрибуты **ProductModelID** элемента <`ProductDescription`>. Внутренний цикл FOR требуется, так как нужны только продукты, имеющие описания характеристик гарантии меньше 20 символов в длину.  
+-   XQuery указывает вложенный цикл FOR. Требуется внешний цикл FOR, так как необходимо получить атрибуты **ProductModelID** `ProductDescription` элемента <>. Внутренний цикл FOR требуется, так как нужны только продукты, имеющие описания характеристик гарантии меньше 20 символов в длину.  
   
  Частичный результат:  
   
