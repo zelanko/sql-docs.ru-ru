@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075029"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546716"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Предоставление разрешений кубу или модели (службы Analysis Services)
   Куб или табличная модель являются основным объектом запроса в модели данных службы Analysis Service. При подключении к многомерным или табличным данным из Excel для просмотра данных ad hoc, пользователи обычно начинают с выбора определенного куба или табличной модели в качестве структуры данных Сводного объекта отчета. Данная тема объясняет, как предоставить необходимые разрешения для доступа к кубу или табличным данным.  
@@ -93,14 +92,14 @@ ms.locfileid: "66075029"
   
 2.  В SSMS пройдите к папке **Роли** и щелкните правой кнопкой мыши существующую роль.  
   
-3.  Выберите **создать скрипт** | **для** | роли создание**файла**.  
+3.  Выберите **Script Role as**  |  **создать скрипт для роли создание**  |  **файла**.  
   
 4.  Сохраните файл с разрешением файла .xmla. Для проверки сценария удалите текущую роль, откройте файл в SSMS и нажмите F5 для запуска сценария.  
   
-## <a name="next-step"></a>Далее  
+## <a name="next-step"></a>Следующий шаг  
  Мы можете детализировать разрешения куба для ограничения доступа к ячейке или данным измерения. Дополнительные сведения см. в разделах [Предоставление настраиваемого доступа к данным измерений (службы Analysis Services)](grant-custom-access-to-dimension-data-analysis-services.md) и [Предоставление настраиваемого доступа к данным ячейки (службы Analysis Services)](grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методологии проверки подлинности, поддерживаемые Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Предоставление разрешений на структуры и модели интеллектуального анализа данных &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Предоставление разрешений объекту источника данных (службы Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md)  

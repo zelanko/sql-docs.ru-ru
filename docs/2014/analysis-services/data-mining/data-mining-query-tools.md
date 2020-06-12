@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084980"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523166"
 ---
 # <a name="data-mining-query-interfaces"></a>Интерфейсы запросов интеллектуального анализа данных
   Запросы интеллектуального анализа данных основаны на языке расширения интеллектуального анализа данных (DMX). DMX-запросы используются в задачах прогнозирования и моделирования, в том числе для классификации, анализа рисков, формирования рекомендаций и линейной регрессии. Можно также извлечь статистику и закономерности, сформированные при обработке модели.  
@@ -90,7 +89,7 @@ ms.locfileid: "66084980"
   
 -   Чтобы получить **содержимое модели** и **метаданные модели**, например число кластеров, атрибутов, использованных в деревьях принятия решений, даты последней обработки модели и параметров алгоритма, заданные при создании модели, можно воспользоваться методом [Discover (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover), а также указать один из наборов строк схемы интеллектуального анализа данных в заголовке элемента [RequestType (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla). Чтобы сузить область действия запроса, введите такие критерии, как ограничения, внутри элемента [RestrictionList (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictionlist-element-xmla).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Решения интеллектуального анализа данных](data-mining-solutions.md)   
  [Основные сведения о инструкции SELECT расширений интеллектуального анализа данных](/sql/dmx/understanding-the-dmx-select-statement)   

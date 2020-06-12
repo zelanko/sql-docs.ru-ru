@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedd6ec66a188738ac9a522b4802b3b431e82f36
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62731916"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528630"
 ---
 # <a name="discover_xevent_trace_definition-rowset"></a>Набор строк DISCOVER_XEVENT_TRACE_DEFINITION
   Содержит сведения о трассировках XEvent, которые в настоящее время активны на сервере.  
@@ -36,12 +35,12 @@ ms.locfileid: "62731916"
   
  В следующей таблице указываются значения строки и идентификатора GUID, определяющие этот набор строк.  
   
-|Аргумент|Применение|  
+|Аргумент|Значение|  
 |--------------|-----------|  
 |Код GUID|a07ccd1c-8148-11d0-87bb-00c04fc33942|  
 |Строка|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [XML для аналитики наборов строк схемы](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
  [Используйте SQL Server расширенные события &#40;&#41; XEvents для отслеживания Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
  [Использование динамических административных представлений для мониторинга служб Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 504e190f4c513a8c999c4d7d7ab9eaabb83298c3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728507"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545196"
 ---
 # <a name="database-dimension-properties"></a>Свойства измерений базы данных
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]службах характеристики измерения определяются метаданными для измерения, основанными на параметрах различных свойств измерения, а также в атрибутах или иерархиях, содержащихся в измерении. Следующая таблица содержит описания свойств измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] характеристики измерения определяются метаданными для измерения, основанными на параметрах различных свойств измерения, а также в атрибутах или иерархиях, содержащихся в измерении. Следующая таблица содержит описания свойств измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
 |Свойство|Описание|  
 |--------------|-----------------|  
@@ -51,7 +50,7 @@ ms.locfileid: "62728507"
 > [!NOTE]  
 >  Дополнительные сведения о задании значений свойств ErrorConfiguration и UnknownMember при работе со значениями NULL и другими проблемами целостности данных см. в разделе [обработка проблем целостности данных в Analysis Services 2005](https://go.microsoft.com/fwlink/?LinkId=81891).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](attributes-and-attribute-hierarchies.md)   
  [Пользовательские иерархии](user-hierarchies.md)   
  [Связи измерений](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

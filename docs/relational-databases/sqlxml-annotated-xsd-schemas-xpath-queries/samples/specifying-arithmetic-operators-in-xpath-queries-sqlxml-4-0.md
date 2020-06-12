@@ -1,5 +1,6 @@
 ---
 title: Использование арифметических операторов в запросах XPath (SQLXML)
+description: Узнайте, как указывать арифметические операторы в запросах XPath 4,0 в SQLXML.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252624"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529894"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252624"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Указание арифметического оператора *  
- Этот запрос XPath возвращает ** \<OrderDetail>** элементов, которые соответствуют заданному предикату:  
+ Этот запрос XPath возвращает **\<OrderDetail>** элементы, которые соответствуют заданному предикату:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В `child` запросе — это ось, а `OrderDetail` — проверка узла (true, если **OrderDetail** является ** \<узлом элемента>**, поскольку ** \<элемент>ным** узлом является основным узлом для **дочерней** оси). Для всех узлов элементов ** \<OrderDetail>** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
+ В запросе `child` является осью и `OrderDetail` является тестом узла (true, если **OrderDetail** является **\<element node>** , так как **\<element>** узел является основным узлом для **дочерней** оси). Для всех **\<OrderDetail>** узлов элементов применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  

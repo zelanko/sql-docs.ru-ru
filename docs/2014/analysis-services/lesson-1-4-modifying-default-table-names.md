@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079229"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543616"
 ---
 # <a name="modifying-default-table-names"></a>Изменение имен таблиц по умолчанию
   Значение свойства **FriendlyName** для объектов в представлении источника данных можно изменить, сделав его имя более понятным и простым в использовании.  
@@ -33,11 +32,11 @@ ms.locfileid: "66079229"
   
      Когда окно свойств открыто, проще изменять свойства каждой таблицы в представлении источника данных. Если окно не закреплено в открытом состоянии с помощью кнопки **Автоматически скрывать** , оно будет закрыто, как только будет выбран другой объект на панели **Диаграмма** .  
   
-3.  Измените свойство **FriendlyName** для объекта **FactInternetSales** на *`InternetSales`*.  
+3.  Измените свойство **FriendlyName** для объекта **FactInternetSales** на *`InternetSales`* .  
   
      Изменение будет применено, если щелкнуть вне ячейки свойства **FriendlyName** . На следующем занятии будет рассмотрено определение группы мер на основе этой таблицы фактов. Из-за сделанных на этом занятии изменений она будет называться не FactInternetSales, а InternetSales.  
   
-4.  На панели **Таблицы** выберите таблицу **DimProduct** . В окно свойств измените свойство **FriendlyName** на *`Product`*.  
+4.  На панели **Таблицы** выберите таблицу **DimProduct** . В окно свойств измените свойство **FriendlyName** на *`Product`* .  
   
 5.  Точно таким же образом измените значения свойства **FriendlyName** для всех оставшихся таблиц в представлении источника данных, удалив префикс**Dim**.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66079229"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 2. Определение и развертывание куба](lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Изменение свойств в представлении источника данных (службы Analysis Services)](multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   

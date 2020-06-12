@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a21653e55088935539f8dedd4c94078c4c0ffdf9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085503"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523940"
 ---
 # <a name="create-a-data-mining-dimension"></a>создать измерение интеллектуального анализа данных
   Если структура интеллектуального анализа данных основана на кубе OLAP, то можно создать измерение, которое содержит содержимое модели интеллектуального анализа данных. После этого можно встроить это измерение обратно в исходный куб.  
@@ -42,7 +41,7 @@ ms.locfileid: "66085503"
   
      Измерение интеллектуального анализа данных создается и добавляется в папку **Измерения** в обозревателе решений. Если выбран пункт **Создать куб**, то также создается новый куб и добавляется в папку **Кубы** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)  
   
   

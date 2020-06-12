@@ -1,5 +1,6 @@
 ---
 title: Выражения последовательности (XQuery) | Документация Майкрософт
+description: Сведения о выражениях последовательности XQuery, которые создают, фильтруют и объединяют последовательность элементов.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529768"
 ---
 # <a name="sequence-expressions-xquery"></a>Выражения последовательности (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Пример В  
- Следующий запрос задается для столбца AdditionalContactInfo типа **XML** в таблице Contact. В этом столбце хранятся дополнительные контактные данные: адреса, номера телефонов и пейджеров. \<TelephoneNumber>, \<пейджер> и другие узлы могут находиться в любом месте документа. Запрос формирует последовательность, которая содержит все дочерние \<элементы telephoneNumber> узла контекста, за которыми следуют \<пейджер> дочерние элементы. Обратите внимание на применение оператора последовательности в возвращаемом выражении `($a//act:telephoneNumber, $a//act:pager)`.  
+ Следующий запрос задается для столбца AdditionalContactInfo типа **XML** в таблице Contact. В этом столбце хранятся дополнительные контактные данные: адреса, номера телефонов и пейджеров. \<telephoneNumber>Узлы, \<pager> и могут находиться в любом месте документа. Запрос формирует последовательность, которая содержит все \<telephoneNumber> дочерние узлы контекстного узла, за которыми следуют \<pager> дочерние элементы. Обратите внимание на применение оператора последовательности в возвращаемом выражении `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -151,7 +152,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- Чтобы получить только <`a`> элементов, имеющих атрибут attr, можно указать фильтр в предикате. Результирующая последовательность будет содержать только один элемент `a`> <.  
+ Чтобы получить только <`a`> элементов, имеющих атрибут attr, можно указать фильтр в предикате. Результирующая последовательность будет содержать только один `a` элемент> <.  
   
 ```  
 declare @x xml  

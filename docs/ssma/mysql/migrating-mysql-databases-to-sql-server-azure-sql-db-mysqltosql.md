@@ -1,5 +1,6 @@
 ---
 title: Перенос баз данных MySQL в SQL Server в базе данных SQL Azure | Документация Майкрософт
+description: Используйте этот рекомендуемый процесс для переноса баз данных MySQL в SQL Server или базу данных SQL Azure с помощью Помощник по миграции SQL Server (SSMA).
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8006f9a0-394d-4238-8dc5-44255134628b
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 33dd7faf67e82f1259ac87a0ef8e0eb5fdf2927d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0daee899775b5a8bb3a0e4b6ee0eef4a93eca00b
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908789"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293593"
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Перенос баз данных MySQL в SQL Server в базе данных SQL Azure (MySQLToSql)
 Помощник по миграции SQL Server (SSMA) для MySQL — это Комплексная среда, которая помогает быстро перенести базы данных MySQL в SQL Server или SQL Azure. С помощью SSMA для MySQL можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в SQL Server или SQL Azure, а затем переносить данные в SQL Server или SQL Azure.  
@@ -38,7 +39,7 @@ ms.locfileid: "67908789"
   
 7.  [Преобразование баз данных MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Синхронизиру](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
+8.  [Синхронизация](loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 9. Это можно сделать одним из следующих способов:  
   
@@ -53,7 +54,7 @@ ms.locfileid: "67908789"
 > [!NOTE]  
 > Вы не можете перенести схемы Information_schema и MySQL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Установка SSMA для MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)  
 [Начало работы с SSMA для MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

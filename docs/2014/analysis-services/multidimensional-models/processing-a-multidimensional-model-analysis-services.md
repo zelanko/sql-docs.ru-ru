@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7d4952724f19a3c7010884feac0254f4f75d90ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caf111b2d78032b0a127f978562b2e0138df0109
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073355"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545798"
 ---
 # <a name="multidimensional-model-object-processing"></a>Обработка объектов многомерной модели
   Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
@@ -35,7 +34,7 @@ ms.locfileid: "66073355"
   
  Этот раздел включает следующие подразделы:  
   
- [Предварительные условия](#bkmk_prereq)  
+ [Предварительные требования](#bkmk_prereq)  
   
  [Выбор средства или подхода](#bkmk_tool)  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66073355"
   
  При обработке объектов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбрать параметр обработки или включить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для определения соответствующего типа обработки. Доступные методы обработки отличаются от одного объекта к другому и зависят от типа объекта. Кроме того, доступные методы зависят от типа изменений, внесенных в объект с момента его последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время. Дополнительные сведения см. в разделе [Настройка параметров обработки (службы Analysis Services)](processing-options-and-settings-analysis-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Логическая архитектура &#40;Analysis Services многомерных данных&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Объекты баз данных (службы Analysis Services — многомерные данные)](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   

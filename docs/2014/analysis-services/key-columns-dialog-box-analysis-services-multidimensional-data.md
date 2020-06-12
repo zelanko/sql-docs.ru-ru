@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0758c814a7edce134be01ebf766a12832e942a61
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543707"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Ключевые столбцы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Ключевые столбцы** , чтобы изменить свойство **KeyColumns** атрибута. Дополнительные сведения см. в разделе [Изменение свойства KeyColumn атрибута](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "66079465"
   
 -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] или [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите атрибут, а затем в окне **Свойства** нажмите кнопку с многоточием (**...**), связанную со свойством **KeyColumns** этого атрибута.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Исходная таблица**  
  Выберите исходную таблицу, для которой нужно выбрать ключевые столбцы. Можно выбрать исходную таблицу из списка всех таблиц в представлении источника данных.  
   
@@ -42,13 +41,13 @@ ms.locfileid: "66079465"
   
  Чтобы удалить столбец из списка **Ключевые столбцы** , выберите столбец и нажмите кнопку **\<** .  
   
- **Вверх**  
+ **Up**  
  Нажмите, чтобы переместить столбец, выбранный в списке **Ключевые столбцы** , на одну позицию вверх.  
   
 > [!NOTE]  
 >  Этот параметр доступен, только если список содержит более одного столбца и выбран какой-либо столбец.  
   
- **Вниз**  
+ **Down**  
  Нажмите, чтобы переместить столбец, выбранный в списке **Ключевые столбцы** , на одну позицию вниз.  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.locfileid: "66079465"
  **<**  
  Нажмите, чтобы удалить выбранный столбец из списка **Ключевые столбцы**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

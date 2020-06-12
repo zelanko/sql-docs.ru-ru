@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174247"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527735"
 ---
 # <a name="browsing-a-neural-network-model"></a>Просмотр модели нейронной сети
   При открытии модели нейронной сети или логистической регрессии с помощью кнопки **Обзор** модель отображается в интерактивном средстве просмотра, аналогичном средству просмотра модели нейронной сети в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Средство просмотра помогает исследовать корреляции и получать информацию об элементах организации в модели и в базовых данных.
@@ -89,7 +88,7 @@ ms.locfileid: "78174247"
 
 1.  Предположим, что необходимо обратиться к особой группе и просмотреть факторы, которые сильнее всего будут влиять на покупки в этой группе.
 
-     На панели **входных данных** щелкните ячейку ** \<все>** в поле **атрибут**и выберите **возраст**.
+     На панели **входных данных** щелкните **\<All>** ячейку в поле **атрибут**и выберите **возраст**.
 
      В поле **Значение** выберите наиболее молодую возрастную категорию.
 
@@ -133,7 +132,7 @@ ms.locfileid: "78174247"
 
  Дополнительные сведения см. в разделах [Создание структуры интеллектуального анализа данных (надстройки интеллектуального анализа данных SQL Server)](create-mining-structure-sql-server-data-mining-add-ins.md) и [Добавление модели к структуре (надстройки интеллектуального анализа данных для Excel)](add-model-to-structure-data-mining-add-ins-for-excel.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Просмотр моделей в Excel &#40;SQL Server надстройки интеллектуального анализа данных&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)
 
 

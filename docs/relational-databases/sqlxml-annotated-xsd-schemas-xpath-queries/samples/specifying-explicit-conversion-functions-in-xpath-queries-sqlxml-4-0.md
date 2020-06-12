@@ -1,5 +1,6 @@
 ---
 title: Использование функций преобразования в запросах XPath (SQLXML)
+description: Узнайте, как указать явные функции преобразования String () и Number () в запросах типа SQLXML 4,0 XPath.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58611edabcfeaeb9a97de3da6c7305fb169c14ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f38cb1b18b096fe73f9d6b587162e7fcbe6f69a8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252555"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529906"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Определение явных функций преобразования в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75252555"
 ### <a name="a-use-the-number-explicit-conversion-function"></a>A. Используйте функцию явного преобразования number()  
  Функция **Number ()** Преобразует аргумент в число.  
   
- Если значение параметра **ContactID** не является числовым, следующий запрос преобразует идентификатор **ContactID** в число и сравнивает его со значением 4. Затем запрос возвращает все **ContactID** ** \<** дочерние элементы Employee>элемента контекстного узла с атрибутом ContactID, имеющим числовое значение 4:  
+ Если значение параметра **ContactID** не является числовым, следующий запрос преобразует идентификатор **ContactID** в число и сравнивает его со значением 4. Затем запрос возвращает все **\<Employee>** дочерние элементы узла контекста с атрибутом **ContactID** , имеющим числовое значение 4:  
   
 ```  
 /child::Contact[number(attribute::ContactID)= 4]  
@@ -78,10 +79,10 @@ ms.locfileid: "75252555"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>Б) Используйте функцию явного преобразования string()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>Б. Используйте функцию явного преобразования string()  
  Функция **String ()** Преобразует аргумент в строку.  
   
- Следующий запрос преобразует **ContactID** в строку и сравнивает его со строковым значением "4". Запрос возвращает все ** \<** дочерние элементы>элементов узла контекста с параметром **ContactID** со строковым значением "4":  
+ Следующий запрос преобразует **ContactID** в строку и сравнивает его со строковым значением "4". Запрос возвращает все **\<Employee>** дочерние элементы узла контекста с параметром **ContactID** со строковым значением "4":  
   
 ```  
 /child::Contact[string(attribute::ContactID)="4"]  

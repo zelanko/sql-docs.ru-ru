@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 953818b4-9543-4c01-bb20-1d45ec6dfb91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14d63345020fbe76b727d9276585b17bb3406846
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50086ef38d9bd54a4088e9cf647a53553694a09d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072592"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535795"
 ---
 # <a name="add-or-delete-a-user-defined-hierarchy"></a>Добавление или удаление пользовательскую иерархию
   Добавление пользовательской иерархии в измерение и ее удаление производится на вкладке **Структура измерения** конструктора измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -53,15 +52,15 @@ ms.locfileid: "66072592"
   
 -   На панели **Иерархии** вкладки **Структура измерения** выберите пользовательскую иерархию, которую хотите удалить. На панели инструментов щелкните **Удалить**.  
   
-     - или -  
+     - или  
   
 -   На панели **Иерархия** щелкните правой кнопкой мыши пользовательскую иерархию, которую необходимо удалить, и выберите **Удалить**.  
   
-     - или -  
+     - или  
   
 -   Удалите иерархию из области конструктора с помощью мыши.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские иерархии](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Создание пользовательских иерархий](user-defined-hierarchies-create.md)  
   

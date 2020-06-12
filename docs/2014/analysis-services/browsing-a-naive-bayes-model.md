@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cceead32ca14d2a5261c0ef35cb4444be2effcf5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088480"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527720"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Обзор модели упрощенного алгоритма Байеса
   При открытии модели упрощенного алгоритма Байеса с помощью **кнопки Обзор**модель отображается в интерактивном средстве просмотра с четырьмя разными панелями. Используйте средство просмотра для исследования корреляций и получайте сведения о модели и базовых данных.  
@@ -111,7 +110,7 @@ ms.locfileid: "66088480"
   
  [К началу](#BKMK_Tabs)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр моделей в Excel &#40;SQL Server надстройки интеллектуального анализа данных&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e65da7af45aa2c5dbb18a560b05a5d943a9e64c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 533b244a8a5b6ec5e2866b068cfbf5eb6f31a7a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72811599"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545116"
 ---
 # <a name="user-hierarchies"></a>Пользовательские иерархии
   Пользовательские иерархии — это определяемые пользователем иерархии атрибутов, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для организации элементов измерения в иерархические структуры и предоставления путей навигации в Кубе. Например, в следующей таблице определена таблица измерения для измерения времени. Эта таблица измерения поддерживает три атрибута: «Год», «Квартал» и «Месяц».  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 32c17b4f-e090-45f9-b3aa-ffa7084e928e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b890514422a6b9b16cdfe2eb5b07d796a46bd60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a85819955e167c2356be51c5f3abcc2897bb42b9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174448"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523367"
 ---
 # <a name="customize-mining-models-and-structure"></a>Настройка структуры и моделей интеллектуального анализа данных
   После выбора алгоритма в соответствии с задачами организации, можно выполнить индивидуальную настройку модели, что может повысить эффективность результатов. Настройка выполняется следующими способами.
@@ -61,7 +60,7 @@ ms.locfileid: "78174448"
 ### <a name="creating-aliases-for-model-columns"></a>Создание псевдонимов для столбцов модели
  Когда службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают модель интеллектуального анализа данных, они используют те же имена столбцов, что существуют в структуре интеллектуального анализа данных. Любому столбцу в модели интеллектуального анализа данных можно добавить псевдоним. Это может облегчить понимание содержимого столбца или его использования. Также можно сократить имя, чтобы было удобнее создавать запросы. Псевдонимы также удобны при создании копии столбца с заданием для нее описательного имени.
 
- Псевдоним создается путем изменения свойства `Name` для столбца модели интеллектуального анализа данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]использует исходное имя в качестве идентификатора столбца, а новое значение, введенное для `Name` , становится псевдонимом столбца и отображается в сетке в круглых скобках рядом с использованием столбца.
+ Псевдоним создается путем изменения свойства `Name` для столбца модели интеллектуального анализа данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]использует исходное имя в качестве идентификатора столбца, а новое значение, введенное для, `Name` становится псевдонимом столбца и отображается в сетке в круглых скобках рядом с использованием столбца.
 
  ![псевдонимы для столбцов модели интеллектуального анализа данных](../media/modelcolumnalias-income.gif "псевдонимы для столбцов модели интеллектуального анализа данных")
 
@@ -94,7 +93,7 @@ ms.locfileid: "78174448"
 
  В разделе для каждого типа алгоритма также приведены прогнозирующие функции, которые можно использовать с моделями, основанными на данном алгоритме.
 
-|Имя свойства|Область применения|
+|Имя свойства|Применяется к|
 |-------------------|----------------|
 |AUTO_DETECT_PERIODICITY|[Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|
 |CLUSTER_COUNT|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)|
@@ -132,7 +131,7 @@ ms.locfileid: "78174448"
 |SPLIT_METHOD|[Технический справочник по алгоритму дерева принятия решений (Майкрософт)](microsoft-decision-trees-algorithm-technical-reference.md)|
 |STOPPING_TOLERANCE|[Технический справочник по алгоритму кластеризации (Майкрософт)](microsoft-clustering-algorithm-technical-reference.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа данных&#41;](data-mining-algorithms-analysis-services-data-mining.md) [физическую архитектуру &#40;Analysis Services — интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)
 
 

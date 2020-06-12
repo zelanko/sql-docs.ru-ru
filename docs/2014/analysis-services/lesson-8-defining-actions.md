@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5299599a2431d68e3ea13370f51aceef58efaf14
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078230"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542236"
 ---
 # <a name="lesson-8-defining-actions"></a>Урок 8. Определение действий
   На этом занятии определяются действия в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Действие представляет собой инструкцию многомерных выражений, хранимую в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , которая может быть включена в клиентские приложения и выполнена пользователем.  
@@ -27,12 +26,12 @@ ms.locfileid: "66078230"
   
 |||  
 |-|-|  
-|Командная строка|Выполняет команду в командной строке|  
+|CommandLine|Выполняет команду в командной строке|  
 |Dataset|Возвращает клиентскому приложению набор данных.|  
 |Детализация|Возвращает инструкцию детализации в качестве выражения, которое клиент выполняет, чтобы вернуть набор строк|  
 |Html|Выполняет HTML-скрипт в браузере Интернета.|  
 |Частный|Выполняет операцию с использованием интерфейса, отличного от приведенных в данной таблице.|  
-|Report|Направляет серверу отчетов параметризованный запрос на основе URL-адресов и возвращает клиентскому приложению отчет.|  
+|Отчет|Направляет серверу отчетов параметризованный запрос на основе URL-адресов и возвращает клиентскому приложению отчет.|  
 |Набор строк|Возвращает клиентскому приложению набор строк.|  
 |.|Выполняет команду OLE DB.|  
 |URL-адрес|Отображает динамическую веб-страницу в браузереБраузер Интернета.|  
@@ -50,7 +49,7 @@ ms.locfileid: "66078230"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 9. Определение перспектив и преобразований](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services сценарий учебника](analysis-services-tutorial-scenario.md)   
  [&#40;учебника по Adventure Works в многомерном моделировании&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Действия &#40;Analysis Services многомерных данных&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   

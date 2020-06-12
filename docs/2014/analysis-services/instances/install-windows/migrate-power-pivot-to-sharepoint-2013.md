@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd90dd467d0e09f96901847b6a167477f35eeab8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63a3d08a4458ce9347f4e26238d8a28c2b49a22a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175243"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543900"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Перенос PowerPivot на SharePoint 2013
 
@@ -72,7 +71,7 @@ ms.locfileid: "78175243"
 5.  **Перевод базы данных в режим доступа для чтения и записи.** Задайте для параметра **База данных доступна только для чтения** значение **False**.
 
 ##  <a name="3-prepare-web-applications-and-mount-content-databases"></a><a name="bkmk_prepare_mount_databases"></a>3) подготовка веб-приложений и подключение баз данных содержимого
- Более подробное описание следующих процедур см. в разделе [Upgrade databases from sharepoint 2010 to sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+ Более подробное описание следующих процедур см. в разделе [Upgrade databases from sharepoint 2010 to sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .
 
 1.  **Перевод баз данных в режим «вне сети».**
 
@@ -96,7 +95,7 @@ ms.locfileid: "78175243"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]
     ```
 
-     Дополнительные сведения см. в разделе [присоединение или отсоединение баз данных содержимого (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) (https://technet.microsoft.com/library/ff628582.aspx).
+     Дополнительные сведения см. в разделе [присоединение или отсоединение баз данных содержимого (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) ( https://technet.microsoft.com/library/ff628582.aspx) .
 
      **Состояние после завершения этого шага.**  После завершения операции подключения пользователи могут видеть файлы, которые присутствовали в старой базе данных содержимого. Поэтому пользователи могут видеть и открывать книги в библиотеке документов.
 
@@ -170,8 +169,8 @@ ms.locfileid: "78175243"
 
 -   [Обновление книг и запланированное обновление данных (SharePoint 2013)](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).
 
--   [Общие сведения о процессе обновления до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) (https://go.microsoft.com/fwlink/p/?LinkId=256688).
+-   [Общие сведения о процессе обновления до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256688) ( https://go.microsoft.com/fwlink/p/?LinkId=256688) .
 
--   [Выполните предварительную подготовку перед обновлением до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) (https://go.microsoft.com/fwlink/p/?LinkId=256689).
+-   [Выполните предварительную подготовку перед обновлением до SharePoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256689) ( https://go.microsoft.com/fwlink/p/?LinkId=256689) .
 
--   [Обновите базы данных с sharepoint 2010 на sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690).
+-   [Обновите базы данных с sharepoint 2010 на sharepoint 2013](https://go.microsoft.com/fwlink/p/?LinkId=256690) ( https://go.microsoft.com/fwlink/p/?LinkId=256690) .

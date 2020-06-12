@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da4e685a1ebc05e27070873b12de99e8cc480a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079843"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543876"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Обновление книг и запланированное обновление данных (SharePoint 2013)
   В этом разделе описываются способы использования книг, созданных в предыдущих средах PowerPivot, и способы обновления книг PowerPivot с целью получения преимуществ от новых функций этого выпуска. Дополнительные сведения о новых возможностях см. в разделе [новые возможности PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -23,7 +22,7 @@ ms.locfileid: "66079843"
 > [!WARNING]  
 >  Невозможно выполнить откат обновления для книг, автоматически обновленных на сервере. После обновления книги она остается обновленной. Для использования предыдущей версии можно повторно опубликовать предыдущую книгу в SharePoint, восстановить предыдущую версию или повторно использовать книгу. Дополнительные сведения о восстановлении и повторном использовании документа в SharePoint см. в разделе [Планирование защиты содержимого с использованием корзин и управления версиями](https://go.microsoft.com/fwlink/?LinkId=238669).  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
 -   [Общие сведения об обновлении книг](#bkmk_overview)  
   
@@ -169,7 +168,7 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
   
 2.  С помощью прокрутки перейдите в раздел MSOLAP. Убедитесь, что в списке поставщиков OLAP, установленных в системе, указан MSOLAP.5. Убедитесь, что для параметра MSOLAP | CurVer задано значение MSOLAP.5  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Перенос PowerPivot в SharePoint 2013](migrate-power-pivot-to-sharepoint-2013.md)   
  [PowerPivot для SharePoint обновления](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Новые возможности Analysis Services и бизнес-аналитики](../../what-s-new-in-analysis-services.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a67cadab4ee67bb3f81776ccb658c66fe6a67d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 153369979737dded52609843cd30cf914315e9cc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085158"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523441"
 ---
 # <a name="data-definition-queries-data-mining"></a>Запросы, определяющие данные (интеллектуальный анализ данных)
   При интеллектуальном анализе данных категория *запрос определения данных* означает инструкции расширения интеллектуального анализа данных или команды XMLA, которые выполняют следующие действия.  
@@ -88,7 +87,7 @@ ms.locfileid: "66085158"
 |Управление моделями в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|[Экспорт и импорт объектов интеллектуального анализа данных](export-and-import-data-mining-objects.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](/sql/dmx/export-dmx)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](/sql/dmx/import-dmx)|  
 |Подробнее об OPENROWSET и других способах запроса внешних данных.|[&#60;запрос источника данных&#62;](/sql/dmx/source-data-query).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-wizard-analysis-services-data-mining.md)  
   
   

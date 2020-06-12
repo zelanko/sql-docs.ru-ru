@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98da3e0f7a9b61b178372d9b24b8b595ab6b6626
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aef124abc8398f1b314a391291b52340a90689ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727168"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544978"
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Вставка, обновление и удаление элементов (XMLA)
   Команды [вставки](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla), [обновления](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)и [удаления](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla) в XML для аналитики (XMLA) можно использовать для вставки, обновления или удаления элементов из измерения, доступного для записи. Дополнительные сведения об измерениях, доступных для записи, см. в разделе [измерения, доступные для записи](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
@@ -109,7 +108,7 @@ ms.locfileid: "62727168"
 > [!IMPORTANT]  
 >  Чтобы удалить и родительский элемент, и его потомков, пользователю необходимо иметь только разрешения на удаление родительского элемента. Разрешения на удаление потомков иметь не обязательно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Drop элемент &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/drop-element-xmla)   
  [Элемент INSERT &#40;&#41;XMLA](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/insert-element-xmla)   
  [Элемент Update &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/update-element-xmla)   

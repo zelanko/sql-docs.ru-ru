@@ -1,5 +1,6 @@
 ---
 title: Типы данных и поведение при выполнении групповой загрузки XML (SQLXML)
+description: Сведения о типах данных и работе с массовым загрузкой XML в SQLXML 4,0.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33619d0d3e1ec5d6684e3dc300317b1cc3666e79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e77e4ca789a2abf5bb664221adb8911dd5a1bae5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246731"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529752"
 ---
 # <a name="data-types-and-xml-bulk-load-behavior-sqlxml-40"></a>Типы данных и массовая загрузка XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "75246731"
   
  В XSD.  
   
--   Если тип имеет **значение DateTime** или **time**, необходимо указать **SQL: DataType** , так как при выполнении XML-загрузки выполняется преобразование данных перед отправкой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]данных в корпорацию Майкрософт.  
+-   Если тип имеет **значение DateTime** или **time**, необходимо указать **SQL: DataType** , так как при выполнении XML-загрузки выполняется преобразование данных перед отправкой данных в корпорацию Майкрософт [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   При выполнении групповой загрузки в столбец типа **uniqueidentifier** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а значение XSD — это идентификатор GUID, включающий фигурные скобки ({и}), необходимо указать **SQL: datatype = "uniqueidentifier"** , чтобы удалить фигурные скобки перед вставкой значения в столбец. Если **SQL: DataType** не указан, значение отправляется с фигурными скобками, а вставка завершается ошибкой.  
   
@@ -36,7 +37,7 @@ ms.locfileid: "75246731"
   
  В XDR:  
   
--   Если значение **DT: Type** равно **DateTime**, **time**, **DateTime.TZ**или **time.TZ**, необходимо указать оба типа данных **DT: Type** и **SQL: DataType** , так как при выполнении XML-загрузки выполняется преобразование данных перед их отправкой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Если значение **DT: Type** равно **DateTime**, **time**, **DateTime.TZ**или **time.TZ**, необходимо указать оба типа данных **DT: Type** и **SQL: DataType** , так как при выполнении XML-загрузки выполняется преобразование данных перед их отправкой [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   Если XML-данные имеют тип **UUID**, необходимо указать **SQL: DataType** . **DT: Type = "UUID"** также требуется, если только данные не являются строковыми данными. Если не указать значение **DT: UUID**, при выполнении XML-загрузки с использованием фигурных скобок будут удалены строки (при необходимости удаляются).  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088026"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527590"
 ---
 # <a name="choosing-data-for-data-mining"></a>Выбор данных для интеллектуального анализа данных
   При запуске интеллектуального анализа данных можно задать вопрос «какой объем данных требуется?». или "есть ли особые требования, о которых следует помнить при очистке или форматировании данных?"  
@@ -205,7 +204,7 @@ ms.locfileid: "66088026"
   
  Как правило, ключевой столбец — это числовой или текстовый идентификатор, который не может использоваться для анализа, а только для отслеживания записей. Исключения — это ключи временных рядов и ключи последовательности.  
   
- **Ключи вложенных таблиц** используются только при получении данных из внешнего источника данных, который был определен как представление источника данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Дополнительные сведения о вложенных таблицах см [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx). в следующих статьях:  
+ **Ключи вложенных таблиц** используются только при получении данных из внешнего источника данных, который был определен как представление источника данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Дополнительные сведения о вложенных таблицах см [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) . в следующих статьях:  
   
  Этот тип содержимого может использоваться со следующими типами данных: `Date`, `Double`, `Long` и `Text`.  
   

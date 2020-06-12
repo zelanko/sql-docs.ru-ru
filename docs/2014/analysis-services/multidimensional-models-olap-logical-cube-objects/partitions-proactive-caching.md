@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c968cb8c75fc5f1fb8e77cc98d8c6a306a62115
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a903d73394b191dbfe96dea710fb2c6c86165402
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727278"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545236"
 ---
 # <a name="proactive-caching-partitions"></a>Упреждающее кэширование (секции)
   Упреждающее кэширование позволяет автоматически создавать кэш MOLAP для объектов OLAP, а также управлять им. Кубы мгновенно реагируют на изменения, которые происходят с данными из базы данных, благодаря уведомлениям, получаемым от базы данных. Цель упреждающего кэширования — совмещение производительности, характерной для традиционного MOLAP, со скоростью и простотой управления ROLAP.  
@@ -42,7 +41,7 @@ ms.locfileid: "62727278"
 ### <a name="maximizing-performance"></a>Максимизация производительности  
  Для увеличения производительности при уменьшении задержек кэширование может также использоваться без удаления объектов текущего хранилища MOLAP. После этого запросы отправляются к объектам MOLAP, в то время как данные считываются и обрабатываются в новом кэше. Этот метод обеспечивает лучшую производительность, но может привести к тому, что запросы возвращают старые данные во время перестроения нового кэша.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранилище измерений](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
  [Определение хранилища секции (Analysis Services — многомерные данные)](../multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   

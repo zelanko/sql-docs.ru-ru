@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eadc6bc2f0bf6f318f20ad42a5cc9e7a5afa5e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086691"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526280"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Создание и использование значений свойств (многомерные выражения)
   Многомерные выражения поддерживают внутренние и заданные пользователем свойства для измерений, уровней, элементов и ячеек. Для отдельных ячеек внутренние свойства предоставляют уникальные имена, заголовки и даже форматирование и размер шрифта. В то же время заданные пользователем свойства могут давать элементам дополнительные атрибуты практически любого типа.  
@@ -37,7 +36,7 @@ ms.locfileid: "66086691"
   
  Дополнительные сведения о свойствах ячеек и их применении см. в разделе [Использование свойств ячеек (многомерные выражения)](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

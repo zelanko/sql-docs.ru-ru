@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f858f2ba6fe542d84e3bd6e7617b2d1565c0ca2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078112"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542016"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Уровень и элементы (вкладка «Браузер» конструктора измерений) (службы Analysis Services — многомерные данные)
   Данная панель используется для просмотра элементов выбранных в настоящий момент иерархии и языка. Чтобы выбрать иерархию или язык для просмотра, используйте параметры **Иерархия** и **Язык** на **Панели инструментов** . Дополнительные сведения об этой панели инструментов см. в разделе [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66078112"
 |Переименовать выбранный элемент.|Либо щелкните правой кнопкой мыши выбранный элемент и выберите пункт **Переименовать**, либо щелкните уже выбранный элемент.|  
 |Изменить значения свойств элемента|Дважды щелкните значение в свойстве выбранного элемента для выбранного элемента для редактирования значения.|  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Текущий уровень**  
  Отображает уровень, к которому принадлежит выбранный в текущий момент элемент, относящийся к пункту **Дерево** .  
   
@@ -92,7 +91,7 @@ ms.locfileid: "66078112"
 > [!NOTE]  
 >  Этот параметр отображается только при включенной обратной записи.  
   
- **Переименовать**  
+ **Переименование**  
  Выберите для редактирования имени выбранного элемента.  
   
 > [!NOTE]  
@@ -122,7 +121,7 @@ ms.locfileid: "66078112"
  **Обратная запись**  
  Выберите, чтобы включить режим обратной записи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Панель инструментов &#40;вкладка «браузер», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

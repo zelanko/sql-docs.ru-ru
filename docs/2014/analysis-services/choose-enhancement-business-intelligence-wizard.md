@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9c28c39ef94c5dd28821e23c6ddbe83efd7fd11
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088119"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527582"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Выбор расширения (мастер бизнес-аналитики)
   Страница **Выбор расширения** используется для выбора расширения бизнес-аналитики для добавления к кубу или измерению.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имеющиеся расширения**  
  Выберите расширение бизнес-аналитики для добавления. В следующей таблице перечислены имеющиеся расширения.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66088119"
  **Описание**  
  Предоставляет краткое описание выбранного расширения бизнес-аналитики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

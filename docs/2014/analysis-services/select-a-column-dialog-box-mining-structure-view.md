@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55270f44c15fad735b4252ee9d6b5342f4c4a4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538446"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Диалоговое окно «Выбор столбца» (представление структуры интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор столбца** , чтобы добавить столбцы к структуре интеллектуального анализа данных. Диалоговое окно содержит различные параметры в зависимости от того, работает ли пользователь с моделью интеллектуального анализа данных OLAP или с реляционной моделью интеллектуального анализа данных.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Исходная таблица**  
  Таблица, на которой основана модель интеллектуального анализа данных.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66069918"
   
  Этот параметр используется только для моделей интеллектуального анализа данных OLAP.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представление структуры интеллектуального анализа &#40;конструктора моделей интеллектуального анализа данных&#41;](mining-structure-view-data-mining-model-designer.md)   
  [добавить столбцы к структуре интеллектуального анализа данных](data-mining/add-columns-to-a-mining-structure.md)  
   

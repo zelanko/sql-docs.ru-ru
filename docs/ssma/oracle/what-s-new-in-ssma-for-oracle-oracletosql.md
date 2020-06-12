@@ -1,24 +1,32 @@
 ---
 title: Новые возможности в SSMA для Oracle (OracleToSQL) | Документация Майкрософт
+description: Узнайте об изменениях в Помощник по миграции SQL Server (SSMA) для Oracle (OracleToSQL) для каждого выпуска.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 39da9754b75ebf1ce7dd5adb3df55d4d07718b32
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220689"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294071"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности SSMA для Oracle (OracleToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений Oracle в каждом выпуске.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+Выпуск v 8.10 SSMA для Oracle содержит небольшие улучшения производительности, а также следующие изменения:
+
+* Исправление проблемы тестера с помощью таблиц, упорядоченных по индексу
+* Исправление имен расширенных хранимых процедур в пакете расширений
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -287,7 +295,7 @@ ms.locfileid: "82220689"
 * Исправлено преобразование символьных типов данных для Oracle.
 * Исправлена ошибка в глобальных параметрах.
 
-## <a name="march-2016"></a>март 2016 г.
+## <a name="march-2016"></a>Март 2016 г.
 
 В предварительной версии SSMA для Oracle в марте 2016 добавлена поддержка:
 

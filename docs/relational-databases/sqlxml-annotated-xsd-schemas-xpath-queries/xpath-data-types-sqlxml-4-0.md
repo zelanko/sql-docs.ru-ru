@@ -1,5 +1,6 @@
 ---
 title: Типы данных XPath (SQLXML)
+description: Сведения о типах данных XPath в SQLXML 4,0 и их сравнении с типами данных Microsoft SQL Server и схем XML (XSD).
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -28,27 +29,27 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089b2b006d0159c63e480c8627762ac37dec98b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17ad196110a68a83618e5048f53bfa84fb7e0f51
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247091"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306023"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath и XML Schema (XSD) имеют очень разные типы данных. Например, в XPath отсутствуют целочисленные типы данных и тип данных для обозначения даты, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD таких типов множество. Типы данных XSD определяют время с точностью до наносекунды, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только до одной трехсотой доли секунды. Поэтому не всегда возможно сопоставить один тип другому. Дополнительные сведения о сопоставлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных с ТИПАМИ данных XSD см. в разделе [приведение типов данных и Аннотация sql: DATATYPE &#40;&#41;SQLXML 4,0 ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath и XML Schema (XSD) имеют очень разные типы данных. Например, в XPath отсутствуют целочисленные типы данных и тип данных для обозначения даты, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD таких типов множество. Типы данных XSD определяют время с точностью до наносекунды, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только до одной трехсотой доли секунды. Поэтому не всегда возможно сопоставить один тип другому. Дополнительные сведения о сопоставлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных с типами данных XSD см. [в разделе приведение типов данных и аннотация SQL: datatype &#40;&#41;SQLXML 4,0 ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
   
  XPath имеет три типа данных: **строка**, **число**и **логическое значение**. **Числовым** типом данных всегда является IEEE 754 с плавающей запятой двойной точности. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип данных **float (53)** является ближайшим к **числу**XPath. Однако тип **float (53)** не соответствует стандарту IEEE 754. В частности, этот тип не содержит ни значения NaN (не число), ни значения бесконечности. Попытка преобразовать нечисловую строку в **число** и попытку деления на ноль приведет к ошибке.  
   
 ## <a name="xpath-conversions"></a>Преобразования в XPath  
- При использовании запроса XPath, например, `OrderDetail[@UnitPrice > "10.0"]`, явные и неявные преобразования типов данных могут различными неочевидными способами изменить значение запроса. Поэтому важно знать, как реализована система типов данных в XPath. Спецификация языка XPath, язык XML Path (XPath) версии 1,0 W3C предложенная рекомендация 8 1999 октября, находится на веб-сайте W3C по адресу http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
+ При использовании запроса XPath, например, `OrderDetail[@UnitPrice > "10.0"]`, явные и неявные преобразования типов данных могут различными неочевидными способами изменить значение запроса. Поэтому важно знать, как реализована система типов данных в XPath. Спецификация языка XPath, язык XML Path (XPath) версии 1,0 W3C предложенная рекомендация 8 1999 октября, находится на веб-сайте W3C по адресу http://www.w3.org/TR/1999/PR-xpath-19991008.html .  
   
  Операторы XPath делятся на четыре категории:  
   
 -   Логические операторы (и, или)  
   
--   Операторы отношения (\<, >, \<=, >=)  
+-   Операторы отношения ( \<, > , \<=, > =)  
   
 -   Операторы равенства (=, !=)  
   
@@ -71,9 +72,9 @@ ms.locfileid: "75247091"
  Преобразования наборов узлов не всегда интуитивно понятны. Набор узлов преобразуется в **строку** , принимая строковое значение только первого узла в наборе. Набор узлов преобразуется в **число** , преобразуя его в **строку**, а затем преобразуя **строку** в **число**. Набор узлов преобразуется в **логическое значение** путем проверки его существования.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не производит выборку по положению в наборах узлов — например, запрос XPath `Customer[3]` указывает на третьего заказчика; такой тип выборки по положению не поддерживается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом, преобразование "набор узлов в**строку** " или "набор узлов в**число** ", как описано в спецификации XPath, не реализовано. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует семантику «любой» там, где спецификация XPath использует семантику «первый». Например, на основе спецификации W3C XPath запрос `Order[OrderDetail/@UnitPrice > 10.0]` XPath выбирает эти заказы с помощью первого элемента **OrderDetail** , у которого **Цена** больше 10,0. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот запрос XPath выбирает эти заказы с любым значением **OrderDetail** , имеющим значение **UnitPrice** больше 10,0.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не производит выборку по положению в наборах узлов — например, запрос XPath `Customer[3]` указывает на третьего заказчика; такой тип выборки по положению не поддерживается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Таким образом, преобразование "набор узлов в**строку** " или "набор узлов в**число** ", как описано в спецификации XPath, не реализовано. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует семантику «любой» там, где спецификация XPath использует семантику «первый». Например, на основе спецификации W3C XPath запрос XPath `Order[OrderDetail/@UnitPrice > 10.0]` выбирает эти заказы с помощью первого элемента **OrderDetail** , у которого **Цена** больше 10,0. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот запрос XPath выбирает эти заказы с любым значением **OrderDetail** , имеющим значение **UnitPrice** больше 10,0.  
   
- Преобразование в **Boolean** создает тест существования; Таким образом, запрос `Products[@Discontinued=true()]` XPath эквивалентен выражению SQL "Products. uncontinueed не null", а не выражение SQL "Products. uncontinueed = 1". Чтобы сделать запрос эквивалентным последнему выражению SQL, сначала преобразуйте набор узлов в тип, отличный от**логического** , например **Number**. Например, `Products[number(@Discontinued) = true()]`.  
+ Преобразование в **Boolean** создает тест существования; Таким образом, запрос XPath `Products[@Discontinued=true()]` эквивалентен выражению SQL "Products. uncontinueed не null", а не выражение SQL "Products. uncontinueed = 1". Чтобы сделать запрос эквивалентным последнему выражению SQL, сначала преобразуйте набор узлов в тип, отличный от**логического** , например **Number**. Например, `Products[number(@Discontinued) = true()]`.  
   
  Большинство операторов реализовано так, что они возвращают TRUE, если их результат равен TRUE хотя бы для одного (любого) узла набора, поэтому они возвращают FALSE, если набор узлов пуст. Таким образом, если набор узлов A пуст, оба оператора `A = B` и `A != B` вернут FALSE, а `not(A=B)` и `not(A!=B)` — TRUE.  
   
@@ -89,7 +90,7 @@ ms.locfileid: "75247091"
   
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Недоступно|NoneEmployeeID|  
+|Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
 |Логическое|Логическое|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
@@ -97,7 +98,7 @@ ms.locfileid: "75247091"
 |Дата|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|строка|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- Преобразования даты и времени предназначены для работы, если значение хранится в базе данных с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]типа данных **DateTime** или **строки**. Обратите внимание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что тип данных **DateTime** не использует **Часовой пояс** и имеет меньшую точность, чем тип данных XML **time** . Чтобы включить тип данных **TimeZone** или дополнительную точность, храните данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используя **строковый** тип.  
+ Преобразования даты и времени предназначены для работы, если значение хранится в базе данных с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа данных **DateTime** или **строки**. Обратите внимание, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных **DateTime** не **использует часовой пояс** и имеет меньшую точность, чем тип данных XML **time** . Чтобы включить тип данных **TimeZone** или дополнительную точность, храните данные в, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используя **строковый** тип.  
   
  При преобразовании узла из типа данных XDR в тип данных XPath иногда требуются дополнительные преобразования (из одного типа XPath в другой тип XPath). В качестве примера рассмотрим следующий запрос XPath:  
   
@@ -149,10 +150,10 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  К строке добавляется префикс «E-», а результат затем сравнивается с `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б) Несколько преобразований типов данных в запросе XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б. Несколько преобразований типов данных в запросе XPath  
  Рассмотрим этот запрос XPath, заданный для схемы XSD с заметками:`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Этот запрос XPath возвращает все элементы ** \<>OrderDetail** , соответствующие предикату. `@UnitPrice * @OrderQty > 98` Если **UnitPrice** помечена **фиксированным** типом данных 14,4 в схеме с заметками, то этот предикат эквивалентен выражению SQL:  
+ Этот запрос XPath возвращает все элементы, которые **\<OrderDetail>** соответствуют предикату `@UnitPrice * @OrderQty > 98` . Если **UnitPrice** помечена **фиксированным** типом данных 14,4 в схеме с заметками, то этот предикат эквивалентен выражению SQL:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   
@@ -181,6 +182,6 @@ CONVERT(float(53), 98)
 ```  
   
 > [!NOTE]  
->  Если используемый в схеме тип данных XSD несовместим с базовым типом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных или нужное преобразование типа данных XPath невозможно выполнить, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вернуть ошибку. Например, если атрибут **EmployeeID** снабжен аннотацией с **префиксом ID** , то `Employee[@EmployeeID=1]` XPath выдает ошибку, поскольку **EmployeeID** имеет аннотацию **идентификатора** и не может быть преобразована в **число**.  
+>  Если используемый в схеме тип данных XSD несовместим с базовым типом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных или нужное преобразование типа данных XPath невозможно выполнить, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может вернуть ошибку. Например, если атрибут **EmployeeID** снабжен аннотацией с **префиксом ID** , то XPath `Employee[@EmployeeID=1]` выдает ошибку, поскольку **EmployeeID** имеет аннотацию **идентификатора** и не может быть преобразована в **число**.  
   
   

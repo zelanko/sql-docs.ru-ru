@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086032"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525454"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Просмотр модели с помощью средства просмотра упрощенного алгоритма Байеса (Майкрософт)
-  Средство [!INCLUDE[msCoName](../../includes/msconame-md.md)] просмотра упрощенного алгоритма Байеса в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального [!INCLUDE[msCoName](../../includes/msconame-md.md)] анализа данных, построенные с помощью упрощенного алгоритма Байеса. Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, хорошо адаптирующийся к задачам прогнозирующего моделирования. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Средство просмотра упрощенного алгоритма Байеса в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] упрощенного алгоритма Байеса. Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, хорошо адаптирующийся к задачам прогнозирующего моделирования. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
   
  Ввиду того что одной из главных задач упрощенной модели Байеса является предоставление способа быстрого просмотра данных в наборе, средство просмотра упрощенных алгоритмов Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) содержит несколько методов отображения взаимодействия между прогнозируемыми и входными атрибутами.  
   
@@ -74,21 +73,21 @@ ms.locfileid: "66086032"
 ##  <a name="attribute-discrimination"></a><a name="BKMK_Discrimination"></a> Сравнение атрибутов  
  Чтобы воспользоваться вкладкой **Сравнение атрибутов** , выберите прогнозируемый атрибут и пару его состояний из списков **Атрибут**, **Значение 1**и **Значение 2** . В столбцах сетки на вкладке **Сравнение атрибутов** отобразятся следующие сведения.  
   
- **Версию**  
+ **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
  Перечисляет другие атрибуты из набора данных, которые содержат состояние, сильно благоприятствующее одному из состояний прогнозируемого атрибута.  
   
  **Значения**  
  Показывает значение атрибута в столбце **Атрибут**.  
   
- **Подходит к \<значению 1>**  
+ **Подходит\<value 1>**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 1**.  
   
- **Подходит к \<значению 2>**  
+ **Подходит\<value 2>**  
  Выводит цветную полоску, показывающую, насколько значение атрибута соответствует значению прогнозируемого атрибута, показанному в поле **Значение 2**.  
   
  [К началу](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Упрощенный алгоритм Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Средства интеллектуального анализа данных](data-mining-tools.md)   

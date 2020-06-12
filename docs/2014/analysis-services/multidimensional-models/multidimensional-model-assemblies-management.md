@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c7a09c9a1c411b639ac1b91027e42899dec158f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073530"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546076"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Управление сборками многомерной модели
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет множество встроенных функций для использования с языками многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX), предназначенных для выполнения всех операций, от стандартных статистических вычислений до обхода элементов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] иерархии. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет множество встроенных функций для использования с языками многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX), предназначенных для выполнения всех операций, от стандартных статистических вычислений до обхода элементов в иерархии. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  
   
  Поэтому [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет добавлять сборки в экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базу данных. Сборки позволяют создавать внешние пользовательские функции при помощи любого языка среды CLR, например Microsoft Visual Basic .NET или Microsoft Visual C#. Также можно использовать языки автоматизации COM, например Microsoft Visual Basic или Microsoft Visual C++.  
   
@@ -105,14 +104,14 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
 -   В случае отсутствия промежуточной инструкции EXECUTE AS, изменившей контекст исходного вызывающего элемента, попытка получить доступ к внутреннему ресурсу закончится ошибкой.  
   
- Свойство `ImpersonationMode` может принимать значение `ImpersonateCurrentUser` или `ImpersonateAnonymous`. Параметр по умолчанию, `ImpersonateCurrentUser`, запускает сборку под текущей сетевой учетной записью входа пользователя. Если используется `ImpersonateAnonymous` параметр, контекст выполнения соответствует учетной записи входа пользователя Windows IUSER_*ServerName* на сервере. Это учетная запись гостя из сети Интернет, которой предоставлены ограниченные права на сервере. Сборка, запущенная в таком контексте, может получить доступ только к ограниченным ресурсам на локальном сервере.  
+ Свойство `ImpersonationMode` может принимать значение `ImpersonateCurrentUser` или `ImpersonateAnonymous`. Параметр по умолчанию, `ImpersonateCurrentUser`, запускает сборку под текущей сетевой учетной записью входа пользователя. Если `ImpersonateAnonymous` используется параметр, контекст выполнения соответствует учетной записи входа пользователя Windows IUSER_*ServerName* на сервере. Это учетная запись гостя из сети Интернет, которой предоставлены ограниченные права на сервере. Сборка, запущенная в таком контексте, может получить доступ только к ограниченным ресурсам на локальном сервере.  
   
 ### <a name="application-domains"></a>Домены приложений  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не открывают домены приложений напрямую. На основании набора сборок, запущенных в одном и том же домене приложений, домены приложений способны обнаруживать друг друга во время выполнения, используя пространство имен служб `System.Reflection` на платформе .NET Framework или иными способами, а также способны вызывать их с использованием режима позднего связывания. Такие вызовы подвергаются проверкам разрешений, используемым основанной на авторизации системой безопасности служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  Не следует искать сборки в том же домене приложений, поскольку граница домена приложений и сборки, входящие в каждый домен, определяются реализацией.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка безопасности для хранимых процедур](../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [Определение хранимых процедур](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

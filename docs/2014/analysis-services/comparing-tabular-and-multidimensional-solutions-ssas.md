@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087771"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527430"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Сравнение табличных и многомерных решений (службы SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] предоставляет два различных подхода для моделирования данных: табличный и многомерный. Несмотря на значительные сходства, между ними существуют важные различия, которые помогают принимать решения по выполнению дальнейших действий. В этом разделе вы сможете сравнить два подхода и узнать, каким образом каждый из них обеспечивает соответствие общим требованиям проекта. Например, если основным фактором является поддержка конкретного источника данных, при выборе подхода для моделирования будет полезна информация из раздела об источниках данных.  
@@ -97,24 +96,24 @@ ms.locfileid: "66087771"
 ||||  
 |-|-|-|  
 ||**Многомерные**|**Таблицы**|  
-|Действия|[Да](multidimensional-models/actions-in-multidimensional-models.md)|нет|  
-|Объекты Aggregation|[Да](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|нет|  
+|Действия|[Да](multidimensional-models/actions-in-multidimensional-models.md)|Нет|  
+|Объекты Aggregation|[Да](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Нет|  
 |Вычисляемые меры|[Да](multidimensional-models/create-calculated-members.md)|Да|  
-|Пользовательские сборки|[Да](multidimensional-models/multidimensional-model-assemblies-management.md)|нет|  
+|Пользовательские сборки|[Да](multidimensional-models/multidimensional-model-assemblies-management.md)|Нет|  
 |Пользовательские свертки|Да|Нет|  
 |Количество различных|[Да](multidimensional-models/use-aggregate-functions.md)|Да (с помощью DAX) *|  
 |Детализация|[Да](multidimensional-models/actions-in-multidimensional-models.md)|Да|  
 |Иерархии|[Да](multidimensional-models/user-defined-hierarchies-create.md)|Да|  
 |Ключевые показатели эффективности|[Да](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Да|  
-|Связанные группы мер|[Да](multidimensional-models/linked-measure-groups.md)|нет|  
-|Связи «многие ко многим»|[Да](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|нет|  
+|Связанные группы мер|[Да](multidimensional-models/linked-measure-groups.md)|Нет|  
+|Связи "много ко многим".|[Да](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|Нет|  
 |Иерархии типа «родители-потомки»|[Да](multidimensional-models/parent-child-dimension.md)|Да (посредством DAX)|  
 |Секции|[Да](tabular-models/partitions-ssas-tabular.md)|  
-|перспективами|[Да](multidimensional-models/perspectives-in-multidimensional-models.md)|[Да](tabular-models/partitions-ssas-tabular.md)|  
+|Перспективы|[Да](multidimensional-models/perspectives-in-multidimensional-models.md)|[Да](tabular-models/partitions-ssas-tabular.md)|  
 |Полуаддитивные меры|[Да](multidimensional-models/define-semiadditive-behavior.md)|Да (посредством DAX)|  
-|Translations|[Да](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|нет|  
+|Translations|[Да](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Нет|  
 |Пользовательские иерархии|[Да](multidimensional-models/user-defined-hierarchies-create.md)|Да|  
-|Обратная запись|[Да](multidimensional-models/set-partition-writeback.md)|нет|  
+|Обратная запись|[Да](multidimensional-models/set-partition-writeback.md)|Нет|  
   
  * Если решение должно поддерживать очень большое количество различных счетчиков (например, множество миллионов идентификаторов клиентов), рассмотрите возможность использования табличных данных в первую очередь. В этом случае данный подход может быть более производительным. Сведения о количестве различных объектов можно найти в техническом документе, [Практический пример использования служб Analysis Services: использование табличных моделей в крупномасштабных коммерческих решениях](https://msdn.microsoft.com/library/dn751533.aspx).  
   
@@ -186,7 +185,7 @@ ms.locfileid: "66087771"
 |**Платформа**|**Описание**|  
 |------------------|---------------------|  
 |Microsoft Azure.|На виртуальной машине Azure можно запускать любую поддерживаемую версию и выпуск служб Analysis Services. В отличие от базы данных SQL Azure, которая является службой в Azure, предоставляющей практически те же функциональные возможности, что и ядро локальной реляционной СУБД, эквивалента служб Analysis Services в Azure не существует. Единственным вариантом на основе Azure является установка, настройка и запуск служб Analysis Services на виртуальной машине Azure.|  
-|Office 365|Excel Online в Office 365 поддерживает удаленные подключения к табличным и многомерным моделям, работающим на локальном компьютере.|  
+|Office 365|Excel Online в Office 365 поддерживает удаленные подключения к табличным и многомерным моделям, работающим на локальном компьютере.|  
 |Сайты Power BI в Office 365|На сайте Power BI отчеты Power View можно подключать к табличным моделям данных, работающим на локальных компьютерах.|  
 |На локальных серверах (экземпляры SharePoint и SQL Server)|Локальный сервер базы данных (то есть экземпляр SQL Server с установленными службами Analysis Services) по-прежнему является основным средством для обеспечения доступности данных служб Analysis Services для отчетов и клиентских приложений. Табличные, многомерные решения и решения для интеллектуального анализа данных выполняются на экземплярах служб Analysis Services, при этом они не зависят от SharePoint.<br /><br /> SQL Server обеспечивает интеграцию с SharePoint, добавляя поддержку доступа к данным PowerPivot и табличным данным. Затраты на интеграцию SharePoint и SQL Server растут при максимизации числа используемых функций каждого из продуктов. При наличии SharePoint можно установить SQL Server PowerPivot для SharePoint, чтобы обеспечить доступ к данным PowerPivot и получать BISM-файлы подключений PowerPivot, используемые для доступа к табличным базам данных, запущенным на внешнем экземпляре служб Analysis Services на сетевом сервере.<br /><br /> При наличии SharePoint и SQL Server можно обеспечить поддержку следующего сочетания служб и приложений:<br /><br /> модели служб Analysis Services (табличные или многомерные);<br /><br /> службы SharePoint среднего уровня (службы Excel, службы Reporting Services в SharePoint или службы PerformancePoint);<br /><br /> клиенты браузера или полнофункциональные клиентов (Excel) для более детального исследования и анализа данных.|  
   
@@ -201,7 +200,7 @@ ms.locfileid: "66087771"
   
 -   Построение модели PowerPivot с помощью [учебника PowerPivot для Excel](https://go.microsoft.com/fwlink/?LinkId=251135).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление экземплярами Analysis Services](instances/analysis-services-instance-management.md)   
  [Новые возможности Analysis Services и бизнес-аналитики](what-s-new-in-analysis-services.md)   
  [Новые возможности &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)   

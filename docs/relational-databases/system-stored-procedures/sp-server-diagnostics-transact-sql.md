@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810621"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294011"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
-|**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонента уровня экземпляра или для Always on группы доступности:<br /><br /> экземпляр<br /><br /> Always On: AvailabilityGroup|  
-|**component_name**|**sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> события<br /><br /> *\<имя группы доступности>*|  
+|**create_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
+|**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонента уровня экземпляра или для Always on группы доступности:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
+|**component_name**|**sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> ресурс<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> события<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Указывает состояние работоспособности компонента:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Описывает столбец state. Далее представлены описания, соответствующие значениям в столбце state:<br /><br /> 0. Неизвестно<br /><br /> 1: чистая очистка<br /><br /> 2: предупреждение<br /><br /> 3: ошибка|  
 |**данные**|**varchar (max)**|Указывает данные, свойственные данному компоненту.|  
@@ -77,9 +77,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **события**: собирает данные и поверхности с помощью хранимой процедуры в отношении ошибок и событий, которые записываются сервером, включая сведения об исключениях кольцевого буфера, событиях кольцевого буфера о брокере памяти, нехватке памяти, мониторе планировщиков, буферном пуле, спин-блокировки, безопасности и подключении. В качестве состояния событий всегда указывается 0.  
   
--   ** \< имя группы доступности>**: собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup").  
+-   **\<name of the availability group>**: Собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
@@ -87,7 +87,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |Компоненты|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |система|x|x|x||  
-|resource|x|x|x||  
+|ресурс|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |события||||x|  
@@ -240,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

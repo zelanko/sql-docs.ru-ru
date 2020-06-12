@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b206facd1a8dc3faa58c58ae97e783d8a5c630b6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079339"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543626"
 ---
 # <a name="defining-a-data-source"></a>Определение источника данных
   После создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] работа с проектом обычно начинается с определения одного или нескольких источников данных, которые будут использоваться в этом проекте. Для определения источника данных нужно задать строку соединения, которая будет использована для подключения к этому источнику данных. Дополнительные сведения см. в разделе [Создание источника данных (многомерные службы SSAS)](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -34,9 +33,9 @@ ms.locfileid: "66079339"
   
      [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] также поддерживают других поставщиков, которые доступны в списке **Поставщик** .  
   
-5.  В текстовом поле **имя сервера** введите `localhost`.  
+5.  В текстовом поле **имя сервера** введите `localhost` .  
   
-     Чтобы подключиться к именованному экземпляру на локальном компьютере, введите **localhost\\<имя\>экземпляра**. Чтобы подключиться к конкретному компьютеру вместо локального, введите имя компьютера или его IP-адрес.  
+     Чтобы подключиться к именованному экземпляру на локальном компьютере, введите **localhost \\<\> имя экземпляра**. Чтобы подключиться к конкретному компьютеру вместо локального, введите имя компьютера или его IP-адрес.  
   
 6.  Убедитесь в том, что выбран параметр **Использовать проверку подлинности Windows** . В поле списка **Выберите или введите имя базы данных** выберите **AdventureWorksDW2012**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66079339"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Определение представления источников данных](lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание источника данных (многомерные службы SSAS)](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

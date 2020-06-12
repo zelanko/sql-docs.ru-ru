@@ -1,24 +1,29 @@
 ---
 title: Новые возможности SSMA для DB2 (DB2ToSQL) | Документация Майкрософт
+description: Узнайте об изменениях в Помощник по миграции SQL Server (SSMA) для DB2 (DB2ToSQL) для каждой версии.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220091"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293981"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Новые возможности SSMA для DB2 (DB2ToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений DB2 в каждом выпуске.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+Версия 8.10 версии SSMA для DB2 устраняет регрессию при обнаружении внешних ключей и содержит незначительные улучшения производительности.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -52,7 +57,7 @@ ms.locfileid: "82220091"
 * Улучшено преобразование для `COUNT` функции в таблицах MQ.
 * Преобразование `SAVEPOINT` инструкций.
 * Преобразование для эмуляции поведения DB2's для `NULL` значений в `ORDER BY` предложении.
-* Поддержка синтаксического анализа для инструкции СВЯЗЫВАНИЯ РЕЗУЛЬТИРУЮЩего набора.
+* Поддержка синтаксического анализа `ASSOCIATE RESULT SET` инструкции.
 
 > [!IMPORTANT]
 > В SSMA версии 8.5 и более поздних версий платформа .NET 4.7.2 является необходимым условием установки. Если вам нужно установить эту версию, можно скачать файл среды выполнения [отсюда.](https://dotnet.microsoft.com/download/dotnet-framework/net472)
@@ -240,7 +245,7 @@ ms.locfileid: "82220091"
 * Исправлена Инвентаризация объектов для начальной загрузки.
 * Исправлена ошибка в глобальных параметрах.
   
-## <a name="march-2016"></a>март 2016 г.
+## <a name="march-2016"></a>Март 2016 г.
 
 В предварительной версии SSMA для DB2 в марте 2016 добавлена поддержка миграции на SQL Server 2016.
 

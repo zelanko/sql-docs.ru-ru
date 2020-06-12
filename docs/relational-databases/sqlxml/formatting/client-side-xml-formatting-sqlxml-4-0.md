@@ -1,5 +1,6 @@
 ---
 title: Форматирование XML на стороне клиента (SQLXML)
+description: Сведения о форматировании XML-кода на стороне клиента в SQLXML 4,0 с помощью предложения FOR XML.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247024"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84530018"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Форматирование XML на стороне клиента (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75247024"
 > [!NOTE]  
 >  В этом разделе содержатся дополнительные сведения об использовании предложения FOR XML на стороне клиента и предполагается предварительное знакомство с предложением FOR XML. Дополнительные сведения о XML см. в разделе [Создание XML с помощью for XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
- **Важно!** Чтобы использовать функции XML на стороне клиента с новым типом данных **XML** , клиенты всегда должны использовать поставщик данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) вместо поставщика SQLOLEDB. SQLNCLI11 является самой последней версией поставщика SQL Server, поддерживающей все типы данных, появившиеся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Поведение на стороне клиента для XML с поставщиком SQLOLEDB будет рассматривать типы данных **XML** как строки.  
+ **Важно!** Чтобы использовать функции XML на стороне клиента с новым типом данных **XML** , клиенты всегда должны использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик данных Native Client (SQLNCLI11) вместо поставщика SQLOLEDB. SQLNCLI11 является самой последней версией поставщика SQL Server, поддерживающей все типы данных, появившиеся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Поведение на стороне клиента для XML с поставщиком SQLOLEDB будет рассматривать типы данных **XML** как строки.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Форматирование XML-документов на стороне клиента  
  Предположим, клиентское приложение выполняет следующий запрос.  
@@ -54,7 +55,7 @@ FROM   Person.Contact
   
  В следующей таблице приведены режимы, которые могут быть заданы для FOR XML на стороне клиента.  
   
-|Режим FOR XML на стороне клиента|Добавление примечаний|  
+|Режим FOR XML на стороне клиента|Комментировать|  
 |-------------------------------|-------------|  
 |RAW|Выдает одинаковый результат при указании в FOR XML на стороне клиента или сервера.|  
 |NESTED|Похож на режим FOR XML AUTO на стороне сервера.|  
@@ -119,7 +120,7 @@ AS
      Установив это свойство управляемых классов SQLXML в значение true, можно задать форматирование на стороне клиента.  
   
 ## <a name="enhanced-xml-template-support"></a>Улучшенная поддержка XML-шаблонов  
- Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]версии, XML-шаблон [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в был дополнен добавлением атрибута на **стороне клиента XML** . Если значение этого атрибута установлено в значение true, то XML-форматирование выполняется на стороне клиента. Обратите внимание, что этот атрибут шаблона идентичен свойству Клиентсидексмл, зависящему от поставщика SQLXMLOLEDB, в функциональных возможностях.  
+ Начиная с версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , XML-шаблон в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] был дополнен добавлением атрибута на **стороне клиента XML** . Если значение этого атрибута установлено в значение true, то XML-форматирование выполняется на стороне клиента. Обратите внимание, что этот атрибут шаблона идентичен свойству Клиентсидексмл, зависящему от поставщика SQLXMLOLEDB, в функциональных возможностях.  
   
 > [!NOTE]  
 >  Если вы выполняете XML-шаблон в приложении ADO, использующем поставщик SQLXMLOLEDB, и задаете атрибут **Client-Side-XML** в шаблоне и свойстве клиентсидексмл поставщика, приоритет получает значение, заданное в шаблоне.  

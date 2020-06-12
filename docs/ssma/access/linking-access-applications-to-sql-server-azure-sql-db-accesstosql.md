@@ -1,5 +1,6 @@
 ---
 title: Связывание приложений Access с SQL Server в базе данных SQL Azure | Документация Майкрософт
+description: Сведения о связывании таблиц доступа с перенесенными таблицами для использования существующих приложений Access с SQL Server или базой данных SQL Azure.
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -23,21 +24,21 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112062"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293771"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Связывание приложений Access с SQL Server в базе данных SQL Azure (Акцесстоскл)
-Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure таблицами. Связывание изменяет базу данных Access таким образом, чтобы запросы, формы, отчеты и страницы доступа к данным использовали данные в базе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных или SQL Azure, а не данные в базе данных Access.  
+Если вы хотите использовать существующие приложения Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , можно связать исходные таблицы Access с перенесенными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure таблицами. Связывание изменяет базу данных Access таким образом, чтобы запросы, формы, отчеты и страницы доступа к данным использовали данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных или SQL Azure, а не данные в базе данных Access.  
   
 > [!NOTE]  
 > Таблицы Access остаются в доступе, но не обновляются вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обновлениями. После связывания таблиц и проверки функциональности может потребоваться удалить таблицы Access.  
   
 ## <a name="linking-access-and-sql-server-tables"></a>Связывание таблиц доступа и SQL Server  
-При связывании таблицы Access с таблицей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azureой ядро СУБД Jet сохраняет сведения о соединении и метаданные таблицы, но данные хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Такое связывание позволяет приложениям доступа работать с таблицами Access, даже если фактические таблицы и данные находятся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure.  
+При связывании таблицы Access с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицей или SQL Azureой ядро СУБД Jet сохраняет сведения о соединении и метаданные таблицы, но данные хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Такое связывание позволяет приложениям доступа работать с таблицами Access, даже если фактические таблицы и данные находятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure.  
   
 > [!NOTE]  
 > При использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности пароль сохраняется в виде открытого текста в связанных таблицах Access. Рекомендуется использовать проверку подлинности Windows.  
@@ -59,7 +60,7 @@ ms.locfileid: "79112062"
 > Последнюю версию SNAC можно получить с помощью [пакета дополнительных компонентов Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="unlinking-access-tables"></a>Отмена связи с таблицами доступа  
-При разрыве связи таблицы доступа из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azureа SSMA восстанавливает исходную таблицу Access и ее данные.  
+При разрыве связи таблицы доступа из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы или SQL Azureа SSMA восстанавливает исходную таблицу Access и ее данные.  
   
 **Отмена связи таблиц**  
   
@@ -85,7 +86,7 @@ ms.locfileid: "79112062"
 6.  Щелкните правой кнопкой мыши элемент **таблицы**и выберите команду **связать**.  
   
 ## <a name="updating-linked-tables"></a>Обновление связанных таблиц  
-Если определения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблиц или SQL Azure изменены, можно удалить связь и повторно связать таблицы в SSMA, используя процедуры, приведенные ранее в этом разделе. Также можно обновить таблицы с помощью Access.  
+Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определения таблиц или SQL Azure изменены, можно удалить связь и повторно связать таблицы в SSMA, используя процедуры, приведенные ранее в этом разделе. Также можно обновить таблицы с помощью Access.  
   
 **Обновление связанных таблиц с помощью Access**  
   
@@ -98,7 +99,7 @@ ms.locfileid: "79112062"
 4.  Установите флажок рядом с каждой связанной таблицей, которую требуется обновить, а затем нажмите кнопку **ОК**.  
   
 ## <a name="possible-post-migration-issues"></a>Возможные проблемы, возникающие после миграции  
-В следующих разделах перечислены проблемы, которые могут возникнуть в существующих приложениях Access после переноса баз данных из Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или SQL Azure, а также связывания таблиц вместе с причинами и решениями.  
+В следующих разделах перечислены проблемы, которые могут возникнуть в существующих приложениях Access после переноса баз данных из Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, а также связывания таблиц вместе с причинами и решениями.  
   
 ### <a name="slow-performance-with-linked-tables"></a>Снижение производительности с помощью связанных таблиц  
 **Причина:** Некоторые запросы могут быть слишком длительными после изменения размера по следующим причинам.  
@@ -125,11 +126,11 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>Новые записи недоступны  
-**Причина:** При добавлении записи в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azureную с помощью VBA, если поле уникального индекса таблицы имеет значение по умолчанию и не присваивается значение этому полю, Новая запись не отображается до тех пор, пока таблица не будет снова открыта в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. При попытке получить значение из новой записи появляется следующее сообщение об ошибке:  
+**Причина:** При добавлении записи в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу или SQL Azureную с помощью VBA, если поле уникального индекса таблицы имеет значение по умолчанию и не присваивается значение этому полю, Новая запись не отображается до тех пор, пока таблица не будет снова открыта в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. При попытке получить значение из новой записи появляется следующее сообщение об ошибке:  
   
 `Run-time error '3167' Record is deleted.`  
   
-**Решение:** При открытии таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure с помощью кода VBA включите `dbSeeChanges` параметр, как показано в следующем примере:  
+**Решение:** При открытии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы или SQL Azure с помощью кода VBA включите `dbSeeChanges` параметр, как показано в следующем примере:  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
@@ -141,7 +142,7 @@ Recordset.LastModified
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>Невозможно изменить схему связанной таблицы с доступом  
 **Причина:** После переноса данных и связывания таблиц пользователь не может изменить схему таблицы в Access.  
   
-**Решение:** Измените схему таблицы с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], а затем обновите ссылку в Access.  
+**Решение:** Измените схему таблицы с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем обновите ссылку в Access.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Функция гиперссылки потеряна после переноса данных  
 **Причина:** После переноса данных гиперссылки в столбцах теряют свои функциональные возможности и становятся простыми столбцами типа **nvarchar (max)** .  
@@ -153,6 +154,6 @@ Recordset.LastModified
   
 **Решение:** Можно определить запрос доступа, возвращающий только строки с поддерживаемыми типами данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>Дополнительно  
 [Миграция баз данных Access в SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

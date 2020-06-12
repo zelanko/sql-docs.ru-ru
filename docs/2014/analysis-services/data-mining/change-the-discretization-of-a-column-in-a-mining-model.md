@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f5dfbc1ab2481afc1b4f4b152c7748f9ac5a03a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085899"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525070"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>изменить дискретизацию столбца в модели интеллектуального анализа данных
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]автоматически дискретизировать значения, то есть данные ячеек в числовом столбце — в определенных сценариях. Например, если в данных содержатся непрерывные числовые данные и создается модель дерева принятия решений, каждый столбец непрерывных данных автоматически будет сегментирован (в зависимости от распределения данных). Если вам необходимо управлять процессом дискретизации данных, измените свойства столбца структуры интеллектуального анализа данных, управляющие использованием данных в модели.  
@@ -43,10 +42,10 @@ ms.locfileid: "66085899"
   
      В окне <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> и <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> включены.  
   
-2.  В окне **Свойства** <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> щелкните текстовое поле рядом с полем и выберите одно из следующих значений: `Automatic`, `EqualAreas`или. `Cluster`  
+2.  В окне **Свойства** щелкните текстовое поле рядом с полем <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> и выберите одно из следующих значений: `Automatic` , `EqualAreas` или `Cluster` .  
   
     > [!NOTE]  
-    >  Если для столбца задано значение `Ignore`, окно **свойств** столбца остается пустым.  
+    >  Если для столбца задано значение `Ignore` , окно **свойств** столбца остается пустым.  
   
      Новое значение вступает в силу после выбора другого элемента в конструкторе.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66085899"
     > [!NOTE]  
     >  После изменения данных свойств необходимо выполнить повторную обработку структуры и всех моделей, для которых должны действовать новые настройки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)  
   
   

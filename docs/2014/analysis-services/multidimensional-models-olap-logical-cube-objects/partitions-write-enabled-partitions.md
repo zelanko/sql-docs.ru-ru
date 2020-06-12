@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd4bd012847c3aee231767e94bead86a507ecc53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727178"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545226"
 ---
 # <a name="write-enabled-partitions"></a>Секции, доступные для записи
   Как правило, данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  
@@ -53,7 +52,7 @@ ms.locfileid: "62727178"
 ## <a name="security"></a>Безопасность  
  Пользователю разрешается записывать изменения в таблицу обратной записи куба, только если этот пользователь принадлежит роли с разрешением на чтение и запись в ячейки куба. Для каждой роли можно управлять тем, какие ячейки куба можно обновлять, а какие нельзя. Дополнительные сведения см. в разделе [предоставление разрешений куба или модели &#40;Analysis Services&#41;](../multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Измерения, доступные для записи](../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Агрегаты и статистические схемы](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Секции &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

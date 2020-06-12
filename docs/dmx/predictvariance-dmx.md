@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041692"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666859"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,9 +31,9 @@ PredictVariance(<scalar column reference>)
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, заданное * \<скалярным справочником по столбцам>*.  
+ Скалярное значение типа, заданное * \< скалярным справочником по столбцам>*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если ссылка на столбец является дискретной, **PredictVariance** возвращает 0, так как дисперсию нельзя вычислить из дискретных значений.  
   
 ## <a name="examples"></a>Примеры  

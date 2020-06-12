@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96948f8a256b90429e45ac6ce1068cf3d88baa9a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080618"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544216"
 ---
 # <a name="import-data-ssas-tabular"></a>Импорт данных (табличные службы SSAS)
   Данные можно импортировать в табличную модель из разнообразных источников. Здесь представлены разделы, в которых описано использование мастера импорта данных для подключения и выбора данных, импортируемых в проект модели.  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 98176d54f6cdf29be5c06563ec1dbd7fd6275724
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085113"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523172"
 ---
 # <a name="data-mining-designer"></a>Конструктора моделей интеллектуального анализа данных
-  Конструктор интеллектуального анализа данных — это основная среда, в которой можно работать с [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]моделями интеллектуального анализа в. Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
+  Конструктор интеллектуального анализа данных — это основная среда, в которой можно работать с моделями интеллектуального анализа в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
   
 -   Изменение структуры и модели интеллектуального анализа, ранее созданных при помощи мастера интеллектуального анализа данных.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66085113"
   
  [Задачи и инструкции по запросам интеллектуального анализа данных](data-mining-query-tasks-and-how-tos.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Решения интеллектуального анализа данных](data-mining-solutions.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32f122933e03992afdc287fa064f78d5d22c0e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083650"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521460"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
@@ -287,7 +286,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Значение `Missing` (VALUE_TYPE = 1) добавляется к каждому входному и выходному атрибуту, представляя возможные значения, которые не присутствовали в обучающих данных. Важно различать строку «missing» и значение `Missing` по умолчанию. Дополнительные сведения см. в разделе [Отсутствующие значения (службы Analysis Services — интеллектуальный анализ данных)](missing-values-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining-model-viewers.md)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   

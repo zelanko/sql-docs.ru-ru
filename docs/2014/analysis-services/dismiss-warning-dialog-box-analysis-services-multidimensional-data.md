@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3450713f3b621e960e443062323c3074b2698b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c75289571216568a440fdfb863a1a1633ecb86ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081635"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528530"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отклонить предупреждение» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Отклонить предупреждение** используется, чтобы отклонить конкретный экземпляр предупреждения.  
@@ -28,14 +27,14 @@ ms.locfileid: "66081635"
   
 2.  В **обозревателе решений**щелкните правой кнопкой мыши проект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , выберите команду **Изменить базу данных**, а затем перейдите на вкладку **Предупреждения** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Описание**  
  Отображает предупреждение, которое было отклонено.  
   
  **Комментарии (необязательно)**  
  Введите объяснение, почему отклонено предупреждение. Комментарий будет отображаться в столбце **Комментарий** таблицы **Отключенные предупреждения** вкладки **Предупреждения** конструктора баз данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предупреждения &#40;конструкторе баз данных&#41; &#40;Analysis Services многомерных данных&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

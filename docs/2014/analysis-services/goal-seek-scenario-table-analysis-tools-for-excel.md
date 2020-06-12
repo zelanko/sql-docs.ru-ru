@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080738"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544366"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Сценарий поиска решения (средства анализа таблиц для Excel)
   ![Кнопка «Поиск решения» на ленте «Средства анализа таблиц»](media/tat-goalseek.gif "Кнопка «Поиск решения» на ленте «Средства анализа таблиц»")  
@@ -99,9 +98,9 @@ ms.locfileid: "66080738"
 ## <a name="related-tools"></a>Дополнительные средства  
  Клиент интеллектуального анализа данных для Excel представляет собой отдельную надстройку, поддерживающую дополнительные возможности интеллектуального анализа данных, в состав которой входят несколько мастеров, предназначенных для создания моделей интеллектуального анализа данных, прогнозирующих поведение. Дополнительные сведения см. [в разделе Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md).  
   
- Дополнительные сведения о алгоритме, используемом средством «сценарий **поиска решения** », см. в разделе «Алгоритм логистической регрессии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (Майкрософт)» электронной документации по.  
+ Дополнительные сведения о алгоритме, используемом средством «сценарий **поиска решения** », см. в разделе «Алгоритм логистической регрессии (Майкрософт)» [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] электронной документации по.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства анализа таблиц для Excel](table-analysis-tools-for-excel.md)  
   
   

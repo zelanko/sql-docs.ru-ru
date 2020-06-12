@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070688"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539876"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Настройки диаграммы роста прибыли» (представление диаграммы точности интеллектуального анализа данных)
   Используйте диалоговое окно **Настройки диаграммы роста прибыли** для настройки параметров формирования диаграммы роста прибыли. Дополнительные сведения о диаграммах роста прибыли см. в разделе [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](data-mining/lift-chart-analysis-services-data-mining.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Повтор**  
  Введите число вариантов в наборе данных, которое будет использоваться при создании диаграммы роста прибыли.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66070688"
  **Доход на единицу**  
  Введите предполагаемый доход, который будет получен в результате продаж или привлечения клиентов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  

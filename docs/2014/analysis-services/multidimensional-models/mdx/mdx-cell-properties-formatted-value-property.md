@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546426"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>Взаимодействие свойств LANGUAGE и FORMAT_STRING для построения свойства FORMATED_VALUE
   Свойство FORMATTED_VALUE основано на взаимодействии свойств ячейки VALUE, FORMAT_STRING и LANGUAGE. В этом разделе объясняется, как эти свойства взаимодействуют для построения свойства FORMATTED_VALUE.  
@@ -76,7 +75,7 @@ ms.locfileid: "66074400"
   
  Результаты в транспонированном виде выглядят следующим образом, если приведенный выше запрос многомерных выражений запускался с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] через сервер, а локаль клиента равна 1033:  
   
-|Участник|FORMATTED_VALUE|Объяснение|  
+|Член|FORMATTED_VALUE|Объяснение|  
 |------------|----------------------|-----------------|  
 |Объект|$ 5 040,00|Свойство FORMAT_STRING имеет значение `Currency` , свойство LANGUAGE имеет значение `1033`, унаследованное от значения локали системы.|  
 |B|€ 5 040,00|Свойство FORMAT_STRING имеет значение `Currency` (унаследованное из примера А), а свойству LANGUAGE явно задано значение `1034` (испанский), следовательно, используется знак евро, другой десятичный разделитель и другой разделитель групп разрядов.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66074400"
   
  Результаты в транспонированном виде выглядят следующим образом, если приведенный выше запрос многомерных выражений запускался с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] через сервер, а локаль клиента равна 1033:  
   
-|Участник|FORMATTED_VALUE|Объяснение|  
+|Член|FORMATTED_VALUE|Объяснение|  
 |------------|----------------------|-----------------|  
 |Объект|3/12/1959 6:30:00 AM|Свойству FORMAT_STRING явно присвоено значение `General Date` выражением CDate(). Свойство LANGUAGE имеет значение `1033` (английский), унаследованное от значения локали системы.|  
 |B|Thursday, March 12, 1959|Свойству FORMAT_STRING явно присвоено значение `Long Date` . Свойство LANGUAGE имеет значение `1033` (английский), унаследованное от значения локали системы.|  
@@ -141,7 +140,7 @@ ms.locfileid: "66074400"
 |K|6:30:00|Свойству FORMAT_STRING явно присвоено значение `Long Time` . Свойству LANGUAGE явно присвоено значение `1041` (японский).|  
 |L|06:30|Свойству FORMAT_STRING явно присвоено значение `Short Time` . Свойству LANGUAGE явно присвоено значение `1041` (японский).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [FORMAT_STRING содержимого &#40;многомерных выражений&#41;](mdx-cell-properties-format-string-contents.md)   
  [Использование свойств ячеек &#40;&#41;многомерных выражений](mdx-cell-properties-using-cell-properties.md)   
  [Создание и использование значений свойств &#40;&#41;многомерных выражений](../../creating-and-using-property-values-mdx.md)   

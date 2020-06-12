@@ -12,17 +12,17 @@ ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 205ee5d7c316c9a81e82edc0b2b6d132ed5c0ae1
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000954"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858687"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Свойства полнотекстового каталога (страница "Таблицы и представления")
   Используйте это диалоговое окно для просмотра и редактирования таблиц и представлений, назначенных полнотекстовому каталогу.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Все подходящие объекты таблиц и представлений в этой базе данных**  
  Перечисляет таблицы и представления, для которых задан уникальный индекс, но они еще не входят в полнотекстовый каталог. Чтобы выбрать таблицу или представление и назначить их каталогу, выберите элементы в списке и нажмите кнопку "->".  
   
@@ -56,7 +56,7 @@ ms.locfileid: "83000954"
 |**Вручную**|Когда происходит изменение, добавление или удаление индексированных данных, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] отслеживает изменения. Если активировано отслеживание изменений по параметру **Вручную** , индекс автоматически не обновляется этими изменениями. Вместо этого администратор может применить изменения вручную с помощью [инструкции ALTER FULLTEXT INDEX... ЗАПУСК инструкции обновления заполнения](/sql/t-sql/statements/alter-fulltext-index-transact-sql) .|  
 |**Не отслеживать изменения**|Если этот параметр включен, изменения в индексированные данные каталога не регистрируются. Администратор должен построить индекс с помощью инструкции ALTER FULLTEXT INDEX с параметром FULL POPULATION или INCREMENTAL POPULATION.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [&#41;Transact-SQL &#40;инструкции ALTER FULLTEXT CATALOG](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Заполнение полнотекстовых индексов](../relational-databases/indexes/indexes.md)  

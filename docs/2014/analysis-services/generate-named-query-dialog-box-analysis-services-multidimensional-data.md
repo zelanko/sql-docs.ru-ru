@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f385577-a2e5-4527-ab88-b27e73112591
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0995ac659de7ffd4c36c584b5a16b46f79fe8d5d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544376"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Создание именованного запроса» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Создание именованного запроса** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] позволяет создать именованный запрос на основании рядов диаграмм, значений рядов диаграмм или фильтра диаграммы, выбранных из диаграммы, отображаемой во вкладке **Сводная диаграмма** в диалоговом окне **Просмотреть данные** . Для вывода диалогового окна **Создание именованного запроса** нажмите кнопку **Создать именованный запрос** в диалоговом окне **Просмотреть данные** .  

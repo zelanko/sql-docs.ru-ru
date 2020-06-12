@@ -10,19 +10,19 @@ ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c4f3a480b039b4853c112831341b6448a7d6a7
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211257"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859386"
 ---
 # <a name="options-environment-fonts-and-colors-page"></a>Параметры ("Среда" — "Шрифты и цвета")
   В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
   
  Изменения цветовой схемы не затрагивают сеанс, в котором эти изменения были сделаны. Чтобы оценить изменения цвета, можно открыть другой экземпляр среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и создать условия, в которых изменения проявятся.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Показать параметры для**  
  Перечисляются все элементы интерфейса пользователя, для которых можно изменить шрифт и цветовую схему. Выбрав элемент из этого списка, можно изменить настройки цвета для элемента, выбранного в списке **Отображаемые элементы**.  
   

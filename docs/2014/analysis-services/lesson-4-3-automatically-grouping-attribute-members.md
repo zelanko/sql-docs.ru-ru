@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543396"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Автоматическое группирование элементов атрибута
   При просмотре куба обычно выполняется распределение по измерениям элементов одной иерархии атрибута на основе элементов другой иерархии атрибута. Например, можно сгруппировать продажи по таким признакам, как город, приобретенный товар или пол. Однако с определенными типами атрибутов полезно [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] автоматически создавать группирование элементов атрибутов на основе распределения элементов в иерархии атрибутов. Например, с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно объединить заказчиков в группы на основе их годового дохода. При этом пользователь, просматривающий иерархию атрибута, будет видеть названия и значения групп вместо самих элементов групп. Данный подход ограничивает количество отображаемых уровней, что упрощает анализ данных.
@@ -24,7 +23,7 @@ ms.locfileid: "78175343"
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] диапазоны групп создаются таким образом, что элементы измерения распределяются по группам пропорционально.
 
- **Кластеры** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] создают группы, выполняя одномерный кластеризацию входных значений с помощью метода кластеризации K-средних с распределениями по Гауссу. Эта функция применима только в отношении числовых столбцов.
+ **Кластеры** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] создает группы, выполняя одномерный кластеризацию входных значений с помощью метода кластеризации K-средних с распределениями по Гауссу. Эта функция применима только в отношении числовых столбцов.
 
  После выбора метода группирования необходимо указать количество групп, используя свойство **DiscretizationBucketCount** . Дополнительные сведения см. в разделе [группирование членов атрибутов &#40;дискретизация&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175343"
 
 4.  На панели **Атрибуты** выберите атрибут **Yearly Income**.
 
-5.  В окно свойств измените значение свойства **DiscretizationMethod** на **автоматически** и измените значение свойства **DiscretizationBucketCount** на `5`.
+5.  В окно свойств измените значение свойства **DiscretizationMethod** на **автоматически** и измените значение свойства **DiscretizationBucketCount** на `5` .
 
      На следующем рисунке показаны измененные свойства атрибута **Yearly Income**.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175343"
 
 4.  На панели **Атрибуты** выберите атрибут **Sick Leave Hours**.
 
-5.  В окно свойств измените значение свойства **DiscretizationMethod** на **Clusters** и измените значение свойства **DiscretizationBucketCount** на `5`.
+5.  В окно свойств измените значение свойства **DiscretizationMethod** на **Clusters** и измените значение свойства **DiscretizationBucketCount** на `5` .
 
 6.  На панели **Атрибуты** выберите атрибут **Vacation Hours**.
 
-7.  В окно свойств измените значение свойства **DiscretizationMethod** на **равные области** и измените значение свойства **DiscretizationBucketCount** на `5`.
+7.  В окно свойств измените значение свойства **DiscretizationMethod** на **равные области** и измените значение свойства **DiscretizationBucketCount** на `5` .
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Просмотр измененных иерархий атрибутов
 

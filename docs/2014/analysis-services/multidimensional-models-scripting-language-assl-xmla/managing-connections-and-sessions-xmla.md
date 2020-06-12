@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544946"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Управление соединениями и сеансами (XMLA)
   *Пользуясь* — это условие, во время которого сервер сохраняет удостоверение и контекст клиента между вызовами методов. *Стателесснесс* — это условие, в течение которого сервер не запоминает удостоверение и контекст клиента после завершения вызова метода.  
@@ -72,7 +71,7 @@ ms.locfileid: "62701996"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  Ответное сообщение SOAP от поставщика содержит идентификатор сеанса в области заголовка возврата с помощью тега \<заголовка XMLA>.  
+2.  Ответное сообщение SOAP от поставщика включает идентификатор сеанса в области заголовка возврата с помощью тега заголовка XMLA \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701996"
     </SOAP-ENV:Header>  
     ```  
   
-4.  По завершении сеанса используется тег \<EndSession>, содержащий СООТВЕТСТВУЮЩЕЕ значение идентификатора сеанса.  
+4.  По завершении сеанса \<EndSession> используется тег, содержащий значение идентификатора связанного сеанса.  
   
     ```  
     <SOAP-ENV:Header>  
@@ -105,7 +104,7 @@ ms.locfileid: "62701996"
     </SOAP-ENV:Header>  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

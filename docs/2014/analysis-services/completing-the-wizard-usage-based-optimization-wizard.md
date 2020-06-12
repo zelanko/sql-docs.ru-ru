@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3faf5983b452f436b4d3071fa542bfb2ccdd382e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087560"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527289"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>Завершение работы мастера (мастер оптимизации на основе использования)
   Страница **Завершение работы мастера** позволяет сохранить статистическую схему и присвоить ее выбранным секциям. Также можно дополнительно обработать выбранные секции после того, как мастер оптимизации на основе использования завершит проектирование и сохранение статистических схем.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Создать новую статистическую схему**  
  Позволяет создать новую статистическую схему и ввести ее имя.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66087560"
  **Обработать секции немедленно**  
  Выполняет обработку выбранных секций после завершения работы мастера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

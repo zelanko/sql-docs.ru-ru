@@ -1,5 +1,6 @@
 ---
 title: Установка компонентов SSMA на SQL Server (OracleToSQL) | Документация Майкрософт
+description: Узнайте, как установить пакет расширений SSMA и поставщики Oracle на компьютере, на котором выполняется SQL Server для поддержки преобразования базы данных Oracle.
 ms.prod: sql
 ms.custom: ''
 ms.date: 10/01/2019
@@ -13,26 +14,26 @@ ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3df476f5fa14840af0b023253b79702ed7a85c8a
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71713311"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292938"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
 
-Помимо установки SSMA, необходимо также установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. К этим компонентам относится пакет расширений SSMA, который поддерживает миграцию данных, и поставщики Oracle для обеспечения подключения между серверами.  
+Помимо установки SSMA, необходимо также установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . К этим компонентам относится пакет расширений SSMA, который поддерживает миграцию данных, и поставщики Oracle для обеспечения подключения между серверами.  
   
 ## <a name="ssma-for-oracle-extension-pack"></a>SSMA для пакета расширений Oracle
 
-Пакет расширений SSMA добавляет базы данных **сисдб** и **ссматестердб** в указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. База данных **сисдб** содержит таблицы и хранимые процедуры, необходимые для переноса данных, и определяемые пользователем функции, имитирующие системные функции Oracle. База данных **ссматестердб** содержит таблицы и процедуры, необходимые компоненту тестера.  
+Пакет расширений SSMA добавляет базы данных **сисдб** и **ссматестердб** в указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . База данных **сисдб** содержит таблицы и хранимые процедуры, необходимые для переноса данных, и определяемые пользователем функции, имитирующие системные функции Oracle. База данных **ссматестердб** содержит таблицы и процедуры, необходимые компоненту тестера.  
   
-Кроме того, при переносе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.  
+Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.  
   
 ### <a name="prerequisites"></a>Предварительные требования
 
-Перед установкой SSMA для компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]сервера Oracle убедитесь, что система соответствует следующим требованиям.  
+Перед установкой SSMA для компонентов сервера Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что система соответствует следующим требованиям.  
   
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]экземпляр установлен. SSMA не поддерживает SQL Server 2008 Express Edition.
   
@@ -40,17 +41,17 @@ ms.locfileid: "71713311"
   
 - Поставщик клиента Oracle или поставщик OLE DB для Oracle, а также подключение к базе данных Oracle, которую требуется перенести. Поставщики можно установить с носителя продукта Oracle или с веб-сайта Oracle.  
   
-- Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера должна быть запущена во время установки. Используется для заполнения списка экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в мастере установки. Службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера можно отключить после установки.  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба браузера должна быть запущена во время установки. Используется для заполнения списка экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в мастере установки. Службу браузера можно отключить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после установки.  
   
     > [!NOTE]  
-    > Если служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера запущена, но список экземпляров в программе установки по-прежнему не отображается, необходимо разблокировать UDP-порт 1434. Вы можете использовать брандмауэр Windows, чтобы временно разблокировать порт, или временно отключить брандмауэр Windows. Также может потребоваться временное отключение антивирусного по. После установки обязательно включите брандмауэры и антивирусное по.  
+    > Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба браузера запущена, но список экземпляров в программе установки по-прежнему не отображается, необходимо разблокировать UDP-порт 1434. Вы можете использовать брандмауэр Windows, чтобы временно разблокировать порт, или временно отключить брандмауэр Windows. Также может потребоваться временное отключение антивирусного по. После установки обязательно включите брандмауэры и антивирусное по.  
   
 ### <a name="installing-the-extension-pack"></a>Установка пакета расширений
 
-Пакет расширений можно установить в любое время перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Пакет расширений можно установить в любое время перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> Чтобы установить пакет расширений, необходимо быть членом роли сервера **sysadmin** на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Чтобы установить пакет расширений, необходимо быть членом роли сервера **sysadmin** на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Установка пакета расширений**
   
@@ -58,9 +59,9 @@ ms.locfileid: "71713311"
   
     В зависимости от версии WinZip можно дважды щелкнуть файл или щелкнуть его правой кнопкой мыши и выбрать пункт **извлечь все** или **Открыть в WinZip**. Чтобы извлечь файлы, следуйте инструкциям в пользовательском интерфейсе WinZip.  
   
-2. Скопируйте **SSMA для пакета расширения Oracle.* n*. Install. exe** (где *n* — номер сборки) на компьютере, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2. Скопируйте **SSMA для пакета расширения Oracle.* n*.Install.exe** (где *n* — номер сборки) на компьютере, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3. Дважды щелкните **SSMA для пакета расширения Oracle.* n*. Install. exe**.  
+3. Дважды щелкните **SSMA для пакета расширения Oracle.* n*.Install.exe**.  
   
 4. На странице **приветствия** нажмите кнопку **Далее**.  
   
@@ -80,7 +81,7 @@ ms.locfileid: "71713311"
   
 10. На странице Подключение выберите метод проверки подлинности и нажмите кнопку **Далее**.  
   
-    При проверке подлинности Windows будут использоваться учетные данные Windows для входа в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности необходимо ввести имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа и пароль.  
+    При проверке подлинности Windows будут использоваться учетные данные Windows для входа в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности необходимо ввести [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль.  
   
 11. На следующей странице выберите **установить служебные базы данных** *n*, где *n* — номер версии, а затем нажмите кнопку **Далее**.  
   
@@ -88,7 +89,7 @@ ms.locfileid: "71713311"
   
     Если установлен флажок **установить базу данных тестировщика** , будет создана база данных **ссматестердб** Tester.  
   
-12. Чтобы установить служебные программы на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите **Да**, а затем нажмите кнопку **Далее**или закройте мастер и выберите **нет**.  
+12. Чтобы установить служебные программы на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее**или закройте мастер и выберите **нет**.  
   
 13. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью программы sqlcmd выполните следующий скрипт, чтобы включить CLR:  
   
@@ -99,7 +100,7 @@ ms.locfileid: "71713311"
     GO  
     ```
 
-    Если среда CLR не включена, при подключении SSMA к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполните следующее сообщение об ошибке:  
+    Если среда CLR не включена, при подключении SSMA к выполните следующее сообщение об ошибке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
     SSMA не удалось получить сведения о версии сборки пакета расширений. Переустановите пакет расширений на сервере базы данных.  
   
@@ -107,9 +108,9 @@ ms.locfileid: "71713311"
 
 После установки пакета расширений в базе данных **сисдб** появляется таблица **ssma_oracle. bcp_migration_packages** .
 
-Каждый раз при миграции данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA создает задание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента. Эти задания называются **ssma_oracle пакет переноса данных {GUID}** и отображаются в узле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в папке задания.  
+Каждый раз при миграции данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Задание агента. Эти задания называются **ssma_oracle пакет переноса данных {GUID}** и отображаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] узле агент [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в папке задания.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>Дополнительно
 
 [Установка SSMA для клиента Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Перенос баз данных Oracle в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

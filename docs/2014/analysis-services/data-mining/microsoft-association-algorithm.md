@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237618a07f7a6f541257ed0ad18fc2967723b93c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174771"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522132"
 ---
 # <a name="microsoft-association-algorithm"></a>Алгоритм взаимосвязей (Майкрософт)
   Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом взаимосвязей, предоставляемым службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Этот алгоритм полезен для механизмов выработки рекомендаций. Ядро рекомендаций рекомендует программы пользователям на основе элементов, которые они уже купили, или к которым проявили интерес. Алгоритм взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] удобно использовать для анализа потребительской корзины. Пример анализа потребительской корзины см. в разделе [занятие 3. Создание сценария потребительской корзины &#40;учебник по интеллектуальному анализу данных&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) в учебнике по интеллектуальному анализу данных.
@@ -78,7 +77,7 @@ ms.locfileid: "78174771"
  Дополнительные сведения о создании запроса к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](data-mining-queries.md).
 
 ## <a name="performance"></a>Производительность
- Процесс создания наборов элементов и расчета значений корреляции может потребовать много времени. Несмотря на [!INCLUDE[msCoName](../../includes/msconame-md.md)] то, что алгоритм правил взаимосвязей использует методы оптимизации для экономии пространства и ускорения обработки, следует помнить, что проблемы с производительностью могут возникнуть в следующих условиях:
+ Процесс создания наборов элементов и расчета значений корреляции может потребовать много времени. Несмотря на то, [!INCLUDE[msCoName](../../includes/msconame-md.md)] что алгоритм правил взаимосвязей использует методы оптимизации для экономии пространства и ускорения обработки, следует помнить, что проблемы с производительностью могут возникнуть в следующих условиях:
 
 -   Применяется крупный набор данных, состоящий из большого количества отдельных элементов.
 
@@ -86,7 +85,7 @@ ms.locfileid: "78174771"
 
  Чтобы свести к минимуму время обработки и уменьшить сложность наборов элементов, можно попытаться сгруппировать связанные элементы по категориям перед выполнением анализа данных.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.
 
@@ -96,7 +95,7 @@ ms.locfileid: "78174771"
 
 -   Поддерживается создание измерений интеллектуального анализа данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md) [Просмотр модели с помощью средства просмотра правил взаимосвязей (Майкрософт) Просмотр](browse-a-model-using-the-microsoft-association-rules-viewer.md) [содержимого модели интеллектуального анализа данных для моделей взаимосвязей &#40;Analysis Services — интеллектуальный анализ,&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md) [Microsoft Association Algorithm Справочник](microsoft-association-algorithm-technical-reference.md) [Association Model Query Examples](association-model-query-examples.md)
 
 

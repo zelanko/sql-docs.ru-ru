@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 125fe829c3b76be0d92a3519249df571890efbf2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938123"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670020"
 ---
-# <a name="ltsource-data-querygt---openrowset"></a>&lt;запрос&gt; источника данных — OPENROWSET
+# <a name="ltsource-data-querygt---openrowset"></a>&lt;запрос источника данных &gt; — OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Заменяет запрос источника данных на запрос к внешнему поставщику. Инструкция INSERT, выбор из ПРОГНОЗИРУЕМого объединения и выбор из операторов ЕСТЕСТВЕННОго ПРОГНОЗИРУЮЩЕГО подключения поддерживают **OPENROWSET**.  
@@ -37,7 +37,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Синтаксис запроса, возвращающего набор строк.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Поставщик интеллектуального анализа данных установит соединение с объектом источника данных с помощью *provider_name* и provider_string и будет выполнять запрос *,* указанный в *query_syntax* , для получения набора строк из исходных данных.  
   
 ## <a name="examples"></a>Примеры  

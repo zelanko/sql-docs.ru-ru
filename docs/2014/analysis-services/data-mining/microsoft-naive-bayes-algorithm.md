@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c0fc3ae439f3502458e71fca1700302d745788a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174463"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521780"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса — это алгоритм классификации, основанный на байесе теоремах и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляемый для использования в прогнозном моделировании. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Упрощенный алгоритм Байеса — это алгоритм классификации, основанный на байесе теоремах и предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.
 
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Этот алгоритм можно использовать для первоначального исследования данных, а затем применить результаты для создания дополнительных моделей интеллектуального анализа с другими алгоритмами, требующими большего количества вычислений и являющимися более точными.
 
@@ -81,7 +80,7 @@ ms.locfileid: "78174463"
 
  Дополнительные сведения о создании запросов к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](data-mining-queries.md). Примеры использования запросов с моделью упрощенного алгоритма Байеса см. в разделе [Примеры запросов к модели упрощенного алгоритма Байеса](naive-bayes-model-query-examples.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 -   Поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.
 
@@ -91,7 +90,7 @@ ms.locfileid: "78174463"
 
 -   Поддерживается использование моделей интеллектуального анализа OLAP.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — выбор компонентов&#41;интеллектуального](data-mining-algorithms-analysis-services-data-mining.md) анализа данных [&#40;интеллектуальный анализ данных](feature-selection-data-mining.md) . [примеры запросов модели упрощенного](naive-bayes-model-query-examples.md) алгоритма Байеса [содержимое модели интеллектуального анализа данных для моделей упрощенного](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md) [алгоритма](microsoft-naive-bayes-algorithm-technical-reference.md) Байеса&#41;&#40;
 
 

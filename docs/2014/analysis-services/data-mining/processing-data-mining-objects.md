@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4a6693a46679badc068111a311bb82219e752cd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083152"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520760"
 ---
 # <a name="processing-data-mining-objects"></a>Обработка объектов интеллектуального анализа данных
   До обработки объект интеллектуального анализа данных представляет собой просто пустой контейнер. *Обработка* модели интеллектуального анализа данных также называется *обучением*.  
@@ -55,7 +54,7 @@ ms.locfileid: "66083152"
   
  Дополнительные сведения см. в разделе [Требования к обработке и связанные замечания (интеллектуальный анализ данных)](processing-requirements-and-considerations-data-mining.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы детализации &#40;&#41;интеллектуального анализа данных](drillthrough-queries-data-mining.md)   
  [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)   
  [Модели интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-models-analysis-services-data-mining.md)   

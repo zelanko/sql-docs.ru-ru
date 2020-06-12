@@ -27,18 +27,17 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b34fc9d18866572056126b1df408d91c3934e85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082801"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520422"
 ---
 # <a name="testing-and-validation-data-mining"></a>Тестирование и проверка (интеллектуальный анализ данных)
   Проверка представляет собой процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  
   
- В этом разделе рассматриваются некоторые основные понятия, связанные с качеством модели, и описываются стратегии проверки модели, предоставляемые в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Общие сведения о том, как проверка моделей применяется в процессах интеллектуального анализа данных большего масштаба, см. в разделе [Решения для интеллектуального анализа данных](data-mining-solutions.md).  
+ В этом разделе рассматриваются некоторые основные понятия, связанные с качеством модели, и описываются стратегии проверки модели, предоставляемые в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Общие сведения о том, как проверка моделей применяется в процессах интеллектуального анализа данных большего масштаба, см. в разделе [Решения для интеллектуального анализа данных](data-mining-solutions.md).  
   
 ## <a name="methods-for-testing-and-validation-of-data-mining-models"></a>Методы тестирования и проверки моделей интеллектуального анализа данных  
  Оценить качество и характеристики моделей интеллектуального анализа данных можно многими способами.  
@@ -81,7 +80,7 @@ ms.locfileid: "66082801"
   
  В подразделах этого раздела приведены общие сведения о каждом методе, в них также подробно описан процесс оценки точности моделей, выстраиваемых с помощью интеллектуального анализа данных SQL Server.  
   
-### <a name="related-topics"></a>Связанные разделы  
+### <a name="related-topics"></a>См. также  
   
 |Разделы|Ссылки|  
 |------------|-----------|  
@@ -90,7 +89,7 @@ ms.locfileid: "66082801"
 |Узнайте о типах диаграмм точности, имеющихся в [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)].|[Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)](profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)](scatter-plot-analysis-services-data-mining.md)|  
 |Узнайте о создании матрицы классификации, которую иногда также называют матрицей несоответствий, для оценки нескольких условий.|[Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства интеллектуального анализа данных](data-mining-tools.md)   
  [Решения интеллектуального анализа данных](data-mining-solutions.md)   
  [Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](testing-and-validation-tasks-and-how-tos-data-mining.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c21c1153289eddf99220279ed8b71b1377088ac
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083957"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521790"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Алгоритм логистической регрессии (Майкрософт)
   Логистическая регрессия является известным статистическим методом, применяемым для моделирования двоичных результатов.  
@@ -68,7 +67,7 @@ ms.locfileid: "66083957"
   
 -   Примеры запросов к модели логистической регрессии см. в разделе [Примеры запросов к модели кластеризации](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 -   Не поддерживается детализация. Это объясняется тем, что структура узлов в модели интеллектуального анализа данных не обязательно однозначно соответствует базовым данным.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66083957"
   
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Содержимое модели интеллектуального анализа данных для моделей логистической регрессии &#40;Analysis Services-интеллектуальный анализ данных&#41;](mining-model-content-for-logistic-regression-models.md)   
  [Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Примеры запросов модели логистической регрессии](logistic-regression-model-query-examples.md)  

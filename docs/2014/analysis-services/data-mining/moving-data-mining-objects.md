@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ed12525e1b27bd45aa1d6313ad6538a7856f17ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b10be3a79487376b173eab87059404b7f7a618e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521052"
 ---
 # <a name="moving-data-mining-objects"></a>Перемещение объектов интеллектуального анализа данных
   Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
@@ -46,7 +45,7 @@ ms.locfileid: "66083297"
   
  Дополнительные сведения о развертывании решений служб Analysis Services см. в разделе [Развертывание проектов служб Analysis Services (среда SSDT)](../multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-### <a name="scripting"></a>Написание сценариев  
+### <a name="scripting"></a>Скрипты  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько языков, с помощью которых можно создавать скрипты для работы с объектами.  
   
 -   **XML для аналитики**: можно создать скрипт для работы с объектами с помощью XMLA, щелкнув правой кнопкой мыши соответствующие объекты в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для выполнения скрипта откройте его в окне **Запрос XMLA** на целевом сервере.  
@@ -82,7 +81,7 @@ ms.locfileid: "66083297"
 > [!NOTE]  
 >  С помощью инструкций DMX нельзя экспортировать и импортировать модели OLAP. Если модель интеллектуального анализа данных основана на кубе OLAP, для резервного копирования и восстановления всей базы данных необходимо воспользоваться функциями служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] либо выполнить повторное развертывание куба и его моделей.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление решениями и объектами интеллектуального анализа данных](management-of-data-mining-solutions-and-objects.md)  
   
   

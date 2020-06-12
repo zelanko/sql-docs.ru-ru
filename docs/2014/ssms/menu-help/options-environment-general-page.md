@@ -12,19 +12,19 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b215ff16f5e4a42a6d43f0a6e5f9758f158a682
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188501"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859854"
 ---
 # <a name="options-environment-general-page"></a>Параметры ("Среда" — "Общие")
   Диалоговое окно **Параметры** используется для настройки действий среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] при запуске, общих параметров управления окнами и других общих настроек. В меню **Сервис** выберите пункт **Параметры**, откройте папку **Среда** и выберите пункт **Общие**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **При запуске**  
- Выберите действие, которое среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] будет выполнять при запуске. Доступны следующие возможности:  
+ Выберите действие, которое среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] будет выполнять при запуске. Доступны следующие параметры.  
   
 -   **Открыть обозреватель объектов** — запрашивает об установке соединения, а затем открывает обозреватель объектов.  
   

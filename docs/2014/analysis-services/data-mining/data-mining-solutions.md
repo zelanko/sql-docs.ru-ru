@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5a5126048928e66fd8351bc00226cadb2de54d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 226b8c52fde4c9c4190c9c6c0c1e91c578643f53
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084893"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522737"
 ---
 # <a name="data-mining-solutions"></a>Решения интеллектуального анализа данных
   Решение по интеллектуальному анализу данных представляет собой решение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которое содержит один или несколько проектов интеллектуального анализа данных.  
   
- Подразделы этого раздела содержат сведения о проектировании и реализации интегрированного решения интеллектуального анализа данных с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]помощью. Общие сведения о процессе разработки в области интеллектуального анализа данных и связанных с этим средствах см. в разделе [Data Mining Concepts](data-mining-concepts.md).  
+ Подразделы этого раздела содержат сведения о проектировании и реализации интегрированного решения интеллектуального анализа данных с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Общие сведения о процессе разработки в области интеллектуального анализа данных и связанных с этим средствах см. в разделе [Data Mining Concepts](data-mining-concepts.md).  
   
  Дополнительные сведения о других типах проектов, полезных для интеллектуального анализа данных, см. в разделе [Связанные проекты для решений интеллектуального анализа данных](data-mining-solutions.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66084893"
 |Настройка модели интеллектуального анализа данных путем применения фильтров к данным, используемым в обучении модели.|[Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)](add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Обновление решений по интеллектуальному анализу данных и управление ими.|Ссылка подлежит определению|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебники по интеллектуальному анализу данных (службы Analysis Services)](../data-mining-tutorials-analysis-services.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: 'Фильтрация с помощью SQL: limit-field и SQL: limit-value (SQLXML)'
+description: 'Узнайте, как использовать аннотации SQL: limit-field и SQL: limit-value в SQLXML 4,0 для фильтрации данных, возвращаемых запросом на основе ограничивающего значения.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0304b2113e6112f5c2777478ae03436d9f24cfb1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257411"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689410"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -165,7 +166,7 @@ ms.locfileid: "75257411"
 </ROOT>  
 ```  
   
-### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>Б) Ограничение результатов на основе значения скидки, имеющего тип данных real  
+### <a name="b-limiting-results-based-on-a-discount-value-of-type-real-data"></a>Б. Ограничение результатов на основе значения скидки, имеющего тип данных real  
  В этом примере база данных содержит две таблицы  
   
 -   Orders (OrderID)  

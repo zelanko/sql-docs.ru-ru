@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b26c912791a18d4bbdcf3def6d282e025b5af89b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088272"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527610"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Средства вычисления (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
   С помощью панели **Средства вычисления** на вкладке **Ключевые показатели эффективности** конструктора кубов можно исследовать метаданные, функции и шаблоны, доступные для использования в ключевых показателях эффективности.  
@@ -25,7 +24,7 @@ ms.locfileid: "66088272"
 > [!NOTE]  
 >  Данная панель отображается только в представлении формы.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Метаданные**  
  Отображает метаданные для выделенного куба.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66088272"
 > [!NOTE]  
 >  В режиме проекта диалоговое окно **Средства вычисления** считывает сведения для этого параметра из XML-файла с именем MDXFunctions.xml, который имеется в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В режиме «в сети» сведения для этого параметра извлекаются из набора строк схемы MDSCHEMA_FUNCTIONS для этого экземпляра.  
   
- **Шаблоны**  
+ **См**  
  Отображает предопределенные шаблоны, доступные для ключевых показателей эффективности.  
   
  Перетащите выбранный элемент на панели **Редактор форм ключевого показателя эффективности** , чтобы включить синтаксис многомерных выражений для этого элемента в выбранном размещении на панели.  
@@ -71,7 +70,7 @@ ms.locfileid: "66088272"
 > [!NOTE]  
 >  Этот параметр доступен только в том случае, если выбран параметр **Метаданные** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Ключевые показатели эффективности &#40;конструктора кубов&#41; &#40;Analysis Services многомерных данных&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «Ключевые показатели эффективности», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

@@ -5,17 +5,17 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: master-data-services
 ms.topic: reference
 ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2e204b5021cb2928988331c73750821225a4192d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0313c5dd8fcb1dd8dac5bc436bdf024d044dd5a
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81728442"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83730563"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Создание классов-посредников веб-службы диспетчера основных данных
 
@@ -31,7 +31,7 @@ ms.locfileid: "81728442"
 2.  Найдите раздел **mdsWsHttpBehavior** в **\<serviceBehaviors>**. Для элемента ** \<>serviceMetadata** задайте для **хттпжетенаблед** **значение true**.  
   
     > [!NOTE]  
-    >  Если вы хотите включить веб-службы по протоколу TLS, ранее известное как SSL (SSL), установите для **HttpsGetEnabled** **значение true** в разделе **mdsWsHttpBehavior** файла Web. config. Также необходимо изменить **мдсвшттпбиндинг** , чтобы он также был НАСТРОЕН для TLS, и Закомментировать раздел, не относящийся к TLS.  
+    >  Если вы хотите включить веб-службы по протоколу TLS, ранее известное как SSL (SSL), установите для **HttpsGetEnabled** **значение true** в разделе **mdsWsHttpBehavior** файла web.config. Также необходимо изменить **мдсвшттпбиндинг** , чтобы он также был НАСТРОЕН для TLS, и Закомментировать раздел, не относящийся к TLS.  
   
 3.  Сохраните изменения в файле.  
   
@@ -39,10 +39,10 @@ ms.locfileid: "81728442"
     "Вы создали службу".  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Создание классов-посредников с помощью Visual Studio  
- Если установлена программа Visual Studio 2010, то самый простой способ создания прокси-классов заключается в добавлении в проект **Ссылки на службу**. Адресом ссылки на службу является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], к которому добавлено /service/service.svc. Например: `https://yourserver/MDS/service/service.svc`. Дополнительные сведения см. в статье [Добавление, обновление или удаление ссылки на службу](https://go.microsoft.com/fwlink/?LinkId=221167).  
+ Если установлена программа Visual Studio 2010, то самый простой способ создания прокси-классов заключается в добавлении в проект **Ссылки на службу**. Адресом ссылки на службу является URL-адрес веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], к которому добавлено /service/service.svc. Например: `https://yourserver/MDS/service/service.svc` Дополнительные сведения см. в статье [Добавление, обновление или удаление ссылки на службу](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Создание классов-посредников с помощью Svcutil.exe  
- Чтобы программа Svcutil. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] exe была [!INCLUDE[msCoName](../../includes/msconame-md.md)] установлена на компьютере, необходимо либо установить или Windows SDK. При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для выполнения команды необходимо использовать командную строку [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Дополнительные сведения см. в статьях [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) (Служебная программа для работы с метаданными ServiceModel — Svcutil.exe) и [Generating a WCF Client from Service Metadata](https://go.microsoft.com/fwlink/?LinkId=164821) (Создание клиента WCF из метаданных службы).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] Для Svcutil.exe на компьютере необходимо установить или Windows SDK. При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для выполнения команды необходимо использовать командную строку [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Дополнительные сведения см. в статьях [ServiceModel Metadata Utility Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) (Служебная программа для работы с метаданными ServiceModel — Svcutil.exe) и [Generating a WCF Client from Service Metadata](https://go.microsoft.com/fwlink/?LinkId=164821) (Создание клиента WCF из метаданных службы).  
   
  Для создания набора классов-посредников C# с помощью Svcutil.exe используйте команду наподобие следующей:  
   
@@ -61,7 +61,7 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
   
 -   *proxy_name* ― это имя создаваемого прокси-файла.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операции веб-службы по категориям (службы Master Data Services)](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

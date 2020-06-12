@@ -1,5 +1,6 @@
 ---
 title: Перенос баз данных Access в SQL Server в базе данных SQL Azure | Документация Майкрософт
+description: Используйте этот рекомендуемый процесс для переноса баз данных Access в SQL Server или базу данных SQL Azure с помощью Помощник по миграции SQL Server (SSMA).
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -16,15 +17,15 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3cbe1565642d43aabf3e36604fac5bfc2979c65
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68260237"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293743"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Миграция баз данных Access в SQL Server в базе данных SQL Azure (Акцесстоскл)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) — это средство, предоставляющее исчерпывающую среду, помогающую быстро перенести базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access в или SQL Azure. С помощью SSMA можно просматривать объекты базы данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQL Azure, оценивать базу данных Access для миграции, преобразовывать объекты базы данных Access, загружать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, а затем переносить данные.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) — это средство, предоставляющее исчерпывающую среду, помогающую быстро перенести базы данных Access в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. С помощью SSMA можно просматривать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных Access и SQL Azure, оценивать базу данных Access для миграции, преобразовывать объекты базы данных Access, загружать их в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, а затем переносить данные.  
   
 ## <a name="recommended-migration-process"></a>Рекомендуемый процесс миграции  
 Чтобы успешно перенести объекты и данные из доступа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure, используйте следующую процедуру.  
@@ -47,7 +48,7 @@ ms.locfileid: "68260237"
   
 7.  [Загрузите преобразованные объекты базы данных в SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
-    Можно загрузить либо объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, либо SQL Azure с помощью SSMA, либо сохранить [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипты.  
+    Можно загрузить либо объекты базы данных, либо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure с помощью SSMA, либо сохранить [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипты.  
   
 8.  [Перенос данных доступа в SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
@@ -58,6 +59,6 @@ ms.locfileid: "68260237"
   
 Вы также можете использовать мастер миграции для пошагового выполнения этого процесса. Дополнительные сведения см. в разделе [Мастер миграции](migration-wizard-accesstosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>Дополнительно  
 [начало работы с Помощник по миграции SQL Server для доступа](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Подготовка баз данных Access к миграции](preparing-access-databases-for-migration-accesstosql.md)

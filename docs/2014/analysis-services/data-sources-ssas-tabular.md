@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6908998b-9302-4a90-976e-770106b48d18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 94718b35efdcf31a0c9de19930cc765f7d9db5d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d686d8100e30d7608e8d90f135022bdf46785723
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082328"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528960"
 ---
 # <a name="data-sources-ssas-tabular"></a>Источники данных (табличные службы SSAS)
   Источники данных предоставляют данные для включения в решения табличной модели. Данные можно импортировать в модель из разных источников, таких как реляционные базы данных, веб-каналы данных, многомерные источники данных, например куб служб Analysis Services, а также данные из текстовых файлов, таких как книга Microsoft Excel. В темах настоящего раздела представлены сведения о типах источников данных, из которых можно выполнять импорт, различных типах импортируемых данных, а также о задачах, которые описывают импорт данных из этих источников данных.  

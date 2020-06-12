@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 155ac80c-63ae-47aa-9e86-9396e3d920eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 25496be8f8cfc877b72ab6fd511446d9e194e2b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e78754c93393f172e7282df19166536b29a2e640
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088399"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527684"
 ---
 # <a name="business-intelligence-wizard-f1-help"></a>Справка F1 мастера бизнес-аналитики
   Мастер бизнес-аналитики позволяет определить функции бизнес-аналитики и задать дополнительные параметры для кубов и измерений. Этот мастер устанавливает значения свойств для существующих объектов, создает новые объекты, формирует скрипты многомерных выражений и предоставляет такие функции, как логика измерений и конвертация валют.  
@@ -96,7 +95,7 @@ ms.locfileid: "66088399"
   
 -   [Завершение работы мастера &#40;мастера бизнес-аналитики&#41;](completing-the-wizard-business-intelligence-wizard.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  

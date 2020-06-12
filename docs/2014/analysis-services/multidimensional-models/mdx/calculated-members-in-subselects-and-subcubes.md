@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89e87d8c1f15dfd0f70ebaca92a81603b06ff0ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074784"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546546"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
   В предыдущих версиях вычисляемые элементы не допускались в подзапросах выборки и вложенных кубах. Тем не менее, начиная с версии SQL Server 2008, они разрешены и включаются свойством соединения. Кроме того, в SQL Server 2008 R2 определяется новое поведение вычисляемых элементов в подзапросах выборки и вложенных кубах.  
   
 ## <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах  
- Свойство `SubQueries` строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемых свойствах XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) определяет поведение или квоту вычисляемых элементов или вычисляемых наборов для подзапросов выборки или вложенных кубов. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
+ `SubQueries`Свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или `DBPROPMSMDSUBQUERIES` свойство в [поддерживаемых свойствах XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) определяет поведение или квоту вычисляемых элементов или вычисляемых наборов для подзапросов выборки или вложенных кубов. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  
   
  Свойство SubQueries может принимать следующие значения.  
   
 |||  
 |-|-|  
-|Применение|Описание|  
+|Значение|Описание|  
 |0|Вычисляемые элементы не допускаются в подзапросах выборки и вложенных кубах.<br /><br /> Если при вычислении подзапроса выборки или вложенного куба присутствует ссылка на вычисляемый элемент, возникает ошибка.|  
 |1|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, однако в возвращаемое подпространство восходящие элементы не вводятся.|  
 |2|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, и в возвращаемое подпространство вводятся восходящие элементы. Кроме того, в выборке вычисляемых элементов допускается смешанная гранулярность.|  
@@ -118,10 +117,10 @@ Where [Measures].[Reseller Sales Amount]
   
  В приведенных результатах агрегированные значения для [All Geographies], [United States], [Oregon] и [Washington] получаются на основе статической обработки родителей &[Portland]&[OR] и &[Spokane]&[WA]. Из вычисляемого элемента не берется ничего.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Комментарии  
  В выражениях подзапроса выборки или вложенного куба допускается использование только элементов, вычисляемых в сеансе, или элементов, вычисляемых глобально. Наличие в многомерном запросе элементов, вычисляемых в запросе, приведет к ошибке выполнения выражения подзапроса выборки или вложенного куба.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Подзапросы выборки в запросе](subselects-in-queries.md)   
  [Поддерживаемые свойства XMLA (XMLA)](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)  

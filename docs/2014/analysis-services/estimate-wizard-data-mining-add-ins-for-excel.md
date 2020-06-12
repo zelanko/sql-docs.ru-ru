@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2706dae37c1dc303aa6708fe1f7387a39835e4d5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081245"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528372"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Мастер оценки (надстройки интеллектуального анализа данных для Excel)
   ![Мастер оценки на ленте «Интеллектуальный анализ данных»](media/dmc-estimate.gif "Мастер оценки на ленте «Интеллектуальный анализ данных»")  
@@ -96,7 +95,7 @@ ms.locfileid: "66081245"
   
  Чтобы использовать алгоритм оценки, результат, который требуется предсказать, должен быть выражен в виде числового значения, например валюты, объема продаж, даты или времени.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)   
  [Пошаговое руководство по диаграмме дерева решений &#40;надстроек интеллектуального анализа данных&#41;](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   

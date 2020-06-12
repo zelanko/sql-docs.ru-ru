@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a20484a85b459dad58e5e6687a6cc34a093b130
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081308"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528360"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>Просмотр данных (надстройки интеллектуального анализа данных SQL Server)
   ![Мастер просмотра данных](media/dmc-explore.gif "Мастер просмотра данных")  
@@ -51,7 +50,7 @@ ms.locfileid: "66081308"
 ### <a name="requirements"></a>Требования  
  Чтобы использовать мастер **просмотра данных** , данные должны находиться в таблице данных Excel.   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контрольный список для подготовки к интеллектуальному анализу данных](checklist-of-preparation-for-data-mining.md)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 00076475-d687-4376-90f4-6536f17631a0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3c99733ca6853a2e0a5503868e2270fa6585eae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b6eb40999ca009184d438e0c0dc514d2c3f009
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083483"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521209"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Задачи и инструкции средства просмотра моделей интеллектуального анализа данных
   Конструктор интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит несколько средств, которые можно использовать для просмотра моделей интеллектуального анализа данных. Следующие разделы содержат пошаговые инструкции по выполнению задач, для которых характерно использование вкладки конструктора **Средство просмотра моделей интеллектуального анализа данных** .  
@@ -45,7 +44,7 @@ ms.locfileid: "66083483"
   
 -   [изменить цвета, используемые в средстве просмотра интеллектуального анализа данных](change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник по основам интеллектуального анализа данных](../../tutorials/basic-data-mining-tutorial.md)   
  [Средства просмотра моделей интеллектуального анализа данных (конструктор моделей интеллектуального анализа данных)](../mining-model-viewers-data-mining-model-designer.md)  
   

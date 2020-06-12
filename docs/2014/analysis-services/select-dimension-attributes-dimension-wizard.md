@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f58a3e14-ab27-44d3-8c26-f5c9ee7583b0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcaf18ea2df3bbd3b227c8948d2fb15f54828853
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537926"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Выбор атрибутов измерения (мастер измерения)
   Используйте страницу **Выбор атрибутов измерения** для выбора и изменения атрибутов для создаваемых измерений.  
@@ -29,7 +28,7 @@ ms.locfileid: "67624344"
   
 -   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  (Столбец с флажками)  
  Выберите для включения атрибута в измерение.  
   
@@ -54,12 +53,12 @@ ms.locfileid: "67624344"
 |----------|--------------|  
 |Измерение содержит иерархию типа "родители-потомки", а параметр **Разрешить обзор** не выбран.|Мастер оставляет свойству `AttributeHierarchyEnabled` значение `True` и назначает атрибуту `AttributeHierarchyVisible` значение `False` для ключевого атрибута.|  
 |Таблица в измерении содержит внешний ключ к таблице вне этого измерения.|Мастер выбирает внешний ключ, как включаемый атрибут, но не выбирает параметр **Разрешить обзор**. Если сохранить эти настройки, то свойству `AttributeHiearchyEnabled` атрибута будет присвоено значение `True`, а свойству `AttributeHierarchyVisible` — значение `False`.|  
-|Измерение содержит таблицы, связанные по схеме «снежинка», доступные через внешние ключевые столбцы, допускающих значение NULL<br /><br /> - и -<br /><br /> Не выбран параметр «Разрешить обзор» для атрибута, основанного на ключе таблицы, связанной по схеме «снежинка»|Мастер создаст новый атрибут со свойством `AttributeHiearchyEnabled`, установленным в значение `True`, и свойством `AttributeHierarchyVisible`, установленным в значение `False`.|  
+|Измерение содержит таблицы, связанные по схеме «снежинка», доступные через внешние ключевые столбцы, допускающих значение NULL<br /><br /> \- и -<br /><br /> Не выбран параметр «Разрешить обзор» для атрибута, основанного на ключе таблицы, связанной по схеме «снежинка»|Мастер создаст новый атрибут со свойством `AttributeHiearchyEnabled`, установленным в значение `True`, и свойством `AttributeHierarchyVisible`, установленным в значение `False`.|  
   
  **Тип атрибута**  
  Задайте тип атрибута (необязательно). Значение по умолчанию — **Обычный**. Тип атрибута указывает клиентским приложениям, какие сведения может содержать атрибут.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2dcde9e445538866159f66639159aa1fc6cef87d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175171"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529003"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Конструктор представлений источников данных (службы Analysis Services — многомерные данные)
   Представление источника данных (DSV) — это логическое представление внешнего реляционного источника данных, используемых для создания кубов и измерений в многомерной модели.

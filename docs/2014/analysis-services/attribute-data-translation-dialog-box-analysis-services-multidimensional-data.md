@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063069"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527930"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Перевод данных атрибута» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Перевод данных атрибута** используется для задания столбца, содержащего данные заголовка перевода, а также значения параметров сортировки и порядка сортировки, которые должны быть применены к переведенным данным. Диалоговое окно **Перевод данных атрибута** может отображаться следующим образом.  
@@ -28,8 +27,8 @@ ms.locfileid: "66063069"
   
 -   Щелкнуть правой кнопкой мыши панель **Подробности перевода** на вкладке **Переводы****конструктора измерений** и выбрать команду **Создать столбец заголовков** или **Изменить столбец заголовков**.  
   
-## <a name="options"></a>Параметры  
- **Версию**  
+## <a name="options"></a>Варианты  
+ **Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))  
  Отображает выбранный атрибут.  
   
  **Язык**  
@@ -72,7 +71,7 @@ ms.locfileid: "66063069"
   
  Если этот параметр не выбран, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] рассматривают символы в однобайтном и двухбайтном представлении как одинаковые.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Сведения о переводе &#40;вкладка Переводы, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

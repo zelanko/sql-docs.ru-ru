@@ -1,5 +1,6 @@
 ---
 title: Преобразование объектов базы данных Access (Акцесстоскл) | Документация Майкрософт
+description: Узнайте, как выбрать объекты базы данных Access после подключения к SQL Server или базе данных SQL Azure, а затем преобразовать схемы в схемы базы данных SQL Server или SQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -29,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f15fc6cee7f66128af7646b9605234e60830b8db
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68006629"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84302809"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Преобразование объектов базы данных Access (Акцесстоскл)
-После добавления баз данных Access и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure SSMA отображает метаданные для объектов базы данных access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQL Azure. Теперь можно выбрать доступ к объектам базы данных, а затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure схемы.  
+После добавления баз данных Access и подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure SSMA отображает метаданные для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объектов базы данных access и SQL Azure. Теперь можно выбрать доступ к объектам базы данных, а затем преобразовать схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure схемы.  
   
 ## <a name="the-conversion-process"></a>Процесс преобразования  
 Преобразование объектов базы данных принимает определения объектов из метаданных доступа, преобразует их в эквивалентный [!INCLUDE[tsql](../../includes/tsql-md.md)] синтаксис, а затем загружает эту информацию в проект. Затем можно просмотреть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты и их свойства с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure обозревателе метаданных.  
@@ -51,12 +52,12 @@ ms.locfileid: "68006629"
 Перед преобразованием объектов проверьте параметры преобразования проекта в диалоговом окне " **Параметры проекта** ". С помощью этого диалогового окна можно задать, как SSMA Преобразует столбцы с индексированными memoми, первичные ключи, ограничения внешнего ключа, метки времени и таблицы без индексов. Дополнительные сведения см. в разделе [Параметры проекта (преобразование)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388) .  
   
 ## <a name="conversion-results"></a>Результаты преобразования  
-В следующей таблице показано, какие объекты Access преобразуются, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также в итоговые или SQL Azure объекты.  
+В следующей таблице показано, какие объекты Access преобразуются, а также в итоговые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure объекты.  
   
 |Доступ к объекту|Результирующий объект SQL Server|  
 |-----------------|-------------------------------|  
 |table|table|  
-|столбец|столбец|  
+|гистограмма|гистограмма|  
 |индекс|индекс|  
 |внешний ключ|внешний ключ|  
 |query|представление<br /><br />Большинство запросов SELECT преобразуются в представления. Другие запросы, например запросы на обновление, не переносятся.<br /><br />Запросы SELECT, которые принимают параметры, не преобразовываются и не являются запросами перекрестных вкладок.|  
@@ -87,7 +88,7 @@ ms.locfileid: "68006629"
   
     -   Чтобы преобразовать или исключить отдельные таблицы, разверните базу данных, разверните узел **таблицы**, а затем установите или снимите флажок рядом с таблицей.  
   
-3.  Выполните одно из указанных ниже действий.  
+3.  Выполните одно из следующих действий.  
   
     -   Чтобы преобразовать схемы, щелкните правой кнопкой мыши **базы данных** и выберите команду **преобразовать схему**.  
   

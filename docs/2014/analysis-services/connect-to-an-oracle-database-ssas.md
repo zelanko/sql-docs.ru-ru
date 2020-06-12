@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d6344fd130a9d84b67c242af93f7a3f2ce204e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087019"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526990"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>Соединение с базой данных Oracle (SSAS)
   Эта страница **мастера импорта таблиц** используется для задания параметров для соединения с базой данных Oracle. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087019"
 > [!NOTE]  
 >  При выборе базы данных на этой странице используются учетные данные текущего пользователя. Тем не менее импорт не будет успешным, если пользователь, указанный на странице сведений об олицетворении, не имеет достаточных прав для чтения из выбранной базы данных.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Понятное имя соединения**  
  Введите уникальное имя для соединения с источником данных. Это поле является обязательным.  
   

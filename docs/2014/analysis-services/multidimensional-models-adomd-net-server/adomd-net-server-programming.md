@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 522478af0b19f1745d80f167e40345d4751136b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217157"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545453"
 ---
 # <a name="adomdnet-server-programming"></a>Программирование сервера ADOMD.NET
-  Серверные компоненты ADOMD.NET находятся в пространстве имен `Microsoft.AnalysisServices.AdomdServer` (в файле msmgdsrv.dll). Эти серверные компоненты используются для создания пользовательских функций МНОГОМЕРных выражений и хранимых процедур, выполняемых на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]служб. Серверные объекты обеспечивают возможность выполнения запросов к кубам и моделям интеллектуального анализа данных, а также для вычисления выражений в данном контексте. Среди преимуществ создания пользовательских функций и хранимых процедур — быстрое выполнение, централизованное развертывание и удобство поддержки.  
+  Серверные компоненты ADOMD.NET находятся в пространстве имен `Microsoft.AnalysisServices.AdomdServer` (в файле msmgdsrv.dll). Эти серверные компоненты используются для создания пользовательских функций МНОГОМЕРных выражений и хранимых процедур, выполняемых на экземпляре служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Серверные объекты обеспечивают возможность выполнения запросов к кубам и моделям интеллектуального анализа данных, а также для вычисления выражений в данном контексте. Среди преимуществ создания пользовательских функций и хранимых процедур — быстрое выполнение, централизованное развертывание и удобство поддержки.  
   
  Разделы, приведенные в следующей таблице, могут помочь в разработке серверных приложений ADOMD.NET.  
   

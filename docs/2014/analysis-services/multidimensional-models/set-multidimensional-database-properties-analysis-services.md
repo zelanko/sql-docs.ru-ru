@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa3e1544f625183df3240359aa22b117144244d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45379f12358b5e25d4f576bd01f11f777d688c64
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072995"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545666"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Задание свойств многомерной базы данных (службы Analysis Services)
-  Существует ряд [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] свойств базы данных, которые можно настроить в конструкторе [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] баз данных.  
+  Существует ряд [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] свойств базы данных, которые можно настроить в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] конструкторе баз данных.  
   
  В этом конструкторе можно выполнить следующие типы задач.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66072995"
 |Язык|При развертывании проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] база данных унаследует свойство Language сервера, если не указать другое значение.|  
 |MasterDataSource ID|Используется удаленными секциями. Дополнительные сведения см. в разделе [Remote Partitions](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Свойства базы данных» &#40;службы SSAS — многомерные&#41;](../database-properties-dialog-box-ssas-multidimensional.md)   
  [Настройка свойств проекта служб Analysis Services (среда SSDT)](configure-analysis-services-project-properties-ssdt.md)  
   

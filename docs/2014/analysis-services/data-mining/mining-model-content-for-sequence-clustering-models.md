@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083564"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521276"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм кластеризации последовательностей (Майкрософт). Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
@@ -126,10 +125,10 @@ ms.locfileid: "66083564"
  По этому значению можно сказать, сколько обучающих вариантов использовано в переходе.  
   
  MSOLAP_MODEL_COLUMN  
- неприменимо.  
+ Неприменимо.  
   
  MSOLAP_NODE_SCORE  
- неприменимо.  
+ Неприменимо.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Значение совпадает с NODE_DESCRIPTION.  
@@ -260,7 +259,7 @@ ORDER BY Count(*) DESC
   
  Сведения о том, как получить список наблюдаемых путей с помощью запроса содержимого модели, а также другие примеры запросов, основанных на модели кластеризации последовательностей, см. в разделе [Примеры запросов к модели кластеризации последовательностей](clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Алгоритм кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm.md)   
  [Примеры запросов к модели кластеризации последовательностей](clustering-model-query-examples.md)  

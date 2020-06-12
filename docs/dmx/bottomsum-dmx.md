@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889765"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669844"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Применяется к  
- Выражение, возвращающее таблицу, например ссылку на \<столбец таблицы> или функцию, возвращающую таблицу.  
+ Выражение, возвращающее таблицу, например ссылку на \< столбец таблицы> или функцию, возвращающую таблицу.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<табличное выражение>  
   
-## <a name="remarks"></a>Remarks  
- Функция **BottomSum** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \<ранжирующего выражения> аргументе для каждой строки, так что сумма \<ранжирующего выражения> значения по крайней мере по заданному итогу, заданному аргументом \<Sum>. **BottomSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
+## <a name="remarks"></a>Комментарии  
+ Функция **BottomSum** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \< ранжирующего выражения> аргументе для каждой строки, так что сумма \< ранжирующего выражения> значения по крайней мере по заданному итогу, заданному \< аргументом Sum>. **BottomSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [учебника по базовому интеллектуальному анализу данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

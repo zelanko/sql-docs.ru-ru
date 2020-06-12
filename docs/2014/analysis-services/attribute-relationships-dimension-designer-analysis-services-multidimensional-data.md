@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 228d1d91-7524-4773-9c83-39b04e8534d3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 08d01bb328bcf3e693724475532b6c9a39c79be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5113ec1a554f2ae74c3f024fd6cbe8f6398d8bf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063190"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527880"
 ---
 # <a name="attribute-relationships-dimension-designer-analysis-services---multidimensional-data"></a>Связи атрибутов (конструктор измерений) (службы Analysis Services - многомерные данные)
   Вкладка **Связи атрибутов** в конструкторе измерений используется, чтобы создать, изменить или удалить связи атрибутов выбранного измерения.  
@@ -37,7 +36,7 @@ ms.locfileid: "66063190"
  [Список «Связи атрибутов»](attribute-relationships-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Этот список используется, чтобы отыскать конкретную связь в диаграмме связей атрибутов и управлять этой связью.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структура измерения &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
  [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)   

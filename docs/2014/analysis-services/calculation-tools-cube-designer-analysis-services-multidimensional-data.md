@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ff0f13ec91ef1e8796ed5ebd5ccf3cc37ff2f354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e658ae7d839a55da315619e0870b32c1da52dad8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088281"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527622"
 ---
 # <a name="calculation-tools-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Средства вычисления (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   С помощью панели **Средства вычисления** на вкладке **Вычисления** конструктора кубов можно исследовать метаданные, функции и шаблоны, доступные для использования в расчетах.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Метаданные**  
  Отображает метаданные для выделенного куба.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66088281"
 > [!NOTE]  
 >  В режиме проекта диалоговое окно **Средства вычисления** считывает сведения для этого параметра из XML-файла с именем MDXFunctions.xml, который имеется в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В режиме «в сети» сведения для этого параметра извлекаются из набора строк схемы MDSCHEMA_FUNCTIONS для этого экземпляра.  
   
- **Шаблоны**  
+ **См**  
  Отображаются определенные заранее шаблоны, доступные вычисляемым элементам, именованным наборам и командам скрипта.  
   
  Перетащите выделенный элемент на панель **Редактор скриптов**, **Редактор форм вычисляемых элементов**или **Редактор форм именованных наборов** для добавления синтаксиса на языке многомерных выражений для этого элемента в выбранном месте панели.  
@@ -68,7 +67,7 @@ ms.locfileid: "66088281"
 > [!NOTE]  
 >  Этот параметр доступен только в том случае, если выбран параметр **Метаданные** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Коллекция скриптов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

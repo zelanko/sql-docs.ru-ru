@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b23f250a5589d47ac6e26baf48a40b0979a1895
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174453"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521266"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   *Модель интеллектуального анализа данных* создается путем применения алгоритма к данным. Но это больше, чем алгоритм или контейнер метаданных: это набор данных, статистик и шаблонов, которые можно применять к новым данным для формирования прогнозов и вывода взаимосвязей.
@@ -144,7 +143,7 @@ ms.locfileid: "78174453"
 |Заполнение моделей данными и обновление данных в модели|[обработать модель интеллектуального анализа данных](process-a-mining-model.md)|
 |Работа с моделями OLAP|[создать измерение интеллектуального анализа данных](create-a-data-mining-dimension.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Объекты баз данных (службы Analysis Services — многомерные данные)](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
 
 

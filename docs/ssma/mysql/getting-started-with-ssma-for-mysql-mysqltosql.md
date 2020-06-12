@@ -1,5 +1,6 @@
 ---
 title: Начало работы с SSMA для MySQL (MySQLToSQL) | Документация Майкрософт
+description: Узнайте о Помощник по миграции SQL Server (SSMA) для процесса установки MySQL и ознакомьтесь с пользовательским интерфейсом SSMA.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984536"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293801"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Начало работы с SSMA для MySQL (MySQLToSQL)
 Помощник по миграции SQL Server (SSMA) для MySQL позволяет быстро преобразовывать схемы баз данных MySQL в SQL Server или в схемы базы данных SQL Azure, передавать полученные схемы в SQL Server или базу данных SQL Azure, а также переносить данные из MySQL в SQL Server или базу данных SQL Azure.  
@@ -96,7 +97,7 @@ SSMA содержит две панели инструментов: панель
   
 |||  
 |-|-|  
-|**Кнопка**|**Функция**|  
+|**Кнопка**|**Компонент**|  
 |**Создавать отчет**|Преобразует выбранные объекты MySQL в SQL Server или объекты базы данных SQL Azure, а затем создает отчет, показывающий успешность преобразования.<br /><br />Эта команда отключена, если в обозревателе метаданных MySQL не выбраны объекты.|  
 |**Преобразовать схему**|Преобразует выбранные объекты MySQL в SQL Server или объекты базы данных SQL Azure.<br /><br />Эта команда отключена, если в обозревателе метаданных MySQL не выбраны объекты.|  
 |**Перенос данных**|Переносит данные из базы данных MySQL в SQL Server или базу данных SQL Azure. Перед выполнением этой команды необходимо преобразовать схемы MySQL в SQL Server или схемы базы данных SQL Azure, а затем загрузить объекты в SQL Server или базу данных SQL Azure.<br /><br />Эта команда отключена, если в обозревателе метаданных MySQL не выбраны объекты.|  

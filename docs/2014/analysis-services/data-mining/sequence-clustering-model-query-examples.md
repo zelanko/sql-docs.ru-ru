@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d56924f27f7986861895cf4fff21fa758cc47070
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082914"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520432"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Примеры запросов к модели кластеризации последовательностей
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения об информации, содержащейся в модели, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования на основе новых данных. Что касается модели кластеризации последовательностей, то запросы содержимого обычно возвращают дополнительную информацию об обнаруженных кластерах или о переходах в этих кластерах. Запрос также позволяет получить метаданные, описывающие модель.  
@@ -271,7 +270,7 @@ AS t
   
  Список функций, общих для всех алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)], см. в статье [Общие функции прогнозирования (расширения интеллектуального анализа данных)](/sql/dmx/general-prediction-functions-dmx). Синтаксис отдельных функций см. в статье [Справочник по функциям расширений интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Алгоритм кластеризации последовательностей (Майкрософт)](microsoft-sequence-clustering-algorithm.md)   

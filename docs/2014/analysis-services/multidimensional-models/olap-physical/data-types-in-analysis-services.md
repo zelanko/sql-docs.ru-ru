@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b93090918a0fffc9c98e1560b338177eff3d84
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725388"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545932"
 ---
 # <a name="data-types-in-analysis-services"></a>Типы данных в службах Analysis Services
-  Для всех <xref:Microsoft.AnalysisServices.DataItem> объектов [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующее подмножество `System.Data.OleDb.OleDbType`. Чтобы задать или прочитать тип данных, используйте [тип данных dataitem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
+  Для всех <xref:Microsoft.AnalysisServices.DataItem> объектов [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующее подмножество `System.Data.OleDb.OleDbType` . Чтобы задать или прочитать тип данных, используйте [тип данных dataitem &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl).  
   
 ## <a name="supported-data-types"></a>Поддерживаемые типы данных  
   
@@ -26,7 +25,7 @@ ms.locfileid: "62725388"
 |-|-|  
 |BigInt|64-разрядное целое число со знаком. Тип значения *bigint* представляет целые числа со значениями от минус до 9223372036854775808 до положительного 9 223 372 036 854 775 807.|  
 |Двоичные данные|Поток двоичных данных типа **Byte** . **Byte** — это тип значения, представляющий целые числа без знака со значениями в диапазоне от 0 до 255.|  
-|Логическое|Экземпляры этого типа имеют значения либо `true`, либо `false`.|  
+|Логическое значение|Экземпляры этого типа имеют значения либо `true`, либо `false`.|  
 |Валюта|Значение *валюты* от-922 337 203 685 477,5808 до + 922 337 203 685 477,5807 с точностью до одной десятитысячной единицы валюты (четыре десятичные разряды).|  
 |Дата|Данные даты и времени, хранящиеся в виде типа double. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть представляет долю (время) дня.|  
 |Double|Число с плавающей запятой в диапазоне от -1,79769313486232E +308 до 1,79769313486232E +308. Значения типа Double хранят сведения о числах с точностью до 15 десятичных знаков после запятой.|  
@@ -51,7 +50,7 @@ ms.locfileid: "62725388"
 ||CustomRollupColumn|Только WChar|  
 ||CustomRollupPropertiesColumn|Только WChar|  
 ||UnaryOperatorColumn|Только WChar|  
-||ValueColumn|All|  
+||ValueColumn|Все|  
 |AttributeTranslation|CaptionColumn|Только WChar|  
 |ScalarMiningStructureColumn|KeyColumns|Все, кроме Binary|  
 ||NameColumn|Только WChar|  

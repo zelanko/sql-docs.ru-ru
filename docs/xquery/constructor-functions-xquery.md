@@ -1,5 +1,6 @@
 ---
 title: Функции-конструкторы (XQuery) | Документация Майкрософт
+description: Сведения о функциях конструктора в XQuery, позволяющих создавать экземпляры встроенных или определяемых пользователем атомарных типов XSD.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038992"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529210"
 ---
 # <a name="constructor-functions-xquery"></a>Функции-конструкторы (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *Тип*  
  Любой встроенный тип XSD.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Конструкторы поддерживаются и базовыми, и производными атомарными типами XSD. Однако подтипы **xs: Duration**, включающие **xdt: еармонсдуратион и xdt: dayTimeDuration**, и **xs: QName**, **xs: NMTOKEN**и **xs: Notation** , не поддерживаются. Пользовательские атомарные типы, доступные в ассоциированных коллекциях схем, также доступны, если они прямо или косвенно произведены от следующих типов.  
   
 #### <a name="supported-base-types"></a>Поддерживаемые базовые типы  
@@ -138,7 +139,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>А) Использование функции dateTime() языка XQuery для получения описаний старой продукции  
- В этом примере образец XML-документа сначала присваивается переменной типа **XML** . Этот документ содержит три примера <`ProductDescription`> элементов, каждый из которых содержит дочерний `DateCreated` элемент <>.  
+ В этом примере образец XML-документа сначала присваивается переменной типа **XML** . Этот документ содержит три примера <`ProductDescription`> элементов, каждый из которых содержит `DateCreated` дочерний элемент <>.  
   
  После этого выполняется запрос переменной, получающей описания только тех продуктов, которые были произведены до указанной даты. В целях сравнения запрос использует функцию конструктора **xs: DateTime ()** для ввода дат.  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   ДЛЯ... Структура цикла WHERE используется для получения элемента> \<ProductDescription, удовлетворяющего условию, заданному в предложении WHERE.  
+-   ДЛЯ... Структура цикла WHERE используется для получения элемента, \<ProductDescription> удовлетворяющего условию, заданному в предложении WHERE.  
   
 -   Функция-конструктор **DateTime ()** используется для создания значений типа **DateTime** , чтобы их можно было сравнивать соответствующим образом.  
   

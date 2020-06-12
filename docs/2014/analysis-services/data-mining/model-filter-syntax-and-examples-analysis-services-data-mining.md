@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521077"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Синтаксис и примеры фильтра модели (службы Analysis Services — интеллектуальный анализ данных)
   В этом разделе приводятся сведения о синтаксисе фильтров моделей, а также образцы критериев.  
@@ -238,9 +237,9 @@ FILTER (EXISTS (Products))
 
   
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Пример 7. Сложные сочетания фильтров  
- Сценарий для этой модели напоминает сценарий из примера 4, но здесь он более сложный. Вложенная таблица **ProductsOnSale**имеет условие `(OnSale)` фильтра, означающее, что значение **onsale** должно быть `true` для продукта, указанного в поле **ProductName**. Здесь **OnSale** — это столбец структуры.  
+ Сценарий для этой модели напоминает сценарий из примера 4, но здесь он более сложный. Вложенная таблица **ProductsOnSale**имеет условие фильтра `(OnSale)` , означающее, что значение **onsale** должно быть `true` для продукта, указанного в поле **ProductName**. Здесь **OnSale** — это столбец структуры.  
   
- Вторая часть фильтра для **ProductsNotOnSale**повторяет этот синтаксис, но фильтрует по продуктам, для которых значение **onsale** равно `not true``(!OnSale)`.  
+ Вторая часть фильтра для **ProductsNotOnSale**повторяет этот синтаксис, но фильтрует по продуктам, для которых значение **onsale** равно `not true``(!OnSale)` .  
   
  Затем эти условия объединяются, а на таблицу вариантов накладывается одно дополнительное ограничение. В результате прогнозируются покупки продуктов в списке **ProductsNotOnSale** на основе вариантов, включенных в список **ProductsOnSale** , для покупателей старше 25 лет.  
   
@@ -303,7 +302,7 @@ FILTER (EXISTS (Products))
   
  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Фильтры для моделей интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа&#41;](mining-models-analysis-services-data-mining.md)   
  [Тестирование и проверка (интеллектуальный анализ данных)](testing-and-validation-data-mining.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: Условные выражения (XQuery) | Документация Майкрософт
+description: Сведения о условных выражениях, поддерживаемых XQuery.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76570b6b7cbb1ecb55a881d58683e158736e85d0
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039015"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689705"
 ---
 # <a name="conditional-expressions-xquery"></a>Выражения условий (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +56,7 @@ else
   
 -   Выражение **else** является обязательным. Если оно не требуется, можно возвратить « ( ) », как показано в примерах, приведенных в этом подразделе.  
   
- Например, следующий запрос задается для переменной типа **XML** . Условие **If** проверяет значение переменной SQL (@v) в выражении XQuery с помощью функции расширения [функции SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Если переменная имеет значение FirstName, то возвращается элемент> <`FirstName` . В противном случае возвращается элемент `LastName`> <.  
+ Например, следующий запрос задается для переменной типа **XML** . Условие **If** проверяет значение переменной SQL ( @v ) в выражении XQuery с помощью функции расширения [функции SQL: variable ()](../xquery/xquery-extension-functions-sql-variable.md) . Если переменная имеет значение FirstName, то возвращается `FirstName` элемент> <. В противном случае возвращается `LastName` элемент> <.  
   
 ```  
 declare @x xml  
@@ -80,7 +81,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- Следующий запрос получает описания первых двух характеристик конкретной модели продукции из каталога товаров. Если в документе больше функций, он добавляет элемент <`there-is-more`> с пустым содержимым.  
+ Следующий запрос получает описания первых двух характеристик конкретной модели продукции из каталога товаров. Если в документе больше функций, он добавляет `there-is-more` элемент <> с пустым содержимым.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -122,7 +123,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- В следующем запросе возвращается элемент <`Location`> с атрибутом LocationID, если в расположении рабочего центра не указано время настройки.  
+ В следующем запросе `Location` возвращается элемент <> с атрибутом LocationID, если в расположении рабочего центра не указано время настройки.  
   
 ```  
 SELECT Instructions.query('  

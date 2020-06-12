@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 312afc0336405ca530f731ad4fec55a26a960e7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 237f4dfaa615718f7fa4301b8d64cab0c45600b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547766"
 ---
 # <a name="start-or-stop-a-powerpivot-for-sharepoint-server"></a>Запуск и остановка PowerPivot для сервера SharePoint
   Системная служба PowerPivot и [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляр работают совместно на одном локальном сервере приложений для поддержки согласованного запроса и обработки данных в ферме SharePoint.  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Зависимости служб](#dependencies)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66071048"
 |Новые запросы на данные или обновление данных|Если на ферме только один сервер PowerPivot для SharePoint и он останавливается, новые запросы данных PowerPivot не будут обрабатываться и при попытке запросить данные будет выдаваться ошибка «Данные не обнаружены».<br /><br /> Если есть дополнительные серверы PowerPivot для SharePoint, запрос будет передан на один из доступных серверов.|  
 |Данные об использовании|Когда службы остановлены, данные об использовании не собираются.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание учетных записей служб PowerPivot](configure-power-pivot-service-accounts.md)  
   
   

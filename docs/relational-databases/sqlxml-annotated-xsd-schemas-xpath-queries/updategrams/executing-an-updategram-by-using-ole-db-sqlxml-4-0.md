@@ -1,5 +1,6 @@
 ---
 title: Исполнение Диаграмма обновления с помощью OLE DB (SQLXML)
+description: Узнайте, как использовать OLE DB в SQLXML 4,0 для выполнения диаграмма обновления.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241281"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215255"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Выполнение диаграммы обновления с помощью OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241281"
 </Schema>  
 ```  
   
- Запрос возвращает все элементы работника. При сопоставлении по умолчанию элемент ** \<Person. Contact>** сопоставляется с таблицей Person. Contact в базе данных AdventureWorks.  
+ Запрос возвращает все элементы работника. При использовании сопоставления по умолчанию **\<Person.Contact>** элемент сопоставляется с таблицей Person. Contact в базе данных AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Установка XML как команды и получение результата как XML-документа  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- Шаблон включает SQL-запрос. Для запроса требуется значение параметра (@Title). Если значение параметра не передано, используется значение по умолчанию («Mr.»).  
+ Шаблон включает SQL-запрос. Для запроса требуется значение параметра ( @Title ). Если значение параметра не передано, используется значение по умолчанию («Mr.»).  
   
  При передаче значений параметра в шаблон должны быть указаны как имя, так и значение параметра.  
   

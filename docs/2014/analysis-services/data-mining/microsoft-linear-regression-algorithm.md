@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32d34df7de149c6e98946d1c038c1d3baf9f4b61
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174423"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521980"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Алгоритм линейной регрессии (Майкрософт)
   Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] является разновидностью алгоритма дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] , помогающего рассчитать линейную связь между зависимой и независимой переменной, а затем использовать эту связь при прогнозировании.
@@ -66,7 +65,7 @@ ms.locfileid: "78174423"
 
  Если прогнозируемый атрибут имеет непрерывный числовой тип данных, в дополнение к созданию модели линейной регрессии путем выбора алгоритма линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] можно создать модель дерева принятия решений, содержащую регрессии. В этом случае алгоритм разобьет данные при обнаружении точек, подходящих для разделения, но для некоторых областей данных будет создана формула регрессии. Дополнительные сведения о деревьях регрессии в модели деревьев принятия решений см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей дерева принятия решений (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.
 
@@ -76,7 +75,7 @@ ms.locfileid: "78174423"
 
 -   Поддерживается использование моделей интеллектуального анализа OLAP.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа данных&#41;](data-mining-algorithms-analysis-services-data-mining.md) [алгоритм линейной](microsoft-linear-regression-algorithm-technical-reference.md) регрессии (Майкрософт) технический справочник по модели линейной регрессии [примеры запросов](linear-regression-model-query-examples.md) [содержимое моделей интеллектуальной регрессии &#40;Analysis Services — интеллектуальный анализ данных&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)
 
 

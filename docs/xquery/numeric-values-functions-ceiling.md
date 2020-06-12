@@ -1,5 +1,6 @@
 ---
 title: Функция ceiling (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию ceiling () XQuery для возврата наименьшего числа без дробной части, которая не меньше значения аргумента функции.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946577"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689772"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Функции с числовыми значениями — ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double**или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* .  
   
  Если тип *$arg* является типом, производным от одного из числовых типов, то возвращаемым типом является базовый числовой тип.  
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **Инструкции** — это столбец типа **XML** . Поэтому для указания XQuery используется [метод query () (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md) . Инструкция XQuery задана как аргумент метода query.  
   
--   **для... Return** является конструкцией цикла. В запросе цикл **for** определяет список \<расположений> элементов. Для каждого расположения рабочего центра оператор **return** в цикле **for** описывает создаваемый XML:  
+-   **для... Return** является конструкцией цикла. В запросе цикл **for** определяет список \< расположений> элементов. Для каждого расположения рабочего центра оператор **return** в цикле **for** описывает создаваемый XML:  
   
-    -   Элемент \<Location>, содержащий атрибуты LocationID и лаборхрс. Соответствующее выражение в фигурных скобках ({ }) получает запрашиваемые значения из документа.  
+    -   \<Элемент Location>, содержащий атрибуты LocationID и лаборхрс. Соответствующее выражение в фигурных скобках ({ }) получает запрашиваемые значения из документа.  
   
-    -   Выражение {$i/@LotSize } извлекает из документа атрибут LotSize, если он есть.  
+    -   Выражение {$ i/@LotSize } извлекает из документа атрибут LotSize, если он есть.  
   
     -   Результат:  
   

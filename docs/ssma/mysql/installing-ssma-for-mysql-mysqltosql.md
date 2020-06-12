@@ -1,5 +1,6 @@
 ---
 title: Установка SSMA для MySQL (MySqlToSql) | Документация Майкрософт
+description: Используйте эти статьи для установки, обновления и удаления Помощник по миграции SQL Server (SSMA) для MySQL, который включает клиентское приложение и пакет расширений.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: e944daafdbcfc0bf9fdcec3498a6d2f75342fdc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4aedce85a63c5f931cfab0b590810d1fac36d64b
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086816"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293651"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Установка SSMA для MySQL (MySqlToSql)
 Помощник по миграции SQL Server (SSMA) для MySQL состоит из клиентского приложения, которое используется для выполнения миграции с MySQL на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или SQL Azure. Он также содержит пакет расширений, который поддерживает перенос данных и использование системных функций MySQL в перенесенных базах данных.  
@@ -30,9 +31,9 @@ ms.locfileid: "68086816"
   
 |||  
 |-|-|  
-|**Раздел**|**Описание**|  
+|**Главе**|**Описание**|  
 |[Установка SSMA для клиента MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Содержит сведения и инструкции по установке клиента SSMA.|  
-|[Установка компонентов SSMA на SQL Server (MySQL в SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|[Установка компонентов SSMA на SQL Server (MySQL в SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Содержит сведения и инструкции по установке пакета расширения на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Удаление SSMA для компонентов MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Содержит инструкции по удалению клиентской программы.|  
   
 ## <a name="see-also"></a>См. также:  

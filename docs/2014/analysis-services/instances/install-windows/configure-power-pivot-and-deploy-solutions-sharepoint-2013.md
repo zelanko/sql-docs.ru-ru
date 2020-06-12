@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26faf2ef80f416858665893e14e405eab7254d6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543906"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
   В этом разделе описаны развертывание и настройка расширений среднего уровня компонентов PowerPivot в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)], в том числе коллекции PowerPivot, расписания обновления данных, панели мониторинга управления и поставщиков данных. Запустите средство **Настройка PowerPivot для SharePoint 2013** , чтобы выполнить следующее.  
@@ -28,7 +27,7 @@ ms.locfileid: "69493972"
   
  Сведения об установке средства настройки PowerPivot для SharePoint 2013 см. в разделе [Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Запуск PowerPivot для SharePoint 2013](#bkmk_run_configuration_tool)  
   
@@ -79,7 +78,7 @@ ms.locfileid: "69493972"
  Дополнительные сведения см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 &#40;средство настройки PowerPivot&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
 ##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>Проверка конфигурации PowerPivot  
- **Обслуживание**  
+ **Службы.**  
   
 1.  В центре администрирования в окне «Системные параметры» выберите пункт **Управление службами на сервере**.  
   
@@ -134,7 +133,7 @@ ms.locfileid: "69493972"
   
 5.  Нажмите кнопку **ОК**.  
   
- Дополнительные сведения об устранении проблем с обновлением данных см. в разделе [диагностика PowerPivot Data Refresh](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Дополнительные сведения об устранении проблем с обновлением данных см. в разделе [диагностика PowerPivot Data Refresh](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) ( https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) .  
   
  Дополнительные сведения о средстве настройки см. в разделе [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

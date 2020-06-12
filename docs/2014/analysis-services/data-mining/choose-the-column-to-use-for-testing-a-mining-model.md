@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 719e4dc2e934ac430ab4910612265d4b3532ed14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f0d8a59ac40364a9e28c1bc52b49d04a785bd3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085724"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524880"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Выбор столбца, используемого для тестирования модели интеллектуального анализа данных
   Прежде чем измерять точность модели интеллектуального анализа данных, необходимо решить, какие результаты вы хотите оценить. Для большинства моделей интеллектуального анализа данных необходимо выбрать хотя бы один столбец, который будет использоваться в качестве прогнозируемого атрибута при создании модели. Поэтому при проверке точности модели обычно необходимо выбрать для проверки этот атрибут.  
@@ -54,7 +53,7 @@ ms.locfileid: "66085724"
   
 5.  Чтобы определить точность модели, необходимо указать конкретное значение результата, выбрав его в списке **Значение прогнозирования** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор и сопоставьте данные тестирования модели](choose-and-map-model-testing-data.md)   
  [Выбор типа диаграммы точности и задание параметров диаграммы](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ca9eab174a146ebd4dcd38d682fd52ee9e820ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084131"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522129"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Технический справочник по алгоритму взаимосвязей (Майкрософт)
   Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой простую реализацию хорошо известного априорного алгоритма.  
@@ -73,7 +72,7 @@ ms.locfileid: "66084131"
  Алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает несколько параметров, влияющих на работу, производительность и точность итоговой модели интеллектуального анализа данных.  
   
 ### <a name="setting-algorithm-parameters"></a>Задание параметров алгоритма  
- Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Параметры можно также изменить программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции в объектах AMO или с помощью [элемента MiningModels &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) в XMLA. В следующей таблице содержатся описания всех параметров.  
+ Параметры модели интеллектуального анализа данных можно изменить в любой момент с помощью конструктора интеллектуального анализа данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Параметры можно также изменить программно с помощью <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> коллекции в объектах AMO или с помощью [элемента MININGMODELS &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) в XMLA. В следующей таблице содержатся описания всех параметров.  
   
 > [!NOTE]  
 >  Нельзя изменить параметры в существующей модели с помощью инструкции DMX; необходимо указать параметры в DMX-создании модели или ALTER STRUCTURE... Добавьте модель при создании модели.  
@@ -161,7 +160,7 @@ ms.locfileid: "66084131"
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)   
  [Примеры запросов к модели взаимосвязей](association-model-query-examples.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-association-models-analysis-services-data-mining.md)  

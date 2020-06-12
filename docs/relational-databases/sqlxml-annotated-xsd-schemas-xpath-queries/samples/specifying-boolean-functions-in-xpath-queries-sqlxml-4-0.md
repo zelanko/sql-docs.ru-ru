@@ -1,5 +1,6 @@
 ---
 title: Использование логических функций в запросах XPath (SQLXML)
+description: Узнайте, как в запросах XPath указаны логические функции SQLXML 4,0 (), false () и not ().
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18d1f66cde1a40e68d95fa4ef98c4df7c1a608b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1839d9bbf5776457828d39ab4a9242ae8d86631
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252590"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529887"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252590"
 ## <a name="examples"></a>Примеры  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
- Этот запрос возвращает все ** \<клиентские>** дочерние элементы контекстного узла, не имеющие ** \<порядка>** дочерних элементов:  
+ Этот запрос возвращает все **\<Customer>** дочерние элементы контекстного узла, не имеющие **\<Order>** дочерних элементов:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -78,8 +79,8 @@ ms.locfileid: "75252590"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>Б) Задание логических функций true() и false()  
- Этот запрос возвращает все ** \<** дочерние элементы>элементов для узла контекста, не имеющие ** \<порядка>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>Б. Задание логических функций true() и false()  
+ Этот запрос возвращает все **\<Customer>** дочерние элементы узла контекста, не имеющие **\<Order>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
   
 ```  
 /child::Customer[child::Order=false()]  

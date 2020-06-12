@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072992"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545652"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Определение хранилища секции (Analysis Services — многомерные данные)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет несколько стандартных конфигураций хранилища для режимов хранения и параметров кэширования [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Они предоставляют часто используемые конфигурации для уведомлений об обновлениях, задержки и перестроения данных.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько стандартных конфигураций хранилища для режимов хранения и параметров кэширования. Они предоставляют часто используемые конфигурации для уведомлений об обновлениях, задержки и перестроения данных.  
   
  Хранилище секций можно указать на вкладке секций куба в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]или на странице свойств секции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66072992"
   
  Если установить флажок **Применить настройки к измерениям** , заданные параметры хранения будут применены к измерениям, которые связаны с группой мер. Значения параметров измерения изначально совпадают со значениями параметров секций.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции в многомерных моделях](partitions-in-multidimensional-models.md)  
   
   

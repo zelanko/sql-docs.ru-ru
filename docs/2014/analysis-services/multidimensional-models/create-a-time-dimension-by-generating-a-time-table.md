@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b54bfbdb03f6f2220cf66cb988456b2e6e6a0070
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af1cc0c5838c942d8f04eb5246c9c1714d08d786
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076292"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536486"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Создание измерения времени посредством формирования таблицы времени
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать мастер измерений в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , чтобы создать измерение времени, если в базе данных-источнике нет доступной таблицы времени. С этой целью на странице **Выбор метода создания** выберите один из следующих параметров.  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно использовать мастер измерений в, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] чтобы создать измерение времени, если в базе данных-источнике нет доступной таблицы времени. С этой целью на странице **Выбор метода создания** выберите один из следующих параметров.  
   
 -   **Создать в источнике данных таблицу времени** .  Выберите этот параметр при наличии разрешения на создание объектов в базовом источнике данных. Мастер создаст таблицу времени и сохранит ее в источнике данных. Затем на основе этой таблицы времени мастер создает измерение времени.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66076292"
 ## <a name="completing-the-dimension-wizard"></a>Завершение работы мастера измерений  
  На странице **Завершение работы мастера** просмотрите атрибуты и иерархии, созданные мастером, и введите название измерения времени. Нажмите кнопку **Готово** , чтобы завершить работу мастера и создать измерение. После завершения создания измерения его можно изменить при помощи конструктора измерений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   
  [Создание измерения типа "Дата"](database-dimensions-create-a-date-type-dimension.md)   
  [Свойства измерения базы данных](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
