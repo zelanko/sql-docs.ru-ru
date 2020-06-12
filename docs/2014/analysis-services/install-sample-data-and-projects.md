@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530816"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544121"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services
   Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
@@ -98,7 +97,7 @@ ms.locfileid: "69530816"
   
      Учебники 2012 года действительны для версии [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-     Файл "Analysis Services Tutorial SQL Server 2012. zip" будет сохранен в папку "загрузки" на компьютере.  
+     Файл "учебник по Analysis Services SQL Server 2012.zip" будет сохранен в папке "загрузки" на компьютере.  
   
 2.  Переместите этот ZIP-файл в папку, расположенную в корне диска (например, C:\Tutorial). Этот шаг позволяет уменьшить ошибку «слишком длинный путь», которая иногда возникает при попытке распаковать файлы в папке Downloads.  
   

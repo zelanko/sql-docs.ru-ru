@@ -1,5 +1,6 @@
 ---
 title: Функции XQuery для типа данных XML | Документация Майкрософт
+description: Сведения о функциях XQuery, которые поддерживаются для использования с типом данных XML.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945998"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305745"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе и его подразделах описываются функции, которые можно использовать при указании XQuery для типа данных **XML** . Спецификации W3C см. в разделе [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873).  
+  В этом разделе и его подразделах описываются функции, которые можно использовать при указании XQuery для типа данных **XML** . Спецификации W3C см. в разделе [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
  Функции XQuery принадлежат http://www.w3.org/2004/07/xpath-functions пространству имен. Спецификации W3C используют префикс пространства имен «fn:» для описания этих функций. При использовании функций нет необходимости явно указывать префикс пространства имен «fn:». По этой причине, а также для удобства чтения префиксы пространства имен, как правило, не используются в данной документации.  
   
@@ -37,26 +38,26 @@ ms.locfileid: "67945998"
 |[Функции с числовыми значениями](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[толок](../xquery/numeric-values-functions-ceiling.md)|  
 ||[фабрич](../xquery/numeric-values-functions-floor.md)|  
 ||[округло](../xquery/numeric-values-functions-round.md)|  
-|[Функции XQuery для строковых значений](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[сцеплен](../xquery/functions-on-string-values-concat.md)|  
-||[содержащих](../xquery/functions-on-string-values-contains.md)|  
-||[подстроки](../xquery/functions-on-string-values-substring.md)|  
+|[Функции XQuery для строковых значений](https://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
+||[contains](../xquery/functions-on-string-values-contains.md)|  
+||[substring](../xquery/functions-on-string-values-substring.md)|  
 ||[Функция нижнего регистра &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[Длина строки](../xquery/functions-on-string-values-string-length.md)|  
 ||[Функция верхнего регистра &#40;XQuery&#41;](../xquery/functions-on-string-values-upper-case.md)|  
-|Функции над значениями типа Boolean|[недостаточно](../xquery/functions-on-boolean-values-not-function.md)|  
+|Функции над значениями типа Boolean|[not](../xquery/functions-on-boolean-values-not-function.md) (не);|  
 |[Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)|[number](../xquery/functions-on-nodes-number.md)|  
 ||[Функция local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Функция namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
-|[Функции контекста](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[Последняя](../xquery/context-functions-last-xquery.md)|  
+|[Функции контекста](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
 ||[разместить](../xquery/context-functions-position-xquery.md)|  
-|[Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[указано](../xquery/functions-on-sequences-empty.md)|  
+|[Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Функция id (XQuery)](../xquery/functions-on-sequences-id.md)|  
 |[Агрегатные функции &#40;&#41;XQuery](https://msdn.microsoft.com/library/be647ef1-291e-4a5d-ab18-07c759efe176)|[count](../xquery/aggregate-functions-count.md)|  
 ||[обращения](../xquery/aggregate-functions-avg.md)|  
-||[минимум](../xquery/aggregate-functions-min.md)|  
+||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
-||[функции](../xquery/aggregate-functions-sum.md)|  
+||[sum](../xquery/aggregate-functions-sum.md)|  
 |[Функции конструктора &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Функции-конструкторы](../xquery/constructor-functions-xquery.md)|  
 |[Функции метода доступа к данным](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[данные](../xquery/data-accessor-functions-data-xquery.md)|  
@@ -69,7 +70,7 @@ ms.locfileid: "67945998"
 ||[функция sql:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [Методы типа данных XML](../t-sql/xml/xml-data-type-methods.md)   
+ [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
  [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  
   

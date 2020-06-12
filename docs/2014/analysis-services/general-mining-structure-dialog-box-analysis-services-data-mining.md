@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 2f7cedb6-9a83-49c4-9cc6-883d4f147a68
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26d4cacc826750b74dd8bb5aa14f270e643edc44
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 678dace2a8695b5da0788aa95b66adc3ada6af98
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081057"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544405"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Общие (диалоговое окно «Структура интеллектуального анализа данных») (службы Analysis Services — интеллектуальный анализ данных)
   Для установки общих свойств структуры интеллектуального анализа данных в базе данных служб **используется страница** Общие **диалогового окна** Свойства структуры интеллектуального анализа данных **в среде** SQL Server Management Studio [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Имя**|Отображает структуры интеллектуального анализа данных.|  
+|**имя**;|Отображает структуры интеллектуального анализа данных.|  
 |**Идентификатор**|Выводит идентификатор структуры интеллектуального анализа данных.|  
 |**Описание**|Выводит описание структуры интеллектуального анализа данных.|  
 |**Отметка времени создания**|Отображает дату и время создания структуры интеллектуального анализа данных.|  
@@ -34,7 +33,7 @@ ms.locfileid: "66081057"
 |**Состояние**|Выводит состояние обработки структуры интеллектуального анализа данных. Дополнительные сведения о значениях этого свойства см. в разделе <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Последняя обработка**|Отображает дату и время последней обработки структуры интеллектуального анализа данных.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

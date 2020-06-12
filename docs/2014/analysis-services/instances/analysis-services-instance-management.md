@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef72741b09666a4059fc0fdd09f282d749e4e99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544146"
 ---
 # <a name="analysis-services-instance-management"></a>Управление экземплярами служб Analysis Services
   Экземпляр служб Analysis Services — это копия исполняемого файла `msmdsrv.exe`, который запускается как служба операционной системы. Каждый экземпляр полностью независим от других экземпляров на том же сервере и обладает собственной конфигурацией, разрешениями, портами, стартовыми учетными записями, областью хранения файлов и свойствами режима сервера.  
@@ -53,7 +52,7 @@ ms.locfileid: "66080352"
 |[Сценарии глобализации для многомерных служб Analysis Services](../globalization-scenarios-for-analysis-services-multiidimensional.md)|Описывает поддерживаемые языки и параметры сортировки, действия по изменению обоих свойств и рекомендации по настройке и тестированию поведений языка и параметров сортировки.|  
 |[Журнал операций в службах Analysis Services](log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сравнение табличных и многомерных решений &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Средства настройки PowerPivot](../power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Администрирование и настройка сервера PowerPivot в центре администрирования](../power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

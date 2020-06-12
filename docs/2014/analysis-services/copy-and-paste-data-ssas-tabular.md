@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086969"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526841"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Копирование и вставка данных (табличные службы SSAS)
   Табличные данные можно скопировать из внешнего приложения и вставить в новую или существующую таблицу в конструкторе моделей. Данные, вставляемые из буфера обмена, должны иметь формат HTML, например, как и данные, копируемые из Excel или Word. Конструктор моделей автоматически обнаруживает и применяет типы данных для вставляемых данных. Также можно изменить тип данных или формат отображения столбца вручную.  
@@ -28,7 +27,7 @@ ms.locfileid: "66086969"
   
  Разделы данной темы:  
   
--   [Предварительные условия](#bkmk_prerequisites)  
+-   [Предварительные требования](#bkmk_prerequisites)  
   
 -   [Вставить данные](#bkmk_paste_data)  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66086969"
  **Данные для вставки**  
  Показывает образец содержимого буфера обмена. Существующие данные будут удалены из целевой таблицы, и будут вставлены новые строки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)   
  [Поддерживаемые источники данных &#40;табличные&#41;SSAS](tabular-models/data-sources-supported-ssas-tabular.md)   
  [Выбор типа данных столбца (табличные службы SSAS)](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b64cc581-e784-42c4-bec8-932abd687423
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ead5a45bf163ca4e7998c30ab5c83f94cca9075b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75e5df5a0677ee205b5517f4c7ca89a390426971
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074262"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546296"
 ---
 # <a name="user-defined-member-properties-mdx"></a>Пользовательские свойства элементов (многомерные выражения)
   Определяемые пользователем свойства элементов можно добавить к конкретному именованному уровню измерения в виде связей атрибутов. Определяемые пользователем свойства элементов нельзя добавлять к уровню иерархии `(All)` или в саму иерархию.  
@@ -66,7 +65,7 @@ FROM [Adventure Works]
   
  Дополнительные сведения о создании вычисляемых элементов см. в разделе [Создание вычисляемых элементов в многомерных выражениях (многомерные выражения)](mdx-calculated-members-building-calculated-members.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование свойств элементов &#40;&#41;многомерных выражений](mdx-member-properties.md)   
  [Properties (многомерные выражения)](/sql/mdx/properties-mdx)  
   

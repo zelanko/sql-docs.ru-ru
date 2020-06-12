@@ -1,5 +1,6 @@
 ---
 title: Функция local name (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию XQuery local-name (), чтобы вернуть локальную часть имени узла.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038871"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689571"
 ---
 # <a name="functions-on-nodes---local-name"></a>Функции с узлами — local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Имя узла, локальную часть имени которого нужно получить.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 -   В SQL Server **fn: local-name ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
   
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
 -- result = Location  
 ```  
   
-### <a name="b-using-local-name-without-argument-in-a-predicate"></a>Б) Использование локального имени без аргумента в предикате  
+### <a name="b-using-local-name-without-argument-in-a-predicate"></a>Б. Использование локального имени без аргумента в предикате  
  Следующий запрос задается для столбца Instructions, типизированного **XML-** столбец таблицы ProductModel. Выражение возвращает все дочерние элементы элемента <`root`>, локальным именем которого является "Location". Функция **local-name ()** указана в предикате и не имеет аргументов. контекстный узел используется функцией.  
   
 ```  
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- Запрос возвращает все дочерние `Location` элементы <> элемента <`root`>.  
+ Запрос возвращает все `Location` дочерние элементы <> элемента <`root`>.  
   
 ## <a name="see-also"></a>См. также:  
  [Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

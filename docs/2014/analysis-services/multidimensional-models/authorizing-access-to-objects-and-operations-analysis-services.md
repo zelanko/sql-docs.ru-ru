@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077014"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544670"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Предоставление доступа к объектам и операциям (Analysis Services)
   Доступ неадминистративных пользователей к кубам, измерениям и моделям интеллектуального анализа данных внутри базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется посредством включения пользователя в одну или несколько ролей базы данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы создают указанные роли базы данных, предоставляют разрешения на чтение или чтение и запись объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем добавляют к каждой роли пользователей и группы Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -37,7 +36,7 @@ ms.locfileid: "66077014"
 ## <a name="list-roles-defined-for-your-database"></a>Список ролей, заданных для базы данных  
  Чтобы получить список ролей, заданных на сервере, администраторы могут выполнить простой запрос динамических административных представлений (DMV) в SQL Server Management Studio.  
   
-1.  В среде SSMS щелкните правой кнопкой мыши базу данных и выберите **создать запрос** | **многомерное выражение**.  
+1.  В среде SSMS щелкните правой кнопкой мыши базу данных и выберите **создать запрос**  |  **многомерное выражение**.  
   
 2.  Введите следующий запрос и нажмите клавишу F5, чтобы выполнить его:  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66077014"
   
  Использование подобного подхода снижает время обработки определений ролей и членства ролей в модели, а также предоставляет видимость назначений ролей, что упрощает реализацию и поддержание разрешений кубов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений администратора сервера &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Роли и разрешения &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  

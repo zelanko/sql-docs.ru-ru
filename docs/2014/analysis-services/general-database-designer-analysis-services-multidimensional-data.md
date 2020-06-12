@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e7b2e1e72263d8edf362941985bb775457fc6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081088"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544494"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Общие (конструктор баз данных) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Общие** , чтобы изменить свойства базы данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -48,7 +47,7 @@ ms.locfileid: "66081088"
  **Язык**  
  Выберите язык для данной транзакции.  
   
- Чтобы добавить новый перевод в сетку, щелкните ** \<добавить новый перевод>**.  
+ Чтобы добавить новый перевод в сетку, нажмите кнопку **\<Add new translation>** .  
   
  **Переведенный заголовок**  
  Введите заголовок базы данных на соответствующем языке для перевода. Если это поле оставить пустым, будет использоваться заголовок базы данных по умолчанию.  
@@ -64,10 +63,10 @@ ms.locfileid: "66081088"
   
  Этот раздел содержит сетку со следующими столбцами.  
   
- **Имя**  
+ **имя**;  
  Введите имя типа учетной записи.  
   
- Чтобы добавить новый тип учетной записи, щелкните ** \<добавить новый тип учетной записи>**.  
+ Чтобы добавить новый тип учетной записи, нажмите кнопку **\<Add new account type>** .  
   
  **Псевдоним**  
  Задает имя типа учетной записи по умолчанию для использования в мастере бизнес-аналитики. Если оставить этот столбец пустым, будет использоваться столбец **Имя** .  
@@ -75,7 +74,7 @@ ms.locfileid: "66081088"
  **Агрегатная функция**  
  Задает статистическую функцию, используемую с выбранным типом учетной записи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Базы данных многомерной модели &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [Предупреждения &#40;конструкторе баз данных&#41; &#40;Analysis Services многомерных данных&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  

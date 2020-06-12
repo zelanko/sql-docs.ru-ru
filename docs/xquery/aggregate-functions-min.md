@@ -1,5 +1,6 @@
 ---
 title: Функция min (XQuery) | Документация Майкрософт
+description: Сведения о функции min () XQuery, возвращающей один элемент в последовательности, значение которой меньше, чем все остальные.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b209f6d46c47de5a604eee3c14c681a333bcdec8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985758"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529978"
 ---
 # <a name="aggregate-functions---min"></a>Агрегатные функции — min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Последовательность элементов, из которой необходимо вернуть минимальное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все типы атомарных значений, которые передаются в **min ()** , должны быть подтипами одного и того же базового типа. Допустимые базовые типы — это типы, поддерживающие операцию **gt** . Эти типы включают в себя три встроенных базовых численных типа, базовые типы даты-времени, а также xs:string, xs:boolean, xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Если существует смесь этих типов или передаются другие значения других типов, возникает статическая ошибка.  
   
  Результат **min ()** получает базовый тип переданных типов, например xs: Double в случае xdt: untypedAtomic. Если вход статически пуст, подразумевается пустое значение и возвращается статическая ошибка.  
@@ -70,7 +71,7 @@ WHERE ProductModelID=7
   
 -   Ключевое слово **Namespace** в прологе XQuery определяет префикс пространства имен. Данный префикс затем используется в теле XQuery.  
   
- В теле запроса XQuery создается XML-код, который \<содержит> элемент с атрибутами ВЦид и **лаборхрс** .  
+ В теле запроса XQuery создается XML-код, содержащий \<Location> элемент с атрибутами вЦид и **лаборхрс** .  
   
 -   Запрос также получает номер ProductModelID и значения имени.  
   

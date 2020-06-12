@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 23c095dd-f47a-4d6b-8d22-b49bbb954bcb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5972d690f89374e02cc18ac4aa13fcbae9de87c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f85a1933b0b3c08f2295b92ee58f71426fb6ea2d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062771"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528160"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>Расширенное представление (вкладка «Агрегаты», конструктор кубов)
   **Расширенное представление** конструктора агрегатов используется для создания и редактирования статистических схем и отдельных агрегатов вручную. Это представление должно использоваться только опытными пользователями.  
@@ -31,7 +30,7 @@ ms.locfileid: "66062771"
 |**Создать агрегат**|Нажмите, чтобы создать новый агрегат.|  
 |**Удаление**|Нажмите, чтобы удалить выбранный агрегат или выбранную статистическую схему.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агрегаты &#40;&#41;проектирования кубов](aggregations-cube-design.md)  
   
   

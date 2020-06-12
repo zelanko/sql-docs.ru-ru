@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2dd3659aed11e4e1cee791fcb5e541471320c82a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075901"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547106"
 ---
 # <a name="database-storage-location"></a>Место хранения базы данных
-  Часто администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо расположить определенную базу данных вне папки данных сервера. Обычно это связано с производственной необходимостью (например, чтобы повысить производительность или расширить хранилище). В `DbStorageLocation` этих ситуациях свойство Database позволяет [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратору базы данных указать расположение базы на локальном диске или сетевом устройстве.  
+  Часто администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо расположить определенную базу данных вне папки данных сервера. Обычно это связано с производственной необходимостью (например, чтобы повысить производительность или расширить хранилище). В этих ситуациях `DbStorageLocation` свойство Database позволяет [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратору базы данных указать расположение базы на локальном диске или сетевом устройстве.  
   
 ## <a name="dbstoragelocation-database-property"></a>Свойство DbStorageLocation базы данных  
  Свойство `DbStorageLocation` базы данных указывает папку, в которой службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают и хранят все файлы данных и метаданных, входящие в базу данных. Все файлы метаданных хранятся в папке `DbStorageLocation`, за исключением файла метаданных базы данных, который хранится в папке данных сервера. При изменении свойства `DbStorageLocation` базы данных следует руководствоваться следующими двумя важными соображениями.  
@@ -36,12 +35,12 @@ ms.locfileid: "66075901"
  Свойство `DbStorageLocation` указывает на папку, в которой находятся все файлы данных и метаданных, относящиеся к базе данных, тогда как свойство `StorageLocation` указывает на папку, в которой находятся одна или несколько секций куба. Свойство `StorageLocation` можно задать независимо от свойства `DbStorageLocation`. Администратор базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] принимает решение исходя из поставленной задачи, и зачастую применение того или иного свойства даст одни и те же результаты.  
   
 ## <a name="dbstoragelocation-usage"></a>Использование свойства DbStorageLocation  
- Свойство `DbStorageLocation` базы данных используется как `Create` часть команды базы данных в `Detach` / `Attach` последовательности команд базы данных, в `Backup` / `Restore` последовательности команд базы данных или в команде `Synchronize` базы данных. Изменение свойства `DbStorageLocation` связано со структурными изменениями объекта базы данных. Это означает, что все метаданные будут созданы повторно, а данные повторно обработаны.  
+ `DbStorageLocation`Свойство базы данных используется как часть `Create` команды базы данных в `Detach` / `Attach` последовательности команд базы данных, в `Backup` / `Restore` последовательности команд базы данных или в `Synchronize` команде базы данных. Изменение свойства `DbStorageLocation` связано со структурными изменениями объекта базы данных. Это означает, что все метаданные будут созданы повторно, а данные повторно обработаны.  
   
 > [!IMPORTANT]  
 >  Место хранения базы данных не следует изменять командой `Alter`. Вместо этого рекомендуется использовать последовательность `Detach` / `Attach` команд базы данных (см. раздел [Перемещение базы данных Analysis Services](move-an-analysis-services-database.md), [Присоединение и отсоединение Analysis Services баз данных](attach-and-detach-analysis-services-databases.md)).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
  [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Перемещение базы данных Analysis Services](move-an-analysis-services-database.md)   

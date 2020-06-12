@@ -6,17 +6,17 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 685758e8671455103c0510db254381eecefaf676
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: 2003443e41ace15cb8cdd16a887d3bdfa68800bc
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606766"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731690"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Связывание базы данных служб Master Data Services и веб-приложения
 
@@ -34,7 +34,7 @@ ms.locfileid: "83606766"
   
 ### <a name="to-associate-a-master-data-services-database-and-web-application"></a>Связывание базы данных служб Master Data Services и веб-приложения  
   
-1.  Откройте файл [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
+1.  Откройте [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].  
   
 2.  На панели слева щелкните элемент **Веб-конфигурация**.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "83606766"
   
 -   Добавьте пользователей и группы в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. Если ни одной группе или пользователю не предоставлен доступ к [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], необходимо открыть [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , используя учетные данные системного администратора среды [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в статьях [Администраторы (службы Master Data Services)](../../master-data-services/administrators-master-data-services.md) и [Пользователи и группы (службы Master Data Services)](../../master-data-services/users-and-groups-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [Страница "Веб-конфигурация" (диспетчер конфигурации Master Data Services)](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   

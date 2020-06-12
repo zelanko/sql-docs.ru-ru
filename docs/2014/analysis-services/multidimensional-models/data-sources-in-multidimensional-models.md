@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a16469d9-9d53-4e35-9982-fc06327a9d33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf51e9e73d1748d2be0a514d17ea727941391829
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cbf22bb2524d94e3665fd79c5ceeeab5b5c88af
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076037"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547186"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Источники данных в многомерных моделях
   Все данные, которые вы импортируете или загружаете в многомерную модель, происходят из внешнего источника данных. Обычно исходные данные поступают из хранилища данных, разработанного для составления отчетов, однако они могут поступать из любой реляционной базы данных, которая обращается прямо или косвенно через посредника, например пакет [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
@@ -60,7 +59,7 @@ ms.locfileid: "66076037"
 |[Задание свойств источника данных (многомерные службы SSAS)](set-data-source-properties-ssas-multidimensional.md)|Описывает каждое свойство и объясняет, как его задать.|  
 |[Задание параметров олицетворения (службы SSAS — многомерные)](set-impersonation-options-ssas-multidimensional.md)|Объясняет настройку параметров в диалоговом окне «Сведения об олицетворении».|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты базы данных &#40;Analysis Services многомерных данных&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Логическая архитектура &#40;Analysis Services многомерных данных&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Представления источников данных в многомерных моделях](data-source-views-in-multidimensional-models.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084677"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522708"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Развертывание решения интеллектуального анализа данных в предыдущих версиях SQL Server
   В этом разделе описаны известные проблемы совместимости, которые могут возникнуть во время развертывания модели или структуры интеллектуального анализа данных, созданной в экземпляре служб [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] , в базе данных со службами SQL Server 2005 Analysis Services, а также при развертывании моделей, созданных в SQL Server 2005, на экземпляре [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "66084677"
   
  При открытии структуры интеллектуального анализа данных в службах SQL Server 2005 Analysis Services среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] выдает ошибку и производит повторное формирование структуры, удаляя контрольную секцию.  
   
- После перестроения структуры размер контрольной секции больше не будет доступен в окно свойств; Однако значение \<Ddl100_100: HoldoutMaxPercent>30\</ddl100_100: HoldoutMaxPercent>) по-прежнему может присутствовать в файле скрипта ASSL.  
+ После перестроения структуры размер контрольной секции больше не будет доступен в окно свойств; Однако значение \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ) по-прежнему может присутствовать в файле скрипта ASSL.  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a> Развертывание моделей с фильтрами  
  Если в службах [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] к модели интеллектуального анализа данных применен фильтр, то такая модель может быть развернута на экземпляре SQL Server 2005, но фильтр к ней применен не будет.  
@@ -77,7 +76,7 @@ ms.locfileid: "66084677"
   
  При попытке синхронизации базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] сервер вернет ошибку, а синхронизация будет отменена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services Backward Compatibility](../analysis-services-backward-compatibility.md)  
   
   

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e62abaab5a8f74dfee7d51962f2fb243dc6eb20a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725258"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546006"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Роли безопасности (службы Analysis Services — многомерные данные)
-  Роли [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] используются в для управления безопасностью [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов и данных. Роли связывают идентификаторы безопасности (SID) пользователей и групп Microsoft Windows, имеющих определенные права доступа и разрешения, определенные для объектов, управляемых экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]имеет два типа ролей:  
+  Роли используются в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] для управления безопасностью [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов и данных. Роли связывают идентификаторы безопасности (SID) пользователей и групп Microsoft Windows, имеющих определенные права доступа и разрешения, определенные для объектов, управляемых экземпляром служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]имеет два типа ролей:  
   
 -   Роль сервера — фиксированная роль, предоставляющая права администратора для доступа к экземпляру служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62725258"
   
  Класс <xref:Microsoft.AnalysisServices.Permission> представляет собой абстрактный класс. Поэтому необходимо использовать производные классы для определения разрешений на соответствующие объекты. Для каждого объекта определяется производный класс разрешения.  
   
-|Объект|Class|  
+|Объект|Класс|  
 |------------|-----------|  
 |<xref:Microsoft.AnalysisServices.Database>|<xref:Microsoft.AnalysisServices.DatabasePermission>|  
 |<xref:Microsoft.AnalysisServices.DataSource>|<xref:Microsoft.AnalysisServices.DataSourcePermission>|  
@@ -80,10 +79,10 @@ ms.locfileid: "62725258"
 |Процесс|{`true`, `false`}<br /><br /> Default=`false`|Если дано значение `true`, то члены роли могут обрабатывать и сам объект, и любые содержащиеся в нем объекты.<br /><br /> Разрешения на обработку не применяются к моделям интеллектуального анализа данных. Разрешения <xref:Microsoft.AnalysisServices.MiningModel> всегда наследуются от <xref:Microsoft.AnalysisServices.MiningStructure>.|  
 |ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Default=`None`|Определяет, могут ли члены читать определение данных (в коде ASSL), связанное с объектом.<br /><br /> Если дано значение `Allowed`, то члены могут читать код ASSL, связанный с объектом.<br /><br /> Разрешения `Basic` и `Allowed` наследуются объектами, которые содержатся в данном объекте. `Allowed` переопределяет `Basic` и `None`.<br /><br /> Разрешение `Allowed` необходимо для выполнения операции DISCOVER_XML_METADATA над объектом. Разрешение `Basic` необходимо для создания связанных объектов и локальных кубов.|  
 |Чтение|{`None`, `Allowed`}<br /><br /> Default=`None` (за исключением DimensionPermission, где default=`Allowed`)|Указывает, имеют ли члены доступ для чтения к наборам строк схемы и содержимому данных.<br /><br /> `Allowed`предоставляет доступ для чтения к базе данных, которая позволяет обнаружить базу данных.<br /><br /> Значение `Allowed` применительно к кубу предоставляет доступ для чтения в наборах строк схемы и доступ к содержимому куба (при условии, что не введены в действие ограничения со стороны <xref:Microsoft.AnalysisServices.CellPermission> и <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> Значение `Allowed` применительно к измерению предоставляет разрешение на чтение для всех атрибутов в этом измерении (при условии, что не введены в действие ограничения со стороны <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). Разрешение на чтение используется для статического наследования только для <xref:Microsoft.AnalysisServices.CubeDimensionPermission>. `None` применительно к измерению скрывает это измерение и предоставляет доступ к члену по умолчанию только для статистически обрабатываемых атрибутов. Если измерение содержит статистически необрабатываемый атрибут, возникает ошибка.<br /><br /> Значение `Allowed` применительно к разрешениям <xref:Microsoft.AnalysisServices.MiningModelPermission> предоставляет возможность просматривать объекты в наборах строк схемы и выполнять соединения в целях выработки прогноза.<br /><br /> **Нотеалловед** требуется для чтения или записи в любой объект базы данных.|  
-|запись|{`None`, `Allowed`}<br /><br /> Default=`None`|Указывает, имеют ли члены доступ для записи к данным родительского объекта.<br /><br /> Права доступа относятся к подклассам <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> и <xref:Microsoft.AnalysisServices.MiningModel>. Они не применяются к подклассам базы данных <xref:Microsoft.AnalysisServices.MiningStructure>, которые создают сообщения ошибок проверки.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.Dimension> предоставляет разрешение на запись для всех атрибутов измерения.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.Cube> предоставляет разрешение на запись в ячейки куба для секций, определенных как Type=writeback.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.MiningModel> предоставляет разрешение на изменение содержимого модели.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.MiningStructure> не имеет конкретного смысла в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Примечание.**  Невозможно задать параметр Write, `Allowed` если для Read также задано значение`Allowed`|  
+|запись|{`None`, `Allowed`}<br /><br /> Default=`None`|Указывает, имеют ли члены доступ для записи к данным родительского объекта.<br /><br /> Права доступа относятся к подклассам <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> и <xref:Microsoft.AnalysisServices.MiningModel>. Они не применяются к подклассам базы данных <xref:Microsoft.AnalysisServices.MiningStructure>, которые создают сообщения ошибок проверки.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.Dimension> предоставляет разрешение на запись для всех атрибутов измерения.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.Cube> предоставляет разрешение на запись в ячейки куба для секций, определенных как Type=writeback.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.MiningModel> предоставляет разрешение на изменение содержимого модели.<br /><br /> Значение `Allowed` применительно к <xref:Microsoft.AnalysisServices.MiningStructure> не имеет конкретного смысла в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. **Примечание.**  Невозможно задать параметр Write, `Allowed` Если для Read также задано значение`Allowed`|  
 |Примечание по администрированию **:** только в разрешениях базы данных|{`true`, `false`}<br /><br /> Default=`false`|Указывает, могут ли члены выполнять административные функции по отношению к базе данных.<br /><br /> Значение `true` предоставляет членам роли разрешение для доступа ко всем объектам в базе данных.<br /><br /> Член роли может иметь разрешение на администрирование применительно к какой-то конкретной базе данных, но не к другим.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление доступа к объектам и операциям (службы Analysis Services)](../authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

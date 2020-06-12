@@ -19,12 +19,12 @@ ms.assetid: 723a9e63-8f6e-4d6e-b570-468cfaf03201
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52416d954660aac6981ced8e2407672f04bc0bb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 655026163236a448b3f225cfa4aea4f2ffacd30e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078416"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669697"
 ---
 # <a name="tables-transact-sql"></a>TABLES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078416"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор таблицы.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> <strong> \* \* Важно \* !</strong> Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — выполнить запрос к представлению каталога sys.objects. Представления INFORMATION_SCHEMA могут быть неполными, поскольку они не обновлены для работы со всеми новыми функциями.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> Важно только надежный способ найти схему объекта — запросить представление каталога sys. objects. <strong> \* \* \* \* </strong> Представления INFORMATION_SCHEMA могут быть неполными, поскольку они не обновлены для работы со всеми новыми функциями.|  
 |**TABLE_NAME**|**sysname**|Имя таблицы или представления.|  
 |**TABLE_TYPE**|**varchar (** 10 **)**|Тип таблицы. Может быть VIEW или BASE TABLE.|  
   

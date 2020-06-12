@@ -1,5 +1,6 @@
 ---
 title: Команды меню и другие сочетания клавиш (MySQLToSQL) | Документация Майкрософт
+description: Сведения о сочетаниях клавиш для доступа к командам меню и другим сочетаниям клавиш, используемым в различных диалоговых окнах приложения SSMA для MySQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04450495d85eed7ab198090afcc2a4ac9cffb4c0
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67908802"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293605"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Команды меню и другие сочетания клавиш (MySQLToSQL)
 В следующих разделах описываются сочетания клавиш для доступа к командам меню и другие сочетания клавиш, используемые в различных диалоговых окнах приложения SSMA для MySQL.  
@@ -179,6 +180,6 @@ ms.locfileid: "67908802"
 |Запустить краткие сведения.|CTRL + SHIFT + ПРОБЕЛ|  
 |Переход к объявлению.|F12|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Сочетания клавиш &#40;&#41;MySQLToSQL](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

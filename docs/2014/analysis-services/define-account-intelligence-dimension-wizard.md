@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b218c10826253bc63985e2eb970a4102873e699
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082161"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528860"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Определение логики операций со счетами (мастер измерений)
   Используйте страницу **Определение логики операций со счетами** , чтобы сопоставить типы счетов, определенные в экземпляре служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , с типами счетов, определенных в атрибуте измерения, связанном в измерении с типом атрибута **Тип счета** .  
@@ -25,7 +24,7 @@ ms.locfileid: "66082161"
 > [!NOTE]  
 >   Эта страница отображается, только если был выбран пункт **Стандартное измерение** на странице **Выбор типа измерения** и атрибут измерения был сопоставлен с типом атрибута **Тип счета** на странице **Определение типа измерения** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Типы счетов исходной таблицы**  
  Отображает значения, содержащиеся в атрибуте измерения, присвоенном типу атрибута **Тип счета** на странице **Определение ключа и типа измерения** .  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66082161"
   
  Следующая таблица содержит список типов счетов, определенных в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Актив**|Ценность вещей, находящихся в собственности в заданное время.|  
 |**Balance**|Итоговое количество чего-либо в заданное время.|  
@@ -44,7 +43,7 @@ ms.locfileid: "66082161"
 |**Обязательство**|Ценность подлежащего возврату в заданное время.|  
 |**Статистические**|Вычисленное соотношение или количество некоторой величины, не подлежащей статистической обработке.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

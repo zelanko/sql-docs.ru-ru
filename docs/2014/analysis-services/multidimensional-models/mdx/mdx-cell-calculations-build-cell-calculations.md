@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab3219850c49c2ec16a12aab3ba7db67e9a8721
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074520"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546496"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Построение вычислений значений ячеек в многомерном выражении
   Многомерные выражения предоставляют целый ряд инструментов для формирования вычисляемых значений, таких как вычисляемые элементы, пользовательские свертки и пользовательские элементы. Однако по этой причине применить эти средства так, чтобы повлиять только на часть ячеек или на одну ячейку, будет трудно.  
@@ -42,7 +41,7 @@ ms.locfileid: "66074520"
   
      Дополнительные сведения о применении инструкций CREATE CELL CALCULATION и ALTER CUBE для создания вычисляемых ячеек в сеансе см. в разделе [Создание вычисляемых ячеек с областью действия сеанса](mdx-cell-calculations-session-scoped-calculated-cells.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкция ALTER CUBE &#40;&#41;многомерных выражений](/sql/mdx/mdx-data-definition-alter-cube)   
  [СОЗДАНИЕ инструкции вычисления ЯЧЕЙКИ &#40;многомерных выражениях&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [Создание вычислений ячеек с областью действия запроса &#40;многомерных выражениях&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   

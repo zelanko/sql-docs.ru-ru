@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 98c879ee-7257-40c9-bc85-6766bd3b4885
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ab10518ff976562665317a75574ee2070be0d8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f5f3c678968f8620414ceb4c7c2574be322674cd
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087203"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527150"
 ---
 # <a name="connect-to-a-microsoft-sql-server-parallel-data-warehouse-ssas"></a>Подключение к параллельному хранилищу данных Microsoft SQL Server (SSAS)
   Эта страница **мастера импорта таблиц** позволяет указать параметры подключения к Microsoft SQL Server Parallel Data Warehouse (PDW). Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087203"
 > [!NOTE]  
 >  При выборе базы данных на этой странице используются учетные данные текущего пользователя. Тем не менее импорт не будет успешным, если пользователь, указанный на странице сведений об олицетворении, не имеет достаточных прав для чтения из выбранной базы данных.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Понятное имя соединения**  
  Введите уникальное имя для соединения с источником данных. Это поле является обязательным.  
   

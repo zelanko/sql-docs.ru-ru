@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41471645e3443d59294f980eba35fbf9074d7728
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073899"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546148"
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
   Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
@@ -255,7 +254,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Все продукты|Accessory|Components|Mountain|Дорога|Touring|  
+||Все продукты|Accessory|Компоненты|Mountain|Дорога|Touring|  
 |All Customers|29 358 677,22 $|604 053,30 $|(null)|10 251 183,52 $|14 624 108,58 $|3 879 331,82 $|  
 |США|9 389 789,51 $|217 168,79 $|(null)|3 547 956,78 $|4 322 438,41 $|1 302 225,54 $|  
 |Орегон|1 170 991,54 $|30 513,17 $|(null)|443 607,98 $|565 372,10 $|131 498,29 $|  
@@ -280,7 +279,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Все продукты|Accessory|Components|Mountain|Дорога|Touring|  
+||Все продукты|Accessory|Компоненты|Mountain|Дорога|Touring|  
 |All Customers|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |США|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |Вашингтон|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
@@ -305,7 +304,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Австралия|Canada|Central|Northwest|Southwest|  
+||All Sales Territories|Австралия|Канада|Central|Northwest|Southwest|  
 |Все продукты|7 591 495,49 $|1 281 059,99 $|1 547 298,12 $|600 205,79 $|1 924 763,50 $|2 238 168,08 $|  
 |Mountain-200 Silver, 38|1 449 576,15 $|248 702,93 $|275 052,45 $|141 103,65 $|349 487,01 $|435 230,12 $|  
 |Mountain-200 Black, 38|1 722 896,50 $|218 024,05 $|418 726,43 $|123 929,46 $|486 694,63 $|475 521,93 $|  
@@ -328,7 +327,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Австралия|Canada|Northwest|Southwest|United Kingdom|  
+||All Sales Territories|Австралия|Канада|Northwest|Southwest|Соединенное Королевство|  
 |Все продукты|7 938 218,56 $|1 096 312,24 $|1 474 255,49 $|2 042 674,72 $|2 238 099,55 $|1 086 876,56 $|  
 |Mountain-200 Silver, 38|1 520 958,53 $|248 702,93 $|275 052,45 $|349 487,01 $|435 230,12 $|212 486,03 $|  
 |Mountain-200 Silver, 42|1 392 237,14 $|198 127,15 $|229 679,01 $|361 233,58 $|407 854,24 $|195 343,16 $|  
@@ -338,7 +337,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Очевидно, между двумя наборами результатов есть различия. Первый запрос ответил на вопрос, каковы пять наиболее популярных продуктов в пяти наиболее успешных регионах, а второй запрос — где лучше всего продаются пять наиболее популярных продуктов.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Комментарии  
  Для подзапросов выборки действуют следующие ограничения.  
   
 -   Предложение WHERE не фильтрует подпространство.  
@@ -349,6 +348,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   Предложение HAVING нельзя использовать в предложении оси, вместо него следует применять выражение функции [Filter (многомерные выражения)](/sql/mdx/filter-mdx).  
   
--   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки. Однако это `SubQueries` ограничение можно изменить в зависимости от сеанса, назначив значение свойству строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> свойстве или `DBPROP_MSMD_SUBQUERIES` в [поддерживаемых свойствах XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Подробное описание поведения вычисляемых элементов `SubQueries` см `DBPROP_MSMD_SUBQUERIES`. в разделе [вычисляемые элементы в подзапросах выборки и вложенных кубах](calculated-members-in-subselects-and-subcubes.md) .  
+-   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки. Однако это ограничение можно изменить в зависимости от сеанса, назначив значение `SubQueries` свойству строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> `DBPROP_MSMD_SUBQUERIES` свойстве или в [поддерживаемых свойствах XMLA &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties). Подробное описание поведения вычисляемых элементов см. в разделе [вычисляемые элементы в подзапросах выборки и вложенных кубах](calculated-members-in-subselects-and-subcubes.md) `SubQueries` `DBPROP_MSMD_SUBQUERIES` .  
   
   

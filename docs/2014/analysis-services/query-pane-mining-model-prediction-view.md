@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: fdeec72e-d0bd-4453-9eaa-46436e4d6edc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6bfb0a0c4e8284173a102b034a8b19457340a286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e17a27190891ea9e00be21d5013d0767d61ac148
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070518"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539670"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Панель запросов (представление прогноза модели интеллектуального анализа данных)
   Панель **Запрос** отображает инструкции выражений интеллектуального анализа данных, созданные в построителе прогнозирующих запросов. Можно изменить инструкции и затем нажать кнопку **Переключиться в режим просмотра результата запроса** для возврата результатов. Если переключиться обратно на представление **Проект** , то любые произведенные изменения инструкций будут потеряны.  
   
  **Дополнительные сведения:** [Инструкции управления данными расширений интеллектуального анализа данных](/sql/dmx/dmx-statements-data-manipulation), [Создание DMX-запроса в среде SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Переключиться в режим просмотра результата запроса**  
  Для переключения между панелями щелкните **Проект**, **Запрос**и **Результат** . При переключении на панель **Результат** происходит выполнение запроса.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66070518"
  **Обновить результаты запроса**  
  Обработать заново прогнозирующий запрос. Это возможно только на панели **Результат** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерфейсы запросов интеллектуального анализа данных](data-mining/data-mining-query-tools.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Построитель прогнозирующих запросов (интеллектуальный анализ данных)](prediction-query-builder-data-mining.md)  

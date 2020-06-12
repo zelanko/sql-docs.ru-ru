@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0dea40f9c4e4c0672db78ca7e841cb7cedca857e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755b38d1f42432818f87d92b0d2bf097d58795f0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174353"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543956"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Контрольный список: использование PowerShell для проверки PowerPivot для SharePoint
   Ни одна из операций установки или восстановления [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] не завершена без прохождения проверочного теста, который подтверждает работоспособность служб и данных. В этой статье рассказывается о том, как выполнить эти шаги с помощью Windows PowerShell. Каждому шагу посвящен отдельный подраздел с тем, чтобы можно было перейти непосредственно к конкретным задачам. Например, выполните скрипт, приведенный в подразделе [Базы данных](#bkmk_databases) этого раздела для проверки имени приложения службы и баз данных содержимого, если необходимо запланировать их для обслуживания или резервного копирования.
@@ -69,7 +68,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
 |Обновление данных не выполняется|См. раздел [Timer Jobs](#bkmk_timer_jobs) и проверьте, что **Оперативное задание таймера обновления данных PowerPivot** находится в сети.|
 |На панели мониторинга управления отображаются старые данные|См. раздел [Задания таймера](#bkmk_timer_jobs) и проверьте, что **панель управления заданием таймера обработки** включена.|
 |Некоторые части панели мониторинга управления|При установке PowerPivot для SharePoint в ферму с такой топологией (центр администрирования без службы Excel Services или PowerPivot для SharePoint) необходимо загрузить и установить клиентскую библиотеку Microsoft ADOMD.NET, если требуется иметь полный доступ к встроенным на панели управления PowerPivot отчетам. Некоторые отчеты с панели мониторинга используют ADOMD.NET для доступа к внутренним данным, предоставляющим сведения об обработке запросов PowerPivot и исправности сервера в ферме. Дополнительные сведения см. в разделе [ADOMD.Net client Library](#bkmk_adomd) и в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](../../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md).|
-|\<> содержимого в будущем||
+|\<future content>||
 
 ##  <a name="analysis-services-windows-service"></a><a name="bkmk_windows_service"></a> Службы Analysis Services для Windows
  Приведенный в этом разделе скрипт проверяет экземпляр служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Убедитесь, что служба **запущена**.
@@ -153,7 +152,7 @@ Status      : Online
 > [!NOTE]
 >  Следующий образец кода сначала возвращает свойство applicationpool приложения службы [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] по умолчанию. Имя анализируется из строки и используется для получения сведений о состоянии объекта пула приложений.
 > 
->  Проверьте состояние "в **сети**". Если состояние находится не в сети или отображается сообщение "ошибка HTTP" при просмотре [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] сайта, убедитесь, что учетные данные удостоверения в ПУЛАХ приложений IIS все еще верны. Имя пула приложений IIS — это значение свойства идентификатора, возвращаемого командой Get-SPServiceApplicationPool.
+>  Проверьте состояние "в **сети**". Если состояние находится не в сети или отображается сообщение "ошибка HTTP" при просмотре [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] сайта, убедитесь, что учетные данные удостоверения в пулах приложений IIS все еще верны. Имя пула приложений IIS — это значение свойства идентификатора, возвращаемого командой Get-SPServiceApplicationPool.
 
 ```powershell
 $poolname = [string](Get-PowerPivotServiceApplication | Select -Property applicationpool)
@@ -170,7 +169,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea
 ```
 
- ![Примечание](../../../reporting-services/media/rs-fyinote.png "Примечание") . Пул приложений также можно проверить на странице центра администрирования **Управление приложениями служб**. Щелкните имя приложения службы, затем нажмите кнопку **Свойства** на ленте.
+ ![Примечание](../../../reporting-services/media/rs-fyinote.png "Примечание.") . Пул приложений также можно проверить на странице центра администрирования **Управление приложениями служб**. Щелкните имя приложения службы, затем нажмите кнопку **Свойства** на ленте.
 
  **Прокси-серверы приложения службы PowerPivot и Excel**
 

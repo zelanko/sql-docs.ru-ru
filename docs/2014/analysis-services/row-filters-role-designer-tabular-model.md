@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cc232f6c861a3b7dbde44b342deaa831de6c99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070125"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547396"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Фильтры строк (конструктор ролей, табличная модель)
   На странице **Фильтры строк** конструктора ролей можно определить фильтры уровня строк для соответствующей роли. Они могут быть определены только для ролей с разрешениями "Чтение" и "Чтение и обработка".  
@@ -25,17 +24,17 @@ ms.locfileid: "66070125"
 > [!NOTE]  
 >  Все параметры на этой странице отключены, если параметр **Полный доступ (администратор)** выбран на странице **Общие** конструктора ролей или если разрешение роли имеет значение **Обработка**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Таблица**  
  Таблица модели, для которой задан фильтр.  
   
  **DAX-фильтр**  
  DAX-формула, значением которой является логическое условие.  
   
- **Фильтр DAX — \<>TableName**  
+ **Фильтр DAX —\<tablename>**  
  Введите DAX-формулу, значением которой является логическое условие.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Роли табличной модели &#40;табличные&#41;SSAS](tabular-models/roles-ssas-tabular.md)   
  [Управление ролями с помощью среды SSMS (табличные службы SSAS)](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f10901625ece0a154248f99370e427c7a999c87
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073602"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546066"
 ---
 # <a name="move-an-analysis-services-database"></a>Перемещение базы данных служб Analysis Services
   Часто возникают ситуации, когда администратору баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переместить базу данных для многомерной или табличной модели в другое место. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта.  
@@ -139,7 +138,7 @@ ms.locfileid: "66073602"
   
 2.  Выполните команду XML для аналитики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   

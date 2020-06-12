@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed8dfcb04a9f15e168ddec01616373e60efce9ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088193"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527630"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>Изменение секции DirectQuery (табличные службы SSAS)
   Поскольку только одну секцию в таблице можно определить как секцию DirectQuery, службы Analysis Services по умолчанию используют первую секцию, созданную в таблице. При создании проекта модели секцию DirectQuery можно изменять с помощью диалогового окна «Диспетчер секций» в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Для развернутых моделей изменить секцию DirectQuery можно с помощью среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "66088193"
   
 4.  Выберите другую секцию в раскрывающемся списке **Имя секции** и при необходимости измените параметры обработки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции (табличные службы SSAS)](tabular-models/partitions-ssas-tabular.md)  
   
   

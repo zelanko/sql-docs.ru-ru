@@ -1,7 +1,7 @@
 ---
 title: sys. dm_exec_query_memory_grants (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 05/19/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50c336c329f5e610d90637f80ef8ef24569bb204
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829418"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731895"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,14 +63,18 @@ ms.locfileid: "82829418"
 |**pool_id**|**int**|Идентификатор пула ресурсов, к которому принадлежит данная группа рабочей нагрузки.|  
 |**is_small**|**tinyint**|Значение 1 означает, что для данной операции предоставления памяти используется малый семафор ресурса. Значение 0 означает использование обычного семафора.|  
 |**ideal_memory_kb**|**bigint**|Объем, в килобайтах (КБ), предоставленной памяти, необходимый для размещения всех данных в физической памяти. Основывается на оценке количества элементов.|  
-|**pdw_node_id**|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
+|**pdw_node_id**|**int**|Идентификатор узла, на котором находится данное распределение.<br /><br /> **Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|**reserved_worker_count**|**bigint**|Количество зарезервированных [рабочих потоков](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling).<br /><br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. |  
+|**used_worker_count**|**bigint**|Число [рабочих потоков](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) , используемых в данный момент.<br /><br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**max_used_worker_count**|**bigint**|Максимальное число [рабочих потоков](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) , использованных до этого момента.<br /><br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**reserved_node_bitmap**|**bigint**|Битовая карта узлов NUMA, в которых зарезервированы [рабочие потоки](../../relational-databases/thread-and-task-architecture-guide.md#sql-server-task-scheduling) .<br /><br />**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
 ## <a name="permissions"></a>Разрешения  
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] необходимо разрешение `VIEW DATABASE STATE` для базы данных.   
    
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Обычный сценарий отладки для времени ожидания запроса может выглядеть следующим образом:  
   
 -   Проверьте общее состояние системной памяти с помощью представлений [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) и различных счетчиков производительности.  
@@ -114,9 +118,9 @@ ms.locfileid: "82829418"
   
  Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера между пулами ресурсов, используя до 64 пулов. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , каждый пул ведет себя как небольшой независимый экземпляр сервера и требует 2 семафора. Число строк, возвращаемых из **sys. dm_exec_query_resource_semaphores** , может быть не более чем в 20 раз больше, чем количество строк, возвращаемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
  [sys. dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
- [Динамические административные представления и функции, связанные с выполнением (Transact-SQL)](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-  
+ [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
+ [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 654d659900d01ae9d5caf5188b9146510de483ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a019de00f932a8992b9adde426d1b9d953acb49f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080122"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544016"
 ---
 # <a name="connect-to-analysis-services"></a>Подключение к службам Analysis Services
   В этом разделе содержатся сведения о свойствах строки подключения, клиентских библиотеках, используемых для подключений, методах проверки подлинности, поддерживаемых службами Analysis Services, настройке и отмене подключений перед переводом сервера в автономный режим.  
@@ -40,7 +39,7 @@ ms.locfileid: "66080122"
 |[Поставщики данных, используемые для соединений со службами Analysis Services](data-providers-used-for-analysis-services-connections.md)|Службы Analysis Services предоставляют три клиентские библиотеки для доступа к операциям на сервере или данным служб Analysis Services. Этот раздел содержит краткое введение в ADOMD.NET, службы Analysis Services (AMO) и работу поставщика OLE DB для служб Analysis Services (MSOLAP).|  
 |[Отключение пользователей и сеансов на сервере служб Analysis Services](disconnect-users-and-sessions-on-analysis-services-server.md)|Сбросьте существующие сеансы и соединения, прежде чем переводить сервер в режим «вне сети» или выполнять базовые тесты производительности.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services &#40;конфигурации после установки&#41;](post-install-configuration-analysis-services.md)   
  [Настройка свойств сервера в Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
  [Создание скриптов для административных задач в службах Analysis Services](../script-administrative-tasks-in-analysis-services.md)  

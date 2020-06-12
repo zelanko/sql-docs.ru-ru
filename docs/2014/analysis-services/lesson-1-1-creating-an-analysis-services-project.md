@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e1e21053603c73e018585d9f8f8d043b4831cfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079363"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543686"
 ---
 # <a name="creating-an-analysis-services-project"></a>Создание проекта служб Analysis Services
-  В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] следующей задаче используется для создания нового [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта с именем `Analysis Services Tutorial`в зависимости от шаблона [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта. *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+  В следующей задаче используется [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания нового [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта с именем в `Analysis Services Tutorial` зависимости от [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] шаблона проекта. *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Создание нового проекта служб Analysis Services  
   
@@ -32,14 +31,14 @@ ms.locfileid: "66079363"
   
      Обратите внимание, что имя проекта по умолчанию, расположение и имя решения по умолчанию генерируются в нижней части диалогового окна. По умолчанию для решения создается новый каталог.  
   
-4.  Измените имя проекта на `Analysis Services Tutorial`, которое также изменяет поле **имя решения** , а затем нажмите кнопку **ОК**.  
+4.  Измените имя проекта на `Analysis Services Tutorial` , которое также изменяет поле **имя решения** , а затем нажмите кнопку **ОК**.  
   
- Вы успешно создали `Analysis Services Tutorial` проект на основе шаблона **проекта Analysis Services многомерных данных и интеллектуального анализа** , в новом решении, которое также называется `Analysis Services Tutorial`.  
+ Вы успешно создали `Analysis Services Tutorial` проект на основе шаблона **проекта Analysis Services многомерных данных и интеллектуального анализа** , в новом решении, которое также называется `Analysis Services Tutorial` .  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Определение источника данных](lesson-1-2-defining-a-data-source.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание многомерных моделей с помощью SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Создание проекта служб Analysis Services (среда SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   

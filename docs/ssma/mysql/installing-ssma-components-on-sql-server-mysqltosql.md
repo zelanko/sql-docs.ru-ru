@@ -1,5 +1,6 @@
 ---
 title: Установка компонентов SSMA на SQL Server (MySQLToSql) | Документация Майкрософт
+description: Установите компоненты на сервер, на котором выполняется SQL Server для поддержки преобразования базы данных MySQL с помощью SSMA, включая пакет расширений SSMA и поставщиков MySQL.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,44 +12,44 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 502f42a961cfbd64b0dcd6ac6c6867d0cdcf501a
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075350"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293791"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Установка компонентов SSMA в SQL Server (MySQLToSql)
-Помимо установки SSMA, необходимо также установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. К этим компонентам относится пакет расширений SSMA, который поддерживает миграцию данных, и поставщики MySQL для обеспечения подключения между серверами.  
+Помимо установки SSMA, необходимо также установить компоненты на компьютере, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . К этим компонентам относится пакет расширений SSMA, который поддерживает миграцию данных, и поставщики MySQL для обеспечения подключения между серверами.  
   
 ## <a name="ssma-for-mysql-extension-pack"></a>Пакет расширений SSMA для MySQL  
-Пакет расширений SSMA добавляет базу данных **сисдб**к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных содержит таблицы и хранимые процедуры, необходимые для переноса данных.  
+Пакет расширений SSMA добавляет базу данных **сисдб**к указанному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта база данных содержит таблицы и хранимые процедуры, необходимые для переноса данных.  
   
-Кроме того, при переносе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.  
+Кроме того, при переносе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, когда для переноса данных используется модуль миграции данных на стороне сервера.  
   
 ### <a name="prerequisites"></a>Предварительные требования  
-Перед установкой SSMA для серверных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL убедитесь, что компьютер соответствует следующим требованиям.  
+Перед установкой SSMA для серверных компонентов MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Убедитесь, что компьютер соответствует следующим требованиям.  
   
 -   Установщик [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows версии 3.1 или более поздняя версия.  
   
 -   Поставщик клиента MySQL и подключение к базе данных MySQL, которую необходимо перенести. Вы можете установить поставщики с носителя продукта MySQL или с веб-сайта MySQL.  
   
--   Служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера должна быть запущена во время установки. Используется для заполнения списка экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в мастере установки. Службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера можно отключить после установки.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба браузера должна быть запущена во время установки. Используется для заполнения списка экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в мастере установки. Службу браузера можно отключить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после установки.  
   
     > [!NOTE]  
-    > Если служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузера запущена, но список экземпляров в программе установки по-прежнему не отображается, необходимо разблокировать UDP-порт 1434. Вы можете использовать брандмауэр Windows, чтобы временно разблокировать порт, или временно отключить брандмауэр Windows. Также может потребоваться временное отключение антивирусного по. После установки обязательно включите брандмауэры и антивирусное по.  
+    > Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба браузера запущена, но список экземпляров в программе установки по-прежнему не отображается, необходимо разблокировать UDP-порт 1434. Вы можете использовать брандмауэр Windows, чтобы временно разблокировать порт, или временно отключить брандмауэр Windows. Также может потребоваться временное отключение антивирусного по. После установки обязательно включите брандмауэры и антивирусное по.  
   
 ### <a name="installing-the-extension-pack"></a>Установка пакета расширений  
-Пакет расширений можно установить в любое время перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Пакет расширений можно установить в любое время перед переносом данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
-> Чтобы установить пакет расширений, необходимо быть членом роли сервера **sysadmin** на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> Чтобы установить пакет расширений, необходимо быть членом роли сервера **sysadmin** на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 **Установка пакета расширений**  
   
-1.  Скопируйте SSMA для пакета расширения MySQL. *n*. Install. exe, где *n* — номер сборки, на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Скопируйте SSMA для пакета расширения MySQL. *n*.Install.exe, где *n* — номер сборки, на компьютер, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-2.  Дважды щелкните SSMA для пакета расширений MySQL. *n*. Install. exe.  
+2.  Дважды щелкните SSMA для пакета расширений MySQL. *n*.Install.exe.  
   
 3.  В диалоговом окне Добро пожаловать нажмите кнопку **Далее**.  
   
@@ -68,13 +69,13 @@ ms.locfileid: "68075350"
   
 9. В диалоговом окне Подключение выберите метод проверки подлинности и нажмите кнопку **Далее**.  
   
-    При проверке подлинности Windows будут использоваться учетные данные Windows для входа на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности необходимо ввести имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа и пароль.  
+    При проверке подлинности Windows будут использоваться учетные данные Windows для входа на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При выборе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности необходимо ввести [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа и пароль.  
   
 10. В следующем диалоговом окне выберите **установить служебные базы данных** *n*, где *n* — номер версии, а затем нажмите кнопку **Далее**.  
   
     База данных **сисдб** создается с таблицами и хранимыми процедурами, необходимыми для переноса данных (с использованием сервера серверной части данных) в этой базе данных.  
   
-11. Чтобы установить служебные программы на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите **Да**, а затем нажмите кнопку **Далее**. Чтобы выйти из мастера, нажмите кнопку **нет**.  
+11. Чтобы установить служебные программы на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выберите **Да**, а затем нажмите кнопку **Далее**. Чтобы выйти из мастера, нажмите кнопку **нет**.  
   
 ## <a name="see-also"></a>См. также:  
 [Установка SSMA для клиента MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

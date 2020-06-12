@@ -1,5 +1,6 @@
 ---
 title: Функция distinct-values (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию distinct-values в языке XQuery для удаления повторяющихся значений из последовательности.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c6e52209713ca94ab9cecc9f3c7910b6fc76ce9
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68223737"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215830"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>Функции с последовательностями — distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Последовательность атомарных значений.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все типы атомарных значений, которые передаются в **различные значения ()** , должны быть подтипами одного и того же базового типа. Допустимые базовые типы — это типы, поддерживающие операцию **EQ** . Эти типы включают в себя три встроенных базовых численных типа, базовые типы даты-времени, а также xs:string, xs:boolean, xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:string. Если имеется смесь этих типов или передаются значения других типов, возникает статическая ошибка.  
   
  Результат **distinct-values ()** получает базовый тип переданных типов, например xs: String в случае xdt: untypedAtomic с исходной кратностью. Если вход статически пуст, подразумевается пустое значение, и формируется статическая ошибка.  

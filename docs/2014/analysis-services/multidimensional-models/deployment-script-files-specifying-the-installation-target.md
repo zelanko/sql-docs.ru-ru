@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e830fc353898e3ec835b338e84765a0cad0de43f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075220"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546832"
 ---
 # <a name="specifying-the-installation-target"></a>Указание целевого объекта установки
-  Мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания считывает сведения о целевом объекте установки из \<файла *Project*>. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует базу данных и сервер, указанные на странице **развертывание** диалогового окна свойства * \<имя проекта>* диалоговом окне **страницы свойств** , чтобы создать \< *имя проекта*>. targets.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Мастер развертывания считывает сведения о целевом объекте установки из \<*project name*> файла deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]создает этот файл при сборке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]использует базу данных и сервер, указанные на странице **развертывание** *\<project name>* диалогового окна **страницы свойств** , для создания \<*project name*> файла TARGETS.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Измерение целевого объекта установки для развертывания  
  В некоторых ситуациях может быть необходимо развернуть проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в базу данных или экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , отличающийся от указанного на странице **Развертывание** . Например может быть необходимо развернуть проект на сервер для тестирования перед развертыванием, а затем развернуть его на производственный сервер после окончания тестирования. Может также быть необходимо развернуть завершенный и протестированный проект на несколько производственных серверов в кластере балансирования сетевой нагрузки, или на промежуточный сервер и производственный сервер.  
@@ -42,9 +41,9 @@ ms.locfileid: "66075220"
   
      -или-  
   
--   \<Измените *имя проекта*>. deploymenttargets с помощью любого текстового редактора.  
+-   Измените \<*project name*> файл deploymenttargets с помощью любого текстового редактора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Указание параметров развертывания секций и ролей](deployment-script-files-partition-and-role-deployment-options.md)   
  [Указание параметров конфигурации для развертывания решения](deployment-script-files-solution-deployment-config-settings.md)   
  [Указание параметров обработки](deployment-script-files-specifying-processing-options.md)  

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecf47eff045aa379a8e67332a82b2045a8569a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c58cf6a2f55e57c9faa65ddec72fe1bda6000c2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075692"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547026"
 ---
 # <a name="define-cube-dimension-properties"></a>Определение свойств измерения куба
   Измерение куба представляет собой экземпляр измерения базы данных в пределах куба. Измерение базы данных может быть использовано в нескольких кубах, а измерения нескольких кубов могут быть основаны на одном измерении базы данных. В следующей таблице описаны свойства измерения куба.  
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|`AllMemberAggregationUsage`|Управляет тем, как агрегаты создаются конструктором статистических [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]схем в. Это свойство может иметь следующие значения:<br /><br /> **Full**: каждый агрегат для куба должен включать элемент "Все".<br /><br /> **None**: ни один агрегат для куба не может включать элемент "Все". Это значение по умолчанию.<br /><br /> **Unrestricted**: на конструктор статистических схем не налагаются никакие ограничения.<br /><br /> **Default**: функциональное назначение такое же, как и у значения "Unrestricted".|  
+|`AllMemberAggregationUsage`|Управляет тем, как агрегаты создаются конструктором статистических схем в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Это свойство может иметь следующие значения:<br /><br /> **Full**: каждый агрегат для куба должен включать элемент "Все".<br /><br /> **None**: ни один агрегат для куба не может включать элемент "Все". Это значение по умолчанию.<br /><br /> **Unrestricted**: на конструктор статистических схем не налагаются никакие ограничения.<br /><br /> **Default**: функциональное назначение такое же, как и у значения "Unrestricted".|  
 |`Description`|Представляет описательное имя уровня.|  
 |`DimensionID`|Содержит уникальный идентификатор (ID) измерения базы данных.|  
 |`HierarchyUniqueNameStyle`|Определяет правила формирования уникальных имен для иерархий, содержащихся в измерении куба. Это свойство может иметь следующие значения:<br /><br /> `IncludeDimensionName`: имя измерения включается в качестве части имени иерархии. Это значение по умолчанию.<br /><br /> `ExcludeDimensionName`: имя измерения не включается в качестве части имени иерархии.|  
@@ -34,7 +33,7 @@ ms.locfileid: "66075692"
 |`Name`|Содержит понятное имя измерения куба. По умолчанию имя измерения куба является таким же, как и имя измерения базы данных, если только уже не определено измерение куба с таким же именем.|  
 |`Visible`|Определяет, является ли измерение куба видимым. Значение по умолчанию — `True`.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Измерения (службы Analysis Services — многомерные данные)](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

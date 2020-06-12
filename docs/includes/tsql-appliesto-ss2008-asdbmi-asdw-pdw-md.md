@@ -4,11 +4,11 @@ ms.service: sql
 ms.topic: include
 ms.date: 01/13/2020
 ms.author: mikeray
-ms.openlocfilehash: a84aab849040c956a0b445e2f7545ac508992744
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d98e2977076f09f79d76b4ffacca1e55ea20b51
+ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387304"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84124417"
 ---
-<Token>Область **применения:** ![да](media/yes-icon.png)SQL Server ![да](media/yes-icon.png), база данных SQL Azure (только ![управляемый экземпляр](media/yes-icon.png)) да Azure синапсе Analytics (SQL ![DW](media/yes-icon.png)) да Параллельное хранилище данных</Token>
+<Token>**применимо к:** ![ Да ](media/yes-icon.png) SQL Server ![ Да ](media/yes-icon.png) SQL Azure управляемый экземпляр ![ Да ](media/yes-icon.png) Azure синапсе Analytics (SQL DW) ![ Да ](media/yes-icon.png) Parallel Data Warehouse</Token>

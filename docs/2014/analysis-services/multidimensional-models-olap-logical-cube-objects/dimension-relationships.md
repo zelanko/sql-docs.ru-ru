@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797619"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545303"
 ---
 # <a name="dimension-relationships"></a>Связи измерений
   Использование измерений определяет связи между измерением куба и группами мер в нем. Измерение куба представляет собой экземпляр измерения базы данных, используемый в конкретном кубе. Куб может содержать (и часто содержит) измерения, которые не связаны непосредственно с группой мер, но которые могут быть косвенно связаны с ней через другое измерение или группу мер. При добавлении измерения базы данных или группы мер в куб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пытается определить использование измерения путем проверки связей между таблицами измерений и таблицами фактов в представлении источника данных куба, а также путем проверки связей между атрибутами в измерениях. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически устанавливают параметры использования измерений для связей, которые они смогли обнаружить.  
@@ -76,7 +75,7 @@ ms.locfileid: "72797619"
   
  ![Логическая схема или связь измерений «многие ко многим»](../../analysis-services/dev-guide/media/as-many-dimension1.gif "Логическая схема или связь измерений «многие ко многим»")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет определить связь «многие ко многим» между измерением и таблицей фактов.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]позволяет определить связь «многие ко многим» между измерением и таблицей фактов.  
   
 > [!NOTE]  
 >  Для обеспечения поддержки связи измерений «многие ко многим» в представлении источника данных должна быть установлена связь по внешнему ключу между всеми участвующими таблицами, как показано на предыдущей диаграмме. В противном случае вы не сможете выбрать правильную промежуточную группу мер при установлении связи на вкладке **Использование измерений** конструктора измерений.  

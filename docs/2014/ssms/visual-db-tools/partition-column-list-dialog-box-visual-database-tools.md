@@ -12,19 +12,19 @@ ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44da1a0e95acd6713bef4988de6e4d28a99aa577
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280375"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858976"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Диалоговое окно «Список столбцов секционирования» (визуальные инструменты для баз данных)
   Если таблица имеет соответствующую схему секционирования, это диалоговое окно может использоваться для выбора столбцов, к которым применяется функция секционирования. Чтобы эта функция могла работать, тип данных столбца, на который производится переключение, должен совпадать с типом данных столбца, определенного в функции секционирования.  
   
  Дополнительные сведения о схемах и функциях секционирования см. в электронной документации по SQL Server.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Тип данных  
  Отображаются типы данных столбцов, определенных в схеме секционирования.  
   

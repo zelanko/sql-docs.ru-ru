@@ -13,12 +13,12 @@ ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e529f26ca6a0e032d9a6d580330ea4a4f968ce6d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460152"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859166"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Диалоговое окно «Добавление таблицы» (конструктор базы данных) (визуальные инструменты для баз данных)
   Позволяет добавлять таблицы в конструкторе базы данных.  
@@ -26,7 +26,7 @@ ms.locfileid: "63460152"
 > [!NOTE]  
 >  Если таблица опубликована для репликации, то изменения схемы следует проводить при помощи инструкции языка Transact-SQL [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) или объектов SMO. При изменении схемы с помощью конструктора таблиц или конструктора диаграмм баз данных конструктор пытается удалить и затем вновь создать таблицу. Но поскольку удалять опубликованные объекты нельзя, изменения схемы не будут применены.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Обновить**  
  Обновляет список таблиц для соответствия текущему состоянию базы данных.  
   

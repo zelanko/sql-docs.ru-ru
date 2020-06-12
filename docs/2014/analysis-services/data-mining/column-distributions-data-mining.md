@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 87e700de-32be-4bc8-b01d-ba4ee1ab48de
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c7eab32f251b9622c6ac77febf2c004806c024b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29aad33535c4cc4d9baf4c453249ce3b51595e78
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174652"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524401"
 ---
 # <a name="column-distributions-data-mining"></a>Распределения столбцов (интеллектуальный анализ данных)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно определить распределения столбцов в структуре интеллектуального анализа данных, чтобы повлиять на то, как алгоритмы обрабатывают данные в этих столбцах при создании моделей интеллектуального анализа данных. В некоторых алгоритмах лучше задавать распределение для всех столбцов, содержащих непрерывные данные, до начала обработки модели в случае, если указанные столбцы содержат общие распределения значений. Если распределения не заданы, создаваемые модели интеллектуального анализа данных могут работать менее точно, чем модели с заданными распределениями, так как на вход алгоритмов будет подаваться меньшее количество данных для анализа.
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно определить распределения столбцов в структуре интеллектуального анализа данных, чтобы повлиять на то, как алгоритмы обрабатывают данные в этих столбцах при создании моделей интеллектуального анализа данных. В некоторых алгоритмах лучше задавать распределение для всех столбцов, содержащих непрерывные данные, до начала обработки модели в случае, если указанные столбцы содержат общие распределения значений. Если распределения не заданы, создаваемые модели интеллектуального анализа данных могут работать менее точно, чем модели с заданными распределениями, так как на вход алгоритмов будет подаваться меньшее количество данных для анализа.
 
  Алгоритмы, доступные в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , поддерживают следующие типы распределения.
 
@@ -43,7 +42,7 @@ ms.locfileid: "78174652"
 
  Дополнительные сведения об алгоритмах в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining-algorithms-analysis-services-data-mining.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Типы содержимого &#40;интеллектуального анализа&#41;](content-types-data-mining.md) [структур интеллектуального анализа данных &#40;Analysis Services —](mining-structures-analysis-services-data-mining.md) [методы дискретизации](discretization-methods-data-mining.md)&#41;интеллектуального анализа данных &#40;[распределения&#41;DMX](/sql/dmx/distributions-dmx) &#40;[столбцы структуры интеллектуального](mining-structure-columns.md) анализа данных
 
 

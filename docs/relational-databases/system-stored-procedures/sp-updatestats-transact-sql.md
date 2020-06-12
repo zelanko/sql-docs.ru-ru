@@ -18,12 +18,12 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808955"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806850"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Аргументы  
 `[ @resample = ] 'resample'`Указывает, что **sp_updatestats** будет использовать параметр ресамплинг инструкции [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Если параметр **"ресамплинг"** не указан, **sp_updatestats** обновляет статистику с использованием выборки по умолчанию. **ресамплинг** имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию No.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_updatestats** выполняется `UPDATE STATISTICS` путем указания `ALL` ключевого слова для всех определяемых пользователем и внутренних таблиц в базе данных. sp_updatestats отображает сообщения, указывающие ход выполнения. По завершении обновления выдается отчет о том, что обновление статистики произведено для всех таблиц.  
   
-Процедура sp_updatestats обновляет статистику по отключенным некластеризованным индексам и не обновляет статистику по отключенным кластеризованным индексам.  
+**sp_updatestats** обновляет статистику отключенных некластеризованных индексов и не обновляет статистику отключенных кластеризованных индексов.  
   
 Для дисковых таблиц **sp_updatestats** обновляет статистику на основе сведений о **modification_counter** в представлении каталога **sys. dm_db_stats_properties** , обновляя статистику, когда по крайней мере одна строка была изменена. Статистика для таблиц, оптимизированных для памяти, всегда обновляется при выполнении **sp_updatestats**. Поэтому не выполняйте **sp_updatestats** больше, чем требуется.  
   
@@ -58,7 +58,8 @@ sp_updatestats [ [ @resample = ] 'resample']
 Для баз данных с уровнем совместимости, указанным ниже 90, при исполнении **sp_updatestats** не сохраняются последние значения NORECOMPUTE для конкретной статистики. Для баз данных с уровнем совместимости 90 или выше sp_updatestats сохраняет последнюю версию параметра NORECOMPUTE для конкретной статистики. Дополнительные сведения об отключении и повторном включении обновления статистики см. в разделе [Статистика](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в предопределенной роли сервера **sysadmin** или владение базой данных (**dbo**).  
+
+Для запуска **sp_updatestats**пользователь должен быть владельцем базы данных (а `dbo` не только членом роли `db_owner` ) или членом предопределенной роли сервера sysadmin.
 
 ## <a name="examples"></a>Примеры  
 В следующем примере обновляется статистика для таблиц в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -72,7 +73,7 @@ EXEC sp_updatestats;
 ## <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
 Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

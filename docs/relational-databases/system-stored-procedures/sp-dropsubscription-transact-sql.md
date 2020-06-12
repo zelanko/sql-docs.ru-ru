@@ -1,5 +1,6 @@
 ---
 title: sp_dropsubscription (Transact-SQL) | Документация Майкрософт
+description: Удаляет подписки на публикацию в статьях, публикациях или подписках на издателе. Эта хранимая процедура выполняется на издателе в базе данных публикации.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f800ef185145e63a17db3855989bebde91b48bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 483fc481e78c1a879f2858addf6925e987066010
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831175"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807971"
 ---
 # <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **sp_dropsubscription** используется в моментальных снимках и репликации транзакций.  
   
  Если удаляется подписка на статью в публикации с немедленной синхронизацией, то нельзя добавить ее обратно до тех пор, пока не будут удалены подписки на все статьи в публикации и, затем, не добавлены все одновременно обратно.  
@@ -70,7 +71,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** , предопределенной роли базы данных **db_owner** или пользователя, создавшего подписку, могут выполнять **sp_dropsubscription**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md)   
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   

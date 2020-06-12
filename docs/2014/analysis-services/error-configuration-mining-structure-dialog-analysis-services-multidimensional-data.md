@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: d9aa028b-bad9-49c7-a81c-c2150e4dd481
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef6ba1926d23990399be8571ed117b87dd2edb8b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081373"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528389"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Конфигурация ошибок (диалоговое окно «Структура интеллектуального анализа данных») (службы Analysis Services — многомерные данные)
   Страница **Конфигурация ошибок** диалогового окна **Свойства структуры интеллектуального анализа данных** среды **SQL Server Management Studio** используется для задания свойств конфигурации ошибок структуры интеллектуального анализа данных в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать конфигурацию ошибок по умолчанию**  
  Выберите этот параметр, чтобы использовать конфигурацию ошибок по умолчанию для объектов в операциях обработки.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66081373"
  **Путь к журналу ошибок**  
  Введите полный путь и имя файла журнала ошибок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно "Свойства структуры интеллектуального анализа данных &#40;Analysis Services"&#41;интеллектуального анализа](mining-structure-properties-dialog-analysis-services-data-mining.md)   
  [Диалоговое окно «Общие &#40;структуры интеллектуального анализа данных»&#41; &#40;Analysis Services —&#41;интеллектуального анализа](general-mining-structure-dialog-box-analysis-services-data-mining.md)  
   

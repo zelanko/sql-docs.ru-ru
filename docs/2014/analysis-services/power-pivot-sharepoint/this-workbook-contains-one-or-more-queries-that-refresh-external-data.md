@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e13b648b35cb0a6b6d9272ec9a2b9d560c3c7f4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547746"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Эта книга содержит один или несколько запросов на обновление внешних данных.
   Для книг Excel, содержащих данные PowerPivot, службы Excel отображают это предупреждение при обнаружении сведений о соединении и предлагают пользователю включить или отключить запросы для этой книги.  
@@ -26,7 +25,7 @@ ms.locfileid: "66070972"
 |-|-|  
 |Название продукта|PowerPivot для SharePoint|  
 |Версия продукта|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|Причина:|Службы Excel настроены на предупреждение об обновлении данных.|  
+|Причина|Службы Excel настроены на предупреждение об обновлении данных.|  
 |Текст сообщения|Эта книга содержит один или несколько запросов на обновление внешних данных. Злоумышленник может создать запрос для доступа к конфиденциальным сведениям и распространения их среди других пользователей или для выполнения других вредоносных действий.<br /><br /> Если вы доверяете источнику этой книги, нажмите кнопку «Да», чтобы разрешить в этой книге запросы к внешним данным. Если вы не уверены, нажмите кнопку «Нет», чтобы изменения к рабочей книге не применялись.<br /><br /> Разрешить в этой книге запросы к внешним данным?|  
   
 ## <a name="explanation"></a>Объяснение  

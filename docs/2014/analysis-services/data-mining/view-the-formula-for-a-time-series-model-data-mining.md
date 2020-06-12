@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43382b5dd8a20de1454bfc3d6a16aa68c99e34a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27df4456d774f7c80f30fd4840c521ddf93c77a6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082600"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520220"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)
-  Конструктор [!INCLUDE[msCoName](../../includes/msconame-md.md)] интеллектуального анализа данных средства просмотра временных рядов предоставляет самый простой способ просмотра формулы регрессии, используемой в модели временных рядов.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Конструктор интеллектуального анализа данных средства просмотра временных рядов предоставляет самый простой способ просмотра формулы регрессии, используемой в модели временных рядов.  
   
  Формулу регрессии для модели временных рядов можно получить с помощью запроса к содержимому модели. Однако для просмотра полной формулы ARTXP или ARIMA рекомендуется использовать **Условные обозначения интеллектуального анализа данных** [средства просмотра временных рядов (Майкрософт](browse-a-model-using-the-microsoft-time-series-viewer.md)), которые представляют все константы в удобном для чтения формате.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66082600"
   
 5.  Если вкладка **Условные обозначения интеллектуального анализа данных** недоступна, щелкните узел правой кнопкой мыши и выберите **Показать обозначения**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Примеры запросов моделей временных рядов](time-series-model-query-examples.md)  

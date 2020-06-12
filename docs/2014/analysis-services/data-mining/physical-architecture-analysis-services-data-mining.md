@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f034e8892a8f5a77c7a049da6e33336592cb5294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9d90d0483b81f2a21b187b6132efc1c93861d8a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175203"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520910"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Физическая архитектура (службы Analysis Services — интеллектуальный анализ данных)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует как серверные, так и клиентские компоненты для предоставления функциональных возможностей интеллектуального анализа данных для приложений бизнес-аналитики:
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]использует как серверные, так и клиентские компоненты для предоставления функциональных возможностей интеллектуального анализа данных для приложений бизнес-аналитики:
 
 -   Серверный компонент реализован в виде службы Microsoft Windows. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают установку нескольких экземпляров на одном компьютере, при этом каждый из экземпляров служб реализуется в виде отдельного экземпляра службы Windows.
 
@@ -50,7 +49,7 @@ ms.locfileid: "78175203"
 
  Вся связь между клиентом и сервером служб Analysis Services основана на протоколе XMLA, независимом от платформы или языка. Если от клиента поступает запрос, службы Analysis Services определяют, связан ли он с OLAP или с интеллектуальным анализом данных, и соответствующим образом назначают маршрут. Дополнительные сведения см. в разделе [Серверные компоненты ядра OLAP](../multidimensional-models/olap-physical/olap-engine-server-components.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Логическая архитектура (службы Analysis Services — интеллектуальный анализ данных)](logical-architecture-analysis-services-data-mining.md)
 
 

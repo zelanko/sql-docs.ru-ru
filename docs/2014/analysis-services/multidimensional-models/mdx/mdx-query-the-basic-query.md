@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcd55827377b72040dd142ed1f2fd094c9bd2651
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b1a70753abe8e477bd1e522a37f4513cc12a52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546192"
 ---
 # <a name="the-basic-mdx-query-mdx"></a>Базовый запрос многомерных выражений (многомерные выражения)
   Базовый запрос многомерных выражений (MDX) — это наиболее часто используемый запрос в МНОГОМЕРных выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  
@@ -108,7 +107,7 @@ WHERE ( [Sales Territory].[Southwest] )
   
  Дополнительные примеры см. в разделах [Определение содержимого оси запроса (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md) и [Определение содержимого оси среза (многомерные выражения)](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Инструкция SELECT (многомерные выражения)](/sql/mdx/mdx-data-manipulation-select)  
   

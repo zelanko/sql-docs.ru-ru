@@ -1,5 +1,6 @@
 ---
 title: управляемые классы SQLXML
+description: Сведения о управляемых классах Microsoft SQLXML, которые предоставляют функциональные возможности SQLXML 4,0 в Microsoft .NET Framework.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ ms.assetid: 73a5faeb-dabf-4895-acb5-a9651b646065
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7511dc12bea8a83544ddb39ff427b6400128294e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b73fff4ba541e0f9b25c1b8dc84419dd5db1b2b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246921"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529955"
 ---
 # <a name="sqlxml-40-net-framework-support---managed-classes"></a>Поддержка SQLXML 4.0 на платформе .NET Framework — управляемые классы
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75246921"
 > [!NOTE]  
 >  Можно также составить приложения [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio для массовой загрузки XML-документов с использованием массовой загрузки XML. Дополнительные сведения см. в разделе [выполнение групповой загрузки XML-данных &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md). Необходимо добавить в приложение ссылку на DLL-библиотеку массовой загрузки XML (Xblkld4.dll). Это DLL-библиотека COM, для которой Visual Studio .NET автоматически создает библиотеку-упаковщик.  
   
-  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] этом разделе приводятся примеры приложений, демонстрирующие использование управляемых классов SQLXML:  
+  В этом разделе приводятся примеры приложений, демонстрирующие использование [!INCLUDE[msCoName](../../../includes/msconame-md.md)] управляемых классов SQLXML:  
  [Исполнение запросов SQL &#40;управляемых классов SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)  
   [Выполнение SQL-запросов с использованием метода ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md)  
   [Обработка XML на стороне клиента &#40;управляемые классы SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/processing-xml-on-the-client-side-sqlxml-managed-classes.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083131"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520903"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Требования к обработке и связанные замечания (интеллектуальный анализ данных)
   В этом разделе рассматриваются некоторые технические вопросы, которые необходимо учитывать при обработке объектов интеллектуального анализа данных. Общее описание обработки и ее применения в интеллектуальном анализе данных см. в разделе [Обработка объектов интеллектуального анализа данных](processing-data-mining-objects.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66083131"
   
  Во время обработки модель не считывает повторно данные из источника, а получает сводку данных из структуры интеллектуального анализа данных. Совместно используя созданный куб, кэшированный индекс и данные таблицы вариантов, сервер создает независимые потоки для обучения моделей.  
   
- Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих параллельную обработку модели, см. в разделе функции, поддерживаемые различными [выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
+ Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих параллельную обработку модели, см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> Обработка структур интеллектуального анализа данных  
  Структуру интеллектуального анализа можно обрабатывать вместе со всеми зависимыми моделями или отдельно. Обработка структуры интеллектуального анализа данных отдельно от моделей может оказаться полезной, когда некоторые модели обрабатываются продолжительное время и эту операцию необходимо отложить.  
@@ -86,7 +85,7 @@ ms.locfileid: "66083131"
   
  Дополнительные сведения см. в разделе [Экспорт и импорт объектов интеллектуального анализа данных](export-and-import-data-mining-objects.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)   
  [Структуры интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ&#41;](mining-structures-analysis-services-data-mining.md)   
  [Обработка объектов многомерной модели](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

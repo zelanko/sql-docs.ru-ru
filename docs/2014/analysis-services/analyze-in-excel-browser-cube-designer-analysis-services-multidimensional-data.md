@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2833fb2ecbbac269442ce149cd5673abedcf83c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84fd7daf954b7537d34189ce6848472aa8818e6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527976"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Анализ в Excel (вкладка «Браузер», конструктор кубов) (службы Analysis Services — многомерные данные)
   Функция**Анализ в Excel** позволяет разработчику куба быстро определить, как проект будут видеть конечные пользователи. Функция **Анализ в Excel** открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области, и автоматически добавляет сводную таблицу на лист. Эта функция заменяет веб-элемент управления Office на вкладке «Браузер», который в предыдущих версиях содержал внедренную сводную таблицу.  
@@ -50,7 +49,7 @@ ms.locfileid: "66062368"
   
  [Просмотр данных и метаданных в кубе](multidimensional-models/browse-data-and-metadata-in-cube.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обозреватель &#40;конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «браузер», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Вкладка браузера &#40;метаданных, конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

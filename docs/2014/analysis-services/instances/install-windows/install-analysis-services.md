@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bcc40c0b8ca91c621c9e269b4d19af0de4e1af7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543886"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Установка служб Analysis Services в табличном режиме
   Если службы Analysis Services устанавливаются для использования новых функций табличных моделей, необходимо устанавливать их в серверном режиме с поддержкой соответствующего типа модели. Серверный режим — табличный, он настраивается во время установки.  
@@ -53,13 +52,13 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Значение `ASSERVERMODE` учитывает регистр.  Все значения должны задаваться в верхнем регистре. В следующей таблице приведены допустимые значения параметра `ASSERVERMODE`.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|Это значение по умолчанию. Если не задать значение `ASSERVERMODE`, сервер будет установлен в многомерном режиме.|  
-|POWERPIVOT|Это значение является необязательным. На практике, если задан параметр `ROLE`, то режим сервера автоматически получает значение 1, что делает `ASSERVERMODE` необязательным в установке PowerPivot для SharePoint. Дополнительные сведения см. [в статье Установка PowerPivot из командной строки](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
+|POWERPIVOT|Это необязательное значение. На практике, если задан параметр `ROLE`, то режим сервера автоматически получает значение 1, что делает `ASSERVERMODE` необязательным в установке PowerPivot для SharePoint. Дополнительные сведения см. [в статье Установка PowerPivot из командной строки](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Это значение является обязательным при установке служб Analysis Services в табличном режиме из командной строки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение режима работы сервера для экземпляра Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Настройка доступа в памяти или DirectQuery для базы данных табличной модели](../../tabular-models/enable-directquery-mode-in-ssms.md)   
  [Табличное моделирование &#40;табличные&#41;SSAS](../../tabular-models/tabular-models-ssas.md)  

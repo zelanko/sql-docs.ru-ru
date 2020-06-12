@@ -1,5 +1,6 @@
 ---
 title: Помощник по миграции SQL Server для MySQL (MySQLToSQL) | Документация Майкрософт
+description: Узнайте о SSMA для MySQL и выполните пошаговые инструкции по переносу баз данных MySQL в SQL Server или базу данных SQL Azure.
 ms.prod: sql
 ms.custom: ''
 ms.date: 10/10/2019
@@ -10,22 +11,22 @@ ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 author: Jtoland
 ms.author: Jtoland
 manager: murato
-ms.openlocfilehash: 61f1edc662e7b4a510d616dbee47cfaa615b9c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff0f81088d4da835a24b59c1629dc7d59ef2e5b1
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252150"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293611"
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>Помощник по миграции SQL Server для MySQL (MySQLToSQL)
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для MySQL — это инструмент для переноса баз данных MySQL [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2017 в Windows и Linux [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , 2019 в Windows и Linux, а [!INCLUDE[msCoName](../../includes/msconame_md.md)] также в базе данных Azure. SSMA для MySQL преобразует объекты базы данных MySQL в SQL Server объекты базы данных, создает эти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]объекты в, а затем переносит данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]MySQL в.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для MySQL — это инструмент для переноса баз данных MySQL в [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 в Windows и Linux, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2019 в Windows и Linux, а также в [!INCLUDE[msCoName](../../includes/msconame_md.md)] базе данных Azure. SSMA для MySQL преобразует объекты базы данных MySQL в SQL Server объекты базы данных, создает эти объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем переносит данные из MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-В этой документации описывается SSMA для MySQL и приводятся пошаговые инструкции по переносу баз данных MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в. В следующей таблице приведены статьи, которые помогут вам получить дополнительные сведения:  
+В этой документации описывается SSMA для MySQL и приводятся пошаговые инструкции по переносу баз данных MySQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующей таблице приведены статьи, которые помогут вам получить дополнительные сведения:  
   
 ## <a name="contents"></a>Содержимое  
   
-|Раздел|Описание|
+|Section|Описание|
 |-----------|---------------|
 |[Новые возможности в SSMA для MySQL](https://msdn.microsoft.com/1451a0b0-6713-4d0c-954f-ea3d8fce1d31)|Новые возможности в этой версии SSMA для MySQL|  
 |[Установка SSMA для MySQL &#40;MySqlToSql&#41;](../../ssma/mysql/installing-ssma-for-mysql-mysqltosql.md)|Содержит статьи, содержащие необходимые условия и инструкции по установке клиента SSMA для MySQL и необходимых компонентов на компьютере, на котором работает SQL Server.|  

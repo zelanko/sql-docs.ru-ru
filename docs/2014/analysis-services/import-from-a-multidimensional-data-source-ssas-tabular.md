@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f0793ea-a4c7-42e9-b722-2164a454ebca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c062bab47317d121a2b1895742d70c79048413d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080556"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544236"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>Импорт из многомерного источника данных (табличные службы SSAS)
   В качестве источника данных для табличной модели можно использовать базу данных куба служб Analysis Services. Чтобы импортировать данные из куба служб Analysis Services, необходимо указать запрос многомерных выражений для выбора данных.  
@@ -32,7 +31,7 @@ ms.locfileid: "66080556"
   
 3.  Выполните шаги мастера импорта таблиц. На странице **Указание запроса MDX** можно указать запрос многомерных выражений. Для использования конструктора запросов многомерных выражений нажмите кнопку **Конструирование**на странице «Указание запроса MDX».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Импорт данных &#40;табличные&#41;SSAS](import-data-ssas-tabular.md)   
  [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md)  
   

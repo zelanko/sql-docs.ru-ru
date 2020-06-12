@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80bddac8f800c1b9394c1ed605007ab0f2137b88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 003c70362c38ae1838b4679abf6485fa031a9143
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727468"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545066"
 ---
 # <a name="canceling-commands-xmla"></a>Отмена команд (XMLA)
   В зависимости от административных разрешений пользователя, выполняющего команду, команда [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) в XML для АНАЛИТИКИ (XMLA) может отменить команду в сеансе, сеансе, подключении, серверном процессе или связанном сеансе или соединении.  
@@ -44,7 +43,7 @@ ms.locfileid: "62727468"
 ## <a name="canceling-sessions"></a>Отмена сеансов  
  Указав идентификатор сеанса для явного сеанса в свойстве [SessionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) `Cancel` команды, администратор базы данных или администратор сервера может отменить сеанс, включая выполняемую в данный момент команду. Администратор баз данных может отменять сеансы только для тех баз данных, на которые у него есть разрешения администратора.  
   
- Администратор базы данных может извлекать сведения об активных сеансах для указанной базы данных путем извлечения набора строк схемы DISCOVER_SESSIONS. Для получения набора строк схемы DISCOVER_SESSIONS администратор базы данных использует метод XMLA `Discover` и указывает соответствующий идентификатор базы данных для столбца ограничений SESSION_CURRENT_DATABASE в свойстве restriction [Restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) `Discover` метода.  
+ Администратор базы данных может извлекать сведения об активных сеансах для указанной базы данных путем извлечения набора строк схемы DISCOVER_SESSIONS. Для получения набора строк схемы DISCOVER_SESSIONS администратор базы данных использует `Discover` метод XMLA и указывает соответствующий идентификатор базы данных для столбца ограничений SESSION_CURRENT_DATABASE в свойстве restriction [Restrictions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/restrictions-element-xmla) `Discover` метода.  
   
 ## <a name="canceling-connections"></a>Отмена соединений  
  Указав идентификатор соединения в свойстве [ConnectionID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/connectionid-element-xmla) `Cancel` команды, администратор сервера может отменить все сеансы, связанные с данным подключением, включая все выполняющиеся команды, и отменить подключение.  
@@ -58,9 +57,9 @@ ms.locfileid: "62727468"
  Указав идентификатор серверного процесса (SPID) в свойстве [SPID](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) `Cancel` команды, администратор сервера может отменить команды, связанные с данным идентификатором SPID.  
   
 ## <a name="canceling-associated-sessions-and-connections"></a>Отмена ассоциированных сеансов и соединений  
- Можно задать для свойства [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) значение true, чтобы отменить соединения, сеансы и команды, связанные с соединением, сеансом или SPID, указанными `Cancel` в команде.  
+ Можно задать для свойства [CancelAssociated](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cancelassociated-element-xmla) значение true, чтобы отменить соединения, сеансы и команды, связанные с соединением, сеансом или SPID, указанными в `Cancel` команде.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Discover &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)   
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   

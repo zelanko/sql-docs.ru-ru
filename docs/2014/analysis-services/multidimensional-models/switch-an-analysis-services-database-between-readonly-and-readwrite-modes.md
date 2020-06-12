@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072887"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547346"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Переключение базы данных служб Analysis Services между режимами ReadOnly и ReadWrite
   Часто возникают ситуации, когда администратору баз данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо изменить режим чтения/записи в табличной или многомерной базе данных. Эти ситуации часто определяются бизнес-потребностями, например, совместное использование базы данных между пулом [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] серверов для повышения удобства работы пользователей.  
@@ -47,7 +46,7 @@ ms.locfileid: "66072887"
   
 4.  Назначьте пароль отсоединяемой базе данных и нажмите кнопку **ОК** , чтобы выполнить команду отсоединения.  
   
-5.  Откройте папку **базы данных** в левой или правой области окна [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Откройте папку **базы данных** в левой или правой области окна [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  Щелкните правой кнопкой мыши папку **базы данных** и выберите команду **Присоединить...**  
   
@@ -166,7 +165,7 @@ ms.locfileid: "66072887"
   
 2.  Выполните команду XML для аналитики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e050a59da542041b9ce825f573625bdb6afc289
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082736"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520350"
 ---
 # <a name="training-and-testing-data-sets"></a>Обучающие и проверочные наборы данных
   Разделение данных на обучающие и проверочные наборы является важной частью оценки моделей интеллектуального анализа данных. Обычно при разделении набора данных на обучающий и проверочный наборы большая часть данных используется для обучения, а меньшая — для проверки. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют случайную выборку данных, чтобы убедиться в том, что проверочный и обучающий наборы похожи. Использование одинаковых данных для обучения и проверки позволяет свести к минимуму влияние несоответствия данных и лучше понять характеристики модели.  
@@ -103,11 +102,11 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
 |------------|-----------|  
 |Описывает, каким образом фильтры модели взаимодействуют с обучающим и проверочным наборами данных.|[Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-models-analysis-services-data-mining.md)|  
 |Описывает, как использование обучающих и проверочных данных влияет на перекрестные проверки.|[Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](cross-validation-analysis-services-data-mining.md)|  
-|Предоставляет сведения о программных интерфейсах для работы с обучающим и проверочным наборами данных в структуре интеллектуального анализа данных.|[Основные понятия и модель объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Элемент MiningStructure (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Предоставляет сведения о программных интерфейсах для работы с обучающим и проверочным наборами данных в структуре интеллектуального анализа данных.|[Основные понятия и объектная модель объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [Элемент MiningStructure (ASSL)](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
 |Содержит синтаксис DMX для создания контрольных наборов.|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX)](/sql/dmx/create-mining-structure-dmx)|  
 |Получить данные о вариантах в обучающем и проверочном наборах.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Запросы к наборам строк схемы интеллектуального анализа данных &#40;Analysis Services интеллектуального анализа данных&#41;](data-mining-schema-rowsets-ssas.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства интеллектуального анализа данных](data-mining-tools.md)   
  [Основные понятия интеллектуального анализа данных](data-mining-concepts.md)   
  [Решения интеллектуального анализа данных](data-mining-solutions.md)   

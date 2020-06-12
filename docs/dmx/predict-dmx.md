@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: eb939c45d298117fa81b05d6188aa3a4c5cd7c4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008158"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669277"
 ---
 # <a name="predict-dmx"></a>Predict (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Ссылка на скалярный столбец>  
   
- или диспетчер конфигурации служб  
+ or  
   
  \<Ссылка на столбец таблицы>  
   
@@ -43,7 +43,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  Параметры INCLUSIVE, EXCLUSIVE, INPUT_ONLY и INCLUDE_STATISTICS применяются только к ссылкам на столбцы таблицы, а EXCLUDE_NULL и INCLUDE_NULL — только к ссылкам на скалярные столбцы.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Имеются следующие параметры: EXCLUDE_NULL (по умолчанию), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (по умолчанию), INPUT_ONLY и INCLUDE_STATISTICS.  
   
 > [!NOTE]  

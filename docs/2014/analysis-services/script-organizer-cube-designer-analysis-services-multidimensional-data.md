@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 92624ca4-de67-4ebd-aab2-8adb527d327e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c8c8484089bf3aa1f9c88b3b2163a49b445bf8d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 494b3a6e4c05a88e68da34aca34bfbdce2944fbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538566"
 ---
 # <a name="script-organizer-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Организатор скриптов (вкладка «Вычисления», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Организатор скриптов** на вкладке **Вычисления** конструктора кубов, чтобы получить доступ к вычисляемым элементам, именованным наборам и командам скриптов, содержащимся в скрипте куба для определенного куба, а также реорганизовать их.  
@@ -25,13 +24,13 @@ ms.locfileid: "66069921"
 > [!NOTE]  
 >  Эта панель не отображается в представлении формы.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Шаг**  
  Отображает порядок выполнения вычисляемых элементов, именованных наборов и команд скриптов в скрипте куба.  
   
  Щелкните **Вверх** или **Вниз** на панели **Панель инструментов** или в контекстном меню, чтобы изменить порядок исполнения вычислений.  
   
- **Type**  
+ **Тип**  
  Отображает значок, который определяет вычисления как вычисляемый элемент, именованный набор или команду скрипта.  
   
  **Command**  
@@ -51,7 +50,7 @@ ms.locfileid: "66069921"
 |**Вниз**|Выберите, чтобы переместить выбранное вычисление на одну позицию вниз.<br /><br /> Примечание. Этот параметр недоступен, если выделенное вычисление нельзя переместить дальше.|  
 |**Удаление**|Выберите для удаления выбранного вычисления.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Средства вычисления &#40;вкладка «вычисления», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculation-tools-cube-designer-analysis-services-multidimensional-data.md)   

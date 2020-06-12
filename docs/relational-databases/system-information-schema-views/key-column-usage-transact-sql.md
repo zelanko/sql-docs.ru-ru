@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d38e6ae0eaf7ed6015834052067db28993cbcccd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1e9069b8d8503b2229c15c25edd70dcc53acc6a0
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67948615"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669541"
 ---
 # <a name="key_column_usage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "67948615"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Квалификатор ограничения.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей ограничение.<br /><br /> <strong> \* \* Важно \* !</strong> Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей ограничение.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**CONSTRAINT_NAME**|**nvarchar (** 128 **)**|Имя ограничения.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Квалификатор таблицы.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> <strong> \* \* Важно \* !</strong> Не используйте INFORMATION_SCHEMA представления для определения схемы объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Имя схемы, содержащей таблицу.<br /><br /> Важно. не используйте INFORMATION_SCHEMA представления для определения схемы объекта. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA представления представляют только подмножество метаданных объекта. Единственный надежный способ найти схему объекта — направить запрос к представлению каталога sys.objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Имя таблицы.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Имя столбца.|  
 |**ORDINAL_POSITION**|**int**|Порядковая позиция столбца.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. Columns &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   

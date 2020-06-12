@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b7fdf989fc23ea70be7d7863f5d4c6ac0b61d8a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546326"
 ---
 # <a name="using-member-properties-mdx"></a>Использование свойств элементов (многомерные выражения)
   Свойства элементов включают основные сведения о каждом элементе каждого кортежа. К таким основным сведениям относятся имя элемента, родительский уровень, число потомков и т. д. Свойства элемента доступны всем элементам данного уровня. С точки зрения организации свойства элемента рассматриваются как организованные по измерениям данные, хранимые в одном измерении.  
@@ -43,7 +42,7 @@ ms.locfileid: "66074163"
  Как встроенные, так и определяемые пользователем свойства элементов можно получить с помощью `PROPERTIES` ключевого слова или функции [свойств](/sql/mdx/properties-mdx) .  
   
 ## <a name="using-the-properties-keyword"></a>Использование ключевого слова PROPERTIES  
- Ключевое слово `PROPERTIES` указывает свойства элементов, которые будут использоваться для данной оси измерения. `PROPERTIES` Ключевое слово скрыто в `<axis specification>` предложении инструкции многомерных выражений [SELECT](/sql/mdx/mdx-data-manipulation-select) :  
+ Ключевое слово `PROPERTIES` указывает свойства элементов, которые будут использоваться для данной оси измерения. `PROPERTIES`Ключевое слово скрыто в `<axis specification>` предложении инструкции многомерных выражений [SELECT](/sql/mdx/mdx-data-manipulation-select) :  
   
 ```  
 SELECT [<axis_specification>  
@@ -73,7 +72,7 @@ SELECT [<axis_specification>
   
 -   Заданным пользователем внутренним свойствам элемента должно предшествовать имя уровня, на котором они располагаются. Дополнительные сведения об использовании `PROPERTIES` ключевого слова с определяемыми пользователем свойствами элементов см. в разделе [определяемые пользователем свойства элементов &#40;&#41;многомерных выражений ](mdx-member-properties-user-defined-member-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и использование значений свойств (многомерные выражения)](../../creating-and-using-property-values-mdx.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Namespace-функция URI (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию Namespace-URI в XQuery для возврата URI пространства имен указанного QName.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929941"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306063"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Функции с узлами — namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Имя узла, для которого будет получена часть URI-кода пространства имен.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 -   Если аргумент опускается, значением по умолчанию является узел контекста.  
   
@@ -61,7 +62,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Так как указанное имя QName не содержит части URI-кода пространства имен, а только часть локального имени, результатом будет строка нулевой длины.  
   
- Следующий запрос задается для типизированного **XML-** столбца инструкций. Выражение `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`Возвращает URI пространства имен первого <`Location`> дочернего элемента для элемента <`root`>.  
+ Следующий запрос задается для типизированного **XML-** столбца инструкций. Выражение `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` ВОЗВРАЩАЕТ URI пространства имен первого <`Location`> дочернего элемента для `root` элемента <>.  
   
 ```  
 SELECT Instructions.query('  
@@ -77,7 +78,7 @@ WHERE ProductModelID=7
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>Б) Использование функции namespace-uri() без аргумента в предикате  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>Б. Использование функции namespace-uri() без аргумента в предикате  
  Следующий запрос указывается в типизированном столбце xml типа CatalogDescription. Выражение возвращает все узлы элементов, чей URI-код пространства имен является адресом `https://www.adventure-works.com/schemas/OtherFeatures`. Функция Namespace-**URI ()** указана без аргумента и использует контекстный узел.  
   
 ```  
@@ -98,7 +99,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Пространство имен URI в предыдущем запросе можно изменить на адрес `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Затем будут получены все дочерние узлы элемента <`ProductDescription`>, чей URI-адрес пространства имен расширенного имени QName — `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Пространство имен URI в предыдущем запросе можно изменить на адрес `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. Затем будут получены все дочерние узлы элемента <`ProductDescription`>, чей URI-адрес пространства имен расширенного имени QName — `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` .  
   
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существуют следующие ограничения:  

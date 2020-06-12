@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 451afa58-ce03-4ecc-8dd3-9e7e8559b5f1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 290f1e5fe7efb876ab6c24004c7465cf109de0d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96afa94f7c9c20072ae88b09a436d079ce0478ae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702234"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544996"
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Блокировка и снятие блокировки баз данных (XMLA)
   Вы можете блокировать и разблокирование баз данных с помощью, соответственно, команд [Lock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) и [Unlock](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla) в XML для аналитики (XMLA). Другие команды XML для аналитики также при необходимости автоматически блокируют и снимают блокировку объектов в процессе выполнения команды. Можно явно заблокировать или разблокировать базу данных для выполнения нескольких команд в одной транзакции, например [пакетной](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/batch-element-xmla) командой, и предотвратить фиксацию транзакции записи в базе данных другими приложениями.  
   
 ## <a name="locking-databases"></a>Блокировка баз данных  
- Команда `Lock` блокирует объект для совместного или монопольного использования в контексте текущей активной транзакции. Блокировка объекта не позволяет фиксировать транзакции, пока она не будет снята. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа блокировок: совмещаемые и монопольные [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] блокировки. Дополнительные сведения о типах блокировок [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поддерживаемых, см. в статье [элемент Mode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/mode-element-xmla).  
+ Команда `Lock` блокирует объект для совместного или монопольного использования в контексте текущей активной транзакции. Блокировка объекта не позволяет фиксировать транзакции, пока она не будет снята. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает два типа блокировок: совмещаемые и монопольные блокировки. Дополнительные сведения о типах блокировок [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , поддерживаемых, см. в статье [элемент Mode &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/mode-element-xmla).  
   
  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяют блокировать только базы данных. Команда [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) должен содержать ссылку на базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если элемент `Object` не указан или если элемент `Object` ссылается на объект, отличающийся от базы данных, возникает ошибка.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62702234"
   
  Все блокировки удерживаются в контексте текущей транзакции. После фиксации или отката текущей транзакции все блокировки, определенные в рамках транзакции, автоматически снимаются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Элемент Lock &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
  [Разблокировка элемента &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/lock-element-xmla)   
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  

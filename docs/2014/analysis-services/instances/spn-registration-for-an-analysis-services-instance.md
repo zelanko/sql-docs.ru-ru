@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 984ee1c0bbceb236da6bf00fd220a15f601495ae
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079572"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543756"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
   Имя участника-службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, если протокол Kerberos используется для взаимной проверки подлинности идентификаторов клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  
@@ -29,12 +28,12 @@ ms.locfileid: "66079572"
  Регистрация имени участника-службы не требуется, если служба запускается от имени предопределенной учетной записи управляемой службы, созданной администратором домена. Обратите внимание, что в зависимости от функционального уровня домена для регистрации имени участника-службы может потребоваться разрешение администратора домена.  
   
 > [!TIP]  
->  **Configuration Manager Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это диагностическое средство, помогающее устранять неполадки, связанные с подключением Kerberos, к. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
 > [!TIP]  
->  **Configuration Manager Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это диагностическое средство, помогающее устранять неполадки, связанные с подключением Kerberos, к. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
  [Когда требуется регистрация имени участника-службы](#bkmk_scnearios)  
   
@@ -76,10 +75,10 @@ ms.locfileid: "66079572"
 |Имя узла|Идентифицирует компьютер, на котором выполняется служба. Это может быть полное доменное имя или имя NetBIOS. Регистрация имени участника-службы необходима в обоих случаях.<br /><br /> При регистрации имени участника-службы для имени NetBIOS сервера обязательно используйте команду `SetupSPN -S` для проверки повторяющихся регистраций. Обратите внимание, что в пределах леса не гарантируется уникальность имен NetBIOS, а наличие дублированных регистраций имени участника-службы приведет к сбою подключения.<br /><br /> Для сбалансированных по нагрузке кластеров служб Analysis Services имя узла должно быть виртуальным именем, назначенным кластеру.<br /><br /> Никогда не создавайте имя участника-службы (SPN) с помощью IP-адреса. Протокол Kerberos использует возможности домена по разрешению DNS. Задание IP-адреса приводит к неиспользованию этих возможностей.|  
 |Номер порта|Хотя номер порта и является частью синтаксиса имени участника-службы, не указывайте номер порта при регистрации имени участника-службы Analysis Services. Символ двоеточия ( : ), который, как правило, в стандартном синтаксисе имени участника-службы используется для указания номера порта, в службах Analysis Services применяется для указания имени экземпляра. Для экземпляров служб Analysis Services применяется порт по умолчанию (порт TCP 2383) или порт, назначенный службой обозревателя SQL Server (порт TCP 2382).|  
 |Имя экземпляра|Analysis Services — службы, которые можно установить несколько раз на одном и том же компьютере. Каждый экземпляр определяется посредством его имени.<br /><br /> Перед именем экземпляра добавляется символ двоеточия ( : ). Например, если есть главный компьютер с именем SRV01 и именованный экземпляр SSAS-Tabular, то имя участника-службы выглядит как SRV01:SSAS-Tabular.<br /><br /> Обратите внимание, что синтаксис для указания именованного экземпляра служб Analysis Services отличается от того, что используется другими экземплярами SQL Server. Другие службы используют обратную косую черту (\) для добавления имени экземпляра в имя участника-службы.|  
-|Service-account|Это стартовая учетная запись службы Windows **MSSQLServerOLAPService** . Это может быть учетная запись пользователя домена Windows, виртуальная учетная запись, управляемая учетная запись службы (MSA) или встроенная учетная запись, например идентификатор безопасности службы, NetworkService или LocalSystem. Учетную запись пользователя домена Windows можно отформатировать как user@domainдомен \ пользователь или.|  
+|Service-account|Это стартовая учетная запись службы Windows **MSSQLServerOLAPService** . Это может быть учетная запись пользователя домена Windows, виртуальная учетная запись, управляемая учетная запись службы (MSA) или встроенная учетная запись, например идентификатор безопасности службы, NetworkService или LocalSystem. Учетную запись пользователя домена Windows можно отформатировать как домен \ пользователь или user@domain .|  
   
 ##  <a name="spn-registration-for-a-virtual-account"></a><a name="bkmk_virtual"></a>Регистрация имени участника-службы для виртуальной учетной записи  
- Виртуальные учетные записи для служб SQL Server являются типом записи по умолчанию. Виртуальная учетная запись — **NT Service\MSOLAPService** для экземпляра по умолчанию и имя **NT Service\MSOLAP $**\<instance-name> для именованного экземпляра.  
+ Виртуальные учетные записи для служб SQL Server являются типом записи по умолчанию. Виртуальная учетная запись — **NT Service\MSOLAPService** для экземпляра по умолчанию и **NT Service\MSOLAP $** \<instance-name> для именованного экземпляра.  
   
  Как следует из имен, эти учетные записи не присутствуют в Active Directory. Виртуальная учетная запись существует только на локальном компьютере. При подключении ко внешним службам, приложениям и устройствам подключение осуществляется от имени учетной записи локальной машины. Поэтому регистрация имени участника-службы для служб Analysis Services, выполняющихся от имени виртуальной учетной записи, фактически является регистрацией SPN для учетной записи машины.  
   
@@ -94,9 +93,9 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
 > [!NOTE]  
 >  Помните, что нужно добавить две регистрации имени участника-службы: одно для имени NetBIOS, а другое для полного доменного имени хост-компьютера (узла). Разные клиентские приложения используют разные соглашения об именовании узлов при подключении к службам Analysis Services. Наличие двух регистраций имени участника-службы гарантирует учет обеих версий имени узла.  
   
- **Пример синтаксиса для именованного экземпляра, работающего как\<NT Service\MSOLAP $ instance-name>**  
+ **Пример синтаксиса для именованного экземпляра, запущенного как NT Service\MSOLAP$\<instance-name>**  
   
- Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись компьютера, указанная для имени субъекта-службы, а не виртуальная учетная запись **NT Service\MSOLAP $**\<имя экземпляра>.  
+ Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись компьютера, указанная для имени субъекта-службы, а не для виртуальной учетной записи **NT Service\MSOLAP $** \<instance-name> .  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -116,7 +115,7 @@ Setspn -s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service
 ```  
   
 > [!TIP]  
->  Проверьте, было ли создано имя участника-службы для сервера Analysis Services, запустив командлет `Setspn -L <domain account>` или `Setspn -L <machinename>`в зависимости от способа регистрации имени участника-службы. В списке должно отобразиться MSOLAPSVC. 3\</hostname>.  
+>  Проверьте, было ли создано имя участника-службы для сервера Analysis Services, запустив командлет `Setspn -L <domain account>` или `Setspn -L <machinename>`в зависимости от способа регистрации имени участника-службы. Вы должны увидеть MSOLAPSVC. 3/ \<hostname> в списке.  
   
 ##  <a name="spn-registration-for-a-built-in-account"></a><a name="bkmk_builtin"></a>Регистрация имени участника-службы для встроенной учетной записи  
  Хотя подобный метод не рекомендуется, предыдущие установки служб Analysis Service иногда настраиваются для запуска от имени встроенной учетной записи, такой как Network Service, Local Service или Local System.  
@@ -141,7 +140,7 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="spn-registration-for-an-ssas-cluster"></a><a name="bkmk_spnCluster"></a>Регистрация имени участника-службы для кластера SSAS  
- Для кластеров отработки отказа служб Analysis Services имя узла должно быть виртуальным именем, назначенным кластеру. Это сетевое имя SQL Server, указанное во время установки SQL Server при установке служб Analysis Services на основе существующих WSFC. Это имя можно найти в Active Directory. Его также можно найти на вкладке**ресурсы** **Диспетчер отказоустойчивости кластеров** | **роли** | . Имя сервера на вкладке ресурсы должно использоваться в качестве "виртуального имени" в команде SPN.  
+ Для кластеров отработки отказа служб Analysis Services имя узла должно быть виртуальным именем, назначенным кластеру. Это сетевое имя SQL Server, указанное во время установки SQL Server при установке служб Analysis Services на основе существующих WSFC. Это имя можно найти в Active Directory. Его также можно найти на **Failover Cluster Manager**  |  **Role**  |  вкладке**ресурсы** Диспетчер отказоустойчивости кластеров роли. Имя сервера на вкладке ресурсы должно использоваться в качестве "виртуального имени" в команде SPN.  
   
  **Синтаксис имени участника-службы для кластера служб Analysis Services**  
   
@@ -165,11 +164,11 @@ Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Экземпляр служб Analysis Services может прослушивать только один порт. Использование нескольких портов не поддерживается. Дополнительные сведения о настройке порта см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка подлинности и делегирование удостоверений бизнес-аналитики Майкрософт](https://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](https://go.microsoft.com/fwlink/?LinkId=299283)   
  [Настройка SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services для использования проверки подлинности Kerberos](https://support.microsoft.com/kb/917409)   
- [Синтаксис имен субъектов-служб (SPN) SetSPN (SetSPN. exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Синтаксис имен субъектов-служб (SPN) SetSPN (Setspn.exe)](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [Какое имя субъекта-службы я использую и как оно получает?](https://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](https://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Пошаговое руководств по учетным записям служб](https://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   

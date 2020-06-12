@@ -3,19 +3,19 @@ title: sys. pdw_health_alerts (Transact-SQL) | Документация Майк
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
-ms.technology: system-objects
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c47bcc342bf8a052aed93649ca0ad8475d937608
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68127543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627453"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68127543"
 |alert_name|**nvarchar(255)**|Имя оповещения.|NOT NULL|  
 |state|**nvarchar(32)**|Состояние оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> Рабочего<br /><br /> "Неработающий"<br /><br /> Пониженной функциональности<br /><br /> Ошибок|  
 |severity|**nvarchar(32)**|Серьезность оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> Извещен<br /><br /> !<br /><br /> План|  
-|type|**nvarchar(32)**|Тип оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> StatusChange — состояние устройства изменилось.<br /><br /> Threshold — значение превысило пороговое значение.|  
+|тип|**nvarchar(32)**|Тип оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> StatusChange — состояние устройства изменилось.<br /><br /> Threshold — значение превысило пороговое значение.|  
 |description|**nvarchar(4000)**|Описание оповещения.|NOT NULL|  
 |condition|**nvarchar(255)**|Используется, если Type = threshold. Определяет, как вычисляется пороговое значение оповещения.|NULL|  
 |status|**nvarchar(32)**|Состояние оповещения|NULL|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 847e9da07f8c255af8041071c63254b241490761
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d14df51c6ec37fb96520af7acf207227ae4ea5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546536"
 ---
 # <a name="calculation-context"></a>Контекст вычисления
   Контекстом вычисления является известное подпространство куба, где оценивается выражение, а все координаты либо известны, либо могут получены с помощью выражения.  
@@ -69,7 +68,7 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  Чтобы увеличить производительность запроса, следует удалить элементы и кортежи как можно раньше в процессе разрешений. Таким образом уменьшается время вычисления сложного запроса на конечном наборе элементов, поскольку запрос обрабатывает минимально возможное количество ячеек.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение контекста куба в запросе &#40;многомерных выражений&#41;](establishing-cube-context-in-a-query-mdx.md)   
  [Основные принципы запросов многомерных выражений &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Основные понятия многомерных выражений (службы Analysis Services)](../key-concepts-in-mdx-analysis-services.md)  

@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887729"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670035"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;запрос&gt; источника данных — OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;запрос источника данных &gt; — OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Заменяет запрос источника данных запросом существующего источника данных. Инструкция INSERT, выбор из ПРОГНОЗИРУЕМого объединения и выбор из выражений ЕСТЕСТВЕННОго ПРОГНОЗИРУЮЩЕГО подключения поддерживают **OPENQUERY**.  
@@ -34,7 +34,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  *синтаксис запроса*  
  Синтаксис запроса, возвращающего набор строк.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  **OPENQUERY** обеспечивает более безопасный способ доступа к внешним данным путем поддержки разрешений источника данных. Так как строка соединения хранится в источнике данных, администраторы могут использовать свойства источника данных для управления доступом к данным. Дополнительные сведения об источниках данных см. в разделе [Поддерживаемые источники данных &#40;SSAS — многомерные&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
  Список источников данных, доступных на сервере, можно получить, выполнив запрос к набору строк схемы **MDSCHEMA_INPUT_DATASOURCES** . Дополнительные сведения об использовании **MDSCHEMA_INPUT_DATASOURCES**см. в разделе [набор строк MDSCHEMA_INPUT_DATASOURCES](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  

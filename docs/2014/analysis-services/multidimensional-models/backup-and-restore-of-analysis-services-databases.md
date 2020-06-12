@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 322b755357da597d3bdcb41e4a83685075f4d991
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077030"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544646"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Создание и восстановление резервных копий баз данных служб Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предусмотрено резервное копирование и восстановление базы данных и ее объектов на определенный момент времени. Резервное копирование и восстановление подходит для переноса баз данных на модернизированные серверы, между серверами или для развертывания базы данных на рабочем сервере. Если есть ценные данные, но пока нет плана резервного копирования, то необходимо как можно скорее разработать и реализовать такой план на случай последующего восстановления данных.  
@@ -123,7 +122,7 @@ ms.locfileid: "66077030"
   
  Дополнительные сведения о восстановлении базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Параметры восстановления](restore-options.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование, восстановление и синхронизация баз данных &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
  [Analysis Services PowerShell](../analysis-services-powershell.md)  
   

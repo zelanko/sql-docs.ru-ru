@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d033e74c-f8ec-46a3-8dc7-1c1eb8574c23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d553f0fbb7e8c4188ff8fec2ac292213547e43b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb2a149c9e96af29b32f41153b340c2ab653c968
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075991"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547162"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Просмотр данных измерения в конструкторе измерений
   Можно просмотреть данные в измерении с использованием представления **Браузер** конструктора измерений, доступ к которому можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "66075991"
     > [!NOTE]  
     >  Необходимо иметь в измерении преобразование, определенное для выбранного языка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения об измерениях &#40;Analysis Services многомерных данных&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](dimensions-in-multidimensional-models.md)  
   

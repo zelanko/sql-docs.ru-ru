@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aedd88a380ad8790d5492524a24028c6df03db3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086540"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525920"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Диалоговое окно «Параметры просмотра данных» (службы Analysis Services — интеллектуальный анализ данных)
   Используйте диалоговое окно **Параметры просмотра данных** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для установки параметров отбора и построения графиков для диалогового окна **Просмотр данных** . Чтобы отобразить диалоговое окно **Параметры просмотра данных** , щелкните **Параметры выборки** в диалоговом окне **Просмотр данных** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  

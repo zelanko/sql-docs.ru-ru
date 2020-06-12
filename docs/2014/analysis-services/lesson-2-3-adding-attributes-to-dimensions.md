@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c0411e2e19fbec88ab9c1bae8536d96725554f5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079032"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543496"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Добавление атрибутов к измерениям
   Теперь после определения измерений можно наполнить их атрибутами, которые представляют все элементы данных в измерении. Атрибуты обычно основаны на полях из представления источников данных. При добавлении атрибутов в измерение можно включить поля из любой таблицы в представлении источника данных.  
@@ -56,7 +55,7 @@ ms.locfileid: "66079032"
   
     -   **NumberCarsOwned**  
   
-    -   **Номер телефона**  
+    -   **Телефон**  
   
     -   **DateFirstPurchase**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66079032"
   
     -   **EnglishCountryRegionName**  
   
-    -   **PostalCode**  
+    -   **Почтовый**  
   
 6.  В меню Файл выберите команду **Сохранить все**.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66079032"
   
     -   **SizeRange**  
   
-    -   **Вес**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079032"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Просмотр свойств куба и измерения](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по свойствам атрибута измерения](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

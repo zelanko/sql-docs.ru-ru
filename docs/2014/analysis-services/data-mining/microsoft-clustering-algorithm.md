@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d6edc91257b31703573923ae8d7e63f2e1ccf1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc1a06de710276d5f8b60a44d0f1259026a9a973
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174718"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522138"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Алгоритм кластеризации (Майкрософт)
   Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм сегментации, предоставляемый службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Алгоритм использует итерационные методы для группировки вариантов в наборы данных в кластерах, содержащих подобные характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.
@@ -73,7 +72,7 @@ ms.locfileid: "78174718"
 
  Дополнительные сведения о создании запросов к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](data-mining-queries.md). Примеры использования запросов с моделью кластеризации см. в разделе [Примеры запросов к модели кластеризации](clustering-model-query-examples.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 -   Поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.
 
@@ -81,7 +80,7 @@ ms.locfileid: "78174718"
 
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md) содержимое модели интеллектуального анализа с [алгоритмом кластеризации Microsoft](microsoft-clustering-algorithm-technical-reference.md) [для моделей кластеризации &#40;Analysis Services — примеры запросов интеллектуального анализа данных&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md) [модели кластеризации](clustering-model-query-examples.md)
 
 

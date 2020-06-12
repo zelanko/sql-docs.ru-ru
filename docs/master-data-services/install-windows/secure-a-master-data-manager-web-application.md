@@ -5,17 +5,17 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: install
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 0ac70d45886904032e1f61c01c35ee8542351029
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: c87fd72a7257615ab83a7e9845fdd4c6a80d70f7
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606516"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83731591"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
 
@@ -49,7 +49,7 @@ ms.locfileid: "83606516"
   
 7.  Нажмите кнопку **ОК**.  
   
-8.  Необязательный элемент. Чтобы удалить из списка протокол HTTP, разрешив доступ к сайту только по протоколу HTTPS, щелкните строку **http**. Нажмите кнопку **Удалить** и в диалоговом окне подтверждения выберите **Да**.  
+8.  Необязательный параметр. Чтобы удалить из списка протокол HTTP, разрешив доступ к сайту только по протоколу HTTPS, щелкните строку **http**. Нажмите кнопку **Удалить** и в диалоговом окне подтверждения выберите **Да**.  
   
     > [!IMPORTANT]  
     >  Необходимо изменить настройки basicHttp и wsHttpBinding после удаления HTTP.  
@@ -62,10 +62,10 @@ ms.locfileid: "83606516"
 
 12. Измените `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` на `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`, чтобы предотвратить проблемы, которые могут появиться в клиенте Silverlight.
 
-13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
+13. Сохраните и закройте файл. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d35bd61dcc59eca8bcb920ed99f2e791631047c7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074048"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546286"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Создание именованных наборов с областью действия сеанса (многомерные выражения)
   Для создания именованного набора, доступного в сеансе многомерных выражений, используется инструкция [CREATE SET](/sql/mdx/mdx-data-definition-create-set) . Именованный набор, созданный с помощью инструкции CREATE SET, удаляется только при закрытии сеанса многомерных выражений.  
@@ -52,7 +51,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание именованных наборов с областью действия запроса (многомерные выражения)](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

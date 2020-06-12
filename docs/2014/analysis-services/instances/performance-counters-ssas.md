@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079711"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543836"
 ---
 # <a name="performance-counters-ssas"></a>Счетчики производительности [службы SSAS]
   С помощью системного монитора можно контролировать производительность экземпляра служб Microsoft SQL Server Analysis Services (SSAS) посредством счетчиков производительности.  
@@ -33,10 +32,10 @@ ms.locfileid: "66079711"
 |Группа|Описание|  
 |-----------|-----------------|  
 |[Кэш](#bkmk_Cache)|Статистические данные, относящиеся к кэшу агрегатов служб Analysis Services.|  
-|[Соединен](#bkmk_Connection)|Статистические данные, относящиеся к соединениям служб Microsoft Analysis Services.|  
+|[Соединение](#bkmk_Connection)|Статистические данные, относящиеся к соединениям служб Microsoft Analysis Services.|  
 |[Прогноз интеллектуального анализа данных](#bkmk_DataMiningPrediction)|Статистические данные, относящиеся к обработке модели интеллектуального анализа данных.|  
 |[Обработка модели интеллектуального анализа данных](#bkmk_DataMiningModelProcessing)|Статистические данные, относящиеся к созданию прогнозов на основании моделей интеллектуального анализа данных.|  
-|[Блокировки](#bkmk_Locks)|Статистические данные, относящиеся к внутренним блокировкам сервера служб Microsoft Analysis Services.|  
+|[Намерен](#bkmk_Locks)|Статистические данные, относящиеся к внутренним блокировкам сервера служб Microsoft Analysis Services.|  
 |[Многомерное выражение](#bkmk_MDX)|Статистические данные, относящиеся к вычислениям многомерных выражений служб Microsoft Analysis Services.|  
 |[Память](#bkmk_Memory)|Статистические данные, относящиеся к внутренней памяти сервера служб Microsoft Analysis Services.|  
 |[Упреждающее кэширование](#bkmk_ProactiveCaching)|Статистические данные, относящиеся к упреждающему кэшированию служб Microsoft Analysis Services.|  
@@ -318,7 +317,7 @@ ms.locfileid: "66079711"
 |Поисков по агрегатам/с|Интенсивность поисков по агрегатам.|  
 |Попаданий в агрегатах/с|Интенсивность попаданий в агрегатах.|  
   
-###  <a name="threads"></a><a name="bkmk_Threads"></a>Многопоточно  
+###  <a name="threads"></a><a name="bkmk_Threads"></a> Потоки  
  Статистические данные, относящиеся к потокам служб Microsoft Analysis Services.  
   
 |Счетчик|Описание|  

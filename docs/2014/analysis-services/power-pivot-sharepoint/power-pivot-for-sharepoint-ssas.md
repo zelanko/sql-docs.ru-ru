@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4c393d3-4856-47ac-ab5f-15da2f240d1d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34a4cc6b16e22a20e0e8be3ded12b0465ba46eab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683589"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535136"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot для SharePoint (SSAS)
   PowerPivot для SharePoint — это сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], исполняемый в режиме интеграции с SharePoint. PowerPivot для SharePoint предусматривает размещение данных PowerPivot на сервере в ферме SharePoint. Данные PowerPivot представляют собой модель аналитических данных, которая создается в одной из следующих программ:  
@@ -24,12 +23,12 @@ ms.locfileid: "74683589"
   
 -   Excel 2013  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013 | [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2010  
   
  Для размещения этих данных на сервере требуются SharePoint, службы Excel и установка компонента PowerPivot для SharePoint. Данные загружаются в экземпляры PowerPivot для SharePoint, где их можно обновлять по расписанию с помощью функции обновления данных PowerPivot, предоставлямой сервером для книг Excel 2010 или службами Excel в SharePoint 2013 для книг Excel 2013.  
   
 ## <a name="powerpivot-for-sharepoint-2013"></a>PowerPivot для SharePoint 2013  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] поддерживает [!INCLUDE[msCoName](../../includes/msconame-md.md)] использование служб Excel SharePoint 2013 книги Excel, содержащие модели данных и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчеты Power View.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]Поддержка [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint 2013. использование в службах Excel книг Excel, содержащих модели данных и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчеты Power View.  
   
  Службы Excel в SharePoint 2013 включают функции модели данных для обеспечения взаимодействия с книгой PowerPivot в браузере. Не обязательно развертывать отдельную надстройку PowerPivot для SharePoint 2013 в ферме. Достаточно установить сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме SharePoint и зарегистрировать сервер в параметрах **Модель данных** служб Excel.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "74683589"
   
  Завершает развертывание экземпляр сервера служб Analysis Service в режиме интеграции с SharePoint. Он загружает и выгружает данные и управляет запросами к ним. Он также обрабатывает данные, если для книги настроено обновление данных PowerPivot.  Каждый экземпляр тесно связан с локальной системной службой PowerPivot, которая входит в состав той же установки.  
   
-##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>В этом разделе  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a> в этом разделе  
  [Настройка и администрирование сервера PowerPivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Настройка PowerPivot с помощью Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  

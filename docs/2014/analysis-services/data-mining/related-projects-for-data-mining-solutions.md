@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082990"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520610"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Связанные проекты для решений интеллектуального анализа данных
   Для решения интеллектуального анализа данных требуется, как минимум, проект интеллектуального анализа данных, определяющий источники данных, представления источников данных, структуры и модели интеллектуального анализа данных. Однако, если модели интеллектуального анализа данных используются для каждодневного принятия решений, важно, чтобы интеллектуальный анализ данных интегрировался с другой частью решения для прогнозирующего анализа, включая следующие процессы и компоненты.  
@@ -200,7 +199,7 @@ ms.locfileid: "66082990"
   
 -   Не все полнотекстовые языки поддерживают семантическое индексирование. Список поддерживаемых языков см. в разделе [sys.fulltext_semantic_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Решения многомерной модели &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Решения табличных моделей (табличные службы SSAS)](../tabular-model-solutions-ssas-tabular.md)  
   

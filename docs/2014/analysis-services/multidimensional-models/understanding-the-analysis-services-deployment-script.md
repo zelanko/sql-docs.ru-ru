@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a63ebee9-9848-48f1-82ad-64ecf2e47019
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9436d33cdc99cf979509a40f06ceea15c0cd765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25df0b377918316e54a14787d7492a681c81778d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072658"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536016"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Основные сведения о скрипте развертывания служб Analysis Services
   Скрипт развертывания XML для аналитики, сформированный мастером развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , состоит из двух частей.  
@@ -34,7 +33,7 @@ ms.locfileid: "66072658"
 > [!IMPORTANT]  
 >  Мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывает объекты только в одну базу данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Он не осуществляет развертывание никаких объектов или данных уровня сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск мастера развертывания Analysis Services](running-the-analysis-services-deployment-wizard.md)   
  [Основные сведения о входных файлах, применяемых для создания скрипта развертывания](deployment-script-files-input-used-to-create-deployment-script.md)  
   

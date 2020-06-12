@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7501cf316773ffc2aa8cc13cadb27cf16b50df90
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082010"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528750"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Определение временных периодов (источник данных) (мастер измерений)
   Страница **Определение временных периодов** используется для определения атрибутов, представляющих периоды времени в измерении времени, которое имеет столбцы в таблице, заданной на странице **Выбор типа измерения** .  
@@ -25,7 +24,7 @@ ms.locfileid: "66082010"
 > [!NOTE]  
 >  Эта страница отображается только в том случае, если выбран параметр **Построение измерения с использованием источника данных** на странице **Определение измерения** и **Измерение времени** на странице **Выбор типа измерения** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя свойства времени**  
  Выводит типы атрибутов, которые используются для указания периодов времени в измерении времени. Дополнительные сведения о типах атрибутов см. в разделе [Элемент Type (DimensionAttribute) (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66082010"
   
  Чтобы изменить этот столбец, щелкните его, а затем выберите в списке другой столбец.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

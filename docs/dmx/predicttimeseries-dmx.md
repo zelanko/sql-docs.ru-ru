@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893880"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666694"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Ссылка на столбец таблицы>, * \< * * \<ссылки на скалярный столбец>*  
+ * \< ссылка на столбец таблицы>, ссылки на * * \< скалярный столбец>*  
  Указывает имя прогнозируемого столбца. Столбец может содержать скалярные или табличные данные.  
   
  *n*  
@@ -67,8 +67,8 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \< *Табличное выражение*>.  
   
-## <a name="remarks"></a>Remarks  
- Алгоритм [!INCLUDE[msCoName](../includes/msconame-md.md)] временных рядов не поддерживает прогнозирование с предысторией при использовании инструкции PREDICTION JOIN для добавления новых данных.  
+## <a name="remarks"></a>Комментарии  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]Алгоритм временных рядов не поддерживает прогнозирование с предысторией при использовании инструкции PREDICTION JOIN для добавления новых данных.  
   
  В инструкции PREDICTION JOIN процесс прогнозирования всегда начинается на временном шаге сразу после окончания первоначальной обучающей последовательности. Так происходит даже при добавлении новых данных. Таким образом, параметр *n* и значения параметра *n-start* должны быть целым числом больше 0.  
   
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  Модель может давать разные результаты; результаты приведенных ниже примеров призваны лишь продемонстрировать формат результатов.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Пример 1. прогнозирование количества временных срезов  
- В следующем примере функция **PredictTimeSeries** используется для возврата прогноза на следующие три шага и позволяет ограничивать результаты для ряда M200 в странах Европы и Тихоокеанского региона. В этой конкретной модели прогнозируемым атрибутом является Quantity, поэтому необходимо использовать `[Quantity]` в качестве первого аргумента функции PredictTimeSeries.  
+ В следующем примере функция **PredictTimeSeries** используется для возврата прогноза на следующие три шага и позволяет ограничивать результаты для ряда M200 в странах Европы и Тихоокеанского региона. В этой конкретной модели прогнозируемым атрибутом является Quantity, поэтому необходимо использовать в `[Quantity]` качестве первого аргумента функции PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Пример 4. Возвращение статистики в прогнозе временных рядов  
  Функция **PredictTimeSeries** не поддерживает *INCLUDE_STATISTICS* в качестве параметра. Однако вернуть статистику прогнозов для запроса по временным рядам можно с помощью приведенного ниже запроса. Кроме того, этот подход можно использовать при работе с моделями, в которых есть столбцы вложенных таблиц.  
   
- В этой конкретной модели прогнозируемым атрибутом является Quantity, поэтому необходимо использовать `[Quantity]` в качестве первого аргумента функции PredictTimeSeries. Если в модели используется другой прогнозируемый атрибут, можно подставить другое имя столбца.  
+ В этой конкретной модели прогнозируемым атрибутом является Quantity, поэтому необходимо использовать в `[Quantity]` качестве первого аргумента функции PredictTimeSeries. Если в модели используется другой прогнозируемый атрибут, можно подставить другое имя столбца.  
   
 ```  
 SELECT FLATTENED [Model Region],  

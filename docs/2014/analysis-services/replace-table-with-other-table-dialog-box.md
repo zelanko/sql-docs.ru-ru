@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 7ca304bf-a01f-43db-bbbc-0572976425b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ab26f596a669a5a0d13b6bb0c283a55851bd58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac74a4147541837e642c9d3ab9637555ef16fb0d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070269"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539300"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Диалоговое окно «Замена таблицы другой таблицей»
   Используйте диалоговое окно **Замена таблицы другой таблицей** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для замены существующей таблицы в представлении источника данных на таблицу базового источника данных, еще не включенную в представление источника данных. Диалоговое окно **Замена таблицы другой таблицей** отображается после щелчка правой кнопкой мыши по имени таблицы на панели **Диаграмма** или **Таблицы** окна **Конструктор представлений источников данных** и выбора пункта **Другой таблицей** в меню **Заменить таблицу**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Источник данных**  
  Позволяет выбрать источник данных, откуда следует извлечь таблицу.  
   
- **Grid**  
+ **Сетка**  
  Служит для отображения объектов и их типов, доступных в выбранном источнике данных и еще не включенных в представление источника данных.  
   
  **Filter**  
@@ -37,7 +36,7 @@ ms.locfileid: "66070269"
  **Show system objects**  
  Выберите для отображения системных объектов выбранного источника данных в поле **Сетка**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   

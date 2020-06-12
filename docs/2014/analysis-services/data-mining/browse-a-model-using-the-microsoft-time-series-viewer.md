@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 069199c648b883f85dcddb2538efc154c1ee7ebf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085981"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525282"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Просмотр модели с помощью средства просмотра временных рядов (Майкрософт)
-  Средство [!INCLUDE[msCoName](../../includes/msconame-md.md)] просмотра временных рядов в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма [!INCLUDE[msCoName](../../includes/msconame-md.md)] временных рядов. Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Средство просмотра временных рядов в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма временных рядов. Алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой алгоритм регрессии, который создает модели интеллектуального анализа данных для прогнозирования столбцов с непрерывными данными, таких, как данные о продажах продукта, в сценарии прогнозирования. Эти модели временных рядов могут включать информацию, основанную на других алгоритмах:  
   
 -   Алгоритм ARTxp, оптимизированный для краткосрочного прогнозирования.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66085981"
   
 -   [Моделировать](#BKMK_Tree)  
   
--   [Диаграммы](#BKMK_Charts)  
+-   [Создание графиков](#BKMK_Charts)  
   
  **Примечание** Информация, отображаемая для содержимого модели и к условным обозначениям интеллектуального анализа данных, зависит от используемого в модели алгоритма. Тем не менее, вкладки **Модель** и **Диаграммы** остаются одинаковыми, независимо от применяемого сочетания алгоритмов.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66085981"
   
  [К началу](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Алгоритм временных рядов (Майкрософт)](microsoft-time-series-algorithm.md)   
  [Примеры запросов модели временных рядов](time-series-model-query-examples.md)   

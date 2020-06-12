@@ -1,5 +1,6 @@
 ---
 title: Миграция баз данных Sybase ASE в SQL Server в базе данных SQL Azure | Документация Майкрософт
+description: Используйте этот рекомендуемый процесс для переноса адаптивных серверных баз данных SAP в SQL Server или базу данных SQL Azure с помощью Помощник по миграции SQL Server (SSMA).
 ms.custom: ''
 ms.date: 11/30/2017
 ms.prod: sql
@@ -9,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: ed7952d4-8331-44d7-bccf-3440e17238b2
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c3735e03e3196f899ab33ca152364244e3331ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a9bcca5d23fe147394a350ff8c640680ec674675
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028848"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292821"
 ---
 # <a name="migrating-sap-ase-databases-to-sql-server---azure-sql-database-sybasetosql"></a>Миграция баз данных SAP ASE в SQL Server — база данных SQL Azure (SybaseToSQL)
-Помощник по миграции SQL Server (SSMA) для SAP адаптивного сервера Enterprise (ASE) — это Комплексная среда, которая помогает быстро перенести базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SAP ASE в базу данных SQL Azure или. С помощью SSMA для SAP ASE можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в базу данных SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее.  
+Помощник по миграции SQL Server (SSMA) для SAP адаптивного сервера Enterprise (ASE) — это Комплексная среда, которая помогает быстро перенести базы данных SAP ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или. С помощью SSMA для SAP ASE можно просматривать объекты и данные базы данных, оценивать базы данных для миграции, переносить объекты базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure, а затем переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных SQL Azure или из нее.  
   
 ## <a name="recommended-migration-process"></a>Рекомендуемый процесс миграции  
-Чтобы успешно перенести объекты и данные из баз данных SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в или базу данных SQL Azure, используйте следующую процедуру.  
+Чтобы успешно перенести объекты и данные из баз данных SAP ASE в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или базу данных SQL Azure, используйте следующую процедуру.  
   
 1.  [Создайте новый проект SSMA](working-with-ssma-projects-sybasetosql.md).  
   
@@ -44,7 +45,7 @@ ms.locfileid: "68028848"
   
 9. При необходимости обновите приложения базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>Дополнительно  
 [Установка SSMA для SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
 [Начало работы с SSMA для SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
   

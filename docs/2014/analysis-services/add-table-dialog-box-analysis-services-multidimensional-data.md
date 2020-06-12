@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: b93f841f-0164-4e37-bd08-085aa179ea1f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b429f115eff1692495e1ded58fb6afadc6e5ee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c038e13706c44891bae021aaf35d04a10b715a97
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062804"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528250"
 ---
 # <a name="add-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Добавление таблицы» (службы Analysis Services — многомерные данные)
   Диалоговое окно **Добавление таблицы** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] используется для добавления таблицы при создании запроса в диалоговом окне **Создание именованного запроса** , **Создание опрашивающего запроса** или **Создание обрабатывающего запроса** . Диалоговое окно **Добавление таблицы** может быть выведено в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] нажатием значка **Добавление таблицы** в **панели инструментов** диалогового окна **Создание именованного запроса** , диалогового окна **Создание опрашивающего запроса** или **Создание обрабатывающего запроса** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
@@ -33,9 +32,9 @@ ms.locfileid: "66062804"
 |**Функции**|Вкладка **Функции** используется для отображения и выбора добавляемой функции или хранимой процедуры.|  
 |**Синонимы**|Вкладка **Синонимы** используется для отображения и выбора добавляемого синонима.|  
 |**Обновление**|Нажмите для обновления всех вкладок диалогового окна.|  
-|**Добавление**|Нажмите для добавления элемента, выбранного в настоящее время. **Примечание.**  Этот параметр доступен, только если выбран элемент.|  
+|**Добавить**|Нажмите для добавления элемента, выбранного в настоящее время. **Примечание.**  Этот параметр доступен, только если выбран элемент.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Диалоговое окно «Создание или изменение именованного запроса» &#40;Analysis Services многомерных данных&#41;](create-or-edit-named-query-dialog-box-analysis-services-multidimensional-data.md)   
  [Диалоговое окно «Создание опрашивающего запроса» &#40;Analysis Services многомерных данных&#41;](create-polling-query-dialog-box-analysis-services-multidimensional-data.md)   

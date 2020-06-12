@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 099f97ac1195f58ae9bf9dbc7c6b0671e6aada2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088150"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527560"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Контрольный список для подготовки к интеллектуальному анализу данных
   Хотя надстройки интеллектуального анализа данных упрощают создание и эксперименты с моделями, когда требуется получить повторяемые результаты, на основании которых можно действовать, необходимо выделить достаточный срок для формулировки базовых требований бизнеса и получения и подготовки данных. В этом разделе представлен контрольный список, который поможет вам спланировать исследование, а также приводится описание распространенных проблем.  
@@ -110,7 +109,7 @@ ms.locfileid: "66088150"
   
 -   Могут ли эксперты в предметной области понять и интерпретировать результаты, а также предложить улучшения?  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор данных для интеллектуального анализа данных](choosing-data-for-data-mining.md)  
   
   

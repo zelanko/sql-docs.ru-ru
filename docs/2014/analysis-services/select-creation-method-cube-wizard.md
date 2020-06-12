@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 793c83dba01be84fb468b0be54bb7d0405e39467
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05bc721be827fc9f72317874d32de8815a38a412
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069629"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538166"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Выберите метод построения (мастер кубов)
   Страница **Выбор метода создания** позволяет задать метод создания куба.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать существующие таблицы**  
  Выберите этот параметр, чтобы создать куб с использованием таблиц, существующих в источнике данных. При построении нового куба мастер предоставит вам последовательные рекомендации по процессу выбора и определения групп мер и измерений, основанных на существующих таблицах.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66069629"
 > [!NOTE]  
 >  Этот параметр доступен, только если выбран параметр **Создать таблицы в источнике данных** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

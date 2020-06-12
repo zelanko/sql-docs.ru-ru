@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086395"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525780"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Фигуры интеллектуального анализа данных для Visio
   Фигуры интеллектуального анализа данных для Visio предоставляют шаблоны, настроенные для отображения моделей интеллектуального анализа данных. С помощью этих шаблонов можно подключаться к своим созданным моделям и создавать интерактивные презентации для демонстрации результатов интеллектуального анализа данных.  
@@ -38,7 +37,7 @@ ms.locfileid: "66086395"
 -   **Диаграмма кластеров:** Этот мастер используется для создания цветных графиков для моделей сегментации. Можно переключаться между такими представлениями, как сравнение атрибутов, профили кластеров и зависимости, а также настраивать внешний вид кластеров.  
   
 ## <a name="installation"></a>Установка  
- При установке шаблонов интеллектуального анализа данных для Visio по умолчанию на \<диск будут установлены следующие файлы:> \program Files\Microsoft SQL Server 2012 DM (или \<Drive> \ или Program Files (x86) \Microsoft SQL Server 2012 DM Add-ins):  
+ При установке шаблонов интеллектуального анализа данных для Visio по умолчанию устанавливаются следующие файлы для \<drive> \Program Files\Microsoft SQL Server 2012 DMS (или \<drive> \ или Program Files (x86) \Microsoft SQL Server 2012, надстройки DM):  
   
 -   **Microsoft Data Mining. VST** Этот шаблон содержит предварительно спроектированное форматирование, макет и мастера, которые помогают работать с фигурами интеллектуального анализа данных.  
   

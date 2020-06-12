@@ -13,17 +13,17 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd040bbf0f6e3f5e150d45df41ea676a71c6e03a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277081"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859226"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и обозреватель программ)
   Используйте данное диалоговое окно для задания фильтра. Фильтр позволяет настроить обозреватель объектов и проводник служебной программы для отображения только тех элементов, которые соответствуют заданным критериям. Например, фильтр можно использовать для отображения только тех заданий, имена которых содержат слово «Maintenance». В заголовке диалогового окна **Настройки фильтра** содержится имя сервера и может содержаться имя базы данных.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Свойство**  
  Позволяет отобразить свойство включения фильтра.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "63277081"
   
 ## <a name="see-also"></a>См. также:  
  [Использование SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
- [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Функции и задачи служебная программа SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   
