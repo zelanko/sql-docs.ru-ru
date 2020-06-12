@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1df04621d87aa028a2aea43d758fa613dcedccf2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908c0a8d8caa810badf4b82dc3dd3f411d09f323
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085319"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523690"
 ---
 # <a name="create-an-alias-for-a-model-column"></a>создать псевдоним для столбца модели
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]для столбца модели можно создать псевдоним. Необходимость в этом может возникнуть, если имя структуры интеллектуального анализа данных имеет слишком большую длину и с ним неудобно работать, или если необходимо присвоить столбцу другое имя, более точно описывающее его содержимое или назначение в модели. Например, если создается копия столбца структуры, а затем дискретизация столбца выполняется различно для конкретной модели, можно переименовать столбец, чтобы его имя более точно отражало его содержимое.  
@@ -36,7 +35,7 @@ ms.locfileid: "66085319"
   
 2.  В окне **Свойства** в правой части экрана щелкните ячейку рядом со свойством Name и удалите текущее значение. Введите новое имя столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
  [Свойства модели интеллектуального анализа данных](mining-model-properties.md)  
   

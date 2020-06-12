@@ -1,24 +1,29 @@
 ---
 title: Новые возможности SSMA для Access (Акцесстоскл) | Документация Майкрософт
+description: Узнайте об изменениях в Помощник по миграции SQL Server (SSMA) для Access (Акцесстоскл) для каждого выпуска.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: da71576b58487fa5d2d1e069d56c9fa6db783fc2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220269"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292961"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Новые возможности SSMA для Access (Акцесстоскл)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменения доступа в каждом выпуске.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+Выпуск v 8.10 SSMA для Access содержит небольшие улучшения производительности и исправления ошибок.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -194,7 +199,7 @@ ms.locfileid: "82220269"
 * Исправлена таблица загрузки данных для вкладок пользовательского интерфейса для доступа.
 * Исправлена ошибка в глобальных параметрах.
 
-## <a name="march-2016"></a>март 2016 г.
+## <a name="march-2016"></a>Март 2016 г.
 
 В предварительной версии SSMA для Access в марте 2016 добавлена поддержка миграции на SQL Server 2016.
 

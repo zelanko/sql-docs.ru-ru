@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 778cdfa11ac63aa1857816c8e5bcf42ef48a2e0d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087181"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527070"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Соединение с базой данных Sybase (SSAS)
   Эта страница **мастера импорта таблиц** используется для задания параметров для соединения с базой данных Sybase. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087181"
 > [!NOTE]  
 >  При выборе базы данных на этой странице используются учетные данные текущего пользователя. Тем не менее импорт не будет успешным, если пользователь, указанный на странице сведений об олицетворении, не имеет достаточных прав для чтения из выбранной базы данных.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Понятное имя соединения**  
  Введите уникальное имя для соединения с источником данных. Это поле является обязательным.  
   

@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c9ad60ad7602222572bd1649d2ac503e0535205
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086058"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525300"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)
-  Средство [!INCLUDE[msCoName](../../includes/msconame-md.md)] просмотра нейронных сетей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в отображает модели интеллектуального анализа данных, [!INCLUDE[msCoName](../../includes/msconame-md.md)] созданные с помощью алгоритма нейронной сети. Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] создает классификационные и регрессивные модели интеллектуального анализа данных, с помощью которых можно выполнять анализ из нескольких входящих и исходящих источников. Это делает его полезным при выполнении различных видов открытого анализа и изучения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Средство просмотра нейронных сетей в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, созданные с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма нейронной сети. Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] создает классификационные и регрессивные модели интеллектуального анализа данных, с помощью которых можно выполнять анализ из нескольких входящих и исходящих источников. Это делает его полезным при выполнении различных видов открытого анализа и изучения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
   
  При исследовании модели при помощи средства просмотра нейронных сетей [!INCLUDE[msCoName](../../includes/msconame-md.md)] , обычно выбирается некий целевой атрибут и состояние, после чего средство просмотра используется для того, чтобы узнать, как входящие атрибуты отражаются на результате  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66086058"
   
  [К началу](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм нейронной сети (Майкрософт)](microsoft-neural-network-algorithm.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   

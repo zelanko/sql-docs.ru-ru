@@ -1,24 +1,29 @@
 ---
 title: Новые возможности SSMA для SAP ASE (SybaseToSQL) | Документация Майкрософт
+description: Узнайте об изменениях в Помощник по миграции SQL Server (SSMA) для Sybase (SybaseToSQL) для каждого выпуска.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1124349e961de7b4dc384b2db67d503d82e305fe
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220679"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293702"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Новые возможности SSMA для SAP ASE (SybaseToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для SAP ASE (ранее SSMA для Sybase) изменений в каждом выпуске.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+Выпуск v 8.10 SSMA для SAP ASE содержит небольшие улучшения производительности и исправления ошибок.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -205,7 +210,7 @@ ms.locfileid: "82220679"
 * Исправлена Инвентаризация объектов для начальной загрузки.
 * Исправлена ошибка в глобальных параметрах.
 
-## <a name="march-2016"></a>март 2016 г.
+## <a name="march-2016"></a>Март 2016 г.
 
 В предварительной версии SSMA для Sybase в марте 2016 добавлена поддержка миграции на SQL Server 2016.
 
@@ -324,6 +329,6 @@ ms.locfileid: "82220679"
 
 Первый выпуск SSMA для СУБД Sybase был в июле 2006 г.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>Дополнительно
 
 [Начало работы с SSMA для Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

@@ -1,5 +1,6 @@
 ---
 title: Запуск файлов шаблонов с помощью свойства CommandText
+description: Просмотрите пример использования свойства SQLXML CommandText для указания имени файла шаблона, содержащего запросы SQL или XPath.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a05f0d974a6e88b82a654c7c9aab1159544b6839
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee37996f4d22787c8379e6a887e23769a260b6b2
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244352"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306190"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Выполнение файлов шаблонов с использованием свойства CommandText
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью Коммандтекстпроперти. Вместо указания запроса SQL или XPath в качестве значения CommandText можно указать имя файла в качестве значения. В следующем примере свойство CommandType указано как Склксмлкоммандтипе. TemplateFile.  
+  В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью свойства CommandText. Вместо указания запроса SQL или XPath в качестве значения CommandText можно указать имя файла в качестве значения. В следующем примере свойство CommandType указано как Склксмлкоммандтипе. TemplateFile.  
   
  Образец приложения выполняет следующий шаблон:  
   
@@ -93,7 +94,7 @@ class Test
   
 5.  Запустите файл DocSample.exe из командной строки.  
 
- При передаче параметра в шаблон имя параметра должно начинаться с символа @. Например, p.Name = "\@ContactID", где p — объект SqlXmlParameter.  
+ При передаче параметра в шаблон имя параметра должно начинаться с символа @. Например, p.Name = " \@ ContactID", где p — объект SqlXmlParameter.  
   
  Это обновленный шаблон, который принимает один параметр.  
   

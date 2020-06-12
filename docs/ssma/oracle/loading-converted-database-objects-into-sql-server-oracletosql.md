@@ -1,5 +1,6 @@
 ---
 title: Загрузка преобразованных объектов базы данных в SQL Server (OracleToSQL) | Документация Майкрософт
+description: Узнайте, как загрузить объекты базы данных, преобразованные из Oracle, в экземпляр SQL Server с помощью SSMA для Oracle.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c4d30b3a803cfd5eb8e196f540c33952de3bf5
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262991"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293851"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Загрузка преобразованных объектов базы данных в SQL Server (OracleToSQL)
 После преобразования схем Oracle в SQL Server можно загрузить итоговые объекты базы данных в SQL Server. Можно либо создать объекты SSMA, либо создавать сценарии для объектов и выполнять сценарии самостоятельно. Кроме того, SSMA позволяет обновлять целевые метаданные фактическим содержимым базы данных SQL Server.  
@@ -87,7 +88,7 @@ ms.locfileid: "68262991"
 4.  Чтобы сохранить скрипт, в меню Файл выберите команду **сохранить**.  
   
 ### <a name="running-scripts"></a>Выполнение скриптов  
-Можно выполнить сценарий или отдельные инструкции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Можно выполнить сценарий или отдельные инструкции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 **Запуск сценария**  
   
@@ -99,7 +100,7 @@ ms.locfileid: "68262991"
   
 4.  Чтобы выполнить набор инструкций, выберите инструкции в окне редактора запросов и нажмите клавишу **F5** .  
   
-Дополнительные сведения об использовании редактора запросов для выполнения скриптов см. в разделе « [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Query» в Электронная документация на SQL Server.  
+Дополнительные сведения об использовании редактора запросов для выполнения скриптов см [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] . в разделе «Query» в Электронная документация на SQL Server.  
   
 Скрипты также можно запускать из командной строки с помощью программы **sqlcmd** и из агент SQL Server. Дополнительные сведения о программе **sqlcmd**см. в разделе "программа sqlcmd" в Электронная документация на SQL Server. Дополнительные сведения о агент SQL Server см. в разделе «Автоматизация административных задач (агент SQL Server)» в электронная документация на SQL Server.  
   

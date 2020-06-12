@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f98507289acd8f8fd0f2ff9ef8fed49813d80f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081331"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528440"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Включение обратной записи в измерения (измерение) (мастер бизнес-аналитики)
   Страница **Включение обратной записи в измерения** используется для выбора измерения, для которого мастер бизнес-аналитики включит обратную запись.  
@@ -25,11 +24,11 @@ ms.locfileid: "66081331"
 > [!NOTE]  
 >  Эта страница не выводится на экран, если мастер бизнес-аналитики был запущен из конструктора измерений, а также если щелкнуть правой кнопкой мыши измерение в обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="options"></a>Параметры  
- **Измерение**  
+## <a name="options"></a>Варианты  
+ **Фокусирован**  
  Позволяет выбрать измерение, для которого мастер включит обратную запись.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

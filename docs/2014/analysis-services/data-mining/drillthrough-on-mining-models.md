@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cb5e932e2121efb9bd19375dfd2ff329c001812
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522532"
 ---
 # <a name="drillthrough-on-mining-models"></a>Детализация моделей интеллектуального анализа данных
   *Детализация* — это возможность выполнять запросы к модели или структуре интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
@@ -62,7 +61,7 @@ ms.locfileid: "66084597"
 |См. примеры запросов детализации для конкретных типов моделей.|[Запросы интеллектуального анализа данных](data-mining-queries.md)|  
 |Включение детализации в мастере моделей интеллектуального анализа данных|[Завершение работы мастера (мастер интеллектуального анализа данных)](../completing-the-wizard-data-mining-wizard.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Детализация структур интеллектуального анализа данных](drillthrough-on-mining-structures.md)  
   
   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd6972f94596a106dfd5971e46861a2b86976248
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083901"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521800"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса — это алгоритм классификации, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляемый для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Упрощенный алгоритм Байеса — это алгоритм классификации, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
   
 ## <a name="implementation-of-the-microsoft-naive-bayes-algorithm"></a>Реализация упрощенного алгоритма Байеса (Майкрософт)  
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Алгоритм учитывает все пары значений входного атрибута и выходного атрибута.  
@@ -98,7 +97,7 @@ ms.locfileid: "66083901"
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Упрощенный алгоритм Байеса (Майкрософт)](microsoft-naive-bayes-algorithm.md)   
  [Примеры запросов модели упрощенного алгоритма Байеса](naive-bayes-model-query-examples.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  

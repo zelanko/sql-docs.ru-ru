@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1836cb414e8ea7f6e0bedbf0b4fb75cf0bfa264e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083687"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521591"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)
   В этой статье описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм правил взаимосвязей [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Описание общей и статистической терминологии, связанной с содержимым модели интеллектуального анализа данных, областью применения которого являются модели всех типов, см. в статье [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-analysis-services-data-mining.md).  
@@ -60,10 +59,10 @@ ms.locfileid: "66083687"
  NODE_TYPE  
  Модель взаимосвязей выводит узлы только следующих типов.  
   
-|Идентификатор типа узла|Type|  
+|Идентификатор типа узла|Тип|  
 |------------------|----------|  
 |1 (модель)|Корневой или родительский узел.|  
-|7 (набор элементов)|Набор элементов или коллекция пар «атрибут-значение». Примеры:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ,<br /><br /> `Gender = Male`.|  
+|7 (набор элементов)|Набор элементов или коллекция пар «атрибут-значение». Примеры:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> or<br /><br /> `Gender = Male`.|  
 |8 (правило)|Правило, определяющее то, как связаны элементы друг с другом.<br /><br /> Пример.<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -192,7 +191,7 @@ ms.locfileid: "66083687"
  MSOLAP_NODE_SHORT_CAPTION  
  Пусто.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;содержимого моделей интеллектуального анализа данных Analysis Services — интеллектуальный анализ&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)   
  [Примеры запросов моделей взаимосвязей](association-model-query-examples.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e107dde8a3f811cbc1a24533705863c954dd85c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5979ed2e4733609a504d852b5a0bcc8d7660b87
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112150"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523182"
 ---
 # <a name="data-mining-projects"></a>Проекты интеллектуального анализа данных
   Проект интеллектуального анализа данных — это часть решения служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Во время проектирования объекты, создаваемые в этом проекте, доступны для тестирования и запросов в составе базы данных рабочей области. Чтобы дать пользователям возможность просматривать объекты в проекте и составлять к ним запросы, необходимо развернуть проект в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в многомерном режиме.  
@@ -86,7 +85,7 @@ ms.locfileid: "79112150"
   
 
   
-###  <a name="data-source-views"></a><a name="bkmk_DSV"></a> Data Source Views  
+###  <a name="data-source-views"></a><a name="bkmk_DSV"></a>Представления источников данных  
  После определения этого соединения с источником данных создается представление, в котором определяются конкретные данные, относящиеся к модели.  
   
  Представление источника данных также позволяет задать способ передачи данных, содержащихся в источнике, в модель интеллектуального анализа данных. Структуру данных можно изменить таким образом, чтобы она лучше подходила для задач проекта, или выбрать только данные определенных типов.  
@@ -202,7 +201,7 @@ ms.locfileid: "79112150"
 |Сведения о параметрах обработки и разрешениях|[Обработка объектов интеллектуального анализа данных](processing-data-mining-objects.md)|  
 |Дополнительные сведения о службах Analysis Services|[Базы данных многомерных моделей (службы SSAS)](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор интеллектуального анализа данных](data-mining-designer.md)   
  [Создание многомерных моделей с помощью SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [База данных рабочей области (табличные службы SSAS)](../tabular-models/workspace-database-ssas-tabular.md)  

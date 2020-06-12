@@ -1,5 +1,6 @@
 ---
 title: Помощник по миграции SQL Server | Документация Майкрософт
+description: Узнайте о Помощник по миграции SQL Server, средстве, которое автоматизирует миграцию базы данных на SQL Server из Microsoft Access, DB2, MySQL, Oracle и SAP ASE.
 ms.custom: ''
 ms.date: 10/10/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
-ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f03fdab2cf2f2593d43c16cef572614b36731ef9
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252125"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84294031"
 ---
 # <a name="sql-server-migration-assistant"></a>Помощник по миграции SQL Server
 
@@ -48,7 +49,7 @@ ms.locfileid: "72252125"
 
 * * Этот целевой объект поддерживается только SSMA для Oracle.
 
-## <a name="downloads"></a>Загрузки
+## <a name="downloads"></a>Файлы для загрузки
 
 - [SSMA для Access](https://aka.ms/ssmaforaccess)
 - [SSMA для DB2](https://aka.ms/ssmafordb2)
@@ -68,7 +69,7 @@ ms.locfileid: "72252125"
   
   - [Сообщество SQL Server Developer Center](https://go.microsoft.com/fwlink/?LinkId=42456) — группы новостей, форумы и другие ресурсы сообщества, которые полезны для SQL Server разработчиков  
   
-- Служба **технической поддержки** — перейдите по [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) адресу "помощник по миграции SQL Server" и выполните поиск.  Выберите свою версию и нажмите кнопку "запустить запрос".  Служба технической поддержки входит в состав средства Помощник по миграции SQL Server.  
+- Служба **технической поддержки** — перейдите по адресу [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) "помощник по миграции SQL Server" и выполните поиск.  Выберите свою версию и нажмите кнопку "запустить запрос".  Служба технической поддержки входит в состав средства Помощник по миграции SQL Server.  
   
 - **Поддержка Premier** . Если у вас есть контракт Premier, вы можете получить поддержку Premier на [портале Premier Online](https://premier.microsoft.com/).  
   

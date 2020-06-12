@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fad74c354d4560a00718292616d842b4ffc7e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70151829"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527160"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Соединение с отчетом или веб-каналом данных (SSAS)
   Эта страница **мастера импорта таблиц** позволяет подключиться к потоку данных. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
@@ -55,7 +54,7 @@ ms.locfileid: "70151829"
  **Ключ учетной записи**  
  Укажите ключ учетной записи, используемый для доступа к подпискам набора данных Azure Marketplace.  
   
- **Найдено**  
+ **Поиск**  
  Найдите ключ учетной записи, связанный с учетной записью Windows Live.  
   
  **Сохранить мой ключ учетной записи**  

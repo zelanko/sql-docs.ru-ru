@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892763"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670179"
 ---
 # <a name="functions-dmx"></a>Функции (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  При использовании расширений интеллектуального анализа данных для запроса объектов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]можно использовать функции, чтобы получить больше информации, чем просто значения столбцов в модели интеллектуального анализа данных или входного набора данных. Например, с помощью запросов расширений интеллектуального анализа данных можно получить не только прогнозируемое значение столбца, но также и вероятность точности прогноза. Кроме функций расширений интеллектуального анализа данных можно использовать также функции языка Microsoft Visual Basic for Applications (VBA), Microsoft Excel, а также хранимые процедуры.  
+  При использовании расширений интеллектуального анализа данных для запроса объектов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно использовать функции, чтобы получить больше информации, чем просто значения столбцов в модели интеллектуального анализа данных или входного набора данных. Например, с помощью запросов расширений интеллектуального анализа данных можно получить не только прогнозируемое значение столбца, но также и вероятность точности прогноза. Кроме функций расширений интеллектуального анализа данных можно использовать также функции языка Microsoft Visual Basic for Applications (VBA), Microsoft Excel, а также хранимые процедуры.  
   
 ## <a name="dmx-functions"></a>Функции (расширения интеллектуального анализа данных)  
  С помощью функций расширений интеллектуального анализа данных можно выполнять следующие задачи:  

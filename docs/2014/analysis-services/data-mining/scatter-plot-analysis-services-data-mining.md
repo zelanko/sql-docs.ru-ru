@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ea37a9aecda0b3fbb6d61f7ba14a82f368c95aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87e21d2f6e5fd6a5c857d8139a8e6cd669c4a3b5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175181"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520452"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)
   На *точечной диаграмме* реальные значения пользовательских данных графически сравниваются с прогнозируемыми значениями в модели. Реальные значения отображаются на оси Х точечной диаграммы; прогнозируемые значения — на оси Y. На ней также отображается линия, отображающая идеальный прогноз, на которой прогнозируемое значение точно совпадает с реальным значением. Расстояние от точки на линии идеальных прогнозов, расположенной под углом в 45 градусов, показывает, насколько хорошо или плохо был выполнен прогноз.
@@ -52,7 +51,7 @@ ms.locfileid: "78175181"
 |Описывает использование перекрестной проверки для моделей интеллектуального анализа данных и структур интеллектуального анализа данных.|[Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](cross-validation-analysis-services-data-mining.md)|
 |Описывает шаги для создания диаграммы точности прогнозов и других диаграмм точности.|[Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](testing-and-validation-tasks-and-how-tos-data-mining.md)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Тестирование и проверка (интеллектуальный анализ данных)](testing-and-validation-data-mining.md)
 
 

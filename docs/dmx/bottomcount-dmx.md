@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889850"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669849"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Применяется к  
- Выражение, возвращающее таблицу, например ссылку на \<столбец таблицы> или функцию, возвращающую таблицу.  
+ Выражение, возвращающее таблицу, например ссылку на \< столбец таблицы> или функцию, возвращающую таблицу.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<табличное выражение>  
   
-## <a name="remarks"></a>Remarks  
- Значение, предоставляемое выражением \<Rank> аргумент, определяет порядок возрастания ранга для строк, представленных в \<табличном выражении> аргументе, и число нижних строк, указанных в аргументе \<Count>.  
+## <a name="remarks"></a>Комментарии  
+ Значение, предоставляемое \< выражением rank> аргумент, определяет порядок возрастания ранга для строк, представленных в \< табличном выражении> аргументе, и число нижних строк, указанных в \< аргументе Count>.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [учебника по базовому интеллектуальному анализу данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

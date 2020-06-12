@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a76f4cad33ac9c168d39f9878e297896da77d441
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088318"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527670"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Свойства вычисления» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Свойства вычислений** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы просматривать или изменять папку отображения и свойства вычислений связанной группы мер, определенных на вкладке **Вычисления** конструктора кубов для выбранного куба. Диалоговое окно **Свойства вычислений** можно вызвать, щелкнув **Свойства вычислений** на панели **Панель инструментов** вкладки **Вычисления** конструктора кубов.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя вычисления**  
  Отображает имя вычисляемого элемента или именованного набора.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66088318"
  **Связанная группа мер**  
  Выберите группу мер, в которой вычисляемый элемент и именованный набор должны отображаться в клиентских приложениях, включая среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вычисления &#40;конструкторе кубов&#41; &#40;Analysis Services многомерных данных&#41;](calculations-cube-designer-analysis-services-multidimensional-data.md)   
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

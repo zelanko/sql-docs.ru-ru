@@ -1,5 +1,6 @@
 ---
 title: Функция upper (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать функцию XQuery с прописной буквой (), которая преобразует символы в их эквиваленты в верхнем регистре.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004618"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689487"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Функции со строковыми значениями — upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +42,20 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Термин|Определение|  
 |*$arg*|Строковое значение для преобразования в верхний регистр.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Преобразование строки в верхний регистр  
- Следующий пример изменяет входную строку "abcDEF! @4' в верхний регистр.  
+ Следующий пример изменяет входную строку "abcDEF! @4 " в верхний регистр.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>Б) Поиск конкретной символьной строки  
+### <a name="b-search-for-a-specific-character-string"></a>Б. Поиск конкретной символьной строки  
  В этом примере показано использование функции upper-case для выполнения поиска без учета регистра.  
   
 ```  

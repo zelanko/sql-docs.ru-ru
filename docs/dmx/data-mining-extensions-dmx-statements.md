@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54489088aa6edc540dd2da0fb0d9121fc0c6d4b9
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070866"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670413"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Инструкции расширений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Работа с моделями интеллектуального [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] анализа данных в включает в себя следующие основные задачи:  
+  Работа с моделями интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] включает в себя следующие основные задачи:  
   
 -   Создание структур и моделей интеллектуального анализа данных  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68070866"
  Используйте инструкцию [SELECT INTO &#40;DMX&#41;](../dmx/select-into-dmx.md) , чтобы скопировать структуру существующей модели интеллектуального анализа данных в новую модель интеллектуального анализа данных и обучить новую модель с теми же данными.  
   
  Обзор моделей интеллектуального анализа данных  
- Используйте инструкцию [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) для просмотра сведений, которые алгоритм интеллектуального анализа данных вычисляет и сохраняет в модели интеллектуального анализа данных во время обучения модели. Во многом [!INCLUDE[tsql](../includes/tsql-md.md)]аналогично, для расширения возможностей можно использовать несколько предложений с инструкцией SELECT. Эти предложения включают [в себя различные \<>](../dmx/select-distinct-from-model-dmx.md) [ \<из модели>. СЛУЧАИ](../dmx/select-from-model-cases-dmx.md): [из \<модели>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [из \<> модели. СОДЕРЖИМОЕ](../dmx/select-from-model-content-dmx.md) и [> \<модели. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
+ Используйте инструкцию [SELECT &#40;DMX&#41;](../dmx/select-dmx.md) для просмотра сведений, которые алгоритм интеллектуального анализа данных вычисляет и сохраняет в модели интеллектуального анализа данных во время обучения модели. Во многом аналогично [!INCLUDE[tsql](../includes/tsql-md.md)] , для расширения возможностей можно использовать несколько предложений с инструкцией SELECT. Эти предложения включают [в себя различные \<>из модели ](../dmx/select-distinct-from-model-dmx.md) [ \<>. СЛУЧАИ](../dmx/select-from-model-cases-dmx.md): [из \< модели>. SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md), [из \<> модели. СОДЕРЖИМОЕ](../dmx/select-from-model-content-dmx.md) и [ \<> модели. DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md).  
   
  Прогнозирование по моделям интеллектуального анализа данных  
  Используйте предложение [PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) инструкции SELECT для создания прогнозов на основе существующей модели интеллектуального анализа данных.  

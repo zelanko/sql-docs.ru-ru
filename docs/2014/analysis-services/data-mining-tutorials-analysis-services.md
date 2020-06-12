@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086324"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525880"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Учебники по интеллектуальному анализу данных (службы Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Службы    упрощают создание сложных решений по интеллектуальному анализу данных. Средства служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] помогают проектировать, создавать и управлять моделями интеллектуального анализа данных, которые используют реляционные данные или данные куба. Можно управлять доступом клиентов к моделям интеллектуального анализа данных и создавать прогнозирующие запросы от многочисленных клиентов.  
@@ -46,7 +45,7 @@ ms.locfileid: "66086324"
   
      В этих занятиях рассматриваются такие современные методы, как использование вложенных таблиц, перекрестного прогнозирования, представлений пользовательских источников данных и именованных запросов, а также фильтров данных в запросах интеллектуального анализа данных. Вы также приобретете опыт использования средств интеллектуального анализа данных, предоставляемых службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Ссылка  
  [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](/sql/dmx/data-mining-extensions-dmx-reference)  
@@ -60,7 +59,7 @@ ms.locfileid: "66086324"
   
  [Проекты интеллектуального анализа данных](data-mining/data-mining-projects.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Решения интеллектуального анализа данных](data-mining/data-mining-solutions.md)   
  [Microsoft SQL Server ресурсов интеллектуального анализа данных](https://go.microsoft.com/fwlink/?LinkId=97965)   
  [Создание моделей интеллектуального анализа данных и выполнение к ним запросов с помощью расширений интеллектуального анализа данных: учебники (службы Analysis Services — интеллектуальный анализ данных)](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
