@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773756"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857856"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Администрирование программ (служебная программа SQL Server)
   Вкладки «Администрирование программ» используются для управления настройками политики, безопасности и хранилища данных для утилиты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения об основных понятиях служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в статье [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Вкладка «Политика» — используется для просмотра или задания политик глобального наблюдения.  
   
  Задайте глобальные политики наблюдения за приложениями уровня данных. Чтобы развернуть список значений этого параметра щелкните стрелку рядом с именем политики или заголовок политики.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773756"
  Снижение шума от нарушения политик для крайне непостоянных ресурсов. Чтобы развернуть элементы управления для этой функции, щелкните стрелку вниз на правой стороне дисплея.  
  Дополнительные сведения см. [в разделе уменьшение уровня шума в политиках загрузки цп &#40;служебная программа SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Вкладка «Безопасность» — на этой вкладке отображаются имена входа с разрешениями администрирования или чтения из UCP.  
   
  Выберите имена входа из UCP, которые будут добавлены к роли чтения данных служебной программы.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773756"
   
  Чтобы стать администратором служебной программы, необходимо обладать правами доступа sysadmin для экземпляра SQL Server. Чтобы добавлять или изменять учетные записи пользователей для пункта управления программой (UCP) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], используйте обозреватель объектов в среде SSMS для добавления пользователей в список имен входа сервера для экземпляра пункта управления программой (UCP) в SQL Server. Дополнительные сведения см. в статье [sp_addlogin (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Вкладка «Хранилище данных» — отображает подробные сведения о конфигурации хранилища данных управления программами.  
   
  Хранение данных  
@@ -101,7 +101,7 @@ ms.locfileid: "62773756"
  Вернуться к значениям по умолчанию  
  Чтобы изменить настройки на этой вкладке на значения по умолчанию, нажмите кнопку **Восстановить значения по умолчанию** , затем кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Панель мониторинга служебной программы &#40;служебная программа SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Сведения о развернутом приложении уровня данных &#40;служебная программа SQL Server&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [Сведения о Управляемый экземпляр &#40;служебная программа SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   

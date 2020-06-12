@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 787488570627e2c8c7fc9a37e8f814847c40f3ca
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080948"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544386"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Общие (диалоговое окно «Восстановление базы данных») (службы Analysis Services - многомерные данные)
   Для задания файла резервной копии и общих настроек используется страница **Общие** диалогового окна **Восстановление базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] при восстановлении базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -32,8 +31,8 @@ ms.locfileid: "66080948"
   
 -   В среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]щелкните правой кнопкой мыши папку **Базы данных** экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базу данных в окне **Обозреватель объектов**, выберите пункт **Восстановить**, а затем на панели **Выбор страницы**выберите **Общие**.  
   
-## <a name="options"></a>Параметры  
- **Скрипт**  
+## <a name="options"></a>Варианты  
+ **Сценарий**  
  Создает скрипт восстановления, основанный на параметрах, выбранных в диалоговом окне. Скрипт восстановления написан на языке скриптов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (ASSL).  
   
  Щелкнув значок **Скрипт** , можно отправить скрипт восстановления в новое окно запроса по умолчанию.  
@@ -63,7 +62,7 @@ ms.locfileid: "66080948"
  **Включить сведения о безопасности**  
  Выберите, чтобы скопировать все сведения о безопасности, хранимые в файле резервной копии, в базу данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- Если выбран этот параметр, то можно выбрать количество сведений о безопасности из раскрывающегося списка, который включается при выборе этого параметра. Доступны следующие параметры.  
+ Если выбран этот параметр, то можно выбрать количество сведений о безопасности из раскрывающегося списка, который включается при выборе этого параметра. Доступны следующие варианты:  
   
 |Параметр|Описание|  
 |------------|-----------------|  
@@ -73,7 +72,7 @@ ms.locfileid: "66080948"
  **Пароль**  
  Если файл резервной копии зашифрован, то введите пароль, использовавшийся для его шифрования.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Восстановление базы данных» &#40;Analysis Services многомерных данных&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Секции &#40;диалоговое окно «Восстановление базы данных»&#41; &#40;Analysis Services многомерных данных&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Создание и восстановление резервных копий баз данных служб Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

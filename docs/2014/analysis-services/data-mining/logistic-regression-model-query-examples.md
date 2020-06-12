@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7c8e13a3-5c67-46c2-abfa-4881e6ef9c62
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d432d38794e65e8b8bea69608479e330649ee395
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522230"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Примеры запросов модели логистической регрессии
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования на основе новых данных.  
@@ -145,7 +144,7 @@ NATURAL PREDICTION JOIN
   
 ##### <a name="to-create-a-discretized-version-of-the-call-center-mining-structure-and-models"></a>Создание дискретизированной версии структуры и моделей интеллектуального анализа данных центра обработки вызовов  
   
-1.  В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Обозреватель решений разверните узел **структуры интеллектуального анализа данных**.  
+1.  В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Обозреватель решений разверните узел **структуры интеллектуального анализа данных**.  
   
 2.  Щелкните Call Center.dmm правой кнопкой мыши и выберите команду **Копировать**.  
   
@@ -207,7 +206,7 @@ NATURAL PREDICTION JOIN
 > [!NOTE]  
 >  Для моделей нейронной сети и логистической регрессии функция [PredictSupport (расширения интеллектуального анализа данных)](/sql/dmx/predictsupport-dmx) возвращает единственное значение, представляющее собой размер обучающего набора для всей модели.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы интеллектуального анализа данных](data-mining-queries.md)   
  [Алгоритм логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm.md)   
  [Технический справочник по алгоритму логистической регрессии (Майкрософт)](microsoft-logistic-regression-algorithm-technical-reference.md)   

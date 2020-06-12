@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080413"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544141"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Диалоговое окно «Вставка функции» (SSAS)
   Диалоговое окно **Вставка функции** используется для выбора из списка тех функций, которые можно применять при построении формул. Для доступа к этому диалоговому окну из конструктора моделей нажмите кнопку функции (**fx**) в строке формул над каждой таблицей. Дополнительные сведения о выборе функций для применения в формулах см. в разделах «Введение в DAX» и «Построение формулы».  
@@ -32,11 +31,11 @@ ms.locfileid: "66080413"
 ## <a name="function-categories"></a>Категории функций  
  В выражении анализа данных предусмотрены следующие типы категорий функций, которые представлены в диалоговом окне **Вставка функций** .  
   
- All  
+ Все  
   
  Дата и время  
   
- Filter  
+ Фильтр  
   
  Логические  
   
@@ -44,12 +43,12 @@ ms.locfileid: "66080413"
   
  Статистический  
   
- Text  
+ text  
   
 ## <a name="measures-and-formulas"></a>Меры и формулы  
  Диалоговое окно **Вставка функции** доступно только при построении формулы. Вычисления можно создавать либо в вычисляемых столбцах, либо в сводных таблицах и сводных диаграммах. Формулы, создаваемые явно для применения в сводной таблице, также называются *мерами*. Дополнительные сведения см. в разделах [Создание вычисляемого столбца (табличные службы SSAS)](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) и [Создание мер и управление ими (табличные службы SSAS)](tabular-models/measures-ssas-tabular.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вычисления (табличные службы SSAS)](tabular-models/calculations-ssas-tabular.md)  
   
   

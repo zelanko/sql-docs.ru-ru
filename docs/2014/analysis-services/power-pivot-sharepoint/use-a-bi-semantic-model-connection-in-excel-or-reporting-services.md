@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 05cd74af77cc62dc637eeb4141478a79fee4ad02
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547726"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Использование соединения семантической модели бизнес-аналитики в службах Excel или Reporting Services
   В этом разделе описывается использование соединений BISM, созданных по указаниям из других разделов. Если вы еще не создали семантическую модель бизнес-аналитики, см. статью [Создание соединения семантической модели бизнес-аналитики с книгой PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) и [Создание соединения с семантической МОДЕЛЬЮ бизнес-аналитики к базе данных табличной модели](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66070929"
   
 2.  Нажмите кнопку **Из служб Analysis Services** и импортируйте данные с помощью мастера подключения к данным.  
   
-3.  Введите URL-адрес SharePoint файла соединения семантической модели бизнес-аналитики (например, ** http://mysharepoint/shared Documents/MyData. BISM**). Для учетных данных входа в систему выберите вариант по умолчанию, **Использовать проверку подлинности Windows**. Нажмите кнопку **Далее**.  
+3.  Введите URL-адрес SharePoint файла соединения семантической модели бизнес-аналитики (например, ** http://mysharepoint/shared Documents/MyData. BISM**). Для учетных данных входа в систему выберите вариант по умолчанию, **Использовать проверку подлинности Windows**. Щелкните **Далее**.  
   
 4.  На следующей странице снова нажмите **Далее** . Несмотря на то что будет предложено выбрать базу данных, можно использовать только одну базу данных, которая указана в соединении BISM.  
   

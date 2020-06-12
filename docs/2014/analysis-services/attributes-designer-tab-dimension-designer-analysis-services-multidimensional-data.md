@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d114e9aa025f3c3967372e8cb026a278b45f492e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064479"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527858"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Атрибуты (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services — многомерные данные)
   Список **Атрибуты** используется, чтобы отыскать конкретный атрибут в диаграмме связей атрибутов или определить новую связь атрибутов. Эта панель окна размещается непосредственно под панелью, содержащей диаграмму связей атрибутов.  
@@ -44,13 +43,13 @@ ms.locfileid: "66064479"
   
  Дополнительные сведения см. в разделах [Диалоговые окна "Создание связи атрибутов" и "Изменение связи атрибутов" (вкладка "Конструктор связей атрибутов", конструктор измерений) (службы Analysis Services — многомерные данные)](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) и [Определение связей атрибутов](multidimensional-models/attribute-relationships-define.md).  
   
- **Переименовать**  
+ **Переименование**  
  Выделяет имя атрибута в списке и позволяет изменить этот текст.  
   
  **Свойства**  
  Отображает свойства атрибута в окне **Свойства** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка Конструктор связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Диаграмма связей атрибутов &#40;вкладка «Конструктор связей атрибутов», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationship-diagram-analysis-services-multidimensional-data.md)   

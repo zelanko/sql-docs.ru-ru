@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: ecba72a3-703f-4ede-9d85-9a3318a749e5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cb486ec383ab6fa1684bd9d0e9b8f6bc67631eee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8fae25590d8da3f54ed94bc9d106b44a0aa4d85
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070704"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540253"
 ---
 # <a name="proactive-caching-partition-properties-dialog-box-ssms"></a>Упреждающее кэширование (диалоговое окно «Свойства секции») (среда SSMS)
   Страница **Упреждающее кэширование** диалогового окна **Свойства секции** среды SQL Server Management Studio позволяет устанавливать свойства хранения и упреждающего кэширования секции в группе мер для куба в базе данных служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Стандартные настройки**  
  Выберите, чтобы задействовать ползунок **Стандартные настройки** и использовать предопределенные настройки режима хранения и возможностей упреждающего кэширования.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66070704"
  **Параметры**  
  Щелкните, чтобы вывести диалоговое окно **Параметры хранилища** и явно задать параметры режима хранения, упреждающего кэширования и уведомлений. Дополнительные сведения о диалоговом окне **Параметры хранилища** см. в разделе [Диалоговое окно "Параметры хранилища" (службы Analysis Services — многомерные данные)](storage-options-dialog-box-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Упреждающее кэширование &#40;секций&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Диалоговое окно «Свойства секции» &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [Диалоговое окно «Выбор &#40;свойств секции»&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   

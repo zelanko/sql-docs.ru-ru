@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 3a38d489-4625-4878-bd18-c6f903be33df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03e142f00192e04d5b17bc2041563cea06199c8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073040"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545726"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Запуск мастера развертывания служб Analysis Services
-  При использовании [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] мастера развертывания для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания проекта можно запустить мастер следующими способами.  
+  При использовании [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] мастера развертывания для развертывания [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта можно запустить мастер следующими способами.  
   
 -   **Интерактивно.** При интерактивном запуске мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] формирует XML-скрипт развертывания на основе входных файлов в соответствии с изменениями, интерактивно вводимыми пользователем. Мастер применяет все пользовательские изменения только к скрипту развертывания. Мастер не изменяет входные файлы. Дополнительные сведения о настройках конфигурации см. в разделе [Understanding the Input Files Used to Create the Deployment Script](deployment-script-files-input-used-to-create-deployment-script.md)(Основные сведения о входных файлах, применяемых для создания скрипта развертывания).  
   
--   **Из командной строки** При запуске из командной строки мастер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] развертывания создает XML для АНАЛИТИКИ (XMLA) скрипт развертывания на основе параметров, используемых для запуска мастера. Мастер может работать одним из следующих способов: выдать приглашение для ввода данных и изменить входные файлы на основе этих данных, запустить автоматическое развертывание с использованием исходных входных файлов или создать скрипт развертывания, который можно использовать позже.  
+-   **Из командной строки** При запуске из командной строки [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Мастер развертывания создает XML для аналитики (XMLA) скрипт развертывания на основе параметров, используемых для запуска мастера. Мастер может работать одним из следующих способов: выдать приглашение для ввода данных и изменить входные файлы на основе этих данных, запустить автоматическое развертывание с использованием исходных входных файлов или создать скрипт развертывания, который можно использовать позже.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-interactively"></a>Запуск мастера развертывания служб Analysis Services в интерактивном режиме  
  При интерактивном запуске мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] считывает значения их входных файлов и выводит эти данные. Вы можете изменить эти входные значения, такие как назначение развертывания, параметры конфигурации, параметры развертывания и пароли строк подключения, либо оставить их как есть. При изменении каких-либо входных значений мастер использует их при формировании XMLA-скрипта развертывания. Однако мастер не изменяет какие-либо значения во входном файле.  
@@ -40,10 +39,10 @@ ms.locfileid: "66073040"
   
      -или-  
   
--   В папке **проекты** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта дважды щелкните * \<имя проекта>* файл. asdatabase.  
+-   В папке **проекты** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта дважды щелкните *\<project name>* файл asdatabase.  
   
     > [!NOTE]  
-    >  Если не удается найти * \<имя проекта>* файл. asdatabase, попробуйте использовать поиск и укажите *. asdatabase.  
+    >  Если файл asdatabase не найден *\<project name>* , попробуйте использовать поиск и укажите *. asdatabase.  
   
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Запуск мастера развертывания служб Analysis Services из командной строки  
  Мастер развертывания служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно также запускать из командной строки. При этом вводится полный путь к файлу .asdatabase и используется один из следующих режимов.  
@@ -73,7 +72,7 @@ ms.locfileid: "66073040"
   
 2.  Запустите **Microsoft.AnalysisServices.Deployment.exe** с ключом, определяющим режим запуска мастера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о скрипте развертывания Analysis Services](understanding-the-analysis-services-deployment-script.md)   
  [Развертывание решений модели с использованием мастера развертывания](deploy-model-solutions-using-the-deployment-wizard.md)  
   

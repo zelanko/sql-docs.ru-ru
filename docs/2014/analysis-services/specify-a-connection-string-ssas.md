@@ -12,19 +12,19 @@ ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc1080c2e75c58dfe732a2b0238f1d46f292816d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068548"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857940"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Указание строки подключения (SSAS)
   На этой странице **мастера импорта таблиц** указывается строка подключения для подключения к источнику данных OLE DB или ODBC. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
   
  Для соединения с источником данных на компьютере должен быть установлен соответствующий поставщик. Дополнительные сведения о поддерживаемых источниках данных и поставщиках см. в разделе [Поддерживаемые источники данных (табличные службы SSAS)](tabular-models/data-sources-supported-ssas-tabular.md).  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Понятное имя для соединения**  
  Введите уникальное имя для соединения с источником данных. Это поле является обязательным.  
   

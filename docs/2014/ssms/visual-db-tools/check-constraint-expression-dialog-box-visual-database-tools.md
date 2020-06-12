@@ -12,17 +12,17 @@ ms.assetid: beb6ce43-3913-4d66-8826-8e885335b790
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e763c930a37e90d1bf23c186fa5db8a16c5e971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b14a78839ac49a76a8745d74f04f3b6c9a37b82
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067890"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858988"
 ---
 # <a name="check-constraint-expression-dialog-box-visual-database-tools"></a>Диалоговое окно «Выражение проверочного ограничения» (визуальные инструменты для баз данных)
   При присоединении проверочных ограничений к таблице или столбцу нужно задать выражение SQL. Введите в предоставляемое окно выражение проверочного ограничения.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Выражение  
  Ввод выражения  
   

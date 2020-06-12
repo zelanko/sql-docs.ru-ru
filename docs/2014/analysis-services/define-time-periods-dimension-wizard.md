@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7f5fc866904397d4e6fc78a95030c79f6f9451a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081980"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528770"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Определение временных периодов (мастер измерений)
   Используйте страницу **Определение временных периодов** , чтобы указать календарные данные для включения в измерение времени или серверное измерение времени.  
@@ -28,7 +27,7 @@ ms.locfileid: "66081980"
 > [!IMPORTANT]  
 >  Эта страница предназначена для определения календарного года в измерении времени. Чтобы определить финансовый, производственный, отчетный год или год по стандарту 8601 Международной организации стандартов (ISO) для измерения времени, используйте страницу **Выбор календарей** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Первый день календаря**  
  Ввести или выбрать день начала текущего года.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66081980"
  **Язык отображения имен элементов времени**  
  Выбрать язык отображения имен элементов времени.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   

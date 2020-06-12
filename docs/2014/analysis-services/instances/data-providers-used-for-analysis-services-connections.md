@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080101"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543986"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Поставщики данных, используемые для соединений со службами Analysis Services
   Службы Analysis Services предоставляют 3 поставщика данных для сервера и доступа к данным. Все приложения подключаются к службам Analysis Services с помощью одного из следующих поставщиков. Два из этих поставщиков, ADOMD.NET и управляющие объекты AMO служб Analysis Services, — управляемые поставщики данных. Поставщик OLE DB для служб Analysis Services (MSOLAP DLL) является собственным поставщиком данных.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080101"
   
 1.  Перейдите в каталог «\Program Files\Microsoft Analysis Services\AS OLEDB\120».  
   
-2.  Щелкните правой кнопкой мыши файл msolap120. dll и выберите пункт **Свойства**.  
+2.  Щелкните правой кнопкой мыши msolap120.dll и выберите пункт **Свойства**.  
   
  Если в этом местоположении нет файла либо если в пути к папке содержится «AS OLEDB\110» или «AS OLEDB\90», то используется старая библиотека и для подключения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]необходимо установить более новую версию (AS OLEDB\11).  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080101"
   
  MSOLAP130.dll — это версия поставщика OLE DB служб Analysis Services, которая поставляется в составе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. К другим более ранним версиям относятся MSOLAP10.dll (для SQL Server 2008 и 2008 R2) и MSOLAP90.dll (для SQL Server 2005).  
   
- Поставщики OLE DB часто указываются в строках подключения. В строке подключения Analysis Services используется другая номенклатура для ссылки на поставщик OLE DB: MSOLAP. \<версия>. dll  
+ Поставщики OLE DB часто указываются в строках подключения. В строке подключения Analysis Services используется другая номенклатура для ссылки на поставщик OLE DB: MSOLAP. \<version> . компоновки  
   
  MSOLAP.5.dll — это текущий поставщик Analysis Services OLE DB, устанавливаемый в составе Excel 2013. На рабочих станциях, где работают более старые версии Excel, часто можно найти предыдущие версии, например MSOLAP.4.dll или MSOLAP.3.dll. Для некоторых компонентов служб Analysis Services, таких как надстройка PowerPivot, требуются определенные версии поставщика OLE DB. Дополнительные сведения см. в разделе [Свойства строки подключения (службы Analysis Services)](connection-string-properties-analysis-services.md).  
   
@@ -106,11 +105,11 @@ ms.locfileid: "66080101"
   
  Объекты AMO устанавливаются программой установки SQL Server и используются клиентскими приложениями SQL Server для подключения к службам Analysis Services. Можно также загрузить и установить объекты AMO вручную для применения в пользовательском коде (см. подраздел [Как определить версию поставщиков данных служб Analysis Services](#bkmk_LibUpdate) этого раздела). Объекты AMO можно найти в глобальном кэше сборок под названием `Microsoft.AnalysisServices`.  
   
- Соединение с помощью объектов AMO обычно минимально, состоящее из "Data Source\<= ServerName>". Когда подключение будет установлено, этот API можно использовать для работы с коллекциями баз данных и основными объектами. SSDT и SSMS используют объекты AMO для подключения к экземпляру служб Analysis Services.  
+ Соединение с помощью объектов AMO обычно является минимальным, состоящим из "Data Source = \<servername> ". Когда подключение будет установлено, этот API можно использовать для работы с коллекциями баз данных и основными объектами. SSDT и SSMS используют объекты AMO для подключения к экземпляру служб Analysis Services.  
   
  Дополнительные сведения о подключении программным путем см. в разделе [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подключение к службам Analysis Services](connect-to-analysis-services.md)  
   
   

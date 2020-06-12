@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087348"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527240"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Подключение к серверу служб интеллектуального анализа данных
   ![Кнопка «Соединения»](media/misc-connection.gif "Кнопка «Соединения»")  
   
- Нажмите кнопку **соединение** , чтобы выбрать существующее соединение или создать новое соединение с экземпляром [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Нажмите кнопку **соединение** , чтобы выбрать существующее соединение или создать новое соединение с экземпляром [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Почему мне нужно подключиться к серверу?**  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66087348"
   
 4.  Нажмите кнопку «Экспортировать эту модель интеллектуального анализа данных», чтобы создать файл скрипта в указанном местоположении.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подключение к исходным данным &#40;клиент интеллектуального анализа данных для Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md)   
  [Служебная программа настройки сервера &#40;надстройки интеллектуального анализа данных для Excel&#41;](server-configuration-utility-data-mining-add-ins-for-excel.md)  
   

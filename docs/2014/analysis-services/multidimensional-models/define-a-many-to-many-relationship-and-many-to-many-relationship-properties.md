@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075781"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547086"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Определение связей "многие ко многим" и свойств связей "многие ко многим"
   В этом разделе рассматривается измерения «многие ко многим» в службах Analysis Services, включая случаи их использования и способы создания.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075781"
   
 1.  Разверните проект, затем откройте куб, чтобы подтвердить правильность выполнения агрегирований.  
   
-2.  В Excel щелкните **данные** | **из других источников** | **Analysis Services**. Введите имя сервера, выберите базу данных и куб.  
+2.  В Excel щелкните **данные**  |  **из других источников**  |  **Analysis Services**. Введите имя сервера, выберите базу данных и куб.  
   
 3.  Создайте сводную таблицу, которая использует следующее:  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66075781"
   
  [Руководство. Пример измерения "многие ко многим" для служб SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связи измерений](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Руководство по установке образца данных и проектов для Analysis Services учебника по многомерному моделированию](../install-sample-data-and-projects.md)   
  [Развертывание проектов Analysis Services &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   

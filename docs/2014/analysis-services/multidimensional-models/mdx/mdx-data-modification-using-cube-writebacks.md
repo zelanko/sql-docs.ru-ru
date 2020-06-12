@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a79e98375c27c6a3570b2fafcf424965d7a97c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ac43e9206619117c1fc090a594ca32ccbeeeb31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074220"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546336"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Обратная запись в куб (многомерные выражения)
   Для обновления куба используется инструкция [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) . Эта инструкция позволяет записать в кортеж указанное значение. Для эффективного использования инструкции UPDATE CUBE необходимо понимать ее синтаксис, ситуации, в которых может возникнуть ошибка, и влияние обновления на весь куб.  
@@ -116,7 +115,7 @@ USE_EQUAL_ALLOCATION
   
 -   Изменение степени гранулярности измерения, которое содержится в обратной записи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение данных (многомерные выражения)](mdx-data-modification-modifying-data.md)  
   
   

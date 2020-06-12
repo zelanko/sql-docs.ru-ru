@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9d8b1665c6e6978af7dc673f7dd51a363da5c48d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892869"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669837"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,8 +40,8 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="result-type"></a>Тип результата  
  Таблица.  
   
-## <a name="remarks"></a>Remarks  
- Функция **BottomPercent** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \<ранжирующего выражения> аргументе для каждой строки, так что сумма \<ранжирующего выражения> значения по крайней мере в заданном процентном выражении, заданном аргументом \<percent>. **BottomPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
+## <a name="remarks"></a>Комментарии  
+ Функция **BottomPercent** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \< ранжирующего выражения> аргументе для каждой строки, так что сумма \< ранжирующего выражения> значения по крайней мере в заданном процентном выражении, заданном \< аргументом percent>. **BottomPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, созданной в [учебнике по основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

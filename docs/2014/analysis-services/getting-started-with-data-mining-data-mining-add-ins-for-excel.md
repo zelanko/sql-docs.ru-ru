@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1578e071f0ca0f511e6443f7b4462520adcda6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544356"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Приступая к работе с интеллектуальным анализом данных (надстройки интеллектуального анализа данных для Excel)
   Интеллектуальный анализ данных — это процесс обнаружения имеющих смысл закономерностей в данных. Интеллектуальный анализ данных — это естественное дополнение к процессу просмотра и понимания данных посредством традиционной бизнес-аналитики. Автоматические алгоритмы могут обрабатывать очень большие объемы данных и обнаруживать скрытые закономерности и тенденции.  
@@ -126,7 +125,7 @@ ms.locfileid: "66080936"
   
  [Проверка моделей и использование моделей для прогнозирования &#40;надстройки интеллектуального анализа данных для Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Что входит в состав надстроек интеллектуального анализа данных для Office](what-s-included-in-the-data-mining-add-ins-for-office.md)   
  [Технический справочник &#40;надстроек интеллектуального анализа данных для Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   

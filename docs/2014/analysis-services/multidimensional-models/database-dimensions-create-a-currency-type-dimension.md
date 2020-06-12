@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b1f037d1-ce47-4e47-a1c2-5ec9e781cff6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d967d1275c7b682c79313b95af06f3088e7acf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0cfd7aa0b6d7f401510add51f3938c4c297a31
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075980"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547168"
 ---
 # <a name="create-a-currency-type-dimension"></a>Создание измерения типа Currency
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]службах измерение типа Currency — это измерение, атрибуты которого представляют собой список валют для целей финансовой отчетности.  
+  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] службах измерение типа Currency — это измерение, атрибуты которого представляют собой список валют для целей финансовой отчетности.  
   
  Измерение валюты позволяет добавлять возможности конвертации валюты в куб в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы добавить в куб конвертацию валюты, воспользуйтесь мастером бизнес-аналитики для определения команды скрипта многомерного выражения, которая конвертирует меры валюты в значения, соответствующие локали клиентского приложения. Для создания скрипта многомерных выражений мастеру бизнес-аналитики необходимы следующие данные:  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66075980"
 ## <a name="defining-account-intelligence-with-the-business-intelligence-wizard"></a>Определение логики операций со счетами с помощью мастера бизнес-аналитики  
  После определения измерения счетов и его добавления в куб можно, воспользовавшись мастером бизнес-аналитики, добавить функционал логики операций со счетами, например идентифицирующие типы учетной записи и типы сопоставления, к измерению. Дополнительные сведения см. в разделе [Добавление логики операций со счетами к измерению](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Справка F1 мастера бизнес-аналитики](../business-intelligence-wizard-f1-help.md)   
  [Типы измерений](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

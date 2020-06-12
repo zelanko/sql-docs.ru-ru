@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1827cf0acf8e600c58efca82bb3223a00efb3e41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3ea13dc58815e82d82a3f3b5ffdd3c5d666d7e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217119"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543719"
 ---
 # <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>Использование динамических административных представлений для мониторинга служб Analysis Services
   Динамические административные представления служб Analysis Services — это структуры запросов, которые предоставляют сведения о локальных операциях сервера и его состоянии. Структура запроса — это интерфейс для наборов строк схемы, которые возвращают метаданные и сведения об экземпляре служб Analysis Services.  
@@ -98,7 +97,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  Если динамическое административное представление недоступно для данного набора строк, сервер возвращает следующую ошибку: " \<тип запроса счемаровсет> не распознан сервером". Все остальные ошибки указывают на проблемы с синтаксисом.  
+>  Если динамическое административное представление недоступно для данного набора строк, сервер возвращает следующую ошибку: " \<schemarowset> тип запроса не распознан сервером". Все остальные ошибки указывают на проблемы с синтаксисом.  
   
 |Набор строк|Описание|  
 |------------|-----------------|  

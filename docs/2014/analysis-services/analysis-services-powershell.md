@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782651"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528030"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   В службах [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] имеется поставщик Analysis Services PowerShell (SQLAS) и командлеты, позволяющие использовать Windows PowerShell для навигации, администрирования и выполнения запросов к объектам служб Analysis Services.  
@@ -29,7 +28,7 @@ ms.locfileid: "72782651"
 -   Командлеты для отдельных задач, выполняющие типовые операции, в частности, обработку, управление ролями, управление секциями, резервное копирование и восстановление.  
   
 ## <a name="in-this-article"></a>В этой статье  
- [Предварительные условия](#bkmk_prereq)  
+ [Предварительные требования](#bkmk_prereq)  
   
  [Поддерживаемые версии и режимы служб Analysis Services](#bkmk_vers)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "72782651"
   
  Необходимо установить компонент SQL Server, включающий модуль SQL Server PowerShell (SQLPS) и клиентские библиотеки. Проще всего это сделать, установив среду SQL Server Management Studio, которая уже включает компонент PowerShell и клиентские библиотеки. Модуль SQL Server PowerShell (SQLPS) содержит поставщики PowerShell и командлеты для всех компонентов SQL Server, включая модуль SQLASCmdlets и поставщик SQLAS, используемый для навигации по иерархии объектов служб Analysis Services.  
   
- Для использования `SQLAS` поставщика и командлетов необходимо импортировать модуль **sqlps** . Поставщик SQLAS является расширением `SQLServer` поставщика. Имеется несколько способов импорта модуля SQLPS. Дополнительные сведения см. в разделе [Импорт модуля SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
+ Для использования **SQLPS** `SQLAS` поставщика и командлетов необходимо импортировать модуль sqlps. Поставщик SQLAS является расширением `SQLServer` поставщика. Имеется несколько способов импорта модуля SQLPS. Дополнительные сведения см. в разделе [Импорт модуля SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
   
  Для удаленного доступа к экземпляру служб Analysis Services требуется включить удаленное администрирование и общий доступ к файлам. Дополнительные сведения см. в разделе [Включение удаленного администрирования](#bkmk_remote) этого раздела.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "72782651"
 |Табличные экземпляры и базы данных|Поддерживается локальное и удаленное администрирование.<br /><br /> Дополнительные сведения см. в блоге 2011 августа об [управлении табличными моделями с помощью PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Экземпляры и базы данных PowerPivot для SharePoint|Ограниченная поддержка. Для просмотра сведений об экземпляре и базе данных можно использовать соединения HTTP и поставщик SQLAS.<br /><br /> Однако использование командлетов не поддерживается. Надстройку PowerShell для служб Analysis Services не следует использовать для резервного копирования и восстановления хранящихся в памяти баз данных PowerPivot, а также для добавления и удаления ролей, обработки данных или запуска произвольных скриптов XMLA.<br /><br /> В целях настройки в PowerPivot для SharePoint имеется встроенная поддержка PowerShell, реализуемая отдельно. Дополнительные сведения см. в [справочнике по PowerShell для PowerPivot для SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Собственные соединения с локальными кубами<br /><br /> "Data Source = к:\баккуп\тест.куб"|Не поддерживается.|  
-|Соединения HTTP с файлами соединений семантических моделей бизнес-аналитики (BISM-файлами) в SharePoint<br /><br /> "Data Source =http://server/shared_docs/name.bism"|Не поддерживается.|  
+|Соединения HTTP с файлами соединений семантических моделей бизнес-аналитики (BISM-файлами) в SharePoint<br /><br /> "Data Source = http://server/shared_docs/name.bism "|Не поддерживается.|  
 |Встроенные соединения с базами данных PowerPivot<br /><br /> "Data Source = $Embedded $"|Не поддерживается.|  
 |Контекст локального сервера в хранимых процедурах служб Analysis Services<br /><br /> "Data Source = *"|Не поддерживается.|  
   
@@ -82,7 +81,7 @@ ms.locfileid: "72782651"
   
 3.  Имя пользователя и пароль, предоставляемые объектом учетных данных, разрешаются в идентификатор пользователя Windows. Службы Analysis Services используют этот идентификатор в качестве текущего пользователя. Если пользователь не является пользователем Windows или у него недостаточно прав для выполнения запрошенной операции, запрос завершается с ошибкой.  
   
- Чтобы создать объект учетных данных, можно воспользоваться командлетом Get-Credential для получения учетных данных от оператора. Затем этот объект учетных данных можно использовать в команде подключения к службам Analysis Services. В следующем примере показан один из подходов. В этом примере соединение выполняется с локальным экземпляром (`SQLSERVER:\SQLAS\HTTP_DS`), настроенным для доступа по протоколу HTTP.  
+ Чтобы создать объект учетных данных, можно воспользоваться командлетом Get-Credential для получения учетных данных от оператора. Затем этот объект учетных данных можно использовать в команде подключения к службам Analysis Services. В следующем примере показан один из подходов. В этом примере соединение выполняется с локальным экземпляром ( `SQLSERVER:\SQLAS\HTTP_DS` ), настроенным для доступа по протоколу HTTP.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  HTTP-подключения полезны, если вы настроили сервер для доступа по протоколу HTTP, выполнив инструкции в этом разделе: [Настройка доступа по протоколу HTTP к Analysis Services на службы IIS &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- Если предположить, что URL http://localhost/olap/msmdpump.dll-адрес сервера для, соединение может выглядеть следующим образом:  
+ Если предположить, что URL-адрес сервера для http://localhost/olap/msmdpump.dll , соединение может выглядеть следующим образом:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  
@@ -273,7 +272,7 @@ Restart-Service mssqlserverolapservice
     Get-PSDrive  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка SQL Server PowerShell](../database-engine/install-windows/install-sql-server-powershell.md)   
  [Управление табличными моделями с помощью PowerShell (блог)](https://go.microsoft.com/fwlink/?linkID=227685)   
  [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  

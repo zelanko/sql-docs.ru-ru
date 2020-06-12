@@ -1,5 +1,6 @@
 ---
 title: Указание оси в шаге выражения пути | Документация Майкрософт
+description: Узнайте, как указать шаг оси в выражении пути XQuery.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946483"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215761"
 ---
 # <a name="path-expressions---specifying-axis"></a>Выражения пути — указание оси
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,15 +53,15 @@ ms.locfileid: "67946483"
 |**самообслуживания**|Возвращает сам контекстный узел.|  
 |**descendant-or-self**|Возвращает сам контекстный узел и всех его потомков.|  
   
- Все эти оси, за исключением **родительской** оси, являются прямыми осями. **Родительская** ось — это обратная ось, так как она выполняет поиск в обратном направлении в иерархии документа. Например, относительное выражение пути `child::ProductDescription/child::Summary` имеет два шага, и каждый шаг указывает ось `child`. Первый шаг получает дочерний элемент \<ProductDescription> элемента контекстного узла. Для каждого \<узла элемента ProductDescription> второй шаг извлекает дочерние \<элементы узла сводки> элементов.  
+ Все эти оси, за исключением **родительской** оси, являются прямыми осями. **Родительская** ось — это обратная ось, так как она выполняет поиск в обратном направлении в иерархии документа. Например, относительное выражение пути `child::ProductDescription/child::Summary` имеет два шага, и каждый шаг указывает ось `child`. Первый шаг извлекает \<ProductDescription> дочерние элементы узла контекста. Для каждого \<ProductDescription> узла элемента второй шаг извлекает \<Summary> потомки узла элемента.  
   
- Относительное выражение пути `child::root/child::Location/attribute::LocationID` имеет три шага. Каждый из первых двух шагов указывает ось `child`, а третий этап указывает ось `attribute`. При выполнении в XML-документах с инструкциями по производству в таблице **Production. ProductModel** выражение возвращает `LocationID` атрибут \<Location> элемент element \<корневого элемента>.  
+ Относительное выражение пути `child::root/child::Location/attribute::LocationID` имеет три шага. Каждый из первых двух шагов указывает ось `child`, а третий этап указывает ось `attribute`. При выполнении в XML-документах с инструкциями по производству в таблице **Production. ProductModel** выражение возвращает `LocationID` атрибут \<Location> дочернего узла элемента \<root> .  
   
 ## <a name="examples"></a>Примеры  
  Примеры запросов в этом разделе указываются для столбцов типа **XML** в базе данных **AdventureWorks** .  
   
 ### <a name="a-specifying-a-child-axis"></a>А) Указание дочерней оси  
- Для конкретной модели продукта следующий запрос получает \<компоненты,> дочерние узлы узла элемента \<ProductDescription> из описания каталога продуктов, хранящегося в `Production.ProductModel` таблице.  
+ Для конкретной модели продукта следующий запрос получает \<Features> дочерние узлы узла \<ProductDescription> element из описания каталога продуктов, хранящегося в `Production.ProductModel` таблице.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -72,11 +73,11 @@ WHERE ProductModelID=19
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   `query()` Метод типа данных **XML** задает выражение пути.  
+-   `query()`Метод типа данных **XML** задает выражение пути.  
   
 -   Оба шага в выражении пути указывают ось `child` и имена узлов, `ProductDescription` и `Features`, в качестве проверок узлов. Дополнительные сведения о тестировании узлов см. [в разделе Указание проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md).  
   
-### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>Б) Указание осей descendant или descendant-or-self  
+### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>Б. Указание осей descendant или descendant-or-self  
  Следующий пример использует ось descendant, а также ось descendant-or-self. Запрос в этом примере задается для переменной типа **XML** . Экземпляр XML упрощен, чтобы было легче проиллюстрировать различие в формируемых результатах.  
   
 ```  
@@ -108,7 +109,7 @@ select @y
   
  Если в этом выражении указать ось потомков для данного выражения пути,  
   
- `/child::a/child::b/descendant::*`, запрашиваются все потомки узла <`b`> элемента.  
+ `/child::a/child::b/descendant::*`, запрашиваются все потомки `b` узла <> элемента.  
   
  Звездочка (*) в проверке узла представляет имя узла как проверку узла. Поэтому тип основного узла оси потомков, узел-элемент, определяет типы возвращаемых узлов. Таким образом, выражение возвращает все узлы-элементы. Текстовые узлы возвращены не будут. Дополнительные сведения о типе первичного узла и его связи с тестом узла см. [в разделе Указание проверки узла в шаге выражения пути](../xquery/path-expressions-specifying-node-test.md) .  
   
@@ -151,9 +152,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>В. Указание родительской оси  
- Следующий запрос возвращает дочерний `Summary` элемент <> элемента <`ProductDescription`> в XML-документе каталога продуктов, который хранится в `Production.ProductModel` таблице.  
+ Следующий запрос возвращает `Summary` дочерний элемент <> элемента <`ProductDescription`> в XML-документе каталога продуктов, который хранится в `Production.ProductModel` таблице.  
   
- В этом примере используется родительская ось, чтобы вернуться к родительскому элементу <`Feature`> и получить дочерний элемент <`Summary`> элемента `ProductDescription` <>.  
+ В этом примере используется родительская ось, чтобы вернуться к родительскому `Feature` элементу <> и получить `Summary` дочерний элемент <> элемента <`ProductDescription`>.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -193,7 +194,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Чтобы добавить элемент `ProductModelID` for each `<Feature`>, необходимо указать `parent` ось:  
+ Чтобы добавить `ProductModelID` элемент for each `<Feature`>, необходимо `parent` указать ось:  
   
 ```  
 SELECT CatalogDescription.query('  

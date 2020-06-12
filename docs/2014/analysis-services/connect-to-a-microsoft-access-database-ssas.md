@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9fa81839-dd8b-41d3-915e-c774a707ed53
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95d40cc0a6da642fe92f46a86308da348d5cc040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb7044a7b0c8b563a266cfbed9c7df44d5c79a55
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087301"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527210"
 ---
 # <a name="connect-to-a-microsoft-access-database-ssas"></a>Соединение с базой данных Microsoft Access (SSAS)
   Эта страница **мастера импорта таблиц** позволяет задать параметры для соединения с базой данных Microsoft Access. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087301"
 > [!NOTE]  
 >  При выборе файла на этой странице используются учетные данные текущего пользователя. Тем не менее импорт не будет успешным, если пользователь, указанный на странице сведений об олицетворении, не имеет достаточных прав для чтения из выбранного файла.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Понятное имя соединения**  
  Введите уникальное имя для соединения с источником данных. Это поле является обязательным.  
   

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66980b1afe9d4eed353ae18c37ed1fdd052e62b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081158"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544468"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Фильтрация элементов» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Фильтрация элементов** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для фильтрации элементов измерения по заголовку элемента, имени элемента, уникальному имени элемента, значению ключевого столбца или значению столбца значений для текущего уровня при просмотре измерения на вкладке **Браузер** в **Конструктор измерений**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
@@ -32,7 +31,7 @@ ms.locfileid: "66081158"
 |**Область тестирования**|При нажатии кнопки **Тест** на этой панели отображаются элементы, возвращенные критерием фильтра. Если при использовании критериев, заданных в поле **Критерий фильтра**, не возвращаются никакие элементы, то отображается предупреждение.|  
 |**Тест**|Нажмите эту кнопку для тестирования критериев, заданных в поле **Критерий фильтра**.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Конструктор измерений &#40;конструктора&#41; &#40;Analysis Services многомерных данных&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   

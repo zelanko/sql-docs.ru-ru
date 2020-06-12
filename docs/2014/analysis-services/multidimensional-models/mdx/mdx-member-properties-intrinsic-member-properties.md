@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074205"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546366"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Внутренние свойства элементов (многомерные выражения)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] предоставляет внутренние свойства элементов измерения, которые можно включить в запрос для возвращения дополнительных данных или метаданных для использования в пользовательском приложении или при исследовании в модели или структуре. Если используются клиентские средства SQL Server, внутренние свойства можно просматривать в среде SQL Server Management Studio (SSMS).  
@@ -29,7 +28,7 @@ ms.locfileid: "66074205"
  Основные сведения об использовании и просмотре свойств элемента измерения см. в разделе [Просмотр свойств элементов служб SSAS в окне запроса MDX в SSMS](https://go.microsoft.com/fwlink/?LinkId=317362).  
   
 > [!NOTE]  
->  Как поставщик, совместимый с разделом OLAP спецификации OLE DB, датированным 1999 (2,6), поддерживает [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] внутренние свойства элементов, перечисленные в этом разделе.  
+>  Как поставщик, совместимый с разделом OLAP спецификации OLE DB, датированным 1999 (2,6), [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает внутренние свойства элементов, перечисленные в этом разделе.  
 >   
 >  Другие поставщики (не службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ) могут поддерживать дополнительные встроенные свойства элементов. Дополнительные сведения о внутренних свойствах элементов, поддерживаемых другими поставщиками, см. в документации по этим поставщикам.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66074205"
   
 -   Для обращения к свойству используется ключевое слово `PROPERTIES`.  
   
- В следующих разделах описываются как различные контекстно-зависимые, так и независимые от контекста [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]внутренние свойства элементов, доступные в `PROPERTIES` , а также использование ключевого слова с каждым типом свойства.  
+ В следующих разделах описываются как различные контекстно-зависимые, так и независимые от контекста внутренние свойства элементов, доступные в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , а также использование `PROPERTIES` ключевого слова с каждым типом свойства.  
   
 ## <a name="context-sensitive-member-properties"></a>Свойства элементов, зависящие от контекста  
  Все элементы измерения и уровня поддерживают группу внутренних свойств, зависящих от контекста. Эти свойства перечислены в следующей таблице.  
@@ -84,10 +83,10 @@ ms.locfileid: "66074205"
 ## <a name="non-context-sensitive-member-properties"></a>Свойства элементов, не зависящие от контекста  
  Все элементы поддерживают группу внутренних свойств элементов, одинаковых вне зависимости от контекста. Эти свойства несут дополнительные сведения, используемые приложениями для создания более удобной пользовательской среды.  
   
- В следующей таблице перечислены внутренние свойства, не зависящие от контекста, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]поддерживаемые в.  
+ В следующей таблице перечислены внутренние свойства, не зависящие от контекста, поддерживаемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  Столбцы в наборе строк схемы MEMBERS поддерживают внутренние свойства элементов, перечисленные в следующей таблице. Дополнительные сведения о наборе `MEMBERS` строк схемы см. в разделе [MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
+>  Столбцы в наборе строк схемы MEMBERS поддерживают внутренние свойства элементов, перечисленные в следующей таблице. Дополнительные сведения о `MEMBERS` наборе строк схемы см. в разделе [MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
 |Свойство|Описание|  
 |--------------|-----------------|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074205"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- Инструкция возвращает описание каждого элемента в оси измерения. При попытке определить свойство с помощью измерения или уровня, как в *измерении* `.DESCRIPTION` или *уровне*`.DESCRIPTION`, инструкция не будет проверяться.  
+ Инструкция возвращает описание каждого элемента в оси измерения. При попытке определить свойство с помощью измерения или уровня, как в *измерении* `.DESCRIPTION` или *уровне* `.DESCRIPTION` , инструкция не будет проверяться.  
   
 ### <a name="example"></a>Пример  
  В следующих примерах показаны запросы многомерных выражений, которые возвращают внутренние свойства.  
@@ -205,7 +204,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [PeriodsToDate &#40;&#41;многомерных выражений](/sql/mdx/periodstodate-mdx)   
  [Дочерние &#40;&#41;многомерных выражений](/sql/mdx/children-mdx)   
  [Hierarchize &#40;&#41;многомерных выражений](/sql/mdx/hierarchize-mdx)   

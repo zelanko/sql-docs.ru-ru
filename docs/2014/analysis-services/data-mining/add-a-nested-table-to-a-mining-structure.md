@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97d52ba1e5167c988b89421ff784428725ccec37
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086355"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525610"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>добавить вложенную таблицу в структуру интеллектуального анализа данных
   Используйте конструктор интеллектуального анализа данных, чтобы добавить к структуре вложенную таблицу, предварительно созданную мастером интеллектуального анализа данных.  
@@ -43,7 +42,7 @@ ms.locfileid: "66086355"
   
      К структуре интеллектуального анализа данных добавлен новый столбец таблицы, содержащий ключевой столбец. Дополнительные сведения о способе добавления новых столбцов см. в разделе [Добавление столбцов к структуре интеллектуального анализа данных](add-columns-to-a-mining-structure.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)  
   
   

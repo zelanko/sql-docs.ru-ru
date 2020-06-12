@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09aa5a282e02b778b759cbdfc83950d3a2559423
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087812"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527480"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>Мастер кластеризации (надстройки интеллектуального анализа данных для Excel)
   ![Мастер кластеризации на ленте «Интеллектуальный анализ данных»](media/dmc-cluster.gif "Мастер кластеризации на ленте «Интеллектуальный анализ данных»")  
@@ -68,7 +67,7 @@ ms.locfileid: "66087812"
 ### <a name="requirements"></a>Требования  
  Чтобы использовать мастер кластеризации, необходимо установить соединение с базой данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Дополнительные сведения см. [в разделе Подключение к источнику данных &#40;клиент интеллектуального анализа данных для Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание модели интеллектуального анализа данных](creating-a-data-mining-model.md)   
  [Определение категорий &#40;средств анализа таблиц для Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  
   

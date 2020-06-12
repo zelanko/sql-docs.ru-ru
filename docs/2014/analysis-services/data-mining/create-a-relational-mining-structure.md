@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085383"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523710"
 ---
 # <a name="create-a-relational-mining-structure"></a>Создание реляционной структуры интеллектуального анализа данных
   Большинство моделей интеллектуального анализа данных основано на реляционных источниках данных. Преимуществом создания реляционной модели интеллектуального анализа данных является возможность собирать неорганизованные данные, а также проводить обучение и обновление модели, не решая сложную задачу построения куба.  
@@ -124,7 +123,7 @@ ms.locfileid: "66085383"
 > [!WARNING]  
 >  Чтобы использовать детализацию, нужно включить ее при создании структуры интеллектуального анализа данных. Детализацию для моделей можно включить позднее, задав свойство модели, однако для структур интеллектуального анализа данных эту возможность следует задавать с самого начала. Дополнительные сведения см. в разделе [Запросы детализации (интеллектуальный анализ данных)](drillthrough-queries-data-mining.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор интеллектуального анализа данных](data-mining-designer.md)   
  [Мастер интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-analysis-services-data-mining.md)   
  [Свойства модели интеллектуального анализа данных](mining-model-properties.md)   

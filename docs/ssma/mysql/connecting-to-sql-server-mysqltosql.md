@@ -1,5 +1,6 @@
 ---
 title: Подключение к SQL Serverу (MySQLToSQL) | Документация Майкрософт
+description: Узнайте, как подключиться к целевому экземпляру SQL Server для переноса баз данных MySQL. SSMA получает метаданные о базах данных в SQL Server.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103132"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293961"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Подключение к SQL Server (MySQLToSQL)
 Чтобы перенести базы данных MySQL в SQL Server, необходимо подключиться к целевому экземпляру SQL Server. При подключении SSMA получает метаданные обо всех базах данных в экземпляре SQL Server и отображает метаданные базы данных в обозревателе метаданных SQL Server. SSMA хранит сведения об экземпляре SQL Server, к которому вы подключены, но не хранят пароли.  
@@ -67,13 +68,13 @@ ms.locfileid: "68103132"
   
 Ему разрешено подключаться и повторно подключаться к более поздним версиям SQL Server.  
   
-1.  Вы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможете подключиться к 2008 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если создан проект — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+1.  Вы сможете подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если создан проект — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-2.  Вы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сможете подключиться к 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если проект создан в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, но ему не разрешено подключаться к более ранним версиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например 2005.  
+2.  Вы сможете подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если проект создан в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, но ему не разрешено подключаться к более ранним версиям, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-3.  Вы сможете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключиться к 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если проект создан в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
+3.  Вы сможете подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если проект создан в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
   
-4.  Вы сможете подключиться только [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если создан проект — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
+4.  Вы сможете подключиться только к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, если создан проект — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
 5.  Совместимость более поздних версий недопустима для "SQL Azure".  
   
@@ -88,7 +89,7 @@ ms.locfileid: "68103132"
 |SQL Azure||||||Да|  
   
 > [!IMPORTANT]  
-> Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версией, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с которой установлено соединение. В случае с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проектом 2005 преобразование выполняется в соответствии с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, даже если вы подключены к более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
+> Преобразование объектов базы данных выполняется в соответствии с типом проекта, но не в соответствии с версией, с которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлено соединение. В случае с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проектом 2005 преобразование выполняется в соответствии с 2005, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] даже если вы подключены к более поздней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Синхронизация метаданных SQL Server  
 Метаданные SQL Server базы данных не обновляются автоматически. Метаданные в SQL Server обозревателе метаданных являются моментальным снимком метаданных при первом подключении к SQL Server или при последнем обновлении метаданных вручную. Можно вручную обновить метаданные для всех баз данных или для любой отдельной базы данных или объекта базы данных.  

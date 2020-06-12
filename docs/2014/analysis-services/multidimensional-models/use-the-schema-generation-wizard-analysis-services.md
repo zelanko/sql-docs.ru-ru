@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea4eee9909b4af80a5d8471f58d569690ff0962
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072645"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535916"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Использование мастера формирования схем (службы Analysis Services)
   На стадии формирования мастер формирования схем требует ограниченный объем сведений. Большая часть данных, необходимых мастеру формирования схем для формирования реляционных схем, извлекается из кубов и измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , уже созданных в проекте. Кроме того, можно настроить то, каким образом будет создана предметная область и как будут именоваться объекты схемы.  

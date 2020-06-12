@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: b01aa630-0b70-42a5-a743-f45a030cf26b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a79df6d154b5b5f2363eb14af0a4ffae5c9cb618
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d79ce686a9a0e3cdf58c81ea9060daa8a05e953d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081359"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528428"
 ---
 # <a name="enable-dimension-writeback-business-intelligence-wizard"></a>Разрешение обратной записи в измерение (мастер бизнес-логики)
   Страница **Разрешение обратной записи в измерение** используется для включения или выключения функций обратной записи для выбранного измерения.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Разрешить обратную запись в измерение**  
  При выборе этого параметра измерение становится доступным для записи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера бизнес-аналитики](business-intelligence-wizard-f1-help.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   

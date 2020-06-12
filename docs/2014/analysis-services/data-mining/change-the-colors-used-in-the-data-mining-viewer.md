@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4a8124d929faa22ec9429ca8bf15e4f0148ab71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8abee369a99bb2fa7d0590ca85d87c1bda76ba2c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085930"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525080"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>изменить цвета, используемые в средстве просмотра интеллектуального анализа данных
   Можно изменить цвета, используемые в средствах просмотра интеллектуального анализа данных, для отображения рядов данных, узлов или кластеров. Данная операция выполняется путем настройки параметров в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После изменения параметров выбранные цвета применяются ко всем моделям, просматриваемым с помощью среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Однако для отображения новых цветов необходимо закрыть среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и снова открыть модель в средстве просмотра.  

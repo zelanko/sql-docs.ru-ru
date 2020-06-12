@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fea2db082448fa96ad26733a2fad5f294575a74
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087712"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527370"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Завершение работы мастера (мастер интеллектуального анализа данных)
   Используйте страницу **Завершение работы мастера** , чтобы проверить созданную структуру интеллектуального анализа данных после окончания работы с мастером. Можно также задать имя структуры интеллектуального анализа данных.  
@@ -29,7 +28,7 @@ ms.locfileid: "66087712"
   
  **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Конструктор интеллектуального анализа данных](data-mining/data-mining-designer.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя структуры интеллектуального анализа данных**  
  Введите имя структуры интеллектуального анализа данных, определенной **мастером интеллектуального анализа данных**.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66087712"
 > [!NOTE]  
 >  Данный параметр доступен только в случае, если было выбрано **На основе существующего куба** на странице мастера **Выбор метода определения** и **Создать измерение модели интеллектуального анализа данных** на текущей странице мастера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Выберите представление источника данных &#40;мастер интеллектуального анализа данных&#41;](select-data-source-view-data-mining-wizard.md)   
  [Укажите обучающие данные &#40;мастер интеллектуального анализа данных&#41;](specify-the-training-data-data-mining-wizard.md)  

@@ -1,5 +1,6 @@
 ---
 title: Объект SqlXmlCommand (SQLXML)
+description: Сведения о методах и свойствах объекта SqlXmlCommand.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252649"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306164"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Управляемые классы SQLXML — объект SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252649"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Где `cnString` — строка подключения ADO или OLEDB, идентифицирующая сервер, базу данных и сведения об имени входа, например `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`.  
+ Где `cnString` — строка подключения ADO или OLEDB, идентифицирующая сервер, базу данных и сведения об имени входа, например `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  В строке соединения параметр `Provider` должен иметь значение SQLOLEDB, а параметр `Data Provider` в строку поставщика не включается).  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  Записывает результаты запроса в существующий поток. Этот метод полезен при наличии потока, к которому должны быть добавлены результаты (например, чтобы результаты запроса записывались в System. Web. HttpResponse. OutputStream). Рабочий пример см. в разделе [Выполнение SQL-запросов &#40;управляемых классов SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  XmlReader ExecuteXmlReader ()  
- Возвращает объект XmlReader. Этот метод можно использовать для непосредственного управления данными в объекте XmlReader или подключения к связанной архитектуре System. XML. Дополнительные сведения см. в документации по платформе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [Выполнение SQL-запросов с помощью метода ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Возвращает объект XmlReader. Этот метод можно использовать для непосредственного управления данными в объекте XmlReader или подключения к связанной архитектуре System.Xml. Дополнительные сведения см. в документации по платформе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [Выполнение SQL-запросов с помощью метода ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Объект Сесклксмлкомманд также поддерживает следующие дополнительные методы:  
   

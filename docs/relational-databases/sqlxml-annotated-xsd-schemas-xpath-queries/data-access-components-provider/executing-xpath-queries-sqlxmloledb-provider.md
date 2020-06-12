@@ -1,5 +1,6 @@
 ---
 title: Выполнение запросов XPath (поставщик SQLXMLOLEDB)
+description: Узнайте, как использовать свойства, зависящие от поставщика SQLXMLOLEDB, при выполнении запросов XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175c2e82b29c9c7c3895b8764e835db11295ebdb
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246634"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306240"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Выполнение запросов XPath (поставщик SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "75246634"
   
 -   **Схема сопоставления**  
   
- В этом образце клиентского приложения ADO запрос XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml). Схема имеет элемент ** \<Contacts>** с атрибутами **ContactID**, **FirstName**и **LastName** . В схеме выполняется сопоставление по умолчанию: имя элемента сопоставляется с таблицей с тем же именем, а атрибуты простого типа сопоставляются со столбцами с теми же именами.  
+ В этом образце клиентского приложения ADO запрос XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml). Схема содержит **\<Contacts>** элемент с атрибутами **ContactID**, **FirstName**и **LastName** . В схеме выполняется сопоставление по умолчанию: имя элемента сопоставляется с таблицей с тем же именем, а атрибуты простого типа сопоставляются со столбцами с теми же именами.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2390c0b921368e7e06f0e5563a7eb59769d99c17
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702301"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545034"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Создание и изменение объектов (XMLA)
   Основные объекты можно создавать, изменять и удалять независимо. Основные объекты включают следующие объекты:  
@@ -40,7 +39,7 @@ ms.locfileid: "62702301"
   
 -   Секции  
   
--   перспективами  
+-   Перспективы  
   
 -   Модели интеллектуального анализа данных  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62702301"
   
 -   Источники данных  
   
- Команда [CREATE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) используется для создания основного объекта в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]служб, а команда [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) — для изменения существующего основного объекта в экземпляре. Обе команды выполняются с помощью метода [EXECUTE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
+ Команда [CREATE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) используется для создания основного объекта в экземпляре служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а команда [ALTER](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla) — для изменения существующего основного объекта в экземпляре. Обе команды выполняются с помощью метода [EXECUTE](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) .  
   
 ## <a name="creating-objects"></a>Создание объектов  
  Объекты можно создавать при помощи метода `Create`; для этого сначала необходимо определить родительский объект, содержащий объект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], который должен быть создан. Вы определяете родительский объект, предоставив ссылку на объект в свойстве [ParentObject](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) `Create` команды. Каждая ссылка объекта содержит идентификаторы объекта, необходимые, чтобы идентифицировать родительский объект для команды `Create` уникальным образом. Дополнительные сведения о ссылках на объекты см. в разделе [Определение и идентификация объектов &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects).  
@@ -61,7 +60,7 @@ ms.locfileid: "62702301"
   
  Если атрибуту `AllowOverwrite` команды `Create` задать значение TRUE, можно переписать существующий основной объект, имеющий указанный идентификатор. В противном случае, если основной объект с указанным идентификатором уже существует в родительском объекте, возникает ошибка.  
   
- Дополнительные сведения о команде см `Create` . в разделе [Создание элемента &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla).  
+ Дополнительные сведения о `Create` команде см. в разделе [создание элемента &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla).  
   
 ### <a name="creating-session-objects"></a>Создание объектов сеанса  
  Объекты сеанса — это временные объекты, доступные только для явных или неявных сеансов, которые используются клиентским приложением и удаляются по завершении сеанса. Вы можете создавать объекты сеанса, присвоив `Scope` атрибуту `Create` команды значение *Session*.  
@@ -81,10 +80,10 @@ ms.locfileid: "62702301"
 ### <a name="using-the-objectexpansion-attribute"></a>Использование атрибута ObjectExpansion  
  Если изменяются только свойства основного объекта и не переопределяются небольшие объекты, содержащиеся в основном объекте, можно установить `ObjectExpansion` атрибут `Alter` команды *ObjectProperties*. В этом случае свойство `ObjectDefinition` должно содержать только элементы для свойств основного объекта, а команда `Alter` оставляет второстепенные объекты, ассоциированные с основным объектом, без изменений.  
   
- Чтобы переопределить незначительные объекты для основного объекта, необходимо задать для `ObjectExpansion` атрибута значение *ExpandFull* , а определение объекта должно включать все небольшие объекты, содержащиеся в основном объекте. Если в свойство `ObjectDefinition` команды `Alter` явно не включен второстепенный объект, содержащийся в основном объекте, то не указанный в нем второстепенный объект удаляется.  
+ Чтобы переопределить незначительные объекты для основного объекта, необходимо задать `ObjectExpansion` для атрибута значение *ExpandFull* , а определение объекта должно включать все небольшие объекты, содержащиеся в основном объекте. Если в свойство `ObjectDefinition` команды `Alter` явно не включен второстепенный объект, содержащийся в основном объекте, то не указанный в нем второстепенный объект удаляется.  
   
 ### <a name="altering-session-objects"></a>Изменение объектов сеанса  
- Чтобы изменить `Create` объекты сеанса, созданные командой, присвойте `Scope` атрибуту `Alter` команды значение *Session*.  
+ Чтобы изменить объекты сеанса `Create` , созданные командой, присвойте `Scope` атрибуту команды значение `Alter` *Session*.  
   
 > [!NOTE]  
 >  При использовании параметра *сеанса* `ObjectDefinition` элемент может содержать только [измерения](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl), [Кубы](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl)или [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) элементы ASSL.  
@@ -143,9 +142,9 @@ ms.locfileid: "62702301"
 ```  
   
 ### <a name="comments"></a>Комментарии  
- `ObjectExpansion` Атрибуту `Alter` команды было присвоено значение *ObjectProperties*. Этот параметр позволяет исключить элемент [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) , дополнительный объект, из источника данных, определенного в `ObjectDefinition`. Поэтому в качестве данных об олицетворении для этого источника данных остается заданной учетная запись службы, как указано в первом примере.  
+ `ObjectExpansion`Атрибуту `Alter` команды было присвоено значение *ObjectProperties*. Этот параметр позволяет исключить элемент [ImpersonationInfo](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) , дополнительный объект, из источника данных, определенного в `ObjectDefinition` . Поэтому в качестве данных об олицетворении для этого источника данных остается заданной учетная запись службы, как указано в первом примере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метод Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)   
  [Разработка с помощью Analysis Services языка сценариев &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  

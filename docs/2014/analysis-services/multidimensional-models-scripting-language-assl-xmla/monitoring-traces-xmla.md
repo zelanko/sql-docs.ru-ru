@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a2ca181b7c194fdd3909875f881d1030a77ae039
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62729078"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544934"
 ---
 # <a name="monitoring-traces-xmla"></a>Наблюдение за трассировками (XMLA)
-  С помощью команды [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) в XML для АНАЛИТИКИ (XMLA) можно отслеживать существующую трассировку, определенную в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]служб. Команда `Subscribe` возвращает результаты трассировки в виде набора строк.  
+  С помощью команды [Subscribe](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) в XML для АНАЛИТИКИ (XMLA) можно отслеживать существующую трассировку, определенную в экземпляре служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Команда `Subscribe` возвращает результаты трассировки в виде набора строк.  
   
 ## <a name="specifying-a-trace"></a>Задание трассировки  
  Свойство [объекта](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) `Subscribe` команды должно содержать ссылку на объект либо на [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр, либо на трассировку в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляре. Если свойство `Object` не задано или в свойстве `Object` не указан идентификатор трассировки, команда `Subscribe` отслеживает трассировку сеанса по умолчанию для явного сеанса, указанного в заголовке SOAP для данной команды.  
   
 ## <a name="returning-results"></a>Возвращаемые результаты  
- Команда `Subscribe` возвращает набор строк, содержащий события трассировки, которые зафиксировала указанная трассировка. `Subscribe` Команда возвращает результаты трассировки до отмены команды командой [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) .  
+ Команда `Subscribe` возвращает набор строк, содержащий события трассировки, которые зафиксировала указанная трассировка. `Subscribe`Команда возвращает результаты трассировки до отмены команды командой [Cancel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla) .  
   
  Набор строк содержит столбцы, перечисленные в следующей таблице.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62729078"
 |CurrentTime|Datetime|Время начала события, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|Datetime|Время начала события, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|Datetime|Время окончания события, если оно известно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».<br /><br /> Этот столбец не заполняется для классов событий, описывающих начало процесса или действия.|  
-|Duration|Long integer|Общее время (в миллисекундах), прошедшее для события.|  
+|Длительность|Long integer|Общее время (в миллисекундах), прошедшее для события.|  
 |CPUTime|Long integer|Общее время процессора (в миллисекундах), прошедшее для события.|  
 |JobID|Long integer|Идентификатор задания для процесса.|  
 |SessionID|Строка|Идентификатор сеанса, к которому относится происшедшее событие.|  
@@ -55,7 +54,7 @@ ms.locfileid: "62729078"
 |NestLevel|Целое число|Уровень транзакции, к которой относится происшедшее событие.|  
 |NumSegments|Long integer|Количество сегментов данных, затронутых или открытых командой, к которой относится происшедшее событие.|  
 |Severity|Целое число|Степень серьезности исключения для события. Столбец может содержать одно из следующих значений.<br /><br /> Значение: 0 = успешное завершение<br /><br /> Значение: 1 = сведения<br /><br /> Значение: 2 = предупреждение<br /><br /> Значение: 3 = ошибка|  
-|Успех|Логическое|Указывает, выполнена ли команда успешно или окончилась неудачей.|  
+|Успех|Логическое значение|Указывает, выполнена ли команда успешно или окончилась неудачей.|  
 |Ошибка|Long integer|Номер ошибки события, если это применимо.|  
 |ConnectionID|Строка|Идентификатор соединения, к которому относится происшедшее событие.|  
 |имя_базы_данных|Строка|Имя базы данных, к которой относится происшедшее событие.|  
@@ -71,7 +70,7 @@ ms.locfileid: "62729078"
 |RequestParameters|Строка|Параметры параметризированного запроса или команды XMLA, к которой относится происшедшее событие.|  
 |RequestProperties|Строка|Свойства метода XMLA, к которому относится происшедшее событие.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка с использованием XMLA в службах Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 09911d0d0d8553ab26d0fc141bcc07ed2f479728
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041922"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666970"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<Табличное выражение>.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если указан параметр *n* , он возвращает следующие значения:  
   
 -   Если *n* больше нуля, наиболее вероятные значения последовательностей приведены в следующих *n* шагах.  

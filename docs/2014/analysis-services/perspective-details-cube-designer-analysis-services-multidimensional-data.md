@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86983780a94af679c06253e710a582115bb25956
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072061"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540636"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Подробности перспективы (вкладка «Перспективы», конструктор кубов) (службы Analysis Services — многомерные данные)
   С помощью панели **Подробности перспективы** на вкладке **Перспективы** конструктора кубов можно управлять метаданными, доступными пользователям, запрашивающим выбранную перспективу.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Объекты куба**  
  Отображается иерархический список объектов и свойств, содержащихся в кубе, который может быть включен в перспективу.  
   

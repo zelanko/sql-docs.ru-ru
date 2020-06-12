@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebc79ed1221b729cfac3fb3d34ed5d9683dc6875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b2377aa37747a1e6e58f4494129afd2b2adcd78
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082962"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520462"
 ---
 # <a name="remove-columns-from-a-mining-structure"></a>удалить столбцы из структуры интеллектуального анализа данных
   Конструктор интеллектуального анализа данных можно использовать для удаления столбцов структуры интеллектуального анализа данных после ее создания. Возможны следующие причины удаления столбца структуры интеллектуального анализа данных.  
@@ -43,7 +42,7 @@ ms.locfileid: "66082962"
   
 4.  В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084829"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522970"
 ---
 # <a name="data-mining-tools"></a>Средства интеллектуального анализа данных
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет следующие средства, которые можно использовать для создания решений интеллектуального анализа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] данных.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет следующие средства, которые можно использовать для создания решений интеллектуального анализа данных.  
   
 -   **Мастер интеллектуального анализа данных** , который является компонентом среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Он упрощает создание структур и моделей интеллектуального анализа данных либо в реляционных источниках данных, либо в многомерных данных в кубах.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66084829"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] представляет собой интерфейс, предназначенный для работы с существующими решениями интеллектуального анализа данных, развернутыми в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы обновить данные структур и моделей, необходимо выполнить их повторную обработку.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержит средства, которые можно использовать для очистки данных, для автоматизации таких задач, как создание прогнозов и обновление моделей, а также для создания решений для интеллектуального анализа текста.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]содержит средства, которые можно использовать для очистки данных, для автоматизации таких задач, как создание прогнозов и обновление моделей, а также для создания решений для интеллектуального анализа текста.  
   
  Следующие разделы содержат более подробные сведения о средствах интеллектуального анализа данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66084829"
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редакторы запросов, которые могут быть использованы для проектирования и выполнения расширений интеллектуального анализа данных либо для работы с объектами интеллектуального анализа данных средствами XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Преобразования и задачи интеллектуальной обработки данных служб Integration Services  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет множество компонентов, поддерживающих интеллектуальный анализ данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]предоставляет множество компонентов, поддерживающих интеллектуальный анализ данных.  
   
  Некоторые средства служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] направлены на автоматизацию наиболее часто выполняемых задач интеллектуального анализа данных — прогнозирования, построения и обработки моделей. Пример:  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66084829"
   
  **Дополнительные сведения см. в разделе** [Связанные проекты для решений интеллектуального анализа данных](data-mining-solutions.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Задачи и инструкции по модели интеллектуального анализа данных](mining-model-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](mining-model-viewer-tasks-and-how-tos.md)   

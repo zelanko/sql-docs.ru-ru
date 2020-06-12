@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: abc8af00-5389-456d-b0f1-ec3e7403d4f9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92ad2dfbe51f97a84b443ae531bd11b0531f055e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062264"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527890"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Связи атрибутов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services — многомерные данные)
   Используйте список **Связи атрибутов** , чтобы отыскать конкретную связь в диаграмме связей атрибутов и управлять этой связью. Эта панель окна размещается непосредственно под панелью, содержащей диаграмму связей атрибутов.  
@@ -55,7 +54,7 @@ ms.locfileid: "66062264"
  **Свойства**  
  Отображает свойства атрибута в окне **Свойства** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Связи атрибутов &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [Панель инструментов &#40;вкладка Конструктор связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [Атрибуты &#40;вкладка конструктора связей атрибутов, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

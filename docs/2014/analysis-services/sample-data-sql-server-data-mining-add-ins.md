@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35907ae6-887f-4cb3-a750-cff3d7683d90
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a69b2286abbc1ba4289fd482b1bbf5a2dfb3e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8c0f9424c9e817ee482f426b3045e878a9c9c9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070038"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539066"
 ---
 # <a name="sample-data-sql-server-data-mining-add-ins"></a>Образец данных (надстройки интеллектуального анализа данных SQL Server)
   ![Мастер секционирования данных на ленте «Интеллектуальный анализ данных»](media/dmc-partition.gif "Мастер секционирования данных на ленте «Интеллектуальный анализ данных»")  
@@ -70,7 +69,7 @@ ms.locfileid: "66070038"
 ## <a name="related-options"></a>Связанные параметры  
  При работе с мастером вам будут доступны следующие параметры.  
   
-|Параметры|Комментарии|  
+|Варианты|Комментарии|  
 |-------------|--------------|  
 |Диалоговое окно «Выбор источника данных» (клиент интеллектуального анализа данных для Excel)|Выберите диапазон или таблицу Excel, которая содержит данные. Если необходимо использовать внешние данные, это могут быть реляционные данные, но их следует включить в источник данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. T|  
 |Страница «Выбор типа выборки» (клиент интеллектуального анализа данных для Excel)|При использовании внешнего источника данных доступен только режим случайной выборки. Кроме того, необходимо указать число строк, создаваемых в заключительном наборе данных, с помощью параметра **количество строк** . Процент от исходных данных указать нельзя.|  
@@ -82,7 +81,7 @@ ms.locfileid: "66070038"
   
  Дополнительные сведения см. в разделе [Преобразование «Выборка строк](../integration-services/data-flow/transformations/row-sampling-transformation.md) » и [Преобразование «Процентная выборка](../integration-services/data-flow/transformations/percentage-sampling-transformation.md)».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контрольный список для подготовки к интеллектуальному анализу данных](checklist-of-preparation-for-data-mining.md)  
   
   

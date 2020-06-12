@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd55af5914bcc6409a3e5d6c899cbfd8b7f939f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174721"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522167"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Алгоритм дерева принятия решений (Майкрософт)
-  Алгоритм [!INCLUDE[msCoName](../../includes/msconame-md.md)] дерева принятия решений — это алгоритм классификации и регрессии, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляемый для использования в прогнозном моделировании как дискретных, так и непрерывных атрибутов.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Алгоритм дерева принятия решений — это алгоритм классификации и регрессии, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании как дискретных, так и непрерывных атрибутов.
 
  Для дискретных атрибутов алгоритм осуществляет прогнозирования на основе связи между входными столбцами в наборе данных. Он использует значения этих столбцов (известные как состояния) для прогнозирования состояний столбца, который обозначается как прогнозируемый. Алгоритм идентифицирует входные столбцы, которые коррелированы с прогнозируемым столбцом. Например, в сценарии для прогнозирования того, какие заказчики, скорее всего, приобретут велосипед, если девять из десяти молодых заказчиков покупают велосипед, но только двое из более старших заказчиков делают это, то алгоритм заключает, что возраст является хорошим прогнозом приобретения велосипеда. Дерево решений осуществляет прогнозирование на основе этой тенденции в направлении конкретного результата.
 
@@ -92,7 +91,7 @@ ms.locfileid: "78174721"
 
  Общие сведения о создании запросов к моделям интеллектуального анализа см. в разделе [Запросы интеллектуального анализа данных](data-mining-queries.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Комментарии
 
 -   Поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.
 
@@ -100,7 +99,7 @@ ms.locfileid: "78174721"
 
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-algorithms-analysis-services-data-mining.md) [древовидное](decision-trees-model-query-examples.md) дерево [принятия решений](microsoft-decision-trees-algorithm-technical-reference.md) . [Analysis Services &#40;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md) Справочник
 
 

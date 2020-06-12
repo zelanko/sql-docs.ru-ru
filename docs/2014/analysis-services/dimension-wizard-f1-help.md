@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8311b2c3a2cfec2e3bac00a9082ca83d2d927b25
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081657"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528590"
 ---
 # <a name="dimension-wizard-f1-help"></a>Справка F1 мастера измерений
-  Используйте [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] мастер измерений в для создания измерения базы данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекте. После создания измерения базы данных можно использовать конструктор измерений, чтобы изменить его свойства. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
+  Используйте мастер измерений в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания измерения базы данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекте. После создания измерения базы данных можно использовать конструктор измерений, чтобы изменить его свойства. Дополнительные сведения о конструкторе измерений см. в разделе [Конструктор измерений (службы Analysis Services — многомерные данные)](dimension-designer-analysis-services-multidimensional-data.md).  
   
  **Открытие мастера измерений**  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66081657"
   
 -   [Завершение работы мастера &#40;измерений&#41;](completing-the-wizard-dimension-wizard.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  

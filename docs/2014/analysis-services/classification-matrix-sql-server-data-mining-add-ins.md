@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8af87605bb8c4c2cf4bcd53cce3f7ab0019b7d94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087971"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527520"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Матрица классификации (надстройки интеллектуального анализа данных SQL Server)
   ![Кнопка «Матрица классификации» на ленте ленте «Интеллектуальный анализ данных»](media/dmc-cmatrix.gif "Кнопка «Матрица классификации» на ленте ленте «Интеллектуальный анализ данных»")  
@@ -39,7 +38,7 @@ ms.locfileid: "66087971"
 |Бронзовая|**94,45%**|15,18%|1,70 %|  
 |Золотая|2,72%|**84,82%**|0,00%|  
 |Серебряная|1,84%|0,00%|**93,80%**|  
-|*Правильное*|*95,45%*|*84,82%*|*98,30%*|  
+|*Правильно*|*95,45%*|*84,82%*|*98,30%*|  
 |*Ошибка классификации*|*4,55%*|*15,18%*|*1,70%*|  
   
 -   Каждый столбец содержит фактические значения из проверочного набора данных.  
@@ -87,7 +86,7 @@ ms.locfileid: "66087971"
 ### <a name="known-issues"></a>Известные проблемы  
  В SQL Server 2012 и SQL Server 2014 возможность сопоставлять внутренний проверочный набор данных с моделью не работает в средстве **классификации матрицы** . Однако можно указать внешний набор данных и затем выбрать обучающий набор в качестве входного, чтобы выявить ошибку исходного набора данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка моделей и использование моделей для прогнозирования &#40;надстройки интеллектуального анализа данных для Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [Изучите &#40;данных SQL Server надстройки интеллектуального анализа данных&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [Определение категорий &#40;средств анализа таблиц для Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)  

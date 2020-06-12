@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 281dc08a4674949758e4abbc8142f78eb97700f6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082322"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528940"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Диалоговое окно «Свойства базы данных» (службы SSAS — многомерные)
   Используйте диалоговое окно **Свойства базы данных** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для установки свойств базы данных в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Можно отобразить диалоговое окно **Свойства базы данных** , щелкнув правой кнопкой мыши базу данных в обозревателе объектов и выбрав пункт **Свойства**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|  
 |----------|----------------|  
-|**Имя**|Введите новое имя базы данных вместо прежнего.|  
+|**имя**;|Введите новое имя базы данных вместо прежнего.|  
 |**Идентификатор**|Отображает идентификатор базы данных.|  
 |**Описание**|Введите новое описание базы данных вместо прежнего.|  
 |**Отметка времени создания**|Отображает дату и время создания базы данных.|  
@@ -37,7 +36,7 @@ ms.locfileid: "66082322"
 |**Предполагаемый размер**|Отображает предполагаемый размер базы данных.|  
 |**Место хранения**|Указывает расположение базы данных. Если база данных находится в каталоге данных по умолчанию, это значение будет пустым.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Базы данных многомерных моделей (службы SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   

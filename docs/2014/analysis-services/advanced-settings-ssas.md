@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f6ccea00-3419-489c-affc-ed8b002cffc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69839dc912784380d51160aa08f62b42df2cb899
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062730"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528180"
 ---
 # <a name="advanced-settings-ssas"></a>Дополнительные параметры (SSAS)
   В этом диалоговом окне **мастера импорта таблиц** указывается кодировка и локаль для неструктурированного файла, с которым выполняется соединение. Для доступа к мастеру из [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]выберите пункт **Импорт из источника данных** в меню **Модель**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
   
 |||  
 |-|-|  

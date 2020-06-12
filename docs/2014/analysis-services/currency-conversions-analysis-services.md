@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b60acaf4254112a53d905340c2750dd1e2e6e8f7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086549"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526017"
 ---
 # <a name="currency-conversions-analysis-services"></a>Преобразования валюты (службы Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Только многомерные  
@@ -84,7 +83,7 @@ ms.locfileid: "66086549"
 ## <a name="defining-currency-conversions"></a>Определение конвертаций валют  
  Можно использовать мастер бизнес-аналитики, чтобы определить функционал конвертации валют для куба, также можно вручную определить конвертации валют, используя скрипты многомерных выражений.  
   
-### <a name="prerequisites"></a>Предварительные условия  
+### <a name="prerequisites"></a>Предварительные требования  
  Перед тем как определять конвертацию валюты в кубе, используя мастер бизнес-аналитики, вначале необходимо определить хотя бы одно измерение валют, одно измерение времени и одну группу мер курсов. Из этих объектов мастер бизнес-аналитики может получать данные и метаданные, используемые для построения измерения валют отчета и скрипта многомерных выражений, необходимых для обеспечения функционала конвертации валют.  
   
 ### <a name="decisions"></a>Решения  
@@ -184,7 +183,7 @@ ms.locfileid: "66086549"
   
  При необходимости можно изменять команды скрипта, содержащиеся в конвертации валют. Однако при перезаписи конвертации валют эти изменения будут утеряны.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сценарии глобализации для многомерных служб Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 221f6d0c51b3c0a688a8bf3f002bfd4d31c04a45
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174303"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527790"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Браузер (конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте вкладку **браузера** в конструкторе кубов для просмотра измерений, мер и ключевых показателей эффективности в кубе. В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]браузер кубов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] интегрирован в конструктор запросов многомерных выражений и предоставляет графические интерфейсы пользователя, которые помогают создавать запросы многомерных выражений, фильтровать кубы и создавать их срезы, а также выполнять детализацию углублением иерархии.
@@ -57,7 +56,7 @@ ms.locfileid: "78174303"
 
  **Фильтр и запрос** Эта область конструктора используется для создания запросов многомерных выражений, для перетаскивания объектов с панели **Метаданные** и для определения условий фильтра в исходном кубе или измерении. Дополнительные сведения см. в разделе [Запрос и фильтр (вкладка "Браузер", конструктор кубов) (службы Analysis Services — многомерные данные)](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Объекты куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md) [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md) [конструктор кубов &#40;Analysis Services — многомерные данные&#41;](cube-designer-analysis-services-multidimensional-data.md)
 
 

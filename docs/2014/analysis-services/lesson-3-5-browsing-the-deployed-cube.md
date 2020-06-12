@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9035079fc94e0e39344fa89d9e7cf1b6e77fb8de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493979"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543406"
 ---
 # <a name="browsing-the-deployed-cube"></a>Просмотр развернутого куба
   В этой задаче будет проводиться просмотр куба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial. Так как при проведении анализа сравниваются несколько измерений, для просмотра данных воспользуемся сводной таблицей Excel. Разместим в сводной таблице информацию о клиенте, дате и продукте на разных осях, чтобы было видно, как изменяются продажи через Интернет в различные периоды времени, для различных групп клиентов и продуктовых линий.  
   
 ### <a name="to-browse-the-deployed-cube"></a>Просмотр развернутого куба  
   
-1.  Чтобы переключиться в конструктор [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]кубов в, дважды щелкните куб ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** в папке **Кубы** Обозреватель решений.  
+1.  Чтобы переключиться в конструктор кубов в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , дважды щелкните куб ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial** в папке **Кубы** Обозреватель решений.  
   
 2.  Перейдите на вкладку **Браузер** и на панели инструментов конструктора нажмите кнопку **Повторное соединение** .  
   

@@ -1,5 +1,6 @@
 ---
 title: 'Получение невостребованных данных с помощью SQL: overflow-field (SQLXML)'
+description: 'Узнайте, как использовать поле SQL: overflow в SQLXML 4,0 для получения данных, которые не использовались функцией OPENXML.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,16 +19,16 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 35abd64e0c7e492f114164447ec3e258242d3765
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 172d500e0b16f192eaea438b58b4dbcb8b710c29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257397"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524580"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Получение невостребованных данных с помощью sql:overflow-field (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При извлечении данных из базы данных с помощью схем с заметками можно указать атрибут **SQL: overflow-field** , чтобы определить столбец в таблице, в которой хранятся данные о переполнении. Атрибут **SQL: overflow-field** можно указать в ** \<>элемента **.  
+  Когда в базу данных с помощью функции OPENXML [!INCLUDE[tsql](../../includes/tsql-md.md)] вставляются записи из XML-документа, все невостребованные данные из исходного XML-документа могут быть сохранены в столбце. При извлечении данных из базы данных с помощью схем с заметками можно указать атрибут **SQL: overflow-field** , чтобы определить столбец в таблице, в которой хранятся данные о переполнении. Атрибут **SQL: overflow-field** может быть указан в **\<element>** .  
   
  Затем эти данные можно получить одним из трех способов.  
   

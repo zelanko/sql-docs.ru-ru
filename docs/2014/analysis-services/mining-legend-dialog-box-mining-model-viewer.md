@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb621d6adc4729785e551a985d349ebf5650f3a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077768"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545466"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Диалоговое окно «Легенда интеллектуального анализа данных» (средство просмотра моделей интеллектуального анализа данных)
   Используйте диалоговое окно **Легенда интеллектуального анализа данных** для получения более подробных сведений о выбранном узле или элементе в средстве просмотра модели интеллектуального анализа данных.  
@@ -34,7 +33,7 @@ ms.locfileid: "66077768"
   
 -   Модели взаимосвязей  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Модели дерева принятия решений  
  [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66077768"
  Модели линейной регрессии  
  [Просмотр модели с помощью средства просмотра деревьев (Майкрософт)](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Средства просмотра моделей интеллектуального анализа &#40;конструктор моделей интеллектуального анализа данных&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Средства просмотра моделей интеллектуального анализа данных](data-mining/data-mining-model-viewers.md)  

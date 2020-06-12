@@ -18,17 +18,17 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754113"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858696"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Подробные сведения о развернутом приложении уровня данных (служебная программа SQL Server)
   Представление «Сведения о развернутых приложениях уровня данных» проводника служебной программы отображает сведения об использовании для отдельных приложений уровня данных, журнал использования процессора, подробные сведения об использовании хранилища на уровне файлов, а также позволяет просматривать и обновлять пороговые значения политик. Пороговые значения политик могут быть изменены на уровне приложения уровня данных для использования процессора, а также для файлов данных баз данных и файлов журналов. Также можно просматривать подробные сведения о свойствах отдельных приложений уровня данных.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  Режим списка  
  В представлении списка в верхней панели отображаются данные об отдельных приложениях уровня данных. Значки состояния исправности показывают общее состояние каждого приложения уровня данных по категории использования.  
   
@@ -165,10 +165,10 @@ ms.locfileid: "62754113"
   
 -   Время последнего отчета: в этом столбце содержится локальная дата и время в формате UCP с использованием типа данных datetime. Дополнительные сведения см. в разделе [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) электронной документации по SQL Server. При использовании объектной модели служебной программы обратите внимание, что среда SSMS использует тип данных datetimeoffset. Дополнительные сведения см. в разделе [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) электронной документации по SQL Server.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сведения о Управляемый экземпляр &#40;служебная программа SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Панель мониторинга служебной программы &#40;служебная программа SQL Server&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Наблюдение за экземплярами SQL Server в служебная программа SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Функции и задачи служебная программа SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

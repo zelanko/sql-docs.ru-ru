@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d83a7111bbea13733190eeb612373d9136dd058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afba038563ec5934a874811c804dd7a4aa9fff1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217132"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523100"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Службы интеллектуального анализа данных и источники данных
   Для интеллектуального анализа данных требуется соединение с экземпляром служб SQL Server Analysis Services. Данные из куба не требуются для интеллектуального анализа данных, и рекомендуется использовать реляционные источники данных. Однако интеллектуальный анализ данных использует компоненты, предоставляемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -23,7 +22,7 @@ ms.locfileid: "79217132"
  В этом разделе представлены необходимые сведения по соединению с экземпляром служб SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания, обработки и развертывания моделей интеллектуального анализа данных и выполнения запросов к ним.  
   
 ## <a name="data-mining-services"></a>Службы интеллектуального анализа данных  
- Серверный компонент компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — это приложение msmdsrv. exe, которое обычно выполняется как служба Windows. Оно состоит из компонентов безопасности, компонента прослушивания XML для аналитики (XMLA), компонента обработчика запросов и множества других внутренних компонентов, выполняющих следующие функции:  
+ Серверный компонент компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] — это msmdsrv.exe приложение, которое обычно выполняется как служба Windows. Оно состоит из компонентов безопасности, компонента прослушивания XML для аналитики (XMLA), компонента обработчика запросов и множества других внутренних компонентов, выполняющих следующие функции:  
   
 -   Синтаксический анализ инструкций, получаемых от клиентов  
   
@@ -44,13 +43,13 @@ ms.locfileid: "79217132"
 -   Управление ресурсами сервера  
   
 ### <a name="xmla-listener"></a>Прослушиватель XML для аналитики  
- Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv. ini можно использовать для указания порта, который прослушивает [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляр. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
+ Компонент прослушивателя XML для аналитики обрабатывает все XMLA-взаимодействия между службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и их клиентами. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] `Port` Параметр конфигурации в файле msmdsrv.ini можно использовать для указания порта, который [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает экземпляр. Значение 0 указывает на то, что [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] прослушивает порт по умолчанию. По умолчанию службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пользуются следующими TCP-портами:  
   
 |Порт|Описание|  
 |----------|-----------------|  
-|2383|Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]по умолчанию.|  
-|2382|Перенаправитель для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|Динамически назначается при запуске сервера|Именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
+|2383|Экземпляр по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|2382|Перенаправитель для других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|Динамически назначается при запуске сервера|Именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
   
  Дополнительные сведения об управлении портами, используемыми этой службой, см. в разделе [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "79217132"
  Можно также установить свойства, позволяющие тонко настраивать сервер и управлять безопасностью использования клиента. Дополнительные сведения см. в статье [Feature Properties](../server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Дополнительные сведения о поддержке подключаемых алгоритмов в выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (.https://go.microsoft.com/fwlink/?linkid=232473)  
+>  Дополнительные сведения о поддержке подключаемых алгоритмов в выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Программный доступ к объектам интеллектуального анализа данных  
  Можно использовать следующие модели объектов для создания соединения с базой данных служб Analysis Services и работы с объектами интеллектуального анализа данных.  
@@ -122,7 +121,7 @@ ms.locfileid: "79217132"
 > [!NOTE]  
 >  Хранимые процедуры нельзя использовать для изменения безопасности в серверных объектах базы данных. При выполнении хранимой процедуры для определения доступа ко всем серверным объектам используется текущий контекст пользователя. Поэтому пользователи должны иметь соответствующие разрешения для всех объектов базы данных, к которым они получают доступ.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Физическая архитектура &#40;Analysis Services многомерных данных&#41;](../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [Физическая архитектура &#40;Analysis Services-интеллектуальный анализ данных&#41;](physical-architecture-analysis-services-data-mining.md)   
  [Управление решениями и объектами интеллектуального анализа данных](management-of-data-mining-solutions-and-objects.md)  

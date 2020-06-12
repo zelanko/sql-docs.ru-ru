@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084196"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522180"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
@@ -75,7 +74,7 @@ ms.locfileid: "66084196"
 ### <a name="analysis-management-objects-amo"></a>Объекты AMO  
  Объекты AMO — это объектная модель, построенная на основе XMLA, которая обеспечивает полный доступ к объектам интеллектуального анализа данных. Объекты AMO позволяют создавать, развертывать и отслеживать структуры и модели интеллектуального анализа данных.  
   
--   [Основные понятия и модель объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
+-   [Основные понятия и объектная модель объектов AMO](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)  
   
 -   <xref:Microsoft.AnalysisServices>  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66084196"
   
  **Ограничения.** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] формируются некоторые XMLA-инструкции, поддерживаемые только для внутреннего использования. Их использование в скриптах XML DDL невозможно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;Analysis Services с руководством разработчика&#41;](../analysis-services-developer-documentation.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a19eb2302639c7f13d48a8778969bbeca4fee18d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086114"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525434"
 ---
 # <a name="association-model-query-examples"></a>Примеры запросов моделей взаимосвязей
   Создаваемый запрос к модели интеллектуального анализа данных может быть запросом содержимого. Такой запрос предоставляет подробные сведения о правилах и наборах элементов, обнаруженных в процессе анализа. Можно также создавать прогнозирующие запросы. Они используют взаимосвязи, обнаруженные в данных, для создания прогнозов. Прогнозы для моделей взаимосвязей обычно основаны на правилах, и их можно использовать для рекомендаций, в то время как запросы к содержимому обычно исследуют связи между наборами элементов. Можно также получать метаданные, описывающие модель.  
@@ -235,7 +234,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport (расширения интеллектуального анализа данных)](/sql/dmx/predictsupport-dmx)|Возвращает опорное значение для указанного состояния.|  
 |[PredictVariance (расширения интеллектуального анализа данных)](/sql/dmx/predictvariance-dmx)|Возвращает дисперсию для прогнозируемого значения.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм взаимосвязей (Майкрософт)](microsoft-association-algorithm.md)   
  [Технический справочник по алгоритму взаимосвязей (Майкрософт)](microsoft-association-algorithm-technical-reference.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](mining-model-content-for-association-models-analysis-services-data-mining.md)  

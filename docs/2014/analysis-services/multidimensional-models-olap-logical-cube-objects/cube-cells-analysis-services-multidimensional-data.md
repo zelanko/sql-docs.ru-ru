@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 9945773c-a43b-40d4-91cf-3d2ebc90bca5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 73967427b97a00d88b3d6c372a0228aa28c2024c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b55e940f75319a965fb1441520a7e16ce7ab2f6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387914"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545313"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Ячейки куба (службы Analysis Services — многомерные данные)
   Куб состоит из ячеек, организованных по группам мер и по измерениям. Ячейка представляет собой уникальное логическое пересечение элементов — по одному из каждого измерения в кубе. Например, куб, описываемый следующей диаграммой, содержит одну группу мер с двумя мерами, организованными вдоль трех измерений, названных «Источник», «Маршрут» и «Время».  
@@ -76,7 +75,7 @@ ms.locfileid: "81387914"
   
  ![Диаграмма куба, определяющая пустые ячейки](../../analysis-services/dev-guide/media/as-cubeintro7.gif "Диаграмма куба, определяющая пустые ячейки")  
   
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]пустую ячейку — это ячейка с особыми характеристиками. Поскольку пустые ячейки могут искажать результаты перекрестных соединений, подсчетов и т. п., многие функции многомерных выражений обеспечивают возможность пропуска пустых ячеек для целей вычислений. Дополнительные сведения см. в статьях многомерные [выражения &#40;Справочник по mdx&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)и [основные понятия в &#40;многомерных выражений Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
+ В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] пустую ячейку — это ячейка с особыми характеристиками. Поскольку пустые ячейки могут искажать результаты перекрестных соединений, подсчетов и т. п., многие функции многомерных выражений обеспечивают возможность пропуска пустых ячеек для целей вычислений. Дополнительные сведения см. в статьях многомерные [выражения &#40;Справочник по mdx&#41; Reference](/sql/mdx/multidimensional-expressions-mdx-reference)и [основные понятия в &#40;многомерных выражений Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Безопасность  
  Доступ к данным ячеек в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] осуществляется на уровне ролей и может точно управляться с помощью многомерных выражений. Дополнительные сведения см. в статьях [предоставление настраиваемого доступа к данным измерения &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)и [предоставление настраиваемого доступа к данным ячейки &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  

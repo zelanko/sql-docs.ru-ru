@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c39d03d60cb66f3b2e26b2e660bd85f4e5e9d4ec
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073767"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546136"
 ---
 # <a name="tuples"></a>Кортежи
   Кортеж однозначно определяет срез данных в кубе. Кортеж формируется сочетанием элементов измерения, если отсутствует несколько элементов, принадлежащих одной иерархии.  
@@ -62,7 +61,7 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  На элемент атрибута можно ссылаться по имени или ключу. В предыдущем примере ссылку [CY 2004] можно изменить на &[2004].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия в Analysis Services &#40;многомерных выражений&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Пространство куба](cube-space.md)   
  [Автоматической проверки существования](autoexists.md)   

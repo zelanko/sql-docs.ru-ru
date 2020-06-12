@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63034ac9d8ba601070f716830b3b9173575a8775
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084372"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522338"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
   В этом разделе описано, как создать новый проект интеллектуального анализа данных путем импорта метаданных из существующего проекта интеллектуального анализа данных на другом сервере, используя шаблон **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**, в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -52,13 +51,13 @@ ms.locfileid: "66084372"
     > [!WARNING]  
     >  Импортируемые объекты указывать нельзя; при выборе существующей базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] импортируются все многомерные объекты и объекты интеллектуального анализа данных.  
   
-     Нажмите кнопку **Далее**.  
+     Щелкните **Далее**.  
   
 5.  На странице **Завершение работы мастера**отображается ход выполнения операции импорта. Отменить операцию или изменить импортируемые объекты нельзя. По завершении нажмите кнопку **Готово** .  
   
      Новый проект будет автоматически открыт в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства проекта (табличные службы SSAS)](../tabular-models/properties-ssas-tabular.md)  
   
   

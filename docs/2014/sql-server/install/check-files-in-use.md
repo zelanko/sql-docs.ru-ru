@@ -10,12 +10,12 @@ ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3610ad08d34942dd7dbc1af1371a6c5d86e7890
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096532"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856616"
 ---
 # <a name="check-files-in-use"></a>Проверка используемых файлов
   Чтобы избежать необходимости перезагрузки Windows после установки обновлений для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на странице «Проверка используемых файлов» можно найти процессы, которые блокируют файлы, необходимые программе установки обновлений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -42,12 +42,12 @@ ms.locfileid: "66096532"
   
 -   Имя заблокированного файла  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
   
 |Имя|Описание|  
 |----------|-----------------|  
 |Процесс|Отображает полное имя процесса, использующего файлы, которые будут обновлены.|  
-|Type|Отображает тип процесса.|  
+|Тип|Отображает тип процесса.|  
 |Учетная запись|Отображает учетную запись, под которой выполняется процесс.|  
 |ИД процесса|Отображает идентификатор процесса.|  
   

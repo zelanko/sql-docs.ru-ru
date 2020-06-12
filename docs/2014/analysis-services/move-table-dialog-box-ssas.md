@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6466e075-3345-4d6b-9e20-1ffb4c8f30c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6c680dd48f3588b92a2c87d9fa8d3c3a04dde39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7befaa35fb520bda23cfe8cd216df521090cce58
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077611"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537341"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Диалоговое окно «Перемещение таблицы» (SSAS)
   Диалоговое окно **Перемещение таблицы** позволяет изменить порядок отображения таблиц в конструкторе моделей. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши вкладку в нижней части перемещаемой таблицы и выберите команду **Переместить**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Переместить выбранную таблицу перед таблицей**  
  Таблица будет перемещена в позицию перед таблицей, выбранной в этом списке. Чтобы переместить таблицу в конец набора таблиц, выберите вариант **(переместить в конец)**.  
   

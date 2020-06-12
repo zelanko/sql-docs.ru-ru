@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f6b20c32ee955023ea24af2f70a83a7793ba1d64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44b162c34f5f505462a713205d8434484473afa4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085653"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524060"
 ---
 # <a name="content-queries-data-mining"></a>Запросы содержимого (интеллектуальный анализ данных)
   Запрос содержимого позволяет извлечь сведения о внутренней статистике и структуре модели интеллектуального анализа данных. Иногда запрос содержимого может предоставить информацию, которую не удается получить с помощью средства просмотра. Результаты запроса содержимого можно также использовать для извлечения информации программным образом с целью ее последующего использования.  
@@ -195,7 +194,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  Дополнительные сведения о работе с иерархическими наборами строк см. в спецификации OLEDB на сайте MSDN.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о инструкции SELECT расширений интеллектуального анализа данных](/sql/dmx/understanding-the-dmx-select-statement)   
  [Запросы интеллектуального анализа данных](data-mining-queries.md)  
   

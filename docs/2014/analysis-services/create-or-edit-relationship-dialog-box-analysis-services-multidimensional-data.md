@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da3c7074-623e-4ddf-a707-d3276a47cf1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b18a0b6c79a3787af4a55a473e5203daf9c7308f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086775"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526488"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>диалоговое окно "Создание/Изменение связи" (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Создание связи/изменение связи** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для определения или редактирования связи в представлении источника данных. Диалоговое окно **Создание связи/изменение связи** можно вызвать следующими способами:  
@@ -33,7 +32,7 @@ ms.locfileid: "66086775"
 > [!NOTE]  
 >   В **конструкторе представления источников данных** можно создать связи, не существующие в исходном источнике данных, и удалить связи, созданные **конструктором представления источников данных** из существующих связей внешних ключей в исходном источнике данных.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Исходная таблица (внешний ключ)**  
  Выберите таблицу или именованный запрос, содержащий ссылку на один или несколько столбцов в целевой таблице.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66086775"
  **Описание**  
  Введите необязательное описание связи.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Конструктор представлений источников данных (службы Analysis Services — многомерные данные)](data-source-view-designer-analysis-services-multidimensional-data.md)  
   

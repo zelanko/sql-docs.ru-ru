@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0500cca6b59ce1510d274dc0a8336ee2ac1db394
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820883"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859816"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "82820883"
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar(120)**|Имя класса кратковременных блокировок.|  
+|latch_class|**nvarchar(60)**|Имя класса кратковременных блокировок.|  
 |waiting_requests_count|**bigint**|Число ожиданий кратковременных блокировок в данном классе. Этот счетчик увеличивается в начале ожидания кратковременной блокировки.|  
 |wait_time_ms|**bigint**|Общее время ожидания кратковременных блокировок в данном классе в миллисекундах.<br /><br /> **Примечание.** Этот столбец обновляется каждые пять минут во время ожидания кратковременной блокировки и в конце ожидания кратковременной блокировки.|  
 |max_wait_time_ms|**bigint**|Максимальный период времени ожидания данной кратковременной блокировки объектом памяти. Если данное значение неестественно велико, это может указывать на взаимоблокировку.|  
@@ -45,7 +45,7 @@ ms.locfileid: "82820883"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Представление динамического управления sys.dm_os_latch_stats может быть использовано для выявления источника состязания между кратковременными блокировками путем исследования относительного числа ожиданий и времени ожидания для различных классов кратковременных блокировок. В некоторых ситуациях возможно устранение состязания между кратковременными блокировками или снижение его остроты. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
 Очистить содержимое представления sys.dm_os_latch_stats с помощью инструкции `DBCC SQLPERF` можно следующим образом.  
@@ -103,97 +103,97 @@ GO
 |BUFFER|Используется для синхронизации краткосрочного доступа к страницам баз данных. Кратковременная блокировка буфера необходима перед считыванием или модификацией любой страницы базы данных. Конфликт кратковременной блокировки буферов может указывать на наличие ряда проблем, в числе которых — «горячие» страницы и низкая производительность подсистемы ввода-вывода.<br /><br /> Этот класс кратковременных блокировок охватывает все возможные способы использования кратковременных блокировок страниц. sys. dm_os_wait_stats делает разницу между ожиданиями кратковременной блокировки страниц, вызванными операциями ввода-вывода и операциями чтения и записи на странице.|  
 |BUFFER_POOL_GROW|Используется для синхронизации внутреннего диспетчера буферов при выполнении операций увеличения буферного пула.|  
 |DATABASE_CHECKPOINT|Используется для сериализации контрольных точек внутри базы данных.|  
-|CLR_PROCEDURE_HASHTABLE|Только для внутреннего использования.|  
-|CLR_UDX_STORE|Только для внутреннего использования.|  
-|CLR_DATAT_ACCESS|Только для внутреннего использования.|  
-|CLR_XVAR_PROXY_LIST|Только для внутреннего использования.|  
-|DBCC_CHECK_AGGREGATE|Только для внутреннего использования.|  
-|DBCC_CHECK_RESULTSET|Только для внутреннего использования.|  
-|DBCC_CHECK_TABLE|Только для внутреннего использования.|  
-|DBCC_CHECK_TABLE_INIT|Только для внутреннего использования.|  
-|DBCC_CHECK_TRACE_LIST|Только для внутреннего использования.|  
-|DBCC_FILE_CHECK_OBJECT|Только для внутреннего использования.|  
+|CLR_PROCEDURE_HASHTABLE|Только для внутреннего применения.|  
+|CLR_UDX_STORE|Только для внутреннего применения.|  
+|CLR_DATAT_ACCESS|Только для внутреннего применения.|  
+|CLR_XVAR_PROXY_LIST|Только для внутреннего применения.|  
+|DBCC_CHECK_AGGREGATE|Только для внутреннего применения.|  
+|DBCC_CHECK_RESULTSET|Только для внутреннего применения.|  
+|DBCC_CHECK_TABLE|Только для внутреннего применения.|  
+|DBCC_CHECK_TABLE_INIT|Только для внутреннего применения.|  
+|DBCC_CHECK_TRACE_LIST|Только для внутреннего применения.|  
+|DBCC_FILE_CHECK_OBJECT|Только для внутреннего применения.|  
 |DBCC_PERF|Используется для синхронизации счетчиков внутреннего системного монитора.|  
-|DBCC_PFS_STATUS|Только для внутреннего использования.|  
-|DBCC_OBJECT_METADATA|Только для внутреннего использования.|  
-|DBCC_HASH_DLL|Только для внутреннего использования.|  
-|EVENTING_CACHE|Только для внутреннего использования.|  
+|DBCC_PFS_STATUS|Только для внутреннего применения.|  
+|DBCC_OBJECT_METADATA|Только для внутреннего применения.|  
+|DBCC_HASH_DLL|Только для внутреннего применения.|  
+|EVENTING_CACHE|Только для внутреннего применения.|  
 |FCB|Используется для синхронизации доступа к блоку управления файлами.|  
-|FCB_REPLICA|Только для внутреннего использования.|  
+|FCB_REPLICA|Только для внутреннего применения.|  
 |FGCB_ALLOC|Используется для синхронизации доступа к данным, размещенным внутри файловой группы в порядке круговой очереди.|  
 |FGCB_ADD_REMOVE|Используется для синхронизации доступа к файловых группах для операций добавления, удаления, увеличения и сжатия файлов.|  
-|FILEGROUP_MANAGER|Только для внутреннего использования.|  
-|FILE_MANAGER|Только для внутреннего использования.|  
-|FILESTREAM_FCB|Только для внутреннего использования.|  
-|FILESTREAM_FILE_MANAGER|Только для внутреннего использования.|  
-|FILESTREAM_GHOST_FILES|Только для внутреннего использования.|  
-|FILESTREAM_DFS_ROOT|Только для внутреннего использования.|  
-|LOG_MANAGER|Только для внутреннего использования.|  
-|FULLTEXT_DOCUMENT_ID|Только для внутреннего использования.|  
-|FULLTEXT_DOCUMENT_ID_TRANSACTION|Только для внутреннего использования.|  
-|FULLTEXT_DOCUMENT_ID_NOTIFY|Только для внутреннего использования.|  
-|FULLTEXT_LOGS|Только для внутреннего использования.|  
-|FULLTEXT_CRAWL_LOG|Только для внутреннего использования.|  
-|FULLTEXT_ADMIN|Только для внутреннего использования.|  
-|FULLTEXT_AMDIN_COMMAND_CACHE|Только для внутреннего использования.|  
-|FULLTEXT_LANGUAGE_TABLE|Только для внутреннего использования.|  
-|FULLTEXT_CRAWL_DM_LIST|Только для внутреннего использования.|  
-|FULLTEXT_CRAWL_CATALOG|Только для внутреннего использования.|  
-|FULLTEXT_FILE_MANAGER|Только для внутреннего использования.|  
-|DATABASE_MIRRORING_REDO|Только для внутреннего использования.|  
-|DATABASE_MIRRORING_SERVER|Только для внутреннего использования.|  
-|DATABASE_MIRRORING_CONNECTION|Только для внутреннего использования.|  
-|DATABASE_MIRRORING_STREAM|Только для внутреннего использования.|  
-|QUERY_OPTIMIZER_VD_MANAGER|Только для внутреннего использования.|  
-|QUERY_OPTIMIZER_ID_MANAGER|Только для внутреннего использования.|  
-|QUERY_OPTIMIZER_VIEW_REP|Только для внутреннего использования.|  
-|RECOVERY_BAD_PAGE_TABLE|Только для внутреннего использования.|  
-|RECOVERY_MANAGER|Только для внутреннего использования.|  
-|SECURITY_OPERATION_RULE_TABLE|Только для внутреннего использования.|  
-|SECURITY_OBJPERM_CACHE|Только для внутреннего использования.|  
-|SECURITY_CRYPTO|Только для внутреннего использования.|  
-|SECURITY_KEY_RING|Только для внутреннего использования.|  
-|SECURITY_KEY_LIST|Только для внутреннего использования.|  
-|SERVICE_BROKER_CONNECTION_RECEIVE|Только для внутреннего использования.|  
-|SERVICE_BROKER_TRANSMISSION|Только для внутреннего использования.|  
-|SERVICE_BROKER_TRANSMISSION_UPDATE|Только для внутреннего использования.|  
-|SERVICE_BROKER_TRANSMISSION_STATE|Только для внутреннего использования.|  
-|SERVICE_BROKER_TRANSMISSION_ERRORS|Только для внутреннего использования.|  
-|SSBXmitWork|Только для внутреннего использования.|  
-|SERVICE_BROKER_MESSAGE_TRANSMISSION|Только для внутреннего использования.|  
-|SERVICE_BROKER_MAP_MANAGER|Только для внутреннего использования.|  
-|SERVICE_BROKER_HOST_NAME|Только для внутреннего использования.|  
-|SERVICE_BROKER_READ_CACHE|Только для внутреннего использования.|  
+|FILEGROUP_MANAGER|Только для внутреннего применения.|  
+|FILE_MANAGER|Только для внутреннего применения.|  
+|FILESTREAM_FCB|Только для внутреннего применения.|  
+|FILESTREAM_FILE_MANAGER|Только для внутреннего применения.|  
+|FILESTREAM_GHOST_FILES|Только для внутреннего применения.|  
+|FILESTREAM_DFS_ROOT|Только для внутреннего применения.|  
+|LOG_MANAGER|Только для внутреннего применения.|  
+|FULLTEXT_DOCUMENT_ID|Только для внутреннего применения.|  
+|FULLTEXT_DOCUMENT_ID_TRANSACTION|Только для внутреннего применения.|  
+|FULLTEXT_DOCUMENT_ID_NOTIFY|Только для внутреннего применения.|  
+|FULLTEXT_LOGS|Только для внутреннего применения.|  
+|FULLTEXT_CRAWL_LOG|Только для внутреннего применения.|  
+|FULLTEXT_ADMIN|Только для внутреннего применения.|  
+|FULLTEXT_AMDIN_COMMAND_CACHE|Только для внутреннего применения.|  
+|FULLTEXT_LANGUAGE_TABLE|Только для внутреннего применения.|  
+|FULLTEXT_CRAWL_DM_LIST|Только для внутреннего применения.|  
+|FULLTEXT_CRAWL_CATALOG|Только для внутреннего применения.|  
+|FULLTEXT_FILE_MANAGER|Только для внутреннего применения.|  
+|DATABASE_MIRRORING_REDO|Только для внутреннего применения.|  
+|DATABASE_MIRRORING_SERVER|Только для внутреннего применения.|  
+|DATABASE_MIRRORING_CONNECTION|Только для внутреннего применения.|  
+|DATABASE_MIRRORING_STREAM|Только для внутреннего применения.|  
+|QUERY_OPTIMIZER_VD_MANAGER|Только для внутреннего применения.|  
+|QUERY_OPTIMIZER_ID_MANAGER|Только для внутреннего применения.|  
+|QUERY_OPTIMIZER_VIEW_REP|Только для внутреннего применения.|  
+|RECOVERY_BAD_PAGE_TABLE|Только для внутреннего применения.|  
+|RECOVERY_MANAGER|Только для внутреннего применения.|  
+|SECURITY_OPERATION_RULE_TABLE|Только для внутреннего применения.|  
+|SECURITY_OBJPERM_CACHE|Только для внутреннего применения.|  
+|SECURITY_CRYPTO|Только для внутреннего применения.|  
+|SECURITY_KEY_RING|Только для внутреннего применения.|  
+|SECURITY_KEY_LIST|Только для внутреннего применения.|  
+|SERVICE_BROKER_CONNECTION_RECEIVE|Только для внутреннего применения.|  
+|SERVICE_BROKER_TRANSMISSION|Только для внутреннего применения.|  
+|SERVICE_BROKER_TRANSMISSION_UPDATE|Только для внутреннего применения.|  
+|SERVICE_BROKER_TRANSMISSION_STATE|Только для внутреннего применения.|  
+|SERVICE_BROKER_TRANSMISSION_ERRORS|Только для внутреннего применения.|  
+|SSBXmitWork|Только для внутреннего применения.|  
+|SERVICE_BROKER_MESSAGE_TRANSMISSION|Только для внутреннего применения.|  
+|SERVICE_BROKER_MAP_MANAGER|Только для внутреннего применения.|  
+|SERVICE_BROKER_HOST_NAME|Только для внутреннего применения.|  
+|SERVICE_BROKER_READ_CACHE|Только для внутреннего применения.|  
 |SERVICE_BROKER_WAITFOR_MANAGER| Используется для синхронизации схемы на уровне экземпляра в очередях ожидания. Одна очередь существует по ИДЕНТИФИКАТОРу базы данных, версии базы данных и кортежу ИДЕНТИФИКАТОРов очередей. Состязание за кратковременные блокировки этого класса может произойти, если много подключений: в состоянии ожидания WAITFOR (RECEIVE); вызов WAITFOR (RECEIVE); превышение времени ожидания WAITFOR; получение сообщения; Фиксация или откат транзакции, содержащей WAITFOR (RECEIVE); Можно уменьшить состязание за счет сокращения числа потоков в состоянии ожидания WAITFOR (RECEIVE). |  
-|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Только для внутреннего использования.|  
-|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Только для внутреннего использования.|  
-|SERVICE_BROKER_TRANSPORT|Только для внутреннего использования.|  
-|SERVICE_BROKER_MIRROR_ROUTE|Только для внутреннего использования.|  
-|TRACE_ID|Только для внутреннего использования.|  
-|TRACE_AUDIT_ID|Только для внутреннего использования.|  
-|трассировка|Только для внутреннего использования.|  
-|TRACE_CONTROLLER|Только для внутреннего использования.|  
-|TRACE_EVENT_QUEUE|Только для внутреннего использования.|  
-|TRANSACTION_DISTRIBUTED_MARK|Только для внутреннего использования.|  
-|TRANSACTION_OUTCOME|Только для внутреннего использования.|  
-|NESTING_TRANSACTION_READONLY|Только для внутреннего использования.|  
-|NESTING_TRANSACTION_FULL|Только для внутреннего использования.|  
-|MSQL_TRANSACTION_MANAGER|Только для внутреннего использования.|  
-|DATABASE_AUTONAME_MANAGER|Только для внутреннего использования.|  
-|UTILITY_DYNAMIC_VECTOR|Только для внутреннего использования.|  
-|UTILITY_SPARSE_BITMAP|Только для внутреннего использования.|  
-|UTILITY_DATABASE_DROP|Только для внутреннего использования.|  
-|UTILITY_DYNAMIC_MANAGER_VIEW|Только для внутреннего использования.|  
-|UTILITY_DEBUG_FILESTREAM|Только для внутреннего использования.|  
-|UTILITY_LOCK_INFORMATION|Только для внутреннего использования.|  
-|VERSIONING_TRANSACTION|Только для внутреннего использования.|  
-|VERSIONING_TRANSACTION_LIST|Только для внутреннего использования.|  
-|VERSIONING_TRANSACTION_CHAIN|Только для внутреннего использования.|  
-|VERSIONING_STATE|Только для внутреннего использования.|  
-|VERSIONING_STATE_CHANGE|Только для внутреннего использования.|  
-|KTM_VIRTUAL_CLOCK|Только для внутреннего использования.|  
+|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Только для внутреннего применения.|  
+|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Только для внутреннего применения.|  
+|SERVICE_BROKER_TRANSPORT|Только для внутреннего применения.|  
+|SERVICE_BROKER_MIRROR_ROUTE|Только для внутреннего применения.|  
+|TRACE_ID|Только для внутреннего применения.|  
+|TRACE_AUDIT_ID|Только для внутреннего применения.|  
+|TRACE|Только для внутреннего применения.|  
+|TRACE_CONTROLLER|Только для внутреннего применения.|  
+|TRACE_EVENT_QUEUE|Только для внутреннего применения.|  
+|TRANSACTION_DISTRIBUTED_MARK|Только для внутреннего применения.|  
+|TRANSACTION_OUTCOME|Только для внутреннего применения.|  
+|NESTING_TRANSACTION_READONLY|Только для внутреннего применения.|  
+|NESTING_TRANSACTION_FULL|Только для внутреннего применения.|  
+|MSQL_TRANSACTION_MANAGER|Только для внутреннего применения.|  
+|DATABASE_AUTONAME_MANAGER|Только для внутреннего применения.|  
+|UTILITY_DYNAMIC_VECTOR|Только для внутреннего применения.|  
+|UTILITY_SPARSE_BITMAP|Только для внутреннего применения.|  
+|UTILITY_DATABASE_DROP|Только для внутреннего применения.|  
+|UTILITY_DYNAMIC_MANAGER_VIEW|Только для внутреннего применения.|  
+|UTILITY_DEBUG_FILESTREAM|Только для внутреннего применения.|  
+|UTILITY_LOCK_INFORMATION|Только для внутреннего применения.|  
+|VERSIONING_TRANSACTION|Только для внутреннего применения.|  
+|VERSIONING_TRANSACTION_LIST|Только для внутреннего применения.|  
+|VERSIONING_TRANSACTION_CHAIN|Только для внутреннего применения.|  
+|VERSIONING_STATE|Только для внутреннего применения.|  
+|VERSIONING_STATE_CHANGE|Только для внутреннего применения.|  
+|KTM_VIRTUAL_CLOCK|Только для внутреннего применения.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [DBCC SQLPERF &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [SQL Server, объект Latches](../../relational-databases/performance-monitor/sql-server-latches-object.md)      

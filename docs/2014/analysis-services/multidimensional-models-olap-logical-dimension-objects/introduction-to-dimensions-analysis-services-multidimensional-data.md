@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387904"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545126"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Введение в измерения (службы Analysis Services — многомерные данные)
-  Все измерения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Майкрософт — это группы атрибутов, основанные на столбцах таблиц или представлений в представлении источника данных. Измерения существуют независимо от куба, могут использоваться в нескольких кубах или несколько раз в одном и том же кубе, а также могут быть связаны между экземплярами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Измерение, существующее независимо от куба, называется измерением базы данных, а экземпляр измерения базы данных в кубе называется измерением куба.  
+  Все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] измерения Майкрософт — это группы атрибутов, основанные на столбцах таблиц или представлений в представлении источника данных. Измерения существуют независимо от куба, могут использоваться в нескольких кубах или несколько раз в одном и том же кубе, а также могут быть связаны между экземплярами служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Измерение, существующее независимо от куба, называется измерением базы данных, а экземпляр измерения базы данных в кубе называется измерением куба.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Измерение, основанное на структуре схемы «звезда»  
  Структура измерения в основном определяется структурой таблицы или таблиц базового измерения. Простейшая структура называется схемой «звезда», в которой каждое измерение основано на одной таблице измерения, которая непосредственно связана с таблицей фактов связью первичного и внешнего ключей.  
   
- На следующей схеме показан [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] подраздел базы данных, в котором таблица фактов **FactResellerSales** связана с двумя таблицами измерений, **DimReseller** и **DimPromotion**. Столбец **ResellerKey** в таблице фактов **FactResellerSales** определяет связь по внешнему ключу с первичным ключевым столбцом **ResellerKey** в таблице измерения **DimReseller** . Аналогичным образом столбец **промотионкэй** в таблице фактов **FactResellerSales** определяет связь по внешнему ключу с первичным ключевым столбцом **промотионкэй** в таблице измерения **DimPromotion** .  
+ На следующей схеме показан подраздел [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] базы данных, в котором таблица фактов **FactResellerSales** связана с двумя таблицами измерений, **DimReseller** и **DimPromotion**. Столбец **ResellerKey** в таблице фактов **FactResellerSales** определяет связь по внешнему ключу с первичным ключевым столбцом **ResellerKey** в таблице измерения **DimReseller** . Аналогичным образом столбец **промотионкэй** в таблице фактов **FactResellerSales** определяет связь по внешнему ключу с первичным ключевым столбцом **промотионкэй** в таблице измерения **DimPromotion** .  
   
  ![Логическая схема связи измерений фактов](../../analysis-services/dev-guide/media/dimfactrelationship.gif "Логическая схема связи измерений фактов")  
   

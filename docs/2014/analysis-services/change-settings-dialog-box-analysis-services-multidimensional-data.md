@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088252"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527650"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Изменение настроек» (службы Analysis Services — многомерные данные)
   В диалоговом окне **Изменение настроек** в средах [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно изменить настройки обработки объектов, перечисленных в диалоговом окне **Обработка** . Открыть диалоговое окно **Изменить установки** можно, щелкнув **Изменить установки** в диалоговом окне **Обработка** .  
@@ -25,11 +24,11 @@ ms.locfileid: "66088252"
 > [!NOTE]  
 >   Настройки, указанные в этом диалоговом окне, переопределяют настройки по умолчанию, унаследованные из базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для объектов, перечисленных в диалоговом окне **Обработка** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Параметры обработки**  
  Используйте эту вкладку для изменения параметров порядка обработки, таблицы обратной записи и объектов, изменяемых при обработке. Вкладка содержит следующие параметры.  
   
- **Распараллеливани**  
+ **Parallel**  
  Выберите этот параметр для параллельной обработки объектов.  
   
  **Максимальное число параллельных задач**  
@@ -137,7 +136,7 @@ ms.locfileid: "66088252"
  **Обработать затронутые объекты**  
  Выберите этот пункт, чтобы обработать объекты, зависящие от объектов, выбранных в диалоговом окне **Обработка** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Диалоговое окно "обработка" &#40;Analysis Services многомерных данных&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   
