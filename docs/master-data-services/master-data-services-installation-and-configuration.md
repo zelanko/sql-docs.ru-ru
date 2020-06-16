@@ -1,5 +1,6 @@
 ---
 title: Установка и настройка
+description: Узнайте, как установить Master Data Services на компьютере под Windows Server 2012 R2, настроить базу данных и веб-сайт MDS и развернуть образцы моделей и данных.
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289782"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796285"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
@@ -33,8 +34,8 @@ ms.locfileid: "79289782"
  
 Ссылки на видео и другие обучающие ресурсы, которые помогут ознакомиться с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Изучение служб Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
-> **Скачать**  
-> -    Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите в  **[Центр пробного ПО](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> **Загрузить**  
+> -   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
 > 
 > **Не удается создать веб-сайт MDS?**
@@ -46,7 +47,7 @@ ms.locfileid: "79289782"
 - Для работы в веб-приложении на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 **[с этой веб-страницы](https://www.microsoft.com/silverlight/)**.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure
-По умолчанию при запуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] уже установленной [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] виртуальной машины Azure также устанавливается. 
+По умолчанию при запуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] уже установленной виртуальной машины Azure [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] также устанавливается. 
 
 Далее следует установить службы IIS. См. раздел [Установка и настройка служб IIS](#InstallIIS). 
 
@@ -133,7 +134,7 @@ ms.locfileid: "79289782"
 
 4. Выберите **тип проверки подлинности** и нажмите кнопку **проверить подключение** , чтобы убедиться, что можно подключиться к базе данных, используя учетные данные для выбранного типа проверки подлинности. Щелкните **Далее**.
 
-    >Для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]подключения к управляемому экземпляру базы данных SQL Azure используйте один из следующих типов проверки подлинности:
+    >Для [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] подключения к управляемому экземпляру базы данных SQL Azure используйте один из следующих типов проверки подлинности:
     >
     >- Встроенная проверка подлинности Azure Active Directory: **текущий пользователь — встроенная Active Directory**
     >- SQL Server проверка подлинности: **учетная запись SQL Server**.
@@ -203,7 +204,7 @@ ms.locfileid: "79289782"
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Нажмите кнопку **Применить**. Появится сообщение о **завершении настройки**. Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта — HTTPS://*Server Name*/*Web Application*/. 
+15. Нажмите кнопку **Применить**. Появится сообщение о **завершении настройки**. Нажмите кнопку **ОК** в окне сообщения, чтобы запустить веб-приложение. Адрес веб-сайта — HTTPS://*Server Name* / *Web Application*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ ms.locfileid: "79289782"
   
     1.  Перейдите на настроенный веб-сайт [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . См. раздел [Настройка базы данных и веб-сайта](#SetUpWeb) .  
   
-         Адрес веб-сайта — HTTPS://*Server Name*/*Web Application*/.  
+         Адрес веб-сайта — HTTPS://*Server Name* / *Web Application*/.  
   
     2.  Выберите модель в поле со списком **Модель** и щелкните **Обозреватель**.  
   

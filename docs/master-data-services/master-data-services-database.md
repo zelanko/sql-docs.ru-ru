@@ -1,5 +1,6 @@
 ---
 title: База данных служб Master Data Services
+description: База данных Master Data Services содержит все сведения о системе Master Data Services и является центральной частью развертывания Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 897435f83591df84ec9a9b0a21d3eb4a2a9634a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9aab396644dde824668cda8717ed7d14b695bb6d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729039"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796257"
 ---
 # <a name="master-data-services-database"></a>База данных служб Master Data Services
 

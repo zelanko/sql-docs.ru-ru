@@ -1,5 +1,6 @@
 ---
 title: Business Rules Extension
+description: Пользовательские скрипты SQL можно применять в качестве расширения предварительно определенных условий бизнес-правил и действий в Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4a8a5215438a7cbed7796c5b9afaae5f8d59db9a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728684"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796535"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Расширение бизнес-правил (Master Data Services)
 
@@ -65,7 +66,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**схема**|**Разрешения**|  
+|**Схема**|**Разрешения**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
@@ -103,7 +104,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     4.  Присвойте значения всем параметрам  
   
-    5.  Выберите команду **Сохранить**.  
+    5.  Нажмите кнопку **Сохранить**.  
   
 8.  Выполните следующие шаги, чтобы использовать пользовательский сценарий как действие.  
   
@@ -111,7 +112,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     2.  Из раскрывающегося списка **Оператор** в области **Пользовательский скрипт** выберите пользовательскую функцию.  
   
-    3.  Выберите команду **Сохранить**.  
+    3.  Нажмите кнопку **Сохранить**.  
   
 ## <a name="see-also"></a>См. также:  
  [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   

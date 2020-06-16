@@ -1,5 +1,6 @@
 ---
 title: Импорт данных из таблиц
+description: Импорт данных из таблиц и внесение в модель изменений данных в виде пакета. Эта процедура используется для добавления, обновления и удаления данных в базе данных Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729247"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796347"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Импорт данных из таблиц (службы Master Data Services)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73729247"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]поддерживает массовое добавление данных в модель и их изменение.  
   
- **Предварительные условия**  
+ **Предварительные требования**  
   
--   Требуется разрешение на вставку данных в таблицу stg.\<имя>_Leaf, the stg.\<имя>_Consolidated, stg.\<имя>_Relationship в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Необходимо иметь разрешение на вставку данных в STG. \<name> _Leaf STG. \<name> _Consolidated, stg. \<name> _Relationship таблицу в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
   
--   Необходимы разрешения на выполнение хранимой процедуры stg.udp_\<имя>_Leaf, stg.udp\_\<имя>_Consolidated или stg.udp\_\<имя>_Relationship в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Необходимо иметь разрешения на выполнение хранимой процедуры STG. udp_ \<name> _Leaf, stg. udp \_ \<name> _Consolidated или stg. UDP \_ \<name> _Relationship в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
   
 -   Эта модель не должна иметь состояние **Зафиксирована**.  
   
@@ -35,11 +36,11 @@ ms.locfileid: "73729247"
   
 1.  Подготовьте элементы к импорту в соответствующую промежуточную таблицу в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , в том числе укажите значения обязательных полей. Общие сведения о промежуточных таблицах см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-    -   Таблица для конечных элементов — stg.\<имя>_Leaf, где \<имя> — это имя соответствующей сущности. Сведения о требуемых полях см. в разделе [Конечный элемент таблицы элементов (службы Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md).  
+    -   Для конечных элементов таблица является STG. \<name> _Leaf, где \<name> ссылается на соответствующую сущность. Сведения о требуемых полях см. в разделе [Конечный элемент таблицы элементов (службы Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
-    -   Таблица для консолидированных элементов — stg.\<имя>_Consolidated. Сведения о требуемых полях см. в разделе [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Для консолидированных элементов таблица является STG. \<name> _Consolidated. Сведения о требуемых полях см. в разделе [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Таблица для перемещения расположения элементов в явных иерархиях — stg.\<имя>_Relationship. Сведения о требуемых полях см. в разделе [Промежуточная таблица связей (службы Master Data Services)](../master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Для перемещения расположения элементов в явных иерархиях таблица является STG. \<name> _Relationship. Сведения о требуемых полях см. в разделе [Промежуточная таблица связей (службы Master Data Services)](../master-data-services/relationship-staging-table-master-data-services.md).  
   
          Общие сведения о перемещении элементов в явных иерархиях см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   

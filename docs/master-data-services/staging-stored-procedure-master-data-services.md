@@ -1,5 +1,6 @@
 ---
 title: Промежуточная хранимая процедура
+description: Используйте одну из трех хранимых процедур для запуска промежуточного процесса из SQL Server Management Studio в Master Data Services.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 103c43f012f6cf7025139fd29656a42d00fc233f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82b068612f0699cdba3788e4931fb6bdfe8c7e69
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727892"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796505"
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>Промежуточная хранимая процедура (службы Master Data Services)
 
@@ -23,11 +24,11 @@ ms.locfileid: "73727892"
 
   При запуске промежуточного процесса из [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]используется одна из трех хранимых процедур.  
   
--   stg.udp_\<имя>_Leaf  
+-   STG. udp_ \<name> _Leaf  
   
--   stg.udp_\<имя>_Consolidated  
+-   STG. udp_ \<name> _Consolidated  
   
--   stg.udp_\<имя>_Relationship  
+-   STG. udp_ \<name> _Relationship  
   
  Где имя — это имя промежуточной таблицы, определенной при создании сущности.  
   
@@ -36,8 +37,8 @@ ms.locfileid: "73727892"
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|**VersionName**<br /><br /> Обязательный|Имя версии. С учетом или без учета регистра, в зависимости от параметров сортировки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
-|**LogFlag**<br /><br /> Обязательный|Определяет, будут ли регистрироваться транзакции в ходе промежуточного процесса. Возможны следующие значения:<br /><br /> **0**: не регистрировать транзакции.<br /><br /> **1**: регистрировать транзакции.<br /><br /> <br /><br /> Дополнительные сведения о транзакциях см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).|  
+|**VersionName**<br /><br /> Обязательно|Имя версии. С учетом или без учета регистра, в зависимости от параметров сортировки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|**LogFlag**<br /><br /> Обязательно|Определяет, будут ли регистрироваться транзакции в ходе промежуточного процесса. Возможны следующие значения:<br /><br /> **0**: не регистрировать транзакции.<br /><br /> **1**: регистрировать транзакции.<br /><br /> <br /><br /> Дополнительные сведения о транзакциях см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).|  
 |**BatchTag**<br /><br /> Требуется, за исключением веб-службы|Значение **BatchTag** , как указано в промежуточной таблице.|  
 |**Batch_ID**<br /><br /> Требуется только для веб-службы|Значение **Batch_ID** , как указано в промежуточной таблице.|  
 |**Имя пользователя**|Необязательный параметр|  

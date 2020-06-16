@@ -1,5 +1,6 @@
 ---
 title: Требования веб-приложений
+description: Узнайте о требованиях для установки и запуска веб-приложения Master Data Services, размещенного на службы IIS.
 ms.custom: ''
 ms.date: 02/13/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 851452cd5170abb6328210ecb35bd95b2bb951a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e5e80c3e4e9437efa41b43e7bf6469d06432745
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728085"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796275"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
 
@@ -51,7 +52,7 @@ ms.locfileid: "73728085"
   
 ||  
 |-|  
-|службы IIS;<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> [Примечание: не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> Безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows|  
+|Службы IIS<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> [Примечание: не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> Безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows|  
   
 ### <a name="features"></a>Компоненты 
  В Windows Server 2012 и Windows Server 2012 R2 приведенные ниже компоненты можно установить с помощью **Диспетчера сервера** .  

@@ -1,5 +1,6 @@
 ---
 title: Создание пакета развертывания модели (MDSModelDeploy)
+description: Используйте MDSModelDeploy для создания пакета развертывания в Master Data Services. Пакет может содержать либо только объекты модели, либо объекты модели и данные.
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 47ae80a58f32aab4debb7cd4dde60a1ccf2cdb4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 404faa39224c74e7768aa011fffd8818d6274455
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728503"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796435"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели при помощи MDSModelDeploy
 
@@ -94,7 +95,7 @@ ms.locfileid: "73728503"
   
 6.  Нажмите клавишу ВВОД. После успешного создания пакета отображается сообщение "Операция MDSModelDeploy успешно завершена".  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   

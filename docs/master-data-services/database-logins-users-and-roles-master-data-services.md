@@ -1,5 +1,6 @@
 ---
 title: Имена входа, пользователи и роли базы данных
+description: Master Data Services включает имена входа, пользователей и роли, установленные на экземпляре ядро СУБД SQL Server, где размещена база данных Master Data Services.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729483"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796385"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Имена входа, пользователи и роли базы данных (службы Master Data Services)
 
@@ -32,21 +33,21 @@ ms.locfileid: "73729483"
   
 ## <a name="logins"></a>Имена входа  
   
-|Имя входа|Описание|  
+|Вход|Описание|  
 |-----------|-----------------|  
 |**mds_dlp_login**|Разрешает создание сборок UNSAFE. Дополнительные сведения см. в статье [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> — Отключенное имя входа со случайно созданным паролем.<br /><br /> — Сопоставляет со схемой dbo для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> — Для msdb это имя входа сопоставляется с mds_clr_user.|  
 |**mds_email_login**|Включенное имя входа, используемое для уведомлений.<br /><br /> Для msdb и базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] это имя входа сопоставляется с mds_email_user.|  
   
 ## <a name="msdb-users"></a>Пользователи msdb  
   
-|User (Пользователь)|Описание|  
+|Пользователь|Описание|  
 |----------|-----------------|  
 |**mds_clr_user**|Не используется. Сопоставляется с mds_dlp_login.|  
 |**mds_email_user**|Используется для уведомлений.<br /><br /> — Сопоставляется с mds_email_login.<br /><br /> — Является членом роли DatabaseMailUserRole.|  
   
 ## <a name="master-data-services-database-users"></a>Пользователи базы данных Master Data Services  
   
-|User (Пользователь)|Описание|  
+|Пользователь|Описание|  
 |----------|-----------------|  
 |**mds_email_user**|Используется для уведомлений.<br /><br /> — Имеет разрешение SELECT для схемы mdm.<br /><br /> — Имеет разрешение EXECUTE для определяемого пользователем табличного типа mdm.MemberGetCriteria.<br /><br /> — Имеет разрешение EXECUTE для хранимой процедуры mdm.udpNotificationQueueActivate.|  
 |**mds_schema_user**|Владеет схемами mdm и mdq. Схема по умолчанию — mdm.<br /><br /> Не имеет сопоставленного имени входа.|  

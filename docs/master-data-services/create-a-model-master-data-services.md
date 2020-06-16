@@ -1,5 +1,6 @@
 ---
 title: Создание модели
+description: Узнайте, как создать модель в Master Data Services для хранения объектов модели. Необходимо иметь разрешения для области "Администрирование системы".
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55a0ff697fd9f20f34c2ddc878016ba75f5fa673
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728480"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796431"
 ---
 # <a name="create-a-model-master-data-services"></a>Создание модели (службы Master Data Services)
 
@@ -55,7 +56,7 @@ ms.locfileid: "73728480"
   
  Для каждой созданной модели в сетке создается строка с восемью столбцами. Ниже перечислены эти восемь столбцов.  
   
--   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Updating") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
+-   **Состояние**: состояние модели. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновление") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "ОК") .  
   
 -   **Имя**: имя модели.  
   
@@ -71,7 +72,7 @@ ms.locfileid: "73728480"
   
 -   **Дата и время обновления**: дата и время последнего обновления модели.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)  
   

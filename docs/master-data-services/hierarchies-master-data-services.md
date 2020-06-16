@@ -1,5 +1,6 @@
 ---
 title: Иерархии
+description: Иерархия — это древовидная структура, которую можно использовать для группирования схожих элементов и консолидации и суммирования элементов для отчетов и анализа в Master Data Services.
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7e7ea7ff0a6f5107bb670b373a5d0356da5ba444
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729223"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796309"
 ---
 # <a name="hierarchies-master-data-services"></a>Иерархии (службы основных данных)
 

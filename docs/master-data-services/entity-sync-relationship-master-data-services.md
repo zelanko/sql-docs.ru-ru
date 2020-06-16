@@ -1,5 +1,6 @@
 ---
 title: Отношение синхронизации сущностей
+description: Синхронизация сущностей — односторонняя, повторяемая синхронизация между версиями сущности, которая позволяет совместно использовать данные сущностей между моделями Master Data Services.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8072ca35b1676a5bace4fe60f70e7cfdbc0778b
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729268"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796325"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>Отношение синхронизации сущностей (Master Data Services)
 
@@ -29,7 +30,7 @@ ms.locfileid: "73729268"
   
  После установления отношения синхронизации целевая сущность может быть изменена только в ходе синхронизации. Отношение синхронизации в любое время можно удалить, чтобы сделать целевую сущность доступной для редактирования.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и выполнение отношения синхронизации сущностей &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
  [Создание и удаление отношения синхронизации сущностей (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   

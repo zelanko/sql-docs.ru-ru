@@ -1,5 +1,6 @@
 ---
 title: Изучение служб SQL Server Master Data Services
+description: Узнайте о возможностях и возможностях SQL Server 2019 Master Data Services с помощью самостоятельного обучения, видео, примеров и сертификации SQL Server.
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143636402af33512a65d7057f7acccdf455b034
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487893"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796625"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Изучение служб SQL Server Master Data Services
 
@@ -26,8 +27,8 @@ ms.locfileid: "81487893"
   
   
 ## <a name="training"></a>Обучение  
-* Чтобы изучить новые функции и возможности, появившиеся [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]в, попробуйте выполнить [лабораторную работу с самостоятельным семинаром](https://www.microsoft.com/handsonlabs/selfpacedlabs) (требуется выполнить вход с использованием учетная запись Майкрософт).  
-* Чтобы разработать [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] решение для хранения главных списков географических данных и управления ими с помощью надстройки для Excel и [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], Попробуйте испытать [лабораторную работу самостоятельно](https://www.microsoft.com/handsonlabs/selfpacedlabs). Вы создадите сущности и иерархии, а также воспользуетесь [!INCLUDE[ssIS_md](../includes/ssis-md.md)] для заполнения таблицы измерения.  
+* Чтобы изучить новые функции и возможности, появившиеся в [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , попробуйте выполнить [лабораторную работу с самостоятельным семинаром](https://www.microsoft.com/handsonlabs/selfpacedlabs) (требуется выполнить вход с использованием учетная запись Майкрософт).  
+* Чтобы разработать [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] решение для хранения главных списков географических данных и управления ими с помощью надстройки для Excel и [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)] , Попробуйте испытать [лабораторную работу самостоятельно](https://www.microsoft.com/handsonlabs/selfpacedlabs). Вы создадите сущности и иерархии, а также воспользуетесь [!INCLUDE[ssIS_md](../includes/ssis-md.md)] для заполнения таблицы измерения.  
   
 ## <a name="videos"></a>Видео  
 * Узнать о новых возможностях в выпуске [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] продукта [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)][**можно из этого видеоролика**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

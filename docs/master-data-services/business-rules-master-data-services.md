@@ -1,5 +1,6 @@
 ---
 title: Бизнес-правила
+description: Сведения о бизнес-правилах в Master Data Services, которые могут обновлять данные, отправлять электронную почту или запускать бизнес-процесс или рабочий процесс.
 ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0e8c072ebda3cd314858bfa7aac2885267f1e86
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728690"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796447"
 ---
 # <a name="business-rules-master-data-services"></a>Бизнес-правила (службы Master Data Services)
 

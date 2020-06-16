@@ -1,5 +1,6 @@
 ---
 title: Новые&#39;
+description: Сведения об изменениях, улучшениях и обновлениях в выпуске Master Data Services SQL Server 2019.
 ms.custom: ''
 ms.date: 07/08/2016
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 80ffd207d44f8c53bed0fe7fb5f7efb4ed54ebc8
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 09553815997bcc529d30c0760faf2a75059b50a5
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886231"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796455"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
@@ -231,7 +232,7 @@ ms.locfileid: "82886231"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

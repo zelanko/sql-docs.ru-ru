@@ -1,5 +1,6 @@
 ---
 title: Создание сущности
+description: Узнайте, как создать сущность в Master Data Services, чтобы она содержала элементы и их атрибуты. Необходимо иметь разрешения для области "Администрирование системы".
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a43ffa259fd30d7aeaf4e2336780a2b92b2ef289
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728466"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796408"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
 
@@ -64,7 +65,7 @@ ms.locfileid: "73728466"
   
 9. Необязательный параметр. Установите флажок **Включить сжатие данных** . Сжатие строк включено по умолчанию. Дополнительные сведения см. в статье [Data Compression](../relational-databases/data-compression/data-compression.md).  
   
-10. Выберите команду **Сохранить**.  
+10. Нажмите кнопку **Сохранить**.  
   
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждой созданной сущности в сетке создается строка с тринадцатью столбцами. Ниже приведены эти столбцы.  
@@ -85,7 +86,7 @@ ms.locfileid: "73728466"
 |Кем обновлена|Имя пользователя, выполнившего последнее обновление сущности.|  
 |Обновлено|Дата и время последнего обновления сущности.|  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Создание текстового атрибута (службы Master Data Services)](../master-data-services/create-a-text-attribute-master-data-services.md)  
   

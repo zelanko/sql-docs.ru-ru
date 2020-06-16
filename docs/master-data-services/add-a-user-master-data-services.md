@@ -1,5 +1,6 @@
 ---
 title: Добавление пользователя
+description: Узнайте, как добавить пользователя в список пользователей в диспетчер основных данных. Необходимо добавить пользователя, чтобы начать процесс назначения разрешения для веб-приложения.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6fe6ec485c1d0e4bc6b30b1fa40f1be03f8b7f67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8c17a3356949375ab6836db94a31910f5e54ca2a
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729817"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796604"
 ---
 # <a name="add-a-user-master-data-services"></a>Добавление пользователя (службы Master Data Services)
 
@@ -37,13 +38,13 @@ ms.locfileid: "73729817"
   
 2.  На странице **Пользователи** нажмите кнопку **Добавить пользователя**.  
   
-3.  Введите имя пользователя, которому предшествует Active Directory доменное имя, или имя компьютера сервера, например *домен*\\*user_name* или *компьютер \ user_name*.  
+3.  Введите имя пользователя, которому предшествует Active Directory доменное имя, или имя компьютера сервера, например *домен* \\ *user_name* или *компьютер \ user_name*.  
   
 4.  По желанию нажмите кнопку **Проверить имена**.  
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
