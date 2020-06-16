@@ -1,5 +1,6 @@
 ---
 title: Выбор сетевого протокола | Документация Майкрософт
+description: Сравним и сравните сетевые протоколы, доступные для подключения к SQL Server ядро СУБД, такие как общая память, TCP/IP и именованные каналы.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,12 +24,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001094"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716701"
 ---
 # <a name="choosing-a-network-protocol"></a>Выбор сетевого протокола
   Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может одновременно обслуживать запросы по нескольким протоколам. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

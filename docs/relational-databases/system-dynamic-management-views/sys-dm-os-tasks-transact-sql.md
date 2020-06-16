@@ -20,12 +20,12 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829311"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748731"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,12 +59,12 @@ ms.locfileid: "82829311"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. Наблюдение за параллельными запросами  
- Для запросов, которые выполняются параллельно, вы увидите несколько строк для одного и того же сочетания ( \< **session_id**>, \< **request_id**>). Используйте следующий запрос, чтобы найти [параметр конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) для всех активных запросов.  
+ Для запросов, которые выполняются параллельно, вы увидите несколько строк для одного сочетания ( \<**session_id**> , \<**request_id**> ). Используйте следующий запрос, чтобы найти [параметр конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) для всех активных запросов.  
   
 > [!NOTE]  
 >  **Request_id** уникален в пределах сеанса.  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -85,7 +85,7 @@ SELECT
 ### <a name="b-associating-session-ids-with-windows-threads"></a>Б. Сопоставление идентификатора сеанса с потоками Windows  
  Можно использовать следующий запрос для сопоставления значения идентификатора сеанса со значением идентификатора потока Windows. Затем можно наблюдать за производительностью потока в системном мониторе Windows. Следующий запрос не возвращает сведений для сеансов, находящихся в ждущем режиме.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -94,10 +94,10 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
-## <a name="see-also"></a>См. также  
+
+## <a name="see-also"></a>См. также:  
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
-[Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)     
+[Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)     
   
 
 

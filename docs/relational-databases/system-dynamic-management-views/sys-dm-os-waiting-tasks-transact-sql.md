@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0efa4a5b5c8144807c27014a96b3fa90ed77971
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ab32f364725d11a606ac698fdefb7f9f95a312d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811762"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748252"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "82811762"
   Возвращает сведения об очереди задач, ожидающих освобождения определенного ресурса. Дополнительные сведения о задачах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_waiting_tasks**.  
+> Чтобы вызвать эту функцию из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , используйте имя **sys. dm_pdw_nodes_os_waiting_tasks**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -54,11 +54,11 @@ ms.locfileid: "82811762"
   
  **Владелец ресурса пула потоков:**  
   
--   Идентификатор пула потоков = \<>-адрес планировщика шестнадцатеричного адреса  
+-   ThreadPool ID = планировщик\<hex-address>  
   
  **Владелец ресурса параллельного запроса:**  
   
--   Ексчанжеевент ID = {порт | Pipe} \< шестнадцатеричный адрес> столбцы waittype = \< Exchange-Wait-Type> NodeId = \< Exchange-node-ID>  
+-   Ексчанжеевент ID = {порт | Pipe} \<hex-address> столбцы waittype = \<exchange-wait-type> NodeId =\<exchange-node-id>  
   
  **Exchange-wait-type:**  
   
@@ -78,43 +78,43 @@ ms.locfileid: "82811762"
   
  **Владелец ресурса блокировки:**  
   
--   \<Тип-описание> идентификатор = блокировка Lock \< -Hex-адрес> режим = \< режим> ассоЦиатедобжектид = \< связанный-obj-ID>  
+-   \<type-specific-description>ID = \<lock-hex-address> режим блокировки = \<mode> ассоЦиатедобжектид =\<associated-obj-id>  
   
-     **\<> описания типа могут быть:**  
+     **\<type-specific-description>может быть:**  
   
-    -   Для базы данных: databaselock подресурс = \< databaselock-resource> DBID = \< DB-ID>  
+    -   Для базы данных: databaselock, подресурс = \<databaselock-subresource> DBID =\<db-id>  
   
-    -   Для файла: FileLock ИД \< файла = файл-id> подресурсе = \< FileLock-Resource> DBID = \< db-ID>  
+    -   Для файла: FileLock ИД \<file-id> ресурса = подресурс = \<filelock-subresource> DBID =\<db-id>  
   
-    -   Для объекта: objectlock Локкпартитион = \< Lock-Partition-id> ObjId = \< obj-ID> подресурсе = \< objectlock-Resource> DBID = \< DB-ID>  
+    -   Для объекта: objectlock Локкпартитион = \<lock-partition-id> objID = \<obj-id> Resource = \<objectlock-subresource> DBID =\<db-id>  
   
-    -   Для страницы: пажелокк ИД \< файла = файл-id> идентификатор страницы = \< Page-ID> DBID = \< db-ID> подресурсе = \< пажелокк-Resource>  
+    -   Для страницы: пажелокк ИД = \<file-id> идентификатор страницы = \<page-id> DBID = \<db-id> Resource =\<pagelock-subresource>  
   
-    -   Для ключа: кэйлокк хобтид = \< HoBT-id> DBID = \< DB-ID>  
+    -   Для ключа: кэйлокк хобтид = \<hobt-id> DBID =\<db-id>  
   
-    -   Для ЭКСТЕНТа: екстентлокк ИД \< файла = File-id> идентификатор страницы = \< Page-ID> DBID = \< db-ID>  
+    -   Для ЭКСТЕНТа: екстентлокк ИД = \<file-id> идентификатор страницы = \<page-id> DBID =\<db-id>  
   
-    -   Для RID: ридлокк ИД \< файла = файл-id> идентификатор страницы = \< Page-ID> DBID = \< db-ID>  
+    -   Для RID: ридлокк ИД = \<file-id> идентификатор страницы = \<page-id> DBID =\<db-id>  
   
-    -   Для приложения: аппликатионлокк hash = \< хэш> датабасепринЦипалид = \< Role-ID> DBID = \< db-ID>  
+    -   Для приложения: аппликатионлокк hash = \<hash> датабасепринЦипалид = \<role-id> DBID =\<db-id>  
   
-    -   Для МЕТАДАННЫХ: metadatalock подресурс = \< метаданные — подресурс> ClassID = \< metadatalock-Description> DBID = \< db-ID>  
+    -   Для МЕТАДАННЫХ: metadatalock, подресурс = \<metadata-subresource> ClassID = \<metadatalock-description> DBID =\<db-id>  
   
-    -   Для HOBT: хобтлокк хобтид = \< HoBT-id> подресурс = \< HoBT-Resource> DBID = \< db-ID>  
+    -   Для HOBT: хобтлокк хобтид = " \<hobt-id> подресурс = \<hobt-subresource> DBID =\<db-id>  
   
-    -   Для ALLOCATION_UNIT: аллокунитлокк хобтид = \< HoBT-id> подресурсе = \< Alloc-Unit-a> DBID = \< db-ID>  
+    -   Для ALLOCATION_UNIT: аллокунитлокк хобтид = " \<hobt-id> подресурс = \<alloc-unit-subresource> DBID =\<db-id>  
   
-     **\<режим> может быть следующим:**  
+     **\<mode>может быть:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
  **Владелец внешнего ресурса:**  
   
--   External Екстерналресаурце = \< тип ожидания>  
+-   External Екстерналресаурце =\<wait-type>  
   
  **Владелец универсального ресурса:**  
   
--   Рабочая область Трансактионмутекс Трансактионинфо = \< Workspace-id>  
+-   Рабочая область Трансактионинфо Трансактионмутекс =\<workspace-id>  
   
 -   Mutex  
   
@@ -128,11 +128,11 @@ ms.locfileid: "82811762"
   
  **Владелец ресурса кратковременной блокировки:**  
   
--   \<база данных с идентификатором>: \<> с идентификатором файла: \< страница в файле>  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
 -   \<GUID>  
   
--   \<> класса кратковременной блокировки ( \< кратковременный адрес>)  
+-   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Разрешения
 
@@ -140,15 +140,47 @@ ms.locfileid: "82811762"
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
  
 ## <a name="example"></a>Пример
-В этом примере будут определены заблокированные сеансы. Выполните [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .
+### <a name="a-identify-tasks-from-blocked-sessions"></a>A. Выявление задач из заблокированных сеансов. 
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
-``` 
+```   
+
+### <a name="b-view-waiting-tasks-per-connection"></a>Б. Просмотр ожидающих задач на подключение
+
+```sql
+SELECT st.text AS [SQL Text], c.connection_id, w.session_id, 
+  w.wait_duration_ms, w.wait_type, w.resource_address, 
+  w.blocking_session_id, w.resource_description, c.client_net_address, c.connect_time
+FROM sys.dm_os_waiting_tasks AS w
+INNER JOIN sys.dm_exec_connections AS c ON w.session_id = c.session_id 
+CROSS APPLY (SELECT * FROM sys.dm_exec_sql_text(c.most_recent_sql_handle)) AS st 
+              WHERE w.session_id > 50 AND w.wait_duration_ms > 0
+ORDER BY c.connection_id, w.session_id
+GO
+```
+
+### <a name="c-view-waiting-tasks-for-all-user-processes-with-additional-information"></a>В. Просмотр ожидающих задач для всех пользовательских процессов с дополнительными сведениями
+
+```sql
+SELECT 'Waiting_tasks' AS [Information], owt.session_id,
+    owt.wait_duration_ms, owt.wait_type, owt.blocking_session_id,
+    owt.resource_description, es.program_name, est.text,
+    est.dbid, eqp.query_plan, er.database_id, es.cpu_time,
+    es.memory_usage*8 AS memory_usage_KB
+FROM sys.dm_os_waiting_tasks owt
+INNER JOIN sys.dm_exec_sessions es ON owt.session_id = es.session_id
+INNER JOIN sys.dm_exec_requests er ON es.session_id = er.session_id
+OUTER APPLY sys.dm_exec_sql_text (er.sql_handle) est
+OUTER APPLY sys.dm_exec_query_plan (er.plan_handle) eqp
+WHERE es.is_user_process = 1
+ORDER BY owt.session_id;
+GO
+```
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
-[Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)     
+[Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

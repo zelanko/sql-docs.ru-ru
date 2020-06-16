@@ -1,5 +1,6 @@
 ---
 title: Создание допустимой строки подключения с использованием именованных каналов | Документация Майкрософт
+description: Узнайте, как создать допустимую строку подключения при использовании протокола именованных каналов для подключения к экземпляру SQL Server. Просмотр примеров допустимых имен каналов.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001034"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716711"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Создание допустимой строки соединения, использующей протокол именованных каналов
   Если пользователь по умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прослушивает протокол именованных каналов, он использует в `\\.\pipe\sql\query` качестве имени канала. Точка означает, что компьютер является локальным компьютером, `pipe` указывает, что соединение является именованным каналом, а `sql\query` — именем канала. Чтобы подключиться к каналу по умолчанию, псевдоним должен содержать `\\<computer_name>\pipe\sql\query` в качестве имени канала. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был настроен на прослушивание другого канала, то имя канала должно соответствовать этому каналу. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует в качестве канала `\\.\pipe\unit\app`, то псевдоним должен использовать `\\<computer_name>\pipe\unit\app` в качестве имени канала.  
@@ -116,9 +117,9 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Сведения об указании сетевого протокола в качестве параметра **sqlcmd** см. в разделе «как подключиться к ядро СУБД с помощью sqlcmd. exe» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
+>  Сведения об указании сетевого протокола в качестве параметра **sqlcmd** см. в разделе «как подключиться к ядро СУБД с помощью sqlcmd.exe» [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание допустимой строки подключения с помощью протокола общей памяти](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Создание допустимой строки подключения с помощью IP-адреса TCP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
