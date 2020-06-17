@@ -1,5 +1,6 @@
 ---
 title: Функция Concat (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery Concat (), возвращающей строку, созданную путем сцепления нуля или более строк, указанных в качестве аргументов.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099829"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881811"
 ---
 # <a name="functions-on-string-values---concat"></a>Функции со строковыми значениями — concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ fn:concat ($string as xs:string?
  *$string*  
  Необязательная строка для сцепления.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функции требуется как минимум два аргумента. Если в качестве аргумента передана пустая последовательность, она трактуется как строка нулевой длины.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Дополнительные символы (суррогатные пары)  
@@ -49,8 +50,8 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в образце базы данных AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>А) Применение функции concat() языка XQuery для объединения строк  
- Для указанного изделия запрос возвращает строку, полученную сцеплением гарантийного строка и гарантийных обязательств. В документе описания каталога элемент> <`Warranty` состоит из <`WarrantyPeriod`> и <`Description`> дочерних элементов.  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Применение функции concat() языка XQuery для объединения строк  
+ Для указанного изделия запрос возвращает строку, полученную сцеплением гарантийного строка и гарантийных обязательств. В документе описания каталога элемент> <состоит `Warranty` из <`WarrantyPeriod`> и <> `Description` дочерних элементов.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- Приведенный запрос получает сведения об указанном изделии. Следующий запрос получает те же сведения по всем изделиям, для которых имеются описания каталога XML. Метод **exist ()** типа данных **XML** в предложении WHERE возвращает значение true, если XML-документ в строках содержит элемент <`ProductDescription`>.  
+ Приведенный запрос получает сведения об указанном изделии. Следующий запрос получает те же сведения по всем изделиям, для которых имеются описания каталога XML. Метод **exist ()** типа данных **XML** в предложении WHERE возвращает значение true, если XML-документ в строках содержит `ProductDescription` элемент <>.  
   
 ```  
 WITH XMLNAMESPACES (  

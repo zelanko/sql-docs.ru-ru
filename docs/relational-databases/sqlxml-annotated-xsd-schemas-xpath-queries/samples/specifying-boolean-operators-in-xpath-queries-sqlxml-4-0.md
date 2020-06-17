@@ -1,5 +1,6 @@
 ---
 title: Использование логических операторов в запросах XPath (SQLXML)
+description: Узнайте, как использовать логические операторы в запросах типа SQLXML 4,0 XPath.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a53f9d1b04d0f96e854a9e85c1588aa33e60fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41c521f2e8d1984ab8c10b8970c83c7ebe495f99
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252582"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884175"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Указание логических операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75252582"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Указание логического оператора OR  
- Этот запрос XPath возвращает дочерний элемент ** \<Customer>** элемента контекстного узла с атрибутом **CustomerID** со значением 13 или 31:  
+ Этот запрос XPath возвращает **\<Customer>** дочерние элементы узла контекста с атрибутом **CustomerID** со значением 13 или 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -43,7 +44,7 @@ ms.locfileid: "75252582"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- В `attribute` предикате является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является ** \<атрибутом>** узле, так как ** \<атрибут>** node является основным узлом для оси **атрибута** ). Предикат фильтрует элементы ** \<>клиента** и возвращает только те, которые соответствуют условию, указанному в предикате.  
+ В предикате `attribute` является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является **\<attribute>** узлом, поскольку **\<attribute>** узел является основным узлом для оси **атрибута** ). Предикат фильтрует **\<Customer>** элементы и возвращает только те, которые соответствуют условию, указанному в предикате.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Проверка запросов XPath к схеме сопоставления  
   

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881808"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;запрос источника данных &gt; — форма
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,30 +26,30 @@ ms.locfileid: "83669998"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *Главный запрос*  
+ *первичный запрос*  
  Запрос, возвращающий родительскую таблицу.  
   
  *запрос дочерней таблицы*  
  Запрос, возвращающий вложенную таблицу.  
   
- *Главный столбец*  
+ *первичный столбец*  
  Столбец в родительской таблице для определения дочерних строк из результата запроса дочерней таблицы.  
   
  *дочерний столбец*  
- Столбец в дочерней таблице для определения родительской строки из результата главного запроса.  
+ Столбец в дочерней таблице, который определяет родительскую строку из результата первичного запроса.  
   
  *имя таблицы столбцов*  
  Имя добавленного столбца в родительской таблице для вложенной таблицы.  

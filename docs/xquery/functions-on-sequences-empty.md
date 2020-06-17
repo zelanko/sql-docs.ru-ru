@@ -1,5 +1,6 @@
 ---
 title: Функция empty (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery empty (), возвращающей значение, указывающее, пуста ли указанная последовательность элементов.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004672"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881833"
 ---
 # <a name="functions-on-sequences---empty"></a>Функции с последовательностями — empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +39,13 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Последовательность элементов. Если последовательность пуста, функция возвращает значение True. В противном случае функция возвращает значение False.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Функция **fn: Exists ()** не поддерживается. В качестве альтернативы можно использовать функцию **NOT ()** .  
   
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>А) Использование функции XQuery empty() для определения наличия атрибута  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Использование функции XQuery empty() для определения наличия атрибута  
  В процессе производства для модели продукта 7 этот запрос возвращает все расположения рабочих центров, у которых нет атрибута **«MachineHours»** .  
   
 ```  

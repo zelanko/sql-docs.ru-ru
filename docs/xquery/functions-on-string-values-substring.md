@@ -1,5 +1,6 @@
 ---
 title: Функция substring (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery Function substring (), возвращающей указанную часть исходной строки.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004642"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881926"
 ---
 # <a name="functions-on-string-values---substring"></a>Функции со строковыми значениями — substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  Количество получаемых символов [дополнительно]. Если не указано, возвращаются все символы из расположения, указанного в *$startingLoc* вплоть до конца строки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Версия этой функции с тремя аргументами возвращает символы строки `$sourceString`, позиции которых `$p` удовлетворяют следующим условиям:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -69,10 +70,10 @@ fn:substring($sourceString as xs:string?,
  SQL Server позволяет *$startingLoc* и *$length* быть пустой последовательностью, поскольку пустая последовательность является возможным значением в результате возникновения динамических ошибок, сопоставленных с ().  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML **xml** , [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] хранящимся в различных столбцах типа XML в базе данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>А) Использование функции XQuery substring() для получения частичного резюме о модели продукта  
- Запрос получает первые 50 символов текста, описывающего модель продукта, элемент <`Summary`> в документе.  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Использование функции XQuery substring() для получения частичного резюме о модели продукта  
+ Запрос получает первые 50 символов текста, описывающего модель продукта, `Summary` элемент <> в документе.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Функция **String ()** возвращает строковое значение элемента<`Summary`>. Эта функция используется, поскольку элемент <`Summary`> содержит как текст, так и вложенные элементы (элементы форматирования HTML), и потому что эти элементы будут пропущены и получен весь текст.  
+-   Функция **String ()** возвращает строковое значение `Summary` элемента<>. Эта функция используется, поскольку `Summary` элемент <> содержит как текст, так и вложенные элементы (элементы форматирования HTML), и потому что эти элементы будут пропущены и получен весь текст.  
   
 -   Функция **substring ()** извлекает первые 50 символов из строкового значения, полученного **строкой ()**.  
   

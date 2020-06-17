@@ -1,5 +1,6 @@
 ---
 title: Использование реляционных операторов в запросах XPath (SQLXML)
+description: Узнайте, как использовать операторы отношения в запросах SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1961cc90c303e789c4bfbb847cea5e0eb80049ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e1d3f5b7832d15121cde56dd27e7cf9bf9e26704
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84883662"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Применение реляционных операторов в запросах XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252552"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-relational-operator"></a>A. Укажите реляционный оператор  
- Этот запрос XPath возвращает дочерние элементы элемента ** \<>Customer** , где значение атрибута **CustomerID** равно 1, и где любой дочерний ** \<порядок элементов>** содержит дочерний элемент ** \<OrderDetail>** с атрибутом **OrderQty** со значением больше 3:  
+ Этот запрос XPath возвращает дочерние элементы **\<Customer>** элемента, где значение атрибута **CustomerID** равно "1", а все дочерние **\<Order>** элементы содержат **\<OrderDetail>** дочерний элемент с атрибутом **OrderQty** со значением больше 3:  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  
 ```  
   
- Предикат, указанный в квадратных скобках, ** \<фильтрует элементы>клиента** . Возвращаются только элементы ** \<Customer>** , у которых есть хотя бы один ** \<элемент OrderDetail>** внучатый с атрибутом OrderQty со значением больше 3.  
+ Предикат, указанный в квадратных скобках, фильтрует **\<Customer>** элементы. Возвращаются только те **\<Customer>** элементы, у которых есть хотя бы один **\<OrderDetail>** внучатый с атрибутом OrderQty со значением больше 3.  
   
  По умолчанию используется **дочерняя** ось. Поэтому запрос можно определить следующим образом.  
   
@@ -80,8 +81,8 @@ ms.locfileid: "75252552"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>Б) Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
- Этот запрос возвращает все элементы ** \<Order>** элементов контекстного узла, у которых значение атрибута **SalesPersonID** меньше 270:  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>Б. Укажите реляционный оператор в запросе XPath и используйте логическую функцию для сравнения результатов  
+ Этот запрос возвращает все **\<Order>** дочерние элементы узла контекста, у которых значение атрибута **SalesPersonID** меньше 270:  
   
 ```  
 /child::Customer/child::Order[(attribute::SalesPersonID < 270)=true()]  

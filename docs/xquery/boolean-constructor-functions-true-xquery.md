@@ -1,5 +1,6 @@
 ---
 title: Функция true (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery true (), возвращающей логическое значение true.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886572"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Функции логического конструктора — true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>А) Применение логической функции XQuery true()  
+### <a name="a-using-the-true-xquery-boolean-function"></a>A. Применение логической функции XQuery true()  
  В следующем примере запрашиваются нетипизированная **XML-** переменная. Выражение в методе **value ()** возвращает логическое **значение true ()** , если "AAA" является значением атрибута. Метод **value ()** типа данных **XML** преобразует логическое значение в бит и возвращает его.  
   
 ```  
@@ -47,9 +48,9 @@ go
 -- result = 1  
 ```  
   
- В следующем примере запрос задается для типизированного **XML-** столбца. `if` Выражение проверяет типизированное логическое значение элемента <`ROOT`> и возвращает сформированный XML соответствующим образом. В примере выполняются следующие действия.  
+ В следующем примере запрос задается для типизированного **XML-** столбца. `if`Выражение проверяет типизированное логическое значение `ROOT` элемента <> и возвращает сформированный XML соответствующим образом. В примере выполняются следующие действия.  
   
--   Создает коллекцию XML-схем, определяющую элемент `ROOT` <> типа xs: Boolean.  
+-   Создает коллекцию XML-схем, определяющую `ROOT` элемент <> типа xs: Boolean.  
   
 -   Создает таблицу с типизированным **XML** -столбцом с помощью коллекции XML-схем.  
   

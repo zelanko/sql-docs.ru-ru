@@ -1,5 +1,6 @@
 ---
 title: Пользовательские сопоставления XSD с таблицами и столбцами (SQLXML)
+description: Узнайте, как создать пользовательское сопоставление в запросе SQLXML XPath между элементами и атрибутами XSD-схемы, а также таблицами и столбцами реляционной базы данных.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257433"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885602"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Пользовательские сопоставления XSD с таблицами и столбцами (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,10 +60,10 @@ ms.locfileid: "75257433"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>А) Задание заметок sql:relation и sql:field  
- В этом примере схема XSD состоит из элемента ** \<Contact>** сложного типа с ** \<fname>** и ** \<LName>** дочерними элементами и атрибутом **ContactID** .  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Задание заметок sql:relation и sql:field  
+ В этом примере схема XSD состоит из **\<Contact>** элемента сложного типа с **\<FName>** **\<LName>** дочерними элементами и атрибутом **ContactID** .  
   
- Аннотация **SQL: relation** сопоставляет элемент ** \<>контакта** с таблицей Person. Contact в базе данных AdventureWorks. Заметка **SQL: field** сопоставляет элемент ** \<fname>** столбцу FirstName и элементу ** \<LName>** столбцу LastName.  
+ Аннотация **SQL: relation** сопоставляет **\<Contact>** элемент с таблицей Person. Contact в базе данных AdventureWorks. Заметка **SQL: field** сопоставляет **\<FName>** элемент столбцу FirstName и **\<LName>** элементу со столбцом LastName.  
   
  Для атрибута **ContactID** не задана Аннотация. Поэтому атрибут по умолчанию сопоставляется со столбцом с тем же именем.  
   

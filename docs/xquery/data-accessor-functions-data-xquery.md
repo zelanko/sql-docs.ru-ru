@@ -1,5 +1,6 @@
 ---
 title: Функция data (XQuery) | Документация Майкрософт
+description: Узнайте, как использовать данные функции XQuery (), чтобы вернуть типизированное значение для каждого элемента в указанной последовательности элементов.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881870"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Функции метода доступа к данным — data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Последовательность элементов, типизированные значения которых будут возвращены.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Следующее применимо к типизированным значениям:  
   
 -   Типизированное значение атомного значения является атомным значением.  
@@ -78,7 +79,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>А) Использование функции data() XQuery для извлечения типизированного значения узла  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Использование функции data() XQuery для извлечения типизированного значения узла  
  Следующий запрос иллюстрирует использование функции **Data ()** для извлечения значений атрибута, элемента и текстового узла:  
   
 ```  
@@ -125,7 +126,7 @@ WHERE ProductModelID = 19
   
  В следующих примерах показаны экземпляры, в которых требуется функция **Data ()** .  
   
- В следующем запросе **$PD/P1: спецификации/материалы** возвращает элемент <`Material`>. Кроме того, **данные ($PD/P1: спецификации/материалы)** возвращают символьные данные, типизированные как xdt `Material` : untypedAtomic, так как <> не типизирован. Если входные данные не типизированы, результат типа **данных ()** вводится как **xdt: untypedAtomic**.  
+ В следующем запросе **$PD/P1: спецификации/материалы** возвращает `Material` элемент <>. Кроме того, **данные ($PD/P1: спецификации/материалы)** возвращают символьные данные, типизированные как xdt: untypedAtomic, так как <`Material`> не типизирован. Если входные данные не типизированы, результат типа **данных ()** вводится как **xdt: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  

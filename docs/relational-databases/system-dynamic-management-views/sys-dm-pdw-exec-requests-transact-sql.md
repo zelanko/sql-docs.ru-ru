@@ -12,12 +12,12 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 982096893cdce9c4b604df9c3fb0258cefaaf93d
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a3ee27ca4f92efb950c35ab0d8174676246c14b3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796525"
+ms.locfileid: "84818044"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
@@ -34,7 +34,7 @@ ms.locfileid: "84796525"
 |start_time|**datetime**|Время начала выполнения запроса.|Значение NULL для запросов в очереди; в противном случае допустимое **значение DateTime** меньше или равно текущему времени.|  
 |end_compile_time|**datetime**|Время, когда обработчик завершил компиляцию запроса.|Значение NULL для запросов, которые еще не были скомпилированы; в противном случае допустимое значение **DateTime** меньше start_time и меньше или равно текущему времени.|
 |end_time|**datetime**|Время, когда выполнение запроса завершилось, завершилось сбоем или было отменено.|Значение NULL для очереди или активных запросов; в противном случае допустимое **значение DateTime** меньше или равно текущему времени.|  
-|total_elapsed_time|**int**|Время, затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разностью между start_time и end_time.</br></br> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будет продолжать быть максимальным значением. Это условие выдаст предупреждение "превышено максимальное значение".</br></br> Максимальное значение в миллисекундах равно 24,8 дням.|  
+|total_elapsed_time|**int**|Время, затраченное на выполнение с момента запуска запроса, в миллисекундах.|Между 0 и разностью между submit_time и end_time.</br></br> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будет продолжать быть максимальным значением. Это условие выдаст предупреждение "превышено максимальное значение".</br></br> Максимальное значение в миллисекундах равно 24,8 дням.|  
 |label|**nvarchar(255)**|Необязательная строка метки, связанная с некоторыми инструкциями запроса SELECT.|Любая строка, содержащая "a-z", "A-Z", "0-9", "_".|  
 |error_id|**nvarchar (36)**|Уникальный идентификатор ошибки, связанной с запросом, если он есть.|См [. раздел sys. dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md). Если ошибка не возникала, задайте значение NULL.|  
 |database_id|**int**|Идентификатор базы данных, используемой явным контекстом (например, DB_X).|См. раздел ID в [представлении sys. databases &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  

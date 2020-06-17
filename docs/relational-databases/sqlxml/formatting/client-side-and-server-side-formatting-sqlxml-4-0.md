@@ -1,5 +1,6 @@
 ---
 title: Форматирование на стороне клиента и на стороне сервера (SQLXML)
+description: Сведения о форматировании XML-кода на стороне клиента и на стороне сервера для документов, созданных в SQLXML 4,0 запросы, выполняемые в базе данных Microsoft SQL Server.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27bf8d7c69755bc0745773fd6c0e3defd6bc03c9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3cf289d7f34cdfa0226464e67b5894b02d982f02
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882910"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75247031"
   
 -   форматирование на стороне клиента.  
   
- В этом разделе содержатся сведения о форматировании XML-документов на стороне клиента или на стороне сервера из наборов строк, созданных запросами, выполняемыми в базе данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ В этом разделе содержатся сведения о форматировании XML-документов на стороне клиента или на стороне сервера из наборов строк, созданных запросами, выполняемыми в базе данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Архитектура форматирования XML на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  

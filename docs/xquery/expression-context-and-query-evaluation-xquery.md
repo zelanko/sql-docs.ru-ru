@@ -1,5 +1,6 @@
 ---
 title: Контекст выражения и вычисление запросов (XQuery) | Документация Майкрософт
+description: Узнайте, как данные из статического и динамического контекста выражения XQuery используются для анализа и вычисления.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cadfc71bdbb137650d897dc8374ed1caa8d193ab
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038922"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881904"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Контекст выражения и вычисление запросов (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +60,7 @@ ms.locfileid: "68038922"
   
     -   Любых пространств имен, определенных при помощи WITH XMLNAMESPACES. Дополнительные сведения см. [в разделе Добавление пространств имен в запросы с WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-    -   Любых пространств имен, определенных в прологе запроса. Обратите внимание на то, что объявления пространств имен в прологе могут отменять объявления пространств имен в WITH XMLNAMESPACES. Например, в следующем запросе параметр WITH XMLNAMESPACES объявляет префикс (PD), который привязывает его к пространству имен (`https://someURI`). Однако пролог запроса отменяет связывание в предложении WHERE.  
+    -   Любых пространств имен, определенных в прологе запроса. Обратите внимание на то, что объявления пространств имен в прологе могут отменять объявления пространств имен в WITH XMLNAMESPACES. Например, в следующем запросе параметр WITH XMLNAMESPACES объявляет префикс (PD), который привязывает его к пространству имен ( `https://someURI` ). Однако пролог запроса отменяет связывание в предложении WHERE.  
   
         ```  
         WITH XMLNAMESPACES ('https://someURI' AS pd)  
@@ -127,7 +128,7 @@ ms.locfileid: "68038922"
     SELECT @x.query('"x" + 4')  
     ```  
   
-     В следующем примере оператору **value ()** требуется Singleton. Как указано в схеме XML, можно использовать несколько \<элементов Elem>. Статический анализ выражения определяет, что это небезопасный тип, и возвращает статическую ошибку. Чтобы устранить ошибку, выражение должно быть переписано таким образом, чтобы явно указать одноэлементный запрос (`data(/x:Elem)[1]`).  
+     В следующем примере оператору **value ()** требуется Singleton. Как указано в схеме XML, может быть несколько \<Elem> элементов. Статический анализ выражения определяет, что это небезопасный тип, и возвращает статическую ошибку. Чтобы устранить ошибку, выражение должно быть переписано таким образом, чтобы явно указать одноэлементный запрос (`data(/x:Elem)[1]`).  
   
     ```  
     DROP XML SCHEMA COLLECTION SC  

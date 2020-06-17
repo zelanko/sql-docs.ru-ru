@@ -1,5 +1,6 @@
 ---
 title: Функция number (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery Number (), возвращающей числовое значение указанного аргумента.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930117"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881845"
 ---
 # <a name="functions-on-nodes---number"></a>Функции с узлами — number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +40,8 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Узел, значение которого будет возвращено в виде числа.  
   
-## <a name="remarks"></a>Remarks  
- Если *$arg* не указан, возвращается числовое значение узла контекста, преобразованное в Double. В SQL Server **fn: Number ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]). Например, следующее выражение возвращает элемент <`ROOT`>.  
+## <a name="remarks"></a>Комментарии  
+ Если *$arg* не указан, возвращается числовое значение узла контекста, преобразованное в Double. В SQL Server **fn: Number ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]). Например, следующее выражение возвращает `ROOT` элемент <>.  
   
 ```  
 declare @x xml  
@@ -53,7 +54,7 @@ select @x.query('/ROOT[number()=111]')
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>А) Использование функции number() языка XQuery для получения числового значения атрибута  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Использование функции number() языка XQuery для получения числового значения атрибута  
  В следующем запросе получается числовое значение атрибута, представляющего объем партии, производимого в первом цехе, участвующем в производственном процессе для модели продукта 7.  
   
 ```  

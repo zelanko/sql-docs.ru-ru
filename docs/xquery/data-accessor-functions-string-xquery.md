@@ -1,5 +1,6 @@
 ---
 title: Функция String (XQuery) | Документация Майкрософт
+description: Сведения о строке функции XQuery (), возвращающей значение аргумента, представленного в виде строки.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881896"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Функции метода доступа к данным — string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  Узел или атомарное значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
   
 -   Если *$arg* является пустой последовательностью, возвращается строка нулевой длины.  
   
@@ -54,8 +55,8 @@ fn:string($arg as item()?) as xs:string
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-string-function"></a>А) Использование строковой функции  
- Следующий запрос получает узел <`Features`> дочернего элемента элемента <`ProductDescription`>.  
+### <a name="a-using-the-string-function"></a>A. Использование строковой функции  
+ Следующий запрос получает `Features` узел <> дочернего элемента элемента <`ProductDescription`>.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -97,7 +98,7 @@ These are the product highlights.
 3 yearsparts and labor...    
 ```  
   
-### <a name="b-using-the-string-function-on-various-nodes"></a>Б) Использование строковой функции в различных узлах  
+### <a name="b-using-the-string-function-on-various-nodes"></a>Б. Использование строковой функции в различных узлах  
  В следующем примере экземпляр XML назначается переменной типа xml. Запросы указываются для иллюстрации результата применения **String ()** к различным узлам.  
   
 ```  

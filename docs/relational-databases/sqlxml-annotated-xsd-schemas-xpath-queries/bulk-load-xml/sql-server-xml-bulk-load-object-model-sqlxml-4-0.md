@@ -1,5 +1,6 @@
 ---
 title: SQL Server объектной модели XML для загрузки (SQLXML)
+description: Сведения о методах и свойствах объекта Склксмлбулклоад, который используется для выполнения групповой загрузки XML в SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -32,16 +33,16 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71a5c756953c6b70e51422b5c1032b117eb7785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dff7936e236ae76333543e902f588fa8ead1be
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882564"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Объектная модель массовой загрузки XML SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Объектная [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] модель Microsoft XML с массовым загрузкой состоит из объекта склксмлбулклоад. Этот объект поддерживает следующие свойства и методы.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Объектная модель Microsoft XML с массовым загрузкой состоит из объекта склксмлбулклоад. Этот объект поддерживает следующие свойства и методы.  
   
 ## <a name="methods"></a>Методы  
  Execute  

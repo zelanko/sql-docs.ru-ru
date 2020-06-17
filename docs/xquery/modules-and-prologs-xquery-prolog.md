@@ -1,5 +1,6 @@
 ---
 title: Пролог XQuery | Документация Майкрософт
+description: Сведения о прологе XQuery, содержащем ряд объявлений и определений, которые создают необходимую среду для обработки запросов.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881664"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Модули и прологи — пролог XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Запрос XQuery состоит из пролога и текста запроса. Пролог XQuery является набором объявлений и определений, создающим требуемую для обработки запроса среду. На сервере SQL Server, в прологе XQuery могут содержаться объявления пространств имен. Текст запроса XQuery состоит из последовательности выражений, которые определяют желаемый результат запроса.  
   
- Например, следующий запрос XQuery задается для столбца Instructions типа **XML** , который хранит инструкции по производству в виде XML. Запрос получает инструкции по производству продукта для производственного цеха `10`. `query()` Метод типа данных **XML** используется для указания языка XQuery.  
+ Например, следующий запрос XQuery задается для столбца Instructions типа **XML** , который хранит инструкции по производству в виде XML. Запрос получает инструкции по производству продукта для производственного цеха `10`. `query()`Метод типа данных **XML** используется для указания языка XQuery.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,7 +42,7 @@ WHERE ProductModelID=7
   
  Обратите внимание на следующие данные из предыдущего запроса:  
   
--   Пролог XQuery содержит объявление префикса пространства имен (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Пролог XQuery содержит объявление префикса пространства имен (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` .  
   
 -   Ключевое слово `declare namespace` определяет префикс пространств имен, который впоследствии используется в теле запроса.  
   

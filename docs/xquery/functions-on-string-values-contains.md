@@ -1,5 +1,6 @@
 ---
 title: Contains, функция (XQuery) | Документация Майкрософт
+description: Сведения об использовании функции Contains в языке XQuery для определения того, содержит ли указанное строковое значение указанное значение подстроки.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881865"
 ---
 # <a name="functions-on-string-values---contains"></a>Функции со строковыми значениями — contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 2*  
  Подстрока для поиска.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если значение *$arg 2* является строкой нулевой длины, функция возвращает **значение true**. Если значение *$arg 1* является строкой нулевой длины, а значение *$arg 2* не является строкой нулевой длины, функция возвращает **значение false**.  
   
  Если значение *$arg 1* или *$arg 2* является пустой последовательностью, аргумент рассматривается как строка нулевой длины.  
@@ -58,8 +59,8 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа XML в базе данных AdventureWorks.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>А) Использование функции contains() языка XQuery для поиска указанной строки символов  
- В следующем запросе выполняется поиск продуктов, сводное описание которых содержат слово «Aerodynamic». Запрос возвращает ProductID и элемент> <`Summary` для таких продуктов.  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Использование функции contains() языка XQuery для поиска указанной строки символов  
+ В следующем запросе выполняется поиск продуктов, сводное описание которых содержат слово «Aerodynamic». Запрос возвращает ProductID и `Summary` элемент> <для таких продуктов.  
   
 ```  
 --The product model description document uses  
@@ -108,7 +109,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: Система типов (XQuery) | Документация Майкрософт
+description: Сведения о системе типов XQuery, которая включает встроенные типы схемы XML и типы, определенные в пространстве имен XPath-данных.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82cfc060b021e28c5b5e73602285b1edc3fcf20
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886547"
 ---
 # <a name="type-system-xquery"></a>Система типов (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "67946204"
   
 -   Встроенные типы схемы XML в **http://www.w3.org/2001/XMLSchema** пространстве имен.  
   
--   Типы, **http://www.w3.org/2004/07/xpath-datatypes** определенные в пространстве имен.  
+-   Типы, определенные в **http://www.w3.org/2004/07/xpath-datatypes** пространстве имен.  
   
  В этом разделе также описано следующее:  
   
@@ -50,7 +51,7 @@ ms.locfileid: "67946204"
 ## <a name="built-in-types-of-xml-schema"></a>Встроенные типы XML-схемы  
  Встроенные типы XML-схемы обозначаются в пространстве имен стандартным префиксом xs. К некоторым из этих типов относятся **xs: integer** и **xs: String**. Поддерживаются все встроенные типы данных. Эти типы могут быть использованы при создании коллекции XML-схем.  
   
- При обращении к типизированному XML статические и динамические типы узлов определяются коллекцией XML-схем, связанной со столбцом, к которому происходит обращение. Дополнительные сведения о статических и динамических типах см. в статьях [контекст выражения и вычисление запросов &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Например, следующий запрос задается для типизированного **XML-** столбца (`Instructions`). В выражении `instance of` используется для проверки того, что типизированное значение возвращенного атрибута `LotSize` имеет тип данных `xs:decimal`.  
+ При обращении к типизированному XML статические и динамические типы узлов определяются коллекцией XML-схем, связанной со столбцом, к которому происходит обращение. Дополнительные сведения о статических и динамических типах см. в статьях [контекст выражения и вычисление запросов &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Например, следующий запрос задается для типизированного **XML-** столбца ( `Instructions` ). В выражении `instance of` используется для проверки того, что типизированное значение возвращенного атрибута `LotSize` имеет тип данных `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -105,7 +106,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   [Строковая функция &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md) возвращает строковое значение узла.  
   
- В следующей коллекции XML-схем определен элемент <`root`> целочисленного типа:  
+ В следующей коллекции XML-схем `root` определен элемент <> целочисленного типа:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +133,7 @@ SET @x='<root>5</root>'
 SELECT @x.query('string(/root[1]) + 3')  
 ```  
   
- В следующем примере производится вычисление общей суммы атрибутов `LaborHours`. `data()` Функция получает типизированные значения `LaborHours` атрибутов из всех элементов> <`Location` для модели продукта. В соответствии со схемой XML, связанной `Instruction` со столбцом, `LaborHours` имеет тип **xs: decimal** .  
+ В следующем примере производится вычисление общей суммы атрибутов `LaborHours`. `data()`Функция получает типизированные значения `LaborHours` атрибутов из всех `Location` элементов> <для модели продукта. В соответствии со схемой XML, связанной со `Instruction` столбцом, `LaborHours` имеет тип **xs: decimal** .  
   
 ```  
 SELECT Instructions.query('   
@@ -149,7 +150,7 @@ WHERE ProductModelID=7
 >  В этом примере явное использование функции **Data ()** используется только для иллюстрации. Если он не указан, функция **Sum ()** неявно применяет функцию **Data ()** для извлечения типизированных значений узлов.  
   
 ## <a name="see-also"></a>См. также:  
- [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   
   

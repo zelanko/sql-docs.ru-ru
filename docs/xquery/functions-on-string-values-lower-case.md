@@ -1,5 +1,6 @@
 ---
 title: Функция нижнего регистра (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery с нижним регистром (), которая преобразует каждый символ в указанной строке в его эквивалент в нижнем регистре.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886593"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Функции со строковыми значениями — lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ fn:lower-case($arg as xs:string?) as xs:string
 |Термин|Определение|  
 |*$arg*|Строковое значение для преобразования в нижний регистр.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Преобразование строки в верхний регистр  
- Следующий пример изменяет входную строку "abcDEF! @4' в нижнем регистре.  
+ Следующий пример изменяет входную строку "abcDEF! @4 " в нижний регистр.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -58,7 +59,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>Б) Поиск конкретной символьной строки  
+### <a name="b-search-for-a-specific-character-string"></a>Б. Поиск конкретной символьной строки  
  В этом примере показано использование функции lower-case для выполнения поиска без учета регистра.  
   
 ```  

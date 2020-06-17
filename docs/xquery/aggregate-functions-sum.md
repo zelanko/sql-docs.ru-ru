@@ -1,5 +1,6 @@
 ---
 title: Функция Sum (XQuery) | Документация Майкрософт
+description: Сведения о функции XQuery Sum (), возвращающей сумму последовательности чисел.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985741"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886931"
 ---
 # <a name="aggregate-functions---sum"></a>Агрегатные функции — sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Последовательность атомарных значений, сумма которых должна быть вычислена.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Все типы атомарных значений, передаваемых **функции Sum ()** , должны быть подтипами одного и того же базового типа. Базовые типы, которые принимаются, — это три встроенных числовых базовых типа или тип xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Если существует смесь этих типов или передаются другие значения других типов, возникает статическая ошибка.  
   
  Результат **Sum ()** получает базовый тип переданных типов, таких как xs: Double в случае xdt: untypedAtomic, даже если входные данные при необходимости являются пустой последовательностью. Если вход статически пуст, результатом будет значение 0 со статическим и динамическим типом xs:integer.  
@@ -48,9 +49,9 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  Функция возвращает ошибку времени выполнения, если происходит переполнение или исключение выхода за пределы диапазона.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>А) Использование функции языка XQuery sum() для определения полного количества рабочих часов для всех расположений цехов в производственном процессе  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Использование функции языка XQuery sum() для определения полного количества рабочих часов для всех расположений цехов в производственном процессе  
  Следующий запрос находит общее количество трудовых часов для всех расположений цехов в производственном процессе всех моделей продукта, для которых сохранены производственные команды.  
   
 ```  

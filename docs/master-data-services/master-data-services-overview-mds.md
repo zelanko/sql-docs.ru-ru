@@ -1,5 +1,6 @@
 ---
 title: Обзор
+description: Сведения о ключевых функциях Организации данных и управления Master Data Services. Master Data Services позволяет управлять главным набором данных.
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 44723e33929c71b51cdf61d675644a4bf9f6068d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb6d1967173c4379b54ca8596b34eadbd8ab46e9
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729052"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84800521"
 ---
 # <a name="master-data-services-overview-mds"></a>Общие сведения о службах Master Data Services (MDS)
 
@@ -30,7 +31,7 @@ ms.locfileid: "73729052"
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] позволяют управлять основным набором данных в вашей организации. Можно организовывать данные в модели, создавать правила для обновления данных и контролировать тех, кто обновляет данные. Excel позволяет использовать основной набор данных совместно с другими людьми в вашей организации. 
   
- >  Описание архитектуры [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Master Data Services — основы](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) на сайте simple-talk.com. Сведения о новых возможностях в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]см. в разделе [новые возможности Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
+ >  Описание архитектуры [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] см. в статье [Master Data Services — основы](https://www.simple-talk.com/sql/database-delivery/master-data-services-basics) на сайте simple-talk.com. Сведения о новых возможностях в см. в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] разделе [новые возможности Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)  
    **Инструкции по установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], настройке базы данных и веб-сайта и развертыванию образцов моделей см. в статье ** [Установка и конфигурация служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md).  
   
  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]модель является наивысшим уровнем контейнера в структуре основных данных. Можно создать модель для управления группами сходных данных, например для управления данными продуктов в сети. В модели содержится одна или несколько сущностей, а сущности содержат элементы, которые являются записями данных. Сущность похожа на таблицу.  
@@ -56,7 +57,7 @@ ms.locfileid: "73729052"
 > [!NOTE]  
 >  Следующие задачи можно выполнить в тестовой среде и использовать предложенные образцы данных при установке служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md).  
   
-|Действие|Сведения|Связанные разделы|  
+|Действие|Сведения|См. также|  
 |------------|-------------|--------------------|  
 |Создание модели|При создании модели она считается версией VERSION_1.|[Модели (службы Master Data Services)](../master-data-services/models-master-data-services.md)<br /><br /> [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md)|  
 |Создание сущностей|Создавайте столько сущностей, сколько необходимо для хранения элементов.|[Сущности (службы Master Data Services)](../master-data-services/entities-master-data-services.md)<br /><br /> [Создание сущности (службы Master Data Services)](../master-data-services/create-an-entity-master-data-services.md)|  

@@ -1,5 +1,6 @@
 ---
 title: Запросы XQuery использующие, включающая иерархию | Документация Майкрософт
+description: Просмотрите примеры запросы XQuery использующие, которые используют иерархии.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946107"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880631"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Запросы XQuery, использующие иерархию
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +31,9 @@ ms.locfileid: "67946107"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Получение сведений о размещении цехов и о первом этапе производства в этих цехах из документов инструкций производства  
- Для модели продукта 7 Запрос конструирует XML, `ManuInstr` включающий элемент <>, с атрибутами **ProductModelID** и **ProductModelName** и одним или несколькими <`Location`> дочерними элементами.  
+ Для модели продукта 7 Запрос конструирует XML, включающий `ManuInstr` элемент <>, с атрибутами **ProductModelID** и **ProductModelName** и одним или несколькими <`Location`> дочерними элементами.  
   
- Каждый элемент `Location`> <имеет собственный набор атрибутов и один <`step`> дочерний элемент. Этот <`step`> дочерним элементом является первым шагом производства в расположении цеха.  
+ Каждый `Location` элемент> <имеет собственный набор атрибутов и один <`step`> дочерний элемент. Этот <`step`> дочерним элементом является первым шагом производства в расположении цеха.  
   
 ```sql
 SELECT Instructions.query('  
@@ -63,7 +64,7 @@ WHERE ProductModelID=7
   
 -   При конструировании элемента <`Location`> $WC/@ * получает все атрибуты расположения рабочего центра.  
   
--   Функция **String ()** возвращает строковое значение из элемента <`step`>.  
+-   Функция **String ()** возвращает строковое значение из `step` элемента <>.  
   
  Частичный результат:  
   
@@ -83,8 +84,8 @@ WHERE ProductModelID=7
 </ManuInstr>   
 ```  
   
-### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>Б) Поиск всех телефонных номеров в столбце AdditionalContactInfo  
- Следующий запрос получает дополнительные телефонные номера для конкретного контакта клиента, выполняя поиск элемента <`telephoneNumber`> в всей иерархии. Поскольку элемент> `telephoneNumber` <может находиться в любом месте иерархии, в запросе используется потомок и оператор Self (//).  
+### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>Б. Поиск всех телефонных номеров в столбце AdditionalContactInfo  
+ Следующий запрос получает дополнительные телефонные номера для конкретного контакта клиента, выполняя поиск элемента <> в всей иерархии `telephoneNumber` . Поскольку `telephoneNumber` элемент> <может находиться в любом месте иерархии, в запросе используется потомок и оператор Self (//).  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -115,7 +116,7 @@ WHERE ContactID = 1
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>Дополнительно  
  [Основы XQuery](../xquery/xquery-basics.md)   
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  

@@ -1,5 +1,6 @@
 ---
 title: Выражения XQuery | Документация Майкрософт
+description: Просмотр сведений о выражениях XQuery, которые включают описания каждого типа выражения и способы их использования.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f136f07b500a52a5382fff6f4388840d2007892
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef7a6f6131099cdccdb5d2217c3fd548f722aa93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881825"
 ---
 # <a name="xquery-expressions"></a>Выражения языка XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

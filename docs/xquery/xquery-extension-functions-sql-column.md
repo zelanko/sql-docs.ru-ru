@@ -1,5 +1,6 @@
 ---
 title: 'Функция SQL: column () (XQuery) | Документация Майкрософт'
+description: 'Узнайте, как с помощью функции XQuery SQL: column () можно привязывать реляционные данные, отличные от XML, в XML и одновременно объединять реляционные и XML-данные.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881503"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Функции расширения XQuery — sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "67946012"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Обратите внимание, что ссылка на столбец, указанный в функции **SQL: column ()** в запросе XQuery, ссылается на столбец в строке, которая обрабатывается.  
   
- В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно ссылаться только на экземпляр **XML** в контексте ИСХОДНОГО выражения инструкции INSERT XML-DML. в противном случае нельзя ссылаться на столбцы, имеющие тип **XML** или определяемый пользователем тип данных CLR.  
+ В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно ссылаться только на экземпляр **XML** в контексте исходного выражения инструкции INSERT XML. в противном случае нельзя ссылаться на столбцы, имеющие тип **XML** или определяемый пользователем тип данных CLR.  
   
  Функция **SQL: column ()** не поддерживается в операциях JOIN. Вместо этого можно использовать операцию APPLY.  
   
@@ -134,7 +135,7 @@ select @x
  [Сравнение типизированного и нетипизированного XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Создание экземпляров XML-данных](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Методы типа данных XML](../t-sql/xml/xml-data-type-methods.md)   
+ [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
  [Язык модификации XML-данных (XML DML)](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   
