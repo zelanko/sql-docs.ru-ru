@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927994"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Диагностика общих проблем с производительностью хэш-индексов оптимизированными для памяти таблиц
   В этом разделе рассматривается устранение неполадок и обходные пути для распространенных проблем с хэш-индексами.  
@@ -72,7 +71,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Обратите внимание, что оптимизированный для памяти хэш-индекс не работает оптимально при наличии большого количества повторяющихся строк для заданного значения ключа индекса. в этом примере, если число уникальных значений для столбца o_id намного меньше, чем количество строк в таблице, не было бы оптимальным добавлять индекс в (o_id). Вместо этого лучшим решением будет изменение типа индекса PK_od от hash к некластеризованному. Дополнительные сведения см. в разделе [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Индексы для оптимизированных для памяти таблиц](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af82c187fce638ddd1f28ab98a5109898f7cad25
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43381593b6a43f9e912088a67d5e10401ef3fc6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768710"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969004"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (выражение служб SSIS)
   Возвращает токен (подстроку) из строки с учетом заданных разделителей токенов строки и номера токена, определяющего, какой токен следует возвратить.  
@@ -40,13 +39,13 @@ TOKEN(character_expression, delimiter_string, occurrence)
  DT_WSTR  
   
 ## <a name="remarks"></a>Remarks  
- Эта функция разделяет строку <character_expression> на набор токенов, разделенных символами, которые заданы в строке <delimiter_string>, а затем возвращает токен N, где N — это порядковый номер токена, заданный параметром \<occurrence>. Примеры использования этой функции см. в разделе «Примеры».  
+ Эта функция разделяет <character_expression> строки на набор токенов, разделенных разделителями, заданными в <delimiter_string>, а затем возвращает токен n, где N — это число вхождений токена, заданного \<occurrence> параметром. Примеры использования этой функции см. в разделе «Примеры».  
   
  Следующие примечания относятся к функции TOKEN.  
   
 -   Строка разделения может содержать один или несколько символов разделения.  
   
--   Если значение параметра \<occurrence> больше общего числа токенов в строке, функция возвратит значение NULL.  
+-   Если значение параметра больше, \<occurrence> чем общее число токенов в строке, функция возвращает значение null.  
   
 -   Первые разделители пропускаются.  
   

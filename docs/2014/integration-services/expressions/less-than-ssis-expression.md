@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c0683f741de16b688330fcd7833d5705e4bbb9a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d95a6a5fd8646ea44db80c4dbefe9da14b9daf34
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769050"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969304"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (меньше) (выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение меньше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  

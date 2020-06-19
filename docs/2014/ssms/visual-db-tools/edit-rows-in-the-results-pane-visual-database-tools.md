@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6afca189318d4c004c4d9bfeb1bf29b0a9b3284
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054623"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>изменить строки на панели результатов (визуальные инструменты для баз данных)
   В большинстве случаев данные на [панели результатов](visual-database-tools.md)можно изменять. Сведения об изменении данных см. в разделах [Правила обновления результатов (визуальные инструменты для баз данных)](rules-for-updating-results-visual-database-tools.md) и [Работа с данными на панели результатов (визуальные инструменты для баз данных)](work-with-data-in-the-results-pane-visual-database-tools.md)можно изменять.  

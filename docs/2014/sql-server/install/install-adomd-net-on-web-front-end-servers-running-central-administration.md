@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f36e00a9393dcbdf1f8cbfe878b8382e6a8dac9d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4acc6888e88a4186a48a6047d8d21fffc9a0f3ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952154"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054769"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования
   При установке PowerPivot для SharePoint в ферму с топологией центра администрирования без служб Excel или PowerPivot для SharePoint загрузите и установите клиентскую библиотеку Microsoft ADOMD.NET, если желаете иметь полный доступ к встроенным на панели управления PowerPivot отчетам. Некоторые отчеты с панели мониторинга используют ADOMD.NET для доступа к внутренним данным, предоставляющим сведения об обработке запросов PowerPivot и исправности сервера в ферме.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010  
   
- Для SharePoint 2013 поставщик включен в пакет дополнительных компонентов SQL Server. Сведения о том, как скачать средство PowerPivot. msi, см. в статье [пакет дополнительных компонентов Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=35577) .  
+ Для SharePoint 2013 поставщик включен в пакет дополнительных компонентов SQL Server. Сведения о загрузке spPowerPivot.msi см. в статье [пакет дополнительных компонентов Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=35577) .  
   
 ### <a name="download-and-install-the-client-library"></a>Загрузка и установка клиентской библиотеки  
   
@@ -42,7 +41,7 @@ ms.locfileid: "71952154"
   
 3.  Нажмите **Версия**.  
   
-4.  Убедитесь, что версия включает 12,00. \<номер сборки> и описание — Microsoft. AnalysisService. AdomdClient.  
+4.  Убедитесь, что версия включает 12,00.\<build number> и это описание — Microsoft. AnalysisService. AdomdClient.  
   
 ## <a name="see-also"></a>См. также:  
  [Панель мониторинга управления PowerPivot и данные об использовании](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  

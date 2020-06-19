@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8dc507d455636bf6256fd7ba4649dba53d32884e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd5717b545913bd9e5ee98debe670a1af616fc61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953612"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Создание объектов базы данных с интеграцией со средой CLR
-  Вы можете создавать объекты базы данных с [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] помощью среды, называемой "подпрограммы CLR". Эти подпрограммы включают:  
+  Вы можете создавать объекты базы данных с помощью [!INCLUDE[ssNoVersion](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среды, называемой "подпрограммы CLR". Эти подпрограммы включают:  
   
 -   определяемые пользователем функции, возвращающие скалярное значение (скалярные определяемые пользователем функции);  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62919257"
  [Триггеры CLR](../../../database-engine/dev-guide/clr-triggers.md)  
  Показывает, как реализовать и использовать триггеры CLR.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения об интеграции&#41; среды CLR &#40;](../common-language-runtime-integration-overview.md)  
   
   

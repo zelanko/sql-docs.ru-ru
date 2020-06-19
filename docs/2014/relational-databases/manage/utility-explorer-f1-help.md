@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fb706fb8be1864b8da12c91fc4ce1e767355f93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467858"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023083"
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
   В следующих разделах описываются функциональные возможности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебной программы и связанные операции.  
@@ -31,7 +30,7 @@ ms.locfileid: "62467858"
   
  [Администрирование программ (служебная программа SQL Server)](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>Справочник  
+## <a name="reference"></a>Справочные сведения  
  [Создание точки управления служебной программы SQL Server (служебная программа SQL Server)](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [Подключение к служебной программе SQL Server](connect-to-a-sql-server-utility.md)  
@@ -42,7 +41,7 @@ ms.locfileid: "62467858"
   
  [Наблюдение за экземплярами SQL Server в служебной программе SQL Server](monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции и задачи служебная программа SQL Server](sql-server-utility-features-and-tasks.md)   
  [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md)  
   

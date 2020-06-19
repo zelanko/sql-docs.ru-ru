@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9ae6f68ad3f743400199f5981e813eda1488683
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa60ae2e275646812c226bd2fd9cd945174bab54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068471"
 ---
 # <a name="step-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
   Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые будут выполняться в окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  

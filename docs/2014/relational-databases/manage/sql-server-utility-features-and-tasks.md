@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1d3f61904a1a820df58583212dcbd2e998dbabbd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9344f3b0858050441452238800758a769bcf3d27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023368"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Функции и задачи служебной программы SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важным требованием является возможность управления средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в целом. В этом выпуске для удовлетворения такого требования используется концепция управления приложениями и многосерверной средой, реализованная в программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f1f2b28-c9f5-49ad-934b-02f2fa6b9328
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 8959b1ca4ea719ce571cb8609b817bba965185bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c69caf370d454c708484a61576716c213663f3d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054697"
 ---
 # <a name="install-powerpivot-from-the-command-prompt"></a>Установка PowerPivot из командной строки
   Программу установки SQL Server PowerPivot для SharePoint можно запустить из командной строки. В команду необходимо включить параметр `/ROLE` и исключить из нее параметр `/FEATURES`.  
@@ -28,7 +27,7 @@ ms.locfileid: "72798327"
  Компьютер должен быть присоединен к тому же домену, что и ферма SharePoint.  
   
 ##  <a name="role-based-installation-options"></a><a name="Commands"></a>Параметры установки на основе/ROLE  
- При развертывании PowerPivot для SharePoint используется параметр `/ROLE` вместо параметра `/FEATURES`. Допустимые значения:  
+ При развертывании PowerPivot для SharePoint используется параметр `/ROLE` вместо параметра `/FEATURES`. Допустимы следующие значения:  
   
 -   `SPI_AS_ExistingFarm`  
   
@@ -41,7 +40,7 @@ ms.locfileid: "72798327"
  В отличие от предыдущих выпусков, все задачи настройки сервера выполняются как задачи после установки. В целях автоматизации шагов по установке и настройке для настройки сервера можно использовать PowerShell. Дополнительные сведения см. в статье [Настройка PowerPivot с помощью Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell).  
   
 ## <a name="example-commands"></a>Примеры команд  
- В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 `SPI_AS_ExistingFarm`показано.  
+ В следующих примерах демонстрируется применение каждого из вариантов. В примере 1 показано `SPI_AS_ExistingFarm` .  
   
 ```cmd
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_ExistingFarm /INSTANCENAME=PowerPivot /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
@@ -80,9 +79,9 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
     /PID=<product key for an Enterprise installation>  
     ```  
   
-3.  Замените заполнители для \<домен \ имя_пользователя> \<и StrongPassword>действительными учетными записями пользователей и паролями.  
+3.  Замените заполнители для \<domain\username> и \<StrongPassword> на действительные учетные записи пользователей и пароли.  
   
-     Параметры `/assvaccount` и **/ассвкпассворд** используются для настройки [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляра на сервере приложений. Замените эти заполнители на допустимые сведения учетной записи.  
+     `/assvaccount`Параметры и **/ассвкпассворд** используются для настройки [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляра на сервере приложений. Замените эти заполнители на допустимые сведения учетной записи.  
   
      Для параметра **/ассисадминаккаунтс** необходимо задать идентификатор пользователя, выполняющего программу установки SQL Server. Для служб необходимо указать хотя бы одного системного администратора. Следует отметить, что программа установки SQL Server больше не предоставляет автоматически разрешения sysadmin членам встроенной группы «Администраторы».  
   

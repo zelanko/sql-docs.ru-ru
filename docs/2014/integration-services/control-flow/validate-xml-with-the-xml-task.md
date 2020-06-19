@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67ab14cbf756784f9e89112afb2893a157d6abd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f34e133e7aa7699f49660684cafce6c3a9e2fde
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176504"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917946"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Активировав в задаче XML свойство `ValidationDetails`, вы сможете получить подробные результаты проверки XML-документа.
@@ -32,7 +31,7 @@ ms.locfileid: "78176504"
  Функция проверки XML легко масштабируется в соответствии с размером XML-документов и количеством ошибок. Так как выходной файл имеет формат XML, можно запрашивать и анализировать содержащиеся в нем данные. Например, если выходные данные содержат большое количество ошибок, их можно сгруппировать, используя запрос [!INCLUDE[tsql](../../../includes/tsql-md.md)] , как описано в этом разделе.
 
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) представил `ValidationDetails` свойство в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] пакете обновления 2 (SP2). Свойство также доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и в SQL Server 2016.
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) представил `ValidationDetails` свойство в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] пакете обновления 2 (SP2). Свойство также доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и в SQL Server 2016.
 
 ## <a name="sample-output-for-xml-thats-valid"></a>Пример выходных данных в допустимом XML-файле
  Ниже приведен пример допустимого выходного XML-файла с результатами проверки.
@@ -54,7 +53,7 @@ ms.locfileid: "78176504"
 ```
 
 ## <a name="sample-output-for-xml-thats-not-valid"></a>Пример выходных данных в недопустимом XML-файле
- Ниже приведен пример выходного XML-файла с результатами проверки, который содержит небольшое количество ошибок. Текст элементов \<error> скрыт для удобства чтения.
+ Ниже приведен пример выходного XML-файла с результатами проверки, который содержит небольшое количество ошибок. Текст \<error> элементов был упакован для удобства чтения.
 
 ```xml
 

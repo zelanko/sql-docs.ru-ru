@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 9c7ed5dd25ed2b02445bfae5eb78ac03b2270552
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927955"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Устранение неполадок с управляемым резервным копированием SQL Server в Azure
   В этом разделе описываются задачи и средства, позволяющие устранять ошибки, которые могут возникнуть при выполнении операций [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -102,7 +101,7 @@ ms.locfileid: "82849602"
 ### <a name="troubleshooting-system-issues"></a>Проблемы системы диагностики  
  Ниже приведены некоторые сценарии, описывающие проблему с системой (SQL Server, агент SQL Server) и ее влияние на [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
--   **Sqlservr. exe перестает отвечать на запросы или прекращает работу при [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] выполнении:** если SQL Server перестанет работать, работа агента SQL Server будет остановлена, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] также останавливается и события регистрируются в файле SQL Agent. out.  
+-   **Sqlservr.exe перестает отвечать на запросы или прекращает работу при [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] выполнении:** если SQL Server перестанет работать, работа агента SQL Server будет остановлена, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] также прекращается и события регистрируются в файле агента SQL. out.  
   
      Если SQL Server прекращает отвечать, события записываются в канал администратора.  Пример журнала событий.  
   

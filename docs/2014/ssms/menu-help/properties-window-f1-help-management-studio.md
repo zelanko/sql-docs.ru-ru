@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73ac04e428a07cd607969a18ec88c68ea07df9ed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062057"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Справка F1 окна свойств (среда Management Studio)
   В окне **Свойства** можно просмотреть свойства выбранных элементов. Кроме того, в окне **Свойства** можно просматривать свойства файла, проекта или решения. Чтобы открыть окно **Свойства** , щелкните **Окно "Свойства"** в меню **Вид** .  

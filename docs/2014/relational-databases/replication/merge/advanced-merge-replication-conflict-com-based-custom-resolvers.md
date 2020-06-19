@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 27d5be264fc6e6033997babb4a7aac1e8271a39d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78f3dbabe5d9671d243b7c6f9a295146a047daba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63066312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068661"
 ---
 # <a name="com-based-custom-resolvers"></a>COM-Based Custom Resolvers
   Пользовательские сопоставители предоставляют большую гибкость по сравнению с механизмом разрешения конфликтов по умолчанию, и они могут реализовать бизнес-логику, необходимую для приложений, использующих реплицированные данные. Пользовательский сопоставитель на основе COM — это динамически подключаемая библиотека (DLL), которая реализует COM-интерфейс **ICustomResolver** , его методы и свойства, а также другие поддерживаемые интерфейсы и определения типов, разработанные специально для устранения конфликтов.  

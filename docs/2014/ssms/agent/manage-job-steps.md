@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062224"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
   Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
@@ -101,7 +100,7 @@ ms.locfileid: "72798218"
   
 -   Существующий файл скрипта PowerShell.  
   
- Подсистема [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента PowerShell открывает сеанс PowerShell и загружает оснастки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Сценарий PowerShell, используемый в качестве команды шага задания, может ссылаться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на поставщика и командлеты PowerShell. Дополнительные сведения о написании скриптов PowerShell с помощью оснасток [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Подсистема агента PowerShell открывает сеанс PowerShell и загружает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оснастки PowerShell. Сценарий PowerShell, используемый в качестве команды шага задания, может ссылаться на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика и командлеты PowerShell. Дополнительные сведения о написании скриптов PowerShell с помощью оснасток [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell см. в разделе [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Шаги задания скрипта ActiveX  
   
@@ -210,6 +209,6 @@ Set oServer = nothing
 |Описывает, как удалить журнал шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>См. также:  
- [dbo. таблицу sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysжобстепслогс &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Создание заданий](create-jobs.md)   
  [sp_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
