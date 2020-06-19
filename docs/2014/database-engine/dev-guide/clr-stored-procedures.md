@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4998058d55cd49c0eecfdecce2edc609a4d62c1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77213961"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933737"
 ---
 # <a name="clr-stored-procedures"></a>Хранимые процедуры CLR
-  Хранимыми процедурами являются процедуры, которые нельзя использовать в скалярных выражениях. В отличие от скалярных функций, они могут возвращать клиенту табличные результаты и сообщения, вызывать инструкции языка описания данных DDL и языка обработки данных DML, а также возвращать выходные параметры. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым [!INCLUDE[tsql](../../includes/tsql-md.md)]кодом и см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Хранимыми процедурами являются процедуры, которые нельзя использовать в скалярных выражениях. В отличие от скалярных функций, они могут возвращать клиенту табличные результаты и сообщения, вызывать инструкции языка описания данных DDL и языка обработки данных DML, а также возвращать выходные параметры. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Требования для хранимых процедур CLR  
  В среде CLR хранимые процедуры реализуются как открытые статические методы в классе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сборке. Статический метод может быть объявлен как void или может возвратить целое значение. Если он возвращает целое значение, возвращенное целое число рассматривается как код возврата из процедуры. Пример:  
   
  `EXECUTE @return_status = procedure_name`  
   
- @return_status Переменная будет содержать значение, возвращаемое методом. Если метод объявляется как void, код возврата равен 0.  
+ @return_statusПеременная будет содержать значение, возвращаемое методом. Если метод объявляется как void, код возврата равен 0.  
   
  Если метод принимает параметры, число параметров в реализации [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должно быть равно числу параметров, используемых в декларации [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "77213961"
  Возврат данных из хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] может осуществляться несколькими способами. Это относится к выходным параметрам, табличным результатам и сообщениям.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Параметры OUTPUT и хранимые процедуры CLR  
- Так же как и для хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)], данные могут возвращаться из хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] при помощи параметров, описанных с ключевым словом OUTPUT. Синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] DML, используемый для создания хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], тот же, что и синтаксис, используемый для создания хранимых процедур, написанных на [!INCLUDE[tsql](../../includes/tsql-md.md)]. Соответствующий параметр в коде реализации в классе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должен использовать в качестве аргумента параметр, передаваемый по ссылке. Обратите внимание, что Visual Basic не поддерживает выходные параметры точно так же, как это делает C#. Необходимо указать параметр по ссылке и применить атрибут \<out () > для представления выходного параметра, как показано ниже:  
+ Так же как и для хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)], данные могут возвращаться из хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] при помощи параметров, описанных с ключевым словом OUTPUT. Синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] DML, используемый для создания хранимых процедур [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], тот же, что и синтаксис, используемый для создания хранимых процедур, написанных на [!INCLUDE[tsql](../../includes/tsql-md.md)]. Соответствующий параметр в коде реализации в классе [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] должен использовать в качестве аргумента параметр, передаваемый по ссылке. Обратите внимание, что Visual Basic не поддерживает выходные параметры точно так же, как это делает C#. Необходимо указать параметр по ссылке и применить \<Out()> атрибут для представления выходного параметра, как показано ниже:  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -122,7 +121,7 @@ Partial Public Class StoredProcedures
 End Class  
 ```  
   
- После того как сборка, содержащая указанную выше хранимую процедуру CLR, была построена и создана на [!INCLUDE[tsql](../../includes/tsql-md.md)] сервере, для создания процедуры в базе данных используется следующая функция и в качестве выходного параметра указывается *Sum* .  
+ После того как сборка, содержащая указанную выше хранимую процедуру CLR, была построена и создана на сервере, [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания процедуры в базе данных используется следующая функция и в качестве выходного параметра указывается *Sum* .  
   
 ```sql
 CREATE PROCEDURE PriceSum (@sum int OUTPUT)  
@@ -132,7 +131,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Обратите внимание, что *Sum* объявляется как тип данных `int` SQL Server, а параметр *значения* , определенный в хранимой процедуре CLR, указывается как `SqlInt32` тип данных CLR. Когда вызывающая программа выполняет хранимую процедуру CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , автоматически преобразует тип данных `SqlInt32` CLR в `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  Дополнительные сведения о том, какие типы данных CLR могут и не могут быть преобразованы, см. в разделе [сопоставление данных параметров CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Обратите внимание, что *Sum* объявляется как `int` тип данных SQL Server, а параметр *значения* , определенный в хранимой процедуре CLR, указывается как `SqlInt32` тип данных CLR. Когда вызывающая программа выполняет хранимую процедуру CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует `SqlInt32` тип данных CLR в `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных.  Дополнительные сведения о том, какие типы данных CLR могут и не могут быть преобразованы, см. в разделе [сопоставление данных параметров CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Возврат табличных результатов и сообщений  
  Возврат клиенту табличных результатов и сообщений выполняется через объект `SqlPipe`, получаемый при использовании свойства `Pipe` класса `SqlContext`. Объект `SqlPipe` имеет метод `Send`. Вызвав метод `Send`, можно передать данные по каналу вызывающему приложению.  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933702"
 ---
 # <a name="clr-triggers"></a>Триггеры CLR
   Благодаря тому что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интегрирован со средой [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR, для создания триггеров CLR можно использовать любой язык [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В настоящем разделе рассматриваются сведения, касающиеся реализации триггеров в условиях интеграции со средой CLR. Полное описание триггеров см. в разделе [триггеры DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "62755256"
   
 -   получать доступ к сведениям об объектах базы данных, затронутых в результате выполнения инструкций языка DDL.  
   
- Эти возможности предоставляются непосредственно в языке запросов или с помощью класса `SqlTriggerContext`. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым [!INCLUDE[tsql](../../includes/tsql-md.md)]кодом и см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Эти возможности предоставляются непосредственно в языке запросов или с помощью класса `SqlTriggerContext`. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Использование класса SqlTriggerContext  
  Класс `SqlTriggerContext` не может быть создан как общедоступный и может быть получен только путем доступа к свойству `SqlContext.TriggerContext` в коде триггера CLR. Класс `SqlTriggerContext` можно получить из активного контекста `SqlContext` путем вызова свойства `SqlContext.TriggerContext`:  
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- Инструкция, создающая триггер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в, имеет следующий вид, и предполагается, что сборка **склклртест** уже зарегистрирована [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в текущей базе данных. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]Инструкция, создающая триггер в, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет следующий вид, и предполагается, что сборка **склклртест** уже зарегистрирована в текущей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных.  
   
 ```  
 CREATE TRIGGER EmailAudit  

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3f1dbcf9-9cca-4606-bdcc-7ea6ad48cdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76f2c5e517ca81ae667df3efa6ccd2f49384f090
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d769112c95b88becfd1ec9bfbe7beabd0130cdd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922108"
 ---
 # <a name="character-map-transformation-editor"></a>Редактор преобразования «Таблица соответствия символов»
   Диалоговое окно **Редактор преобразования "Таблица соответствия символов"** используется для выбора строковых функций, применяемых к данным столбцов, и для задания того, будет ли сопоставление приводить к замене на месте или к добавлению нового столбца.  
   
  Дополнительные сведения о преобразовании «Таблица символов» см. в разделе [Character Map Transformation](data-flow/transformations/character-map-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные входные столбцы**  
  Флажки используются для выбора столбцов, подлежащих преобразованию строковыми функциями. Результаты выбора отобразятся в таблице внизу.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66060974"
  **Настройка вывода ошибок**  
  Диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания параметров обработки ошибок в этом преобразовании.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

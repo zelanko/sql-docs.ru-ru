@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d7d5db55-36c3-45f6-ade3-29aa516589c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 019c4ea2744ec27aa7dc24d5065c176551e8cbeb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068390"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940395"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>Указание ключа и типа измерения (мастер измерений)
   На странице **Определение ключа и типа измерения** можно определить ключевой атрибут измерения и указать, является ли измерение медленно меняющимся измерением (SCD).  
@@ -25,7 +24,7 @@ ms.locfileid: "66068390"
 > [!NOTE]  
 >   Эта страница отображается, только если на странице **Выбор метода построения** выбран параметр **Построить измерение без использования источника данных** и если на странице **Выбор типа измерения** выбрано **Стандартное измерение** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ключевой атрибут**  
  Выберите атрибут, который будет ключевым атрибутом для измерения.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66068390"
  **Это изменяющееся измерение**  
  Этот параметр указывает, что измерение является медленно меняющимся измерением. При выборе этого параметра создаются новые столбцы и атрибуты, которые могут использоваться для отслеживания перемещения элементов в иерархиях измерения с течением времени.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

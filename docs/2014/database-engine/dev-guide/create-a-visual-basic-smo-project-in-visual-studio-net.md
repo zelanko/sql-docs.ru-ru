@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 662916720b9953e0374bedb29890a36ced0cfac0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49eb94833d10b2e901c008092aea29eab8e4ad48
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933685"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Создание проекта SMO на языке Visual Basic в среде Visual Studio .NET
   В данном разделе описывается, как построить простое консольное приложение командной строки SMO.  
@@ -30,13 +29,13 @@ ms.locfileid: "62753354"
   
 1.  Запустите среду [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] (или [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)]).  
   
-2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Новый проект** .  
+2.  В меню **Файл** выберите пункт **Создать проект**. Откроется диалоговое окно **Создание проекта** .  
   
-3.  В диалоговом окне **типы проектов** выберите **Visual Basic**, а затем выберите **Windows**. В области [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] установленные шаблоны выберите **консольное приложение.**  
+3.  В диалоговом окне **типы проектов** выберите **Visual Basic**, а затем выберите **Windows**. В [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] области Установленные шаблоны выберите **консольное приложение.**  
   
 4.  Используемых В поле **имя** введите имя нового приложения.  
   
-5.  Нажмите кнопку **ОК** , чтобы [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] загрузить шаблон консольного приложения.  
+5.  Нажмите кнопку **ОК** , чтобы загрузить [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Шаблон консольного приложения.  
   
 6.  В меню **Проект** выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
   

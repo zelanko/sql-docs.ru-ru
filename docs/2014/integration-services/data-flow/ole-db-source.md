@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8c8943c837be852c11d65201d0a8b71de7bec4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771000"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915054"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -115,7 +114,7 @@ ms.locfileid: "62771000"
 ## <a name="related-content"></a>См. также  
  Вики-статья, [службы SSIS с соединителями Oracle](https://go.microsoft.com/fwlink/?LinkId=220670)на Social.TechNet.Microsoft.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение OLE DB](ole-db-destination.md)   
  [Integration Services &#40;переменные&#41; SSIS](../integration-services-ssis-variables.md)   
  [Поток данных](data-flow.md)  

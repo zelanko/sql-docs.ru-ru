@@ -1,5 +1,6 @@
 ---
 title: Исполнение запросов (ODBC) | Документация Майкрософт
+description: Приложение ODBC может запускать инструкции на экземпляре SQL Server путем инициализации обработчика соединения и подключения к источнику данных.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93984308c9b661af8e7263ed1c3c0a54e1b35eab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d704a1231ae61776ea2f99679517100932c26a27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298014"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967598"
 ---
 # <a name="executing-queries-odbc"></a>Выполнение запросов (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +50,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
  После того, как будут вызваны все инструкции SQL и обработаны их результирующие наборы, приложение освобождает дескриптор инструкции.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает несколько дескрипторов инструкций для каждого дескриптора соединения. Управление транзакциями осуществляется на уровне соединения, поэтому вся работа, выполняемая со всеми дескрипторами инструкций на одном дескрипторе соединения, управляется как часть одной транзакции.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает несколько дескрипторов инструкций для каждого дескриптора соединения. Управление транзакциями осуществляется на уровне соединения, поэтому вся работа, выполняемая со всеми дескрипторами инструкций на одном дескрипторе соединения, управляется как часть одной транзакции.  
   
 ## <a name="in-this-section"></a>В этом разделе  
   

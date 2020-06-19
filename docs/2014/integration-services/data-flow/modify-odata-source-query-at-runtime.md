@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c355c95c5e6c686a063c4c32081aa0740f8e2fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915214"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>Изменение запроса источника OData во время выполнения
   Можно изменить запрос источника OData во время выполнения, добавив выражение в свойство **[OData Source].[Query]** задачи потока данных.  
@@ -29,7 +28,7 @@ ms.locfileid: "62901191"
   
 1.  Щелкните правой кнопкой мыши **Задача потока данных** и выберите пункт **Параметризация…** .  
   
-2.  В диалоговом окне **Параметризация** выберите **[\<имя исходного компонента OData>].[Query]** для параметра **Свойство**.  
+2.  В диалоговом окне **параметризация** выберите **[ \<Name of the OData Source Component> ]. [ Запрос]** для **свойства**.  
   
 3.  Выберите, следует ли значение **создать новый параметр** или **использовать существующий параметр**.  
   

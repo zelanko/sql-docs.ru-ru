@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1549b8fa0979bba109c84485a89384722c82e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f57e6ae2cf40092304aa0ee3ff99ef5c5725be1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922675"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Выполнение добавочной загрузки нескольких таблиц
   На диаграмме в разделе [Улучшение добавочных загрузок с помощью системы отслеживания измененных данных](change-data-capture-ssis.md)показан базовый пакет, выполняющий добавочную загрузку только для одной таблицы. Однако чаще требуется добавочная загрузка не одной, а нескольких таблиц  

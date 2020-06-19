@@ -1,5 +1,6 @@
 ---
 title: Обработка кодов возврата и выходных параметров (ODBC) | Документация Майкрософт
+description: Сведения о SQLSTATE, в котором содержатся подробные сведения о причине предупреждения или ошибки в драйвере SQL Server Native Client ODBC.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32310288b14ca49a53f68c6fd632f884fa78ec6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c0f9fadf13ae32581e66b55a0f0ea13b48d47c1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81282016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967606"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Выполнение хранимых процедур — обработка кодов возврата и выходных параметров
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.locfileid: "81282016"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает хранимую процедуру, используемую в этом образце.  
+ Первый [!INCLUDE[tsql](../../includes/tsql-md.md)] листинг кода () создает хранимую процедуру, используемую в этом образце.  
   
  Скомпилируйте второй листинг кода (C++) с библиотекой odbc32.lib. Затем запустите программу.  
   
- Третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() Удаляет хранимую процедуру, используемую в этом образце.  
+ Третий [!INCLUDE[tsql](../../includes/tsql-md.md)] листинг кода () Удаляет хранимую процедуру, используемую в этом образце.  
   
 ```  
 use AdventureWorks  

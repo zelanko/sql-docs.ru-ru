@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faca5e882a89d14fc18e29e3d4c87cc757d6512e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068813"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940555"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Параметры статистической обработки (мастер статистических схем)
   Страница **Параметры статистической обработки** используется для запуска обработки статистической схемы и указания хранилища или пределов производительности для созданных статистических схем.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Размер хранилища достиг**  
  Ограничьте статистическую схему, указав максимальный объем в мегабайтах (МБ) или гигабайтах (ГБ), который может использоваться при формировании статистических схем.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "66068813"
  **Сбросить**  
  Восстанавливает все статистические параметры по умолчанию на данной странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

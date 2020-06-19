@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967484"
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
   Явно приводит выражение одного типа данных к другому типу. Оператор приведения может также выполнять функцию оператора усечения.
@@ -54,8 +53,8 @@ ms.locfileid: "78176444"
 |DT_STR|*параметра charCount*<br /><br /> *страница*|Команда (DT_STR,30,1252) приводит 30 байт (или 30 символов) к значению типа DT_STR, используя кодовую страницу 1252.|
 |DT_WSTR|*Параметра charCount*|Команда (DT_WSTR,20) приводит 20 пар байт (или символов в формате Юникод) к значению типа DT_WSTR.|
 |DT_BYTES|*ByteCount*|(DT_BYTES,50) приводит 50 байт к типу данных DT_BYTES.|
-|DT_DECIMAL|*Масштабирование*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|
-|DT_NUMERIC|*Точность*<br /><br /> *Масштабирование*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|
+|DT_DECIMAL|*Масштаб*|(DT_DECIMAL,2) приводит числовое значение к типу данных DT_DECIMAL, используя масштаб 2.|
+|DT_NUMERIC|*Точность*<br /><br /> *Масштаб*|(DT_NUMERIC,10,3) приводит числовое значение к типу данных DT_NUMERIC, используя точность 10 и масштаб 3.|
 |DT_TEXT|*Страница*|(DT_TEXT,1252) приводит значение к типу данных DT_TEXT, используя кодовую страницу 1252.|
 
  При приведении строки к значению типа DT_DATE (или обратно) используется локаль преобразования. Однако дата задается в формате ISO (ГГГГ-ММ-ДД) вне зависимости от того, используется ли в локали формат ISO.

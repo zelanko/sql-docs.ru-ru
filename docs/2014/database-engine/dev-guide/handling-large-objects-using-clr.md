@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 4140d6b1-51cb-4d23-a4b6-8155360034fe
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc8b2d4c162f3461f6315fd8e747268fcabc32da
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933585"
 ---
 # <a name="handling-large-objects-using-clr"></a>Обработка больших объектов в среде CLR
   Образец `HandlingLOBUsingCLR` для SQL Server демонстрирует передачу больших объектов между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и файловой системой, доступной серверу, с использованием хранимых процедур CLR. Образец демонстрирует доступ к файлам в кодировке сервера и возможность вызова из хранимых процедур CLR динамических запросов и хранимых процедур. Также образец демонстрирует регистрацию и отмену регистрации методов среды CLR и сборок при помощи языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
@@ -573,7 +572,7 @@ END  -- END of sp_InsertDocument
 GO  
 ```  
   
- Следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) проверяет пример, используя хранимые процедуры.  
+ Следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) проверяет пример, используя хранимые процедуры.  
   
 ```  
 USE AdventureWorks  

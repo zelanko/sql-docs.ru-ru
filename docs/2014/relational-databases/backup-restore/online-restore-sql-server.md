@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4db4d5b5ce08c50646857099d82964bb944bc8af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876198"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957844"
 ---
 # <a name="online-restore-sql-server"></a>Восстановление в сети (SQL Server)
   Восстановление в сети поддерживается только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В настоящем выпуске восстановление файлов, страниц или поэтапное восстановление выполняется по умолчанию в режиме «в сети». Этот раздел относится только к базам данных, содержащим несколько файлов или файловых групп, а также (для простой модели восстановления) к файловым группам, доступным только для чтения.  
@@ -59,12 +58,12 @@ ms.locfileid: "62876198"
     > [!NOTE]  
     >  Кроме того, можно вручную перевести файл в режим «вне сети» до последовательности восстановления. Дополнительные сведения см. в разделе «Перевод базы данных или файла в режим «вне сети» ниже в этом разделе.  
   
-##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>Перевод базы данных или файла в режим «вне сети»  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a> Перевод базы данных или файла в режим «вне сети»  
  Если восстановление в сети не требуется, то перед началом последовательности восстановления базу данных можно перевести в режим «вне сети» следующими способами.  
   
 -   При любой модели восстановления базу данных можно перевести в режим «вне сети» с помощью следующей инструкции [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
-     ALTER DATABASE *database_name* Set offline  
+     ALTER DATABASE *имя_базы_данных* SET OFFLINE  
   
 -   Кроме того, при модели полного восстановления можно принудительно перевести восстановление файла или страницы в режим «вне сети» с помощью следующей инструкции [BACKUP LOG](/sql/t-sql/statements/backup-transact-sql) , переводящей базу данных в состояние восстановления:  
   
@@ -77,19 +76,19 @@ ms.locfileid: "62876198"
 > [!NOTE]  
 >  Синтаксис последовательности восстановления в сети тот же самый, что и в случае последовательности восстановления вне сети.  
   
--   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление отдельных файловых групп &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Пример. Оперативное восстановление доступного только для чтения файла &#40;простая модель восстановления&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление базы данных (модель полного восстановления)](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление только некоторых файловых групп (модель полного восстановления)](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление только некоторых файловых групп &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
--   [Пример. Оперативное восстановление файла, доступного для чтения и записи (модель полного восстановления)](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
+-   [Пример. Оперативное восстановление файла, доступного для чтения и записи &#40;модель полного восстановления&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
--   [Пример. Оперативное восстановление файла, доступного только для чтения (модель полного восстановления)](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
+-   [Пример. Оперативное восстановление файла, доступного только для чтения &#40;модель полного восстановления&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
@@ -103,11 +102,11 @@ ms.locfileid: "62876198"
   
 -   [Удаление уничтоженных файловых групп (SQL Server)](remove-defunct-filegroups-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [Восстановление файлов &#40;модель полного восстановления&#41;](file-restores-full-recovery-model.md)   
- [Восстановление файлов &#40;простой модели восстановления&#41;](file-restores-simple-recovery-model.md)   
- [Восстановление страниц &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [Поэтапное восстановление &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Восстановления файлов (модель полного восстановления)](file-restores-full-recovery-model.md)   
+ [Восстановление файлов (простая модель восстановления)](file-restores-simple-recovery-model.md)   
+ [Восстановление страниц (SQL Server)](restore-pages-sql-server.md)   
+ [Поэтапное восстановление (SQL Server)](piecemeal-restores-sql-server.md)   
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   
   

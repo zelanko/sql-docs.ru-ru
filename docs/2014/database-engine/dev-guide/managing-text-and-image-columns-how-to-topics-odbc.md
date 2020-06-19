@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f97333ad-e2ab-4d26-9395-741ba25f2c28
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8645cf56a37e41d681daed2c05c3db9bf34c98e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ed9eb3e4bd081636a4f4708bbde69a53448ff1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933495"
 ---
 # <a name="managing-text-and-image-columns-how-to-topics-odbc"></a>Инструкции по работе со столбцами типа text и image (ODBC)
   Драйвер ODBC Microsoft® SQL Server™ поддерживает использование параметров типа text и image, а также получение данных из столбцов типа text, ntext и image в результирующих наборах.  
@@ -26,7 +25,7 @@ ms.locfileid: "62780989"
   
 -   [Использование столбцов данных на этапе выполнения &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/managing-text-and-image-columns-use-data-at-execution-columns.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

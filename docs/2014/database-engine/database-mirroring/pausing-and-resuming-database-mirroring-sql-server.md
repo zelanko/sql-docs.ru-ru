@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c231876b11303992e0e3300c9cb73c0cf53b3af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754526"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934073"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Приостановка и возобновление зеркального отображения базы данных (SQL Server)
   Владелец базы данных может приостанавливать и возобновлять сеанс зеркального отображения базы данных в любое время. Приостановление сохраняет состояние сеанса, при этом приостанавливается зеркальное отображение. Во время пиковых нагрузок приостановление может способствовать повышению производительности основного сервера.  
@@ -67,7 +66,7 @@ ms.locfileid: "62754526"
   
 -   [Удаление зеркального отображения базы данных (SQL Server)](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   
  [Удаление зеркального отображения базы данных (SQL Server)](database-mirroring-sql-server.md)  

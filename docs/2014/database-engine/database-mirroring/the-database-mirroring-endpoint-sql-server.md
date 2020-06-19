@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1afac17b04c968c6685e356e3bbc8101161a36b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d9728ad642d978378305a21de4b6a9db068c397
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933905"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Конечная точка зеркального отображения базы данных (SQL Server)
   Для участия в [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркальном отображении базы данных экземпляр сервера должен иметь собственную выделенную *конечную точку зеркального отображения базы данных*. Это специальная конечная точка, которая используется исключительно для приема соединений от других экземпляров сервера. В каждом экземпляре сервера для каждого соединения [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркального отображения базы данных с любым другим экземпляром сервера требуется одна конечная точка зеркального отображения базы данных.  

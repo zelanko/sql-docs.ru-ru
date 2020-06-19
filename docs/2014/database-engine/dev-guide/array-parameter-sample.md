@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 822dc7f3d66afc44c187d199674a22f20977f535
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a670b2e4f4a7a276f9e026cb650855c8aa2108a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74055905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933745"
 ---
 # <a name="array-parameter-sample"></a>Образец параметра массива
   Иногда бывает необходимо создавать, обновлять или удалять набор строк в базе данных. Существует несколько подходов, которые можно использовать для достижения этой цели. Один из них — передавать массив данных от клиента в хранимую процедуру среды CLR на сервере через определяемый пользователем тип данных интеграции со средой CLR. Природа таких пользовательских типов данных ограничивает данные, передаваемые серверу, размером 8 000 байт. По этой причине такое решение не подходит для больших или сложных данных. Если обрабатываемые данные имеют простую структуру и небольшой объем, этот подход может оказаться более эффективным, чем вызов хранимой процедуры для каждой строки. При передаче массива порядок данных сохраняется для тех приложений, в которых этот порядок является важным. Этот образец содержит следующее.  
@@ -26,7 +25,7 @@ ms.locfileid: "74055905"
   
 3.  Приложение командной строки `TestArrayParameter` . Создает экземпляр определяемого пользователем типа данных `ContactTypeNames` на основе параметров, передаваемых в командной строке, а затем вызывает хранимую процедуру `usp_EnsureContactTypeNames` , передавая ей созданный экземпляр в качестве параметра.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  

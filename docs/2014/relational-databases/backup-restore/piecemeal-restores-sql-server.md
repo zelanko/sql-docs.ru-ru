@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55520388424e110420ad96d329081ee7a61fe028
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebc4ea11780908f847946a01338571211b57678a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957788"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Поэтапное восстановление (SQL Server)
   Этот раздел касается только баз данных в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, которые содержат несколько файлов или файловых групп, а для простой модели — только файловых групп, предназначенных только для чтения.  
@@ -119,9 +118,9 @@ ms.locfileid: "62876088"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление отдельных файловых групп &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
 ## <a name="piecemeal-restore-under-the-full-recovery-model"></a>Поэтапное восстановление по модели полного восстановления  
  В модели полного восстановления или восстановления с неполным протоколированием поэтапное восстановление доступно для всех баз данных, содержащих по несколько файловых групп, и базу данных можно восстановить до любого момента времени. Последовательности восстановления поэтапного восстановления ведут себя следующим образом.  
@@ -147,9 +146,9 @@ ms.locfileid: "62876088"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Поэтапное восстановление базы данных (модель полного восстановления)](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление только некоторых файловых групп (модель полного восстановления)](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление только некоторых файловых групп &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 ## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>Выполнение поэтапного восстановления базы данных, модель восстановления которой была переключена с простой на полную  
  Можно выполнить поэтапное восстановление базы данных, модель восстановления которой была переключена с простой на полную с момента полного частичного резервного копирования или резервного копирования базы данных. Например, рассмотрим базу данных, для которой можно выполнить следующее:  
@@ -172,10 +171,10 @@ ms.locfileid: "62876088"
   
 4.  разностные резервные копии, следующие за любыми другими резервными копиями, восстановленными в исходной последовательности поэтапного восстановления, чтобы восстановить данные до первоначальной точки восстановления.  
   
-## <a name="see-also"></a>См. также  
- [Применение резервных копий журналов транзакций &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Применение резервных копий журналов транзакций (SQL Server)](transaction-log-backups-sql-server.md)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Восстановление SQL Server базы данных на момент времени &#40;модель полного восстановления&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [Планирование и выполнение последовательностей восстановления (модель полного восстановления)](plan-and-perform-restore-sequences-full-recovery-model.md)  
   

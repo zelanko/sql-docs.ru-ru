@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933705"
 ---
 # <a name="clr-transactions-sample"></a>Образец транзакции среды CLR
   В этом образце демонстрируется управление транзакциями с использованием управляемых программных интерфейсов, расположенных в пространстве имен `System.Transactions` . В частности, класс `System.Transactions.TransactionScope` используется для установления границы транзакции, чтобы не допустить изменения значений запасов, кроме как при наличии достаточных запасов для выполнения запроса, а также при наличии запасов, передача которых из одного местоположения в другое происходит неразрывно. Автоматическая регистрация в распределенной транзакции демонстрируется путем записи данных об изменениях товарных запасов на складе в базу данных аудита, хранящуюся в отдельном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

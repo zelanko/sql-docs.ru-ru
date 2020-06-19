@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd7aea63ae85a16e23ff532c7e18ace3c376a707
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957955"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Управление таблицей suspect_pages (SQL Server)
   В этом разделе описывается управление таблицей **suspect_pages** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с использованием [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Таблица **suspect_pages** содержит сведения о потенциально поврежденных страницах и используется при принятии решений о необходимости восстановления. Таблица [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) находится в [базе данных msdb](../databases/msdb-database.md).  
   
  Страница считается «подозрительной», если при попытке ее чтения компонентом [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] обнаруживается одна из следующих ошибок.  
   
--   [Ошибка 823](../errors-events/mssqlserver-823-database-engine-error.md) , которая вызывается проверкой циклической контрольной суммы (CRC), запущенной операционной системой; например ошибка диска (происходит при некоторых ошибках оборудования)  
+-   [Ошибка 823](../errors-events/mssqlserver-823-database-engine-error.md) , вызванная циклической проверкой избыточности (CRC), выданной операционной системой, например ошибка диска (некоторые ошибки оборудования)  
   
--   [Ошибка 824](../errors-events/mssqlserver-824-database-engine-error.md), например разрыв страницы (или любая другая логическая ошибка)  
+-   [Ошибка 824](../errors-events/mssqlserver-824-database-engine-error.md), например обрыв страницы (любая логическая ошибка)  
   
  Идентификатор каждой "подозрительной" страницы записывается в таблицу **suspect_pages** . В эту таблицу [!INCLUDE[ssDE](../../includes/ssde-md.md)] записывает все подозрительные страницы, которые встретились при обработке, в частности:  
   

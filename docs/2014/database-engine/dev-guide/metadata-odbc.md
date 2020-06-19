@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 99133efc-b1f2-46e9-8203-d90c324a8e4c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48f2fde8280a4b309c43e292bda452091d46ee02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e206edda86a8143962a1d658d507fa88daad3e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781234"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933485"
 ---
 # <a name="metadata-odbc"></a>Метаданные (ODBC)
   В этом разделе рассматриваются метаданные параметра, результата столбца и каталога.  
@@ -30,7 +29,7 @@ ms.locfileid: "62781234"
  [Метаданные каталога](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)  
  Описывает метаданные столбца, возвращаемые `SQLColumns` и `SQLProcedureColumns`, а также метаданные типа данных, возвращаемые `SQLGetTypeInfo`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

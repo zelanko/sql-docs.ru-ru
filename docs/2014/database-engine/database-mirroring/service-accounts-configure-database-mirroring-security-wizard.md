@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d58d8f93-7888-4d66-af4d-969ef6a2dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69877c6a20e37e012925185d0b807e9579066e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6497e3e28f5ea3347cc735292cc3502a42301ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754389"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933995"
 ---
 # <a name="service-accounts-configure-database-mirroring-security-wizard"></a>Учетные записи службы (мастер настройки безопасности зеркального отображения баз данных)
   При использовании проверки подлинности Windows, в случае если экземпляры сервера используют разные учетные записи, задайте учетные записи службы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти учетные записи службы должны быть учетными записями домена (одного и того же или доверенных доменов).  
@@ -33,23 +32,23 @@ ms.locfileid: "62754389"
   
 -   [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Основного**  
  Укажите учетную запись службы экземпляра основного сервера. Введите имя домена прописными буквами:  
   
- *Имя_домена*\\*имя пользователя*  
+ *Имя_домена* \\ *имя пользователя*  
   
  **Зеркальное отображение**  
  Укажите учетную запись службы экземпляра зеркального сервера. Введите имя домена прописными буквами:  
   
- *Имя_домена*\\*имя пользователя*  
+ *Имя_домена* \\ *имя пользователя*  
   
  **Свидетель**  
  Укажите учетную запись службы экземпляра следящего сервера. Введите имя домена прописными буквами:  
   
- *Имя_домена*\\*имя пользователя*  
+ *Имя_домена* \\ *имя пользователя*  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства базы данных &#40;страница зеркального отображения&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Запуск монитора зеркального отображения баз данных &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   

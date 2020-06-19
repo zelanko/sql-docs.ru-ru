@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30234275a724dddce95cdad66e5e37a382a25e62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5015589854780f334dfa3b82b4f4ab544a4b7145
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068181"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940365"
 ---
 # <a name="specify-source-information-dimension-wizard"></a>Определение исходных сведений (мастер измерений)
   Страница **Выбор основной таблицы измерения** позволяет выбрать представление источника данных, главную таблицу измерения, ключевые столбцы и столбец имен элементов для создаваемого измерения.  
@@ -26,7 +25,7 @@ ms.locfileid: "66068181"
   
 -   В [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]обозревателе решений **** щелкните правой кнопкой мыши папку **Измерения** для проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выберите команду **Новое измерение**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Представление источника данных**  
  Выберите представление источника данных.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66068181"
  **Столбец имени**  
  Выберите столбец, содержащий имена членов для данного измерения, из таблицы, указанной в поле **Основная таблица** . Необходимо указать столбец имени, прежде чем составной ключ будет доступен для использования. Чтобы создать столбец имени для составного ключа, рекомендуется создать именованное вычисление в представлении источника данных, объединяющем указанные ключевые столбцы. Если используется единственный ключ, то столбец имени необязателен.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера измерений](dimension-wizard-f1-help.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)  

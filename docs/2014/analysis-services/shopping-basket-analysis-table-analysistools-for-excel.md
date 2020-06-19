@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068677"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940525"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Анализ покупательского поведения (средства анализа таблиц для Excel)
   ![Список покупок](media/tat-shopbskt.gif "Список покупок")  
@@ -129,7 +128,7 @@ ms.locfileid: "66068677"
   
  Дополнительные сведения об алгоритме, используемом для проведения анализа, см. в разделе «Алгоритм взаимосвязей (Майкрософт)» электронной документации по SQL Server.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства анализа таблиц для Excel](table-analysis-tools-for-excel.md)  
   
   

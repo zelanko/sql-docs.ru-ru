@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50dfafd0d15dc64962ba7ee1fb4e171b2aaf71b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915514"
 ---
 # <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
   Назначение «Неструктурированный файл» записывает данные в текстовый файл. Текстовый файл может быть в следующих форматах: с разделителями, фиксированной ширины, фиксированной ширины с разделителем строки и без выравнивания текста справа.  
@@ -57,7 +56,7 @@ ms.locfileid: "62902476"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источник "Неструктурированный файл"](flat-file-source.md)   
  [Поток данных](data-flow.md)  
   
