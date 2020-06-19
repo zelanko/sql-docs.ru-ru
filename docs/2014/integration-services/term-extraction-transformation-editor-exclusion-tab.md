@@ -13,39 +13,38 @@ helpviewer_keywords:
 ms.assetid: 90110d95-fd97-4542-9cda-832c86606130
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b1032a0fc11ab07069309b7053e756d28329b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5539544afba4e2752baaefb2324b33d3ac897b0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962244"
 ---
 # <a name="term-extraction-transformation-editor-exclusion-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Исключения»)
   Используйте вкладку **Исключение** в диалоговом окне **Редактор преобразования «Извлечение терминов»** для установки соединения с таблицей исключений и указания столбцов, в которых содержатся исключаемые термины.  
   
  Дополнительные сведения о преобразовании «Извлечения терминов» см. в разделе [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать исключаемые термины**  
  Укажите, необходимо ли исключать определенные термины в процессе извлечения терминов, определив столбцы, содержащие исключаемые термины. Необходимо указать следующие свойства источника, если принято решение исключать термины.  
   
  **Диспетчер подключений OLE DB**  
  Выберите существующий диспетчер соединений OLE DB или создайте новое соединение, выбрав **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новое соединение с базой данных, используя диалоговое окно **Настройка диспетчера соединений OLE DB** .  
   
  **Таблица или представление**  
  Выберите таблицу или представление, которое содержит исключаемые термины.  
   
- **Рубрик**  
+ **Столбец**  
  Выберите столбец в таблице или представлении, который содержит исключаемые термины.  
   
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Извлечение терминов" &#40;вкладка "Извлечение терминов"&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Редактор преобразования "Извлечение терминов" &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   

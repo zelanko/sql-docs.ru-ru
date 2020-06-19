@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ce0072bcd6642dcb4f3ac63e04c98786bd550e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936287"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)
   Администраторы баз данных используют панель мониторинга AlwaysOn, чтобы быстро определять исправность группы доступности AlwaysOn, а также ее реплик доступности и баз данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Далее приведены некоторые стандартные варианты использования панели мониторинга AlwaysOn.  
@@ -120,10 +119,10 @@ ms.locfileid: "62788731"
 ##  <a name="availability-replica-details"></a><a name="AvReplicaDetails"></a>Сведения о реплике доступности  
  На панели **Реплика доступности** отображаются следующие столбцы.  
   
- **Имя**  
+ **имя**;  
  Отображает имя экземпляра сервера, на котором размещена реплика доступности. Этот столбец отображается по умолчанию.  
   
- **Роль**  
+ **Role**  
  Указывает текущую роль реплики доступности, т. е. **Первичная** или **Вторичная**. Сведения о ролях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md). Этот столбец отображается по умолчанию.  
   
  **Режим отработки отказа**  
@@ -174,7 +173,7 @@ ms.locfileid: "62788731"
   
 -   **Подключено**. Удаленная реплика доступности, которая в настоящее время подключена к локальной реплике.  
   
- **Состояние работоспособности**  
+ **Операционное состояние**  
  Указывает текущее состояние работоспособности вторичной реплики. Это значение по умолчанию скрыто. Допустимые значения:  
   
  **0**. Ожидается отработка отказа  
@@ -218,7 +217,7 @@ ms.locfileid: "62788731"
   
  Панель, на которой отображаются сгруппированные сведения, содержит следующие столбцы:  
   
- **Имя**  
+ **имя**;  
  Имя базы данных доступности. Это значение отображается по умолчанию.  
   
  **Реплика**  
@@ -352,7 +351,7 @@ ms.locfileid: "62788731"
   
 -   [Используйте политики AlwaysOn для просмотра работоспособности группы доступности &#40;SQL Server&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)   
  [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   

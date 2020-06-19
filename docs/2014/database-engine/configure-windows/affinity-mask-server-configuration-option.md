@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a041171d9639429196b09b7a1f9254a30907ab2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dfebde8a9431026e8faedb2a1e76eb2f2d82e207
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814051"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935969"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>Параметр конфигурации сервера «affinity mask»
     
@@ -59,7 +58,7 @@ ms.locfileid: "62814051"
   
  Если указать маску сходства, которая попытается сопоставить поток несуществующему процессору, то команда RECONFIGURE отправит сообщение об ошибке в сеанс клиента и в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование параметра RECONFIGURE WITH OVERRIDE в этом случае ничего не изменит, и будет создано еще одно сообщение об ошибке.  
   
- Можно также исключить работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на процессорах, получивших специальные рабочие нагрузки от операционной системы Windows 2000 или Windows Server 2003. Если установить значение бита, представляющего процессор, в 1, этот процессор будет выбран ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для назначения потоков. Если задано `affinity mask` значение 0 (по умолчанию), алгоритмы планирования Microsoft Windows 2000 или windows Server 2003 устанавливают сходство потоков. Если в качестве `affinity mask` задано любое ненулевое значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует это значение схожести как битовую маску, определяющую процессоры, годные для выбора.  
+ Можно также исключить работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на процессорах, получивших специальные рабочие нагрузки от операционной системы Windows 2000 или Windows Server 2003. Если установить значение бита, представляющего процессор, в 1, этот процессор будет выбран ядром СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для назначения потоков. Если задано значение `affinity mask` 0 (по умолчанию), алгоритмы планирования Microsoft windows 2000 или Windows Server 2003 устанавливают сходство потоков. Если в качестве `affinity mask` задано любое ненулевое значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует это значение схожести как битовую маску, определяющую процессоры, годные для выбора.  
   
  Если потокам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрещено выполняться на определенных процессорах, ОС Microsoft Windows 2000 или Windows Server 2003 может лучше обрабатывать процессы, характерные для Windows. Например, на сервере с 8 процессорами, на котором работают два экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (экземпляры A и B), системный администратор может использовать параметр affinity mask для назначения первого набора из 4 процессоров экземпляру A и второго набора из 4 процессоров экземпляру B. Чтобы выполнить настройку больше чем для 32 процессоров, задавайте и параметр affinity mask, и параметр affinity64 mask. Возможны следующие значения `affinity mask`.  
   

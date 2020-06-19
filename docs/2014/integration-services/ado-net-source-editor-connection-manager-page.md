@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f3d9d2270603c3f38189478ccaaf48510085907f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061690"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925905"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Редактор источника данных «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** для выбора соединения [!INCLUDE[vstecado](../includes/vstecado-md.md)] применительно к источнику. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -36,7 +35,7 @@ ms.locfileid: "66061690"
  **Диспетчер соединений ADO.NET**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новый диспетчер соединений с помощью диалогового окна **Настройка диспетчера соединений ADO.NET** .  
   
  **Режим доступа к данным**  
@@ -51,7 +50,7 @@ ms.locfileid: "66061690"
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне**Предварительный просмотр** может отображаться до 200 строк.  
   
 > [!NOTE]  
->  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображается текст \<значение слишком велико для отображения> или System.Byte[]. Первый вариант отображается во время доступа к источнику данных с помощью поставщика [!INCLUDE[vstecado](../includes/vstecado-md.md)] , а последний — при использовании поставщика данных для собственного клиента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого \<value too big to display> отображаются значения или System. Byte []. Первый вариант отображается во время доступа к источнику данных с помощью поставщика [!INCLUDE[vstecado](../includes/vstecado-md.md)] , а последний — при использовании поставщика данных для собственного клиента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66061690"
  **Обзор**  
  Воспользуйтесь диалоговым окном **Открыть** для выбора файла, содержащего текст SQL-запроса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника «ADO NET» &#40;столбцы&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Редактор источника ADO NET &#40;страница вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  

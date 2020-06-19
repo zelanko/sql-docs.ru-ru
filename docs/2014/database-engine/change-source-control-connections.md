@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 538e3beb-f99c-4095-bd65-6413e872d26e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077a09cdca0c0aff777184f04467ca39592690aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812793"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936078"
 ---
 # <a name="change-source-control-connections"></a>Изменение соединений с системой управления версиями
   При первом добавлении или открытии решения в системе управления версиями поставщик этой системы создает связь между корневой папкой локального каталога решения и соответствующей папкой на сервере.  
@@ -33,7 +32,7 @@ ms.locfileid: "62812793"
   
 1.  В меню **файл** укажите пункт **система управления версиями**, а затем выберите пункт **запустить Microsoft Visual SourceSafe**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основы системы управления версиями](../../2014/database-engine/source-control-basics.md)   
  [Задание параметров системы управления версиями](../../2014/database-engine/set-source-control-options.md)   
  [Исключить файлы из системы управления версиями](../../2014/database-engine/exclude-files-from-source-control.md)  

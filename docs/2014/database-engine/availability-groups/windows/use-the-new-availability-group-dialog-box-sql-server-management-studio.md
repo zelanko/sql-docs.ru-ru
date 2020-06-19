@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee729f9f2bdd0044f2897a06e93f00b7b37ca785
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94a1eff298dd200275fec49519a51c4aeb96997
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783142"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936255"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Используйте диалоговое окно «Создание группы доступности» (SQL Server Management Studio)
   Данный раздел содержит сведения об использовании диалогового окна **Новая группа доступности** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для создания группы доступности AlwaysOn в экземплярах [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , которые включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
@@ -160,5 +159,5 @@ ms.locfileid: "72783142"
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  

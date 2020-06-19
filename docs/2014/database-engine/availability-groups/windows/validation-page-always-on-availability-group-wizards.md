@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6cf16c8afb363a1b7727b6da3a5f75bf966ab0d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e912ca16cdbd626e8d8d84f9f68734b73ea052e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936235"
 ---
 # <a name="validation-page-alwayson-availability-group-wizards"></a>Страница проверки (мастера групп доступности AlwaysOn)
   В этом разделе описываются параметры, приведенные на странице **Проверка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Используйте эту страницу для проверки поддержки средой всех вариантов конфигурации, выбранных на предыдущей странице мастера.  
@@ -30,7 +29,7 @@ ms.locfileid: "62812995"
  **Результаты проверки группы доступности.**  
  В этой сетке отображаются результаты каждого завершенного этапа проверки. Сетка содержит следующие столбцы.  
   
- **Имя**  
+ **имя**;  
  Отображает фразу, которая описывает конкретный шаг.  
   
  **Результат**  
@@ -58,7 +57,7 @@ ms.locfileid: "62812995"
   
  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

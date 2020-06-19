@@ -16,26 +16,25 @@ helpviewer_keywords:
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b67e2308c95db109c89bd2c3ff61f311e83fb898
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62878291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962644"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Учебник по службам SSIS. Создание простого ETL-пакета
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SSIS) — это платформа для создания высокопроизводительных решений по интеграции данных, включая пакеты извлечения, преобразования и загрузки (ETL) для хранения [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; службу управления, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для администрирования выполнения и хранения пакетов, а также API-интерфейсы для программирования объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) — это платформа для создания высокопроизводительных решений по интеграции данных, включая пакеты извлечения, преобразования и загрузки (ETL) для хранения данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; службу управления, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для администрирования выполнения и хранения пакетов, а также API-интерфейсы для программирования объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
- В этом руководстве вы узнаете, как [!INCLUDE[ssIS](../includes/ssis-md.md)] использовать конструктор для создания простого [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакета. Этот пакет получает данные из неструктурированного файла, преобразует их, а затем вставляет преобразованные данные в таблицу фактов. На следующих занятиях пакет будет расширен, чтобы продемонстрировать циклическую обработку, конфигурацию пакетов, ведение журнала и поток ошибок.  
+ В этом руководстве вы узнаете, как использовать [!INCLUDE[ssIS](../includes/ssis-md.md)] конструктор для создания простого [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакета. Этот пакет получает данные из неструктурированного файла, преобразует их, а затем вставляет преобразованные данные в таблицу фактов. На следующих занятиях пакет будет расширен, чтобы продемонстрировать циклическую обработку, конфигурацию пакетов, ведение журнала и поток ошибок.  
   
  При установке данных образца, используемых в данном учебнике, устанавливаются также полные версии пакетов, которые требуется создать на занятиях данного учебника. Используя завершенные пакеты, пользователь может при желании пропустить начало учебника и приступить к работе с более позднего занятия. В случае первого знакомства с пакетами или новой средой разработки рекомендуется начинать с занятия 1.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
- Лучшим способом знакомства с новыми инструментами, элементами управления и функциями, доступными в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , является их использование. В этом учебнике с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] будет создан простой пакет ETL, который включает циклическую обработку, конфигурацию, логику потока ошибок и ведение журнала.  
+ Лучшим способом знакомства с новыми инструментами, элементами управления и функциями, доступными в, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] является их использование. В этом учебнике с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] будет создан простой пакет ETL, который включает циклическую обработку, конфигурацию, логику потока ошибок и ведение журнала.  
   
 ## <a name="requirements"></a>Требования  
- Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный доступ к новым [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]функциям, доступным в.  
+ Этот учебник предназначен для пользователей, знакомых с основными операциями с базами данных, но имеющих ограниченный доступ к новым функциям, доступным в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   

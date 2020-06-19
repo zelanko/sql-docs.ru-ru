@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926115"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Добавление выражений к элементам управления очередностью
   Элементы управления очередностью могут использовать выражение для определения зависимости между двумя исполняемыми объектами: приоритетным исполняемым объектом и исполняемым объектом с ограничением. Исполняемыми объектами могут быть задачи или контейнеры. Выражение может быть использовано само по себе или в сочетании с результатом выполнения приоритетного исполняемого объекта. Выполнение любого исполняемого объекта может закончиться успешно или со сбоем. При настройке результата выполнения управления очередностью доступны варианты `Success`, `Failure` или `Completion`. Для варианта `Success` требуется успешное выполнение ограничивающего исполняемого объекта, для `Failure` — его неудачное выполнение, а `Completion` означает, что ограничивающий исполняемый объект должен запускаться независимо от успешности выполнения приоритетной задачи. Дополнительные сведения см. в статье [Precedence Constraints](control-flow/precedence-constraints.md).  
@@ -46,10 +45,10 @@ ms.locfileid: "66061894"
   
 |Вычислительная операция|Результат ограничения|Результат выражения|Запуск исполняемого объекта с ограничением|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Ограничение|True|Н/Д|True|  
-|Ограничение|False|Н/Д|False|  
-|Выражение|Н/Д|True|True|  
-|Выражение|Н/Д|False|False|  
+|Ограничение|True|Недоступно|True|  
+|Ограничение|False|Недоступно|False|  
+|Выражение|Недоступно|True|True|  
+|Выражение|Недоступно|False|False|  
 |Ограничение и выражение|True|True|True|  
 |Ограничение и выражение|True|False|False|  
 |Ограничение и выражение|False|True|False|  
@@ -68,7 +67,7 @@ ms.locfileid: "66061894"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Несколько элементов управления очередностью](../../2014/integration-services/multiple-precedence-constraints.md)   
  [Управление очередностью](control-flow/precedence-constraints.md)  
   

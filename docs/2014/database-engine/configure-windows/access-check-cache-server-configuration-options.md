@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a82aa2872f5a1e1658ab3d736c2651253bb7cc74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f05e2a9bfd2cacfcbeb6128411f7d10c531600e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935985"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>Параметры конфигурации сервера «access check cache»
   При доступе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]к объектам базы данных проверка доступа кэшируется во внутренней структуре, которую называют **кэшем результатов проверки доступа**. Параметры **access check cache quota** и **access check cache bucket count** управляют количеством записей и числом сегментов хэша, которые используются в **кэше результатов проверки доступа**. В редких случаях можно добиться увеличения производительности, изменив эти параметры.  

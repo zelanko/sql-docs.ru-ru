@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925565"
 ---
 # <a name="analysis-of-data-flow"></a>Анализ потока данных
-  Для анализа потока данных пакетов можно использовать представление базы данных [Catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` . Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
+  [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` Для анализа потока данных пакетов можно использовать представление базы данныхcatalog.execution_data_statistics. Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии. Подобная информация дает полное представление о строках, отправляемых для каждого компонента.  
   
 > [!NOTE]  
 >  Чтобы получать необходимые сведения с помощью представления catalog.execution_data_statistics, уровнем ведения журнала должен быть **Подробно** .  
@@ -42,7 +41,7 @@ order by source_component_name, destination_component_name
   
 -   **num_rows_per_millisecond** — количество строк, отправляемых каждым компонентом в миллисекунду  
   
- `HAVING` Предложение используется для предотвращения ошибки деления на ноль в вычислениях.  
+ `HAVING`Предложение используется для предотвращения ошибки деления на ноль в вычислениях.  
   
 ```  
 use SSISDB  
@@ -63,7 +62,7 @@ order by source_component_name desc
   
  [Устранение неполадок инструментов с помощью отчетов](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Данные потоков данных](data-flow/data-in-data-flows.md)  
   
   

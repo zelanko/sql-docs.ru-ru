@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec17acfb9be26fc08274d285cf98897768633b9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061638"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925765"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>Редактор источника данных «ADO.NET» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника «ADO.NET»** используется для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
@@ -32,11 +31,11 @@ ms.locfileid: "66061638"
   
 3.  В окне **Редактор источника «ADO.NET»** нажмите кнопку **Вывод ошибок**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
- **Рубрик**  
+ **Столбец**  
  Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер подключений** диалогового окна **Редактор источника "ADO.NET"** .  
   
  **Error**  
@@ -56,7 +55,7 @@ ms.locfileid: "66061638"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [Редактор источника «ADO NET» &#40;столбцы&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  

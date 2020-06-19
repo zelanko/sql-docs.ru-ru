@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7d1f57a9bd29b6c65160ec9a163bc77dfca48b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936225"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>Просмотр свойств группы доступности (SQL Server)
   В этом разделе описывается просмотр свойств группы доступности для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62813257"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md) [мониторинг групп доступности &#40;политик Transact-SQL&#41;](monitor-availability-groups-transact-sql.md) [AlwaysOn для проблем в работе с группы доступности AlwaysOn](always-on-policies-for-operational-issues-always-on-availability.md) &#40;SQL Server&#41; 
   
   

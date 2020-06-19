@@ -13,30 +13,29 @@ helpviewer_keywords:
 ms.assetid: 423e1654-54af-47c6-ab6f-98670534557d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3bffc98a14c1a8bc672e9f15a4bad8b6f5a7dbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44b7a2b45ca77af87457ae0f4e908ec0a667ff79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962814"
 ---
 # <a name="sql-destination-editor-connection-manager-page"></a>Редактор назначения «SQL» (страница «Диспетчер соединений»)
-  Страница **Диспетчер соединений** диалогового окна **Редактор назначения «SQL»** используется для задания сведений об источнике данных и для предварительного просмотра результатов. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Назначение загружает данные в таблицы или представления в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базе данных.  
+  Страница **Диспетчер соединений** диалогового окна **Редактор назначения «SQL»** используется для задания сведений об источнике данных и для предварительного просмотра результатов. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Назначение загружает данные в таблицы или представления в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базе данных.  
   
  Дополнительные сведения о назначении «SQL Server» см. в разделе [SQL Server Destination](data-flow/sql-server-destination.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Диспетчер подключений OLE DB**  
  Выберите существующий диспетчер подключений из списка или создайте новое соединение, выбрав пункт **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
  **Использовать таблицу или представление**  
  Выберите существующую таблицу или представление из списка или создайте новое соединение, нажав кнопку **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новую таблицу с помощью диалогового окна **Создание таблицы** .  
   
 > [!NOTE]  
@@ -45,7 +44,7 @@ ms.locfileid: "66055410"
  **Предварительный просмотр**  
  Просмотрите предварительные результаты, используя диалоговое окно **Предварительный просмотр результатов запроса** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "SQL &#40;страниц сопоставления"&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   
  [Редактор назначения "SQL" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1e3d0780e761cb5b0cdd4fd267bdfb2662f55cf4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8581771394ed40f740ea83407b9acd47c6f4ddd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963244"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Задание свойств диспетчера соединений
   Все диспетчеры соединений могут быть настроены в окне **Свойства** .  
@@ -51,7 +50,7 @@ ms.locfileid: "66055838"
   
 4.  В области **Диспетчеры соединений** дважды щелкните нужный диспетчер подключений для открытия диалогового окна **Диспетчер соединений** . Дополнительные сведения о конкретных типах диспетчеров соединений и настройках каждого из них см. в следующей таблице.  
   
-    |Диспетчер соединений|Параметры|  
+    |Диспетчер соединений|Варианты|  
     |------------------------|-------------|  
     |[Диспетчер соединений ADO](connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](configure-ole-db-connection-manager.md)|  
     |[Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](configure-ado-net-connection-manager.md)|  
@@ -73,7 +72,7 @@ ms.locfileid: "66055838"
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;соединений&#41; SSIS](connection-manager/integration-services-ssis-connections.md)   
  [Добавление, удаление или совместное использование диспетчера соединений в пакете](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md)  
   

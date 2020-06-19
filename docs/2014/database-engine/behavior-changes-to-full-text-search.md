@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00dc0fbda03bb7f729123a84e7e91fb2361aee9f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: cbe807237651bd8bb81fa1c9f028847654b97889
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001089"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936185"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Изменения в функциях полнотекстового поиска
   В этом разделе описаны изменения поведения полнотекстового поиска. Изменения в работе оказывают влияние на способ выполнения функций или взаимодействие между ними в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] по сравнению с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -102,7 +101,7 @@ ms.locfileid: "83001089"
   
      Полнотекстовый поиск индексирует содержимое блоков больших двоичных объектов (BLOB) FILESTREAM. Индексирование таких файлов, как изображения, может оказаться нецелесообразным. При обновлении блоков больших двоичных объектов (BLOB) FILESTREAM выполняется их повторное индексирование.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компонент Full-text Search](../relational-databases/search/full-text-search.md)   
  [Обратная совместимость полнотекстового поиска](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Обновление полнотекстового поиска](../relational-databases/search/upgrade-full-text-search.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 728811c4-5d7a-4420-abce-f56c5a0994d2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f29bf7098f0c73d0b672e20b973b1347349b31f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936005"
 ---
 # <a name="compare-files"></a>Сравнение файлов
   Сравнение файлов применяется для выяснения истории изменения файла до текущего состояния. Например, если в сборке проекта кода обнаружен дефект после возврата определенной версии исходного файла в систему управления версиями, можно сравнить текущую версию файла с предыдущей. Это поможет выявить код, вызвавший дефект.  
@@ -34,7 +33,7 @@ ms.locfileid: "62812598"
   
 3.  В диалоговом окне **Параметры различий** выберите соответствующие параметры и нажмите кнопку **отчет**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Просмотр истории файлов](../../2014/database-engine/view-file-history.md)   
  [Просмотр журнала проекта](../../2014/database-engine/view-project-history.md)   

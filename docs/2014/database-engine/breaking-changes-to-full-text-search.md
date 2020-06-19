@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 260b1a303685ad9247154504400ef1519ecaa219
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936125"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Критические изменения в полнотекстовом поиске
   В этом разделе описываются критические изменения полнотекстового поиска. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "83001025"
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Критические изменения полнотекстового поиска в SQL Server 2008  
  Следующие критические изменения были внесены в компонент полнотекстового поиска (Full-Text Search) между выпуском [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] и выпуском [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] (и последующими версиями).  
   
-|Признак|Сценарий|SQL Server 2005|SQL Server 2008 и последующие версии|  
+|Компонент|Сценарий|SQL Server 2005|SQL Server 2008 и последующие версии|  
 |-------------|--------------|---------------------|----------------------------------------|  
 |[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) с определяемыми пользователем типами (UDT)|Полнотекстовый ключ — это определяемый пользователем тип [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], например `MyType = char(1)`.|Возвращаемый ключ имеет тип, назначенный определяемому пользователем типу.<br /><br /> В этом примере это будет **char (1)**.|Возвращаемый ключ имеет определяемый пользователем тип. В этом примере это будет **MyType**.|  
 |параметр *top_n_by_rank* (операторов CONTAINSTABLE и [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] )|*top_n_by_rank* запросы, использующие значение 0 в качестве параметра.|Завершается с сообщением об ошибке, указывающим на то, что значение должно быть больше нуля.|Завершается успешно, возвращая 0 строк.|  
@@ -57,7 +56,7 @@ ms.locfileid: "83001025"
 |[sp_help_fulltext_catalog_components](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalog-components-transact-sql)|Использование хранимой процедуры sp_help_fulltext_catalog_components.|Возвращает список всех компонентов (фильтров, разделителей слов и обработчиков протоколов), используемых для всех полнотекстовых каталогов в текущей базе данных.|Возвращает пустые строки.|  
 |[DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql)|Использование свойства **IsFullTextEnabled** .|Параметр **IsFullTextEnabled** указывает, включен ли полнотекстовый поиск в заданной базе данных.|Значение этого столбца не учитывается. Полнотекстовый поиск всегда включен для пользовательских баз данных.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменения в работе полнотекстового поиска](../relational-databases/search/full-text-search.md)   
  [Полнотекстовый поиск](../relational-databases/search/full-text-search.md)  
   

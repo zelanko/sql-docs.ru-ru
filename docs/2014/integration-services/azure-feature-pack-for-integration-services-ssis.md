@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c99d4c9c561345a49faa595e080985731656bc3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62772150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925425"
 ---
 # <a name="azure-feature-pack"></a>Пакет дополнительных компонентов Azure
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -37,7 +36,7 @@ ms.locfileid: "62772150"
     
     -   [Диспетчер подключений Azure HDInsight](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   Задачи  
+-   Задания  
   
     -   [Задача передачи больших двоичных объектов Azure](control-flow/azure-blob-upload-task.md)  
   

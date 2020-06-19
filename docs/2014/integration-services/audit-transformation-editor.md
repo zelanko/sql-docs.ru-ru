@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d31f297b9544c75e416fe798facd6a1c328ff0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061419"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925542"
 ---
 # <a name="audit-transformation-editor"></a>редактор преобразования «Аудит»
   Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  
   
  Дополнительные сведения о преобразовании «Аудит» см. в разделе [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя выходного столбца**  
  Введите имя для нового выходного столбца, который будет содержать данные аудита.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66061419"
 |**Имя задачи**|Укажите имя задачи потока данных, с которой связано преобразование «Аудит».|  
 |**Идентификатор задачи**|Укажите идентификатор GUID, который уникально идентифицирует задачу потока данных, с которой связано преобразование «Аудит».|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

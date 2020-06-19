@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061840"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925970"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Добавление или удаление проектом служб Integration Services из решения
   Следующие процедуры описывают способы добавления или удаления проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в решении.  
   
- Добавлять проекты к существующему решению и удалять их из него можно только тогда, когда решение отображается в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Если вы выбрали параметр **всегда показывать решение** в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] будет отображать решение, даже если это решение содержит только один проект. В противном случае среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] будет отображать решение, только когда в нем более одного проекта. Дополнительными могут быть проекты служб [!INCLUDE[ssIS](../includes/ssis-md.md)] или проекты других типов.  
+ Добавлять проекты к существующему решению и удалять их из него можно только тогда, когда решение отображается в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Если вы выбрали параметр **всегда показывать решение** в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] будет отображать решение, даже если это решение содержит только один проект. В противном случае среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] будет отображать решение, только когда в нем более одного проекта. Дополнительными могут быть проекты служб [!INCLUDE[ssIS](../includes/ssis-md.md)] или проекты других типов.  
   
 ## <a name="adding-an-integration-services-project"></a>Добавление проекта служб Integration Services  
  При добавлении проекта можно создать новый пустой проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или добавить проект, созданный для другого решения. Добавить проект к существующему решению можно, только если решение отображается в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -68,7 +67,7 @@ ms.locfileid: "66061840"
   
 3.  Нажмите кнопку **ОК** для подтверждения удаления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;проектов&#41; SSIS](integration-services-ssis-projects-and-solutions.md)   
  [Создание нового проекта служб Integration Services](../../2014/integration-services/create-a-new-integration-services-project.md)  
   

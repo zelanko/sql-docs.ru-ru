@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 557e849713ff6a58172dfbc3ddcd8e0816ef2b7f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962789"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Редактор диспетчера соединений SQL Server Compact Edition (страница «Соединение»)
   Диалоговое окно **Диспетчер соединений SQL Server Compact Edition** позволяет задать свойства для соединения с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  Дополнительные сведения о диспетчере соединений [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition см. в разделе [Диспетчер соединений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Требуется ввести имя файла базы данных и его путь**  
  Введите путь и имя файла базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66055424"
  **Требуется ввести пароль доступа к базе данных**  
  Введите пароль для базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   

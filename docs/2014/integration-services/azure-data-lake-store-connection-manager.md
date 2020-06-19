@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db1db5b066e5540d64121993e6126edefa3b8124
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66462697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925415"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Диспетчер подключений Azure Data Lake Store
   **Диспетчер подключений Azure Data Lake Store** позволяет пакету служб SSIS подключаться к службе Azure Data Lake Store с помощью двух типов проверки подлинности: удостоверение пользователя Azure AD и удостоверение службы Azure AD.  
@@ -27,7 +26,7 @@ ms.locfileid: "66462697"
   
 1.  В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureDataLake**и щелкните **Добавить**.   
   
-2.  В диалоговом окне "Редактор диспетчера подключений Azure Data Lake Store" введите URL-адрес узла Azure Data Lake Store в поле **Узел ADLS** . Например: https:\//test.azuredatalakestore.net или Test.azuredatalakestore.NET.
+2.  В диалоговом окне "Редактор диспетчера подключений Azure Data Lake Store" введите URL-адрес узла Azure Data Lake Store в поле **Узел ADLS** . Например: https: \/ /Test.azuredatalakestore.NET или Test.azuredatalakestore.NET.
   
 3.  Выберите соответствующий тип проверки подлинности для доступа к данным Azure Data Lake Store.
 
@@ -49,7 +48,7 @@ ms.locfileid: "66462697"
     
         4. Щелкните **Проверить подключение** для проверки подключения.  
   
-4.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
+4.  Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.  
   
     Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  
   

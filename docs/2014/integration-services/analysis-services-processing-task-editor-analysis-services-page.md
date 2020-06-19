@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ae832263c3a025f53989761541e3278f5ea6a60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890369"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925585"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Средства Analysis Services»)
   Используйте страницу **Службы Analysis Services** диалогового окна **Редактор задачи «Обработка средствами Analysis Services»** для задания диспетчера соединений служб Analysis Services, выбора аналитических объектов для обработки, установки параметров обработки и действий при ошибках.  
@@ -36,11 +35,11 @@ ms.locfileid: "68890369"
   
  Дополнительные сведения об этой задаче см. в разделе [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Диспетчер подключений Analysis Services**  
  Выберите из списка существующий диспетчер подключений служб Analysis Services или нажмите кнопку **Создать** для его создания.  
   
- **Создать**  
+ **Новые**  
  Создайте новый диспетчер соединений служб Analysis Services.  
   
  **См. также:** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочник по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
@@ -49,14 +48,14 @@ ms.locfileid: "68890369"
  |Свойство|Описание|  
 |--------------|-----------------|  
 |**Имени объекта**|Позволяет отобразить список имен заданных объектов.|  
-|**Type**|Позволяет отобразить список типов заданных объектов.|  
+|**Тип**|Позволяет отобразить список типов заданных объектов.|  
 |**Параметры обработки**|Выберите из списка параметр обработки.<br /><br /> **См. также**: [Обработка объектов многомерной модели](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Параметры**|Позволяет отобразить список настроек обработки для заданных объектов.|  
   
  **Добавление**  
  Добавьте объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в список.  
   
- **Удалить**  
+ **Remove**  
  Выделите объект, а затем нажмите кнопку **Удалить**.  
   
  **Анализ влияния**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee3c73e6875c65ab5204d122cda2db4144df8e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925889"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Редактор назначения «ADO.NET» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор назначения «ADO.NET»** используется для задания параметров обработки ошибок.  
@@ -32,11 +31,11 @@ ms.locfileid: "66061768"
   
 3.  В окне **Редактор назначения «ADO.NET»** нажмите кнопку **Вывод ошибок**.  
   
-## <a name="options"></a>Параметры  
- **Вход или выход**  
+## <a name="options"></a>Варианты  
+ **Входные или выходные данные**  
  Просмотрите имя входных данных.  
   
- **Рубрик**  
+ **Столбец**  
  Не используется.  
   
  **Error**  
@@ -56,7 +55,7 @@ ms.locfileid: "66061768"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначения «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
  [Редактор назначения ADO.NET (страница "Сопоставления")](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   

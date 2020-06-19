@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935995"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Настройка управляемого резервного копирования (SQL Server Management Studio)
   Диалоговое окно **управляемое резервное копирование** позволяет настроить [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] значения по умолчанию для экземпляра. В этом разделе описывается, как использовать это диалоговое окно для настройки значений [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] по умолчанию для экземпляра, а также рассматриваются параметры, которые необходимо учитывать при этом. Если для экземпляра настроен [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], параметры применяются для любой новой базы данных, создаваемой в дальнейшем.  
@@ -28,7 +27,7 @@ ms.locfileid: "82849442"
 > [!NOTE] 
 > Управляемое резервное копирование SQL Server не поддерживается для прокси-серверов. 
   
-## <a name="task-list"></a>список задач  
+## <a name="task-list"></a>Список задач  
   
 ## <a name="ss_smartbackup-functions-using-managed-backup-interface-in-sql-server-management-studio"></a>Функции [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], использующие интерфейс управляемого резервного копирования в SQL Server Management Studio  
  В этом выпуске можно настроить параметры по умолчанию на уровне экземпляра с помощью интерфейса **резервного копирования управления** . Невозможно настроить [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для базы данных, приостановить или возобновить операции [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] или настроить уведомления по почте. Сведения о том, как выполнять операции, не поддерживаемые в **управляемом интерфейсе резервного копирования** , см. в разделе [SQL Server управляемое резервное копирование в Azure — параметры хранения и хранилища](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
@@ -69,19 +68,19 @@ ms.locfileid: "82849442"
   
  Укажите **URL-адрес хранилища** для учетной записи хранения Azure, учетные данные SQL, в которых хранятся данные проверки подлинности для учетной записи хранения, а также срок хранения файлов резервной копии.  
   
- Формат URL-адреса хранилища: https:// \< StorageAccount>. BLOB.Core.Windows.NET/  
+ Формат URL-адреса хранилища: https:// \<StorageAccount> . BLOB.Core.Windows.NET/  
   
  Чтобы задать параметры шифрования на уровне экземпляра, установите флажок **шифровать резервную копию** и укажите алгоритм и сертификат или асимметричный ключ, используемые для шифрования.  Эти параметры устанавливаются на уровне экземпляра и используются для всех создаваемых баз данных после применения этой конфигурации.  
   
 > [!WARNING]  
 >  Это диалоговое окно не может использоваться для указания параметров шифрования без настройки [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Эти параметры шифрования применяются только к операциям [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]. Чтобы использовать шифрование для других процедур резервного копирования, см. раздел [Шифрование резервной копии](../relational-databases/backup-restore/backup-encryption.md).  
   
-### <a name="considerations"></a>Особенности  
+### <a name="considerations"></a>Рекомендации  
  Если для экземпляра настроен [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], параметры применяются для любой новой базы данных, создаваемой в дальнейшем.  Однако существующая база данных не наследует эти параметры автоматически. Чтобы настроить [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для ранее созданных баз данных, необходимо отдельно настроить каждую базу данных. Дополнительные сведения см. в статье [Включение и настройка SQL Server управляемого резервного копирования в Azure для базы данных](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
  Если работа [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] приостановлена с помощью `smart_admin.sp_backup_master_switch` , появится предупреждение "управляемое резервное копирование отключено и текущие конфигурации не вступят в силу..." При попытке завершить настройку. Используйте `smart_admin.sp_backup_master_switch` хранимый параметр и задайте значение @new_state = 1. Работа служб [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] будет возобновлена, а параметры конфигурации вступят в силу. Дополнительные сведения о хранимой процедуре см. в разделе [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управляемое резервное копирование SQL Server в Azure: Возможности взаимодействия и совместной работы](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
   

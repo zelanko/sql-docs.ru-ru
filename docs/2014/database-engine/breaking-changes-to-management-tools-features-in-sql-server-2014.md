@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3ff3fad8-b569-4516-bd58-5a3efeb537e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73e2c6ecb4ae2f829c02897ed5c6ab5d84f1ba4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0487b6ab0958e0b83d4e8e34be507b5b3211ac87
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936105"
 ---
 # <a name="breaking-changes-to-management-tools-features-in-sql-server-2014"></a>Критические изменения в функциях средств управления в SQL Server 2014
   В этом разделе описаны критические изменения в функциях средств управления. Эти изменения могут нарушать работу приложений, скриптов или механизмов, основанных на более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При обновлении могут возникнуть следующие проблемы. Дополнительные сведения см. в разделе [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "62787022"
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
  [Дополнительные сведения о критических изменениях в функциях средств управления в SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   

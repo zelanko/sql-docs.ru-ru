@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b7d92800a2f5d55cf85ace3e7746d934b7474b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926239"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Добавление, удаление или совместное использование диспетчера соединений в пакете
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат множество диспетчеров соединений, предназначенных для соединения с различными источниками данных: реляционными базами данных, базами данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и файлами в форматах CSV и XML. Можно создать диспетчер соединений на уровне пакета или на уровне проекта. Диспетчер соединений, созданный на уровне проекта, доступен всем пакетам в проекте. Диспетчер соединений, созданный на уровне пакета, доступен только этому определенному пакету.  
@@ -68,7 +67,7 @@ ms.locfileid: "66062010"
   
      Откроется пользовательское диалоговое окно для выбранного типа диспетчера соединений. Дополнительные сведения о типах диспетчеров соединений и доступных параметрах представлены в таблице ниже.  
   
-    |Диспетчер соединений|Параметры|  
+    |Диспетчер соединений|Варианты|  
     |------------------------|-------------|  
     |[Диспетчер соединений ADO](connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](configure-ole-db-connection-manager.md)|  
     |[Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](configure-ado-net-connection-manager.md)|  
@@ -104,7 +103,7 @@ ms.locfileid: "66062010"
   
      Откроется пользовательское диалоговое окно для выбранного типа диспетчера соединений. Дополнительные сведения о типах диспетчеров соединений и доступных параметрах представлены в таблице ниже.  
   
-    |Диспетчер соединений|Параметры|  
+    |Диспетчер соединений|Варианты|  
     |------------------------|-------------|  
     |[Диспетчер соединений ADO](connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](configure-ole-db-connection-manager.md)|  
     |[Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](configure-ado-net-connection-manager.md)|  
@@ -169,7 +168,7 @@ ms.locfileid: "66062010"
     > [!NOTE]  
     >  Также можно удалить диспетчер соединений на уровне проекта на вкладке **Диспетчер соединений** в окне **Конструктор служб SSIS** , открытом для любого пакета в проекте. Удалить диспетчер можно, щелкнув правой кнопкой мыши диспетчер соединений на вкладке и выбрав **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;соединений&#41; SSIS](connection-manager/integration-services-ssis-connections.md)   
  [Задание свойств диспетчера соединений](../../2014/integration-services/set-the-properties-of-a-connection-manager.md)  
   
