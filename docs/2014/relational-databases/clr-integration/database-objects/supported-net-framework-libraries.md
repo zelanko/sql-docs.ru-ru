@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2518404830577839bce3e84c4eac9b76c850cd3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0db38e8bf21d56a0fcd35208920b9ee24b583062
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953480"
 ---
 # <a name="supported-net-framework-libraries"></a>Поддерживаемые библиотеки платформы .NET Framework
   Если среда CLR размещается в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то появляется возможность разрабатывать на управляемом коде хранимые процедуры, триггеры, определяемые пользователем функции, определяемые пользователем типы и определяемые пользователем статистические функции. Функциональность, реализованная в библиотеках классов платформы .NET Framework, предоставляет доступ к предварительно построенным классам для операций со строками, сложных математических операций, доступа к файлам, шифрования и т. д. Доступ к этим классам легко получить из любой управляемой хранимой процедуры, определяемого пользователем типа, триггера, определяемой пользователем функции или определяемой пользователем статистической функции.  
   
 > [!NOTE]  
->  При обслуживании или обновлении неподдерживаемых сборок в глобальном кэше сборок (GAC) ваш [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если сборка существует и в интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR. При обслуживании или обновлении любых сборок в глобальном кэше сборок, которые также зарегистрированы в базе данных, в том числе неподдерживаемых сборок платформы .NET Framework, необходимо обеспечить обслуживание или обновление копии сборки в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции `ALTER ASSEMBLY`. Дополнительные сведения см. в [статье базы знаний 949080](https://support.microsoft.com/kb/949080).  
+>  При обслуживании или обновлении неподдерживаемых сборок в глобальном кэше сборок (GAC) ваш [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если сборка существует и в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интеграции со средой CLR. При обслуживании или обновлении любых сборок в глобальном кэше сборок, которые также зарегистрированы в базе данных, в том числе неподдерживаемых сборок платформы .NET Framework, необходимо обеспечить обслуживание или обновление копии сборки в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью инструкции `ALTER ASSEMBLY`. Дополнительные сведения см. в [статье базы знаний 949080](https://support.microsoft.com/kb/949080).  
   
 ## <a name="supported-libraries"></a>Поддерживаемые библиотеки  
  Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] имеет список поддерживаемых .NET Framework библиотек, проверенных на соответствие стандартам надежности и безопасности для взаимодействия с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] загрузкой их непосредственно из глобального кэша сборок (GAC).  
@@ -68,7 +67,7 @@ ms.locfileid: "62873772"
   
  Например, не поддерживается пространство имен `System.DirectoryServices`. Необходимо зарегистрировать сборку System.DirectoryServices.dll с разрешением `UNSAFE`, прежде чем ее можно будет вызвать из пользовательского кода. Разрешение `UNSAFE` необходимо, так как классы в пространстве имен `System.DirectoryServices` не соответствуют требованиям для разрешений `SAFE` и `EXTERNAL_ACCESS`. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](clr-integration-programming-model-restrictions.md) и [Безопасность доступа к коду интеграции CLR](../security/clr-integration-code-access-security.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание сборки](../assemblies/creating-an-assembly.md)   
  [Безопасность доступа к коду при интеграции со средой CLR](../security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования на основе интеграции со средой CLR](clr-integration-programming-model-restrictions.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b7d478761a1051114e0189c7fd11eddafcef086b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b2b17fcb1464d32e7fd2e43ae6350f4681a48998
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054741"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Установка PowerPivot для SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] представляет собой набор служб среднего уровня и серверных служб, которые обеспечивают доступ к данным PowerPivot в ферме SharePoint 2010. Если для создания книг с аналитическими данными в компании используется клиентское приложение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel 2010, то для доступа к этим данным в серверной среде потребуется [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . В этой теме пошагово рассматривается процесс установки и приводятся ссылки на другие темы, которые помогут при настройке PowerPivot.
@@ -26,7 +25,7 @@ ms.locfileid: "78172346"
 
  
 
- Инструкции по установке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] размещению на том же сервере см. в разделе [контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).
+ Инструкции по установке и размещению на том [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] же сервере см. в разделе [Контрольный список развертывания: Reporting Services, Power View и PowerPivot для SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -42,7 +41,7 @@ ms.locfileid: "78172346"
 
 6.  Должно быть доступно имя экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Не допускается, чтобы на компьютере, где устанавливается PowerPivot для SharePoint, уже имелся именованный экземпляр [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .
 
-7.  Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] не может входить в состав отказоустойчивого кластера SQL Server. Используйте функции высокого уровня доступности продукта SharePoint. Например, службы Excel управляют распределением нагрузки серверов PowerPivot для SharePoint. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx).
+7.  Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] не может входить в состав отказоустойчивого кластера SQL Server. Используйте функции высокого уровня доступности продукта SharePoint. Например, службы Excel управляют распределением нагрузки серверов PowerPivot для SharePoint. Дополнительные сведения см. в разделе [Управление параметрами модели данных служб Excel (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) ( https://technet.microsoft.com/library/jj219780.aspx) .
 
 8.  Если [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] устанавливается в существующей ферме, необходимо наличие одного или нескольких веб-приложений SharePoint, в которых настроен классический режим проверки подлинности. Доступ к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] поддерживается только в веб-приложениях, использующих классическую проверку подлинности Windows. Дополнительные сведения о требованиях к классическому режиму см. в разделе [PowerPivot Authentication and Authorization](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization).
 
@@ -110,7 +109,7 @@ ms.locfileid: "78172346"
 
 20. Нажимайте кнопку **Далее** на всех оставшихся страницах, пока не откроется страница «Все готово для установки».
 
-21. Щелкните **Install**(Установить).
+21. Нажмите кнопку **Установить**.
 
 > [!TIP]
 >  Если требуется выполнить устранение неисправностей при установке SQL Server, см. раздел [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).

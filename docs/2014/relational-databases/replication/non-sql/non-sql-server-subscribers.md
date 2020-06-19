@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068587"
 ---
 # <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server
   Следующие подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , могут подписаться на публикации моментальных снимков и публикации транзакций, используя принудительные подписки. Подписки поддерживаются для двух самых последних версий каждой из баз данных, приведенных в списке, с использованием самой последней версии поставщика OLE DB из приводимого списка.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022249"
   
 -   Репликация поддерживает публикацию таблиц и индексированных представлений в виде таблиц для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (индексированные представления не могут быть реплицированы как индексированные представления).  
   
--   При создании публикации в мастере создания публикаций и последующем включении ее для подписчиков, отличных от SQL Server, с помощью диалогового окна Свойства публикации владелец всех объектов в базе данных подписки не указывается для[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков, отличных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от, в то время как для подписчиков задан владелец соответствующего объекта в базе данных публикации.  
+-   При создании публикации в мастере создания публикаций и последующем включении ее для подписчиков, отличных от SQL Server, с помощью диалогового окна Свойства публикации владелец всех объектов в базе данных подписки не указывается для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков, отличных от, в то время как для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] подписчиков задан владелец соответствующего объекта в базе данных публикации.  
   
 -   Если публикация имеет подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , то публикация должна быть включена для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , перед тем как будут созданы какие-либо подписки для подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
@@ -95,7 +94,7 @@ ms.locfileid: "63022249"
   
 -   Подписчики, не относящиеся к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , не могут быть автоматически инициализированы из резервной копии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разнородная репликация базы данных](heterogeneous-database-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dca92489-f179-4b1f-997c-adcc46aa17a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dae96ba17ee792b703e96ceff2200d1f8f629a01
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8b27d39327a68a150fe42a0d6f152bd34c0dd4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022934"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   В данном разделе описываются функции ODBC, демонстрирующие специфичное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение при использовании с драйвером ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Здесь перечислены не все функции ODBC. В отдельных разделах обсуждаются только те проблемы, которые специфичны для функции ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они не являются полным справочником по функциям ODBC.  
@@ -131,7 +130,7 @@ ms.locfileid: "82706405"
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по SQL Server Native Client &#40;ODBC&#41;](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [Построение приложений с использованием SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25ba1ccc87c024fa3da370f2ff19251a1bee9f30
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874499"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934090"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
   К сбою во время сеанса зеркального отображения базы данных могут привести различные физические неисправности, ошибки операционной системы или ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сеанс зеркального отображения базы данных не выполняет активных проверок компонентов, на которые опирается процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли быть не замечены, для зеркального отображения базы данных реализован собственный механизм ожидания. По истечении времени ожидания для зеркального отображения базы данных предполагается, что произошел сбой и объявляется *кратковременная ошибка*. Однако некоторые ошибки, которые возникают на уровне экземпляра SQL Server, не превышают времени ожидания зеркального отображения и поэтому не обнаруживаются.  
@@ -98,7 +97,7 @@ ms.locfileid: "70874499"
   
  **Изменение величины тайм-аута (только в режиме высокой безопасности)**  
   
--   Используйте инструкцию [ALTER DATABASE \<база данных> SET PARTNER TIMEOUT \<целое число>](/sql/t-sql/statements/alter-database-transact-sql).  
+-   Используйте инструкцию [ALTER DATABASE \<database> Set партнёр \<integer> timeout](/sql/t-sql/statements/alter-database-transact-sql) .  
   
  **Просмотр текущего значения времени ожидания**  
   

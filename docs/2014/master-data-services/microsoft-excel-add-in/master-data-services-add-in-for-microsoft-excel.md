@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d8bac9ba8afafa6b5141d90c51f8029f596ba8f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84048371eac930974ebbd3d0693e25761f9a784
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482627"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961164"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Надстройка Master Data Services для Microsoft Excel
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно распространить главные списки ссылочных данных среди всех пользователей в вашей организации, использующих [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]Excel. Какие именно данные пользователь может просматривать и обновлять, определяется системой безопасности.  
+  С помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно распространить главные списки ссылочных данных среди всех пользователей в вашей организации, использующих Excel. Какие именно данные пользователь может просматривать и обновлять, определяется системой безопасности.  
   
  Можно загрузить отфильтрованные списки данных из MDS в Excel, где их обработка может выполняться точно так же, как и обработка любых других данных. Завершив работу, можно снова опубликовать данные в MDS, где они централизованно хранятся.  
   

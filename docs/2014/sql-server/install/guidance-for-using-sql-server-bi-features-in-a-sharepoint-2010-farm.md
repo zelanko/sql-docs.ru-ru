@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054835"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Указания по использованию функций бизнес-аналитики SQL Server в ферме SharePoint 2010
   В этом разделе содержатся сведения о доступности компонентов в зависимости от версии и выпуска используемого ПО. Здесь также описываются требования по установке SharePoint 2010 для использования определенных компонентов SQL Server. Сведения, относящиеся к SharePoint 2013, см. [в разделе топологии развертывания для SQL Server функций бизнес-аналитики в SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
@@ -57,7 +56,7 @@ ms.locfileid: "78172563"
 
 -   Нужно использовать [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и средство настройки служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].
 
- Одна из основных причин, по которой требуется пакет обновления 1 (SP1 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) для установки SharePoint, в которой выполняется с, — это функция ядра СУБД **sp_dboption**, которая устарела в предыдущем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] выпуске, больше не поддерживается в выпуске. Дополнительные сведения см. [в разделе неподдерживаемые функции ядро СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) .
+ Одна из основных причин, по которой требуется пакет обновления 1 (SP1) для установки SharePoint, в которой выполняется с, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] — это функция ядра субд **sp_dboption**, которая устарела в предыдущем выпуске, больше не поддерживается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] выпуске. Дополнительные сведения см. [в разделе неподдерживаемые функции ядро СУБД в SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md) .
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Руководство по установке пакета обновления 1 (SP1) для SharePoint 2010
  [Загрузите SharePoint Server 2010 с пакетом обновления 1 (SP1)](https://go.microsoft.com/fwlink/?LinkID=219697) и примените его на всех серверах фермы.
@@ -67,7 +66,7 @@ ms.locfileid: "78172563"
 
 -   **Мастер настройки продуктов SharePoint:** Запустите мастер, чтобы завершить обновление и настройку пакета обновления 1 (SP1).
 
--   **Выполните обновление с помощью Psconfig:** Выполните команду `psconfig -upgrade` , чтобы завершить обновление с пакетом обновления 1 (SP1)
+-   **Выполните обновление с помощью Psconfig:** Выполните команду, `psconfig -upgrade` чтобы завершить обновление с пакетом обновления 1 (SP1)
 
  Дополнительные сведения см. в подразделе "обновление" статьи [(SharePoint Server 2010)](https://technet.microsoft.com/library/cc263093.aspx) и [центра ресурсов: обновления для продуктов SharePoint 2010](https://technet.microsoft.com/sharepoint/ff800847.aspx)
 

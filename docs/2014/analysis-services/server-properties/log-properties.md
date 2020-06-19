@@ -52,13 +52,12 @@ helpviewer_keywords:
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af365a21443f3feeb54ce2f76c729ba40909b9df
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068918"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940658"
 ---
 # <a name="log-properties"></a>Свойства журнала
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера журналов, список которых приведен в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и об их настройке см. в разделе [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -76,7 +75,7 @@ ms.locfileid: "66068918"
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="error-log"></a>Журнал ошибок  
- Эти свойства можно задать на уровне экземпляра сервера, чтобы изменить значения по умолчанию для конфигурации обработки ошибок, которые применяются в других средствах и конструкторах. См. [раздел Конфигурация ошибок для обработки кубов, секций и измерений &#40;SSAS — многомерные&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) и <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> дополнительные сведения.  
+ Эти свойства можно задать на уровне экземпляра сервера, чтобы изменить значения по умолчанию для конфигурации обработки ошибок, которые применяются в других средствах и конструкторах. См. [раздел Конфигурация ошибок для обработки кубов, секций и измерений &#40;SSAS — многомерные&#41;](../multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) и дополнительные <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> сведения.  
   
  **ErrorLog\ErrorLogFileName**  
  Свойство, используемое в качестве значения по умолчанию во время выполнения операции обработки сервером.  
@@ -231,7 +230,7 @@ ms.locfileid: "66068918"
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка свойств сервера в Analysis Services](server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

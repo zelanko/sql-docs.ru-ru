@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f54dd4ea82b9d46cde0c83f645f378d13f32849
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061843"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Копирование результатов запросов (визуальные инструменты для баз данных)
   Можно скопировать результирующий набор в виде текста с разделителями табуляции с панели **Результаты** . Можно скопировать весь результирующий набор или любое количество смежных или несмежных строк или ячеек.  
