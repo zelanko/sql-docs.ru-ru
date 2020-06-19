@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 619a826f-8e65-48eb-8c34-39497d238279
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6750456d708d68e57aadd4b1139f6e108a93b9ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d946440e2950192299c42652babb4082790dbd03
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937061"
 ---
 # <a name="change-the-failover-mode-of-an-availability-replica-sql-server"></a>Изменение режима отработки отказа для реплики доступности (SQL Server)
   В этом разделе описывается изменение режима отработки отказа для реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell. Режим отработки отказа ― это свойство реплики, которое определяет режим отработки отказа для реплик, работающих в режиме доступности с синхронной фиксацией. Дополнительные сведения см. в разделах [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](failover-and-failover-modes-always-on-availability-groups.md) и [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md).  
@@ -70,11 +69,11 @@ ms.locfileid: "72783019"
   
      }  )  
   
-     where  
+     где  
   
     -   *имя_группы* — это имя группы доступности.  
   
-    -   {'*system_name*[\\*instance_name*] ' | "*FCI_network_name*[\\*instance_name*]"}  
+    -   { '*системное_имя*[\\*имя_экземпляра*]' | '*сетевое_имя_FCI*[\\*имя_экземпляра*]' }  
   
          Задает адрес экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена изменяемая реплика доступности. Этот адрес состоит из следующих компонентов:  
   

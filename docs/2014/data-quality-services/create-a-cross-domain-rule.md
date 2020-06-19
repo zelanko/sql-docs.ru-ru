@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9478564d6fde6596fe6f407bb9a9a2b389b2a1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 607bab94349fc2d32362647dc44ab27b84690f5f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937945"
 ---
 # <a name="create-a-cross-domain-rule"></a>Создание междоменного правила
   В этом разделе описано, как создать междоменное правило для составного домена в базе знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Междоменное правило проверяет связь между значениями в отдельных доменах, включенных в составной домен. Междоменное правило должно выполняться в составном домене, чтобы значения в домене были точными и соответствовали требованиям бизнеса. Междоменное правило используется для проверки, исправления и стандартизации значений в домене.  

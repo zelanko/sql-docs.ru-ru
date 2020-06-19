@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 691196697b7131cfaaf5ed5e41aea33f76ddc698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057798"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951204"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Сопоставление параметров запроса с переменными в задаче «Выполнение SQL»
 
@@ -55,16 +54,16 @@ ms.locfileid: "66057798"
   
      Маркеры параметров, которые используются в параметризованных инструкциях SQL, зависят от типа соединения, используемого задачей «Выполнение SQL».  
   
-    |Тип подключения|Маркер параметра|  
+    |Тип соединений|Маркер параметра|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET и SQLMOBILE|@\<имя параметра>|  
+    |ADO.NET и SQLMOBILE|@\<parameter name>|  
     |ODBC|?|  
     |EXCEL и OLE DB|?|  
   
      В следующей таблице приведен список примеров команды SELECT для разных типов диспетчеров соединений. Параметры предоставляют значения фильтра в предложениях WHERE. В примерах инструкции SELECT возвращают из таблицы **Product** базы данных [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)] продукты, для которых значение **ProductID** больше и меньше значений, указанных двумя параметрами.  
   
-    |Тип подключения|Синтаксис SELECT|  
+    |Тип соединений|Синтаксис SELECT|  
     |---------------------|-------------------|  
     |EXCEL, ODBC и OLEDB|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
     |ADO|`SELECT* FROM Production.Product WHERE ProductId > ? AND ProductID < ?`|  
@@ -80,10 +79,10 @@ ms.locfileid: "66057798"
   
      Имена параметров зависят от типа соединения, используемого задачей «Выполнение SQL».  
   
-    |Тип подключения|Имя параметра|  
+    |Тип соединений|Имя параметра|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET и SQLMOBILE|@\<имя параметра>|  
+    |ADO.NET и SQLMOBILE|@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL и OLE DB|0, 1, 2, 3, ...|  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66057798"
   
 14. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
  [Параметры и коды возврата в задаче «Выполнение SQL»](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md)   
  [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ffb403c82ebff3cd7715595714504831a127090
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937395"
 ---
 # <a name="use-the-dqs-speller"></a>Использование средства проверки орфографии DQS
   Средство проверки орфографии [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) проверяет синтаксис, орфографию и структуру предложения для строковых значений в домене. Средство проверки орфографии — это автономная, клиентская функция, которая не имеет интеграции с серверными подсистемами и не оказывает влияния на текущие потоки или состояния. Средство проверки орфографии выявляет те строковые значения, которые в нем рассматриваются как потенциальные ошибки, а затем отмечает их подчеркиванием красной линией в том же месте, где вручную вносятся другие изменения в значениях домена. Это следующие места:  

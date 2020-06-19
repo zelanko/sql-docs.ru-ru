@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10ad92286011f6f81fbaff5ab4908007e16bdd45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6aee7503ca02d47575be4e8103641f61d9696d1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870954"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969954"
 ---
 # <a name="view-or-change-the-properties-of-a-database"></a>Просмотр или изменение свойств базы данных
   В этом разделе описывается просмотр и изменение свойств базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После задания нового значения свойства базы данных изменение вступает в силу немедленно.  
@@ -54,7 +53,7 @@ ms.locfileid: "62870954"
   
 #### <a name="to-view-or-change-the-properties-of-a-database"></a>Просмотр или изменение свойств базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], а затем разверните этот экземпляр.  
+1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , а затем разверните этот экземпляр.  
   
 2.  Разверните **Базы данных**, правой кнопкой мыши щелкните базу данных для просмотра, затем выберите пункт **Свойства**.  
   
@@ -111,10 +110,10 @@ GO
   
  [!code-sql[DatabaseDDL#AlterDatabase9](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase9)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [ALTER DATABASE SET HADR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
- [Параметры ALTER DATABASE SET &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [ALTER DATABASE SET HADR (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-hadr)   
+ [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Уровень совместимости ALTER DATABASE &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)   
  [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)  

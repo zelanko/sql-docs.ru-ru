@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a2279940c2502a310e9dac4448bd6029b6e13dc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782921"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936525"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Возобновление базы данных доступности (SQL Server)
   В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно возобновить выполнение приостановленной базы данных доступности с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Возобновление приостановленной базы данных переводит базу данных в состояние SYNCHRONIZING. Возобновление базы данных-источника возобновляет также все ее базы данных-получатели, которые были приостановлены в результате приостановки базы данных-источника. Если какая-либо база данных-получатель была приостановлена локально на экземпляре сервера, на котором размещена вторичная реплика, эта база данных-получатель должна быть возобновлена локально. Как только определенная база данных-получатель и соответствующая база данных-источник вместе переходят в состояние SYNCHRONIZING, возобновляется синхронизация данных для базы данных-получателя.  
@@ -34,7 +33,7 @@ ms.locfileid: "72782921"
   
      [Ограничения](#Restrictions)  
   
-     [Предварительные условия](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
      [Безопасность](#Security)  
   

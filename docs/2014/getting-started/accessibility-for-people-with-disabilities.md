@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc4a3e976fb504839215e48096d5b6c024324dd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927287"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Специальные функции для людей с ограниченными возможностями
   [!INCLUDE[msCoName](../includes/msconame-md.md)] работает над тем, чтобы сделать свои продукты и услуги еще более простыми в использовании. Данный раздел содержит сведения о следующих функциях, продуктах и службах, которые делают продукты семейства [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server более доступными для людей с физическими нарушениями.  
@@ -110,7 +109,7 @@ ms.locfileid: "82707026"
   
  Выпускается бесплатный электронный ежемесячный бюллетень со свежими данными по специальным возможностям продуктов [!INCLUDE[msCoName](../includes/msconame-md.md)] . Для подписки обратитесь на веб-сайт [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приступая к работе с документацией по продукту для SQL Server](../2014-toc/index.yml)   
  [Получение помощи по SQL Server](getting-sql-server-assistance.md)  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970754"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Обновление столбцов определяемых пользователем типов с помощью DataAdapter
   Определяемые пользователем типы поддерживаются с помощью объектов `System.Data.DataSet` и `System.Data.SqlClient.SqlDataAdapter` для получения и изменения данных.  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Следующий фрагмент кода ADO.NET извлекает допустимую строку соединения, создает новый `SqlDataAdapter`объект и заполняет его `System.Data.DataTable` строками данных из таблицы **points** .  
+ Следующий фрагмент кода ADO.NET извлекает допустимую строку соединения, создает новый объект `SqlDataAdapter` и заполняет его `System.Data.DataTable` строками данных из таблицы **points** .  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,7 +84,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  В следующем примере ADO.NET используются два метода.  
   
--   `UserProvidedCommands`, в котором демонстрируется предоставление `InsertCommand`объектов `UpdateCommand`, и `DeleteCommand` для обновления `Point` определяемого пользователем типа в таблице **points** (которая не содержит `timestamp` столбца).  
+-   `UserProvidedCommands`, в котором демонстрируется предоставление `InsertCommand` `UpdateCommand` объектов, и `DeleteCommand` для обновления `Point` определяемого пользователем типа в таблице **points** (которая не содержит `timestamp` столбца).  
   
 -   `CommandBuilder`, который демонстрирует использование `SqlCommandBuilder` в таблице **Points_ts** , содержащей `timestamp` столбец.  
   
@@ -369,7 +368,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к определяемым пользователем типам в ADO.NET](accessing-user-defined-types-in-ado-net.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 947f4bdbb6dae0e371c9df50b202986c62f0644e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066797"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938755"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>Обработка секций в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных рабочей области модели с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "66066797"
   
 3.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции &#40;табличные&#41;SSAS](partitions-ssas-tabular.md)   
  [Создание секций и управление ими в базе данных рабочей области (табличные службы SSAS)](workspace-database-ssas-tabular.md)  
   

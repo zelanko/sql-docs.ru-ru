@@ -23,12 +23,12 @@ helpviewer_keywords:
 - information types
 - rank
 monikerRange: '>= sql-server-ver15 || = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ee73a840be6ec29e3ac34c4c43fe0c8e87185f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9b8f6bf20fa02981e3275299849d1cb04036dfa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77903913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939045"
 ---
 # <a name="syssensitivity_classifications-transact-sql"></a>sys.sensitivity_classifications (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "77903913"
 
 ### <a name="a-listing-all-classified-columns-and-their-corresponding-classification"></a>A. Составление списка всех классифицированных столбцов и соответствующих им классификаций
 
-В следующем примере возвращается таблица с перечнем имени таблицы, имени столбца, метки, идентификатора метки, типа сведений, идентификатора информационного типа для каждого классифицированного столбца в базе данных.
+В следующем примере возвращается таблица, в которой перечислены имя таблицы, имя столбца, метка, идентификатор метки, тип сведений, идентификатор информационного типа, ранг и описание ранжирования для каждого классифицированного столбца в базе данных.
 
 > [!NOTE]
 > Метка — это ключевое слово для хранилища данных SQL Azure.

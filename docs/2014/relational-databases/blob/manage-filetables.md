@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a15a914c243f1fafd3b913d98113e984bf533086
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66009988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970879"
 ---
 # <a name="manage-filetables"></a>Управление таблицами FileTable
   Описывает стандартные административные задачи по управлению таблицами FileTables.  
@@ -62,7 +61,7 @@ GO
   
      Если команда ALTER DATABASE отменяется или истекает ее время ожидания, уровень транзакционного доступа изменен не будет.  
   
--   При вызове инструкции ALTER DATABASE с предложением WITH \<termination> (ROLLBACK AFTER integer [ SECONDS ] | ROLLBACK IMMEDIATE | NO_WAIT) все открытые нетранзакционные дескрипторы файлов будут уничтожены.  
+-   При вызове инструкции ALTER DATABASE с \<termination> предложением WITH (ROLLBACK после Integer [секунды]) | НЕМЕДЛЕННО ВЫПОЛНИТЬ ОТКАТ | NO_WAIT), все открытые нетранзакционные дескрипторы файлов будут уничтожены.  
   
 > [!WARNING]  
 >  При уничтожении открытых дескрипторов файлов пользователи могут потерять несохраненные данные. Такое поведение согласуется с поведением самой файловой системы.  

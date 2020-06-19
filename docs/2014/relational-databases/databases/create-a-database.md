@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe42e394482e3abf4d87c00c6e79ee84db6ba278
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872339"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952044"
 ---
 # <a name="create-a-database"></a>Создание базы данных
   В этом разделе описывается создание базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62872339"
   
      [Ограничения](#Restrictions)  
   
-     [Предварительные условия](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
      [Рекомендации](#Recommendations)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62872339"
   
 #### <a name="to-create-a-database"></a>Создание базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] а затем разверните этот экземпляр.  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и разверните его.  
   
 2.  Щелкните правой кнопкой мыши элемент **базы данных**и выберите пункт **создать базу данных**.  
   
@@ -131,9 +130,9 @@ GO
   
  Дополнительные примеры см. в статье [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы и файловые группы базы данных](database-files-and-filegroups.md)   
- [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Добавление файлов данных или журналов в базу данных](add-data-or-log-files-to-a-database.md)  
   

@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40dcdc2e6413e2b9944dfbdb0194da410b05733c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971084"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Страница «Настройка сервера служб Master Data Services» (диспетчер конфигурации)
   Используйте страницу **Конфигурация сервера** для просмотра сведений о конфигурации локального сервера.  
   
 ## <a name="server-configuration"></a>Конфигурация сервера  
   
-|Имя элемента управления|Описание|  
+|Название элемента управления|Описание|  
 |------------------|-----------------|  
 |**Windows PowerShell**|Показывает версию Windows PowerShell, установленную на локальном компьютере. Windows PowerShell версии 1.0 и выше требует использования диспетчера конфигурации Master Data Services.|  
 |**Internet Information Services (IIS)**|Показывает версию служб IIS, установленных на локальном компьютере. IIS версии 7.0 и выше требует использования диспетчера конфигурации Master Data Services.|  

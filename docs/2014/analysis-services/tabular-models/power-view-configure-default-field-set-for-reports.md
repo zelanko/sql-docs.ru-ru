@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6836b42f-28b8-4a98-a86d-2c3c109f0189
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37571e141395afe255329edc10edeaeaed121710
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7dd48fae06258370e4b93bcceb9eadc80554bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938775"
 ---
 # <a name="configure-default-field-set-for-power-view-reports-ssas-tabular"></a>Настройка набора полей по умолчанию для отчетов Power View (табличные службы SSAS)
   Набор полей по умолчанию представляет собой предустановленный список столбцов и мер, которые автоматически добавляются на лист отчета [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] при выборе таблицы из списка полей отчета. Автор табличной модели может создавать наборы полей по умолчанию, чтобы удалить лишние шаги для создателей отчетов, которые используют модель данных для своих отчетов. Например, если известно, что большинство авторов отчетов, работающих с контактными сведениями клиентов, хотят видеть имя, основной номер телефона, адрес электронной почты и название компании, можно сделать предварительный выбор этих столбцов так, чтобы они всегда добавлялись на лист отчета, если автор щелкает таблицу «Сведения о клиентах».  

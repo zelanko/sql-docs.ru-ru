@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e74a05193ae2051b12dbc15bb199b22a3c44f2a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2d51d1db75caa29814a01fc1f49bfdd49b403c3d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936980"
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Настройка маршрутизации только для чтения в группе доступности (SQL Server)
   Чтобы настроить группу доступности AlwaysOn для поддержки маршрутизации только для чтения в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], можно использовать процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell. *Маршрутизация только для чтения* означает способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] направлять уточняющие запросы на соединение только для чтения к имеющейся [доступной для чтения вторичной реплике](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn (то есть реплике, настроенной для разрешения рабочей нагрузки только для чтения при выполнении вторичной роли). Для поддержки маршрутизации только для чтения группа доступности должна иметь [прослушиватель группы доступности](../../listeners-client-connectivity-application-failover.md). Клиент, запрашивающий данные в режиме только чтения, должен направлять свои запросы к данному прослушивателю, а строки подключения клиента должны определять намерение приложения как «только для чтения». Это означает, что они должны быть *запросами на соединение с правами чтения*.  
@@ -85,7 +84,7 @@ ms.locfileid: "82925022"
          *system-address*  
          Это строка, такая как адрес системы, полное доменное имя или IP-адрес, однозначно идентифицирующий целевую компьютерную систему.  
   
-         *порту*  
+         *port*  
          Номер порта, который используется компонентом ядра СУБД экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
          Например:   `SECONDARY_ROLE (READ_ONLY_ROUTING_URL = N'TCP://COMPUTER01.contoso.com:1433')`  
@@ -152,11 +151,11 @@ GO
   
     -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите параметр **параметр readonlyroutingconnectionurl " *`url`* "** .  
   
-         Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Например: `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
+         Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Например:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          Дополнительные сведения см. в разделе [Вычисления для AlwaysOn](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson).  
   
-    -   Чтобы настроить доступ к соединению для первичной роли, укажите **ReadonlyRoutingList " *`server`* "** [ **,**... *n* ], где *Server* определяет экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например: `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   Чтобы настроить доступ к соединению для первичной роли, укажите **ReadonlyRoutingList " *`server`* "** [ **,**... *n* ], где *Server* определяет экземпляр сервера, на котором размещена вторичная реплика только для чтения в группе доступности. Например:  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  Необходимо настроить URL-адрес маршрутизации только для чтения для реплики перед тем, как перейти к настройке ее списка маршрутизации.  
@@ -239,7 +238,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Технические документы**  
+-   **Технические документы:**  
   
      [Технические документы Майкрософт Microsoft по SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   

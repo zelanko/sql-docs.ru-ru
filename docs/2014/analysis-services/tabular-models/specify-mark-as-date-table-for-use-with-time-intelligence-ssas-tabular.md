@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a612b7b5005fb603be30d697a18fc92a7c481933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938645"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Указание таблицы дат для использования с логикой операций со временем (табличные службы SSAS)
   Для использования логики операций со временем в формулах DAX необходимо указать таблицу дат и уникальный столбец идентификаторов (datetime) типа данных Date. После указания в таблице дат столбца в качестве уникального идентификатора можно создавать связи между столбцами таблицы дат и любых таблиц фактов.  
@@ -50,7 +49,7 @@ ms.locfileid: "67284882"
   
 4.  При необходимости создайте связи между таблицами фактов и таблицей дат.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вычисления &#40;табличных&#41;SSAS](calculations-ssas-tabular.md)   
  [Функции логики операций со временем &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   

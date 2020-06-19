@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1dab84084c612c73bf993ece66646a5b28cf48d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951214"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор преобразования «Уточняющий запрос»** используется для задания параметров обработки ошибок.  
   
  Дополнительные сведения о преобразовании «Уточняющий запрос» см. в разделе [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ввод-вывод**  
  Просмотрите имя входных данных.  
   
- **Рубрик**  
+ **Столбец**  
  Не используется.  
   
  **Error**  
@@ -68,7 +67,7 @@ ms.locfileid: "66057862"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

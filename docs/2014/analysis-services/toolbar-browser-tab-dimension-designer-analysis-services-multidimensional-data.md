@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066158"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938445"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Браузер» конструктора измерений) (службы Analysis Services — многомерные данные)
   Используйте **Панель инструментов** для выполнения типовых операций на вкладке **Браузер** в **Конструкторе измерений**.  
   
-## <a name="options"></a>Параметры  
- **Процесс**  
+## <a name="options"></a>Варианты  
+ **Process**  
  Выберите этот пункт, чтобы открыть диалоговое окно **Обработка** и обработать выбранное измерение.  
   
- **Повторного подключения**  
+ **Повтор соединения**  
  Выберите этот пункт, чтобы заново установить соединение вкладки **Браузер** с экземпляром служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и базой данных, содержащей измерение, если сеанс связи для вкладки **Браузер** был прерван из-за обрыва соединения или превышения времени ожидания.  
   
  **Обновление**  

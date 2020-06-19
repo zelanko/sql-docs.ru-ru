@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50069ad5b96914d98f3d08e795467c2693fabe87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3311984e1a1a4148ddb2752e4b2356d235dc8b53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970654"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Олицетворение и учетные данные для соединений
   В условиях интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR использовать проверку подлинности Windows сложнее, чем проверку подлинности SQL Server, но более безопасно. При использовании проверки подлинности Windows имейте ввиду следующие замечания.  
@@ -75,7 +74,7 @@ catch
   
  Более того, если был получен экземпляр идентификатора [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, то по умолчанию нельзя перенести этот экземпляр на другой компьютер; по умолчанию инфраструктура безопасности Windows не позволяет делать этого. Однако существует механизм под названием «делегирование», который позволяет распространять идентификаторы Windows на несколько доверенных компьютеров. Дополнительные сведения о делегировании см. в статье TechNet "[Переход по протоколу Kerberos и ограниченное делегирование](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlContext](../../clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

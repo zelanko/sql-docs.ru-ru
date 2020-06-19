@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0378394c274e66d71eebd642188f20194d29236b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f26ef1429d24b93d3c2aa59d613a6ec37684a89
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480004"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971814"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели при помощи MDSModelDeploy
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для создания пакетов используется средство MDSModelDeploy. В зависимости от указанных команд, пакет может содержать:  
@@ -94,11 +93,11 @@ ms.locfileid: "65480004"
   
 6.  Нажмите клавишу ВВОД. После успешного создания пакета отображается сообщение "Операция MDSModelDeploy успешно завершена".  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры развертывания модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-deployment-options-master-data-services.md)   
  [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   

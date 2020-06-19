@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857856"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927696"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Администрирование программ (служебная программа SQL Server)
   Вкладки «Администрирование программ» используются для управления настройками политики, безопасности и хранилища данных для утилиты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения об основных понятиях служебной программы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] см. в статье [Функции и задачи служебной программы SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "83857856"
  Сведения о конфигурации хранилища данных служебной программы  
  Перечисленные далее параметры конфигурации не могут быть изменены в этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
--   UMDW name: Sysutility_mdw_\<GUID>_DATA.  
+-   Имя UMDW: Sysutility_mdw_ \<GUID> _data.  
   
 -   Частота передачи набора элементов сбора: каждые 15 минут.  
   
- Каталог UMDW можно настроить: <системный диск\<:\Program Files\Microsoft SQL Server\MSSQL10_50.<имя_UCP>\MSSQL\Data\\, где \<системный диск> — это чаще всего диск C:\. Файл журнала, UMDW_\<GUID>_LOG, находится в том же каталоге.  
+ Каталог UMDW можно настроить следующим образом: \<System drive> : \Program Files\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \MSSQL\Data \\ , где \<System drive> обычно является C:\ диск. Файл журнала UMDW_ _LOG находится \<GUID> в том же каталоге.  
   
 > [!NOTE]  
 >  Расположение файла UMDW (sysutility_mdw) можно изменить путем отсоединения и присоединения или с помощью инструкции ALTER DATABASE. Рекомендуется использовать инструкцию ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

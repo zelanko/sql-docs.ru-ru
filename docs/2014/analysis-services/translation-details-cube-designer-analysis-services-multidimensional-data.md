@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d90d246cb54b54dea0ed4f84f1b96142a5f56803
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938307"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Сведения о переводе (вкладка «Переводы», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте панель **Сведения перевода** на вкладке **Переводы** конструктора кубов для определения и управления переводами куба, выбранного в настоящее время.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Язык по умолчанию**  
  Устанавливает имена объектов куба на языке по умолчанию.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66065862"
   
 -   Группа мер  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
 -   Measure  
   
@@ -39,11 +38,11 @@ ms.locfileid: "66065862"
   
 -   Измерение  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
 -   Перспектива  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
 -   Ключевой показатель эффективности (KPI)  
   
@@ -51,17 +50,17 @@ ms.locfileid: "66065862"
   
 -   Действие  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
 -   Именованный набор  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
 -   вычисляемый элемент  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
- **\<Языковая>**  
+ **\<Language>**  
  Введите значение свойства для объекта куба в выбранном языке.  
   
 ## <a name="context-menu"></a>Контекстное меню  

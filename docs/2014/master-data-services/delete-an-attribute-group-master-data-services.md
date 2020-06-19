@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4a913d9a49d2b1af43ea569bf40585c47432ef96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d7d86080444e06aeaa50a274323805c31e12566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950764"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Удаление группы атрибутов (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно удалить группу атрибутов, если больше не нужна вкладка для отображения в функциональной области **Обозреватель** в среде [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "65479562"
   
 9. В дополнительном диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы атрибутов &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Создание группы атрибутов (службы Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   

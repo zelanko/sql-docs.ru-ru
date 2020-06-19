@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 184473773e520f2ea0cd0c9d01a9c3738d1d5c78
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706943"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926959"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Документация по компонентам средств и надстроек SQL Server 2014
     
@@ -24,7 +23,7 @@ ms.locfileid: "82706943"
   
 |||  
 |-|-|  
-|**Средство**|**Описание**|  
+|**Инструмент**|**Описание**|  
 |[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|Диспетчер конфигураций — это средство, предназначенное для управления службами, связанными с SQL Server, настройки сетевых протоколов, которые используются SQL Server, а также для управления конфигурацией подключений с клиентских компьютеров SQL Server.|  
 |[Помощник по обновлению SQL Server 2014](../sql-server/install/sql-server-2014-upgrade-advisor.md)|Помощник по обновлению [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] анализирует конфигурацию установленных компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и создает отчет о проблемах, которые необходимо решить, чтобы обеспечить успешное обновление.|  
 |[Надстройки интеллектуального анализа данных Microsoft SQL Server для Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Надстройки для интеллектуального анализа данных — это упрощенный набор средств для прогнозирующего анализа, позволяющий использовать данные в Excel для построения аналитических моделей для прогнозирования, рекомендации и исследования.|  
@@ -35,5 +34,5 @@ ms.locfileid: "82706943"
 |[Драйвер Microsoft ODBC 11 для SQL Server в Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Драйвер Microsoft ODBC 11 для Windows — это изолированный драйвер, предоставляющий программный интерфейс (API), который реализует стандартные интерфейсы ODBC для Microsoft Windows.|  
 |[Power Pivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|Power Pivot для SharePoint представляет собой сервер служб Analysis Services, запущенный в режиме интеграции с SharePoint.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Документация по SQL Server 2014](../2014-toc/index.yml)  

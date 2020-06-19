@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0504d7be4060afc9c46a46fa3968523537381882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771040"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915164"
 ---
 # <a name="odata-source"></a>Источник OData
   Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData. Компонент поддерживает протоколы OData v2 и v3, а также форматы данных ATOM и JSON.  
   
 > [!NOTE]  
->  Источник OData можно использовать для чтения данных из списков SharePoint. Чтобы просмотреть все списки на сервере SharePoint, используйте следующий URL-адрес: http://\<Server>/_vti_bin/листдата.СВК. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
+>  Источник OData можно использовать для чтения данных из списков SharePoint. Чтобы просмотреть все списки на сервере SharePoint, используйте следующий URL-адрес: http:// \<server> /_vti_bin/листдата.СВК. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](https://msdn.microsoft.com/library/ff521587.aspx).  
   
 ## <a name="odata-format"></a>Формат OData  
  Большинство служб OData возвращают результаты в различных форматах. Можно указать формат результирующего набора с помощью параметра $format запроса. Такие форматы, как JSON и JSON Light, более эффективны, чем ATOM/XML, и способны обеспечить более высокую производительность при передаче больших объемов данных. В следующей таблице отображаются результаты типовых тестов. Как видно, выигрыш в производительности при переключении с ATOM на JSON составил 30–53 и 67 % при переходе с ATOM на новый формат JSON Light (доступный в WCF Data Services 5.1).  
@@ -53,7 +52,7 @@ ms.locfileid: "62771040"
   
 -   [Свойства источника OData](odata-source-properties.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер соединений OData](../connection-manager/odata-connection-manager.md)  
   
   

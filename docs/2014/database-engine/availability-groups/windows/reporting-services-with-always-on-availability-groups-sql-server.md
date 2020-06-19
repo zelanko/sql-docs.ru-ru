@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 685560b35eafd4092c149a809089abc299da6bbc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 29e41e2b65df744cdf495441a8e7bd72accc9ce9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936536"
 ---
 # <a name="reporting-services-with-alwayson-availability-groups-sql-server"></a>Службы Reporting Services с группами доступности AlwaysOn (SQL Server)
   В этом разделе содержатся сведения о настройке компонента [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] для работы с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (группами доступности) в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Существует три варианта использования служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : базы данных для источников данных отчетов, базы данных сервера отчетов и конструирование отчетов. Поддерживаемые функции и необходимая конфигурация для разных вариантов использования будут различными.
 
  Основное преимущество применения [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с источниками данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключается в возможности использования доступных для чтения вторичных реплик в качестве источников данных для отчетов, при этом вторичные реплики продолжают обеспечивать отработку отказа для базы данных-источника.
 
- Общие сведения о см [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. в статье [вопросы и ответы по AlwaysOnhttps://msdn.microsoft.com/sqlserver/gg508768)для SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
+ Общие сведения о см [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . в статье [вопросы и ответы по AlwaysOn https://msdn.microsoft.com/sqlserver/gg508768) для SQL Server 2012 (](https://msdn.microsoft.com/sqlserver/gg508768).
 
  
 
 ##  <a name="requirements-for-using-reporting-services-and-alwayson-availability-groups"></a><a name="bkmk_requirements"></a>Требования к использованию Reporting Services и группы доступности AlwaysOn
- Для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]необходимо загрузить и установить исправление для .NET 3,5 с пакетом обновления 1 (SP1). Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.
+ Для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] с необходимо [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] загрузить и установить исправление для .NET 3,5 с пакетом обновления 1 (SP1). Это исправление добавляет в клиент SQL Server поддержку компонентов групп доступности, а также поддержку свойств строки подключения **ApplicationIntent** и **MultiSubnetFailover**. Если не установить это исправление на все компьютеры, на которых размещен сервер отчетов, то пользователи, пытающиеся просмотреть отчеты, будут видеть сообщение об ошибке примерно следующего содержания, которое также будет записываться в журнал трассировки сервера отчетов.
 
 > **Сообщение об ошибке:** "Ключевое слово не поддерживается" ApplicationIntent ""
 
@@ -41,7 +40,7 @@ ms.locfileid: "78175463"
  Дополнительные сведения о требованиях [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в статье [Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn (SQL Server)](prereqs-restrictions-recommendations-always-on-availability.md).
 
 > [!NOTE]
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]такие файлы конфигурации, как **RSReportServer. config** , не поддерживаются как [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] часть функциональности. Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.
+>  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]такие файлы конфигурации, как **RSreportserver.config** , не поддерживаются в составе [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] функциональности. Если изменения в файл конфигурации на одном из серверов отчетов вносятся вручную, то необходимо будет вручную обновить реплики.
 
 ##  <a name="report-data-sources-and-availability-groups"></a><a name="bkmk_reportdatasources"></a>Источники данных отчета и группы доступности
  Источники данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] на основе [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] будут работать по-разному в зависимости от того, каким образом администратор настроил среду групп доступности.

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c50ad866b9c658b54107e5f8e3da45c15dae231c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927873"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Основные сведения о транзакциях с таблицами, оптимизированными для памяти
   Транзакции обращаются к оптимизированным для памяти таблицам с использованием управления оптимистичным параллелизмом с различными версиями. Это означает, что существуют разные версии данных. Каждая транзакция работает с собственной транзакционно согласованной версией базы данных независимо от других одновременно выполняемых транзакций. Кроме того, транзакции работают с оптимистическим допущением об отсутствии конфликтов с другими параллельными транзакциями. В результате исключается необходимость в использовании блокировок, но требуется, чтобы система обнаруживала конфликты и завершала одну из конфликтующих транзакций. Конфликты могут возникать только для транзакций «запись-запись» и транзакций «чтение-запись». При наличии конфликта между двумя операциями записи одна транзакция записи будет завершена принудительно.  
@@ -37,7 +36,7 @@ ms.locfileid: "62773385"
   
  Дополнительные сведения см. в разделе [Управление устойчивостью транзакций](../relational-databases/logs/control-transaction-durability.md).  
   
-## <a name="see-also"></a>См. также  
- [Оптимизированные для памяти таблицы](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
+## <a name="see-also"></a>См. также:  
+ [Таблицы, оптимизированные для памяти](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7f7af7d70cb136b530cfb761cb402ecf0dc6b58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873412"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970424"
 ---
 # <a name="system-data-collection-set-reports"></a>Отчеты наборов элементов сбора системных данных
   Сборщик данных предоставляет отчет с предысторией для каждого набора элементов сбора системных данных. Каждый из следующих отчетов использует данные, содержащиеся в хранилище данных управления.  
@@ -132,7 +131,7 @@ ms.locfileid: "62873412"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Случаи ожидания|График ожиданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает данные о числе ожиданий, зафиксированных потоками, выполняющимися в каждой категории ожидания. Чтобы получить подробный отчет, достаточно щелкнуть сегмент на графике. Дополнительно к данной графической статистике случаев ожидания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] за узкий период времени этот отчет предоставляет сведения о категориях ожиданий в формате таблицы. Для каждой категории, например категории «Процессор» и ее подкатегорий, в таблице приведено количество случаев ожидания, время ожидания и процент общего времени ожидания.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Действие|По графику активности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно получить различные сведения об активности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ниже перечислены отчеты, которые можно получить с помощью щелчка в точке линейного графика «Число компиляций SQL-кода в секунду»:<br /><br /> Подключения и сеансы<br /><br /> Requests<br /><br /> Коэффициент попадания в кэш планов<br /><br /> Характеристики базы данных tempdb|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сбор данных](data-collection.md)   
  [Просмотр отчета о наборе элементов сбора (среда SQL Server Management Studio)](view-a-collection-set-report-sql-server-management-studio.md)  
   

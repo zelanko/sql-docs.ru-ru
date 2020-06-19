@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2b52be0b8c76333b069c018415ff698f13f824ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78fca612d75d0436e0d47870b715d5d810937c71
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971704"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Создание и публикация бизнес-правила (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]бизнес-правило создается для гарантии точности основных данных. Чтобы применить к данным созданное правило, его необходимо опубликовать.  
@@ -84,7 +83,7 @@ ms.locfileid: "65479895"
   
 23. В диалоговом окне подтверждения нажмите кнопку **ОК**. Состояние правила изменится на **Активно**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   Примените бизнес-правила к данным с помощью одной из следующих процедур:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "65479895"
   
     -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка бизнес-правил для отправки уведомлений &#40;Master Data Services&#41;](../../2014/master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)   
  [Измените имя бизнес-правила &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-business-rule-name-master-data-services.md)   
  [Добавление нескольких условий к бизнес-правилу (службы Master Data Services)](../../2014/master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)  

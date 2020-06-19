@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffeb4a86677e1a39efaf296fa874ca65e31762a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915154"
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
   Назначение ODBC выполняет массовую загрузку данных в таблицы базы данных с поддержкой ODBC. Назначение ODBC использует диспетчер соединений ODBC для подключения к источнику данных.  

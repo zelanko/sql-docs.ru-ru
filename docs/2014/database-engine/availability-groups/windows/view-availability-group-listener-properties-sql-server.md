@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef7fe316394a030350ceb12a0d1b8e2d48ee1d34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788043"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936211"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Просмотр свойств прослушивателя группы доступности (SQL Server)
   В этом разделе описывается просмотр свойств *прослушивателя группы доступности* AlwaysOn при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -56,7 +55,7 @@ ms.locfileid: "62788043"
  **Сетевой режим**  
  Указывает TCP-протокол, используемый прослушивателем, один из:  
   
- **Служба**  
+ **DHCP**  
  Прослушиватель использует динамический IP-адрес, назначенный сервером, на котором запущен протокол DHCP.  
   
  **Статический IP-адрес**  
@@ -93,9 +92,9 @@ ms.locfileid: "62788043"
   
 -   [Удаление прослушивателя группы доступности (SQL Server)](remove-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Отслеживание групп доступности (Transact-SQL)](monitor-availability-groups-transact-sql.md)  
   
   

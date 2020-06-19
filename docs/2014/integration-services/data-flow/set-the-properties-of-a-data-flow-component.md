@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc360da93b905bed20f118812898b5c029c570cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa19bd588839711b7e26ce632be906f41d3628fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914249"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Установление свойств компонента потока данных
   Чтобы задать свойства компонентов потока данных, которые включают источники, целевые объекты и преобразования, можно использовать следующие компоненты.  
@@ -102,7 +101,7 @@ ms.locfileid: "62770750"
   
 8.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразования служб Integration Services](transformations/integration-services-transformations.md)  
   
   

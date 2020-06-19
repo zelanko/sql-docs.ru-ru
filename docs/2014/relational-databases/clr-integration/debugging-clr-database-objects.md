@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e9455615dc4a2c121135b2ce68d9ae0aab1df28
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919020"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970604"
 ---
 # <a name="debugging-clr-database-objects"></a>Отладка объектов базы данных среды CLR
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляется поддержка отладки объектов [!INCLUDE[tsql](../../../includes/tsql-md.md)] и среды CLR в базе данных. Ключевыми особенностями отладки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] стали простота установки и использования, а также интеграция отладчика SQL Server с отладчиком Microsoft Visual Studio. Более того, процесс отладки охватывает код на всех применяемых языках: пользователи могут беспрепятственно переходить к коду объектов среды CLR из кода [!INCLUDE[tsql](../../../includes/tsql-md.md)] и наоборот. Отладчик Transact-SQL в среде SQL Server Management Studio нельзя использовать для отладки управляемых объектов базы данных, но эти объекты можно отлаживать с помощью отладчиков, входящих в состав среды Visual Studio. Отладка управляемого объекта базы данных в Visual Studio поддерживает все обычные средства отладки, такие как шаг с входом и шаг с выходом в процедурах, выполняющихся на сервере. Отладчики могут задавать точки останова, просматривать стек вызова, проверять значения переменных и изменять значения переменных во время отладки. Обратите внимание, что среду Visual Studio .NET 2003 нельзя использовать для программирования или отладки в интеграции со средой CLR. В состав [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] входит предварительно установленная платформа .NET Framework, а Visual Studio .NET 2003 не может использовать сборки .NET Framework версии 2.0.  
@@ -29,7 +28,7 @@ ms.locfileid: "62919020"
  Дополнительные сведения об отладке управляемого кода с помощью Visual Studio см. в разделе "[Отладка управляемого кода](https://go.microsoft.com/fwlink/?LinkId=120377)" в документации по Visual Studio.  
   
 ## <a name="debugging-permissions-and-restrictions"></a>Разрешения и ограничения отладки  
- Отладка — это операция с высокой степенью привилегий, и **sysadmin** поэтому в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]могут быть разрешены только члены предопределенной роли сервера sysadmin.  
+ Отладка — это операция с высокой степенью привилегий, и поэтому в могут быть разрешены только члены предопределенной роли сервера **sysadmin** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  При отладке применяются следующие ограничения.  
   
@@ -118,7 +117,7 @@ End Class
 EXEC GetVersion  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о программировании интеграции со средой (CLR)](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

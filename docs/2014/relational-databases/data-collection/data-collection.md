@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970509"
 ---
 # <a name="data-collection"></a>Сбор данных
   Сборщик данных является компонентом [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , который собирает различные наборы данных. Сбор данных выполняется постоянно или по расписанию, назначенному пользователем. Собранные данные сборщик данных сохраняет в реляционной базе данных, называемой хранилищем данных управления.
@@ -59,7 +58,7 @@ ms.locfileid: "78175988"
  Дополнительные сведения см. в разделе [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md).
 
 ## <a name="data-collector-terminology"></a>Терминология сборщика данных
- Нацеливание на экземпляр [!INCLUDE[ssDE](../../includes/ssde-md.md)] класса в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающем сбор данных. Дополнительные сведения о поддерживаемых выпусках см. в разделе "управляемость" статьи [функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Нацеливание на экземпляр класса [!INCLUDE[ssDE](../../includes/ssde-md.md)] в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающем сбор данных. Дополнительные сведения о поддерживаемых выпусках см. в разделе "управляемость" статьи [функции, поддерживаемые различными Выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  *Целевой корневой элемент* определяет поддерево в иерархии целей. *Набор целей* — это группа целей, получаемая в результате применения фильтра к поддереву, определенному целевым корневым элементом. Целевой корневой элемент может быть базой данных, экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или экземпляром компьютера.
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175988"
 
  поставщик данных — известный источник данных, относящийся к типу целевого объекта, который предоставляет данные для типа сборщика.
 
- Сборщик введите логическую оболочку для [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакетов, обеспечивающих реальный механизм для сбора данных и их передачи в хранилище управляющих данных.
+ Сборщик введите логическую оболочку [!INCLUDE[ssIS](../../includes/ssis-md.md)] для пакетов, обеспечивающих реальный механизм для сбора данных и их передачи в хранилище управляющих данных.
 
  элемент сбора экземпляр типа сборщика. Элемент сбора создается с определенным набором входных свойств и частотой сбора.
 

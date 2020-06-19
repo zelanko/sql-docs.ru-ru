@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480701"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937775"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  
@@ -71,7 +70,7 @@ ms.locfileid: "65480701"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  Панель **Сведения базы данных** (внизу) отображает имя присоединяемых файлов. Чтобы проверить или изменить путь к файлу, нажмите кнопку **обзора** (...).  
+5.  Панель **Сведения базы данных** (внизу) отображает имя присоединяемых файлов. Чтобы проверить или изменить путь к файлу, нажмите кнопку **Обзор** ( ... ).  
   
 6.  Чтобы присоединить базу данных DQS_MAIN, нажмите кнопку **ОК** .  
   
@@ -99,7 +98,7 @@ ms.locfileid: "65480701"
   
  Базы данных DQS также можно присоединять с помощью инструкций Transact-SQL. Дополнительные сведения о присоединении баз данных с помощью инструкций Transact-SQL см. в подразделе [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) раздела [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

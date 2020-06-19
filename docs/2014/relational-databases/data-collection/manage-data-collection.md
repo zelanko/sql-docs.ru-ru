@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 543f972f5c5805bb1508b6a256f7a7ed3a2aaa3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a7d88923bc41939541bedeed2d40908e454e9c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970454"
 ---
 # <a name="manage-data-collection"></a>Управление сбором данных
   Хранимые процедуры и функции среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] могут быть использованы для управления различными аспектами сбора данных (например, включать или отключать сбор данных, изменять конфигурацию набора сбора или просматривать данные в хранилище данных управления).  
@@ -170,7 +169,7 @@ ms.locfileid: "62918596"
 |[fn_syscollector_get_execution_stats (Transact-SQL)](/sql/relational-databases/system-functions/fn-syscollector-get-execution-stats-transact-sql)|Получение статистики выполнения для пакета или набора сбора. Эти сведения включают записанные в журнал ошибки.|  
 |[snapshots.fn_trace_getdata (Transact-SQL)](/sql/relational-databases/system-functions/snapshots-fn-trace-getdata-transact-sql)|Получение событий, записанных в журнал при использовании типа сборщика «Универсальная трассировка SQL».|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение хранимой процедуры](../stored-procedures/execute-a-stored-procedure.md)   
  [Использование SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)   
  [Сбор данных](data-collection.md)  

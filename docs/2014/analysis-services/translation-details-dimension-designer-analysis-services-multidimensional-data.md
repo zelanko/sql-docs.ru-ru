@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938315"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Сведения о переводе (вкладка «Переводы», конструктор измерений) (службы Analysis Services — многомерные данные)
   Панель **Подробности перевода** на вкладке **Переводы** окна «Конструктор измерений» позволяет определять переводы для выбранного измерения и управлять ими.  
@@ -28,7 +27,7 @@ ms.locfileid: "66065846"
   
 2.  Перейдите на вкладку **Переводы** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Язык по умолчанию**  
  Устанавливает имена объектов измерения на языке по умолчанию.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66065846"
   
      Свойства `Caption` и `AttributeAllMember`  
   
--   Атрибут  
+-   attribute  
   
      Свойства `Caption`, `AttributeHierarchyDisplayFolder` и `NamingTemplate`  
   
@@ -52,12 +51,12 @@ ms.locfileid: "66065846"
   
 -   Level  
   
-     Свойство `Caption`  
+     Свойство`Caption`  
   
- **\<Языковая>**  
+ **\<Language>**  
  Введите или выберите значение свойства данного объекта измерения на выбранном языке. Нажав кнопку с многоточием (**...**) можно открыть дополнительные диалоговые окна, в зависимости от изменяемого свойства.  
   
--   Свойство `NamingTemplate`  
+-   Свойство`NamingTemplate`  
   
      Открывает [Диалоговое окно "Шаблон именования уровней" (службы Analysis Services — многомерные данные)](level-naming-template-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66065846"
  **Показать все атрибуты**  
  Выберите для включения режима отображения всех атрибутов, определенных для выбранного измерения, включая атрибуты, для которых иерархии атрибутов отключены.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   
