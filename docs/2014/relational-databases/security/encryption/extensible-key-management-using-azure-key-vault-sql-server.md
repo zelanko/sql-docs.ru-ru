@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289452"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068383"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать шифрование для использования Azure Key Vault службы в качестве [РАСШИРЕНного управления ключами &#40;поставщика расширенных ключей&#41;](extensible-key-management-ekm.md) для защиты ключей шифрования.
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Соединитель для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использовать шифрование для использования Azure Key Vault службы в качестве [расширенного управления КЛЮЧами &#40;поставщика расширенных ключей&#41;](extensible-key-management-ekm.md) для защиты ключей шифрования.
 
  Разделы данной темы
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289452"
 2.  Настройте учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для входа администратора [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . С их помощью хранилище ключей будет использоваться для настройки сценариев шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и управления ими.
 
     > [!IMPORTANT]
-    >  Аргумент **Identity** для `CREATE CREDENTIAL` требует указания имени хранилища ключей. Аргумент **Secret** параметра `CREATE CREDENTIAL` требует, * \<чтобы идентификатор клиента>* (без дефисов) и * \<секретный>* передаваться вместе без пробела между ними.
+    >  Аргумент **Identity** для `CREATE CREDENTIAL` требует указания имени хранилища ключей. Для аргумента **Secret** параметра `CREATE CREDENTIAL` требуется *\<Client ID>* (без дефисов) и *\<Secret>* передаваться вместе без пробела между ними.
 
-     В следующем примере **идентификатор клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляется из дефисов и указывается в виде строки `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_sysadmin_login*.
+     В следующем примере **идентификатор клиента** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) удаляется из дефисов и указывается в виде строки `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_sysadmin_login*.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289452"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     Пример использования переменных для `CREATE CREDENTIAL` аргументов и программного удаления дефисов из идентификатора клиента см. в статье [Создание учетных данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
+     Пример использования переменных для `CREATE CREDENTIAL` аргументов и программного удаления дефисов из идентификатора клиента см. в статье [Создание учетных данных &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
 
 3.  Если вы импортировали асимметричный ключ, как описано выше в шаге 1 раздела 3, откройте ключ, указав имя ключа в следующем примере.
 
@@ -204,11 +203,11 @@ ms.locfileid: "79289452"
 
 -   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)
 
--   [CREATE CREDENTIAL (Transact-SQL)](/sql/t-sql/statements/create-credential-transact-sql)
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)
 
 -   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)
 
--   [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)
 
 -   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289452"
 1.  Создайте учетные данные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для [!INCLUDE[ssDE](../../../includes/ssde-md.md)] , которые будут использоваться при доступе к EKM хранилища ключей во время загрузки базы данных.
 
     > [!IMPORTANT]
-    >  Аргумент **Identity** для `CREATE CREDENTIAL` требует указания имени хранилища ключей. Аргумент **Secret** параметра `CREATE CREDENTIAL` требует, * \<чтобы идентификатор клиента>* (без дефисов) и * \<секретный>* передаваться вместе без пробела между ними.
+    >  Аргумент **Identity** для `CREATE CREDENTIAL` требует указания имени хранилища ключей. Для аргумента **Secret** параметра `CREATE CREDENTIAL` требуется *\<Client ID>* (без дефисов) и *\<Secret>* передаваться вместе без пробела между ними.
 
-     В следующем примере **идентификатор клиента** (`EF5C8E09-4D2A-4A76-9998-D93440D8115D`) удаляется из дефисов и указывается в виде строки `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_DBEngine*.
+     В следующем примере **идентификатор клиента** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) удаляется из дефисов и указывается в виде строки `EF5C8E094D2A4A769998D93440D8115D` , а **секрет** представляется строкой *SECRET_DBEngine*.
 
     ```sql
     USE master;

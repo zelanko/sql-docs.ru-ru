@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a8d632b538104e490fb70542cdd0f8bd73b87f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929503"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933742"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Пример определяемого пользователем типа даты и времени с учетом календаря
   Сохранение дат в виде строк может приводить к недоразумениям, потому что даты теряют смысл, если неизвестно, какой календарь используется. Образец `CADatetime` определяет два определяемых пользователем типа данных, `CADatetime` и `CADate`, обеспечивающих обработку даты и времени с учетом календаря.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

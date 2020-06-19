@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49455bf9a5138d539a13ed241a24ab5d720c7f43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9226cfd55b6851779564baced0c745e8a17686b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896084"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968767"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Создание пользовательского перечислителя по каждому элементу
   Создание пользовательского перечислителя по каждому элементу, как и любого другого пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], осуществляется за несколько шагов, а именно:  
@@ -45,7 +44,7 @@ ms.locfileid: "62896084"
  Настройте в обоих проектах подписывание сборок, которые будут создаваться во время построения, с помощью файла ключа для строгого имени.  
   
 ### <a name="applying-the-dtsforeachenumerator-attribute"></a>Применение атрибута DtsForEachEnumerator  
- Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>, чтобы определить его как перечислитель по каждому элементу. Этот атрибут содержит сведения для времени разработки, например, имя и описание перечислителя по каждому элементу. Свойство отображается в раскрывающемся списке доступных перечислителей на вкладке Коллекция диалогового окна **Редактор циклов по каждому** элементу. **Collection** `Name`  
+ Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>, чтобы определить его как перечислитель по каждому элементу. Этот атрибут содержит сведения для времени разработки, например, имя и описание перечислителя по каждому элементу. `Name`Свойство отображается в раскрывающемся списке доступных перечислителей на вкладке **коллекция** диалогового окна **Редактор циклов по каждому** элементу.  
   
  Используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute.UITypeName%2A>, чтобы связать перечислитель по каждому элементу с его пользовательским интерфейсом. Чтобы получить токен открытого ключа, необходимый для этого свойства, можно использовать команду **sn.exe -t**, отображающую токен открытого ключа из SNK-файла пары ключей, который предназначен для подписывания сборки пользовательского интерфейса.  
   
@@ -79,7 +78,7 @@ namespace Microsoft.Samples.SqlServer.Dts
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Написание кода пользовательского перечислителя Foreach](coding-a-custom-foreach-enumerator.md)   
  [Разработка пользовательского интерфейса для пользовательского перечислителя по каждому элементу](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   

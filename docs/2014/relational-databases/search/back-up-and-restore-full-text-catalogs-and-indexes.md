@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c0df49c03325da375427c6566799f374fcc9dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012820"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068426"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Создание резервных копий и восстановление полнотекстовых каталогов и индексов
   В этом разделе рассказывается о создании резервных копий и восстановлении полнотекстовых индексов, созданных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]полнотекстовый каталог — это логическое понятие, он не хранится в файловой группе. Следовательно, для того чтобы создать резервную копию полнотекстового каталога в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует определить все файловые группы, содержащие полнотекстовый индекс, принадлежащий каталогу. Затем необходимо создать резервные копии этих файловых групп, одну за другой.  

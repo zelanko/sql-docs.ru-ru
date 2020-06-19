@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34577136-a0ed-4822-94de-4a0d5f98265f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bad0f660bb6cb08de51a52a951bddca8a6c7eb2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 092c2a56af6ed607b565f6a489f834136ccdb789
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000127"
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Фильтрация трассировок с помощью приложения SQL Server Profiler
   Можно определить фильтры на столбцах данных для событий трассировки в программе [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] таким образом, чтобы происходил перехват только тех сведений, которые относятся к событиям, представляющим интерес. Фильтры трассировки позволяют уменьшить воздействие трассировки на производительность системы, поскольку способствуют сокращению числа событий, перехватываемых в трассировке. Кроме того, фильтрация упрощает чтение выходных данных трассировки за счет того, что приходится просматривать меньше событий.  

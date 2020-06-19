@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbd7ba20-d917-4ca9-b018-018ac6af9f98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f4a04d7851a79ab461711cfc173d40a0a83ef6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d0ca1b0fbad144117e409019d8d2247bbf918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022953"
 ---
 # <a name="sqlbindcol"></a>SQLBindCol
   Как правило, следует рассмотреть последствия использования **SQLBindCol** для преобразования данных. Преобразования привязки являются клиентскими процессами, поэтому, например, получение значения с плавающей запятой, связанного с символьным столбцом, вынуждает драйвер выполнить локальное преобразование «плавающая запятая в символ» при выборке строки. Функция [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT может использоваться для размещения затрат преобразования данных на сервере.  
@@ -40,7 +39,7 @@ ms.locfileid: "82706397"
 ## <a name="sqlbindcol-support-for-large-clr-udts"></a>Поддержка функцией SQLBindCol определяемых пользователем типов больших данных CLR  
  **SQLBindCol** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLBindCol](https://go.microsoft.com/fwlink/?LinkId=59327)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f0cab4451b78b662a426612aee0f0a72aae8cf80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0ad216a5c016cf02fc20a67e80b6efb10435c18
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968611"
 ---
 # <a name="additional-script-component-examples"></a>Дополнительные примеры компонента скрипта
   Компонент скрипта является настраиваемым средством, которое можно использовать в потоке данных пакета, чтобы выполнить практическое любое требование, которое не удается выполнить с помощью источников, преобразований и назначений, входящих в состав служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. В этом разделе содержатся образцы кода компонента скрипта, демонстрирующие различные типы доступной функциональности.  

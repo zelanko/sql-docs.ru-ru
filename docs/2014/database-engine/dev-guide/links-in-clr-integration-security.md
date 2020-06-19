@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f7a685a57bf07b812aefc2bd5406210b86054c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933515"
 ---
 # <a name="links-in-clr-integration-security"></a>Ссылки в средствах безопасности интеграции со средой CLR
   В этом разделе описан способ обеспечения взаимного вызова в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]фрагментов пользовательского кода на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] или на одном из управляемых языков. Применяемые при этом связи между объектами называются ссылками.  
@@ -49,7 +48,7 @@ ms.locfileid: "62781073"
   
 4.  Это разрешение проверяется применительно к текущему контексту выполнения. Процедуры и функции могут быть созданы с контекстом выполнения, отличным от такового для вызывающего объекта. Сборки всегда создаются с контекстом выполнения процедуры, функции или триггера, по отношению к которому определен этот объект.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Безопасность интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

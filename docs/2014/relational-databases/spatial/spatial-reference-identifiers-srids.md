@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c1e96d37ae3d140eb2efddd6d3df5c656cc3afd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15db59b43731b9a39ff4bef78e3a6cb6929e9b47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068358"
 ---
 # <a name="spatial-reference-identifiers-srids"></a>идентификаторы пространственных ссылок (SRID)
   У каждого пространственного экземпляра имеется идентификатор пространственной ссылки (SRID). Идентификатор SRID соответствует системе пространственных ссылок, основанной на конкретном эллипсоиде, используемом для плоского или сферического сопоставления.  
@@ -35,7 +34,7 @@ ms.locfileid: "66013994"
 > [!NOTE]  
 >  Система идентификации пространственных ссылок определена стандартом [Европейской группы Petroleum Survey (EPSG)](https://go.microsoft.com/fwlink/?LinkId=99349) , представляющим собой набор стандартов, разработанных для картографии, геодезии и хранилищ геодезических данных. Владельцем данного стандарта является комитет Oil and Gas Producers (OGP) Surveying and Positioning Committee.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о типах пространственных данных](spatial-data-types-overview.md)  
   
   

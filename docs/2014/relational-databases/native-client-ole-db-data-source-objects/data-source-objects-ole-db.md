@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec5479d3b1e4ee1e828ba1c43cd86ce5e42b6497
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043886"
 ---
 # <a name="data-source-objects-ole-db"></a>Объекты источников данных (OLE DB)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Собственный клиент использует термин источник данных для набора OLE DB интерфейсов, используемых для установления связи с хранилищем данных, например [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Создание экземпляра объекта источника данных поставщика является первой задачей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребителя собственного клиента.  
@@ -81,13 +80,13 @@ else
   
 -   [Свойства инициализации и авторизации](initialization-and-authorization-properties.md)  
   
--   [Сеансы](sessions.md)  
+-   [Активных](sessions.md)  
   
 -   [Свойства сеанса](session-properties-sql-server-native-client-ole-db-provider.md)  
   
 -   [Материализованные данные исходного объекта](persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

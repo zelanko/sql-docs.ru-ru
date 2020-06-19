@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0513b300939b935dbf138d2bd8484e86740f31c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940535"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Установка или изменение предпочтительного метода подключения для DirectQuery
   При создании модели для использования в режиме DirectQuery необходимо сначала настроить поддержку DirectQuery в среде конструирования. Дополнительные сведения см. в разделе [Включение режима разработки DirectQuery &#40;табличных&#41;SSAS ](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "66068702"
   
  Обратите внимание: это те же свойства, что задавались в проекте перед развертыванием в Visual Studio. Изменить предпочтительный режим подключения для режима DirectQuery можно в любое время при условии, что модель настроена на использование DirectQuery.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Режим DirectQuery &#40;табличные&#41;SSAS](tabular-models/directquery-mode-ssas-tabular.md)   
  [Включение режима конструктора DirectQuery &#40;табличных&#41;SSAS](tabular-models/enable-directquery-mode-in-ssdt.md)  
   

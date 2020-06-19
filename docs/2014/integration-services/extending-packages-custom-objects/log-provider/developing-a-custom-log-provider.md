@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968724"
 ---
 # <a name="developing-a-custom-log-provider"></a>Разработка пользовательского регистратора
   В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеются различные возможности по ведению журналов, которые позволяют отслеживать события, возникающие во время выполнения пакетов. Службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают целый ряд регистраторов, используя которые можно создавать и сохранять журналы в различных форматах, например XML, текстовом, базы данных или в виде журнала событий Windows. Если предоставляемые регистраторы и форматы выходных данных не вполне отвечают вашим требованиям, вы можете создать пользовательский регистратор.
@@ -36,14 +35,14 @@ ms.locfileid: "78176309"
 
  [Программирование пользовательского регистратора](coding-a-custom-log-provider.md) Описывает реализацию пользовательского регистратора путем переопределения методов и свойств базового класса.
 
- [Разработка пользовательского интерфейса для пользовательского регистратора](developing-a-user-interface-for-a-custom-log-provider.md) Настраиваемые пользовательские интерфейсы для пользовательских регистраторов не поддерживаются в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].
+ [Разработка пользовательского интерфейса для пользовательского регистратора](developing-a-user-interface-for-a-custom-log-provider.md) Настраиваемые пользовательские интерфейсы для пользовательских регистраторов не поддерживаются в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
-## <a name="related-topics"></a>Связанные разделы
+## <a name="related-topics"></a>См. также
 
 ### <a name="information-common-to-all-custom-objects"></a>Общие сведения для всех пользовательских объектов
  Сведения, общие для всех типов пользовательских объектов, которые можно создавать в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], см. в следующих разделах.
 
- [Разработка пользовательских объектов для Integration Services](../developing-custom-objects-for-integration-services.md) Описывает основные шаги реализации всех типов пользовательских объектов для [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].
+ [Разработка пользовательских объектов для Integration Services](../developing-custom-objects-for-integration-services.md) Описывает основные шаги реализации всех типов пользовательских объектов для [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Сохранение пользовательских объектов](../persisting-custom-objects.md) Описывает пользовательскую сохраняемость и объясняет, когда это необходимо.
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4058a059f1f8690f636e00ac1c68957b68c85f76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968584"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Создание назначения с помощью компонента скрипта
   Компонент назначения в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется для сохранения данных, полученных из вышестоящих источников и преобразований, в источник данных. Обычно компонент назначения подключается к источнику данных через существующий диспетчер соединений.
@@ -66,9 +65,9 @@ ms.locfileid: "78176301"
  Дополнительные сведения о странице **Входы и выходы** **редактора преобразования "Скрипт"** см. в разделе [Редактор преобразования "Скрипт" (страница "Входы и выходы")](../script-transformation-editor-inputs-and-outputs-page.md).
 
 ### <a name="adding-variables"></a>Добавление переменных
- Если вы хотите использовать в скрипте существующие переменные, их можно добавить в поля `ReadOnlyVariables` свойств и `ReadWriteVariables` на странице **Скрипт** в **редакторе преобразования "Скрипт**".
+ Если вы хотите использовать в скрипте существующие переменные, их можно добавить в `ReadOnlyVariables` `ReadWriteVariables` поля свойств и на странице **Скрипт** в **редакторе преобразования "Скрипт**".
 
- Если в поле свойства добавляются несколько переменных, их имена нужно разделять запятыми. Можно также выбрать несколько переменных, нажав кнопку с многоточием (**...**) рядом с полями свойств `ReadOnlyVariables` и `ReadWriteVariables` , а затем выбрав переменные в диалоговом окне **Выбор переменных** .
+ Если в поле свойства добавляются несколько переменных, их имена нужно разделять запятыми. Можно также выбрать несколько переменных, нажав кнопку с многоточием (**...**) рядом с `ReadOnlyVariables` `ReadWriteVariables` полями свойств и, а затем выбрав переменные в диалоговом окне **Выбор переменных** .
 
  Общие сведения об использовании переменных в компоненте скрипта см. в разделе [Использование переменных в компоненте скрипта](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).
 
@@ -82,7 +81,7 @@ ms.locfileid: "78176301"
 ### <a name="understanding-the-auto-generated-code"></a>Основные сведения об автоматически создаваемом коде
  При открытии интегрированной среды разработки VSTA после создания и настройки компонента назначения в редакторе кода появляется редактируемый класс `ScriptMain` с заглушкой для метода `ProcessInputRow`. Класс `ScriptMain` — место для размещения собственного кода, а метод `ProcessInputRow` — самый важный метод в компоненте назначения.
 
- Если открыть окно **обозревателя проектов** в VSTA, то можно увидеть, что компонент скрипта также создал элементы проекта только `BufferWrapper` для чтения и `ComponentWrapper` . Класс `ScriptMain` наследует класс `UserComponent` в элементе проекта `ComponentWrapper`.
+ Если открыть окно **обозревателя проектов** в VSTA, то можно увидеть, что компонент скрипта также создал элементы проекта только для чтения `BufferWrapper` и `ComponentWrapper` . Класс `ScriptMain` наследует класс `UserComponent` в элементе проекта `ComponentWrapper`.
 
  Во время выполнения подсистема обработки потока данных вызывает метод `ProcessInput` в классе `UserComponent`, который переопределяет метод <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> родительского класса <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. В свою очередь, метод `ProcessInput` проходит по строкам во входном буфере и вызывает для каждой строки метод `ProcessInputRow`.
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6268fe16c31c931dc71ad1a62bd72e08b1ecb537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e4246898e5b054af8cbbdc86aff41cb7ea087e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768923"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968644"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Разработка пользовательского интерфейса для пользовательской задачи
   Объектная модель служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляет разработчикам пользовательских задач удобный способ создания собственного пользовательского интерфейса для задачи, который можно затем интегрировать и вывести в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Пользовательский интерфейс может предоставлять пользователю полезную информацию в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] и помогать пользователям правильно конфигурировать свойства и настройки пользовательской задачи.  
@@ -115,7 +114,7 @@ End Class 'MyTask
 ## <a name="the-idtstaskui-interface"></a>Интерфейс IDTSTaskUI  
  Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI> определяет коллекцию методов и свойств, вызываемых конструктором служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] для инициализации и вывода пользовательского интерфейса, связанного с данной задачей. При вызове пользовательского интерфейса задачи конструктор вызывает метод <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.Initialize%2A>, реализованный в пользовательском интерфейсе задачи во время разработки, а затем передает коллекции <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> и <xref:Microsoft.SqlServer.Dts.Runtime.Connections> задачи и пакета соответственно в качестве параметров. Коллекции хранятся локально и последовательно используются методом <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>.  
   
- Конструктор служб <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> вызывает метод [!INCLUDE[ssIS](../../../includes/ssis-md.md)], чтобы запросить окно, выводимое в конструкторе. Задача создает экземпляр окна, содержащего пользовательский интерфейс задачи, и возвращает пользовательский интерфейс конструктору для вывода. Обычно окну через перегруженный конструктор предоставляются объекты <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> и <xref:Microsoft.SqlServer.Dts.Runtime.Connections>, чтобы их можно было использовать для настройки задачи.  
+ Конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] вызывает метод <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A>, чтобы запросить окно, выводимое в конструкторе. Задача создает экземпляр окна, содержащего пользовательский интерфейс задачи, и возвращает пользовательский интерфейс конструктору для вывода. Обычно окну через перегруженный конструктор предоставляются объекты <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> и <xref:Microsoft.SqlServer.Dts.Runtime.Connections>, чтобы их можно было использовать для настройки задачи.  
   
  Конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] вызывает метод <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsTaskUI.GetView%2A> пользовательского интерфейса задачи, чтобы вывести пользовательский интерфейс данной задачи. Пользовательский интерфейс задачи возвращает после вызова данного метода форму Windows, и конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] выводит эту форму как модальное диалоговое окно. После закрытия формы конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] исследует значение свойства `DialogResult` формы, чтобы определить, была ли задача изменена и следует ли сохранить эти изменения. Если значение свойства `DialogResult` равно `OK`, конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] вызывает методы сохранения задачи, чтобы сохранить изменения; в противном случае изменения отменяются.  
   
@@ -199,7 +198,7 @@ End Class
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательской задачи](creating-a-custom-task.md)   
  [Написание кода пользовательской задачи](coding-a-custom-task.md)   
  [Разработка пользовательского интерфейса для пользовательской задачи](developing-a-user-interface-for-a-custom-task.md)  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4b51c56f-f902-4e72-b919-e36127369b63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673ad13ff5688fb17eaa4b975644256f072a3aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 905e4c6909c792b019c11ef95662a7ec1a113bb4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054581"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Использование конструктора запросов и представлений с международными данными (визуальные инструменты для баз данных)
   [Конструктор запросов и представлений](visual-database-tools.md) можно использовать с данными на любом языке и с любой версией операционной системы Windows. Ниже описаны различия, с которыми можно столкнуться при работе, и предоставлены сведения об управлении данными в международных приложениях.  

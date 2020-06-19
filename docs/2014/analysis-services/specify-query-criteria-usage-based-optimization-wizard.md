@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba9e131a8986b01a6bb897e35b2e45b2bb70ccd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068214"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940350"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Определение критериев запросов (мастер оптимизации с учетом использования)
   На странице **Определение критериев запроса** выберите один или несколько параметров фильтрации, чтобы определить запросы, которые следует оптимизировать.  
@@ -25,7 +24,7 @@ ms.locfileid: "66068214"
 > [!NOTE]  
 >  Эта страница отключена, если служба [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не может подключиться к журналу запросов.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Статистика журнала запросов**  
  Отображает данные о запросах, хранимых в журнале запросов для выбранных секций. Отображаются следующие элементы:  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66068214"
  **Наиболее часто выполняемые запросы**  
  Фильтрует запросы в журнале запросов на основе наибольшего процентного количества уникальных запросов, выполняемых наиболее часто для выбранных секций. Выберите или введите процентное значение в текстовое поле.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера оптимизации с учетом использования](usage-based-optimization-wizard-f1-help.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

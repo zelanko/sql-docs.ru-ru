@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25ffaea6-0eee-4169-8dd0-1da417c28fc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8c74a4c427e4fc89d32c0dcf961bf5f4b839fff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78288986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061966"
 ---
 # <a name="start-sql-server-management-studio"></a>Запуск среды SQL Server Management Studio
   В начале этого учебника кратко рассмотрим среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "78288986"
     > [!NOTE]  
     >  Среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не устанавливается по умолчанию. Если среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] недоступна, установите ее с помощью программы установки. Среда [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] не входит в состав [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Выпуск Express доступен в виде бесплатной загрузки из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=14630), но имеет другой пользовательский интерфейс, чем описано в этом руководстве.  
   
-2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Для подключения поле **имя сервера** должно содержать имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, то **поле имя сервера** также должно содержать имя экземпляра в формате \< *computer_name*>\\<*instance_name*>.  
+2.  В диалоговом окне **Соединение с сервером** подтвердите заданные по умолчанию параметры, а затем нажмите кнопку **Подключиться**. Для подключения поле **имя сервера** должно содержать имя компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен. Если [!INCLUDE[ssDE](../../includes/ssde-md.md)] является именованным экземпляром, то поле **имя сервера** также должно содержать имя экземпляра в формате \<*computer_name*> \\ < *instance_name*>.  
   
 ## <a name="management-studio-components"></a>Компоненты среды Management Studio  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] представляет данные в виде окон, выделенных для отдельных типов данных. Сведения о базе данных отображаются в обозревателе объектов и окнах документов.  

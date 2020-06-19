@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d920fef68adaa63059970a49c9473d75eeabfd30
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 140be806cfb79996c68b7c413c7998fcc0c20ebe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043883"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Привязки и преобразования (OLE DB)
   В этом разделе описано преобразование между типами `datetime` и `datetimeoffset`. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
@@ -68,7 +67,7 @@ ms.locfileid: "82705047"
  [Преобразования, выполняемые при передаче от сервера к клиенту](conversions-performed-from-server-to-client.md)  
  Описывает преобразования даты-времени, проводимые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

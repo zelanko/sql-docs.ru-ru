@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d228eedfb3a23ae34a5d20fad682d7c42a9fceff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700398"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043943"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
   Для использования драйвера ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо предусмотреть возможность создания источников данных ODBC и убедиться в том, что на сервере находится правильная версия хранимых процедур каталога. Для написания приложения ODBC, в котором используется SQL Server, необходимо знать, как выделять дескрипторы ODBC, устанавливать атрибуты, соединяться с экземпляром SQL Server, выполнять запросы и вычислять результаты.  
@@ -44,7 +43,7 @@ ms.locfileid: "82700398"
   
 -   [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

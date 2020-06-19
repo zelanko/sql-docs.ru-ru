@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb6d525235db93e10fcf14b73e80fc9c096d9c9f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768530"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968704"
 ---
 # <a name="persisting-custom-objects"></a>Сохранение пользовательских объектов
   Нет необходимости реализовывать пользовательскую сохраняемость для создаваемых пользовательских объектов при условии, что их свойствами пользуются только простые типы данных, например `integer` и `string`. Реализация сохраняемости по умолчанию обеспечивает сохранение метаданных для пользовательского объекта, а также значений всех его свойств.  
@@ -154,7 +153,7 @@ public void SaveToXML(System.Xml.XmlDocument doc,
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка пользовательских объектов для Integration Services](developing-custom-objects-for-integration-services.md)   
  [Построение, развертывание и отладка пользовательских объектов](building-deploying-and-debugging-custom-objects.md)  
   

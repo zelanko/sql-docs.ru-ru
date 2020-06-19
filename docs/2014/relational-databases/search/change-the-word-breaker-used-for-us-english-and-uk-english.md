@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f0067b0e13e724948e53a2eb291c9a1da6315011
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5401bea3c42674a1e85cd823570e2abfb30491b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012748"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068400"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Change the Word Breaker Used for US English and UK English
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] устанавливает новую версию (версию 14.0.4999.1038) средства разбиения по словам и парадигматического модуля для английского языка, заменяя предыдущую версию этих компонентов (версию 12.0.6828.0). Дополнительные сведения об изменениях в поведении новых компонентов см. в статье [Изменения в функциях полнотекстового поиска](full-text-search.md). В этом разделе описывается способ переключения из новой версии этих компонентов в предыдущую версию или обратно из предыдущей версии в новую версию. При работе с кластерными установками эти изменения необходимо вносить на всех основных и пассивных узлах.  

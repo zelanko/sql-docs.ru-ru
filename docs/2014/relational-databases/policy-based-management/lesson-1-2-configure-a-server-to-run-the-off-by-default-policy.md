@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f6a17e9cc6cd3beb0626c53f03c2d83edc7c4ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061693"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>Настройка сервера для выполнения политики «Отключено по умолчанию»
   Теперь есть политика с именем «Отключено по умолчанию». В этой задаче производится проверка сервера на соответствие требованиям политики «Отключено по умолчанию».  

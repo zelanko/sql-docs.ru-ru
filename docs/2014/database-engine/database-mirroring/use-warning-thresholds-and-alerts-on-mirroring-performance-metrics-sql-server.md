@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933855"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Использование пороговых значений предупреждений и оповещений в метриках производительности зеркального отображения (SQL Server)
   В этом разделе содержатся сведения о событиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которых можно настраивать пороговые значения предупреждений и управлять ими для зеркального отображения базы данных. Это можно сделать с помощью монитора зеркального отображения баз данных или хранимых процедур **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**и **sp_dbmmonitordropalert** . В этом разделе содержатся также сведения о настройке предупреждений о событиях зеркального отображения баз данных.  
@@ -73,9 +72,9 @@ ms.locfileid: "62754037"
     |[sp_dbmmonitordropalert (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Удаляет предупреждение для указанной метрики производительности.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Пороговые события производительности, отправляемые в журнал событий Windows  
- Если для метрики производительности определено пороговое значение предупреждения, то при обновлении таблицы состояния последнее значение сравнивается с пороговым. При достижении порогового значения процедура обновления, **sp_dbmmonitorupdate**, создает информационное событие — *пороговое событие производительности*для метрики и записывает событие в журнал событий [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. В следующей таблице приведены идентификаторы пороговых событий производительности.  
+ Если для метрики производительности определено пороговое значение предупреждения, то при обновлении таблицы состояния последнее значение сравнивается с пороговым. При достижении порогового значения процедура обновления, **sp_dbmmonitorupdate**, создает информационное событие — *пороговое событие производительности*для метрики и записывает событие в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал событий Windows. В следующей таблице приведены идентификаторы пороговых событий производительности.  
   
-|Метрика производительности|Идентификатор события|  
+|Метрика производительности|Код события|  
 |------------------------|--------------|  
 |Неотправленный журнал|32042|  
 |Невосстановленный журнал|32043|  
@@ -139,7 +138,7 @@ ms.locfileid: "62754037"
   
 -   [sp_dbmmonitorupdate (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   
  [Мониторинг зеркального отображения базы данных (SQL Server)](monitoring-database-mirroring-sql-server.md)  
   

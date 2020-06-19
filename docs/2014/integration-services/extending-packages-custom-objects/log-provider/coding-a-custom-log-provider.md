@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a0f7e10a39896efffa5159911ebd753b1d649e45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d055769a8f854b58e455eec873c1c94a7f740393
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968734"
 ---
 # <a name="coding-a-custom-log-provider"></a>Создание кода пользовательского регистратора
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
@@ -132,7 +131,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Создание записей журнала  
- Метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> вызывается каждый раз, когда объект в пакете инициирует событие путем вызова метода Fire\<событие> для одного из интерфейсов события. Каждое событие инициируется со сведениями о его контексте и обычно дополняется поясняющим сообщением. Однако не каждый вызов метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> включает сведения о каждом параметре метода. Например, некоторые стандартные события, имена которых очевидны без пояснений, не предоставляют параметров MessageText, а параметры DataCode и DataBytes предназначены для необязательных вспомогательных сведений.  
+ <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>Метод вызывается каждый раз, когда объект в пакете вызывает событие, вызывая \<event> метод Fire для одного из интерфейсов событий. Каждое событие инициируется со сведениями о его контексте и обычно дополняется поясняющим сообщением. Однако не каждый вызов метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> включает сведения о каждом параметре метода. Например, некоторые стандартные события, имена которых очевидны без пояснений, не предоставляют параметров MessageText, а параметры DataCode и DataBytes предназначены для необязательных вспомогательных сведений.  
   
  В следующем примере кода реализуется метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> и события записываются в поток, открытый в предыдущем разделе.  
   
@@ -190,7 +189,7 @@ End Sub
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательского регистратора](creating-a-custom-log-provider.md)   
  [Разработка пользовательского интерфейса для пользовательского регистратора](developing-a-user-interface-for-a-custom-log-provider.md)  
   

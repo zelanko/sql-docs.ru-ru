@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df4a0332ebc622b069c468e51c461b7cba20aa36
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044196"
 ---
 # <a name="table-properties-visual-database-tools"></a>Свойства таблицы (визуальные инструменты для баз данных)
   Эти свойства отображаются в окне «Свойства», при щелчке правой кнопкой мыши в конструкторе таблиц и выборе пункта «Свойства». Если иное не указано, можно редактировать эти свойства в окне «Свойства», выбрав соответствующую таблицу.  

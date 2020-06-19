@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 224093839e8e464f731040d3634c8b252796cfed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933615"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Приступая к работе с Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET представляет собой один из языков программирования с управляемым кодом, поддерживаемых библиотекой среды выполнения в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Многие из образцов в этой документации написаны на [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Для разработки приложений объектов SMO можно использовать [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] и [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] .  
@@ -29,7 +28,7 @@ ms.locfileid: "62781571"
   
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]сборки объектов SMO расположены в папке [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание проекта SMO на языке Visual Basic в среде Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
   
   

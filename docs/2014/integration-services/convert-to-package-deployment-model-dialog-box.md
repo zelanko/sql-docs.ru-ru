@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73f1242b9756828b330d0386d93e3c8e8e4f2220
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917614"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>Преобразовать в модель диалоговое окно "пакет развертывания"
   С помощью команды **Преобразовать в модель развертывания пакетов** можно выполнить преобразование пакета в модель развертывания пакетов после проверки проекта и каждого пакета в проекте на совместимость с данной моделью. Если пакет использует специальные функции в модели развертывания проекта, такие как параметры, то пакет невозможно преобразовать.  
   
-## <a name="task-list"></a>список задач  
+## <a name="task-list"></a>Список задач  
  Преобразование пакета в модель развертывания пакетов выполняется в два этапа.  
   
 1.  При выборе команды **Преобразовать в модель развертывания пакетов** из меню **Проект** выполняется проверка проекта и каждого пакета на совместимость с этой моделью. Результаты отображаются в таблице **Результаты** .  
@@ -34,7 +33,7 @@ ms.locfileid: "66060350"
 > [!NOTE]  
 >  Для преобразования проекта в модель развертывания проектов воспользуйтесь **Мастером преобразования проекта служб Integration Services**. Дополнительные сведения см. в статье [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)   
  [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Мастером преобразования проекта служб Integration Services](../../2014/integration-services/integration-services-project-conversion-wizard.md)  

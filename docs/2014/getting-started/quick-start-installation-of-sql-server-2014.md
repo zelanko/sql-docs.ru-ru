@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b77cc00c6b6faef7e22fc636a0b33703864d34d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926785"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Быстрая установка SQL Server 2014
     
-## <a name="introduction"></a>Вступление  
+## <a name="introduction"></a>Введение  
  Мастер установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построен на основе установщика Windows. Он предоставляет единое дерево функций для установки следующих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 -   [!INCLUDE[ssDE](../includes/ssde-md.md)]  
@@ -150,7 +149,7 @@ ms.locfileid: "82706879"
 |В этом разделе рассматривается процесс удаления экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Удаление экземпляра отказоустойчивого кластера SQL Server (программа установки)](../sql-server/failover-clusters/install/remove-a-sql-server-failover-cluster-instance-setup.md)|  
 |В этом разделе приводятся сведения об удалении объектов служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) вручную после удаления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или сервера служб DQS.|[Удаление объектов служб Data Quality Services](../../2014/sql-server/install/remove-data-quality-server-objects.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Спецификации продуктов для SQL Server 2014](sql-server-2014-product-specifications.md)   
  Приступая к [работе с документацией по продукту для SQL Server](../2014-toc/index.yml) [обратной совместимости](backward-compatibility.md)  
   

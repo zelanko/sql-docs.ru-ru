@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53faaae001e177f1d48d394e06961e89c563d124
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fb4a2b48343c6424007a590f7a54e40290c6a345
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933661"
 ---
 # <a name="currency-type-and-conversion-function"></a>Тип денежной единицы и функция конвертации
   В этом примере определяется пользовательский тип данных Currency на языке C#. Определяемый пользователем тип данных включает в себя количество и культуру, что помогает выбрать правильный способ подготовки к показу суммы в виде значения валюты в представлении конкретной культурной среды. В этом примере также реализуется функция конвертации валюты, возвращающая экземпляр пользовательского типа данных Currency. Если база данных AdventureWorks содержит коэффициент перевода из долларов США в валюту, связанную с заданной культурой, функция перевода возвращает определяемый пользователем тип данных Currency с коэффициентом перевода и культурой, соответствующей запрошенной. В противном случае определяемый пользователем тип данных Currency возвращается с исходной суммой, которая должна быть выражена в долларах США, и культурой `en-us`. В этом примере также показано, как регистрировать и отменять регистрацию методов и сборок среды CLR при помощи Transact-SQL.  
@@ -23,7 +22,7 @@ ms.locfileid: "73637649"
 > [!CAUTION]  
 >  Курсы обмена, используемые в этом образце, являются вымышленными и не должны использоваться при реальных финансовых транзакциях.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

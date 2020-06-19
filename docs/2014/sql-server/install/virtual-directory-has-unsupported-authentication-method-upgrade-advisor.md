@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3394181111267c01e9baaa13bd1b6d64339dd5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054646"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>Виртуальный каталог использует неподдерживаемый метод проверки подлинности (советник по переходу)
   Помощник по обновлению обнаружил неподдерживаемый метод проверки подлинности в виртуальном каталоге диспетчера отчетов или сервера отчетов. Обновлением не поддерживаются следующие методы проверки подлинности: анонимный доступ, дайджест-проверка подлинности и .NET Passport.  
@@ -34,7 +33,7 @@ ms.locfileid: "71952012"
   
 -   Анонимные  
   
--   Дайджест  
+-   Digest (дайджест)  
   
 -   Пароль .NET  
   

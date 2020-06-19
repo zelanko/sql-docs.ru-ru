@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93a22979296e397ebe9c28a014913ca9da592ee6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478983"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961324"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Создание атрибута на основе домена (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут создать атрибут на основе домена, чтобы ограничить значения в столбце определенным набором значений.  
@@ -54,11 +53,11 @@ ms.locfileid: "65478983"
   
 7.  Нажмите кнопку **ОК**. Теперь каждая ячейка в столбце имеет список значений, из которых могут выбирать пользователи.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   Чтобы удалить или добавить значения в списке с ограничениям, загрузите сущность, на которой основан атрибут. Дополнительные сведения о загрузке сущностей см. в статье [Загрузка данных из MDS в Excel](export-data-to-excel-from-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты на основе домена &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
  [Создание сущности &#40;надстройка MDS для Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
  [Построение модели (надстройка MDS для Excel)](building-a-model-mds-add-in-for-excel.md)  

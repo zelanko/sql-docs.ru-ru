@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d898433bc8130ecb4bbf2aae7bca2325ec113ed
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917654"
 ---
 # <a name="xml-task"></a>Задача «XML»
   Задача «XML» используется для работы с XML-данными. С помощью этой задачи пакет может получать XML-документы, выполнять операции над документами с помощью преобразований XSLT и выражений XPath, объединять несколько документов, проверять, сравнивать и сохранять обновленные документы в файлы и переменные.  
