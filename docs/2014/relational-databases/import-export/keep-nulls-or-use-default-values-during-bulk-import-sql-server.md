@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026686"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Сохранение значений NULL или использование значений по умолчанию при массовом импорте данных (SQL Server)
   При импорте данных в таблицу команда **bcp** и инструкция BULK INSERT используют значения по умолчанию, которые определены для столбцов таблицы. Например, если поле в файле данных имеет значение NULL, вместо него загружается значение по умолчанию соответствующего столбца. И команда **bcp** , и инструкция BULK INSERT позволяют пользователю указать, следует ли оставлять значения NULL.  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Чтобы вставить "`NULL`" вместо "`Default value of Col2`", необходимо использовать параметр `-k` Switch или keepnull (см, как показано в следующих примерах **bcp** и BULK INSERT.  
+ Чтобы вставить " `NULL` " вместо " `Default value of Col2` ", необходимо использовать `-k` параметр Switch или keepnull (см, как показано в следующих примерах **bcp** и BULK INSERT.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Сохранение значений NULL при работе с командой bcp  
  Следующий пример демонстрирует, как сохранить значения NULL при использовании команды **bcp**. Команда **bcp** содержит следующие параметры:  

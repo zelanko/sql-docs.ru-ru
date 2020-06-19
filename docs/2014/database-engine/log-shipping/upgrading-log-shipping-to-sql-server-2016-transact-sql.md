@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175423"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931145"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Обновление доставки журналов до SQL Server 2014 (Transact-SQL)
   При обновлении с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]конфигурацию доставки журналов можно сохранить. В этом разделе описаны альтернативные сценарии и рекомендации по обновлению конфигурации доставки журналов.
@@ -181,7 +180,7 @@ ms.locfileid: "78175423"
 5.  Перевод базы данных на другой ресурс путем перенаправления клиентов с исходного сервера-источника (сервера A) на подключенный сервер-получатель (сервер B).
 
     > [!IMPORTANT]
-    >  При отработке отказа с переходом на новую базу данных-источник следует убедиться, что ее метаданные согласованы с метаданными исходной базы данных-источника. Дополнительные сведения см. [в разделе Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  При отработке отказа с переходом на новую базу данных-источник следует убедиться, что ее метаданные согласованы с метаданными исходной базы данных-источника. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Обновление нескольких экземпляров сервера-получателя
  Эта конфигурация показана на следующей иллюстрации, на которой изображен экземпляр сервера-источника (A) и два экземпляра сервера-получателя (B и C).

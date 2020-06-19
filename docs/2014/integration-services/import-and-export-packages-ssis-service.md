@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058149"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965684"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Импорт и экспорт пакетов (службы SSIS)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058149"
   
  Можно выполнять импорт и экспорт пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] между следующими типами хранилищ.  
   
--   Можно импортировать пакет, хранящийся в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в файловой системе или в хранилище [!INCLUDE[ssIS](../includes/ssis-md.md)] пакетов. Импортированные пакеты сохраняются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в папке хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+-   Можно импортировать пакет, хранящийся в экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в файловой системе или в [!INCLUDE[ssIS](../includes/ssis-md.md)] хранилище пакетов. Импортированные пакеты сохраняются в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в папке хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 -   Можно экспортировать пакеты, хранящиеся в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в файловой системе или хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , в другой формат хранения и в другое расположение.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66058149"
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В поле **имя сервера** введите имя сервера или нажмите кнопку ** \<обзор, чтобы узнать больше... >** и найдите используемый сервер.  
+    -   В поле **имя сервера** введите имя сервера или нажмите **\<Browse for more...>** и выберите сервер для использования.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "66058149"
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В поле **имя сервера** введите имя сервера или нажмите кнопку ** \<обзор, чтобы узнать больше... >** и найдите используемый сервер.  
+    -   В поле **имя сервера** введите имя сервера или нажмите **\<Browse for more...>** и выберите сервер для использования.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
-4.  В обозревателе объектов разверните папку « **Сохраненные пакеты** ».  
+4.  В обозревателе объектов разверните папку **Сохраненные пакеты** .  
   
 5.  Разверните вложенные папки и выберите пакет для экспорта.  
   
@@ -132,7 +131,7 @@ ms.locfileid: "66058149"
   
 8.  Чтобы завершить экспорт, нажмите кнопку **ОК** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md)  
   
   

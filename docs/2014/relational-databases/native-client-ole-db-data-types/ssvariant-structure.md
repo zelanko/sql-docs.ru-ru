@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3877e7b8c6ccd0d5364b3aea291facb1799bff7d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b2859c9d124382892949b32cb6efb65821663c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048080"
 ---
 # <a name="ssvariant-structure"></a>Структура SSVARIANT
   Структура `SSVARIANT`, определяемая в файле sqlncli.h, соответствует значению DBTYPE_SQLVARIANT в поставщике OLEDB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -52,7 +51,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Следующая таблица описывает элементы структуры `SSVARIANT`.  
   
-|Член организации|Индикатор типа OLE DB|Тип данных OLE DB|Значение vt|Комментарии|  
+|Член|Индикатор типа OLE DB|Тип данных OLE DB|Значение vt|Комментарии|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||Указывает тип значения, которое содержится в структуре `SSVARIANT`.|  
 |bTinyIntVa|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|Поддерживает тип данных `tinyint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -76,7 +75,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |UnknownType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
 |BLOBType|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|НЕ ИСПОЛЬЗУЕТСЯ|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных (OLE DB)](data-types-ole-db.md)  
   
   

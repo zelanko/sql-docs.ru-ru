@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 801d2995-7aa5-4626-906e-c8190758ec71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1506d4f83fcfb94d62efd01c4d6447048fecfd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063686"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Просмотр и изменение свойств принудительной подписки
   В данном разделе описывается просмотр и изменение свойств принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -40,7 +39,7 @@ ms.locfileid: "68212011"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Просмотр и изменение свойств принудительной подписки со стороны издателя:  
   
--   В диалоговом окне **Свойства подписки — \<издатель>: \<база данных публикации>**, которое доступно из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   Диалоговое окно « **Свойства подписки — \<Publisher> : \<PublicationDatabase> ** », доступное в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   На вкладке **Все подписки** в мониторе репликации. Сведения о запуске монитора репликации см. в [этой статье](monitor/start-the-replication-monitor.md).  
   
@@ -69,7 +68,7 @@ ms.locfileid: "68212011"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Просмотр свойств принудительной подписки на публикацию моментальных снимков или транзакций  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Укажите **@publication**, **@subscriber**и значение **ALL** для **@article**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Укажите **@publication** , **@subscriber** и значение **ALL** для **@article** .  
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "68212011"
   
 1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql), указав параметр **@subscriber** и любые параметры для свойств подписчика, которые нужно изменить.  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql). Укажите **@publication**, **@subscriber**, **@destination_db**, значение **ALL** для **@article**, изменяемое свойство подписки **@property**, а новое значение — как. **@value** При этом изменятся параметры безопасности для принудительной подписки.  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql). Укажите **@publication** , **@subscriber** , **@destination_db** , значение **ALL** для **@article** , изменяемое свойство подписки **@property** , а новое значение — как **@value** . При этом изменятся параметры безопасности для принудительной подписки.  
   
 3.  Чтобы изменить свойства пакета служб DTS подписки, выполните хранимую процедуру [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) на подписчике для базы данных подписки (необязательно). Укажите идентификатор задания агент распространения для **@jobid** и следующих свойств пакета служб DTS:  
   
@@ -94,15 +93,15 @@ ms.locfileid: "68212011"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Просмотр свойств принудительной подписки на публикацию слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Укажите **@publication** и **@subscriber**.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql). Укажите **@publication** и **@subscriber** .  
   
 2.  На издателе выполните хранимую процедуру [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql), указав параметр **@subscriber**.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>Изменение свойств принудительной подписки на публикацию слиянием  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Укажите **@publication**, **@subscriber**, **@subscriber_db**, изменяемое свойство подписки **@property**, а новое значение — как. **@value**  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql). Укажите **@publication** , **@subscriber** , **@subscriber_db** , изменяемое свойство подписки **@property** , а новое значение — как **@value** .  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Пример (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  Какие именно классы объектов RMO для этого применяются, зависит от типа публикации этой подписки.  
@@ -139,7 +138,7 @@ ms.locfileid: "68212011"
   
 7.  Чтобы просмотреть новые значения, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> , который выполняет повторную загрузку свойств для подписки (необязательно).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр сведений и выполнение задач с помощью монитора репликации](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  

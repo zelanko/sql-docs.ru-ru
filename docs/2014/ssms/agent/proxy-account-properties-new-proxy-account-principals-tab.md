@@ -11,28 +11,27 @@ f1_keywords:
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b94819974c53e9bd73aa085580018bad22a3bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064396"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Свойства учетной записи-посредника и создание учетной записи-посредника (вкладка "Участники")
   Эта страница используется для просмотра или изменения участников, которые могут использовать [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетную запись-посредник агента в шагах задания.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Участники учетной записи-посредника**  
  Содержит список участников, которые могут использовать данную учетную запись-посредник.  
   
  **Добавление**  
  Добавляет участника к списку.  
   
- **Удалить**  
+ **Remove**  
  Удаляет выбранного участника из списка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание учетной записи-посредника агента SQL Server](create-a-sql-server-agent-proxy.md)  
   
   

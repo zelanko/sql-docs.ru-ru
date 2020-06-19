@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b446d566e7c9aa18e635799e81120d1ac73470
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965178"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Шаг 3. Проверка учебного пакета, созданного на занятии 3
   В этой задаче вы выполните пакет Lesson 3.dtsx. После запуска пакета в окне «Журнал событий» отображаются записи, которые заносятся в файл журнала. После завершения выполнения пакета следует проверить, что регистратор сформировал содержимое файла журнала.  
@@ -43,7 +42,7 @@ ms.locfileid: "62891592"
   
 -   В приложении «Блокнот» или другом текстовом редакторе откройте файл TutorialLog.log.  
   
--   Несмотря на то, что `PipelineExecutionPlan` семантика информации, формируемой `PipelineExecutionTrees` для событий и, выходит за рамки данного учебника, можно увидеть, что в первой строке перечислены поля сведений, указанные на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Кроме того, можно проверить, что два выбранных события (PipelineExecutionPlan и PipelineExecutionTrees) были занесены в журнал для каждой итерации цикла ForEach.  
+-   Несмотря на то, что семантика информации, формируемой для `PipelineExecutionPlan` событий и, `PipelineExecutionTrees` выходит за рамки данного учебника, можно увидеть, что в первой строке перечислены поля сведений, указанные на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Кроме того, можно проверить, что два выбранных события (PipelineExecutionPlan и PipelineExecutionTrees) были занесены в журнал для каждой итерации цикла ForEach.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 4. Добавление перенаправления потока ошибок](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  

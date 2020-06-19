@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972664"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Обновление пакетов (мастер обновления пакетов служб SSIS)
   Страница **Обновление пакетов** используется для слежения за ходом обновления пакетов и прерывания процесса обновления. Мастер обновления пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] обновляет выбранные пакеты один за другим.  
@@ -30,7 +29,7 @@ ms.locfileid: "66054738"
   
 -   В обозревателе решений среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а затем разверните узел **Пакеты служб SSIS** , чтобы увидеть обновленные пакеты.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Панель сообщений**  
  Отображает сообщения о ходе обновления и сводку в течение процесса обновления.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66054738"
  **Состояние**  
  Просмотр результатов каждого действия.  
   
- **Сообщение**  
+ **Message**  
  Просмотр сообщений об ошибках, которые формируются каждым действием.  
   
  **Остановить**  
@@ -57,7 +56,7 @@ ms.locfileid: "66054738"
   
 -   отправка отчета по электронной почте.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

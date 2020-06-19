@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931835"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Обновление до версии SQL Server 2014 с помощью мастера установки (программа установки)
   Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через единое дерево компонентов. Можно также установить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] параллельно с предыдущей версией или выполнить перенос существующих баз данных и параметров конфигурации из предыдущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а затем применить их к экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -54,7 +53,7 @@ ms.locfileid: "62775424"
 -   [Обратная совместимость компонента ядра СУБД SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о добавлении компонентов к обновленному экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] после завершения операции обновления см. в разделе [Добавление компонентов в экземпляр компонента SQL Server 2014 &#40;&#41;установки ](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Не забудьте, что во время обновления невозможно ни изменять обновляемые компоненты, ни добавлять их. Дополнительные сведения о добавлении компонентов к обновленному экземпляру [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] после завершения операции обновления см. [в разделе Добавление компонентов в экземпляр компонента SQL Server 2014 &#40;&#41;установки ](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Процедура  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775424"
   
 1.  Вставьте установочный носитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , перейдите в корневую папку и дважды щелкните файл Setup.exe. Чтобы выполнить установку из общего сетевого ресурса, перейдите в его корневой каталог и дважды щелкните файл Setup.exe.  
   
-2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы обновить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]существующий экземпляр, щелкните **Установка** в левой области навигации, а затем нажмите кнопку **обновить с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
+2.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы обновить существующий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , щелкните **Установка** в левой области навигации, а затем нажмите кнопку **обновить с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ,, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
   
 3.  На странице «Ключ продукта» выберите вариант, чтобы указать, производится ли обновление до бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или имеется ключ PID для рабочей версии этого продукта. Дополнительные сведения см. в статьях [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775424"
      Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
     > [!NOTE]  
-    >  Если вы выбрали обновление общих компонентов, выбрав ** \<обновление только общие компоненты>** на странице **Выбор экземпляра** , все общие компоненты будут выбраны на странице Выбор компонентов. Все общие компоненты обновляются одновременно.  
+    >  Если вы выбрали обновление общих компонентов, выбрав **\<Upgrade shared features only>** на странице **Выбор экземпляра** , все общие компоненты будут выбраны на странице Выбор компонентов. Все общие компоненты обновляются одновременно.  
   
 12. На странице «Конфигурация экземпляра» укажите идентификатор экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -119,7 +118,7 @@ ms.locfileid: "62775424"
   
 20. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  После обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполните следующие задачи.  
   
 -   **Регистрация серверов:** в процессе обновления удаляются настройки реестра для предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления необходимо заново зарегистрировать серверы.  
@@ -128,7 +127,7 @@ ms.locfileid: "62775424"
   
 -   **Настройка новой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  — чтобы уменьшить уязвимую контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по выбору устанавливает и активирует ключевые службы и функции. Дополнительные сведения о настройке контактной зоны см. в файле Readme для данной версии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление до SQL Server 2014](upgrade-sql-server.md)   
  [Обратная совместимость](../../getting-started/backward-compatibility.md)  
   

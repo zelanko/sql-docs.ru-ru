@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c036813-36cf-4415-a0c9-248d0a433859
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed13712678ab599e55b539d6226142b686106fe5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774985"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931975"
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
   В данном разделе содержатся сведения, которые понадобятся для понимания процесса обновления при подготовке к нему. Он состоит из следующих подразделов.  
@@ -102,7 +101,7 @@ ms.locfileid: "62774985"
  Обновление компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно выполнить при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Уровень совместимости баз данных после обновления  
- После обновления уровни совместимости баз `tempdb`данных `model`ресурсов `msdb` , **Resource** и устанавливаются в 120. Системная база данных `master` сохраняет уровень совместимости, который она имела до обновления.  
+ `tempdb` `model` После обновления уровни совместимости `msdb` баз данных **ресурсов** , и устанавливаются в 120. Системная база данных `master` сохраняет уровень совместимости, который она имела до обновления.  
   
  Если уровень совместимости пользовательской базы данных до обновления был 100 или выше, после обновления он останется таким же. Если уровень совместимости до обновления был 90, в обновленной базе данных он устанавливается в значение 100, что является минимально поддерживаемым уровнем совместимости в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -162,7 +161,7 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддерживаемые обновления версий и выпусков](supported-version-and-edition-upgrades.md)   
  [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Обратная совместимость](../../getting-started/backward-compatibility.md)   

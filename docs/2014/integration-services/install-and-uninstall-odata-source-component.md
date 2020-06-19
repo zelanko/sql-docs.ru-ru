@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0a3ae788-e8c8-4a4d-bb15-34c673abcd17
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7c7edea5701fe784f34375c2ff218fc93e610e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeeea240761915fae8489072cc71d697b988ce7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965464"
 ---
 # <a name="install-and-uninstall-odata-source-component"></a>Установка и удаление компонента источника OData
   В этом разделе приведены инструкции по установке или удалению компонента источника OData на компьютере.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f95aab55d402ac72228dcc4326ad00ea15e7471f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110187"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048384"
 ---
 # <a name="tuning-a-workload"></a>Настройка рабочей нагрузки
   Помощник по настройке ядра СУБД можно использовать для определения физической структуры базы данных и выбранных таблиц, оптимальной с точки зрения производительности запросов.  

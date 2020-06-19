@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cccc230-3b20-4074-804f-3448d9616a83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0e53d710c6c3310641a30144a42ea5f614dffd6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054678"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972584"
 ---
 # <a name="variable-grid-options"></a>Параметры сетки переменных
   Используйте диалоговое окно **Параметры сетки переменных** для выбора столбцов, которые появятся в окне **Переменные** , и для выбора фильтров, применяемых к списку переменных. Дополнительные сведения о свойствах соответствующей переменной см. в разделе [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "66054678"
   
 -   **Область**  
   
--   **Тип данных**  
+-   **Data type**  
   
 -   **Значение**  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66054678"
   
 -   **Выражение**  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Окно переменных](../../2014/integration-services/variables-window.md)   
  [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)   

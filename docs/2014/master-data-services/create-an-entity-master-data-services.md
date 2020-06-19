@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479915"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971724"
 ---
 # <a name="create-an-entity-master-data-services"></a>Создание сущности (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]сущности создаются, чтобы содержать элементы и их атрибуты.  
@@ -53,13 +52,13 @@ ms.locfileid: "65479915"
   
 8.  В списке **включить явные иерархии и коллекции** выберите один из следующих вариантов.  
   
-    -   **No**. Выберите этот параметр, если сущность не должна включать явные иерархии и коллекции. При необходимости это значение можно впоследствии изменить.  
+    -   **Нет**. Выберите этот параметр, если сущность не должна включать явные иерархии и коллекции. При необходимости это значение можно впоследствии изменить.  
   
     -   **Да.** Выберите этот параметр, если необходимо включить использование явных иерархий и коллекций. В поле **имя явной иерархии** введите имя. При необходимости выберите **обязательная иерархия (все конечные элементы включены** , чтобы сделать явную иерархию обязательной иерархией.  
   
 9. Нажмите кнопку **Сохранить сущность**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Создание текстового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   
@@ -67,7 +66,7 @@ ms.locfileid: "65479915"
   
 -   [Создание файлового атрибута (службы Master Data Services)](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сущности &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   
  [Явные иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [Измените имя сущности &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)   

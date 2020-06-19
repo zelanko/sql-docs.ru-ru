@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c76256e03a7ad9a14f877ee1220a8dd6ced2ed8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067270"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939745"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Удаление столбца (табличные службы SSAS)
   В этом разделе описано, как удалить столбец из таблицы в табличной модели.  
@@ -37,7 +36,7 @@ ms.locfileid: "66067270"
   
 3.  В диалоговом окне **Изменение свойств таблицы** в окне предварительного просмотра таблицы снимите флажок, соответствующий удаляемому столбцу, после чего нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление столбцов в таблицу &#40;табличных&#41;SSAS](add-columns-to-a-table-ssas-tabular.md)   
  [Секции (табличные службы SSAS)](partitions-ssas-tabular.md)  
   

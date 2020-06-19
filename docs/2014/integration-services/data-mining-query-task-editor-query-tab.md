@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939125"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
   Используйте вкладку **Запрос** диалогового окна **Задача «Запрос интеллектуального анализа данных»** , чтобы создать запросы прогноза, основанные на модели интеллектуального анализа данных. В этом диалоговом окне также можно привязать параметры и результирующие наборы к переменным.  
@@ -57,7 +56,7 @@ ms.locfileid: "68890714"
  **Добавление**  
  Добавить параметр к списку.  
   
- **Удалить**  
+ **Remove**  
  Выберите параметр, а затем нажмите **Удалить**.  
   
 ## <a name="result-set-tab-options"></a>Параметры вкладки «Результирующий набор»  
@@ -75,7 +74,7 @@ ms.locfileid: "68890714"
  **Добавление**  
  Добавить результирующий набор к списку.  
   
- **Удалить**  
+ **Remove**  
  Выберите результат, а затем нажмите кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также:  

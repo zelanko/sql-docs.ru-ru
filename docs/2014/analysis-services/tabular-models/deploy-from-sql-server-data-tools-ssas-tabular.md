@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067302"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939729"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Развертывание из SQL Server Data Tools (табличные службы SSAS)
   Задания в этом разделе помогут развернуть решение табличной модели с помощью команды Deploy в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "66067302"
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши имя проекта и выберите пункт меню **Свойства**.  
   
-2.  В диалоговом окне **Свойства> свойств в параметрах развертывания укажите параметры свойств, если они отличаются от параметров по умолчанию. \<** **Deployment Options**  
+2.  В диалоговом окне ** \<project name> свойства** в **параметрах развертывания**укажите параметры свойств, если они отличаются от параметров по умолчанию.  
   
     > [!NOTE]  
     >  Для моделей в режиме кэширования **Режим запроса** всегда **В памяти**.  
@@ -54,7 +53,7 @@ ms.locfileid: "66067302"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Развертывание решения табличной модели  
   
--   В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]в меню **Сборка** выберите пункт **Развернуть \<имя проекта>**.  
+-   В в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] меню **Сборка** выберите пункт **Развернуть \<project name> **.  
   
      Появится диалоговое окно **Развертывание** , в котором будет отображаться состояние развертывания метаданных и обработки каждой таблицы (если для свойства "Вариант обработки" не выбрано значение "Не обрабатывать"), включенной в модель. После завершения процесса развертывания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] подключитесь к экземпляру служб Analysis Services и проверьте, был ли создан новый объект шаблона базы данных, либо используйте клиентское приложение создания отчетов для подключения к развернутой модели.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66067302"
  **Остановить развертывание**  
  Щелкните, чтобы остановить операцию развертывания. Этот параметр полезен, если операция развертывания занимает слишком много времени либо обнаружено слишком много ошибок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание решения табличной модели &#40;табличные&#41;SSAS](tabular-model-solution-deployment-ssas-tabular.md)   
  [Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)](properties-ssas-tabular.md)  
   

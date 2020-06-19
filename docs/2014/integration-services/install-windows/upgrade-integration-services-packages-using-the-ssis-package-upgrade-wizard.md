@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965494"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
   Пакеты, созданные в более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно обновить до формата служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используемых [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Мастер можно настроить так, что исходные пакеты останутся без изменений. Поэтому в случае каких-либо трудностей обновления можно продолжать использовать исходные пакеты.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767895"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Запуск мастера из командной строки  
   
--   В командной строке запустите файл файл ssisupgrade. exe из папки **C:\Program FILES\MICROSOFT SQL server\120\dts\binn»** .  
+-   В командной строке запустите файл SSISUpgrade.exe из папки **C:\Program FILES\MICROSOFT SQL server\120\dts\binn»** .  
   
 ## <a name="backing-up-the-original-packages"></a>Резервное копирование исходных пакетов  
  Чтобы создать резервные копии исходных пакетов перед их обновлением, исходные пакеты и обновленные пакеты должны храниться в той же папке файловой системы. В зависимости от способа запуска мастера, это место хранения может определяться автоматически.  
@@ -86,7 +85,7 @@ ms.locfileid: "62767895"
 2.  На странице мастера **Выбор параметров управления пакетами** выберите параметр **Создать резервную копию исходных пакетов** .  
   
     > [!WARNING]  
-    >  Параметр **создать резервную копию исходных пакетов** не отображается при открытии проекта [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], который автоматически запускает мастер.  
+    >  Параметр **создать резервную копию исходных пакетов** не отображается при открытии [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] проекта или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , который автоматически запускает мастер.  
   
 3.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]запустите мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   

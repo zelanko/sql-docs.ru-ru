@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924675"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Редактор задачи «Массовая вставка» (страница «Параметры»)
   Страница **Параметры** диалогового окна **Редактор задачи «Массовая вставка»** используется для установки свойств операции массовой вставки. Задача «Глобальная Вставка» копирует большие объемы данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] таблицу или представление.  
   
  Сведения о работе с массовой вставкой см. в разделах [Задача "Массовая вставка"](control-flow/bulk-insert-task.md) и [BULK INSERT(Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
-## <a name="options"></a>Параметры  
- **Страница**  
+## <a name="options"></a>Варианты  
+ **CodePage**  
  Задает кодовую страницу данных в файле данных.  
   
  **DataFileType**  
@@ -54,13 +53,13 @@ ms.locfileid: "66061192"
  **SortedData**  
  Определяет предложение ORDER BY в инструкции массовой вставки. Указываемое имя столбца должно быть действительным столбцом в целевой таблице. Значение по умолчанию — `false`. Это означает, что данные не отсортированы с помощью предложения ORDER BY.  
   
- **MaxErrors**  
+ **максеррорс**  
  Определяет максимальное количество ошибок, которое может произойти перед отменой операции массовой вставки. Значение «0» указывает на то, что допускается бесконечное количество ошибок.  
   
 > [!NOTE]  
 >  Каждая строка, которая не может быть импортирована операцией массовой загрузки, считается за одну ошибку.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "групповые вставки" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Вставка в &#40;"&#41;страницу "соединение"](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   

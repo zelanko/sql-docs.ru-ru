@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 46d6fd5d4ecd821a3ccfeb35679e8fa7bab6104e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc063300616567f3d6c83e7a0898dd915878abf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771724"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924505"
 ---
 # <a name="browse-all-principals-dialog-box"></a>Просмотр всех участников-диалоговое окно
   Диалоговое окно **Просмотр всех участников** используется для выбора участника базы данных с тем, чтобы изменить его разрешения для выбранного проекта или для всех проектов, содержащихся в выбранной папке.  

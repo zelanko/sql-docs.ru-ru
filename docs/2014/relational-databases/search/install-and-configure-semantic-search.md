@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637911"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063236"
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
   Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
@@ -61,9 +60,9 @@ GO
   
     -   Найдите пакет установщика Windows с именем файла **SemanticLanguageDatabase.msi** на установочном носителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Выберите 32-разрядную или 64-разрядную версию пакета установщика с учетом целевой системы. Имя папки, содержащей файл, обозначает 32-разрядную или 64-разрядную версию файла; само имя файла остается одинаковым для обеих версий.  
   
-    -   Загрузить пакет установщика из [Microsoft?? SQL Server?? 2014 Семантическая статистика языка](https://go.microsoft.com/fwlink/?LinkID=296743) страница в центре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] загрузки.  
+    -   Загрузить пакет установщика из [Microsoft?? SQL Server?? 2014 Семантическая статистика языка](https://go.microsoft.com/fwlink/?LinkID=296743) страница в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] центре загрузки.  
   
-2.  Запустите пакет установщика Windows **SemanticLanguageDatabase. msi** , чтобы извлечь базу данных и файл журнала.  
+2.  Запустите пакет установщика Windows **SemanticLanguageDatabase.msi** , чтобы извлечь базу данных и файл журнала.  
   
      Предусмотрена возможность изменить каталог назначения (не обязательно). По умолчанию установщик извлекает файлы в папку с именем **базы данных семантического языка Майкрософт** в папке 32-bit или 64-bit Program Files. Файл MSI содержит файл базы данных и файл журнала в сжатом виде.  
   
