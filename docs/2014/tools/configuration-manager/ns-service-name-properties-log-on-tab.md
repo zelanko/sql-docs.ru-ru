@@ -1,5 +1,5 @@
 ---
-title: Свойства NS&lt;$ Service&gt; Name (вкладка «Вход в систему») | Документация Майкрософт
+title: Свойства NS $ &lt; Service Name &gt; (вкладка «Вход в систему») | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a811e815cf4321dca126ecb584cd226a225a306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008007"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Свойства NS$&lt;имя службы&gt; (вкладка "Вход в систему")
   Используйте вкладку **Вход** диалогового окна **Свойства служб Notification Services** для указания учетной записи, используемой службами [!INCLUDE[ssNS](../../includes/ssns-md.md)] , а также для запуска и остановки службы.  

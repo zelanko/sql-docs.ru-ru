@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: efda11d7bcbb4afd37143c6f9669e15f0cc16f5f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d978b53754d8b233f1f8b7e58b30d806c0bfdb26
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055795"
 ---
 # <a name="stored-procedures"></a>Хранимые процедуры
   Хранимая процедура ([Хранимые процедуры (компонент ядра СУБД)](../../stored-procedures/stored-procedures-database-engine.md)) — это исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает:  
@@ -38,7 +37,7 @@ ms.locfileid: "82704163"
   
 -   [Вызов хранимых процедур (OLE DB)](stored-procedures-calling.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (OLE DB)](sql-server-native-client-ole-db.md)  
   
   

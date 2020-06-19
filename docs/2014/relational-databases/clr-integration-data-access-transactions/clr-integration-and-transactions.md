@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de72a2113aeb568decbdc9b5ee0174160cc0d3ef
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874820"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955073"
 ---
 # <a name="clr-integration-and-transactions"></a>Интеграция со средой CLR и транзакции
   Пространство имен `System.Transactions` предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Совместное использование пространства имен `System.Transactions` и ADO.NET позволяет расширить и упростить использование локальных и распределенных транзакций в управляемых приложениях.  
@@ -45,7 +44,7 @@ ms.locfileid: "62874820"
  [Время существования транзакций](transaction-lifetimes.md)  
  Содержит описание различий во времени существования между транзакциями, запущенными в хранимых процедурах [!INCLUDE[tsql](../../includes/tsql-md.md)], и транзакциями, запущенными в приложениях CLR.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Доступ к данным из объектов среды CLR для работы с базами данных](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

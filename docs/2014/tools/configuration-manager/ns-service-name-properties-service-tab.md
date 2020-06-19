@@ -1,5 +1,5 @@
 ---
-title: Свойства NS&lt;$ Service&gt; Name (вкладка "службы") | Документация Майкрософт
+title: Свойства NS $ &lt; Service Name &gt; (вкладка "службы") | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 57c6b791-1663-4a01-9de2-cf1bdd8adb2c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1042eeefb53b16573fd13eb6f0449eeda4688f3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3c5d473f8f57a6ecec7084af912940a2687c0cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008020"
 ---
 # <a name="nsltservice-namegt-properties-service-tab"></a>Свойства NS$&lt;имя службы&gt; (вкладка "Службы")
   Эта служба представляет собой службу [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNS](../../includes/ssns-md.md)]. Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  

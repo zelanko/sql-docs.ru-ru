@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487163"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063178"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
   С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. В данном подразделе содержатся следующие сведения.  
@@ -49,11 +48,11 @@ ms.locfileid: "81487163"
   
      Предоставляет возможность изменения свойств определенной защищаемой сущности, кроме ее владельца. При предоставлении разрешения ALTER на ту или иную область также предоставляется возможность изменения, создания или удаления любой защищаемой сущности, содержащейся в пределах данной области. Например, разрешение ALTER на схему включает возможность создания, изменения и удаления объектов этой схемы.  
   
--   Изменение любого \<защищаемого *сервера*>, где *защищаемым объектом сервера* может быть любой защищаемый сервер.  
+-   ALTER ANY \<*Server Securable*> , где *защищаемый объект сервера* может быть любым защищаемым сервером.  
   
      Предоставляет возможность создавать, изменять и удалять отдельные экземпляры *Защищаемой сущности сервера*. Например, разрешение ALTER ANY LOGIN предоставляет возможность создания, изменения и удаления любого имени входа в экземпляре.  
   
--   Изменение любого \<защищаемого *объекта базы данных*>, где *Защищаемая сущностью базы данных* может быть любой защищаемой сущностью на уровне базы данных.  
+-   ALTER ANY \<*Database Securable*> , где *защищаемый объект базы данных* может быть любым защищаемым объектом на уровне базы данных.  
   
      Предоставляет возможность СОЗДАВАТЬ, ИЗМЕНЯТЬ и УДАЛЯТЬ отдельные экземпляры *Защищаемой сущности базы данных*. Например, разрешение ALTER ANY SCHEMA предоставляет возможность создания, изменения и удаления любой схемы в базе данных.  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487163"
   
      Позволяет получать во владение защищаемую сущность, на которую предоставлено разрешение.  
   
--   \<Олицетворять *имя входа*>  
+-   ОЛИЦЕТВОРЕНИЕ\<*Login*>  
   
      Позволяет олицетворять имя входа.  
   
--   \<Олицетворять *пользователя*>  
+-   ОЛИЦЕТВОРЕНИЕ\<*User*>  
   
      Позволяет олицетворять пользователя.  
   
--   Создание \< *защищаемого объекта сервера*>  
+-   СОЗДАНИЯ\<*Server Securable*>  
   
      Предоставляет возможность создавать *Защищаемую сущность сервера*.  
   
--   Создать \< *защищаемую сущность базы данных*>  
+-   СОЗДАНИЯ\<*Database Securable*>  
   
      Предоставляет возможность создавать *Защищаемую сущность базы данных*.  
   
--   Создание \< *защищаемой сущности, содержащейся в схеме*>  
+-   СОЗДАНИЯ\<*Schema-contained Securable*>  
   
      Предоставляет возможность создавать защищаемую сущность, содержащуюся в схеме. Однако для создания защищаемой сущности в той или иной схеме на эту схему требуется разрешение ALTER.  
   
@@ -92,12 +91,12 @@ ms.locfileid: "81487163"
      Разрешение REFERENCES для объекта необходимо для создания FUNCTION или VIEW с предложением 2 `WITH SCHEMABINDING` , которое ссылается на этот объект.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server  
- Для получения диаграммы с размером афиши [!INCLUDE[ssDE](../../includes/ssde-md.md)] всех разрешений в формате PDF см [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf). раздел.  
+ Для получения диаграммы с размером афиши всех [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешений в формате PDF см [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) . раздел.  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Разрешения, применимые к конкретным защищаемым объектам  
  В следующей таблице перечислены главные классы разрешений и защищаемых объектов, к которым эти разрешения могут применяться.  
   
-|Разрешение|Область применения|  
+|Разрешение|Применяется к|  
 |----------------|----------------|  
 |SELECT|Синонимы<br /><br /> Таблицы и столбцы<br /><br /> Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] с табличным значением и среды CLR, а также столбцы<br /><br /> Представления и столбцы|  
 |VIEW CHANGE TRACKING|Таблицы<br /><br /> Схемы|  
@@ -157,7 +156,7 @@ ms.locfileid: "81487163"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487163"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487163"
 |DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Примечание. применяется только к [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Использование ALTER ANY CONNECTION в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF;|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -399,7 +398,7 @@ ms.locfileid: "81487163"
 ##  <a name="examples"></a><a name="_examples"></a> Примеры  
  В примерах этого раздела показано, как получить сведения о разрешениях.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>А) Получение полного списка разрешений, которые могут быть предоставлены  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Получение полного списка разрешений, которые могут быть предоставлены  
  Следующая инструкция возвращает все разрешения компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью функции `fn_builtin_permissions` . Дополнительные сведения см. в разделе [sys.fn_builtin_permissions (Transact-SQL)](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql).  
   
 ```  
@@ -407,7 +406,7 @@ SELECT * FROM fn_builtin_permissions(default);
 GO  
 ```  
   
-### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>Б) Получение разрешений на определенный класс объектов  
+### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>Б. Получение разрешений на определенный класс объектов  
  В следующем примере функция `fn_builtin_permissions` используется для просмотра всех разрешений, доступных для категории защищаемых объектов. В примере возвращаются разрешения на сборки.  
   
 ```  

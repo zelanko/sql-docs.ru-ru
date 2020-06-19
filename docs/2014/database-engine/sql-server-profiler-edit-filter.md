@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c4ed409286e531413be74a487f5baa2d3a7a878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928675"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler - Edit Filter
   Диалоговое окно **Изменить фильтр** используется для создания и изменения фильтров столбцов данных в трассировке. Нажмите имя столбца данных в списке, и в соседней панели будут отображены критерии фильтра, доступные для этого столбца. Введите критерии фильтра и нажмите кнопку **ОК** для применения их к выделенному столбцу данных. Если слева от имени столбца данных в списке выводится значок фильтра, то для этого столбца уже имеется сконфигурированный фильтр.  
@@ -25,7 +24,7 @@ ms.locfileid: "66089782"
 > [!NOTE]  
 >  Для столбцов данных строкового типа критерии фильтрации будут показаны как строковое значение LIKE или NOT LIKE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Фильтрация событий в SQL Server Profiler &#40;трассировки&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Фильтрация событий на основе времени окончания события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-end-time-sql-server-profiler.md)   
  [Отфильтруйте события на основе времени начала события &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-based-on-the-event-start-time-sql-server-profiler.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894cb2beb52684ececb4d9aadb171e283fad5a55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935459"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
@@ -85,7 +84,7 @@ ms.locfileid: "62811288"
   
 1.  В меню **Пуск** выберите последовательно **Все программы**, **Microsoft SQL Server** и **Диспетчер конфигурации SQL Server**.  
   
-2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши **Протоколы для** *\<* Имя_экземпляра*>*, а затем выберите пункт **Свойства**.  
+2.  Разверните **SQL Server конфигурация сети**, щелкните правой кнопкой мыши элемент **протоколы для** *\<*InstanceName*>* и выберите пункт **Свойства**.  
   
 3.  Для привязки каналов и служб на вкладке **Дополнительно** установите значение **Расширенная защита** для соответствующих параметров.  
   

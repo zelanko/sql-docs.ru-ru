@@ -49,13 +49,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f74d26366e0c7c586f466b8fd227cd78ba8ab598
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 8a2fc385e7235e1857931e187086911b52ef14b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935548"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
   Каждая служба в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой процесс или набор процессов для управления проверкой подлинности при выполнении операций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в операционной системе Windows. В этом разделе описана конфигурация по умолчанию служб данного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также параметры конфигурации служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые можно настроить во время и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -99,7 +98,7 @@ ms.locfileid: "83269413"
   
     -   [Именованные каналы](#Pipes)  
   
--   [Провизионирование](#Provisioning)  
+-   [Подготовка](#Provisioning)  
   
     -   [Подготовка ядра СУБД к работе](#DE_Prov)  
   
@@ -134,15 +133,15 @@ ms.locfileid: "83269413"
 ##  <a name="services-installed-by-ssnoversion"></a><a name="Service_Details"></a> Службы, устанавливаемые с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  В зависимости от компонентов, которые выбраны для установки, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает следующие службы.  
   
--   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Services** — служба реляционного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Путь к исполняемому файлу: \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe.  
+-   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database Services** — служба реляционного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Исполняемый файл \<MSSQLPATH>\MSSQL\Binn\sqlservr.exe.  
   
--   **Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — предназначен для выполнения заданий, наблюдения за [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], предупреждения о нештатных ситуациях. Кроме того, позволяет автоматизировать некоторые задачи по администрированию. Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присутствует, но отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Путь к исполняемому файлу: \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe.  
+-   **Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — предназначен для выполнения заданий, наблюдения за [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], предупреждения о нештатных ситуациях. Кроме того, позволяет автоматизировать некоторые задачи по администрированию. Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присутствует, но отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Исполняемый файл \<MSSQLPATH>\MSSQL\Binn\sqlagent.exe.  
   
--   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**— Предоставляет возможности оперативной аналитической обработки (OLAP) и интеллектуального анализа данных для приложений бизнес-аналитики. Путь к исполняемому файлу: \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
+-   **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**— Предоставляет возможности оперативной аналитической обработки (OLAP) и интеллектуального анализа данных для приложений бизнес-аналитики. Исполняемый файл \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.  
   
--   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**— Управляет, выполняет, создает, планирует и доставляет отчеты. Путь к исполняемому файлу: \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
+-   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**— Управляет, выполняет, создает, планирует и доставляет отчеты. Исполняемый файл — \<MSSQLPATH> \Reporting Services\ReportServer\Bin\ReportingServicesService.exe.  
   
--   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**— Обеспечивает поддержку управления [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранением и выполнением пакетов. Путь к исполняемому файлу — \< MSSQLPATH> \120\dts\binn\msdtssrvr.exe  
+-   **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**— Обеспечивает поддержку управления [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранением и выполнением пакетов. Путь к исполняемому файлу — \<MSSQLPATH>\120\DTS\Binn\MsDtsSrvr.exe  
   
 -   **Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — служба разрешения имен, которая предоставляет сведения о соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентским компьютерам. Путь к исполняемому файлу: c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe  
   
@@ -230,7 +229,7 @@ ms.locfileid: "83269413"
   
 -   <a name="VA_Desc"></a>**Виртуальные учетные записи**  
   
-     Виртуальные учетные записи (начиная с Windows Server 2008 R2 и Windows 7) — это *управляемые локальные учетные записи* , которые предоставляют следующие возможности для упрощения администрирования служб. Управление виртуальной учетной записью осуществляется автоматически, и она может получать доступ к сети в среде домена. Если установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется со значением по умолчанию для учетных записей служб, используется виртуальная учетная запись с именем, соответствующим имени экземпляра, в формате **NT SERVICE\\** _\<ИМЯ_СЛУЖБЫ>_ . Службы, запускаемые от имени виртуальных учетных записей, получают доступ к сетевым ресурсам с использованием учетных данных учетной записи компьютера в формате _<имя_домена>_ **\\** _<имя_компьютера>_ **$** .  При указании виртуальной учетной записи для запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оставьте поле пароля пустым. Если для виртуальной учетной записи не удалось зарегистрировать имя участника-службы (SPN), выполните регистрацию вручную. Дополнительные сведения о регистрации SPN вручную см. в статье [Регистрация имени участника-службы для соединений Kerberos](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
+     Виртуальные учетные записи (начиная с Windows Server 2008 R2 и Windows 7) — это *управляемые локальные учетные записи* , которые предоставляют следующие возможности для упрощения администрирования служб. Управление виртуальной учетной записью осуществляется автоматически, и она может получать доступ к сети в среде домена. Если значение по умолчанию используется для учетных записей службы во время [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки, используется виртуальная учетная запись, использующая имя экземпляра в качестве имени службы, в формате **NT Service \\ ** _\<SERVICENAME>_ . Службы, запускаемые от имени виртуальных учетных записей, получают доступ к сетевым ресурсам с использованием учетных данных учетной записи компьютера в формате _<имя_домена>_ **\\** _<имя_компьютера>_ **$** .  При указании виртуальной учетной записи для запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оставьте поле пароля пустым. Если для виртуальной учетной записи не удалось зарегистрировать имя участника-службы (SPN), выполните регистрацию вручную. Дополнительные сведения о регистрации SPN вручную см. в статье [Регистрация имени участника-службы для соединений Kerberos](register-a-service-principal-name-for-kerberos-connections.md#Manual).  
   
     > [!NOTE]  
     >  Виртуальные учетные записи не могут использоваться для экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так как у виртуальной учетной записи будет отличаться идентификатор безопасности на каждом узле кластера.  
@@ -301,7 +300,7 @@ ms.locfileid: "83269413"
 -   [Именованные каналы](#Pipes)  
   
 ###  <a name="service-configuration-and-access-control"></a><a name="Serv_SID"></a> Настройка служб и управление доступом  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет обеспечить изоляцию и всестороннюю защиту идентификатора безопасности каждой службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для этой службы. Например, именем идентификатора безопасности службы для службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть **NT Service\MSSQL$** _\<InstanceName>_ . Изоляция служб обеспечивает доступ к конкретным объектам без необходимости использования учетной записи с высоким уровнем привилегий или ослабления защиты этих объектов. Используя запись управления доступом, содержащую удостоверение безопасности службы, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может ограничить доступ к своим ресурсам.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет обеспечить изоляцию и всестороннюю защиту идентификатора безопасности каждой службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для этой службы. Например, имя идентификатора безопасности службы для [!INCLUDE[ssDE](../../includes/ssde-md.md)] службы может быть **NT Service\MSSQL $** _\<InstanceName>_ . Изоляция служб обеспечивает доступ к конкретным объектам без необходимости использования учетной записи с высоким уровнем привилегий или ослабления защиты этих объектов. Используя запись управления доступом, содержащую удостоверение безопасности службы, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может ограничить доступ к своим ресурсам.  
   
 > [!NOTE]  
 >  В Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (и более поздних версиях) удостоверением безопасности службы может быть виртуальная учетная запись, используемая этой службой.  
@@ -402,19 +401,19 @@ ms.locfileid: "83269413"
 ||80\tools|Чтение и выполнение|  
 ||120\sdk|Чтение|  
 ||Microsoft SQL Server\120\Setup Bootstrap|Чтение и выполнение|  
-|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|\<ToolsDir>\DReplayController\Log\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
+|Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|\<ToolsDir>\Дреплайконтроллер\лог\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayController\resources\|Чтение, выполнение, просмотр содержимого папки|  
-||\<ToolsDir>\DReplayController\\{все DLL-библиотеки}|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\Дреплайконтроллер\ресаурцес \| чтение, выполнение, просмотр содержимого папки|  
+||\<ToolsDir>\Дреплайконтроллер \\ {все библиотеки DLL}|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayController\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\дреплайконтроллер\иртемплате.тдф|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Чтение и выполнение, список содержимого папки|  
-|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|\<ToolsDir>\DReplayClient\Log\|Чтение, выполнение, просмотр содержимого папки|  
+|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|\<ToolsDir>\Дреплайклиент\лог \| чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayClient\resources\|Чтение, выполнение, просмотр содержимого папки|  
-||\<ToolsDir>\DReplayClient\ (все DLL-библиотеки)|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\Дреплайклиент\ресаурцес \| чтение, выполнение, просмотр содержимого папки|  
+||\<ToolsDir>\Дреплайклиент\ (все библиотеки DLL)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\дреплайклиент\иртемплате.тдф|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\IRDefinition.xml|Чтение и выполнение, список содержимого папки|  
   
  <sup>1</sup> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Служба агента отключена на экземплярах [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] с дополнительными службами.  
@@ -432,11 +431,11 @@ ms.locfileid: "83269413"
 ||Только администратор|\\\\.\root\Microsoft\SqlServer\ServerEvents \\<sql_instance_name><sup>1</sup>|Полный доступ|  
 ||Администраторы, система|\tools\binn\schemas\sqlserver\2004\07\showplan|Полный доступ|  
 ||Пользователи|\tools\binn\schemas\sqlserver\2004\07\showplan|Чтение и выполнение|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
-||Учетная запись службы Windows сервера отчетов, все|* \< установите>* \Reporting Services\ReportManager, * \< установите>* \Reporting Services\ReportManager\Pages \\ \* . \* , * \< установите>* \Reporting Services\ReportManager\Styles \\ \* . \* , * \< установите>* \Reporting services\reportmanager\ webctrl_client \ 1_0 \\ *.\*|Чтение и выполнение|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\ReportServer|Чтение|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>* \Reporting Services\ReportServer\global.asax|Полное|  
-||Все|*\<установка>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Учетная запись службы Windows для сервера отчетов|*\<install>* \Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Учетная запись службы Windows сервера отчетов, все|*\<install>* \Reporting Services\ReportManager, *\<install>* \Reporting Services\ReportManager\Pages \\ \* . \* , *\<install>* \Reporting Services\ReportManager\Styles \\ \* . \* , *\<install>* \Reporting services\reportmanager\ webctrl_client \ 1_0 \\ *.\*|Чтение и выполнение|  
+||Учетная запись службы Windows для сервера отчетов|*\<install>* \Reporting Services\ReportServer|Чтение|  
+||Учетная запись службы Windows для сервера отчетов|*\<install>* \Reporting Services\ReportServer\global.asax|Полное|  
+||Все|*\<install>* \Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||Учетная запись служб Windows сервера отчетов|*\<install>* \Reporting Services\ReportServer\rsreportserver.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Все|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> Управление чтением|  
 ||Пользователь служб терминала|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  

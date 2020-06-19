@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd75fdae7fc871101aa07785561c8277783a424f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62724794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063063"
 ---
 # <a name="tracing-and-replaying-events"></a>Трассировка и воспроизведение событий
   В SMO объекты `Trace` и `Replay` в пространстве имен <xref:Microsoft.SqlServer.Management.Trace> обеспечивают программный доступ к функциональности приложения [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], которая используется для наблюдения за экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Приложение позволяет собирать и сохранять данные о каждом событии в файле или в таблице для последующего анализа. Например, с помощью приложения можно наблюдать за рабочей средой, чтобы определить, какие процедуры сказываются на производительности из-за того, что выполняются слишком медленно.  
@@ -51,7 +50,7 @@ ms.locfileid: "62724794"
   
 -   воспроизвести файлы и таблицы трассировки.  
   
- Данные трассировки из объектов `Trace` и `Replay` могут использоваться приложением SMO или могут быть проверены вручную с помощью [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Данные трассировки также совместимы с хранимыми процедурами [SQL Trace](../../sql-trace/sql-trace.md) , которые также обеспечивают возможности трассировки.  
+ Данные трассировки из `Trace` `Replay` объектов и могут использоваться приложением SMO или могут быть проверены вручную с помощью [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Данные трассировки также совместимы с хранимыми процедурами [SQL Trace](../../sql-trace/sql-trace.md) , которые также обеспечивают возможности трассировки.  
   
  Объекты трассировки SMO находятся в пространстве имен <xref:Microsoft.SqlServer.Management.Trace>, для использования которого необходима ссылка на файл Microsoft.SQLServer.ConnectionInfo.dll.  
   

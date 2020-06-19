@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c77d9be9-2176-4438-8c7a-04b63ebece08
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d6da9e7d9fd17d35d9868834c6b0d688519ff7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 786101d76185c21763787ab11fd29600938be198
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704171"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055810"
 ---
 # <a name="running-stored-procedures-ole-db"></a>Выполнение хранимых процедур (OLE DB)
   При выполнении инструкций вызов хранимой процедуры в источнике данных (вместо выполнения или подготовки инструкции непосредственно в клиентском приложении) может обеспечить следующее:  
@@ -50,7 +49,7 @@ ms.locfileid: "82704171"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента задает для свойства DBPROP_OUTPUTPARAMETERAVAILABILITY значение DBPROPVAL_OA_ATROWRELEASE, чтобы указать, что коды возврата и выходные параметры не возвращаются до тех пор, пока результирующий набор не будет обработан или освобожден.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры](stored-procedures.md)  
   
   
