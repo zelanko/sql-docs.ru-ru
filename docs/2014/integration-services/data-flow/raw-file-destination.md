@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf4d31a05977cc34cf9aaee8fff38867aa302f37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914815"
 ---
 # <a name="raw-file-destination"></a>назначение «Необработанный файл»
   Назначение «Необработанный файл» записывает необработанные данные в файл. Так как формат данных является собственным для назначения, данные не требуют перевода и нуждаются лишь в небольшом анализе. Это значит, что назначение «Необработанный файл» может записывать данные быстрее, чем другие назначения, такие как «Неструктурированный файл» или «OLE DB».  
@@ -113,7 +112,7 @@ ms.locfileid: "81487016"
   
 1.  Установите для свойства WriteOption значение **CreateOnce** или **CreateAlways**и запустите одну итерацию цикла. Файл будет создан. Это будет гарантией того, что добавляемые метаданные и файл будут соответствовать друг другу.  
   
-2.  Сбросьте свойство WriteOption в значение **append** и задайте для `False`свойства ValidateExternalMetadata значение.  
+2.  Сбросьте свойство WriteOption в значение **append** и задайте для свойства ValidateExternalMetadata значение `False` .  
   
  Если используется параметр **TruncateAppend** вместо параметра **Append** , то строки, которые были добавлены в любой предыдущей итерации, будут усечены, и только затем будет добавлена новая строка. Использование параметра **TruncateAppend** также требует, чтобы данные соответствовали формату файла.  
   

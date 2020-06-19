@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 532099a9d60a4fa5ccc3a206d2e7e86194423ace
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b25ec92d1124b33de4c2cd6796dbe7c7eafb630
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048114"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
   В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. Дополнительные сведения об определяемых пользователем типах данных CLR см. в [этой статье](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  

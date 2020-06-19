@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 638afff2aa05a9fc4e61bc71e8610dba1dda8cf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935585"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Настройка параметра конфигурации сервера query wait
   В этом разделе описано, как настроить параметр конфигурации сервера **query wait** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Запросы, требующие много памяти (например, включающие сортировку и хеширование), помещаются в очередь, если для выполнения запроса не хватает памяти. Параметр **query wait** указывает время в секундах (от 0 до 2147483647), в течение которого запрос будет ожидать необходимые ресурсы. Значение по умолчанию для этого параметра равно -1. Это означает, что время ожидания вычисляется как время на запрос, умноженное на 25 раз.  

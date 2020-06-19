@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f8cbd2789fbf4f941642439545f7c8fa349cf66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048040"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Создает привязку между переменными программы и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -126,7 +125,7 @@ DBORDINALidxServerCol);
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

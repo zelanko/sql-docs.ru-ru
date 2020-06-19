@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5f4ec8a9538cead097402c046e2f9f91c95faa01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047933"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Изменение поведения драйвера ODBC при обработке преобразования символов
-  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Драйвер ODBC для собственного клиента (sqlncli11. dll) изменил то, как он выполняет преобразования SQL_WCHAR * (nchar/nvarchar/nvarchar (max)) и SQL_CHAR \* (char/varchar/НАРЧАР (max)). При использовании драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 функции ODBC, например SQLGetData, SQLBindCol и SQLBindParameter, возвращают (-4) SQL_NO_TOTAL в качестве параметра длины или индикатора. Предыдущие версии драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращали значение длины, которое могло быть неверным.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Драйвер ODBC для собственного клиента (SQLNCLI11.dll) изменил то, как он выполняет преобразование SQL_WCHAR * (nchar/nvarchar/nvarchar (max)) и SQL_CHAR \* (char/varchar/НАРЧАР (max)). При использовании драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 функции ODBC, например SQLGetData, SQLBindCol и SQLBindParameter, возвращают (-4) SQL_NO_TOTAL в качестве параметра длины или индикатора. Предыдущие версии драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращали значение длины, которое могло быть неверным.  
   
 ## <a name="sqlgetdata-behavior"></a>Поведение SQLGetData  
  Многие функции Windows позволяют указывать нулевой размер буфера, при этом возвращаемая длина является размером возвращаемых данных. Следующий вариант является стандартным для программистов Windows:  
@@ -107,7 +106,7 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 -   Если не выполнить привязку, можно получить данные в блоках с помощью **SQLGetData** и **метод SQLParamData**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

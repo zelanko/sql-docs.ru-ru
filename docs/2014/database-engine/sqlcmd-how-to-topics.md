@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd7a2d2b-6327-4d77-ac5a-580d36073ad4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd9f9a5b786c5e1a928655276641e841cb3f43c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c011103c4434f87dba5ba61d6f4419278583f50b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089603"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928547"
 ---
 # <a name="sqlcmd-how-to-topics"></a>Связанные инструкции по sqlcmd
   [Программа sqlcmd](../tools/sqlcmd-utility.md) позволяет вводить инструкции [!INCLUDE[tsql](../includes/tsql-md.md)], системные процедуры и файлы скриптов из командной строки в редактор запросов в режиме SQLCMD, в файл скрипта Windows или шаг задания операционной системы (Cmd.exe) задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -23,7 +22,7 @@ ms.locfileid: "66089603"
 ## <a name="related-tasks"></a>Связанные задачи  
  В следующих разделах показано, как использовать программу [sqlcmd Utility](../tools/sqlcmd-utility.md):  
   
--   [Запуск программу sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
+-   [Запуск программы sqlcmd](../relational-databases/scripting/sqlcmd-start-the-utility.md)  
   
 -   [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   

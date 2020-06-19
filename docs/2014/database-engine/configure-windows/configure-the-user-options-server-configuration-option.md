@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7ee40d0f6de532b93ce9d8075b609c80f09df7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935492"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Настройка параметра конфигурации сервера user options
   В этом разделе описано, как настроить параметр конфигурации сервера **user options** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **user options** задает глобальные параметры по умолчанию для всех пользователей. Список параметров обработки запросов по умолчанию создается на время сеанса работы пользователя. Параметр **user options** позволяет изменить значения по умолчанию параметров инструкции SET (в случае если настройки сервера по умолчанию не подходят).  

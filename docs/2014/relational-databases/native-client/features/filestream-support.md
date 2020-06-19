@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ab8ca7912db7607acbca716f733184ed57dc681e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18e9a002bfb205e2c0807234550998fe48120d20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047988"
 ---
 # <a name="filestream-support"></a>Поддержка FILESTREAM
   Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о поддержке усовершенствованного компонента FILESTREAM см. в статье [FILESTREAM (SQL Server)](../../blob/filestream-sql-server.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "82707295"
   
  Чтобы создать столбцы FILESTREAM или определить, какие существующие столбцы являются столбцами FILESTREAM, можно использовать `is_filestream` Столбец представления каталога [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) .  
   
- Ниже представлен пример такого кода:  
+ Ниже приведен пример:  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -62,7 +61,7 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
   
  Для клиентов, которые используют SQLOLEDB или другие поставщики, выпущенные до [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] собственного клиента, `varbinary(max)` будут сопоставлены с изображением.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

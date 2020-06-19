@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5f3c354a36f5a3a62120ecc40a815420393648c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab803bcaa5ab6b6187c1a994abef02f81ae105c6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935730"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Настройка компонента Database Engine на прослушивание нескольких портов TCP
   В этой теме описан процесс настройки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для прослушивания нескольких портов на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. При включении TCP/IP для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет прослушивать входящие соединения в точке соединения по IP-адресу и номеру порта TCP. В результате выполнения следующих процедур будет создана конечная точка потока табличных данных (TDS), чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог прослушивать соединения на дополнительном порту TCP.  
@@ -82,7 +81,7 @@ ms.locfileid: "62811548"
   
 4.  Щелкните правой кнопкой мыши **IPAll**и выберите пункт **Свойства**.  
   
-5.  В поле **TCP-порт** введите номера портов, которые должны прослушиваться компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , разделяя их запятыми. В нашем примере, если указан порт по умолчанию 1433, введите `,1500` , чтобы поле было `1433,1500`Прочитано, а затем нажмите кнопку **ОК**.  
+5.  В поле **TCP-порт** введите номера портов, которые должны прослушиваться компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] , разделяя их запятыми. В нашем примере, если указан порт по умолчанию 1433, введите `,1500` , чтобы поле было прочитано `1433,1500` , а затем нажмите кнопку **ОК**.  
   
     > [!NOTE]  
     >  Если порт включается не для всех IP-адресов, настройте дополнительный порт в окне свойств только для необходимого адреса. Затем на панели консоли щелкните правой кнопкой мыши **TCP/IP**, выберите пункт **Свойства**и в поле **Прослушивать все** выберите **Нет**.  

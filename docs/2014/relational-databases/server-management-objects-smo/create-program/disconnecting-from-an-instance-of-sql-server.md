@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7783fa93912c305403cc34ad6e52668123d164ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3430048a52b3dce5e82d6b7af2d6a8162841d062
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063157"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>Отсоединение от экземпляра SQL Server
   Закрытие и отсоединение объектов SMO [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вручную не требуется. Соединения открываются и закрываются по мере необходимости.  
@@ -59,7 +58,7 @@ srv.ConnectionContext.Disconnect();
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

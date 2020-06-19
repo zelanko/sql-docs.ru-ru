@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027132"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Принципы работы расширенных хранимых процедур
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512996"
   
  Принцип работы расширенной хранимой процедуры заключается в следующем.  
   
-1.  Когда клиент выполняет расширенную хранимую процедуру, запрос передается в виде потока табличных данных (TDS) или в формате протокола SOAP из клиентского приложения в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Когда клиент выполняет расширенную хранимую процедуру, запрос передается в виде потока табличных данных (TDS) или в формате протокола SOAP из клиентского приложения в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ищет DLL-библиотеки, связанные с расширенной хранимой процедурой, и загружает их, если они еще не загружены.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62512996"
   
 4.  Расширенная хранимая процедура передает результирующий набор и возвращает параметры обратно на сервер через API-интерфейс расширенной хранимой процедуры.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование расширенных хранимых процедур ядра СУБД](../database-engine-extended-stored-procedure-programming.md)  
   
   

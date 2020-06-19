@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8bc3de7-4b97-4de9-8df8-e11947d24045
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d8865f6a6e38e9764b7aa2c67d069eeb6a4ec84
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf74466a698d39f74b9531adaa54c79c75e50ef2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055987"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Создание набора строк с помощью интерфейса IOpenRowset
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB Native Client поддерживает метод **IOpenRowset:: OPENROWSET** со следующими ограничениями:  
@@ -35,7 +34,7 @@ ms.locfileid: "82704677"
   
  Результирующий набор интерфейса **IOpenRowset::OpenRowset** содержит один набор строк. Результирующие наборы, содержащие один набор строк, могут поддерживаться [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] курсорами. Благодаря поддержке курсоров разработчик может использовать механизмы параллелизма [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы строк](rowsets.md)  
   
   

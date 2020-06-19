@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 301a6b6970c03b620783af7ca176de34846557d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a3c73fddf9c47938086c57f1b6d8b63f9bf07f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913724"
 ---
 # <a name="cache-transform"></a>преобразование кэша
   Преобразование «Преобразование кэша» создает ссылочный набор данных для преобразования «Уточняющий запрос», выполняя запись из подключенного источника данных в потоке данных в диспетчер соединений с кэшем. Преобразование «Подстановка» выполняет подстановки, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в связанной базе данных.  
@@ -55,7 +54,7 @@ ms.locfileid: "62900808"
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразования Integration Services](integration-services-transformations.md)   
  [Поток данных](../data-flow.md)  
   

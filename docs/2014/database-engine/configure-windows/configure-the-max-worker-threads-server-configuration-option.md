@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d4aae8a264bd77d51c3365183ee510043ae814b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4881cefee350d34d93b539c56be6f43866d3ddfe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935661"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
   В этом разделе описываются способы настройки параметра конфигурации сервера **max worker threads** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max worker threads** используется для установки количества рабочих потоков, доступных процессам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются собственные службы для потоков операционных систем, поэтому один или несколько потоков одновременно поддерживают все сети, которые поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , еще один поток обрабатывает контрольные точки базы данных, а пул потоков обрабатывает запросы от всех пользователей. Значение по умолчанию для параметра **max worker threads** — 0. Это позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически настраивать количество рабочих потоков при запуске. Настройка по умолчанию является оптимальной для большинства систем. Но иногда, в зависимости от конфигурации системы, установка параметра **max worker threads** в другое определенное значение может улучшить производительность.  
@@ -45,7 +44,7 @@ ms.locfileid: "62787611"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Если реальное количество запросов меньше значения, заданного параметром **max worker threads**, каждый запрос обрабатывается одним потоком. Однако если фактическое число запросов превышает объем, заданный в параметре **max worker threads**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пулы рабочих потоков следует использовать, чтобы следующий доступный рабочий поток мог справиться с запросом.  
+-   Если реальное количество запросов меньше значения, заданного параметром **max worker threads**, каждый запрос обрабатывается одним потоком. Однако если фактическое число запросов превышает объем, заданный в параметре **max worker threads**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Пулы рабочих потоков следует использовать, чтобы следующий доступный рабочий поток мог справиться с запросом.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   

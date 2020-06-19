@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f13db8a1e22c88c4433cd8928479a6ed1af540f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc86d269d3b286aeee5ccc67ddf6dddc4bfb1c95
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920185"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Добавление задачи или контейнера в поток управления или удалить их из него
   При работе в конструкторе потока управления окно «Область элементов» конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержит задачи, которые службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют для построения потока управления в пакете. Дополнительные сведения об области элементов см. в разделе [SSIS Toolbox](../ssis-toolbox.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "62833139"
   
 3.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи Integration Services](integration-services-tasks.md)   
  [Контейнеры Integration Services](integration-services-containers.md)   
  [Поток управления](control-flow.md)  

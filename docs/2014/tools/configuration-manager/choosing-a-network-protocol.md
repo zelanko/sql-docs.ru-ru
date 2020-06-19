@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 20156e41bffcdca51ac8d1e16bcbff8d61079c73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716701"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008204"
 ---
 # <a name="choosing-a-network-protocol"></a>Выбор сетевого протокола
   Чтобы установить соединение с [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , необходимо включить сетевой протокол. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]может одновременно обслуживать запросы по нескольким протоколам. Клиенты подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи одного протокола. Если программе клиента неизвестно, какой протокол прослушивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте клиент для последовательного использования нескольких протоколов. Для включения, выключения и настройки сетевых протоколов используйте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

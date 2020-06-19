@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ebd1394-cc8d-4bcf-92f3-c374a26e7ba0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c4d9ba6fb3a28bd54e51c4e87946919f0dae286
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ed8a3011efa95df0ceed438341de9015d252d9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056026"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Устанавливает соединение с источником данных
   Чтобы получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщику OLE DB собственного клиента, потребитель должен сначала создать экземпляр объекта источника данных, вызвав метод **CoCreateInstance** . Каждый поставщик OLE DB определяется уникальным идентификатором класса (CLSID). Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB идентификатор класса CLSID_SQLNCLI10. Можно также использовать символы SQLNCLI_CLSID, которые будут разрешаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента, используемый в ссылке sqlncli. h.  
@@ -102,7 +101,7 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложения поставщика OLE DB для собственного клиента SQL Server](creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
   

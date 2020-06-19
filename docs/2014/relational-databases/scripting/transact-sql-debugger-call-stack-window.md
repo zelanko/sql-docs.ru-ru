@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34b01bc737e35705a7ec4f49ea07a47faaf2b11d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 720a42b2b3ddf46318ac5412181d70a79b142026
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718435"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063356"
 ---
 # <a name="call-stack-window"></a>Окно стека вызовов
   В окне **Стек вызовов** отображаются модули в стеке вызова, а также типы данных и значения всех параметров, передаваемых в модули. [!INCLUDE[tsql](../../includes/tsql-md.md)] включают в себя хранимые процедуры, функции и триггеры. Чтобы отобразить стек вызова, необходимо находиться в режиме отладки.  

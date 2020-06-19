@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec615911233227c15f43e55125adfd6166cb51e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a439b9d5076114d57d5b3bfd317e95911d52fcc3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001620"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Write the Job Status to the Windows Application Log
-  В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для записи состояния задания в журнал событий приложений Windows с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющие объекты SQL Server.  
+  В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для записи состояния задания в журнал событий приложений Windows с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющие объекты SQL Server.  
   
  Ответы заданий дают гарантию того, что администраторы базы данных будут знать о завершении выполнения заданий и частоте их выполнения. Обычными ответами заданий являются следующие.  
   

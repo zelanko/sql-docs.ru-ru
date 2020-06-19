@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 765f1e83-dd52-44fb-b0c8-1078f213607b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d75f292ea86b4b619fec81ea7a6f7aafc83fdc15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f42d7d2022e07dcac3039557295dc70e4500583d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812276"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935627"
 ---
 # <a name="configure-the-priority-boost-server-configuration-option"></a>Настройка параметра конфигурации сервера priority boost
   В этом разделе описывается настройка параметра конфигурации сервера **priority boost** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. С помощью параметра **priority boost** задается, должен ли [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняться с большим приоритетом в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2008 или Windows 2008 R2 по сравнению с остальными процессами на том же компьютере. Если установить этот параметр в значение 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в планировщике Windows 2008 или Windows Server 2008 R2 с базовым приоритетом 13. Значением по умолчанию является 0, что соответствует базовому значению приоритета 7.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935809"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Настройка брандмауэра Windows для доступа к компоненту Database Engine
   В данном разделе описывается, как настроить брандмауэр Windows для доступа к компоненту Database Engine в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Чтобы обращаться к экземпляру компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] через брандмауэр, необходимо разрешить такой доступ в настройках брандмауэра на компьютере с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -68,7 +67,7 @@ ms.locfileid: "62812306"
   
 3.  В диалоговом окне **Тип правила** выберите **Порт**и нажмите кнопку **Далее**.  
   
-4.  В диалоговом окне **Протокол и порты** выберите протокол **TCP**. Выберите **определенные локальные порты**, а затем введите номер порта экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)], например, `1433` для экземпляра по умолчанию. Щелкните **Далее**.  
+4.  В диалоговом окне **Протокол и порты** выберите протокол **TCP**. Выберите **определенные локальные порты**, а затем введите номер порта экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] , например, `1433` для экземпляра по умолчанию. Щелкните **Далее**.  
   
 5.  В диалоговом окне **Действие** выберите **Разрешить соединение**и нажмите кнопку **Далее**.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62812306"
   
 3.  В диалоговом окне **Тип правила** выберите **Программа**и нажмите кнопку **Далее**.  
   
-4.  В диалоговом окне **Программа** выберите пункт **Путь программы**. Нажмите кнопку **Обзор**, найдите и выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому необходим доступ через брандмауэр, а затем нажмите кнопку **Открыть**. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в папке **C:\Program Files\Microsoft SQL Server\MSSQL12. Мссклсервер\мсскл\бинн\склсервр.ЕКСЕ**. Щелкните **Далее**.  
+4.  В диалоговом окне **Программа** выберите пункт **Путь программы**. Нажмите кнопку **Обзор**, найдите и выберите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , к которому необходим доступ через брандмауэр, а затем нажмите кнопку **Открыть**. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет значение **C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Sqlservr.exe**. Щелкните **Далее**.  
   
 5.  В диалоговом окне **Действие** выберите **Разрешить соединение**и нажмите кнопку **Далее**.  
   

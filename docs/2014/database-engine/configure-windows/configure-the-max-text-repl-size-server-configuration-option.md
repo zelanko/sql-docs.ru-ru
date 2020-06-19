@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e55268f499069fb6714aa07944997e1e92e7fc23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2af0cf426583ee328f0a484de1c3539836c0d8af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935645"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Настройка параметра конфигурации сервера max text repl size
-  В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max text repl size** задает максимальный размер (в байтах) `text`данных, `ntext`, `varchar(max)`, `nvarchar(max)` `varbinary(max)` `xml`,, и `image` , которые могут быть добавлены к реплицируемому или записанному столбцу в одной инструкции INSERT, Update, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
+  В этом разделе описываются способы настройки параметра конфигурации сервера **max text repl size** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max text repl size** задает максимальный размер (в байтах) `text` данных,, `ntext` ,,, `varchar(max)` и, `nvarchar(max)` `varbinary(max)` `xml` `image` которые могут быть добавлены к реплицируемому или записанному столбцу в одной инструкции INSERT, Update, WRITETEXT или UPDATETEXT. Значение по умолчанию — 65 536 байт. Значение -1 означает отсутствие ограничений размера, кроме тех, которые налагаются типом данных.  
   
  **В этом разделе**  
   

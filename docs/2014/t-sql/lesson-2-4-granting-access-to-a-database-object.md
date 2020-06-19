@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a44d9bbf-f58e-4734-b7f4-eb3b492b777b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22bd0bb1f01e59ec30f7cf1bbf128c890d3d5d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008437"
 ---
 # <a name="granting-access-to-a-database-object"></a>Предоставление доступа к объекту базы данных
    Будучи администратором, можно выполнять инструкцию SELECT из таблицы **Products** и представления **vw_Names**, а также выполнять процедуру **pr_Names**; однако Мэри всего этого не может. Чтобы предоставить Mary необходимые разрешения, воспользуйтесь инструкцией GRANT.  
@@ -42,7 +41,7 @@ ms.locfileid: "62643451"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Сводка. Настройка разрешений на объекты базы данных](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ПРЕДОСТАВЛЕНИЕ &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [REVOKE (Transact-SQL)](/sql/t-sql/statements/revoke-transact-sql)  
   

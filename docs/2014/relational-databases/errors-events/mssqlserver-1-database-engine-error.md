@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bad25b91-eaed-46c0-a5b7-71117a32304c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc558a0a0f5b8bd05f2ff461cc45a73aafa6da23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf33ef7895ebeae9af158e0b7d8c3c4447805893
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916401"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969904"
 ---
 # <a name="mssqlserver_-1"></a>MSSQLSERVER_-1
     
@@ -56,7 +55,7 @@ ms.locfileid: "62916401"
   
 -   Убедитесь, что служба «[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], браузер» запущена на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка брандмауэра Windows для доступа к ядро СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)   
  [Настройка клиентских протоколов](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Сетевые протоколы и сетевые библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)   

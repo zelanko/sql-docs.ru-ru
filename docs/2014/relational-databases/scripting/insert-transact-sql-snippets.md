@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d66c96f4-2e84-4d79-9bfd-3635fdd98425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 258934209cf17fd43ea41b6aa07063a2e42b056a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3984f1f7d9744fee36c5fc52af080d783e87615c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063439"
 ---
 # <a name="insert-transact-sql-snippets"></a>вставлять фрагменты кода Transact-SQL
   Фрагмент кода [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать в качестве шаблона при написании новых инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

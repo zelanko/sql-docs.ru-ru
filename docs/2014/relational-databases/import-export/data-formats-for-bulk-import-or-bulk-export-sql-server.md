@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43cb42cffba31f20b0e9717204f5475b5bb156d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b92ac8c038362ff18a1459a8bf3c55b6b596a17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026843"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Форматы данных для массового экспорта или импорта (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может принимать данные в символьном или исходном двоичном формате. Символьный формат применяется при перемещении данных между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и другим приложением (например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) или другим сервером базы данных (например Oracle или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Собственный формат может применяться только при переносе данных между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

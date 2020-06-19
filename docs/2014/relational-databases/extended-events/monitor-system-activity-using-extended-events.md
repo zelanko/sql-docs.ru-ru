@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d83ad88f-818c-49fe-a9a9-299f704fca53
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a15a6e9a04c64e6e277d37a86d8e6f198b81906
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4890c043f64c359e5cc4ddd5b11d01dfb3756a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706615"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027315"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>отслеживать активность системы с помощью расширенных событий
   Эта процедура показывает, как использовать расширенные события совместно со средством отслеживания событий для Windows (ETW) в целях мониторинга активности системы. Процедура показывает также варианты использования инструкций CREATE EVENT SESSION, ALTER EVENT SESSION и DROP EVENT SESSION.  
@@ -115,7 +114,7 @@ ms.locfileid: "82706615"
     go  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [Удаление сеанса событий &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-event-session-transact-sql)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33cfb7faaa7f332292df8e4a087925b2f1605250
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9a2b488b13eeb4df7754e331960faedef49b9bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063376"
 ---
 # <a name="breakpoints-window"></a>Окно точек останова
   В окне **Точки останова** перечисляются все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.  

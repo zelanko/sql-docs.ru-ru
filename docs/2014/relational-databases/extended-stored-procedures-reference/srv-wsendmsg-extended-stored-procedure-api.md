@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2153076-32c9-4a52-8e1b-fc9618153543
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14235b544d495f0f6ce23a797adafec97dd29fc0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027081"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API-интерфейс расширенных хранимых процедур)
     
@@ -68,7 +67,7 @@ msglen
  *msglen*  
  Указывает длину *message*в символах.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
 ## <a name="remarks"></a>Remarks  
@@ -85,7 +84,7 @@ msglen
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [srv_sendmsg (интерфейс API расширенных хранимых процедур)](srv-sendmsg-extended-stored-procedure-api.md)  
   
   

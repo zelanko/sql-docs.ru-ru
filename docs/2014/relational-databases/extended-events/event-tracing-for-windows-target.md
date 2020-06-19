@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 55f247af30b5278f614b6505a94266cc07ec6c54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706834"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027594"
 ---
 # <a name="event-tracing-for-windows-target"></a>Цель «Средство трассировки событий для Windows»
   Прежде чем использовать средство трассировки событий для Windows (ETW) в качестве назначения, рекомендуется сначала попрактиковаться в работе с данным средством. Трассировка событий Windows используется совместно с расширенными событиями или в качестве потребителя расширенных событий. Следующие внешние ссылки помогут получить начальные сведения о трассировке событий Windows.  
@@ -75,7 +74,7 @@ ms.locfileid: "82706834"
     > [!IMPORTANT]  
     >  После начала первого сеанса путь к файлу изменить нельзя.  
   
--   Файлы MOF (MOF) находятся в * \< пути установки>* \Microsoft SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
+-   Файлы MOF (MOF) находятся в *\<your install path>* \MICROSOFT SQL Server\Shared. Дополнительные сведения см. в разделе [Формат управляющих объектов](https://go.microsoft.com/fwlink/?LinkId=92851) библиотеки MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Добавление цели к сеансу  
  Для добавления назначения счетчика событий в сеанс расширенных событий следует использовать одну из следующих инструкций при создании или изменении сеанса события:  
@@ -86,7 +85,7 @@ ADD TARGET package0.etw_classic_sync_target
   
  Дополнительные сведения о полном примере, который показывает, как использовать назначение трассировки событий, включая просмотр данных, см. в разделе [отслеживать активность системы с помощью расширенных событий](monitor-system-activity-using-extended-events.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Serverные цели расширенных событий](../../database-engine/sql-server-extended-events-targets.md)   
  [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   

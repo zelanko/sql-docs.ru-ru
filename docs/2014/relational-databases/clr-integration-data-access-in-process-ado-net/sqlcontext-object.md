@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72ff29ff35f1f09898b6f6e890aae5aba1d3d2d3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955250"
 ---
 # <a name="sqlcontext-object"></a>Объект SqlContext
   На сервере управляемый код запускается при вызове процедуры, функции или метода для определяемого пользователем типа данных CLR или когда действие вызывает срабатывание триггера, определенного на одном из языков платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Так как выполнение этого кода необходимо как часть соединения пользователя, требуется доступ к контексту участника из кода, работающего на сервере. Кроме того, определенные операции доступа к данным могут быть допустимы, только если они выполняются в контексте участника. Например, доступ к вставленным или удаленным псевдотаблицам, применяемым в операциях триггеров, допустим только в контексте участника.  
@@ -28,9 +27,9 @@ ms.locfileid: "62920047"
   
  Объект `SqlContext` обеспечивает доступ к следующим компонентам.  
   
--   `SqlPipe`: объект `SqlPipe` представляет "канал", по которому результаты передаются клиенту. Дополнительные сведения об объекте см `SqlPipe` . в разделе [объект SqlPipe](sqlpipe-object.md).  
+-   `SqlPipe`: объект `SqlPipe` представляет "канал", по которому результаты передаются клиенту. Дополнительные сведения об `SqlPipe` объекте см. в разделе [объект SqlPipe](sqlpipe-object.md).  
   
--   `SqlTriggerContext`: объект `SqlTriggerContext` можно получить только из триггера CLR. Он предоставляет сведения об операции, которая вызвала срабатывание триггера, а также карту столбцов, которые были обновлены. Дополнительные сведения об объекте см `SqlTriggerContext` . в разделе [объект SqlTriggerContext](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: объект `SqlTriggerContext` можно получить только из триггера CLR. Он предоставляет сведения об операции, которая вызвала срабатывание триггера, а также карту столбцов, которые были обновлены. Дополнительные сведения об `SqlTriggerContext` объекте см. в разделе [объект SqlTriggerContext](sqltriggercontext-object.md).  
   
 -   `IsAvailable`: свойство `IsAvailable` используется для определения доступности контекста.  
   
@@ -127,7 +126,7 @@ Public Shared Sub  WindowsIDTestProcVB ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlPipe](sqlpipe-object.md)   
  [Объект SqlTriggerContext](sqltriggercontext-object.md)   
  [Триггеры CLR](../../database-engine/dev-guide/clr-triggers.md)   

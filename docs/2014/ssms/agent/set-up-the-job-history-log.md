@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 018e5c49-d3a0-4504-851a-f70996a34bb7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 613c0ccae7be912bd3bec63905b838b7f07b59b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48b0c0b72b7b27ca944e78603d2c574a8f4d27dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033585"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001773"
 ---
 # <a name="set-up-the-job-history-log"></a>Set Up the Job History Log
   В этом разделе описывается настройка [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журнала заданий агента.  
@@ -43,13 +42,13 @@ ms.locfileid: "63033585"
   
 3.  В диалоговом окне **Свойства агента SQL Server** выберите страницу **Журнал** .  
   
-4.  Выберите один из следующих параметров:  
+4.  Выберите один из следующих параметров.  
   
     1.  Выберите **Ограниченный размер журнала заданий**, а затем введите максимальное число строк для журнала заданий и максимальное число строк на задание.  
   
     2.  Выберите **Автоматически удалять журнал агента**и задайте период времени, записи старше которого будут автоматически удаляться из журнала.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](implement-jobs.md)   
  [Мониторинг активности заданий](monitor-job-activity.md)   
  [Создание заданий](create-jobs.md)  

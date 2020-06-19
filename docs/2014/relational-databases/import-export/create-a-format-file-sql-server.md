@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa0d34f100af614a1e2187c265bf01a24f3be7ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66265152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026889"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
   При массовом импорте в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовом экспорте данных из таблицы вы можете воспользоваться файлом форматирования, который обеспечивает гибкую структуру записи файлов данных и практически не требует изменения для поддержки соответствия с другими форматами данных или для считывания данных из других программ.  
@@ -44,9 +43,9 @@ ms.locfileid: "66265152"
 ### <a name="examples"></a>Примеры  
  В этом разделе приведены следующие примеры, которые показывают, как пользоваться командами **bcp** для создания файлов форматирования в формате, отличном от XML:  
   
--   А) Создание файла форматирования в формате, отличном от XML для данных в собственном формате  
+-   A. Создание файла форматирования в формате, отличном от XML для данных в собственном формате  
   
--   Б) Создание файла форматирования в формате, отличном от XML для символьных данных  
+-   Б. Создание файла форматирования в формате, отличном от XML для символьных данных  
   
 -   В. Создание файла форматирования в формате, отличном от XML для данных в собственном формате в кодировке Юникод  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66265152"
   
  В этом примере используется таблица `HumanResources.Department` в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Таблица `HumanResources.Department` содержит четыре столбца: `DepartmentID`, `Name`, `GroupName`и `ModifiedDate`.  
   
-#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>А) Создание файла форматирования в формате, отличном от XML для данных в собственном формате  
+#### <a name="a-creating-a-non-xml-format-file-for-native-data"></a>A. Создание файла форматирования в формате, отличном от XML для данных в собственном формате  
  В следующем примере создается XML-файл форматирования `Department-n.xml`для таблицы [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . в котором используются собственные типы данных. Содержимое созданного файла форматирования приведено после команды.  
   
  Команда **bcp** содержит следующие квалификаторы:  
@@ -84,7 +83,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Дополнительные сведения см в разделе [Файлы формата, отличные от XML (SQL Server)](xml-format-files-sql-server.md).  
   
-#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>Б) Создание файла форматирования в формате, отличном от XML для символьных данных  
+#### <a name="b-creating-a-non-xml-format-file-for-character-data"></a>Б. Создание файла форматирования в формате, отличном от XML для символьных данных  
  В следующем примере создается XML-файл форматирования `Department.fmt`для таблицы [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]`HumanResources.Department` . Файл форматирования использует формат символьных данных и признак конца поля, отличный от установленного по умолчанию (`,`). Содержимое созданного файла форматирования приведено после команды.  
   
  Команда **bcp** содержит следующие квалификаторы:  

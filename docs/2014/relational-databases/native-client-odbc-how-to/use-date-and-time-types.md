@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9373aeec2086e330da95eba343645c0c0d68ab6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a3fe6c753fa432084edd90e820d859263be7c498
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712062"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048147"
 ---
 # <a name="use-date-and-time-types"></a>Использование типов данных даты и времени
   Этот образец показывает, как инициализировать структуры данных даты-времени, добавленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Затем подготавливаются входные значения, привязываются параметры и выполняется запрос. Дополнительные сведения об использовании этих типов см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  

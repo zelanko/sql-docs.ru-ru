@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07c803ca-299a-42c5-ba02-360b9631d15f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d47e668a2c31e9fb00a8f3582a3538fa9127ef65
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5573fe1fef39f29329e373323f5f8aaf15f2c58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055955"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>Выборка одной строки при помощи интерфейса IRow
   Реализация интерфейса **IRow** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном поставщике OLE DB клиента упрощена для повышения производительности. Интерфейс **IRow** предоставляет прямой доступ к столбцам одного объекта, представляющего собой строку. Если заранее известно, что результатом выполнения команды будет ровно одна строка, **IRow** даст возможность получить столбцы этой строки. Если в результирующий набор входит несколько строк, интерфейс **IRow** предоставит доступ только к первой.  

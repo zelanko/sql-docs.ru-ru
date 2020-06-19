@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0df2930d17d8d99fd52aef3fcca7e9e92ca6638
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 57f7c2af512821c89dabf45e60e0754a6373c62c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056106"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>Функция ISSAsynchStatus::GetStatus (OLE DB)
   Возвращает состояние операции асинхронного выполнения.  
@@ -59,7 +58,7 @@ HRESULT GetStatus(
  Если *pulProgressMax* является указателем NULL, ожидаемое максимальное значение возвращено не будет.  
   
  *peAsynchPhase*[out]  
- Указатель на буфер, в который будут возвращены дополнительные сведения о ходе выполнения асинхронной операции. Допустимые значения:  
+ Указатель на буфер, в который будут возвращены дополнительные сведения о ходе выполнения асинхронной операции. Допустимы следующие значения:  
   
  DBASYNCHPHASE_INITIALIZATION — объект находится в стадии инициализации. Аргументы *pulProgress* и *pulProgressMax* указывают примерный процент выполнения. Объект еще полностью не материализован. Попытка вызова любых других интерфейсов может завершиться неудачей, а полный набор интерфейсов может быть недоступен для данного объекта. Если асинхронная операция была результатом вызова метода **ICommand::Execute** для команды, которая обновляет, удаляет или вставляет строки, а также если значение параметра *cParamSets* больше 1, то параметры *pulProgress* и *pulProgressMax* могут указывать ход выполнения для единого набора параметров или для полного массива наборов параметров.  
   
@@ -121,7 +120,7 @@ HRESULT GetStatus(
   
  В случае вызова метода **ISSAsynchStatus::GetStatus** для инициализированного объекта источника данных или заполненного набора строк, либо передачи значения для параметра *eOperation* , отличного от DBASYNCHOP_OPEN, возвращается S_OK с параметрами *pulProgress* и *pulProgressMax* , которым установлено такое же значение. Если метод **ISSAsynchStatus::GetStatus** вызывается для объекта, созданного в результате выполнения команды, которая обновляет, удаляет или уставляет строки, оба параметра *pulProgress* и *pulProgressMax* указывают общее число строк, затронутых при выполнении этой команды.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение асинхронных операций](../native-client/features/performing-asynchronous-operations.md)   
  [ISSAsynchStatus (OLE DB)](issasynchstatus-ole-db.md)  
   

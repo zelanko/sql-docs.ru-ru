@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 695848c8633d310f5e8ee21e9e738749d1550e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055855"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Вызов хранимой процедуры (OLE DB)
   Хранимая процедура может иметь ноль и более параметров. Также она может возвращать значение. При использовании [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB параметры хранимой процедуры могут передаваться следующим образом:  
@@ -125,7 +124,7 @@ ms.locfileid: "82704196"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимые процедуры](stored-procedures.md)  
   
   

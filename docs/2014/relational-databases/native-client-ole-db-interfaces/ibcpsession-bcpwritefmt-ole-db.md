@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: add50425-2ed6-411a-a391-4ce63c364892
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a547548f84af88ea3790658618570aeed8ce8112
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec126f82b3bae86701f2723bb8b93180916dc6b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047946"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   Записывает в файл форматирования сведения о формате каждого из столбцов.  
@@ -58,7 +57,7 @@ const wchar_t *pwszFormatFile);
  E_UNEXPECTED  
  Непредвиденный вызов метода. Например, перед вызовом этого метода не был вызван метод [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   

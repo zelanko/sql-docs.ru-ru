@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274c984d6ecec8af8f5bea27496450a45fc2f1df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026798"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Импорт данных в собственном и символьном формате из предыдущих версий SQL Server
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]можно с помощью программы **bcp** импортировать данные в собственном и символьном формате из [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , задав ключ **-V** . Ключ **-V** указывает [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , что следует использовать типы данных из указанной более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и что формат файла данных аналогичен формату в предыдущей версии.  
@@ -52,15 +51,15 @@ ms.locfileid: "66011919"
  <sup>1</sup> UDT обозначает определяемый пользователем тип.  
   
 ## <a name="exporting-using--v-80"></a>Экспорт с ключом -V 80  
- При выполнении операций с массовым экспортом `varbinary(max)`с помощью параметра `text` `image` `ntext` [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] `nvarchar(max)` `varchar(max)` **-V80** данные,,, XML и определяемые пользователем типы данных в собственном режиме сохраняются с помощью 4-байтного префикса, например, и данных, вместо 8-байтного префикса по умолчанию для и более поздних версий.  
+ При выполнении операций с массовым экспортом с помощью параметра **-V80** данные,,, `nvarchar(max)` `varchar(max)` `varbinary(max)` XML и определяемые пользователем типы данных в собственном режиме сохраняются с помощью 4-байтного префикса, например `text` , `image` и `ntext` данных, вместо 8-байтного префикса по умолчанию для [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий.  
   
 ## <a name="copying-date-values"></a>Копирование значений данных  
  Программа**bcp** использует API-интерфейс массового копирования ODBC. Таким образом, для импорта значений дат в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]программа **bcp** использует формат данных ODBC (*гггг-мм-дд чч:мм:сс*[ *.f...* ]).  
   
- Команда **bcp** экспортирует файлы данных символьного формата, используя формат ODBC по `datetime` умолчанию `smalldatetime` для значений и. Например, столбец типа `datetime`, содержащий дату `12 Aug 1998`, копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
+ Команда **bcp** экспортирует файлы данных символьного формата, используя формат ODBC по умолчанию для `datetime` `smalldatetime` значений и. Например, столбец типа `datetime`, содержащий дату `12 Aug 1998`, копируется с помощью массового копирования в файл данных в качестве строки символов `1998-08-12 00:00:00.000`.  
   
 > [!IMPORTANT]  
->  При импорте данных в `smalldatetime` поле с помощью программы **bcp**убедитесь, что значение для секунд равно 00,000; в противном случае операция завершится ошибкой. Тип данных `smalldatetime` содержит значения только с точностью до минуты. В данном случае инструкции BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...) не приведут к ошибке, но усекут значение секунд.  
+>  При импорте данных в `smalldatetime` поле с помощью программы **bcp**убедитесь, что значение секунд равно 00,000; в противном случае операция завершится ошибкой. Тип данных `smalldatetime` содержит значения только с точностью до минуты. В данном случае инструкции BULK INSERT и INSERT ... SELECT * FROM OPENROWSET(BULK...) не приведут к ошибке, но усекут значение секунд.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
  **Использование форматов данных для массового импорта или экспорта**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209879"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063567"
 ---
 # <a name="resource-governor-resource-pool"></a>Пул ресурсов регулятора ресурсов
   В регуляторе ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пул ресурсов представляет подмножество физических ресурсов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений в пуле ресурсов. Каждый пул ресурсов может содержать одну или несколько групп рабочей нагрузки. После запуска сеанса классификатор регулятора ресурсов назначает этот сеанс группе рабочей нагрузки и этот сеанс должен функционировать с ресурсами, назначенными этой группе рабочей нагрузки.  
@@ -116,11 +115,11 @@ ms.locfileid: "63209879"
 |Описывает, как изменить параметры пула ресурсов.|[Изменение параметров пула ресурсов](change-resource-pool-settings.md)|  
 |Описывает, как удалить пул ресурсов.|[Удаление пула ресурсов](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>См. также  
- [Resource Governor](resource-governor.md)   
- [Группа рабочей нагрузки Resource Governor](resource-governor-workload-group.md)   
+## <a name="see-also"></a>См. также:  
+ [регулятор ресурсов](resource-governor.md)   
+ [Группа рабочей нагрузки регулятора ресурсов](resource-governor-workload-group.md)   
  [Resource Governorная функция-классификатор](resource-governor-classifier-function.md)   
- [Настройка Resource Governor с помощью шаблона](configure-resource-governor-using-a-template.md)   
+ [Настройка регулятора ресурсов с помощью шаблона](configure-resource-governor-using-a-template.md)   
  [Просмотр свойств регулятора ресурсов](view-resource-governor-properties.md)  
   
   

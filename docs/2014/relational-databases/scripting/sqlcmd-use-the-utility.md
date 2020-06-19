@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35f7bcf1c8e5ebcb225a9198944cf4144321bad3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c2a07ae5d4248b4c37ab5fa8124582c99a1e6f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063421"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Использование программы sqlcmd
   Служебная программа `sqlcmd` представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)], а также для автоматизации задач скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интерактивная работа с `sqlcmd` и создание файлов скриптов, исполняемых с помощью `sqlcmd`, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа `sqlcmd` обычно применяется следующим образом.  
@@ -69,7 +68,7 @@ ms.locfileid: "82703696"
     sqlcmd -S <ComputerName>\<InstanceName>  
     ```  
   
-     or  
+     или диспетчер конфигурации служб  
   
     ```  
     sqlcmd -S .\<InstanceName>  
@@ -560,11 +559,11 @@ SQLCMD -E -N -C
   
  Если поставщик установил значение `ForceProtocolEncryption = True` , шифрование включается даже в случае, если в строке соединения указано значение `Encrypt=No` .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   
- [Использование sqlcmd с переменными скрипта](sqlcmd-use-with-scripting-variables.md)   
- [Изменение скриптов SQLCMD с помощью редактора запросов](edit-sqlcmd-scripts-with-query-editor.md)   
- [Управление шагами заданий](../../ssms/agent/manage-job-steps.md)   
+ [Использование программы sqlcmd с переменными скрипта](sqlcmd-use-with-scripting-variables.md)   
+ [Изменение скриптов SQLCMD при помощи редактора запросов](edit-sqlcmd-scripts-with-query-editor.md)   
+ [Управление шагами задания](../../ssms/agent/manage-job-steps.md)   
  [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   
