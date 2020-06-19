@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fe4f8527bf23ac1af36b6661f2d8f98350a96e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc30f175ce11051fc4ab578180da0a1df75e5fd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968804"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Работа с типами данных в потоке данных
   При разработке пользовательского компонента потока данных в службах Integration Services постоянно идет работа с типами данных: копирование данных в буферы потока и из буферов потока, а также преобразование значений. Сведения, представленные в этом разделе, помогут выбрать нужные типы данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] и использовать правильные методы работы с ними.
@@ -101,7 +100,7 @@ ms.locfileid: "78176364"
 > [!CAUTION]
 >  Разработчикам следует соблюдать осторожность при использовании методов класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>: может оказаться более удобным написать собственные методы сопоставления типов данных, более подходящие для специальных задач разрабатываемых ими компонентов. В существующих методах не учитывается числовая точность и масштаб, а также другие свойства, тесно связанные с типом данных. В следующей версии служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] корпорация [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] может изменить или удалить эти методы либо изменить выполняемое ими сопоставление.
 
- В следующей таблице представлены сопоставления различных типов данных служб <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> с управляемыми типами данных с помощью методов <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> и [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]
+ В следующей таблице представлены сопоставления различных типов данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с управляемыми типами данных с помощью методов <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A>
 
 |Тип данных служб Integration Services|Сопоставляется с управляемым типом данных|
 |------------------------------------|------------------------------------|
@@ -135,7 +134,7 @@ ms.locfileid: "78176364"
 > [!CAUTION]
 >  Разработчикам следует соблюдать осторожность при использовании методов класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>: может оказаться более удобным написать собственные методы сопоставления типов данных, более подходящие для специальных задач разрабатываемых ими компонентов. В существующих методах не учитывается числовая точность и масштаб, а также другие свойства, тесно связанные с типом данных. В следующей версии служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] корпорация [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] может изменить или удалить эти методы либо изменить выполняемое ими сопоставление.
 
- В следующей таблице представлены сопоставления типов данных служб <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> с другими типами данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с помощью метода [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].
+ В следующей таблице представлены сопоставления типов данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с другими типами данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A>.
 
 |Исходный тип данных служб Integration Services|Сопоставляется с типом данных служб Integration Services|
 |---------------------------------------------|-------------------------------------------------|

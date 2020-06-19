@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03913242246fcdaf11e9272e827cd8e06951a108
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21be7236565104edf9fd708d9162c92ac1e71fe6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917974"
 ---
 # <a name="transfer-jobs-task"></a>Задача «Передача заданий»
   Задача «Передача заданий» служит для передачи одного или нескольких заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -77,7 +76,7 @@ ms.locfileid: "62829900"
   
 -   [Задание свойств задач или контейнеров](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   

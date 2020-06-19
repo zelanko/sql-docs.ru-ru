@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6c13587-c690-45d9-af90-b3d652afc55b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a597d1f8f3b5720f2f7a688fdf2aabc7941a0ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068173"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940305"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Определение исходных сведений (мастер секционирования)
   С помощью страницы **Определение исходных сведений** можно выбрать группу мер, в которой создается секция, а также представление источника данных, и отфильтровать таблицы для секции.  
@@ -25,7 +24,7 @@ ms.locfileid: "66068173"
 > [!CAUTION]  
 >  Если из списка **Доступные таблицы** выбирается таблица, которая используется другой секцией, необходимо предоставить запрос на странице **Ограничение на строки** , иначе возникнет риск повторения данных в кубе.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Группа мер**  
  Выберите группу мер для этой секции.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66068173"
 > [!NOTE]  
 >  Если выбирается несколько таблиц, страницу **Ограничение на строки** невозможно отобразить, и нельзя ограничить строки для секций, созданных из выбранных таблиц. Для ограничения строк во всех секциях мастер секционирования должен выполняться по одному разу для каждой таблицы, из которых должна создаваться секция.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции (службы Analysis Services — многомерные данные)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

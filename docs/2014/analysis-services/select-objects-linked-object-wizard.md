@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 733afc25-5055-4411-bab5-dd9e0595cd2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6825417c53e0b0f9eb79e42e1a38737f6a60ce63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10b6405545a3f47a644394be08eb3e93f1945edb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940915"
 ---
 # <a name="select-objects-linked-object-wizard"></a>Выбор объектов (мастер связанных объектов)
   Используйте страницу **Выбор объектов** , чтобы выбрать объекты, которые должны быть связаны или импортированы.  
@@ -25,7 +24,7 @@ ms.locfileid: "66069318"
 > [!NOTE]  
 >  Измерения и группы мер (включая взаимодействующие меры) связываются. Действия, ключевые показатели эффективности и вычисления импортируются.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Available objects**  
  Выберите объекты, которые должны быть связаны или импортированы.  
   

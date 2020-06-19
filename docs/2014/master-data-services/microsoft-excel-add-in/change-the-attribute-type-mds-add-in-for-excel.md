@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81349af5984f7fafda863f0091cae3375f3dd8d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961464"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Изменение типа атрибута (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут изменить тип атрибута, если тип данных или количество допустимых символов являются неверными.  
@@ -72,7 +71,7 @@ ms.locfileid: "65482767"
 > [!TIP]  
 >  Изменять тип данных атрибутов MDS, которые имеют данные и связанные сущности, неудобно, особенно если объявлено бизнес-правило или представление подписки, которое ссылается на сущность. Рекомендуется для начала выбрать тип данных, который достаточно гибок и позволяет указывать все необходимые значения. Например, вначале строки могут быть небольшими, но со временем становиться все длиннее, поэтому следует исходить из самого худшего варианта развития событий. Очень длинные текстовые строки могут быть неудобными в работе (например, широкие текстовые поля для пользовательского интерфейса сложно уместить на экране), поэтому следует избегать слишком длинных строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;атрибутов&#41;](../attributes-master-data-services.md)   
  [Построение модели (надстройка MDS для Excel)](building-a-model-mds-add-in-for-excel.md)  
   

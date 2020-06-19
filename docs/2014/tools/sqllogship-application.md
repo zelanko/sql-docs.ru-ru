@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc9695e711379247590a849651bc6573bd2f04fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007017"
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
   Приложение **sqllogship** выполняет операции резервного копирования, обычного копирования и восстановления, а также связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
@@ -74,7 +73,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
   
  Журнал доставки журналов, созданный программой **sqllogship** , смешивается с журналом, создаваемым заданиями доставки журналов. При частом использовании программы **sqllogship** в конфигурациях доставки журналов стоит рассмотреть отключение заданий доставки журналов. Дополнительные сведения см. в статье [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
- Приложение **sqllogship** , sqllogship. exe, устанавливается в каталог X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn.  
+ Приложение **sqllogship** , SqlLogShip.exe, устанавливается в каталог X:\PROGRAM Files\Microsoft SQL Server\120\Tools\Binn.  
   
 ## <a name="permissions"></a>Разрешения  
  **sqllogship** использует проверку подлинности Windows. Учетной записи Windows, от которой выполняется команда, необходимы доступ к каталогу Windows и разрешения [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Это требование зависит от того, какой параметр задается командой **sqllogship** : **-backup**, **-copy**или **-restore** .  

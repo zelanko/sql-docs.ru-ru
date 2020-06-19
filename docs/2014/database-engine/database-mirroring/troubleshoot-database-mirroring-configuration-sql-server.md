@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dafd98f721bfc2d2d0dd64a9f97689466529407
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933887"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
   В этом разделе приводятся сведения об устранении неполадок при установке сеанса зеркального отображения базы данных.  
@@ -164,7 +163,7 @@ ms.locfileid: "62754212"
   
  Дополнительные сведения см. в разделе [Транзакции между базами данных не поддерживаются при зеркальном отображении баз данных или в группах доступности AlwaysOn (SQL Server)](../availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка SQL Server &#40;зеркального отображения базы данных&#41;](setting-up-database-mirroring-sql-server.md)   
  [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)  
   

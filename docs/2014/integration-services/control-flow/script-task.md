@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918381"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
   Задача "Скрипт" представляет код для выполнения функций, недоступных в задачах и преобразованиях, предоставляемых средствами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Задача «Скрипт» также позволяет объединять функции в одном скрипте вместо использования нескольких задач и преобразований. Задачу «Скрипт» следует использовать для выполнения операций над пакетом (или над каждым перечисленным объектом), а не над каждой строкой данных.  
@@ -64,7 +63,7 @@ ms.locfileid: "62830565"
  Эти свойства можно задать с помощью конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программно.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Настройка задачи «Скрипт» в конструкторе  
- В следующей таблице описано событие `ScriptTaskLogEntry`, которое может быть зарегистрировано для задачи «Скрипт». `ScriptTaskLogEntry` Событие выбирается для ведения журнала на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
+ В следующей таблице описано событие `ScriptTaskLogEntry`, которое может быть зарегистрировано для задачи «Скрипт». `ScriptTaskLogEntry`Событие выбирается для ведения журнала на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
 |Запись журнала|Описание|  
 |---------------|-----------------|  

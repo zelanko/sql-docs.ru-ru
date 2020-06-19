@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2423afc2a16751ddb60c6ca679a2ee21121d238
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918300"
 ---
 # <a name="select-objects-to-transfer"></a>Выбор объектов для передачи
   Используйте данное диалоговое окно, чтобы выбрать объекты для передачи из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой с использованием задачи передачи служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

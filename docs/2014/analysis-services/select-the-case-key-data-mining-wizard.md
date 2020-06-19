@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 75755ee7-65b7-4d61-b1e8-3566199430d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d005ef9666d9bac5355b7419cf2a9cbb9040e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 484b1ccb084ca6e3ed5f80f0ed8a98fd8c1c7c49
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069254"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940805"
 ---
 # <a name="select-the-case-key-data-mining-wizard"></a>Выбор ключа варианта (мастер интеллектуального анализа данных)
   Используйте страницу **Выбор ключа варианта** , чтобы выбрать атрибут исходного измерения куба, который будет ключом структуры интеллектуального анализа данных. Этот атрибут должен принадлежать иерархии или иметь собственную включенную иерархию атрибутов.  
@@ -27,11 +26,11 @@ ms.locfileid: "66069254"
   
  **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Атрибуты**  
  Щелкните атрибут, который будет ключом структуры интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Выберите измерение исходного куба &#40;мастер интеллектуального анализа данных&#41;](select-the-source-cube-dimension-data-mining-wizard.md)   
  [Выбор столбцов уровня вариантов &#40;мастера интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)  

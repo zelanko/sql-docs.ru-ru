@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 232beed45a62ad9cef9f43b122d23cb4d0728a78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fee3411a65d7e2b5f91e503b1314aa004b6a12bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023182"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Использование проводника служебных программ для управления служебной программой SQL Server
   Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов в служебной программе представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде дерева. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](sql-server-utility-features-and-tasks.md).  

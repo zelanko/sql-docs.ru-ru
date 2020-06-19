@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c29053daaef4e24d89ee92fc4b6653616999205a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70cf3a1a0edb8cb38d59a2b79ef1891d3bdd0e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62710510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044221"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>Сохранение диаграмм баз данных (визуальные инструменты для баз данных)
   При сохранении диаграммы базы данных могут быть сохранены все изменения в базе данных, включая изменения, выполненные в таблицах, столбцах и других ее объектах.  
   
 ### <a name="to-save-the-database-diagram"></a>Сохранение диаграммы базы данных  
   
-1.  В меню **файл** выберите команду **сохранить <*`tablename`* **.  
+1.  В меню **файл** выберите команду **сохранить <*`tablename`* > **.  
   
 2.  Если это новая диаграмма, которую еще ни разу не сохраняли, откроется диалоговое окно **Сохранить как** . Введите имя диаграммы.  
   

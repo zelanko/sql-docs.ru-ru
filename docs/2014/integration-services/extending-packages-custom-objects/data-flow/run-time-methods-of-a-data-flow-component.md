@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 656acd0802eb08e7b32c2d6b4dbee2129682d298
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768640"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968844"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Методы времени выполнения для компонента потока данных
   Во время выполнения задача потока данных проверяет последовательность компонентов, подготавливает план выполнения и управляет пулом рабочих потоков, выполняющих план работы. Задача загружает строки данных из источников, обрабатывает их с помощью преобразований, а затем сохраняет в соответствующие назначения.  
@@ -210,7 +209,7 @@ End Sub
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Методы времени разработки для компонента потока данных](design-time-methods-of-a-data-flow-component.md)  
   
   

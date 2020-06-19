@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b249b3603b23884e218e893ae6e7a7bc0c93be1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940995"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Выбор метода определения соединения (мастер источников данных) (службы Analysis Services)
   Страница **Выбор метода определения соединения** используется для создания или выбора подключения к данным для источника данных.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Создать источник данных, основанный на существующем или на новом соединении**  
  Выберите этот параметр для использования существующей строки соединения или создания новой строки соединения для объекта источника данных.  
   

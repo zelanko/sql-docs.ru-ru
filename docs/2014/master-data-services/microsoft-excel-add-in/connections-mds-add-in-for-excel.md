@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f2b2f9d-7744-460e-83cd-56d34ea70ff0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a7d336e777f4f6bf00310cbadfed75987ba45252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1704cf87bfebf0cab80630f3dcb66517b0f5420a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478915"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961424"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Соединения (настройка MDS для Excel)
   Для скачивания данных в [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]необходимо сначала создать соединение. Соединение — это данные, по которым веб-служба [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] узнает, с какой базой данных MDS нужно устанавливать соединение.  

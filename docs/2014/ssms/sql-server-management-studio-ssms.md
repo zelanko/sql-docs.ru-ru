@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66a6b7b1-de6a-4161-82bd-98ded486947b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0644d2bfc49ecd34869c134f163897990c147713
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154990"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061991"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] — это интегрированная среда для управления инфраструктурой SQL Server. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров SQL Server. Она также предоставляет средства для развертывания, наблюдения и обновления компонентов уровня данных, например баз данных и хранилищ данных, используемых приложениями, а также для построения запросов и скриптов.  
@@ -35,7 +34,7 @@ ms.locfileid: "63154990"
 |Описывает, как использовать средства визуального проектирования, включенные в [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |Описывает, как использовать редакторы языков [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для интерактивного построения и отладки запросов и скриптов.|[Редакторы запросов и текста (SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник. SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
  [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   

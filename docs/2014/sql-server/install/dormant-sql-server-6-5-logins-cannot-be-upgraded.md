@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebe18a74-0375-4df4-b894-239f8fdabb64
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e2865607f058c077fc3d12c2e3c2f778450511d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f78bca9bf2b99b2ab6f530613b64bc0e46c4001c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054822"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Невозможно обновить неактивные имена входа SQL Server 6.5
   Советник по переходу обнаружил имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пароль которого нельзя напрямую обновить до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -41,7 +40,7 @@ SELECT * FROM sysxlogins WHERE (xstatus & 2048) = 2048;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

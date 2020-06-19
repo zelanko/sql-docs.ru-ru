@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d52790be862d4a41552a32a7be4082decf2af0f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061761"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Задача 1. Создание проекта качества данных
   В этой задаче будет создан проект служб DQS для очистки данных о поставщиках в файле Excel с использованием базы знаний Suppliers, созданной ранее в этом учебнике.

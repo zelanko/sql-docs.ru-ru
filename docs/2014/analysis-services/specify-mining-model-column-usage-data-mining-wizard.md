@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41a9867e-e055-495b-ba40-0a7ffaf57604
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb9f57e7918e7ef283255bf8ff947cc4493e9a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e7701d755b42dbbd94bcc53480bcc25a83bf1e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068361"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940385"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Использование столбцов для модели (мастер интеллектуального анализа данных)
   Страница **Использование столбцов для модели** используется для задания того, как будут использоваться столбцы модели интеллектуального анализа данных и для добавления вложенных таблиц.  
@@ -27,11 +26,11 @@ ms.locfileid: "66068361"
   
  **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Таблицы и столбцы**  
  Отображает имена таблиц и столбцов, ранее определенных в мастере.  
   
- **Входные данные**  
+ **Ввод**  
  Выберите для использования таблицы или столбца в качестве ввода в модель интеллектуального анализа данных.  
   
  **Прогнозируемый**  
@@ -43,7 +42,7 @@ ms.locfileid: "66068361"
  **Удалить вложенную таблицу**  
  Нажмите эту кнопку для удаления выбранной вложенной таблицы. Данная кнопка действует, только если выбрана вложенная таблица.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Выбор столбцов уровня вариантов &#40;мастера интеллектуального анализа данных&#41;](select-case-level-columns-data-mining-wizard.md)   
  [Укажите содержимое столбца и тип данных &#40;мастер интеллектуального анализа данных&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
