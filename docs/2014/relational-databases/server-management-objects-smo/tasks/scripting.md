@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063066"
 ---
 # <a name="scripting"></a>Написание сценариев
-  Создание скрипта в SMO управляется объектом <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерними объектами или методом `Script` на отдельных объектах. <xref:Microsoft.SqlServer.Management.Smo.Scripter> Объект управляет сопоставлением из отношений зависимости для объектов в экземпляре. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+  Создание скрипта в SMO управляется объектом <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерними объектами или методом `Script` на отдельных объектах. <xref:Microsoft.SqlServer.Management.Smo.Scripter>Объект управляет сопоставлением из отношений зависимости для объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Расширенное создание сценария с помощью объекта <xref:Microsoft.SqlServer.Management.Smo.Scripter> и его дочерних объектов является процессом из трех фаз.  
   

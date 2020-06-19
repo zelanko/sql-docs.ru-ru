@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15691c513aad6027be1063ef566ebdf245ebcc8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957724"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет восстанавливать базу данных, несмотря на обнаруженные ошибки. Новый важный механизм обнаружения ошибок состоит в возможном создании контрольной суммы резервной копии, которую можно создать операцией резервного копирования и проверить операцией восстановления. Можно управлять тем, будет ли операция проверять наличие ошибок и будет ли она останавливаться или продолжаться при обнаружении ошибки. Если резервная копия содержит контрольную сумму, инструкции RESTORE и RESTORE VERIFYONLY могут выполнять проверку на наличие ошибок.  

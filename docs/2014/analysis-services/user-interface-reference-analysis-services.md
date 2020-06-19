@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b751e2dfd9950ba7a25bc3cde36f3625ab473131
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938236"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Справочник по пользовательскому интерфейсу (службы Analysis Services)
-  В этом разделе содержатся разделы справки [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]по. Эти разделы доступны также из пользовательского интерфейса. Для обращения к ним нужно нажать клавишу F1 или кнопку **Справка** на страницах мастеров, конструкторов и в диалоговых окнах.  
+  В этом разделе содержатся разделы справки по [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Эти разделы доступны также из пользовательского интерфейса. Для обращения к ним нужно нажать клавишу F1 или кнопку **Справка** на страницах мастеров, конструкторов и в диалоговых окнах.  
   
 ## <a name="topic-list"></a>Список разделов  
   
-|Раздел|Содержит|  
+|Section|Содержит|  
 |-------------|--------------|  
 |[Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)|Разделы справки по мастерам (многомерным) служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
 |[Конструкторы и диалоговые окна служб интеллектуального анализа данных](data-mining-designers-and-dialog-boxes.md)|Разделы справки по мастерам (интеллектуального анализа данных) служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 84339eab432194327759fbdad505cdb1af60517b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890a7da8d94c23ff65303eb2ce629774f20f70a4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971534"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Операции веб-службы по категориям (службы Master Data Services)
   Веб-служба [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] содержит полный набор операций, позволяющих писать код для управления всеми функциями веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] через его пользовательский интерфейс. Операции веб-службы определяются интерфейсом <xref:Microsoft.MasterDataServices.IService> и реализуются в виде методов класса <xref:Microsoft.MasterDataServices.ServiceClient>. В этом разделе операции веб-службы сгруппированы по основным категориям для того, чтобы было проще понять, как пользоваться API-интерфейсом веб-службы.  

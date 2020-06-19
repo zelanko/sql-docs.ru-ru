@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ca013ca12af9ee215fa5c3e4eefe7712ba02d68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84994820"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Справка F1 по диалоговым окнам «Параметры»
   В этом разделе содержатся материалы справки F1 для диалоговых окон, доступ к которым осуществляется выбором пункта **Параметры** меню **Сервис** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

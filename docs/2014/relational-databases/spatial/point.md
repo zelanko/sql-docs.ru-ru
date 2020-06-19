@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b5027eb9be355348e00b6f17128b821a2bfc2af4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b12069d84e00738e3ddac8c414f33903f4f0999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063038"
 ---
 # <a name="point"></a>Точка
   В пространственных данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр `Point` является объектом без измерения, представляющим отдельное месторасположение, и может содержать значения Z (уровень) и M (мера).  
@@ -59,7 +58,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [MultiPoint](multipoint.md)   
  [STX &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/stx-geometry-data-type)   
  [STY &#40;типа данных geometry&#41;](/sql/t-sql/spatial-geometry/sty-geometry-data-type)   

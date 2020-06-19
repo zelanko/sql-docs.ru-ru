@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c37f57da9651cad37a3ac4bb267efb3da05d7616
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971612"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Удаление элемента или коллекции (службы Master Data Services)
   В службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]элементы и коллекции следует удалять, когда в них больше нет необходимости. Если необходимо удалить большое количество элементов, лучше воспользоваться промежуточным процессом. Дополнительные сведения см. [в разделе Отключение или удаление элементов с помощью промежуточного процесса &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md).  
@@ -60,7 +59,7 @@ ms.locfileid: "65479714"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повторная активация элемента или коллекции &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
  [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Коллекции (службы Master Data Services)](../../2014/master-data-services/collections-master-data-services.md)  

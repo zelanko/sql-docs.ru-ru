@@ -11,32 +11,31 @@ f1_keywords:
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea70ca9d5d511660ff19a84165a7fc7921b6de1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9c4049681e671993f48594eb7ac18bad403e3e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965014"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Редактор источника «ODBC» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника ODBC** , чтобы выбрать диспетчер соединений ODBC для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
   
  Дополнительные сведения об источнике ODBC см. в разделе [ODBC Source](data-flow/odbc-source.md).  
   
-## <a name="task-list"></a>список задач  
+## <a name="task-list"></a>Список задач  
  **Открытие страницы диспетчера соединений в редакторе источника ODBC**  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник ODBC.  
   
 -   На вкладке **Поток данных** дважды щелкните источник ODBC.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ### <a name="connection-manager"></a>Диспетчер соединений  
  Выберите из списка существующий диспетчер соединений ODBC или нажмите кнопку **создать** , чтобы создать новое соединение. Соединение может устанавливаться с любой базой данных, поддерживающей ODBC.  
   
-### <a name="new"></a>Создать  
+### <a name="new"></a>Оператор new  
  Нажмите кнопку **New** (Создать). Откроется диалоговое окно **Настройка редактора диспетчера соединений ODBC** , где можно создать новый диспетчер соединений ODBC.  
   
 ### <a name="data-access-mode"></a>Режим доступа к данным  
@@ -55,7 +54,7 @@ ms.locfileid: "66057220"
 ### <a name="preview"></a>Preview (Предварительный просмотр)  
  Нажмите кнопку **Просмотр** , чтобы просмотреть первые 200 строк данных, извлеченных из выбранной таблицы или представления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские свойства источника «ODBC»](data-flow/odbc-source-custom-properties.md)   
  [Редактор источника «ODBC» &#40;столбцы&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Редактор источника ODBC (страница "Вывод ошибок")](../../2014/integration-services/odbc-source-editor-error-output-page.md)  

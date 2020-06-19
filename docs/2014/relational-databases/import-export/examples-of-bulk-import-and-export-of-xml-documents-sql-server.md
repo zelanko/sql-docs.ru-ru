@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011973"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026740"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Примеры массового импорта и экспорта XML-документов (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Можно выполнять массовый импорт XML-документов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базу данных или выполнить их экспорт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из базы данных. В этом разделе приведены примеры и того, и другого.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Можно выполнять массовый импорт XML-документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базу данных или выполнить их экспорт из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных. В этом разделе приведены примеры и того, и другого.  
   
  Для выполнения массового импорта данных из файла в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или несекционированное представление могут использоваться следующие средства.  
   
@@ -44,9 +43,9 @@ ms.locfileid: "66011973"
 ## <a name="examples"></a>Примеры  
  Далее следуют примеры.  
   
--   А) [МАССОВЫй импорт XML-данных в виде двоичного байтового потока](#binary_byte_stream)  
+-   A. [МАССОВЫй импорт XML-данных в виде двоичного байтового потока](#binary_byte_stream)  
   
--   Б) [Массовый импорт XML-данных в существующую строку](#existing_row)  
+-   Б. [Массовый импорт XML-данных в существующую строку](#existing_row)  
   
 -   В. [Массовый импорт XML-данных из файла, содержащего DTD](#file_contains_dtd)  
   

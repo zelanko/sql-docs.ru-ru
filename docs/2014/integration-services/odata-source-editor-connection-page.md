@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057318"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965084"
 ---
 # <a name="odata-source-editor-connection-page"></a>Редактор источника OData (страница «Подключение»)
   Страница **Диспетчер соединений** диалогового окна **Редактор источника OData** служит для выбора диспетчера соединений OData для источника. На этой странице также можно задать путь к коллекции или ресурсу, а также параметры запроса, чтобы указать, какие данные нужно получить из источника OData. Дополнительные сведения об источнике OData см. в разделе [OData Source](data-flow/odata-source.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "66057318"
  **Диспетчер соединений OData**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новый диспетчер соединений с помощью диалогового окна **Редактор диспетчера соединений OData** .  
   
  **Использование пути к коллекции или ресурсу**  
@@ -34,7 +33,7 @@ ms.locfileid: "66057318"
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|Collection|Извлечение данных из источника OData с помощью имени коллекции.|  
+|Коллекция|Извлечение данных из источника OData с помощью имени коллекции.|  
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  
   
  **Параметры запроса**  
@@ -49,14 +48,14 @@ ms.locfileid: "66057318"
 ## <a name="dynamic-options"></a>Динамические параметры  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Использование пути к коллекции или ресурсу = коллекция  
- **Collection**  
+ **Коллекция**  
  Выберите коллекцию из раскрывающегося списка.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Использование пути к коллекции или ресурсу = путь к ресурсу  
- **Resource path**  
+ **Путь к ресурсу**  
  Введите путь к ресурсу. Например: Employees  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника OData — страница &#40;столбцы&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Редактор источника OData &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Диспетчер соединений OData](connection-manager/odata-connection-manager.md)  

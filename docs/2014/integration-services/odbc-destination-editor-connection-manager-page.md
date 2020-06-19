@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 281bbda38a6711efd4e2ffae7afbfa17d689254b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57a45cb3e9eace357477c0c9f2adfc25384466a1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057208"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965054"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Редактор назначения «ODBC» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения ODBC** используется для выбора диспетчера соединений ODBC для назначения. На этой странице также можно выбрать таблицу или представление базы данных  
@@ -26,7 +25,7 @@ ms.locfileid: "66057208"
   
  **Открытие страницы диспетчера соединений в редакторе назначения ODBC**  
   
-## <a name="task-list"></a>список задач  
+## <a name="task-list"></a>Список задач  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий назначение ODBC.  
   
@@ -34,12 +33,12 @@ ms.locfileid: "66057208"
   
 -   В окне **Редактор назначения ODBC**нажмите кнопку **Диспетчер соединений**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ### <a name="connection-manager"></a>Диспетчер соединений  
  Выберите из списка существующий диспетчер соединений ODBC или нажмите кнопку «Создать», чтобы создать новое соединение. Соединение может устанавливаться с любой базой данных, поддерживающей ODBC.  
   
-### <a name="new"></a>Создать  
+### <a name="new"></a>Оператор new  
  Нажмите кнопку **New** (Создать). Откроется диалоговое окно **Настройка редактора диспетчера соединений ODBC** , где можно создать новый диспетчер соединений.  
   
 ### <a name="data-access-mode"></a>Режим доступа к данным  
@@ -55,7 +54,7 @@ ms.locfileid: "66057208"
 ### <a name="preview"></a>Preview (Предварительный просмотр)  
  Нажмите кнопку **Просмотр** , чтобы просмотреть первые строки (до 200) данных для выбранной таблицы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские свойства назначения «ODBC»](data-flow/odbc-destination-custom-properties.md)   
  [Редактор назначения ODBC &#40;страниц сопоставления&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
  [Редактор назначения ODBC (страница "Вывод ошибок")](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  

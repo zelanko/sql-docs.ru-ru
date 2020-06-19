@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48060c9b1bf3dfd670f96a9b8bcf68c2002fc7fc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479478"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971601"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Развертывание пакета развертывания модели с помощью мастера
   Мастер развертывания модели [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] служит для развертывания пакетов, содержащих только объекты модели. Если нужно развернуть пакет с данными, см. раздел [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "65479478"
   
 5.  Найдите свой пакет развертывания (файл PKG) и нажмите кнопку **Открыть**.  
   
-6.  Нажмите кнопку **Далее**.  
+6.  Щелкните **Далее**.  
   
 7.  После загрузки пакета нажмите кнопку **Далее**.  
   
@@ -73,14 +72,14 @@ ms.locfileid: "65479478"
   
      При обновлении в случае неудачного завершения любого из первых трех шагов переход к следующему шагу не производится. Однако откат уже внесенных изменений также не выполняется. Если процесс развертывания завершается неудачей в шаге 4, обновляются те элементы, которые могут обновиться.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
- Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительная информация:  
+## <a name="next-steps"></a>Next Steps  
+ Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную.    Дополнительные сведения см. в разделе:  
   
 -   [Добавление Master Data Services &#40;метаданных&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
 -   [Назначение разрешения для объекта модели (службы Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

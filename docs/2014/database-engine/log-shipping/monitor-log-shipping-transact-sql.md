@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ab87d5d8aa08b7b2860fe52fd097f33af327a94
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774888"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931165"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Наблюдение за доставкой журналов (Transact-SQL)
   После того, как была настроена доставка журналов, можно отслеживать данные о состоянии всех серверов доставки журналов. Журнал и состояние операций доставки журналов всегда сохраняются локально заданиями доставки журналов. Журнал и состояние операций резервного копирования сохраняются на сервере-источнике, а журнал и состояние операций копирования и восстановления сохраняются на сервере-получателе. Если был реализован удаленный сервер мониторинга, эти данные также сохраняются и на нем.  

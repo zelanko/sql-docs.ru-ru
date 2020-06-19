@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0a743f8d-2a51-4296-9976-8104f5ca22d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 972357372fe6d0281aedb57d49dd8d50682085b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82853123767237314edac1e301723724628439d9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965044"
 ---
 # <a name="odbc-destination-editor-error-output-page"></a>Редактор назначения «ODBC» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор назначения ODBC** используется для выбора параметров обработки ошибок.  
@@ -26,7 +25,7 @@ ms.locfileid: "66057203"
   
  **Открытие страницы «Вывод ошибок» редактора назначения ODBC**  
   
-## <a name="task-list"></a>список задач  
+## <a name="task-list"></a>Список задач  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий назначение ODBC.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "66057203"
   
 -   В окне **Редактор назначения ODBC**нажмите кнопку **Вывод ошибок**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ### <a name="inputoutput"></a>Ввод-вывод  
  Просмотр имени источника данных.  
@@ -42,7 +41,7 @@ ms.locfileid: "66057203"
 ### <a name="column"></a>Столбец  
  Не используется.  
   
-### <a name="error"></a>Ошибка  
+### <a name="error"></a>Error  
  Выберите порядок обработки ошибок в потоке назначением ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
 ### <a name="truncation"></a>Усечение  
@@ -61,7 +60,7 @@ ms.locfileid: "66057203"
  Следующие параметры позволяют настроить обработку ошибок и усечений назначением ODBC.  
   
 ### <a name="fail-component"></a>Компонент, завершившийся сбоем  
- Задача потока данных заканчивается сбоем, если возникли ошибка или усечение. Это поведение по умолчанию.  
+ Задача потока данных заканчивается сбоем, если возникли ошибка или усечение. Это поведение установлено по умолчанию.  
   
 ### <a name="ignore-failure"></a>Пропуск неудачи  
  Ошибка или усечение пропускается.  
@@ -69,7 +68,7 @@ ms.locfileid: "66057203"
 ### <a name="redirect-flow"></a>Перенаправление потока  
  Строка, вызывающая ошибку или усечение, направляется на вывод ошибок назначения ODBC. Дополнительные сведения см. в разделе, посвященном назначению ODBC.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначения ODBC &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
  [Редактор назначения ODBC (страница "Сопоставления")](../../2014/integration-services/odbc-destination-editor-mappings-page.md)  
   

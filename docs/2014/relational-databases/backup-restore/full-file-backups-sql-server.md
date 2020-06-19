@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2e45dc68afa4d464aa3931075a1c1b3be792e6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957984"
 ---
 # <a name="full-file-backups-sql-server"></a>полные резервные копии файлов (SQL Server)
   Сведения, приведенные в этом разделе, относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , которые содержат несколько файлов или файловых групп.  
@@ -99,7 +98,7 @@ ms.locfileid: "62876144"
 ## <a name="see-also"></a>См. также:  
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
- [Резервное копирование и восстановление: взаимодействие и сосуществование (SQL Server)](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Резервное копирование и восстановление: взаимодействие и совместимость &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
  [Восстановление файлов (простая модель восстановления)](file-restores-simple-recovery-model.md)   
  [Восстановления файлов (модель полного восстановления)](file-restores-full-recovery-model.md)   

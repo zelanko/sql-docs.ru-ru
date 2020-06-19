@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968322f92c7a135adb5fd0733b5774e7562bc39
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875711"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957584"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Восстановление связанных баз данных, которые содержат помеченную транзакцию
   Этот раздел относится только к базам данных, содержащим помеченные транзакции и использующим полную модель восстановления или модель восстановления с неполным протоколированием.  
@@ -61,11 +60,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Синтаксис языка Transact-SQL для восстановления до метки  
  Отметив помеченную транзакцию с помощью инструкции[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), можно использовать одно из следующих предложений, чтобы остановиться на метке или перед ней.  
   
--   Используйте предложение WITH STOPATMARK = **'*`<mark_name>`*'** , чтобы указать, что помеченная транзакция является точкой восстановления.  
+-   Используйте предложение WITH STOPATMARK = **' *`<mark_name>`* '** , чтобы указать, что помеченная транзакция является точкой восстановления.  
   
      С помощью предложения STOPATMARK выполняется накат к метке, при этом помеченная транзакция включается в накат.  
   
--   Используйте предложение WITH STOPBEFOREMARK = **'*`<mark_name>`*'** , чтобы указать, что запись журнала, которая находится непосредственно перед меткой, является точкой восстановления.  
+-   Используйте предложение WITH STOPBEFOREMARK = **' *`<mark_name>`* '** , чтобы указать, что запись журнала, которая находится непосредственно перед меткой, является точкой восстановления.  
   
      С помощью предложения STOPBEFOREMARK выполняется накат к метке, при этом помеченная транзакция не включается в накат.  
   

@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 73e949de-67a3-4c84-9735-7da1ad4ba34a
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
-ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d1892b26f3c638a696d8ed15e739f56ac2e682f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71708211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026781"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Массовый импорт и экспорт данных с использованием программы bcp (SQL Server)
 
@@ -74,11 +73,11 @@ ms.locfileid: "71708211"
 
 ## <a name="see-also"></a>См. также:
 
-[INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
- [предложение SELECT &#40;](/sql/t-sql/queries/select-clause-transact-sql) 
- [служебной программы](../../tools/bcp-utility.md) Transact-SQL&#41;bcp   
-[Подготовка к групповому импорту данных &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
+&#41;Transact- [SQL INSERT &#40;](/sql/t-sql/statements/insert-transact-sql) 
+ [Предложение SELECT &#40;&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
+ Transact-SQL [программа bcp](../../tools/bcp-utility.md)   
+[Подготовка SQL Server &#40;данных к групповому импорту&#41;](prepare-to-bulk-import-data-sql-server.md) 
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
- [групповой импорт и экспорт данных &#40;](bulk-import-and-export-of-data-sql-server.md) 
-SQL Server&#41;[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
- [Создание файла форматирования &#40;](create-a-format-file-sql-server.md) SQL Server
+ [Групповой импорт и экспорт SQL Server &#40;данных&#41;](bulk-import-and-export-of-data-sql-server.md) 
+ [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) 
+ [Создайте файл форматирования &#40;SQL Server&#41;](create-a-format-file-sql-server.md)

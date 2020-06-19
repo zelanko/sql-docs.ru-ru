@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e8fa620-315d-4e10-a718-23fa5171c09e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04e4f78e51adb803bb65530c0b3b903aa7f76419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957614"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Восстановление базы данных без восстановления данных (Transact-SQL)
   Обычно все данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] восстанавливаются перед восстановлением базы данных. Однако операция восстановления может восстановить базу данных без использования резервной копии, например, при восстановлении согласованных с базой данных файлов, доступных только для чтения. Это называется *восстановлением только по журналу транзакций*. Восстановление только по журналу транзакций выполняется в тех случаях, когда данные уже согласованы с базой данных и остается только сделать их доступными.  
@@ -42,7 +41,7 @@ ms.locfileid: "62921819"
  RESTORE DATABASE *имя_базы_данных* WITH RECOVERY  
   
 > [!NOTE]  
->  Предложение FROM **=** \< *backup_device>* не используется для восстановления только с восстановлением, так как резервная копия не требуется.  
+>  Предложение FROM **=** \<*backup_device> * не используется для восстановления только с восстановлением, так как резервная копия не требуется.  
   
  **Пример**  
   
@@ -63,7 +62,7 @@ RESTORE DATABASE AdventureWorks2012
   
  Синтаксис инструкции [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) для восстановления файлов только по журналу транзакций:  
   
- Восстановление базы данных *database_name* { **=** файл _logical_file_name_ | Файловая группа **=** _logical_filegroup_name_ } [ **,**... *n* ] с восстановлением  
+ Восстановление базы данных *database_name* {файл **=** _logical_file_name_ | ФАЙЛовая группа **=** _logical_filegroup_name_ } [ **,**... *n* ] с восстановлением  
   
  **Пример**  
   
@@ -76,23 +75,23 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 ## <a name="examples-of-completing-a-piecemeal-restore-scenario-with-a-recovery-only-restore"></a>Примеры завершения сценария поэтапного восстановления восстановлением только по журналу транзакций  
  **Простая модель восстановления**  
   
--   [Пример. Поэтапное восстановление базы данных (простая модель восстановления)](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление отдельных файловых групп (простая модель восстановления)](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [Пример. Поэтапное восстановление отдельных файловых групп &#40;простая модель восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
  **Модель полного восстановления**  
   
--   [Пример. Поэтапное восстановление базы данных (модель полного восстановления)](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление базы данных &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
--   [Пример. Поэтапное восстановление только некоторых файловых групп (модель полного восстановления)](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
+-   [Пример. Поэтапное восстановление только некоторых файловых групп &#40;модель полного восстановления&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
-## <a name="see-also"></a>См. также  
- [&#40;оперативного восстановления SQL Server&#41;](online-restore-sql-server.md)   
- [Поэтапное восстановление &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [Восстановление файлов &#40;простой модели восстановления&#41;](file-restores-simple-recovery-model.md)   
- [Восстановление файлов &#40;модель полного восстановления&#41;](file-restores-full-recovery-model.md)   
+## <a name="see-also"></a>См. также:  
+ [Восстановление в сети (SQL Server)](online-restore-sql-server.md)   
+ [Поэтапное восстановление (SQL Server)](piecemeal-restores-sql-server.md)   
+ [Восстановление файлов (простая модель восстановления)](file-restores-simple-recovery-model.md)   
+ [Восстановления файлов (модель полного восстановления)](file-restores-full-recovery-model.md)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

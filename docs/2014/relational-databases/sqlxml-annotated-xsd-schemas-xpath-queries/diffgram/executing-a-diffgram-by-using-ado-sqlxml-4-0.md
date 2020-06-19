@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 741fce82-de83-4923-86eb-30acb5b9a5e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 30b46fba97e5608fa91a2b0a52bffc797982e923
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 304cba3b913e9eb16d25af58f303945ec882266c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062983"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Выполнение дельты с использованием ADO (SQLXML 4.0)
   Следующее приложение на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic использует ADO для установки соединения с экземпляром Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и выполняет DiffGram. В этом приложении дельты и схема XSD хранятся в файле. Приложение загружает DiffGram из заданного файла. Вы можете использовать любую из дельтами (и связанную с ней схему XSD), описанную в разделе [примеры DiffGram](diffgram-examples-sqlxml-4-0.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "82703174"
   
 -   Поток вывода команды задается как объект **стрмаут** (**ADODB. Stream**) для получения возвращенных данных.  
   
--   При использовании поставщика SQLOLEDB вы по умолчанию получаете функциональность Microsoft SQLXML, предоставляемую библиотекой Sqlxmlx.dll. Чтобы использовать библиотеку Sqlxml4. dll с поставщиком SQLOLEDB, свойство **версии SQLXML** должно иметь значение **SQLXML. 4.0** для объекта **соединения** поставщика SQLOLEDB.  
+-   При использовании поставщика SQLOLEDB вы по умолчанию получаете функциональность Microsoft SQLXML, предоставляемую библиотекой Sqlxmlx.dll. Чтобы использовать Sqlxml4.dll с поставщиком SQLOLEDB, свойство **версии SQLXML** должно иметь значение **SQLXML. 4.0** для объекта **соединения** поставщика SQLOLEDB.  
   
 -   Команда (дельта) будет выполнена.  
   

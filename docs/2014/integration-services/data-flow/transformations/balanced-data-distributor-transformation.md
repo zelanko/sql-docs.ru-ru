@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae0b33dd-f44b-42df-b6f6-69861770ce10
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec61ee62bf952e64e746ae132ce6ee35c89d468a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c14603a1c27bde829d119521389c1a35f9f8178c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770623"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84913804"
 ---
 # <a name="balanced-data-distributor-transformation"></a>Преобразование распространителя сбалансированных данных
   В процессе преобразования распространителя сбалансированных данных (BDD) используются возможности параллельной обработки современных процессоров. Оно равномерно распределяет буферы входящих строк по отдельным потокам. С помощью отдельных потоков пути для каждого пути вывода компонент BDD улучшает производительность пакета служб SSIS на многоядерных и мультипроцессорных компьютерах. Компонент BDD является частью пакета дополнительных компонентов для [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Скачайте и установите приложение [отсюда](https://go.microsoft.com/fwlink/p/?LinkId=391999).  

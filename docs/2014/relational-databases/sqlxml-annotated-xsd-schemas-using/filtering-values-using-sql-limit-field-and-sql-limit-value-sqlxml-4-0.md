@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7886a9a6f51c76ed693576ca6f4659f4051d1f20
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063003"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
   Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. Для указания столбца базы данных, содержащего ограничивающие значения, и задания конкретного ограничивающего значения, которое будет использовано для фильтрации возвращенных данных, используются заметки `sql:limit-field` и `sql:limit-value`.  
@@ -304,7 +303,7 @@ ms.locfileid: "82703583"
     </root>  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#41;с плавающей запятой и реальным &#40;Transact-SQL](/sql/t-sql/data-types/float-and-real-transact-sql)   
  [nchar и nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)   
  [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   

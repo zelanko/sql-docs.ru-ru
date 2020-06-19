@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2c9cab378f66a5d5b0603144ca3dafb5f544ce4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938275"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Переводы (конструктор измерений) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Переводы** конструктора измерений, чтобы определить переводы, иерархии и атрибуты для измерения, а также управлять переводами, иерархиями и атрибутами.  
@@ -31,7 +30,7 @@ ms.locfileid: "66065730"
  [Сведения о переводе](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
  Используйте панель **Сведения о переводе** , чтобы просматривать переводы, связанные с измерением, и управлять ими.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор измерений &#40;Analysis Services многомерных данных&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Измерения &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Измерения в многомерных моделях](multidimensional-models/dimensions-in-multidimensional-models.md)   

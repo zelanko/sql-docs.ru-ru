@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938095"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Какие&#39;s входят в надстройки интеллектуального анализа данных для Office
   Если установить надстройки интеллектуального анализа данных для Office 2013 и выбрать все параметры установки, будут добавлены следующие панели инструментов и шаблоны:  
@@ -48,7 +47,7 @@ ms.locfileid: "66065331"
   
      Если вы не знакомы с интеллектуальным анализом данных и просто хотите поэкспериментировать с инструментами, рекомендуется использовать книгу образцов данных, которая устанавливается вместе с надстройками. Просмотрев эти данные, можно также увидеть примеры подготовки данных для моделей временных рядов или моделей взаимосвязей.  
   
-     **Пример данных**  
+     **Образцы данных**  
   
      Данные в образце книги предварительно отформатированы, что позволяет упростить изучение всех средств и мастеров.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "66065331"
   
      Расположение образца книги по умолчанию зависит от используемой версии установки:  
   
-    -   \<> диска: \Program Files\Microsoft SQL Server 2014, надстройки DM  
+    -   \<drive>: \Program Files\Microsoft SQL Server 2014, надстройки DM  
   
-    -   \<диск>: \Program Files (x86) \Microsoft SQL Server 2014, надстройки DM  
+    -   \<drive>: \Program Files (x86) \Microsoft SQL Server 2014 надстройки DM  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Начало работы с интеллектуальным анализом данных &#40;надстройки интеллектуального анализа данных для Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  
   
   
