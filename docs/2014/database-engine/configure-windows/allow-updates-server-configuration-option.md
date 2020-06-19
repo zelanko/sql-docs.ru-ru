@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6cf28b18bcad06be7383b98dee72810c4e6157c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7e3ede317509a2044be90635db46e30a932af66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935915"
 ---
 # <a name="allow-updates-server-configuration-option"></a>Параметр конфигурации сервера «allow updates»
   Этот параметр по-прежнему присутствует в хранимой процедуре **sp_configure** , хотя его функции недоступны в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметр не влияет на работу сервера. Непосредственные обновления системных таблиц не поддерживаются.  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9211f91d81d1da1d3c1b96286aac0fa53306f6e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789015"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936515"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Страница результатов (мастера групп доступности AlwaysOn)
   В этом разделе описываются параметры, приведенные на странице **Результаты** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Эта страница используется для просмотра результатов работы мастера.  
@@ -28,7 +27,7 @@ ms.locfileid: "62789015"
 ##  <a name="results-page-options"></a><a name="PageOptions"></a> Параметры страницы результатов  
  Сетка **Сводка** содержит следующие столбцы:  
   
- **Имя**  
+ **имя**;  
  Отображает фразу, которая описывает конкретную операцию.  
   
  **Результат**  
@@ -53,7 +52,7 @@ ms.locfileid: "62789015"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f96be882208a9570c36ef8da63f1efb265f752f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512560"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027258"
 ---
 # <a name="use-the-system_health-session"></a>Использование сеанса system_health
   Сеанс system_health является сеансом расширенных событий, который по умолчанию включен в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот сеанс запускается автоматически при запуске [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и выполняется без заметного воздействия на производительность. В этом сеансе собираются системные данные, которые можно использовать для устранения неполадок, связанных с производительностью компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Поэтому этот сеанс не рекомендуется останавливать или удалять.  
@@ -70,11 +69,11 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-system_health-session"></a>Восстановление сеанса system_health  
  Если сеанс system_healt был удален, то вы можете его восстановить, выполнив файл **u_tables.sql** в редакторе запросов. Этот файл находится в следующей папке (где C: означает диск, на котором установлены программные файлы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
- C:\Program Files\Microsoft SQL Server\MSSQL12. \< *InstanceId*> \мсскл\инсталл  
+ C:\Program Files\Microsoft SQL Server\MSSQL12. \<*instanceid*> \мсскл\инсталл  
   
  Имейте в виду, что после восстановления сеанса необходимо его запустить с помощью инструкции ALTER EVENT SESSION или через узел **Расширенные события** в обозревателе объектов. Если этого не сделать, сеанс запустится автоматически при следующем перезапуске службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства расширенных событий](extended-events-tools.md)  
   
   

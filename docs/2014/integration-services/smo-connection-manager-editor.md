@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962964"
 ---
 # <a name="smo-connection-manager-editor"></a>редактор диспетчера соединений SMO
   Используйте **Редактор диспетчера соединений SMO** для настройки соединения сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которое может использоваться различными задачами, переносящими объекты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Дополнительные сведения о диспетчере соединений объектов SMO см. в разделе [SMO Connection Manager](connection-manager/smo-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя сервера**  
  Введите имя экземпляра сервера [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или выберите имя сервера из списка.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66055599"
  **Проверить подключение**  
  Проверка соединения согласно настройке.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

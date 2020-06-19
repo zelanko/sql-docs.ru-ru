@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc9fc81fb02f004eb86c1bfef5662460aa4005f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936805"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>Начало работы с группами доступности AlwaysOn (SQL Server)
   В этом разделе описаны шаги настройки экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] для поддержки [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , а также для создания, управления и наблюдения за группой доступности.  
@@ -98,7 +97,7 @@ ms.locfileid: "75228757"
  [Группы доступности AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Конфигурация экземпляра сервера для группы доступности AlwaysOn &#40;SQL Server&#41;](configuration-of-a-server-instance-for-always-on-availability-groups-sql-server.md)   
- [Создание и Настройка групп доступности &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
+ [Создание и настройка групп доступности (SQL Server)](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [Общие сведения о инструкциях Transact-SQL для группы доступности AlwaysOn &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Общие сведения о командлетах PowerShell для группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  

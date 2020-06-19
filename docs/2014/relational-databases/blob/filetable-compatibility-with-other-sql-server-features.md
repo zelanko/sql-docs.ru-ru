@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6ac6668ff362a986646c4e01b1f0e5e722611c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955364"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>Совместимость FileTable с другими компонентами SQL Server
   Описывает, как FileTable работает с другими функциями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -119,7 +118,7 @@ ms.locfileid: "66010144"
   
  Для автономности базы данных можно установить значение PARTIAL при необходимости использовать некоторые функции автономных баз данных, например такие, как функция автономных пользователей. В этом случае следует иметь в виду, что некоторые параметры базы данных не хранятся в самой базе данных и не перемещаются автоматически при перемещении базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление таблицами FileTable](manage-filetables.md)  
   
   

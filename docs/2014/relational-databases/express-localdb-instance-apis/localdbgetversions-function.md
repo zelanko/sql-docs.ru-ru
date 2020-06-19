@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8b02f89903475462265ffc154553c176951c259
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027670"
 ---
 # <a name="localdbgetversions-function"></a>Функция LocalDBGetVersions
   Возвращает все доступные версии SQL Server Express LocalDB на компьютере.  
@@ -42,7 +41,7 @@ ms.locfileid: "63032286"
  [Вход/выход] На входе содержит число ячеек для версий в буфере *pVersionNames* .   
 На выходе содержит количество существующих версий LocalDB.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "63032286"
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

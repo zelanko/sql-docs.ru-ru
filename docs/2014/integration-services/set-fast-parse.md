@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0fefd2f9c06d6bcff44c211904a951ebe01937
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055815"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963354"
 ---
 # <a name="set-fast-parse"></a>Установка быстрого анализа
   Свойство быстрого анализа необходимо установить для каждого столбца источника или преобразования, использующего этот анализ. Для установки этого свойства используется расширенный редактор источника «Неструктурированный файл» и преобразование «Преобразование данных».  
@@ -28,7 +27,7 @@ ms.locfileid: "66055815"
   
 3.  На панели **Входы и выходы** щелкните столбец, для которого нужно включить быстрый анализ.  
   
-4.  В окно свойств разверните узел **пользовательские свойства** и задайте для `FastParse` `True`свойства значение.  
+4.  В окно свойств разверните узел **пользовательские свойства** и задайте `FastParse` для свойства значение `True` .  
   
 5.  Нажмите кнопку **ОК**.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789823"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936727"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Отслеживание групп доступности (Transact-SQL)
   Для мониторинга групп доступности и реплик доступности, а также связанных баз данных с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предусмотрен набор представлений каталога, динамических административных представлений и свойств сервера. С помощью инструкций [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT можно использовать представления для отслеживания групп доступности, их реплик и баз данных. Сведения, возвращаемые по данной группе доступности, зависят от наличия подключения к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещена первичная или вторичная реплика.  
@@ -80,7 +79,7 @@ ms.locfileid: "62789823"
 > [!NOTE]  
 >  См. также описание команд **sys.dm_hadr_availability_replica_cluster_nodes** и **sys.dm_hadr_availability_replica_cluster_states** в разделе [Мониторинг реплик доступности](#AvReplicas) и описание команд **sys.availability_databases_cluster** и **sys.dm_hadr_database_replica_cluster_states** в разделе [Мониторинг баз данных доступности](#AvDbs) далее в этой статье.  
   
- Сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]см. в разделе [отказоустойчивая кластеризация Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [отказоустойчивой кластеризацией и группы доступности AlwaysOn &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;.  
+ Сведения о кластерах WSFC и [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см. в разделе [отказоустойчивая кластеризация Windows Server &#40;WSFC&#41; с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) и [отказоустойчивой кластеризацией и группы доступности AlwaysOn &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;.  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>Мониторинг групп доступности  
  Для мониторинга групп доступности, для которых на экземпляре сервера размещена реплика доступности, используются следующие представления.  
@@ -148,7 +147,7 @@ ms.locfileid: "62789823"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  Содержит одну строку для каждой базы данных в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если база данных принадлежит к реплике доступности, то в строке для этой базы данных отображается идентификатор GUID реплики и уникальный идентификатор базы данных внутри группы доступности.  
   
- имена столбцов: replica_id, group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] имена столбцов:** replica_id, group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  Возвращает строку для каждой попытки автоматического восстановления страниц во всех базах данных доступности в реплике доступности, размещенной в группе доступности на экземпляре сервера. Это представление содержит строки, связанные с последними попытками автоматического восстановления страниц в определенной базе данных-источнике или получателе, количество которых ограничено числом в 100 строк на каждую базу данных. По достижении максимального значения строка для следующей попытки автоматического восстановления страниц заменяет одну из существующих записей.  
@@ -272,7 +271,7 @@ ms.locfileid: "62789823"
   
 -   [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73eb11034d185deb9c004d138230fff8fbf27bb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211426"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995289"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Назначение резервного оператора
-  Резервный оператор — это пользователь, который получает предупреждение, если нужный оператор недоступен. В этом разделе описывается, как настроить резервный оператор для получения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уведомлений об оповещениях агента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]помощью.  
+  Резервный оператор — это пользователь, который получает предупреждение, если нужный оператор недоступен. В этом разделе описывается, как настроить резервный оператор для получения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уведомлений об оповещениях агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  **В этом разделе**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "68211426"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
+-   Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
 -   Обратите внимание, что для использования компонента Database Mail для отправки операторам уведомлений по электронной почте и на пейджер агент SQL Server необходимо настроить для использования компонента Database Mail. Дополнительные сведения см. в разделе [Назначить предупреждения для оператора](assign-alerts-to-an-operator.md).  
   

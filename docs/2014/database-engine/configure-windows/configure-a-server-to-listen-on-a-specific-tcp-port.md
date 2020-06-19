@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfe8a35e9ba0a23edb3fc08833ab015ddbd2f119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935835"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)
   В этом разделе описано, как настроить экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для прослушивания определенного фиксированного порта с помощью диспетчера конфигурации SQL Server. Если прослушивание включено, то экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] по умолчанию прослушивает TCP-порт 1433. Именованные экземпляры компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и [!INCLUDE[ssEW](../../includes/ssew-md.md)] настроены для использования динамических портов. Это означает, что при запуске службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для них выбирается свободный порт. При соединении с именованным экземпляром через брандмауэр необходимо настроить компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] на прослушивание определенного порта. Это позволит открыть в брандмауэре необходимый порт.  
@@ -45,7 +44,7 @@ ms.locfileid: "62813590"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Назначение ядру СУБД SQL Server порта TCP/IP  
   
-1.  В области консоли диспетчера конфигурации SQL Server разверните узел **Сетевая конфигурация SQL Server**, **Протоколы для <имя экземпляра>\<** , а затем дважды щелкните **TCP/IP**.  
+1.  В диспетчер конфигурации SQL Server в области консоли разверните узел **SQL Server конфигурация сети**, разверните узел **протоколы для \<instance name> **и дважды щелкните **TCP/IP**.  
   
 2.  В диалоговом окне **Свойства TCP/IP** на вкладке **IP-адреса** появится несколько IP-адресов в формате **IP1**, **IP2**до **IPAll**. Одним из приведенных IP-адресов является адрес адаптера заглушки 127.0.0.1. Для каждого IP-адреса на компьютере появляются дополнительные IP-адреса. Чтобы определить настраиваемый IP-адрес, щелкните правой кнопкой мыши каждый адрес и выберите пункт **Свойства**.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "62813590"
   
 5.  На панели консоли выберите **Службы SQL Server**.  
   
-6.  В области сведений щелкните правой кнопкой мыши **SQL Server (**\<имя экземпляра>**)** и выберите команду **перезапустить**, чтобы прерывать и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перезапускать.  
+6.  В области сведений щелкните правой кнопкой мыши **SQL Server (** \<instance name> **)** и выберите команду **перезапустить**, чтобы прерывать и перезапускать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  После настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на прослушивание определенного порта установить соединение с ним с помощью клиентского приложения можно тремя способами:  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62813590"
   
 -   Настройте клиент на использование пользовательской строки подключения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание или удаление псевдонима сервера для использования клиентом (диспетчер конфигурации SQL Server)](create-or-delete-a-server-alias-for-use-by-a-client.md)  
   
   

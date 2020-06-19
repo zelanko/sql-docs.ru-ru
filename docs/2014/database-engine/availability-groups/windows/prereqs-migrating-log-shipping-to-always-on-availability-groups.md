@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: c517850e7dfc7dfb134389b50feee77b3d1cbfbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936635"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Необходимые условия для выполнения перехода от использования доставки журналов к использованию групп доступности AlwaysOn (SQL Server)
   В этом разделе описаны предварительные условия для преобразования базы данных-источника доставки журналов вместе с одной или несколькими базами данных-получателями в базу данных-источник и базы данных-получатели AlwaysOn.  
@@ -44,7 +43,7 @@ ms.locfileid: "82922032"
 |Автоматическое резервное копирование группы доступности|Только в первичной реплике|  
 |Приоритет резервного копирования первичной реплики.|> 0|  
   
- **Дополнительные сведения:**  
+ **Дополнительные сведения**  
   
  [Просмотр свойств группы доступности (SQL Server)](view-availability-group-properties-sql-server.md)  
   
@@ -64,7 +63,7 @@ ms.locfileid: "82922032"
   
  После создания всех баз данных-получателей для группы доступности при необходимости проведения резервного копирования во вторичных репликах нужно изменить параметры автоматического резервного копирования для группы доступности.  
   
- **Дополнительные сведения:**  
+ **Дополнительные сведения**  
   
  [Преобразование конфигурации доставки журналов в группу доступности](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx) (блог по SQL Server)  
   
@@ -110,7 +109,7 @@ ms.locfileid: "82922032"
      [Технические документы группы консультантов по SQL Server](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;доставки журналов&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](../../log-shipping/about-log-shipping-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Отслеживание групп доступности (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   

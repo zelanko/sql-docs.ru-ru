@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43919e335700a23a4174eb1bdf42c36c0c08fe2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bda31ca7d0c5949173a9a3e5ea656c1757c04f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935865"
 ---
 # <a name="change-server-authentication-mode"></a>Изменение режима проверки подлинности сервера
   В этом разделе описывается, как изменить режим проверки подлинности сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. В процессе установки компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] настраивается на использование **режима проверки подлинности Windows** или **режима проверки подлинности SQL Server и Windows**. После установки вы можете изменить режим проверки подлинности в любое время.  
@@ -58,7 +57,7 @@ ms.locfileid: "62812303"
   
 #### <a name="to-enable-the-sa-login"></a>Включение имени входа sa  
   
-1.  В обозревателе объектов разверните узел **Безопасность**, разверните узел имена входа, щелкните правой `sa`кнопкой мыши и выберите пункт **Свойства**.  
+1.  В обозревателе объектов разверните узел **Безопасность**, разверните узел имена входа, щелкните правой кнопкой мыши `sa` и выберите пункт **Свойства**.  
   
 2.  На странице **Общие** , возможно, придется создать и подтвердить пароль для имени входа.  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62812303"
   
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Надежные пароли](../../relational-databases/security/strong-passwords.md)   
  [Вопросы безопасности при установке SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   

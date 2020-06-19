@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 63c9f56894ede1002b358c624ab763935fd42fc1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd4dd62d8b30e2041415e0b9be5682ce4b01d1f6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789896"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936785"
 ---
 # <a name="flexible-failover-policy-for-automatic-failover-of-an-availability-group-sql-server"></a>Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)
   Гибкая политика отработки отказа обеспечивает детальный контроль над условиями, которые приводят к [автоматическому переходу на другой ресурс](failover-and-failover-modes-always-on-availability-groups.md) для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
@@ -70,7 +69,7 @@ ms.locfileid: "62789896"
   
 -   [How It Works: SQL Server AlwaysOn Lease Timeout (Как это работает: время ожидания аренды AlwaysOn SQL Server)](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-alwayson-lease-timeout.aspx)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Режимы доступности (группы доступности AlwaysOn)](availability-modes-always-on-availability-groups.md)   
  [Отказоустойчивость и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md)   

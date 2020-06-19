@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4369b588-e982-4b57-80a1-beb2e879ce0b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9261f692dfed61174181fce1ff6b9aeb72ab69cc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789250"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936687"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>Параметры (страница панели мониторинга SQL Server AlwaysOn)
   Для настройки панели мониторинга AlwaysOn используйте страницу **SQL Server AlwaysOn Dashboard** (Панель мониторинга SQL Server) диалогового окна [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**в среде** .  
@@ -28,7 +27,7 @@ ms.locfileid: "62789250"
   
 ## <a name="on-this-page"></a>На этой странице  
  **Включить автоматическое обновление.**  
- Выберите, чтобы включить автоматическое обновление. Доступны следующие возможности:  
+ Выберите, чтобы включить автоматическое обновление. Доступны следующие параметры.  
   
 -   В поле **Интервал обновления (в секундах)** отображается количество секунд, через которое панель будет обновлена. Значение по умолчанию — 30. Если автоматическое обновление включено, значение в этом поле можно изменить, чтобы указать новый интервал обновления.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62789250"
  **Включить собственную, определяемую пользователем политику AlwaysOn.**  
  Если вы определили собственную политику AlwaysOn, выберите этот параметр, чтобы включить ее.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование панели мониторинга AlwaysOn (среда SQL Server Management Studio)](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

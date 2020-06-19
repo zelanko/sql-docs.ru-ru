@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 63407b3bf1a2860ad3f8c35b5cd8ecc4a4b125c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fc8b4e5a5d6741dd11faf4c846db7862a7254db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027611"
 ---
 # <a name="localdbshareinstance-function"></a>Функция LocalDBShareInstance
   Разделяет указанный экземпляр SQL Server Express LocalDB с другими пользователями компьютера, используя указанное общее имя.  
@@ -52,7 +51,7 @@ HRESULT LocalDBShareInstance(
  *dwFlags*  
  [Вход] Зарезервировано для использования в будущем. В настоящее время должно быть равным 0.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -83,7 +82,7 @@ HRESULT LocalDBShareInstance(
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 329bc7fb351406f0c53c69e4addb4513dca1c556
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ad98184856d2860316be35f0b83acbd53b3234a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936505"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Выбор начальной страницы синхронизации данных (мастера группы доступности AlwaysOn)
   Используйте страницу AlwaysOn **Выбор начальной синхронизации данных** для указания нужных предпочтений по синхронизации начальных данных для новых баз данных-получателей. Эта страница используется тремя мастерами — [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] и [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  
@@ -87,7 +86,7 @@ ms.locfileid: "62789475"
   
 -   Вручную восстановить последнюю резервную копию базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY, а затем восстановить все последовательные резервные копии журнала с помощью инструкции RESTORE WITH NORECOVERY. Если базы данных-получатель и база данных-источник имеют различные пути к файлам, необходимо использовать параметр WITH MOVE. Выполните эту последовательность восстановления на каждом экземпляре сервера, на котором расположена вторичная реплика этой группы доступности.  Для выполнения этих операций резервного копирования и восстановления можно использовать [!INCLUDE[tsql](../../../includes/tsql-md.md)] или Powershell.  
   
-     **Дополнительные сведения:**  
+     **Дополнительные сведения**  
   
      [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -96,7 +95,7 @@ ms.locfileid: "62789475"
     > [!NOTE]  
     >  После создания всех баз данных-получателей для группы доступности, при необходимости проведения резервного копирования на вторичных репликах, нужно изменить параметры автоматического резервного копирования для группы доступности.  
   
-     **Дополнительные сведения:**  
+     **Дополнительные сведения**  
   
      [Необходимые условия для перехода с доставки журналов на группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -122,7 +121,7 @@ ms.locfileid: "62789475"
   
 -   [Использование диалогового окна "Создание группы доступности" (среда SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

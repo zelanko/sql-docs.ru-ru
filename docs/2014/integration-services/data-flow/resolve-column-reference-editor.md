@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 63d14790e0690882dd23527d52d5de282637d2d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f810a24baec565a7870fb6602b76ff8f3ba119f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914624"
 ---
 # <a name="resolve-column-reference-editor"></a>Редактор разрешения ссылок на столбцы
   Если входной путь отсоединен или если в нем присутствуют несопоставленные столбцы, напротив соответствующего пути данных будет отображен значок ошибки. Чтобы упростить разрешение ошибок ссылок на столбцы, новый редактор разрешения ссылок позволяет связывать несопоставленные входные и выходные столбцы для всех путей в дереве выполнения. Редактор разрешения ссылок также выделяет пути, чтобы указать, какие из них разрешаются в данный момент.  

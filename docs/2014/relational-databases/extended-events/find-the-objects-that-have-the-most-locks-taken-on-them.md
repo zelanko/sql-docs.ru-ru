@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e533f823d69f10af28084eecd714c303735957d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 345c5f179358bd7b8df587b76c9c6053235d3a73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027491"
 ---
 # <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>найти объекты, на которые наложено наибольшее число блокировок
   Администраторам баз данных часто нужно определить источник блокировок, приводящих к ухудшению производительности базы данных.  
@@ -105,7 +104,7 @@ ms.locfileid: "82706638"
   
 -   lock_count  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание сеанса событий &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [sys. dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   

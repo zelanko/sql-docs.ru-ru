@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4722e844e527f04ccde62c699d46b0fbc955a416
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936625"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Страница «Выполнение» (мастера групп доступности AlwaysOn)
   Используйте это диалоговое окно для просмотра шагов мастера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , запущенного в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Индикатор выполнения указывает относительный прогресс шагов мастера.  
@@ -41,7 +40,7 @@ ms.locfileid: "83858706"
   
 |Результат|Описание|  
 |------------|-----------------|  
-|**Ошибка**|Указывает, что при выполнении операции в этом шаге произошла ошибка. Щелкните ссылку, чтобы отобразить диалоговое окно с сообщением, описывающим ошибку.|  
+|**Error**|Указывает, что при выполнении операции в этом шаге произошла ошибка. Щелкните ссылку, чтобы отобразить диалоговое окно с сообщением, описывающим ошибку.|  
 |**Выполняется (** *процент завершения* **)**|Указывает, что операция происходит сейчас и выполняет оценку процентной доли завершения этого шага.|  
 |**Success**|Указывает, что операция, выполнявшаяся в этом шаге, завершилась успешно.|  
   

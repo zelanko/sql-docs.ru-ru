@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b6fafaf6464431d68f8cfdf9dc9d8fa844a42a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936603"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Удаление базы данных-источника из группы доступности (SQL Server)
   В этом разделе описывается удаление базы данных-источника и соответствующих баз данных-получателей из группы доступности AlwaysOn с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Перед началом работы**  
   
-     [Предварительные условия и ограничения](#Prerequisites)  
+     [Требования и ограничения](#Prerequisites)  
   
      [Безопасность](#Security)  
   

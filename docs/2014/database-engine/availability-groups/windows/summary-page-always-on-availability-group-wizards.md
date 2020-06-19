@@ -14,19 +14,18 @@ f1_keywords:
 ms.assetid: b98e2511-297f-49fd-b0e8-74652a91bc0c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e0aeae7b7207c9b469504cf4115f371d00f5d7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936385"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Страница «Сводка» (мастера групп доступности AlwaysOn)
   В этом разделе описываются параметры, приведенные на странице **Сводка** . Эта тема относится к [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] и [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. На этой странице приведены заданные пользователем параметры новой группы доступности. Чтобы внести одно или несколько изменений, нажмите кнопку **Назад** , чтобы вернуться на нужную страницу или страницы. После внесения необходимых изменений нажмите кнопку **Далее** , чтобы вернуться на страницу **Сводка** . После проверки выбранных параметров нажмите кнопку **Готово**.  
   
 ##  <a name="summary-page-options"></a><a name="PageOptions"></a> Параметры страницы «Сводка»  
- **Скрипт**  
+ **Сценарий**  
  Нажмите эту кнопку для создания скрипта [!INCLUDE[tsql](../../../includes/tsql-md.md)] для действий, перечисленных в сетке сводки. Вам будет предложено указать место, в которое будет сохранен файл скрипта.  
   
  **Назад**  
@@ -52,7 +51,7 @@ ms.locfileid: "62814070"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

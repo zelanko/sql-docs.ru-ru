@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 90067eb8-ca3e-44e8-bb1a-bf7d1a359423
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c6d747fe98e08ee21305525302563d1c8025aa2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ba44f1bf0906dfd4265ce07cf6f7dd5d350ee5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063404"
 ---
 # <a name="run-transact-sql-script-files-using-sqlcmd"></a>Выполнение файлов скрипта Transact-SQL с использованием программы sqlcmd
   Для запуска файла скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] можно использовать программу командной строки `sqlcmd`. Файл скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] является текстовым файлом, содержащим сочетание инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)], команд `sqlcmd` и переменных скрипта.  
@@ -65,7 +64,7 @@ ms.locfileid: "82703678"
   
  Результат не будет выведен в окне командной строки. Он будет записан в файл EmpAdds.txt. Можно проверить полученные результаты, открыв файл EmpAdds.txt.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск программы sqlcmd](sqlcmd-start-the-utility.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)  
   

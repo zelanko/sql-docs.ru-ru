@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924919"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936355"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)
   Этот раздел содержит сведения об устранении типичных проблем, возникающих при настройке экземпляров сервера для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Примеры типичных проблем настройки: [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] отключен, учетные записи настроены неправильно, конечная точка зеркального отображения баз данных не существует, конечная точка недоступна (ошибка SQL Server 1418), отсутствует сетевой доступ, команда присоединения базы данных завершается с ошибкой (ошибка SQL Server 35250).
@@ -32,7 +31,7 @@ ms.locfileid: "82924919"
 |Section|Описание|
 |-------------|-----------------|
 |[Функция групп доступности AlwaysOn не включена](#IsHadrEnabled)|Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], то экземпляр не поддерживает создание групп доступности и на нем не могут размещаться реплики доступности.|
-|[Учетные записи](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|
+|[Измерение счетов](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|
 |[Конечные точки](#Endpoints)|Описывается диагностика проблем конечной точки зеркального отображения баз данных для экземпляра сервера.|
 |[Имя системы](#SystemName)|Обобщаются альтернативы указанию системного имени экземпляра сервера в URL-адресе конечной точки.|
 |[Доступ к сети](#NetworkAccess)|Документирует требование к каждому экземпляру сервера, на котором размещается реплика доступности, чтобы каждый такой экземпляр имел доступ к порту каждого другого экземпляра сервера по протоколу TCP.|
@@ -121,7 +120,7 @@ ms.locfileid: "82924919"
 ##  <a name="join-database-fails-sql-server-error-35250"></a><a name="JoinDbFails"></a> Ошибка присоединения базы данных (ошибка SQL Server 35250)
  В этом разделе обсуждаются возможные причины и способы устранения проблемы с присоединением баз данных-получателей к группе доступности, вызванные тем, что соединение с первичной репликой неактивно.
 
- **Решение:**
+ **Решение.**
 
 1.  Проверьте настройку брандмауэра: разрешена ли связь для портов конечных точек между экземплярами серверов, на которых размещаются первичная и вторичная реплика (по умолчанию порт 5022).
 
@@ -163,7 +162,7 @@ ms.locfileid: "82924919"
 
 -   [Блог группы разработчиков SQL Server AlwaysOn: официальный блог группы разработчиков SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md) требования к [конфигурации сети клиента](../../configure-windows/client-network-configuration.md) [, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)
 
 

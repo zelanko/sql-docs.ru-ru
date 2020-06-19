@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c018a020fd86925ff14efcb37e2f5734c7e5f141
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 078f38058c612037a8013f7955349e94d6db610e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936665"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>предварительными требованиями, и ограничениями и рекомендациями для групп доступности AlwaysOn (SQL Server)
   В этом разделе приводятся рекомендации по развертыванию [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], в т.ч. предварительные условия, ограничения и рекомендации в отношении компьютеров, отказоустойчивых кластеров Windows Server (WSFC), экземпляров сервера и групп доступности. Для каждого из этих компонентов описываются имеющиеся вопросы безопасности и необходимые разрешения.  
@@ -99,7 +98,7 @@ ms.locfileid: "82925026"
   
 3.  С помощью командлета `Get-ClusterResource` найдите ресурс сетевого имени, затем с помощью командлета `Set-ClusterParameter` задайте значение `HostRecordTTL` следующим образом:  
   
-     Get-ClusterResource "* \< нетворкресаурценаме>*" | Set-ClusterParameter HostRecordTTL * \< тимеинсекондс>*  
+     Get-ClusterResource " *\<NetworkResourceName>* " | Set-ClusterParameter HostRecordTTL*\<TimeInSeconds>*  
   
      В следующем примере для PowerShell задается значение HostRecordTTL в 300 секунд для сетевого ресурса сетевого имени «`SQL Network Name (SQL35)`».  
   
@@ -136,7 +135,7 @@ ms.locfileid: "82925026"
   
 ###  <a name="checklist-prerequisites-server-instance"></a><a name="PrerequisitesSI"></a>Контрольный список: предварительные требования (экземпляр сервера)  
   
-||Предварительное требование|Ссылки|  
+||Предварительные требования|Ссылки|  
 |-|------------------|-----------|  
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Главный компьютер должен являться узлом отказоустойчивой кластеризации Windows Server (WSFC). Экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на которых размещаются реплики доступности для данной группы доступности, должны размещаться на отдельных узлах одного WSFC-кластера. Единственное исключение состоит в том, что при переносе в другой кластер WSFC группа доступности может временно находится в двух кластерах.|[Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Если необходима группа доступности для работы с Kerberos:<br /><br /> Все экземпляры сервера, на которых размещена реплика доступности для группы доступности, должны использовать одинаковые учетные записи службы SQL Server.<br /><br /> Администратору домена необходимо вручную зарегистрировать имя участника-службы (SPN) с помощью службы каталогов Active Directory на учетной записи службы SQL Server для виртуального сетевого имени (VNN) прослушивателя группы доступности. Если имя участника-службы (SPN) зарегистрировано на учетной записи, отличной от учетной записи службы SQL Server, то проверку подлинности пройти не удастся.<br /><br /> Важно. при изменении учетной записи службы SQL Server администратору домена потребуется вручную повторно зарегистрировать имя субъекта-пользователя. ** \* \* \* \* **|[Регистрация имени участника-службы для соединений Kerberos](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Краткое описание:**<br /><br /> Kerberos и имена участников-служб обеспечивают взаимную проверку подлинности. Имя участника-службы (SPN) сопоставляется с учетной записью Windows, которая запускает службы SQL Server. Если регистрация имени участника-службы (SPN) не была выполнена должным образом или завершилась неудачно, уровень безопасности Windows не может определить учетную запись, связанную с именем участника-службы, и проверка подлинности Kerberos не может использоваться.<br /><br /> Примечание. Для NTLM нет таких требований.|  
@@ -218,7 +217,7 @@ ms.locfileid: "82925026"
   
 ###  <a name="checklist-prerequisites-fcis"></a><a name="PrerequisitesFCI"></a>Контрольный список: предварительные требования (FCI)  
   
-||Предварительное требование|Ссылка|  
+||Предварительные требования|Ссылка|  
 |-|------------------|----------|  
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Перед использованием экземпляра отказоустойчивого кластера для размещения реплики доступности убедитесь, что администратор системы установил исправление для Windows Server 2008, описанное в статье базы знаний KB 976097. Это исправление включает оснастку консоли управления (MMC) отказоустойчивого кластера для поддержки асимметричных общих дисков хранилища, доступных только на некоторых узлах WSFC.|Статья базы знаний 976097: [Исправление, предназначенное для добавления функции поддержки асимметричных систем хранения данных в оснастку MMC управления отказоустойчивым кластером для отказоустойчивых кластеров под управлением ОС Windows Server 2008 или Windows Server 2008 R2](https://support.microsoft.com/kb/976097)|  
 |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что каждый экземпляр отказоустойчивого кластера SQL Server обладает требуемым пространством хранения, как и в случае со стандартным экземпляром отказоустойчивого кластера SQL Server.||  
@@ -363,7 +362,7 @@ ms.locfileid: "82925026"
   
 -   [Обучающая серия AlwaysON — HADRON. использование пулов рабочих потоков для баз данных с HADRON](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Подключение клиента AlwaysOn (SQL Server)](always-on-client-connectivity-sql-server.md)  

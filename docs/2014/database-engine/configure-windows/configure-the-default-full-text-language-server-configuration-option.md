@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d98194f5dead58b738c39503445923d9df49be06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec0736326a4da0708d125bfc480996d54bb86c8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935735"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Настройка параметра конфигурации сервера «язык полнотекстового поиска по умолчанию»
-  В этом разделе описывается настройка параметра конфигурации `default full-text language` сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или. [!INCLUDE[tsql](../../includes/tsql-md.md)] `default full-text language` Параметр задает значение языка по умолчанию для полнотекстовых индексов. Лингвистический анализ выполняется для всех данных с полнотекстовой индексацией и зависит от языка, в котором эти данные представлены. Значением по умолчанию для этого параметра является язык сервера. Для локализованной версии программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает `default full-text language` параметр на язык сервера, если существует соответствующее совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр `default full-text language` по умолчанию имеет значение, соответствующее английскому языку.  
+  В этом разделе описывается настройка `default full-text language` параметра конфигурации сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] . `default full-text language`Параметр задает значение языка по умолчанию для полнотекстовых индексов. Лингвистический анализ выполняется для всех данных с полнотекстовой индексацией и зависит от языка, в котором эти данные представлены. Значением по умолчанию для этого параметра является язык сервера. Для локализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки устанавливает `default full-text language` параметр на язык сервера, если существует соответствующее совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр `default full-text language` по умолчанию имеет значение, соответствующее английскому языку.  
   
  **В этом разделе**  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62787070"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Значение `default full-text language` параметра используется в полнотекстовом индексе, если для столбца не указан язык, используя параметр Language **language_term** в инструкциях CREATE FULLTEXT INDEX и ALTER FULLTEXT INDEX. Если установленный по умолчанию язык полнотекстового поиска не поддерживается или отсутствует пакет лингвистического анализа, операция CREATE или ALTER завершится ошибкой, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет сообщение об указании недопустимого языка.  
+-   Значение `default full-text language` параметра используется в полнотекстовом индексе, если для столбца не указан язык, используя параметр language **language_term** в ИНСТРУКЦИЯХ CREATE FULLTEXT INDEX и ALTER FULLTEXT INDEX. Если установленный по умолчанию язык полнотекстового поиска не поддерживается или отсутствует пакет лингвистического анализа, операция CREATE или ALTER завершится ошибкой, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет сообщение об указании недопустимого языка.  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   

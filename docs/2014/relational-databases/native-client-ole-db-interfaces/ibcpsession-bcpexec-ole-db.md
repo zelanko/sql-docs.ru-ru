@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4ebb63-cf03-4e53-846e-6c3021cde007
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5695ef3c8a049ef3b6dd75c78648be8eb3a8916b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff2b5614e750d69b615bb2dc3823e3896797d0d6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047967"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
   Выполняет операцию массового копирования.  
@@ -67,7 +66,7 @@ DBROWCOUNT *pRowsCopied);
  DB_S_ERRORSOCCURRED  
  Во время операции массового копирования произошли ошибки, и некоторые строки могли быть не скопированы. Количество ошибок все еще меньше минимально допустимого числа ошибок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../native-client/features/performing-bulk-copy-operations.md)  
   
