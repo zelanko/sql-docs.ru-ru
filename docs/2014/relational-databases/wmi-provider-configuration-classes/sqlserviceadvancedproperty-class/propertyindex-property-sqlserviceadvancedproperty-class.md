@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e328c2fcf6b5f6ab6fc95383b7020deb9e172b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048880"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Свойство PropertyIndex (класс SqlServiceAdvancedProperty)
   Возвращает или задает индекс свойства, определяющего положение дополнительного свойства в массиве дополнительных свойств указанной службы.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

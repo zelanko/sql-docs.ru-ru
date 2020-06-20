@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca06f4267edd65885bf4fec1838ecc4360c304fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067870"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940155"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Сведения о привязке таблицы (диалоговое окно «Источник секции») (службы Analysis Services — многомерные данные)
   Используйте параметр **Привязка таблицы** в диалоговом окне **Источник секции** , чтобы указать таблицу фактов, предоставляющую данные для этой секции. Чтобы открыть эту панель, выберите **Привязка таблицы** в параметре **Тип привязки** в диалоговом окне **Источник секции** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Группа мер**  
  Отображает группу мер для этой секции.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66067870"
   
  Если в поле **Фильтровать таблицы**указан фильтр, то список ограничивается путем сравнения фильтра с именами таблиц, которые соответствуют приведенным выше критериям. Отображаются только те таблицы, которые содержат строку, указанную в поле **Фильтровать таблицы** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Источник секции» &#40;Analysis Services многомерных данных&#41;](partition-source-dialog-box-analysis-services-multidimensional-data.md)  
   
   

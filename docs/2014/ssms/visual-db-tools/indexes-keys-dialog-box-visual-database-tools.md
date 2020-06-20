@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68c9022f3ea7803f372e7c349e0dc75b1fc56adc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048642"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Диалоговое окно "Индексы/ключи" (визуальные инструменты для баз данных)
   Это диалоговое окно используется для изменения индексов, первичных и уникальных ключей. Чтобы открыть это диалоговое окно, откройте определение таблицы с нужным индексом или ключом, щелкните правой кнопкой мыши сетку определения таблицы и выберите команду **Индексы/Ключи**.  

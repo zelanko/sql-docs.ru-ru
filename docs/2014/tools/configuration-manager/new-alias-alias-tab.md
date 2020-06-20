@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a64d4a3cc46a68a06367d51a3cf3511191c6232
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c1ff7c45544c739acc254ace6cd1d9990257978
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064223"
 ---
 # <a name="new-alias-alias-tab"></a>Создание псевдонима (вкладка «Псевдоним»)
   Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Используйте страницу **Псевдоним** в диалоговом окне **Псевдоним — новый** , чтобы задать элементы строки подключения для псевдонима. Сведения об изменении строки подключения существующего псевдонима см. в разделе [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md).  

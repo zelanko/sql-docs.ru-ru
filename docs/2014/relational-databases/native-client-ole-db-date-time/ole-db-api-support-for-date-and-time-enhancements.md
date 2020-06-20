@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba55a2a8fe0ad873c4b5433a53972c441b535333
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cdb17f0d2104373ea797ff9403cc417dfaa3d868
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704987"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056261"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Новые возможности поддержки API OLE DB для функций даты и времени
   Следующие API-интерфейсы OLE DB поддерживают улучшенные возможности по работе с данными в формате даты-времени.  
@@ -34,7 +33,7 @@ ms.locfileid: "82704987"
 |IRowsetFastLoad|Данный интерфейс поддерживает новые типы даты-времени, но он остается неизменным.|  
 |ITableDefinition::CreateTable|Подробнее см. статью [Улучшения поддержки типов данных даты и времени OLE DB](data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

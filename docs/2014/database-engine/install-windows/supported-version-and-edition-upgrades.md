@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932235"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Поддерживаемые обновления версий и выпусков
   Можно обновить версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]и [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. В этом разделе приведены поддерживаемые пути обновления данных версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поддерживаемые обновления выпусков [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -73,7 +72,7 @@ ms.locfileid: "62775227"
   
  В таблице, представленной ниже, перечислены поддерживаемые сценарии обновления предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
-|Исходная версия|Поддерживаемые варианты обновления|  
+|Обновление с|Поддерживаемые варианты обновления|  
 |------------------|----------------------------|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Enterprise с пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Business Intelligence|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Developer с пакетом обновления 4 (SP4)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Developer|  
@@ -121,7 +120,7 @@ ms.locfileid: "62775227"
   
 -   Подключитесь к [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Когда база данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] обновляется до версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], уровень совместимости базы данных будет изменен с 90 на 100. (В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]допустимые значения для уровня совместимости базы данных: 100, 110 и 120.) Изменение [уровня совместимости базы данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) объясняет, как изменение уровня совместимости может повлиять на работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложений.  
+ Когда база данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] обновляется до версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], уровень совместимости базы данных будет изменен с 90 на 100. (В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Допустимые значения для уровня совместимости базы данных: 100, 110 и 120.) Изменение [уровня совместимости базы данных &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) объясняет, как изменение уровня совместимости может повлиять на работу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложений.  
   
  Все сценарии, не указанные в списке выше, не поддерживаются, включая в том числе следующие:  
   
@@ -179,7 +178,7 @@ ms.locfileid: "62775227"
   
 -   SQL Server 2014 Enterprise Evaluation до SQL Server 2014 Standard.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)   

@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ae9b5b908e4f4c6104d2639c7d0032a3b1f2087c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3b31c9ee3d14dcc65b44194b5e9cc2aff85215b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056352"
 ---
-# <a name="sessions"></a>Сеансы
+# <a name="sessions"></a>сеансы;
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Сеанс поставщика собственного клиента OLE DB представляет одно соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента требует, чтобы сеансы разделяют пространство транзакций для источника данных. Все объекты команд, созданные из определенного объекта сеанса, участвуют в локальной или распределенной транзакции объекта сеанса.  
@@ -185,7 +184,7 @@ EXIT:
 > [!NOTE]  
 >  В предыдущем примере используется интерфейс **IDBCreateCommand**, так как интерфейс **ICommand** реализует метод **GetDBSession**, единственный метод в команде или области набора строк, который позволяет объекту определить сеанс, в котором он был создан. Поэтому объект команды, и только объект команды, позволяет приложению получить указатель объекта источника данных, из которого могут быть созданы дополнительные сеансы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты источников данных (OLE DB)](data-source-objects-ole-db.md)  
   
   

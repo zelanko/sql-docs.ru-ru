@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 801a731db6c5b31bc479d1a3f6079c45ad9a7c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63215802"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063613"
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
   Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  

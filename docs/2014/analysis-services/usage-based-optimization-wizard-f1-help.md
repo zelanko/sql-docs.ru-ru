@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: e5f5a938-ae7c-4f4e-9416-a7f94ac82763
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5e94818245ba1e87d90f87539ae07e9531e5450
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea3aedff3f7bfa931b900bdeab59495a35853ae1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938245"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Справка F1 мастера оптимизации с учетом использования
   Результаты работы мастера оптимизации с учетом использования похожи на результаты, выдаваемые мастером статистических схем, и используются для разработки статистических схем для секции. Но в отличие от него мастер оптимизации с учетом использования разрабатывает схемы на основе определенных шаблонов использования, которые записываются в журнал запросов экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Агрегаты обеспечивают повышение производительности, позволяя [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] извлекать предварительно вычисленные итоги непосредственно из хранилища куба вместо того, чтобы пересчитывать данные из базового источника данных для каждого запроса.  
   
- Чтобы открыть мастер оптимизации с учетом использования из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], откройте конструктор кубов для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта и перейдите на вкладку **агрегаты** . Нажмите кнопку **Оптимизация на основе использования** на панели инструментов.  
+ Чтобы открыть мастер оптимизации с учетом использования из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , откройте конструктор кубов для [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта и перейдите на вкладку **агрегаты** . Нажмите кнопку **Оптимизация на основе использования** на панели инструментов.  
   
  Чтобы открыть мастер оптимизации с учетом использования из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], установите соединение с базой данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем откройте папку **Кубы** . Выберите куб, а затем откройте папку **Группы мер** и разверните группу мер, которую нужно изменить. Щелкните правой кнопкой мыши папку **Секции** и выберите пункт **Оптимизация на основе использования**.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66065571"
   
 -   [Завершение работы мастера &#40;мастера оптимизации с учетом использования&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агрегаты и статистические схемы](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Кубы в многомерных моделях](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Справка F1 мастера статистических схем](aggregation-design-wizard-f1-help.md)   

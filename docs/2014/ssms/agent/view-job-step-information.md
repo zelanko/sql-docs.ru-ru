@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3f06492-dc86-4e06-b186-ea58aff6d591
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8123a523a0fa5212b4c0ffc8d98c6a90aef3396c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1a4519fa83b85493cc16395e1f7c2948a84d1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001610"
 ---
 # <a name="view-job-step-information"></a>View Job Step Information
   В данном разделе описано, как просмотреть сведения о шаге задания в окне «Свойства шага задания». Также предоставляются сведения о просмотре выходных данных шага задания.  

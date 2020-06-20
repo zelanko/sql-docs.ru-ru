@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cede183f39ed7aca5bfe6bc7f0226c96da6ca84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f4d5a65dc7c4a32fc0e90cec2226cffa12c6a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995039"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>Настройка аудита входа в систему (среда SQL Server Management Studio)
   В этом разделе описывается, как настроить аудит входа в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] для контроля подключения к компоненту [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Аудит входа в систему может быть настроен на запись в журнал ошибок при следующих событиях.  

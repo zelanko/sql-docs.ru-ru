@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b87b81acef728129c38debe56f24859671117d1f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e19b845d5a4ebddb7b859afced7d93c75d4b56d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048984"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Вопросы безопасности массовой загрузки (SQLXML 4.0)
   Ниже приведены рекомендации по обеспечению безопасности при использовании массовой загрузки XML.  
@@ -53,7 +52,7 @@ ms.locfileid: "82717726"
   
 -   Если пользователь задает для SQLXML файл журнала ошибок для записи ошибок, то каждый раз при выполнении массовой загрузки этот файл будет перезаписываться данными последнего процесса массовой загрузки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

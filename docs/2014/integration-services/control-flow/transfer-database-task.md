@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7ddf838269932c19b0614d5a5219a7f03daed17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43a4f930b93d8657bdb5c2d0f91d7e6680b9ade2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918024"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  

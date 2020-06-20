@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c9122db448e95a6734ea3cf3c1010665b60f4650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0cbd22ac2de86b068990f9cecc5385f9133e482
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481187"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938065"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Добавление знаний в базу знаний
   В этом разделе описываются способы, которыми можно добавить знания в базу знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Прежде чем приступать к работе со службами DQS, необходимо получить набор знаний о данных. Для этого необходимо построить и поддерживать базу знаний служб DQS, а также пополнять ее наборами знаний, связанными с соответствующими типами источников данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 37ffad63-d6db-4609-8deb-786200659554
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bbd1ffb75402e475e5d55a9661967be2fcd57c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63042678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063956"
 ---
 # <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Урок 2. Выполнение политик рекомендаций по расписанию
   Можно настроить запланированные оценки рекомендованных политик на одном или нескольких экземплярах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы настроить рекомендованные политики на выполнение в соответствии с расписанием, необходимо импортировать эти политики в целевой экземпляр.  
@@ -41,7 +40,7 @@ ms.locfileid: "63042678"
   
 -   [Развертывание запланированных политик на нескольких экзмплярах](../../2014/tutorials/deploy-scheduled-policies-to-multiple-instances.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование нескольких серверов с использованием центральных серверов управления](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

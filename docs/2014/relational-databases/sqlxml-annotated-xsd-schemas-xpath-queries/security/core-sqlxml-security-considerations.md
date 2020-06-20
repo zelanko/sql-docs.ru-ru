@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 330cd2ff-d5d5-4c8e-8f93-0869c977be94
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2046229ded8ec429d12c54939d7432e478aaf3ba
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 34b15b956f3361b13e42745688025e0d30279ca9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048964"
 ---
 # <a name="core-sqlxml-security-considerations"></a>Основные проблемы безопасности SQLXML
   Далее приведены рекомендации по безопасности при использовании SQLXML для доступа к данным.  
@@ -48,7 +47,7 @@ ms.locfileid: "82717638"
   
 -   При выполнении дельты SQLXML переводит дельту в команды DELETE, UPDATE и INSERT, выполняемые на экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Только эти команды всегда затрагивают существующие данные. Команды, сформированные SQLXML, никогда не изменяют базу данных. Пользователь должен явным образом дать команду на изменение структуры базы данных. Для этого можно, например, включить их в блок `sql:query` шаблона.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы безопасности SQLXML 4.0](sqlxml-4-0-security-considerations.md)  
   
   

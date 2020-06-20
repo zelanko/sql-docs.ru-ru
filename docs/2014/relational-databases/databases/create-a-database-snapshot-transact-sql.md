@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762347"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952132"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
   Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
   
 -   **Перед началом работы**  
   
-     [Предварительные условия](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
      [Безопасность](#Security)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "62762347"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
  База данных-источник, в которой может применяться любая модель восстановления, должна соответствовать следующим предварительным требованиям.  
   
--   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Сведения о поддержке моментальных снимков базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   На экземпляре сервера должен быть запущен выпуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который поддерживает моментальные снимки баз данных. Сведения о поддержке моментальных снимков базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] см. в разделе [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   База данных-источник должна быть в режиме в сети, если база данных не является зеркальной в сеансе зеркального отображения базы данных.  
   
@@ -127,16 +126,16 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  При создании моментального снимка базы данных файлы журнала файлы в режиме вне сети, восстанавливаемые из копии файлы и нефункционирующие файлы являются недопустимыми в инструкции CREATE DATABASE.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 > [!NOTE]  
 >  Расширение `.ss` , используемое в примерах, выбрано произвольно.  
   
  Этот раздел содержит следующие примеры.  
   
--   А) [Создание моментального снимка по базе данных AdventureWorks](#Creating_on_AW)  
+-   A. [Создание моментального снимка по базе данных AdventureWorks](#Creating_on_AW)  
   
--   Б) [Создание моментального снимка по базе данных Sales](#Creating_on_Sales)  
+-   Б. [Создание моментального снимка по базе данных Sales](#Creating_on_Sales)  
   
 ####  <a name="a-creating-a-snapshot-on-the-adventureworks-database"></a><a name="Creating_on_AW"></a> A. Создание моментального снимка по базе данных AdventureWorks  
  В этом примере создается моментальный снимок базы данных по базе данных `AdventureWorks` . Имя моментального снимка `AdventureWorks_dbss_1800`и имя файла его разреженного файла `AdventureWorks_data_1800.ss`указывают на время создания — 18:00.  

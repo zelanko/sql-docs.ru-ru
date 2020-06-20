@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c61859b-00c9-4267-aef3-bc3ad075db69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d4559c13091f809cc222128d0f9e991ea424628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6eb7faad6f5e3f3742a97dcbda0548242c5f6cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029748"
 ---
 # <a name="exec-prepared-sql-event-class"></a>Exec Prepared SQL, класс событий
   Класс событий Exec Prepared SQL показывает, что приложение, использующее технологию SqlClient, ODBC, OLE DB или DB-Library, выполнило одну или несколько подготовленных инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -28,7 +27,7 @@ ms.locfileid: "62663984"
   
 |Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
+|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
@@ -50,7 +49,7 @@ ms.locfileid: "62663984"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

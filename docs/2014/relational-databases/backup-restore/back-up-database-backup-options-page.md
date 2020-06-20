@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c8030a0005f0f5b949a3eecd12d73f3a3aa709c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffd527ba4334244c7fd4c5d4a73099093cb8520b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959649"
 ---
 # <a name="back-up-database-backup-options-page"></a>Резервное копирование базы данных (страница «Параметры резервного копирования»)
   На странице  **Параметры резервного копирования** диалогового окна **Резервное копирование базы данных** можно просмотреть или изменить параметры резервного копирования базы данных.  
@@ -40,7 +39,7 @@ ms.locfileid: "62876867"
 ### <a name="backup-set"></a>Резервный набор данных  
  Параметры панели **Резервный набор данных** позволяют указать необязательные сведения о резервном наборе данных, созданном операцией резервного копирования.  
   
- **Название**  
+ **имя**;  
  Укажите имя резервного набора данных. Система автоматически предложит имя по умолчанию на основе имени базы данных и типа резервной копии.  
   
  Сведения о наборах резервных копий см. в разделе [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](media-sets-media-families-and-backup-sets-sql-server.md).  

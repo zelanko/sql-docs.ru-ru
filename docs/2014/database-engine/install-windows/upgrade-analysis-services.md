@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932085"
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
   Используйте пакет установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об обновлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме интеграции с SharePoint см. в разделе [Upgrade PowerPivot для SharePoint](upgrade-power-pivot-for-sharepoint.md). Дополнительные сведения об обновлении существующего экземпляра SQL Server см. в статье [обновление до SQL Server 2014 с помощью мастера установки &#40;&#41;установки ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "68889186"
   
 -   [Заметки о Выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   
--   Чтобы узнать, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] какие функции и функции были прекращены, устарели или изменены, см. [Analysis Services обратная совместимость](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
+-   Чтобы узнать [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , какие функции и функции были прекращены, устарели или изменены, см. [Analysis Services обратная совместимость](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
   
 ## <a name="pre-upgrade-checklist"></a>Контрольный список действий перед обновлением  
  Перед обновлением просмотрите следующую информацию:  

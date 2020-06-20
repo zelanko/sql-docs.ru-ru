@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6087d5fa39dd023d13ce3f49fbdfb855f12b921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fbc0d47c523be7a6a1dd421535862ac30748168a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067450"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939815"
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Создание мер и управление ими (табличные службы SSAS)
   Мера — это формула, которая создается специально для использования в отчете или сводной таблице (или сводной диаграмме) Excel. Меры могут быть основаны на стандартных агрегатных функциях, например COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). Задачи в этом разделе описывают создание мер и управление ими с помощью сетки мер таблицы.  
@@ -32,7 +31,7 @@ ms.locfileid: "66067450"
   
 -   [Удаление меры](#bkmk_delete)  
   
-## <a name="tasks"></a>Задачи  
+## <a name="tasks"></a>Задания  
  Для создания мер и управления ими будет использоваться сетка мер таблицы. Просматривать сетку мер таблицы в конструкторе моделей можно только в представлении данных. В представлении диаграммы создавать меры или увидеть сетку мер нельзя. Однако в этом представлении отображаются существующие меры. Чтобы отобразить сетку мер таблицы, в меню **Таблица** выберите команду **Показать сетку мер**.  
   
 ###  <a name="to-create-a-measure-using-a-standard-aggregation-formula"></a><a name="bkmk_create_stand"></a>Создание меры с помощью стандартной формулы статистической обработки  
@@ -59,7 +58,7 @@ ms.locfileid: "66067450"
   
 -   Щелкните меру правой кнопкой мыши в сетке мер и выберите команду **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Меры &#40;табличных&#41;SSAS](measures-ssas-tabular.md)   
  [Ключевые показатели эффективности &#40;табличные&#41;SSAS](kpis-ssas-tabular.md)   
  [Вычисляемые столбцы (табличные службы SSAS)](ssas-calculated-columns.md)  

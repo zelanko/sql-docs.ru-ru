@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ac8c2a0fa9ce77db59d50b3a7b9da42415e013
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512352"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027191"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Добавление на SQL Server расширенной хранимой процедуры
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Пользуйтесь вместо этого интеграцией со средой CLR.  
   
- DLL-библиотека, которая содержит функции расширенных хранимых процедур, используется как расширение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить библиотеку DLL, скопируйте файл в каталог, например в тот, который содержит стандартные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файлы DLL (C:\PROGRAM Files\Microsoft SQL Server\MSSQL12.0.* x*\MSSQL\Binn по умолчанию).  
+ DLL-библиотека, которая содержит функции расширенных хранимых процедур, используется как расширение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы установить библиотеку DLL, скопируйте файл в каталог, например в тот, который содержит стандартные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файлы DLL (C:\Program FILES\MICROSOFT SQL Server\MSSQL12.0.* x*\MSSQL\Binn по умолчанию).  
   
  После копирования DLL-библиотеки расширенной хранимой процедуры на сервер, системному администратору [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следует зарегистрировать в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждую из функций расширенной хранимой процедуры в DLL-библиотеке. Это выполняется с помощью системной хранимой процедуры sp_addextendedproc.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62512352"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL12.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Если имя функции, указанное в процедуре `sp_addextendedproc`, не соответствует в точности имени функции в DLL-библиотеке, новое имя будет зарегистрировано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это имя будет непригодно для использования. Например, `xp_Hello` хотя регистрируется как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расширенная хранимая процедура, расположенная в `xp_hello.dll`, не сможет найти функцию в библиотеке DLL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] если вы используете `xp_Hello` для вызова функции позже.  
+ Если имя функции, указанное в процедуре `sp_addextendedproc`, не соответствует в точности имени функции в DLL-библиотеке, новое имя будет зарегистрировано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это имя будет непригодно для использования. Например, хотя `xp_Hello` регистрируется как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Расширенная хранимая процедура, расположенная в `xp_hello.dll` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сможет найти функцию в библиотеке DLL, если вы используете `xp_Hello` для вызова функции позже.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -92,7 +91,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  Останавливать и перезапускать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не обязательно.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_addextendedproc &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql)   
  [sp_dropextendedproc (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18cb81205a6e7036f34c7bb6f73f822bf0a6e173
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9071c6821e6edeb577b639223e42899d2927bced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055898"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Асинхронный режим и команда SQLCancel
   Некоторые функции ODBC могут работать как синхронно, так и асинхронно. В приложении могут быть разрешены асинхронные операции как для дескриптора инструкции, так и для дескриптора соединения. Если параметр установлен для дескриптора соединения, он затрагивает все дескрипторы инструкции в этом дескрипторе соединения. Приложение использует следующие инструкции, чтобы включить или отключить асинхронный режим:  
@@ -47,7 +46,7 @@ SQLSetStmtAttr(hstmt, SQL_ATTR_ASYNC_ENABLE,
   
  Иногда команда остается необработанной долгое время. Если приложению нужно отменить команду, не дожидаясь ответа, это можно сделать, вызвав **SQLCancel** с тем же маркером инструкции, что и у необработанной команды. Это единственный момент, когда следует использовать **SQLCancel** . Некоторые программисты используют **SQLCancel** , когда они обрабатывали фрагменты в результирующем наборе и хотят отменить оставшуюся часть результирующего набора. [SQLMoreResults](../../native-client-odbc-api/sqlmoreresults.md) или [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) следует использовать для отмены оставшейся части необработанного результирующего набора, а не **SQLCancel**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание драйвера ODBC для собственного клиента SQL Server](creating-a-driver-application.md)  
   
   

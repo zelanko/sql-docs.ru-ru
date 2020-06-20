@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f5900b087081150b78bb0c335cf0ac1634d5f83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d27547862138b511a4defaa3cae80f48f69fdc4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048172"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Инструкции по измерению производительности драйвера ODBC (ODBC)
   Драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет два параметра для измерения производительности драйвера.  
@@ -30,7 +29,7 @@ ms.locfileid: "82705211"
   
 -   [Регистрация долго выполняющихся запросов &#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](odbc-how-to-topics.md)  
   
   

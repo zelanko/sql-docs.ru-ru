@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 87982955-1542-4551-9c06-447ffe8193b9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec85083e634123497c707f3028285ec1300ff2d4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e815007bc48260f95a573f9459ede09d3e585927
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707095"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055876"
 ---
 # <a name="filestream-support-odbc"></a>Поддержка FILESTREAM (ODBC)
   Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает улучшенную функциональность FILESTREAM. Дополнительные сведения об этой функции см. в разделе [Поддержка FILESTREAM](../features/filestream-support.md). Пример, демонстрирующий поддержку ODB для FILESTREAM, см. в разделе [пошаговая отправка и получение данных с помощью FILESTREAM &#40;&#41;ODBC ](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
@@ -264,7 +263,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   
   

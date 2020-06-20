@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9eebc2c66143d4728a05fc3df0f9ac02af9a5288
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7c378345848edf8c3a4de8c6d8d6c50ce101389
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703735"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009358"
 ---
 # <a name="search-an-active-document-incrementally"></a>Выполнение добавочного поиска в активном документе
   В отдельном документе или окне можно осуществлять добавочный поиск с уточнением критериев путем ввода текста. При операции поиска первый набор символов, соответствующий введенным в ходе добавочного поиска в документе или окне, выделяется цветом. При добавочном поиске производится автоматический поиск во всем тексте документа или окна, кроме скрытого текста.  
