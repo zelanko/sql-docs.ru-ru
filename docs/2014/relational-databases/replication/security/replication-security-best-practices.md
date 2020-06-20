@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7db85ce6d63cd6c3eb458434357fa5a2d8127dec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db577e8f3d248945db67610404ad4093d46a0430
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268664"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066565"
 ---
 # <a name="replication-security-best-practices"></a>Рекомендации по защите репликации
   Репликация перемещает данные в распределенных средах, начиная с внутренних сетей в рамках одного домена и заканчивая приложениями, обеспечивающими передачу данных между доменами без доверия, а также через Интернет. Чтобы обеспечить безопасность соединения при репликации, важно выбрать способ, соответствующий конкретным обстоятельствам.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917364"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Первый шаг в развертывании пакетов — это создание программы развертывания для проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа развертывания — это папка, которая содержит файлы, требуемые для развертывания пакетов проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на другом сервере. Программа развертывания создается на компьютере, где хранится проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -35,7 +34,7 @@ ms.locfileid: "66060231"
 |CreateDeploymentUtility|Значение, указывающее, будет ли во время построения пакета производиться создание программы развертывания. Для создания программы развертывания значение свойства должно быть равно `True`.|  
 |DeploymentOutputPath|Расположение программы развертывания, соответствующей проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
   
- При создании проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] файл манифеста — \<имя проекта>.SSISDeploymentManifest.xml — создается и добавляется вместе с копиями пакетов проекта и их зависимостей в папку bin\Deployment проекта или в расположение, указанное в свойстве DeploymentOutputPath. Файл манифеста производит перечисление пакетов, их конфигураций, а также иных различных файлов проекта.  
+ При построении [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекта \<project name> создается и добавляется файл манифеста,.SSISDeploymentManifest.xml, вместе с копиями пакетов проектов и зависимостей пакетов, в папку bin\Deployment проекта или в расположение, указанное в свойстве DeploymentOutputPath. Файл манифеста производит перечисление пакетов, их конфигураций, а также иных различных файлов проекта.  
   
  Содержимое папки развертывания обновляется каждый раз при построении проекта. Это означает, что любой файл, сохраненный в этой папке, который не копируется снова в эту папку в процессе построения, будет удален. Например, файлы конфигурации пакета, сохраненные в папку развертывания, будут удалены.  
   
@@ -45,9 +44,9 @@ ms.locfileid: "66060231"
   
 2.  Щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
   
-3.  В диалоговом окне ** \<страницы свойств "имя проекта>** " щелкните **средство развертывания**.  
+3.  В диалоговом окне ** \<project name> страницы свойств** щелкните **средство развертывания**.  
   
-4.  Чтобы обновить конфигурации пакетов при развертывании пакетов, задайте **AllowConfigurationChanges** для `True`AllowConfigurationChanges значение.  
+4.  Чтобы обновить конфигурации пакетов при развертывании пакетов, задайте для **AllowConfigurationChanges** значение `True` .  
   
 5.  Присвойте параметру `CreateDeploymentUtility` значение `True`.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66060231"
   
 9. Просмотрите ход компоновки и ошибки в окне **Выход** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Развертывание пакетов с помощью программы развертывания](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   

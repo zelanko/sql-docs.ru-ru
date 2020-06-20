@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f48fddf99a39db36a872d892c768b3df287a521
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056182"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964111"
 ---
 # <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Скрипт»** позволяет дать имя и описание задаче «Скрипт».  
@@ -36,7 +35,7 @@ ms.locfileid: "66056182"
  **Описание**  
  Введите описание задачи «Скрипт».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Скрипт" &#40;страница "Скрипт"&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

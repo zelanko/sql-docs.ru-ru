@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6947a01553ebc9bc99e1fef86cf1a6e46c13289
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482312"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970968"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]проверьте версию на применение бизнес-правил ко всем элементам версии модели.  
@@ -56,11 +55,11 @@ ms.locfileid: "65482312"
     > [!NOTE]  
     >  Когда исчезнет индикатор выполнения, проверка версии будет закончена.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Блокировка версии (службы Master Data Services)](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Состояния проверки &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
  [Master Data Services &#40;хранимой процедуры проверки&#41;](validation-stored-procedure-master-data-services.md)   
  [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701940"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019440"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Возвращает имя типа SQL для указанного токена типа BCP.  
@@ -69,15 +68,15 @@ fIsMaxType
 |`SQLDATETIME`|Можно использовать|**datetime**|  
 |`SQLBITN`|Можно использовать|**bit-null**|  
 |`SQLBIT`|Можно использовать|**bit**|  
-|`SQLBIGCHAR`|Нет|**char**|  
-|`SQLCHARACTER`|Нет|**char**|  
-|`SQLBIGVARCHAR`|Нет|**varchar**|  
-|`SQLVARCHAR`|Нет|**varchar**|  
+|`SQLBIGCHAR`|нет|**char**|  
+|`SQLCHARACTER`|нет|**char**|  
+|`SQLBIGVARCHAR`|нет|**varchar**|  
+|`SQLVARCHAR`|нет|**varchar**|  
 |`SQLTEXT`|Можно использовать|**text**|  
-|`SQLBIGBINARY`|Нет|**binary**|  
-|`SQLBINARY`|Нет|**Двоичный**|  
-|`SQLBIGVARBINARY`|Нет|**Varbinary**|  
-|`SQLVARBINARY`|Нет|**Varbinary**|  
+|`SQLBIGBINARY`|нет|**binary**|  
+|`SQLBINARY`|нет|**Двоичный**|  
+|`SQLBIGVARBINARY`|нет|**Varbinary**|  
+|`SQLVARBINARY`|нет|**Varbinary**|  
 |`SQLIMAGE`|Можно использовать|**Изображение**|  
 |`SQLINTN`|Можно использовать|**int-null**|  
 |`SQLDATETIMN`|Можно использовать|**datetime-null**|  
@@ -92,8 +91,8 @@ fIsMaxType
 |`SQLMONEY4`|Можно использовать|**Smallmoney**|  
 |`SQLFLT4`|Можно использовать|**Real**|  
 |`SQLUNIQUEID`|Можно использовать|**uniqueidentifier**|  
-|`SQLNCHAR`|Нет|**Nchar**|  
-|`SQLNVARCHAR`|Нет|**Nvarchar**|  
+|`SQLNCHAR`|нет|**Nchar**|  
+|`SQLNVARCHAR`|нет|**Nvarchar**|  
 |`SQLNTEXT`|Можно использовать|**Типы**|  
 |`SQLVARIANT`|Можно использовать|**sql_variant**|  
 |`SQLINT8`|Можно использовать|**Bigint**|  
@@ -115,7 +114,7 @@ fIsMaxType
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

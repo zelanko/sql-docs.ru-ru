@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc5cf457b453cf2da6010af455b4f1d778f8be0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066723"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Диалоговое окно «Подробный просмотр результатов»
   В этом диалоговом окне отображаются результаты оценки политики после ее запуска с помощью диалогового окна **Выполнить политики** и нажатия кнопки **Оценить**. Это диалоговое окно доступно только для чтения; оно помогает понять, в какой части выражения свойства может содержаться ошибка.  

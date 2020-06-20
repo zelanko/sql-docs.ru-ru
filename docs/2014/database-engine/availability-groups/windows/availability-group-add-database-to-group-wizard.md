@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02cd05baa6da57de6f90099d788d582821492d55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937169"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)
   Используйте мастер добавления базы данных в группу доступности для добавления одной или нескольких баз данных в существующую группу доступности AlwaysOn.  
@@ -32,7 +31,7 @@ ms.locfileid: "62815729"
   
 -   **Перед началом работы**  
   
-     [Предварительные условия и ограничения](#Prerequisites)  
+     [Требования и ограничения](#Prerequisites)  
   
      [Безопасность](#Security)  
   
@@ -85,9 +84,9 @@ ms.locfileid: "62815729"
   
 4.  На странице **Выбор баз данных** выберите одну или несколько баз данных. Дополнительные сведения см. в разделе [Страница Выбор баз данных &#40;мастер создания группы доступности — мастер добавления базы данных&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-5.  На странице **Выбор начальной синхронизации данных** выберите, как именно необходимо создать новые базы данных-получатели и присоединить их к группе доступности. Выберите один из следующих параметров.  
+5.  На странице **Выбор начальной синхронизации данных** выберите, как именно необходимо создать новые базы данных-получатели и присоединить их к группе доступности. Выберите один из следующих вариантов.  
   
-    -   **Полный**  
+    -   **Полное**  
   
          Выберите этот режим, если ваша среда удовлетворяет требованиям для автоматического запуска начальной синхронизации данных (дополнительные сведения см. в подразделе [Предварительные условия, ограничения и рекомендации](#Prerequisites)ранее в этом разделе).  
   
@@ -140,7 +139,7 @@ ms.locfileid: "62815729"
   
 -   [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Добавление базы данных в группу доступности &#40;SQL Server&#41;](availability-group-add-a-database.md)   

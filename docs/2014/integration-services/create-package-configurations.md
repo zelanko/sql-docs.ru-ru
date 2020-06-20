@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917352"
 ---
 # <a name="create-package-configurations"></a>Создание конфигурации пакетов
   Конфигурации пакетов создаются с помощью диалогового окна **Организатор конфигураций пакетов**, а также мастера настройки пакетов. Для доступа к этим средствам выберите **Конфигурация пакетов** в меню **службы SSIS** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -106,7 +105,7 @@ ms.locfileid: "66060168"
   
 10. Просмотрите конфигурацию в диалоговом окне **Организатор конфигураций пакетов** .  
   
-11. Нажмите кнопку **Закрыть**.  
+11. Щелкните **Закрыть**.  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66060168"
   
 -   Запись блога, [Пример API — программное добавление файла конфигурации в пакет](https://go.microsoft.com/fwlink/?LinkId=217664)на blogs.MSDN.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)   
  [Программная работа с переменными](building-packages-programmatically/working-with-variables-programmatically.md)  

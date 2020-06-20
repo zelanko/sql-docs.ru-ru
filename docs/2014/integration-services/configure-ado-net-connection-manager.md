@@ -13,33 +13,32 @@ helpviewer_keywords:
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921825"
 ---
 # <a name="configure-adonet-connection-manager"></a>настройка диспетчера соединений ADO.NET
   Диалоговое окно **Настройка диспетчера соединений ADO.NET** используется для добавления соединения с источником данных, доступ к которому будет осуществляться с помощью поставщика данных .NET Framework, например поставщиком SqlClient. Диспетчер соединений использует существующее соединение, либо можно создать новое.  
   
  Дополнительные сведения о диспетчере соединений ADO.NET см. в разделе [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Подключения к данным**  
  Выберите из списка существующее подключение к данным ADO.NET.  
   
  **Свойства подключения к данным**  
  Просмотрите свойства и значения выбранного подключения к данным ADO.NET.  
   
- **Создать**  
+ **Новые**  
  Создание подключения к данным ADO.NET с помощью диалогового окна **Диспетчер соединений** .  
   
  **Удаление**  
  Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

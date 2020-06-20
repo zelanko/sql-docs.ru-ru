@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bddf15e6469e2fd347c716e98e750c077bcc29e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c74e92286eab4bc1be8f3f538d83d86f056cf01
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797686"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936925"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Создание или настройка прослушивателя группы доступности (SQL Server)
-  В этом разделе описывается создание или настройка одного *прослушивателя группы* доступности для группы доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]среды, [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]  
+  В этом разделе описывается создание или настройка одного *прослушивателя группы* доступности для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 > [!IMPORTANT]  
 >  Для создания прослушивателя первой группы доступности настоятельно рекомендуется использовать [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или Powershell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Старайтесь не создавать прослушиватель непосредственно в кластере WSFC, кроме случаев, когда необходимо, например, создать дополнительный прослушиватель.  
@@ -191,22 +190,22 @@ ms.locfileid: "72797686"
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, используйте командлет **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, используйте командлет **Get-Help** в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] среде PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
 Сведения о настройке и использовании поставщика SQL Server PowerShell см. в разделе [поставщик SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md).
   
-## <a name="troubleshooting"></a>Устранение неполадок  
+## <a name="troubleshooting"></a>Диагностика  
   
 ###  <a name="failure-to-create-an-availability-group-listener-because-of-active-directory-quotas"></a><a name="ADQuotas"></a>Не удалось создать прослушиватель группы доступности из-за Active Directoryных квот  
  Создание нового прослушивателя группы доступности может завершиться неудачей в случае превышения квоты Active Directory для учетной записи участвующего узла кластера.  Дополнительные сведения см. в следующих статьях:  
   
--   [HYPERLINK "https://support.microsoft.com/kb/307532" как устранять неполадки с учетной записью службы кластеров при изменении объектов компьютеров](https://support.microsoft.com/kb/307532)  
+-   [HYPERLINK " https://support.microsoft.com/kb/307532 " как устранять неполадки с учетной записью службы кластеров при изменении объектов компьютеров](https://support.microsoft.com/kb/307532)  
   
--   [ГИПЕРССЫЛКаhttps://technet.microsoft.com/library/cc904295(WS.10).aspx"" Active Directory квоты](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
+-   [ГИПЕРССЫЛКа " https://technet.microsoft.com/library/cc904295(WS.10).aspx " Active Directory квоты](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
 ##  <a name="follow-up-after-creating-an-availability-group-listener"></a><a name="FollowUp"></a> Дальнейшие действия. Действия после создания прослушивателя группы доступности  
   
-###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a> Ключевое слово и связанные функции MultiSubnetFailover  
+###  <a name="multisubnetfailover-keyword-and-associated-features"></a><a name="MultiSubnetFailover"></a>Ключевое слово MultiSubnetFailover и связанные с ним функции  
  `MultiSubnetFailover` — это новое ключевое слово строки подключения, которое обеспечивает ускоренную отработку отказа для групп доступности AlwaysOn и экземпляров отказоустойчивых кластеров AlwaysOn в SQL Server 2012. Если в строке подключения задано условие `MultiSubnetFailover=True` , то включаются следующие три дополнительные функции.  
   
 -   Ускоренная отработка отказа для нескольких подсетей с прослушивателем для группы доступности AlwaysOn или экземпляров отказоустойчивых кластеров.  
@@ -221,21 +220,21 @@ ms.locfileid: "72797686"
   
  **MultiSubnetFailover=True не поддерживается платформой NET Framework 3.5 или OLEDB**  
   
- **Проблема** . Если у группы доступности или экземпляра отказоустойчивого кластера есть имя прослушивателя (в диспетчере кластеров WSFC оно называется сетевым именем или точкой доступа клиента) с зависимостью от нескольких IP-адресов из разных подсетей и при этом используется ADO.NET с платформой .NET Framework 3.5 с пакетом обновления 1 (SP1) или SQL Native Client 11.0 OLEDB, то потенциально 50 % запросов на подключение клиентов к прослушивателю группы доступности исчерпают время ожидания подключения.  
+ **Вопрос.** Если у вашей группы доступности или экземпляра отказоустойчивого кластера есть имя прослушивателя (имя сети или точка доступа клиента в диспетчере кластеров WSFC) в зависимости от нескольких IP-адресов из разных подсетей и вы используете ADO.NET с .NET Framework 3.5 с пакетом обновления 1 (SP1) или SQL Native Client 11,0 OLEDB, потенциально 50% запросов на подключение клиента к прослушивателю группы доступности приведет к превышению времени ожидания подключения.  
   
  **Решения.** Рекомендуется выполнить одну из следующих задач.  
   
 -   При отсутствии разрешения на работу с ресурсами кластера измените время ожидания соединения на 30 секунд (это означает 20 секунд ожидания TCP плюс 10-секундный буфер).  
   
-     **Преимущества**. В случае перехода на другой ресурс по нескольким подсетям обеспечивается быстрое восстановление клиента.  
+     **Преимущества**. В случае отработки отказа по нескольким подсетям обеспечивается быстрое восстановление клиента.  
   
-     **Недостатки.** Установление 50 % соединений клиентов потребует более 20 секунд.  
+     **Недостатки**. Установление половины соединений клиентов потребует более 20 секунд.  
   
 -   При наличии разрешений на работу с ресурсами кластера рекомендуется задать `RegisterAllProvidersIP=0`в качестве сетевого имени прослушивателя группы доступности. Дополнительные сведения см. в подразделе "Установка значения RegisterAllProvidersIP" далее в этом разделе.  
   
-     **Преимущества** . Не потребуется увеличивать значение времени ожидания подключения клиента.  
+     **Преимущества**. Не потребуется увеличивать значение времени ожидания соединения клиента.  
   
-     **Против:** Если происходит отработка отказа между подсетями, время восстановления клиента может составлять не более 15 минут, `HostRecordTTL` в зависимости от настроек и расписания репликации межсайтовых DNS/AD.  
+     **Против:** Если происходит отработка отказа между подсетями, время восстановления клиента может составлять не более 15 минут, в зависимости от `HostRecordTTL` настроек и расписания репликации межсайтовых DNS/AD.  
   
 ###  <a name="registerallprovidersip-setting"></a><a name="RegisterAllProvidersIP"></a>Параметр RegisterAllProvidersIP  
  При создании прослушивателя группы доступности с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или Powershell точка доступа клиента в кластере WSFC создается со свойством `RegisterAllProvidersIP`, установленным в значение 1 (true). Действие этого значения свойства зависит от строки подключения клиента следующим образом.  
@@ -255,7 +254,7 @@ ms.locfileid: "72797686"
   
 -   Строки подключения, не задающие свойство `MultiSubnetFailover` в значение true.  
   
-     Если выполняется условие `RegisterAllProvidersIP = 1`, то у любых клиентов, у которых строка подключения не содержит `MultiSubnetFailover = True`, будет возникать большая задержка в соединениях. Это происходит потому, что эти клиенты пытаются соединиться со всеми IP-адресами последовательно. Наоборот, если свойство `RegisterAllProvidersIP` изменено на 0, то IP-адрес включается в список клиентской точки доступа в кластере WSFC и уменьшает задержку для клиентов устаревших версий. Поэтому при наличии устаревших клиентов, которым необходимо подключаться к прослушивателю группы доступности и не может `MultiSubnetFailover` использовать свойство, рекомендуется изменить `RegisterAllProvidersIP` значение на 0.  
+     Если выполняется условие `RegisterAllProvidersIP = 1`, то у любых клиентов, у которых строка подключения не содержит `MultiSubnetFailover = True`, будет возникать большая задержка в соединениях. Это происходит потому, что эти клиенты пытаются соединиться со всеми IP-адресами последовательно. Наоборот, если свойство `RegisterAllProvidersIP` изменено на 0, то IP-адрес включается в список клиентской точки доступа в кластере WSFC и уменьшает задержку для клиентов устаревших версий. Поэтому при наличии устаревших клиентов, которым необходимо подключаться к прослушивателю группы доступности и не может использовать `MultiSubnetFailover` свойство, рекомендуется изменить `RegisterAllProvidersIP` значение на 0.  
   
     > [!IMPORTANT]  
     >  При создании прослушивателя группы доступности через кластер WSFC (графический интерфейс диспетчера отказоустойчивого кластера) свойство `RegisterAllProvidersIP` будет иметь значение 0 (false) по умолчанию.  
@@ -263,7 +262,7 @@ ms.locfileid: "72797686"
 ###  <a name="hostrecordttl-setting"></a><a name="HostRecordTTL"></a> Установка значения HostRecordTTL  
  По умолчанию клиенты кэшируют DNS-записи кластера на 20 минут.  Путем уменьшения `HostRecordTTL` (срок существования (TTL) для кэшированной записи) старые клиенты могут подключиться быстрее.  Однако уменьшение параметра `HostRecordTTL` также может привести к увеличению трафика к серверам DN.  
   
-###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a> Образец скрипта PowerShell для отключения RegisterAllProvidersIP и сокращения TTL  
+###  <a name="sample-powershell-script-to-disable-registerallprovidersip-and-reduce-ttl"></a><a name="SampleScript"></a>Пример скрипта PowerShell для отключения RegisterAllProvidersIP и сокращения срока жизни  
  В следующем примере показано, как настроить PowerShell и параметры кластера `RegisterAllProvidersIP` и `HostRecordTTL` для ресурса прослушивателя.  Запись DNS будет кэшироваться каждые 5 минут, а не 20 минут (по умолчанию).  Если изменить оба параметра кластера, можно сократить время подключения к нужному IP-адресу после перехода на старых клиентов, которые не могут использовать параметр `MultiSubnetFailover`.  Замените `yourListenerName` на имя изменяемого прослушивателя.  
   
 ```powershell
@@ -328,5 +327,5 @@ Start-ClusterResource yourAGResource
   
 ## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Кластеры SQL Server с несколькими подсетями (SQL Server)](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

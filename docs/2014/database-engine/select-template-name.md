@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33d3d1246346ca4affb7ee38bfb62a338c87ce5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089795"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929257"
 ---
 # <a name="select-template-name"></a>Выберите имя шаблона
   Диалоговое окно **Выбор имени шаблона** позволяет выбрать существующий шаблон трассировки приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] для экспорта в один из файлов в операционной системе. Это диалоговое окно позволяет также выбрать или ввести другое имя, чтобы сохранить шаблон трассировки, как при редактировании существующего шаблона трассировки. Чтобы открыть это диалоговое окно при экспорте шаблона, в меню приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Файл** наведите курсор на пункт **Шаблоны** и выберите команду **Экспорт шаблона**. Чтобы получить доступ к этому диалоговому окну при изменении имени шаблона, в меню **Файл** укажите курсор на пункт **Шаблоны**, затем на пункт **Изменить шаблон**и после выберите команду **Сохранить как**.  
@@ -31,8 +30,8 @@ ms.locfileid: "66089795"
  **Название шаблона**  
  Введите имя нового шаблона или выберите имя шаблона из списка. Если осуществляется экспорт шаблона, можно лишь выбрать имя шаблона из списка.  
   
-## <a name="see-also"></a>См. также  
- [Изменение &#40;шаблона трассировки SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>См. также:  
+ [Изменение шаблона трассировки (приложение SQL Server Profiler)](modify-a-trace-template-sql-server-profiler.md)   
  [Экспорт шаблона трассировки (приложение SQL Server Profiler)](../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)  
   
   

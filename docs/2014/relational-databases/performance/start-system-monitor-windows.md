@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aeb073b7e44060c0382d3d641aa196b93fbb402d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aba02928ead04c3ad4ab1027f86e367b7bb787d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066780"
 ---
 # <a name="start-system-monitor-windows"></a>Запуск системного монитора (Windows)
   Системный монитор позволяет отслеживать использование системных ресурсов, сбор и просмотр текущих данных производительности в виде счетчиков ресурсов сервера, например счетчиков использования процессора и оперативной памяти, а также многих ресурсов Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , таких как блокировки и транзакции.  
@@ -28,7 +27,7 @@ ms.locfileid: "63150586"
   
 1.  В меню **Пуск** выберите пункт **Выполнить**, в диалоговом окне «Выполнить» введите **perfmon** и нажмите кнопку **OK**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск системного монитора](../performance-monitor/run-system-monitor.md)  
   
   

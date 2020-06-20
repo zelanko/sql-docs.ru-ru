@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2e91eb8e0704b7c07fac285986a0827e4d79b160
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929597"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Параметры ("Текстовый редактор" — "XML" — страница "Разное")
 
@@ -38,10 +37,10 @@ ms.locfileid: "83000594"
  **Автоматически загружать DTD и схемы**  
  Схемы и определения типов документов (DTD) автоматически загружаются с адресов HTTP. Эта функция использует System.Net в режиме автоматического определения прокси-сервера. Этот флажок выбран по умолчанию.  
   
-## <a name="outlining"></a>Структуризация  
+## <a name="outlining"></a>Структура  
  **Включать режим создания структуры при открытии файлов**  
  Включает функцию структурирования при открытии файла. Этот флажок выбран по умолчанию.  
   
 ## <a name="caching"></a>Caching  
  **Схемы**  
- Определяет местоположение кэша схемы. Кнопка обзора (...) открывает текущее расположение кэша схемы в новом окне. Расположение по умолчанию — * \< Management Studio каталог установки>* \Xml\Schemas.  
+ Определяет местоположение кэша схемы. Кнопка обзора (...) открывает текущее расположение кэша схемы в новом окне. Расположение по умолчанию — *\<Management Studio install directory>* \Xml\Schemas.  

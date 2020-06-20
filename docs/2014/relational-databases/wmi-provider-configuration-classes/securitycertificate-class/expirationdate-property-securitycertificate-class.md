@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 54a1bed6d43deb132dc4acc125e2948852bf7574
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 352085843e77587bfa2afb620a4238628c248e1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060055"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Свойство ExpirationDate (класс SecurityCertificate)
   Возвращает дату истечения срока действия сертификата безопасности.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

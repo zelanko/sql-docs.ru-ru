@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b20ab1851d02e493035414dd4682fc5330296b19
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 088068bd4ddd70879efa606b22b186eb4839eaf6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929665"
 ---
 # <a name="query-options-execution-ansi-page"></a>Выполнение параметров запроса (страница ANSI)
   Используйте эту страницу, чтобы указать, что [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет выполнять запросы, используя все параметры или часть параметров, указанных в стандарте ISO (ANSI).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006702"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Информационный менеджмент предприятия совместным использованием SSIS, MDS и DQS [учебник]
   Для управления информацией на предприятии, как правило, требуется интеграция данных со всего предприятия и из-за его пределов, очистка данных, проверка данных на наличие повторений, стандартизация данных, обогащение данных, согласование данных с юридическими и нормативными требованиями и последующее сохранение данных в централизованном расположении со всеми необходимыми параметрами безопасности.  
@@ -42,7 +41,7 @@ ms.locfileid: "81487723"
   
 1.  Microsoft SQL Server 2012 со следующими установленными компонентами.  
   
-    1.  Службы Integration Services (SSIS)  
+    1.  Integration Services (SSIS)  
   
     2.  Службы Master Data Services (MDS)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "81487723"
   
 2.  [Настройка служб MDS с помощью диспетчера конфигурации Master Data Services](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Используйте диспетчер конфигурации для создания и настройки базы данных служб Master Data Services. После создания базы данных MDS создайте веб-приложение для MDS на веб-сайте (например, `http://localhost/MDS`) и свяжите базу данных MDS с веб-приложением MDS. Обратите внимание, что для создания веб-приложения MDS на компьютере должны быть установлены службы IIS. Дополнительные сведения о предварительных требованиях для настройки базы данных MDS и веб-приложения см. в разделе [требования к веб-приложениям (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) и [требования к базе данных (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) .  
+     Используйте диспетчер конфигурации для создания и настройки базы данных служб Master Data Services. После создания базы данных MDS создайте веб-приложение для MDS на веб-сайте (например `http://localhost/MDS` ,) и свяжите базу данных MDS с веб-приложением MDS. Обратите внимание, что для создания веб-приложения MDS на компьютере должны быть установлены службы IIS. Дополнительные сведения о предварительных требованиях для настройки базы данных MDS и веб-приложения см. в разделе [требования к веб-приложениям (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) и [требования к базе данных (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) .  
   
 3.  [Установка и Настройка служб DQS с помощью установщика Data Quality Server](https://msdn.microsoft.com/library/hh231682.aspx). Нажмите кнопку **Пуск**, последовательно выберите пункты **все программы**, **Microsoft SQL Server 2014**, **службы Data Quality Services**, а затем — **установщик сервера Data Quality**.  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487723"
   
 6.  Используемых Создайте учетную запись с помощью [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Для выполнения одной из задач этого руководства требуется учетная запись **Azure Marketplace** (изначально именованный **рынок данных**). Эту задачу можно пропустить, если необходимо, и перейти к следующей задаче.  
   
-7.  Скачайте файл поставщики. xls из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=50426).  
+7.  Скачайте файл Suppliers.xls из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  Службы DQS не позволяют экспортировать результаты очистки или сопоставления в файл Excel, если используется **64-разрядная версия Excel**. Это известная проблема. Чтобы обойти ее, выполните следующие действия.  
   
-    1.  Запустите **дклинсталлер. exe-Upgrade**. Если был установлен экземпляр SQL Server по умолчанию, файл DQSInstaller.exe будет находиться в папке «C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn». Дважды щелкните файл DQSInstaller.exe.  
+    1.  Запустите **DQLInstaller.exe-Upgrade**. Если был установлен экземпляр SQL Server по умолчанию, файл DQSInstaller.exe будет находиться в папке «C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn». Дважды щелкните файл DQSInstaller.exe.  
   
     2.  В **Диспетчер конфигурации Master Data Services**щелкните **выбрать базу данных**, выберите Существующая база данных **MDS** и нажмите кнопку **Обновить**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "81487723"
 |[Занятие 4: Хранение данных поставщика в MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|На этом занятии вы отправите очищенные и сопоставленные данные поставщика в Master Data Services (MDS) с помощью **надстройка MDS для Excel**.|45|  
 |[Занятие 5.: Автоматизация очистки и сопоставления с помощью SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|На этом занятии вы создадите решение служб SSIS, которое автоматически очищает входные данные с помощью служб DQS, сопоставляет очищенные данные для удаления повторений и сохраняет очищенные и сопоставленные данные в службах MDS.|75|  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Чтобы начать работу с руководством, перейдите к первому занятию. [Урок 1. Создание базы знаний служб DQS](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
   
   
