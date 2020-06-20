@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055021"
 ---
 # <a name="use-column-sets"></a>Использование наборов столбцов
   В таблицах, использующих разреженные столбцы, можно назначить набор столбцов, который будет возвращать все разреженные столбцы в таблице. Набор столбцов — это нетипизированное XML-представление, которое объединяет на выходе все разреженные столбцы таблицы в структурированном виде. Набор столбцов похож на вычисляемые столбцы тем, что набор столбцов физически не хранится в таблице. Набор столбцов отличается от вычисляемого столбца тем, что он может быть напрямую обновлен.  
@@ -139,7 +138,7 @@ GO
 ## <a name="examples"></a>Примеры  
  В следующих примерах в таблице документа содержится обычный набор столбцов `DocID` и `Title`. Производственной группе необходимы столбцы `ProductionSpecification` и `ProductionLocation` для всех рабочих документов. Группе сбыта необходим столбец `MarketingSurveyGroup` для документов сбыта.  
   
-### <a name="a-creating-a-table-that-has-a-column-set"></a>А) Создание таблицы с набором столбцов  
+### <a name="a-creating-a-table-that-has-a-column-set"></a>A. Создание таблицы с набором столбцов  
  В следующем примере создается таблица, в которой используются разреженные столбцы и содержится набор столбцов `SpecialPurposeColumns`. В этом примере в таблицу вставляются две строки, а затем из таблицы выбираются данные.  
   
 > [!NOTE]  
@@ -160,7 +159,7 @@ CREATE TABLE DocumentStoreWithColumnSet
 GO  
 ```  
   
-### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>Б) Вставка данных в таблицу с использованием имен разреженных столбцов  
+### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>Б. Вставка данных в таблицу с использованием имен разреженных столбцов  
  В следующих примерах в таблицу, созданную в примере А, вставляются две строки. В примерах используются имена разреженных столбцов; набор столбцов не упоминается.  
   
 ```  
@@ -255,7 +254,7 @@ WHERE DocID = 3 ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование разреженных столбцов](use-sparse-columns.md)  
   
   

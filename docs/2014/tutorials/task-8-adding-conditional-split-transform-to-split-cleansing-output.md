@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d4ebe420-a4a9-4076-89d3-41abe726fc5c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d5a55f0694094e6fe88a42946bcff34f420210f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57e8738edf77dae56454baba9ffc1b193146b110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006339"
 ---
 # <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Задача 8. Добавление преобразования "Условное разбиение" для выходных данных очистки
   В этом преобразовании в поток данных добавляется преобразование «Условное разбиение». Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. В этом руководстве используется столбец выходные данные **состояния записи** из преобразования «Очистка DQS». В этом учебнике вы передаете на сервер MDS только верные или исправленные записи. Поэтому проверяется **правильность** или **исправление** **состояния записи** , а также объединение записей перед отправкой записей в MDS.  

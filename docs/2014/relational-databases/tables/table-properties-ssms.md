@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196708"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055056"
 ---
 # <a name="table-properties"></a>Свойства таблицы
   Данный раздел описывает свойства таблицы, отображаемые в диалоговом окне «Свойства таблицы» в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения по отображению этих свойств см. в разделе [Просмотр определения таблицы](view-the-table-definition.md).  
@@ -128,7 +127,7 @@ ms.locfileid: "68196708"
  **Текстовая файловая группа**  
  Имя файловой группы, содержащей текстовые данные таблицы.  
   
- **Файловой группы**  
+ **Файловая группа**  
  Имя файловой группы, содержащей таблицу.  
   
  **Таблица секционирована**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196708"
   
 ### <a name="general"></a>Общие сведения  
  **Включен формат хранения Vardecimal**  
- При `True`значении это значение только для чтения указывает `decimal` , `numeric` что типы данных и хранятся с использованием формата хранения vardecimal. Чтобы изменить этот параметр, используйте `vardecimal storage format` параметр [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
+ При `True` значении это значение только для чтения указывает, что `decimal` `numeric` типы данных и хранятся с использованием формата хранения vardecimal. Чтобы изменить этот параметр, используйте `vardecimal storage format` параметр [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   
  **Место, занимаемое индексом**  
  Объем свободного места в мегабайтах, занимаемого индексами в таблице. Это значение не включает занимаемое XML-индексом пространство для таблицы. Если XML-индексы относятся к таблице, используйте вместо этого процедуру [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) .  
@@ -161,7 +160,7 @@ ms.locfileid: "68196708"
  **Схема секционирования**  
  Имя схемы секционирования, если таблица является секционированной. Если таблица не секционирована, это поле пусто.  
   
- **Количество секций**  
+ **Количество разделов**  
  Количество секций в таблице.  
   
  **Схема секционирования FILESTREAM**  
@@ -169,7 +168,7 @@ ms.locfileid: "68196708"
   
  Схема секционирования FILESTREAM должна быть симметрична схеме, указанной в параметре **Схема секционирования** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр определения таблицы](view-the-table-definition.md)   
  [Изменение столбцов (компонент Database Engine)](../tables/modify-columns-database-engine.md)  
   

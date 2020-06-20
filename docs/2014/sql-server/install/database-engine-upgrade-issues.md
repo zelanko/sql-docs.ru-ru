@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 81df03de-219b-4ec1-b3c6-fb861150346e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6f06cea141c2812e97459b0427d1ceb248688a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69c6dfdf1657e7ddf93905b4f9e880eba23ec1b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095779"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054907"
 ---
 # <a name="database-engine-upgrade-issues"></a>Проблемы обновления компонента Database Engine
   В подразделах этого раздела описаны проблемы в работе компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , которые могут повлиять на процесс обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В следующих разделах описаны действия, позволяющие смягчить воздействие этих изменений на рабочую среду.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)   
  [Устранение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Проблемы с обновлением репликации](../../../2014/sql-server/install/replication-upgrade-issues.md)   

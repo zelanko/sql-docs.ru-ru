@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a79316eedb95a026d4869442a06ca1916b40ff3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b10711f9c1940bc4cc307cb64a78227746863287
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059175"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966837"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Редактор назначения «Excel» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «Excel»** используется для сопоставления входных столбцов с целевыми.  
   
  Дополнительные сведения о назначении Excel см. в разделе [Excel Destination](data-flow/excel-destination.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Для сопоставления доступных входных столбцов с целевыми столбцами используется операция перетаскивания.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66059175"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Excel" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Редактор назначения "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
