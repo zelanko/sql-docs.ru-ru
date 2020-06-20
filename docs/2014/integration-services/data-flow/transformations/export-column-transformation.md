@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7279b3b40bbf7805d04aedbce6e86ff67862b76a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939585"
 ---
 # <a name="export-column-transformation"></a>Преобразование «Экспорт столбца»
   Преобразование «Экспорт столбца» считывает данные из потока и вставляет их в файл. Например, если поток данных содержит сведения о продукте, такие как изображения каждого продукта, можно применить преобразование «Экспорт столбца» для сохранения изображений в файлы.  

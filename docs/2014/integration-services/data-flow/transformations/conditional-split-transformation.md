@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcfbbac9eacc96384a723088cf8f20cc939bdc48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eafd5c3e5bbb7bd619ca4e070f916da4f9bb9761
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939695"
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
   Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. Реализация преобразования "Условное разбиение" аналогична применению структур решения CASE в языке программирования. Преобразование производит оценку выражений и на основе результатов направляет строку данных на указанный выход. Это преобразование также обеспечивает выход по умолчанию, таким образом, если строка не совпадает с выражением, она направляется на выход по умолчанию.  
@@ -69,7 +68,7 @@ ms.locfileid: "62900828"
 ## <a name="related-tasks"></a>Связанные задачи  
  [Разбиение набора данных с помощью преобразования «Условное разбиение»](conditional-split-transformation.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

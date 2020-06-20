@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9b5012fd-233e-4a25-a2e1-585c63b70502
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57adcc55cf7b699e5092671fc61eb83278858cb4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7f168d45b03473d958e202bd75116f4519d2fc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064116"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Параметр предварительной обработки (средство администрирования распределенного воспроизведения)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство `DReplay.exe`администрирования распределенное воспроизведение — это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Средство администрирования распределенное воспроизведение `DReplay.exe` — это средство командной строки, которое можно использовать для взаимодействия с контроллером распределенного воспроизведения. В этом разделе описан параметр командной строки **preprocess** и соответствующий синтаксис.
 
  Параметр **preprocess** запускает предварительную обработку. На этом этапе контроллер подготавливает для воспроизведения на целевом сервере входные данные трассировки.
 
- ![Значок ссылки на раздел](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в разделе [Синтаксические обозначения в Transact-SQL (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).
+ ![Значок ссылки на раздел](../../database-engine/media/topic-link.gif "Значок ссылки на раздел") Дополнительные сведения о синтаксических обозначениях, используемых в синтаксисе средства администрирования, см. в статье [Синтаксические обозначения в Transact-SQL (Transact-SQL)](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +36,7 @@ ms.locfileid: "78177344"
 
  Если параметр **-m** не задан, то используется локальный компьютер.
 
- **-i** *input_trace_file* указывает полный путь к входному файлу трассировки на контроллере, например `D:\Mytrace.trc`. Параметр **-i** является обязательным.
+ **-i** *input_trace_file* указывает полный путь к входному файлу трассировки на контроллере, например `D:\Mytrace.trc` . Параметр **-i** является обязательным.
 
  При наличии в том же каталоге файлов продолжения они загружаются и используются автоматически. Файлы должны соответствовать соглашению об именовании переключения на файл продолжения, например: `Mytrace.trc`, `Mytrace_1.trc`, `Mytrace_2.trc`, `Mytrace_3.trc`, … `Mytrace_n.trc`.
 

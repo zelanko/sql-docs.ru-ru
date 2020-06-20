@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b67b5eaf0d6927a0ed009498fd1b81c3aabd3354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4349e520e248c581ba588bf58781bf037a97781
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924605"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Редактор задачи «Массовая вставка» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Массовая вставка»** используется для наименования и описания задачи «Массовая вставка».  
@@ -36,7 +35,7 @@ ms.locfileid: "66061141"
  **Описание**  
  Введите описание задачи «Массовая вставка».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Вставка в &#40;"&#41;страницу "соединение"](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
  [Редактор задачи "операции с массовыми вставками" &#40;параметры&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

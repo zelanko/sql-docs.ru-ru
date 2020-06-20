@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775287"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932405"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>установить SQL Server 2014 с помощью файла конфигурации
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки предоставляет возможность создать файл конфигурации на основе системных значений по умолчанию и значений, вводимых во время выполнения. Файл конфигурации может быть использован для развертывания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всем предприятии с одной и той же конфигурацией. Стандартизировать установки в ручном режиме на территории предприятия также можно, создав пакетный файл, запускающий файл Setup.exe.  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Следуйте указаниям мастера до страницы **Все готово для установки** . Путь к файлу конфигурации указывается на странице **Все готово для установки** в разделе пути файла конфигурации. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в разделе [Install SQL Server 2014 мастера установки &#40;&#41;установки ](install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Следуйте указаниям мастера до страницы **Все готово для установки** . Путь к файлу конфигурации указывается на странице **Все готово для установки** в разделе пути файла конфигурации. Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [install SQL Server 2014 мастера установки &#40;&#41;установки ](install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Отмените установку, не завершая ее, чтобы создать INI-файл.  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Использование файла конфигурации для установки изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Запустите установку из командной строки и укажите файл ConfigurationFile. ini с помощью параметра *файл ConfigurationFile* .  
+-   Запустите установку с помощью командной строки и укажите ConfigurationFile.ini с помощью параметра *файл ConfigurationFile* .  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Использование файла конфигурации для подготовки и завершения создания образа изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SysPrep)  
   
@@ -138,7 +137,7 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка SQL Server 2014 из командной строки](install-sql-server-from-the-command-prompt.md)   
  [Установка отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [Обновление отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  

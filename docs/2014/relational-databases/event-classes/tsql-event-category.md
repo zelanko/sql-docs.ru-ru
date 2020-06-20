@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215f8747-64b5-4bf3-9845-d476b10cda3a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cfa8ca59787be1fd6d33c392bfa7333075e38936
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 763d5f31fd3562f54b274a74324ed4715b623a18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62746088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027940"
 ---
 # <a name="tsql-event-category"></a>Категория событий TSQL
   Категория событий **TSQL** включает общие события TSQL.  

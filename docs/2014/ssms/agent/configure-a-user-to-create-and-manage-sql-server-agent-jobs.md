@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83313389b3b872004fb23b0babdad19cfb5b8e7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995493"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
   В этом разделе описывается настройка пользователя для создания или выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заданий агента.  
@@ -48,7 +47,7 @@ ms.locfileid: "63253563"
   
 3.  Щелкните правой кнопкой мыши имя входа, которое необходимо добавить к предопределенной роли базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и выберите пункт **Свойства**.  
   
-4.  На странице **Сопоставление пользователей** диалогового окна **Свойства имени входа** выберите строку, содержащую `msdb`.  
+4.  На странице **Сопоставление пользователей** диалогового окна **Свойства имени входа** выберите строку, содержащую `msdb` .  
   
 5.  На вкладке **Членство в роли базы данных для: msdb**выберите соответствующую предопределенную роль базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -66,7 +65,7 @@ ms.locfileid: "63253563"
   
 6.  На вкладке **Участники** добавьте или удалите имена входа или роли, чтобы предоставить или отменить доступ к учетной записи-посреднику.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обеспечение безопасности агента SQL Server](implement-sql-server-agent-security.md)  
   
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: e08de622-6f87-470c-aee0-b2d6cb6cca88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96d0105faad9fb4c2c3213eaa90da464ccd90bd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7abcd0cf2c159977c7977e1e49820a4562b25372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995414"
 ---
 # <a name="configure-sql-server-agent-error-logs-general-page"></a>Журналы ошибок конфигурации агента SQL Server (страница «Общие»)
   Эта страница используется для просмотра и изменения параметров журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Файл журнала ошибок**  
  Указывает файл, в который агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит запись журнала ошибок.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63253875"
  **Сведения**  
  В файл журнала ошибок производится только запись информационных сообщений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Журнал ошибок агента SQL Server](sql-server-agent-error-log.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49225fac4cc54548b31e262a7ed6899ed4d00e31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2db468ae6a9bc90c492a9c4557d248f7f7ef81d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061362"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925231"
 ---
 # <a name="azure-resource-manager-connection-manager"></a>Диспетчер подключений Azure Resource Manager
 **Диспетчер подключений Azure Resource Manager** позволяет пакету служб SSIS управлять ресурсами Azure с помощью [субъекта-службы](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
@@ -27,5 +26,5 @@ ms.locfileid: "66061362"
 
 1. В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureResourceManager**и щелкните **Добавить**.
 2. В диалоговом окне **редактора диспетчера подключений Azure Resource Manager** укажите **Идентификатор приложения**, **Ключ приложения** и **Идентификатор клиента** для субъекта-службы. Дополнительные сведения об этих свойствах см. [этой](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal) статье.
-3. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
+3. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.
 4. Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .

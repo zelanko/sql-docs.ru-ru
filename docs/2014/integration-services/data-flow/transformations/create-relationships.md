@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 647fa27d872829a60d32c0cdc7686938ae796f2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c7956683258e1a9ae78a32eab0d02ff84c3b0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770380"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939645"
 ---
 # <a name="create-relationships"></a>Создание связей
   Используйте диалоговое окно **Создание связей** , чтобы изменить сопоставления между исходными столбцами и столбцами таблицы уточняющих запросов, настроенные в редакторе преобразования «Нечеткий уточняющий запрос», в редакторах преобразования «Уточняющий запрос» и «Уточняющий запрос термина».  

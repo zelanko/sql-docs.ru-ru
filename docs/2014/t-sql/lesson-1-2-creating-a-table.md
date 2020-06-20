@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c772f2527bd5ddb8a6759cbaa72d8aed9277f5cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048479"
 ---
 # <a name="creating-a-table-tutorial"></a>Создание таблицы (Учебник)
   Чтобы создать таблицу, нужно указать имя таблицы, имена и типы данных для каждого столбца таблицы. Также рекомендуется указывать, допускаются ли значения NULL для каждого из столбцов.  
@@ -73,7 +72,7 @@ ms.locfileid: "62704562"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Вставка данных в таблицу и их обновление (учебник)](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)  
   
   

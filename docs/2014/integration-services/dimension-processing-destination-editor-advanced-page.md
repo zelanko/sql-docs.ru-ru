@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07a04fe26bbd47463d0564f7799698ab282a9979
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bef21b424c401d77b9d8f3477de4061c3ff0f3d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966963"
 ---
 # <a name="dimension-processing-destination-editor-advanced-page"></a>Редактор назначения обработки измерений (страница «Дополнительно»)
   Используйте страницу **Дополнительно** диалогового окна **Редактор назначения обработки измерений** для настройки обработки ошибок.  
   
  Дополнительные сведения о назначении обработки измерений см. в разделе [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать конфигурацию ошибок по умолчанию**  
- Укажите, нужно ли использовать обработку ошибок в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] по умолчанию. По умолчанию это значение равно `True`.  
+ Укажите, нужно ли использовать обработку ошибок в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] по умолчанию. Значение по умолчанию — `True`.  
   
  **Действие при возникновении ошибки ключа**  
  Укажите способ обработки записей с недопустимыми ключевыми значениями.  
@@ -97,7 +96,7 @@ ms.locfileid: "66059488"
  **Обзор (...)**  
  Укажите путь к журналу ошибок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения «Обработка измерений» &#40;страница «Диспетчер соединений»&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
  [Редактор назначения "Обработка измерения" (страница "Сопоставления")](../../2014/integration-services/dimension-processing-destination-editor-mappings-page.md)  

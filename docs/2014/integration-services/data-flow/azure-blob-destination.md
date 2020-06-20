@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a64cfd2385cb510163ca5c2f66db64a86dd00bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828273"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916694"
 ---
 # <a name="azure-blob-destination"></a>Назначение больших двоичных объектов Azure
   Компонент **Назначение больших двоичных объектов Azure** позволяет пакету SSIS записывать данные в BLOB-объект Azure. Поддерживаются следующие форматы файлов: CSV и AVRO. Ддраг. Перетащите **назначение больших двоичных объектов Azure** в конструктор потока данных и дважды щелкните его, чтобы открыть редактор.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939495"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900289"
 -   Выход несовпадающих строк. Выход несовпадающих строк обрабатывает строки во входе, которые не совпадают ни с одной записью эталонного набора данных. Если преобразование «Уточняющий запрос» было настроено для обработки строк без совпадающих записей как ошибок, строки будут перенаправлены в вывод ошибок на выходе. В противном случае преобразование перенаправит эти строки в выход несовпадающих строк.  
   
     > [!NOTE]  
-    >  В службах [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] у преобразования «Уточняющий запрос» только один выход. Дополнительные сведения о выполнении преобразования «Уточняющий запрос», созданного в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], см. в разделе [Обновление преобразований «Уточняющий запрос](../../../sql-server/install/upgrade-lookup-transformations.md)».  
+    >  В службах [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] у преобразования «Уточняющий запрос» только один выход. Дополнительные сведения о выполнении преобразования «Уточняющий запрос», созданного в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , см. в разделе [Обновление преобразований «Уточняющий запрос](../../../sql-server/install/upgrade-lookup-transformations.md)».  
   
 -   Вывод ошибок на выходе.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62900289"
   
      Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование "Нечеткий уточняющий запрос"](fuzzy-lookup-transformation.md)   
  [Преобразование «Уточняющий запрос термина»](term-lookup-transformation.md)   
  [Поток данных](../data-flow.md)   

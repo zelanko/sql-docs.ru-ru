@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f001652af1f6ed627ded9be287b4910059cce9cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0378fe285ba57e1420b7e6bebf5e2e6fe13d29e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721719"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064634"
 ---
 # <a name="configure-distribution"></a>Настройка распространителя
   Распространитель — это сервер, на котором находится база данных распространителя, хранящая метаданные и данные предыстории для всех типов репликации, а также транзакции репликации транзакций. Для настройки репликации, необходимо настроить распространитель. Каждый издатель может быть назначен только одному экземпляру распространителя, однако один распространитель может совместно использоваться несколькими издателями. Распространитель использует следующие дополнительные ресурсы на сервере, где он расположен.  

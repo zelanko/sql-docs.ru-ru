@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4328c284d23313cf737c5cf8b39751359e568b4f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c69ded7b487168063109d1acb3f44f20e138e38f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055825"
 ---
 # <a name="sql-server-native-client-ole-db"></a>Собственный клиент SQL Server (OLE DB)
   Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — это низкоуровневый API-интерфейс COM, используемый для доступа к данным. Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] рекомендуется для разработки средств, программ и низкоуровневых компонентов, требующих высокой производительности. Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — собственный, высокопроизводительный поставщик, который напрямую обращается к протоколу потока табличных данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -72,7 +71,7 @@ ms.locfileid: "82704184"
   
 -   [Инструкции по OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   
   

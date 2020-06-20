@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b48bf3c0f0984c3f13acde23515c931aed5f467
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185976"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057629"
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
   Служебная программа **tablediff** используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения несоответствия данных в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
@@ -76,8 +75,8 @@ ms.locfileid: "68185976"
  [ **-?** ]  
  Возвращает список поддерживаемых параметров.  
   
- **-sourceServer** *source_server_name*[**\\**_instance_name_]  
- Имя исходного сервера. Укажите _имя\_исходного\_сервера_ для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Укажите**\\**_имя\_экземпляра_ _исходного\_\_сервера_для именованного экземпляра. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-sourceServer** *source_server_name*[ **\\** _instance_name_]  
+ Имя исходного сервера. Укажите _ \_ \_ имя исходного сервера_ для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Укажите _ \_ \_ _ **\\** _ \_ имя экземпляра_ исходного сервера для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-sourcedatabase** *source_database*  
  Имя базы данных-источника.  
@@ -100,8 +99,8 @@ ms.locfileid: "68185976"
  **-sourcelocked**  
  Исходная таблица блокируется в ходе сравнения при помощи табличных подсказок TABLOCK и HOLDLOCK.  
   
- **-DestinationServer** *destination_server_name*[**\\**_имя\_экземпляра_]  
- Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите**\\**_имя\_экземпляра_ _сервера\_\_назначения_для именованного экземпляра. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+ **-DestinationServer** *destination_server_name*[ **\\** _ \_ имя экземпляра_]  
+ Имя целевого сервера. Укажите *имя_целевого_сервера* для экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]по умолчанию. Укажите _ \_ \_ _ **\\** _ \_ имя экземпляра_ сервера назначения для именованного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-destinationdatabase** *subscription_database*  
  Имя целевой базы данных.  
@@ -162,14 +161,14 @@ ms.locfileid: "68185976"
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**0**|Успешно|  
 |**1**|Критическая ошибка|  
 |**2**|Различия таблиц|  
   
 ## <a name="remarks"></a>Remarks  
- Служебную программу **tablediff** нельзя использовать с[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] серверами, отличными от.  
+ Служебную программу **tablediff** нельзя использовать с серверами, отличными от [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Таблицы со столбцами с данными типа `sql_variant` не поддерживаются.  
   
@@ -178,7 +177,7 @@ ms.locfileid: "68185976"
 |Тип данных источника|Тип данных назначения|  
 |----------------------|---------------------------|  
 |`tinyint`|`smallint`, `int`или `bigint`|  
-|`smallint`|`int` или `bigint`|  
+|`smallint`|`int` либо `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -219,7 +218,7 @@ ms.locfileid: "68185976"
   
  Чтобы использовать параметр **-o** или **-f** , необходимо иметь разрешения на запись в указанный каталог файлов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сравнение реплицируемых таблиц на предмет различий (программирование репликации)](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbcf09c6-3128-4775-b3de-e986a70411e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6b6fa07c2cb2f4880420885fefc30d0fd419c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa3f29b6174342f0ec298df5bc49b30f7c0cbf1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011999"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027963"
 ---
 # <a name="transactionlog-event-class"></a>TransactionLog, класс событий
   Класс событий TransactionLog используются для наблюдения за активностью в журналах транзакций экземпляра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -33,8 +32,8 @@ ms.locfileid: "63011999"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, где регистрируются данные.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 54.|27|Нет|  
-|EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 54.|27|нет|  
+|EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |EventSubClass|`int`|Тип подкласса события.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -53,7 +52,7 @@ ms.locfileid: "63011999"
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Журнал транзакций (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   

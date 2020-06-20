@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f0950e48245bed53581d2f91b120ab9555aa562
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064582"
 ---
 # <a name="statistics"></a>Статистика
   Оптимизатор запросов использует статистику для создания планов запросов, которые повышают производительность запросов. Для большинства запросов оптимизатор уже создает необходимую статистику для формирования высококачественного плана запроса, но в некоторых случаях для достижения наилучших результатов нужно создать дополнительные статистические данные или изменить структуру запроса. В этом разделе обсуждаются основные статистические понятия и предоставляются рекомендации по эффективному использованию статистики для оптимизации запросов.  
@@ -191,7 +190,7 @@ GO
   
 -   Удаление временной статистики осуществляется с использованием инструкции [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) .  
   
--   Мониторинг статистики ведется с помощью представлений каталога **sys.stats** и **sys.stats_columns**. **sys_stats** включает столбец **is_temporary** для указания на то, какая статистика является постоянной, а какая временной.  
+-   Наблюдение за статистикой ведется с помощью представлений каталога **sys.stats** и **sys.stats_columns** . **sys_stats** включает столбец **is_temporary** для указания на то, какая статистика является постоянной, а какая временной.  
   
  Поскольку временная статистика хранится в базе данных `tempdb`, перезапуск службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вызывает исчезновение всей временной статистики.  
   
@@ -322,13 +321,13 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>Улучшение оценки количества элементов с помощью структур плана  
  Для некоторых приложений рекомендации по конструированию запросов могут не действовать, поскольку запрос невозможно изменить или указание запроса RECOMPILE может вызвать слишком много повторных компиляций. С помощью структур плана можно задавать другие указания, такие как USE PLAN, чтобы управлять работой запроса, пока идет согласование изменений приложения с поставщиком приложения. Дополнительные сведения о структурах планов см. в разделе [Руководства планов](../performance/plan-guides.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание статистики &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [Обновление статистики &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
  [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
- [Параметры ALTER DATABASE SET &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
  [Удаление статистики &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   
- [Инструкция ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [ALTER INDEX (Transact-SQL)](/sql/t-sql/statements/alter-index-transact-sql)   
  [Создание отфильтрованных индексов](../indexes/create-filtered-indexes.md)  

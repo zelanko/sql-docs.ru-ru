@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14ba2cb1-a424-4e4d-b224-0bf1015ab801
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c30d74580d9912906589efc0164a948b71bb0d85
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5216f6b49b16920fe3115f3985bc05f8af2c282e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704147"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057239"
 ---
 # <a name="sql-server-native-client-programming"></a>Программирование собственного клиента SQL Server
   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это изолированный прикладной программный интерфейс (API) для доступа к данным, используемый в OLE DB и ODBC, который появился в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объединяет поставщика SQL OLE DB и драйвер SQL ODBC в одну собственную DLL-библиотеку. Также он предоставляет новые расширенные функциональные возможности, поставляемые компонентами доступа к данным Windows (выделенное административное соединение Windows, ранее — компоненты доступа к данным компонентов MDAC). Технология собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может применяться для создания новых или усовершенствования существующих приложений, которым требуется доступ к новым функциям [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], таким как режим MARS, определяемые пользователем типы, уведомления о запросах, изоляция моментальных снимков и поддержка типа данных XML.  
@@ -69,7 +68,7 @@ ms.locfileid: "82704147"
  [Ошибки собственного клиента SQL Server](../native-client-ole-db-errors/errors.md)  
  Содержит разделы об ошибках времени выполнения, связанных с собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление приложения с SQL Server 2005 Native Client](applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [Разделы руководства по ODBC](../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  

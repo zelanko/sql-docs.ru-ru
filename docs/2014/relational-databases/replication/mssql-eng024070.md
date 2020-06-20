@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c10b9071fb821acc284c5d52621ed582c526ed62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057128"
 ---
 # <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
@@ -35,7 +34,7 @@ ms.locfileid: "63023914"
 ## <a name="explanation"></a>Объяснение  
  Это общая ошибка, которая может возникнуть независимо от того, реплицируется база данных или нет. Для сервера в топологии репликации эта ошибка обычно означает, что учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была изменена с использованием диспетчера управления службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если попытаться выполнить задание агента после изменения учетной записи службы, выполнение задания может закончится выдачей примерно следующего сообщения об ошибке:  
   
- "Выполняется от имени пользователя \<: UserAccount>. Репликация — подсистема моментальных снимков \<репликации: сбой агента ажентнаме>. Выполняется от имени пользователя \<: UserAccount>. Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. `[SQLSTATE 42000] (Error 14151)`. Шаг завершился с ошибкой».  
+ "Выполняется от имени пользователя: \<UserAccount> . Репликация — подсистема моментальных снимков репликации: \<AgentName> сбой агента. Выполняется от имени пользователя: \<UserAccount> . Клиент не располагает требуемыми правами доступа. Шаг завершился с ошибкой. `[SQLSTATE 42000] (Error 14151)`. Шаг завершился с ошибкой».  
   
  Эта проблема возникает из-за того, что диспетчер управления службами Windows не может предоставить новой учетной записи службы для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуемые разрешения.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "63023914"
   
  Членство в ней предоставляет новой учетной записи разрешения, необходимые для выполнения задания агента репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ошибки и события ссылаются на &#40;&#41;репликации](errors-and-events-reference-replication.md)   
  [Управление именами входа и паролями в репликации](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)  

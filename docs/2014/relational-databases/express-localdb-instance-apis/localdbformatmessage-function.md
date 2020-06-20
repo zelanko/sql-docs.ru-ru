@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d287a7ceff1c38c829da91a8ae2e530f664fb4ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f106cb74174a501af9e1a1b9bc30d6870f3a1904
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128742"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027782"
 ---
 # <a name="localdbformatmessage-function"></a>Функция LocalDBFormatMessage
   Возвращает локализованное текстовое описание для указанной ошибки SQL Server Express LocalDB.  
@@ -61,7 +60,7 @@ HRESULT LocalDBFormatMessage(
  *лпкчмессаже*  
  [Вход/выход] На входе содержит размер буфера *wszMessage* в символах. На выходе, если указан недостаточный размер буфера, содержит требуемый размер буфера в символах, включая любые конечные символы NULL. При успешном завершении работы функции содержит количество символов в сообщении без учета конечных символов NULL.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -86,7 +85,7 @@ HRESULT LocalDBFormatMessage(
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

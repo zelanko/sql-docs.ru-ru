@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 650e4a8efac5ce39e3fdfb476099ea648ca8ae62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 565e42d1b3ba6391aaf61c3c44f60a9a05867902
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995889"
 ---
 # <a name="instancename-property-serversettings-class"></a>Свойство InstanceName (класс ServerSettings)
-  Возвращает имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , к которому применяются параметры сервера.  
+  Возвращает имя экземпляра, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] к которому применяются параметры сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

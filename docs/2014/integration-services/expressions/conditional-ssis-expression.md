@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: baf066638eb8c42dbf4ba7f488c9b0c1ca9acdb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b19c8464e894723aae0f7a32ce8c423205da2338
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769401"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967430"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (условный) (выражение служб SSIS)
   Возвращает одно из двух выражений на основе вычисления логического выражения. Если логическое выражение принимает значение TRUE, то возвращается результат вычисления первого выражения. Если логическое выражение принимает значение FALSE, возвращается результат вычисления второго выражения.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8d84a4da6a10fbcbae311fe1bf738c03b85a4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176824"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056833"
 ---
 # <a name="create-tables-database-engine"></a>Создание таблиц (компонент Database Engine)
   Предусмотрена возможность создавать новые таблицы, присваивать им имена и добавлять к существующим базам данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , используя [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].

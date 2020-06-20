@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9f959d3c4b61a6231a0d4b3806b57cfa935445e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bf24de9bdc0e8b7b7ceb33bb881812b180ce112
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064251"
 ---
 # <a name="verify-queries-visual-database-tools"></a>Проверка запросов (визуальные инструменты для баз данных)
   Чтобы избежать проблем, можно проверить созданный запрос, чтобы гарантировать правильность его синтаксиса. Эта возможность особенно полезна при вводе инструкций на [панели SQL](visual-database-tools.md).  

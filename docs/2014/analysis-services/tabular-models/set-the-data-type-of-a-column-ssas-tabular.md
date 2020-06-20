@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5fc58d837a6dd0ca508dbaba8da18578fac6b6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066612"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938665"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
   При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
@@ -50,7 +49,7 @@ ms.locfileid: "66066612"
   
 |Типы данных модели|  
 |----------------------|  
-|Text<br /><br /> Десятичное число<br /><br /> Whole Number<br /><br /> Валюта<br /><br /> True или false<br /><br /> Дата|  
+|текст<br /><br /> Десятичное число<br /><br /> Whole Number<br /><br /> Валюта<br /><br /> True или false<br /><br /> Дата|  
   
  Если оказывается, что данные имеют неправильный тип данных или нужен другой тип данных, существует несколько возможностей.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66066612"
   
  Подробные сведения о типах данных, которые используются в семантических моделях бизнес-аналитики, о способах неявного преобразования и использовании разных типов данных в формулах см. в разделе [Поддерживаемые типы данных (табличные службы SSAS)](data-types-supported-ssas-tabular.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддерживаемые типы данных (табличные службы SSAS)](data-types-supported-ssas-tabular.md)  
   
   

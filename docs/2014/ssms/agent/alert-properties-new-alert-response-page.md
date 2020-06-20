@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 135207a16ef49fca4820e0d7872d9c3542628d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18c4c93464d7144c8edce9c38464c2f750d7068e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062195"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056585"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Свойства предупреждения — Создание предупреждения (страница «ответ»)
   Используйте эту страницу, чтобы указать задание, которое требуется запустить, и получить список операторов, которые должны получать уведомления в ответ на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Выполнить задание**  
  Включает параметры **Список заданий**, **Создать задание** и **Просмотреть задание** .  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63062195"
  **Просмотр оператора**  
  Отображается диалоговое окно **Свойства** для текущего выбранного оператора. Свойства операторов можно просматривать и изменять в диалоговом окне **Свойства оператора**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уведомление](alerts.md)   
  [Создание предупреждения с использованием уровня серьезности](create-an-alert-using-severity-level.md)   
  [Уведомление](alerts.md)   

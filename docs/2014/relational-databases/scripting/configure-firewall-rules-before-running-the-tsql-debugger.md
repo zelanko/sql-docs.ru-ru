@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056917"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Настройка отладчика Transact-SQL
   Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который работает на компьютере, отличном от того, на котором работает редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +55,7 @@ ms.locfileid: "82704037"
   
     2.  В диалоговом окне **Тип правила** выберите **Программа**и нажмите кнопку **Далее**.  
   
-    3.  В диалоговом окне **Программа** выберите элемент **Путь к этой программе** и введите полный путь к файлу sqlservr.exe для данного экземпляра. По умолчанию sqlservr. exe устанавливается в папку C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, где *instanceName* — MSSQLSERVER для экземпляра по умолчанию, и имя экземпляра для любого именованного экземпляра.  
+    3.  В диалоговом окне **Программа** выберите элемент **Путь к этой программе** и введите полный путь к файлу sqlservr.exe для данного экземпляра. По умолчанию sqlservr.exe устанавливается в папку C:\Program Files\Microsoft SQL Server\MSSQL12. *InstanceName*\MSSQL\Binn, где *instanceName* — MSSQLSERVER для экземпляра по умолчанию, и имя экземпляра для любого именованного экземпляра.  
   
     4.  В диалоговом окне **Действие** выберите **Разрешить соединение**и нажмите кнопку **Далее**.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "82704037"
 
 * Сервер должен обмениваться данными с клиентом через RPC. Учетная запись, под которой выполняется служба SQL Server, должна иметь разрешения на проверку подлинности для клиента.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отладчик Transact-SQL](transact-sql-debugger.md)   
  [Запуск отладчика Transact-SQL](run-the-transact-sql-debugger.md)   
  [Шаг с заходом в код Transact-SQL](step-through-transact-sql-code.md)   

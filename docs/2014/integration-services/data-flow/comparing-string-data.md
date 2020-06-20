@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d1954d2509b15591239e14727cf9c88eb26054
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828141"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916554"
 ---
 # <a name="comparing-string-data"></a>сравнение строковых данных
   Сравнения строк — важная составляющая любого преобразования, которое выполняется с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Кроме того, они применяются для вычисления выражений в переменных и выражениях свойств. Например, при преобразовании «Сортировка» сравниваются значения в наборе данных для сортировки данных по возрастанию или по убыванию.  

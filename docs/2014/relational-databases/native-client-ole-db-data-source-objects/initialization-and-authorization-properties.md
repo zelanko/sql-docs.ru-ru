@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a1e996bff6c68a6211b015033b108cf5f1f9614
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ef1404ae61aebe629d2ecd815ddf8ad2dd3ba0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056374"
 ---
 # <a name="initialization-and-authorization-properties"></a>Свойства инициализации и авторизации
   Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретирует свойства инициализации и авторизации OLE DB следующим образом.  
@@ -84,7 +83,7 @@ Server=MyServer;UID=MyUserName;
   
  Список ключевых слов, доступных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщике OLE DB собственного клиента, см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты источников данных (OLE DB)](data-source-objects-ole-db.md)  
   
   

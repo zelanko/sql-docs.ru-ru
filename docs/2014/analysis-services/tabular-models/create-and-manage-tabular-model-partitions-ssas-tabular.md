@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27f6bda21381a3388e51c387b072c80026b44c6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067403"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939785"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Создание секций табличной модели и управление ими (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями с помощью диалогового окна **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В задачах этого раздела описывается создание и управление секциями в развернутой модели.  
@@ -30,7 +29,7 @@ ms.locfileid: "66067403"
   
 -   [Удаление секции](#bkmk_delete)  
   
-## <a name="tasks"></a>Задачи  
+## <a name="tasks"></a>Задания  
  Создание секций и управление ими в развернутой базе данных с табличной моделью выполняются в диалоговом окне **Секции** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы открыть диалоговое окно **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], щелкните таблицу правой кнопкой мыши и выберите команду **Секции**.  
   
 ###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Создание новой секции  
@@ -62,7 +61,7 @@ ms.locfileid: "66067403"
   
 -   В диалоговом окне **Секции** в списке **Секции** выберите секцию, которую необходимо удалить, и нажмите кнопку **Удалить** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции табличной модели &#40;табличные&#41;SSAS](partitions-ssas-tabular.md)   
  [Обработка секций табличной модели (табличные службы SSAS)](process-tabular-model-partitions-ssas-tabular.md)  
   

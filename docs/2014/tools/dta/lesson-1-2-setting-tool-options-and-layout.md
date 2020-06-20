@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36139b916442b2c0f616d52d2b06efdbda2cfe03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048344"
 ---
 # <a name="setting-tool-options-and-layout"></a>Настройка параметров и вида средств
   Чтобы повысить удобство работы с помощником по настройке ядра СУБД, можно настроить параметры, влияющие на вид графического интерфейса пользователя помощника при запуске и применяемый шрифт, а также воспользоваться другими возможностями этого средства. Выполнение практических заданий на этой странице позволит изучить эти параметры и способ их настройки.  
@@ -43,6 +42,6 @@ ms.locfileid: "66110201"
     -   По умолчанию установлен флажок **Запрашивать подтверждение перед остановкой анализа сеанса** , что позволяет избежать случайной остановки сеанса настройки до завершения анализа рабочей нагрузки в помощнике по настройке ядра СУБД.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
- [Урок 2. Использование помощника по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Занятие 2. Использование помощника по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

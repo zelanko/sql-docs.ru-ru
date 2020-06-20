@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967234"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
   После настройки задачи "Скрипт" в окне **Редактор задачи "Скрипт"** нужно создать пользовательский код в среде разработки задачи "Скрипт".
@@ -49,9 +48,9 @@ ms.locfileid: "78176191"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Элементы и классы проекта в проекте задачи «Скрипт»
  По умолчанию проект задачи «Скрипт», отображаемый в окне обозревателя проекта VSTA, содержит один элемент `ScriptMain`. В свою очередь, элемент `ScriptMain` содержит один класс, именуемый `ScriptMain`. Элементы кода в классе изменяются в зависимости от языка программирования, выбранного для задачи «Скрипт».
 
--   Если задача «Скрипт» настроена для [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] языка программирования, то `ScriptMain` класс имеет общедоступную подпрограмму `Main`. Подпрограмма `ScriptMain.Main` является методом, который вызывается во время выполнения задачи «Скрипт».
+-   Если задача «Скрипт» настроена для [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] языка программирования, то `ScriptMain` класс имеет общедоступную подпрограмму `Main` . Подпрограмма `ScriptMain.Main` является методом, который вызывается во время выполнения задачи «Скрипт».
 
-     По умолчанию единственным кодом в подпрограмме `Main` нового скрипта является строка `Dts.TaskResult = ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи. `Dts.TaskResult` Свойство обсуждается в разделе [возвращение результатов из задачи «Скрипт](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)».
+     По умолчанию единственным кодом в подпрограмме `Main` нового скрипта является строка `Dts.TaskResult = ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи. `Dts.TaskResult`Свойство обсуждается в разделе [возвращение результатов из задачи «Скрипт](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)».
 
 -   Если для задачи «Скрипт» задан язык программирования Visual C#, то класс `ScriptMain` имеет публичный метод `Main`. Этот метод вызывается при запуске задачи «Скрипт».
 

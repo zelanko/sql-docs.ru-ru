@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b9da4b68bba6358ff473846fb710f8fa6454e5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65546f6820765286b558d2043e0155a79a07eb58
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688590"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057747"
 ---
 # <a name="replay-requirements"></a>Replay Requirements
   Для воспроизведения данных трассировки с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или программы распределенного воспроизведения в трассировке должен быть записан определенный набор классов событий и столбцов. Если для настройки трассировки, которая в дальнейшем будет использоваться для воспроизведения, применяется шаблон трассировки **TSQL_Replay** , то по умолчанию эти параметры включены. В этом разделе приводится описание этих параметров и других требований к воспроизведению.  

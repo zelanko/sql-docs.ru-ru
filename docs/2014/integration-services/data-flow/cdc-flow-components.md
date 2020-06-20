@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22722605b266f28981457ce0c6839ad14279a434
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828577"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916794"
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -135,7 +134,7 @@ ms.locfileid: "62828577"
   
  Значение переменной состояния CDC необходимо хранить в постоянном хранилище. Оно должно считываться перед началом обработки CDC и сохраняться с учетом текущего состояния после завершения обработки. Задача загрузки и сохранения состояния CDC может выполняться разработчиком служб SSIS, но компонент управления CDC может автоматизировать эту задачу, сохраняя значение состояния CDC в таблице базы данных.  
   
-## <a name="security-considerations"></a>Вопросы безопасности  
+## <a name="security-considerations"></a>Соображения безопасности  
  В этом разделе перечислены некоторые соображения по безопасности, связанные с использованием компонентов CDC в службах SSIS.  
   
 ### <a name="access-authorization-to-change-data"></a>Авторизация доступа к информации об изменениях  
@@ -216,7 +215,7 @@ ms.locfileid: "62828577"
   
 -   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](https://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача управления CDC](../control-flow/cdc-control-task.md)  
   
   

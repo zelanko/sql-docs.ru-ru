@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1b3957db316648fd37da071ac155aad01b93c7cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063500"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
   С помощью **мастера формирования и публикации скриптов** можно создавать скрипты для переноса баз данных между экземплярами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Скрипты для базы данных вы можете создавать на экземпляре компонента ядра СУБД в локальной сети или из [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Сформированные скрипты могут выполняться на другом экземпляре компонента ядра СУБД или [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. С помощью мастера также можно публиковать содержимое базы данных непосредственно в веб-службе, созданной с помощью проекта служб Database Publishing Services. Создать скрипты можно как для всей базы данных, так и ограничить их определенными данными или объектами.  
@@ -335,7 +334,7 @@ ms.locfileid: "82703936"
   
  **Готово** — закрыть мастер после завершения обработки или возникновения ошибки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка объектов SMO](../server-management-objects-smo/installing-smo.md)   
  [Копирование баз данных на другие серверы](../databases/copy-databases-to-other-servers.md)  
   

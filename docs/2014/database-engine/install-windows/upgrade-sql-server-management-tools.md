@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 925ab0eb6248ec59284c175e472a237071a0c0bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 632b36d763cf2498e4d583abfcfdccae9090040e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931967"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Обновление средств управления SQL Server
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней. В этом разделе описаны средства поддержки и процесс обновления средств управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , компонента Database Mail, планов обслуживания, XPStar, XPWeb и других компонентов управления.  

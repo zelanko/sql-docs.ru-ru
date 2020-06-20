@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8cde162479645ab13a6ae000cc46e42e3c10e41
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65485581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057592"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Учебники по информационному менеджменту предприятия
   В этом разделе содержатся учебники по управлению данными на предприятии с помощью технологий управления данными на предприятии (EIM), включенных в службы [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Технологии управления данными на предприятии (EIM) предоставляют портфель корпоративных решений, которые позволяют организациям обеспечивать надежность и согласованность своих данных, для принятия на их основе важных бизнес-решений. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] содержит следующие технологии, помогающие в реализации решений EIM на предприятии.  
@@ -29,7 +28,7 @@ ms.locfileid: "65485581"
  [Руководство по управлению информацией на предприятии с помощью служб SSIS, MDS и DQS &#91;учебнике&#93;](../../2014/tutorials/enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md)  
  В этом учебнике вы научитесь совместно использовать службы SSIS, MDS и DQS для внедрения примера решения по управлению данными предприятия (EIM). Сначала службы DQS будут использованы для создания базы знаний с набором знаний о данных поставщика (метаданные), очистки данных в файле Excel путем их сравнения с базой знаний и сопоставления данных для обнаружения и удаления повторений в данных. Затем надстройка MDS для Excel будет использована для передачи очищенных и сопоставленных данных в MDS. Затем весь процесс будет автоматизирован с помощью решения служб SSIS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление информацией на предприятии — Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=270871)  
   
   

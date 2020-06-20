@@ -1,5 +1,6 @@
 ---
 title: Свойства SQL Server (вкладка "высокий уровень доступности AlwaysOn") | Документация Майкрософт
+description: Сведения о включении или отключении группы доступности AlwaysOn компонента в SQL Server 2014. Просмотрите предварительные требования, которые должны соответствовать экземпляру сервера для этой функции.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 author: mikeraymsft
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 44282a8495bdefc9c817de1bd8340bca1379944c
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4e15cc28354d8dc77b579008feabbc6d13efb63d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857746"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939095"
 ---
 # <a name="sql-server-properties-alwayson-high-availability-tab"></a>Свойства SQL Server (вкладка «Высокий уровень доступности AlwaysOn»)
   На вкладке **Высокий уровень доступности AlwaysOn** в диалоговом окне **Свойства SQL Server** в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно включить или отключить функцию «Группы доступности AlwaysOn» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Включение функции «Группы доступности AlwaysOn» является предварительным требованием для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы группы доступности использовались в качестве решения высокого уровня доступности и аварийного восстановления.  

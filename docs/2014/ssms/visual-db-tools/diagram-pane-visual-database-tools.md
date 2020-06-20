@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c76911b19e48785dfc4d06a91708589c87e2acbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126594"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008610"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Панель диаграммы (визуальные инструменты для баз данных)
   Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  

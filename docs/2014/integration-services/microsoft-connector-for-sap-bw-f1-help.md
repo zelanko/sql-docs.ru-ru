@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd963b0bcd215dff7211f0073c450565cdec775c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890666"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967077"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Справка F1 по Microsoft Connector 1.1 для SAP BW
   В этом разделе содержатся подразделы справки F1 для трех компонентов [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft Connector 1.1 для SAP BW. Эти разделы доступны также из пользовательского интерфейса, если нажать клавишу F1 или щелкнуть меню «Справка» на страницах мастеров или в диалоговых окнах.  
@@ -73,7 +72,7 @@ ms.locfileid: "62890666"
   
 -   [Создать InfoPackage](data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты Microsoft Connector 1.1 для SAP BW](microsoft-connector-for-sap-bw-components.md)  
   
   
