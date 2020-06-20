@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3f06127c2e86060c90518bc24dde512e4259668
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 298ba469c565765b524b17a58f464b5a3ee909c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706547"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050390"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Модель приложения для секционирования таблиц, оптимизированных для памяти
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] поддерживает шаблон, в соответствии с которым ограниченный объем активных данных сохраняется в таблице, оптимизированной для памяти, в то время как менее популярные данные обрабатываются на диске. Как правило, в этом случае данные сохраняются с ключом `datetime`.  

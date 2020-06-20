@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69a22c5d032ca42b64536bb765b037d2cad02a27
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050359"
 ---
 # <a name="application-level-partitioning"></a>Секционирование уровня приложения
   В этом примере демонстрируется секционирование уровня приложения, где данные хранятся в таблице, оптимизированной для памяти, или в таблице на диске в зависимости от того, был заказ сделан до или после определенной даты. Все заказы с более поздней или равной *hotDate* датой в оптимизированной для памяти таблице и все заказы до *hotDate* в таблице на диске. Предположим наличие предельной рабочей нагрузки OLTP с большим количеством параллельных транзакций. Это бизнес-правило (последние заказы находятся в оптимизированной для памяти таблице) необходимо обеспечить даже в том случае, когда несколько параллельных транзакций пытаются изменить *hotDate*.  
@@ -219,7 +218,7 @@ SELECT * FROM [dbo].[SalesOrders_cold] ORDER BY so_date DESC
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Примеры кода In-Memory OLTP](in-memory-oltp-code-samples.md)  
   

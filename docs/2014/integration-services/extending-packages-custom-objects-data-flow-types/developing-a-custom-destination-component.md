@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc29f3b9acf52172aa3d9fedecac752d419b2e55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81bb8b079142b2b6c4597fa2fdfeddd034841f93
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968984"
 ---
 # <a name="developing-a-custom-destination-component"></a>Разработка пользовательского компонента назначения
   Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создания пользовательских компонентов назначения, которые могут соединяться с любым пользовательским источником данных и хранить в нем свои данные. Пользовательские компоненты назначения полезны при необходимости соединения с источниками данных, доступ к которым не может быть осуществлен с помощью одного из существующих исходных компонентов, включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].

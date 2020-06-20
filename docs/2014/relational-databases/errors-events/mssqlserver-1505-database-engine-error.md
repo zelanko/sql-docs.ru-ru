@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727739"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969528"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727739"
   
  В сообщении об ошибке 1505 возвращается первая строка, нарушающая ограничение уникальности. В таблице могут быть другие повторяющиеся строки. Чтобы найти все повторяющиеся строки, выполните запрос к указанной таблице и используйте предложения GROUP BY и HAVING, чтобы получить информацию о повторяющихся строках. Например, следующий запрос возвращает строки таблицы **Employee**, в которых есть повторяющиеся значения имени и фамилии:  
   
- Выберите LastName, FirstName, Count (\*) из dbo. Группа сотрудников по фамилии, FirstName Count (\*) > 1;  
+ Выберите LastName, FirstName, Count ( \* ) из dbo. Группа сотрудников по фамилии, FirstName Count ( \* ) > 1;  
   
 ## <a name="user-action"></a>Действие пользователя  
  Рассмотрим следующие решения.  

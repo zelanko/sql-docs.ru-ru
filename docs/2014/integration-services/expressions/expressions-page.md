@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969334"
 ---
 # <a name="expressions-page"></a>Страница «Выражения»
   На странице **Выражения** можно изменить выражения свойств и открыть диалоговые окна **Редактор выражений свойств** и **Построитель выражений для свойств** .  
@@ -32,11 +31,11 @@ ms.locfileid: "62898036"
  **Выражения (...)**  
  Нажмите кнопку с многоточием, чтобы открыть диалоговое окно **Редактор выражений свойств** . Дополнительные сведения см. в статье [Property Expressions Editor](property-expressions-editor.md).  
   
- **\<имя_свойства>**  
+ **\<property name>**  
  Нажмите кнопку с многоточием, чтобы открыть диалоговое окно **Построитель выражений** . Дополнительные сведения см. в статье [Expression Builder](expression-builder.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Переменные в службах Integration Services (SSIS)](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;переменные&#41; SSIS](../integration-services-ssis-variables.md)   
  [Системные переменные](../system-variables.md)   
  [Выражения служб Integration Services (SSIS)](integration-services-ssis-expressions.md)  
   

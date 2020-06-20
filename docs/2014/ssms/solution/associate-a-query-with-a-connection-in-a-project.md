@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b05715dc6680148a8ae673c73cfc36c96a55c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62955897"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066338"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Связь запроса с соединением в проекте
   Если запрос был создан без соединения или если запрос был перемещен из одного проекта в другой, он не будет связан с соединением в текущем проекте.  

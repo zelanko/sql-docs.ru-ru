@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 622aabe6-95c7-42cc-8768-ac2e679c5089
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1d6bb42e4b35a74ef2bd6eefb85ea81b0ed18e40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 048cd415ec16ef668bbf61a393f9103b522694eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050281"
 ---
 # <a name="creating-and-managing-storage-for-memory-optimized-objects"></a>Создание и управление хранилищем для оптимизированных для памяти объектов
   Механизм [!INCLUDE[hek_2](../../includes/hek-2-md.md)] интегрирован в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], что позволяет использовать оптимизированные для памяти таблицы и (традиционные) таблицы на диске в одной базе данных. Тем не менее структуры хранилища оптимизированных для памяти таблиц и таблиц на диске отличаются.  
@@ -62,7 +61,7 @@ ms.locfileid: "63073849"
   
 -   [Мониторинг и устранение неполадок со слиянием для пар файлов данных и разностных файлов](../../database-engine/monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -29,18 +29,17 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c073b0f438ec022e1b05f481652d6f08ef34cc53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066113"
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет объекты и счетчики, которые могут использоваться системным монитором для мониторинга активности на компьютере, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объект представляет собой любой ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например блокировку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или процесс Windows. В каждом объекте содержатся один или более счетчиков, определяющих различные аспекты объектов для мониторинга. Например, объект **Блокировки SQL Server** содержит счетчики с названием **Количество взаимоблокировок/с** и **Превышений времени ожидания блокировки в секунду**.  
   
- В некоторых объектах содержится несколько экземпляров разных ресурсов данного типа, существующих на компьютере. Например, у типа объектов **Процессор** будет несколько экземпляров, если в системе установлено несколько процессоров. У типа объектов **Базы данных** будет по одному экземпляру для каждой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. У некоторых типов объектов (например, у объекта **Диспетчер памяти** ) может быть только один экземпляр. Если у типа объектов несколько экземпляров, можно добавлять счетчики для отслеживания статистики каждого экземпляра или, во многих случаях, для всех экземпляров сразу. Счетчики для экземпляра по умолчанию отображаются в формате **SQLServer:** _\<имя_объекта>_ . Счетчики для именованных экземпляров отображаются в формате **MSSQL$** _\<имя_экземпляра>_ **:** _\<имя_счетчика>_ или **SQLAgent$** _\<имя_экземпляра>_ **:** _\<имя_счетчика>_ .  
+ В некоторых объектах содержится несколько экземпляров разных ресурсов данного типа, существующих на компьютере. Например, у типа объектов **Процессор** будет несколько экземпляров, если в системе установлено несколько процессоров. У типа объектов **Базы данных** будет по одному экземпляру для каждой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. У некоторых типов объектов (например, у объекта **Диспетчер памяти** ) может быть только один экземпляр. Если у типа объектов несколько экземпляров, можно добавлять счетчики для отслеживания статистики каждого экземпляра или, во многих случаях, для всех экземпляров сразу. Счетчики для экземпляра по умолчанию отображаются в формате **SQLServer:** _\<object name>_ . Счетчики для именованных экземпляров отображаются в формате **MSSQL $** _\<instance name>_ **:** _\<counter name>_ или в **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
   
  Добавляя или удаляя счетчики в диаграмму и сохраняя ее параметры, можно указать объекты и счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с которых будут считываться данные при запуске системного монитора.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "63151176"
   
 -   [Необходимые разрешения](#RequiredPermissions)  
   
-##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a>агент SQL Server объектов производительности  
+##  <a name="sql-server-agent-performance-objects"></a><a name="SQLServerAgentPOs"></a> Объекты производительности агента SQL Server  
  Следующая таблица содержит список объектов измерения производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Объект производительности|Описание|  
@@ -73,7 +72,7 @@ ms.locfileid: "63151176"
 |[SQLAgent:JobSteps](sql-server-agent-jobsteps-object.md)|Предоставляет сведения о шагах заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLAgent:Statistics](sql-server-agent-statistics-object.md)|Предоставляет общие сведения об агенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
   
-##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a>Service Broker объектов производительности  
+##  <a name="service-broker-performance-objects"></a><a name="ServiceBrokerPOs"></a> Объекты производительности компонента Service Broker  
  Следующая таблица содержит список объектов измерения производительности для компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 |Объект производительности|Описание|  
@@ -82,7 +81,7 @@ ms.locfileid: "63151176"
 |[SQLServer:Broker Statistics](sql-server-broker-statistics-object.md)|Предоставляет общие сведения о компоненте [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
 |[SQLServer: транспорт посредника](sql-server-broker-dbm-transport-object.md)|Предоставляет сведения о сетевой работе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
   
-##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a>SQL Server объектов производительности  
+##  <a name="sql-server-performance-objects"></a><a name="SQLServerPOs"></a> Объекты производительности SQL Server  
  В следующей таблице описаны объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Объект производительности|Описание|  
@@ -105,28 +104,28 @@ ms.locfileid: "63151176"
 |[SQLServer:Locks](sql-server-locks-object.md)|Предоставляет сведения об отдельных запросах на блокировку, сделанных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например время ожидания блокировки и взаимоблокировки. Может существовать несколько экземпляров этого объекта.|  
 |[SQLServer:Memory Manager](sql-server-memory-manager-object.md)|Предоставляет сведения об использовании памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например общее число выделенных на данный момент структур блокировок.|  
 |[SQLServer:Plan Cache](sql-server-plan-cache-object.md)|Предоставляет сведения о кэше [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующемся для хранения таких объектов, как хранимые процедуры, триггеры и планы запросов.|  
-|[SQLServer:Resource Pool Stats](sql-server-resource-pool-stats-object.md)|Предоставляет статистические данные о пуле ресурсов регулятора ресурсов.|  
+|[SQLServer: статистика пула ресурсов](sql-server-resource-pool-stats-object.md)|Предоставляет статистические данные о пуле ресурсов регулятора ресурсов.|  
 |[SQLServer:SQL Errors](sql-server-sql-errors-object.md)|Предоставляет сведения об ошибках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](sql-server-sql-statistics-object.md)|Предоставляет сведения о разных аспектах запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] , например число пакетов инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , полученных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](sql-server-transactions-object.md)|Предоставляет сведения об активных транзакциях в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например общее число транзакций и число транзакций моментальных снимков.|  
 |[SQLServer:User Settable](sql-server-user-settable-object.md)|Выполняет пользовательское наблюдение. Каждый счетчик может быть пользовательской хранимой процедурой или любой инструкцией [!INCLUDE[tsql](../../includes/tsql-md.md)] , возвращающей значение, которое можно отслеживать.|  
-|[SQLServer:Wait Statistics](sql-server-wait-statistics-object.md)|Предоставляет сведения об ожиданиях.|  
-|[SQLServer:Workload Group Stats](sql-server-workload-group-stats-object.md)|Предоставляет статистические данные о группе рабочей нагрузки регулятора ресурсов.|  
+|[SQLServer: статистика ожидания](sql-server-wait-statistics-object.md)|Предоставляет сведения об ожиданиях.|  
+|[SQLServer: статистика группы рабочей нагрузки](sql-server-workload-group-stats-object.md)|Предоставляет статистические данные о группе рабочей нагрузки регулятора ресурсов.|  
   
-##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a>Репликация SQL Server объектов производительности  
+##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> Объекты производительности репликации SQL Server  
  Следующая таблица содержит список объектов измерения производительности репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Объект производительности|Описание|  
 |------------------------|-----------------|  
 |**SQLServer: агенты репликации**<br /><br /> **SQLServer: моментальный снимок репликации**<br /><br /> **SQLServer: чтение журнала репликаций**<br /><br /> **SQLServer: распространитель репликации**<br /><br /> **SQLServer: репликация слиянием**<br /><br /> Дополнительные сведения см. в статье [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Содержит сведения о действиях агента репликации.|  
   
-##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a>Счетчики конвейера служб SSIS  
+##  <a name="ssis-pipeline-counters"></a><a name="SsisPipelineCounters"></a> Счетчики каналов службы SSIS  
  Сведения о счетчике **Конвейер служб SSIS** см. в разделе [Счетчики производительности](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="required-permissions"></a><a name="RequiredPermissions"></a>Необходимые разрешения  
+##  <a name="required-permissions"></a><a name="RequiredPermissions"></a> Необходимые разрешения  
  Использование объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зависит от разрешений Windows. Исключение составляет только объект **SQLAgent:Alerts**. Для работы с объектом **SQLAgent:Alerts** пользователь должен быть членом предопределенной роли сервера **sysadmin**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование объектов производительности](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   

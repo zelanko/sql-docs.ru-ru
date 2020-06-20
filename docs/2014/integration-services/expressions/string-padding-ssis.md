@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 50ad5f637d6e13d31af02698488d6eec8e734ddb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a572fd3fc238faabfb80e6b85d42fd887237dc27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768722"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969044"
 ---
 # <a name="string-padding-ssis"></a>Дополнение строк (службы SSIS)
   Средство оценки выражений не проверяет, содержит ли строка начальные и конечные пробелы, и не приводит строки к одинаковой длине перед их сравнением. Если выражения требуют дополнения строк, можно использовать оператор + для сцепления значений столбцов и пустых строк. Дополнительные сведения см. в разделе [+ (Объединение) (выражение SSIS)](concatenate-ssis-expression.md).  

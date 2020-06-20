@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: badc6d36-8a87-42b5-b28c-9c4f5ded8552
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f2b6c03506139ded1fd4452bb19f23c931ea0c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc5e8b1636d26349bb3938d4b3bcbdf0fbf43e1a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127109"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050636"
 ---
 # <a name="srv_paramtype-extended-stored-procedure-api"></a>srv_paramtype (API-интерфейс расширенных хранимых процедур)
     
@@ -55,7 +54,7 @@ n
  *n*  
  Указывает номер параметра. Первый параметр имеет значение 1.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Значение токена для типа данных параметра. Сведения о типах данных см. в разделе [Типы данных (интерфейс API расширенных хранимых процедур)](data-types-extended-stored-procedure-api.md). Если параметра с номером *n* или удаленной хранимой процедуры не существует, возвращается значение - 1.  
   
  Эта функция возвращает следующие значения, если параметр относится к одному из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] типов данных.  
@@ -77,7 +76,7 @@ n
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [API srv_paraminfo &#40;расширенных хранимых процедур&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](srv-rpcparams-extended-stored-procedure-api.md)  
   

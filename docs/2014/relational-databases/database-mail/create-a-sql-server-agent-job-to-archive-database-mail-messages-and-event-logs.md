@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1fa03dbb8803c27ba917e662db1958361900b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffbfaa1bda561240d64c7548752f0ae18ddddf3c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917596"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952606"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
   Копии сообщений компонента Database Mail и их вложения хранятся в таблицах **msdb** , расположенных в журнале событий компонента Database Mail. Может возникнуть потребность периодического уменьшения объема ненужных таблиц и архивных сообщений и событий. Представленные ниже процедуры используются для создания задания агента SQL Server для автоматизации указанного процесса.  
@@ -208,7 +207,7 @@ ms.locfileid: "62917596"
   
 5.  В области **Периодичность** задайте параметр выполнения периодического задания, например, первое число каждого месяца.  
   
-6.  В области **ежедневные частоты** выберите **выполняется один раз в \<>**.  
+6.  В области **ежедневные частоты** выберите **выполняется один раз в \<time> **.  
   
 7.  Убедитесь, что другие параметры настроены правильно, и сохраните расписание, нажав кнопку **OK** .  
   
