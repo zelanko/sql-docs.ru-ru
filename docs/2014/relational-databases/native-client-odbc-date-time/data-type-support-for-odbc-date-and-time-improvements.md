@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f5e5d90a24aed8a717edb2f1c4efe4a2fd5e07
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fb3e72250e9fcc389b42db3e614671e414487e66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020451"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Поддержка типов данных для улучшений функций даты и времени ODBC
   Этот раздел содержит сведения о типах ODBC, поддерживающих типы данных даты и времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -135,7 +134,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
   
  Если значение `timezone_hour` отрицательно, значение `timezone_minute` также должно быть отрицательным или равным нулю. Если значение `timezone_hour` положительно, значение `timezone_minute` должно быть положительным или равным нулю. Если значение `timezone_hour` равно нулю, значение `timezone_minute` может быть любым в диапазоне от -59 до +59.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

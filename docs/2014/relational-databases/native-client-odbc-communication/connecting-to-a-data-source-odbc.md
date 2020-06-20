@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe7f86c2ca53ef4534abd1024d317eee0c1b3c99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 42d38247cdf688c9d0445b9dd12b7423b646adef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705793"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021162"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Соединение с источником данных (ODBC)
   После определения среды и дескрипторов соединения, а также установки любых атрибутов соединения приложение устанавливает соединение с источником данных или драйвером. Существует три функции, которые можно использовать для установки соединения:  
@@ -111,7 +110,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  Функция обработки ошибок приложения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключений должна вызывать **SQLGetDiagRec** до тех пор, пока не вернет SQL_NO_DATA. Затем он должен работать с любыми сообщениями, кроме тех, с *pfNative* кодом 5701 или 5703.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Взаимодействие с SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

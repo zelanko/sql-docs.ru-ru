@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8b54e8abc817c35b120966b551d8b01a546052a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049666"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
   Как правило, потребители должны изолировать код, который создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB объект хранилища поставщика из другого кода, обрабатывающего данные, на которые не ссылается указатель интерфейса **ISequentialStream** .  
@@ -145,7 +144,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большие двоичные объекты и OLE](blobs-and-ole-objects.md)   
  [Использование типов больших значений](../native-client/features/using-large-value-types.md)  
   

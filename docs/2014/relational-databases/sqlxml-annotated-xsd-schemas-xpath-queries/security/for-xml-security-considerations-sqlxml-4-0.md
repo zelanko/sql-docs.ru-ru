@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: facba279-df93-475b-ad43-0043dc5bae03
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ee2ac48e03d7436f2671faa8f4883b10210a380
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18fb9760cf866473525b7da750923c8faad0713f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717621"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048952"
 ---
 # <a name="for-xml-security-considerations-sqlxml-40"></a>Вопросы безопасности FOR XML (SQLXML 4.0)
   Режим FOR XML AUTO создает иерархию XML, в которой имена элементов совпадают с именами таблиц, а имена атрибутов — с именами столбцов. Он предоставляет сведения о таблицах и столбцах базы данных. При использовании режима AUTO (форматирование на стороне сервера) сведения о базе данных можно скрыть, указав в запросе псевдонимы таблиц и столбцов. Эти псевдонимы возвращаются в результирующем XML-документе в виде имен элементов и атрибутов.  

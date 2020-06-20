@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4fb2a6fc58d008dc0c69824282f5ac35b2bb6a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14e3bdd491d30b2afe8ac943a36dc9b6f8964d30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63254734"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064930"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Открытие конструктора диаграмм баз данных (визуальные инструменты для баз данных)
   Конструктор диаграмм баз данных представляет собой визуальное средство разработки и визуализации базы данных. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  

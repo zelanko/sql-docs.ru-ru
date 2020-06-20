@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46a51a1ead140209145635e422d3ea1033b117e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00a973732c296cadd3d38a6ac7d9c50b7da3c90b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007621"
 ---
 # <a name="simple-xml-input-file-sample-dta"></a>Образец простого входного файла XML (DTA)
   Скопируйте и вставьте этот образец простого входного файла XML, используемого для настройки рабочих нагрузок, в любой текстовый или XML-редактор. Затем замените значения, заданные для элементов **Server**, **Database**, **Schema**, **Table**, **Workload**и **TuningOptions** , значениями для конкретного сеанса настройки. Дополнительные сведения об атрибутах и дочерних элементах, которые могут использоваться с этими элементами, см. в разделе [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md). В следующем образце используется только подмножество доступных атрибутов и параметров дочерних элементов.  

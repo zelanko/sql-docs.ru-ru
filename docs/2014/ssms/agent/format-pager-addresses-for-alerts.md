@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a9797d01-1050-442c-9038-ed4bfee1e76a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 535ae5f92fea0222468ed64f567154495e329a61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3754afbc5d8f0f67dac61e785a4626c8ced4c2e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995301"
 ---
 # <a name="format-pager-addresses-for-alerts"></a>Format Pager Addresses for Alerts
-  В этом разделе описывается форматирование адресов пейджера для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]или.  
+  В этом разделе описывается форматирование адресов пейджера для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **В этом разделе**  
   

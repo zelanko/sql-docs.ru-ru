@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f6f6ee0d881f470f1251c99f17212f1648b85c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f82a0fb71103e811b36280f9722c160791023e44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706086"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022369"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет характерные для драйвера атрибуты соединения. Некоторые атрибуты доступны для `SQLGetConnectAttr` , а функция используется для сообщения о текущих параметрах. Нельзя быть уверенным в правильности значений этих атрибутов, сообщаемых функцией, до тех пор, пока не будет установлено соединение или атрибут не будет задан при помощи функции [SQLSetConnectAttr](sqlsetconnectattr.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "82706086"
   
  Дополнительные сведения о SPN см. [в статье имена субъектов-служб &#40;имен участников-служб&#41; в клиентских подключениях &#40;&#41;ODBC ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
  [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
  [Настройка QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)   

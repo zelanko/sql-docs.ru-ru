@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 270df8181fe42f48619736ba858dc0c16d9e30c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d32daf928392d94fd4d62def6b667892abf0b686
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003453"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>Использование файловых групп и файлов для хранения данных
   Для хранения файлов базы данных используются файлы данных. Файлы данных делятся на файловые группы. Объект <xref:Microsoft.SqlServer.Management.Smo.Database> содержит свойство <xref:Microsoft.SqlServer.Management.Smo.Database.FileGroups%2A>, которое ссылается на объект <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection>. Каждый объект <xref:Microsoft.SqlServer.Management.Smo.FileGroup> в этой коллекции содержит свойство <xref:Microsoft.SqlServer.Management.Smo.FileGroup.Files%2A>. Это свойство ссылается на коллекцию <xref:Microsoft.SqlServer.Management.Smo.DataFileCollection>, которая содержит все файлы данных, принадлежащие базе данных. Файловые группы в основном используются для объединения файлов, используемых для хранения объекта базы данных. Одной из причин разделения объекта базы данных по нескольким файлам является повышение производительности, особенно если файлы хранятся на разных дисках.  

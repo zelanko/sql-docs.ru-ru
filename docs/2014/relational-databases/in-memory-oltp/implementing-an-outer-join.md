@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1e7ce6db35817fdfc9bb4169a69e5f959b40f268
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719106"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050146"
 ---
 # <a name="implementing-an-outer-join"></a>Создание внешнего соединения
   Внешние соединения не поддерживаются в скомпилированных в собственном коде хранимых процедурах. В следующем примере показан способ реализации функциональности левого внешнего соединения в скомпилированной в собственном коде хранимой процедуре.  
@@ -112,7 +111,7 @@ GO
 exec dbo.usp_left_join  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы миграции для хранимых процедур, скомпилированных в собственном виде](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 524a3985-a08d-4445-99e0-bb551a666615
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2b4a5094f8bac1e3972b4d0b2daa7a0da9fa3629
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eecf9714a97577ff490b642cee5b9c380333e40b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022513"
 ---
 # <a name="sqlfetchscroll"></a>SQLFetchScroll
   Функция**SQLFetchScroll** возвращает приложению один набор строк данных. Размер набора строк задается с помощью функции [SQLSetStmtAttr](sqlsetstmtattr.md). Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает все определенные инструкции выборки (например, SQL_FETCH_RELATIVE) со следующими ограничениями.  
@@ -36,7 +35,7 @@ ms.locfileid: "82706134"
 ## <a name="sqlfetchscroll-support-for-large-clr-udts"></a>Поддержка функцией SQLFetchScroll больших определяемых пользователем типов CLR  
  Функция**SQLFetchScroll** поддерживает большие определяемые пользователем типы данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLFetchScroll](https://go.microsoft.com/fwlink/?LinkId=59343)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

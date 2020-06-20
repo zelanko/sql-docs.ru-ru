@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eee88533ee6048e85d4d1617b607c64d537fc996
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049972"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
   Индекс является структурой на диске, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по их ключевым значениям в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
