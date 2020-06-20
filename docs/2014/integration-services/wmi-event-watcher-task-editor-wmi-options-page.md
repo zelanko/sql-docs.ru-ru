@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 525f3de7-a021-4e52-9939-3a83c88f131a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b330e63d802d0801f4473bb1a1422c5bf79c35e2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054381"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972414"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Параметры WMI»)
   Страница **Параметры инструментария WMI** диалогового окна **Редактор задачи "Отслеживание событий WMI"** используется для указания источника запроса на языке запросов инструментария управления Windows (WQL) и вариантов реакции задачи "Отслеживание событий WMI" на события инструментария Microsoft Windows (WMI).  
@@ -28,7 +27,7 @@ ms.locfileid: "66054381"
   
 ## <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  
- Выберите диспетчер WMI-соединений из списка или нажмите кнопку \< **Создать WMI-подключение...**>, чтобы создать новый диспетчер соединений.  
+ Выберите диспетчер WMI-соединений из списка или щелкните, \<**New WMI Connection...**> чтобы создать новый диспетчер соединений.  
   
  **См. также** [Диспетчер WMI-соединений](connection-manager/wmi-connection-manager.md), [Редактор диспетчера WMI-сеансов](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -67,17 +66,17 @@ ms.locfileid: "66054381"
   
 ### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Соединение с файлом  
  **WQLQuerySource**  
- Выберите Диспетчер подключения файлов в списке или нажмите кнопку \< **создать соединение...**>, чтобы создать новый диспетчер соединений.  
+ Выберите Диспетчер подключения файлов в списке или щелкните, \<**New connection...**> чтобы создать новый диспетчер соединений.  
   
  **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>WQLQuerySource = Переменная  
  **WQLQuerySource**  
- Выберите переменную из списка или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
+ Выберите переменную из списка или нажмите кнопку, \<**New variable...**> чтобы создать новую переменную.  
   
  **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "наблюдатель событий WMI" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

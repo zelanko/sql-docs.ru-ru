@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920515"
 ---
 # <a name="odbc-connection-manager"></a>диспетчер соединений ODBC
   Диспетчер соединений ODBC позволяет пакету подключаться к разнообразным системам управления базами данных, используя открытый интерфейс взаимодействия с базами данных (ODBC).  
   
- При добавлении подключения ODBC к пакету и задании свойств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] диспетчера соединений создает диспетчер соединений и добавляет его в `Connections` коллекцию пакета. Во время выполнения диспетчер соединений рассматривается как физическое соединение с ODBC.  
+ При добавлении подключения ODBC к пакету и задании свойств диспетчера соединений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер соединений и добавляет его в `Connections` коллекцию пакета. Во время выполнения диспетчер соединений рассматривается как физическое соединение с ODBC.  
   
  Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `ODBC`.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62833766"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

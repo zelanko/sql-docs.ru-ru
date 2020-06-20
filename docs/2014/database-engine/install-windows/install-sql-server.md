@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 693b8e82a3ca01616e85fe5e175726a687cfea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889243"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932525"
 ---
 # <a name="install-sql-server-2014"></a>Установка SQL Server 2014
 ## <a name="download-sql-server-2014-express"></a>[Загрузка SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Благодарим вас на [Скотт Hanselman](http://www.hanselman.com/) по сбору всех ссылок на пакеты установщика в одном месте!**
   
- В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентах, которые можно установить, а также о процессе установки, см. в разделе [Установка SQL Server 2014](installation-for-sql-server.md).  
-> **Примечание.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно в 32-разрядных и 64-разрядных выпусках. Установка 64-разрядной и 32-разрядной версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может производиться либо с помощью мастера установки, либо из командной строки. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентах см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ В этом разделе представлены общие сведения о разных параметрах установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о различных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентах, которые можно установить, а также о процессе установки, см. в разделе [установка SQL Server 2014](installation-for-sql-server.md).  
+> **Примечание.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступна в 32-разрядных и 64-разрядных выпусках. Установка 64-разрядной и 32-разрядной версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может производиться либо с помощью мастера установки, либо из командной строки. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентах см. в разделе [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Чтобы установить образцы баз данных и образцы кода для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], кроме выпуска Express, посетите [веб-сайт CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Сведения о поддержке образцов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и образцы кода для [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]см. в разделе [Обзор баз данных и образцов](https://go.microsoft.com/fwlink/?LinkId=110391).  
   

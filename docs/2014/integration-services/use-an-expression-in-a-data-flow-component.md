@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d08d256946fbeb2f5b70057fc0d6992758b3a211
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054821"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972634"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Использование выражения в компоненте потока данных
   Ниже описана процедура добавления выражения в преобразование «Условное разбиение» или «Производный столбец». Преобразование «Условное разбиение» с помощью выражений определяет условия, которые направляют строки данных в выход преобразования, а преобразование «Производный столбец» с помощью выражений определяет значения, присваиваемые столбцам.  
@@ -64,7 +63,7 @@ ms.locfileid: "66054821"
     > [!NOTE]  
     >  Если выражение является недопустимым, появится предупреждение с описанием синтаксических ошибок данного выражения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения&#41; Integration Services &#40;SSIS](expressions/integration-services-ssis-expressions.md)   
  [Преобразование «Условное разбиение»](data-flow/transformations/conditional-split-transformation.md)   
  [Преобразование «Производный столбец»](data-flow/transformations/derived-column-transformation.md)   

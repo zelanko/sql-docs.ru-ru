@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda1608ae8a7dd59052763aafc8e4313618777c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918797"
 ---
 # <a name="ftp-task"></a>Задача «FTP»
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
@@ -74,7 +73,7 @@ ms.locfileid: "62831542"
   
  Дополнительные сведения о настройке этих свойств программным путем см. в разделе <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "FTP" &#40;страница "Общие"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "FTP" &#40;страницу "перенос файлов"&#41;](../ftp-task-editor-file-transfer-page.md)   
  [Задачи Integration Services](integration-services-tasks.md)   

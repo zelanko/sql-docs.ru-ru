@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bd621890bad3bc42fb2d4d5289d71efcbdbcc2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eaeb50da9e4b71a08ec78614ae62ea33e3dc0d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721666"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065995"
 ---
 # <a name="initialize-a-subscription-manually"></a>Инициализация подписки вручную
   В этом разделе описывается инициализация подписки вручную в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Обычно инициализация подписки производится через исходный моментальный снимок, однако подписку на публикацию можно инициализировать и другим способом. Для этого необходимо, чтобы на подписчике уже имелась схема и исходные данные.  
@@ -48,7 +47,7 @@ ms.locfileid: "62721666"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber**, имя базы данных на подписчике, содержащей опубликованные данные, для **@destination_db**, значение **Pull** **@subscription_type**в параметре и значение **Поддержка репликации только** для **@sync_type**. Дополнительные сведения см. в статье [Создание подписки по запросу](create-a-pull-subscription.md).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication** , **@subscriber** , имя базы данных на подписчике, содержащей опубликованные данные, для **@destination_db** , значение **Pull** в параметре **@subscription_type** и значение **Поддержка репликации только** для **@sync_type** . Дополнительные сведения см. в статье [Создание подписки по запросу](create-a-pull-subscription.md).  
   
 3.  Выполните процедуру [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)на подписчике. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62721666"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md).  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите имя базы данных на подписчике, содержащей опубликованные данные, для **@destination_db**, значение **Push** **@subscription_type**в параметре и значение **Поддержка репликации только** для **@sync_type**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите имя базы данных на подписчике, содержащей опубликованные данные, для **@destination_db** , значение **Push** в параметре **@subscription_type** и значение **Поддержка репликации только** для **@sync_type** . Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](create-a-push-subscription.md).  
   
@@ -70,7 +69,7 @@ ms.locfileid: "62721666"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Это можно сделать путем восстановления резервной копии базы данных публикации на подписчике.  
   
-2.  Выполните процедуру [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)на издателе. Укажите **@publication**значения **@subscriber**, **@subscriber_db**, и значение **Pull** для **@subscription_type**. После этого подписка по запросу будет зарегистрирована.  
+2.  Выполните процедуру [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)на издателе. Укажите **@publication** **@subscriber** значения,, **@subscriber_db** и значение **Pull** для **@subscription_type** . После этого подписка по запросу будет зарегистрирована.  
   
 3.  На подписчике в базе данных, содержащей публикуемые данные, выполните хранимую процедуру [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). В параметре **@sync_type** в параметре **@sync_type**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62721666"
   
 1.  Убедитесь, что схема и данные существуют в базе данных подписки. Это можно сделать путем восстановления резервной копии базы данных публикации на подписчике.  
   
-2.  В базе данных публикации на издателе выполните процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Укажите имя базы данных на подписчике, содержащей опубликованные данные, для **@subscriber_db**, значение **Push** **@subscription_type**в параметре и значение **None** в параметре **@sync_type**.  
+2.  В базе данных публикации на издателе выполните процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Укажите имя базы данных на подписчике, содержащей опубликованные данные, для **@subscriber_db** , значение **Push** в параметре **@subscription_type** и значение **None** в параметре **@sync_type** .  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Дополнительные сведения см. в статье [Создание принудительной подписки](create-a-push-subscription.md).  
   

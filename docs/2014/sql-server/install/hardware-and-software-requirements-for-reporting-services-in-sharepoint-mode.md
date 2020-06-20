@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f95544de8f0362b8981a175f1c65de1798a1eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245625"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059320"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Требования к оборудованию и программному обеспечению для служб Reporting Services в режиме интеграции с SharePoint
 
-  В этом разделе описываются необходимые условия, требования к оборудованию и [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] рекомендации по установке для работы в режиме интеграции с SharePoint. Поскольку для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint требуется сервер SharePoint, большинство требований основаны на среде SharePoint. Для серверов отчетов, работающих в собственном режиме, оборудование должно соответствовать минимальным требованиям для работы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+  В этом разделе описываются необходимые условия, требования к оборудованию и рекомендации по установке для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работы в режиме интеграции с SharePoint. Поскольку для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint требуется сервер SharePoint, большинство требований основаны на среде SharePoint. Для серверов отчетов, работающих в собственном режиме, оборудование должно соответствовать минимальным требованиям для работы [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения см. в разделе [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
--   [Предварительные условия](#bkmk_prereq)  
+-   [Предварительные требования](#bkmk_prereq)  
   
 -   [Требования к базе данных сервера отчетов](#bkmk_report_server_database)  
   
@@ -61,13 +60,13 @@ ms.locfileid: "75245625"
   
 -   Экземпляр сервера отчетов не может использовать для своей базы данных выпуск SQL Server Express Edition. Однако экземпляр SQL Server Express Edition, установленный продуктом SharePoint, может существовать параллельно с другими выпусками ядра СУБД.  
   
-##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Требования к
+##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Требования к
 
  Ознакомьтесь с новейшей [документацией по Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) на сайте Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] входит в состав Microsoft Excel 2013 и является частью надстройки служб Reporting Services [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для выпусков Microsoft SharePoint Server 2010 и 2013 Enterprise.  
   
 ##  <a name="more-information"></a><a name="bkmk_more_information"></a> Дополнительные сведения
 
- Сведения об изменениях SharePoint см. в статье [изменения из sharepoint 2010 в sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
+ Сведения об изменениях SharePoint см. в статье [изменения из sharepoint 2010 в sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) ( https://technet.microsoft.com/library/ff607742(office.15).aspx) .  
   
  [Заметки о Выпуске SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcc6da18ebe6c1930888bb0d2bd36610a19e7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807508"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934525"
 ---
 # <a name="create-history-and-status-reports"></a>Создание журналов и отчетов состояния
   По данным журнала или текущему состоянию файлов загруженного на данный момент решения можно создать отчет. Также можно выполнить предварительный просмотр отчета, а затем направить отчет на печать, в файл или буфер обмена. Эти отчеты создает не [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Отчет создает система [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  
@@ -29,7 +28,7 @@ ms.locfileid: "62807508"
   
 2.  В меню **файл** укажите пункт **система управления версиями**и выберите пункт **Журнал**.  
   
-3.  В диалоговом окне **Журнал** \<> файла или проекта нажмите кнопку **отчет**.  
+3.  В **History of** \<File or Project> диалоговом окне Журнал нажмите кнопку **отчет**.  
   
 4.  В диалоговом окне **отчет журнала** выберите нужные параметры и нажмите кнопку **ОК**.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "62807508"
   
  Дополнительные сведения о параметрах, которые можно указать при получении состояния файла, см. в разделе [Просмотр состояния файла](../../2014/database-engine/view-file-status.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)  
   
   

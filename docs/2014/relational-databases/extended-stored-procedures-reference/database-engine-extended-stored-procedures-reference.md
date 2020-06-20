@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23141b6d377333837e3416978d67424352075e75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050821"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>Справочник программистов по расширенным хранимым процедурам&#39;
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
   
- API [!INCLUDE[msCoName](../../includes/msconame-md.md)] расширенных хранимых процедур, который ранее был частью службы Open Data Services, предоставляет серверный интерфейс прикладного программирования (API) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для расширения функциональных возможностей. API состоит из функций и макросов на языке C и C++, используемых для построения приложений.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)]API расширенных хранимых процедур, который ранее был частью службы Open Data Services, предоставляет серверный интерфейс прикладного программирования (API) для расширения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциональных возможностей. API состоит из функций и макросов на языке C и C++, используемых для построения приложений.  
   
  С появлением новых и более мощных технологий, таких как интеграция со средой CLR, необходимость расширенных хранимых процедур значительно уменьшилась.  
   

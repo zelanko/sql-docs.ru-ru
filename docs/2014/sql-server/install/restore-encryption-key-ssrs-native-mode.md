@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 111e44275922149949cd7e252e112d95cef65076
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e26b3d124d01d2163eade48656de44ca03784bb1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058960"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Восстановление ключа шифрования (службы Reporting Services в собственном режиме)
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют ключ шифрования для защиты конфиденциальных данных, хранящихся в базе данных сервера отчетов. Чтобы не лишиться доступа к зашифрованным данным в результате смены учетной записи службы или запланированной миграции, необходимо создать резервную копию ключа шифрования. Этот раздел содержит общие сведения об использовании диспетчера конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для восстановления ключей.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим.  
   
  Чтобы обеспечить возможность восстановления ключа, необходимо сохранить его резервную копию в файле, защищенном паролем. В процессе восстановления сервер отчетов заменит существующий ключ ключом из файла, защищенного паролем. Ключ в этом файле должен быть идентичен тому, который применялся для шифрования и расшифровки данных.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "71952036"
   
  Чтобы открыть диалоговое окно «Восстановление ключа шифрования», выберите элемент **Ключи шифрования** на панели навигации диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а затем щелкните **Восстановить**. Это диалоговое окно отображается при обновлении учетной записи службы на странице «Учетная запись службы» диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Расположение файла**  
  Выберите файл, защищенный паролем, который содержит копию симметричного ключа. По умолчанию файл имеет расширение SNK.  
   

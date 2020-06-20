@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 866586f5da9682d66f884565254adf4185d63760
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 37459359f9f6cb7e3951b705c4007477ec43e36a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050890"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Просмотр эквивалентов расширенных событий для классов событий трассировки SQL
   Если требуется с помощью расширенных событий выполнять сбор данных о событиях, эквивалентных классам и столбцам событий трассировки SQL, желательно иметь представление о том, как события SQL-трассировки сопоставляются с событиями и действиями расширенных событий.  
@@ -77,7 +76,7 @@ ms.locfileid: "82706587"
   
 -   Что касается настраиваемых пользователем классов событий трассировки SQL (с UserConfigurable:1 по UserConfigurable:9), в расширенных событиях вместо них используется одно событие. Имя события — user_event. Это событие вызывается с помощью хранимой процедуры sp_trace_generateevent, которая используется и в трассировке SQL. Событие user_event возвращается независимо от того, какой идентификатор события передается хранимой процедуре. Однако поле event_id возвращается вместе с другими данными о событии. Это позволяет составлять предикат на основе идентификатора события. Например, если в коде используется UserConfigurable:0 (идентификатор события = 82), то можно добавить событие user_event в сеанс и указать предикат "event_id = 82". Таким образом, нет необходимости менять код, поскольку хранимая процедура sp_trace_generateevent формирует событие расширенных событий user_event и эквивалентный класс событий трассировки SQL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_generateevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

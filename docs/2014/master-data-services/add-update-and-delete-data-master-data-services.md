@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: b6295ead-bd2f-49dd-8756-35c6afb59648
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2212e7424f22ecca2619ef7215bf94b0dbb62875
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a12c6dd3b0691d62f5509a363311b1deb1584078
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054266"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972304"
 ---
 # <a name="add-update-and-delete-data-master-data-services"></a>Добавление, обновление и удаление данных (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]поддерживает массовое добавление данных в модель и их изменение.  
   
- **Предварительные условия**  
+ **Предварительные требования**  
   
--   Требуется разрешение на вставку данных в таблицу stg.\<имя>_Leaf, the stg.\<имя>_Consolidated, stg.\<имя>_Relationship в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Необходимо иметь разрешение на вставку данных в STG. \<name> _Leaf STG. \<name> _Consolidated, stg. \<name> _Relationship таблицу в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
   
--   Необходимы разрешения на выполнение хранимой процедуры stg.udp_\<имя>_Leaf, stg.udp\_\<имя>_Consolidated или stg.udp\_\<имя>_Relationship в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Необходимо иметь разрешения на выполнение хранимой процедуры STG. udp_ \<name> _Leaf, stg. udp \_ \<name> _Consolidated или stg. UDP \_ \<name> _Relationship в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных.  
   
 -   Эта модель не должна иметь состояние **Зафиксирована**.  
   
@@ -32,11 +31,11 @@ ms.locfileid: "66054266"
   
 1.  Подготовьте элементы к импорту в соответствующую промежуточную таблицу в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , в том числе укажите значения обязательных полей. Общие сведения о промежуточных таблицах см. в разделе [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Таблица для конечных элементов — stg.\<имя>_Leaf, где \<имя> — это имя соответствующей сущности. Сведения о требуемых полях см. в разделе [Конечный элемент таблицы элементов (службы Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md).  
+    -   Для конечных элементов таблица является STG. \<name> _Leaf, где \<name> ссылается на соответствующую сущность. Сведения о требуемых полях см. в разделе [Конечный элемент таблицы элементов (службы Master Data Services)](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md).  
   
-    -   Таблица для консолидированных элементов — stg.\<имя>_Consolidated. Сведения о требуемых полях см. в разделе [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   Для консолидированных элементов таблица является STG. \<name> _Consolidated. Сведения о требуемых полях см. в разделе [Промежуточная таблица консолидированных элементов (службы Master Data Services)](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Таблица для перемещения расположения элементов в явных иерархиях — stg.\<имя>_Relationship. Сведения о требуемых полях см. в разделе [Промежуточная таблица связей (службы Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Для перемещения расположения элементов в явных иерархиях таблица является STG. \<name> _Relationship. Сведения о требуемых полях см. в разделе [Промежуточная таблица связей (службы Master Data Services)](../../2014/master-data-services/relationship-staging-table-master-data-services.md).  
   
          Общие сведения о перемещении элементов в явных иерархиях см. в разделе [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66054266"
   
      При загрузке из промежуточных таблиц данные не проверяются автоматически с помощью бизнес-правил. Дополнительные сведения о том, что такое проверка и когда она выполняется, см. в разделе [Проверка (службы Master Data Services)](../../2014/master-data-services/validation-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;импорта данных&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
   

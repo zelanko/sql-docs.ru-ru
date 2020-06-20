@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fdfaeeb9e8dafe82a1312593df2dd128635b8365
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc99e29d95aa08ce9363ca1fa6971d7602824868
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766197"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972774"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -68,7 +67,7 @@ ms.locfileid: "62766197"
 |Зеленый|Успешное завершение.|  
 |красный|Завершение с ошибками.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](troubleshooting-tools-for-package-development.md)  
   
   

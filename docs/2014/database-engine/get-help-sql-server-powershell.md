@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 968c316d-db83-4c24-8ea6-9f18736842f7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 705512f54feae3bf60317c18b8c260ef484abebc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1d97a3b694eebb924f9e1ff228d4d38da4f45ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932925"
 ---
 # <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
   Сведения об использовании поставщика и командлетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для Windows PowerShell можно получить из нескольких источников. К ним относится справка, доступная в среде Windows PowerShell.  
@@ -49,7 +48,7 @@ ms.locfileid: "72797883"
 -   Инструкции XQuery. Сведения о языке XQuery, поддерживаемом [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], см. в [Справочнике по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
   
 ## <a name="get-help-for-a-sql-server-cmdlet"></a>Получение справки по командлету SQL Server  
- **Получение справки по командлету**  
+ **Справка по командлетам**  
   
 -   Запустите командлет Get-Help, указав имя командлета и уровень справочных данных, которые должны быть возвращены.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1144d186ca38a32dc5fe5db3f487ea7507953cba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934255"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
   Для поддержки автоматической отработки отказа сеанс зеркального отображения базы данных должен быть настроен на использование режима высокой безопасности, а также должен присутствовать третий экземпляр, называемый *следящим сервером*. Следящий сервер это дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющий зеркальному серверу в сеансе режима высокой безопасности определить, следует ли начать процедуру автоматической отработки отказа. В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3172d3597a014a9f86a75a61f2f3d8f705527b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939925"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>Добавление столбцов в таблицу (табличные службы SSAS)
   В этом разделе описано добавление столбцов в существующую таблицу.  
@@ -61,7 +60,7 @@ ms.locfileid: "66067772"
   
 2.  Щелкните верхнюю ячейку, введите имя и нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Изменение свойств таблицы» &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
  [Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS)](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   

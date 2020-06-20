@@ -11,13 +11,12 @@ api_location:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6e390430115daf394c5e94267dad30a87851375d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10468ccd96cd4b68d01e0ef1dae35284b388cd49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128699"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050948"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>Заголовок и сведения о версии SQL Server Express LocalDB
   Отдельный файл заголовка для интерфейса API экземпляра SQL Server Express LocalDB отсутствует. Сигнатуры функций LocalDB и коды ошибок определяются в файле заголовка собственного клиента SQL Server (sqlncli.h). Для использования интерфейса API экземпляра LocalDB необходимо включить в проект файл заголовка sqlncli.h.  
@@ -44,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions]  
 ```  
   
- Этот ключ содержит список ключей, по одному для каждой из установленных на компьютере версий LocalDB. Каждый из этих ключей именуется номером версии LocalDB в формате * \<основной версии>*. дополнительный номер версии>(например, ключ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с именем 12,0). * \<* В каждом из ключей версий содержится пара «имя-значение» `InstanceAPIPath`, определяющая полный путь к установленному в составе соответствующей версии файлу SQLUserInstance.dll. В следующем примере показаны записи реестра на компьютере, на котором установлены версии 11.0 и 12.0 LocalDB.  
+ Этот ключ содержит список ключей, по одному для каждой из установленных на компьютере версий LocalDB. Каждый из этих ключей именуется номером версии LocalDB в формате *\<major-version>* .*\<minor-version>* (например, ключ для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] имеет имя 12,0). В каждом из ключей версий содержится пара «имя-значение» `InstanceAPIPath`, определяющая полный путь к установленному в составе соответствующей версии файлу SQLUserInstance.dll. В следующем примере показаны записи реестра на компьютере, на котором установлены версии 11.0 и 12.0 LocalDB.  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server Local DB\Installed Versions\12.0]  
@@ -66,7 +65,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
   
 ```  
   
- 64-разрядные программы, `Installed Versions` считывающие ключ, увидят значения, указывающие на 64-разрядные версии библиотеки **SQLUserInstance** DLL, а 32-разрядные программы (работающие в 64-разрядных Windows в режиме WOW64) будут `Installed Versions` автоматически перенаправлены в `Wow6432Node` раздел, расположенный в кусте Hive. Этот ключ содержит значения, указывающие на 32-разрядные версии библиотеки **SQLUserInstance** .  
+ 64-разрядные программы, считывающие ключ, увидят `Installed Versions` значения, указывающие на 64-разрядные версии библиотеки **SQLUserInstance** DLL, а 32-разрядные программы (работающие в 64-разрядных Windows в режиме WOW64) будут автоматически перенаправлены в `Installed Versions` раздел, расположенный в `Wow6432Node` кусте Hive. Этот ключ содержит значения, указывающие на 32-разрядные версии библиотеки **SQLUserInstance** .  
   
 ## <a name="using-localdb_define_proxy_functions"></a>Использование константы LOCALDB_DEFINE_PROXY_FUNCTIONS  
  API экземпляра LocalDB определяет константу с именем LOCALDB_DEFINE_PROXY_FUNCTIONS, которая автоматизирует обнаружение и загрузку библиотеки **SQLUserInstance** DLL.  

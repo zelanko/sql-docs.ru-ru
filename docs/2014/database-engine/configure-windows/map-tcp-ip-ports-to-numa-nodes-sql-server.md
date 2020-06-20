@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 795cb57a01cf0c49084b0f9341cde8e1d5718b13
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935211"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Сопоставление портов TCP/IP с узлами NUMA (SQL Server)
   В этом разделе описывается сопоставление портов TCP/IP с узлами архитектуры доступа к неоднородной памяти (NUMA) с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При запуске компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] записывает сведения об узле в журнал ошибок.  
@@ -48,7 +47,7 @@ ms.locfileid: "62781748"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>Сопоставление порта TCP/IP узлу NUMA  
   
-1.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разверните узел **Сетевая конфигурация SQL Server** и щелкните элемент **Протоколы для** *\<имя экземпляра>* .  
+1.  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager разверните узел **SQL Server конфигурация сети**, а затем щелкните **протоколы для** *\<instance name>* .  
   
 2.  В области сведений дважды щелкните **TCP/IP**.  
   

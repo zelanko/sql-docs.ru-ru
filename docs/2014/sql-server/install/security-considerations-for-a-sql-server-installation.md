@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eec38b5ecc524f0d3decd02c0832efd1909e8f00
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a5e45d7dd1dda907d15d7d825abda5f3c59cd87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058983"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Вопросы безопасности при установке SQL Server
   Безопасность является важной характеристикой для любого продукта и любого предприятия. Следуя простым рекомендациям, можно избежать многих уязвимостей в безопасности. В этой статье обсуждаются некоторые рекомендации по безопасности, которых следует придерживаться как до установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения по безопасности для конкретных компонентов приводятся в справочных разделах по этим компонентам.  

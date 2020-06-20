@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3094085e-fe9e-423d-bf87-7852352c2d26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1036cbe649a2448b3eb4838621ec8be0590b1c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24a4d5802d3dcee27a327237823b92f3b6240c17
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050590"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API-интерфейс расширенных хранимых процедур)
     
@@ -48,7 +47,7 @@ srvproc
  *srvproc*  
  Указатель на структуру SRV_PROC, представляющую собой дескриптор соединения с клиентом (в данном случае — дескриптор, получивший удаленную хранимую процедуру). Структура содержит сведения, которые используются библиотекой API-интерфейса расширенных хранимых процедур для управления связью и передачи данных между приложением и клиентом.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Компонент номера для текущей удаленной хранимой процедуры. Если клиент при выполнении удаленной хранимой процедуры не использует компонент номера (либо при отсутствии текущей удаленной хранимой процедуры), возвращается значение -1.  
   
 ## <a name="remarks"></a>Remarks  

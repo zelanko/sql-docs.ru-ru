@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960584"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]при создании элементов и объектов модели нельзя использовать некоторые слова. В противном случае могут возникнуть ошибки.  
@@ -28,13 +27,13 @@ ms.locfileid: "65482574"
   
 -   [Модели](#models)  
   
--   [Entities](#entities)  
+-   [Сущности](#entities)  
   
 -   [Явные иерархии](#exhierarchies)  
   
 -   [Атрибуты](#attributes)  
   
--   [Участниками](#members)  
+-   [Члены](#members)  
   
 ##  <a name="models"></a><a name="models"></a>Моделью  
  Если вы создаете модель с именем **Name, не**выбирайте параметр **создать сущность с тем же именем, что и модель** , поскольку **имя** не может использоваться для имени сущности.  
@@ -47,11 +46,11 @@ ms.locfileid: "65482574"
   
 ##  <a name="attributes"></a><a name="attributes"></a>Атрибута  
   
--   **Идентификатор**  
+-   **ID**  
   
--   **Приведен**  
+-   **Код**  
   
--   **Имя**  
+-   **имя**;  
   
 -   **EnterDTM**  
   
@@ -72,7 +71,7 @@ ms.locfileid: "65482574"
 ##  <a name="members"></a><a name="members"></a>Участниками  
  Для элементов нельзя использовать **MDMMemberStatus** или **root** в качестве значения атрибута **Code** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обзор Master Data Services](master-data-services-overview-mds.md)  
   
   

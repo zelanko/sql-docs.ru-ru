@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b1f5e936843ed84a5c6b88e2f3685e7a4272bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012171"
 ---
 # <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>Новый столбец, возвращаемый процедурой sp_helptrigger, может повлиять на работу приложений
   trigger_schemaias последний столбец в результирующем наборе, возвращенном системной хранимой процедурой sp_helptrigger.  
@@ -31,7 +30,7 @@ ms.locfileid: "66093736"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Проверьте использование в приложениях хранимой процедуры sp_helptrigger. Возможно, придется изменить приложения для обработки дополнительного столбца. Можно также воспользоваться представлением каталога sys.triggers.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

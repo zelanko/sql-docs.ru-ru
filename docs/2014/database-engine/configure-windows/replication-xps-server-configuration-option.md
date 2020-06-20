@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e9850652965b44e68d7996ce28386aef2803f546
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3579e2f5c950187f643c9ca131e8652226b3d60
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809667"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935075"
 ---
 # <a name="replication-xps-server-configuration-option"></a>Параметр конфигурации сервера «Replication XPs»
   Этот параметр предназначен только для внутреннего использования.  

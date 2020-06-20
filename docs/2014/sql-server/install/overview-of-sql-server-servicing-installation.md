@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56123fc1b254cc876339dde816648f2b1f79b90d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012084"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Общие сведения об обслуживании установки SQL Server
   Можно обновить любой установленный компонент [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , применив сервисное обновление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Если версия существующего компонента [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] новее, чем версия обновления, то программа установки исключит этот компонент из списка обновления. Дополнительные сведения о применении обновления для обслуживания см. в разделе [Install SQL Server 2014 обслуживание Updates](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
@@ -24,7 +23,7 @@ ms.locfileid: "66093592"
   
 -   Все компоненты, которые принадлежат одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должны обновляться одновременно. Например, если обновляется компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)], также необходимо обновить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , если они установлены в качестве части того же экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Общие компоненты, такие как средства управления, среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], всегда должны быть обновлены до самой последней версии. Если компонент или экземпляр не выбран в дереве компонентов, то он не будет обновлен.  
   
--   По умолчанию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] файлы журнала обновлений сохраняются в% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\LOG\\.  
+-   По умолчанию [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] файлы журнала обновлений сохраняются в% Program Files% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\LOG \\ .  
   
 -   Теперь в программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обновление может быть интегрировано с исходным носителем, что позволяет выполнять обновление одновременно с запуском исходного носителя. Дополнительные сведения см. [в разделе новые возможности SQL Server установки](../../../2014/sql-server/install/what-s-new-in-sql-server-installation.md).  
   
@@ -49,27 +48,27 @@ ms.locfileid: "66093592"
 ### <a name="prepare-for-a-sscurrent-update-installation"></a>подготовка к установке обновлений для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Настоятельно рекомендуется до установки обновлений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполнить следующие действия.  
   
--   **Резервное копирование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системных баз данных** . перед установкой [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обновлений создайте резервную копию `master`баз `msdb`данных, `model` и. При установке обновления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] эти базы данных изменяются, при этом они становятся несовместимыми с более ранними версиями [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Резервные копии этих баз данных понадобятся в случае, если будет принято решение переустановить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] без этих обновлений.  
+-   **Резервное копирование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системных баз данных** . перед установкой [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обновлений создайте резервную копию `master` `msdb` `model` баз данных, и. При установке обновления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] эти базы данных изменяются, при этом они становятся несовместимыми с более ранними версиями [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Резервные копии этих баз данных понадобятся в случае, если будет принято решение переустановить [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] без этих обновлений.  
   
      Разумно также создать резервные копии пользовательских баз данных.  
   
     > [!IMPORTANT]  
     >  Перед установкой обновлений для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , участвующих в топологии репликации, необходимо создать резервные копии реплицируемых баз данных наряду с системными базами данных.  
   
--   **Резервное копирование [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных, файла конфигурации и репозитория** . перед обновлением экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]необходимо выполнить резервное копирование следующих файлов:  
+-   **Резервное копирование [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных, файла конфигурации и репозитория** . перед обновлением экземпляра необходимо [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполнить резервное копирование следующих файлов:  
   
-    -   Базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. По умолчанию они устанавливаются в папку C:\Program\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Files \MSAS12. \<InstanceId> \olap\data\\. Для установки WoW путь по умолчанию — C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12. \<InstanceId> \olap\data\\.  
+    -   Базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. По умолчанию они устанавливаются в папку C:\Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSAS12. \<InstanceID> \OLAP\Data \\ . Для установки WOW путь по умолчанию — C:\ProgramFiles (x86) \ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSAS12. \<InstanceID> \OLAP\Data \\ .  
   
-    -   Параметр конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в файле конфигурации msmdsrv.ini. По умолчанию это расположение находится в папке C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSAS12. \<InstanceId> \олап\конфиг\ Directory.  
+    -   Параметр конфигурации служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в файле конфигурации msmdsrv.ini. По умолчанию это расположение находится в папке C:\Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSAS12. \<InstanceID> Каталог \Олап\конфиг\.  
   
     -   База данных, содержащая репозиторий служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (необязательно). Этот шаг необходим только в случае, если службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] были настроены для работы с библиотекой объектов DSO.  
   
     > [!NOTE]  
     >  Если не создать резервные копии файла конфигурации, репозитория и баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , вернуть обновленный экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] к более ранней версии будет невозможно.  
   
--   **Проверка наличия достаточного свободного места в системных базах данных** . Если для системных баз данных `master` и `msdb` не выбран параметр автоматического увеличения, то в каждой из этих баз данных должно быть не менее 500 КБ свободного пространства. Чтобы убедиться, что в базах данных достаточно свободного пространства, запустите системную хранимую процедуру `sp_spaceused` в базах данных `master` и `msdb`. Если размер свободного места в какой-либо из этих баз данных составляет менее 500 КБ, увеличьте ее размер.  
+-   **Проверка наличия достаточного свободного места в системных базах данных** . Если для системных баз данных и не выбран параметр автоматического увеличения `master` , то `msdb` в каждой из этих баз данных должно быть не менее 500 КБ свободного пространства. Чтобы убедиться, что в базах данных достаточно свободного пространства, запустите системную хранимую процедуру `sp_spaceused` в базах данных `master` и `msdb`. Если размер свободного места в какой-либо из этих баз данных составляет менее 500 КБ, увеличьте ее размер.  
   
--   **Останавливает службы и приложения** . чтобы избежать возможного перезапуска системы, прежде чем устанавливать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обновления, закройте все приложения и службы, которые устанавливают соединения с обновляемыми экземплярами. Это также касается среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в статьях [Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы Обозреватель SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+-   **Останавливает службы и приложения** . чтобы избежать возможного перезапуска системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прежде чем устанавливать обновления, закройте все приложения и службы, которые устанавливают соединения с обновляемыми экземплярами [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Это также касается среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Дополнительные сведения см. в статьях [Запуск, остановка, приостановка, возобновление и перезапуск ядро СУБД, агент SQL Server или службы Обозреватель SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
     > [!NOTE]  
     >  В среде с отказоустойчивым кластером нельзя останавливать службы. Дополнительные сведения см. в подразделе, посвященном установке отказоустойчивого кластера, далее в этом разделе.  
@@ -87,9 +86,9 @@ ms.locfileid: "66093592"
 #### <a name="starting-a-sscurrent-update"></a>Начало обновления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Чтобы установить обновление [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , запустите файл самоизвлекающегося пакета.  
   
- Накопительный пакет обновления (CU) \<: SQLServer2014>-KBxxxxxx-*PPP*. exe  
+ Накопительный пакет обновления (CU): \<SQLServer2014> -KBxxxxxx-*PPP*. exe  
   
- Пакет обновления (PCU): \<SQLServer2014>\<SPX>-кбкскскскскскс-ППП-ЛЛЛ. exe  
+ Пакет обновления (PCU): \<SQLServer2014> \<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x указывает номер пакета обновления.  
   
@@ -141,7 +140,7 @@ ms.locfileid: "66093592"
   
 -   У экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с накопительным обновлением 1, пакетом обновления 1 (SP1) и накопительным обновлением 2 удалите сначала накопительное обновление 2, затем пакет обновления 1 (SP1).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Установка обновлений для обслуживания SQL Server 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md)   
  [Проверка установки SQL Server](../../database-engine/install-windows/validate-a-sql-server-installation.md)   

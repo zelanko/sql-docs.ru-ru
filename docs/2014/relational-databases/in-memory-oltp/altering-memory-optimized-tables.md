@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706558"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050377"
 ---
 # <a name="altering-memory-optimized-tables"></a>Изменение таблиц с оптимизацией для памяти
   Выполнение операций ALTER для оптимизированных для памяти таблиц не поддерживается. Сюда входят такие операции, как изменение bucket_count, добавление или удаление индекса, добавление или удаление столбца. В этом разделе представлены рекомендации о том, как обновить оптимизированные для памяти таблицы.  
@@ -223,7 +222,7 @@ Write-Host ""
   
  Следующий скрипт PowerShell выполняет изменения схемы, которые были указаны в предыдущем примере. Данный скрипт принимает в качестве аргумента таблицу и выполняет скрипты изменения схемы, созданные для этой таблицы и связанных хранимых процедур.  
   
- Использование: execute_schema_change. ps1 *server_name * * db_name `schema_name` table_name*  
+ Использование: execute_schema_change.ps1 *server_name * * db_name `schema_name` table_name*  
   
 ```powershell
 # stop execution once an error occurs  

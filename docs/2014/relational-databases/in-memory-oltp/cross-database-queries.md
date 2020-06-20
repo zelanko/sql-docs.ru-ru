@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e829bc3bc7216532bd76f083335f126166347f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b86fb120d8263ae48bb9a4e874e4cf0d012bf7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050209"
 ---
 # <a name="cross-database-queries"></a>Межбазовые запросы
   В [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]транзакции между базами данных не поддерживаются с таблицами, оптимизированными для памяти. Нельзя получить доступ к другой базе данных из той же транзакции или того же запроса, которые также получают доступ к оптимизированной для памяти таблицы. Нельзя скопировать данные из одной таблицы в базе данных в оптимизированную для памяти таблицу в другой базе данных.  
@@ -33,7 +32,7 @@ INSERT dbo.t2 SELECT * FROM @v1
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

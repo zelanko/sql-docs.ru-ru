@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 529d0521c320ff2e893a2269fe020d191a6ce284
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284984"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960694"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Промежуточная таблица связей (службы Master Data Services)
   Используйте промежуточную таблицу связей (stg.name_Relationship) в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для изменения расположения элементов в явной иерархии на основе связей между элементами.  
@@ -36,10 +35,10 @@ ms.locfileid: "67284984"
 |**HierarchyName**<br /><br /> Обязательный|Имя явной иерархии. Каждый объединенный элемент может принадлежать только одной явной иерархии.|  
 |**ParentCode**<br /><br /> Обязательный|Для связи родительский-дочерний элемент код объединенного элемента, который должен стать родительским для дочернего или объединенного элемента.<br /><br /> Для одноуровневых отношений код одного из одноуровневых элементов.|  
 |**ChildCode**<br /><br /> Обязательный|Для связи родительский-дочерний элемент код объединенного или конечного элемента, который должен стать дочерним элементом.<br /><br /> Для одноуровневых отношений код одного из одноуровневых элементов.|  
-|**Порядок сортировки**<br /><br /> Необязательный|Целое число, указывающее порядковый номер элемента относительно других элементов на уровнях ниже родителя. У всех дочерних элементов должен быть уникальный идентификатор.|  
-|**Код ошибки**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID** , равным **2**, см. раздел [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md).|  
+|**Порядок сортировки**<br /><br /> Необязательно|Целое число, указывающее порядковый номер элемента относительно других элементов на уровнях ниже родителя. У всех дочерних элементов должен быть уникальный идентификатор.|  
+|**ErrorCode**|Отображает код ошибки. Для всех записей со значением **ImportStatus_ID** , равным **2**, см. раздел [Ошибки промежуточного процесса (службы Master Data Services)](staging-process-errors-master-data-services.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Перемещение элементов явной иерархии с помощью промежуточного процесса &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Master Data Services &#40;импорта данных&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Просмотрите ошибки, возникающие во время промежуточного процесса &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   

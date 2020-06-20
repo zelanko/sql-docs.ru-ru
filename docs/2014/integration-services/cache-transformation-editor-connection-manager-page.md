@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc44af33e79f1c419a13444cca021da59f4917ba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061071"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924573"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Редактор преобразования «Кэш» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор преобразования «Кэш»** , чтобы выбрать существующий диспетчер соединений с кэшем или создать новый.  
@@ -26,17 +25,17 @@ ms.locfileid: "66061071"
   
  Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Диспетчер соединений с кэшем**  
  Выберите в списке существующий диспетчер соединений с кэшем или создайте новое соединение с помощью кнопки **Создать** .  
   
- **Создать**  
+ **Новые**  
  Создайте новое соединение с помощью диалогового окна «Редактор диспетчера соединений с кэшем».  
   
  **Edit** (Изменение)  
  Измените существующее соединение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор преобразования "Кэш" (страница "Сопоставления")](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

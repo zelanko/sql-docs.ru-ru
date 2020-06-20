@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93489e5dea295964826005e081bcffe889cb7586
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050450"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]In-Memory OLTP вводятся оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. В данной статье приводится обзор обработки запросов для таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде.  

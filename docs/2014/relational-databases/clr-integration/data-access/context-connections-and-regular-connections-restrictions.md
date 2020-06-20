@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ebf188db7213b26264d66bad7e2a4ca9f0a09af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970674"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Ограничения обычных и контекстных соединений
   В этом разделе содержатся сведения об ограничениях, связанных с кодом, выполняемым в процессе [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] через контекстные и обычные соединения.  
@@ -51,7 +50,7 @@ ms.locfileid: "62919169"
   
 -   Объект `SqlDependency` не поддерживается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контекстное соединение](context-connection.md)  
   
   

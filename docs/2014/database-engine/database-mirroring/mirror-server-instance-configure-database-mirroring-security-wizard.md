@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 83a92633a4c466e72c8cc2de0cc1c220e88e01bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 889e62af592d8d23f2aca0d752f1c7f535df883a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934135"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Экземпляр зеркального сервера (мастер настройки безопасности зеркального отображения баз данных)
   Используйте данную страницу для задания информации об экземпляре сервера с зеркальной базой данных.  
@@ -31,7 +30,7 @@ ms.locfileid: "62755168"
   
 -   [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Экземпляр зеркального сервера**  
  Если экземпляр зеркального сервера уже задан (на странице **Зеркальное отображение** диалогового окна **Свойства базы данных** ), то он отображается. Дополнительные сведения см. в разделе [Свойства базы данных (страница "Зеркальное отображение")](../../relational-databases/databases/database-properties-mirroring-page.md).  
   
@@ -63,7 +62,7 @@ ms.locfileid: "62755168"
   
  Снимите этот флажок для выключения шифрования. Установите этот флажок, чтобы вновь включить шифрование.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Свойства базы данных &#40;страница зеркального отображения&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

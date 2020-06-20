@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8dd30cd0-a831-4d25-b577-648d7f3c7fa6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2e0c1162d196abba660cb1f15091c5d6a5c13884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ad85e4c70e5185de83a8d3e259e397c5673ac9aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939845"
 ---
 # <a name="create-and-manage-hierarchies-ssas-tabular"></a>Создание иерархий и управление ими (табличные службы SSAS)
   Создавать иерархии и управлять ими можно в конструкторе моделей, в представлении диаграммы. Чтобы просмотреть представление диаграммы в конструкторе моделей в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], укажите в меню **Модель** пункт **Представление модели**, а затем выберите пункт **Представление диаграммы**.  
@@ -93,7 +92,7 @@ ms.locfileid: "66067498"
   
 -   Можно также щелкнуть родительский уровень иерархии и нажать клавишу «Delete». При этом также удаляются все дочерние уровни.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор табличных моделей &#40;табличные&#41;SSAS](../tabular-model-designer-ssas-tabular.md)   
  [Иерархии &#40;табличные&#41;SSAS](hierarchies-ssas-tabular.md)   
  [Меры (табличные службы SSAS)](measures-ssas-tabular.md)  

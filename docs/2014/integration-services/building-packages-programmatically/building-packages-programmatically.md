@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 7474b1f4-7607-4f28-a6fd-67f7db1dd3f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4227560fbaf3e618a25e3dd214a214ac68a736e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d69416b36969e564b611d1b1274367b6ce5cb86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924975"
 ---
 # <a name="building-packages-programmatically"></a>Программное построение пакетов
   Если необходимо динамическое создание пакетов или управление и выполнение пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вне среды разработки, то можно управлять пакетами программно. Этот подход предлагает следующий набор вариантов.
@@ -62,7 +61,7 @@ ms.locfileid: "78176559"
 
  [Сохранение пакета программным способом](../building-packages-programmatically/saving-a-package-programmatically.md) Описание способа сохранения пакета программным способом.
 
-## <a name="reference"></a>Справочник
+## <a name="reference"></a>Ссылка
  [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md) Список стандартных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] кодов ошибок со своими символическими именами и описаниями.
 
 ## <a name="related-sections"></a>Связанные разделы

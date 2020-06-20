@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127271"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050794"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API-интерфейс расширенных хранимых процедур)
     
@@ -87,7 +86,7 @@ destlen
  *destlen*  
  Задает длину целевой переменной в байтах. Для типов с фиксированной длиной это значение не учитывается. Для целевой переменной типа SRVCHAR значение параметра *destlen* представляет собой полную длину буфера назначения. Длина переменной назначения типа SRVCHAR or SRVBINARY (равная -1) указывает, что места достаточно. Для переменной назначения типа *srvchar* длина, равная –1, вызывает завершение строки нулевым символом.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Длина преобразованных данных в байтах, если преобразование типов было проведено успешно. Если функция **srv_convert** получает запрос на преобразование, которое не поддерживается, то вызывает обработчик ошибок, если он был задан разработчиком, устанавливает глобальный номер ошибки и возвращает значение –1.  
   
 ## <a name="remarks"></a>Remarks  
@@ -114,7 +113,7 @@ destlen
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [API srv_setutype &#40;расширенных хранимых процедур&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert (интерфейс API расширенных хранимых процедур)](srv-willconvert-extended-stored-procedure-api.md)  
   

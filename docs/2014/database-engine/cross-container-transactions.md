@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934485"
 ---
 # <a name="cross-container-transactions"></a>Транзакции между контейнерами
   Транзакции между контейнерами представляют собой неявные или явные пользовательские транзакции, включающие вызовы хранимых процедур, скомпилированных в собственном коде, или операции над оптимизированными для памяти таблицами.  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Семантика изоляции для отдельных операций  
  Cериализуемая транзакция T выполняется в полной изоляции. То есть как бы каждая другая транзакция зафиксирована перед запуском T или запущена после фиксации T. Ситуация становится более сложной, если различные операции в транзакции имеют разные уровни изоляции.  
   
- Общая семантика уровней изоляции транзакций в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также влияние на блокировку, объясняется в описании [инструкции SET transaction изоляцией Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ Общая семантика уровней изоляции транзакций в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , а также влияние на блокировку, объясняется в описании [инструкции SET TRANSACTION изоляцией Level &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  Для транзакций между контейнерами, где различные операции могут иметь различные уровни изоляции, необходимо понимать семантику изоляции отдельных операций чтения. Операции записи всегда изолированы. Записи в разных транзакциях не могут повлиять друг на друга.  
   
@@ -135,7 +134,7 @@ commit
   
  Дисковая сторона данной транзакции T достигает определенного уровня изоляции X, если выполняется одно из следующих условий.  
   
--   Он начинается с X. То есть сеанс по умолчанию имел значение X, так как вы `SET TRANSACTION ISOLATION LEVEL`выполнили или это значение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию.  
+-   Он начинается с X. То есть сеанс по умолчанию имел значение X, так как вы выполнили `SET TRANSACTION ISOLATION LEVEL` или это значение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию.  
   
 -   Во время транзакции уровень изоляции по умолчанию изменяется на X с помощью `SET TRANSACTION ISOLATION LEVEL`.  
   
@@ -185,7 +184,7 @@ commit
   
  Явные или неявные транзакции только для чтения между контейнерами выполняют проверку в момент фиксации, если транзакция обращается к таблицам с оптимизацией для памяти в уровне изоляции REPEATABLE READ или SERIALIZABLE. Дополнительные сведения о проверке см. в разделе об обнаружении конфликтов, проверке и проверке зависимостей фиксации в [транзакциях в таблицах, оптимизированных для памяти](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о транзакциях в таблицах, оптимизированных для памяти](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Рекомендации по уровню изоляции транзакций с таблицами, оптимизированными для памяти](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [Рекомендации для логики повторного выполнения транзакций для таблиц, оптимизированных для памяти](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
