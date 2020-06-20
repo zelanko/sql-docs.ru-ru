@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010879"
 ---
 # <a name="disable-publishing-and-distribution"></a>Отключение публикации и распространения
   В данном разделе описывается отключение публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -87,7 +86,7 @@ ms.locfileid: "73882377"
 7.  На распространителе выполните хранимую процедуру [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) , чтобы удалить с сервера обозначение распространителя.  
   
     > [!NOTE]  
-    >  Если все объекты публикации репликации и распространения не удалены перед выполнением хранимых процедур [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) и [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), эти процедуры возвратят ошибку. Чтобы удалить все объекты, связанные с репликацией, при удалении издателя или распространителя, параметру ** \@no_checks** должно быть присвоено значение **1**. Если издатель или распространитель отключен или недоступен, параметру ** \@ignore_distributor** может быть присвоено значение **1** , чтобы их можно было удалить; Однако все публикации и распространение объектов, которые остались позади, необходимо удалить вручную.  
+    >  Если все объекты публикации репликации и распространения не удалены перед выполнением хранимых процедур [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) и [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), эти процедуры возвратят ошибку. Чтобы удалить все объекты, связанные с репликацией, при удалении издателя или распространителя, параметру ** \@ no_checks** должно быть присвоено значение **1**. Если издатель или распространитель отключен от сети или недоступен, параметру ** \@ ignore_distributor** может быть присвоено значение **1** , чтобы их можно было удалить, однако все публикуемые и распределенные объекты должны быть удалены вручную.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере скрипта удаляются объекты репликации из базы данных подписки.  

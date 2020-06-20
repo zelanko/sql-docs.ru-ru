@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3196b985b7bb788744f48b1fb64f64b5f6fe099b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6189b4115a9e04a58d155bbff3558e0ce2e64970
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716898"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048749"
 ---
 # <a name="example-querying-xmltype-columns"></a>Пример. Запросы к столбцам XMLType
   В следующий запрос включены столбцы типа `xml`. Запрос возвращает идентификатор модели продукта, имя и шаги производства в первом месте из столбца `Instructions` типа `xml`.  

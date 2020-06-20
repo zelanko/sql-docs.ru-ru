@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbb165b157fda7d2bd978a91f479d6c1f2a09272
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052908"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Класс событий Lock:Timeout (timeout &gt; 0)
   Класс событий **Lock:Timeout (timeout > 0)** показывает, что запрос на блокировку некоторого ресурса, например страницы, превысил время ожидания, так как этот ресурс был блокирован другой транзакцией. Данный класс событий работает аналогично классу событий **Lock:Timeout** за тем исключением, что не включает события со значением времени ожидания 0.  
@@ -37,7 +36,7 @@ ms.locfileid: "63023504"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой истекло время ожидания.|35|Да|  
 |Duration|`bigint`|Длительность события (в микросекундах).|13|Да|  
 |EndTime|`datetime`|Время окончания события. Этот столбец не заполняется для классов событий запуска, таких как **SQL:BatchStarting** или **SP:Starting**.|15|Да|  
-|EventClass|`int`|Тип события = 189.|27|Нет|  
+|EventClass|`int`|Тип события = 189.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -58,9 +57,9 @@ ms.locfileid: "63023504"
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`ntext`|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
-|Type|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
+|Тип|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс событий Lock: Timeout](lock-timeout-event-class.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  

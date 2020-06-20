@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fee544578a24f47e662645a0d5cd576a74fb0496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e98fd75976a7862909f3d4f03f78649073da32d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966502"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Разработка пользовательского диспетчера соединений
   Службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] инкапсулируют сведения, необходимые для подключения к внешнему источнику данных, с помощью диспетчеров соединений. В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеются различные диспетчеры соединений, поддерживающие соединения с наиболее распространенными источниками данных, от корпоративных баз данных до текстовых файлов и книг Excel. Если набор диспетчеров соединений и внешних источников данных, поддерживаемых службами [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не отвечает потребностям пользователя, можно создать пользовательский диспетчер соединений.  

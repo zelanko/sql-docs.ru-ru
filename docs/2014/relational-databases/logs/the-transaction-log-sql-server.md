@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 025ef22e6dee1fcfaa1225a4709fa01b6c326b12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049750"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
   Каждая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет журнал транзакций, в котором фиксируются все транзакции и производимые ими в базе изменения. Журнал транзакций необходимо регулярно усекать, чтобы избежать его переполнения. Но при этом по ряду причин его усечение может быть отложено, поэтому очень важно следить за размером журнала. Некоторые операции можно выполнять с минимальным протоколированием, чтобы сократить их вклад в размер журнала транзакций.  
@@ -118,7 +117,7 @@ ms.locfileid: "79289412"
   
 -   Частичные обновления типов данных с большими значениями с помощью предложений .WRITE инструкции [UPDATE](/sql/t-sql/queries/update-transact-sql) при вставке или добавлении новых данных. Обратите внимание, что минимальное протоколирование не используется при обновлении существующих значений. Дополнительные сведения о больших типах-значениях см. в статье [Типы данных (Transact-SQL)](/sql/t-sql/data-types/data-types-transact-sql).  
   
--   Инструкции [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) и [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) при вставке или добавлении новых данных в столбцы `text`типа `ntext`данных, `image` и. Обратите внимание, что минимальное протоколирование не используется при обновлении существующих значений.  
+-   Инструкции [WRITETEXT](/sql/t-sql/queries/writetext-transact-sql) и [UPDATETEXT](/sql/t-sql/queries/updatetext-transact-sql) при вставке или добавлении новых данных в `text` `ntext` `image` столбцы типа данных, и. Обратите внимание, что минимальное протоколирование не используется при обновлении существующих значений.  
   
     > [!NOTE]  
     >  Инструкции WRITETEXT и UPDATETEXT являются устаревшими, поэтому следует избегать их использования в новых приложениях.  

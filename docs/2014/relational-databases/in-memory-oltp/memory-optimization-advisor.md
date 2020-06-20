@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 581ce3a1b13d94814904876f61637dcad3dd76de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719078"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050084"
 ---
 # <a name="memory-optimization-advisor"></a>Помощник по оптимизации памяти
   Средство отчетов о производительности транзакций (см. [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информирует о том, какие таблицы в базе данных смогут воспользоваться преимуществами перехода на In-Memory OLTP. После определения таблицы, которую планируется перенести для использования In-Memory OLTP, можно воспользоваться помощником по оптимизации памяти для миграции таблицы базы данных на диске в In-Memory OLTP.  
@@ -121,7 +120,7 @@ ms.locfileid: "82719078"
   
  После завершения процесса обновите **обозреватель объектов** для просмотра новой, оптимизированной для памяти таблицы и старой дисковой таблицы. Старую таблицу можно сохранить или удалить по своему усмотрению.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

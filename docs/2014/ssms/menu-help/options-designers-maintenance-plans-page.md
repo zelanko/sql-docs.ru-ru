@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e995fcdb128f7b9f67bb75ae41222c7d6d022d3
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 0d2f62ecdb772ccb6b9ad4b32386786e68659ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859842"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048699"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Параметры (конструкторы — страница «планы обслуживания»)
   Диалоговое окно **Параметры** позволяет определить поведение конструктора по умолчанию при добавлении новых фигур на область конструктора. В меню **Сервис** выберите пункт **Параметры**, откройте раздел **Конструкторы**и выберите пункт **Планы обслуживания**.  

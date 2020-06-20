@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000349"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049473"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   Когда издатель и подписчик соединяются и происходит синхронизация, агент слияния проверяет наличие конфликтов. При обнаружении конфликтов сопоставитель слияния использует арбитр конфликтов (указанный при добавлении статьи в публикацию), чтобы определить, какие данные являются приемлемыми и распространяются на другие сайты.  
@@ -81,11 +80,11 @@ ms.locfileid: "63000349"
   
 -   Пользовательский сопоставитель на основе COM  
   
-     Репликация слиянием предоставляет API для записи арбитров конфликтов в виде COM-объектов на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] языках [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], таких как или. Дополнительные сведения см. в статье [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     Репликация слиянием предоставляет API для записи арбитров конфликтов в виде COM-объектов на языках, таких как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] . Дополнительные сведения см. в статье [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Основанный на технологии COM сопоставитель, поддерживаемый [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] включает несколько арбитров конфликтов на основе COM. Дополнительные сведения см. в статье [Сопоставители на базе технологии Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]включает несколько арбитров конфликтов на основе COM. Дополнительные сведения см. в статье [Сопоставители на базе технологии Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Сведения о выборе подходящего типа сопоставителя см. в статье [Выбор сопоставителя](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "63000349"
   
  Средство просмотра конфликтов отображает информацию из трех системных таблиц:  
   
--   При репликации для каждой таблицы в статье слияния создается таблица конфликтов с именем следующего вида: **MSmerge_conflict_\<имя_публикации>_\<имя_статьи>**.  
+-   Репликация создает таблицу конфликтов для каждой таблицы в статье публикации слиянием с именем в формате **MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **.  
   
      Таблицы конфликтов имеют структуру, аналогичную структуре таблиц, на которых они основаны. Строка в одной из этих таблиц состоит из проигравшей версии строки конфликта (победившая версия строки находится в существующей пользовательской таблице).  
   
@@ -131,7 +130,7 @@ ms.locfileid: "63000349"
   
 -   Репликация [!INCLUDE[tsql](../../../includes/tsql-md.md)] Программирование: [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../view-conflict-information-for-merge-publications.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Синхронизация данных](../synchronize-data.md)  
   
   

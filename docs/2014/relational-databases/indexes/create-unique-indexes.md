@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c96c4e17a8ce0863452db171302d650f6114919
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049931"
 ---
 # <a name="create-unique-indexes"></a>Создание уникальных индексов
   В данном разделе описывается создание уникальных индексов в таблице в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Уникальный индекс гарантирует, что ключ индекса не будет содержать одинаковых значений, а значит, каждая строка в таблице будет уникальна. Нет существенных различий между созданием ограничения UNIQUE и созданием уникального индекса, не зависящего от ограничения. Проверка данных происходит подобным же образом, и оптимизатор запросов не делает различия между уникальным индексом, который создан ограничением, и индексом, созданным вручную. Однако при создании ограничения UNIQUE для столбца назначение индекса становится очевидным. Дополнительные сведения об ограничениях UNIQUE см. в разделе [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  

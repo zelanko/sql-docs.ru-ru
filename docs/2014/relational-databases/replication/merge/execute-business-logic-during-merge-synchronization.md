@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67724c0816ceb77e61bc6e4a0cf8650a9228f39d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62999568"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049376"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Выполнение бизнес-логики при синхронизации слиянием
   Платформа обработчика бизнес-логики всегда доступна для добавления сборки управляемого кода, который выполняется во время процесса синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Платформа обработчика бизнес-логики предоставляет простую программируемую модель; данные, которые процесс слияния предоставляет для вашей сборки, находятся в форме набора данных ADO.NET, поэтому удобнее эффективно использовать знание ADO.NET, чем изучать патентованный интерфейс. Дополнительные сведения о программируемых обработчиках бизнес-логики см. в следующих источниках:  
@@ -89,7 +88,7 @@ ms.locfileid: "62999568"
   
 -   Сервер служб Internet Information Services (IIS), если используется веб-синхронизация. Используйте подписку по запросу, синхронизированную с помощью веб-синхронизации, и обработчик бизнес-логики будет выполняться на сервере IIS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Репликация слиянием](merge-replication.md)   
  [Subscribe to Publications](../subscribe-to-publications.md)   
  [Синхронизация данных](../synchronize-data.md)   

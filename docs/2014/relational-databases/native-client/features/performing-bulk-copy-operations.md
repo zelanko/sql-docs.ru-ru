@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aaaf53a546ccef646c9c53a30c09196d113b738f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d5f7679031dd6ab724a0e4f109a920f3218bb0c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049603"
 ---
 # <a name="performing-bulk-copy-operations"></a>Выполнение операций массового копирования
   Функция массового копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает передачу больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из них. Данные можно также передать путем указания инструкции SELECT. Данные можно передавать между [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и файлом данных операционной системы, таким как ASCII-файл. Файлы данных могут иметь различные форматы. Формат определяется для массового копирования в файле форматирования. По желанию данные можно загрузить в переменные программы и передать в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью функций и методов массового копирования.  
@@ -109,7 +108,7 @@ ms.locfileid: "82704344"
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает такую же поддержку операций массового копирования, которые были частью предыдущих версий драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Сведения об операциях с массовым копированием с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера ODBC для собственного клиента см. в разделе [выполнение операций с массовым копированием &#40;&#41;ODBC ](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
  [Свойства источника данных &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../../import-export/bulk-import-and-export-of-data-sql-server.md)   

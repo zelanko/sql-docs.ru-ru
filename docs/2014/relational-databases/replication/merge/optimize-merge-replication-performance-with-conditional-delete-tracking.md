@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a564dc4bcabc46689fbf1a521a9ecb1209654594
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "68210695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010504"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Оптимизация производительности репликации слиянием с помощью отслеживания условного удаления
     
@@ -48,7 +47,7 @@ ms.locfileid: "68210695"
   
 -   Программирование репликации в [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Отключение отслеживания операций удаления для статей публикации слиянием (программирование репликации на языке Transact-SQL)](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры статьи для репликации слиянием](article-options-for-merge-replication.md)   
  [Оптимизация производительности репликации слиянием при работе со статьями, доступными только для загрузки](optimize-merge-replication-performance-with-download-only-articles.md)  
   

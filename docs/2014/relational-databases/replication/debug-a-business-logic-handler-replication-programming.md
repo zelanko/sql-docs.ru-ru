@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f07b66fd937fda395af4d72025c0d82c8bec46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721504"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010867"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
   Используйте обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](merge/execute-business-logic-during-merge-synchronization.md).  
@@ -81,7 +80,7 @@ ms.locfileid: "62721504"
   
 11. Если не заданы другие точки останова и репликацию проходят нужные команды, выполнение будет остановлено по достижении точки останова в обработчике бизнес-логики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация обработчика бизнес-логики для статьи публикации слиянием](implement-a-business-logic-handler-for-a-merge-article.md)  
   
   

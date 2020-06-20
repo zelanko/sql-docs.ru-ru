@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9093ac313f0b72671e647461318793c21f476c75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af77616211b98ce64bc8adbe9c85bae98641febc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032028"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049523"
 ---
 # <a name="article-issues"></a>Проблемы в статьях
   На странице **Проблемы в статьях** перечисляются условия, определенные для статей, а также изменения, проведение которых необходимо при этих условиях. В следующей таблице перечисляются возможные проблемы и действия, необходимые для гарантированного корректного выполнения репликации и существующих приложений.  

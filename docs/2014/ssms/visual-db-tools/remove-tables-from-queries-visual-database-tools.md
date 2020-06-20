@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8fea0b4f-99b7-4050-8d6f-a97ffb839619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bda582c7b9171e89a43b6870b3b6c2df139b7b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fab5380e13742f3cd289ce17f26ad2e5fb9089ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670467"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064872"
 ---
 # <a name="remove-tables-from-queries-visual-database-tools"></a>Удаление таблиц из запросов (визуальные инструменты для базы данных)
   Из запроса можно удалить таблицу или любой возвращающий табличное значение объект.  

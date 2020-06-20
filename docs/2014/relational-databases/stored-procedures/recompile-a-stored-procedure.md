@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: b90deb27-0099-4fe7-ba60-726af78f7c18
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ae01b9173693370d5e422d4f26b6175101ff12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a9bc0e1d4baecb7f4c66b83b57081ed3131123d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062776"
 ---
 # <a name="recompile-a-stored-procedure"></a>Перекомпиляция хранимой процедуры
-  В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это можно сделать тремя способами: `WITH RECOMPILE` параметр в определении процедуры или при вызове процедуры, указание `RECOMPILE` запроса для отдельных инструкций или использование `sp_recompile` системной хранимой процедуры. В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
+  В этом разделе описывается, как перекомпилировать хранимую процедуру в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это можно сделать тремя способами: `WITH RECOMPILE` параметр в определении процедуры или при вызове процедуры, `RECOMPILE` Указание запроса для отдельных инструкций или использование `sp_recompile` системной хранимой процедуры. В этом разделе описывается использование параметра WITH RECOMPILE при создании определения процедуры и выполнении существующей процедуры. Также описывается использование системной хранимой процедуры sp_recompile для перекомпиляции существующей процедуры.  
   
  **В этом разделе**  
   
@@ -131,7 +130,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание хранимой процедуры](../stored-procedures/create-a-stored-procedure.md)   
  [Изменение хранимой процедуры](../stored-procedures/modify-a-stored-procedure.md)   
  [Переименование хранимой процедуры](rename-a-stored-procedure.md)   

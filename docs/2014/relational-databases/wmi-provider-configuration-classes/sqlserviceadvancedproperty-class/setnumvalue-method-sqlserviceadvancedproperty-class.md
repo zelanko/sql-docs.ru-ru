@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f44d3426d7a3f11157167763e047dcb7423a904f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64ffacdb14d0a0ba636a34aa27fec6fa10dc1e3a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62635083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059649"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetNumValue (класс SqlServiceAdvancedProperty)
   Задает числовое значение свойства.  
@@ -55,7 +54,7 @@ NumValue
 ## <a name="remarks"></a>Remarks  
  Чтобы для свойства можно было задать числовое значение, свойство должно иметь числовой тип.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

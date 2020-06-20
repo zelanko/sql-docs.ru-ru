@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5a464f9791ea635236069555647229bf1f0d79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049989"
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
   В этой теме описывается добавление невключенных или неключевых столбцов, чтобы расширить функциональные возможности некластеризованных индексов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление неключевых столбцов позволяет создавать некластеризованные индексы, покрывающие больше запросов. Это обусловлено следующими преимуществами неключевых столбцов.  

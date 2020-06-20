@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12ef7d658496c0fb7281827259e8e46f0c5fac64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010938"
 ---
 # <a name="create-a-pull-subscription"></a>Создание подписки по запросу
   В данном разделе описывается процесс создания подписки по запросу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -72,7 +71,7 @@ ms.locfileid: "62721596"
   
 3.  Щелкните правой кнопкой мыши папку **Локальные подписки** , затем щелкните **Создать подписку**.  
   
-4.  На странице **Публикация** мастера создания подписки выберите **\<Найти издатель SQL Server>** или **\<Найти издатель Oracle>** из раскрывающегося списка **Издатель**.  
+4.  На странице **Публикация** мастера создания подписки выберите **\<Find SQL Server Publisher>** или **\<Find Oracle Publisher>** из раскрывающегося списка **Издатель** .  
   
 5.  Соединитесь с издателем в диалоговом окне **Соединение с сервером** .  
   
@@ -89,24 +88,24 @@ ms.locfileid: "62721596"
   
     -   Если в результирующем наборе значение параметра **allow_pull** равно **1**, подписки по запросу поддерживаются.  
   
-    -   Если значение **allow_pull** равно **0**, выполните [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_pull** **@property** для и. `true` **@value**  
+    -   Если значение **allow_pull** равно **0**, выполните [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_pull** для **@property** и `true` **@value** .  
   
-2.  На подписчике выполните процедуру [sp_addpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Укажите **@publisher** и **@publication**. Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  На подписчике выполните процедуру [sp_addpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Укажите **@publisher** и **@publication** . Сведения об обновлении подписок см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   Параметры **@publisher**, **@publisher_db**и **@publication** .  
+    -   **@publisher**Параметры, **@publisher_db** и **@publication** .  
   
-    -   Учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми работает агент распространения на подписчике **@job_login** , **@job_password**для и.  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Учетные данные Windows, с которыми работает агент распространения на подписчике, для **@job_login** и **@job_password** .  
   
         > [!NOTE]  
-        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент распространителя всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем с помощью встроенной проверки подлинности Windows.  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в **@job_login** и **@job_password** . Агент распространителя всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем с помощью встроенной проверки подлинности Windows.  
   
     -   (Необязательно.) Значение **0** в качестве значения параметра **@distributor_security_mode** и данные входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@distributor_login** и **@distributor_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
-4.  Чтобы зарегистрировать подписку по запросу, выполните на издателе хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber**и **@destination_db**. В качестве значения параметра **@subscription_type** в качестве значения параметра **@subscription_type**.  
+4.  Чтобы зарегистрировать подписку по запросу, выполните на издателе хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication** , **@subscriber** и **@destination_db** . В качестве значения параметра **@subscription_type** в качестве значения параметра **@subscription_type**.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>Создание подписки по запросу на публикацию слиянием  
   
@@ -114,9 +113,9 @@ ms.locfileid: "62721596"
   
     -   Если в результирующем наборе значение параметра **allow_pull** равно **1**, подписки по запросу поддерживаются.  
   
-    -   Если значение **allow_pull** равно **0**, выполните [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_pull** **@property** для и. `true` **@value**  
+    -   Если значение **allow_pull** равно **0**, выполните [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_pull** для **@property** и `true` **@value** .  
   
-2.  На подписчике выполните процедуру [sp_addmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**и следующие параметры:  
+2.  На подписчике выполните процедуру [sp_addmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Укажите **@publisher** , **@publisher_db** , **@publication** и следующие параметры:  
   
     -   **@subscriber_type**— Укажите **локальную** для клиентской подписки и **глобальную** для серверной подписки.  
   
@@ -126,12 +125,12 @@ ms.locfileid: "62721596"
   
 3.  На подписчике выполните процедуру [sp_addmergepullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Укажите значения следующих параметров.  
   
-    -   **@publisher**, **@publisher_db**и **@publication**.  
+    -   **@publisher**, **@publisher_db** и **@publication** .  
   
-    -   Учетные данные Windows, с которыми работает агент слияния на подписчике **@job_login** , **@job_password**для и.  
+    -   Учетные данные Windows, с которыми работает агент слияния на подписчике, для **@job_login** и **@job_password** .  
   
         > [!NOTE]  
-        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент слияния всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем и издателем с помощью встроенной проверки подлинности Windows.  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в **@job_login** и **@job_password** . Агент слияния всегда создает локальное соединение с подписчиком с использованием встроенной проверки подлинности Windows. По умолчанию агент установит соединение с распространителем и издателем с помощью встроенной проверки подлинности Windows.  
   
     -   (Необязательно.) Значение **0** в качестве значения параметра **@distributor_security_mode** и данные входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для параметров **@distributor_login** и **@distributor_password**, если для соединения с распространителем нужно использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62721596"
   
     -   Расписание агента слияния для данной подписки. Дополнительные сведения см. в разделе [Создание обновляемых подписок для публикаций транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
-4.  На издателе выполните процедуру [sp_addmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Укажите **@publication**значения **@subscriber**, **@subscriber_db**, и значение **Pull** для **@subscription_type**. После этого подписка по запросу будет зарегистрирована.  
+4.  На издателе выполните процедуру [sp_addmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Укажите **@publication** **@subscriber** значения,, **@subscriber_db** и значение **Pull** для **@subscription_type** . После этого подписка по запросу будет зарегистрирована.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере создается подписка по запросу на публикацию транзакций. Первый пакет выполняется на подписчике, а второй — на издателе. Имя входа и пароль предоставляются во время выполнения переменными сценария sqlcmd.  

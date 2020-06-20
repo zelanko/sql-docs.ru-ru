@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15dfb65dc7cb51311e60112145623eeda50339e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d36397bbee88bdea60be57d80e68e762a636962f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058058"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Показ имен столбцов на панели диаграмм (визуальные инструменты для баз данных)
   Можно выбрать, скрыть или показать имена столбцов таблиц на **панели диаграммы** в конструкторе запросов и представлений.  

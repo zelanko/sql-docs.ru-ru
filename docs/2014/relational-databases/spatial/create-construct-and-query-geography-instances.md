@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016073"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
   Тип пространственных данных `geography` представляет данные в системе координат круглой земли. Этот тип реализован как тип данных среды CLR .NET в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` хранит данные для эллипсоидальной (сферической) Земли, такие как координаты широты и долготы GPS.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014298"
  [STGeomCollFromWKB (тип данных geography)](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (тип данных geography)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Построение экземпляра географического объекта на основе входных данных в формате GML Text  
- Тип `geography` данных предоставляет метод, создающий `geography` экземпляр из GML, XML-представление `geography` экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
+ `geography`Тип данных предоставляет метод, создающий `geography` экземпляр из GML, XML-представление `geography` экземпляра. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
  Дополнительные сведения о языке GML см. в спецификации OGC: [Спецификации OGC, географический язык разметки.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66014298"
  [AsGml (тип данных geography)](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Выполнение запроса к свойствам и методам экземпляров географических объектов  
- У `geography` всех экземпляров есть ряд свойств, которые можно получить с помощью методов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляемых. В следующих разделах определяются свойства и поведение географических типов, а также методы запросов к каждому из них.  
+ `geography`У всех экземпляров есть ряд свойств, которые можно получить с помощью методов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляемых. В следующих разделах определяются свойства и поведение географических типов, а также методы запросов к каждому из них.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
  Когда экземпляр `geography` создан, можно использовать следующие методы, чтобы получить типа экземпляра или, если это экземпляр `GeometryCollection`, конкретный экземпляр `geography`.  
@@ -161,7 +160,7 @@ ms.locfileid: "66014298"
  [STEndpoint (тип данных geography)](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Измерение  
- Непустой объект `geography` может иметь 0, 1 или 2 измерения. Экземпляры с нулевым `geography` измерением, такие `Point` как `MultiPoint`и, не имеют длины или площади. Одномерные объекты, такие как `LineString, CircularString`, `CompoundCurve` и `MultiLineString`, имеют длину. Двумерные объекты, такие как `Polygon, CurvePolygon` и `MultiPolygon`, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах `GeometryCollection` — максимальное измерение содержимого.  
+ Непустой объект `geography` может иметь 0, 1 или 2 измерения. Экземпляры с нулевым измерением `geography` , такие как `Point` и `MultiPoint` , не имеют длины или площади. Одномерные объекты, такие как `LineString, CircularString`, `CompoundCurve` и `MultiLineString`, имеют длину. Двумерные объекты, такие как `Polygon, CurvePolygon` и `MultiPolygon`, имеют длину и площадь. В отчете пустых экземпляров указывается измерение -1, а в отчетах `GeometryCollection` — максимальное измерение содержимого.  
   
  **Получение измерения экземпляра**  
  [STDimension (тип данных geography)](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -266,7 +265,7 @@ ms.locfileid: "66014298"
     SELECT @result.STAsText();  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пространственные данные (SQL Server)](spatial-data-sql-server.md)  
   
   

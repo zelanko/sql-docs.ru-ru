@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ddb352b00dc759362c8f6ef1e861e55b6f184f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014307"
 ---
 # <a name="specify-first-and-last-triggers"></a>Указание первого и последнего триггеров
   Возможно указать, что один из триггеров AFTER, связанных с таблицей, является либо первым триггером AFTER, либо последним триггером AFTER, срабатывающим для каждого запускающего действия INSERT, DELETE и UPDATE. Порядок запуска триггеров AFTER, срабатывающих в промежутке между первым и последним триггерами, не определен.  

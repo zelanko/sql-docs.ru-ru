@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4a4bb9cca85fd3f7a7ab076b2f8be7707827aced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018536"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Конструирование инструкций SQL для курсоров
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента использует серверные курсоры для реализации функции курсора, определенной в спецификации ODBC. Приложение ODBC управляет поведением курсора с помощью [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) для установки различных атрибутов операторов. К ним относятся атрибуты и их значения по умолчанию.  
@@ -55,7 +54,7 @@ ms.locfileid: "82711070"
   
      Инструкции SQL, которые выполняют хранимую процедуру, содержащую более одной инструкции SELECT. К ним относятся инструкции SELECT, которые заполняют параметры или переменные.  
   
--   Ключевые слова  
+-   Keywords  
   
      Инструкции SQL, которые содержат ключевые слова FOR BROWSE или INTO.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "82711070"
   
  Инструкции SQL, не относящиеся к перечисленным выше категориям, могут выполняться с любыми настройками атрибутов инструкций; они работают одинаково успешно с результирующим набором по умолчанию и с серверным курсором.  
   
-## <a name="errors"></a>Ошибки  
+## <a name="errors"></a>ошибки  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 и более поздних версиях попытка выполнить инструкцию, возвращающую несколько результирующих наборов, формирует SQL_SUCCESS_WITH_INFO и следующее сообщение:  
   
 ```  
@@ -99,7 +98,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  Приложения ODBC, получающие эти ошибки, должны сбросить все атрибуты инструкции курсора в их значения по умолчанию перед попыткой выполнить инструкцию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняя запросы &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

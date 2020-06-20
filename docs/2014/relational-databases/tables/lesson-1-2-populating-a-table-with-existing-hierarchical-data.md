@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fd943d84-dbe6-4a05-912b-c88164998d80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 966548b11ad4697abc06de5c5c239a511f80b7af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110166"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068086"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Заполнение таблицы существующими иерархическими данными
    В этой задаче таблица создается и заполняется данными из таблицы **EmployeeDemo**. Эта задача включает следующие шаги.  
@@ -113,7 +112,7 @@ ms.locfileid: "66110166"
   
      `10        4         2`  
   
-3.  Заполнение таблицы **NewOrg** . Используйте методы OrgNode и ToString, чтобы объединить значения **num** в `hierarchyid` формат, а затем обновите столбец **OrgNode** с помощью итоговых иерархических значений:  
+3.  Заполнение таблицы **NewOrg** . Используйте методы OrgNode и ToString, чтобы объединить значения **num** в `hierarchyid` Формат, а затем обновите столбец **OrgNode** с помощью итоговых иерархических значений:  
   
     ```  
     WITH paths(path, EmployeeID)   

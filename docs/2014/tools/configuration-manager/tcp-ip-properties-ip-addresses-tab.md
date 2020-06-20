@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064127"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Свойства TCP-IP (вкладка «IP-адреса»)
   Чтобы настроить параметры протокола TCP/IP для определенного IP-адреса, используйте диалоговое окно **Свойства TCP/IP (вкладка "IP-адреса")** . Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
   
- Изменения вступают в силу [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при перезапуске. Сведения о запуске и остановке службы «SQL Server, браузер» см. в разделе «Как запустить и остановить службу "SQL Server, браузер"» электронной документации по SQL Server.  
+ Изменения вступают в силу при [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуске. Сведения о запуске и остановке службы «SQL Server, браузер» см. в разделе «Как запустить и остановить службу "SQL Server, браузер"» электронной документации по SQL Server.  
   
 ## <a name="static-vs-dynamic-ports"></a>Статические и Динамические порты  
  Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию прослушивает входящие соединения через порт 1433. Порт может быть изменен по соображениям безопасности или в силу требований клиентского приложения. По умолчанию именованные экземпляры (включая SQL Server Express) настроены на прослушивание динамических портов. Чтобы настроить статический порт, оставьте поле **Динамические TCP-порты** пустым и укажите доступный номер порта в поле **TCP-порт** . Дополнительные сведения об открытии портов в брандмауэре см. «Настройка Брандмауэра Windows для разрешения доступа к SQL Server» в электронной документации по SQL Server.  
@@ -56,9 +55,9 @@ ms.locfileid: "63151447"
 ## <a name="adding-or-removing-ip-addresses"></a>Добавление или удаление IP-адресов  
  Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает IP-адреса, которые были доступны во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные IP-адреса могут измениться при добавлении или удалении сетевых адаптеров, после истечения срока действия динамически назначаемых IP-адресов, при перестройке сетевой структуры или при изменении физического местоположения компьютера, например в случае, когда переносной компьютер подключается к сети в другом здании. Для изменения IP-адреса необходимо изменить поле **IP-адрес** и перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор сетевого протокола](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Создание допустимой строки подключения с помощью IP-адреса TCP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [Служба обозреватель SQL Server](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [служба «SQL Server, браузер»](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

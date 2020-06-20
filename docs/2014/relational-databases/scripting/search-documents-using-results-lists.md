@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f85db72d1d1a5d5c6935f2aa795c91cf8104a27
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0885c5061bc4844839eab25dfaf211e56e3e31a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009418"
 ---
 # <a name="search-documents-using-results-lists"></a>Поиск документов с помощью списков результатов
   С помощью диалогового окна **Найти и заменить** можно выполнять поиск и замену текста во всех файлах проекта или решения, или в папке файловой системы, даже если они не открыты в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Результаты поиска, выполненного в диалоговом окне **Найти и заменить** , появляются в окнах «Результаты поиска 1» и «Результаты поиска 2», что позволяет просмотреть точный текст строки, содержащей совпадение.  

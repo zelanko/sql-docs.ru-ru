@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8642a96-3a09-4ec7-a9c3-c539147e6330
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d34085e320cd8ca0b82d382d6d49eaa303086114
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065066"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Новые возможности установки SQL Server
   Windows Vista не является поддерживаемой операционной системой для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Пакет обновления 1 (SP1) остается минимальным требованием для операционных систем [!INCLUDE[win7](../../includes/win7-md.md)] и [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Дополнительные сведения о требованиях к операционной системе см. в разделе [требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "68190050"
   
  Начиная с версии [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], компонент Database Engine в выпусках Standard имеет объем памяти 128 ГБ. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ядро СУБД в выпусках Standard имело объем памяти 64 ГБ.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Новые возможности SQL Server 2014](../what-s-new-in-sql-server-2016.md)   
  [Спецификации продуктов для SQL Server 2014](../../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   

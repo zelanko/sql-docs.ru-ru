@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5dcb8b62b3ef2b0e6419bfff82dfa572d5fb0d39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aed6261312414d114fdf9ed92b111d44fbb0f93c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050986"
 ---
 # <a name="localdbstarttracing-function"></a>Функция LocalDBStartTracing
   Включает трассировку вызовов API для всех экземпляров SQL Server Express LocalDB, принадлежащих текущему пользователю Windows.  
@@ -34,7 +33,7 @@ ms.locfileid: "63135269"
 HRESULT LocalDBStartTracing();  
 ```  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -47,7 +46,7 @@ HRESULT LocalDBStartTracing();
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

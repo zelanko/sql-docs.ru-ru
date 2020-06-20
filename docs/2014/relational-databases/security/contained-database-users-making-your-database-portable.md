@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6aef800c41b0c1b44e285f959d1b9e12c58ea937
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997504"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
   Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровне базы данных. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. В этом разделе рассматриваются различия и преимущества использования модели автономной базы данных по сравнению с традиционной моделью имя для входа/ пользователь и правилами брандмауэра в Windows или на уровне сервера. Конкретные сценарии, управляемость или приложение бизнес-логики могут по-прежнему требовать использования традиционной модели имя для входа/ пользователь и правила брандмауэра на уровне сервера.  
@@ -83,7 +82,7 @@ ms.locfileid: "62655484"
   
 -   Использование паролей одинаковой сложности с теми, которые обыкновенно используются для имен входа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автономные базы данных](../databases/contained-databases.md)   
  [Рекомендации по обеспечению безопасности автономных баз данных](../databases/security-best-practices-with-contained-databases.md)   
  [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql)  
