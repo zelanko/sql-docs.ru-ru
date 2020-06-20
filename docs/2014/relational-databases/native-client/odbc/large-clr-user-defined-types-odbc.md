@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df59c3a49715791e2f525e4bc5a69ff8991cac44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62acbe2e9acbf6ba39f982ad43de7a55453f7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055843"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Определяемые пользователем типы данных больших значений CLR (ODBC)
   В этом разделе обсуждаются изменения ODBC в собственном клиенте SQL Server для поддержки определяемых пользователем типов данных CLR.  
@@ -210,7 +209,7 @@ ms.locfileid: "82704284"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Для определяемых пользователем типов возвращаются следующие значения.  
   
-|Тип данных SQL|Type|Подтип|Длина|Точность|Масштабирование|  
+|Тип данных SQL|Тип|Подтип|Длина|Точность|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -230,7 +229,7 @@ ms.locfileid: "82704284"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Для определяемых пользователем типов разрешены следующие значения.  
   
-|Тип данных SQL|Type|Подтип|Длина|Точность|Масштабирование|  
+|Тип данных SQL|Тип|Подтип|Длина|Точность|Масштабирование|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (длина не более 8 000 байт)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (длина более 8 000 байт)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -238,7 +237,7 @@ ms.locfileid: "82704284"
 ### <a name="sqlspecialcolumns"></a>SQLSpecialColumns  
  Значения, возвращаемые для столбцов DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH и DECIMAL_DIGTS определяемых пользователем типов, описаны в подразделе «Метаданные, возвращаемые функциями SQLColumns и SQLProcedureColumns (метаданные каталога)» ранее в этом разделе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Большие определяемые пользователем типы данных CLR](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

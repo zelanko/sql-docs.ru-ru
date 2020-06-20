@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1dc2522aef82913bcc2e93f2f8fcde4f2311e958
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030204"
 ---
 # <a name="cursoropen-event-class"></a>Класс событий CursorOpen
   Класс событий **CursorOpen** описывает события открытия курсора, которые происходят в курсорах API-интерфейса. События открытия курсора происходят, когда [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] определяет инструкцию SQL, которая должна быть связана с курсором или параметрами курсора, и заполняет курсор.  

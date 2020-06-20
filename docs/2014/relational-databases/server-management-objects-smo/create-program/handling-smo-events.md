@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063125"
 ---
 # <a name="handling-smo-events"></a>Обработка событий SMO
   На некоторые типы событий сервера можно подписаться с помощью обработчика событий и объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
@@ -37,7 +36,7 @@ ms.locfileid: "63191919"
   
  Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика событий получают сведения о событии из параметра *серверевентнотификатификатионаргс* , который можно использовать для передачи сведений о событии.  
   
- Типы событий базы данных и сервера, которые могут быть обработаны, перечислены <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> в классе и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>классе.  
+ Типы событий базы данных и сервера, которые могут быть обработаны, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> классе и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> классе.  
   
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bff0c172301b1c11a500258e67f4e8f5c69bd3ae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938465"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Конструктор связей атрибутов», конструктор измерений) (службы Analysis Services — многомерные данные)
   Панель инструментов на вкладке **Связь атрибутов** конструктора измерений используется для выполнения следующих процедур.  
@@ -34,17 +33,17 @@ ms.locfileid: "66066226"
   
 -   В обозревателе решений в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]дважды щелкните измерение, чтобы открыть конструктор измерений, а затем перейдите на вкладку **Связь атрибутов** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Добавить бизнес-аналитику**  
  Открывает **Мастер бизнес-аналитики** и добавляет функции бизнес-аналитики. Дополнительные сведения см. в статье [Использование мастера бизнес-аналитики для улучшения измерений](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   
- **Процесс**  
+ **Process**  
  Обрабатывает объект.  
   
  **Создать связь атрибутов**  
  Открывает диалоговое окно **Создание связи атрибутов** , в котором можно определить новую связь атрибутов.  
   
- **Масштабирование**  
+ **Zoom**  
  Циклически изменяет масштаб или отображает список доступных параметров масштаба.  
   
  **Развернуть все фигуры**  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 232de0c9-b24d-4c38-861d-6c1f4a75bdf3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7060990b409773abd4f574e46dd0671c71f1374f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da21a9a12a57b4ddba3b656d154136b7b70e8362
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968384"
 ---
 # <a name="configuring-the-script-task-in-the-script-task-editor"></a>Настройка задачи «Скрипт» в редакторе задачи «Скрипт»
   Прежде чем писать пользовательский код задачи "Скрипт", настройте ее основные свойства на трех страницах окна **Редактор задачи "Скрипт"** . Дополнительные свойства задачи, не уникальные для задачи «Скрипт», можно настроить в окне «Свойства».
@@ -41,7 +40,7 @@ ms.locfileid: "78176153"
  Чтобы задать язык скриптов по умолчанию для компонентов скрипта и задач "Скрипт", воспользуйтесь свойством **ScriptLanguage** на странице **Общие** диалогового окна **Параметры**. Дополнительные сведения см. в разделе [General Page](../../general-page-of-integration-services-designers-options.md).
 
 ### <a name="entrypoint-property"></a>Свойство EntryPoint
- Свойство `EntryPoint` определяет метод класса `ScriptMain` в проекте VSTA, который вызывается средой выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] в качестве точки входа в код задачи «Скрипт». `ScriptMain` Класс является классом по умолчанию, созданным шаблонами скриптов.
+ Свойство `EntryPoint` определяет метод класса `ScriptMain` в проекте VSTA, который вызывается средой выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] в качестве точки входа в код задачи «Скрипт». `ScriptMain`Класс является классом по умолчанию, созданным шаблонами скриптов.
 
  При изменении имени метода в проекте VSTA следует поменять значение свойства `EntryPoint`.
 

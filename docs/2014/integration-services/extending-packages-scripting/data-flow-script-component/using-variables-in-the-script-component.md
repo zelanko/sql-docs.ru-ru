@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 922454c7bc04a211d6f54754d48331fdfdffeb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dd1ad533b6327786195908452701161a94f9592
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894973"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967212"
 ---
 # <a name="using-variables-in-the-script-component"></a>Использование переменных в компоненте скрипта
   Переменные хранят значения, которые пакет и его контейнеры, задачи и обработчики событий могут использовать во время выполнения. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../integration-services-ssis-variables.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "62894973"
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;переменные&#41; SSIS](../../integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](../../use-variables-in-packages.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e78e31157f62346baf12d58c146ed99aab205408
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fcbbca7703af5e254f295240888c2fa54938763
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482653"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960714"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>Повторная активация элемента или коллекции (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно повторно активировать элемент, который был:  
@@ -62,7 +61,7 @@ ms.locfileid: "65482653"
   
 7.  В диалоговом окне подтверждения нажмите кнопку **ОК**. Будет добавлена новая транзакция со значением **Активный** в столбце **Новое значение** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отключение или удаление членов с помощью промежуточного процесса &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Удаление элемента или коллекции &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Master Data Services &#40;членов&#41;](../../2014/master-data-services/members-master-data-services.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951810"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур
   После настройки проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для использования модели развертывания проекта можно вызывать хранимые процедуры в каталоге служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы развернуть проект и выполнить пакеты. Дополнительные сведения о модели развертывания проектов см. в разделе [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -36,9 +35,9 @@ ms.locfileid: "72251313"
   
 1.  Вызовите [catalog.deploy_project (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database), чтобы развернуть проект [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], который содержит пакет, на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
-     Чтобы получить двоичное содержимое файла развертывания [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекта, для параметра * \@project_stream* используйте инструкцию SELECT с функцией OPENROWSET и поставщиком больших наборов строк. Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
+     Чтобы получить двоичное содержимое [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] файла развертывания проекта, для параметра * \@ project_stream* используйте инструкцию SELECT с функцией OPENROWSET и поставщиком больших наборов строк. Поставщик больших наборов строк позволяет считывать данные из файла. Аргумент SINGLE_BLOB для поставщика больших наборов строк возвращает содержимое файла данных в виде набора строк с одной строкой и одним столбцом типа varbinary(max). Дополнительные сведения см. в разделе [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql).  
   
-     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment. ISPAC) и хранятся в параметре * \@прожектбинари* типа varbinary (max). Значение параметра * \@прожектбинари* присваивается параметру * \@project_stream* .  
+     В следующем примере проект SSISPackages_ProjectDeployment будет развернут в папке SSIS Packages на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Двоичные данные считываются из файла проекта (SSISPackage_ProjectDeployment. ISPAC) и хранятся в параметре * \@ прожектбинари* типа varbinary (max). Значение параметра * \@ прожектбинари* присваивается параметру * \@ project_stream* .  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

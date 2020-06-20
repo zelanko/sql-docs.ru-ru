@@ -11,26 +11,25 @@ helpviewer_keywords:
 ms.assetid: 1689af50-d2b8-4aa6-8f27-cc7127157fc8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8dd4e6ce7800c3a0a9db51f6c1a4bddfe7a188c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931705"
 ---
 # <a name="validate-a-sql-server-installation"></a>Проверка установки SQL Server
-  С помощью отчета об обнаружении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно проверить, какая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и какие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлены на компьютере. В **отчете [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об обнаруженных компонентах** отображается отчет обо [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]всех [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] продуктах [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]компонентах, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)],,, и, установленных на локальном сервере. Отчет об обнаружении компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступен на странице **Средства** в центре установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  С помощью отчета об обнаружении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно проверить, какая версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и какие компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлены на компьютере. В ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отчете об обнаруженных компонентах** отображается отчет обо всех [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] продуктах и компонентах,,,, и, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] установленных на локальном сервере. Отчет об обнаружении компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступен на странице **Средства** в центре установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **Запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отчета об обнаружении компонентов:**  
   
- Запустите центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], для этого в меню **Пуск** выберите **Все программы**, **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<имя версии>** , **Средства настройки** и **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Центр установки**. Чтобы запустить отчет об обнаружении компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните **Средства** в левой области навигации **центра установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и выберите **Установленный отчет об обнаружении компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+ Запустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] центр установки, в меню **Пуск** последовательно укажите пункты **все программы**, ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<Version Name> **, **средства настройки**и выберите ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] центр установки**. Чтобы запустить отчет об обнаружении компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните **Средства** в левой области навигации **центра установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и выберите **Установленный отчет об обнаружении компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
- Отчет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] об обнаружении сохраняется в% ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\<последнем сеансе\>установки.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Отчет об обнаружении сохраняется в% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<последнем сеансе установки \> .  
   
- Его создание можно запустить из командной строки. Выполните команду "Setup. exe/Action = RunDiscovery" из командной строки. Если добавить в командную строку "/q", то пользовательский интерфейс не будет отображаться, но отчет по-прежнему будет создан в% ProgramFiles\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\Setup\\ Bootstrap\Log<последнем сеансе\>установки.  
+ Его создание можно запустить из командной строки. Выполните команду "Setup.exe/Action = RunDiscovery" из командной строки. Если добавить в командную строку "/q", то пользовательский интерфейс не будет отображаться, но отчет по-прежнему будет создан в% ProgramFiles% \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \120\Setup Bootstrap\Log \\<последнем сеансе установки \> .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и чтение файлов журналов программы установки SQL Server](view-and-read-sql-server-setup-log-files.md)  
   
   

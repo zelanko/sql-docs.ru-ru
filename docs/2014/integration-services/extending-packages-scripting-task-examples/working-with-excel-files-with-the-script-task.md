@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894788"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968454"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Работа с файлами Excel в задаче "Скрипт"
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют диспетчер соединений Excel, источник «Excel» и назначение «Excel» для работы с данными, хранящимися в электронных таблицах в формате [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Технологии, описанные в этом разделе, используют задачу «Скрипт» для получения сведений о доступных базах данных Excel (файлах книги) и таблицах (листах и именованных диапазонах). Эти образцы можно легко изменить для работы с любыми другими источниками данных на основе файлов, поддерживаемыми поставщиком OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -79,7 +78,7 @@ ms.locfileid: "62894788"
   
 #### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
-1.  Добавьте в пакет новую задачу «Скрипт» и измените ее имя на `ExcelFileExists`.  
+1.  Добавьте в пакет новую задачу «Скрипт» и измените ее имя на `ExcelFileExists` .  
   
 2.  В **редакторе задачи "Скрипт"** на вкладке **Скрипт** щелкните свойство **ReadOnlyVariables** и введите значение свойства одним из следующих способов:  
   
@@ -149,7 +148,7 @@ public class ScriptMain
   
 #### <a name="to-configure-this-script-task-example"></a>Настройка этого образца задачи «Скрипт»  
   
-1.  Добавьте в пакет новую задачу «Скрипт» и измените ее имя на `ExcelTableExists`.  
+1.  Добавьте в пакет новую задачу «Скрипт» и измените ее имя на `ExcelTableExists` .  
   
 2.  В **редакторе задачи "Скрипт"** на вкладке **Скрипт** щелкните свойство **ReadOnlyVariables** и введите значение свойства одним из следующих способов:  
   
@@ -157,7 +156,7 @@ public class ScriptMain
   
          -или-  
   
-    -   Нажмите кнопку с многоточием (**...**) рядом с полем свойства и в диалоговом окне **Выбор переменных** выберите переменные `ExcelTable` и. `ExcelFile`  
+    -   Нажмите кнопку с многоточием (**...**) рядом с полем свойства и в диалоговом окне **Выбор переменных** выберите `ExcelTable` `ExcelFile` переменные и.  
   
 3.  Щелкните свойство **ReadWriteVariables** и введите значение свойства одним из следующих способов:  
   
@@ -543,7 +542,7 @@ public class ScriptMain
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер соединений с Excel](../connection-manager/excel-connection-manager.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](../control-flow/foreach-loop-container.md)  
   

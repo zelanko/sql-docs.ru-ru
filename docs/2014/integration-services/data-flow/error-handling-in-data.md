@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56963bff1b17cc3cb1fd7f2c26bce452f238b1f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827153"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915775"
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
   Если компонент потока данных применяет преобразование к данным столбца, выделяет данные из источников или загружает данные в назначения, то может возникнуть ошибка. Ошибки часто возникают из-за непредвиденных значений данных. Например, преобразование данных не выполняется, так как столбец вместо числа содержит строку; вставка в столбец базы данных не выполняется, потому что данные имеют тип даты, а столбец содержит числовые данные; наконец, результат выражения не может быть определен, так как значение столбца равно нулю, поэтому математическая операция недопустима.  
@@ -74,7 +73,7 @@ ms.locfileid: "62827153"
   
 -   [Настройка вывода ошибок в компоненте потока данных](../configure-an-error-output-in-a-data-flow-component.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток данных](data-flow.md)   
  [Преобразование данных с помощью преобразований](transformations/transform-data-with-transformations.md)   
  [Соединение компонентов с путями](../connect-components-with-paths.md)   

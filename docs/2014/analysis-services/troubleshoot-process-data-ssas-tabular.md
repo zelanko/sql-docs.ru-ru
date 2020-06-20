@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5b45f716b3924aac37d12268ba16cc05cab1fac9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065770"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938295"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Устранение неполадок в данных процесса (табличные службы SSAS)
   В этом разделе содержатся сведения об обработке (обновлении) данных модели при создании модели с помощью [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом разделе не представлены сведения об обработке данных в моделях, развернутых на экземпляре сервера служб Analysis Services. Дополнительные сведения см. в статье [Создание скриптов для административных задач в службах Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -104,7 +103,7 @@ ms.locfileid: "66065770"
   
 -   Нельзя выбрать несколько столбцов из различных таблиц и изменить свойства этих столбцов. В каждый момент времени можно работать только с одной таблицей или представлением.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка данных &#40;табличных&#41;SSAS вручную](manually-process-data-ssas-tabular.md)   
  [Изменение существующего соединения с источником данных (табличные службы SSAS)](edit-an-existing-data-source-connection-ssas-tabular.md)  
   

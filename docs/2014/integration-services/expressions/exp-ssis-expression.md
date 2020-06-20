@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 366a938b2e90ce448cbcba2775f0eb7f327aab61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff0e4c12bbf845f7a2eec0302d56d77a24d41328
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969347"
 ---
 # <a name="exp-ssis-expression"></a>EXP (выражение служб SSIS)
   Возвращает значение экспоненты основания е числового выражения. Функция EXP дополняет действие функции LN и иногда называется обратным логарифмом.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e1e2c83f-dfad-4bb8-aa7a-09d3f69517ae
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d5439c289b5d4e71786d4c6734f158f6bba371
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048532"
 ---
 # <a name="creating-a-database-tutorial"></a>Создание базы данных (учебник)
   Как и у многих инструкций языка [!INCLUDE[tsql](../includes/tsql-md.md)] , у инструкции CREATE DATABASE имеется обязательный параметр: имя базы данных. Кроме этого, у инструкции CREATE DATABASE имеется ряд необязательных параметров, таких как расположение на диске, где требуется хранить файлы базы данных. При выполнении инструкции CREATE DATABASE без дополнительных параметров, для многих из них [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует значения по умолчанию. В этом учебнике используются лишь некоторые дополнительные синтаксические параметры.  
@@ -43,7 +42,7 @@ ms.locfileid: "68211210"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Создание таблицы (учебник)](lesson-1-2-creating-a-table.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
   

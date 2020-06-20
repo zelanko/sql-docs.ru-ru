@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9129b2290480287be6188e8bf7b2c3181b42cea1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960812"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Перекрытие разрешений моделей и элементов (службы основных данных)
   Разрешение для элемента может переопределять разрешение для объекта модели. При возникновении перекрытия действует более жесткое разрешение.  
@@ -67,7 +66,7 @@ ms.locfileid: "65482733"
   
  ![mds_conc_overlap_model_example_2](../../2014/master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как определяются разрешения &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
  [Перекрытие разрешений пользователей и групп (службы основных данных)](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   

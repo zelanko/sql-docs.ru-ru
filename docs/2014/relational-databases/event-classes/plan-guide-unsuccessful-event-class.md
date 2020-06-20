@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef9759f8-5613-4884-9257-86b609313f69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb950f7cb35e6986396da4d80ee10f03e090ae76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827390"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029026"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful, класс событий
   Класс событий Plan Guide Unsuccessful показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удалось создать план выполнения для запроса или пакета, который содержал структуру плана. Вместо этого план был скомпилирован без использования структуры плана. Событие возникает, когда выполняются следующие условия.  
@@ -42,11 +41,11 @@ ms.locfileid: "62827390"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *database* , или базы данных по умолчанию, если для указанного экземпляра инструкция USE *database* не выполнялась. [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 218.|27|Нет|  
-|EventSequence|`int`|Последовательность указанного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 218.|27|нет|  
+|EventSequence|`int`|Последовательность указанного события в запросе.|51|нет|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, вызвано ли событие системным процессом или пользовательским: 1 = системным, 0 = пользовательским.|60|Да|  
-|LoginName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя учетной записи пользователя (имя входа безопасности или учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] входа Windows в формате домен\\*имя_пользователя*).|11|Да|  
+|LoginName|`nvarchar`|Имя учетной записи пользователя (имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа безопасности или [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетные данные входа Windows в формате домен \\ *имя_пользователя*).|11|Да|  
 |LoginSid|`image`|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлениях каталога [sys.server_principals](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql) или [sys.sql_logins](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql) . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |NTDomainName|`nvarchar`|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  
@@ -60,12 +59,12 @@ ms.locfileid: "62827390"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Класс событий «успех структуры плана»](plan-guide-successful-event-class.md)   
  [Расширенные события](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys. fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

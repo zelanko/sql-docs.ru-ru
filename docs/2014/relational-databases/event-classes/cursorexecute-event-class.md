@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb8fb3ffafc001ed6bd63a10f8f1620521cc0435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030228"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute, класс событий
   Класс событий **CursorExecute** описывает события выполнения курсоров, возникающие в курсорах API. События выполнения курсоров возникают при создании и заполнении курсора компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием плана выполнения, созданного событием подготовки курсоров.  

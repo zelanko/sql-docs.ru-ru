@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02a7474999dbc644684fc4065343bc87b0aa9635
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892418"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968274"
 ---
 # <a name="developer39s-guide-integration-services"></a>Руководством для разработчиков&#39;(Integration Services)
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  

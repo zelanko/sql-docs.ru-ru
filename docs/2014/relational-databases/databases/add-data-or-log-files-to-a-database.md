@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952374"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
   В этом подразделе содержатся инструкции по добавлению файлов данных или журналов в базу данных на сервере [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62917734"
   
 6.  Выберите тип файла, данные или журнал.  
   
-7.  Выберите файловую группу, в которую следует добавить файл данных, или вариант **\<новая файловая группа>** . Журналы транзакций не могут быть помещены в файловые группы.  
+7.  Для файла данных выберите файловую группу, в которую должен быть добавлен файл, или выберите, **\<new filegroup>** чтобы создать новую файловую группу. Журналы транзакций не могут быть помещены в файловые группы.  
   
 8.  Укажите исходный размер файла. Файл данных следует делать как можно большего размера, в соответствии с максимальным предполагаемым объемом данных в базе данных.  
   
@@ -109,7 +108,7 @@ ms.locfileid: "62917734"
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере выполняется добавление в базу данных группы из двух файлов. В примере в базе данных `Test1FG1`создается файловая группа [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и добавляются два файла по 5 МБ в эту файловую группу.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере выполняется добавление в базу данных группы из двух файлов. В примере в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]создается файловая группа `Test1FG1` и добавляются два файла по 5 МБ в эту файловую группу.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase2)]  
   

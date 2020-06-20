@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59e3ababcebaf07ee953b3faedc0590db8b9bfec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289212"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952737"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Настройка почты агента SQL Server на использование компонента Database Mail
   В этом разделе описывается настройка в агенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использования компонента Database Mail для отправки уведомлений и предупреждений в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   **Перед началом работы**  
   
--   [Предварительные условия](#Prerequisites)  
+-   [Предварительные требования](#Prerequisites)  
   
 -   [Безопасность](#Security)  
   
@@ -70,11 +69,11 @@ ms.locfileid: "79289212"
 ##  <a name="follow-up-tasks"></a><a name="Follow_Up"></a> Задачи дополнительной работы  
  Следующие задачи необходимо выполнить для завершения конфигурации агента на отправку предупреждений и уведомлений.  
   
--   [Предупреждения](../../ssms/agent/alerts.md)  
+-   [Оповещения](../../ssms/agent/alerts.md)  
   
      Предупреждения могут быть настроены на уведомление оператора о возникновении в базе данных определенного события или о формировании в операционной системе определенных условий.  
   
--   [Инструкции](../../ssms/agent/operators.md)  
+-   [Операторы](../../ssms/agent/operators.md)  
   
      Операторы — это псевдонимы для людей или групп, которые могут получать электронные уведомления.  
   

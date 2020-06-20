@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ebc423dd019b5a161fd767d7b9ca8eaac8d8e335
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d0d7e930c32b1c602eee835be92c7cd69e5b0ce0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056070"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
   Возвращает массив структур SSPARAMPROPS, представляющих собой множества свойств, по одному множеству свойств SSPARAMPROPS на каждый параметр определяемого пользователем типа или XML.  
@@ -66,7 +65,7 @@ SSPARAMPROPS **prgParamProperties);
 |*cPropertySets*|Количество структур DBPROPSET в *rgPropertySets*.|  
 |*rgPropertySets*|Указатель на буфер, в который будет возвращен массив структур DBPROPSET.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ISSCommandWithParameters (OLE DB)](isscommandwithparameters-ole-db.md)  
   
   
