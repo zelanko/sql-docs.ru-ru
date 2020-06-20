@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcce5bcbab747e9febb1ab3ac8de662a8d3974a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006923"
 ---
 # <a name="sqlps-utility"></a>программа sqlps
   Программа `sqlps` запускает сеанс Windows PowerShell 2.0 с помощью поставщика [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell, а также загруженных и зарегистрированных командлетов. Можно вводить команды или скрипты PowerShell, в которых используются компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell для работы с экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и их объектами.  
@@ -57,25 +56,25 @@ ms.locfileid: "72798144"
  Указывает, что `sqlps` выходные данные служебной программы должны быть форматированы как текстовые строки (**текст**) или в сериализованном формате CLIXML (**XML**).  
   
  **-InPutFormat** { **Text** | **XML** }  
- Указывает, что входные `sqlps` данные для служебной программы форматируются как текстовые строки (**текст**) или в сериализованном формате CLIXML (**XML**).  
+ Указывает, что входные данные для `sqlps` служебной программы форматируются как текстовые строки (**текст**) или в сериализованном формате CLIXML (**XML**).  
   
  **-Command**  
- Указывает команду для запуска программой `sqlps`. `sqlps` Программа выполняет команду, а затем завершает работу, если не задан параметр **-Exit** . После параметра **-Command**не следует указывать какие-либо иные параметры, так как они будут интерпретироваться как параметры команды.  
+ Указывает команду для запуска программой `sqlps`. `sqlps`Программа выполняет команду, а затем завершает работу, если не задан параметр **-Exit** . После параметра **-Command**не следует указывать какие-либо иные параметры, так как они будут интерпретироваться как параметры команды.  
   
  **-**  
- **-Command —** указывает, что `sqlps` программа считывает входные данные из стандартного ввода.  
+ **-Command —** указывает, что `sqlps` Программа считывает входные данные из стандартного ввода.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. *Script_block* можно указать только при вызове `sqlps` служебной программы из **PowerShell** или из другого `sqlps` сеанса программы. Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
+ Указывает блок команд PowerShell для выполнения, который должен быть заключен в фигурные скобки: {}. *Script_block* можно указать только при `sqlps` вызове служебной программы из **PowerShell** или из другого `sqlps` сеанса программы. Параметр *массив_аргументов* представляет собой массив переменных PowerShell, содержащий аргументы для команд PowerShell из параметра *блок_скрипта*.  
   
  *string* [ *параметры_команды* ]  
- Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"& {*`command`*}"**. Кавычки обозначают строку, а оператор Invoke (&) заставляет `sqlps` программу выполнить команду.  
+ Указывает строку, содержащую команды PowerShell для запуска. Используйте формат **"& { *`command`* }"**. Кавычки обозначают строку, а оператор Invoke (&) заставляет `sqlps` программу выполнить команду.  
   
  [ **-?** |  **-Help** ]  
  Показывает синтаксис параметров программы `sqlps`.  
   
 ## <a name="remarks"></a>Remarks  
- `sqlps` Программа запускает среду PowerShell (PowerShell. exe) и загружает модуль [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell. Модуль, также именуемый `sqlps`, загружает и регистрирует [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] следующие оснастки PowerShell:  
+ `sqlps`Программа запускает среду PowerShell (PowerShell.exe) и загружает [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] модуль PowerShell. Модуль, также именуемый `sqlps` , загружает и регистрирует следующие [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оснастки PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
@@ -107,7 +106,7 @@ ms.locfileid: "72798144"
 sqlps -NoLogo  
 ```  
   
-### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>Б) Запуск скрипта SQL Server PowerShell из командной строки
+### <a name="b-run-a-sql-server-powershell-script-from-the-command-prompt"></a>Б. Запуск скрипта SQL Server PowerShell из командной строки
   
 ```cmd
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  

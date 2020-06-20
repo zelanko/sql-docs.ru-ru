@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3eaed80e-6f55-42ea-a964-aca31c09d055
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5256795677f4e8ce4249737d25d3ded1c4cd69c8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62792094"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937345"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Добавление решений и проектов в систему управления версиями
   При добавлении решения в систему управления версиями это решение становится частью динамического архива истории версий, созданного и поддерживаемого поставщиком управления версиями. Каждый раз, когда кто-либо возвращает новую версию решения, она становится частью архива, доступной другим пользователям системы управления версиями.  
@@ -34,7 +33,7 @@ ms.locfileid: "62792094"
 |[Добавление решений в систему управления версиями](../../2014/database-engine/add-solutions-to-source-control.md)|Описание типов проектов, которые можно добавлять в систему управления версиями, а также инструкции по добавлению решения в систему.|  
 |[Добавление проектов в систему управления версиями](../../2014/database-engine/add-projects-to-source-control.md)|Инструкции по добавлению проекта к решению.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Открытие решений и проектов из системы управления версиями](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)  
   
   

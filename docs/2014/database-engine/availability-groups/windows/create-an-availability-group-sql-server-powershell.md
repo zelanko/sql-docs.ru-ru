@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be84fd9d747ac2b6699c2e1008836c49ead1b059
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228797"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936935"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Создание группы доступности (SQL Server PowerShell)
   В данном разделе описывается использование командлетов PowerShell для создания и настройки группы доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, а также набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
@@ -51,7 +50,7 @@ ms.locfileid: "75228797"
 |Подготовьте базу данных-получатель|`Backup-SqlDatabase` и `Restore-SqlDatabase`|Создайте резервные копии на экземпляре сервера, размещающем первичную реплику.<br /><br /> Восстановите резервные копии на каждом из тех экземпляров сервера, на которых размещена вторичная реплика, при помощи параметра восстановления `NoRecovery`. Если пути к файлам различны на компьютерах, на которых размещена основная реплика и целевая вторичная реплика, также следует использовать параметр восстановления `RelocateFile`.|  
 |Запуск синхронизации данных с помощью присоединения каждой базы данных-получателя к группе доступности|`Add-SqlAvailabilityDatabase`|Выполнить на каждом экземпляре сервера, размещающем вторичную реплику.|  
   
- **<sup>*</sup>** Чтобы выполнить указанную задачу, измените каталог (`cd`) на указанный экземпляр или экземпляры сервера.  
+ **<sup>*</sup>** Чтобы выполнить указанную задачу, измените каталог ( `cd` ) на указанный экземпляр или экземпляры сервера.  
   
 ###  <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a><a name="PsProviderLinks"></a>Настройка и использование поставщика SQL Server PowerShell  
   
@@ -225,7 +224,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Презентации**  
+-   **Видеоролики**  
   
      [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

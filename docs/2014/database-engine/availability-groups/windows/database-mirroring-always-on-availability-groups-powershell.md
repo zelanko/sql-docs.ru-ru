@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56058ff8aa72d2471381dd87fb25a3b68356ed36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782992"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936885"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Создайте конечную точку зеркального отображения базы данных для групп доступности AlwaysOn (SQL Server PowerShell)
   В этом разделе описывается создание конечной точки зеркального отображения базы данных для использования [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью PowerShell.  
@@ -48,7 +47,7 @@ ms.locfileid: "72782992"
 2.  Создайте конечную точку с помощью командлета `New-SqlHadrEndpoint`, а затем с помощью командлета `Set-SqlHadrEndpoint` запустите эту конечную точку.  
   
 ###  <a name="example-powershell"></a><a name="PShellExample"></a> Пример (PowerShell)  
- Следующие команды PowerShell создают конечную точку зеркального отображения базы данных на экземпляре SQL Server (*экземпляре**компьютера*\\). Эта конечная точка использует порт 5022.  
+ Следующие команды PowerShell создают конечную точку зеркального отображения базы данных на экземпляре SQL Server*Machine*( \\ *экземпляре*компьютера). Эта конечная точка использует порт 5022.  
   
 > [!IMPORTANT]  
 >  Этот пример работает только на экземпляре сервера, на котором в данный момент отсутствует конечная точка зеркального отображения базы данных.  

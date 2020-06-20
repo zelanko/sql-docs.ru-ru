@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936555"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Репликация, отслеживание изменений, изменение данных и группы доступности AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
@@ -109,7 +108,7 @@ ms.locfileid: "62814060"
     ```  
   
     > [!NOTE]  
-    >  Рекомендуется создавать задания для всех возможных целей отработки отказа и отключить их, пока одна из реплик доступности на узле не станет новой первичной репликой. Задания CDC, запущенные в старой базе данных-источнике, также должны быть отключены, когда локальная база данных становится базой данных-получателем. Чтобы отключить и включить задания, используйте *@enabled* параметр [sp_update_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Дополнительные сведения о создании заданий CDC см. в разделе [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
+    >  Рекомендуется создавать задания для всех возможных целей отработки отказа и отключить их, пока одна из реплик доступности на узле не станет новой первичной репликой. Задания CDC, запущенные в старой базе данных-источнике, также должны быть отключены, когда локальная база данных становится базой данных-получателем. Чтобы отключить и включить задания, используйте *@enabled* параметр [Sp_update_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Дополнительные сведения о создании заданий CDC см. в разделе [sys.sp_cdc_add_job (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql).  
   
 -   **Добавление ролей CDC для первичной реплики базы данных AlwaysOn**  
   
@@ -204,11 +203,11 @@ ms.locfileid: "62814060"
   
 |||||  
 |-|-|-|-|  
-||**Издатель**|**Распространитель** <sup>3</sup>|**Подписчик**|  
-|**Транзакционную**|Да<sup>1</sup>|Нет|Да<sup>2</sup>|  
-|**P2P**|Нет|Нет|Нет|  
-|**AutoMerge**|Да|Нет|Да<sup>2</sup>|  
-|**Моментальный снимок**|Да|Нет|Да<sup>2</sup>|  
+||**Издатель**|**Распространитель** <sup>3</sup>|**Subscriber**|  
+|**Транзакционную**|Да<sup>1</sup>|нет|Да<sup>2</sup>|  
+|**P2P**|нет|нет|нет|  
+|**Объединить**|Да|нет|Да<sup>2</sup>|  
+|**Моментальный снимок**|Да|нет|Да<sup>2</sup>|  
   
  <sup>1</sup> не включает поддержку двунаправленной и обратной репликации транзакций.  
   
@@ -241,7 +240,7 @@ ms.locfileid: "62814060"
   
 -   [Работа с информацией об изменениях (SQL Server)](../../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
- **Отслеживание изменений**  
+ **Change tracking**  
   
 -   [Включение и отключение отслеживания изменений (SQL Server)](../../../relational-databases/track-changes/enable-and-disable-change-tracking-sql-server.md)  
   
@@ -249,7 +248,7 @@ ms.locfileid: "62814060"
   
 -   [Работа с отслеживанием изменений (SQL Server)](../../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подписчики репликации и группы доступности AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2dec7e0b-99cd-4185-8334-111795e52f45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbdd231bb7785eda6bca4771579916b7e3cc7a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc4aa8255549b2010951cc0a665c23ac2d3b02c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040475"
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Работа с диаграммами баз данных (визуальные инструменты для баз данных)
   С помощью конструктора баз данных можно создать графическую диаграмму базы данных. Следующие подразделы описывают основы использования конструктора баз данных для работы с диаграммами базы данных.  

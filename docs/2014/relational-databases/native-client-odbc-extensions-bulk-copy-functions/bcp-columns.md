@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d634f393b18124e6ae0db753def2c31860f91a74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019640"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   Задает общее количество столбцов в файле пользователя, используемых для массового копирования на сервер или с сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) можно использовать вместо bcp_columns и [bcp_colfmt](bcp-colfmt.md).  
@@ -59,7 +58,7 @@ nColumns
   
  После вызова `bcp_columns` необходимо вызвать [bcp_colfmt](bcp-colfmt.md)для каждого столбца в файле пользователя, чтобы полностью определить пользовательский формат файла.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

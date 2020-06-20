@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4176ee1dff35a0f9eaeaddf1b35155f76de526ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843670"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929475"
 ---
 # <a name="retrieve-files"></a>Получение файлов
   После открытия проекта, контролируемого системой управления версиями, среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] позволяет загрузить локальную копию файлов проекта из хранилища системы управления версиями в локальный каталог проекта.  
@@ -36,7 +35,7 @@ ms.locfileid: "62843670"
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>Получение последней версии всех файлов проекта  
   
-1.  В обозревателе решений выберите проект.  
+1.  Выберите проект в Обозревателе решений.  
   
 2.  В меню **файл** укажите пункт **система управления версиями**, а затем выберите пункт **получить последнюю версию (рекурсивно)**.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62843670"
   
 3.  В диалоговом окне **Получение** нажмите кнопку **ОК**. Если решение или проект выбрано в обозревателе решений, можно снять флажки, расположенные рядом с элементами, которые не нужно получать.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Получение &#40;системы управления версиями»&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Просмотр журнала проекта](../../2014/database-engine/view-project-history.md)   

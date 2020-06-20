@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a514822a-91f1-4aca-9175-2b96cff29700
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 563cea2a47ce5b68defdf6018b2386f7643dc0fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4fc9ec3079847c231e331063fda6d78bb0255983
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62654882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059962"
 ---
 # <a name="enabled-property-servernetworkprotocol-class"></a>Свойство Enabled (класс ServerNetworkProtocol)
   Возвращает логическое свойство, указывающее, включен ли сетевой протокол сервера.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

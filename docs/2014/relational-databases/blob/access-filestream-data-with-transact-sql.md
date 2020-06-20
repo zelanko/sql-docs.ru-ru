@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c3157ad4e9f192a2b108b82611e844a9f735fd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955917"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Доступ к данным FILESTREAM с помощью Transact-SQL
   В этом разделе описаны способы использования инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE и DELETE для управления данными FILESTREAM.  
@@ -70,8 +69,8 @@ ms.locfileid: "66010440"
 > [!NOTE]  
 >  Базовые файлы удаляются сборщиком мусора FILESTREAM.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение и настройка FILESTREAM](enable-and-configure-filestream.md)   
- [Избегание конфликтов в операциях баз данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
+ [Избегайте конфликтов с операциями базы данных в приложениях FILESTREAM](avoid-conflicts-with-database-operations-in-filestream-applications.md)  
   
   

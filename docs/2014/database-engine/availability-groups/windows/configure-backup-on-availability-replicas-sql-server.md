@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91a781d957eb2f5a81d323fc3c65c93e34945c12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782998"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936995"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Настройка резервного копирования в репликах доступности (SQL Server)
   В этом разделе описывается настройка резервной копии вторичной реплики для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -116,7 +115,7 @@ ms.locfileid: "72782998"
   
 2.  При необходимости настройте приоритет каждой реплики доступности, которую необходимо добавить или изменить. Этот приоритет используется экземпляром сервера, на котором размещается первичная реплика, при принятии решения о том, какая реплика должна обработать запрос автоматического резервного копирования для базы данных в группе доступности (выбирается реплика с максимальным приоритетом). Значением приоритета может быть любое целое число от 0 до 100 включительно. Приоритет 0 указывает, что реплика не должна считаться кандидатом на обработку запросов резервного копирования.  Значение по умолчанию — 50.  
   
-     При добавлении реплики доступности в группу доступности воспользуйтесь командлетом `New-SqlAvailabilityReplica`. При изменении существующей реплики доступности воспользуйтесь командлетом `Set-SqlAvailabilityReplica`. В любом случае укажите `BackupPriority`параметр *n* , где *n* — значение от 0 до 100.  
+     При добавлении реплики доступности в группу доступности воспользуйтесь командлетом `New-SqlAvailabilityReplica`. При изменении существующей реплики доступности воспользуйтесь командлетом `Set-SqlAvailabilityReplica`. В любом случае укажите `BackupPriority` параметр *n* , где *n* — значение от 0 до 100.  
   
      Например, следующая команда присваивает приоритету резервного копирования реплики доступности `MyReplica` значение `60`.  
   
@@ -183,7 +182,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
   
 |Представление|Сведения|Соответствующие столбцы|  
 |----------|-----------------|----------------------|  
-|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Является ли текущая реплика предпочитаемой репликой резервного копирования?|неприменимо.|  
+|[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|Является ли текущая реплика предпочитаемой репликой резервного копирования?|Неприменимо.|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|параметр автоматического резервного копирования|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  
 |[sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)|Приоритет резервного копирования данной реплики доступности|**backup_priority**|  
 |[sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)|Является реплика локальной по отношению к экземпляру сервера?<br /><br /> Текущая роль.<br /><br /> Состояние работы<br /><br /> Состояние подключения<br /><br /> Исправность синхронизации реплики доступности|**is_local**<br /><br /> **role**, **role_desc**<br /><br /> **operational_state**, **operational_state_desc**<br /><br /> **connected_state**, **connected_state_desc**<br /><br /> **synchronization_health**, **synchronization_health_desc**|  

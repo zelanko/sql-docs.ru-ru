@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b9dd83baa9139af4ea46940852e0b357f51e5a12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6d74eb71e5a339dd99675262f39b491e35afeef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059939"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>Свойство SystemStore (класс SecurityCertificate)
   Возвращает системное хранилище для сертификата безопасности.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

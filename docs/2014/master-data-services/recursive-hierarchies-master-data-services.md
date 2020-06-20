@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9408c6ea-d9c4-4a0b-8a1b-1457fb6944af
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c28242daebfdaf01a457432027e68be59ae26f29
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b4b03c3e9e7e22655782646afcc31f680f13998
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175960"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971124"
 ---
 # <a name="recursive-hierarchies-master-data-services"></a>Рекурсивные иерархии (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]рекурсивная иерархия — это производная иерархия, которая содержит рекурсивную связь. Рекурсивная связь возникает, когда у сущности есть атрибут, который базируется на самой сущности, на основе домена.

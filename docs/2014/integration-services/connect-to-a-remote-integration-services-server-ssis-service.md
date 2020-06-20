@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b9fa3f54b7b16b1fd397bfe80c95d08e39289eb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060416"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921375"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Подключение к удаленному серверу служб Integration Services (службы SSIS Service)
     
@@ -105,7 +104,7 @@ ms.locfileid: "66060416"
 
 Дополнительные сведения см. в разделе [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Обеспечение междоменной работы Kerberos и делегирования с помощью пакета SSIS).
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка параметров брандмауэра Windows для доступа к службам SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

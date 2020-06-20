@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d11fc83612e8a21a574b3639d912eb93b732042
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938953"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053275"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR, класс событий
   События класса **Audit Database Scope GDR** возникают всякий раз, когда инструкция GRANT, REVOKE или DENY выполняется применительно к разрешению инструкции любым пользователем в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для действий, связанных только с базой данных, таких как предоставление разрешений на доступ к базе данных.  

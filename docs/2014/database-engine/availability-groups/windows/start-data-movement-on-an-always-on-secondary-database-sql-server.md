@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1ab796d9e48292dfa3426cd102faadecdabb2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936375"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)
   В этом разделе приведены сведения о запуске синхронизации данных после добавления базы данных в группу доступности AlwaysOn. Для каждой новой первичной реплики необходимо подготовить базы данных-получатели на экземплярах сервера, размещающих вторичные реплики. Затем каждую из этих баз данных-получателей необходимо вручную присоединить к группе доступности.  
@@ -31,7 +30,7 @@ ms.locfileid: "62813562"
   
     -   Вручную восстановить последнюю резервную копию базы данных-источника с помощью инструкции RESTORE WITH NORECOVERY, а затем восстановить все последовательные резервные копии журнала с помощью инструкции RESTORE WITH NORECOVERY. Выполните эту последовательность восстановления на каждом экземпляре сервера, на котором расположена вторичная реплика этой группы доступности.  
   
-         **Дополнительные сведения:**  
+         **Дополнительные сведения**  
   
          [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62813562"
         > [!NOTE]  
         >  После создания всех баз данных-получателей для группы доступности, при необходимости проведения резервного копирования на вторичных репликах, нужно изменить параметры автоматического резервного копирования для группы доступности.  
   
-         **Дополнительные сведения:**  
+         **Дополнительные сведения**  
   
          [Необходимые условия для перехода с доставки журналов на группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62813562"
   
 2.  Как можно скорее присоедините все новые подготовленные базы данных-получатели к группе доступности.  
   
-     **Дополнительные сведения:**  
+     **Дополнительные сведения**  
   
      [Присоединение базы данных-получателя к группе доступности (SQL Server)](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62813562"
   
 -   [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6891bba64da82a1a83f5ea4a44bf3fa1f52ddd67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478972"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971165"
 ---
 # <a name="notifications-master-data-services"></a>Уведомления (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно настроить для отправки уведомлений по электронной почте при сбое проверки бизнес-правил или изменении состояния версии модели.  
   
 ## <a name="how-notifications-are-sent"></a>Способ отправки уведомлений  
- Уведомления настраиваются в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Уведомления отправляют сообщения электронной почты с помощью Database Mail на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] , где [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] размещается база данных. Дополнительные сведения о компоненте Database Mail см. в разделе [Объекты конфигурации компонента Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Уведомления настраиваются в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Уведомления отправляют сообщения электронной почты с помощью Database Mail на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] , где размещается [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] база данных. Дополнительные сведения о компоненте Database Mail см. в разделе [Объекты конфигурации компонента Database Mail](../relational-databases/database-mail/database-mail-configuration-objects.md) электронной документации по [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="when-notifications-are-sent"></a>Время отправки уведомлений  
  После настройки уведомлений автоматические уведомления могут отправляться по электронной почте в следующие экземпляры.  

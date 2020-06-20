@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937105"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Свойства группы доступности и создание группы доступности (страница "Общие")
    Приведенные в этом разделе сведения относятся к вкладке **Общие** диалоговых окон **Создание группы доступности** и **Свойства группы доступности**.  Диалоговое окно **Создание группы доступности** позволяет создать новую группу доступности, не прибегая к использованию [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. Диалоговое окно **Свойства группы доступности** позволяет просматривать и изменять конфигурацию существующей группы доступности.  
@@ -36,7 +35,7 @@ ms.locfileid: "83858928"
  **Имя базы данных**  
  Имя базы данных, добавленной к группе доступности.  
   
- **Добавить**  
+ **Добавление**  
  Нажмите, чтобы добавить новую базу данных в группу доступности.  
   
  **Remove**  
@@ -103,7 +102,7 @@ ms.locfileid: "83858928"
  **URL-адрес конечной точки**  
  URL-адрес конечной точки. Сведения о формате этих URL-адресов см. в разделе [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Добавить**  
+ **Добавление**  
  Выберите, чтобы добавить новую вторичную реплику в группу доступности.  
   
  **Remove**  

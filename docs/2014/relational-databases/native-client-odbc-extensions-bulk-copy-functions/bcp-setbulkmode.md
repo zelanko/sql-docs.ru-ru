@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705275"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019326"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode позволяет указать формат столбца в операции массового копирования, устанавливая все атрибуты столбца в одном вызове функции.  
@@ -79,10 +78,10 @@ cbRow
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE и для bcp_setcolfmt со `BCP_FMT_TYPE` свойством, имеющим значение `SQLCHARACTER` .|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и bcp_setcolfmt со `BCP_FMT_TYPE` свойством, имеющим значение `SQLNCHAR` .|  
-|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру-N в BCP. EXE и bcp_setcolfmt со `BCP_FMT_TYPE` свойством, имеющим значение, `SQLNCHAR` Если тип столбца является строкой (по умолчанию, если строка не является строкой).|  
-|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру-n в BCP. EXE и bcp_setcolfmt со `BCP_FMT_TYPE` свойством, имеющим значение по умолчанию.|  
+|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP.EXE и для bcp_setcolfmt со `BCP_FMT_TYPE` свойством, для которого задано значение `SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP.EXE и bcp_setcolfmt со `BCP_FMT_TYPE` свойством, для которого задано значение `SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру-N в BCP.EXE и bcp_setcolfmt свойство со `BCP_FMT_TYPE` значением, `SQLNCHAR` Если тип столбца является строкой (по умолчанию, если строка не является строкой).|  
+|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру-n в BCP.EXE и bcp_setcolfmt `BCP_FMT_TYPE` свойству задано значение по умолчанию.|  
   
  Не следует использовать bcp_setbulkmode с последовательностью вызовов функций, включающих bcp_setcolfmt, bcp_control и bcp_readfmt. Например, не следует вызывать bcp_control (БКПТЕКСТФИЛЕ) и bcp_setbulkmode.  
   
@@ -295,7 +294,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

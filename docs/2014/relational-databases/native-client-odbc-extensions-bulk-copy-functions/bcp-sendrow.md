@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9278a388fa6beb52dc747d310bea4a2ce32c600e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c45e87fdd8e00e9456718c4c9c8160c22bac03a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019380"
 ---
 # <a name="bcp_sendrow"></a>bcp_sendrow
   Отправляет строку данных из переменных программы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +56,7 @@ hdbc
   
  Дополнительные сведения о критическом изменении в разделе Выполнение операций с массовым копированием, начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , см. в статье [осуществление операции копирования &#40;&#41;ODBC ](../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

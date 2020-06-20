@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1a628035fa7469441c670e20dbbf98cdbf8f8a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065262"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937315"
 ---
 # <a name="assembly-load-event-class"></a>Класс событий Assembly Load
   Класс событий **Assembly Load** происходит при выполнении запроса на загрузку сборки.  
@@ -34,11 +33,11 @@ ms.locfileid: "66065262"
 |**ClientProcessID**|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|**int**|Идентификатор базы данных, указанной в инструкции USE database, или базы данных по умолчанию, если для данного экземпляра инструкция USE database не выполнялась. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|**EventSequence**|**int**|Последовательность данного события в запросе.|51|Нет|  
+|**EventSequence**|**int**|Последовательность данного события в запросе.|51|нет|  
 |**Идентификатор**|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**LoginName**|**nvarchar**|Имя входа пользователя (либо защищенное имя входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , либо учетные данные входа [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows в формате «ДОМЕН\имя_пользователя»).|11|Да|  
-|**логинсид**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
+|**логинсид**|**изображение**|Идентификатор безопасности вошедшего в систему пользователя. Эти сведения можно найти в представлении каталога **sys.server_principals** . Значение идентификатора безопасности уникально для каждого имени входа на сервере.|41|Да|  
 |**NTDomainName**|**nvarchar**|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |**NTUserName**|**nvarchar**|Имя пользователя Windows.|6|Да|  
 |**ИД**|**int**|Идентификатор сборки.|22|Да|  
@@ -51,7 +50,7 @@ ms.locfileid: "66065262"
 |**Success**|**int**|Указывает, завершилась ли загрузка сборки успешно (1) или неуспешно (0).|23|Да|  
 |**TextData**|**ntext**|«Assembly Load Succeeded» в случае успешной загрузки; иначе — «Assembly Load Failed».|1|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../relational-databases/extended-events/extended-events.md)   
  [Сборки (компонент Database Engine)](../relational-databases/clr-integration/assemblies-database-engine.md)  
   

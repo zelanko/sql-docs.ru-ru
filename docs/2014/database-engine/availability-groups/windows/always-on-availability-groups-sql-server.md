@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937235"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
   Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Поддержка [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], добавленная с версии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , позволяет максимально увеличить доступность набора пользовательских баз данных для предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс. Группа доступности поддерживает набор первичных баз данных чтения и записи и от одного до четырех наборов соответствующих вторичных баз данных. Кроме того, базы данных-получатели можно сделать доступными только для чтения или для некоторых операций резервного копирования.  
@@ -29,7 +28,7 @@ ms.locfileid: "75229011"
  Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Переход на другой ресурс не вызывается проблемами баз данных, например обозначением базы данных как подозрительной в связи с потерей файла данных, удалением базы данных или повреждением журнала транзакций.  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>Среди  
+##  <a name="benefits"></a><a name="Benefits"></a> Преимущества  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предоставляет широкий набор параметров, позволяющих повысить уровень доступности баз данных и улучшить использование ресурсов. Ключевыми компонентами являются:  
   
 -   Поддержка до девяти реплик доступности. *Реплика доступности* является выделенным экземпляром группы доступности, который размещается на конкретном экземпляре SQL Server и поддерживает локальную копию каждой базы данных доступности, которая принадлежит группе доступности. Каждая группа доступности поддерживает одну первичную реплику и до восьми вторичных реплик. Дополнительные сведения см. в статье [Обзор групп доступности AlwaysOn (SQL Server)](overview-of-always-on-availability-groups-sql-server.md).  
@@ -124,9 +123,9 @@ ms.locfileid: "75229011"
   
 -   [Моментальные снимки базы данных](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
--   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
+-   [ПОТОКА](../../../relational-databases/blob/filestream-sql-server.md)  
   
--   [FileTable](../../../relational-databases/blob/filetables-sql-server.md)  
+-   [Провероч](../../../relational-databases/blob/filetables-sql-server.md)  
   
 -   [Доставка журналов](../../log-shipping/about-log-shipping-sql-server.md)  
   
@@ -141,7 +140,7 @@ ms.locfileid: "75229011"
 -   [службы Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Дополнительные сведения об ограничениях и ограничениях использования других функций [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]с см [. в разделе Always on группы доступности: взаимодействие. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
+>  Дополнительные сведения об ограничениях и ограничениях использования других функций с [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] см [. в разделе Always on группы доступности: взаимодействие. SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
@@ -155,9 +154,9 @@ ms.locfileid: "75229011"
   
      [Блоги инженеров CSS SQL Server](https://blogs.msdn.com/b/psssql/)  
   
--   **Презентации**  
+-   **Видеоролики**  
   
-     [Microsoft SQL Server с рабочим названием Denali AlwaysOn, часть 1. Вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server с рабочим названием Denali Always On, часть 1: вводные сведения о решении следующего поколения по обеспечению высокого уровня доступности](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server серии Always On с кодовым названием «Denali», часть 2. Создание критически важных решений с высоким уровнем доступности с помощью AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

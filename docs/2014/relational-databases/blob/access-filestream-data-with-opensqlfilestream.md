@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d8205653-93dd-4599-8cdf-f9199074025f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74dad8dc9795a30637a9ab08c56ce8d0940b6f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a1416c0104e07c7bd228a723192ecb35bbe9216
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010477"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955994"
 ---
 # <a name="access-filestream-data-with-opensqlfilestream"></a>Доступ к данным FILESTREAM с OpenSqlFilestream
   API OpenSqlFilestream получает файловый обработчик, совместимый с Win32, для большого двоичного объекта FILESTREAM (BLOB), хранящегося в файловой системе. Дескриптор может быть передан в любой из следующих API-интерфейсов Win32: [ReadFile](https://go.microsoft.com/fwlink/?LinkId=86422), [WriteFile](https://go.microsoft.com/fwlink/?LinkId=86423), [TransmitFile](https://go.microsoft.com/fwlink/?LinkId=86424), [SetFilePointer](https://go.microsoft.com/fwlink/?LinkId=86425), [SetEndOfFile](https://go.microsoft.com/fwlink/?LinkId=86426)или [FlushFileBuffers](https://go.microsoft.com/fwlink/?LinkId=86427). При передаче этого дескриптора любому другому API Win32 будет возвращена ошибка ERROR_ACCESS_DENIED. Дескриптор следует закрыть, передав его API-интерфейсу Win32 [CloseHandle](https://go.microsoft.com/fwlink/?LinkId=86428) перед фиксацией или откатом транзакции. Если дескриптор не будет закрыт, то это вызовет утечку ресурсов со стороны сервера.  
@@ -48,7 +47,7 @@ ULONGOpenOptions,LPBYTEFilestreamTransactionContext,SIZE_TFilestreamTransactionC
   
 #### <a name="parameters"></a>Параметры  
  *FilestreamPath*  
- окне `nvarchar(max)` Путь, возвращаемый функцией [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) . PathName можно вызывать только из контекста учетной записи, которая имеет разрешения SELECT или UPDATE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы FILESTREAM и столбца.  
+ окне `nvarchar(max)`Путь, возвращаемый функцией [PathName](/sql/relational-databases/system-functions/pathname-transact-sql) . PathName можно вызывать только из контекста учетной записи, которая имеет разрешения SELECT или UPDATE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для таблицы FILESTREAM и столбца.  
   
  *DesiredAccess*  
  [in] Задает режим, используемый при доступе к данным FILESTREAM BLOB. Это значение передается функции [DeviceIoControl Function](https://go.microsoft.com/fwlink/?LinkId=105527).  

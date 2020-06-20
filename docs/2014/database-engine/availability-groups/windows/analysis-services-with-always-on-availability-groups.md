@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889227"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937165"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
   Группа доступности AlwaysOn — это предопределенная коллекция реляционных баз данных SQL Server, которые при отработке отказа все вместе переключаются на другой ресурс, если создаются условия для отработки отказа в любой из них. Запросы перенаправляются в зеркальную базу данных на другом экземпляре в той же группе доступности. Если группы доступности используются для обеспечения высокой доступности, можно использовать базу данных в этой группе в качестве источника данных в табличном или многомерном решении служб Analysis Services. Если используется база данных доступности, все следующие операции службы Analysis Services работают, как ожидалось: обработка или импорт данных, прямые запросы к базе данных (с использованием хранилища ROLAP или режима DirectQuery) и обратная запись.  
@@ -217,7 +216,7 @@ ms.locfileid: "68889227"
  Для этого создайте дополнительный источник данных в модели служб Analysis Services для поддержки подключения для чтения и записи. Создавая вторичный источник данных, используйте то же имя прослушивателя и ту же базу данных, которые вы указали в подключении только для чтения, но не меняйте **Назначение приложения**, а оставьте значение по умолчанию, поддерживающее подключения READWRITE. Теперь можно добавить в представление источника данных новые таблицы фактов или измерений, основанные на источнике данных для чтения и записи, а затем включите обратную запись для новых таблиц.  
   
 ## <a name="see-also"></a>См. также:  
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Политики AlwaysOn для проблем в работе с группы доступности AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Создание источника данных &#40;многомерных&#41;SSAS](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a494af168a8f5572bafe93f8fb47b22a954a19
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228794"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936918"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Создание группы доступности (Transact-SQL)
   В данном разделе описывается использование [!INCLUDE[tsql](../../../includes/tsql-md.md)] для создания и настройки группы доступности на основе экземпляров [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , на которых включена функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
@@ -101,7 +100,7 @@ ms.locfileid: "75228794"
         GO  
         ```  
   
-    2.  В следующем примере кода создается полная резервная копия баз данных *MyDb1* и *MyDb2*. В этом примере кода используется вымышленная общая папка \\ \\резервных копий, *файлового сервера*\\*SQLbackups*.  
+    2.  В следующем примере кода создается полная резервная копия баз данных *MyDb1* и *MyDb2*. В этом примере кода используется вымышленная общая папка резервных копий, \\ \\ *файлового сервера* \\ *SQLbackups*.  
   
         ```sql
         -- Backup sample databases:  

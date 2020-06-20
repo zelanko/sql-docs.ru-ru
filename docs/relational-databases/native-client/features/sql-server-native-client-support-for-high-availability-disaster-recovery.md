@@ -1,5 +1,6 @@
 ---
 title: Высокий уровень доступности, восстановление
+description: Узнайте о поддержке SQL Server Native Client группы доступности Always On, которая была добавлена в SQL Server 2012.
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fb3d64842c1204706b9bb89f6f1a99bfb8ae6a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949384"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Поддержка высокого уровня доступности и аварийного восстановления собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81388434"
   
 -   При установлении соединения с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], настроенным на работу с более чем 64 IP-адресами, будет возникать ошибка соединения.  
   
--   Поведение приложения, использующего свойство соединения **MultiSubnetFailover** , не зависит от типа проверки подлинности: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверка подлинности, проверка подлинности Kerberos или проверка подлинности Windows.  
+-   Поведение приложения, использующего свойство соединения **MultiSubnetFailover** , не зависит от типа проверки подлинности: проверка подлинности, проверка подлинности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos или проверка подлинности Windows.  
   
 -   Значение **loginTimeout** можно увеличить с учетом времени отработки отказа, это уменьшит количество попыток повторного соединения в приложении.  
   
@@ -92,7 +93,7 @@ ms.locfileid: "81388434"
   
  Приложение собственного клиента ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для создания соединения может использовать одну из трех функций.  
   
-|Компонент|Описание|  
+|Функция|Описание|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|Список серверов, возвращаемый **SQLBrowseConnect**, не содержит имен виртуальных сетей. Будет отображен только список серверов без указания того, является ли сервер отдельным, сервером-источником или сервером-получателем в отказоустойчивом кластере, в котором содержатся два экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], включенные для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], или более. При возникновении ошибки подключения к серверу причина может заключаться в несоответствии параметра **ApplicationIntent** конфигурации сервера.<br /><br /> Поскольку **SQLBrowseConnect** не распознает серверы в отказоустойчивых кластерах, содержащих два или более экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые были включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], **SQLBrowseConnect** не учитывает ключевое слово строки подключения **MultiSubnetFailover**.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLConnect** поддерживает как **ApplicationIntent** , так и **MultiSubnetFailover** через имя источника данных (DSN) или свойства соединения.|  
@@ -134,7 +135,7 @@ ms.locfileid: "81388434"
  После установки неявных соединений эти подключения будут использовать настройку назначения приложения для родительского подключения. Аналогичным образом несколько сеансов, созданных с использованием одного источника данных, будут наследовать настройки назначения приложения от источника данных.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client функции](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Использование ключевых слов строки подключения с собственным клиентом SQL Server](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

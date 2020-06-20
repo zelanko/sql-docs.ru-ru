@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a38c151663dc76921e791b614922a8b52ecfadab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059990"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Метод SetCurrentCertificate (класс SecurityCertificate)
   Задает текущий сертификат безопасности.  
@@ -55,7 +54,7 @@ SHA , SQLInstance
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

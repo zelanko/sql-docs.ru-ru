@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94834ef4be77aed897707d011799f2b9f877e41c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f4e96f2a7fe017aadaeb71ed05f546dabfa6540
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938721"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053313"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Audit Database Principal Impersonation, класс событий
-  Класс событий **Audit Database Principal Impersonation** возникает, если используется олицетворение в области базы данных, например с помощью инструкции EXECUTE AS \<*пользователь*> или SETUSER.  
+  Класс событий **Audit Database Principal Impersonation** возникает, когда в области базы данных происходит олицетворение, например EXECUTE AS \<*user*> или SETUSER.  
   
 ## <a name="audit-database-principal-impersonation-event-class-data-columns"></a>Столбцы данных класса событий Audit Database Principal Impersonation  
   

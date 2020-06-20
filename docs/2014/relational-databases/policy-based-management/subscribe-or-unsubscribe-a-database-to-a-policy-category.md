@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4ca6f804352b57b30b42012da93e0d031be8d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066643"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Подписка базы данных на категорию политики или отмена подписки
   В этом разделе описывается подписка и отмена подписки базы данных на категорию политики в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +55,7 @@ ms.locfileid: "68212131"
      Развернуть столбец  
      Щелкните, чтобы развернуть категорию политики. Перечисляет все политики, включенные в категорию.  
   
-     **Имя**  
+     **имя**;  
      Имя категории политики.  
   
      **Подписаны**  
@@ -65,7 +64,7 @@ ms.locfileid: "68212131"
      **Политика**  
      Если группы политик развернуты, отображаются политики в категории политики.  
   
-     **Включен**  
+     **Enabled**  
      Указывает, включены или выключены политики.  
   
      **Режим выполнения**  

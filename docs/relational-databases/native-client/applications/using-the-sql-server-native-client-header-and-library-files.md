@@ -1,5 +1,6 @@
 ---
 title: Файлы заголовков и библиотек
+description: Узнайте, как использовать файлы заголовка и библиотеки SQL Server Native Client для разработки приложения. Скопируйте необходимые файлы в среду разработки.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e4b7c27ed32beaa1139300fdb83c4fb79583df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56a17cf83d4d303f786907d9313f134664f12178
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388469"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949550"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Использование файлов заголовков и библиотек собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,6 +104,6 @@ include "sqlncli.h";
  Дополнительные сведения см. в разделе [Performing Bulk Copy Operations](../../../relational-databases/native-client/features/performing-bulk-copy-operations.md) (Выполнение операций массового копирования).  
   
 ## <a name="see-also"></a>См. также:  
- [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Построение приложений с использованием SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

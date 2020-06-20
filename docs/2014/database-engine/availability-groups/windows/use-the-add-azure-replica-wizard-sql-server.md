@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 95cb279c939298256a623d67e3db8f979f65c40f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175996"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936267"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Использование мастера добавления реплики Azure (SQL Server)
   С помощью мастера добавления реплики Azure вы сможете создать виртуальную машину Azure в гибридной ИТ-службе и настроить ее в качестве вторичной реплики для новой или существующей группы доступности AlwaysOn.  
   
 -   **Перед началом работы**  
   
-     [Предварительные условия](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
      [Безопасность](#Security)  
   

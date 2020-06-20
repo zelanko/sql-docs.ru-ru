@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3e848fe9a07d838631eef1737c2a7679b67e649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040018"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Просмотр и анализ трассировок с помощью приложения SQL Server Profiler
   Просмотр данных событий, перехваченных при трассировке с помощью программы [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает данные с учетом определенных свойств трассировки. Одним способом анализа данных сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является их копирование в другую программу, например в сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в помощник по настройке ядра СУБД [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Если столбец данных **Текст** включен в трассировку, помощник по настройке может использовать файл трассировки, который содержит пакет инструкций SQL и события удаленного вызова процедуры (RPC). Для обеспечения того, чтобы при использовании помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] Д были захвачены правильные события и столбцы, используйте стандартный шаблон настройки, который поставляется с приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
