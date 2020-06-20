@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ee3473ba16ad3a03a95065aea94888654db53187
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74f7e3a13e28b0cd6e9e6e539992e0430f64753f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479338"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961474"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Построение модели (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут выполнять сокращенный набор административных функций, доступных в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  

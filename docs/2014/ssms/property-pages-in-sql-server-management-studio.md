@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0711b5ff618ec563b437a089765a30547377efaa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3fae6a07fbaa2a259fcca5c3807094b31e0d52d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058487"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Страницы свойств в среде SQL Server Management Studio
   Во всех диалоговых окнах страниц свойств в среде [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] используется общий формат представления данных с развертыванием и свертыванием категорий. Состав показываемых полей зависит от конкретного свойства. Свойства, выделенные серым цветом, доступны только для чтения. В верхней части каждой страницы свойств находятся кнопки «По категориям» и «По алфавиту».  

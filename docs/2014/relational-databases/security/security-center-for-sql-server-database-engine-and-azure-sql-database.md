@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004108"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine
   На этой странице представлены ссылки, помогающие найти сведения, касающиеся безопасности и защиты в компонентах [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "75244526"
   
 ## <a name="links-to-specific-related-topics"></a>Ссылки на определенные связанные разделы  
  ![Маленький значок папки](../../integration-services/media/filefolder-small.gif "Маленький значок папки") **Проверка подлинности: кто вы?**  
- **Кто выполняет проверку подлинности? (Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **Кто выполняет проверку подлинности? (Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )**  
   
 -   [Выбор режима проверки подлинности](choose-an-authentication-mode.md)  
   

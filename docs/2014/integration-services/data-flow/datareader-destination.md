@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 56fcc4bf-c901-42c3-a71d-110039293431
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 694e85a56686379d089f3c2fc11721e4dd6f8642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85e1a9e6ab979f74d2fb628a883950d94138ad66
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827550"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916094"
 ---
 # <a name="datareader-destination"></a>назначение DataReader
   Назначение DataReader извлекает данные из потока данных с помощью интерфейса ADO.NET `DataReader`. Эти данные могут быть впоследствии использованы другими приложениями. Например, можно настроить источник данных из отчета служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на использование результата выполнения пакета служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Для этого нужно создать поток данных, который реализует назначение DataReader.  

@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 774cb9a56fbe4e81df6a440c754c417ae90c16e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f66e613a66f722d84074e6369666edd85b448808
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176344"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968864"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Вызов и определение событий в компоненте потока данных
   Разработчики компонентов могут создавать подмножество событий, определенных в интерфейсе <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents>, вызывая методы, доступ к которым определяется свойством <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Можно также определять пользовательские события, используя коллекцию <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A>, и создавать эти события с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. В данном разделе описывается разработка и вызов событий, а также содержатся рекомендации по вызову событий во время разработки.
 
 ## <a name="raising-events"></a>Вызов событий
- Компоненты вызывают события с помощью методов **Fire\<X>** интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. События можно вызывать во время разработки и во время выполнения компонента. Обычно во время разработки методы <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> вызываются в процессе проверки компонента. Эти события выводят сообщения на панели **Список ошибок** среды [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и обеспечивают отзыв для пользователей компонента в случаях, когда он неправильно настроен.
+ Компоненты вызывают события с помощью методов **Fire \<X> ** <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> интерфейса. События можно вызывать во время разработки и во время выполнения компонента. Обычно во время разработки методы <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireWarning%2A> вызываются в процессе проверки компонента. Эти события выводят сообщения на панели **Список ошибок** среды [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и обеспечивают отзыв для пользователей компонента в случаях, когда он неправильно настроен.
 
  Компоненты могут также вызывать события в любой момент во время выполнения. События позволяют разработчикам компонента предоставлять отзыв пользователям компонента в процессе его работы. Вызов метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireError%2A> во время выполнения, скорее всего, приведет к аварийному завершению работы всего пакета.
 
@@ -42,10 +41,10 @@ ms.locfileid: "78176344"
 
  Пользовательские события компонента не сохраняются в коде XML пакета. Поэтому метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A> вызывается и во время разработки, и во время выполнения, чтобы компонент мог определить события, которые вызывает.
 
- Параметр *allowEventHandlers* метода <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> указывает, позволяет ли компонент создавать для этого события объекты <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Следует заметить, что объекты <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> являются синхронными. Поэтому компонент не возобновляет выполнение, пока объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, принадлежащий пользовательскому событию, не закончил работу. Если параметр *allowEventHandlers* имеет значение `true`, каждый параметр события автоматически становится доступным для всех <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> объектов через переменные, создаваемые и заполняемые автоматически [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] средой выполнения.
+ Параметр *allowEventHandlers* метода <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSEventInfos100.Add%2A> указывает, позволяет ли компонент создавать для этого события объекты <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Следует заметить, что объекты <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> являются синхронными. Поэтому компонент не возобновляет выполнение, пока объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, принадлежащий пользовательскому событию, не закончил работу. Если параметр *allowEventHandlers* имеет значение `true` , каждый параметр события автоматически становится доступным для всех <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> объектов через переменные, создаваемые и заполняемые автоматически [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] средой выполнения.
 
 ### <a name="raising-a-custom-event"></a>Вызов пользовательского события
- Компоненты вызывают пользовательские события с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>, передавая ему имя, текст и параметры события. Если параметр *allowEventHandlers* имеет значение `true`, то <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> все, что создается для пользовательского события, выполняется подсистемой среды [!INCLUDE[ssIS](../../../includes/ssis-md.md)] выполнения.
+ Компоненты вызывают пользовательские события с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>, передавая ему имя, текст и параметры события. Если параметр *allowEventHandlers* имеет значение `true` , то все <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandlers> , что создается для пользовательского события, выполняется [!INCLUDE[ssIS](../../../includes/ssis-md.md)] подсистемой среды выполнения.
 
 ### <a name="custom-event-sample"></a>Образец пользовательского события
  Следующий пример кода демонстрирует компонент, который определяет пользовательское событие с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.RegisterEvents%2A>, а затем вызывает это событие во время выполнения с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>.

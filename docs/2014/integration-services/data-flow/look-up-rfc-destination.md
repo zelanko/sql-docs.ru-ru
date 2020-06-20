@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4badd9c961f5a0d7ca2d3e32185a7ab742628d97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4c22636095f211eef836b709beac269938c730
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901791"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915271"
 ---
 # <a name="look-up-rfc-destination"></a>Поиск назначения RFC
   Используйте диалоговое окно **Поиск назначения RFC** для поиска назначения RFC, определенного в системе SAP Netweaver BW. После открытия списка доступных назначений RFC выберите необходимое назначение и компонент заполнит связанные параметры необходимыми значениями.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e80a18cef595ae3543aba8a656aca9267607e38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4118846915ea5014f25253b625c8bf2913e11295
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011435"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>воспроизвести таблицу трассировки (приложение SQL Server Profiler)
   Воспроизведением называется возможность открывать сохраненную трассировку и снова ее воспроизводить. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] содержит в себе многопоточный модуль воспроизведения, который имитирует соединения пользователей и проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Воспроизведение хорошо помогает при диагностике ошибок приложений и процессов. Отыскав и исправив ошибку, запустите трассировку, обнаружившую эту ошибку, в отношении исправленной версии приложения или процесса. а затем, после воспроизведения исходной трассировки, сравнить результаты.  

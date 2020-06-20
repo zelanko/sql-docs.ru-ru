@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3fe549e5a49dcc7c0c0417199206a6fd34079ac
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 793890018d0d7e57e4102d03a9120feb9803b816
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050134"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Реализация IDENTITY в таблице, оптимизированной для памяти
   IDENTITY(1, 1) поддерживается для таблицы, оптимизированной для памяти. Однако столбцы идентификаторов с определением IDENTITY(x, y), где x != 1 или y != 1 для таблиц, оптимизированных для памяти, не поддерживаются. Для обхода этой проблемы значения IDENTITY используют объект SEQUENCE ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  
@@ -51,7 +50,7 @@ insert into T1 values (@c1, 'test', getdate())
   
  После выполнения нескольких вставок можно увидеть монотонно возрастающие значения в столбце [c1]. Этот результирующий набор создан с помощью просмотра таблицы и хэш-индекса без `ORDER BY`, поэтому строки не упорядочены.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

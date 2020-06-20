@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c0bf4fa-5685-4269-bf7d-f0e9802ab4bf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d21063bf403d9973ac4ff09725545e47e84a7cd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c174dd70611d39a4938146480583615e09ad3914
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940515"
 ---
 # <a name="show-table-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Отображение таблицы» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Показать таблицу** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для добавления таблиц из представления источников данных, связанных с измерением, кубом или структурой интеллектуального анализа данных. Чтобы открыть это диалоговое окно в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , выполните одно из следующих действий.  
@@ -34,14 +33,14 @@ ms.locfileid: "66068663"
   
 -   Щелкните правой кнопкой мыши фон панели **Представление источника данных** на странице **Структура интеллектуального анализа данных** в **конструкторе моделей интеллектуального анализа данных** и выберите в контекстном меню пункт **Показать таблицы**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Выбор дополнительных таблиц для просмотра**  
  Выберите таблицы для добавления на панель **Представление источника данных** . Данный параметр отображает сетку доступных объектов и их типы, совпадающие с фильтром, заданным на странице **Фильтр** (или все таблицы, если **Фильтр** не установлен), которые пока не отображаются в данной диаграмме.  
   
  **Filter**  
  Задайте фильтр ограничения для объектов в списке, затем нажмите кнопку, чтобы отфильтровать таблицы в списке **Выбор дополнительных таблиц для просмотра**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура измерения», конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](datasource-view-dimension-designer-analysis-services-multidimensional-data.md)   
  [Представление источника данных &#40;вкладка «Структура куба», конструктор кубов&#41; &#40;Analysis Services многомерных данных&#41;](data-source-view-cube-designer-analysis-services-multidimensional-data.md)  

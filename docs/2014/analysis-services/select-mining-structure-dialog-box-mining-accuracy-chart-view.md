@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce5af79f-a1f8-47f3-acb9-769022285a69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 833410b6daa15924f0875cee77ad432aa9fac369
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a3420eb19321ff4ccc39c2b4bb615e636315996
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069490"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940945"
 ---
 # <a name="select-mining-structure-dialog-box-mining-accuracy-chart-view"></a>Диалоговое окно «Выбор структуры интеллектуального анализа данных» (просмотр диаграммы точности интеллектуального анализа данных)
   Используйте диалоговое окно **Выбор структуры интеллектуального анализа данных** , чтобы выбрать структуру интеллектуального анализа данных, содержащую модели, точность которых нужно сравнить или протестировать.  
@@ -29,7 +28,7 @@ ms.locfileid: "66069490"
   
  Диалоговое окно содержит древовидный список всех структур интеллектуального анализа данных, существующих в базе данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Хотя можно развернуть каждую структуру интеллектуального анализа данных и просмотреть существующие в ней модели, данное диалоговое окно можно использовать только для выбора структуры интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор диаграмм точности интеллектуального анализа &#40;&#41;интеллектуального анализа данных](mining-accuracy-chart-designer-data-mining.md)   
  [Задачи тестирования и проверки и инструкции &#40;&#41;интеллектуального анализа данных](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Тестирование и проверка (интеллектуальный анализ данных)](data-mining/testing-and-validation-data-mining.md)  

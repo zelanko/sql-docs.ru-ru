@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2c6ed19ca2167a07068c0471194c598fb067fc0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd8be66efd648f5b6703a76855a549a9bd30f1e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927225"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
   В следующих разделах содержатся сведения об обратной совместимости для компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Содержимое этих разделов включает сведения об устаревших и больше неподдерживаемых возможностях, критических изменениях и изменениях в поведении.  
@@ -47,7 +46,7 @@ ms.locfileid: "82707013"
 |[Обратная совместимость &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Содержит подразделы, которые описывают изменения в службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].|  
 |[Обратная совместимость репликации](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Содержит подразделы, описывающие изменения в компоненте [!INCLUDE[ssDE](../includes/ssde-md.md)] для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], которые могут потребовать внесения изменений в существующие решения репликации.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
  [Обновление до SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   

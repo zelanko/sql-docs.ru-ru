@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae7f4d08ac613113d715728a5cb78ae37bd6f99b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62824401"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058525"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Отмена подавления предупреждений для пользовательских отчетов
   Для пользовательских отчетов предусмотрено два типа предупреждающих диалоговых окон. В этом разделе описано, как отменить подавление отображения этих полей в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -28,21 +27,21 @@ ms.locfileid: "62824401"
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>Отмена подавления основного диалогового окна предупреждения для пользовательских отчетов  
   
-1.  Подключитесь \<к *серверу*>\\<*Общий**Drive* \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
+1.  Подключитесь к \<*Server*> \\ < *общей папке* >| \<*Drive*> \Documents and Settings \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  `reports.xml`Щелкните правой кнопкой мыши и выберите пункт **изменить**.  
+2.  Щелкните правой кнопкой мыши `reports.xml` и выберите пункт **изменить**.  
   
-3.  Замените**\<SuppressWarning>true\<>/суппрессварнинг на \<SuppressWarning>false\</суппрессварнинг>**.  
+3.  Измените** \<SuppressWarning> значение \</SuppressWarning> true \<SuppressWarning> на \</SuppressWarning> false**.  
   
 4.  Перезапустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>Отмена подавления диалогового окна предупреждений для детализированных пользовательских отчетов  
   
-1.  Подключитесь \<к *серверу*>\\<*Общий**Drive* \\ \>диск> \Documents and Settings<UserProfile \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.XML.>|\<  
+1.  Подключитесь к \<*Server*> \\ < *общей папке* >| \<*Drive*> \Documents and Settings \\<UserProfile \> \Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
   
-2.  `reports.xml`Щелкните правой кнопкой мыши и выберите **изменить**.  
+2.  Щелкните правой кнопкой мыши `reports.xml` и выберите **изменить**.  
   
-3.  Замените ** \<SuppressDrillthroughWarning>true\<>/суппрессдриллсраугхварнинг на \<SuppressDrillthroughWarning>false\</суппрессдриллсраугхварнинг>**.  
+3.  Измените ** \<SuppressDrillthroughWarning> значение \</SuppressDrillthroughWarning> true \<SuppressDrillthroughWarning> на \</SuppressDrillthroughWarning> false**.  
   
 4.  Перезапустите [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

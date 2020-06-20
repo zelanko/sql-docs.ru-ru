@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 762248d4c2a268ac36b0dfa3ffeba20123017017
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940505"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Срез исходного куба (мастер интеллектуального анализа данных)
   Можно использовать диалоговое окно **Срез исходного куба** для ограничения данных, используемых при обучении модели. Обычно куб содержит данные, относящиеся к разным измерениям и атрибутам, такие как все магазины, все регионы и все товары. Не имеет смысла обучать модель на неограниченных сочетаниях атрибутов, поэтому следует использовать это диалоговое окно в целях выбора конкретного набора для использования в обучении модели.  
@@ -39,8 +38,8 @@ ms.locfileid: "66068598"
   
  **Дополнительные сведения:** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Параметры  
- **Измерение**  
+## <a name="options"></a>Варианты  
+ **Фокусирован**  
  Выберите измерение, которое необходимо разделить.  
   
  **Иерархия**  
@@ -59,7 +58,7 @@ ms.locfileid: "66068598"
  **Параметры**  
  Этот параметр не используется для моделей интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Завершение работы мастера &#40;мастера интеллектуального анализа данных&#41;](completing-the-wizard-data-mining-wizard.md)   
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Определение использования столбцов модели интеллектуального анализа данных &#40;мастер интеллектуального анализа&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  

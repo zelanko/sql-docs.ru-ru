@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167cec89a772084cbd171be14001dded42e059d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996806"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
   Поставщик WMI представляет собой опубликованный интерфейс, используемый консолью управления (MMC) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] для управления службами и сетевыми протоколами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В SMO поставщик WMI представляется объектом <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>.  
@@ -30,7 +29,7 @@ ms.locfileid: "72796626"
 ## <a name="example"></a>Пример  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- Для программ, использующих поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI, необходимо включить `Imports` инструкцию для определения пространства имен WMI. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
+ Для программ, использующих [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик WMI, необходимо включить `Imports` инструкцию для определения пространства имен WMI. Вставьте инструкцию после других инструкций `Imports` и перед любыми декларациями в приложении.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

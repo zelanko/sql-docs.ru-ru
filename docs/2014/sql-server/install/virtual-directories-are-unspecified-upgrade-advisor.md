@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d32b560-49d6-4558-b5d6-9127067f82d6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c9ee7f745fc683a9ed93f2ca09ac94e1bf580f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 79ab9c0d18f20bcfd6f549918cc1501a1d8e1e49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065108"
 ---
 # <a name="virtual-directories-are-unspecified-upgrade-advisor"></a>Виртуальные каталоги не указаны (советник по переходу)
   Помощник по обновлению не обнаружил настроек виртуального каталога для веб-службы сервера отчетов или диспетчера отчетов. После завершения обновления необходимо настроить резервирования URL-адресов для сервера отчетов с помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "71952377"
 ## <a name="corrective-action"></a>Действие по исправлению  
  После окончания обновления задайте URL-адреса сервера отчетов и диспетчера отчетов при помощи диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В диспетчере служб IIS удалите все виртуальные каталоги, в которых больше нет необходимости.  
   
- Дополнительные сведения см. в разделе [Настройка URL-адреса &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Дополнительные сведения см. в разделе [Настройка URL-адреса &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="see-also"></a>См. также:  
  [Reporting Services проблем обновления &#40;советник по переходу&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 9ce9ad9c-f671-4760-90b5-e0c8ca051473
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ddc3521031f34f179cdfef08abf178f21f5f47e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d3b686644995d7604528adf1dc279dfce664b001
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796723"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996849"
 ---
 # <a name="implementing-full-text-search"></a>Реализация полнотекстового поиска
-  Полнотекстовый поиск доступен для отдельных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и представлен в SMO объектом <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextService> размещен в объекте `Server`. Он используется для управления параметрами конфигурации службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] полнотекстового поиска. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> принадлежит объекту <xref:Microsoft.SqlServer.Management.Smo.Database> и является коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>, представляющих полнотекстовые каталоги, определенные в базе данных. Для каждой таблицы можно определить только один полнотекстовый индекс (в отличие от обычных индексов). Индекс представлен объектом <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> в объекте <xref:Microsoft.SqlServer.Management.Smo.Table>.  
+  Полнотекстовый поиск доступен для отдельных экземпляров [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и представлен в SMO объектом <xref:Microsoft.SqlServer.Management.Smo.Server.FullTextService%2A>. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextService> размещен в объекте `Server`. Он используется для управления параметрами конфигурации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] службы полнотекстового поиска. Объект <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalogCollection> принадлежит объекту <xref:Microsoft.SqlServer.Management.Smo.Database> и является коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.FullTextCatalog>, представляющих полнотекстовые каталоги, определенные в базе данных. Для каждой таблицы можно определить только один полнотекстовый индекс (в отличие от обычных индексов). Индекс представлен объектом <xref:Microsoft.SqlServer.Management.Smo.FullTextIndexColumn> в объекте <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
  Чтобы создать службу полнотекстового поиска, необходимо иметь полнотекстовый каталог, определенный в базе данных, и индекс полнотекстового поиска, определенный на одной из таблиц в базе данных.  
   

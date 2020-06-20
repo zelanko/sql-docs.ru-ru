@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 76b452e5ee362aeb2e66d8949a12ed910489f990
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3bf1092aca27c17c7c94a851f5748acef4a445b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961614"
 ---
 # <a name="members-master-data-services"></a>Элементы (службы основных данных)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]элементы являются физическими основными данными. Например, элемент может быть велосипедом «Road-150» в сущности «Product» или конкретным клиентом в сущности «Customer».

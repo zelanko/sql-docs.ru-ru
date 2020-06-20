@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d5465ab5157af0c0a6f1bd4a0566d49e45cd55c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7fbe69600b337130e7fb3b309535f880904e356
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482682"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961194"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Удаление строки (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно удалить строку данных (элемент) из репозитория MDS, если эти данные больше не должны быть доступны пользователям.  
@@ -38,7 +37,7 @@ ms.locfileid: "65482682"
   
 3.  В диалоговом окне подтверждения нажмите кнопку **Да**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Публикация &#40;данных надстройка MDS для Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

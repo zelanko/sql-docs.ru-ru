@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94fb2d07cfd40c8685ef6a8259d871108bbd17bb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961190"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно отправить кому-либо файл ярлыка запроса по электронной почте, если адресат должен иметь возможность работать с теми же данными, что и вы. Вместо сохранения и отправки листа по электронной почте следует предоставлять общий доступ к запросу.  
@@ -33,11 +32,11 @@ ms.locfileid: "65478894"
   
 2.  В группе **Сохранение и отправка** нажмите **Отправить запрос**. Открывается сообщение электронной почты с файлом ярлыка запроса во вложении.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   Чтобы открыть файл ярлыка запроса, получатель электронного письма должен иметь установленный MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] . Получатель должен дважды щелкнуть файл, чтобы открыть его.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы ярлыков запросов (надстройка MDS для Excel)](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

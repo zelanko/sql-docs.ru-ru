@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4580b41b9854b749f4ed6f66d2c7bea77647cef1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: f6c4a3e51745ab0f2c67dcba88f71b79f031d7ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058587"
 ---
 # <a name="name-not-found-dialog-box"></a>диалоговое окно «Имя не найдено»
   Одно или несколько имен объектов в диалоговом окне не были найдены. Выберите параметр для продолжения.  
@@ -37,7 +36,7 @@ ms.locfileid: "83859216"
  **Введите имя объекта**  
  Содержит имя объекта, который не был найден. Исправьте имя объекта или введите новое имя объекта.  
   
- **Удалить*** \< имя объекта>* **из выделенного фрагмента**      
+ **Удалить** *\<object name>* **из выделения**      
  Выберите, чтобы закрыть диалоговое окно **Имя не найдено** и удалить элемент из диалогового окна **Выбор объектов** .  
   
   

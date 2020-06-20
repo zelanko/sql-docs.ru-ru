@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0bfb4-3aa6-4eb2-a83e-c0d0e7d4e9f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 445f6eeaea7057a6267ad41d5e2490eaab253460
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011476"
 ---
 # <a name="server-element-dta"></a>Элемент Server (DTA)
   Содержит сведения идентификации сервера, на котором находятся настраиваемые базы данных.  
@@ -36,7 +35,7 @@ ms.locfileid: "63273433"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -50,7 +49,7 @@ ms.locfileid: "63273433"
 |**Дочерние элементы**|[Элемент Name описания сервера (DTA)](name-element-for-server-dta.md)<br /><br /> [Элемент Database описания сервера (DTA)](database-element-for-server-dta.md)|  
   
 ## <a name="remarks"></a>Remarks  
- Для `DTAInput` элемента можно указать только `Server` один элемент. Этот элемент с именем **ServerDetailsTypecomplexType** определен в схеме XML DTA. Не следует путать данный элемент `Server` с дочерним элементом элемента `Configuration`. Дополнительные сведения см. в разделе [Элемент Server описания конфигурации (DTA)](server-element-for-configuration-dta.md).  
+ Для элемента можно указать только один `Server` элемент `DTAInput` . Этот элемент с именем **ServerDetailsTypecomplexType** определен в схеме XML DTA. Не следует путать данный элемент `Server` с дочерним элементом элемента `Configuration`. Дополнительные сведения см. в разделе [Элемент Server описания конфигурации (DTA)](server-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример иллюстрирует, как указать таблицу **Sales.SalesPerson** в базе данных **AdventureWorks** на сервере SERVER001:  

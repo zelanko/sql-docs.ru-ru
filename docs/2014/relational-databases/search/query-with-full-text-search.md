@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004050"
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
   Для определения полнотекстового поиска в полнотекстовых запросах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются полнотекстовые предикаты (CONTAINS и FREETEXT) и функции (CONTAINSTABLE и FREETEXTTABLE). Эти предикаты и функции поддерживают расширенный синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)] , который поддерживает разнообразные формы выражений запроса. Для создания полнотекстовых запросов нужно знать, когда и как использовать полнотекстовые предикаты и функции.  
@@ -129,7 +128,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-#### <a name="b-using-freetexttable"></a>Б) Использование FREETEXTTABLE  
+#### <a name="b-using-freetexttable"></a>Б. Использование FREETEXTTABLE  
  В следующем примере запрос FREETEXTTABLE расширяется таким образом, чтобы он возвратил первыми строки с самыми высокими ранжирующими значениями и добавил ранг каждой строки к списку выбора. Чтобы указать запрос, необходимо убедиться, что **столбец productdescriptionid** является уникальным ключевым столбцом для `ProductDescription` таблицы.  
   
 ```  
@@ -338,7 +337,7 @@ GO
   
  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [СОДЕРЖИТ &#40;&#41;Transact-SQL](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE (Transact-SQL)](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT (Transact-SQL)](/sql/t-sql/queries/freetext-transact-sql)   

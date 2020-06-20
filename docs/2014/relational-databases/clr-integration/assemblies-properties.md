@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5575b83803628f20568c86f44568fab909f7fdd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68f2bff1458cdbb134aaeb7e64ec959fe111fdb6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953944"
 ---
 # <a name="assembly-properties-general-page"></a>Свойства сборки (страница «Общие»)
   Эта страница используется для просмотра или изменения свойств сборки.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя сборки**  
  Отображает имя сборки, которое всегда совпадает с именем сборки CLR.  
   
@@ -45,10 +44,10 @@ ms.locfileid: "62919291"
  **Строгое имя**  
  Отображает **True** , если сборка подписана цифровой подписью, и **False** , если она не подписана.  
   
- **Версия**  
+ **Version**  
  Отображает номер версии сборки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CREATE ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/create-assembly-transact-sql)  
   
   

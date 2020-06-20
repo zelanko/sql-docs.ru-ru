@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a330fea71ce84e7af82dd2bd92fc2e14f0883a0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 207cf66edc65495fea9d6c46693fc3a9c9d5edda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968814"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Использование выводов ошибок в компоненте потока данных
   Специальные объекты <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>, именуемые выводами ошибок, можно добавлять в компоненты, чтобы позволить компоненту перенаправлять строки, которые он не может обработать во время выполнения. Проблемы, с которыми компонент может столкнуться, обычно упорядочиваются по категориям как ошибки или усечения. Они специфичны для каждого компонента. Компоненты, предоставляющие выводы ошибок, дают пользователям компонента гибкие возможности по обработке ошибок путем фильтрации строк ошибок в результирующем наборе, обеспечивая завершение работы компонента с ошибкой при возникновении проблемы или не обрабатывая ошибки и продолжая работу.  
@@ -432,7 +431,7 @@ End Sub
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка ошибок в данных](../../data-flow/error-handling-in-data.md)   
  [Использование выводов ошибок](using-error-outputs-in-a-data-flow-component.md)  
   

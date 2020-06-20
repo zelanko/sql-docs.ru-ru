@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecb9d388fd0e1362bb8844e874cd89162912e93e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62467907"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050050"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Требования для использования таблиц, оптимизированных для памяти
   Помимо [требований к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), ниже приведены требования к использованию выполняющейся в памяти OLTP.  
@@ -36,7 +35,7 @@ ms.locfileid: "62467907"
   
 -   Чтобы установить OLTP в памяти, выберите **Службы компонента Database Engine** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-     Чтобы установить создание отчета ([Определение, должна ли таблица или хранимая процедура быть перенесена](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)в выполняющуюся в памяти OLTP [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ) и (для управления выполняющейся в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] памяти OLTP через обозреватель объектов), выберите **средства управления — основные** **средства или инструменты управления — дополнительно** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+     Чтобы установить создание отчета ([Определение, должна ли таблица или хранимая процедура быть перенесена в выполняющуюся в памяти OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (для управления выполняющейся в памяти OLTP через [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Обозреватель объектов), выберите **средства управления — основные** **средства или инструменты управления — дополнительно** при установке [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
 ## <a name="important-notes-on-using-hek_2"></a>Важные примечания относительно использования [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
@@ -53,9 +52,9 @@ ms.locfileid: "62467907"
 -   Если создается одна или несколько баз данных с таблицами, оптимизированными для памяти, необходимо включить быструю инициализацию файлов (предоставьте стартовой учетной записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] право SE_MANAGE_VOLUME_NAME) для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Без быстрой инициализации файлов оптимизированные для памяти файлы хранилища (файлы данных и разностные файлы) будут инициализироваться при создании и могут отрицательно повлиять на производительность рабочей нагрузки. Дополнительные сведения о быстрой инициализации файлов см. в разделе [Инициализация файлов базы данных](../databases/database-instant-file-initialization.md). Сведения о включении быстрой инициализации файлов см. в разделе [Как и зачем необходимо включать быструю инициализацию файлов](https://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы будем слушать  
- Какие сведения вы искали и удалось ли вам их найти? Мы будем рады вашим отзывам, чтобы улучшить содержимое. Отправьте свои комментарии в [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  
+ Какие сведения вы искали и удалось ли вам их найти? Мы будем рады вашим отзывам, чтобы улучшить содержимое. Отправьте свои комментарии в [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)  
   
   

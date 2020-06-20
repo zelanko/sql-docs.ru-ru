@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58af27d7-c5dd-4669-be6b-b472bc2c8ef4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4fde67fc6b38e81c7367ee1e298439810b0b35c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2632b5ffd5355065b4b5c1f905b3b6e5c5b6204d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934051"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Экземпляр основного сервера (мастер настройки безопасности зеркального отображения баз данных)
   Используйте данную страницу для задания данных об экземпляре сервера основной базы данных. Основная база данных представляет собой копию базы данных, начинающую сеанс зеркального отображения. После начала сеанса основная база данных является копией базы данных, принимающей пользовательские изменения. (При отработке отказа основная роль и роль зеркального отображения меняются местами, следовательно, первоначальная основная база данных может не остаться основной.)  
@@ -28,7 +27,7 @@ ms.locfileid: "62754562"
   
 -   [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Экземпляр основного сервера**  
  Поскольку зеркальное отображение базы данных в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] всегда настраивается с основного сервера, то текущим экземпляром сервера всегда будет экземпляр основного сервера.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62754562"
   
  Снимите этот флажок для выключения шифрования. Установите этот флажок, чтобы вновь включить шифрование.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Свойства базы данных &#40;страница зеркального отображения&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Создание конечной точки зеркального отображения базы данных для проверки подлинности Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
