@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 51f33f3b-6b7f-41bf-a620-97fd5189e633
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5f361679d7e2e57024f0ac6859dbc3b0aac32a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50f41313457a468a243af4b7542a9b4aa675157d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065788"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938285"
 ---
 # <a name="translations-cube-designer-analysis-services---multidimensional-data"></a>Переводы (конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте вкладку **Переводы** в конструкторе кубов для создания и изменения перспектив для выбранного куба.  
@@ -31,7 +30,7 @@ ms.locfileid: "66065788"
  **Сведения о переводе**  
  Используйте панель **Сведения о переводе** для создания и изменения переводов для выбранного куба.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переводы куба](multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Сценарии глобализации для Analysis Services многомерных](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Конструктор кубов &#40;Analysis Services многомерных данных&#41;](cube-designer-analysis-services-multidimensional-data.md)  

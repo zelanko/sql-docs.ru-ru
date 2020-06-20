@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b15e2f457cca84abb7ab597bdf14d0b2fb2e3ffe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bebcfed02aa30ffc686b2a74807b6a4cc3955c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932005"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Обновление PowerPivot для SharePoint
   В этом разделе описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретная последовательность действий зависит от версии SharePoint вашей среды и включает надстройку PowerPivot для SharePoint (**spPowerPivot.msi**).  
@@ -26,7 +25,7 @@ ms.locfileid: "81388041"
   
 
   
-## <a name="background"></a>История  
+## <a name="background"></a>Историческая справка  
   
 -   При обновлении многосерверной фермы SharePoint 2010 с двумя или более экземпляров [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] необходимо полностью обновить каждый сервер, **прежде** чем переходить к следующему серверу. Полное обновление включает запуск программы установки SQL Server для обновления программных файлов [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , вслед за чем выполняются действия по обновлению SharePoint, которые состоят в настройке обновленных служб. Доступность сервера будет ограниченна, пока не выполнены действия по обновлению в подходящем средстве настройки PowerPivot или Windows PowerShell.  
   
@@ -47,9 +46,9 @@ ms.locfileid: "81388041"
   
  **SQL Server:**  
   
--   Если существующая установка PowerPivot имеет [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]значение, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] то для обновления до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]требуется пакет обновления 2 (SP2).  
+-   Если существующая установка PowerPivot имеет значение [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , то [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] для обновления до требуется пакет обновления 2 (SP2) [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
--   Если существующая установка PowerPivot — [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]пакет [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] обновления 1 (SP1) необходим для обновления до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Если существующая установка PowerPivot — [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] пакет обновления 1 (SP1) необходим для обновления до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
  **SharePoint 2010:**  
   
@@ -185,7 +184,7 @@ ms.locfileid: "81388041"
   
     9. Для продолжения нажмите кнопку **Да**.  
   
-    10. Обновление решений и компонентов в ферме может занять несколько минут. В течение этого времени запросы на соединение с данными PowerPivot завершатся ошибкой, например "не удалось обновить данные" или "произошла ошибка при попытке выполнить запрошенное действие. Повторите попытку". После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
+    10. Обновление решений и компонентов в ферме может занять несколько минут. В течение этого времени запросы на соединение с данными PowerPivot завершатся ошибкой, например "не удалось обновить данные" или "произошла ошибка при попытке выполнить запрошенное действие. Повторите попытку." После завершения обновления сервер станет доступным, и эти ошибки больше не будут возникать.  
   
 8.  **Повторите эту процедуру** для каждой службы SQL Server Analysis Services (PowerPivot) в ферме: 1) запустите SQL Server Setup 2) запустите средство настройки PowerPivot.  
   
@@ -237,7 +236,7 @@ ms.locfileid: "81388041"
 Get-PowerPivotSystemService  
 ```  
   
- Проверьте **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]версия 12,0. \<основной> сборки. \<дополнительный> сборки  
+ Проверьте **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]версия 12,0. \<major build> .\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Проверьте версию службы Windows Analysis Services  
  Если обновлены лишь некоторые серверы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] в ферме SharePoint 2010, экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на необновленных серверах будет более старым, чем версия, ожидаемая в ферме. Чтобы использовать все серверы, потребуется обновить их до одной и той же версии. Чтобы проверить версию службы Windows SQL Server Analysis Services (PowerPivot) на каждом компьютере, используйте один из следующих методов.  
@@ -250,7 +249,7 @@ Get-PowerPivotSystemService
   
 3.  Щелкните **Сведения**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Версия файла должна быть 12,00. \<основной> сборки. \<дополнительный> сборки.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Версия файла должна быть 12,00. \<major build> . \<minor build> .  
   
 5.  Проверьте, что этот номер такой же, как у версии решения PowerPivot и версии системной службы.  
   
@@ -300,7 +299,7 @@ Get-PowerPivotSystemService
   
 2.  Отсортируйте результаты по имени сборки и найдите **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Убедитесь, что у вас установлена версия 12,0. \<номер сборки>.  
+3.  Убедитесь, что у вас установлена версия 12,0. \<build number> .  
   
 
 ##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>Обновление нескольких серверов PowerPivot для SharePoint в ферме SharePoint  

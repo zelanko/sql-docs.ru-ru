@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d22e8e594bd0a0491ab0546e373d64ea591925b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967024"
 ---
 # <a name="delete-a-model-master-data-services"></a>Удаление модели (службы Master Data Services)
   Эта операция используется для удаления модели и всех ее данных из [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
@@ -47,7 +46,7 @@ ms.locfileid: "65483170"
   
 6.  В дополнительном диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Модели &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
  [Создание модели (службы Master Data Services)](../../2014/master-data-services/create-a-model-master-data-services.md)  
   

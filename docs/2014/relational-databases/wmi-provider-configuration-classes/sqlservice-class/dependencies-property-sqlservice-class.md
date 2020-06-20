@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5b64aee371a41bc0d58ec4a52a1a1526bc13388
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223275"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002293"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Свойство Dependencies (класс SqlService)
   Возвращает список служб, зависимых от указанной службы.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

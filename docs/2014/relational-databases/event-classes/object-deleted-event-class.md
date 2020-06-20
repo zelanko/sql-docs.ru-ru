@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3145385db6239df128ead6070ebede48bc96e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90bcc20e16d775e6497958fc1adc58269fb24296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025831"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029383"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted, класс событий
   Класс событий Object:Deleted указывает на удаление объекта (например, инструкцией DROP INDEX или DROP TABLE). Он предназначен для отслеживания факта удаления объекта, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
@@ -34,7 +33,7 @@ ms.locfileid: "63025831"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 47.|27|Нет|  
+|EventClass|`int`|Тип события = 47.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |EventSubClass|`int`|Тип подкласса события.<br /><br /> 0 = начало<br /><br /> 1 = фиксация<br /><br /> 2 = откат|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
@@ -58,7 +57,7 @@ ms.locfileid: "63025831"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

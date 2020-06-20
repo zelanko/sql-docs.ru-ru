@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9977dd75-b0de-4376-9c13-86d80567d8aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 228753c113bcf43ed276d989a3996e9bf23bfc16
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063661"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>просмотреть конфликты данных для публикаций транзакций (среда SQL Server Management Studio)
   В средстве просмотра конфликтов репликации [!INCLUDE[msCoName](../../includes/msconame-md.md)] можно просматривать конфликты одноранговой репликации транзакций и репликации транзакций с подписками, обновляемыми посредством очередей. Сведения о том, как обнаруживать и разрешать конфликты, см. в статьях [Обнаружение конфликтов в одноранговой репликации](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md) и [Настройка параметров разрешения конфликтов для обновления посредством очередей (среда SQL Server Management Studio)](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "63144415"
   
 6.  Закройте средство просмотра конфликтов репликации.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Одноранговая репликация транзакций](transactional/peer-to-peer-transactional-replication.md)   
  [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   

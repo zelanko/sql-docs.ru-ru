@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3017f74b12eb18624f8a34e8a1289da18b70c93a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f7ed275eb9b6558a77160c3c7fb2fc233c199cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048207"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Получение сведений о результирующем наборе (ODBC)
     
@@ -30,11 +29,11 @@ ms.locfileid: "82712696"
   
     -   Вызовите [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) , чтобы получить сведения о столбце Result.  
   
-     Или  
+     либо  
   
     -   Вызовите [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) , чтобы получить конкретные сведения о дескрипторе столбца результатов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разделы руководства по обработке результатов &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
  [Определение характеристик результирующего набора &#40;ODBC&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   

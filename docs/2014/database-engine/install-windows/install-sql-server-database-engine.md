@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3cf4ca5d422e9d124c397bbcae8d8b48d12b95b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932735"
 ---
 # <a name="about-the-sql-server-database-engine"></a>О компоненте SQL Server Database Engine
   Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] входит в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и является основной службой, предназначенной для хранения, обработки и обеспечения безопасности данных. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] обеспечивает управляемый доступ к ресурсам и быструю обработку транзакций, что позволяет использовать его даже с самыми требовательными приложениями по обработке данных на предприятии.  
@@ -26,7 +25,7 @@ ms.locfileid: "62779365"
   
  **Внимание!** Для локальной установки программа установки должна запускаться от имени администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо использовать учетную запись домена с разрешениями на чтение и выполнение для удаленной общей папки.  
   
- Следующие компоненты устанавливаются при выборе ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядро СУБД** на странице компоненты для установки мастера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки.  
+ Следующие компоненты устанавливаются при выборе ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядро СУБД** на странице компоненты для установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастера установки.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -58,7 +57,7 @@ ms.locfileid: "62779365"
 > [!NOTE]  
 >  По умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] образцы баз данных и образцы кода не устанавливаются. Дополнительные сведения об установке образцов баз данных и образцов кода см. на [веб-сайте CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md)   

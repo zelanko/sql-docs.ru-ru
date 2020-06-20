@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 73b71e83f3b0f0f895b2cc5b8fd3495fb4893a32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059614"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951754"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Развертывание пакетов с помощью программы развертывания
   Если сборка программы развертывания, предназначенной для установки пакетов из проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выполнена на компьютере, отличном от того, на котором находится сам проект, прежде всего необходимо скопировать папку развертывания на целевой компьютер.  
   
  Путь к папке развертывания указывается в свойстве DeploymentOutputPath того проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , для которого была собрана данная программа развертывания. По умолчанию папкой развертывания является папка bin\Deployment относительно проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в статье [Create a Deployment Utility](../../2014/integration-services/create-a-deployment-utility.md).  
   
- Для установки пакетов используется мастер установки пакетов. Чтобы запустить мастер, дважды щелкните файл программы развертывания после копирования папки развертывания на сервер. Этот файл называется \<имя_проекта>.SSISDeploymentManifest и находится в папке развертывания на конечном компьютере.  
+ Для установки пакетов используется мастер установки пакетов. Чтобы запустить мастер, дважды щелкните файл программы развертывания после копирования папки развертывания на сервер. Этот файл называется \<project name> . SSISDeploymentManifest и можно найти в папке развертывания на конечном компьютере.  
   
 > [!NOTE]  
 >  В зависимости от версии развертываемого пакета, параллельная установка разных версий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может вызвать ошибку. Эта ошибка может возникнуть из-за того, что расширение имени файла SSISDeploymentManifest одинаково для всех версий [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если дважды щелкнуть имя файла, вызывается установщик (dtsinstall.exe) последней установленной версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], которая может отличаться от версии файла программы развертывания. Чтобы решить эту проблему, запустите нужную версию dtsinstall.exe из командной строки и укажите путь к файлу программы развертывания.  
@@ -50,7 +49,7 @@ ms.locfileid: "66059614"
   
 1.  Откройте папку развертывания на целевом компьютере.  
   
-2.  Дважды щелкните файл манифеста, \<имя проекта>.SSISDeploymentManifest, чтобы запустить мастер установки пакета.  
+2.  Дважды щелкните файл манифеста, \<project name> . SSISDeploymentManifest, чтобы запустить мастер установки пакета.  
   
 3.  На странице **Установка пакетов служб SSIS** выберите параметр **Установить на SQL Server** .  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66059614"
   
 8.  Если выбрана функция проверки пакетов после установки, посмотрите результаты проверки развернутых пакетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

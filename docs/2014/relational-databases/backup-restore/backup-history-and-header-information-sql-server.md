@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff1e75cc88e51de75af32bcd9d48860be52d5861
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922246"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959247"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Журнал и сведения о заголовке резервной копии (SQL Server)
   Полный журнал резервных копий и операций восстановления на экземпляре сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранится в базе данных **msdb** . В этом разделе рассказывается о таблицах журнала восстановления, а также об инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые используются для доступа к журналам резервного копирования. В этом разделе также обсуждается удобство составления списка файлов базы данных и журнала транзакций и использование данных в заголовке носителя в сравнении с использованием данных в заголовке резервной копии.  
@@ -67,7 +66,7 @@ ms.locfileid: "62922246"
 ##  <a name="backup-and-restore-history-tables"></a><a name="BnRHistoryTables"></a> Таблицы журналов резервного копирования и восстановления  
  В этом разделе рассказывается о журнальных таблицах, в которых в системной базе данных **msdb** хранятся метаданные резервного копирования и восстановления.  
   
-|Таблица журнала|Description|  
+|Таблица журнала|Описание|  
 |-------------------|-----------------|  
 |[backupfile;](/sql/relational-databases/system-tables/backupfile-transact-sql)|Содержит по одной строке для каждого файла данных или журнала, подвергаемого резервному копированию.|  
 |[backupfilegroup](/sql/relational-databases/system-tables/backupfilegroup-transact-sql)|Содержит по одной строке для каждой файловой группы в резервном наборе данных.|  
@@ -87,7 +86,7 @@ ms.locfileid: "62922246"
 > [!IMPORTANT]  
 >  Инструкциям Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY и RESTORE VERIFYONLY требуется разрешение CREATE DATABASE. Тем самым обеспечивается более надежная защита файлов резервных копий и данных, чем в предыдущих версиях. Дополнительные сведения об этом разрешении см. в разделе[ Разрешения базы данных GRANT (Transact-SQL)](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
-|Информационная инструкция|Таблица журнала резервного копирования|Description|  
+|Информационная инструкция|Таблица журнала резервного копирования|Описание|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)|[backupfile;](/sql/relational-databases/system-tables/backupfile-transact-sql)|Возвращает результирующий набор со списком файлов базы данных и журнала, которые содержит указанный резервный набор данных.<br /><br /> Дополнительные сведения см. далее в разделе «Составление списка файлов базы данных и журналов транзакций».|  
 |[инструкция RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)|[backupset;](/sql/relational-databases/system-tables/backupset-transact-sql)|Извлекает все данные заголовка резервной копии для всех резервных наборов данных в определенном устройстве резервного копирования. Результатом выполнения RESTORE HEADERONLY является результирующий набор.<br /><br /> Дополнительные сведения см. далее в разделе «Просмотр данных заголовка резервной копии».|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abffd5a1fc77f6cf4935cbf5172210445dbd7006
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ffc477b299daeda004cca26d95f3d33e2e5509b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028462"
 ---
 # <a name="spcachehit-event-class"></a>Класс событий SP:CacheHit
   Класс событий SP:CacheHit указывает на то, что в кэше планов находится хранимая процедура.  
@@ -32,8 +31,8 @@ ms.locfileid: "63050954"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|EventClass|`int`|Тип события = 38.|27|Нет|  
-|EventSequence|`int`|Порядковый номер данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 38.|27|нет|  
+|EventSequence|`int`|Порядковый номер данного события в запросе.|51|нет|  
 |EventSubClass|`int`|Типы подклассов событий.<br /><br /> 1 = попадание контекста выполнения. В кэше планов найден свободный план выполнения.<br /><br /> 2 = попадание скомпилированного плана. В кэше планов найден скомпилированный план.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -54,7 +53,7 @@ ms.locfileid: "63050954"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

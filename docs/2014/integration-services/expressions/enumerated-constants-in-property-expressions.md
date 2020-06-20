@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b691367b8cfbe00c1e383fa3a2fd18e2d545be8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967444"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
   Если выражения свойств включают в себя значения из списка элементов-перечислителей, эти выражения должны использовать числовое значение элементов-перечислителей вместо понятного имени элемента. Например, если выражение устанавливает свойство `LoggingMode`, необходимо использовать числовое значение 2 вместо понятного имени «Запрещено».  
   
  Этот раздел приводит список числовых значений, эквивалентных понятным именам перечислителей, элементы которых, как правило, используются в выражениях свойств. Объектная модель служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включает много дополнительных перечислителей, которые используются при программировании объектной модели для программного построения пакетов или при создании кода элементов пользовательских пакетов, таких как задачи и компоненты потоков данных.  
   
- В дополнение к пользовательским свойствам пакетов и объектов пакетов окно свойств в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] включает набор свойств, которые доступны пакетам, задачам, контейнерам последовательности, «цикл по элементам» и «цикл по каждому элементу». Общие свойства, которые задаются значениями из перечислителей`ForceExecutionResult`, `LoggingMode` `IsolationLevel` `Transaction Option`перечислены в разделе Общие свойства.  
+ В дополнение к пользовательским свойствам пакетов и объектов пакетов окно свойств в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] включает набор свойств, которые доступны пакетам, задачам, контейнерам последовательности, «цикл по элементам» и «цикл по каждому элементу». Общие свойства, которые задаются значениями из перечислителей `ForceExecutionResult` , `LoggingMode` `IsolationLevel` `Transaction Option` перечислены в разделе Общие свойства.  
   
  Ниже приведены сведения о перечислителях-константах.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "62898902"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Перечислитель по набору узлов  
- `SourceDocumentType`свойства `InnerXPathStringSourceType`, и **OuterXPathStringSourceType** задаются с помощью значений из `SourceType` перечисления.  
+ `SourceDocumentType``InnerXPathStringSourceType`свойства, и **OuterXPathStringSourceType** задаются с помощью значений из `SourceType` перечисления.  
   
 |Понятное имя в перечислении SourceType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -373,7 +372,7 @@ ms.locfileid: "62898902"
 |DirectInput|1|  
 |Переменная|2|  
   
- `ActionAtEvent` Свойство "НАБЛЮДАТЕЛЬ событий WMI" задается с помощью значений `ActionAtEvent` из перечисления.  
+ Свойство "наблюдатель событий WMI" `ActionAtEvent` задается с помощью значений из `ActionAtEvent` перечисления.  
   
 |Понятное имя в перечислении ActionAtEvent|Числовое значение|  
 |------------------------------------|-------------------|  
@@ -423,7 +422,7 @@ ms.locfileid: "62898902"
 |Поиск различий|4|  
 |Обновление|5|  
   
- `SourceType`свойства `SecondOperandType`, и `XPathSourceType` задаются с помощью значений из `DTSXMLSourceType` перечисления.  
+ `SourceType``SecondOperandType`свойства, и `XPathSourceType` задаются с помощью значений из `DTSXMLSourceType` перечисления.  
   
 |Понятное имя в перечислении DTSXMLSourceType|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -532,7 +531,7 @@ ms.locfileid: "62898902"
 |Файлы|1|  
 |Журнал|2|  
   
- `BackupDevice`свойство задается с помощью значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечисления управляющих объектов ( `DeviceType` SMO).  
+ `BackupDevice`свойство задается с помощью значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечисления управляющих объектов (SMO) `DeviceType` .  
   
 |Понятное имя в перечислении DeviceType|Числовое значение|  
 |---------------------------------|-------------------|  
@@ -560,7 +559,7 @@ ms.locfileid: "62898902"
 |Год|3|  
   
 ### <a name="update-statistics-task"></a>Задача «Обновление статистики»  
- `UpdateType`свойство задается с помощью значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечисления управляющих объектов ( `StatisticsTarget` SMO).  
+ `UpdateType`свойство задается с помощью значений из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перечисления управляющих объектов (SMO) `StatisticsTarget` .  
   
 |Понятное имя в перечислении StatisticsTarget|Числовое значение|  
 |---------------------------------------|-------------------|  
@@ -580,7 +579,7 @@ ms.locfileid: "62898902"
 |Failure|1|  
 |Completion|2|  
   
- `IsolationLevel`свойство задается перечислением .NET Framework `IsolationLevel` . Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel`свойство задается `IsolationLevel` перечислением .NET Framework. Дополнительные сведения см. в документации по библиотеке классов платформы .NET Framework в [Библиотеке MSDN](https://go.microsoft.com/fwlink?LinkId=17313).  
   
  `LoggingMode`свойство задается с помощью значений из `DTSLoggingMode` перечисления.  
   

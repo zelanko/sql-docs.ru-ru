@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931665"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>обновить SQL Server 2014 до другого выпуска (программа установки)
   Программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает обновление различных выпусков [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Сведения о поддерживаемых способах обновления выпуска см. в разделе [Поддерживаемые обновления выпусков и версий](supported-version-and-edition-upgrades.md). Прежде чем начать обновление выпуска экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], ознакомьтесь со следующими разделами.  
@@ -29,7 +28,7 @@ ms.locfileid: "62774578"
 -   [Требования к аппаратному и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  в кластерной среде: ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Достаточно выполнить обновление выпуска на одном из узлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] кластера. Этот узел может быть как активным, так и пассивным, а ядро не переводит ресурсы в автономный режим во время обновления выпуска. После обновления выпуска требуется либо перезапустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо переключиться на другой узел.  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в кластерной среде** достаточно выполнить обновление выпуска на одном из узлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] кластера. Этот узел может быть как активным, так и пассивным, а ядро не переводит ресурсы в автономный режим во время обновления выпуска. После обновления выпуска требуется либо перезапустить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо переключиться на другой узел.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Для локальных установок необходимо запускать программу установки с правами администратора. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается с удаленного общего ресурса, необходимо использовать учетную запись домена, у которой есть разрешения на чтение на этом удаленном ресурсе.  
@@ -79,7 +78,7 @@ ms.locfileid: "62774578"
   
 -   Шаблоны баз данных остаются на компьютере после обновления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление до SQL Server 2014](upgrade-sql-server.md)   
  [Обратная совместимость](../../getting-started/backward-compatibility.md)  
   

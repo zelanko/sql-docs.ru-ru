@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c442e3e264e36f9d6ffef35947f4f96180c4b799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7518ef7933d864da5b8e9827f772e6599b79d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048179"
 ---
 # <a name="support-for-large-udts"></a>Поддержка больших, определяемых пользователем типов
   В этом образце решения содержатся два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в этой таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце используется база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  

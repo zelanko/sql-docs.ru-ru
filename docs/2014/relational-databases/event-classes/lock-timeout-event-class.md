@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67f9d89897ef36d297dbeabfffcc02906677cb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6b2b2e60f0aadaa2000fa9b14975ab5e2f5879
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62663959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029414"
 ---
 # <a name="locktimeout-event-class"></a>Класс событий Lock:Timeout
   Класс событий Lock:Timeout указывает на то, что запрос на захват некоторого ресурса, например страницы, превысил время ожидания, поскольку данный ресурс был захвачен в блокирующем режиме другой транзакцией. Время ожидания определяется системной функцией @@LOCK_TIMEOUT и может быть задано инструкцией SET LOCK_TIMEOUT.  
@@ -39,7 +38,7 @@ ms.locfileid: "62663959"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой истекло время ожидания.|35|Да|  
 |Duration|`bigint`|Промежуток времени в микросекундах между моментом запроса на блокировку и истечением времени блокировки.|13|Да|  
 |EndTime|`datetime`|Время окончания события.|15|Да|  
-|EventClass|`int`|Тип события = 27.|27|Нет|  
+|EventClass|`int`|Тип события = 27.|27|нет|  
 |EventSequence|`int`|Порядковый номер данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -60,9 +59,9 @@ ms.locfileid: "62663959"
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`ntext`|Текстовое поле, зависящее от типа блокировки, произошедшей при истечении времени ожидания.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
-|Type|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
+|Тип|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Класс событий Lock: Timeout &#40;timeout &#62; 0&#41;](lock-timeout-timeout-0-event-class.md)   
  [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  

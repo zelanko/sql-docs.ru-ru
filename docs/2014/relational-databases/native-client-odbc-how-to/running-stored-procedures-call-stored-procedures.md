@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7db8c722eb7afcb9db47478a1f42dd7830935ad7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 18f9e8742fb01ef0bf3b635d0bdc3fda4e428296
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048164"
 ---
 # <a name="call-stored-procedures-odbc"></a>Вызов хранимых процедур (ODBC)
   Когда инструкция SQL вызывает хранимую процедуру с помощью предложения escape-вызова ODBC, драйвер Microsoft SQL Server отправляет процедуру SQL Server с помощью механизма удаленного вызова хранимой процедуры (RPC). Запросы RPC пропускают большую часть синтаксической проверки и обработки параметров инструкции в SQL Server; они быстрее, чем инструкция Transact-SQL EXECUTE.  
@@ -39,7 +38,7 @@ ms.locfileid: "82712522"
 > [!NOTE]  
 >  Если приложение отправляет процедуру при помощи синтаксиса Transact-SQL EXECUTE (в отличие от escape-последовательности ODBC CALL), драйвер SQL Server ODBC передает этот вызов процедуры SQL Server в виде инструкции SQL, а не RPC. Кроме того, при использовании инструкции Transact-SQL EXECUTE выходные параметры не возвращаются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разделы руководства по выполнению хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
  [Пакетирование вызовов хранимых процедур](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
  [Выполнение хранимых процедур](../native-client-odbc-stored-procedures/running-stored-procedures.md)   

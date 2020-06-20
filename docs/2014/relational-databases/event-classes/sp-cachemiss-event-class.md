@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f3d74cad3f462d9bd8d2d57cc3b6e37c4739598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91df12e64c24bb3e21bb69e73f5ac1741f18ba0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028402"
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss, класс событий
   Класс событий SP:CacheMiss показывает, что процедура не обнаружена в кэше. Если класс событий SP:CacheMiss часто повторяется, это может свидетельствовать о том, что [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется предоставить больший объем памяти, увеличив размер кэша процедур.  
@@ -31,7 +30,7 @@ ms.locfileid: "63050930"
 |ApplicationName|`nvarchar`|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
-|EventClass|`int`|Тип события = 34.|27|Нет|  
+|EventClass|`int`|Тип события = 34.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -52,7 +51,7 @@ ms.locfileid: "63050930"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [SP:CacheInsert, класс событий](sp-cacheinsert-event-class.md)  

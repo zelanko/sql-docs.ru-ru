@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 866b6dd3-2acd-4dfb-aeca-a0352b2d4c6a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fb03809fb465c4b23131d2133931028d7bec118d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff3ecab047d06336051a7d9a3b332241ef8b4cc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048116"
 ---
 # <a name="running-stored-procedures"></a>Выполнение хранимых процедур
   Хранимая процедура представляет собой исполняемый объект, хранящийся в базе данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает:  
@@ -65,7 +64,7 @@ ms.locfileid: "82709459"
   
 -   [Обработка результатов хранимой процедуры](processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Разделы руководства по выполнению хранимых процедур &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   

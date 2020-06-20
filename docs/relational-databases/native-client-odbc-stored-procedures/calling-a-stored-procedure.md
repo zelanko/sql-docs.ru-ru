@@ -1,5 +1,6 @@
 ---
 title: Вызов хранимой процедуры | Документация Майкрософт
+description: Сведения о escape-последовательности ODBC CALL, предпочтительном методе выполнения хранимых процедур. Драйвер ODBC для собственного клиента также поддерживает Transact-SQLEXECUTE.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,20 +20,20 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fae2e947d0faa38ae875f72b48119b21c30dd47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4c13ef2e5e1f47a9cb404a312bcca855c52c42b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967567"
 ---
 # <a name="calling-a-stored-procedure"></a>Вызов хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает как escape-последовательность ODBC CALL, так [!INCLUDE[tsql](../../includes/tsql-md.md)]и инструкцию [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) для выполнения хранимых процедур; предпочтительным методом является escape-последовательность вызова ODBC. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает как escape-последовательность ODBC CALL, так и [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) для выполнения хранимых процедур; в качестве предпочтительного метода используется escape-последовательность вызова ODBC. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
   
 > [!NOTE]  
->  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимых процедур с использованием именованных параметров с помощью ODBC (Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkID=209721)). имена\@параметров должны начинаться с символа "". Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
+>  При вызове [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимых процедур с использованием именованных параметров с помощью ODBC (Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkID=209721)). имена параметров должны начинаться с \@ символа "". Это ограничение, характерное для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это ограничение контролируется строже, чем в компонентах доступа к данным MDAC.  
   
  Управляющая последовательность ODBC CALL для вызова процедуры такова:  
   

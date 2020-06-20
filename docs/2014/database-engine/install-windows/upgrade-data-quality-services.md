@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931894"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
   Этот раздел предоставляет сведения о том, как обновить существующую установку служб Data Quality Services (DQS) в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версии CTP2. В процессе обновления сервера служб DQS в службах DQS в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], необходимо обновить схему базы данных служб DQS.  
@@ -70,7 +69,7 @@ ms.locfileid: "62775634"
     5.  После успешного обновления схемы баз данных DQS отображается сообщение о завершении.  
   
 ##  <a name="verifying-the-dqs-databases-schema-upgrade"></a><a name="Verify"></a> Проверка обновления баз данных DQS схемы  
- Для проверки, что схема баз данных DQS обновлена успешно, можно проверить в текущей версии базы данных DQS_MAIN и DQS_PROJECTS с помощью запроса к таблице A_DB_VERSION в каждой базе данных. Для этого выполните следующие действия.  
+ Для проверки, что схема баз данных DQS обновлена успешно, можно проверить в текущей версии базы данных DQS_MAIN и DQS_PROJECTS с помощью запроса к таблице A_DB_VERSION в каждой базе данных. Для этого сделайте следующее:  
   
 1.  Запустите среду SQL Server Management Studio и установите соединение с экземпляром SQL Server, содержащий обновленные базы данных DQS схемы.  
   
@@ -83,12 +82,12 @@ ms.locfileid: "62775634"
   
 3.  Выводится запись для каждой операции обновления, а также дата создания обновления. Максимальное VERSION_ID и ASSEMBLY_VERSION на самой последней даты текущую версию. Значение 2 в столбце STATUS означает успешное выполнение процедуры. Если возникла ошибка, то ОШИБКА перечисляются в столбец. Образец вывода:  
   
-    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|Состояние|ошибка|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|Состояние|ОШИБКА|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен\имя_пользователя>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен\имя_пользователя>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Удаление объектов служб Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Обновление до SQL Server 2014](upgrade-sql-server.md)  

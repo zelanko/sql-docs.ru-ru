@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 27d6afa2-7dab-4fe7-a1ad-064b879dc654
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ebbd488cd85fde3003f6e54c5f08fd05c601d3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a202279021e3e6c7c3c44a167792bb9439567aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662318"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029292"
 ---
 # <a name="locks-event-category"></a>Категория событий Locks
   Классы событий в категории **Locks** применяются для контроля за активностью блокировок в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Эти классы событий помогают исследовать связанные с блокировками проблемы, вызванные одновременным чтением и записью данных несколькими пользователями.  

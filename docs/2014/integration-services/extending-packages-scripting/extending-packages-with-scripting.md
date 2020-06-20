@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bb567bffe0c184907ca61bd583eb5666948a0f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967254"
 ---
 # <a name="extending-packages-with-scripting"></a>Расширение пакетов с помощью сценариев
   Если встроенные компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не соответствуют требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Существует два варианта расширения пакетов: можно написать код с использованием возможностей многофункциональных оболочек, предоставляемых задачей «Скрипт» и компонентом скрипта или самостоятельно создать пользовательские расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], используя классы, производные от базовых классов, предоставляемых объектной моделью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -39,13 +38,13 @@ ms.locfileid: "78176188"
 
  [Расширение потока данных с помощью компонента скрипта](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Описывает, как создавать пользовательские источники потока данных, преобразования и назначения с помощью компонента скрипта. Компонент потока данных обычно вызывается один раз для каждой обрабатываемой строки данных.
 
-## <a name="reference"></a>Справочник
+## <a name="reference"></a>Ссылка
  [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md) Список стандартных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] кодов ошибок со своими символическими именами и описаниями.
 
 ## <a name="related-sections"></a>Связанные разделы
  [Расширение пакетов с помощью пользовательских объектов](../extending-packages-custom-objects/extending-packages-with-custom-objects.md) Описывает создание пользовательских задач, компонентов потока данных и других объектов пакета для использования в нескольких пакетах.
 
- [Программное создание пакетов](../building-packages-programmatically/building-packages-programmatically.md) Описывает, как создавать, настраивать, запускать, загружать, сохранять пакеты и управлять [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ими программно.
+ [Программное создание пакетов](../building-packages-programmatically/building-packages-programmatically.md) Описывает, как создавать, настраивать, запускать, загружать, сохранять пакеты и управлять ими [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] программно.
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы [!INCLUDE[msCoName](../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 

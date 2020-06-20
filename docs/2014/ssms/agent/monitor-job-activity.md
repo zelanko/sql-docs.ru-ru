@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6310453e1257aaee1a02f035c7213ef4fe6131af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5088e029e90b4556c1559f8c948e8a8734762749
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001882"
 ---
 # <a name="monitor-job-activity"></a>Наблюдение за активностью заданий
   Текущую активность всех определенных заданий экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно контролировать при помощи монитора активности заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -60,10 +59,10 @@ ms.locfileid: "62704776"
 |**Описание**|**Раздел**|  
 |Описывает, как просмотреть состояние времени выполнения для заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Просмотр активности заданий](view-job-activity.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр активности заданий](view-job-activity.md)   
- [dbo. sysjobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
- [dbo. таблице syssessions &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
+ [dbo.sysжобактивити &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobactivity-transact-sql)   
+ [dbo.sysсеансы &#40;&#41;Transact-SQL](/sql/relational-databases/system-tables/dbo-syssessions-transact-sql)   
  [sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql)  
   
   

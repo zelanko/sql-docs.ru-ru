@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 860de6d29557b6594c9ec149f09e915b837fa95e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048514"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
   Для использования компонента распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо обеспечить выполнение требований, указанных в этой статье.  
@@ -107,7 +106,7 @@ ms.locfileid: "63149775"
   
 -   SPID  
   
--   Start Time  
+-   Время начала  
   
 -   EndTime  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63149775"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Требования к операционной системе  
- Для запуска средства администрирования, контроллера и клиентских служб поддерживаются те же операционные системы, что и для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о том, какие операционные системы поддерживаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вашего экземпляра, см. в разделе [требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Для запуска средства администрирования, контроллера и клиентских служб поддерживаются те же операционные системы, что и для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о том, какие операционные системы поддерживаются для вашего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, см. в разделе [требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Компоненты распределенного воспроизведения поддерживаются в операционных системах как для платформы x86, так и для платформы x64. Для операционных систем платформы x64 поддерживается только режим Windows on Windows (WOW).  
   
@@ -157,8 +156,8 @@ ms.locfileid: "63149775"
   
  В результате воспроизведения событий, связанных с отсутствующими или неверными именами входа, будут возникать ошибки воспроизведения, но сама операция воспроизведения будет продолжена.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md)   
+## <a name="see-also"></a>См. также:  
+ [Распределенное воспроизведение SQL Server](sql-server-distributed-replay.md)   
  [Безопасность распределенное воспроизведение](distributed-replay-security.md)   
  [Установка распределенного воспроизведения](install-distributed-replay-overview.md)  
   

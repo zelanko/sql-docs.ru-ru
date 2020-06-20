@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01abcbe81304d2bbc9a09c29f304a55945aae5ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774560"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931511"
 ---
 # <a name="about-log-shipping-sql-server"></a>Сведения о доставке журналов (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет автоматически отправлять резервные копии журналов транзакций из *базы данных-источника* экземпляра *сервера-источника* в одну или более *баз данных-получателей* других экземпляров *сервера-получателя* . Резервные копии журналов транзакций применяются к каждой из баз данных-получателей индивидуально. Необязательный третий экземпляр сервера, известный как *сервер мониторинга*, ведет журнал и отслеживает состояние операций резервного копирования и восстановления и при необходимости выдает предупреждение, если в этих запланированных операциях происходит сбой.  

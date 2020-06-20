@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932731"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Установка SQL Server «2014» с помощью мастера установки (программы установки)
-  В этом разделе приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения о различных компонентах, которые можно установить, см. в разделе [установка SQL Server 2014](installation-for-sql-server.md).  Дополнительные сведения об установке компонентов по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отдельности см. в разделе [Install SQL Server 2014](install-sql-server.md).  
+  В этом разделе приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения о различных компонентах, которые можно установить, см. в разделе [установка SQL Server 2014](installation-for-sql-server.md).  Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонентов по отдельности см. в разделе [install SQL Server 2014](install-sql-server.md).  
   
  Эти дополнительные разделы описывают другие способы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775754"
   
 8.  На странице «Установка установочных файлов» программа установки отображает индикаторы хода загрузки, извлечения и установки установочных файлов. При обнаружении обновления программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно также будет установлено, если указано, что его следует использовать.  
   
-9. На странице Роль установки выберите ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Установка компонентов**, а затем нажмите кнопку **Далее** , чтобы перейти на страницу Выбор компонентов.  
+9. На странице Роль установки выберите **Установка компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , а затем нажмите кнопку **Далее**, чтобы перейти на страницу Выбор компонентов.  
   
 10. Выберите компоненты для установки на странице «Выбор компонентов». После выбора имени компонента описание его группы отображается на панели **Описание компонентов** . Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статьях [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -146,15 +145,15 @@ ms.locfileid: "62775754"
   
 18. Страница «Конфигурация клиента распределенного воспроизведения» позволяет указать пользователей, которым нужно предоставить административные разрешения для службы клиента распределенного воспроизведения. Пользователи с административными разрешениями будут иметь неограниченный доступ к службе клиента распределенного воспроизведения.  
   
-     **Имя контроллера** является необязательным параметром, а значение по умолчанию — \< *пустым*>. Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
+     **Имя контроллера** является необязательным параметром, а значение по умолчанию — \<*blank*> . Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
   
     -   Если контроллер уже настроен, введите имя этого контроллера при настройке каждого клиента.  
   
     -   Если контроллер еще не настроен, имя контроллера можно оставить пустым. Однако необходимо вручную ввести имя контроллера в файл **конфигурации клиента** .  
   
-     Укажите **Рабочий каталог** для службы клиента распределенное воспроизведение. Рабочий каталог по умолчанию \< *— буква диска*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\Files \DReplayClient\WorkingDir.  
+     Укажите **Рабочий каталог** для службы клиента распределенное воспроизведение. Рабочий каталог по умолчанию \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
-     Укажите **Каталог результатов** для службы клиента распределенное воспроизведение. Каталог результатов по умолчанию \< *— буква диска*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\Files \DReplayClient\ResultDir.  
+     Укажите **Каталог результатов** для службы клиента распределенное воспроизведение. Каталог результатов по умолчанию \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
      Чтобы продолжить, нажмите кнопку **Далее**.  
   
@@ -168,12 +167,12 @@ ms.locfileid: "62775754"
   
 22. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения см. в разделе [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Настройте новую установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Чтобы сократить уязвимую для атак контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и активирует ключевые службы и функции. Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка установки SQL Server](validate-a-sql-server-installation.md)   
  [Удаление установки SQL Server 2014](repair-a-failed-sql-server-installation.md)   
  [Просмотр и чтение файлов журнала установки SQL Server](view-and-read-sql-server-setup-log-files.md)   

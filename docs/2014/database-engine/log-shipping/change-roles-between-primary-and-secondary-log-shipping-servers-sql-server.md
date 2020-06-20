@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931337"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)
   После перехода конфигурации доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на ресурс сервера-получателя можно настроить базу данных-получатель для работы в качестве базы данных-источника. Затем базу данных-источник и базу данных-получатель можно менять местами по необходимости.  
@@ -78,7 +77,7 @@ ms.locfileid: "62774568"
 3.  Включите задание резервного копирования в доставке журналов на исходном сервере-получателе (новом сервере-источнике) и задания копирования и восстановления на исходном сервере-источнике (новом сервере-получателе).  
   
 > [!IMPORTANT]  
->  Чтобы обеспечить согласованную работу пользователей и приложений при изменении базы данных-получателя на базу данных-источник, необходимо повторно создать часть или все метаданные базы данных, такие как имена входа и задания, в новом экземпляре сервера-источника. Дополнительные сведения см. [в разделе Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Чтобы обеспечить согласованную работу пользователей и приложений при изменении базы данных-получателя на базу данных-источник, необходимо повторно создать часть или все метаданные базы данных, такие как имена входа и задания, в новом экземпляре сервера-источника. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Связанные задачи  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62774568"
   
 -   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
   
   

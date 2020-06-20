@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 7e9821521e793092c62843dd9bdab0c16bb0f26b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915634"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  

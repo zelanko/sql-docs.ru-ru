@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967354"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Кодирование и отладка компонента скрипта
   В конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] у компонента Script есть два режима: режим конструирования метаданных и режим конструирования кода. Когда открывается **редактор преобразования "Скрипт"** , компонент переключается в режим конструктора метаданных, в котором настраиваются метаданные и задаются свойства компонентов. После того как будут заданы свойства компонента скрипта и настроены входы и выходы в режиме конструктора метаданных, можно переключиться в режим редактирования кода для составления пользовательского скрипта. Дополнительные сведения о режимах конструктора метаданных и кода см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](configuring-the-script-component-in-the-script-component-editor.md).
@@ -59,9 +58,9 @@ ms.locfileid: "78176231"
 
     -   Коллекция классов `Connections`, которая содержит ссылки на подключения, выбранные на странице «Диспетчер соединений» в редакторе преобразования «Скрипт».
 
-    -   Класс `Variables` коллекции, содержащий ссылки на переменные, указанные в свойствах `ReadOnlyVariable` и `ReadWriteVariables` на странице **Скрипт** в **редакторе преобразования "Скрипт**".
+    -   `Variables`Класс коллекции, содержащий ссылки на переменные, указанные в `ReadOnlyVariable` `ReadWriteVariables` свойствах и на странице **Скрипт** в **редакторе преобразования "Скрипт**".
 
--   Элемент `BufferWrapper` проекта содержит класс, наследующий от <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> для каждого входных и выходных данных, настроенных на странице **входы и выходы** в **редакторе преобразования "Скрипт**". Каждый из этих классов содержит типизированные свойства метода доступа, которые соответствуют настроенным входным и выходным столбцам, а также буферы потока данных, содержащие столбцы.
+-   `BufferWrapper`Элемент проекта содержит класс, наследующий от <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> для каждого входных и выходных данных, настроенных на странице **входы и выходы** в **редакторе преобразования "Скрипт**". Каждый из этих классов содержит типизированные свойства метода доступа, которые соответствуют настроенным входным и выходным столбцам, а также буферы потока данных, содержащие столбцы.
 
  Дополнительные сведения об использовании этих объектов, методов и свойств см. в разделе [Основные сведения о модели объектов компонента скрипта](understanding-the-script-component-object-model.md). Сведения об использовании методов и свойств этих классов в компоненте скрипта определенного типа см. в разделе [Дополнительные примеры компонента скрипта](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). В разделах примеров также приведен полный образец кода.
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |Переменные|Использование именованных и типизированных свойств метода доступа класса коллекции `Variables` в элементе проекта `ComponentWrapper`, отображенном в свойстве `Variables` класса `ScriptMain`.<br /><br /> Метод `PreExecute` может обращаться только к переменным, доступным только для чтения. Метод `PostExecute` может обращаться как к переменным, доступным только для чтения, так и к переменным, доступным для чтения и записи.|
 |Соединения|Использование именованных и типизированных свойств метода доступа класса коллекции `Connections` в элементе проекта `ComponentWrapper`, отображенном в свойстве `Connections` класса `ScriptMain`.|
-|События|Инициируйте события с помощью <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> свойства `ScriptMain` класса и методов **\<триггера X>** <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> интерфейса.|
+|События|Инициируйте события, используя <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> свойство `ScriptMain` класса и методы **Fire \<X> ** <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> интерфейса.|
 |Logging|Ведение журнала с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> класса `ScriptMain`.|
 
 ## <a name="debugging-the-script-component"></a>Отладка компонента скрипта
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [Основные сведения об объектной модели компонента скрипта](understanding-the-script-component-object-model.md) Объясняется, как использовать объекты, методы и свойства, доступные в компоненте скрипта.
 
- [Создание ссылок на другие сборки в решениях сценариев](../referencing-other-assemblies-in-scripting-solutions.md) Объясняется, как ссылаться на объекты [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] из библиотеки классов в компоненте скрипта.
+ [Создание ссылок на другие сборки в решениях сценариев](../referencing-other-assemblies-in-scripting-solutions.md) Объясняется, как ссылаться на объекты из [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] библиотеки классов в компоненте скрипта.
 
  [Имитация вывода ошибок для компонента скрипта](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md) Объясняет, как имитировать вывод ошибок для строк, вызывающих ошибки при обработке компонентом скрипта.
 

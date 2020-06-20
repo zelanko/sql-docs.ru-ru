@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb2cd178440a2d0ea0cd9842616a52058a63f7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3c02ce70ace777c171aa981ae6e2f53d235aaa4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029457"
 ---
 # <a name="missing-join-predicate-event-class"></a>Missing Join Predicate, класс событий
   Класс событий Missing Join Predicate указывает на то, что выполняется запрос, не имеющий предиката соединения. Это может привести к длительному выполнению запроса. Дополнительные сведения о предикатах соединения см. в разделе [Предикаты (Transact-SQL)](/sql/t-sql/queries/predicates).  
@@ -32,8 +31,8 @@ ms.locfileid: "62662188"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 80.|27|Нет|  
-|EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 80.|27|нет|  
+|EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -49,7 +48,7 @@ ms.locfileid: "62662188"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
