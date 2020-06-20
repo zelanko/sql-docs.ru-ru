@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060108"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Использование массовой загрузки SQLXML в среде .NET
   В этом разделе объясняется, как можно использовать функциональность массовой загрузки XML в среде .NET. Подробные сведения о групповой загрузке XML см. в разделе [выполнение групповой загрузки XML-данных &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -107,13 +106,13 @@ ms.locfileid: "82717557"
     </ROOT>  
     ```  
   
-4.  Запустите среду Visual Studio.  
+4.  Запустите Visual Studio.  
   
 5.  Создайте консольное приложение C#.  
   
 6.  В меню **проект** выберите команду **Добавить ссылку**.  
   
-7.  На вкладке **com** выберите **БИБЛИОТЕКУ типов Microsoft SQLXML Bulkload 4,0** (xblkld4. dll) и нажмите кнопку **ОК**. Вы увидите сборку **Interop. SQLXMLBULKLOADLib** , созданную в проекте.  
+7.  На вкладке **com** выберите **БИБЛИОТЕКУ типов Microsoft SQLXML Bulkload 4,0** (xblkld4.dll) и нажмите кнопку **ОК**. Вы увидите сборку **Interop. SQLXMLBULKLOADLib** , созданную в проекте.  
   
 8.  Замените метод Main() на следующий код. Обновите свойство **ConnectionString** и путь к файлу схемы и файлов данных.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "82717557"
   
      Это средство создает DLL-библиотеку управляемой оболочки (SQLXMLBULKLOADLib.dll), которую можно использовать в проекте платформы .NET Framework. В .NET Framework ссылка на проект добавляется к вновь созданной DLL-библиотеке.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

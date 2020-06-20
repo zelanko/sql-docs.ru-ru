@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 22eeb621cb9c4ccdf0d853ff9d6d528c156c15a0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5acc2081212b0b732305949234e5f5d5ae73fa63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706937"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926875"
 ---
 # <a name="getting-sql-server-assistance"></a>Получение помощи по SQL Server
   Существует три основных источника сведений [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
@@ -93,7 +92,7 @@ ms.locfileid: "82706937"
   
  Продукты [!INCLUDE[msCoName](../includes/msconame-md.md)] имеют сроки поддержки, которые определяют, как долго для каждой версии будет доступна поддержка. Служба поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] ведет страницу, в которой описываются сроки поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)]. Страница содержит ссылки на другие страницы, в которых указана доступность поддержки [!INCLUDE[msCoName](../includes/msconame-md.md)] продуктов. Дополнительные сведения см. в разделе [Жизненный цикл службы поддержки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование документации по продукту SQL Server](../2014-toc/index.yml)  
   
   

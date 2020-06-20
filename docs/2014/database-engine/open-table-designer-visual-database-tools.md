@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3850cbd99eca927983731ad941f611901d26e6ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930200"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Открытие конструктора таблиц (визуальные инструменты для баз данных)
   Конструктор таблиц является визуальным средством, позволяющим разрабатывать и отображать таблицы подключенной базы данных. С помощью конструктора таблиц можно создавать, редактировать и удалять таблицы, столбцы, ключи, индексы, связи и ограничения.  
@@ -42,7 +41,7 @@ ms.locfileid: "62774192"
   
      Меню **Конструктор таблиц** добавляется к главному меню, а таблица открывается на панелях конструктора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разработка таблиц &#40;визуальных инструментов для баз данных&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Таблицы](../relational-databases/tables/tables.md)  
   

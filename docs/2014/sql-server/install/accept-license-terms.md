@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d41879b84d98f72e570b00a61341a53d2e6187a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096840"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046448"
 ---
 # <a name="accept-license-terms"></a>Принятие условий лицензионного соглашения
   На странице **Принять условия лицензии** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] примите условия лицензии для этого выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,20 +45,20 @@ ms.locfileid: "66096840"
   
  Сведения об использовании функций отправляются в [!INCLUDE[msCoName](../../includes/msconame-md.md)], где хранятся с ограничением доступа.  
   
- Чтобы отключить отчеты программы улучшения качества по после завершения установки, используйте средство ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отчетов об ошибках и использовании** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]меню **средства настройки** .  
+ Чтобы отключить отчеты программы улучшения качества по после завершения установки, используйте средство ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отчетов об ошибках и использовании** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меню **средства настройки** .  
   
  Что же касается таких действий, осуществляемых программой установки, как установка, обновление, исправление и т. д., то сбор и передача сведений о них осуществляется только во время работы программы установки.  
   
  Применительно ко всем прочим компонентам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбор сведений производится всего один раз в день по всем разрешенным экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию сбор запланирован на полночь, что позволяет свести к минимуму нагрузку на сервер. Если необходимо изменить время сбора данных, можно вручную отредактировать раздел реестра, управляющий этим временем. Каждый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует собственный раздел реестра:  
   
- \\[!INCLUDE[msCoName](../../includes/msconame-md.md)]HKLM\Software\\\MSSQL12.[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<InstanceId> \кпе\тимеофрепортинг  
+ HKLM\Software \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \MSSQL12. \<INSTANCEID> \кпе\тимеофрепортинг  
   
  Значение этого раздела реестра содержит время сбора данных как число минут с 00:00 (полуночи) до времени запуска. Например, значение, равное 60, запустит сбор данных в 1:00, значение 1200 — в 20:00, и так далее.  
   
 ## <a name="error-reporting"></a>Отчет об ошибках  
  Страница **Параметры отчетов об ошибках и использовании** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет включить для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]функции отправки отчетов об ошибках и использовании.  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  По умолчанию функции сбора данных об использовании компонентов и отчета об ошибках отключены для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и его компонентов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Отчет об ошибках  
@@ -99,9 +98,9 @@ ms.locfileid: "66096840"
   
  Если при возникновении неустранимой ошибки отчеты об ошибках включены, в журнале событий Windows могут появиться записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в которых содержатся ссылки на соответствующие статьи базы знаний [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
- Чтобы отключить отчеты об ошибках или использовании возможностей для всех экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и его компонентов после завершения установки, перейдите в диалоговое окно **Настройки параметров отчета об ошибках и использовании** и снимите флажки для пункта **Использование возможностей**. Если для нескольких компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (общие компоненты [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], и) включены **отчеты об ошибках** , можно отключить отчеты об ошибках для каждого экземпляра отдельного компонента, а также общих компонентов, перечисленных как **другие**.  
+ Чтобы отключить отчеты об ошибках или использовании возможностей для всех экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и его компонентов после завершения установки, перейдите в диалоговое окно **Настройки параметров отчета об ошибках и использовании** и снимите флажки для пункта **Использование возможностей**. Если для нескольких компонентов (общие компоненты,, и) включены **отчеты об ошибках** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно отключить отчеты об ошибках для каждого экземпляра отдельного компонента, а также общих компонентов, перечисленных как **другие**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Об условиях лицензионного соглашения SQL Server](../../../2014/getting-started/about-the-sql-server-license-terms.md)  
   
   

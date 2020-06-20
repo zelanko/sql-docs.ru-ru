@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 272a33f69edc6f5152b22e6ffb0c8c3bf8ebbb85
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781319"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933535"
 ---
 # <a name="interfaces-ole-db"></a>Интерфейсы (OLE DB)
-  Помимо основных интерфейсов OLE DB, предоставляемых компонентами Microsoft Data Access Components (MDAC), поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB реализует следующие дополнительные интерфейсы OLE DB:  
+  Помимо основных интерфейсов OLE DB, предоставляемых компонентами Microsoft Data Access Components (MDAC), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB реализует следующие дополнительные интерфейсы OLE DB:  
   
 -   [IBCPSession (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
@@ -46,7 +45,7 @@ ms.locfileid: "62781319"
   
 -   [ISQLServerErrorInfo (OLE DB)](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781109"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933465"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Общие сведения о пользовательских атрибутах интеграции со средой CLR
   В среде CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] допускается использование описательных ключевых слов, именуемых атрибутами. Эти атрибуты содержат дополнительную информацию по многим элементам, таким как методы и классы. Эти атрибуты сохраняются в сборке с метаданными объекта и могут быть использованы для описания кода другим инструментальным средствам разработки или для изменения поведения на этапе выполнения внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -88,7 +87,7 @@ End Class
   
  Пользовательские атрибуты, необходимые для подпрограмм CLR, пользовательских типов и агрегатов, определяются в пространстве имен `Microsoft.SqlServer.Server`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские атрибуты для подпрограмм среды CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

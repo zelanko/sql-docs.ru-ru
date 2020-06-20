@@ -9,20 +9,19 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933575"
 ---
 # <a name="hello-world-sample"></a>Образец «Hello World»
   Образец Hello World демонстрирует основные операции, применяемые при создании, развертывании и тестировании простых хранимых процедур на основе интеграции со средой CLR. Этот образец также демонстрирует способы возврата данных при помощи выходного параметра и записи, которая динамически создается хранимой процедурой и возвращается вызывающему.  
   
- `HelloWorld` Хранимая процедура возвращает строку "Hello World!" в результирующем наборе, состоящем из одной строки. В этом примере показаны некоторые варианты использования классов [Microsoft. SqlServer. Server. склметадата](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft. SqlServer. Server. SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) и [Microsoft. SqlServer. Server. pipe](https://go.microsoft.com/fwlink/?LinkID=193571).  
+ `HelloWorld`Хранимая процедура возвращает строку "Hello World!" в результирующем наборе, состоящем из одной строки. В этом примере показаны некоторые варианты использования классов [Microsoft. SqlServer. Server. склметадата](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft. SqlServer. Server. SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) и [Microsoft. SqlServer. Server. pipe](https://go.microsoft.com/fwlink/?LinkID=193571).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

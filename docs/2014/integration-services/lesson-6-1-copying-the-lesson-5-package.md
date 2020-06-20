@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890760"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951444"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Шаг 1. Копирование пакета занятия 5
   В этой задаче будет создана копия пакета Lesson 5.dtsx, созданного на занятии 5. Либо можно добавить пакет для занятия 5, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 6.  
@@ -38,7 +37,7 @@ ms.locfileid: "62890760"
   
 7.  В окне «Свойства» измените свойство Name на «Занятие 6».  
   
-8.  Установите флажок для свойства ID, затем щелкните стрелку раскрывающегося списка и выберите команду \<создать новый идентификатор>.  
+8.  Установите флажок для свойства ID, щелкните стрелку раскрывающегося списка, а затем в списке выберите \<Generate New ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Добавление готового пакета занятия 5  
   

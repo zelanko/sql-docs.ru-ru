@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91443fbb12714bd7d4e1048924b10207de2acb47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067207"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Соединение условий, если приоритет имеет оператор OR (визуальные инструменты для баз данных)
   Чтобы связать условия, оператором OR и дать им приоритет над условиями, связанными оператором AND, необходимо повторить условие, связанное оператором AND, для каждого условия, связанного оператором OR.  

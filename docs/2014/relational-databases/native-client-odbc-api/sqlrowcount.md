@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 967ed3d4-3d31-4485-ac92-027076ebc829
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adc8dbc8083ec1de98951db618dabad8a145d7d6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 410023d960bad6dde1060a509cc1bf46f67d77cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702186"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021707"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
   Если массивы значений параметров привязаны к выполнению инструкции, функция `SQLRowCount` возвращает SQL_ERROR, если любая строка значений параметра создает условие ошибки при выполнении инструкции. Через аргумент *RowCountPtr* функции значение возвращено не будет.  
@@ -30,7 +29,7 @@ ms.locfileid: "82702186"
   
  При [!INCLUDE[tsql](../../includes/tsql-md.md)] выполнении инструкции INSERT, Update, DELETE или MERGE с предложением OUTPUT SQLRowCount не возвращает количество строк, затронутых до тех пор, пока не будут потреблены все строки результирующего набора, сформированного предложением OUTPUT. Чтобы сконсуме эти строки, вызовите SQLFetch или SQLFetchScroll. Склресултколс возвращает значение-1, пока не будут использованы все строки результатов. После того как SQLFetch или SQLFetchScroll возвращает SQL_NO_DATA, приложение должно вызвать SQLRowCount, чтобы определить число затронутых строк перед вызовом SQLMoreResults для перехода к следующему результату.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLRowCount](https://go.microsoft.com/fwlink/?LinkId=59367)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

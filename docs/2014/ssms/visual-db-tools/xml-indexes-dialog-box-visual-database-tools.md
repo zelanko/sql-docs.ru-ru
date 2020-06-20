@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dff22b94cd4be464783a3b9dfcb07cae890a2307
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000553"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>Диалоговое окно «XML-индексы» (визуальные инструменты для баз данных)
   Используйте диалоговое окно **XML-индексы** для создания индексов для столбцов с типом данных XML, которые не могут быть индексированы, используя диалоговое окно **Индексы/Ключи** . Каждый XML-столбец может иметь более одного XML-индекса, но созданный первым (первичный) будет основным для остальных (вторичных). Если первичный XML-индекс удален, вторичные индексы также будут удалены.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a70eed8c362411a3b1b87c66b9277da8aeac1ed4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705804"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021278"
 ---
 # <a name="using-data-files-and-format-files"></a>Использование файлов данных и файлов форматирования
   Простейшая программа массового копирования выполняет следующие действия.  
@@ -51,7 +50,7 @@ ms.locfileid: "82705804"
   
  Функция **bcp_control** управляет несколькими параметрами при выполнении операции копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из файла данных. **bcp_control** задает параметры, такие как максимальное количество ошибок перед завершением, строка в файле, с которой начинается копирование, строка, которую нужно присвоить, и размер пакета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

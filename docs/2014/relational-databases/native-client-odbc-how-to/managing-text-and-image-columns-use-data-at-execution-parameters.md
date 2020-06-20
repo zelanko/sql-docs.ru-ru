@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44f1c1673e761425969558ecb911f8df92601274
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2018b038c76c745c1a81e11e713547a7b10dcce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043954"
 ---
 # <a name="use-data-at-execution-parameters-odbc"></a>Использование параметров с данными времени выполнения (ODBC)
     
@@ -221,7 +220,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'emp4')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разделы руководства по управлению столбцами Text и Image &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
   

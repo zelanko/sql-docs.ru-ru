@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c3e064358b58844726daa6499dc6c2ed0eeedd1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b6d7e62118f4fe3a01bca158d9dce13d9e7bfb52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703794"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009662"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
   Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , многомерных выражений, расширений интеллектуального анализа данных или XML/A либо изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -64,7 +63,7 @@ ms.locfileid: "82703794"
  **Результаты**  
  Это окно используется для просмотра результатов выполнения запроса. Результаты могут отображаться в окне в виде текста или табличной сетки либо могут быть отправлены в файл. Табличные сетки результатов могут отображаться в виде отдельных окон со вкладками.  
   
- **технология IntelliSense**  
+ **IntelliSense**  
  Чтобы просмотреть параметры технологии **IntelliSense, в меню** Правка **редактора выберите пункт**Технология IntelliSense [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
  **выделение цветом;**  
@@ -79,7 +78,7 @@ ms.locfileid: "82703794"
  **Сообщения**  
  Отображают ошибки, предупреждения и информационные сообщения, возвращаемые сервером в ходе выполнения скрипта. Список сообщений изменяется только при повторном запуске скрипта.  
   
- **Строка состояния**  
+ **Status Bar**  
  Отображает системные сведения, связанные с окном редактора запросов, например, к какому экземпляру подключен редактор запросов.  
   
 ## <a name="database-engine-query-editor-components"></a>Компоненты редактора запросов компонента Database Engine  
@@ -128,5 +127,5 @@ ms.locfileid: "82703794"
 |Описывает использование отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] для пошагового просмотра кода и просмотра отладочных данных, например значений переменных и параметров.|[Отладчик Transact-SQL](transact-sql-debugger.md)|  
 |Описывает настройку пользовательских цветов для различных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]и задание этих цветов в качестве фонового цвета для строки состояния в окнах редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Строка состояния (редактор запросов к ядру СУБД)](status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

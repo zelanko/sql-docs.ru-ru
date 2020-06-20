@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fd397349bc3fa3ed7f69e9e1293415ea96fc75d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d149016dabd0239bd76eadc8655b6752afd916d9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933955"
 ---
 # <a name="set-up-login-accounts-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)
   Чтобы два экземпляра сервера могли подключиться к [конечным точкам зеркального отображения базы данных](the-database-mirroring-endpoint-sql-server.md) друг друга, именам входа каждого экземпляра требуется доступ к другому экземпляру. Кроме того, каждой учетной записи требуется разрешение на подключение к конечной точке зеркального отображения базы данных на другом экземпляре.  
@@ -60,7 +59,7 @@ ms.locfileid: "62754313"
   
 -   [Использование сертификатов для конечной точки зеркального отображения базы данных (Transact-SQL)](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Устранение неполадок конфигурации зеркального отображения базы данных &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Устранение неполадок SQL Server &#40;конфигурации группы доступности AlwaysOn&#41;](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

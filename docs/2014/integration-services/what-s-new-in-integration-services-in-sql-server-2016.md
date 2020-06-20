@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5562b7424e4a104204becaed10378ffc999c4e98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d17451c8706722b0dac21d777f35a17fe319799
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68891104"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972484"
 ---
 # <a name="what39s-new-integration-services"></a>Новые&#39;(Integration Services)
-  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не изменяется из предыдущего выпуска.  
+  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]не изменяется из предыдущего выпуска.  
   
  Сведения о других [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] продуктах и технологиях см. [в статье новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).  
   

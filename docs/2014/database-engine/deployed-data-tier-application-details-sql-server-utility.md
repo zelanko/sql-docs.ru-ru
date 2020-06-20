@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 40d0ad53de3589f5dc23e587427f001dbdb808b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858696"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933838"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Подробные сведения о развернутом приложении уровня данных (служебная программа SQL Server)
   Представление «Сведения о развернутых приложениях уровня данных» проводника служебной программы отображает сведения об использовании для отдельных приложений уровня данных, журнал использования процессора, подробные сведения об использовании хранилища на уровне файлов, а также позволяет просматривать и обновлять пороговые значения политик. Пороговые значения политик могут быть изменены на уровне приложения уровня данных для использования процессора, а также для файлов данных баз данных и файлов журналов. Также можно просматривать подробные сведения о свойствах отдельных приложений уровня данных.  

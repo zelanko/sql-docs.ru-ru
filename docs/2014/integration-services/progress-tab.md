@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e1c4e5ac4bf399a2c839c7e8cc71b2d378e268a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27da51dc89038493d24447c402e2d4e2b79c4679
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964664"
 ---
 # <a name="progress-tab"></a>Вкладка «Выполнение»
   Вкладка **Выполнение** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] используется для просмотра выполнения пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] при его запуске в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. На вкладке **Выполнение** приводится время начала, время окончания и истекшее время для оценки выполнения пакета и его исполняемых объектов, а также все данные и предупреждения пакета, уведомления о ходе выполнения пакета; успешный или неудачный результат выполнения пакета; все сообщения об ошибках, сформированные в ходе выполнения пакета.  
@@ -26,7 +25,7 @@ ms.locfileid: "66056628"
   
  После завершения пакета вкладка **Выполнение** становится вкладкой **Результаты выполнения** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [конструктор служб SSIS](ssis-designer.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964401"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Редактор диспетчера соединений SAP BW
   Используйте **Редактор диспетчера соединений SAP BW** , чтобы указать свойства для подключения к системе SAP Netweaver BW версии 7.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056282"
   
     -   Щелкните правой кнопкой мыши диспетчер соединений SAP BW, а затем выберите **Изменить**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 > [!NOTE]  
 >  Если вы не знаете все значения, необходимые для настройки диспетчера соединений, запросите их у администратора SAP.  
@@ -82,7 +81,7 @@ ms.locfileid: "66056282"
 > [!NOTE]  
 >   Этот параметр доступен, только если выбран параметр **Использовать балансировку нагрузки** .  
   
- **Сгруппировать**  
+ **Группа**  
  При подключении к группе серверов с выравниванием нагрузки укажите имя группы серверов.  
   
 > [!NOTE]  
@@ -112,7 +111,7 @@ ms.locfileid: "66056282"
  **Проверить подключение**  
  Выполните проверку подключения с указанными значениями. После щелчка **Проверка подключения**откроется окно сообщения, в котором будет указано, установлено ли подключение успешно или с ошибкой.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

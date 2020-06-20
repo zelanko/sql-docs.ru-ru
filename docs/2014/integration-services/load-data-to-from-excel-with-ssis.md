@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767316"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951254"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -81,7 +80,7 @@ ms.locfileid: "62767316"
 
 -   Для файла на локальном компьютере: **C:\\TestData.xlsx**.
 
--   Для файла в общей сетевой папке ** \\ \\Sales\\Data\\TestData. xlsx**.
+-   Для файла в общей сетевой папке ** \\ \\ \\ \\TestData.xlsxданные о продажах **.
 
 Также можно нажать кнопку **Обзор** и выбрать электронную таблицу в диалоговом окне **Открыть**.  
   
@@ -242,7 +241,7 @@ ms.locfileid: "62767316"
 
 -   Если новая целевая таблица создается во время проектирования пакета, во время выполнения или с помощью мастера импорта и экспорта, в инструкции `CREATE TABLE` необходимо использовать LONGTEXT (или один из его синонимов) в качестве типа данных для целевого столбца типа memo. В мастере проверьте инструкцию `CREATE TABLE` и при необходимости измените ее, нажав кнопку **Изменить SQL** рядом с параметром **Создать целевую таблицу** на странице **Сопоставления столбцов**.
 
-## <a name="related-content"></a>Связанное содержимое
+## <a name="related-content"></a>Связанная информация
 
 Дополнительные сведения о компонентах и процедурах, описываемых в этой статье, см. в следующих статьях:
 

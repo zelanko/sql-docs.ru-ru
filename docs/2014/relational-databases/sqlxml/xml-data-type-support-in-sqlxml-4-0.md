@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009287"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Поддержка типов данных xml в SQLXML 4.0
   Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает ТИПИЗИРОВАННЫЕ XML-данные, используя `xml` тип данных. В этом разделе представлены сведения о том, как SQLXML 4.0 распознает экземпляры типов данных `xml` и реализует их поддержку.  
@@ -34,7 +33,7 @@ ms.locfileid: "82702815"
   
 ## <a name="guidelines-and-limitations"></a>Рекомендации и ограничения  
   
--   ** \< xsd: любые>** не могут быть сопоставлены со столбцом, включая `xml` тип данных. В SQLXML это делается с помощью заметки `sql:overflow-field`. Другой способ обойти это ограничение — сопоставление поля с типом данных `xml` в качестве элемента `xsd:anyType`. Этот способ показан в примере «Сопоставление XML-элемента со столбцом типа данных xml», ссылка на который дана в таблице выше.  
+-   **\<xsd:any>** не может быть сопоставлен со столбцом, включая `xml` тип данных. В SQLXML это делается с помощью заметки `sql:overflow-field`. Другой способ обойти это ограничение — сопоставление поля с типом данных `xml` в качестве элемента `xsd:anyType`. Этот способ показан в примере «Сопоставление XML-элемента со столбцом типа данных xml», ссылка на который дана в таблице выше.  
   
 -   Запрос XPath к содержимому столбца с типом данных `xml` не поддерживается.  
   

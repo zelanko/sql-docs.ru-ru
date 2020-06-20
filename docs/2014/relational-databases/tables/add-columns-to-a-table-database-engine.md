@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeb8d52-d562-4e29-9e1e-2923ae874859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed258c78e76c5ec3f6aeeeb6bdd647166592613
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7e9294de10be0df9ef470c75d0934e9f8787b55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62856132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047254"
 ---
 # <a name="add-columns-to-a-table-database-engine"></a>Добавление столбцов в таблицу (компонент Database Engine)
   В данном разделе содержатся инструкции по добавлению новых столбцов в таблицу в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +77,7 @@ ms.locfileid: "62856132"
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  В следующем примере добавляются два столбца в таблицу `dbo.doc_exa`. Скопируйте и вставьте следующий пример в окно запроса и нажмите кнопку **выполнить** .  
+3.  В следующем примере добавляются два столбца в таблицу `dbo.doc_exa`. Скопируйте и вставьте следующий пример в окно запроса и нажмите кнопку **Выполнить**  
   
 ```  
 ALTER TABLE dbo.doc_exa ADD column_b VARCHAR(20) NULL, column_c INT NULL ;  

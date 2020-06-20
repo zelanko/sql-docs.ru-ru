@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9000dd2b7456036f4828640694aaf697036b71d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef16a5a125883e5ce33e04d9899d0bb882d56541
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62645801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007909"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Дополнительно»)
   Используйте вкладку **Дополнительно** в диалоговом окне **Протоколы для свойств MSSQLSERVER**, чтобы настроить функцию **Расширенная защита для проверки подлинности** для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. **Расширенная защита** представляет собой функцию сетевых компонентов, реализованную операционной системой. **Расширенная защита** доступна в Windows 7 и Windows Server 2008 R2 и включена в пакеты обновления для операционных систем предыдущих версий. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**. Для включения определенных функций **Расширенной защиты** необходимо установить на вкладке **Флаги** флажок **Принудительное шифрование** .  
@@ -27,7 +26,7 @@ ms.locfileid: "62645801"
   
  **Расширенная защита** полностью поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Поддержка **расширенной защиты** для других поставщиков клиентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в настоящее время отсутствует.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **расширенную защиту**  
  Возможны три значения.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "62645801"
  **Принятые имена участников-служб NTLM**  
  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентифицируется с помощью более одного имени участника-службы NTLM, необходимо указать список имен участников-служб в виде строк, разделенных точкой с запятой. Например, значение **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com**указывает, что разрешены клиенты, пытающиеся подключиться к SPN с именами **MSSQLSvc/HOST1.Contoso.com** и **MSSQLSvc/HOST2.Contoso.com** . Максимальная длина этой переменной 2048 символов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенная защита для проверки подлинности служб Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   

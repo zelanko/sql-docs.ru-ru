@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 155be272-4f9a-4d86-9f4f-714c4f45b49a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d44c980c7535b05d462d55e6f2aa1e87bf68c98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14b729156409fcf57b39c4bdefce95d3aa3eafcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637744"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933555"
 ---
 # <a name="in-process-data-access-sample"></a>Образец внутрипроцессного доступа к данным
   Образец `InProcessDataAccess` содержит ряд простых функций, которые демонстрируют различные возможности поставщика доступа к внутрипроцессным данным в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
@@ -355,7 +354,7 @@ EXTERNAL NAME [InProcDA].[DataAccessDemo].[SendReaderToClient];
 GO  
 ```  
   
- Следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] (`test.sql`) проверяет пример, используя хранимые процедуры и функции, определенные в этом примере.  
+ Следующий [!INCLUDE[tsql](../../includes/tsql-md.md)] ( `test.sql` ) проверяет пример, используя хранимые процедуры и функции, определенные в этом примере.  
   
 ```  
 USE AdventureWorks;  
