@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7de45ced2f4f39fff54c5beff6228c6f8a5c0476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050291"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Создание таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде
   В этом разделе представлен пример, описывающий использование синтаксиса In-Memory OLTP.  
@@ -232,7 +231,7 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Образцы кода выполняющейся в памяти OLTP](in-memory-oltp-code-samples.md)   
  [Перенос рассчитанных столбцов](migrating-computed-columns.md)   
  [Реализация IDENTITY в таблице, оптимизированной для памяти](implementing-identity-in-a-memory-optimized-table.md)  

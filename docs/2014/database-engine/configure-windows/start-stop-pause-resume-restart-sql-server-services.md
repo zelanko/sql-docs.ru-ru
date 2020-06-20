@@ -39,22 +39,21 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4b102c8fd81923d7386c8e556896e715311a07e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797953"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934775"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server
-  В этом разделе описано, как запускать, останавливать, приостанавливать, возобновлять или [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапускать, агент или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службу браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команды **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
+  В этом разделе описано, как запускать, останавливать, приостанавливать, возобновлять или перезапускать [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службу браузера с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , команды **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)] или PowerShell.  
   
 -   **Перед началом работы**  
   
     -   [Что это за службы?](#Services)  
   
-    -   [Дополнительные сведения](#MoreInformation)  
+    -   [Дополнительная информация](#MoreInformation)  
   
     -   [Безопасность](#Security)  
   
@@ -117,7 +116,7 @@ ms.locfileid: "72797953"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  По умолчанию только участники локальной группы «Администраторы» могут запускать, останавливать, приостанавливать, возобновлять или перезапускать службу. При необходимости предоставить возможность управления службой для пользователей, не обладающих правами администратора, см. раздел [Как предоставить пользователям права для управления службами в Windows Server 2003](https://support.microsoft.com/kb/325349). (Процесс такой же, как и в других версиях Windows.)  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] Для остановки с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` команды требуется членство в предопределенных ролях сервера **sysadmin** или **serveradmin** , и он не может быть передан.  
+ Для остановки с [!INCLUDE[ssDE](../../includes/ssde-md.md)] помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] `SHUTDOWN` команды требуется членство в предопределенных ролях сервера **sysadmin** или **serveradmin** , и он не может быть передан.  
   
 ##  <a name="using-ssnoversion-configuration-manager"></a><a name="SSCMProcedure"></a> С помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -144,7 +143,7 @@ ms.locfileid: "72797953"
   
 3.  На левой панели диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] щелкните **Службы SQL Server**.  
   
-4.  В области результатов щелкните правой кнопкой мыши ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузер**или ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент (MSSQLSERVER)** или ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент (<instance_name>)** для именованного экземпляра, а затем выберите пункты **Пуск**, **остановить**, **приостановить**, **продолжить**или **перезапустить**.  
+4.  В области результатов щелкните правой кнопкой мыши ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] браузер**или ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент (MSSQLServer)** или ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент (<instance_name>)** для именованного экземпляра, а затем выберите пункты **Пуск**, **остановить**, **приостановить**, **продолжить**или **перезапустить**.  
   
 5.  Нажмите кнопку **ОК** для выхода из диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -165,7 +164,7 @@ ms.locfileid: "72797953"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-ssnoversion-agent"></a>Запуск, остановка или перезапуск экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  В [!INCLUDE[ssDE](../../includes/ssde-md.md)]обозревателе объектов подключитесь к экземпляру, щелкните правой кнопкой мыши ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент**, а затем выберите **запустить**, **Закрыть**или **перезапустить**.  
+1.  В обозревателе объектов подключитесь к экземпляру, щелкните [!INCLUDE[ssDE](../../includes/ssde-md.md)] правой кнопкой мыши ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент**, а затем выберите **запустить**, **Закрыть**или **перезапустить**.  
   
 2.  В диалоговом окне **Контроль учетных записей** нажмите кнопку **Да**.  
   
@@ -186,7 +185,7 @@ ms.locfileid: "72797953"
   
 ###  <a name="to-start-a-named-instance-of-the-ssde"></a><a name="dbNamed"></a> Запуск именованного экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   В командной строке введите одну из следующих команд: Замените *\<имя_экземпляра>* именем экземпляра, которым необходимо управлять.  
+-   В командной строке введите одну из следующих команд: Замените на *\<instancename>* имя экземпляра, которым требуется управлять.  
   
      **net start "SQL Server (** *имя_экземпляра* **)"**  
   
@@ -264,7 +263,7 @@ ms.locfileid: "72797953"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- Дополнительные сведения об инструкции см `SHUTDOWN` . в разделе [Shutdown &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
+ Дополнительные сведения об `SHUTDOWN` инструкции см. в разделе [Shutdown &#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql).  
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Использование PowerShell  
   

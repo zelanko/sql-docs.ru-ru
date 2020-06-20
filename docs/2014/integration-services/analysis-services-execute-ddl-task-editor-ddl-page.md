@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061608"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925645"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Редактор задачи «Выполнение инструкции DDL служб Analysis Services» (страница DDL)
   Используйте страницу **DDL** диалогового окна **Редактор задачи "Выполнение инструкции DDL служб аналитики"** , чтобы настроить соединение с проектом [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или базой данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а также предоставить сведения об источнике инструкций языка определения данных (DDL).  
@@ -27,8 +26,8 @@ ms.locfileid: "66061608"
  Дополнительные сведения об этой задаче см. в разделе [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md).  
   
 ## <a name="static-options"></a>Статические параметры  
- **Соединен**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Выберите проект или диспетчер [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] соединений из списка или нажмите кнопку \< **создать соединение...**> и используйте диалоговое окно **Добавление диспетчера соединений Analysis Services** для создания нового подключения.  
+ **Соединение**  
+ Выберите [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект или [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Диспетчер соединений из списка или нажмите \<**New connection...**> и используйте диалоговое окно **Добавление Analysis Services диспетчера соединений** , чтобы создать новое соединение.  
   
  **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Диспетчер соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
@@ -44,22 +43,22 @@ ms.locfileid: "66061608"
 ## <a name="dynamic-options"></a>Динамические параметры  
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Прямой ввод  
- **Источник**  
+ **Source**  
  Введите инструкции DDL или нажмите кнопку с многоточием **(...)** и введите инструкции в диалоговом окне **инструкции DDL** .  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Подключение файла  
- **Источник**  
- Выберите соединение с файлом в списке или нажмите кнопку \< **создать соединение...**> и используйте диалоговое окно **Диспетчер подключения файлов** для создания нового соединения.  
+ **Source**  
+ Выберите соединение с файлом в списке или нажмите \<**New connection...**> и используйте диалоговое окно **Диспетчер подключения файлов** , чтобы создать новое соединение.  
   
  **См. также:** [Диспетчер соединения файлов](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>SourceType = Переменная  
- **Источник**  
- Выберите переменную из списка или нажмите \<**Новая переменная...**> и создайте новую переменную с помощью диалогового окна **Добавление переменной**.  
+ **Source**  
+ Выберите переменную из списка или нажмите \<**New variable...**> и используйте диалоговое окно **Добавление переменной** , чтобы создать новую переменную.  
   
  **См. также:** [Переменные в службах Integration Services](integration-services-ssis-variables.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Analysis Services выполнение инструкции DDL" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

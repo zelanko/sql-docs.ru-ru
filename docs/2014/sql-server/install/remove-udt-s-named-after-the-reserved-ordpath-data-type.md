@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 474e910a-6abb-4e28-acc2-055338c011d4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0528d19de17781d863e3a42fdef7db558fe5d190
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059130"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Удалить определяемый пользователем тип&#39;s с именем после зарезервированного типа данных НЕВЕРНАЯ ORDPATH
   Помощник по обновлению обнаружил определяемый пользователем тип, имя которого совпадает с именем, зарезервированным для типа данных `ORDPATH`.  

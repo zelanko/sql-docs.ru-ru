@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014308"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996583"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
   Планарный пространственный тип данных `geometry` представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
@@ -129,7 +128,7 @@ ms.locfileid: "66014308"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Построение экземпляра геометрического объекта на основе входных данных в формате GML Text  
- Тип `geometry` данных предоставляет метод, создающий `geometry` экземпляр из GML, XML-представление геометрических объектов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
+ `geometry`Тип данных предоставляет метод, создающий `geometry` экземпляр из GML, XML-представление геометрических объектов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подмножество GML.  
   
  **Создание экземпляра геометрического объекта любого типа на основе входных данных формата GML**  
  [GeomFromGml (тип данных geometry)](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014308"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Запрос свойств и режимов геометрических объектов  
- У `geometry` всех экземпляров есть ряд свойств, которые можно получить с помощью методов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляемых. В следующих разделах описаны свойства и поведение геометрических типов данных, а также методы для запросов к ним.  
+ `geometry`У всех экземпляров есть ряд свойств, которые можно получить с помощью методов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляемых. В следующих разделах описаны свойства и поведение геометрических типов данных, а также методы для запросов к ним.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Допустимость, тип экземпляра и сведения GeometryCollection  
  Как только экземпляр `geometry` сформирован, при помощи следующих методов можно определить правильность его формата, получить тип этого экземпляра или, в случае экземпляра-коллекции, получить определенный экземпляр `geometry`.  
@@ -233,7 +232,7 @@ ms.locfileid: "66014308"
   
   
 ###  <a name="simple"></a><a name="simple"></a> Простой  
- `geometry` Чтобы экземпляр был *простым*, он должен соответствовать обоим следующим требованиям:  
+ `geometry`Чтобы экземпляр был *простым*, он должен соответствовать обоим следующим требованиям:  
   
 -   Каждая фигура экземпляра не должна пересекать саму себя, за исключением конечных точек.  
   
@@ -395,7 +394,7 @@ SELECT @g.STBoundary().ToString();
   
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пространственные данные (SQL Server)](spatial-data-sql-server.md)  
   
   

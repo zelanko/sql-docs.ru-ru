@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d667bba-7c25-492a-8f4d-70ebaca28f40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 02966721d1fdfd1c1d3051510e0dd68ed26dcbc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f125f7896f10e88279667dad4d089d8586f7af64
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924355"
 ---
 # <a name="integration-services-ssis-server"></a>Службы Integration Services (SSIS Server)
   После разработки и тестирования пакетов в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]вы можете выполнить развертывание проектов, содержащих пакеты, на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -41,7 +40,7 @@ ms.locfileid: "62771740"
   
 -   **База данных SSISDB**  
   
-     `SSISDB` База данных отображается в узле " **базы данных** " в разделе "Просмотр объектов". Вы можете создавать запросы к представлениям и вызывать хранимые процедуры для управления сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и объектами, которые хранятся на нем.  
+     `SSISDB`База данных отображается в узле " **базы данных** " в разделе "Просмотр объектов". Вы можете создавать запросы к представлениям и вызывать хранимые процедуры для управления сервером служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и объектами, которые хранятся на нем.  
   
 -   **Каталоги служб Integration Services**  
   

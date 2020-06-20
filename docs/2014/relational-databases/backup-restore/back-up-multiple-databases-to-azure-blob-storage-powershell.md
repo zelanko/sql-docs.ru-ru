@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b0bddf426a7cedaa8f11620355427143bcaa47b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959622"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Использование PowerShell для резервного копирования нескольких баз данных в службу хранилища BLOB-объектов Azure
   В этом разделе приведены примеры скриптов, которые можно использовать для автоматизации резервного копирования в службу хранилища BLOB-объектов Azure с помощью командлетов PowerShell.  

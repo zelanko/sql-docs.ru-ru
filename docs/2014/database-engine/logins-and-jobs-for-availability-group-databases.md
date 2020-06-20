@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 457f3ef946b5cfaf86a4a19774af63c5d7635882
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930975"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Управление именами входа и заданиями для баз данных группы доступности (SQL Server)
   Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
@@ -43,7 +42,7 @@ ms.locfileid: "62774286"
   
 -   **Дополнительные метаданные**  
   
-     Имена входа и задания — это не единственные сведения, которые должны быть созданы повторно на каждом экземпляре сервера, размещающем вторичную реплику доступности. Например, возможно, потребуется воссоздать параметры конфигурации сервера, учетные данные, зашифрованные данные, разрешения и параметры репликации, приложения компонента Service Broker, триггеры уровня сервера и т. д. Дополнительные сведения см. [в разделе Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+     Имена входа и задания — это не единственные сведения, которые должны быть созданы повторно на каждом экземпляре сервера, размещающем вторичную реплику доступности. Например, возможно, потребуется воссоздать параметры конфигурации сервера, учетные данные, зашифрованные данные, разрешения и параметры репликации, приложения компонента Service Broker, триггеры уровня сервера и т. д. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="logins-of-applications-that-use-sql-server-authentication-or-a-local-windows-login"></a><a name="SSauthentication"></a> Имена входа для приложений, использующих проверку подлинности SQL Server или локальное имя входа Windows  
  Если приложение использует проверку подлинности SQL Server или локальное имя входа Windows, то несоответствие идентификаторов безопасности может привести к ошибке входа на удаленный экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Несоответствие идентификаторов безопасности вызывает утрату связи с учетной записью на удаленном экземпляре сервера. Эта проблема может возникать при подключении приложения к зеркальной базе данных или базе данных доставки журналов после отработки отказа либо к базе данных подписчика репликации, которая была инициализирована из резервной копии.  
@@ -65,7 +64,7 @@ ms.locfileid: "62774286"
   
 -   [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Автономные базы данных](../relational-databases/databases/contained-databases.md)   
  [Создание заданий](../ssms/agent/create-jobs.md)  

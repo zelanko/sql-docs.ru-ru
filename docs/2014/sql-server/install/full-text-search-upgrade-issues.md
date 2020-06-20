@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 512f75c7086a8b9c2510552f4888c5cf2eac3116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095114"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012306"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Проблемы обновления компонента Full-Text Search
   В следующих разделах описаны проблемы, связанные с полнотекстовым поиском, которые могут помешать обновлению. В следующих разделах описаны действия, позволяющие смягчить воздействие этих изменений на рабочую среду.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Решение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

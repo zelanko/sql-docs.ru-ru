@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a08e0130e8ab45842d9cc0dc91fdba64a0b06c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48ddec1de8492c86aecfd80ea960c4a01673c24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702273"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012867"
 ---
 # <a name="xml-data-sql-server"></a>XML-данные (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет эффективную платформу для разработки многофункциональных приложений для управления частично структурированными данными. Поддержка языка XML встроена во все компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включает следующее:  

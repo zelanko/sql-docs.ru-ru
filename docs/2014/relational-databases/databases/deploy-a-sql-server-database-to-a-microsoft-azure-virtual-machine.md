@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175738"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970051"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Развертывание базы данных SQL Server в виртуальной машине Microsoft Azure
   Используйте мастер **развертывания SQL Server базы данных в виртуальной машине Azure** , чтобы развернуть базу данных из экземпляра в [!INCLUDE[ssDE](../../includes/ssde-md.md)] на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] виртуальной машине Azure. Мастер использует операцию полного резервного копирования базы данных, поэтому он всегда копирует всю схему базы данных и данные из пользовательской базы данных SQL Server. Мастер также выполняет всю настройку ВМ Azure, поэтому дополнительные действия для задания параметров ВМ не требуются.  
@@ -148,19 +147,19 @@ ms.locfileid: "70175738"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<! — Уровень журналирования -->  
+            -   TraceLevel = "Debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[имя сервера]\\[том]\\" \<! — последний путь, использованный для резервного копирования. Используется в мастере в качестве значения по умолчанию. -->  
+            -   BackupPath = " \\ \\ [имя сервера] \\ [том] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = false/> \<!--мастер не удалит промежуточные файлы и объекты Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! — последние использованные сведения профиля публикации. -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<! — сертификат для использования в мастере. -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<! — подписка для использования в мастере. -->  
+            -   Subscription = "1a2b34c5-67d8-90ef-AB12-xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name= "Моя подписка" \<! — имя подписки. -->  
+            -   Name = "Моя подписка"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -196,11 +195,11 @@ ms.locfileid: "70175738"
 -   **Справка** — запуск раздела справки MSDN для мастера.  
   
 ##  <a name="source-settings"></a><a name="Source_settings"></a>Параметры источника  
- Эта страница используется для подключения к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена база данных, которую требуется развернуть на виртуальной машине Azure. Кроме того, необходимо указать временное расположение файлов, сохраняемых на локальном компьютере, прежде чем они будут переданы в Azure. Это может быть общая сетевая папка.  
+ Эта страница используется для подключения к экземпляру, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещена база данных, которую требуется развернуть на виртуальной машине Azure. Кроме того, необходимо указать временное расположение файлов, сохраняемых на локальном компьютере, прежде чем они будут переданы в Azure. Это может быть общая сетевая папка.  
   
  **Параметры**  
   
--   Нажмите кнопку **Подключить...** , а затем укажите сведения о подключении для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, на котором размещена база данных для развертывания.  
+-   Нажмите кнопку **Подключить...** , а затем укажите сведения о подключении для экземпляра, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещена база данных для развертывания.  
   
 -   Используйте раскрывающийся список **Выбор базы данных** , чтобы указать базу данных для развертывания.  
   

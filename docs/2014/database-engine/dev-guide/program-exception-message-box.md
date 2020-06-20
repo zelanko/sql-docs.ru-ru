@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933411"
 ---
 # <a name="program-exception-message-box"></a>Выведение окна сообщения об исключении программы
   Можно воспользоваться окном сообщения об исключении в приложениях, чтобы предоставить значительно больше возможностей управления информированием, чем в классе <xref:System.Windows.Forms.MessageBox>. Дополнительные сведения см. в разделе [программирование окна сообщений об исключениях](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Сведения о том, как получить и развернуть библиотеку DLL окна сообщений об исключениях, см. в разделе [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
@@ -29,11 +28,11 @@ ms.locfileid: "62780703"
   
 1.  Добавьте в проект управляемого кода ссылку на сборку Microsoft.ExceptionMessageBox.dll.  
   
-2.  Используемых Добавьте директиву `using` (C#) `Imports` или[!INCLUDE[msCoName](../../includes/msconame-md.md)] (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
+2.  Используемых Добавьте `using` директиву (C#) или `Imports` ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
   
 3.  Создайте блок try-catch для обработки ожидаемого исключения.  
   
-4.  В блоке `catch` создайте экземпляр класса <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Передайте <xref:System.Exception> объект, `try` - `catch` обрабатываемый блоком.  
+4.  В блоке `catch` создайте экземпляр класса <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Передайте <xref:System.Exception> объект, обрабатываемый `try` - `catch` блоком.  
   
 5.  (Необязательно) Задайте одно или несколько из следующих свойств <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62780703"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>Перечисление, указывающее символ, отображаемый в окне сообщения об исключении.  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Передайте родительское окно, к которому относится окно сообщения об исключении.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Передайте родительское окно, к которому относится окно сообщения об исключении.  
   
 7.  Отметьте возвращаемое значение перечисления <xref:System.Windows.Forms.DialogResult>, если требуется определить, какую кнопку нажал пользователь (необязательно).  
   
@@ -53,7 +52,7 @@ ms.locfileid: "62780703"
   
 1.  Добавьте в проект управляемого кода ссылку на сборку Microsoft.ExceptionMessageBox.dll.  
   
-2.  Используемых Добавьте директиву `using` (C#) `Imports` или (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
+2.  Используемых Добавьте `using` директиву (C#) или `Imports` (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
   
 3.  Создайте экземпляр класса <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Передайте текст сообщения как <xref:System.String>.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62780703"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>Перечисление, указывающее символ, отображаемый в окне сообщения об исключении.  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Передайте родительское окно, к которому относится окно сообщения об исключении.  
+5.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Передайте родительское окно, к которому относится окно сообщения об исключении.  
   
 6.  (Необязательно) Какую из кнопок нажал пользователь, можно определить, проверив значение возвращенного перечисления <xref:System.Windows.Forms.DialogResult>.  
   
@@ -77,11 +76,11 @@ ms.locfileid: "62780703"
   
 1.  Добавьте в проект управляемого кода ссылку на сборку Microsoft.ExceptionMessageBox.dll.  
   
-2.  Используемых Добавьте директиву `using` (C#) `Imports` или (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
+2.  Используемых Добавьте `using` директиву (C#) или `Imports` (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
   
 3.  Создайте экземпляр класса <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> одним из двух следующих способов.  
   
-    -   Передайте <xref:System.Exception> объект, `try` - `catch` обрабатываемый блоком.  
+    -   Передайте <xref:System.Exception> объект, обрабатываемый `try` - `catch` блоком.  
   
     -   Передайте текст сообщения как <xref:System.String>.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62780703"
   
 5.  При использовании пользовательских кнопок вызовите один из перегруженных методов <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A>, чтобы указать текст для пользовательских кнопок, количество которых не более пяти (необязательно).  
   
-6.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Передайте родительское окно, к которому относится окно сообщения об исключении.  
+6.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Передайте родительское окно, к которому относится окно сообщения об исключении.  
   
 7.  (Необязательно) Какую из кнопок нажал пользователь, можно определить, проверив значение возвращенного перечисления <xref:System.Windows.Forms.DialogResult>. При использовании пользовательских кнопок отметьте значение объекта <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> для свойства <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A>, чтобы определить, какую пользовательскую кнопку нажал пользователь.  
   
@@ -111,15 +110,15 @@ ms.locfileid: "62780703"
   
 1.  Добавьте в проект управляемого кода ссылку на сборку Microsoft.ExceptionMessageBox.dll.  
   
-2.  Используемых Добавьте директиву `using` (C#) `Imports` или (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
+2.  Используемых Добавьте `using` директиву (C#) или `Imports` (Visual Basic .NET) для использования <xref:Microsoft.SqlServer.MessageBox> пространства имен.  
   
 3.  Создайте экземпляр класса <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> одним из двух следующих способов.  
   
-    -   Передайте <xref:System.Exception> объект, `try` - `catch` обрабатываемый блоком.  
+    -   Передайте <xref:System.Exception> объект, обрабатываемый `try` - `catch` блоком.  
   
     -   Передайте текст сообщения как <xref:System.String>.  
   
-4.  Установите свойство <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> в значение `true`.  
+4.  Задайте для свойства <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> значение `true`.  
   
 5.  Укажите текст с вопросом пользователю, показывать ли снова окно сообщения об исключении, для свойства <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A> (необязательно). По умолчанию используется текст «Не показывать больше это сообщение».  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62780703"
   
     3.  Присвойте параметру <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> значение `true`.  
   
-    4.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Вычисляется указанный раздел реестра, и окно сообщения об исключении отображается только тогда, когда хранящиеся в разделе реестра данные равны 0. Если же отображается диалоговое окно и пользователь устанавливает флажок до нажатия кнопки, то данным в разделе реестра присваивается 1.  
+    4.  Вызовите метод <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Вычисляется указанный раздел реестра, и окно сообщения об исключении отображается только тогда, когда хранящиеся в разделе реестра данные равны 0. Если же отображается диалоговое окно и пользователь устанавливает флажок до нажатия кнопки, то данным в разделе реестра присваивается 1.  
   
 ## <a name="example"></a>Пример  
  В этом примере используется окно сообщения об исключении только с кнопкой **ОК** , чтобы отобразить сведения из исключения приложения, которые включают в себя обрабатываемое исключение и дополнительную информацию, отражающую специфику данного приложения.  

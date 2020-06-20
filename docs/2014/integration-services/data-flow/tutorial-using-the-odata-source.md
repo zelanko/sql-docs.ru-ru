@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61a49ccb89343984b29018f293656fd2a9137b37
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939195"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Учебник. Использование источника OData [SSIS]
   Этот учебник содержит процедуру извлечения коллекции **Employees** из образца **Northwind** службы OData (http://services.odata.org/V3/Northwind/Northwind.svc/) ) и последующей ее загрузки в неструктурированный файл.  
@@ -44,7 +43,7 @@ ms.locfileid: "62770220"
   
 5.  Щелкните **Создать…**, чтобы добавить новый диспетчера соединений OData.  
   
-6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный канал или сущность. Для целей данного учебника введите [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/).  
+6.  Введите URL-адрес службы OData в поле **Расположение сервисного документа**. Это может быть URL-адрес сервисного документа либо определенный канал или сущность. Для целей данного учебника введите [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/) .  
   
 7.  Убедитесь, что выбрано **Проверка подлинности Windows** для **проверки подлинности** для использования для доступа к службе OData. **Проверка подлинности Windows** выбрана по умолчанию. Чтобы использовалась обычная проверка подлинности, выберите **Использовать указанные имя пользователя и пароль**.  
   

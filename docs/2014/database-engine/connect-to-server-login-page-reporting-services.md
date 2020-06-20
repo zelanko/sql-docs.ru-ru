@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d312c740-19d7-4931-84a2-88b805ec8439
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a87b6a0ebd2293ad219ce43108c4f42487a8e0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808730"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934610"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>Соединение с сервером служб Reporting Services (страница «Вход»)
-  Эта вкладка используется для просмотра или указания следующих параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+  Эта вкладка используется для просмотра или указания следующих параметров при соединении с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
 ## <a name="options"></a>Параметры  
  **Тип сервера**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808730"
  **Имя сервера**  
  Значение, которое необходимо ввести, определяется серверным режимом того экземпляра сервера отчетов, с которым производится соединение.  
   
- Для сервера отчетов, работающего в собственном режиме, задайте экземпляр сервера отчетов, с которым производится соединение. При использовании экземпляра по умолчанию имя сервера обычно совпадает с именем компьютера. Если вы установили именованный экземпляр, добавьте имя экземпляра к имени сервера в следующем формате: \<servername>\\<InstanceName.\> Службы Reporting Services используют в качестве ограничителя для имени экземпляра обратную косую черту.  
+ Для сервера отчетов, работающего в собственном режиме, задайте экземпляр сервера отчетов, с которым производится соединение. При использовании экземпляра по умолчанию имя сервера обычно совпадает с именем компьютера. Если вы установили именованный экземпляр, добавьте имя экземпляра к имени сервера в следующем формате: \<servername> \\<instanceName \> . Службы Reporting Services используют в качестве ограничителя для имени экземпляра обратную косую черту.  
   
  Для сервера отчетов, работающего в режиме интеграции с SharePoint, необходимо указать сайт SharePoint. Можно указать любой сайт из семейства сайтов, интегрированного со службами [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Введенный URL-адрес должен содержать префикс HTTP или HTTPS. Чтобы подключиться к сайту SharePoint из среды Management Studio, необходимо иметь разрешение на доступ к нему. Уровень разрешений определяет набор объектов, которые доступны для просмотра и управления. Дополнительные сведения см. в статье [Подключение к серверу отчетов в среде Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62808730"
  **Параметры**  
  Отображаются дополнительные параметры соединения сервера, например запоминание пароля.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка подключения к базе данных сервера отчетов &#40;службы SSRS Configuration Manager&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Соединение с сервером отчетов в Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Проверка подлинности с использованием сервера отчетов](../reporting-services/security/authentication-with-the-report-server.md)  

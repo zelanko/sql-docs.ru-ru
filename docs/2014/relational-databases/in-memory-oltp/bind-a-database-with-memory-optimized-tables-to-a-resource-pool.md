@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d64b5bf6b60f37bf386840031c304dd5b13faaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd163c5d3bc7a2cd9051b8d37b8127a1cc88c30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050347"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
   Пул ресурсов представляет подмножество физических ресурсов, доступных для управления. По умолчанию базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] привязываются к пулу и потребляют ресурсы пула по умолчанию. Чтобы защитить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от использования его ресурсов одной или несколькими оптимизированными для памяти таблицами, а также чтобы другие потребители не занимали память, необходимую таким таблицам, рекомендуется создать отдельный пул ресурсов для управления использованием памяти для базы данных с оптимизированными для памяти таблицами.  
@@ -148,7 +147,7 @@ GO
 |-----------------------------|---------------------------------------------|  
 |<= 8 ГБ|70 %|  
 |<= 16 ГБ|75 %|  
-|<= 32 ГБ|80 %|  
+|<= 32 ГБ|80 %|  
 |\<= 96 ГБ|85 %|  
 |>96 ГБ|90 %|  
   
@@ -184,11 +183,11 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
   
  Если не привязать базу данных к именованному пулу ресурсов, она привязывается к пулу ресурсов default. Поскольку стандартный пул ресурсов используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и при других операциях выделения памяти, вы не сможете отслеживать память, потребляемую таблицами, оптимизированными для памяти, в нужной базе данных с помощью динамического административного представления sys.dm_resource_governor_resource_pools.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)   
  [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)   
- [Resource Governor](../resource-governor/resource-governor.md)   
- [Resource Governor пул ресурсов](../resource-governor/resource-governor-resource-pool.md)   
+ [регулятор ресурсов](../resource-governor/resource-governor.md)   
+ [Пул ресурсов регулятора ресурсов](../resource-governor/resource-governor-resource-pool.md)   
  [Создание пула ресурсов](../resource-governor/create-a-resource-pool.md)   
  [Изменение параметров пула ресурсов](../resource-governor/change-resource-pool-settings.md)   
  [Удаление пула ресурсов](../resource-governor/delete-a-resource-pool.md)  

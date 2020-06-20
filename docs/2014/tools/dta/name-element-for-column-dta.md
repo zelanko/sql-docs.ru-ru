@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3d95ce69743caaa6b587195ba107774d8cd8454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48bb1911e0606941229035e14df1da8a2720dfc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011526"
 ---
 # <a name="name-element-for-column-dta"></a>Элемент Name описания столбца (DTA)
   Задает имя для столбца индекса в пользовательской конфигурации.  
@@ -35,7 +34,7 @@ ms.locfileid: "63297520"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  

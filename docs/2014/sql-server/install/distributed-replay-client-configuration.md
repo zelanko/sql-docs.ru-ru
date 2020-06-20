@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72336f2f012ad6f2da03440f431d2fe5be294b07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012706"
 ---
 # <a name="distributed-replay-client-configuration"></a>Конфигурация клиента распределенного воспроизведения
   Страница **Конфигурация клиента распределенного воспроизведения** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет указать пользователей, которым нужно предоставить административные разрешения на службу клиента распределенного воспроизведения.  
   
  Пользователи с административными разрешениями будут иметь неограниченный доступ к службе клиента распределенного воспроизведения.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя контроллера**  
- Это необязательный параметр, а значение по умолчанию \<— *пустое*>.  
+ Это необязательный параметр, значение по умолчанию — \<*blank*> .  
   
  Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
   
@@ -37,11 +36,11 @@ ms.locfileid: "66095476"
  **Рабочий каталог**  
  Укажите рабочий каталог для службы клиента распределенного воспроизведения.  
   
- Рабочий каталог по умолчанию \< *— буква диска*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\Files \DReplayClient\WorkingDir.  
+ Рабочий каталог по умолчанию \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
  **Папка результатов**  
  Укажите каталог результатов для службы клиента распределенного воспроизведения.  
   
- Каталог результатов по умолчанию \< *— буква диска*>:\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Program\\Files \DReplayClient\ResultDir.  
+ Каталог результатов по умолчанию \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
   

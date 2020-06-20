@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149711"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011593"
 ---
 # <a name="review-the-replay-results"></a>просмотреть результаты воспроизведения
   Когда компонент распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] завершает распределенное воспроизведение, действие воспроизведения может быть записано в результирующий файл трассировки на каждом клиенте. Чтобы записать это действие, необходимо использовать параметр **-o** , когда запускается средство администрирования с параметром **replay** . Дополнительные сведения о параметре replay см. в статье [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](replay-option-distributed-replay-administration-tool.md).  
@@ -56,7 +55,7 @@ ms.locfileid: "63149711"
 ## <a name="column-descriptions-for-result-trace"></a>Описания столбцов для результирующей трассировки  
  В следующей таблице описаны столбцы в результирующих данных трассировки.  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|`nvarchar`|Имя класса событий.|1|  
 |EventSequence|`bigint`|Для ошибок поставщика, внутренних ошибок и предупреждений это последовательность записи событий, соответствующая ошибке или предупреждению.<br /><br /> Для всех прочих классов событий это последовательность события в исходных данных трассировки.|2|  
@@ -71,15 +70,15 @@ ms.locfileid: "63149711"
 |ConnectionID|`int`|Идентификатор соединения записи для события.|11|  
 |ReplaySPID|`int`|Идентификатор сеанса воспроизведения для события.|12|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется инструкция пользователя.|13|  
-|LoginName|`nvarchar`|Имя входа пользователя. Это может быть либо имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] входа безопасности, либо учетные данные входа Microsoft Windows в формате *domain_name*\\*user_name*.|14|  
+|LoginName|`nvarchar`|Имя входа пользователя. Это может быть имя входа в системе безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или учетные данные входа Microsoft Windows в формате *имя_домена*\\*имя_пользователя*.|14|  
 |CaptureHostName|`nvarchar`|Имя компьютера, на котором служба клиента работает во время записи.|15|  
 |ReplayHostName|`nvarchar`|Имя компьютера, на котором работает клиент во время воспроизведения.|16|  
 |ApplicationName|`nvarchar`|Имя клиентского приложения, создавшего соединение с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] во время записи.|17|  
   
-## <a name="see-also"></a>См. также  
- [SQL Server распределенное воспроизведение](sql-server-distributed-replay.md)   
- [Требования к распределенное воспроизведение](distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования &#40;распределенное воспроизведение служебной программы&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+## <a name="see-also"></a>См. также:  
+ [Распределенное воспроизведение SQL Server](sql-server-distributed-replay.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](configure-distributed-replay.md)  
   
   

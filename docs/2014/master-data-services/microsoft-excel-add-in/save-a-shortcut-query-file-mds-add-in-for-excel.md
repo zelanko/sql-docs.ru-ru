@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d70e4f9330db23c9cce54f7c615163c4dcee4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482864"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960864"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Сохранение файла ярлыка запроса (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно сохранить файл ярлыка запроса, если требуется часто обращаться к одному и тому же набору данных.  
@@ -31,13 +30,13 @@ ms.locfileid: "65482864"
   
 2.  Необязательный параметр. Чтобы переименовать запрос, щелкните стрелку под кнопкой **Сохранить запрос** и выберите команду **Управление запросами**. Выберите запрос и нажмите кнопку **Переименовать**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   Нажмите стрелку под кнопкой **Сохранить запрос** , чтобы просмотреть ярлык запроса и открыть его.  
   
 -   [Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файлы ярлыков запросов (надстройка MDS для Excel)](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

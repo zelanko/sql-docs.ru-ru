@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011411"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Урок 2. Добавление веб-ссылки
   Поиск веб-службы — это процесс, с помощью которого пользователь находит веб-службу и получает ее описание службы. Процесс поиска веб-службы в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] заключается в опрашивании веб-сайта по определенному алгоритму. Целью процесса является обнаружение описания службы в виде XML-документа, составленного на языке описания веб-служб (WDSL).  
@@ -32,7 +31,7 @@ ms.locfileid: "63316011"
   
 3.  В диалоговом окне **Параметры ссылки на службу** нажмите кнопку **Добавить веб-ссылку**.  
   
-4.  В поле **URL-адрес** диалогового окна **Добавление веб-ссылки** введите URL-адрес, чтобы получить описание службы сервера отчетов, например http://localhost/reportserver/reportservice2010.asmx. Затем нажмите кнопку **Go (найти** ), чтобы получить сведения о веб-службе.  
+4.  В поле **URL-адрес** диалогового окна **Добавление веб-ссылки** введите URL-адрес, чтобы получить описание службы сервера отчетов, например http://localhost/reportserver/reportservice2010.asmx . Затем нажмите кнопку **Go (найти** ), чтобы получить сведения о веб-службе.  
   
      \- или -  
   
@@ -44,13 +43,13 @@ ms.locfileid: "63316011"
   
      В среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] будет загружено описание службы и создан класс-посредник для взаимодействия приложения с веб-службой сервера отчетов. Также для обеспечения работоспособности веб-ссылки необходимо добавить ссылку на пространство имен <xref:System.Web.Services>.  
   
-7.  В меню «Проект» выберите пункт **Добавить ссылку**.  
+7.  В меню Проект щелкните команду **Добавить ссылку**.  
   
 8.  В диалоговом окне **Добавить ссылку** на вкладке **.NET** выберите **System.Web.Services**и нажмите кнопку **ОК**.  
   
  Дополнительные сведения см. в разделе [Доступ к API-интерфейсу SOAP](../reporting-services/report-server-web-service/accessing-the-soap-api.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-служба сервера отчетов](../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Занятие 3. доступ к веб-службе](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
  [Доступ к веб-службе сервера отчетов с помощью Visual Basic или учебника по Visual C&#35; &#40;SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  

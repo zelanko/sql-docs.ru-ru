@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dafd3a5f8a460bb08e63919c2cb853ad74dc2f1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779116"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932765"
 ---
 # <a name="migrate-query-plans"></a>Перенос планов запросов
   В большинстве случаев обновление базы данных до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приведет к повышению производительности запросов. Однако при наличии ответственных запросов, для которых производительность тщательно настроена, перед началом обновления может оказаться полезным сохранить планы запросов, создав для каждого из них структуру плана. Если после обновления оптимизатор запросов выбирает для некоторых запросов менее эффективный план, можно разрешить использование старых структур планов и заставить оптимизатор запросов пользоваться ими.  
@@ -50,7 +49,7 @@ ms.locfileid: "62779116"
   
 -   Запрос query_plan столбца функции динамического управления [sys. dm_exec_query_plan](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql) .  
   
--   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Классы событий [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)и [Showplan XML для запросов Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
+-   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]Классы событий [Showplan XML](../../relational-databases/event-classes/showplan-xml-event-class.md), [Showplan XML Statistics Profile](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)и [Showplan XML для запросов Compile](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md) .  
   
  Следующий пример собирает план запроса для инструкции `SELECT City, StateProvinceID, PostalCode FROM Person.Address ORDER BY PostalCode DESC;` путем запроса динамических административных представлений.  
   
@@ -91,9 +90,9 @@ GO
 ### <a name="step-3-verify-that-the-plan-guide-is-applied-to-the-query"></a>Шаг 3. Проверка применения структуры плана к запросу  
  Выполните запрос еще раз и проверьте созданный план запроса. Убедитесь, что план выполнения совпадает с тем, что был указан в структуре плана.  
   
-## <a name="see-also"></a>См. также  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [Указания запросов &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)   
- [Структуры планов](../../relational-databases/performance/plan-guides.md)  
+## <a name="see-also"></a>См. также:  
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [Указания запросов (Transact-SQL)](/sql/t-sql/queries/hints-transact-sql-query)   
+ [Руководства планов](../../relational-databases/performance/plan-guides.md)  
   
   
