@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02b55465cc4aed912e6e955883ca8fdbfa4be870
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 52c3a38488117c55de497442dd138a55cc8b32e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228213"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932855"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Реализация оператора OR в скомпилированных в собственном коде хранимых процедурах
   Операторы OR не поддерживаются в предикатах запросов в скомпилированных в собственном коде хранимых процедурах. Так как операторы NOT также не поддерживаются в предикатах запросов в скомпилированных в собственном коде хранимых процедурах, использование операторов OR нельзя имитировать только с помощью эквивалентных логических операторов. Однако результаты выполнения оператора OR можно имитировать с помощью переменных оптимизированных для памяти таблиц.  

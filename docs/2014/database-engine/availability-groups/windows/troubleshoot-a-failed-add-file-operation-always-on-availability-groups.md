@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6940e9e40a09e5bd0c7afc591b34c17129350d74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f44caf9a9968c35c8beeff9c218de6fb05f333a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936335"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-alwayson-availability-groups"></a>Устранение неполадок с операцией добавления файла, давшей сбой (группы доступности AlwaysOn)
   В некоторых развертываниях групп доступности AlwaysOn различаются пути в системах, где размещена первичная реплика и где размещена вторичная реплика. Если путь к файлу операции добавления файла во вторичной реплике не существует, то будет выполнена успешно операция добавления файлов в базе данных-источнике. Однако операция добавления файла приводит к приостановке базы данных-получателя. Это, в свою очередь, вызовет переход дополнительной реплики в состояние NOT SYNCHRONIZING.  

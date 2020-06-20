@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964724"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  
@@ -52,7 +51,7 @@ ms.locfileid: "62889816"
     > [!NOTE]  
     >  Нельзя использовать регистратор [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] в пакете, работающем в 64-разрядном режиме.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Регистратор, который записывает записи журнала в `sysssislog` таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Регистратор, который записывает записи журнала в `sysssislog` таблицу в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных.  
   
 -   Поставщик службы Windows «Журнал событий», который ведет журнальные записи в прикладном журнале службы Windows «Журнал событий» на локальном компьютере.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "62889816"
   
 |Шаг|Описание|  
 |----------|-----------------|  
-|Проверить|Компонент проверяется на допустимость значений свойств и параметров настройки.|  
+|Validate|Компонент проверяется на допустимость значений свойств и параметров настройки.|  
 |PreExecute|Компонент выполняет однократную обработку перед началом обработки строк данных.|  
 |PostExecute|Компонент выполняет однократную обработку после обработки всех строк данных.|  
 |ProcessInput|Компонент преобразования или назначения обрабатывает входящие строки данных, которые передает ему вышестоящий источник или преобразование.|  
@@ -214,7 +213,7 @@ ms.locfileid: "62889816"
 ## <a name="related-content"></a>См. также  
  [Инструмент DTLoggedExec для полного и подробного ведения журнала (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md)  
   
   

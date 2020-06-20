@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3edb481894bdf9c4b9ff6228abb27c51b1affc75
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637698"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933232"
 ---
 # <a name="unused-assembly-cleanup"></a>Очистка неиспользуемой сборки
   Образец `AssemblyCleanup` содержит хранимую процедуру .NET, которая удаляет неиспользуемые сборки из текущей базы данных, выполняя запрос к каталогам метаданных. Единственный параметр этой хранимой процедуры `visible_assemblies` указывает, должны ли быть удалены неиспользуемые видимые сборки. Значение 'false' по умолчанию указывает на то, что должны быть удалены только неиспользуемые невидимые сборки. Если указано другое значение, то производится удаление всех неиспользуемых сборок. К неиспользуемым сборкам относятся те, для которых не определено ни одной точки входа (процедуры, тип и статистическая функция), а также ни одной сборки, которая ссылается на них прямо или косвенно.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

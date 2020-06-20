@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aac86ed6438197bc788f08cf9bc618608a65475f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faeb664a99b0d47406b7fb3a42f5834acd135323
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480370"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937455"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Открытие проектов служб Integration Services в клиенте DQS
   Службы [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] позволяют запускать проект очистки в пакетном режиме. Но иногда полезно просмотреть результаты очистки в пакете служб Integration Services, подобно тому, как вы можете просмотреть результаты очистки на вкладке **Просмотр результатов и управление ими** операции очистки в проекте служб DQS. Службы DQS позволяют открывать проекты служб Integration Services в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] точно так же, как любой другой проект служб DQS, с экрана **Открытие проекта** и интерактивно обрабатывать результаты очистки в проекте служб Integration Services.  
@@ -46,7 +45,7 @@ ms.locfileid: "65480370"
   
 3.  На экране **Открытие проекта** проект служб Integration Services вы можете определить любым из следующих способов:  
   
-    1.  **Имя проекта** — проекты служб Integration Services перечислены с использованием следующей терминологии: Package.DQS Cleansing_*\<дата>**\<время>*_{GUID}. При каждом успешном выполнении того же пакета в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]новый пакет появляется на экране **Открытие проекта** .  
+    1.  **Имя проекта**: Integration Services проекты перечислены с помощью следующей терминологии именования: "Package. DQS Cleansing_ *\<DATE>**\<TIME>* _ {GUID}". При каждом успешном выполнении того же пакета в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]новый пакет появляется на экране **Открытие проекта** .  
   
     2.  **Тип проекта**— проекты служб Integration Services, которые относятся к типу **SSIS** , на экране **Открытие проекта** .  
   
@@ -58,6 +57,6 @@ ms.locfileid: "65480370"
   
 6.  После экспорта данных нажмите кнопку **Готово** , чтобы закрыть проект служб Integration Services.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Очистка DQS»](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Проекты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-projects-and-solutions.md)  

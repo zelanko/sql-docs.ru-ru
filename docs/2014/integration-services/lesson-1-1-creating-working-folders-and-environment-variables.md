@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965366"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Шаг 1. Создание рабочих папок и переменных среды
   В этой задаче предстоит создать рабочую папку (C:\DeploymentTutorial) и новые системные переменные среды (`DataTransfer` и `LoadXMLData`), которые будут использоваться в последующих задачах учебника.  
@@ -36,7 +35,7 @@ ms.locfileid: "62767660"
   
 3.  В меню **Файл** наведите указатель на пункт **Создать**, а затем выберите пункт **Папка**.  
   
-4.  Переименуйте новую папку `DeploymentTutorial`в.  
+4.  Переименуйте новую папку в `DeploymentTutorial` .  
   
 ### <a name="to-create-local-environment-variables"></a>Создание локальных переменных среды  
   

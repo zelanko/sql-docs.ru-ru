@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2c62daf9-1f2d-4508-a497-af62360ee859
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1146c612225c2f58dd501ce9cba658ca7ca6ba69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e49b6d36830abcbab720554231a682a98eaca5b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112175"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042475"
 ---
 # <a name="install-the-analysis-services-ole-db-provider-on-sharepoint-servers"></a>Установка поставщика OLE DB служб Analysis Services на серверах SharePoint
   Поставщик Microsoft OLE DB для служб Analysis Services (MSOLAP) представляет собой интерфейс, используемый клиентскими приложениями для взаимодействия с данными служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. В среде SharePoint, где установлен [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], поставщик обрабатывает запросы на подключение к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
@@ -51,13 +50,13 @@ ms.locfileid: "79112175"
   
  **Наиболее распространенный сценарий** — при наличии более старых и более новых версий [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книг, сохраненных в библиотеках документов в ферме. Если аналитики организации пользуются надстройкой [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] версии [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel и сохраняют такие книги в установке [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], то старые книги работать не будут. Строка подключения будет ссылаться на старую версию поставщика, которая не будет находиться на сервере, если она не установлена. Установка обеих версий поможет обеспечить доступ к данным в книгах PowerPivot, созданных и в старых и в новых версиях надстройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel. Программа установки [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не устанавливает версию [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] поставщика, поэтому его необходимо установить вручную, чтобы обеспечить доступ к книгам из предыдущей версии.  
   
- **Второй сценарий** заключается в том, что в ферме SharePoint, где запущены службы Excel, есть сервер [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. В этом случае сервер приложений, на котором запускаются службы Excel, должен быть обновлен вручную для использования новой версии поставщика. Это необходимо для соединения с экземпляром PowerPivot для SharePoint. Если службы Excel Services используют старую версия поставщика, запрос на соединение выполнить не удастся. Обратите внимание, что поставщик должен быть установлен с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пакета установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi), чтобы были установлены поддерживающие элементы для всех компонентов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+ **Второй сценарий** заключается в том, что в ферме SharePoint, где запущены службы Excel, есть сервер [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] . В этом случае сервер приложений, на котором запускаются службы Excel, должен быть обновлен вручную для использования новой версии поставщика. Это необходимо для соединения с экземпляром PowerPivot для SharePoint. Если службы Excel Services используют старую версия поставщика, запрос на соединение выполнить не удастся. Обратите внимание, что поставщик должен быть установлен с помощью мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пакета установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] (spPowerPivot.msi), чтобы были установлены поддерживающие элементы для всех компонентов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
   
 ##  <a name="install-the-sql-server-2012-ole-db-provider-on-an-excel-services-server-by-using-sql-server-setup"></a><a name="bkmk_sql11"></a>Установка поставщика SQL Server 2012 OLE DB на сервере служб Excel с помощью программы установки SQL Server  
  Следующие инструкции помогут установить поставщик OLE DB и другие компоненты для обеспечения связи с клиентами на серверах SharePoint, где он еще не установлен, например на серверах приложений, где службы Excel Services работают без надстройки PowerPivot для SharePoint.  
   
- Используйте эти инструкции, чтобы установить текущий поставщик Analysis Services OLE DB и добавить **библиотеку Microsoft. AnalysisServices. XMLA. dll** в глобальную сборку.  
+ Используйте эти инструкции, чтобы установить текущий поставщик Analysis Services OLE DB и добавить **Microsoft.AnalysisServices.Xmla.dll** в глобальную сборку.  
   
 #### <a name="run-sql-server-setup-and-install-the-client-connectivity-tools"></a>Запуск программы установки SQL Server и установка клиентских средств подключения  
   
@@ -69,7 +68,7 @@ ms.locfileid: "79112175"
   
 4.  На странице Роль установки выберите **SQL Server Установка компонентов**.  
   
-5.  На странице **Выбор компонентов** щелкните элемент **клиентские средства подключение**. Этот параметр устанавливает **Microsoft. AnalysisServices. XMLA. dll**  
+5.  На странице **Выбор компонентов** щелкните элемент **клиентские средства подключение**. Этот параметр устанавливает **Microsoft.AnalysisServices.Xmla.dll**  
   
      Не выбирайте другие функции.  
   
@@ -101,13 +100,13 @@ ms.locfileid: "79112175"
   
 3.  Щелкните **Сведения**.  
   
-4.  Просмотрите информацию о версии файла. Версия должна включать 11,00. \<BuildNumber>.  
+4.  Просмотрите информацию о версии файла. Версия должна включать 11,00. \<buildnumber> .  
   
 5.  Удостоверьтесь, что в папке «Windows\assembly» присутствует файл Microsoft.AnalysisServices.Xmla.dll версии 11.0.0.0.  
   
   
-##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>Используйте пакет установки PowerPivot для SharePoint (с помощью средства PowerPivot. msi) для установки поставщика SQL Server 2012 OLE DB  
- Установите поставщик [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] OLE DB на сервере служб Excel и с помощью пакета [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] установки (Microsoft **PowerPivot. msi)**.  
+##  <a name="use-the-powerpivot-for-sharepoint-installation-package-sppowerpivotmsi-to-install-the-sql-server-2012-ole-db-provider"></a><a name="bkmk_install2012_from_sppowerpivot_msi"></a>Используйте пакет установки PowerPivot для SharePoint (spPowerPivot.msi) для установки поставщика OLE DB SQL Server 2012  
+ Установите [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] поставщик OLE DB на сервере служб Excel и с помощью [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] пакета установки **(spPowerPivot.msi)**.  
   
 #### <a name="download-the-msolap5-provider-from-the-sssql11sp1-feature-pack"></a>Загрузите поставщик MSOLAP.5 из пакета дополнительных компонентов [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] .  
   
@@ -117,7 +116,7 @@ ms.locfileid: "79112175"
   
 3.  См. раздел «Поставщик Microsoft Analysis Services OLE DB для Microsoft SQL Server 2012 с пакетом обновления 1 (SP1)». Загрузите файл и начните установку.  
   
-4.  На странице **Выбор компонентов** выберите **поставщик Analysis Services OLE DB для SQL Server**. Снимите флажки с других компонентов и завершите установку. Дополнительные сведения об элементе PowerPivot. msi см. в [статье Установка и удаление надстройки PowerPivot для SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+4.  На странице **Выбор компонентов** выберите **поставщик Analysis Services OLE DB для SQL Server**. Снимите флажки с других компонентов и завершите установку. Дополнительные сведения о spPowerPivot.msi см. в [статье Установка и удаление надстройки PowerPivot для SharePoint &#40;&#41;SharePoint 2013 ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 5.  Зарегистрируйте MSOLAP.5 в качестве надежного поставщика в службах Excel SharePoint. Дополнительные сведения см. в разделе [Добавление MSOLAP.5 в качестве надежного поставщика данных в службах Excel Services](https://technet.microsoft.com/library/hh758436.aspx).  
   
@@ -135,15 +134,15 @@ ms.locfileid: "79112175"
   
 4.  Если в ферме есть другие серверы, которые используют только службы Excel Services, без [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] на том же компьютере, повторите предыдущие шаги, чтобы установить версию 2008 R2 поставщика на компьютер со службами Excel Services.  
   
-#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Шаг 2. Регистрация файла Microsoft. AnalysisServices. ChannelTransport. dll  
+#### <a name="step-2-register-the-microsoftanalysisserviceschanneltransportdll-file"></a>Шаг 2. Регистрация файла Microsoft.AnalysisServices.ChannelTransport.dll  
   
-1.  Используйте программу regasm.exe для регистрации файла. Если программа Regasm. exe не была запущена ранее, добавьте ее родительскую папку C:\Windows\Microsoft.NET\Framework64\v4.0.30319\\в переменную системного пути.  
+1.  Используйте программу regasm.exe для регистрации файла. Если вы не выполняли regasm.exe до, добавьте ее родительскую папку C:\Windows\Microsoft.NET\Framework64\v4.0.30319 \\ в переменную системного пути.  
   
 2.  Откройте командную строку с разрешениями администратора.  
   
 3.  Перейдите в папку «С:\Windows\assembly\GAC_MSIL\Microsoft.AnalysisServices.ChannelTransport\10.0.0.0__89845dcd8080cc91»  
   
-4.  Введите следующую команду: `regasm microsoft.analysisservices.channeltransport.dll`  
+4.  Выполните следующую команду: `regasm microsoft.analysisservices.channeltransport.dll`  
   
 5.  Повторите предыдущие шаги для любого компьютера, на который вручную установили версию 2008 R2 поставщика.  
   
@@ -153,9 +152,9 @@ ms.locfileid: "79112175"
   
 2.  Кроме того, вы можете проверить версию файла.  
   
-     Перейдите к `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Щелкните правой кнопкой мыши **файл msolap100. dll** и выберите пункт **свойства**. Щелкните **Сведения**.  
+     Перейдите к `C:\Program files\Microsoft Analysis Services\AS OLEDB\10`. Щелкните правой кнопкой мыши **msolap100.dll** и выберите пункт **свойства**. Щелкните **Сведения**.  
   
-     Просмотрите информацию о версии файла. Версия должна включать 10,50. \<BuildNumber>.  
+     Просмотрите информацию о версии файла. Версия должна включать 10,50. \<buildnumber> .  
   
   
 ## <a name="see-also"></a>См. также:  

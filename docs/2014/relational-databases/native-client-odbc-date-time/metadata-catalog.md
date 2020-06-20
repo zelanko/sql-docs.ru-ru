@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 783843e9bc25b0f6f1771fe7459de85b8cb56431
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b37c86616aa1a8077f147fa9bc64b24bcaf17b42
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705456"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020182"
 ---
 # <a name="catalog-metadata"></a>Метаданные каталога
   В этом разделе описаны метаданные столбцов, возвращаемые функциями `SQLColumns` и `SQLProcedureColumns`, а также метаданные для типов данных, возвращаемые функцией `SQLGetTypeInfo`.  
@@ -63,7 +62,7 @@ ms.locfileid: "82705456"
 |INTERVAL_PRECISION|NULL|NULL|NULL|NULL|NULL|NULL|  
 |USERTYPE|0|0|12|22|0|0|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метаданные &#40;ODBC&#41;](../../database-engine/dev-guide/metadata-odbc.md)  
   
   

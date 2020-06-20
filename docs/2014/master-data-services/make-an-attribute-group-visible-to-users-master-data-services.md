@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2f6cc27-dbc9-4f3f-961e-e81e76375248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97cc4c9955b64583571a63fa72df4663c1acd812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ceaab6fad6b5c1ff09000046e347ef537645c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971261"
 ---
 # <a name="make-an-attribute-group-visible-to-users-master-data-services"></a>Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]сделайте группу атрибутов видимой для пользователей или групп, если необходимо, чтобы у пользователей присутствовали вкладки над сеткой в функциональной области **Обозреватель** .  
@@ -51,9 +50,9 @@ ms.locfileid: "65479154"
   
 9. Щелкните Пользователи или группы в поле **доступно** и щелкните стрелку **Добавить** . Чтобы добавить все, щелкните стрелку **Добавить все** .  
   
-10. Нажмите кнопку **Сохранить**.  
+10. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы атрибутов &#40;Master Data Services&#41;](../../2014/master-data-services/attribute-groups-master-data-services.md)   
  [Создание группы атрибутов (службы Master Data Services)](../../2014/master-data-services/create-an-attribute-group-master-data-services.md)  
   

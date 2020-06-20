@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ec88695b4df1e2d4ee5ec7f446574961adc76b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970934"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Возможность просмотра ошибки, которая возникает в ходе промежуточного процесса (службы Master Data Services)
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно просмотреть ошибки, которые возникают в ходе промежуточного процесса. В базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] существуют два представления, в которых показываются ошибки:  
@@ -45,10 +44,10 @@ ms.locfileid: "65478569"
   
 4.  Выполните запрос. Сведения об ошибках отображаются в поле **ErrorDescription** .  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Дополнительные сведения о сообщениях об ошибках см. в разделе [Ошибки промежуточного процесса (службы Master Data Services)](../../2014/master-data-services/staging-process-errors-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;импорта данных&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Устранение неполадок в промежуточном процессе (службы Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

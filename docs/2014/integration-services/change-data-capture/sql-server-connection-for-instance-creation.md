@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 474212ceeeae896612064ac359c36c2296b3ef5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922435"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Соединение с SQL Server для создания экземпляров
   Одним из первых шагов при создании экземпляра CDC Oracle является создание базы данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта база данных CDC должна быть подготовлена к работе CDC SQL Server, для чего требуется имя входа, которое является членом предопределенной роли сервера `sysadmin` .  

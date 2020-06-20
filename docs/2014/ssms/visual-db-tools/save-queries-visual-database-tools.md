@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8245c048d4c1a1314835ad70fc7305c7afabd3f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ba330636d325a992389fdc54c1a6516546f717e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63284465"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040703"
 ---
 # <a name="save-queries-visual-database-tools"></a>Сохранение запросов (визуальные инструменты для баз данных)
   Сохранение запроса для дальнейшей работы с ним. Обратите внимание, что при выполнении запроса изменения не сохраняются.  

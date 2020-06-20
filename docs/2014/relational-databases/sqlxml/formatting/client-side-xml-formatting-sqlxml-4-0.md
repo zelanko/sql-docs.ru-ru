@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9ac825cf6fa86e6a1f4970cffafc20d2873558b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702895"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996048"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Форматирование XML на стороне клиента (SQLXML 4.0)
   В этом разделе содержатся сведения о форматировании XML на стороне клиента. Форматирование на стороне означает форматирование XML на среднем уровне.  
@@ -52,7 +51,7 @@ FROM   Person.Contact
   
  В следующей таблице приведены режимы, которые могут быть заданы для FOR XML на стороне клиента.  
   
-|Режим FOR XML на стороне клиента|Комментировать|  
+|Режим FOR XML на стороне клиента|Комментарий|  
 |-------------------------------|-------------|  
 |RAW|Выдает одинаковый результат при указании в FOR XML на стороне клиента или сервера.|  
 |NESTED|Похож на режим FOR XML AUTO на стороне сервера.|  
@@ -122,7 +121,7 @@ AS
 > [!NOTE]  
 >  Если вы выполняете XML-шаблон в приложении ADO, использующем поставщик SQLXMLOLEDB, и задаете атрибут **Client-Side-XML** в шаблоне и свойстве клиентсидексмл поставщика, приоритет получает значение, заданное в шаблоне.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Архитектура форматирования XML на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
  [ДЛЯ SQL Server &#40;XML&#41;](../../xml/for-xml-sql-server.md)   
  [Рекомендации по безопасности XML &#40;SQLXML 4,0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea689f96911af35176d6467e73d496b59f35e3c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6b6c86aa3f76088ff3cb0e36a1a111b325944ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921095"
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
   Диспетчер подключений службы хранилища Azure позволяет использовать пакет SSIS для подключения к учетной записи хранения Azure с помощью указываемых значений свойств: имени учетной записи хранения и ключа учетной записи.  
@@ -33,7 +32,7 @@ ms.locfileid: "62833562"
   
     2.  Выберите параметр **Использовать HTTPS** , если для подключения к службе хранилища Azure хотите использовать протокол HTTPS, а не HTTP.  
   
-4.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.  
+4.  Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.  
   
 5.  Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .  
   

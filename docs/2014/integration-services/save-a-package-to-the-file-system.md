@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ba45350-dae8-437a-8984-64e6d8d180c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 07077fabaca18170496a1b4e972da7b7e34cd4fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0ee3775732fcce9fb0de2af2cedde0827bfa9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964264"
 ---
 # <a name="save-a-package-to-the-file-system"></a>Сохранение пакета в файловой системе
   Эта процедура описывает сохранение существующего пакета в файловой системе в виде файла с расширением DTSX.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056256"
     > [!NOTE]  
     >  Путь к файлу и имя, под которым был сохранен пакет, можно проверить в окне свойств.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Сохранение одной копии пакета](../../2014/integration-services/save-a-copy-of-a-package.md)  
   

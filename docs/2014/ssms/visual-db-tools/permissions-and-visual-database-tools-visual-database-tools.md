@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35bed6e63aa352986e1072bfad1b5ddf836845e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37cd18427de07aa039d18b0878924b7a37104741
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268495"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001119"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>Разрешения и визуальные инструменты для баз данных (визуальные инструменты для баз данных)
   Разрешения, дающие пользователям доступ к объектам источников данных, предоставляются в источнике данных, а не в визуальных инструментах для баз данных. Предоставляемые разрешения на доступ к объектам источников данных определяются политикой обеспечения безопасности конкретной установки сервера баз данных. Если отсутствуют разрешения на доступ к определенным объектам базы данных, обратитесь к своему администратору баз данных.  

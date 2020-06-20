@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b452acb2e9d168910fec06d959ce3a1c1704b814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060044"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917084"
 ---
 # <a name="data-conversion-transformation-editor"></a>редактор преобразования «Конвертация данных»
   Используйте диалоговое окно **Редактор преобразования «Конвертация данных»** , чтобы выбрать столбцы, подлежащие преобразованию, выбрать тип данных, в который должен быть преобразован столбец, и установить атрибуты преобразования.  
   
 > [!NOTE]  
->  `FastParse` Свойство выходных столбцов преобразования «Конвертация данных» недоступно в **редакторе преобразования «Конвертация данных**», но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Преобразование "Конвертация данных"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  `FastParse`Свойство выходных столбцов преобразования «Конвертация данных» недоступно в **редакторе преобразования «Конвертация данных**», но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Преобразование "Конвертация данных"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Для более подробного знакомства с преобразованием «Конвертация данных» см. раздел [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные входные столбцы**  
  Выберите столбцы, подлежащие преобразованию, установив флажки. Выбранные столбцы добавляются в качестве входных столбцов в таблицу, представленную ниже.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66060044"
  **Точность**  
  Установите точность для числовых данных.  
   
- **Масштабирование**  
+ **Масштаб**  
  Установите масштаб для числовых данных.  
   
  **Кодовая страница**  
@@ -57,7 +56,7 @@ ms.locfileid: "66060044"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок уровня строк в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Преобразование данных в другой тип данных с помощью преобразования «Конвертация данных»](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   

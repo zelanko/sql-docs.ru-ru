@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964134"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Диалоговое окно «Ограничения схемы»
   Используйте диалоговое окно **Ограничения схемы** , чтобы установить ограничения схемы, которые необходимо применить к перечислителю набора строк схемы Foreach ADO.NET.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ограничения**  
  Выберите ограничения, которые необходимо применить к схеме.  
   
@@ -33,10 +32,10 @@ ms.locfileid: "66056147"
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](integration-services-ssis-variables.md), [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
- **Текст**  
+ **Текстовые**  
  Введите текст для определения ограничений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   

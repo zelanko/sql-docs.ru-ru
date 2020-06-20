@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fda014196d933ef9d5391ab4db798d821e43610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85c76037c44f6260bbfc436823d844abdf74355d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921255"
 ---
 # <a name="ado-connection-manager"></a>Диспетчер соединений ADO
   Диспетчер соединений ADO позволяет пакету подключаться к таким объектам ADO, как набор записей. Текущий диспетчер соединений обычно используется в пользовательских задачах, созданных в ранних версиях таких языков, как Microsoft Visual Basic 6.0, или в пользовательских задачах, которые являются частью существующего приложения, использующего ADO для подключения к источникам данных.  
   
- При добавлении [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] к пакету диспетчера соединений ADO создает диспетчер соединений, который будет разрешаться в соединение ADO во время выполнения, устанавливает свойства диспетчера соединений и добавляет его в `Connections` коллекцию пакета. Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `ADO`.  
+ При добавлении к пакету диспетчера соединений ADO [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] создает диспетчер соединений, который будет разрешаться в соединение ADO во время выполнения, устанавливает свойства диспетчера соединений и добавляет его в `Connections` коллекцию пакета. Свойству `ConnectionManagerType` диспетчера соединений присваивается значение `ADO`.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>Устранение неполадок диспетчера соединений ADO  
  При считывании данных диспетчером соединений ADO некоторые типы данных даты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формируют результаты, показанные в следующей таблице.  
@@ -56,7 +55,7 @@ ms.locfileid: "62833819"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

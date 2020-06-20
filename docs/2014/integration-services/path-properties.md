@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964746"
 ---
 # <a name="path-properties"></a>Свойства пути
   Объекты потока данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] объектной модели имеют общие свойства и пользовательские свойства на уровне компонента, входов и выходов, а также входных и выходных столбцов. Многие свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -38,7 +37,7 @@ ms.locfileid: "66056654"
 |DestinationName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|Вход, связанный с путем.|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|Выход, связанный с путем.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Общие свойства](../../2014/integration-services/common-properties.md)   
  [Пользовательские свойства преобразования](data-flow/transformations/transformation-custom-properties.md)   

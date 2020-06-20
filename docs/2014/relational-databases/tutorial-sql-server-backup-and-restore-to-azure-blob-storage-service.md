@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002486"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Руководство по Резервное копирование и восстановление SQL Server с помощью службы хранилищ BLOB-объектов Azure
   Добро пожаловать в начало работы с помощью SQL Server резервного копирования и восстановления с помощью службы хранилища BLOB-объектов Azure. С помощью этого руководства вы научитесь создавать и восстанавливать резервные копии, используя службу хранилища BLOB-объектов Azure.  
@@ -23,7 +22,7 @@ ms.locfileid: "70176113"
 ## <a name="what-you-will-learn"></a>Обзор учебника  
  В этом учебнике показано, как создать учетную запись хранения Windows, контейнер больших двоичных объектов, учетные данные для доступа к учетной записи хранения, как записать резервную копию в службу хранилищ больших двоичных объектов и выполнить простое восстановление. Учебник разделен на четыре занятия.  
   
- [Урок 1. Создание объектов службы хранилища Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Занятие 1. Создание объектов службы хранилища Azure](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  На этом занятии вы создадите учетную запись хранения Azure и контейнер больших двоичных объектов.  
   
  [Урок 2. Создание учетных данных SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
@@ -49,8 +48,8 @@ ms.locfileid: "70176113"
 ### <a name="additional-reading"></a>Дополнительные материалы  
  Чтобы разобраться в концепциях и предпочтительных методах использования службы хранилища BLOB-объектов Azure для резервного копирования [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], рекомендуется изучить перечисленные ниже материалы.  
   
-1.  [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
+1.  [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
   

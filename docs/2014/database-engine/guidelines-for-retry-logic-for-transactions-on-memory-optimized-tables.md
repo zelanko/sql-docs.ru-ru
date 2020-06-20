@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cebe052a91dbf414f63f82efdfca88c64faabd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779218"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932893"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Рекомендации для логики повторного выполнения транзакций для таблиц, оптимизированных для памяти
   Условия ошибки, возникающие с транзакциями, которые обращаются к оптимизированным для памяти таблицам.  
@@ -125,7 +124,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о транзакциях в таблицах, оптимизированных для памяти](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
  [Транзакции в таблицах, оптимизированных для памяти](../relational-databases/in-memory-oltp/memory-optimized-tables.md)   
  [Рекомендации для уровней изоляции транзакций с таблицами, оптимизированными для памяти](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)  

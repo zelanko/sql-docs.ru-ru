@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec56d95cdd0550fb15d6a28eca683a8136ffdd6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76c0ec3da8661db4b7d132d27f5759d1d3571774
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041699"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Работа с несколькими версиями и экземплярами SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает на одном компьютере несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]и служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Кроме того, можно обновить уже установленные на компьютере предыдущие версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]либо установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этот же компьютер с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поддерживаемые сценарии обновления см. в разделе [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
@@ -90,7 +89,7 @@ ms.locfileid: "63205306"
 ## <a name="preventing-ip-address-conflicts"></a>Предотвращение конфликтов IP-адресов  
  Если экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен параллельно с отдельным экземпляром компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], то необходимо исключить возникновение конфликта номера порта TCP с IP-адресами. Конфликты обычно возникают в том случае, когда два экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] одновременно настроены на использование стандартного порта TCP (1433). Чтобы предотвратить возникновение конфликтов, настройте один экземпляр на использование фиксированного порта, отличного от установленного по умолчанию. Обычно настройку фиксированного порта проще всего выполнить на отдельном экземпляре. Настройка компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на использование различных портов позволит предотвратить непредвиденные конфликты IP-адресов и TCP, которые блокируют запуск экземпляра в случае ошибки экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при переходе на режим ожидания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md)   
  [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

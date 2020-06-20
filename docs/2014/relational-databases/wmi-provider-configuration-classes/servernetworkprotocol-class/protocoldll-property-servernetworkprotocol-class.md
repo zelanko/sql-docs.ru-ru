@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6aa776472581ce06ad05b0133df6101b12f75061
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43a83f02fd7b6a21a68d05b97ef87365cc30cd2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63266663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059902"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>Свойство ProtocolDLL (класс ServerNetworkProtocol)
   Возвращает имя DLL-файла, необходимого сетевому протоколу сервера.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

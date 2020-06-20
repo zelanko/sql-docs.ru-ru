@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7039bebb-1f25-4cf3-81f1-393dfb78da12
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 09c54c8229351cf27e0f42c8895f2633b8aa7ccb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5eff9cb3139e1e1043f99ba63d11160b1010c27
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936149"
 ---
 # <a name="backup-files-must-be-on-separate-devices-from-the-database-files"></a>Файлы резервной копии и файлы базы данных должны находиться на отдельных устройствах
   Это правило проверяет, размещаются ли файлы базы данных на устройствах отдельно от файлов резервных копий. Если файлы базы данных и файлов резервных копий расположены на одном устройстве, то в случае его сбоя резервные копии будут недоступны. Кроме того, размещение файлов базы данных и файлов резервных копий на отдельных устройствах оптимизирует производительность ввода-вывода как при записи резервных копий, так и в процессе эксплуатации базы данных.  
@@ -33,7 +32,7 @@ ms.locfileid: "62812628"
   
  [Резервное копирование и восстановление баз данных SQL Server](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

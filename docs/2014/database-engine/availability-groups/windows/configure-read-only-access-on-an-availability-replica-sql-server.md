@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2aee8939ed2bba9ffc6f96344a5c4ac1a95fbaab
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ab13081396aff46d193c1b0449d6b93042ee60d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936966"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Настройка доступа только для чтения в реплике доступности (SQL Server)
   По умолчанию и доступ для чтения и записи, и доступ только для чтения разрешены в первичной реплике, а подключения к вторичным репликам группы доступности AlwaysOn запрещены. В этом разделе описывается настройка доступа к соединениям реплики доступности в группе доступности AlwaysOn в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell.  
@@ -76,7 +75,7 @@ ms.locfileid: "82922046"
          Разрешаются все соединения с базами данных в первичной реплике. Это параметр по умолчанию.  
   
          **разрешить соединения с доступом на чтение и запись;**  
-         Если свойство «Назначение приложения» имеет значение **ReadWrite** или свойство соединения «назначение приложения» не задано, то подключение разрешено. Соединения, у которых свойство соединения «Назначение приложения» равно **ReadOnly** , не разрешены. Таким образом, клиент не сможет по ошибке подключить рабочую нагрузку с намерением чтения к первичной реплике. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+         Если свойство «Назначение приложения» имеет значение **ReadWrite** или не задано, то соединение разрешено. Соединения, у которых свойство соединения «Назначение приложения» равно **ReadOnly** , не разрешены. Таким образом, клиент не сможет по ошибке подключить рабочую нагрузку с намерением чтения к первичной реплике. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
@@ -111,7 +110,7 @@ ms.locfileid: "82922046"
      где  
   
      READ_WRITE  
-     Подключения, для которых свойство подключения намерения приложения имеет значение **ReadOnly** , запрещены.  Если свойство «Назначение приложения» имеет значение **ReadWrite** или свойство соединения «назначение приложения» не задано, то подключение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+     Соединения, у которых свойство "Назначение приложения" равно **ReadOnly** , не разрешены.  Если свойство «Назначение приложения» имеет значение **ReadWrite** или не задано, то соединение разрешено. Дополнительные сведения о свойстве соединения «Назначение приложения» см. в разделе [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
      Разрешаются все соединения с базами данных в первичной реплике. Это параметр по умолчанию.  
@@ -186,7 +185,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 -   Обеспечение возможности подключения клиентских приложений к доступным для чтения вторичным репликам.  
   
-    ||Предварительное требование|Ссылка|  
+    ||Предварительные требования|Ссылка|  
     |-|------------------|----------|  
     |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Убедитесь, что группа доступности имеет прослушиватель.|[Создание или настройка прослушивателя группы доступности (SQL Server)](create-or-configure-an-availability-group-listener-sql-server.md)|  
     |![Установка](../../media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Настройте маршрутизацию только для чтения в группе доступности.|[Настройка маршрутизации только для чтения в группе доступности (SQL Server)](configure-read-only-routing-for-an-availability-group-sql-server.md)|  
@@ -231,7 +230,7 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 -   [AlwaysOn: читаемая вторичная реплика и задержка данных](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Активные вторичные реплики: &#40;группы доступности AlwaysOn для чтения&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb374c8af950973d61ad99dc6d3ef896dcc21939
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060498"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921535"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Настройка служб Integration Services (службы SSIS)
     
 > [!IMPORTANT]  
 >  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
- Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используют для определения параметров файл конфигурации. По умолчанию имя этого файла конфигурации — MsDtsSrvr. ini. XML, а файл находится в папке%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
+ Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используют для определения параметров файл конфигурации. По умолчанию имя этого файла конфигурации MsDtsSrvr.ini.xml, а файл находится в папке%ProgramFiles%\Microsoft SQL Server\120\DTS\Binn.  
   
  Обычно не нужно делать какие-либо изменения в этом файле конфигурации или изменять расположение файла по умолчанию. Однако если пакеты хранятся в именованном или удаленном экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]либо в нескольких экземплярах компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо изменить файл конфигурации. Кроме того, если файл конфигурации переносится в расположение, отличное от расположения по умолчанию, необходимо изменить раздел реестра, указывающий расположение файла.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66060498"
   
 -   Корневыми папками служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для отображения в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] являются папки MSDB и файловой системы.  
   
--   Пакеты в файловой системе, которыми управляет [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] служба, находятся в%ProgramFiles%\Microsoft SQL Server\120\DTS\Packages.  
+-   Пакеты в файловой системе, которыми [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] управляет служба, находятся в%ProgramFiles%\MICROSOFT SQL Server\120\DTS\Packages.  
   
  В этом файле конфигурации указывается, какая база данных msdb содержит пакеты, которыми будет управлять служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . По умолчанию служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)], который установлен одновременно со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../includes/ssde-md.md)].  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66060498"
 ```  
   
 ## <a name="modification-of-the-configuration-file-location"></a>Изменение расположения файла конфигурации  
-Раздел реестра **HKEY_LOCAL_MACHINE \СОФТВАРЕ\МИКРОСОФТ\МИКРОСОФТ SQL Server\120\SSIS\ServiceConfigFile** указывает расположение и имя файла конфигурации, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используемого службой. По умолчанию раздел реестра имеет значение **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn\MsDtsSrvr.ini.XML**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание, что номер версии в пути (120 для [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]SQL Server) будет зависеть от версии SQL Server. 
+Раздел реестра **HKEY_LOCAL_MACHINE \СОФТВАРЕ\МИКРОСОФТ\МИКРОСОФТ SQL Server\120\SSIS\ServiceConfigFile** указывает расположение и имя файла конфигурации, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используемого службой. Значение по умолчанию для раздела реестра — **C:\Program FILES\MICROSOFT SQL Server\120\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] ) будет зависеть от версии SQL Server. 
   
   
 > [!CAUTION]  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058191"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965714"
 ---
 # <a name="implementation-of-child-packages"></a>Осуществление дочерних пакетов
   При реализации балансировки нагрузки с помощью служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]дочерние пакеты устанавливаются на другие серверы для получения преимуществ от доступного времени ЦП или сервера. Чтобы создать и запустить дочерние пакеты, требуется выполнить следующие шаги.  
@@ -51,7 +50,7 @@ ms.locfileid: "66058191"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Отладка задания агента SQL Server и дочерних пакетов  
  Протестировать задания агента SQL Server и их дочерние пакеты можно с помощью одного из следующих методов:  
   
--   Запуск каждого дочернего пакета в конструкторе служб SSIS путем нажатия кнопки **Отладка** / **Запуск без отладки**.  
+-   Запуск каждого дочернего пакета в конструкторе служб SSIS путем нажатия кнопки **Отладка**  /  **Запуск без отладки**.  
   
 -   выполняя индивидуальное задание агента SQL Server на удаленном компьютере, используя среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы убедиться в том, что пакет запущен.  
   

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0366ecb08281a28d43bc98639bf4b11e60aea402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056723"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964695"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>редактор преобразования «Процентная выборка»
   Используйте диалоговое окно **Редактор преобразования «Процентная выборка»** для выборки части входных данных по заданному проценту строк. Это преобразование разделяет входные данные на два отдельных вывода.  
   
  Дополнительные сведения о преобразовании «Процентная выборка» см. в разделе [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Процент строк**  
  Задает процент строк во входных данных для использования в качестве выборки.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66056723"
  **Использовать следующее начальное значение**  
  Задайте начальное значение выборки для генератора случайных чисел, который преобразование использует для создания выборки. Рекомендуется только для разработки и тестирования. Если начальное значение выборки не задано, преобразование использует счетчик тактов Microsoft Windows.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [преобразование «Выборка строк»](data-flow/transformations/row-sampling-transformation.md)  
   

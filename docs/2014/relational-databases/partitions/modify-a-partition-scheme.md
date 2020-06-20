@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 515de63f-dfc5-434d-9adb-f3b5992f745a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 56148cca72ca9561219a9ea14025b0bd0f2204b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d57984228e23143d2061df6bf447f978f9bd3c46
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206570"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060913"
 ---
 # <a name="modify-a-partition-scheme"></a>Изменение схемы секционирования
   Можно изменить схему секционирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , назначив файловую группу для размещения следующей секции, которая добавляется в секционированную таблицу, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Это делается путем присваивания файловой группе свойства NEXT USED. Можно присвоить свойство NEXT USED пустой файловой группе или группе, уже хранящей секцию. Другими словами, файловая группа может содержать несколько секций.  

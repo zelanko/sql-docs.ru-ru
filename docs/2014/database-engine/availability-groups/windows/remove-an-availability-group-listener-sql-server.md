@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 057b9c137cb4d8bbbdd03be61df600f7e59b264c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936577"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Удаление прослушивателя группы доступности (SQL Server)
   В этом разделе описывается удаление прослушивателя группы доступности из группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 -   **Перед началом работы**  
   
-     [Предварительные условия](#Prerequisites)  
+     [Предварительные требования](#Prerequisites)  
   
      [Рекомендации](#Recommendations)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "72782859"
   
 2.  Инструкция [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) используется следующим образом:  
   
-     ALTER AVAILABILITY GROUP *group_name* удалить прослушиватель **"*`dns_name`*"**  
+     ALTER AVAILABILITY GROUP *group_name* удалить прослушиватель **" *`dns_name`* "**  
   
      где *group_name* — имя группы доступности, а *dns_name* — DNS-имя прослушивателя группы доступности.  
   

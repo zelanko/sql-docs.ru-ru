@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be74494f3cf06732ff49bcfd7c268df723fd957b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937605"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Предоставление ролей DQS пользователям
   В этом разделе описывается создание имен входа SQL Server на основе участников Windows и предоставление им ролей служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) в базе данных DQS_MAIN.  
@@ -45,10 +44,10 @@ ms.locfileid: "65480561"
     > [!NOTE]  
     >  Если пользователю предоставляется роль **dqs_administrator** , примените изменения, а затем повторно проверьте разрешения пользователя; флажки двух других ролей DQS (**dq_kb_editor** и **dqs_kb_operator**) также должны быть установлены.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Выполните вход на сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с использованием учетной записи пользователя Windows, для которой только что было создано имя входа SQL Server и предоставлена роль DQS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](install-data-quality-services.md)   
  [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   

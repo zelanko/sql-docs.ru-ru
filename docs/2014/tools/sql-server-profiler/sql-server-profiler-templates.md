@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26082eaf429aae38012c7da31cfebff7434edd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186141"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999799"
 ---
 # <a name="sql-server-profiler-templates"></a>Шаблоны приложения SQL Server Profiler
   Можно использовать приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для создания шаблонов, определяющих классы событий и столбцы данных с целью включения в трассировку. После определения и сохранения шаблона можно запустить трассировку, которая будет записывать данные для каждого выбранного класса событий. Шаблоны можно использовать для многих трассировок; сам шаблон не выполняется.  

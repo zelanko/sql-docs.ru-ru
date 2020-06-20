@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3122ddb64d9f86bd70e5b444bd7bd7fce44956de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175993"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971174"
 ---
 # <a name="data-import-master-data-services"></a>Импорт данных (службы Master Data Services)
   После создания модели для данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно добавлять данные и вносить в них изменения в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .   Используются промежуточные таблицы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , хранимые процедуры и диспетчер основных данных.
 
- Можно [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]также использовать для добавления данных в репозиторий MDS ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] база данных). Дополнительные сведения см. в разделе [Publishing Data &#40;надстройка MDS для Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
+ Можно также использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] для добавления данных в репозиторий MDS ( [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] база данных). Дополнительные сведения см. в разделе [Publishing Data &#40;надстройка MDS для Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).
 
  При добавлении или обновлении данных можно выполнять следующие действия.
 
@@ -83,11 +82,11 @@ ms.locfileid: "78175993"
 
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] включает следующие типы промежуточных хранимых процедур.
 
--   stg.udp_\<имя>_Leaf
+-   STG. udp_ \<name> _Leaf
 
--   stg.udp_\<имя>_Consolidated
+-   STG. udp_ \<name> _Consolidated
 
--   stg.udp_\<имя>_Relationship
+-   STG. udp_ \<name> _Relationship
 
  Для каждой сущности в модели есть три хранимые процедуры, которые соответствуют конечному элементу, объединенному элементу и промежуточным таблицам связей.  На следующем изображении показаны промежуточные хранимые процедуры для сущностей валюты, клиента и продукта.
 

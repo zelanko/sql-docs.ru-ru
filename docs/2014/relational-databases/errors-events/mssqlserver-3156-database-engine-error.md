@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 345d8ed4-177e-4ec3-bab3-25d30000e323
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b1c972481b7c4cf614cf0a91b29247c643696d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25b5a037012a6d6b47b91e763a49cfb67b89f43c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62868930"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054053"
 ---
 # <a name="mssqlserver_3156"></a>MSSQLSERVER_3156
     
@@ -50,7 +49,7 @@ ms.locfileid: "62868930"
  Устраните неполадку, связанную с указанным расположением. Для этого, например, предоставьте необходимые права доступа или измените расположение файла с помощью параметра WITH MOVE предложения RESTORE.  
   
 ## <a name="see-also"></a>См. также:  
- [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [Восстановление базы данных в новое место (SQL Server)](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [Восстановление файлов в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)  
   

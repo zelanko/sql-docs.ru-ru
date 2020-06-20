@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8234c63b-a018-4e55-8184-9a6bdf03274d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cf8a8310abf9173f613549ef7f2776fc33ea690c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fea7ae5abbd6aa2824d5a53244a8dc3c2cb5ea6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937615"
 ---
 # <a name="export-and-import-dqs-knowledge-bases-using-dqsinstallerexe"></a>Export and Import DQS Knowledge Bases Using DQSInstaller.exe
   Для существующей установки DQS все базы знаний на сервере [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] вы можете экспортировать в файл резервной копии DQS (DQSB) одновременно, а затем использовать файл DQSB для одновременного импорта всех баз знаний на другой сервер [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] посредством запуска файла DQSInstaller.exe из командной строки. Дополнительные сведения о запуске DQSInstaller.exe из командной строки см. в подразделе [Запуск DQSInstaller.exe из командной строки](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#CommandPrompt) раздела [Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
@@ -54,8 +53,8 @@ dqsinstaller.exe -importkbs c:\DQSBackup.dqsb
   
  Если в [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] имеются существующие базы знаний с теми же именами, что и у импортируемых баз данных, к именам импортируемых баз данных будет добавлен символ подчеркивания (_) и целочисленное значение, отсчитываемое от единицы. Например, если повторяется домен "CompanyName", то импортируемый домен получит имя "CompanyName_1".  
   
-## <a name="see-also"></a>См. также  
- [Запустите DQSInstaller. exe для завершения установки сервера Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+## <a name="see-also"></a>См. также:  
+ [Запуск DQSInstaller.exe для завершения установки сервера Data Quality Server](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Установка служб Data Quality Services](install-data-quality-services.md)   
  [Экспорт базы знаний в файл DQS](../export-a-knowledge-base-to-a-dqs-file.md)   
  [Импорт базы знаний из файла .dqs](../import-a-knowledge-base-from-a-dqs-file.md)  

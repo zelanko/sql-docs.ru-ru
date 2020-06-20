@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f98d3bf43707caedd8c9d0a01349f36d5a5bfbcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028421"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001473"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
   Это диалоговое окно позволяет создать полнотекстовый индекс для полнотекстового поиска по столбцам, содержащим текстовые данные, в таблицах базы данных. Полнотекстовый индекс зависит от обычного индекса, поэтому необходимо сначала создать его. Обычный индекс должен быть создан для одного столбца со значениями, отличными от NULL; лучше выбрать столбец с небольшими значениями, чем столбец с большими значениями.  
