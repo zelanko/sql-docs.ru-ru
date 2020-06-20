@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0932c3e78cf92501b38f80e779f25f93238e2419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021594"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   Драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает смешанную (динамическую и с набором ключей) модель курсора. Попытки установить размер набора ключей с помощью атрибута SQL_ATTR_KEYSET_SIZE завершатся неудачей, если задаваемое значение не равно 0.  
@@ -145,7 +144,7 @@ ms.locfileid: "82702140"
   
  Если функция каталога, отличная от then SQLTables, SQLColumns или SQLPrimaryKeys, вызывается, когда SQL_SOPT_SS_NAME_SCOPE имеет значение, отличное от SQL_SS_NAME_SCOPE_TABLE, возвращается SQL_ERROR. Создается диагностическая запись с параметром SQLSTATE HY010 и сообщением «Ошибочная последовательность функций (значение атрибута SQL_SOPT_SS_NAME_SCOPE не равно SQL_SS_NAME_SCOPE_TABLE)».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetStmtAttr](https://go.microsoft.com/fwlink/?LinkId=59355)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

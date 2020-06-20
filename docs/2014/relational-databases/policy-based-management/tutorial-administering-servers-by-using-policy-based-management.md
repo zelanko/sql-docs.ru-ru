@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634263350f0f094697ff2a77d68de5a2feacc9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63256060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047760"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Руководство по Администрирование серверов с помощью управления на основе политик
   Добро пожаловать в учебник по администрированию серверов с помощью политик управления на основе политик. Этот учебник предназначен для пользователей, знакомых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но новичков в управлении на основе политик.  
@@ -42,7 +41,7 @@ ms.locfileid: "63256060"
 ## <a name="start-the-tutorial"></a>Приступить к изучению  
  [Урок 1. Создание и применение политики, отключенной по умолчанию](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

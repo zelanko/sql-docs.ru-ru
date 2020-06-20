@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc1bfce77a089b24e68613c94af6e2886e6b5952
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cb3818ed644eede3cf4f2c256a0dcb94ec58c3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954104"
 ---
 # <a name="implementing-assemblies"></a>Реализация сборок
   Эта тема предоставляет сведения о следующих областях, чтобы помочь в реализации и работе со сборками в базе данных.  
@@ -71,7 +70,7 @@ ms.locfileid: "62874473"
   
 -   [Удаление объектов](../../ssms/object/delete-objects.md)  
   
- По умолчанию, все сборки, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отключены от выполнения. Можно использовать параметр **clr enabled** **sp_configure** системной хранимой процедуры, чтобы отключить или включить выполнение всех сборок, отправленных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отключение выполнения сборки не допускает выполнения функций среды CLR, хранимых процедур, триггеров, статистических выражений и определяемых пользователем типов, а также останавливает все эти объекты, выполняющиеся в настоящее время. Отключение выполнения сборки не отключает способность создавать, изменять или удалять сборки. Дополнительные сведения см. в разделе [параметр конфигурации сервера clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
+ По умолчанию, все сборки, созданные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отключены от выполнения. Можно использовать параметр **clr enabled** **sp_configure** системной хранимой процедуры, чтобы отключить или включить выполнение всех сборок, отправленных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Отключение выполнения сборки не допускает выполнения функций среды CLR, хранимых процедур, триггеров, статистических выражений и определяемых пользователем типов, а также останавливает все эти объекты, выполняющиеся в настоящее время. Отключение выполнения сборки не отключает способность создавать, изменять или удалять сборки. Дополнительные сведения см. в разделе [параметр конфигурации сервера clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   
  **Чтобы отключить и включить выполнение сборки**  
   
@@ -112,7 +111,7 @@ ms.locfileid: "62874473"
   
 -   [ALTER ASSEMBLY (Transact-SQL)](/sql/t-sql/statements/alter-assembly-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Получение сведений о сборках](../../relational-databases/clr-integration/assemblies-getting-information.md)  
   

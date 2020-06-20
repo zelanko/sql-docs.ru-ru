@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3ad4cad-d9eb-4824-802c-90f747b32507
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d9e45b2d725eedc3931f15f4272eabdb45db532
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050093"
 ---
 # <a name="in-memory-oltp-code-samples"></a>Примеры кода In-Memory OLTP
   В этом разделе содержатся примеры кода, демонстрирующие операции OLTP в памяти.  
@@ -28,7 +27,7 @@ ms.locfileid: "63157886"
   
 -   [Секционирование уровня приложения](application-level-partitioning.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)  
   
   

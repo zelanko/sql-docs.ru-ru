@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966314"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Дополнительно»)
   На вкладке **Дополнительно** диалогового окна **Редактор преобразования «Нечеткое группирование»** можно определить входные и выходные столбцы, пороги подобия и разделители токенов.  
   
 > [!NOTE]  
->  `MaxMemoryUsage` Свойства `Exhaustive` и преобразования «Нечеткое группирование» недоступны в **редакторе преобразования «Нечеткое группирование**», но могут быть установлены с помощью **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткое группирование"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  `Exhaustive` `MaxMemoryUsage` Свойства и преобразования «Нечеткое группирование» недоступны в **редакторе преобразования «Нечеткое группирование**», но могут быть установлены с помощью **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткое группирование"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Дополнительные сведения о преобразовании «Нечеткое группирование» см. в разделе [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя входного ключевого столбца**  
  Укажите имя выходного столбца, содержащего уникальный идентификатор для каждой входной строки. Столбец `_key_in` содержит значение, уникально идентифицирующее каждую строку.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "66058368"
  **Разделители токенов**  
  В преобразовании имеется набор разделителей по умолчанию для разделения данных на лексемы. При необходимости можно добавить или удалить разделители в списке.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Определение подобных строк данных с помощью преобразования «Нечеткое группирование»](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

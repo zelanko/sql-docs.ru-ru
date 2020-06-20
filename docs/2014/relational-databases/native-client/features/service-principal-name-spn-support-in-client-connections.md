@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049584"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
   Начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] поддержка имен субъектов-служб была расширена для поддержки взаимной проверки подлинности во всех протоколах. В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имена субъектов-служб поддерживались только для протокола Kerberos через TCP, когда имя по умолчанию для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] было зарегистрировано в Active Directory.  
@@ -111,6 +110,6 @@ ms.locfileid: "82707250"
   
  Дополнительные сведения об образцах приложений, которые демонстрируют эту функцию, см. в разделе [Образцы программирования для данных SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   

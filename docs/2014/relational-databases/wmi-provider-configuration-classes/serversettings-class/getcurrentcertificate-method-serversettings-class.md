@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 450e33c6-91d4-420f-ab7c-1905111f5658
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 30b704d26d2b6ac080f32034bb78fddcee446bdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b68c9be215354ed96646baa4a997b675d8c9b74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995868"
 ---
 # <a name="getcurrentcertificate-method-serversettings-class"></a>Метод GetCurrentCertificate (класс ServerSettings)
   Возвращает текущий сертификат безопасности.  
@@ -54,7 +53,7 @@ SHA
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

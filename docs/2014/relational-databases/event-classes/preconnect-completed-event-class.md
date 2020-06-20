@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ed2f620-6511-4985-9961-d2927c2b1759
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eaad0a80fd77257c6e79e092733d75c0c8df5df5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56af8e7de291c81736d2b83abf8a31a972653c8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827085"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052791"
 ---
 # <a name="preconnectcompleted-event-class"></a>PreConnect:Completed, класс событий
   Класс событий PreConnect:Completedevent указывает на завершение триггера LOGON или функции-классификатора регулятора ресурсов.  
@@ -39,12 +38,12 @@ ms.locfileid: "62827085"
 |Операции чтения|`int`|Количество операций логического считывания.|16|Да|  
 |Запись|`int`|Количество операций логической записи.|17|Да|  
 |GroupID|`int`|Идентификатор классифицированной группы рабочей нагрузки.|66|Да|  
-|Ошибка|`int`|Номер последней ошибки в случае, если выполнение определяемой пользователем функции-классификатора завершилось с ошибкой.|31|Да|  
+|Error|`int`|Номер последней ошибки в случае, если выполнение определяемой пользователем функции-классификатора завершилось с ошибкой.|31|Да|  
 |Состояние|`int`|Состояние последней ошибки.|30|Да|  
 |TargetUserName|`sysname`|Возвращаемое значение (имя группы рабочей нагрузки) для определяемой пользователем функции-классификатора, если системе не удается найти соответствующую активную группу. В противном случае этот столбец содержит значение NULL.|39|Да|  
 |ObjectName|`nvarchar(256)`|Двухкомпонентное имя определяемой пользователем функции-классификатора. Например, dbo.classifier.|34|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Класс событий Reconnect: starting](preconnect-starting-event-class.md)   
  [Регулятор ресурсов](../resource-governor/resource-governor.md)  

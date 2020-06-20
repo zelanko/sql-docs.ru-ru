@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecdcafb1cb2d2b78a63dbd15ecec148e5eb1b2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204607"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057952"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Получение суммарных или статистических значений для всех строк в таблице (визуальные инструменты для баз данных)
   Агрегатные функции позволяют вычислять сумму всех значений, содержащихся в таблице. Например, можно создать запрос наподобие того, что приведен ниже, для отображения общей стоимости всех книг, содержащихся в таблице `titles` :  
@@ -77,7 +76,7 @@ FROM titles
 > [!NOTE]  
 >  Конструктор запросов и представлений обслуживает агрегатные функции в инструкции, отображаемой на панели SQL до тех пор, пока режим «Группировать по» явно не будет выключен. Поэтому при изменении типа запроса или изменении состава таблиц и возвращающих табличное значение объектов, присутствующих на панелях диаграмм, конечный запрос может содержать недопустимые агрегатные функции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сортировка и Группировка результатов запроса &#40;визуальных инструментов для баз данных&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Резюмирование результатов запросов (визуальные инструменты для баз данных)](summarize-query-results-visual-database-tools.md)  
   

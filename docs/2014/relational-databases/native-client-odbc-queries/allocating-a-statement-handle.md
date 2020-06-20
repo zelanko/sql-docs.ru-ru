@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a7cce55becbe02982fcf3f7ffaf6f18954735499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fac0802b474f38f6a6c314dd727fa335d14598d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018701"
 ---
 # <a name="allocating-a-statement-handle"></a>Выделение дескриптора инструкции
   Прежде чем приложение сможет выполнить инструкцию, оно должно выделить дескриптор инструкции. Для этого вызывается **функцию SQLAllocHandle** с параметром *параметром handletype* , для которого задано значение SQL_HANDLE_STMT и *инпусандле* указывает на маркер подключения.  
@@ -40,7 +39,7 @@ ms.locfileid: "82705204"
   
  Соблюдайте осторожность при установке этих параметров. Лучше, если все дескрипторы инструкций в дескрипторе соединения будут иметь одинаковые значения SQL_ATTR_MAX_LENGTH и SQL_ATTR_MAX_ROWS. Если драйвер переключается с одного дескриптора инструкции на другой с разными значениями этих параметров, то он должен для изменения значений формировать соответствующие инструкции SET TEXTSIZE и SET ROWCOUNT. Драйвер не может поместить эти инструкции в один пакет как пользовательские инструкции SQL, поскольку пользовательские инструкции SQL могут содержать инструкцию, которая должна быть первой в пакете. Драйвер должен отправлять инструкции SET TEXTSIZE и SET ROWCOUNT в отдельных пакетах, что приводит к появлению дополнительного обращения к серверу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняя запросы &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

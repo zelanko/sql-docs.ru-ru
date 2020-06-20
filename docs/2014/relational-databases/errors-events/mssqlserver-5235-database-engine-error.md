@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1aa7e6a5-7ccb-43c8-a1fd-d50e92e0a798
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42c807944d7506a6a118de97ccd8c2c488942c8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85032846"
 ---
 # <a name="mssqlserver_5235"></a>MSSQLSERVER_5235
     
@@ -58,7 +57,7 @@ ms.locfileid: "62913761"
 |Состояние 4|Обратитесь в службу поддержки пользователей.|  
 |Состояние 5|Запустите команду еще раз: если устранить неполадку не удается, обратитесь в службу поддержки пользователей.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DBCC (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-transact-sql)  
   
   

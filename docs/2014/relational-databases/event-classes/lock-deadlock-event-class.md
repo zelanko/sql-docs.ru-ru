@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e0394bc-6ea8-4533-845c-76782bec73c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1834a4d3044dc8c444486d727274d6fa72a56a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9012a73642f23fa502e4bc3c4d006d3ce6c7f543
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052940"
 ---
 # <a name="lockdeadlock-event-class"></a>Класс событий Lock:Deadlock
   События класса Lock:Deadlock создаются при отмене попытки получить блокировку, приводящую к взаимоблокировке и выбранную сервером в качестве жертвы.  
@@ -37,7 +36,7 @@ ms.locfileid: "63023432"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой запрашивается блокировка.|35|Да|  
 |Duration|`bigint`|Время (в микросекундах) с момента выдачи запроса на блокировку до момента возникновения взаимоблокировки.|13|Да|  
 |EndTime|`datetime`|Время окончания взаимоблокировки.|15|Да|  
-|EventClass|`int`|Тип события = 25.|27|Нет|  
+|EventClass|`int`|Тип события = 25.|27|нет|  
 |EventSequence|`int`|Порядковый номер данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -59,9 +58,9 @@ ms.locfileid: "63023432"
 |StartTime|`datetime`|Время начала события, если оно доступно.|14|Да|  
 |TextData|`ntext`|Текстовое значение, зависящее от типа запрашиваемой блокировки.|1|Да|  
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
-|Type|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
+|Тип|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

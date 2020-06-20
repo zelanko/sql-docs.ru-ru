@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 555c6946a9732d478d9e7dca76b84ce17d0e90e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092224"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036265"
 ---
 # <a name="setup-role"></a>Роль установки
   На этой странице можно указать, будет страница «Выбор компонентов» использоваться для выбора отдельных функций или для установки с использованием роли установки.  
   
  `setup role` представляет собой фиксированный выбор для всех функций и общих компонентов, которые необходимы для реализации стандартной конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Установка компонентов**  
  Укажите этот параметр для выбора отдельных функций и общих компонентов. В число компонентов экземпляра входят службы Database Engine Services, Analysis Services (в собственном режиме) и Reporting Services.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66092224"
   
  Если операционная система не является контроллером домена, по умолчанию в компоненте Database Engine и службах Reporting Services используется учетная запись NTAUTHORITY\NETWORK SERVICE, в Integration Services — учетная запись NTAUTHORITY\NETWORK SERVICE, а в средстве запуска управляющей программы полнотекстовой фильтрации SQL — учетная запись NTAUTHORITY\LOCAL SERVICE.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка PowerPivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=206906)   
  [Требования к оборудованию и программному обеспечению (PowerPivot для SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [Выбор компонентов](../../../2014/sql-server/install/feature-selection.md)  

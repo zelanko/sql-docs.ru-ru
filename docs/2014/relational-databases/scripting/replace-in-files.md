@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a70e5af5cd46abab1980ed0c9f84c3fe309d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009504"
 ---
 # <a name="replace-in-files"></a>Замена в файлах
   Вкладка **Замена в файлах** окна «Найти и заменить» позволяет осуществлять поиск в коде заданного набора файлов заданной строки или выражения и заменять все или некоторые из найденных совпадений. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  

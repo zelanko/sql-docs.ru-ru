@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d9be6a759e2684602a20ed0c493818d5fe4cc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0acefc1ade48833cf790a8849a937a09b6a904d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031103"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User, класс событий
   События класса **Audit Add DB User** происходят, когда имя входа добавляется в базу данных как пользователь базы данных или удаляется из нее. Этот класс событий используется для хранимых процедур **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser** .  

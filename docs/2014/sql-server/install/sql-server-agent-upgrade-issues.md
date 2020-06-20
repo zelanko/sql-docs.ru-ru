@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 598a317bdecb2ed3808a7b5af35316d95d3b87c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac234a757510af5ebfac261ea6d3e7e57d2f426f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092013"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036240"
 ---
 # <a name="sql-server-agent-upgrade-issues"></a>Проблемы обновления агента SQL Server
   В следующих разделах описываются проблемы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые могут повлиять на обновление. В разделах описываются действия, которые могут уменьшить последствия этих изменений в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "66092013"
   
 -   [При обновлении пользовательская учетная запись-посредник агента SQL Server изменится на временную учетную запись-посредник UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)   
  [Решение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

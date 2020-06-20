@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19e4ca323ff61f9a5629706e3dcfad7cb7c51688
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dcf6ba52977e1bdbea02a7b5ac0a097bc1fe0b02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316196"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011468"
 ---
 # <a name="close-a-trace-window-sql-server-profiler"></a>закрыть окно трассировки (приложение SQL Server Profiler)
   В этом разделе описывается, как закрыть окно трассировки для выполняемых трассировок или для сохраненных трассировок, просматриваемых с использованием приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "63316196"
 >  Если трассировка в настоящий момент выполняется, при закрытии окна трассировки выполнение соответствующей трассировки будет остановлено.  
   
 ## <a name="see-also"></a>См. также:  
- [Шаблоны и разрешения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
+ [Шаблоны и разрешения приложения SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](sql-server-profiler.md)  
   
   

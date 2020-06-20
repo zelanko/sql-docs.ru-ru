@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a98bdf472c86a3e608da768d884897600efa476
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030313"
 ---
 # <a name="clr-event-category"></a>Категория событий CLR
   Категория событий среды **CLR** включает классы событий, возникающих при выполнении объектов среды CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "62663649"
 |[Класс событий Assembly Load](../../database-engine/assembly-load-event-class.md)|Указывает, что запрос на загрузку сборки был выполнен.|  
 |[Класс событий Assembly Load](../../database-engine/assembly-load-event-class.md)|Возникает при выполнении запроса на загрузку сборки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919607"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954706"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Вызов определяемых пользователем агрегатных функций CLR
   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно вызывать определяемые пользователем статистические функции CLR, на которые распространяются те же правила, что и на системные агрегатные функции.  
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- После компиляции кода в **мягг. dll**можно зарегистрировать статистическую функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующим образом:  
+ После компиляции кода в **MyAgg.dll**можно зарегистрировать статистическое выражение в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующим образом:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -441,7 +440,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c3cbc8673d38cc21a92f0d333df1dc485db6d733
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a76f86f1be8012e0df2ed80960095eb83d6882e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021446"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Массовое копирование из переменных приложения
   Массовое копирование можно производить напрямую из переменных программы. После выделения переменных для хранения данных для строки и вызова [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) для запуска операции копирования, вызовите [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для каждого столбца, чтобы указать расположение и формат программной переменной, связываемой со столбцом. Заполните каждую переменную данными, а затем вызовите [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) , чтобы отправить на сервер одну строку данных. Повторите процесс заполнения переменных и вызова **bcp_sendrow** , пока все строки не будут отправлены на сервер, а затем вызовите метод [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) , чтобы указать, что операция завершена.  
@@ -110,7 +109,7 @@ GO
   
  С помощью операции массового копирования нельзя считать данные из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переменные программы. Она не похожа на функцию «bcp_readrow». Отправлять данные можно только от приложения на сервер.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

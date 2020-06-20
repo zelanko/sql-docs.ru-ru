@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd093d99d055df8e15fc22e3e570e6805e35d6e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003305"
 ---
 # <a name="multilinestring"></a>MultiLineString
-  `MultiLineString` — Это коллекция из нуля или более `geometry` экземпляров или **geographyLineString** .  
+  `MultiLineString`— Это коллекция из нуля или более `geometry` экземпляров или **geographyLineString** .  
   
 ## <a name="multilinestring-instances"></a>Экземпляры MultiLineString  
  На рисунке ниже приведены примеры экземпляров `MultiLineString`.  
@@ -29,7 +28,7 @@ ms.locfileid: "66014210"
   
  На рисунке представлены:  
   
--   На рисунке 1 показан простой `MultiLineString` экземпляр, граница которого состоит из четырех конечных точек `LineString` двух элементов.  
+-   На рисунке 1 показан простой `MultiLineString` экземпляр, граница которого состоит из четырех конечных точек двух `LineString` элементов.  
   
 -   Изображение 2 представляет простой экземпляр `MultiLineString`, поскольку пересекаются только конечные точки элементов `LineString`. Граница образована двумя неперекрывающимися конечными точками.  
   

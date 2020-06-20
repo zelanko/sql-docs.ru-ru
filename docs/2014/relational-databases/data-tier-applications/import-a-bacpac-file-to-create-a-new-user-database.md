@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 59ab03f1c869f37ea92b3be1fe0fc30d86284a03
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232231"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953224"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
   Импортируйте файл приложения уровня данных (DAC) (файл BACPAC) для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или компоненте [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -124,7 +123,7 @@ ms.locfileid: "75232231"
   
 -   **Имя новой базы данных** — укажите имя импортированной базы данных.  
   
--   Выпуск — укажите [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** Дополнительные сведения о выпусках [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. на веб-сайте [SQL Database](https://www.windowsazure.com/home/tour/database/) .  
+-   **Выпуск [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** — Укажите [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Дополнительные сведения о выпусках [!INCLUDE[ssSDS](../../includes/sssds-md.md)]см. на веб-сайте [SQL Database](https://www.windowsazure.com/home/tour/database/) .  
   
 -   **Максимальный размер базы данных (ГБ)** — используйте раскрывающееся меню, чтобы указать максимальный размер базы данных.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "75232231"
 ###  <a name="summary-page"></a><a name="Summary"></a> Страница «Сводка»  
  Воспользуйтесь этой страницей для просмотра указанного источника и целевых параметров операции. Для завершения импорта с использованием заданных параметров нажмите кнопку **Готово**. Чтобы отменить операцию импорта и выйти из мастера, нажмите кнопку **Отмена**.  
   
-###  <a name="progress-page"></a><a name="Progress"></a>Страница "выполнение"  
+###  <a name="progress-page"></a><a name="Progress"></a> Страница «Ход выполнения»  
  На этой странице отображается индикатор выполнения, который определяет состояние операции. Чтобы просмотреть подробности состояния, выберите параметр **Просмотр сведений** .  
   
  Чтобы продолжить, нажмите кнопку **Далее**.  

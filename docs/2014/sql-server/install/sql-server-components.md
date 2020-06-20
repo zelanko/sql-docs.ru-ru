@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811087"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036277"
 ---
 # <a name="sql-server-components"></a>Компоненты SQL Server
-  Мастер анализа помощника по обновлению можно запустить на локальном или удаленном компьютере, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]на [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]котором [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]установлен, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , или. Первый шаг анализа, предшествующего обновлению, — определение компьютера и компонентов, подлежащих анализу.  
+  Мастер анализа помощника по обновлению можно запустить на локальном или удаленном компьютере, на котором [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] установлен,, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] или [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . Первый шаг анализа, предшествующего обновлению, — определение компьютера и компонентов, подлежащих анализу.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя компьютера**  
  Задает имя компьютера для проведения анализа. Советник по переходу заполняет поле **имя сервера** именем локального компьютера. Для подключения к локальному компьютеру можно также использовать обозначения «.» и «localhost».  
   
@@ -50,7 +49,7 @@ ms.locfileid: "68811087"
   
  При просмотре служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] следует указать имя локального компьютера. Помощник по обновлению просматривает только локальные серверы отчетов.  
   
- **Определение**  
+ **Detect**  
  Кнопка " **обнаружить** " обращается к указанному компьютеру и обнаруживает анализируемые компоненты:  
   
 -   Если выполняется анализ экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на удаленном компьютере, на этом компьютере необходимо включить службы удаленного реестра.  
@@ -61,7 +60,7 @@ ms.locfileid: "68811087"
   
 -   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] будут обнаружены, если в реестре компьютера найдены службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако помощник по обновлению просматривает только локальные серверы отчетов.  
   
- **Компоненты**  
+ **Components**  
  Выберите компоненты, подлежащие анализу. Можно нажать кнопку **обнаружения** , чтобы выбрать все компоненты, установленные на компьютере. Рядом с компонентами, найденными на данном компьютере, будет установлен флажок. Можно также выбрать компоненты вручную, установив или сняв флажок рядом с каждым компонентом.  
   
 ## <a name="see-also"></a>См. также:  

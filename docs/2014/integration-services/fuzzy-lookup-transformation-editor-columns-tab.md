@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: aaf45327-79e9-4760-9b4d-546ace91b5b4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 063248c6b91aebf6198323487aa30ddd1c9cb6ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74608af46f2b76a2df69d2fc7b522948bd858f7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058331"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966294"
 ---
 # <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Столбцы»)
   Вкладка **Столбцы** диалогового окна **Редактор преобразования «Нечеткий уточняющий запрос»** используется для установки свойств входных и выходных столбцов.  
   
  Дополнительные сведения о преобразовании «Нечеткий уточняющий запрос» см. в разделе [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные входные столбцы**  
  Перетащите входные столбцы для подсоединения к доступным уточняющим столбцам. Эти столбцы должны иметь совпадающие и поддерживаемые типы данных. Выберите строку сопоставления и щелкните ее правой кнопкой мыши, чтобы изменить ее в диалоговом окне [Создание связей](data-flow/transformations/create-relationships.md) .  
   
- **Имя**  
+ **имя**;  
  Просмотрите имена доступных входных столбцов.  
   
  **Передать**  
@@ -45,7 +44,7 @@ ms.locfileid: "66058331"
  **Псевдоним вывода**  
  Введите псевдоним выхода для каждого уточняющего столбца. По умолчанию, это будет имя уточняющего столбца с присоединенным индексным значением; однако можно выбрать любое уникальное описательное имя.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" &#40;вкладка "ссылочная таблица"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Дополнительно")](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  

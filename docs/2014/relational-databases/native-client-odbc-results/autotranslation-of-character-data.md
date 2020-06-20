@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86a8adda-c5ad-477f-870f-cb370c39ee13
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 134c37bf2e509c44bfe459638e24ad24f4128aa0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cbced1bb62dcacb896a7ff30fdbd6b5aa28f20e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039594"
 ---
 # <a name="autotranslation-of-character-data"></a>Автоматическое преобразование символьных данных
   Символьные данные, такие как переменные символов ANSI, объявленные с SQL_C_CHAR или с данными, хранящимися в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием типов данных **char**, **varchar**или **Text** , могут представлять только ограниченное число символов. Символьные данные, в которых для обозначения одного символа требуется один байт данных, могут представлять только 256 символов. Для интерпретации значений, содержащихся в переменных SQL_C_CHAR, используются кодовые страницы ANSI (ACP) клиентского компьютера. Значения, хранимые с помощью типов данных **char**, **varchar**или **Text** на сервере, оцениваются с помощью ACP сервера.  
@@ -58,7 +57,7 @@ ms.locfileid: "82699680"
   
  Данные всегда нужно преобразовывать при переходе из символьного формата в Юникод.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)   
  [Поддержка параметров сортировки и Юникода](../collations/collation-and-unicode-support.md)  
   

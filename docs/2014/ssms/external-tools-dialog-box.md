@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc8f54bc4f6e7aaffa5d912fc9bc8f03fad71d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4c22f2ed4e6150b8d8f712f87d87a91f9715a5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058633"
 ---
 # <a name="external-tools-dialog-box"></a>Диалоговое окно «Внешние средства»
   Используйте диалоговое окно **Внешние инструменты** для добавления внешних инструментов, например SQLCMD или приложения "Блокнот", в меню **Сервис**. Добавление внешних инструментов позволяет запускать другие приложения во время работы в среде [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. При запуске средств можно указать аргументы и рабочий каталог. Кроме того, результаты работы некоторых средств могут отображаться в окне **Вывод** . Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  

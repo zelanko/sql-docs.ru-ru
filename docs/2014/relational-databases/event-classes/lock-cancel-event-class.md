@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a6f55c5006eb050eed1c7cf296e3a96747348b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052932"
 ---
 # <a name="lockcancel-event-class"></a>Класс событий Lock:Cancel
   Класс событий **Lock:Cancel** сигнализирует, что получение блокировки на ресурс было отменено (например по причине отмены запроса).  
@@ -33,8 +32,8 @@ ms.locfileid: "63023489"
 |**ClientProcessID**|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|`int`|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|`nvarchar`|Имя базы данных, в которой была запрошена блокировка.|35|Да|  
-|**Длитель**|`bigint`|Время (в микросекундах) между моментом выдачи запроса на блокировку и отменой блокировки.|13|Да|  
-|**Завершения**|`datetime`|Время окончания события.|15|Да|  
+|**Длительность**|`bigint`|Время (в микросекундах) между моментом выдачи запроса на блокировку и отменой блокировки.|13|Да|  
+|**EndTime**|`datetime`|Время окончания события.|15|Да|  
 |**EventClass**|`int`|Тип события = 26.|27|нет|  
 |**EventSequence**|`int`|Последовательность данного события в запросе.|51|нет|  
 |**Идентификатор**|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
@@ -56,9 +55,9 @@ ms.locfileid: "63023489"
 |**StartTime**|`datetime`|Время начала события, если оно доступно.|14|Да|  
 |**TextData**|`ntext`|Текстовое значение, зависящее от типа запрошенной блокировки. Это то же значение, что и в столбце **resource_description** в динамическом представлении управления **sys.dm_tran_locks**.|1|Да|  
 |**TransactionID**|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
-|**Type**|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
+|**Тип**|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   
