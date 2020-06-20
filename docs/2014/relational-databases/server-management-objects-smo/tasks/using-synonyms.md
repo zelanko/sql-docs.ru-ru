@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a96f6ee89b920ec668af21ce625694fc31ce13bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e8416dc3daea3b173fae92e5454a8a65c399e53
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003437"
 ---
 # <a name="using-synonyms"></a>Использование синонимов
   Синоним — это альтернативное имя, которое дается объекту в области схемы. В SMO синонимы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Synonym>. Объект <xref:Microsoft.SqlServer.Management.Smo.Synonym> является дочерним для объекта <xref:Microsoft.SqlServer.Management.Smo.Database>. Это означает, что синонимы действительны только в пределах базы данных, в которой они определены. Однако синоним может относиться к объектам другой базы данных или к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7b543556-ff36-4d35-ac08-de96223d92cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e6f790a82b45f9a74318a8ec46ef1e4f2a283edb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e9d7d5b0f48c68e8ac911f5e274c9afdb8cfe17d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049698"
 ---
 # <a name="managing-text-and-image-columns"></a>Управление столбцами text и image
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]данные типа **Text**, **ntext**и **Image** (также называемые длинными данными) представляют собой символьные или двоичные строковые типы данных, которые могут содержать слишком большие значения данных для размещения в столбцах **char**, **varchar**, **binary**или **varbinary** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Тип данных **Text** сопоставляется с типом данных ODBC SQL_LONGVARCHAR. **ntext** сопоставляется с SQL_WLONGVARCHAR; **изображения** и сопоставляются с SQL_LONGVARBINARY. Некоторые объекты данных (например, длинные документы или большие битовые карты) слишком велики для их размещения в памяти. Для получения длинных данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последовательных частей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента позволяет приложению вызывать [SQLGetData](../native-client-odbc-api/sqlgetdata.md). Для отправки длинных данных в последовательных частях приложение может вызвать [SQLPutData](../native-client-odbc-api/sqlputdata.md). Параметры, для которых данные посылаются во время выполнения, называются параметрами c данными времени выполнения.  
@@ -40,7 +39,7 @@ ms.locfileid: "82709279"
   
 -   [Данные времени выполнения и столбцы text, ntext или image](data-at-execution-and-text-ntext-or-image-columns.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

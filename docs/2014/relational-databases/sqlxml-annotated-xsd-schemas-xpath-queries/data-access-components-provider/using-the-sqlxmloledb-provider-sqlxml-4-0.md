@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fbcefac5-29c9-478b-b0e0-d510b593f446
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ffb1d252167250cbb6cf665d8b3f70179e0285b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 89bc125be4f6ae3aca7150082ddf28107c2706f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703206"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015454"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>Использование поставщика SQLXMLOLEDB (SQLXML 4.0)
   Подразделы этого раздела содержат образцы приложений ADO, иллюстрирующих использование зависящих от поставщика SQLXMLOLEDB свойств.  
@@ -58,7 +57,7 @@ ms.locfileid: "82703206"
  [Применение преобразования XSL &#40;поставщика SQLXMLOLEDB&#41;](applying-an-xsl-transformation-sqlxmloledb-provider.md)  
  Демонстрирует использование свойств Клиентсидексмл и XSL в применении преобразования XSL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Системные требования для собственного клиента SQL Server](../../native-client/system-requirements-for-sql-server-native-client.md)  
   
   

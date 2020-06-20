@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 168a6c6e-12df-46a9-9904-55d63ca8fe14
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b18643f97a328dfee94bc5bfe125d6eddeae4efe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1255e95833d9fc56abd1700f5acb0d2f49ebf77c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069021"
 ---
 # <a name="view-the-windows-application-log-windows"></a>Просмотр журнала приложений Windows (Windows)
   Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен на использование журнала приложений Windows, каждый сеанс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает новые события в этот журнал. В отличие от журнала ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , новый журнал приложений не создается заново каждый раз при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "63150439"
   
 2.  В окне «Просмотр событий» щелкните элемент **Приложение**.  
   
-3.  События [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентифицируются записью **MSSQLSERVER** в столбце **Источник** (именованные экземпляры обозначаются как _MSSQL$_ **<имя_экземпляра>** ). События агента SQL Server идентифицируются записью SQLSERVERAGENT (для именованных экземпляров сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], события агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентифицируются с помощью **SQLAgent$** \<*имя_экземпляра*>). События службы Microsoft Search идентифицируются записью **Microsoft Search**.  
+3.  События [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентифицируются записью **MSSQLSERVER** в столбце **Источник** (именованные экземпляры обозначаются как **MSSQL$**_<имя_экземпляра>_). Агент SQL Server события идентифицируются записью SQLSERVERAGENT (для именованных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] события агента определяются с помощью параметра "идентификатор **экземпляра"** \<*instance_name*> ). События службы Microsoft Search идентифицируются записью **Microsoft Search**.  
   
 4.  Чтобы просмотреть журнал другого компьютера, щелкните правой кнопкой мыши в окне **Просмотр событий**, выберите пункт **Подключение к другому компьютеру** и заполните диалоговое окно **Выбор компьютера**.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "63150439"
   
 6.  Чтобы просмотреть дополнительные сведения о событии, дважды щелкните событие.  
   
-## <a name="see-also"></a>См. также  
- [Просмотрите журнал ошибок SQL Server &#40;SQL Server Management Studio&#41;](../../ssms/sql-server-management-studio-ssms.md)  
+## <a name="see-also"></a>См. также:  
+ [Просмотр журнала ошибок SQL Server (среда SQL Server Management Studio)](../../ssms/sql-server-management-studio-ssms.md)  
   
   

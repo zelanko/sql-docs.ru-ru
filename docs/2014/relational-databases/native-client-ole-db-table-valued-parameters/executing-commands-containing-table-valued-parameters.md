@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ecba6f6-fe7a-462a-9aa3-d5115b6d4529
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b5c6bbdf0d26002af350293a6526ed46bb71fd3e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f22a024b0edddbcc6cad17cecb62aa026b8a6b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704652"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038926"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Выполняет команды, содержащие возвращающие табличное значение параметры
   Выполнение команд, содержащих возвращающие табличное значение параметры, проводится в две стадии.  
@@ -46,7 +45,7 @@ ms.locfileid: "82704652"
   
 -   Данные для столбцов с атрибутом DPPROP_COL_AUTOINCREMENT или SSPROP_COL_COMPUTED будут переданы на сервер, за исключением столбцов, для которых также задан атрибут SSPROP_PARAM_TABLE_DEFAULT.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

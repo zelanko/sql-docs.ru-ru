@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a9f440f32b0bbcc314893b8abe6a183ac8b0738
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b93a38614800e1298894caa9c6d97c3f9353ac73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017360"
 ---
 # <a name="installing-sql-server-native-client"></a>Установка собственного клиента SQL Server
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 устанавливается при установке [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Native Client отсутствует. Дополнительные сведения см. [в разделе новые возможности в SQL Server Native Client](../sql-server-native-client.md). Также можно извлечь файл sqlncli.msi с веб-страницы пакета дополнительных компонентов SQL Server 2012. Чтобы загрузить последнюю версию SQL Server Native Client, перейдите на страницу [Microsoft?? SQL Server?? Пакет дополнительных компонентов 2012 SP2](https://www.microsoft.com/download/details.aspx?id=43339). Если на компьютере установлена предыдущая версия [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (до SQL Server 2012), то клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 будет установлен параллельно с более ранней версией.  
@@ -62,7 +61,7 @@ ms.locfileid: "82704422"
   
  Значением, передаваемым в APPGUID, служит код продукта. Код продукта необходимо создать при использовании установщика (Майкрософт) для формирования пакета установки приложения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью SQL Server Native Client](installing-sql-server-native-client.md)   
  [Инструкции по установке](../../../sql-server/install/installation-how-to-topics.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f9202483bcb2cf8e06b6e0d14834753cc666b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63185405"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000387"
 ---
 # <a name="database-element-for-workload-dta"></a>Элемент Database описания рабочей нагрузки (DTA)
   Указывает базу данных, в которой находится таблица трассировки рабочей нагрузки.  
@@ -36,7 +35,7 @@ ms.locfileid: "63185405"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

@@ -1,5 +1,6 @@
 ---
 title: Использование шифрования без проверки | Документация Майкрософт
+description: Узнайте, как поставщик SQL Server Native Client OLE DB и драйвер ODBC поддерживают шифрование без проверки и рекомендации по их использованию.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2416612b189c9ced09ed2eadef87c1a85649b9df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303235"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948805"
 ---
 # <a name="using-encryption-without-validation"></a>Использование шифрования без проверки
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,10 +41,10 @@ ms.locfileid: "81303235"
   
 |Параметр «Принудительное шифрование протокола» на клиенте|Параметр «Доверять сертификату сервера» на клиенте|Строка соединения или атрибут соединения «Шифрование/использовать шифрование для данных»|Строка соединения или атрибут соединения «Надежный сертификат сервера»|Результат|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|Нет|Недоступно|Нет (по умолчанию)|Не учитывается|Шифрование отсутствует.|  
-|Нет|Недоступно|Да|Нет (по умолчанию)|Шифрование применяется только при наличии подтверждаемого сертификата сервера, в противном случае попытка соединения завершается неудачно.|  
-|Нет|Недоступно|Да|Да|Шифрование производится всегда, однако при этом может использоваться самозаверяющий сертификат сервера.|  
-|Да|Нет|Не учитывается|Не учитывается|Шифрование применяется только при наличии подтверждаемого сертификата сервера, в противном случае попытка соединения завершается неудачно.|  
+|нет|Недоступно|Нет (по умолчанию)|Не учитывается|Шифрование отсутствует.|  
+|нет|Недоступно|Да|Нет (по умолчанию)|Шифрование применяется только при наличии подтверждаемого сертификата сервера, в противном случае попытка соединения завершается неудачно.|  
+|нет|Недоступно|Да|Да|Шифрование производится всегда, однако при этом может использоваться самозаверяющий сертификат сервера.|  
+|Да|нет|Не учитывается|Не учитывается|Шифрование применяется только при наличии подтверждаемого сертификата сервера, в противном случае попытка соединения завершается неудачно.|  
 |Да|Да|Нет (по умолчанию)|Не учитывается|Шифрование производится всегда, однако при этом может использоваться самозаверяющий сертификат сервера.|  
 |Да|Да|Да|Нет (по умолчанию)|Шифрование применяется только при наличии подтверждаемого сертификата сервера, в противном случае попытка соединения завершается неудачно.|  
 |Да|Да|Да|Да|Шифрование производится всегда, однако при этом может быть использован самозаверяющий сертификат сервера.|  
@@ -53,12 +54,12 @@ ms.locfileid: "81303235"
 > В приведенной выше таблице представлено только краткое описание поведения системы в различных конфигурациях. Чтобы подключение было безопасным, убедитесь, что для клиента и сервера требуется шифрование. Также убедитесь, что у сервера есть проверяемый сертификат и что параметр **TrustServerCertificate** на клиенте имеет значение FALSE.
 
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает шифрование без проверки посредством добавления свойства инициализации источника данных SSPROP_INIT_TRUST_SERVER_CERTIFICATE, которое реализуется в наборе свойств DBPROPSET_SQLSERVERDBINIT. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no». При использовании компонентов службы оно принимает значения true и false, значение по умолчанию — false.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает шифрование без проверки посредством добавления свойства инициализации источника данных SSPROP_INIT_TRUST_SERVER_CERTIFICATE, которое реализуется в наборе свойств DBPROPSET_SQLSERVERDBINIT. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no». При использовании компонентов службы оно принимает значения true и false, значение по умолчанию — false.  
   
  Дополнительные сведения об улучшениях, появившихся в наборе свойств DBPROPSET_SQLSERVERDBINIT, см. в статье [Initialization and Authorization Properties](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md) (Свойства инициализации и авторизации).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает шифрование без проверки с помощью дополнений к функциям [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . Добавлен параметр SQL_COPT_SS_TRUST_SERVER_CERTIFICATE, который может принимать значения SQL_TRUST_SERVER_CERTIFICATE_YES или SQL_TRUST_SERVER_CERTIFICATE_NO, где SQL_TRUST_SERVER_CERTIFICATE_NO является значением по умолчанию. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no».  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает шифрование без проверки с помощью дополнений к функциям [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . Добавлен параметр SQL_COPT_SS_TRUST_SERVER_CERTIFICATE, который может принимать значения SQL_TRUST_SERVER_CERTIFICATE_YES или SQL_TRUST_SERVER_CERTIFICATE_NO, где SQL_TRUST_SERVER_CERTIFICATE_NO является значением по умолчанию. Кроме того, добавлено новое ключевое слово строки соединения «TrustServerCertificate». Оно принимает значения «yes» и «no», значение по умолчанию — «no».  
   
 ## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

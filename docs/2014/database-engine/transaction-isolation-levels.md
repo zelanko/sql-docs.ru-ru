@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928187"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Уровни изоляции транзакций в таблицах, оптимизированных для памяти
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637789"
   
 -   Явно используйте более высокий уровень изоляции для доступа к оптимизированной для памяти таблицы (например, WITH (SNAPSHOT)).  
   
--   Укажите параметр `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, который установит уровень изоляции SNAPSHOT для оптимизированных для памяти таблиц (если бы вы добавили указание WITH (SNAPSHOT) в каждую оптимизированную для памяти таблицу). Дополнительные сведения о `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`см. в разделе [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Укажите параметр `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, который установит уровень изоляции SNAPSHOT для оптимизированных для памяти таблиц (если бы вы добавили указание WITH (SNAPSHOT) в каждую оптимизированную для памяти таблицу). Дополнительные сведения о `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` см. в разделе [Параметры ALTER DATABASE SET &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  Кроме того, если уровень изоляции сессии задан как уровень изоляции READ COMMITTED, можно использовать режим автоматической фиксации транзакций.  
   

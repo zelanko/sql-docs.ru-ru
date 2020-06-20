@@ -1,5 +1,6 @@
 ---
 title: Вставка данных в параметры, возвращающие табличные значения | Документация Майкрософт
+description: Сведения о двух моделях, которые поставщик SQL Server Native Client OLE DB поддерживает, чтобы потребитель указал данные для строк параметров, возвращающих табличное значение.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,17 +14,17 @@ ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c1c5ed9c0239c31c0dd8a3c97d4e2740cdd1aa0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 840f92955aebef85f169b4f7f93d3a37f5dc951e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949714"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Вставка данных в параметры, возвращающие табличные значения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает две модели для указания данных для строк параметров, возвращающих табличное значение: модель push-уведомлений и модель извлечения. Образец, в котором демонстрируется применение модели по запросу, см. в разделе [Образцы программирования служб SQL Server](https://msftdpprodsamples.codeplex.com/).  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает две модели для указания данных для строк параметров, возвращающих табличное значение: модель push-уведомлений и модель извлечения. Образец, в котором демонстрируется применение модели по запросу, см. в разделе [Образцы программирования служб SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Столбец возвращающего табличное значение параметра должен содержать во всех строках либо значения по умолчанию, либо значения, отличные от значений по умолчанию. Нельзя, чтобы в одних строках были значения по умолчанию, а в других — значения, отличные от них. Следовательно, в привязках табличных параметров единственными значениями состояния, разрешенными для столбца набора строк возвращающего табличное значение параметра, являются DBSTATUS_S_ISNULL и DBSTATUS_S_OK. Значение DBSTATUS_S_DEFAULT приведет к сбою, и значению состояния привязки будет присвоено значение DBSTATUS_E_BADSTATUS.  
@@ -73,7 +74,7 @@ ms.locfileid: "81283219"
  Во время выполнения поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет обратный вызов объекта набора строк для выборки строк и считывания данных столбца.  
   
 ## <a name="see-also"></a>См. также:  
- [Возвращающие табличное значение параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Возвращающие табличные значения параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

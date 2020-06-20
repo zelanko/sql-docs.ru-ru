@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25c3b5e7-0301-4f7b-9635-b3db06dad1e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bcbe0d14d95d7ba003969a31b8a87d692edb7435
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8554245e177347c5746ff18f54b7d4a404f7e8f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061376"
 ---
 # <a name="propertyname-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyName (класс ClientNetworkProtocolProperty)
   Возвращает имя текущего свойства, на которое ссылается значение [свойства PropertyIdx (класс ClientNetworkProtocolProperty)](clientnetworkprotocolproperty-class.md) .  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

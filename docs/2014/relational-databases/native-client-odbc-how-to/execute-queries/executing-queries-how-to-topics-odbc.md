@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 543c11c1e2048abbdeda8aaf6053d151f1a9e14e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8c6a1963045e74c888fbcc1ef851869493f39048
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701418"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018770"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Инструкции по выполнению запросов (ODBC)
   Выполнение инструкции SQL в приложении ODBC требует выделения дескриптора инструкции, установки атрибутов инструкции и подготовки и выполнения инструкции SQL.  
@@ -32,7 +31,7 @@ ms.locfileid: "82701418"
   
 -   [Подготовка и выполнение инструкции &#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

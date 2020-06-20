@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8406f31269c92dfc950834d31da88fcb26259d51
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928245"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Свойства таблицы трассировки (вкладка «Выбор событий»)
   Используйте вкладку **Выбор событий** в диалоговом окне **Свойства таблицы трассировки** для просмотра событий и свойств столбца данных трассировки или для удаления событий или столбцов из трассировки.  
   
  Для просмотра данного окна используйте приложение [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , чтобы открыть таблицу трассировки. Затем в меню **файл** выберите пункт **свойства**, а затем перейдите на вкладку **Выбор событий** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Столбец**События**  
  Просмотр событий трассировки, систематизированных по категориям событий. Выбор событий может быть осуществлен путем установки флажка для поля или столбца события. При установке флажка выбираются все столбцы данных, доступные для этого события. Если флажок установлен для столбца данных, автоматически устанавливается флажок для события, а также для всех других необходимых столбцов данных. При просмотре файла трассировки или таблицы снятие флажков событий и столбцов данных уменьшает количество видимых в окне трассировки данных, что облегчает их анализ. Существует также возможность изменения фильтров столбцов, что позволяет уменьшить количество видимых в окне трассировки данных. Дополнительные сведения о классах событий см. в разделе [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
@@ -47,9 +46,9 @@ ms.locfileid: "66089541"
  **Систематизировать столбцы**  
  После выбора **событий** и столбцов данных для трассировки нажмите кнопку **Упорядочить столбцы**, чтобы принудительно переупорядочить столбцы в окне результатов трассировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Откройте таблицу трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

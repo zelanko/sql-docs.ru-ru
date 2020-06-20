@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c71f254b0d0fb79e3ee8135c10d2d9ed715d3437
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e3a7d2ec134ff9b7a3fb63aed29a029ef6fc9bf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963794"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Выбор параметров управления пакетами (мастер обновления пакетов служб SSIS)
   Страница **Выбор параметров управления пакетами** используется для выбора параметров обновления пакетов.  
@@ -26,7 +25,7 @@ ms.locfileid: "66056030"
   
 -   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Обновить строки соединения для использования новых имен поставщиков**  
  Обновите строки соединения, чтобы в них использовались имена для следующих поставщиков текущего выпуска служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66056030"
   
  Дополнительные сведения см. в разделе [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

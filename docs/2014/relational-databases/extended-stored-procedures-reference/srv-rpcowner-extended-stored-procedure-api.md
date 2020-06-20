@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68e5d0214a2bd14a466b7a0c40f792031d3fac5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b589d55c8e30e3882ebb25bc46c51bc382e3e2df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62745505"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050583"
 ---
 # <a name="srv_rpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API-интерфейс расширенных хранимых процедур)
     
@@ -55,7 +54,7 @@ len
  *len*  
  Указатель на целочисленную переменную, получающую значение длины имени владельца. Параметр *len* может быть пустым; в этом случае длина компонента владельца не возвращается.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Указатель DBCHAR на оканчивающийся нулевым байтом компонент владельца для текущей удаленной хранимой процедуры. Если текущей удаленной хранимой процедуры нет, возвращается значение NULL, а переменная *len* принимает значение –1.  
   
 ## <a name="remarks"></a>Remarks  

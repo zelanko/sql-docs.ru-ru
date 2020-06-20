@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e442ad28f64de8bd293fa95a604207e9bdc13107
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058551"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966399"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>Диалоговое окно «Столбцы For Each Item» справочника по пользовательскому интерфейсу
   Используйте диалоговое окно **Столбцы For Each Item** для задания столбцов, которые будет перечислять перечислитель Foreach Item.  
   
-## <a name="options"></a>Параметры  
- **Рубрик**  
+## <a name="options"></a>Варианты  
+ **Столбец**  
  Содержит столбцы.  
   
  **Тип данных**  
@@ -34,10 +33,10 @@ ms.locfileid: "66058551"
  **Добавление**  
  Добавление нового столбца.  
   
- **Удалить**  
+ **Remove**  
  Выберите столбец и нажмите **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)  
   

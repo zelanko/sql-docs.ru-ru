@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ca63d633aa06f55b0238ba8930a4ab25054fb03f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703234"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015633"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Выполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB)
   В запросы XPath могут быть включены пространства имен. Если для элементов схемы указано пространство имен (то есть в случае включения целевого пространства имен), то запросы XPath к схеме должны указывать данное пространство имен.  

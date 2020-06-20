@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3831943533939f7b9f8e31f09b80c71cc61b8d3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef3d6fe660b563ceb8f86b2d3cce123447de5366
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094432"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042537"
 ---
 # <a name="install-sql-server-management-tools"></a>Установка базовой версии средств управления SQL Server
   Средства управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включают следующие компоненты.  
@@ -36,9 +35,9 @@ ms.locfileid: "66094432"
   
  Независимо от количества устанавливаемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]или [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается только одна копия средств управления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Средства управления могут работать параллельно на одном компьютере с более ранними версиями средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управления.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Средства управления могут работать параллельно на одном компьютере с более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] средств управления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Выпуски и компоненты SQL Server 2014](../editions-and-components-of-sql-server-2016.md)   
  [Установка SQL Server 2014 с помощью мастера установки &#40;установки&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

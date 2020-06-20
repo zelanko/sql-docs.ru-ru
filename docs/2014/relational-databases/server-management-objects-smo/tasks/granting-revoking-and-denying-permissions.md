@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c64c70965d00967e0cac254cf4d26f6ce25ec5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdc0c2873071d2bed6b1ff5893c88fe5baf16cc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037513"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>Предоставление, отмена и запрет разрешений
   Объект <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> используется для назначения набора разрешений или индивидуального серверного разрешения объекту <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet>. Применительно к разрешениям уровня сервера тот участник, которому предоставлено разрешение, ссылается на имя входа. Имена для входа в систему, проверка подлинности которых осуществляется Windows, перечислены как пользовательские имена Windows. При работе этого образца кода он отменяет разрешение участника, которому оно было предоставлено, и проверяет его удаление с помощью метода <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A>.  

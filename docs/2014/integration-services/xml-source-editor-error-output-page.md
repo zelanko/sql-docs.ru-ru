@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ef142bf30473222bb39babce35b6bac59a6b848
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972364"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Редактор источника «XML» (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** диалогового окна **Редактор источника «XML»** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
   
  Дополнительные сведения об источнике XML см. в разделе [XML Source](data-flow/xml-source.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
- **Рубрик**  
+ **Столбец**  
  Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника "XML"**.  
   
  **Error**  
@@ -50,7 +49,7 @@ ms.locfileid: "66054313"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "XML" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [Редактор источника "XML" &#40;столбцы "&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   

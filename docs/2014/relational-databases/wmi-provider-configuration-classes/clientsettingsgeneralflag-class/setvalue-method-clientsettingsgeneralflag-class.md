@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 34443689-a0e0-4668-a811-17532c6fd271
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7e96139ac789e4ded8453e2c26d1cd436fed6d7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e53d7c31c702531e58f4f950e2053989d1f9de05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067897"
 ---
 # <a name="setvalue-method-clientsettingsgeneralflag-class"></a>Метод SetValue (класс ClientSettingsGeneralFlag)
   Задает все значения упоминаемого флага.  
@@ -54,7 +53,7 @@ Value
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

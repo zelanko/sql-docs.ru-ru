@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 4bd15e48-0feb-4f95-be91-5df58105dbfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cb83e95bd13b566f46386cf10676ee882a954762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19426293c9a27b82acc931904e55f1ddd2cd3811
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057841"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966024"
 ---
 # <a name="lookup-transformation-editor-general-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне «Редактор преобразования "Уточняющий запрос"», чтобы выбрать режим кэширования, выбрать тип соединения и указать метод обработки строк без совпадающих записей.  
   
  Дополнительные сведения о преобразовании «Уточняющий запрос» см. в разделе [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Полное кэширование**  
  Формировать и загружать эталонный набор данных в кэш до запуска преобразования «Уточняющий запрос».  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66057841"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер соединений с кэшем](connection-manager/cache-connection-manager.md)   
  [Редактор преобразования "Уточняющий запрос" &#40;страница подключения&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Редактор преобразования «Уточняющий запрос» &#40;столбцов&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   

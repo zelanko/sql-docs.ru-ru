@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f37bcaf8719f4a2f3b1e7fbca1cf332717bd936e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743170"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049781"
 ---
 # <a name="control-transaction-durability"></a>Управление устойчивостью транзакций
   Фиксации транзакций[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть либо полностью устойчивыми, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, либо отложенными устойчивыми (также известные как отложенная запись).  
@@ -203,7 +202,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="sql-server-shutdown-and-restart"></a>SQL Server завершение работы и перезагрузка  
  Для отложенной устойчивости нет разницы между неожиданным выключением или неожиданным выключением/перезагрузкой службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Как и в случае с критическими событиями, вы должны быть готовы к потере данных. При запланированном выключении/перезагрузке некоторые транзакции, которые не были записаны на диск, могут сначала быть сохранены на диск, но вам не стоит рассчитывать на это. При запланированном или незапланированном выключении/перезагрузке данные теряются так же, как и при критических событиях.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уровни изоляции транзакций](../../database-engine/transaction-isolation-levels.md)   
  [Рекомендации для уровней изоляции транзакций с таблицами, оптимизированными для памяти](../in-memory-oltp/memory-optimized-tables.md)  
   

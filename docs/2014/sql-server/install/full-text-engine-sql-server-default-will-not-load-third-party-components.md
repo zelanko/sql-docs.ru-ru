@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: 029f9895-7232-4149-9362-3ab1a4133d21
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe7f1359b55f2a488a58c37b9f3045a31dbc0778
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12ff188fb6aa6ac286817a7cc1c3ad726483c886
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012479"
 ---
 # <a name="the-microsoft-full-text-engine-for-sql-server-will-not-load-unsigned-third-party-components-by-default"></a>По умолчанию средство полнотекстового поиска (Майкрософт) для SQL Server не загружает компоненты сторонних производителей, не имеющие подписи
-  По умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] средство полнотекстового поиска для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет загружать компоненты, которые не подписаны. [!INCLUDE[msCoName](../../includes/msconame-md.md)]  
+  По умолчанию [!INCLUDE[msCoName](../../includes/msconame-md.md)] средство полнотекстового поиска для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет загружать компоненты, которые не подписаны [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="component"></a>Компонент  
- Компонент Full-text Search  
+ Полнотекстовый поиск  
   
 ## <a name="description"></a>Описание  
- Сторонний фильтр, например фильтр в формате PDF, установленный на сервере, не будет загружен средством [!INCLUDE[msCoName](../../includes/msconame-md.md)] полнотекстового [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поиска по умолчанию после обновления.  
+ Сторонний фильтр, например фильтр в формате PDF, установленный на сервере, не будет загружен средством полнотекстового поиска по [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] умолчанию после обновления.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
  Чтобы загрузить фильтр стороннего производителя, необходимо задать *load_os_resource* и отключить *verify_signature* на этом экземпляре.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

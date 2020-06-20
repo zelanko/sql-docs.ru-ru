@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849534"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929095"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Настройка управляемого резервного копирования SQL Server в Azure для групп доступности
   В этом разделе представлено руководство по настройке [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для баз данных, участвующих в группах доступности AlwaysOn.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849534"
 -   Пропускная способность сети. Это относится к реализациям, где реплики находятся в разных физических расположениях, например в гибридном облаке, или в разных регионах Azure в конфигурации только в облаке. Пропускная способность сети может повлиять на задержку баз данных-получателей, а также в случае, если в базах данных-получателях настроена синхронная репликация, что может привести к увеличению объема журнала в базе данных-источнике. Если в базах данных-получателях настроена синхронная репликация, то из-за задержки в сети они могут не успевать, что может привести к потере данных в случае переключения на вторичную реплику.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Настройка [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для баз данных доступности.  
- **Чтение**  
+ **Разрешения**.  
   
 -   Требуется членство в **db_backupoperator** роли базы данных с разрешениями **ALTER ANY CREDENTIAL** и `EXECUTE` разрешения на хранимую процедуру **sp_delete_backuphistory**.  
   

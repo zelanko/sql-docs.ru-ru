@@ -1,5 +1,6 @@
 ---
 title: Имена источников данных и 64-разрядные операционные системы | Документация Майкрософт
+description: Узнайте, как создать и запустить приложение в виде 32-разрядного приложения в 64-разрядной операционной системе, создав источник данных ODBC с помощью администратора ODBC.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,12 +12,12 @@ ms.assetid: c2f86810-2775-4ddd-8df7-e8373785a7fc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 19930ad172587cd1f36d395c0d246c25c652a90a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e88446d089473d5cae615765e21517c58ce80730
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950481"
 ---
 # <a name="data-source-names-and-64-bit-operating-systems"></a>Имена источников данных и 64-разрядные операционные системы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

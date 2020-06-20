@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5dc57d08f3db1792a9359b3aa79aaceecd03a025
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921832"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930595"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Мониторинг и устранение неполадок со слиянием для пар файлов данных и разностных файлов
   In-Memory OLTP использует политику слияния для автоматического объединения пар смежных файлов данных и разностных файлов. Действия слияния отключить нельзя.  
@@ -49,6 +48,6 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  [Переход состояния блога файлов контрольных точек в базах данных с таблицами, оптимизированными для памяти](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) , описывает смену состояния пар данных и разностных файлов с момента создания на сборку мусора.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   

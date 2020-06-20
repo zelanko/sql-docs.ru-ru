@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66c73c84a54daeeb2cca82e6b591da73b76a280b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a9e3025046dbb301ad192b02657db5e288cdaf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015808"
 ---
 # <a name="template-caching-sqlxml-40"></a>Кэширование шаблонов (SQLXML 4.0)
   Кэширование шаблонов значительно повышает производительность. Если установлено кэширование шаблонов, при первом выполнении шаблон располагается в памяти. Это повышает производительность последующего выполнения шаблона.  
@@ -42,7 +41,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!NOTE]  
 >  Параметры шаблона и свойства команд не кэшируются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кэширование схемы &#40;SQLXML 4,0&#41;](schema-caching-sqlxml-4-0.md)   
  [Кэширование XSL &#40;SQLXML 4,0&#41;](xsl-caching-sqlxml-4-0.md)  
   

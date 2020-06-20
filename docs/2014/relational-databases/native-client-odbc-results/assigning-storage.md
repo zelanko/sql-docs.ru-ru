@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ca5ab2c7c3b92f30701fd51ddef95eccff4842fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4fd131050930cda981ebbd0e82daea46776dfa07
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039604"
 ---
 # <a name="assigning-storage"></a>Назначение хранилища
   Приложение может назначить хранилище для результатов перед выполнением инструкции SQL или после него. Если приложение сначала подготавливает или выполняет инструкцию SQL, оно может запросить о результирующем наборе перед назначением хранилища для результатов. Например, если результирующий набор неизвестен, приложение должно получить количество столбцов, прежде чем им можно будет назначить хранилище.  
@@ -57,7 +56,7 @@ ms.locfileid: "82699703"
   
  Приложение также указывает для атрибута SQL_ATTR_ROW_ARRAY_SIZE значение, равное количеству элементов в массивах столбцов или строк, и устанавливает значения SQL_ATTR_ROW_STATUS_PTR и SQL_ATTR_ROWS_FETCHED_PTR.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

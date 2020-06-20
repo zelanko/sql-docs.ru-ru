@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 37b267c22458442e3c1c1572c2740b6595918fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e9072a68dd3179e5900fda06d4fea58b484a37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002603"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
   В этом учебнике приведен пример, в котором рассматриваются основные понятия безопасности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , включая цепочки владения и переключение контекста.  
@@ -95,7 +94,7 @@ GRANT CREATE PROCEDURE
 GO  
 ```  
   
- Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](stored-procedures/stored-procedures-database-engine.md). Афишу всех [!INCLUDE[ssDE](../includes/ssde-md.md)] разрешений см. в разделе [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf).  
+ Дополнительные сведения об инструкции GRANT см. в разделе [GRANT (Transact-SQL)](/sql/t-sql/statements/grant-transact-sql). Дополнительные сведения о хранимых процедурах см. в разделе [Хранимые процедуры (компонент Database Engine)](stored-procedures/stored-procedures-database-engine.md). Афишу всех [!INCLUDE[ssDE](../includes/ssde-md.md)] разрешений см. в разделе [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ## <a name="2-create-a-stored-procedure-to-access-data"></a>2. Создание хранимой процедуры для доступа к данным  
  Для переключения контекста внутри базы данных используйте инструкцию EXECUTE AS. Инструкции EXECUTE AS требуются разрешения IMPERSONATE.  

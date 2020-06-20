@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6cd3599ff68fadf6a55af1c57379e9cdd8cc4b5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c183bebe34e37455fbefa214ed0fcfeb55f3aa8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154496"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937985"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
   В этом разделе описывается настройка служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) на использование ссылочных данных для очистки данных. Можно либо использовать эталонные данные из Azure Marketplace, либо напрямую обращаться к сторонним поставщикам ссылочных данных.  
@@ -27,7 +26,7 @@ ms.locfileid: "70154496"
 ## <a name="before-you-begin"></a>Перед началом  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
- Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
+ Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) . Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
   
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   

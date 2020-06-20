@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f882aae9062d97914c86644a7be0ea126ed9dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966444"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>Редактор источника «Неструктурированный файл» (страница «Столбцы»)
   С помощью узла **Столбцы** диалогового окна **Редактор источника "Неструктурированный файл"** можно сопоставлять выходной столбец с каждым внешним (исходным) столбцом.  
   
 > [!NOTE]  
->  `FileNameColumnName` Свойство источника "Неструктурированный файл" и `FastParse` свойство его выходных столбцов недоступны в **редакторе источника "Неструктурированный файл**", но могут быть заданы с помощью **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Источник "Неструктурированный файл"» раздела [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
+>  `FileNameColumnName`Свойство источника "Неструктурированный файл" и `FastParse` свойство его выходных столбцов недоступны в **редакторе источника "Неструктурированный файл**", но могут быть заданы с помощью **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Источник "Неструктурированный файл"» раздела [Flat File Custom Properties](data-flow/flat-file-custom-properties.md).  
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](data-flow/flat-file-source.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные внешние столбцы**  
  Просмотр списка доступных внешних столбцов источника данных. В этой таблице нельзя добавлять или удалять столбцы.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66058609"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "Неструктурированный файл" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Редактор источника "Неструктурированный файл" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   

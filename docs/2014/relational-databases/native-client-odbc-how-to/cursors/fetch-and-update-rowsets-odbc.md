@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf0eb3b4-8b72-49fc-a845-95edc360cf93
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a799e2c4c7c3e7e3119fece847cb726751441c39
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10f23e8a8e8c76160362af2f3efacfd297062254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018917"
 ---
 # <a name="fetch-and-update-rowsets-odbc"></a>Выбор и обновление наборов строк (ODBC)
     
@@ -43,7 +42,7 @@ ms.locfileid: "82701881"
   
 6.  Выполните инструкцию позиционирования UPDATE или DELETE, задав имя курсора (его можно получить с помощью [SQLGetCursorName](../../native-client-odbc-api/sqlgetcursorname.md)) и используя дескриптор другой инструкции в том же соединении (необязательно).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по использованию курсоров &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

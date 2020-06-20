@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c283f1c08e4c30066359c91656c29f2adaa513f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5ebb8d863403d547a1aa45a996db3922c1ecd390
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717190"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046851"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>Столбцы с именем XPath-функции проверки узла
   Если имя столбца является одной из XPath-функций проверки узла, сопоставление содержимого производится, как указано в следующей таблице. Когда имя столбца является XPath-функцией проверки узла, содержимое сопоставляется с соответствующим узлом. Если столбец имеет SQL-тип `xml`, возвращается ошибка.  

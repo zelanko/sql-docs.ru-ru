@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe8c047bfeed326fe28ffe71407c6dee614271e0
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2cb730ab0dacc1f0d62a26076b240f9f104cc730
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014936"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>Использование диаграммы обновления в образце приложения ASP (SQLXML 4.0)
   Это приложение Active Server Pages (ASP) позволяет обновлять сведения о заказчике, содержащиеся в таблице Person.Contact базы данных-образца AdventureWorks Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Приложение выполняет следующие действия.  
@@ -158,7 +157,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

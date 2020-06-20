@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d20cd5deb0e94fa120d42f33d4b995ffd22620d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6d2f72dd135a92c0eb03f61c1f88698116e117e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696580"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043504"
 ---
 # <a name="retrieve-rows-using-bookmarks-ole-db"></a>Получение строк с помощью закладок (OLE DB)
   Потребитель устанавливает для поля `dwFlag` значение структуры привязки, равное DBCOLUMNSINFO_ISBOOKMARK, для указания, что столбец используется в качестве закладки. Пользователь также присваивает свойству набора строк DBPROP_BOOKMARKS значение VARIANT_TRUE. Это обеспечивает присутствие в наборе строк столбца с номером 0. Затем с помощью метода `IRowsetLocate::GetRowsAt` производится выборка строк, начиная со строки, указанной в качестве смещения относительно закладки.  

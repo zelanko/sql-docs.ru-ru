@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65e7da666beaf84050dd8d60caf4cac5bfc013c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036605"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Удаление ссылок на устаревшие системные хранимые процедуры
   Советник по переходу обнаружил инструкции, которые ссылаются на недокументированные системные хранимые процедуры и расширенные хранимые процедуры, более не доступные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Выполнение инструкций, ссылающихся на эти объекты, приведет к ошибке. Не пользуйтесь недокументированными системными объектами и API-интерфейсами, поскольку их функциональные возможности могут быть изменены или удалены в следующей версии без уведомления.  
@@ -101,7 +100,7 @@ ms.locfileid: "66093104"
 ### <a name="undocmented-system-stored-procedures"></a>Недокументированные системные хранимые процедуры  
  Чтобы заменить недокументированные системные хранимые процедуры, можно создать хранимые процедуры CLR с равнозначной функциональностью. Дополнительные сведения см. в разделе «Хранимые процедуры CLR» электронной документации по SQL Server.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

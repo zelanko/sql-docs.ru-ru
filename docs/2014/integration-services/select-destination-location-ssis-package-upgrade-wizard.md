@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963876"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Выбор целевого расположения (мастер обновления пакетов служб SSIS)
   Страница **Выбор целевого расположения** используется для указания назначения, в которое сохраняются обновленные пакеты.  
@@ -75,7 +74,7 @@ ms.locfileid: "66056010"
  **Пароль**  
  Введите пароль, который будет использован, если при подключении к серверу применяется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

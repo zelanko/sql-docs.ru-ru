@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cfd50b6641f8806bcab2ec460f030e9b84b7ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90c6aaed02e2dbbb39ddae605280d5ee00d28548
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176018"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971434"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Способ определения разрешений (службы Master Data Services)
   Простейшим способом настройки безопасности служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]является назначение разрешений на объекты модели для группы, членом которой является пользователь.

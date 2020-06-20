@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4ce89c0a1333a0a9a7a4ee9a801a2969c32a2e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b33b83338f1886a464d1831146db683008779799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033476"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001067"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Диалоговое окно «Уведомления после сохранения» (визуальные инструменты для баз данных)
   Данное диалоговое окно появляется при возникновении ошибок во время сохранения изменений таблицы. Это диалоговое окно содержит список объектов, успешно сохраненных в базе данных, объектов, которые не удалось сохранить, и перечень произошедших ошибок.  

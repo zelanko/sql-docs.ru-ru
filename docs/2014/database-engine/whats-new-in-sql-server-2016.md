@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927445"
 ---
 # <a name="what39s-new-database-engine"></a>Новые&#39;(ядро СУБД)
   В этом последнем выпуске [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] появились новые средства и усовершенствования, которые расширяют возможности и повышают производительность архитекторов, разработчиков и администраторов, занимающихся проектированием, созданием и обслуживанием систем хранения данных. Ниже перечислены улучшения, внесенные в компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
@@ -42,11 +41,11 @@ ms.locfileid: "70176076"
   
 -   **Резервное копирование в SQL Server по URL-адресу**  
   
-     Возможность резервного копирования на URL-адрес для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] была введена в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2, поддерживаемой только в [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell и SMO. В [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] можно использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для резервного копирования или восстановления из службы хранилища BLOB-объектов Azure. Новый параметр доступен как для задачи резервного копирования, так и для планов обслуживания. Дополнительные сведения см. в статьях [Использование задачи резервного копирования в SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server резервное копирование на URL-адрес с помощью мастера планов обслуживания](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)и [Восстановление из хранилища Azure с помощью SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+     Возможность резервного копирования на URL-адрес для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] была введена в версии [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1) CU2, поддерживаемой только в [!INCLUDE[tsql](../includes/tsql-md.md)], PowerShell и SMO. В можно [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] использовать [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для резервного копирования или восстановления из службы хранилища BLOB-объектов Azure. Новый параметр доступен как для задачи резервного копирования, так и для планов обслуживания. Дополнительные сведения см. в статьях [Использование задачи резервного копирования в SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#BackupTaskSSMS), [SQL Server резервное копирование на URL-адрес с помощью мастера планов обслуживания](../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)и [Восстановление из хранилища Azure с помощью SQL Server Management Studio](../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
--   **Управляемое резервное копирование SQL Server в Azure**  
+-   **SQL Server управляемого резервного копирования в Azure**  
   
-     Служба [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построена на основе функции резервного копирования на URL-адрес для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] она применяется для управления и планирования операций резервного копирования баз данных и журналов. В этом выпуске поддерживается только резервное копирование в хранилище Azure. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настроить и в базе данных и на уровне экземпляра и что для детального элемента управления на уровне базы данных и автоматизируя на уровне экземпляра. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]можно настроить для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляров, работающих локально, и экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , работающих на виртуальных машинах Azure. Рекомендуется использовать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляры, работающие на виртуальных машинах Azure. Дополнительные сведения см. [в статье SQL Server управляемое резервное копирование в Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Служба [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] построена на основе функции резервного копирования на URL-адрес для [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] она применяется для управления и планирования операций резервного копирования баз данных и журналов. В этом выпуске поддерживается только резервное копирование в хранилище Azure. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] можно настроить и в базе данных и на уровне экземпляра и что для детального элемента управления на уровне базы данных и автоматизируя на уровне экземпляра. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]можно настроить для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляров, работающих локально, и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляров, работающих на виртуальных машинах Azure. Рекомендуется использовать экземпляры, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] работающие на виртуальных машинах Azure. Дополнительные сведения см. [в статье SQL Server управляемое резервное копирование в Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Шифрование для резервных копий**  
   
@@ -139,7 +138,7 @@ ms.locfileid: "70176076"
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>Улучшения системного представления  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [sys. xml_indexes &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) имеют три новых столбца: `xml_index_type`, `xml_index_type_description`и `path_id`.  
+ [sys.xml_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) содержит три новых столбца: `xml_index_type` , `xml_index_type_description` и `path_id` .  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [sys. dm_exec_query_profiles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) наблюдает за ходом выполнения запросов в режиме реального времени во время выполнения запроса.  
@@ -148,7 +147,7 @@ ms.locfileid: "70176076"
  [sys. column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) содержит три новых столбца `is_auto_create_stats_incremental_on`: `is_query_store_on`, и `resource_pool_id`.  
+ [sys. databases &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) содержит три новых столбца: `is_auto_create_stats_incremental_on` , `is_query_store_on` и `resource_pool_id` .  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>Улучшения системного представления для In-Memory OLTP  
  Сведения об улучшениях системного представления для поддержки OLTP в памяти см. в разделе [системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
@@ -157,7 +156,7 @@ ms.locfileid: "70176076"
 ##  <a name="security-enhancements"></a><a name="Security"></a>Улучшения безопасности  
   
 ### <a name="connect-any-database-permission"></a>Разрешение CONNECT ANY DATABASE  
- Новое разрешение на уровне сервера. Предоставьте разрешение **CONNECT ANY DATABASE** имени входа, которому нужно подключиться ко всем существующим базам данных и ко всем новым базам, которые могут быть созданы в будущем. Не предоставляет каких-либо разрешений в базах данных за пределами соединения. Используйте сочетание с **любыми защищаемыми объектами пользователя** или `VIEW SERVER STATE` , чтобы разрешить процессу аудита просматривать все данные или все состояния базы данных на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Новое разрешение на уровне сервера. Предоставьте разрешение **CONNECT ANY DATABASE** имени входа, которому нужно подключиться ко всем существующим базам данных и ко всем новым базам, которые могут быть созданы в будущем. Не предоставляет каких-либо разрешений в базах данных за пределами соединения. Используйте сочетание с **любыми защищаемыми объектами пользователя** или `VIEW SERVER STATE` , чтобы разрешить процессу аудита просматривать все данные или все состояния базы данных на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ### <a name="impersonate-any-login-permission"></a>Разрешение IMPERSONATE ANY LOGIN  
  Новое разрешение на уровне сервера. После предоставления разрешает процессу среднего уровня олицетворять учетную запись клиентов, подключающихся к ней, так как она подключается к базам данных. При запрещении имени входа с высоким уровнем прав может быть запрещено олицетворение других имен входа. Например, имени входа с разрешением **CONTROL SERVER** можно запретить олицетворение других имен входа.  

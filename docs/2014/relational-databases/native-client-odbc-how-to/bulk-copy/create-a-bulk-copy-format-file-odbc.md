@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5c85e0663b5fa9961793cc30bb4a0986b64077bd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07674cef07116f47f4538d5913e002f20ca61282
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82715008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019103"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Создание файла форматирования массового копирования (ODBC)
   В этом образце показано использование функций массового копирования для создания как файла данных, так и файла форматирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -211,7 +210,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Использование файлов данных и файлов форматирования](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   

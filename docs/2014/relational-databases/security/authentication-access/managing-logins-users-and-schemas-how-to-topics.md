@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc9c8e8a-4a40-4c69-bfca-39975c844298
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7427c05643a8619a5913f568ec50fb7ecf4ae34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016247"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Инструкции по управлению именами входа, пользователями и схемами
   На данной странице представлены ссылки на разделы, в которых описан процесс управления именами входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , пользователями и схемами базы данных, а также процесс объединения ролей и предоставления разрешений участникам.  
@@ -34,7 +33,7 @@ ms.locfileid: "63011502"
   
 -   [Предоставление разрешения участнику](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Участники (ядро СУБД)](principals-database-engine.md)   
  [Обеспечение безопасности SQL Server](../securing-sql-server.md)  
   

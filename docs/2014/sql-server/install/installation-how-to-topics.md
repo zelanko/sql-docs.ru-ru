@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20c42e7d57415875acd1aebeaa3a674285468dc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ab6f5e1d93def3f28fafb5423721afa16aad236
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042287"
 ---
 # <a name="installation-how-to-topics"></a>Инструкции по установке
   К установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] относятся следующие разделы.  
@@ -38,7 +37,7 @@ ms.locfileid: "66094364"
 |[Удаление существующего экземпляра SQL Server (программа установки)](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)|Методический раздел, описывающий удаление изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вручную.|  
 |[Инструкции по обновлению](../../../2014/sql-server/install/upgrade-how-to-topics.md)|Методические разделы, описывающие обновление изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или экземпляра, входящего в кластер.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Планирование установки SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md)   
  [Обновление до SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Установка собственного клиента SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  

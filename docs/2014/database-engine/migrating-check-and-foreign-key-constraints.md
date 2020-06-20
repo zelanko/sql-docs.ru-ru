@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1622e87d971a32dcf478dfb036a504e0959fd76
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930765"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Миграция проверочных ограничений и ограничений внешнего ключа
   Проверочные ограничения и ограничения внешнего ключа не поддерживаются в [!INCLUDE[hek_2](../includes/hek-2-md.md)] из [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Эти конструкции обычно используются для обеспечения логической целостности данных в схеме и могут быть очень важны для поддержания правильности функционирования приложений.  
@@ -240,7 +239,7 @@ END CATCH
 END  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

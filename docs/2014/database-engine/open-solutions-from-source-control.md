@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d998956497eb0fb15f3b99de8e543636266e32
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930351"
 ---
 # <a name="open-solutions-from-source-control"></a>Открытие решений из системы управления версиями
   Среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно использовать для открытия решений непосредственно из системы управления версиями. В этом случае среда Studio создает копию последней версии файлов решения в указанном месте.  
@@ -40,7 +39,7 @@ ms.locfileid: "62844772"
   
 5.  В диалоговом окне **Открытие решения** выберите файл решения и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Открытие проекта из системы управления версиями](../../2014/database-engine/open-projects-from-source-control.md)  
   
   

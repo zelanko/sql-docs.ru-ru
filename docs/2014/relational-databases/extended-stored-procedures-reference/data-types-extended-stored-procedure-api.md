@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 715cdc343e3a73781c06977fdb3d3d829d6bf533
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b9c5b8929f6af33546a55e848a75e4243b4973
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511654"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050805"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Типы данных (API-интерфейс расширенных хранимых процедур)
     
@@ -38,19 +37,19 @@ ms.locfileid: "62511654"
 |SRVBITN|`bit null`|Данные типа `bit`, значения NULL допускаются.|  
 |SRVCHAR|`char`|Тип данных `character`.|  
 |SRVDATETIME|`datetime`|8-байтовые данные типа `datetime`.|  
-|SRVDATETIM4|`smalldatetime`|тип данных 4 `smalldatetime` байта.|  
+|SRVDATETIM4|`smalldatetime`|тип данных 4 байта `smalldatetime` .|  
 |SRVDATETIMN|**datetime null**|Данные типа `smalldatetime` или `datetime`, значения NULL допускаются.|  
 |SRVDECIMAL|`decimal`|Тип данных `decimal`.|  
 |SRVDECIMALN|`decimal null`|Данные типа `decimal`, значения NULL допускаются.|  
-|SRVFLT4|`real`|тип данных 4 `real` байта.|  
+|SRVFLT4|`real`|тип данных 4 байта `real` .|  
 |SRVFLT8|`float`|8-байтовые данные типа `float`.|  
 |SRVFLTN|`real` &#124; `float null`|Данные типа `real` или `float`, значения NULL допускаются.|  
 |SRVIMAGE|`image`|Тип данных `image`.|  
 |SRVINT1|`tinyint`|1-байтовый `tinyint` тип данных.|  
-|SRVINT2|`smallint`|тип данных Byte `smallint` (2 байта).|  
-|SRVINT4|`int`|тип данных 4 `int` байта.|  
+|SRVINT2|`smallint`|тип данных Byte (2 байта) `smallint` .|  
+|SRVINT4|`int`|тип данных 4 байта `int` .|  
 |SRVINTN|`tinyint` &#124; `smallint` &#124; `int null`|Данные типа `tinyint`, `smallint` или `int`, значения NULL допускаются.|  
-|SRVMONEY4|`smallmoney`|тип данных 4 `smallmoney` байта.|  
+|SRVMONEY4|`smallmoney`|тип данных 4 байта `smallmoney` .|  
 |SRVMONEY|`money`|8-байтовые данные типа `money`.|  
 |SRVMONEYN|`money` &#124; `smallmoney null`|Данные типа `smallmoney` или `money`, значения NULL допускаются.|  
 |SRVNCHAR|**nchar**|Данные типа `character` в Юникоде.|  

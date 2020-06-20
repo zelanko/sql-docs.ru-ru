@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 77cb4a57afcc40c15341a64dfd841e97b551bc81
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63566d7759c3a88f6c088707d6c7724cb4087f05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706488"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050072"
 ---
 # <a name="memory-optimized-tables"></a>Таблицы, оптимизированные для памяти
   Операции OLTP в памяти[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повышают производительность OLTP-приложений благодаря эффективному, оптимизированному для памяти доступу к данным, собственной компиляции бизнес-логики и алгоритмам без кратковременной блокировки. Функциональность OLTP-операций в памяти обеспечивается оптимизированными для памяти таблицами и табличными типами, а также собственной компиляцией хранимых процедур [!INCLUDE[tsql](../../includes/tsql-md.md)] для эффективного доступа к этим таблицам.  
@@ -58,7 +57,7 @@ ms.locfileid: "82706488"
   
      Обзор обработки запросов для таблиц, оптимизированных для памяти, и хранимых процедур, скомпилированных в собственном коде.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](in-memory-oltp-in-memory-optimization.md)  
   
   

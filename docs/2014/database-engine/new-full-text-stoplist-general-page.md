@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1dc58f006d1e37885418dfb923c6c7cc7563d018
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: a6272fb570b85989f38c8187e29712966862710d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000834"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930470"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Создание списка полнотекстовых стоп-слов (страница «Общие»)
   Используется для создания полнотекстового списка стоп-слов. *Список стоп-слов* — это набор часто употребляемых слов, называемых *стоп-словами*, которые не включаются в полнотекстовый индекс для таблиц, использующих такой список. Дополнительные сведения см. в разделе [Настройка стоп-слов и списков стоп-слов для полнотекстового поиска и управление ими](../relational-databases/search/full-text-search.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "83000834"
   
 -   [Настройка и управление стоп-словами и списками стоп-слов для полнотекстового поиска](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя полнотекстового списка стоп-слов**  
  Введите имя полнотекстового списка стоп-слов.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "83000834"
   
  Если в текущей базе данных не зарегистрирован любой язык стоп-слов из исходного списка стоп-слов, инструкция CREATE FULLTEXT STOPLIST завершается успешно, но с предупреждениями, а соответствующие стоп-слова не добавляются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER FULLTEXT стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
  [Создание ПОЛНОТЕКСТОВОГО списка стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [УДАЛИТЬ ПОЛНОТЕКСТОВЫЙ список стоп-слов &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)   

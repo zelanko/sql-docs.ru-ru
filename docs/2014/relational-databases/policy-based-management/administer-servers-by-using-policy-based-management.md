@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f415ffbc10b93cee2037da78daef3b7ee5aba9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157113"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85069029"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
   Управление на основе политик — это система управления одним или несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если администраторы политик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используют управление на основе политик, то они применяют среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания политик управления сущностями на сервере, например экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базами данных или другими объектами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -131,7 +130,7 @@ ms.locfileid: "63157113"
 |Предоставляет набор файлов политик, которые можно импортировать в качестве политик рекомендаций. Затем приводится описание, как выполнять эти политики для набора целей, включающего экземпляры, объекты экземпляров, базы данных или объекты базы данных.|[Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
 |Содержит разделы справки F1 для узла **Управление политиками** обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Узел управления политиками (обозреватель объектов)](../../ssms/object/object-explorer.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Административные представления на основе политик (Transact-SQL)](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

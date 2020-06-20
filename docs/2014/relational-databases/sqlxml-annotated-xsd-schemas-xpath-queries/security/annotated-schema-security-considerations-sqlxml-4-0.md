@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7d7e44dc-b6d3-4e0f-95c7-8f99930c94f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a04bbba08d3609fd9a4fccb96e515c23db62f6fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 098f554410a846ed0223d17117b51025dfcf7897
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002757"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Основные понятия о безопасности схемы с заметками (SQLXML 4.0)
   Далее приводятся рекомендации по обеспечению безопасности при использовании аннотированных схем.  
@@ -40,7 +39,7 @@ ms.locfileid: "82717700"
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Схемы XSD с заметками в SQLXML 4.0](../../sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
   
   

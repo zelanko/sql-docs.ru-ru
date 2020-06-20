@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66898aa056800c0a7573b5afa73762785706ff7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044621"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Предупреждение об использовании GEOMETRY, GEOGRAPHY и HIERARCHYID на стороне клиента
-  Сборка **Microsoft. SqlServer. types. dll**, которая содержит типы пространственных данных, обновлена с версии 10,0 до версии 11,0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются определенные условия.  
+  Сборка **Microsoft.SqlServer.Types.dll**, содержащая пространственные типы данных, была обновлена с версии 10,0 до версии 11,0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются определенные условия.  
   
 ## <a name="component"></a>Компонент  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Описание  
- Сборка **Microsoft. SqlServer. types. dll**, которая содержит типы пространственных данных, обновлена с версии 10,0 до версии 11,0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются следующие условия.  
+ Сборка **Microsoft.SqlServer.Types.dll**, содержащая пространственные типы данных, была обновлена с версии 10,0 до версии 11,0. Пользовательские приложения, ссылающиеся на эту сборку, могут завершаться с ошибками, если выполняются следующие условия.  
   
--   При перемещении пользовательского приложения с компьютера, на [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] котором установлено приложение, на компьютер, на котором установлено [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] только приложение, произойдет сбой приложения из-за отсутствия ссылки на версию 10,0 для сборки **sqltypes** . Может отображаться следующее сообщение об ошибке: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   При перемещении пользовательского приложения с компьютера, на котором установлено приложение [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , на компьютер, на котором [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установлено только приложение, произойдет сбой приложения из-за отсутствия ссылки на версию 10,0 для сборки **sqltypes** . Может отображаться следующее сообщение об ошибке: `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   Если также установлена ссылка на сборку **sqltypes** версии 11,0 и версия 10,0, может появиться следующее сообщение об ошибке:`"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66091091"
   
 -   Для разрешения этой проблемы в строке подключения можно указать значение «SQL Server 2012» для атрибута «Type System Version», что обеспечивает в SqlClient принудительную загрузку версии 11.0 сборки. Этот атрибут строки подключения доступен только в платформе .NET 4.5 и выше.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md
 )  

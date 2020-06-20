@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f43faad4-2182-4b43-a76a-0e3b405816d1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7dbd50559c88e6dd1de64eb4513db2dbd4c14b29
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc220bcdb899d18b8f439e6e0e1e4b6bdd56903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026050"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде
   В этом разделе описываются некоторые проблемы, связанные с созданием скомпилированных в собственном коде хранимых процедур.  
@@ -34,7 +33,7 @@ ms.locfileid: "82706459"
   
 -   [Реализация оператора OR в скомпилированных в собственном коде хранимых процедурах](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aef64ed8031664dcbefa7d0e30bf9f63435b292c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9082377f1599b719f490222d3ddacba4a6622699
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067248"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>Добавление столбцов в запросы (визуальные инструменты для баз данных)
   Для использования столбца в запросе его необходимо туда добавить. Можно добавлять столбцы для отображения в результатах выполнения запроса, для использования при сортировке, поиска или обобщения их содержимого. Выбрать, какие используемые в запросе столбцы необходимо включить на панель результатов, можно при выполнении запроса. Дополнительные сведения см. в разделе [Удаление столбцов из результатов запроса (визуальные инструменты для баз данных)](visual-database-tools.md).  
@@ -40,7 +39,7 @@ ms.locfileid: "63015705"
   
 ### <a name="to-add-all-columns-for-one-table-or-table-valued-object"></a>Добавление всех столбцов одной таблицы или возвращающего табличное значение объекта  
   
--   На **панели диаграмм**установите флажок рядом с ** \*полем (все столбцы)**.  
+-   На **панели диаграмм**установите флажок рядом с полем ** \* (все столбцы)**.  
   
 ### <a name="to-add-all-columns-for-all-tables-and-table-structured-objects"></a>Добавление всех столбцов всех таблиц и табличных объектов  
   

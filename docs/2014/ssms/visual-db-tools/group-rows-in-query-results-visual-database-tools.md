@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1817e2b91ba46b14e0884d48423a5a7c9f6e95f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63154809"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001369"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Группирование строк в результатах запроса (визуальные инструменты для баз данных)
   Если нужно создать подытог или отобразить другие сводные сведения о подмножествах таблицы, создайте группы, используя статистический запрос. Каждая такая группа обобщает данные всех строк таблицы, имеющих одно и то же значение.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6239d440-2818-4b98-bb79-732dced41952
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4d810978a7326b1be4356d60c495b24806d95183
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3693355eec7a290c03658c10db500161aa52062d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704565"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017911"
 ---
 # <a name="creating-sql-server-indexes"></a>Создание индексов SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик собственного клиента OLE DB предоставляет функцию **IIndexDefinition:: CreateIndex** , позволяющую потребителям определять новые индексы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицах.  
@@ -151,7 +150,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы и индексы](../../relational-databases/native-client-ole-db-tables-indexes/tables-and-indexes.md)  
   
   

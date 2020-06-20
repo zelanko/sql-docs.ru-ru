@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc1f8ce4574580746e20c478b23e40485c3e6ecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037101"
 ---
 # <a name="cluster-node-configuration-complete"></a>Настройка узла кластера (Полная)
   Воспользуйтесь страницей «Настройка узла кластера (полная)», чтобы указать существующий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который подготовлен для работы в кластере. Чтобы установить или обновить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки на каждом узле кластера. Чтобы добавить узел в существующий отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо запустить программу установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на узле, который добавляется в экземпляр отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Из раскрывающегося списка:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]имя экземпляра. Выберите имя экземпляра для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отказоустойчивого кластера.  
   
--   Имя этого узла. это поле заполняется именем компьютера, на котором запущена программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки.  
+-   Имя этого узла. это поле заполняется именем компьютера, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена программа установки.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Сетевое имя отказоустойчивого кластера — это поле не заполняется заранее. Укажите сетевое имя для нового экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это имя, которое идентифицирует отказоустойчивый кластер в сети.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013017"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   В этом разделе описываются ограничения вычислительной мощности в разных выпусках [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] и различия в их работе в физических и виртуальных средах с процессорами Hyper-Threading.  
@@ -98,7 +97,7 @@ ms.locfileid: "62714770"
   
  Если важна производительность в пересчете на виртуальный процессор, может понадобиться отключить технологию Hyper-Threading. Технологию Hyper-Threading можно включать и отключать в параметрах процессора в BIOS, но обычно это операция на уровне сервера, которая действует на всю рабочую нагрузку, активную на сервере. Это обстоятельство делает разумным отделение рабочей нагрузки, действующей в виртуальных средах, от нагрузки, для которой технология Hyper-Threading обеспечит прирост производительности в среде физической операционной системы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выпуски и компоненты SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)   
  [Функции, поддерживаемые различными выпусками SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
  [Спецификации максимальной емкости для SQL Server](../sql-server/maximum-capacity-specifications-for-sql-server.md)   

@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9eb4060a-9c3e-41e0-8767-3cfaebc45de7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 07ca904ab8f98dd4dcbdba3f18f4a6fc6469f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 04d715bee7fdd8d61796040fa04b3fb68db1d15a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045362"
 ---
 # <a name="change-credentials-wizard-ssrs-native-mode"></a>Мастер изменения учетных данных (службы Reporting Services в собственном режиме)
   В диспетчере конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] имеется мастер изменения учетных данных, помогающий выполнить шаги по изменению учетной записи, используемой сервером отчетов для подключения к базе данных сервера отчетов. Когда учетные данные изменены, диспетчер конфигурации обновляет на сервере баз данных все разрешения и сведения о регистрации в базе данных для базы данных сервера отчетов, активно используемой сервером отчетов.  
   
  Чтобы запустить этот мастер, в диспетчере конфигурации служб **на странице базы данных нажмите кнопку** Изменить учетные данные [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Инструкции по запуску [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager см. в разделе [Диспетчер конфигурации служб Reporting Services &#40;основном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Сервер базы данных**  
  Указывает имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] экземпляра, на котором выполняется база данных сервера отчетов.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "71952321"
  Другие учетные данные Windows указать нельзя. Если подключение необходимо производить от лица другого пользователя Windows, то следует войти от этого пользователя, а затем запустить диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  **Учетные данные**  
- Задает учетную запись, используемую сервером отчетов для подключения к базе данных сервера отчетов. В качестве этого значения допускается указывать учетную запись веб-службы сервера отчетов, имя входа базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , определенное в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещен сервер отчетов, или учетную запись Windows. Если используется учетная запись Windows, можно указать локальную учетную запись (*\<ComputerName>\\<username\>*), если сервер отчетов и база данных находятся на одном компьютере, или учетную запись пользователя домена (*\<домен>\\<имя\>пользователя*), если они находятся на разных компьютерах в одном домене.  
+ Задает учетную запись, используемую сервером отчетов для подключения к базе данных сервера отчетов. В качестве этого значения допускается указывать учетную запись веб-службы сервера отчетов, имя входа базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , определенное в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , на котором размещен сервер отчетов, или учетную запись Windows. Если используется учетная запись Windows, можно указать локальную учетную запись (* \<computername> \\<имя \> пользователя*), если сервер отчетов и база данных находятся на одном компьютере, или учетную запись пользователя домена (* \<domain> \\<\> имя пользователя*), если они находятся на разных компьютерах в том же домене.  
   
  Сервер отчетов создаст имя входа базы данных и присвоит для указанной учетной записи разрешения базы данных.  
   

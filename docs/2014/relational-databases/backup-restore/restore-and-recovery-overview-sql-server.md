@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2175ae19218592a2742aa1404ffa6620da333846
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 2b8f032dce4f2eb09ef80cfa8c6333de2d563a81
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925090"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957144"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Обзор процессов восстановления (SQL Server)
   Чтобы восстановить базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после сбоя, администратор базы данных должен восстановить набор резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в составе логически верной и содержательной последовательности восстановления. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает восстановление данных из резервных копий целой базы данных, файла данных или страниц данных следующим образом.  

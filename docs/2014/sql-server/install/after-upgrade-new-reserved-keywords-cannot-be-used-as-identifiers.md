@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36f7f8cadcba5e114feee4a3c42de6f40070ce72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045684"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>После обновления новые зарезервированные ключевые слова не могут быть использованы в качестве идентификаторов
   Советник по переходу обнаружил использование слов, зарезервированных в качестве ключевых. Зарезервированное ключевое слово нельзя использовать в качестве идентификатора или имени объекта, если только имя не заключено в разделители.  

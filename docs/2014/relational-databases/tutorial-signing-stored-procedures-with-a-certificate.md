@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fe387c43431436ba5fba5bcab879584ecdad533
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002506"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Учебник. Подписывание хранимых процедур с помощью сертификата
   В этом учебнике демонстрируется подписание хранимых процедур с помощью сертификата, созданного [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -288,7 +287,7 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Центр безопасности для ядра СУБД SQL Server и Базы данных Azure SQL](security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
