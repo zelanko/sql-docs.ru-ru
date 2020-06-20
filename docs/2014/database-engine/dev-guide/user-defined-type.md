@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: a9b75f36-d7f5-47f7-94d6-b4448c6a2191
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d2baa2a28fb0805f92c27b7f8a237996ce4583db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65711003f7a546660ac9faa3800be42a1dc0ff99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054839"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933205"
 ---
 # <a name="user-defined-type"></a>Определяемый пользователем тип
   В образце определяемого пользователем типа данных демонстрируется создание и применение простого пользовательского типа данных в Transact-SQL и в клиентском приложении при использовании `System.Data.SqlClient`.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
@@ -88,7 +87,7 @@ ms.locfileid: "74054839"
   
     -   В каталоге c:\MySample создайте файл `Program.cs` и скопируйте в него исходный код.  
   
-    -   Execute`: Csc /reference:ComplexNumber.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /out:Client.exe /target:exe Program.cs`  
+    -   Работать`: Csc /reference:ComplexNumber.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.Data.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll /reference:C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.XML.dll /out:Client.exe /target:exe Program.cs`  
   
     -   Тест, выполнив:`Client AdventureWorks`  
   

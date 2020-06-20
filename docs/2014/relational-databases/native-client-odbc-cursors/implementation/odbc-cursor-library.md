@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3c610d3d-6e06-49cf-9a40-05b6a1c83a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63a9a974c1487548526d4b40b8c72d2ce86f2136
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0f0ad049c6b9e77f9888d582ab0cda2f5a5e0f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705653"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020917"
 ---
 # <a name="odbc-cursor-library"></a>Библиотека курсоров ODBC
   Некоторые драйверы ODBC поддерживают только параметры курсора по умолчанию. Эти драйверы также не поддерживают позиционированные операции с курсорами, такие как **SQLSetPos**. Библиотека курсоров ODBC — компонент доступа к данным MDAC, используемый для реализации блочных или статических курсоров на драйвере, который обычно не поддерживает их. Библиотека курсоров также реализует позиционированные инструкции UPDATE и DELETE и **SQLSetPos** для создаваемых курсоров.  
@@ -45,7 +44,7 @@ ms.locfileid: "82705653"
   
  Библиотека курсоров ODBC позволяет приложениям использовать несколько активных инструкций для соединения, а также прокручиваемые, обновляемые курсоры. Библиотека курсоров должна быть загружена для поддержки этой функциональности. Используйте [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) для указания способа использования библиотеки курсоров и [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) для указания типа курсора, параллелизма и размера набора строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Способы реализации курсоров](how-cursors-are-implemented.md)  
   
   

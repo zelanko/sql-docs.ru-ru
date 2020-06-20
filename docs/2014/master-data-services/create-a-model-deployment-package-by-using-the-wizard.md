@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b24ec4c2-1378-4c72-ac69-4ec2647030f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d424f8c592ecf6e9f002342de9539f96dc4479c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971804"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Создание пакета развертывания модели с помощью мастера
   Мастер развертывания модели [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] служит для создания пакета, содержащего только объекты модели. Если в пакет нужно включить данные, см. раздел [Создание пакета развертывания модели при помощи MDSModelDeploy](../../2014/master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
@@ -43,19 +42,19 @@ ms.locfileid: "65483604"
   
 4.  На странице **Создание пакета** выберите модель в списке **Модель** .  
   
-5.  Нажмите кнопку **Далее**.  
+5.  Щелкните **Далее**.  
   
-6.  Нажмите **Загрузить**.  
+6.  Щелкните элемент **Загрузить**.  
   
 7.  Сохраните файл.  
   
 8.  Нажмите кнопку **Закрыть**, чтобы завершить работу мастера.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Развертывание пакета развертывания модели с помощью мастера](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

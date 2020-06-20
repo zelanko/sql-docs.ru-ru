@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8eab18d84efc1a990715e0d5488085252f93a7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877251"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957330"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Восстановление разностной резервной копии базы данных (SQL Server)
   В этом разделе описано, как восстановить разностную резервную копию базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -90,7 +89,7 @@ ms.locfileid: "62877251"
   
          После добавления нужных устройств в списке **Носитель резервной копии** нажмите кнопку **ОК** для возвращения на страницу **Общие** .  
   
-         В списке **Источник: Устройство: База данных** выберите имя базы данных, которую нужно восстановить.  
+         В списке **Источник: Устройство: База данных** выберите имя базы данных, из которой нужно восстановить резервные копии.  
   
          **Примечание.** Этот список доступен, только если выбрано **Устройство** . Будут выбраны только те базы данных, резервные копии которых доступны на выбранном устройстве.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62877251"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Восстановление разностной резервной копии базы данных  
   
-1.  Выполните инструкцию RESTORE DATABASE с предложением NORECOVERY, чтобы восстановить полную резервную копию базы данных, которая предшествует разностной резервной копии базы данных. Дополнительные сведения см. в статье [Практическое руководство. Восстановление полной резервной копии](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Выполните инструкцию RESTORE DATABASE с предложением NORECOVERY, чтобы восстановить полную резервную копию базы данных, которая предшествует разностной резервной копии базы данных. Дополнительные сведения см. в разделе [Как восстановить полную резервную копию](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Выполните инструкцию RESTORE DATABASE для восстановления разностной резервной копии базы данных, указав:  
   

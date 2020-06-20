@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 536d8551b82918aae34fa25723c99e8cfad5f1ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 078e391bd39fdc49cde539c4004ed51d25eef93f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021916"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
   `SQLProcedureColumns`Возвращает одну строку, сообщающую атрибуты возвращаемого значения всех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимых процедур.  
@@ -74,7 +73,7 @@ ms.locfileid: "82705884"
 ## <a name="sqlprocedurecolumns-support-for-large-clr-udts"></a>Поддержка функцией SQLProcedureColumns определяемых пользователем типов больших данных CLR  
  Функция `SQLProcedureColumns` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLProcedureColumns](https://go.microsoft.com/fwlink/?LinkId=59363)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

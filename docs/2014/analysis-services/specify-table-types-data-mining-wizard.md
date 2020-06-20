@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8209a707-faef-4ffc-8991-6c13bb350753
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6c5b38fdc684cce71e0910a8a576180ece3e48f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b854c683cdbc3ff503751efbaf564dfa9e3110f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068139"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940295"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Определение типов таблиц (мастер интеллектуального анализа данных)
   Страница **Определение типов таблиц** используется для идентификации таблиц, используемых для определения структуры интеллектуального анализа данных. Если таблица не выбрана, она не будет использоваться для определения структуры интеллектуального анализа данных.  
@@ -27,7 +26,7 @@ ms.locfileid: "66068139"
   
  **Дополнительные сведения:** [Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)](data-mining/nested-tables-analysis-services-data-mining.md), [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](data-mining/data-mining-wizard-analysis-services-data-mining.md) и [Создание реляционной структуры интеллектуального анализа данных](data-mining/create-a-relational-mining-structure.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Таблицы**  
  Отображает таблицы в представлении источника данных, выбранном на странице **Выбор представления источников данных** данного мастера.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66068139"
 > [!NOTE]  
 >  У этих таблиц должна быть связь «многие к одному» с таблицей вариантов, а не «один-ко-многим». Необходимо определить эту связь в представлении источника данных, прежде чем можно будет выбрать таблицу в качестве вложенной.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
  [Выберите представление источника данных &#40;мастер интеллектуального анализа данных&#41;](select-data-source-view-data-mining-wizard.md)   
  [Укажите обучающие данные &#40;мастер интеллектуального анализа данных&#41;](specify-the-training-data-data-mining-wizard.md)  

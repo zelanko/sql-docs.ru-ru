@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 342877c5-14af-4287-a2b3-d48882b0133a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 343cb7d3957f1859b8676629a14b165e756b450d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068253"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940285"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Задание цели (мастер формирования схем) (службы Analysis Services — многомерные данные)
   Страница **Задание цели** используется для идентификации представления источников данных, в котором должны создаваться реляционные схемы.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Создать новое представление источника данных**  
  Выберите этот параметр, чтобы создать новое представление источника данных для размещения реляционной схемы, сформированной мастером.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "66068253"
 > [!NOTE]  
 >  Этот параметр доступен, только если выбран пункт **Создать новое представление источника данных** .  
   
- **Создать**  
+ **Новые**  
  Выберите этот пункт для отображения мастера источников данных и определите новый источник данных для связи с новым представлением источника данных.  
   
  Дополнительные сведения см. в разделе [Справка F1 мастера источников данных (службы Analysis Services)](data-source-wizard-f1-help-analysis-services.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "66068253"
  **Использовать существующее представление источника данных**  
  Выберите этот параметр, чтобы выбрать существующее представление источника данных для размещения реляционной схемы сформированной мастером.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера формирования схем &#40;Analysis Services многомерных данных&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Analysis Services мастера &#40;многомерных данных&#41;](analysis-services-wizards-multidimensional-data.md)  
   

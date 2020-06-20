@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edb0a9e0384804b733441d7fe256d11a150469d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937825"
 ---
 # <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
   Этот экран обеспечивает доступ к пользовательским интерфейсам каждой из трех основных групп задач служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): управление базами знаний, проекты служб DQS и администрирование.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ### <a name="knowledge-base-management"></a>Управление базами знаний  
  База знаний DQS представляет собой репозиторий метаданных, которые используются DQS для повышения качества данных. Эти метаданные создаются как платформой служб DQS в процессе автоматизированного обнаружения набора знаний, так и администратором данных в процессе интерактивного управления доменами.  

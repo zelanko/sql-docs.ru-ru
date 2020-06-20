@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f0990fbe65adc97b9e654f6393e25582363596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f7ab78b5ab6251b7f27401d36423ec27141c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093131"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041837"
 ---
 # <a name="remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers"></a>Удалите DDL-операции в таблицах inserted и deleted внутри триггеров DML
   Инструкции языка описания данных DDL, такие как CREATE INDEX, не могут быть выполнены для таблиц inserted и deleted в триггерах DML. Некоторые инструкции языка DDL для таблиц inserted и deleted допускались в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе «Использование таблиц inserted и deleted» электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66093131"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Удалите любые DDL-операции, которые применяются к вставленным и удаленным таблицам внутри триггеров DML.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

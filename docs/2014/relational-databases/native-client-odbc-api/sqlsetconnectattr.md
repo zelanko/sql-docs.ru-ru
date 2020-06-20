@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d70b89f20beed9c4bd13aa30ab0bdddda2b97a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 716f9d2d27c7e13d754d1cd31f7c7294af3f3f90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021738"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   В драйвере ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр SQL_ATTR_CONNECTION_TIMEOUT не учитывается.  
@@ -71,7 +70,7 @@ ms.locfileid: "82702188"
 |SQL_COPT_SS_USER_DATA|Можно использовать|  
 |SQL_COPT_SS_WARN_ON_CP_ERROR|До|  
   
- Использование атрибута предварительного соединения и эквивалентной команды [!INCLUDE[tsql](../../includes/tsql-md.md)] для одного и того же сеанса, базы данных или состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может повлечь непредвиденное поведение. Например, примененная к объекту директива  
+ Использование атрибута предварительного соединения и эквивалентной команды [!INCLUDE[tsql](../../includes/tsql-md.md)] для одного и того же сеанса, базы данных или состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может повлечь непредвиденное поведение. Например,  
   
 ```  
 SQLSetConnectAttr(SQL_COPT_SS_QUOTED_IDENT, SQL_QI_ON) // turn ON via attribute  
@@ -97,7 +96,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- Значение по умолчанию — `ReadWrite`. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержке групп доступности в собственном клиенте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] см. в разделе [Поддержка высокой доступности и аварийного восстановления в SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Значение по умолчанию — `ReadWrite`. Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержке групп доступности в собственном клиенте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] см. в разделе [Поддержка высокой доступности и аварийного восстановления в SQL Server Native Client](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME указывает имя первичного файла для присоединяемой базы данных. Эта база данных присоединяется и становится для соединения базой данных по умолчанию. Для использования SQL_COPT_SS_ATTACHDBFILENAME необходимо указать имя базы данных в качестве значения атрибута соединения SQL_ATTR_CURRENT_CATALOG или в параметре DATABASE = параметра [SQLDriverConnect](sqldriverconnect.md). Если база данных уже присоединена, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не будет повторно присоединять ее.  
@@ -355,7 +354,7 @@ SQLSetConnectAttr(hDbc, SQL_COPT_SS_PERF_DATA,
 // Continue on...  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLSetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59368)   
  [Сведения о реализации API ODBC](odbc-api-implementation-details.md)   
  [Функции с массовым копированием](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)   

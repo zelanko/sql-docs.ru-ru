@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 65ac3c0c590a3b5d1fc03ab17625f039c163ac57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82633564746672df867999f2540cdc3746d08631
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971977"
 ---
 # <a name="commit-a-version-master-data-services"></a>Фиксация версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]фиксация версии модели препятствует изменениям элементов модели и их атрибутов. Открыть зафиксированную версию нельзя.  
@@ -46,7 +45,7 @@ ms.locfileid: "65480031"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Создание флага версии (службы Master Data Services)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)  
   
@@ -54,7 +53,7 @@ ms.locfileid: "65480031"
   
 -   [Копирование версии (службы Master Data Services)](../../2014/master-data-services/copy-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Версии (службы Master Data Services)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

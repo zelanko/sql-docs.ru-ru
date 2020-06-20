@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940115"
 ---
 # <a name="imdembedded-interface"></a>Интерфейс IMDEmbedded
   Интерфейс IMDEmbedded является открытым и служит для управления внедренной базой данных PowerPivot или шаблоном базы данных. Этот интерфейс наследует интерфейс `IPersistStream`. Этот интерфейс позволяет выполнить следующие операции:  
@@ -38,8 +37,8 @@ ms.locfileid: "62757780"
   
 -   Сохранить локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от `IPersistStream`.  
   
-## <a name="reference"></a>Справочник  
- В следующей справочной документации `IMDEmbedded` описывается интерфейс, представленный в файле заголовка **мсмд. h** .  
+## <a name="reference"></a>Ссылка  
+ В следующей справочной документации описывается `IMDEmbedded` интерфейс, представленный в файле заголовка **мсмд. h** .  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Исходный файл: PXOEmbeddedData.idl  
   

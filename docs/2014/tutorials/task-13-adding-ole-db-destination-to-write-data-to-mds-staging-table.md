@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb39e9d50d135adfedcf307cda2ad703e302eda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061135"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Задача 13. Добавление назначения OLE DB для записи данных в промежуточную таблицу MDS
   Теперь, когда вы добавили значения **ImportType** и **BatchTag** во все записи, вы можете отправить их в MDS для промежуточного хранения. В этой задаче используется назначение OLE DB для записи данных в промежуточную таблицу **STG. supplier_Leaf** .  

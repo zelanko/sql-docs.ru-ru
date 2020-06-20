@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 47fa45fc-60ab-41a1-bde3-5781c8462889
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36b28a97b920e5c43644451ebee1e0c50df019c2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939940"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Анализ табличной модели в Excel (табличные службы SSAS)
   Функция анализа в Excel в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] открывает Microsoft Excel, создает соединение с источником данных, в качестве которого выступает база данных рабочей области модели, а затем добавляет сводную таблицу на рабочий лист. Объекты модели (таблицы, столбцы, меры, иерархии и ключевые показатели эффективности) включаются в качестве полей в список полей сводной таблицы.  
@@ -25,7 +24,7 @@ ms.locfileid: "66067763"
 > [!NOTE]  
 >  Для использования функции анализа в Excel необходимо на тот же компьютер, где находится среда [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], установить Microsoft Office 2003 или более поздней версии. Если Microsoft Office не установлен на том же компьютере, то можно с помощью Excel на другом компьютере подключиться к базе данных рабочей области модели в качестве источника данных. Затем можно вручную добавить сводную таблицу на лист. Объекты модели (таблицы, столбцы, меры и ключевые показатели эффективности) включаются в качестве полей в список полей сводной таблицы.  
   
-## <a name="tasks"></a>Задачи  
+## <a name="tasks"></a>Задания  
   
 #### <a name="to-analyze-a-tabular-model-project-by-using-the-analyze-in-excel-feature"></a>Анализ проекта табличной модели с помощью функции анализа в Excel  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66067763"
 > [!NOTE]  
 >  Список полей сводной таблицы в Excel не обновляется автоматически при внесении изменений в проект модели в конструкторе моделей. Чтобы обновить список полей сводной таблицы в Excel, нажмите кнопку **Обновить** на ленте **Параметры**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Анализ в Excel (табличные службы SSAS)](analyze-in-excel-ssas-tabular.md)  
   
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1530f609d958b75a584f506dbfa6ab6409a74d0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938855"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Импорт из PowerPivot (табличные службы SSAS)
   В данном разделе описано создание нового проекта табличной модели при помощи импорта метаданных и данных из книги PowerPivot с использованием шаблона проекта «Импорт из PowerPivot» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -46,7 +45,7 @@ ms.locfileid: "66067019"
   
 4.  В диалоговом окне **Открыть** выберите файл [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] , содержащий необходимые для импорта метаданные модели и данные, и нажмите кнопку **Открыть**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [База данных рабочей области &#40;табличные&#41;SSAS](workspace-database-ssas-tabular.md)   
  [Копирование и вставка данных (табличные службы SSAS)](../copy-and-paste-data-ssas-tabular.md)  
   

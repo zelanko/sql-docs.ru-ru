@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5a2b13c80c9e6ee83d2713feab5d9839ded4a6d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2bad6d6ac4c878fde6ae796d29b6fe6b6ac9050
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481266"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937555"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>Обновление схемы базы данных DQS после установки обновления SQL Server
   После установки обновления SQL Server (обновления, исправления или накопительного обновления) на ранее настроенном экземпляре DQS можно обновить схему баз данных DQS, запустив файл DQSInstaller.exe с параметром командной строки **upgrade** . В противном случае может появиться сообщение об ошибке при попытке соединения с сервером DQS через клиент Data Quality:  
@@ -57,12 +56,12 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
   
 6.  После успешного обновления схемы баз данных DQS отображается сообщение о завершении.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  Войдите на обновленный сервер из клиентского приложения Data Quality.  
   
  Дополнительные сведения об обновлении схемы баз данных DQS после установки обновлений SQL Server и о шагах по устранению связанных с обновлением неполадок см. в статье [Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)(Обновления службы DQS: установка накопительных обновлений или исправлений для служб Data Quality Services).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Data Quality Services](install-data-quality-services.md)   
  [Обновление сборок SQLCLR после загрузки обновлений .NET Framework](upgrade-sqlclr-assemblies-after-net-framework-update.md)  
   

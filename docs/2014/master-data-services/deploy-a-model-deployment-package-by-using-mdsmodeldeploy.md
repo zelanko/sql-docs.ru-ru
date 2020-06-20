@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e6229b3edebb8800de642272c9aa2adc0ea907f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971614"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Развертывание пакета развертывания модели при помощи MDSModelDeploy
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]средство MDSModelDeploy используется для развертывания пакетов, содержащих:  
@@ -46,7 +45,7 @@ ms.locfileid: "65483076"
   
 2.  Откройте командную строку и перейдите к MDSModelDeploy.exe.  
   
-    -   Если службы MDS установлены в расположение по умолчанию, это средство доступно на *диске*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
+    -   Если службы MDS установлены в расположении по умолчанию, это средство доступно на *диске*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\Configuration\MDSModelDeploy.exe  
   
     -   Если службы MDS не установлены в местоположение по умолчанию, то найдите файл MDSModelDeploy.exe на локальном компьютере.  
   
@@ -109,14 +108,14 @@ ms.locfileid: "65483076"
   
      При обновлении в случае неудачного завершения любого из первых трех шагов переход к следующему шагу не производится. Однако откат уже внесенных изменений также не выполняется. Если процесс развертывания завершается неудачей в шаге 4, обновляются те элементы, которые могут обновиться.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
- Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную. Дополнительная информация:  
+## <a name="next-steps"></a>Next Steps  
+ Определенные пользователем метаданные, атрибуты файлов и разрешения для пользователей и групп не включаются в пакеты развертывания модели. При развертывании модели их нужно обновить вручную.    Дополнительные сведения см. в разделе:  
   
 -   [Добавление Master Data Services &#40;метаданных&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
 -   [Назначение разрешения для объекта модели (службы Master Data Services)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание моделей (службы Master Data Services)](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
   

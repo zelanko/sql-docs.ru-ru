@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e11f73bf9538fb5ba84f4575631489ef852802c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060787"
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
   Монитор репликации — это графическое средство, позволяющее осуществлять мониторинг топологии репликации. К данным мониторинга можно обращаться программным путем с помощью хранимых процедур репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Эти объекты позволяют программировать следующие задачи:  
@@ -58,21 +57,21 @@ ms.locfileid: "62667250"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Мониторинг издателей, публикаций и подписок с распространителя  
   
-1.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Будут возвращены данные мониторинга всех издателей, использующих этот распространитель. Чтобы ограничить результирующий набор одним издателем, укажите **@publisher**.  
+1.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). Будут возвращены данные мониторинга всех издателей, использующих этот распространитель. Чтобы ограничить результирующий набор одним издателем, укажите **@publisher** .  
   
-2.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Будут возвращены данные мониторинга для всех публикаций, использующих этот распространитель. Чтобы ограничить результирующий набор одним издателем, публикацией или опубликованной базой данных, **@publisher**укажите **@publication**, или **@publisher_db**соответственно.  
+2.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). Будут возвращены данные мониторинга для всех публикаций, использующих этот распространитель. Чтобы ограничить результирующий набор одним издателем, публикацией или опубликованной базой данных, укажите **@publisher** , **@publication** или **@publisher_db** соответственно.  
   
-3.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Будут возвращены данные мониторинга для всех подписок, использующих этот распространитель. Чтобы ограничить результирующий набор подписками, принадлежащими одному издателю, публикации или опубликованной базе данных, **@publisher**укажите **@publication**, или **@publisher_db**соответственно.  
+3.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). Будут возвращены данные мониторинга для всех подписок, использующих этот распространитель. Чтобы ограничить результирующий набор подписками, принадлежащими одному издателю, публикации или опубликованной базе данных, укажите **@publisher** , **@publication** или **@publisher_db** соответственно.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>Мониторинг команд транзакций, ожидающих выполнения на подписчике  
   
-1.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Будут возвращены данные мониторинга по всем ждущим командам для всех подписок, использующих этот распространитель. Чтобы ограничить результирующий набор команд, ожидающих выполнения для подписок, принадлежащих одному издателю, подписчику, публикации или **@publisher**опубликованной **@publication**базе данных **@publisher_db**, укажите, **@subscriber**, или соответственно.  
+1.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). Будут возвращены данные мониторинга по всем ждущим командам для всех подписок, использующих этот распространитель. Чтобы ограничить результирующий набор команд, ожидающих выполнения для подписок, принадлежащих одному издателю, подписчику, публикации или опубликованной базе данных, укажите **@publisher** , **@subscriber** , **@publication** или **@publisher_db** соответственно.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>Мониторинг изменений слияния, ожидающих загрузки или выгрузки  
   
-1.  В базе данных публикации на издателе выполните процедуру [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Это возвращает результирующий набор с информацией об изменениях, ожидающих репликации на серверы-подписчики. Чтобы ограничить результирующий набор изменениями, относящимися к одной публикации или статье, укажите **@publication** или **@article**соответственно.  
+1.  В базе данных публикации на издателе выполните процедуру [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Это возвращает результирующий набор с информацией об изменениях, ожидающих репликации на серверы-подписчики. Чтобы ограничить результирующий набор изменениями, относящимися к одной публикации или статье, укажите **@publication** или **@article** соответственно.  
   
-2.  В базе данных подписки на подписчике выполните процедуру [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Это возвращает результирующий набор с информацией об изменениях, ожидающих репликации на сервер-издатель. Чтобы ограничить результирующий набор изменениями, относящимися к одной публикации или статье, укажите **@publication** или **@article**соответственно.  
+2.  В базе данных подписки на подписчике выполните процедуру [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). Это возвращает результирующий набор с информацией об изменениях, ожидающих репликации на сервер-издатель. Чтобы ограничить результирующий набор изменениями, относящимися к одной публикации или статье, укажите **@publication** или **@article** соответственно.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Мониторинг сеансов агента слияния  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62667250"
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Мониторинг сеансов агента слияния для подписок по запросу с подписчика  
   
-1.  В базе данных подписки на подписчике выполните процедуру [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Для данной подписки укажите **@publisher**, **@publication**и имя базы данных публикации для. **@publisher_db** Будут возвращены сведения о последних пяти сеансах агента слияния для этой подписки. Запомните значение **Session_id** для сеансов, представляющих интерес в результирующем наборе.  
+1.  В базе данных подписки на подписчике выполните процедуру [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Для данной подписки укажите **@publisher** , **@publication** и имя базы данных публикации для **@publisher_db** . Будут возвращены сведения о последних пяти сеансах агента слияния для этой подписки. Запомните значение **Session_id** для сеансов, представляющих интерес в результирующем наборе.  
   
 2.  В базе данных подписки на подписчике выполните процедуру [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). В параметре **Session_id** укажите полученное на шаге 1 значение **@session_id**. Будут возвращены подробные данные мониторинга сеанса.  
   
@@ -92,13 +91,13 @@ ms.locfileid: "62667250"
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Получение и изменение пороговых метрик мониторинга для публикации  
   
-1.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Будут возвращены пороговые значения мониторинга для всех публикаций, использующих этот распространитель. Чтобы ограничить результирующий набор мониторингом порогов для публикаций, принадлежащих одному издателю или опубликованной базе данных, или одной публикации, **@publisher**укажите **@publisher_db**, или **@publication**соответственно. Запомните значение **Metric_id** для всех порогов, которые требуется изменить. Дополнительные сведения см. в статье [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). Будут возвращены пороговые значения мониторинга для всех публикаций, использующих этот распространитель. Чтобы ограничить результирующий набор мониторингом порогов для публикаций, принадлежащих одному издателю или опубликованной базе данных, или одной публикации, укажите **@publisher** , **@publisher_db** или **@publication** соответственно. Запомните значение **Metric_id** для всех порогов, которые требуется изменить. Дополнительные сведения см. в статье [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  В базе данных распространителя на распространителе выполните процедуру [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql). Если требуется, укажите следующие значения.  
   
     -   Значение **Metric_id** , полученное в шаге 1, в параметре **@metric_id**.  
   
-    -   Новое значение порогового метрики монитора для **@value**.  
+    -   Новое значение порогового метрики монитора для **@value** .  
   
     -   Значение **1** в параметре **@shouldalert** , чтобы при достижении порога записывалось в журнал предупреждение, или **0** , если предупреждение не требуется.  
   

@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c67d3b83-a6c8-40de-920f-9236de4ac87f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ffb226202bb4ed52fd01e5e6376accfe6b6558
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056933"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964924"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Резервное копирование и восстановление пакетов (службы SSIS)
     
 > [!IMPORTANT]  
 >  В данном разделе описывается компонент [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] поддерживает эту службу для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], на сервере служб Integration Services можно управлять пакетами.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакеты могут быть сохранены в файловой системе или в базе данных msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в системном файле. Для пакетов, сохраненных в msdb, может выполняться резервное копирование и восстановление с помощью функций резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]пакеты могут быть сохранены в файловой системе или в базе данных msdb, в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] системном файле. Для пакетов, сохраненных в msdb, может выполняться резервное копирование и восстановление с помощью функций резервного копирования и восстановления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Дополнительные сведения о резервном копировании и восстановлении базы данных msdb см. в следующих разделах:  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66056933"
   
 -   [Резервное копирование и восстановление системных баз данных (SQL Server)](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]включает программу командной строки **dtutil** (dtutil. Exec), которую можно использовать для управления пакетами. Дополнительные сведения см. в статье [dtutil Utility](dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]включает программу командной строки **dtutil** (dtutil.exec), которую можно использовать для управления пакетами. Дополнительные сведения см. в статье [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Файлы конфигурации, содержащиеся в пакетах, сохраняются в файловой системе. Эти файлы не копируются при создании резервной копии базы данных msdb, поэтому необходимо регулярно выполнять резервное копирование файлов конфигурации в рамках плана защиты пакетов, сохраняемых в msdb. Чтобы включить конфигурации в резервную копию базы данных msdb, следует рассмотреть использование типа конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] вместо файлов конфигурации.  

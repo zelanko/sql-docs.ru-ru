@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7861e87ad0fd35fdedae444de74f5300edb3de0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175593"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938785"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Настройка свойств работы таблицы для отчетов Power View (табличные службы SSAS)
   Если для [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]в качестве модели интеллектуального анализа данных используется табличная модель, то можно настроить свойства поведения таблицы, содержащие строки более гранулярного уровня. Задание свойств поведения таблицы изменяет групповую обработку строк и обеспечивает более эффективное размещение идентификационной информации (имен, фотографий, логотипов и т. д.) в мозаичном, карточном или диаграммном виде.
@@ -133,7 +132,7 @@ ms.locfileid: "78175593"
 
  ![Диаграмма на основе группирования по идентификатору строки](../media/ssas-rptprop-chartrowid.gif "Диаграмма на основе группирования по идентификатору строки")
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
  После вычисления таблиц в модели и установки свойств работы таблицы для строк с подробными сведениями, которые должны всегда отображаться как отдельные объекты, можно и дальше оптимизировать модель при помощи дополнительных свойств или настроек.
 
 

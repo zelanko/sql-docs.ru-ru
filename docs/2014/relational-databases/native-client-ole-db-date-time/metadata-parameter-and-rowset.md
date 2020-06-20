@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957ef8b180646427d60a42339434139857bdd3fb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 425325d619a6bd15a3617f8ce412af186df8041e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705018"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043606"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Метаданные параметров и наборов строк
   В этом разделе приведены сведения о следующем типе и элементах типа, связанных с усовершенствованиями даты и времени OLE DB.  
@@ -37,7 +36,7 @@ ms.locfileid: "82705018"
   
 |Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|-------------------|------------------|--------------|-----------------------------------------------------|  
-|дата|DBTYPE_DBDATE|6|10|0|Clear|  
+|Дата|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -54,7 +53,7 @@ ms.locfileid: "82705018"
 |*pwszDataSourceType*<br /><br /> (зависит от поставщика)|*pwszDataSourceType*<br /><br /> (OLE DB, обычный)|*ulParamSize*|*bScale*|  
 |----------------------------------------------------|-------------------------------------------------|-------------------|--------------|  
 ||DBTYPE_DATE|6|Не учитывается|  
-|дата|DBTYPE_DBDATE|6|Не учитывается|  
+|Дата|DBTYPE_DBDATE|6|Не учитывается|  
 ||DBTYPE_DBTIME|10|Не учитывается|  
 |time|DBTYPE_DBTIME2|10|0..7|  
 |smalldatetime||16|Не учитывается|  
@@ -71,7 +70,7 @@ ms.locfileid: "82705018"
 |Тип привязки|*pwszDataSourceType*<br /><br /> (зависит от поставщика)|  
 |------------------|----------------------------------------------------|  
 |DBTYPE_DATE|datetime2(0)|  
-|DBTYPE_DBDATE|дата|  
+|DBTYPE_DBDATE|Дата|  
 |DBTYPE_DBTIME|time(0)|  
 |DBTYPE_DBTIME2|time(7)|  
 |DBTYPE_DBTIMESTAMP|datetime2(7)|  
@@ -82,7 +81,7 @@ ms.locfileid: "82705018"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
-|дата|DBTYPE_DBDATE|6|10|0|Clear|  
+|Дата|DBTYPE_DBDATE|6|10|0|Clear|  
 |time|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -116,7 +115,7 @@ ms.locfileid: "82705018"
   
 |Тип параметра|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBPARAMFLAGS_SS_ISVARIABLESCALE|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------------------|  
-|дата|DBTYPE_DBDATE|6|10|0|Clear|  
+|Дата|DBTYPE_DBDATE|6|10|0|Clear|  
 |time(1..7)|DBTYPE_DBTIME2|10|8, 10..16|0..7|Присвойте параметру|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|Clear|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|Clear|  
@@ -141,7 +140,7 @@ ms.locfileid: "82705018"
   
  В *dwFlags* предусмотрен новый флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE, чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. Кроме того, для определения типа сервера необходимо использовать *bScale*.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метаданные (OLE DB)](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

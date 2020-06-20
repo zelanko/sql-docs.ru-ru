@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007577"
 ---
 # <a name="table-element-for-schema-dta"></a>Элемент Table описания схемы (DTA)
   Указывает таблицу для настройки.  
@@ -35,7 +34,7 @@ ms.locfileid: "63138786"
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|attribute|Description|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |`NumberOfRows`|Необязательный параметр. Целое число, позволяющее имитировать таблицы различных размеров.|  
   
@@ -43,9 +42,9 @@ ms.locfileid: "63138786"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|**строка**, от 1 до 255 символов.|  
-|**Значение по умолчанию**|Отсутствует.|  
-|**Однократно**|Необязательный параметр. Перечисляет необходимое число таблиц для рабочей нагрузки.|  
+|**Тип данных и длина**|**string**, от 1 до 255 символов|  
+|**Значение по умолчанию**|Нет.|  
+|**Наличие**|Необязательный параметр. Перечисляет необходимое число таблиц для рабочей нагрузки.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -60,7 +59,7 @@ ms.locfileid: "63138786"
 ## <a name="example"></a>Пример  
  Пример использования см. в разделе [Элемент Server (DTA)](server-element-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

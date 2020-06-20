@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9421f568dae28895eb40b397d5e2589fafe0186
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054324"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Урок 1. Создание базы знаний DQS о поставщиках
   На этом занятии создается база знаний служб DQS **Поставщики** с набором знаний (метаданные) о данных поставщика. База знаний используется для выполнения очистки и действий сопоставления над входными данными о поставщиках. Действие очистки определяет неверные или недопустимые данные, исправляет неверные данные, предлагает исправления и рекомендации, унифицирует данные и вводит в данные дополнительные сведения. Действие сопоставления сравнивает данные и определяет в данных подобные записи (но немного различающиеся), что позволяет удалять повторения из данных.  

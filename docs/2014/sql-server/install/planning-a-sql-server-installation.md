@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f35b83fc8debfedec7be48d264a9267054735587
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042107"
 ---
 # <a name="planning-a-sql-server-installation"></a>Планирование установки SQL Server
   Чтобы установить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполните описанные далее действия.  
@@ -73,7 +72,7 @@ ms.locfileid: "68211497"
  [Установка отказоустойчивого кластера SQL Server](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  В этом разделе документации по программе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] описывается процедура установки и настройки кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Быстрый запуск установки SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [Установка SQL Server 2014 из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Решения для обеспечения высокого уровня доступности &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   

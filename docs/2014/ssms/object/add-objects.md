@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ff53da64d7a3d7dcaa04f4f06ff0da8ced201d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276962"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001351"
 ---
 # <a name="add-objects"></a>Добавление объектов
   Ограничивает диалоговые окна выбора объектов только нужными типами объектов.  
@@ -29,7 +28,7 @@ ms.locfileid: "63276962"
  **Все объекты типов**  
  Открывает диалоговое окно **Выбор типов объектов** для указания типа объектов, который нужно включить в следующий список.  
   
- **The server**_Сервер\<ServerName>_    
+ **Сервер**  _\<servername>_  
  Добавляет все соответствующие объекты на указанном сервере. Появляется только при открытии из диалоговых окон в пределах сервера, например **Имя входа — создание** .  
   
  **Все объекты, принадлежащие схеме**  

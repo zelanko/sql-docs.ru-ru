@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3cf84e541f114d527d9a00cd19bce705a09af30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702072"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021216"
 ---
 # <a name="allocating-a-connection-handle"></a>Выделение дескриптора соединения
   Прежде, чем приложение может подключиться к источнику данных или драйверу, оно должно выделить дескриптор соединения. Это делается путем вызова **функцию SQLAllocHandle** с параметром *параметром handletype* , для которого задано значение SQL_HANDLE_DBC, а *инпусандле* указывает на инициализированный обработчик среды.  
@@ -38,7 +37,7 @@ ms.locfileid: "82702072"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента имеет ряд расширенных атрибутов подключения, которые приложение может использовать для повышения его функциональности. Некоторые из этих атрибутов управляют теми же параметрами, которые могут быть указаны в источниках данных и использованы для переопределения любого параметра, заданного в источнике данных. Например, если приложение использует заключенные в кавычки идентификаторы, оно может назначить специфическому для драйвера атрибуту SQL_COPT_SS_QUOTED_IDENT значение SQL_QI_ON, чтобы этот параметр был установлен всегда, независимо от настройки источника данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Взаимодействие с SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   
