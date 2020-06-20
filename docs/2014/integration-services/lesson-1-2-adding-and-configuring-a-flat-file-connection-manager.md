@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891799"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965334"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами
   В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -62,13 +61,13 @@ ms.locfileid: "62891799"
   
 2.  На панели свойств сделайте следующие изменения.  
   
-    -   Измените значение свойства имя **столбца 0** на `AverageRate`.  
+    -   Измените значение свойства имя **столбца 0** на `AverageRate` .  
   
-    -   Измените значение свойства имя **столбца 1** на `CurrencyID`.  
+    -   Измените значение свойства имя **столбца 1** на `CurrencyID` .  
   
-    -   Измените значение свойства имя **столбца 2** на `CurrencyDate`.  
+    -   Измените значение свойства имя **столбца 2** на `CurrencyDate` .  
   
-    -   Измените значение свойства имя **столбца 3** на `EndOfDayRate`.  
+    -   Измените значение свойства имя **столбца 3** на `EndOfDayRate` .  
   
     > [!NOTE]  
     >  По умолчанию для всех четырех столбцов указан строковый тип данных [DT_STR] со значением параметра `OutputColumnWidth`, равным 50.  
@@ -90,18 +89,18 @@ ms.locfileid: "62891799"
     |CurrencyDate|date [DT_DATE]|DimDate.FullDateAlternateKey|Дата|  
     |EndOfDayRate|float [DT_R4]|FactCurrency.EndOfDayRate|FLOAT|  
   
-     Тип данных, предложенный для `CurrencyID` столбца, несовместим с типом данных поля в целевой таблице. Поскольку тип данных типа `DimCurrency.CurrencyAlternateKey` nchar (3), `CurrencyID` должен быть изменен с String [DT_STR] на String [DT_WSTR]. Кроме того, поле `DimDate.FullDateAlternateKey` определяется как тип данных Date. Следовательно, `CurrencyDate` необходимо изменить значение date [DT_Date] на date [DT_DBDATE] базы данных.  
+     Тип данных, предложенный для `CurrencyID` столбца, несовместим с типом данных поля в целевой таблице. Поскольку тип данных типа `DimCurrency.CurrencyAlternateKey` nchar (3), `CurrencyID` должен быть изменен с string [DT_STR] на string [DT_WSTR]. Кроме того, поле `DimDate.FullDateAlternateKey` определяется как тип данных даты, поэтому `CurrencyDate` его необходимо изменить с date [DT_Date] на date [DT_DBDATE].  
   
-2.  В списке выберите столбец CurrencyID и на панели свойств измените тип данных столбца `CurrencyID` строка [DT_STR] на строку в юникоде [DT_WSTR].  
+2.  В списке выберите столбец CurrencyID и на панели свойств измените тип данных столбца `CurrencyID` строка [DT_STR] на строку в Юникоде [DT_WSTR].  
   
-3.  На панели свойств измените тип данных столбца `CurrencyDate` с date [DT_DATE] на date [DT_DBDATE].  
+3.  На панели свойств измените тип данных столбца `CurrencyDate` с Date [DT_DATE] на Date [DT_DBDATE].  
   
 4.  Нажмите кнопку **ОК**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 3. Добавление и настройка диспетчера подключений OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер соединений с неструктурированными файлами](connection-manager/file-connection-manager.md)   
  [Типы данных служб Integration Services](data-flow/integration-services-data-types.md)  
   

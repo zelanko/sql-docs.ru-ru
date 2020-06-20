@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ebd47e354b77a57768a396b2c5d5dd8e3c570d2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920782"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954264"
 ---
 # <a name="assemblies-database-engine"></a>Сборки (компонент Database Engine)
   В этом разделе содержатся сведения, которые помогут понять, сконструировать и применить сборки.  
   
- Сборки — [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это файлы DLL, используемые в экземпляре служб для развертывания функций, хранимых процедур, триггеров, определяемых пользователем агрегатов и определяемых пользователем типов, написанных на одном из языков управляемого кода [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , размещенных в среде CLR, а не в [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+ Сборки — это файлы DLL, используемые в экземпляре служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для развертывания функций, хранимых процедур, триггеров, определяемых пользователем агрегатов и определяемых пользователем типов, написанных на одном из языков управляемого кода, размещенных в среде CLR [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , а не в [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  Сборка в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] представляет собой объект, который ссылается на управляемый модуль приложений (DLL-файл), созданный в среде CLR [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Сборка содержит метаданные класса и управляемый код. Передача сборки на экземпляр SQL Server — это первый шаг к созданию любого из следующих объектов базы данных.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62920782"
 |[Реализация сборок](assemblies-implementing.md)|Объясняет, как правильно создать и удалить сборку, как и когда необходимо изменить сборку, а также как получить метаданные о сборке.|  
 |[Получение сведений о сборках](assemblies-getting-information.md)|Перечисляет представления и функции каталога, которые могут запрашиваться для метаданных о сборках.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия о программировании интеграции со средой (CLR)](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

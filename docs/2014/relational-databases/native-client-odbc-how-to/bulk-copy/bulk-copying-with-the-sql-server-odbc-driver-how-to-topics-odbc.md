@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 515f84836f55fe1aa97fbb03a22ee6cc2799710c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 21f158c47cc289b583eebc31d9f4893e2c0c6a88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019024"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Инструкции по массовому копированию с помощью драйвера ODBC для SQL Server (ODBC)
   При использовании с Microsoft SQL Server 2005 драйвер ODBC SQL Server поддерживает те же функции операций с массовым копированием, которые поддерживаются API DB-Library.  
@@ -37,7 +36,7 @@ ms.locfileid: "82705246"
   
 -   [Групповое Копирование данных из переменных программы &#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

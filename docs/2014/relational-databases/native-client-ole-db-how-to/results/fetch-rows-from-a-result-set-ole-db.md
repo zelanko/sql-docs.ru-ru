@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8e9916a5-61e1-468e-8a5c-1ab8b5110737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2dd44bd25dcf4c3c77ab099e97efff7177c829e3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5cef9a4894ba4d78d7d78963b6f56f25324e785b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018246"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Выбор строк из результирующего набора (OLE DB)
   Этот образец показывает, как выбирать строки из результирующего набора. Этот образец не поддерживается на архитектуре IA64.  
@@ -375,7 +374,7 @@ int ProcessResultSet() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

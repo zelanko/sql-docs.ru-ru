@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24c35eb9b1df9f250d21e95b591ec2cc40026038
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058345"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966304"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Дополнительно»)
   Вкладка **Дополнительно** диалогового окна **Редактор преобразования «Нечеткий уточняющий запрос»** позволяет задать параметры нечеткого поиска.  
   
  Дополнительные сведения о преобразовании «Нечеткий уточняющий запрос» см. в разделе [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Максимальное количество совпадений, которое следует выводить на каждый уточняющий запрос**  
  Указывает максимальное число совпадений, возвращаемое преобразованием для каждой входной строки. Значение по умолчанию — **1**.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66058345"
  **Разделители токенов**  
  Определяет разделители, используемые преобразованием для разделения значений столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" &#40;вкладка "ссылочная таблица"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0e5fb127-c7ff-4dfa-b90e-d9bcf0ce763b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da790644cbd29bc38a89899e02d50aac58228a0e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965541"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Диалоговое окно «Импорт пакета» справочника по пользовательскому интерфейсу
   Диалоговое окно **Импорт пакета** , доступное в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], позволяет импортировать пакет служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и задавать или изменять уровень защиты пакета.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Размещение пакета**  
  Выберите тип места хранения, в которое импортировать пакет. Доступны следующие параметры.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66058083"
 > [!IMPORTANT]  
 >  При возможности используйте проверку подлинности Windows.  
   
- **Authentication type (Тип проверки подлинности)**  
+ **Тип проверки подлинности**  
  Выберите тип проверки подлинности.  
   
  **User name**  
@@ -61,7 +60,7 @@ ms.locfileid: "66058083"
  **Уровень защиты**  
  Щелкните кнопку просмотра **(…)** и измените уровень защиты в диалоговом окне **Уровень защиты пакета**. Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранить копию пакета](../../2014/integration-services/save-copy-of-package.md)   
  [Справочник по пользовательскому интерфейсу диалогового окна экспорта пакета](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   

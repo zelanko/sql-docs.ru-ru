@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4298b73d-615b-4d28-9843-03b4d5fc489e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a759ed6729ce066cbbd5b8c38043402195b62b98
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b0eaa7ce325115c073420d014b1ec6254da266db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018018"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Возвращающие табличное значение параметры (OLE DB)
   В этом разделе описывается поддержка возвращающих табличное значение параметров в поставщике OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Параметры, возвращающие ](../native-client/features/table-valued-parameters-sql-server-native-client.md)табличное значение, &#40;SQL Server Native Client&#41;. Пример использования можно найти в статье [Использование возвращающих табличные значения параметров (OLE DB)](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82704582"
   
 -   [Поддержка типов параметров OLE DB, возвращающих табличные значения &#40;свойства&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

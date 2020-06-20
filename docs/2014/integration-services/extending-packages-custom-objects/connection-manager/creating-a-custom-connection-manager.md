@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7354c9152d075c2ebc3611a342bbf8d7594cde79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768930"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966534"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Создание пользовательского диспетчера соединений
   Создание пользовательского диспетчера соединений осуществляется за несколько шагов, аналогично созданию любого другого пользовательского объекта служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -43,7 +42,7 @@ ms.locfileid: "62768930"
  Настройте в обоих проектах подписывание сборок, которые будут создаваться во время построения, с помощью файла ключа для строгого имени.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Применение атрибута DtsConnection  
- Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>, чтобы определить его в качестве диспетчера соединений. Этот атрибут содержит сведения для времени разработки, например, имя, описание и тип соединения диспетчера соединений. Свойства <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> и `Description` соответствуют **типу** и `Description` столбцам, отображаемым в диалоговом окне **Добавление диспетчера соединений со службами SSIS** , которое отображается при настройке соединений для пакета в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>, чтобы определить его в качестве диспетчера соединений. Этот атрибут содержит сведения для времени разработки, например, имя, описание и тип соединения диспетчера соединений. <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A>Свойства и `Description` соответствуют **типу** и `Description` столбцам, отображаемым в диалоговом окне **Добавление диспетчера соединений со службами SSIS** , которое отображается при настройке соединений для пакета в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] .  
   
  Используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>, чтобы связать диспетчер соединений с его пользовательским интерфейсом. Чтобы получить токен открытого ключа, необходимый для этого свойства, можно использовать команду **sn.exe -t**, отображающую токен открытого ключа из SNK-файла пары ключей, который предназначен для подписывания сборки пользовательского интерфейса.  
   
@@ -75,7 +74,7 @@ ConnectionManagerBase
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Написание кода пользовательского диспетчера соединений](coding-a-custom-connection-manager.md)   
  [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](developing-a-user-interface-for-a-custom-connection-manager.md)  
   

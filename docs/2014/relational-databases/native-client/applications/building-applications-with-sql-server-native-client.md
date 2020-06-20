@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b33680ea08c130a01a944878609f57d8aba9e3e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63655ab7c78885f56279ade23a952f75c2b6aba7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017620"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Построение приложений с использованием собственного клиента SQL Server
   При разработке приложения, использующего библиотеку собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], следует учитывать ряд проблем. В этом разделе обсуждаются многие из этих проблем, в том числе переход от компонентов MDAC к собственному клиенту [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и использование файлов заголовков и библиотек собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также приведены общие сведения о различных строках соединения, которые можно использовать с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -53,7 +52,7 @@ ms.locfileid: "82704462"
  [Подключение к базе данных SQL Azure с помощью SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  Содержит сведения о соединении с базой данных [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] через [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
  [Разделы руководства по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  

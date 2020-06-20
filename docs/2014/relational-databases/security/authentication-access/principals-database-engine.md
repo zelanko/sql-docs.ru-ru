@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 808c8516b3ed9e95ea4c724736461cb00923a7fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016241"
 ---
 # <a name="principals-database-engine"></a>Субъекты (компонент Database Engine)
   *Субъекты* — это сущности, которые могут запрашивать ресурсы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Как и другие компоненты модели авторизации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , участников можно иерархически упорядочить. Область влияния субъекта зависит от его области определения (Windows, сервер, база данных) и того, неделимый это субъект или коллективный. Имя входа Windows является примером индивидуального (неделимого) субъекта, а группа Windows — коллективного. Каждый субъект имеет идентификатор безопасности (SID).  
@@ -44,7 +43,7 @@ ms.locfileid: "63011915"
   
 -   Локальное имя входа Windows  
   
- **SQL Server**-**level** **Субъекты** уровня SQL Server  
+ **SQL Server** - **level** **субъекты** уровня  
   
 -   Имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
   
@@ -85,7 +84,7 @@ ms.locfileid: "63011915"
 -   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Пользователь-гость  
- Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователь нельзя удалить, но его можно отключить, отменив его `CONNECT` разрешение. `CONNECT` Разрешение можно отозвать, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, отличной от Master или tempdb.  
+ Каждая база данных включает в себя пользователя **guest**. Разрешения, предоставленные пользователю **guest** , наследуются пользователями, которые имеют доступ к базе данных, но не обладают учетной записью пользователя в ней. **Гостевой** пользователь нельзя удалить, но его можно отключить, отменив его `CONNECT` разрешение. `CONNECT`Разрешение можно отозвать, выполнив `REVOKE CONNECT FROM GUEST` в любой базе данных, отличной от Master или tempdb.  
   
 ## <a name="client-and-database-server"></a>Клиент и сервер базы данных  
  По определению клиент и сервер базы данных являются защищаемыми субъектами безопасности. Данные сущности могут пройти взаимную проверку подлинности перед установкой безопасного сетевого соединения. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]поддерживает протокол проверки подлинности [Kerberos](https://go.microsoft.com/fwlink/?LinkId=100758) , который определяет, как клиенты взаимодействуют со службой проверки подлинности сети.  
@@ -101,7 +100,7 @@ ms.locfileid: "63011915"
   
 -   [Роли приложения](application-roles.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обеспечение безопасности SQL Server](../securing-sql-server.md)   
  [sys. database_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
  [sys. server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   

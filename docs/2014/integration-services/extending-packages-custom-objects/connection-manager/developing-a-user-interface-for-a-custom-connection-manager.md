@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 54ec4cc92383d0b8e423aabd19c0aeee9226d71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ddcad6f0968dc8b9321257e0ea2a95d8c65cf2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62896047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966507"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Разработка пользовательского интерфейса для пользовательского диспетчера соединений
   После переопределения реализации свойств и методов базового класса для выполнения пользовательских функций может потребоваться создание настраиваемого пользовательского интерфейса для диспетчера соединений. Если собственный пользовательский интерфейс не создается, пользователи могут настроить только диспетчер соединений в диалоговом окне «Свойства».  
@@ -286,7 +285,7 @@ private void ConfigureControlsFromConnectionManager()
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательского диспетчера соединений](creating-a-custom-connection-manager.md)   
  [Написание кода пользовательского диспетчера соединений](coding-a-custom-connection-manager.md)  
   

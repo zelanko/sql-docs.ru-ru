@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af3d3490957114d6ba7731b49435dc7e90122f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c228ea5db963919d39fcf564eea11b7f63ae76b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62932493"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005853"
 ---
 # <a name="merge-agent-security"></a>Безопасность агента слияния
   При помощи диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] , под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  

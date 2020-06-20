@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5561d0f2398a0a1adc12ae30a7cd7527fdd5d45
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110143"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068095"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Изучение текущей структуры таблицы сотрудников
    Образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] содержит таблицу **Employee** в схеме **HumanResources**. Чтобы не изменять исходную таблицу, на этом шаге создается копия таблицы **Employee** , называющаяся **EmployeeDemo**. Для упрощения этого примера копируется только пять столбцов из исходной таблицы. Затем вы запрашиваете таблицу **HumanResources. EmployeeDemo** , чтобы узнать, как структурированы данные в таблице, не используя `hierarchyid` тип данных.  

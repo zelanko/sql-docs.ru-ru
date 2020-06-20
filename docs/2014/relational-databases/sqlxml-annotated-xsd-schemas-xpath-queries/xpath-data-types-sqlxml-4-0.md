@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3cd2e8af1630fed8dd996a951e904bef0266b300
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07fe58cee4046b78bdca0a748ea4d0c6a82dfebf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014916"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], XPath и XML Schema (XSD) имеют очень разные типы данных. Например, в XPath отсутствуют целочисленные типы данных и тип данных для обозначения даты, а в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD таких типов множество. Типы данных XSD определяют время с точностью до наносекунды, а [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только до одной трехсотой доли секунды. Поэтому не всегда возможно сопоставить один тип другому. Дополнительные сведения о сопоставлении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных с типами данных XSD см. [в разделе приведение типов данных и аннотация SQL: datatype &#40;&#41;SQLXML 4,0 ](../sqlxml-annotated-xsd-schemas-using/data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82702985"
   
 -   Логические операторы (и, или)  
   
--   Операторы отношения ( \< , >, \< =, >=)  
+-   Операторы отношения ( \<, > , \<=, > =)  
   
 -   Операторы равенства (=, !=)  
   
@@ -87,12 +86,12 @@ ms.locfileid: "82702985"
   
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
-|Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
-|boolean|boolean|CONVERT(bit, EmployeeID)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|число|CONVERT(float(53), EmployeeID)|  
+|Nonebin.base64bin.hex|Недоступно|NoneEmployeeID|  
+|Логическое|Логическое|CONVERT(bit, EmployeeID)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|н/д (в XPath нет типа данных, эквивалентного типу fixed14.4 XDR)|CONVERT(money, EmployeeID)|  
-|дата|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|Дата|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
 |time<br /><br /> time.tz|строка|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
  Преобразования даты и времени предназначены для работы, если значение хранится в базе данных с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` типа данных или `string` . Обратите внимание, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` тип данных не использует `timezone` и имеет меньшую точность, чем `time` тип данных XML. Чтобы включить тип данных `timezone` или более высокую точность, следует хранить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием типа `string`.  
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б. Несколько преобразований типов данных в запросе XPath  
  Рассмотрим этот запрос XPath, заданный для схемы XSD с заметками:`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
- Этот запрос XPath возвращает все элементы ** \<>OrderDetail** , соответствующие предикату `@UnitPrice * @OrderQty > 98` . Если **UnitPrice** помечена `fixed14.4` типом данных в схеме с заметками, этот предикат эквивалентен выражению SQL:  
+ Этот запрос XPath возвращает все элементы, которые **\<OrderDetail>** соответствуют предикату `@UnitPrice * @OrderQty > 98` . Если **UnitPrice** помечена `fixed14.4` типом данных в схеме с заметками, этот предикат эквивалентен выражению SQL:  
   
  `CONVERT(float(53), CONVERT(money, OrderDetail.UnitPrice)) * CONVERT(float(53), OrderDetail.OrderQty) > CONVERT(float(53), 98)`  
   

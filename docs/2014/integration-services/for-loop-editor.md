@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e48610bb0bbb40a5a8385468e355cbca40420fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058568"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966388"
 ---
 # <a name="for-loop-editor"></a>Редактор циклов по элементам
   На странице **Цикл по элементам** диалогового окна **Редактор циклов по элементам** можно настроить цикл, в котором рабочий процесс будет повторяться до тех пор, пока заданное условие не примет значение False.  
@@ -43,7 +42,7 @@ ms.locfileid: "66058568"
  **Описание**  
  Описание контейнера «цикл по элементам».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница "выражения"](expressions/expressions-page.md)   
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)   

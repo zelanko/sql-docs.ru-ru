@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a66d28fea8289719d3efb2351409e0f14379ec9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957268"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037820"
 ---
 # <a name="back-up-a-database-master-key"></a>Создание резервной копии главного ключа базы данных
   В этом разделе описано, как выполнить резервное копирование главного ключа [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Главный ключ базы данных используется для шифрования других ключей и сертификатов внутри базы данных. Если он удален или поврежден, то есть вероятность, что [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не сможет расшифровать эти ключи, в результате чего зашифрованные с их помощью данные будут безвозвратно утеряны. По этой причине необходимо создать резервную копию главного ключа базы данных и хранить ее в надежном месте.  

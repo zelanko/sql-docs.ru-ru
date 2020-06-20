@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8cde1faf93713a72f9fa69f056250b4e5357c538
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d416514ed627556b1716fba2ee4be8861fdabad2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704532"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017850"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Удаление столбца из таблицы SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DBа собственного клиента предоставляет функцию **ITableDefinition::D ропколумн** . Она позволяет пользователю удалить столбец из таблицы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -47,7 +46,7 @@ ColumnID.uName.pwszName = L"MyColumnName";
 hr = m_pITableDefinition->DropColumn(&TableID, &ColumnID);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы и индексы](tables-and-indexes.md)  
   
   
