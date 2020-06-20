@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0145f973a2290d6fbe0c93139d42cd2298fa3cbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066905"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   Помощник по настройке ядра СУБД [!INCLUDE[msCoName](../../includes/msconame-md.md)] анализирует базы данных и составляет рекомендации по оптимизации производительности запросов. Помощник по настройке ядра СУБД можно использовать для выбора и создания оптимальных наборов индексов, индексированных представлений и секций таблицы, не обладая экспертным уровнем понимания структуры баз данных или внутренних процессов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Помощник по настройке ядра СУБД позволяет выполнять следующие задачи.  

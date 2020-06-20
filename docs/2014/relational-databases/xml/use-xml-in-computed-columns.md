@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b29be9c59a35120949966e840420b415dc3157c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 26fe0058a93e05d1533ed5332eeaa5054727f9bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702311"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012914"
 ---
 # <a name="use-xml-in-computed-columns"></a>Использование XML в вычисляемых столбцах
   Экземпляры XML могут встречаться в исходных данных для вычисляемого столбца и могут быть типом значений вычисляемого столбца. Примеры в этом разделе демонстрируют использование XML в вычисляемых столбцах.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155079"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959644"
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)
   Страница **Общие** диалогового окна **Резервное копирование базы данных** служит для просмотра и изменения параметров резервного копирования базы данных.  
@@ -25,7 +24,7 @@ ms.locfileid: "70155079"
  Дополнительные сведения об основных понятиях резервного копирования см. в разделе [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Если задача резервного копирования определяется с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], можно создать соответствующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql), нажав кнопку **Скрипт** и выбрав место назначения для этого скрипта.  
+>  Если задача резервного копирования определяется с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], можно создать соответствующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) , нажав кнопку **Скрипт** и выбрав место назначения для этого скрипта.  
   
  **Создание резервной копии в среде SQL Server Management Studio**  
   
@@ -117,13 +116,13 @@ ms.locfileid: "70155079"
  Укажите имя контейнера службы хранилища Azure.  
   
  **Префикс URL-адреса:**  
- Этот элемент создается автоматически на основе данных учетной записи хранения в учетных данных SQL и заданного имени контейнера Azure. Не рекомендуется изменять данные в этом поле, если не используется домен, который использует формат, отличный от ** \<учетной записи хранения>. BLOB.Core.Windows.NET**.  
+ Этот элемент создается автоматически на основе данных учетной записи хранения в учетных данных SQL и заданного имени контейнера Azure. Не рекомендуется изменять данные в этом поле, если не используется домен, использующий формат, отличный от ** \<storage account> . BLOB.Core.Windows.NET**.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание резервной копии журнала транзакций &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Резервное копирование файлов и файловых групп &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [Определение логического устройства резервного копирования для дискового файла &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Определение логического устройства резервного копирования для ленточного накопителя &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Создание резервной копии журнала транзакций (SQL Server)](back-up-a-transaction-log-sql-server.md)   
+ [Создание резервных копий файлов и файловых групп (SQL Server)](back-up-files-and-filegroups-sql-server.md)   
+ [Определение логического устройства резервного копирования для дискового файла (SQL Server)](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Определение логического устройства резервного копирования для ленточного накопителя (SQL Server)](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Модели восстановления (SQL Server)](recovery-models-sql-server.md)  
   
   

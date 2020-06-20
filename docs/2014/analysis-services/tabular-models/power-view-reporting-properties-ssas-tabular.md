@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 51205c2d-b6ce-4b92-afd2-58e399a81691
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b5ec7fcb999c6c81de199aaf3676677edbdd41d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e85d91578e5c3f4b47f56eeb86aa738e37e8f59b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938765"
 ---
 # <a name="power-view-reporting-properties-ssas-tabular"></a>Свойства отчетов Power View (табличные службы SSAS)
   [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] представляет интуитивно понятный способ создания ad-hoc-отчетов для бизнес-пользователей — аналитиков, сотрудников, ответственных за принятие решений, и информационных работников. Они могут легко создавать представления данных из табличных моделей, основанных на книгах PowerPivot, которые опубликованы в галерее PowerPivot, или табличных моделей, созданных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и затем развернутых в экземплярах служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services, и работать с ними. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это браузерное приложение на основе Silverlight, запускаемое из SharePoint Server 2010 или более поздней версии.  

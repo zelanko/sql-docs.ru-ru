@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 43f97832e4afc7565c472d3da58127ea679d85c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929609"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Параметры (текстовый редактор: XML: страница "Табуляция")
   Это диалоговое окно используется для изменения режима табуляции в редакторе XML, который используется для изменения XML-документов. Для вывода этих параметров выберите пункт **Параметры** в меню **Сервис** , раскройте узел **Текстовый редактор** , раскройте узел **XML** и щелкните **Табуляции**.  
@@ -26,7 +25,7 @@ ms.locfileid: "83000610"
  Параметры редактора XML можно также задать в диалоговом окне **Все языки/Общие** . Если диалоговое окно **Все языки** используется для задания различных параметров для других редакторов среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , таких как DMX или MDX, необходимо сбросить параметры редактора XML с помощью этого окна.  
   
 ## <a name="indenting"></a>Отступы  
- **Нет**  
+ **None**  
  Если данный параметр выбран, при нажатии клавиши ВВОД отступ у новой строки создаваться не будет. Курсор помещается в первый столбец новой строки.  
   
  **Заблокировать**  

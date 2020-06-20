@@ -11,21 +11,20 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dc815c0f53db54371d24078f13089246976e63ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 168bc25871ee61b545498be940ec91198d956e7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480644"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937765"
 ---
 # <a name="domain-management-domain-list"></a>Управление доменами. Список доменов
   В этом разделе описаны элементы управления в списке «Домены» страницы **Управление доменами** в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Эта панель управления используется для выбора домена с целью выполнения операций управления. Одна панель управления используется для всех страниц с вкладками на странице **Управление доменами** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ### <a name="domains-list"></a>Список доменов  
- **Поддомен**  
+ **Доменная**  
  Этот список содержит все домены в базе знаний. Операции, выполняемые на страницах с вкладками на правой панели, будут применяться к домену, выбранному в списке. Дополнительные сведения см. в разделе  
   
  **Создание составного домена**  

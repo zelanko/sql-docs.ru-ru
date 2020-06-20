@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1986e21af8d9c6334d8ff9b5a374d46d6c25dda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187815"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013679"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Свойство StartMode (класс SqlService)
   Возвращает режим запуска службы.  
@@ -57,12 +56,12 @@ object
  Вручную  
  Значение = 3. Служба запускается оснасткой «Управление компьютером», когда процесс вызывает метод `StartService`.  
   
- Отключен  
+ Выключено  
  Значение = 4. Служба не может быть запущена.  
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

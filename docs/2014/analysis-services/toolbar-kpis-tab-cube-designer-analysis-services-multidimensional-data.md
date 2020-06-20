@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2be57c8f3ca02e2e182f13240a32ac4255f367d1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938405"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Ключевые показатели эффективности», конструктор кубов) (службы Analysis Services — многомерные данные)
   Используйте **Панель инструментов** для выполнения простых операций на вкладке **Ключевые показатели эффективности** в конструкторе кубов.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Добавить бизнес-аналитику**  
  Нажмите, чтобы открыть **мастер бизнес-аналитики** и добавить функции бизнес-аналитики в куб.  
   
- **Процесс**  
+ **Process**  
  Нажмите, чтобы открыть диалоговое окно **Обработка** и обработать выбранный куб.  
   
- **Повторного подключения**  
+ **Повтор соединения**  
  Нажмите, чтобы заново подключить вкладку **Ключевые показатели эффективности** к экземпляру служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и базе данных, содержащей куб, если сеанс для вкладки **Ключевые показатели эффективности** был отключен из-за потери соединения или превышения времени ожидания.  
   
  **Создать ключевой показатель эффективности**  

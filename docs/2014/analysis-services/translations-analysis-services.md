@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938325"
 ---
 # <a name="translations-analysis-services"></a>Переводы (службы Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Только многомерные  
@@ -45,7 +44,7 @@ ms.locfileid: "66065879"
   
 1.  Откройте многомерную модель Adventure Works в конструкторе.  
   
-2.  В обозреватель решений откройте представление источника данных и дважды щелкните Adventure Works DW\<версия>. DSV.  
+2.  В обозреватель решений откройте представление источника данных и дважды щелкните Adventure Works DW \<version> . DSV.  
   
 3.  Найдите dimDate, dimProduct, dimProductCategory или dimProductSubcateogry. Все эти измерения содержат атрибуты для преобразованных элементов месяца, дня недели, названия продукта, имени категории и т. д.  
   
@@ -116,7 +115,7 @@ ms.locfileid: "66065879"
 ## <a name="resolving-translations"></a>Разрешение переводов  
  Если клиентское приложение запрашивает код языка, экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] пытается разрешить данные и метаданные для объектов [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в ближайший соответствующий код языка. Если клиентское приложение не задает язык по умолчанию или задает нейтральный код локали (0) или идентификатор языка процесса по умолчанию (1024), то службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] используют язык по умолчанию для экземпляра, чтобы вернуть данные и метаданные для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сценарии глобализации для Analysis Services многомерных](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Языки и параметры сортировки &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
  [Установка или изменение параметров сортировки столбца](../relational-databases/collations/set-or-change-the-column-collation.md)   

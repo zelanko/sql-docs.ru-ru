@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49ae9c1a0e9eac4c5fd8a47106a2d72dc880a856
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525475"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938595"
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
   К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -87,7 +86,7 @@ ms.locfileid: "79525475"
   
  Для поддержки доступа в OLE DB к табличным моделям в неуправляемых клиентских приложениях можно использовать поставщик OLE DB для служб Analysis Services версии 9.0. Для включения доступа к табличной модели требуется обновленная версия поставщика OLE DB для служб Analysis Services. Дополнительные сведения о поставщиках, используемых с табличными моделями, см. в статье [Установка поставщика OLE DB служб Analysis Services на серверах SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
- Также можно извлечь данные напрямую из экземпляра служб Analysis Services в формате на основе XML. Можно извлечь схему табличной модели с помощью набора строк DISCOVER_CSDL_METADATA или использовать команду EXECUTE либо DISCOVER с существующими элементами ASSL, объектами или свойствами. Дополнительные сведения см. в следующих ресурсах:  
+ Также можно извлечь данные напрямую из экземпляра служб Analysis Services в формате на основе XML. Можно извлечь схему табличной модели с помощью набора строк DISCOVER_CSDL_METADATA или использовать команду EXECUTE либо DISCOVER с существующими элементами ASSL, объектами или свойствами. Для получения дополнительных сведений см. следующие ресурсы:  
   
 -   [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   

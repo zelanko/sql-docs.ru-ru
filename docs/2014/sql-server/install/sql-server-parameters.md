@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d06ac85b37ef5d91a49381f97f81ee7a2d87e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011832"
 ---
 # <a name="sql-server-parameters"></a>Параметры SQL Server
   На этой странице можно установить параметры, которые будут использованы для анализа компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Можно выполнить анализ одной, нескольких или всех баз данных, проанализировать файлы трассировки, созданные программой [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], и пакетные файлы SQL.  
@@ -28,7 +27,7 @@ ms.locfileid: "66091877"
 > [!NOTE]  
 >  Некоторые проблемы обновления можно обнаружить только с помощью анализа файлов трассировки или пакетных файлов SQL.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Базы данных для анализа**  
  Чтобы проанализировать все базы данных, установите флажок **все базы данных** . Чтобы выполнить анализ выбранных баз данных, установите флажок рядом с каждой просматриваемой базой данной.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66091877"
  **Разделитель пакетов SQL**  
  Текст, используемый для разделения пакетов инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Значение по умолчанию — **Go**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050759"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API-интерфейс расширенных хранимых процедур)
     
@@ -55,7 +54,7 @@ n
  *n*  
  Номер параметра. Первый параметр имеет номер 1.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Указатель на значение параметра. Если параметр с номером *n* имеет значение NULL, или если параметра с номером *n* или удаленной хранимой процедуры не существует, то возвращается значение NULL. Если значением параметра является строка, она не может завершаться нулевым байтом. Используйте функцию **srv_paramlen**, чтобы определить длину строки.  
   
  Эта функция возвращает следующие значения, если параметр относится к одному из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных. В данных указателя показано, является ли этот указатель допустимым для типа данных (VP), NULL или не применимым (N/A), а также содержимое тех данных, на которые он указывает.  
@@ -69,7 +68,7 @@ n
 |BIGVARBINARY|**NULL:** NULL, недоступно<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 байт<br /><br /> **<255:** VP, фактические данные|  
 |NCHAR|**NULL:** NULL, недоступно<br /><br /> **ZERO:** VP, 255 пробелов<br /><br /> **>=255:** VP, 255 символов<br /><br /> **<255:** VP, фактические данные + заполнение (до 255)|  
 |NVARCHAR|**NULL:** NULL, недоступно<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 символов<br /><br /> **<255:** VP, фактические данные|  
-|NTEXT|**NULL:** недоступно<br /><br /> **ZERO:** недоступно<br /><br /> **>= 255:** Н/Д<br /><br /> ** \<255:** Н/Д|  
+|NTEXT|**NULL:** недоступно<br /><br /> **ZERO:** недоступно<br /><br /> **>= 255:** Н/Д<br /><br /> ** \< 255:** н/д|  
   
  \* Данные не завершаются нулевым байтом; при отсечении данных >255 символов предупреждение не выдается.  
   
@@ -81,7 +80,7 @@ n
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

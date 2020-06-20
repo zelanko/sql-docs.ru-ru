@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8de716da5a7f845f68bd50fa09b04594bf883ad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035413"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Задача 3. Создание и запуск проекта качества данных для сопоставления
   В этой задаче вы создадите проект служб DQS для операции сопоставления и выполните сопоставление очищенных данных поставщика, чтобы удалить все повторяющиеся значения.

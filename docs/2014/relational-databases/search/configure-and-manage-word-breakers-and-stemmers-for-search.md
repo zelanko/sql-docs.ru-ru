@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22cb7371a0215989d2759ddfb2c84f51ba5c3c31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997580"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Настройка и управление средством разбиения на слова и парадигматические модули для поиска
   Средства разбиения по словам и парадигматические модули выполняют лингвистический анализ данных, проходящих полнотекстовое индексирование. Лингвистический анализ предусматривает поиск границ слов (разделение слов) и спряжение глаголов (выделение основы). Средства разбиения по словам и парадигматические модули являются уникальными для своих языков. У разных языков правила лингвистического анализа различаются. Для данного языка *средство разбиения по словам* определяет слова по границам слов согласно лексическим правилам языка. Каждое слово (называемое также *токеном*) вставляется в полнотекстовый индекс с использованием сжатого представления для уменьшения его размера. *Парадигматический модуль* создает словоформы определенного слова на основании правил этого языка (например, "выполняется", "выполнялся" и "выполняющийся" являются различными формами слова "выполняться").  
@@ -40,7 +39,7 @@ ms.locfileid: "66011543"
  При добавлении, удалении или изменении средства разбиения по словам следует обновить список кодов локалей, поддерживаемых в Microsoft Windows для полнотекстового индексирования и для выполнения запросов. Дополнительные сведения см. в статье [Просмотр или изменение зарегистрированных фильтры и разделители слов](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>Задание параметра языка Full-Text по умолчанию  
- Для локализованной версии программа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает `default full-text language` параметр на язык сервера, если существует соответствующее совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр `default full-text language` по умолчанию имеет значение, соответствующее английскому языку.  
+ Для локализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программа установки устанавливает `default full-text language` параметр на язык сервера, если существует соответствующее совпадение. Для нелокализованной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр `default full-text language` по умолчанию имеет значение, соответствующее английскому языку.  
   
  При создании или изменении полнотекстового индекса для каждого отдельного полнотекстового индексированного столбца можно указать отдельный язык. Если для столбца не указан язык, по умолчанию используется значение параметра конфигурации `default full-text language`.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66011543"
   
  Полный список всех средств разбиения по словам см. в статье [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER FULLTEXT INDEX &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)   

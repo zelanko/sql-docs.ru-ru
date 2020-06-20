@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968314"
 ---
 # <a name="integration-services-deployment-wizard"></a>Мастер развертывания служб Integration Services
   Мастер развертывания служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] разворачивает проекты в каталоге SSISDB на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью модели развертывания проектов.  
   
- Чтобы запустить мастер [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] развертывания из открытого проекта в, в [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]меню **проект** выберите пункт **развернуть** . Чтобы [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]запустить мастер в, разверните узел **Integration Services каталоги** > **SSISDB** в обозревателе объектов, щелкните правой кнопкой мыши папку **проекты** и выберите пункт **развернуть проект**.  
+ Чтобы запустить [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Мастер развертывания из открытого проекта в, в [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] меню **проект** выберите пункт **развернуть** . Чтобы запустить мастер в [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , разверните узел **Integration Services каталоги**  >  **SSISDB** в обозревателе объектов, щелкните правой кнопкой мыши папку **проекты** и выберите пункт **развернуть проект**.  
   
  Мастер состоит из следующих четырех шагов. Нажмите кнопку **Далее** , чтобы перейти к следующему шагу или **назад** , чтобы вернуться к предыдущему шагу.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66058011"
 4.  **Развертывание/результаты** — развертывает проект и отображает результаты.  
   
 ## <a name="select-source"></a>Выбор источника  
- Чтобы развернуть созданный файл развертывания проекта, выберите **файл развертывания проекта** и введите путь к ISPAC-файлу или нажмите кнопку **Обзор** , чтобы найти его в папке [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] проекта. Для развертывания проекта, который находится в каталоге служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выберите **Каталог служб Integration Services**, а затем введите имя сервера и путь к проекту в каталоге.  
+ Чтобы развернуть созданный файл развертывания проекта, выберите **файл развертывания проекта** и введите путь к ISPAC-файлу или нажмите кнопку **Обзор** , чтобы найти его в [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] папке проекта. Для развертывания проекта, который находится в каталоге служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выберите **Каталог служб Integration Services**, а затем введите имя сервера и путь к проекту в каталоге.  
   
  Если мастер запускается в среде [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], по умолчанию в качестве источника выбирается открытый проект, а этот шаг пропускается. Чтобы вернуться к этому шагу и выбрать другой источник, нажмите кнопку **назад** или выберите **источник** на левой панели.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66058011"
   
  Чтобы выйти из мастера, нажмите кнопку **Закрыть**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание проектов на сервере Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

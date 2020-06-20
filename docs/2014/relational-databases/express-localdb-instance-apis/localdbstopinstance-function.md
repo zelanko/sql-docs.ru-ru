@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4c19943bc79567a5e3abee0c19597247eb31bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050978"
 ---
 # <a name="localdbstopinstance-function"></a>Функция LocalDBStopInstance
   Останавливает указанный запущенный экземпляр SQL Server Express LocalDB.  
@@ -58,7 +57,7 @@ HRESULT LocalDBStopInstance(
  *ултимеаут*  
  [Вход] Время ожидания выполнения операции в секундах. Если это значение равно 0, функция немедленно возвращает управление, не ожидая остановки локального экземпляра LocalDB.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -104,7 +103,7 @@ HRESULT LocalDBStopInstance(
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

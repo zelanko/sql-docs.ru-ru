@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058219"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968324"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Реализация политики подписывания путем задания параметра реестра
   Для управления организационной политикой при загрузке подписанных и неподписанных пакетов можно использовать необязательный параметр реестра. При использовании данного параметра реестра его необходимо создать на каждом компьютере, где будут выполняться пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и где требуется принудительное выполнение этой политики. После задания такого параметра реестра службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будут проверять наличие и верность подписи перед загрузкой пакетов.  
@@ -48,7 +47,7 @@ ms.locfileid: "66058219"
   
 1.  В меню **Пуск** выберите пункт **Выполнить..**.  
   
-2.  В диалоговом окне Выполнить введите `Regedit`и нажмите кнопку **ОК**.  
+2.  В диалоговом окне Выполнить введите `Regedit` и нажмите кнопку **ОК**.  
   
 3.  Найдите раздел реестра HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66058219"
   
 5.  Обновите имя нового значения до `BlockedSignatureStates`.  
   
-6.  Щелкните правой кнопкой `BlockedSignatureStates` мыши и выберите пункт **изменить**.  
+6.  Щелкните правой кнопкой мыши `BlockedSignatureStates` и выберите пункт **изменить**.  
   
 7.  В диалоговом окне **Изменение параметра DWORD** введите значение 0, 1, 2 или 3.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66058219"
   
 9. В меню **Файл** выберите пункт **Выход**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о безопасности &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921995"
 ---
 # <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»
   Диалоговое окно **Редактор преобразования «Условное разбиение»** используется для создания выражений, определения порядка, в котором производится вычисление выражений, а также для именования выходных данных условных разбиений. В этом диалоговом окне вызываются математические, строковые функции, функции даты и времени, а также операторы, которые можно использовать при построении выражений. Первое условие, значение которого вычисляется как TRUE, определяет вывод, на который направляется строка.  
@@ -29,11 +28,11 @@ ms.locfileid: "66060887"
   
  Дополнительные сведения о редакторе преобразований "Условное разбиение" см. в разделе [Преобразование "Условное разбиение"](data-flow/transformations/conditional-split-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Заказ**  
  Выберите строку и с помощью расположенных справа клавиш-стрелок измените порядок, в соответствии с которым будут оцениваться выражения.  
   
- **Имя вывода**  
+ **Имя выходных данных**  
  Укажите имя вывода. По умолчанию, используется нумерованный список вариантов, однако можно выбрать любое уникальное имя для описания.  
   
  **Условие**  
@@ -49,7 +48,7 @@ ms.locfileid: "66060887"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Разбиение набора данных с помощью преобразования «Условное разбиение»](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

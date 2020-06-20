@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e531a2d916cfc464c18aab931c268197fbf5982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33aebb89b831d414d06954bf15f245e851f1abdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034523"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
@@ -61,7 +60,7 @@ ms.locfileid: "62915031"
  Выполнение инструкции REPAIR сделает недействительными разностные битовые карты. Нельзя выполнить разностное резервное копирование до создания полной резервной копии базы данных. Полная резервная копия базы данных обеспечит основу для повторного создания разностной битовой карты.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание полной резервной копии базы данных &#40;SQL Server&#41;](../backup-restore/create-a-full-database-backup-sql-server.md)   
+ [Создание полной резервной копии базы данных (SQL Server)](../backup-restore/create-a-full-database-backup-sql-server.md)   
  [MSSQLSERVER_2516](mssqlserver-2516-database-engine-error.md)  
   
   

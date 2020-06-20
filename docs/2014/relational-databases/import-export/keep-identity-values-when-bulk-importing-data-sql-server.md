@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011904"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050479"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Сохранение значений идентификаторов при массовом импорте данных (SQL Server)
-  Файлы данных, содержащие значения идентификаторов, можно импортировать в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию значения столбца идентификаторов в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает им уникальные значения на основе начального значения и значения приращения, указанных при создании таблицы.  
+  Файлы данных, содержащие значения идентификаторов, можно импортировать в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . По умолчанию значения столбца идентификаторов в импортируемом файле данных не учитываются, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает им уникальные значения на основе начального значения и значения приращения, указанных при создании таблицы.  
   
  Если файл данных не содержит значений для столбцов идентификаторов в таблице, то для указания того, что при импорте столбец идентификаторов в таблице нужно пропустить, применяется файл форматирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически присваивает столбцу уникальные значения.  
   
@@ -73,7 +72,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
   
  Дополнительные сведения о создании файла форматирования см. в разделе [Создание файла форматирования (SQL Server)](create-a-format-file-sql-server.md).  
   
-### <a name="a-using-bcp-and-keeping-identity-values"></a>А) Использование команды bcp с сохранением значений идентификаторов  
+### <a name="a-using-bcp-and-keeping-identity-values"></a>A. Использование команды bcp с сохранением значений идентификаторов  
  В следующем примере показан способ сохранения значений идентификаторов при использовании команды `bcp` для массового импорта данных. Команда `bcp` использует файл форматирования `myDepartment-f-n-x.Xml` и содержит следующие параметры:  
   
 |Квалификаторы|Описание|  
@@ -88,7 +87,7 @@ bcp AdventureWorks.HumanResources.myDepartment in C:\myDepartment-n.Dat -f C:\my
   
 ```  
   
-### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>Б) Использование BULK INSERT с сохранением значений идентификаторов  
+### <a name="b-using-bulk-insert-and-keeping-identity-values"></a>Б. Использование BULK INSERT с сохранением значений идентификаторов  
  В следующем примере BULK INSERT используется для массового импорта данных из файла `myDepartment-c.Dat` в таблицу `AdventureWorks.HumanResources.myDepartment` . Инструкция использует файл форматирования `myDepartment-f-n-x.Xml` и включает параметр KEEPIDENTITY для сохранения значений идентификаторов, находящихся в файле данных.  
   
  В редакторе запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] выполните:  

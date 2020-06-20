@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3ec788c7-22c3-4216-9ad0-81a168d17074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fcb8be3b7803402d6e20510d95f293107b66540
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 3efc3dc8b42fc08969cc1afb85d4e629f6759e10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930285"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Параметры (страница "Выполнение запросов/SQL Server/Дополнительно")
   При использовании команды SET доступно несколько параметров. Данная страница используется для задания параметра **set** для запуска запросов [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в редакторе запросов SQL Server. Они не влияют на другие редакторы кода. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров для текущих запросов выберите пункт **Параметры запроса** в меню **Запрос** или контекстное меню в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В пункте **Выполнение**выберите **Дополнительно**. Дополнительные сведения о них см. в разделе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] электронной документации.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **SET NOCOUNT**  
  Не возвращает значения счетчика количества строк в виде сообщения с результирующим набором. По умолчанию этот флажок снят.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b035fb9d-b5c1-4ce3-beac-f2f8ff736c7c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8a1e23399f91eace993f77dfc9a1ce7032bad222
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6920431686dc4e12fc5d2342744c17fc7b193ad8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698631"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039441"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>Сводка по API-интерфейсам возвращающих табличное значение параметров ODBC
   В этом разделе перечислены функции ODBC, которые были улучшены для поддержки возвращающих табличное значение параметров.  
@@ -59,7 +58,7 @@ ms.locfileid: "82698631"
   
 -   [SQLTables](../native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   
