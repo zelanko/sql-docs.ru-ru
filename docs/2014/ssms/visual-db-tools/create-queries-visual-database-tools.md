@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec730fdd8f5dd8e00a3493b5ec96a80a3397fad9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058116"
 ---
 # <a name="create-queries-visual-database-tools"></a>Создание запросов (визуальные инструменты для баз данных)
   Запросы позволяют получить данные из таблиц и представлений базы данных. Для создания запросов и работы с ними служит **Конструктор запросов и представлений**, который содержит четыре панели: [панель диаграммы](visual-database-tools.md), [панель SQL](sql-pane-visual-database-tools.md), [панель критериев](criteria-pane-visual-database-tools.md)и [панель результатов](results-pane-visual-database-tools.md).  

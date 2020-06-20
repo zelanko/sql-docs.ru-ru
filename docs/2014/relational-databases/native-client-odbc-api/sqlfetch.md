@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba1b1bf96bfbee4d3625417706aad738a49fcf4f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ad80fe0220adf76b83418c8875f18624a34468d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022476"
 ---
 # <a name="sqlfetch"></a>SQLFetch
   SQLFetch поддерживает улучшенные функции даты и времени.  
@@ -27,7 +26,7 @@ ms.locfileid: "82706119"
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>Поддержка функцией SQLFetch определяемых пользователем типов больших данных CLR  
  Функция `SQLFetch` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

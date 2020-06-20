@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 39f76bc7-94e6-4dbc-bfa5-d56f4430bb26
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2ba357fc3910779573ffa36f3070b55c08ced8ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1ffea6cf93eb1e9e5f137c4151e0f0d9e4d2ca4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388728"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045752"
 ---
 # <a name="deployment-topologies-for-sql-server-bi-features-in-sharepoint"></a>Deployment Topologies for SQL Server BI Features in SharePoint
   В этом разделе описываются типовые топологии для установки компонентов SQL Server Business Intelligence [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)] в средах SharePoint 2010 и SharePoint 2013. Например, один сервер и три уровня.  
@@ -53,7 +52,7 @@ ms.locfileid: "81388728"
 ##  <a name="sharepoint-2013-example-deployment-topologies"></a><a name="bkmk_example_deployments_2013"></a>Примеры топологий развертывания SharePoint 2013  
  Режим установки SQL Server **PowerPivot для SharePoint** не зависит от SharePoint. Он не использует объектную модель или интерфейсы SharePoint для поддержки интеграции. Поэтому службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно установить только на компьютере, работающем под управлением Windows Server 2008 R2 или более поздней версии. Это может быть (но необязательно) сервер приложений в ферме SharePoint. Один из шагов настройки — связать службы Excel с сервером, работающим с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Для балансировки нагрузки и отказоустойчивости рекомендуется установить и зарегистрировать несколько серверов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающих в режиме интеграции с SharePoint.  
   
- Для работы в режиме интеграции с SharePoint требуется SharePoint Server 2013 и архитектура приложения службы SharePoint. ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **  
+ Для работы в режиме интеграции с ** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint** требуется SharePoint Server 2013 и архитектура приложения службы SharePoint.  
   
  В следующих разделах приведены типичные топологии развертывания:  
   
@@ -68,11 +67,11 @@ ms.locfileid: "81388728"
 |**открыт**|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Приложение службы. Имя по умолчанию — **Приложение службы PowerPivot по умолчанию**.|  
 |**3-5**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|  
 |**четырех**|Установите надстройку служб Reporting Services для SharePoint с установочного носителя [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] или из пакета дополнительных компонентов [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .|  
-|**5.0**|Запустите программу **PowerPivot. msi** , чтобы установить поставщики данных, средство [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] настройки, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекцию и обновление данных по расписанию.|  
+|**5.0**|Запустите **spPowerPivot.msi** , чтобы установить поставщики данных, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] средство настройки, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекцию и расписание обновления данных.|  
 |**1-6**|Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Для использования этого сервера настройте **параметры модели данных** приложения служб Excel.|  
 |**7**|Базы данных содержимого SharePoint, конфигурации и приложений службы.|  
   
- ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [отправляют отзывы и контактные данные через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) ( https://connect.microsoft.com/SQLServer/Feedback) .  
   
 ###  <a name="powerpivot-for-sharepoint-2013-single-server-deployment"></a><a name="bkmk_powerpivot_sharepoint2013_1server"></a>Развертывание с одним сервером PowerPivot для SharePoint 2013  
  Развертывание одиночного сервера полезно для тестирования, но не рекомендуется для производственных целей.  
@@ -93,7 +92,7 @@ ms.locfileid: "81388728"
   
  [!INCLUDE[ssGeminiShortvnext](../../includes/ssgeminishortvnext-md.md)]расширяет SharePoint Server 2013 для добавления обработки обновления данных на стороне сервера, поставщиков данных, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекции и поддержки управления для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книг и книг Excel с расширенными моделями данных.  
   
- Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Пакет дополнительных компонентов можно скачать из [!INCLUDE[msCoName](../../includes/msconame-md.md)] центра загрузки [майкрософт® SQL Server® 2014 PowerPivot® для Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (Hyperlink "<https://go.microsoft.com/fwlink/?LinkID=296473>" \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473>).  
+ Пакет установщика доступен в составе пакета дополнительных компонентов [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] . Пакет дополнительных компонентов можно скачать из [!INCLUDE[msCoName](../../includes/msconame-md.md)] центра загрузки [майкрософт® SQL Server® 2014 PowerPivot® для Microsoft® SharePoint®](https://go.microsoft.com/fwlink/?LinkID=296473) (Hyperlink " <https://go.microsoft.com/fwlink/?LinkID=296473> " \t "_blank" <https://go.microsoft.com/fwlink/?LinkID=296473> ).  
   
  ![Развертывание сервера в режиме служб SSAS PowerPivot 2](../../analysis-services/media/as-powerpivot-mode-2server-deployment.gif "Развертывание сервера в режиме служб SSAS PowerPivot 2")  
   
@@ -133,7 +132,7 @@ ms.locfileid: "81388728"
 |**1-6**|Сервер [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в режиме интеграции с SharePoint. Для использования этого сервера настройте **параметры модели данных** приложения служб Excel.|  
   
 ###  <a name="powerpivot-for-sharepoint-2013-and-reporting-services-two-server-deployment"></a><a name="bkmk_powerpivot_ssrs_sharepoint2013_2server"></a>PowerPivot для SharePoint 2013 и Reporting Services развертывания двух серверов  
- В следующем двухсерверном развертывании ядро СУБД SQL Server и сервер Analysis Services в режиме интеграции с SharePoint работают на сервере, отдельном от SharePoint. Пакет установщика PowerPivot для SharePoint 2013 (с помощью программы **PowerPivot. msi)** должен быть запущен на сервере SharePoint.  
+ В следующем двухсерверном развертывании ядро СУБД SQL Server и сервер Analysis Services в режиме интеграции с SharePoint работают на сервере, отдельном от SharePoint. Пакет установщика PowerPivot для SharePoint 2013 **(spPowerPivot.msi)** должен быть запущен на сервере SharePoint.  
   
  ![Развертывание сервера в режиме интеграции служб SSAS и SSRS с SharePoint 2](../../../2014/sql-server/install/media/as-and-rs-2server-deployment.gif "Развертывание сервера в режиме интеграции служб SSAS и SSRS с SharePoint 2")  
   

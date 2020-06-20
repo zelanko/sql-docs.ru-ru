@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdb8205a789894caf8c8e2d3c3f491751757bab6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270231"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047097"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Работа с отслеживанием изменений (SQL Server)
   Приложения, в которых используется отслеживание изменений, должны иметь возможность получать отслеженные изменения, применять эти изменения к другому хранилищу данных и обновлять базу данных-источник. В этом разделе описаны способы выполнения этих задач и роль отслеживания изменений в случае отработки отказа и необходимостью восстановить базу данных из резервной копии.  
@@ -431,7 +430,7 @@ COMMIT TRAN
   
 -   Когда клиент делает запрос об изменениях, сохраните номер последней версии синхронизации каждого клиента сервера. При возникновении проблем с данными номера последней синхронизированной версии не совпадут. Это будет означать, что необходима повторная инициализация.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отслеживание изменений данных &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Сведения о Отслеживание изменений &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
  [Управление Отслеживание изменений &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

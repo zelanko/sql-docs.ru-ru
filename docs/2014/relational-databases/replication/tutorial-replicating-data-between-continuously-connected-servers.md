@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c63e48d4c5f5bfad6fe50155cd7fd7a088c2178
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047623"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>Учебник. Репликация данных между постоянно соединенными серверами
   Репликация представляет собой хорошее решение проблемы перемещения данных между постоянно соединенными серверами. С помощью мастеров репликации можно легко настроить и администрировать топологию репликации. В этом учебники рассказывается о настройке топологии репликации для постоянно соединенных серверов.  
@@ -46,7 +45,7 @@ ms.locfileid: "62655400"
     >  Репликация не устанавливается по умолчанию на [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] .  
   
 > [!NOTE]  
->  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]среде необходимо соединиться с издателем и подписчиком, используя имя входа, которое является членом предопределенной роли сервера **sysadmin** .  
+>  В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] среде необходимо соединиться с издателем и подписчиком, используя имя входа, которое является членом предопределенной роли сервера **sysadmin** .  
   
  **Предполагаемое время выполнения этого учебника: 30 минут.**  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62655400"
   
  [Запуск учебника](transactional/transactional-replication.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия программирования репликации](concepts/replication-programming-concepts.md)  
   
   

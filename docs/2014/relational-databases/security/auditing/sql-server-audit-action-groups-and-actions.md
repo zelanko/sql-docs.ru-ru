@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d388256f8c536724e0819704c268aaad379d85e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238136"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055468"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
   Подсистема аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет производить аудит групп событий или отдельных событий на уровне сервера или базы данных. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](sql-server-audit-database-engine.md).  
@@ -71,7 +70,7 @@ ms.locfileid: "63238136"
   
  В следующей таблице приведены группы действий аудита уровня сервера и представлены эквивалентные классы событий SQL Server (если возможно).  
   
-|имя группы действий;|Description|  
+|имя группы действий;|Описание|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Это событие появляется при изменении пароля для роли приложения. Эквивалентно [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Это событие возникает при создании, изменении или удалении любого аудита. Это событие возникает при создании, изменении или удалении спецификации любого аудита. Аудит любых изменений в аудите производится в этом аудите. Эквивалентно [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -88,7 +87,7 @@ ms.locfileid: "63238136"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|Это событие вызывается при смене владельца базы данных инструкцией ALTER AUTHORIZATION в момент проверки разрешений на эту операцию. Это событие возникает при любом изменении владельца базы данных в любой базе данных на сервере. Эквивалентно [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md).|  
 |DATABASE_PERMISSION_CHANGE_GROUP|Это событие возникает в случае, когда инструкции GRANT, REVOKE или DENY выдаются для разрешения на выполнение инструкции любым участником [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (применяется только к событиям базы данных, например предоставлению разрешений на базу данных).<br /><br /> Это событие возникает при любом изменении разрешения базы данных (GDR) для любой базы данных на сервере. Эквивалентно [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Это событие создается при создании, изменении или удалении из базы данных участников, таких как пользователи. Эквивалентно [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md). (Также эквивалентно классу событий подсистемы аудита «Add DB Principal», вызываемому устаревшими хранимыми процедурами sp_grantdbaccess, sp_revokedbaccess, sp_addPrincipal и sp_dropPrincipal).<br /><br /> Это событие возникает при создании или удалении роли базы данных с помощью хранимых процедур sp_addrole или sp_droprole. Это событие возникает при создании, изменении или удалении любых участников базы данных из любой базы данных. Эквивалентно [Класс событий Audit Add Role](../../event-classes/audit-add-role-event-class.md).|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает при использовании в области базы данных операции олицетворения, например EXECUTE AS \<субъект> или SETPRINCIPAL. Это событие возникает при использовании олицетворения в любой базе данных. Эквивалентно [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает при наличии операции олицетворения в области базы данных, такой как EXECUTE AS \<principal> или SETPRINCIPAL. Это событие возникает при использовании олицетворения в любой базе данных. Эквивалентно [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Это событие вызывается каждый раз, когда имя входа добавляется в роль базы данных или удаляется из нее. Этот класс событий вызывается хранимыми процедурами sp_addrolemember, sp_changegroup и sp_droprolemember. Это событие появляется при изменении члена любой роли базы данных в любой базе данных. Эквивалентно [Audit Add Member to DB Role, класс событий](../../event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Это событие появляется при вызове участником любой команды DBCC. Эквивалентно [Audit DBCC Event Class](../../event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP.|Указывает, что попытка участника войти в автономную базу данных завершилась ошибкой. События этого класса вызываются новыми соединениями или соединениями, которые многократно используются в пуле соединений. Эквивалентно [Audit Login Failed Event Class](../../event-classes/audit-login-failed-event-class.md).|  
@@ -106,7 +105,7 @@ ms.locfileid: "63238136"
 |SERVER_OPERATION_GROUP|Это событие возникает при использовании таких операций аудита безопасности, как изменение параметров, ресурсов, внешнего доступа или авторизации. Эквивалентно [Audit Server Operation Event Class](../../event-classes/audit-server-operation-event-class.md).|  
 |SERVER_PERMISSION_CHANGE_GROUP|Это событие возникает в случае, когда инструкции GRANT, REVOKE или DENY выдаются для разрешений в области действия сервера, например для создания имени входа. Эквивалентно [Audit Server Scope GDR Event Class](../../event-classes/audit-server-scope-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|Это событие возникает при создании, изменении и удалении участников на уровне сервера. Эквивалентно [Audit Server Principal Management Event Class](../../event-classes/audit-server-principal-management-event-class.md).<br /><br /> Это событие возникает при вызове участником хранимых процедур sp_defaultdb или sp_defaultlanguage или инструкций ALTER LOGIN. Эквивалентно [Audit Addlogin Event Class](../../event-classes/audit-addlogin-event-class.md).<br /><br /> Это событие вызывается хранимыми процедурами sp_addlogin и sp_droplogin. Также эквивалентно [Audit Login Change Property Event Class](../../event-classes/audit-login-change-property-event-class.md).<br /><br /> Это событие вызывается для sp_grantlogin или sp_revokelogin хранимых процедур. Эквивалентно [Audit Login GDR Event Class](../../event-classes/audit-login-gdr-event-class.md).|  
-|SERVER_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает при использовании в области действия сервера олицетворения, например команды EXECUTE AS \<имя_для_входа>. Эквивалентно [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md).|  
+|SERVER_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает при олицетворении в области сервера, например в инструкции EXECUTE AS \<login> . Эквивалентно [Audit Server Principal Impersonation Event Class](../../event-classes/audit-server-principal-impersonation-event-class.md).|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|Это событие появляется при добавлении или удалении имени входа из предопределенной роли сервера. Это событие вызывается хранимыми процедурами sp_addsrvrolemember и sp_dropsrvrolemember. Эквивалентно [Класс событий Audit Add Login to Server Role](../../event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Это событие возникает при изменении состояния службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Эквивалентно [Audit Server Starts and Stops Event Class](../../event-classes/audit-server-starts-and-stops-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP;|Указывает, что участник успешно выполнил вход в автономную базу данных. Эквивалентно классу событий Audit Successful Database Authentication.|  
@@ -140,7 +139,7 @@ ms.locfileid: "63238136"
 |DATABASE_OWNERSHIP_CHANGE_GROUP|Это событие вызывается при смене владельца базы данных инструкцией ALTER AUTHORIZATION в момент проверки разрешений на эту операцию. Эквивалентно [Audit Change Database Owner Event Class](../../event-classes/audit-change-database-owner-event-class.md).|  
 |DATABASE_PERMISSION_CHANGE_GROUP|Это событие возникает в случае, когда инструкции GRANT, REVOKE или DENY выдаются для разрешения на выполнение инструкции любым пользователем [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (применяется только к событиям базы данных, например предоставлению разрешений на базу данных). Эквивалентно [Audit Database Scope GDR Event Class](../../event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Это событие создается при создании, изменении или удалении из базы данных участников, таких как пользователи. Эквивалентно [Audit Database Principal Management Event Class](../../event-classes/audit-database-principal-management-event-class.md). Также эквивалентно [классу событий Audit Add DB User](../../event-classes/audit-add-db-user-event-class.md), вызываемому устаревшими хранимыми процедурами sp_grantdbaccess, sp_revokedbaccess, sp_adduser и sp_dropuser.<br /><br /> Это событие возникает при создании или удалении роли базы данных с помощью устаревших хранимых процедур sp_addrole и sp_droprole. Эквивалентно [Класс событий Audit Add Role](../../event-classes/audit-add-role-event-class.md).|  
-|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает, когда в области базы данных используется олицетворение, например выполнение в качестве \<пользователя> или SETUSER. Эквивалентно [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
+|DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Это событие возникает при использовании олицетворения в области базы данных, например инструкции EXECUTE AS \<user> или SETUSER. Эквивалентно [Audit Database Principal Impersonation Event Class](../../event-classes/audit-database-principal-impersonation-event-class.md).|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|Это событие вызывается каждый раз, когда имя входа добавляется в роль базы данных или удаляется из нее. Этот класс событий вызывается хранимыми процедурами sp_addrolemember, sp_changegroup и sp_droprolemember. Он эквивалентен [классу событий Audit Add Member to DB Role](../../event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Это событие появляется при вызове участником любой команды DBCC. Эквивалентно [Audit DBCC Event Class](../../event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP.|Указывает, что попытка участника войти в автономную базу данных завершилась ошибкой. События этого класса вызываются новыми соединениями или соединениями, которые многократно используются в пуле соединений. Вызывается событие.|  
@@ -182,7 +181,7 @@ ms.locfileid: "63238136"
 ## <a name="related-content"></a>См. также  
  [Создание аудита сервера и спецификации аудита сервера](create-a-server-audit-and-server-audit-specification.md)  
   
- [Создание спецификация аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md)  
+ [Создание спецификации аудита для сервера и базы данных](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT (Transact-SQL)](/sql/t-sql/statements/create-server-audit-transact-sql)  
   

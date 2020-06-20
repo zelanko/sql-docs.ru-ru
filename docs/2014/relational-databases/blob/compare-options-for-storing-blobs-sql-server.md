@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f7930cd63150b385cd84f48e1bb1c4fdaa9ec0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010349"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955744"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Сравнение параметров для хранения больших двоичных объектов (SQL Server)
   Рассматриваются и сравниваются параметры, доступные для хранения файлов и документов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -40,19 +39,19 @@ ms.locfileid: "66010349"
 ##  <a name="filestream"></a><a name="Filestream"></a> FILESTREAM  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже имеется функция FILESTREAM, обеспечивающая эффективное хранение, управление и потоковую передачу неструктурированных данных, хранящихся в виде файлов в файловой системе. Тем не менее для решения FILESTREAM требуется дополнительное программирование, оно не удовлетворяет требованиям полной совместимости с приложениями Windows, описанным выше.  
   
-##  <a name="filetables"></a><a name="FileTables"></a>Таблицы FileTable  
+##  <a name="filetables"></a><a name="FileTables"></a> Таблицы FileTable  
  Функция FileTable строится поверх существующих возможностей FILESTREAM, позволяя корпоративным клиентам хранить неструктурированные данные файлов и иерархии папок в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и выполняет требования по доступу к данным без транзакций и совместимости приложений Windows с данными, хранящимися в файлах.  
   
-##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a>Сравнение FILESTREAM и FileTable  
+##  <a name="comparing-filestream-and-filetable"></a><a name="CompareFileTable"></a> Сравнение FILESTREAM и таблиц FileTable  
   
-|Функция|Файловый сервер и решение для базы данных|Решение FILESTREAM|Решение FileTable|  
+|Компонент|Файловый сервер и решение для базы данных|Решение FILESTREAM|Решение FileTable|  
 |-------------|---------------------------------------|-------------------------|------------------------|  
-|**Одно решение для задач управления**|Нет|Да|**Да**|  
-|**Один набор служб**: поиск, отчеты, запросы и т. д.|Нет|Да|**Да**|  
-|**Интегрированная модель безопасности**|Нет|Да|**Да**|  
-|**Обновление на месте для данных FILESTREAM**|Да|Нет|**Да**|  
+|**Одно решение для задач управления**|нет|Да|**Да**|  
+|**Один набор служб**: поиск, отчеты, запросы и т. д.|нет|Да|**Да**|  
+|**Интегрированная модель безопасности**|нет|Да|**Да**|  
+|**Обновление на месте для данных FILESTREAM**|Да|нет|**Да**|  
 |**Иерархия каталогов и файлов сохраняется в базе данных**|нет|Нет|**Да**|  
-|**Совместимость с приложениями Windows**|Да|Нет|**Да**|  
+|**Совместимость с приложениями Windows**|Да|нет|**Да**|  
 |**Реляционный доступ к атрибутам файлов**|нет|Нет|**Да**|  
   
 ##  <a name="comparing-filestream-and-remote-blob-store-rbs"></a><a name="CompareRBS"></a> Сравнение FILESTREAM и удаленного хранилища больших двоичных объектов (RBS)  

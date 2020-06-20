@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b22251188f4b175c24610833aa1b74bdb0badb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055253"
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это объекты, предназначенные [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для программного управления. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это объекты, предназначенные для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
   
  К примеру, для удовлетворения потребностей новых пользователей, а также с целью сокращения издержек на подготовку персонала может возникнуть необходимость упрощения пользовательских приложений, выполняющих задачи управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Может возникнуть необходимость в создании специализированных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в создании приложения для формирования индексов и наблюдения за их эффективностью. Кроме того, приложение SMO можно использовать для бесшовной интеграции аппаратных или программных компонентов от независимых поставщиков в приложение управления базами данных.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "63131808"
   
  **Создание скриптов**  
   
- В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter` Класс может обнаруживать зависимости, понимать связи между объектами и позволяет управлять иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
+ В модели объектов SMO средства для работы со скриптами были улучшены и переданы в класс `Scripter`. `Scripter`Класс может обнаруживать зависимости, понимать связи между объектами и позволяет управлять иерархией зависимостей. Главным объектом, обеспечивающим работу со скриптами, является объект `Scripter`. Существует несколько поддерживающих объектов, которые осуществляют обработку зависимостей, а также реагируют на события состояния и на события ошибок.  
   
  Объект `Scripter` поддерживает следующие дополнительные параметры создания скриптов:  
   
@@ -180,7 +179,7 @@ ms.locfileid: "63131808"
   
  При переходе к использованию технологии [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно применять приложения, написанные частично с помощью управляемого, а частично — неуправляемого кода. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] дает возможность взаимодействовать с компонентами COM, для чего требуется основная сборка взаимодействия. Для объекта SQL-DMO требуется оболочка среды выполнения, чтобы к нему можно было обращаться из приложения на базе платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия объектов RMO](../replication/concepts/replication-management-objects-concepts.md)  
   
   

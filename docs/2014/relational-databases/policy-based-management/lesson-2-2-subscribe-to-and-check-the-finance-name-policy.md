@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 126b4c4c-2a1c-4701-a0ad-8de23fbd7306
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0c859bdd982fa7de586c9230754c571eb750944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061616"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Подписка на политику имен финансов и ее проверка
   В этой задаче будет произведена настройка по подписке базы данных Finance к категории политики финансов. Затем будет протестирована политика имен финансов.  
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>Подписка на категорию политик «Finance»  
   
-1.  В обозревателе объектов разверните узел **базы данных**, щелкните правой `Finance`кнопкой мыши, наведите указатель на пункт **политики**и выберите пункт **категории**.  
+1.  В обозревателе объектов разверните узел **базы данных**, щелкните правой кнопкой мыши `Finance` , наведите указатель на пункт **политики**и выберите пункт **категории**.  
   
 2.  Установите флажок **подписки** для `Finance` категории.  
   
@@ -67,12 +66,12 @@ ms.locfileid: "66090685"
 ## <a name="summary"></a>Сводка  
  В этом учебнике показано создание условий управления на основе политик, политик и групп политик, а также применение фильтров и проверка соответствия целей управления на основе политик.  
   
-## <a name="next"></a>Дальше  
+## <a name="next"></a>Следующая  
  Данный учебник завершен. Чтобы вернуться к началу, щелкните ссылку [Учебник. Администрирование серверов с помощью управления на основе политик](tutorial-administering-servers-by-using-policy-based-management.md).  
   
  Список учебников см. в [руководствах по SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

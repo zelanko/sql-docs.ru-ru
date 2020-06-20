@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9238898efd324fae1e4990405c90e31fb7876ca4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ab953952de1c288bcac31548c9562e9ae570bee6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705031"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043580"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Дата и время и наборы строк схемы
   В этом разделе содержатся сведения о наборе строк COLUMNS и о наборе строк PROCEDURE_PARAMETERS. Эти сведения относятся к усовершенствованиям даты и времени поставщика OLE DB, реализованного в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "82705031"
   
 |Тип столбца|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|дата|DBTYPE_DBDATE|Clear|0|  
+|Дата|DBTYPE_DBDATE|Clear|0|  
 |time|DBTYPE_DBTIME2|Присвойте параметру|0..7|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|Clear|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|Clear|3|  
@@ -90,7 +89,7 @@ ms.locfileid: "82705031"
   
  В OLE DB для числовых и десятичных типов определяются только значения MINIMUM_SCALE и MAXIMUM_SCALE, поэтому использование этих столбцов собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для типов time, datetime2 и datetimeoffset является нестандартным.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Метаданные (OLE DB)](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

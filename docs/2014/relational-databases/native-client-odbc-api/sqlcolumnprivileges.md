@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c78acd4e-8668-4abc-9bc9-6ad381965863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 35bd61c12933dac25ac90d8b56afb0e17b44d3ab
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf46fed47817ed94ea2382f2147df254f2986aec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022746"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
   **SQLColumnPrivileges** возвращает значение, SQL_SUCCESS, существуют ли значения для параметров*CatalogName*, *SchemaName*, *TableName*или *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
@@ -28,7 +27,7 @@ ms.locfileid: "82706327"
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает выдачу сведений о таблицах, находящихся на связанных серверах, принимая двухкомпонентное имя в параметре *CatalogName* : *Имя_Связанного_Сервера.Имя_Каталога*.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLColumnPrivileges](https://go.microsoft.com/fwlink/?LinkId=59335)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f294ad3868670783d3010498dd0ba89e1e6a48be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c00479e5587c8662d81e554cae5add2e295183
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068759"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>запустить задания по обслуживанию репликаций (среда SQL Server Management Studio)
   Репликация использует следующие задания по обслуживанию:  
@@ -25,11 +24,11 @@ ms.locfileid: "63127064"
 -   **Повторная инициализация подписок, имеющих сбои при выполнении проверки данных**
 -   **Очистка журнала агента: распределение**
 -   **Обновитель монитора репликацией для распространителя**
--   **Проверка агентов репликации**
+-   **Контроль за агентами репликации**
 -   **Очистка распространения: распространение**
 -   **Очистка истекшей подписки**  
   
- Запустить и остановить эти задания можно из папки **Задания** в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../monitor/start-the-replication-monitor.md). Просмотр и изменение свойств каждого задания осуществляется в диалоговом окне **Свойства задания — \<задание>**, доступном в той же папке и на той же вкладке.  
+ Запустить и остановить эти задания можно из папки **Задания** в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../monitor/start-the-replication-monitor.md). Просмотрите и измените свойства для каждого задания в диалоговом окне **свойства \<Job> задания —** , которое доступно из той же папки и вкладки.  
   
 ### <a name="to-start-or-stop-a-replication-maintenance-job-in-management-studio"></a>Запуск или остановка задания по обслуживанию репликации в среде Management Studio  
   
@@ -55,7 +54,7 @@ ms.locfileid: "63127064"
   
 3.  Правой кнопкой мыши щелкните задание и выберите **Свойства**.  
   
-4.  В диалоговом окне **Свойства задания — \<задание>** измените любые свойства по необходимости, а затем нажмите кнопку **ОК**.  
+4.  В диалоговом окне **свойства \<Job> задания —** измените все свойства, если это необходимо, а затем нажмите кнопку **ОК**.  
   
 ### <a name="to-view-and-modify-properties-for-a-replication-maintenance-job-in-replication-monitor"></a>Просмотр и изменение свойств задания по обслуживанию репликации в мониторе репликации  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63127064"
   
 3.  Щелкните правой кнопкой мыши задание в сетке, а затем щелкните **Свойства**.  
   
-4.  В диалоговом окне **Свойства задания — \<задание>** измените любые свойства по необходимости, а затем нажмите кнопку **ОК**.  
+4.  В диалоговом окне **свойства \<Job> задания —** измените все свойства, если это необходимо, а затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск и завершение работы агента репликации &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Просмотр сведений и выполнение задач с помощью монитора репликации](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Администрирование агента репликации](../agents/replication-agent-administration.md)  

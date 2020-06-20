@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeec8c832061756a818c9d2438df3046a29c1160
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970584"
 ---
 # <a name="clr-integration-security"></a>Безопасность интеграции со средой CLR
-  Модель [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] безопасности среды CLR управляет доступом между различными ТИПАМИ объектов CLR и не-CLR объектами, выполняющимися в [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] операторе или другом объекте CLR, выполняемом на сервере. Вызовы между этими объектами называются связями. Тип проверки безопасности, которая выполняется на этих объектах, зависит от типа связи.  
+  Модель безопасности среды CLR [!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)] управляет доступом между различными типами объектов CLR и не-CLR объектами, выполняющимися в [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] операторе или другом объекте CLR, выполняемом на сервере. Вызовы между этими объектами называются связями. Тип проверки безопасности, которая выполняется на этих объектах, зависит от типа связи.  
   
  Модель безопасности для интеграции со средой CLR решает следующие задачи.  
   
--   По умолчанию запускает управляемый пользовательский код [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]в. Выполнение операций, потенциально небезопасных для устойчивости [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], должно быть защищено соответствующими разрешениями высокого уровня.  
+-   По умолчанию запускает управляемый пользовательский код в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Выполнение операций, потенциально небезопасных для устойчивости [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], должно быть защищено соответствующими разрешениями высокого уровня.  
   
 -   Управляемый пользовательский код не должен получать несанкционированный доступ к пользовательским данным или коду других пользователей в базе данных. Пользовательский программный код должен выполняться в контексте безопасности пользовательского сеанса, который его вызывает, и обладать нужными правами для этого контекста безопасности.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "62918989"
  [Домены приложений и безопасность интеграции со средой CLR](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
  Описывает загрузку сборок в домены приложений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление сборками интеграции со средой CLR](../assemblies/managing-clr-integration-assemblies.md)  
   
   

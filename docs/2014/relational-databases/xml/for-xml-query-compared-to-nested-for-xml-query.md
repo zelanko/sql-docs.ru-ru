@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e5bb88f57d471a199d925039d551a1f206e511b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d1be9f993b9400d51f3f129d48a85bd92d99b2c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054899"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Сравнение запросов FOR XML и вложенных запросов FOR XML
   В этом разделе сравнивается одноуровневый запрос FOR XML с вложенным запросом FOR XML. Одним из преимуществ вложенных запросов FOR XML является то, что в них для результатов запроса можно задать сочетание XML-данных по атрибутивной или элементной модели. Это демонстрируется в примере.  

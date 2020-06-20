@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d276c4d879aeca6c019b00b9f57251db6b2bcb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023549"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
   Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией как управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
@@ -169,7 +168,7 @@ ms.locfileid: "72798081"
 >   
 >  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Дополнительные сведения:  Не удалось получить сведения о пользователе или группе Windows NT "\<ДоменноеИмя\ИмяУчетнойЗаписи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+>  Дополнительные сведения: не удалось получить сведения о пользователе или группе Windows NT " \<DomainName\AccountName> ", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
 >  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062302"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Свойства задания и создание задания (страница "Общие")
   Эта страница используется для просмотра и изменения общих свойств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента.  
@@ -38,10 +37,10 @@ ms.locfileid: "68211386"
  **Описание**  
  Изменение описания задания.  
   
- **Включен**  
+ **Enabled**  
  Включение задания. Если задание не включено, оно не будет выполняться по расписанию или предупреждению, но может быть запущено с помощью хранимой процедуры **sp_start_job** .  
   
- **Источник**  
+ **Source**  
  Отображается главный сервер для задания. Доступно только на странице **Свойства задания — общие** .  
   
  **Создан**  
@@ -56,7 +55,7 @@ ms.locfileid: "68211386"
  **Просмотр журнала заданий**  
  Просмотр журнала заданий. Доступно только на странице **Свойства задания — общие** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](implement-jobs.md)   
  [Категории задания: Управление категориями заданий](job-categories-manage-job-categories.md)  
   

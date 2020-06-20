@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0657a4b1ab266a1721cf889095ff17f30782f8e7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abb598df3d6048acb45fbfdee17d1671bd7ead43
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021303"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Управление размером пакета массового копирования
   Основным назначением пакета в операциях массового копирования является определение области транзакции. Если размер пакета не задан, то функции массового копирования рассматривают все массовое копирование как единую транзакцию. Если указан размер пакета, каждый пакет представляет собой транзакцию, которая фиксируется после завершения работы пакета.  
@@ -46,7 +45,7 @@ ms.locfileid: "82705775"
 results for another hstmt."  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение операций с массовым копированием &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../import-export/bulk-import-and-export-of-data-sql-server.md)  
   

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922305"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Общие сведения о консоли конструктора CDC
   В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity.  
   
 ## <a name="installation"></a>Установка  
- В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity. Чтобы установить консоль CDC Designer, вручную запустите **файл attunityoraclecdcdesigner. msi** с установочного носителя SQL Server.  Пакеты установки для x86 и x64 находятся в **.\тулс\аттунитикдкоракле\\ ** на установочном носителе SQL Server.  
+ В этом разделе описаны процедуры установки конструктора отслеживания измененных данных для Oracle от Attunity. Чтобы установить консоль CDC Designer, вручную запустите **AttunityOracleCdcDesigner.msi** с установочного носителя SQL Server.  Пакеты установки для x86 и x64 находятся в **.\тулс\аттунитикдкоракле \\ ** на установочном носителе SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Поддерживаемые среды Windows  
  Консоль конструктора CDC может работать в следующих средах Windows:  
@@ -30,7 +29,7 @@ ms.locfileid: "62834659"
   
 -   Windows 7, 32-разрядная (x86) и 64-разрядная (x64) версии  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008, 32-разрядная (x86) и 64-разрядная (x64) версии с пакетом обновления 2 (SP2)  
   

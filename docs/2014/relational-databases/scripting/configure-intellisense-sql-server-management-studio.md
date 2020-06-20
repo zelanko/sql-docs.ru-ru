@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e5d123cad9cbc67930786a54fd257ab82e29af39
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 305796d2c3293f64874e77d14592fd7b67554a2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056845"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>Настройка IntelliSense (среда SQL Server Management Studio)
   Большинство параметров технологии [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense по умолчанию включено. Отдельные параметры IntelliSense можно отключить и вместо этого выполнять соответствующие действия посредством команды меню или сочетания клавиш.  
   
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>Чтобы отключить параметры заполнения инструкций по умолчанию  
   
-1.  В меню **Сервис** выберите пункт **Параметры**.  
+1.  В меню **Сервис** выберите команду **Параметры**.  
   
 2.  Раскройте список **Редактор текстов**, затем список **Все языки**, **Transact-SQL**или **XML**, после чего выберите пункт **Общие**.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "82704016"
   
 ### <a name="to-modify-transact-sql-intellisense-options"></a>Изменение параметров технологии Transact-SQL IntelliSense  
   
-1.  В меню **Сервис** выберите пункт **Параметры**.  
+1.  В меню **Сервис** выберите команду **Параметры**.  
   
 2.  Раскройте список **Текстовый редактор**, затем список **Transact-SQL**, после чего выберите **IntelliSense**.  
   

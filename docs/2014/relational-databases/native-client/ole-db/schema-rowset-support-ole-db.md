@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9624749eff8b455c7071d395ec91c96aeae9d32a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cd3efb1740b4919dedc3c5b8703ddd6ad92aeb5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998534"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Поддержка набора строк схемы (OLE DB)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента также поддерживает возврат сведений о схеме со связанного сервера при обработке [!INCLUDE[tsql](../../../includes/tsql-md.md)] распределенных запросов.  
@@ -54,7 +53,7 @@ ms.locfileid: "82704246"
   
  [Набор строк LINKEDSERVERS (OLE DB)](schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;OLE DB&#41;](sql-server-native-client-ole-db.md)   
  [Использование определяемых пользователем типов данных](../features/using-user-defined-types.md)  
   
