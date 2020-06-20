@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65a3c9c87a0551050ba95bdc247afdcfaa421da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e25a33c3d0bb5511f3dcae72442f2f3a9ed4eb93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697044"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998690"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Выполнение хранимой процедуры (с использованием синтаксиса ODBC CALL) и обработка кодов возврата и выходных параметров (OLE DB)
   Хранимые процедуры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут иметь целочисленные коды возврата и выходные параметры. Коды возврата и выходные параметры передаются с сервера в последнем пакете и потому недоступны приложению до полного освобождения набора строк. Если команда возвращает несколько результатов, то данные выходного параметра будут доступны тогда, когда метод `IMultipleResults::GetResult` вернул значение DB_S_NORESULT или при полном освобождении интерфейса `IMultipleResults` (в зависимости от того, что произошло раньше).  
@@ -353,7 +352,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по обработке результатов &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

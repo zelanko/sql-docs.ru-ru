@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926285"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Добавление к пакету обработчик событий
   При выполнении контейнеров и задач происходят разные события. Возможно создание обработчиков пользовательских событий, которые отвечают на возникающие события запуском рабочего процесса. Например, можно создать обработчик событий, который по электронной почте посылает сообщение, если задача завершается неудачей.  
@@ -54,7 +53,7 @@ ms.locfileid: "66062027"
   
 9. Чтобы сохранить пакет, в меню **Файл** выберите пункт **Сохранить выбранные элементы** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
   

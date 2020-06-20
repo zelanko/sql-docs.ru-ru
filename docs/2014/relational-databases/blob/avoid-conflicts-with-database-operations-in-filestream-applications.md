@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fa9321cffd3b6b5edb7ac90fac67867804637b6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010372"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955854"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
   Приложения, использующие функцию SqlOpenFilestream() для открытия дескрипторов файлов Win32 для считывания или записи данных FILESTREAM BLOB, могут столкнуться с конфликтами при работе с инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] , использованными в общей транзакции. Это также относится и к запросам [!INCLUDE[tsql](../../includes/tsql-md.md)] или MARS, выполнение которых занимает много времени. При разработке приложений надо уделить особое внимание предотвращению данных типов конфликтов.  
@@ -38,7 +37,7 @@ ms.locfileid: "66010372"
 ## <a name="examples"></a>Примеры  
  В следующих примерах показывается, как могут возникать конфликты при совместном использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и доступа к FILESTREAM с помощью функций Win32.  
   
-### <a name="a-opening-a-filestream-blob-for-write-access"></a>А) Открытие объекта FILESTREAM BLOB с доступом на запись  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>A. Открытие объекта FILESTREAM BLOB с доступом на запись  
  В следующем примере показывается эффект от открытия файла с доступом только на запись.  
   
 ```  
@@ -61,7 +60,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### <a name="b-opening-a-filestream-blob-for-read-access"></a>Б) Открытие объекта FILESTREAM BLOB с доступом на считывание  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>Б. Открытие объекта FILESTREAM BLOB с доступом на считывание  
  В следующем примере показывается эффект от открытия файла с доступом только на считывание.  
   
 ```  
@@ -140,8 +139,8 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Доступ к данным FILESTREAM с помощью OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+## <a name="see-also"></a>См. также:  
+ [Доступ к данным FILESTREAM с OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Использование множественных активных результирующих наборов (MARS)](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

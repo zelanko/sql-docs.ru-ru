@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 867c341443b7ce1c459806eaac5427a06a8bbebe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cda0be25f07ed2ee283b9707884041e7c6e4692f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014471"
 ---
 # <a name="logon-triggers"></a>Триггеры входа
   Триггеры входа вызывают срабатывание хранимых процедур в ответ на событие LOGON. Это событие вызывается при установке пользовательского сеанса с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Триггеры входа срабатывают после завершения этапа проверки подлинности при входе, но перед тем, как пользовательский сеанс реально устанавливается. Следовательно, все сообщения, которые возникают внутри триггера и обычно достигают пользователя, такие как сообщения об ошибках и сообщения от инструкции PRINT, перенаправляются в журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если проверка подлинности завершается сбоем, триггеры входа не срабатывают.  

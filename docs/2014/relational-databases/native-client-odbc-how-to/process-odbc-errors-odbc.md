@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e87e5e2c1acdc11619b8cc1ed67dcf1542e1d8d5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0b700e41eef8bf3cb2f856a2dd68aa3a96a06e7a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82713259"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039731"
 ---
 # <a name="process-odbc-errors-odbc"></a>Обработка ошибок ODBC (ODBC)
   Для получения сообщений ODBC можно использовать две функции ODBC: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) и [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Для получения в полях диагностики **SQLState**, **pfNative**и **ErrorMessage** сведений, касающихся ODBC, вызывайте функцию [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) до тех пор, пока она не вернет значение SQL_NO_DATA. Чтобы получить отдельные поля, можно вызвать функцию [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) для каждой записи диагностики. Все зависящие от драйвера поля нужно получить с помощью функции `SQLGetDiagField`.  
@@ -235,7 +234,7 @@ DROP PROCEDURE BadOne
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ODBC How-to Topics](odbc-how-to-topics.md)  
   
   

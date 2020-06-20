@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d291ec9a406ee954d04b57ff73475dfe83777fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054412"
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
   Ознакомьтесь со следующими разделами, чтобы установить компоненты распределенного воспроизведения.  
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Установка &#40;установки распределенное воспроизведение&#41;](../../sql-server/install/install-distributed-replay-setup.md)|Методический раздел, описывающий типичную установку программы распределенного воспроизведения при помощи мастера установки.|  
 |[Установка распределенного воспроизведения из командной строки](install-distributed-replay-overview.md)|Методический раздел, в котором приведены образцы синтаксиса и параметров для запуска установки в автоматическом режиме.|  

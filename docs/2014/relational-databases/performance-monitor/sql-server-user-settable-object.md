@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d079c1ad9810f86935777159d0ff2e855c6df3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038621"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, объект User Settable
   В Microsoft **объект** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать пользовательские экземпляры счетчиков, которые используются для контроля тех характеристик сервера, которые нельзя отследить при использовании существующих счетчиков, какими являются, например компоненты, уникальные для вашей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : число зарегистрированных заказов или опись продукции.  

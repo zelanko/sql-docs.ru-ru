@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c7287ad1-50d2-4e80-bc0c-b5570f7e5f69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd49c3264857a92a9ca029a25894a5afdbeab381
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 780a2c1bfd9f21c71367ad61f200ec19ab44a608
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62760993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068125"
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>Отключение проверочных ограничений в инструкциях INSERT и UPDATE
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] проверочное ограничение можно отключить в транзакциях INSERT и UPDATE с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. После отключения проверочных ограничений будущие вставки и обновления столбца не проверяются по проверочным ограничениям. Используйте эту возможность, если новые данные будут нарушать существующее ограничение или если ограничение относится только к данным, уже помещенным в базу данных.  

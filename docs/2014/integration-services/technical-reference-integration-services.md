@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e66a3465c543879b2ff6115e9ea45a53f97312
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1cd70c38c03e0a60cfe5060f15e2ecc6655e72a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055281"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962364"
 ---
 # <a name="technical-reference-integration-services"></a>Технический справочник (службы Integration Services)
-  Найдите средства, языки и справочную документацию по программированию [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в.  
+  Найдите средства, языки и справочную документацию по программированию для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
  ![Маленький значок папки с файлами](media/filefolder-small.gif "Маленький значок папки") **Служба отслеживания измененных данных и конструктор**  
  [Служба системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture/change-data-capture-service-for-oracle-by-attunity.md)  

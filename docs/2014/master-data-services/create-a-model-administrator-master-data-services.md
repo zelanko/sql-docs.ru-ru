@@ -11,21 +11,20 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d4a9e07006444cf85a6d453e6dc8e2956d55e78
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78964371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971824"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Создание администратора модели (службы Master Data Services)
-  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]создайте администратора модели, если требуется, чтобы группа или пользователь имели разрешение **Обновление** для всех объектов в одной или нескольких моделях.  
+  В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Создайте администратора модели, если требуется, чтобы группа или пользователь имели разрешение **Обновление** для всех объектов в одной или нескольких моделях.  
   
 > [!TIP]  
 >  Чтобы упростить администрирование, создайте локальную группу Windows или локальной группы и настройте ее в качестве администратора модели. Впоследствии добавлять пользователей в группу и удалять их из нее можно без обращения к [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для выполнения этой процедуры:  
   
 -   необходимо разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
@@ -44,7 +43,7 @@ ms.locfileid: "78964371"
   
 5.  По желанию выберите модель из списка **Модель** .  
   
-6.  Щелкните **Правка**.  
+6.  Нажмите кнопку **Изменить**.  
   
 7.  Щелкните модель, разрешение на которую необходимо предоставить.  
   

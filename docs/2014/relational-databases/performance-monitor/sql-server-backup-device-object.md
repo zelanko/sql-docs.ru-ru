@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80f6fbec56a086ad150620dac1179da9018370b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3126310ad31dcc153fc79508dbfaccf86f5da78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017002"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, объект Backup Device
   **Устройство резервного копирования** предоставляет счетчики для контроля над устройствами резервного копирования и операциями восстановления Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Контролировать устройства резервного копирования нужно, если необходимо определить пропускную способность, состояние или производительность операций резервного копирования и восстановления для каждого из устройств. Чтобы контролировать пропускную способность операции резервного копирования или восстановить всю **базу данных**, используйте счетчик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Пропускная способность резервного копирования/восстановления в байтах/с**объекта**. Дополнительные сведения см. в статье [SQL Server, Databases Object](sql-server-databases-object.md).  

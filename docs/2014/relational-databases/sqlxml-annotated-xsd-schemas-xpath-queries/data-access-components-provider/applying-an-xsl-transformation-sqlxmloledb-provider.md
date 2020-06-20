@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd5686299751d6ae10b9407deee36b8aeea31468
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015772"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Применение преобразования XSL (поставщик SQLXMLOLEDB)
   В этом образце приложения ADO выполняется SQL-запрос, и к результату применяется преобразование XSL. Присвоение свойству Клиентсидексмл значения true обеспечивает обработку набора строк на стороне клиента. Диалект команды имеет значение {5d531cb2-e6ed-11d2-b252-00c04f681b71}, поскольку SQL-запрос задан в шаблоне, а при выполнении шаблона должен указываться этот диалект. Свойство XSL определяет XSL-файл, используемый для применения преобразования. Значение свойства базового пути используется для поиска XSL-файла. Если указать путь в значении свойства XSL, то путь будет относиться к пути, указанному в свойстве базового пути.  

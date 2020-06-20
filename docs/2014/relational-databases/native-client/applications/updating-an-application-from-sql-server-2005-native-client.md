@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e73e200fb47c1ad54066f66396c887c1604a09c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b8a70b014f0813bb8364509207922b3f2a84329
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017412"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
   В этом разделе рассматриваются критические изменения в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в сравнении с собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "82704416"
 |Более строгая проверка параметров типа SQL_C_TYPE _TIMESTAMP и DBTYPE_DBTIMESTAMP.|Перед [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] собственным клиентом `datetime` значения округляются в соответствии с масштабом `datetime` `smalldatetime` столбцов и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Теперь в собственном клиенте [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (и более поздних версиях) применяются более строгие правила проверки, определенные в базовой спецификации ODBC для долей секунды. Если значение параметра не удается преобразовать в тип SQL с помощью масштаба, заданного или подразумеваемого клиентской привязкой, без усечения конечных разрядов, то возвращается ошибка.|  
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может возвращать различные результаты при выполнении триггера.|Изменения, внесенные в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], могут привести к тому, что приложение получит другие результаты при выполнении инструкции, вызвавшей выполнение триггера при действующем параметре `NOCOUNT OFF`. В такой ситуации в приложении может возникнуть ошибка. Чтобы устранить эту ошибку, задайте `NOCOUNT ON` в триггере или вызовите SQLMoreResults, чтобы перейти к следующему результату.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   
   

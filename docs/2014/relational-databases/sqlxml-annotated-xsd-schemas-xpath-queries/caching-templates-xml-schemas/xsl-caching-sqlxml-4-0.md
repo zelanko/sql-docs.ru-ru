@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 91994142-32f0-4d8d-a8cf-eb0d8b1f1999
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 669600644ec7983b08a278784aa3644ce3948489
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e41f247c34c1b40bedfdf6924a45afe5f63735b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015777"
 ---
 # <a name="xsl-caching-sqlxml-40"></a>Кэширование XSL (SQLXML 4.0)
   Кэширование таблиц стилей XSL повышает производительность. Если кэширование XSL включено, то после первого выполнения таблица стилей XSL остается в памяти. Это повышает производительность последующей обработки. Значение по умолчанию — ON.  
@@ -39,7 +38,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\XSLCacheSize
   
  При каждом использовании кэшированной таблицы стилей XSL проверяется время изменения файла XSL, чтобы определить необходимость его обновления. Это происходит потому, что копия на диске новее копии в кэше.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кэширование шаблонов &#40;SQLXML 4,0&#41;](template-caching-sqlxml-4-0.md)   
  [Кэширование схемы &#40;SQLXML 4,0&#41;](schema-caching-sqlxml-4-0.md)  
   

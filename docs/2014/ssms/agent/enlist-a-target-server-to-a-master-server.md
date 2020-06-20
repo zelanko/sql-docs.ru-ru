@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7633adb5-d140-4e58-a8f2-5b4b50c2f95b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3d0d91de95e82fcd174aa9290e208afda5bef91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 256f1a78d298d89a36412ee5689695f3ab3fde8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211394"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062305"
 ---
 # <a name="enlist-a-target-server-to-a-master-server"></a>Прикрепление целевого сервера к главному
   В этом разделе описывается, как добавить целевые серверы в конфигурацию администрирования нескольких серверов. Запустите эту процедуру с главного сервера. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или управляющих объектов SQL Server (SMO).  
@@ -38,7 +37,7 @@ ms.locfileid: "68211394"
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [SMO](#PowerShellProcedure)  
+     [ОБЪЕКТАХ](#PowerShellProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -58,7 +57,7 @@ ms.locfileid: "68211394"
   
 ##  <a name="using-sql-server-management-objects-smo"></a><a name="PowerShellProcedure"></a>Использование управляющие объекты SQL Server (SMO)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   
   

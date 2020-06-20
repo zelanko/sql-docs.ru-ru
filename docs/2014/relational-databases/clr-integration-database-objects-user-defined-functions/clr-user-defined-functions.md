@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba7a4a983ec0cb36ef0fd79df44491f7f23f7648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874489"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970774"
 ---
 # <a name="clr-user-defined-functions"></a>Определяемые пользователем функции среды CLR
   Определяемые пользователем функции представляют собой подпрограммы, которые могут принимать параметры, выполнять вычисления или другие действия и возвращать результат. Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], определяемую пользователем функцию можно написать на любом языке программирования платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, например на [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
@@ -39,7 +38,7 @@ ms.locfileid: "62874489"
  [Пользовательские агрегатные функции среды CLR](clr-user-defined-aggregates.md)  
  Объясняет реализацию и использование определяемых пользователем статистических функций.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)  
   
   

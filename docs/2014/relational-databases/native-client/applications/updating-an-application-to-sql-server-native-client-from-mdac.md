@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76e846728f3c9e59053ba8e6601c7652528dc46e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 804f4340f3ca9a381f28507e0516d5f2e7d913a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017387"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Обновление приложения с переходом от компонентов MDAC к собственному клиенту SQL Server
   Между собственным клиентом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и компонентами доступа к данным MDAC существует несколько различий; начиная с Windows Vista, компоненты доступа к данным стали называться компонентами доступа к данным Windows, или Windows DAC. Хотя обе программы реализуют собственный доступ к базам данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует новые функции [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] особым образом, обеспечивая в то же время обратную совместимость с ранними версиями.  
@@ -88,7 +87,7 @@ ms.locfileid: "82704404"
   
     -   Завершить  
   
-    -   Backup  
+    -   Резервное копирование  
   
 -   При подключении приложений MDAC к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типы данных, представленные в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], будут отображаться как типы данных, совместимые с [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], как показано в следующей таблице.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917461"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970244"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
   В этом разделе описывается создание нового определяемого пользователем псевдонима типа данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -92,7 +91,7 @@ ms.locfileid: "62917461"
     |20–28|13|  
     |29–38|17|  
   
-     Для `nchar` типов `nvarchar` данных и значение хранилища всегда в два раза больше значения в параметре **length**.  
+     Для `nchar` `nvarchar` типов данных и значение хранилища всегда в два раза больше значения в параметре **length**.  
   
      Значение хранилища не отображается для типов данных `nvarchar(max)`, `varchar(max)` и `varbinary(max)`.  
   

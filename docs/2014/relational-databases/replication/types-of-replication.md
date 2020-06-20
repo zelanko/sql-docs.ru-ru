@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5576331004eca44bc32dbde8f430284f75e6eb70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047600"
 ---
 # <a name="types-of-replication"></a>Типы репликации
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает следующие типы репликации для использования в распределенных приложениях.  
@@ -34,7 +33,7 @@ ms.locfileid: "63255446"
   
  В репликации моментальных снимков изменения данных не отслеживаются. При каждом применении моментального снимка он полностью переписывает существующие данные. Репликации транзакций отслеживают изменения при помощи журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а репликации слиянием отслеживают изменения при помощи триггеров и таблиц метаданных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

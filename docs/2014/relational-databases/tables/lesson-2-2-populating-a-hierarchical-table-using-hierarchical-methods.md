@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec81ae3a078846ad9288fe75eab9fe30d547a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef99d711a772a075f568a83f5d56fcecaaa598f0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110060"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068045"
 ---
 # <a name="populating-a-hierarchical-table-using-hierarchical-methods"></a>Заполнение иерархической таблицы с помощью иерархических методов
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] работает 8 человек. Иерархический список сотрудников выглядит следующим образом.  
@@ -64,7 +63,7 @@ ms.locfileid: "66110060"
   
 ### <a name="to-insert-a-subordinate-employee"></a>Вставка записи подчиненного  
   
-1.  **Сара** подчиняется **Дэвиду**. Чтобы вставить узел **Sariya** , необходимо создать соответствующее значение **OrgNode** типа `hierarchyid`данных. Следующий код создает переменную типа `hierarchyid` и присваивает ей корневое значение OrgNode таблицы. Затем эта переменная используется методом [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) для вставки строки, представляющей подчиненный узел. `GetDescendant` принимает два аргумента. Вот список вариантов с разными значениями аргументов.  
+1.  **Сара** подчиняется **Дэвиду**. Чтобы вставить узел **Sariya** , необходимо создать соответствующее значение **OrgNode** типа данных `hierarchyid` . Следующий код создает переменную типа `hierarchyid` и присваивает ей корневое значение OrgNode таблицы. Затем эта переменная используется методом [GetDescendant()](/sql/t-sql/data-types/getdescendant-database-engine) для вставки строки, представляющей подчиненный узел. `GetDescendant` принимает два аргумента. Вот список вариантов с разными значениями аргументов.  
   
     -   Если родительская запись — NULL, `GetDescendant` возвращает значение NULL.  
   

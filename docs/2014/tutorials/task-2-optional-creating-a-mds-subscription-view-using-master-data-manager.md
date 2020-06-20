@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc923792adc3fefb5ebaab9e225169648394c71f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 598b7bab60cad5d0c391e5e8aeec9fa3b7b9b97f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006528"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Задача 2 (необязательно). Создание представления подписки MDS с помощью диспетчера основных данных
   В этой задаче вы создадите представление подписки, чтобы предоставить сущность **поставщик** в модели **поставщики** другим приложениям. Это представление в текущей версии учебника не используется.  
   
-1.  Перейдите на главную страницу **Диспетчер основных данных** (`http://localhost/MDS`), щелкнув **SQL Server 2012 Master Data Services** сверху.  
+1.  Перейдите на главную страницу **Диспетчер основных данных** ( `http://localhost/MDS` ), щелкнув **SQL Server 2012 Master Data Services** сверху.  
   
 2.  Щелкните **Управление интеграцией**.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43deb215fded67055c069dd629dcb5553b663f71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8975b99640d539827b480d6e7650acb4fd089fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051364"
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>Класс событий TM: Promote Tran Starting
   Класс событий "TM: Promote Tran Starting" указывает на начало выполнения запроса PROMOTE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
@@ -32,8 +31,8 @@ ms.locfileid: "63061369"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 183.|27|Нет|  
-|EventSequence|`int`|Порядковый номер данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 183.|27|нет|  
+|EventSequence|`int`|Порядковый номер данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -49,7 +48,7 @@ ms.locfileid: "63061369"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

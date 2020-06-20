@@ -1,5 +1,5 @@
 ---
-title: Недопустимые типы и члены в Microsoft. VisualBasic. dll | Документация Майкрософт
+title: Недопустимые типы и члены в Microsoft.VisualBasic.dll | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9756c67e3cdfe1ff9e30127b3f8b5bf6ddcda436
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954394"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Запрещенные типы и элементы в Microsoft.VisualBasic.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде `HostProtectionAttribute` CLR запрещает использование типа или члена, имеющего тип, который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **шаредстате**, `Synchronization`или. `UI` В следующей таблице перечислены элементы и типы сборки `Microsoft.VisualBasic.dll`, значения атрибута защиты узла которых недопустимы.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде CLR запрещает использование типа или члена, имеющего тип `HostProtectionAttribute` , который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt` ,, `ExternalThreading` `MayLeakOnAbort` , `SecurityInfrastructure` ,, `SelfAffectingProcessMgmnt` `SelfAffectingThreading` , **шаредстате**, `Synchronization` или `UI` . В следующей таблице перечислены элементы и типы сборки `Microsoft.VisualBasic.dll`, значения атрибута защиты узла которых недопустимы.  
   
 > [!NOTE]  
 >  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [supported .NET Framework librarys](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -60,8 +59,8 @@ ms.locfileid: "62919649"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
+|Microsoft.VisualBasic.Interaction.InputBox()|ИП|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|ИП|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Синхронизация|  
@@ -78,11 +77,11 @@ ms.locfileid: "62919649"
 |Microsoft.VisualBasic.MyServices.RegistryProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy|ExternalProcessMgmt|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Недопустимые типы и элементы в mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Недопустимые типы и члены в System. dll](disallowed-types-and-members-in-system-dll.md)   
- [Недопустимые типы и члены в System. Data. dll](disallowed-types-and-members-in-system-data-dll.md)   
+ [Недопустимые типы и члены в mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Недопустимые типы и члены в System.dll](disallowed-types-and-members-in-system-dll.md)   
+ [Недопустимые типы и члены в System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)   
  [Недопустимые типы и элементы в библиотеке System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

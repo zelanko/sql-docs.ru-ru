@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 25cf8bdd-8691-4caa-96b6-3081b2f37dea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d01cf5aa2a57ace05cdf7d6da02f1f082d77b0bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16a86fa9098efcd6f4d8d46917df175667414dd9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972494"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Просмотр метаданных пути в редакторе пути потока данных
   Пути соединяют два компонента потока данных. Чтобы просмотреть пути метаданных, поток данных должен содержать по крайней мере два соединенных компонента потока данных. Дополнительные сведения см. в разделах [Добавление или удаление компонента в потоке данных](data-flow/add-or-delete-a-component-in-a-data-flow.md) и [Соединение компонентов в потоке данных](data-flow/connect-components-in-a-data-flow.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66054488"
   
 7.  Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Поток данных](data-flow/data-flow.md)  
   

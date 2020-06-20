@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9e8147a4-aeeb-49a6-80f8-df753d0f34cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d1b0daf439816b2a5ee9ba852b95f0628d2c863
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051607"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted, класс событий
   Класс событий SP:StmtCompleted указывает на то, что выполнение инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в хранимой процедуре было завершено.  
@@ -28,14 +27,14 @@ ms.locfileid: "63050960"
   
 |Имя столбца данных|`Data type`|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
+|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |ЦП|`int`|Объем времени ЦП (в миллисекундах), использованного событием.|18|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |Duration|`bigint`|Длительность события (в микросекундах).|13|Да|  
 |EndTime|`datetime`|Время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting.|15|Да|  
-|EventClass|`int`|Тип события = 45.|27|Нет|  
+|EventClass|`int`|Тип события = 45.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -65,7 +64,7 @@ ms.locfileid: "63050960"
 |Запись|`bigint`|Число логических обращений к дискам на запись, выполненное сервером для данного события.|17|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

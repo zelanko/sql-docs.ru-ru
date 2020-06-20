@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c95beaa10331e916f7eae54a9e8c78e796d77f59
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8333f45fd9e3b742b3765efaee5ae7a865161bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039576"
 ---
 # <a name="data-type-usage"></a>Использование типов данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] накладывает следующее использование типов данных.  
@@ -46,7 +45,7 @@ ms.locfileid: "82699536"
 |Определяемый пользователем тип|Столбцы определяемого пользователем типа преобразуются в тип данных SQL_SS_UDT. Если столбец определяемого пользователем типа явно сопоставлен с другим типом в инструкции SQL с помощью методов ToString() или ToXMLString() определяемого пользователем типа или с помощью функций CAST/CONVERT, то тип столбца в результирующем наборе будет отражать реальный тип, к которому столбец был преобразован.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента может быть привязан только к столбцу определяемого пользователем типа как к двоичному типу. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает преобразование только между типами данных SQL_SS_UDT и SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически преобразует XML в текст Юникода. Тип XML преобразуется в SQL_SS_XML.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

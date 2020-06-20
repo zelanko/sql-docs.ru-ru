@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fefa2cc8-2d3c-4336-aeae-ce063a3a8df2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d6672b97524537a51ac8e082a283a203157d01a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fe8b6dbeb50d289a1774d78bf4d2b214711b24c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015089"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Образец схемы XSD с заметками для примеров XPath (SQLXML 4.0)
   Образцы запросов XPath в этом разделе обращаются к схеме сопоставления. Схема сопоставления — это XSD-файл с заметками схемы XML. Дополнительные сведения о схемах сопоставления см. [в статье Введение в схемы XSD с Заметками &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  
