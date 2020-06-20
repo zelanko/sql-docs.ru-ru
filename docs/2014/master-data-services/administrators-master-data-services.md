@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972274"
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] существует два типа администраторов: администраторы модели и системные администраторы служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Администраторы модели  
- В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Администратор модели — это пользователь, имеющий разрешение на **Обновление** , назначенное объекту модели верхнего уровня на вкладке **объекты модели** и не имеющий других назначенных разрешений.  
+ В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Администратор модели — это пользователь, имеющий разрешение на **Обновление** , назначенное объекту модели верхнего уровня на вкладке **объекты модели** и не имеющий других назначенных разрешений.  
   
 -   Если пользователь имеет доступ к функциональной области **Обозреватель** , то он может добавлять, удалять и обновлять все основные данные в этой области.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "65480010"
 |Системный администратор служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]|Разрешения, назначенные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], не влияют на доступ администратора.<br /><br /> Автоматически имеет разрешение **Обновление** для всех моделей.<br /><br /> Автоматически имеет доступ ко всем функциональным областям.<br /><br /> В MDM. tblUser значение столбца **ID** равно **1**.|  
 |Администратор модели|Разрешения, заданные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], определяют, является ли пользователь администратором модели.<br /><br /> Может быть администратором модели на основе разрешений, назначенных ему явно, либо на основе разрешений, полученных в результате членства в некоторой группе.<br /><br /> Является администратором только для моделей, имеющих разрешение на **Обновление** , назначенное объекту модели верхнего уровня, и не имеет других разрешений.<br /><br /> Имеет доступ только к тем функциональным областям, к которым разрешен доступ.<br /><br /> В MDM. tblUser значение в столбце **ID** не равно **1**.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание администратора модели &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md)   
  [Измените &#40;Master Data Services учетной записи системного администратора&#41;](../../2014/master-data-services/change-the-system-administrator-account-master-data-services.md)   
  [Создание базы данных Master Data Services](install-windows/create-a-master-data-services-database.md)   

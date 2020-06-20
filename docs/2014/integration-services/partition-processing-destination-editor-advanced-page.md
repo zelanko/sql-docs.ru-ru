@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056778"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964736"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Редактор назначения обработки секций (страница «Дополнительно»)
   Страница **Дополнительно** диалогового окна **Редактор назначения обработки секций** позволяет настроить обработку ошибок.  
@@ -29,9 +28,9 @@ ms.locfileid: "66056778"
 > [!NOTE]  
 >  Описанные здесь задачи не применимы к табличным моделям служб Analysis Services.  Нельзя связать входные столбцы со столбцами секционирования для табличных моделей. Вместо этого для обработки секции следует использовать задачу выполнения DDL [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) служб Analysis Services.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Использовать конфигурацию ошибок по умолчанию**  
- Укажите, нужно ли использовать обработку ошибок в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] по умолчанию. По умолчанию это значение равно `True`.  
+ Укажите, нужно ли использовать обработку ошибок в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] по умолчанию. Значение по умолчанию — `True`.  
   
  **Действие при возникновении ошибки ключа**  
  Укажите способ обработки записей с недопустимыми ключевыми значениями.  
@@ -100,7 +99,7 @@ ms.locfileid: "66056778"
  **Обзор (...)**  
  Укажите путь к журналу ошибок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Обработка секций" (страница "Сопоставления")](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 02bfbf76b460a74e01311edd59de9d1d3322c089
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fc11dfbc9c6a54ae2c85bb9d7efbe08bc09fe369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020094"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Поддержка API-интерфейса ODBC для улучшенных функций даты и времени
   Следующие API-интерфейсы ODBC поддерживают улучшенную функциональность даты и времени:  
@@ -68,7 +67,7 @@ ms.locfileid: "82705429"
   
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

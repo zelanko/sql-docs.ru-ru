@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823805"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061179"
 ---
 # <a name="manage-files-with-encoding"></a>Управление файлами с помощью кодировок
   Для отображения кода на конкретном языке и на конкретной платформе можно связать файл с определенной кодировкой.  
@@ -42,7 +41,7 @@ ms.locfileid: "62823805"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Сохранение файла с другой кодировкой или символом конца строки  
   
-1.  В меню **файл** выберите команду **сохранить \<имя файла> как**.  
+1.  В меню **Файл** выберите команду **Сохранить \<filename> как**.  
   
 2.  В диалоговом окне **Сохранение файла** раскройте кнопку **Сохранить** и выберите пункт **Выбор кодировки для сохранения**.  
   

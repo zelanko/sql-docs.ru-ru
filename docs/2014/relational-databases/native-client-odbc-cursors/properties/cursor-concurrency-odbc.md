@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7139ace2498ef2eeddb173950281ac4cf493efad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c47f24152978fedf8f2c3d49ec3b721969712814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020587"
 ---
 # <a name="cursor-concurrency-odbc"></a>Параллелизм курсоров (ODBC)
   Операции курсора, как и типы курсора, зависят от параметров параллелизма, устанавливаемых приложением. Параметры параллелизма задаются с помощью параметра SQL_ATTR_CONCURRENCY [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). Существуют следующие типы параллелизма.  
@@ -32,7 +31,7 @@ ms.locfileid: "82705593"
   
 -   Блокировка (SQL_CONCUR_LOCK).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства курсора](cursor-properties.md)  
   
   

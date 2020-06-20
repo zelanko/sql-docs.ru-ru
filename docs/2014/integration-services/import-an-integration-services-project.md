@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5191da78fc32d72c54fa6da925bd419685b90152
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965664"
 ---
 # <a name="import-an-integration-services-project"></a>Импорт проекта служб Integration Services
   Для создания проекта из существующего файла развертывания (ISPAC) или из проекта, развернутого в каталоге служб Integration Services, используется **Мастер импорта проекта** служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эта функция особенно полезна в случаях, когда отсутствует исходная копия проекта, но необходимо создать ее из файла с расширением ISPAC или каталога SSISDB.  
   
 ### <a name="to-import-a-project"></a>Импорт проекта  
   
-1.  В [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]выберите пункт **создать** > **проект** в меню **файл** .  
+1.  В выберите [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] пункт **создать**  >  **проект** в меню **файл** .  
   
 2.  В области **Установленные шаблоны** в окне **Создание проекта** разверните пункт **Бизнес-аналитика**и выберите **Службы Integration Services**.  
   

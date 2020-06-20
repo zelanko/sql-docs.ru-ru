@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061067"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Задача 6. Импорт значений из проекта очистки списка поставщиков
   В этой задаче вы импортируете наборы знаний служб DQS, полученные в процессе очистки. Дополнительные сведения см. в разделе [Импорт значений проекта очистки в домен](https://msdn.microsoft.com/library/hh479581.aspx) . Вы также экспортируете базу знаний в файл служб DQS перед публикацией обновленной базы знаний **Поставщики** .  
@@ -32,14 +31,14 @@ ms.locfileid: "65489098"
   
 5.  Обратите внимание, что все сообщения электронной почты импортируется вместе с двумя изменениями, внесенными во время интерактивной очистки. Прокрутите экран вниз, чтобы просмотреть исправления.  
   
-    |Применение|Исправить на|  
+    |Значение|Исправить на|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  Повторите предыдущий шаг импорта значений проекта для домена **Country** и обратите внимание, что добавлена новая запись для исправления **соединенных** Штатов в **США** (With ').  
   
-    |Применение|Исправить на|  
+    |Значение|Исправить на|  
     |-----------|----------------|  
     |United State|США|  
   

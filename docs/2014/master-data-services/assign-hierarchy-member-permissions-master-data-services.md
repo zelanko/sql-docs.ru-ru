@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a12a46c1a250ce3d93c9ec2091dc5048ceebd61e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d543045fc5aac67b266ceb94c569a226bfd36f53
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972224"
 ---
 # <a name="assign-hierarchy-member-permissions-master-data-services"></a>Назначение разрешений для элемента иерархии (службы Master Data Services)
   Разрешения для элементов иерархии назначаются, чтобы дать пользователям или группам возможность просматривать данные в функциональной области **Обозреватель**[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -48,18 +47,18 @@ ms.locfileid: "65483736"
   
 7.  Выберите иерархию из списка **Иерархия** .  
   
-8.  Щелкните **Правка**.  
+8.  Нажмите кнопку **Изменить**.  
   
 9. Разверните дерево и щелкните узел иерархии, для которого нужно назначить разрешения.  
   
 10. В меню выберите **только чтение**, **Обновить**или **запретить**.  
   
-11. Нажмите кнопку **Сохранить**.  
+11. Выберите команду **Сохранить**.  
   
     > [!NOTE]  
     >  Разрешения для элемента иерархии вступают в силу не сразу. См. раздел [Срочное применение разрешения для элемента (службы Master Data Services)](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление разрешений элемента иерархии &#40;Master Data Services&#41;](../../2014/master-data-services/delete-hierarchy-member-permissions-master-data-services.md)   
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения на элементы иерархии (службы Master Data Services)](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 16a939835d5129a12d5c3b9fce9d6fa5e0c07f80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec199fe0c89378116a0b4fd3e6d36a5062ea0e0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061430"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Метод SetProtocolsOrder (класс ClientNetworkProtocol)
   Меняет порядок протоколов в списке.  
@@ -54,7 +53,7 @@ ProtocolOrderList
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)   
  [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   

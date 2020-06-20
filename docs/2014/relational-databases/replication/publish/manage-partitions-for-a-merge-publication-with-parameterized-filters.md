@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 983b02865c0564919259f896bf09d8bdb0cd969f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479307"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060506"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
   В данном разделе описывается управление секциями для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Параметризованные фильтры строк могут быть использованы для формирования неперекрывающихся секций. Такие секции могут быть ограничены таким образом, чтобы каждая данная секция предоставлялась только одной подписке. В таком случае, чем больше число подписчиков, тем большее число секций потребуется, а это, в свою очередь, приведет к необходимости создания такого же числа секционированных моментальных снимков. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,11 +46,11 @@ ms.locfileid: "74479307"
 -   Если публикация имеет параметризованные фильтры, позволяющие получать подписки с неперекрывающимися секциями, то при необходимости повторного создания подписки в случае ее утраты необходимо удалить секцию, которая была на нее подписана, создать заново подписку, а затем повторно создать секцию. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../merge/parameterized-filters-parameterized-row-filters.md). При формировании скрипта публикации репликация формирует скрипты создания для существующих секций подписчика. Дополнительные сведения см. в разделе [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Управление секциями осуществляется на странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md). На этой странице доступны следующие возможности: создание и удаление секций, разрешение подписчикам выполнять создание и доставку моментального снимка, создание моментальных снимков для одной или нескольких секций, очистка моментальных снимков.  
+ Управление секциями осуществляется на странице **Секции данных** диалогового окна **свойства \<Publication> публикации —** . Дополнительные сведения о доступе к этому диалоговому окну см. в разделе [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md). На этой странице доступны следующие возможности: создание и удаление секций, разрешение подписчикам выполнять создание и доставку моментального снимка, создание моментальных снимков для одной или нескольких секций, очистка моментальных снимков.  
   
 #### <a name="to-create-a-partition"></a>Создание секции  
   
-1.  На странице **Секции данных** диалогового окна **Свойства публикации — \<публикация>** щелкните **Добавить**.  
+1.  На странице **Секции данных** диалогового окна **Свойства публикации — \<Publication> ** нажмите кнопку **Добавить**.  
   
 2.  В диалоговом окне **Добавить секцию данных** введите значение **HOST_NAME()** и/или значение **SUSER_SNAME()** , связанное с секцией, которую требуется создать.  
   
@@ -100,25 +99,25 @@ ms.locfileid: "74479307"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Просмотр информации о существующих секциях  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Укажите имя публикации для ** \@публикации**. Используемых Укажите ** \@SUSER_SNAME** или ** \@HOST_NAME** , чтобы получить сведения только на основе одного критерия фильтрации.  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_helpmergepartition (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Укажите имя публикации для ** \@ публикации**. Используемых Укажите ** \@ suser_sname** или ** \@ HOST_NAME** , чтобы получить сведения только на основе одного критерия фильтрации.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Определение новой секции и формирование нового секционированного снимка  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Укажите имя публикации для ** \@публикации**и параметризованное значение, определяющее секцию для одного из следующих элементов:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepartition (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Укажите имя публикации для ** \@ публикации**и параметризованное значение, определяющее секцию для одного из следующих элементов:  
   
-    -   SUSER_SNAME — когда параметризованный фильтр определяется значением, возвращаемым [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
+    -   ** \@ SUSER_SNAME** — когда параметризованный фильтр определяется значением, возвращаемым [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   HOST_NAME — когда параметризованный фильтр определяется значением, возвращаемым [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
+    -   ** \@ HOST_NAME** — когда параметризованный фильтр определяется значением, возвращаемым [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
 2.  Создайте и инициализируйте параметризованный снимок для новой секции. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 #### <a name="to-delete-a-partition"></a>Удаление секции  
   
-1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergepartition (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Укажите имя публикации для ** \@публикации** и параметризованное значение, определяющее секцию для одного из следующих элементов:  
+1.  На издателе в базе данных публикации выполните хранимую процедуру [sp_dropmergepartition (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Укажите имя публикации для ** \@ публикации** и параметризованное значение, определяющее секцию для одного из следующих элементов:  
   
-    -   SUSER_SNAME — когда параметризованный фильтр определяется значением, возвращаемым [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql). ** \@**  
+    -   ** \@ SUSER_SNAME** — когда параметризованный фильтр определяется значением, возвращаемым [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   HOST_NAME — когда параметризованный фильтр определяется значением, возвращаемым [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql). ** \@**  
+    -   ** \@ HOST_NAME** — когда параметризованный фильтр определяется значением, возвращаемым [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
      При этом также будет удалено задание моментального снимка и все файлы снимка для этой секции.  
   

@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35edfb66f52d5811ff24d85be3d2e403e5fa6121
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964934"
 ---
 # <a name="package-and-project-password"></a>Пароль пакета и проекта
   Диалоговое окно **Пароль пакета** позволяет вводить пароль для пакета, который был зашифрован с паролем. Пароль необходим, если в пакете используется уровень защиты **Шифровать конфиденциальные данные паролем**или **Шифровать все данные паролем** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Пароль**  
  Введите пароль.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о безопасности &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md)  
   

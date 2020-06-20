@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1666aeacd7df2589c810faa47edf9f435b73bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060515"
 ---
 # <a name="maintain-publications"></a>Обслуживание публикаций
   После создания публикации может возникнуть необходимость в добавлении или исключении статей либо в изменении свойств публикации или статьи. После создания публикации разрешается большинство изменений, но в некоторых случаях необходимо создать для публикации новый моментальный снимок и/или повторно инициализировать подписки на эту публикацию. Дополнительные сведения см. в статьях [Изменение свойств публикации и статьи](change-publication-and-article-properties.md) и [Добавление и удаление статей в существующих публикациях](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы и ответы по администрированию репликации](../administration/frequently-asked-questions-for-replication-administrators.md)   
  [Рекомендации по администрированию репликации](../administration/best-practices-for-replication-administration.md)   
  [Публикация данных и объектов базы данных](publish-data-and-database-objects.md)   

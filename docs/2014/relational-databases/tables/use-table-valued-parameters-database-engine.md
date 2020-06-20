@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002858"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Использование параметров, возвращающих табличные значения (компонент Database Engine)
   Возвращающие табличные значения параметры объявляются с помощью определяемых пользователем табличных типов. Возвращающие табличные значения параметры можно использовать, чтобы отправить несколько строк данных в инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или в процедуру, например хранимую процедуру или функцию, не создавая при этом временной таблицы или большого количества параметров.  
@@ -79,7 +78,7 @@ ms.locfileid: "68211764"
   
  Возвращающие табличные значения параметры работают также хорошо или даже лучше, чем эквивалентная реализация массива параметров.  
   
-##  <a name="example"></a><a name="Example"></a>Например  
+##  <a name="example"></a><a name="Example"></a> Пример  
  В следующем примере используется язык [!INCLUDE[tsql](../../includes/tsql-md.md)] и показывается, как создать тип возвращающего табличное значение параметра, объявить ссылающуюся на него переменную, заполнить список параметров, а затем передать значения хранимой процедуре.  
   
 ```  
@@ -119,7 +118,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание типа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)   
  [DECLARE @local_variable (Transact-SQL)](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [sys. types &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)   

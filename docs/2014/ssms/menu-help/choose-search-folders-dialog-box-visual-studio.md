@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c76fc0d5247d2a9f07fcf97677ac1f24b9635e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf3647decf31b37a12d6f9a338907c9fc93182d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678936"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067415"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
   Позволяет собирать, сохранять и исправлять собственные именованные наборы папок поиска, а также задавать порядок поиска в них. Чтобы отобразить это диалоговое окно, нажмите кнопку **Обзор (...)** под раскрывающимся списком **Папка** в окне "Найти в файлах" или "Заменить в файлах", "Найти и заменить".  

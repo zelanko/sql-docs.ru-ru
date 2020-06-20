@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966134"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Шаг 7. Добавление и настройка назначения OLE DB
   Созданный пакет теперь может извлекать данные из источника «Неструктурированный файл» и преобразовывать эти данные в формат, совместимый с форматом назначения. Далее требуется загрузить преобразованные данные в указанное назначение. Чтобы загрузить данные, необходимо добавить назначение OLE DB в поток данных. Назначение OLE DB может использовать таблицу, представление или SQL-команду базы данных, чтобы загрузить данные в различные OLE DB-совместимые базы данных.  
@@ -50,12 +49,12 @@ ms.locfileid: "62767563"
   
 13. Щелкните правой кнопкой мыши назначение **Образец назначения OLE DB** и выберите пункт **Свойства**.  
   
-14. В окно свойств убедитесь `LocaleID` , что свойство имеет значение **Английский (США)** , а`DefaultCodePage` свойство имеет значение **1252**.  
+14. В окно свойств убедитесь, что `LocaleID` свойство имеет значение **английский (США)** , а `DefaultCodePage` свойство имеет значение **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 8. Облегчение чтения пакета, созданного на занятии 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение «OLE DB»](data-flow/ole-db-destination.md)  
   
   

@@ -9,22 +9,21 @@ ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 147c75384fa65a103c3d17c731add99ecec79b63
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933375"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>Сопоставление SQL-DMO с SMO
-  SQL распределенные управляющие объекты (SQL-DMO) больше не включается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], приложения SQL-DMO должны быть преобразованы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использования управляющих объектов (SMO). Объектная модель SMO напоминает объектную модель SQL-DMO, поэтому большинство объектов SQL-DMO сопоставляются с одноименными объектами SMO. Однако некоторые объекты SQL-DMO при переходе на SMO изменены или удалены. В следующей таблице приведены рекомендованные действия по преобразованию SQL-DMO объектов, которые не переводятся на объекты SMO непосредственно.  
+  SQL распределенные управляющие объекты (SQL-DMO) больше не включается в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , приложения SQL-DMO должны быть преобразованы для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO). Объектная модель SMO напоминает объектную модель SQL-DMO, поэтому большинство объектов SQL-DMO сопоставляются с одноименными объектами SMO. Однако некоторые объекты SQL-DMO при переходе на SMO изменены или удалены. В следующей таблице приведены рекомендованные действия по преобразованию SQL-DMO объектов, которые не переводятся на объекты SMO непосредственно.  
   
 |Объект SQL-DMO|Действие в объекте SMO|  
 |---------------------|-------------------|  
 |Объект View2|Перемещено в пространство имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.|  
 |Объект AlertSystem|Перемещено в пространство имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.|  
-|Объект Application|Удалено.|  
+|Объект Application|Удаляются.|  
 |Объекты Backup и Backup2|Объекты <xref:Microsoft.SqlServer.Management.Smo.Backup> и <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>.|  
 |Объект BackupDevice|Объекты <xref:Microsoft.SqlServer.Management.Smo.BackupDevice>|  
 |Объекты BulkCopy и BulkCopy2|Удалено и заменено объектом <xref:Microsoft.SqlServer.Management.Smo.Transfer>.|  
@@ -65,7 +64,7 @@ ms.locfileid: "62780684"
 |Объекты MergePullSubscription и MergePullSubscription2|Объект <xref:Microsoft.SqlServer.Replication.MergePullSubscription>. Перемещено в пространство имен <xref:Microsoft.SqlServer.Replication>.|  
 |Объект MergeSubscription|Объект <xref:Microsoft.SqlServer.Replication.MergeSubscription>. Перемещено в пространство имен <xref:Microsoft.SqlServer.Replication>.|  
 |Объект MergeSubsetFilter|Перемещено в пространство имен `N:Microsoft.SqlServer.Replication`.|  
-|Объект NameList|Удалено. Альтернативная функциональность в объекте <xref:Microsoft.SqlServer.Management.Smo.Scripter>.|  
+|Объект NameList|Удаляются. Альтернативная функциональность в объекте <xref:Microsoft.SqlServer.Management.Smo.Scripter>.|  
 |Объект Operator|Перемещено в пространство имен <xref:Microsoft.SqlServer.Management.Smo.Agent>.|  
 |Объекты Permission и Permission2|Объекты <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>, <xref:Microsoft.SqlServer.Management.Smo.DatabasePermission>, <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> и <xref:Microsoft.SqlServer.Management.Smo.ObjectPermission>.|  
 |Объект Property|Объект `Property`.|  
@@ -73,7 +72,7 @@ ms.locfileid: "62780684"
 |Объекты QueryResults и QueryResults2|Заменены системными объектами <xref:System.Data.DataTable> или <xref:System.Data.DataSet>.|  
 |Объект RegisteredServer|Перемещено в пространство имен <xref:Microsoft.SqlServer.Replication>.|  
 |Объект RegisteredSubscriber|Перемещено в пространство имен <xref:Microsoft.SqlServer.Replication>.|  
-|Объекты Registry и Registry2|Удалено.|  
+|Объекты Registry и Registry2|Удаляются.|  
 |Объект RemoteLogin|Объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>. Перемещено в общее пространство имен.|  
 |Объекты RemoteServer и RemoteServer2|Объект <xref:Microsoft.SqlServer.Management.Common.ServerConnection>. Перемещено в пространство имен <xref:Microsoft.SqlServer.Management.Common>.|  
 |Объект Replication|Перемещено в пространство имен <xref:Microsoft.SqlServer.Replication>.|  
@@ -84,7 +83,7 @@ ms.locfileid: "62780684"
 |Объекты Restore и Restore2|Объекты <xref:Microsoft.SqlServer.Management.Smo.Restore> и <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase>.|  
 |Объекты Rule и Rule2|Объект <xref:Microsoft.SqlServer.Management.Smo.Rule>.|  
 |Объект Schedule|Перемещено в пространство имен <xref:Microsoft.SqlServer.Replication>.|  
-|Объект ServerGroup|Удалено.|  
+|Объект ServerGroup|Удаляются.|  
 |Объект ServerRole|Объект <xref:Microsoft.SqlServer.Management.Smo.ServerRole>.|  
 |Объект SQLObjectList|Массив <xref:Microsoft.SqlServer.Management.Smo.SqlSmoObject>.|  
 |Объекты SQLServer и SQLServer2|Объект <xref:Microsoft.SqlServer.Management.Smo.Server>.|  
@@ -105,7 +104,7 @@ ms.locfileid: "62780684"
 |Объект UserDefinedFunction|Объекты <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> и <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunctionParameter>.|  
 |Объекты View и View2|Объект <xref:Microsoft.SqlServer.Management.Smo.View>.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебник по программированию управляющих объектов SQL Server (SMO)](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

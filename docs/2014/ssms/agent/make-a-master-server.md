@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008756"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
   В этом разделе описывается, как создать главный сервер [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "68189132"
 ###  <a name="security"></a><a name="Security"></a> безопасность  
  Распределенные задания, имеющие связанные с учетной записью-посредником шаги, выполняются в контексте учетной записи-посредника на целевом сервере. Убедитесь в том, что выполняются нижеприведенные условия, либо в том, что шаги заданий, связанные с учетной записью-посредником, не будут загружаться с главного сервера на целевой:  
   
--   В подразделе реестра главного сервера **\ HKEY_LOCAL_MACHINE \софтваре\микрософт\микрософт\\<SQL Server*instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) установлено значение 1 (true). По умолчанию для него задается значение 0 (false).  
+-   В подразделе реестра главного сервера **\ HKEY_LOCAL_MACHINE \софтваре\микрософт\микрософт SQL Server \\ < *instance_name*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) установлено значение 1 (true). По умолчанию для него задается значение 0 (false).  
   
 -   На целевом сервере есть учетная запись-посредник. Ее имя совпадает с именем учетной записи-посредника на главном сервере, под которой выполняется шаг задания.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "68189132"
      **Добавить соединение**  
      Добавляет сервер в список целевых серверов без регистрации.  
   
-     **Соединен**  
+     **Соединение**  
      Измените свойства соединения выбранного сервера.  
   
 5.  Страница **Учетные данные для входа на главный сервер** используется для создания в случае необходимости нового имени входа для целевого сервера и для назначения этому имени прав на главном сервере.  
@@ -136,7 +135,7 @@ GO;
   
  Дополнительные сведения см. в разделе [sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание многосерверной среды](create-a-multiserver-environment.md)   
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   

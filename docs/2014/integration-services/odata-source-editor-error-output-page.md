@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 180d54647f2913e3cf4db1ddfed314215820b648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965074"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Редактор источника OData (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника OData** служит для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
- **Рубрик**  
+ **Столбец**  
  Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника OData** .  
   
  **Error**  
@@ -46,7 +45,7 @@ ms.locfileid: "66057284"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника OData &#40;страница подключения&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
  [Редактор источника OData — страница &#40;столбцы&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Источник OData](data-flow/odata-source.md)   

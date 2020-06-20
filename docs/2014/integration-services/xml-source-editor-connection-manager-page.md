@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0df8c4cf72574df16ad42445434592faeae8548
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054296"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972374"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Редактор источника «XML» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** компонента **Редактор источника «XML»** для указания XML-файла и XSD-схемы, выполняющей преобразование XML-данных.  
@@ -65,7 +64,7 @@ ms.locfileid: "66054296"
  **Имя переменной**  
  Выберите переменную, содержащую XML-данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "XML" &#40;столбцы "&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Редактор источника "XML" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   

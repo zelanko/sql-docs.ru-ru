@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c71ff6e75cbbf27042c1eac70b1f97076290865
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957216"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Восстановление базы данных SQL Server до определенного момента времени (модель полного восстановления)
   В данном разделе содержатся инструкции по восстановлению базы данных на определенный момент времени в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Сведения в этом разделе относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют полную модель восстановления или модель восстановления с неполным протоколированием.  
@@ -132,9 +131,9 @@ ms.locfileid: "62921057"
   
  **Основной синтаксис [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
- RESTORE LOG *database_name* из <backup_device> с параметром STOPAT ** = *`time`*,** Recovery...  
+ RESTORE LOG *database_name* из <backup_device> с параметром STOPAT ** = *`time`* ,** Recovery...  
   
- Точка восстановления — это последняя фиксация транзакции, которая произошла в или `datetime` до значения, указанного в параметре *time*.  
+ Точка восстановления — это последняя фиксация транзакции, которая произошла в или до `datetime` значения, указанного в параметре *time*.  
   
  Чтобы восстановить только изменения до определенного момента времени, для каждой восстанавливаемой резервной копии укажите WITH STOPAT **=** *время*. Это гарантирует, что конечное время не будет пропущено.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62921057"
   
 3.  Восстановите последнюю разностную резервную копию, если таковая имеется, без восстановления базы данных (RESTORE DATABASE *имя_базы_данных* FROM *устройство_резервного_копирования* WITH NORECOVERY).  
   
-4.  Примените каждую резервную копию журнала транзакций в той же последовательности, в которой они были созданы, указав время, когда необходимо отключить восстановление журнала (RESTORE DATABASE *database_name* из <backup_device> STOPAT**=*`time`*,** Recovery).  
+4.  Примените каждую резервную копию журнала транзакций в той же последовательности, в которой они были созданы, указав время, когда необходимо отключить восстановление журнала (RESTORE DATABASE *database_name* из <backup_device> STOPAT** = *`time`* ,** Recovery).  
   
     > [!NOTE]  
     >  Параметры RECOVERY и STOPAT. Если в резервной копии журнала транзакций не содержится требуемое время (например, если указанное время выходит за рамки времени, отраженного в журнале транзакций), создается предупреждение и база данных остается невосстановленной.  
@@ -192,8 +191,8 @@ GO
   
 -   [Восстановление до номера LSN (SQL Server)](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
- [резервный &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [backupset (Transact-SQL)](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  
   

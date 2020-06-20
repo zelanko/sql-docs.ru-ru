@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5099505fa724707f4801418c35927400cb624d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717703"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002841"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Указание переменных XPath в запросах XPath (SQLXML 4.0)
   В следующих примерах показано, как передаются переменные в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "82717703"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Использование переменных XPath  
- Образец шаблона содержит два запроса XPath. Каждый из запросов принимает один параметр. Шаблон также задает для этих параметров значения по умолчанию. Они используются, если значения не заданы. В ** \<>SQL: Header **указаны два параметра со значениями по умолчанию.  
+ Образец шаблона содержит два запроса XPath. Каждый из запросов принимает один параметр. Шаблон также задает для этих параметров значения по умолчанию. Они используются, если значения не заданы. Два параметра со значениями по умолчанию задаются в **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

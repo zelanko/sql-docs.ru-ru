@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 151db2640e9038ad574775fa5374bddb9ed4aad0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061119"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Задача 14. Добавление в поток управления задачи "Выполнение SQL" для запуска хранимой процедуры для MDS
   После загрузки данных в промежуточные таблицы служб MDS вы выполняете хранимую процедуру, связанную с этой таблицей, для загрузки данных из промежуточных таблиц в соответствующие таблицы в базе данных MDS. У этой хранимой процедуры два обязательных параметра, которые нужно передать: LogFlag и VersionName. Параметр LogFlag определяет, записываются ли транзакции в журнал в ходе промежуточного процесса, а параметр VersionName представляет версию модели. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура](https://msdn.microsoft.com/library/hh231028.aspx) .

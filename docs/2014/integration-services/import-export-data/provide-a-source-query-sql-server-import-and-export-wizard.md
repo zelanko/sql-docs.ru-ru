@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a028c880d87e21e1fcc63ffc605e7d375619dbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6da28ac9897681d963325fcaf7712f5ed4d3d88b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767866"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965520"
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Определение исходного запроса (мастер импорта и экспорта SQL Server)
   Используйте страницу **Указание исходного запроса** , чтобы ввести инструкцию SQL, которая будет формировать данные для копирования из источника данных в место назначения.  
@@ -26,7 +25,7 @@ ms.locfileid: "62767866"
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Инструкция SQL**  
  Инструкция запроса для извлечения нужных строк данных из базы данных-источника. Например: следующая инструкция запроса извлекает столбцы **SalesPersonID**, **SalesQuota**и **SalesYTD** из базы данных AdventureWorks для менеджеров по продажам, получающих более 1,5 процентов комиссионных от продаж.  
   
@@ -36,7 +35,7 @@ FROM Sales.SalesPerson
 WHERE CommissionPct > 0.015  
 ```  
   
- **Parse**  
+ **Проанализировать**  
  Проверка синтаксиса инструкции SQL, введенной в текстовое поле **Инструкция SQL**.  
   
 > [!NOTE]  

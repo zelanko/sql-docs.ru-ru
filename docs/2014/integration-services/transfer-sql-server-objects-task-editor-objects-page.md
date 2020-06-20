@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ae231e933e30613d45fe00eaa99d6a2d5c9c772
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054866"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972763"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Редактор задачи «Передача объектов SQL Server» (страница «Объекты» )
   Страница **Объекты** диалогового окна **Редактор задачи «Передача объектов SQL Server»** используется для задания свойств копирования одного или нескольких объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на другой. Примерами объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которые можно копировать, являются таблицы, представления, хранимые процедуры и функции, определяемые пользователем. Дополнительные сведения об этой задаче см. в разделе [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -29,13 +28,13 @@ ms.locfileid: "66054866"
   
 ## <a name="static-options"></a>Статические параметры  
  **SourceConnection**  
- Выберите в списке Диспетчер соединений SMO или нажмите кнопку ** \<создать соединение... >** , чтобы создать новое соединение с исходным сервером.  
+ Выберите в списке Диспетчер соединений SMO или щелкните, **\<New connection...>** чтобы создать новое соединение с исходным сервером.  
   
  **SourceDatabase**  
  Выберите базу данных на исходном сервере, из которой будут копироваться объекты.  
   
  **DestinationConnection**  
- Выберите в списке Диспетчер соединений SMO или нажмите кнопку ** \<создать соединение... >** , чтобы создать новое соединение с целевым сервером.  
+ Выберите в списке Диспетчер соединений SMO или щелкните, **\<New connection...>** чтобы создать новое соединение с целевым сервером.  
   
  **DestinationDatabase**  
  Выберите базу данных на целевом сервере, в которую будут копироваться объекты.  
@@ -55,7 +54,7 @@ ms.locfileid: "66054866"
 |Применение|Описание|  
 |-----------|-----------------|  
 |**Восстановить**|Данные на целевом сервере будут перезаписаны.|  
-|**Добавление**|Данные, копируемые с исходного сервера, будут присоединяться к существующим данным на целевом сервере.|  
+|**Append**|Данные, копируемые с исходного сервера, будут присоединяться к существующим данным на целевом сервере.|  
   
 > [!NOTE]  
 >   Параметр **ExistingData** доступен только в случае, когда значение **CopyData** равно **True**.  
@@ -208,7 +207,7 @@ ms.locfileid: "66054866"
  **XmlSchemaCollectionsList**  
  Выберите этот пункт, чтобы открыть диалоговое окно **Выбрать коллекции XML-схем** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перемещение SQL Server объектов" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   

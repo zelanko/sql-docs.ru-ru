@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918844"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Включение задачи «Профилирование данных» в рабочий процесс пакета
   Профилирование и очистка данных на ранних стадиях не подходят для автоматизации. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выходные данные задачи профилирования данных обычно требуют визуального анализа и вмешательства человека, чтобы определить, являются ли зафиксированные нарушения реальными. Для очистки данных, даже после обнаружения проблем с их качеством, нужен хорошо продуманный план.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831634"
   
 2.  Добавьте к пакету диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] . Настройте этот диспетчер подключений для использования поставщика данных .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) и для соединения с доступным экземпляром базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     По умолчанию диспетчеру подключений присваивается следующее имя: \<имя сервера>.AdventureWorks1.  
+     По умолчанию диспетчер соединений имеет следующее имя: \<server name> . AdventureWorks1.  
   
 3.  Добавьте к пакету диспетчер соединения файлов. Настройте этот диспетчер соединений, чтобы он создавал выходной файл для задачи «Профилирование данных».  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831634"
   
 -   В окне **Переменные** создайте и настройте следующие две переменные пакета.  
   
-    -   Введите имя `ProfileConnectionName`для одной из переменных и задайте для этой переменной тип **String**.  
+    -   Введите имя `ProfileConnectionName` для одной из переменных и задайте для этой переменной тип **String**.  
   
-    -   Введите имя `AddressLine2NullRatio`для другой переменной и задайте для этой переменной тип **Double**.  
+    -   Введите имя `AddressLine2NullRatio` для другой переменной и задайте для этой переменной тип **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Настройка задачи «Профилирование данных»  
  Задачу «Профилирование данных» нужно настроить следующим образом:  
@@ -142,9 +141,9 @@ ms.locfileid: "62831634"
   
 4.  На странице **Скрипт** выберите нужный язык программирования. Затем сделайте две переменных пакета доступными для скрипта.  
   
-    1.  Для `ReadOnlyVariables`выберите `ProfileConnectionName`.  
+    1.  Для `ReadOnlyVariables` выберите `ProfileConnectionName` .  
   
-    2.  Для **ReadWriteVariables**выберите `AddressLine2NullRatio`.  
+    2.  Для **ReadWriteVariables**выберите `AddressLine2NullRatio` .  
   
 5.  Выберите **Изменить скрипт** , чтобы открыть среду разработки скрипта.  
   

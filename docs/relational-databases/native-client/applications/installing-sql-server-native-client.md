@@ -1,5 +1,6 @@
 ---
 title: Установка
+description: SQL Server Native Client 11,0 устанавливается с SQL Server 2016. Узнайте, где устанавливаются компоненты. Существует также распространяемая программа установки.
 ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5bcf0d1000b0ceee182ba043f81b4c1221ae8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6ecaaa2abcc65c24519a1d078bb5792b4cd8173
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965219"
 ---
 # <a name="installing-sql-server-native-client"></a>Установка собственного клиента SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "81388226"
  
  Нет собственного клиента SQL Server 2016. Дополнительные сведения см. в разделе [SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client.md). 
  
-Также можно извлечь файл sqlncli.msi с веб-страницы пакета дополнительных компонентов SQL Server 2012. Чтобы загрузить самую последнюю версию SQL Server Native Client, перейдите на страницу [Microsoft® SQL Server® 2012 с пакетом дополнительных компонентов](https://www.microsoft.com/download/confirmation.aspx?id=29065). Если на компьютере также установлена предыдущая версия [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, чем SQL Server 2012, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] то собственный клиент 11,0 будет устанавливаться параллельно с более ранней версией.  
+Также можно извлечь файл sqlncli.msi с веб-страницы пакета дополнительных компонентов SQL Server 2012. Чтобы загрузить самую последнюю версию SQL Server Native Client, перейдите на страницу [Microsoft® SQL Server® 2012 с пакетом дополнительных компонентов](https://www.microsoft.com/download/confirmation.aspx?id=29065). Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на компьютере также установлена предыдущая версия собственного клиента, чем SQL Server 2012, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент 11,0 будет устанавливаться параллельно с более ранней версией.  
   
  Файлы собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (sqlncli11.dll, sqlnclir11.rll и s11ch_sqlncli.chm) устанавливаются в следующий каталог.  
   
@@ -55,7 +56,7 @@ ms.locfileid: "81388226"
   
  Версии файла sqlncli.msi для архитектур x64 и Itanium устанавливают и 64-разрядную версию, и 32-разрядную версию собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если приложение планируется использовать на платформе, отличной от той, на которой оно разрабатывалось, можно скачать из центра загрузки Майкрософт версии sqlncli.msi for x64, Itanium и x86.  
   
- При инициировании sqlncli.msi по умолчанию устанавливаются только компоненты клиентской части. Клиентские компоненты — это файлы, поддерживающие запуск приложения, разработанного [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью собственного клиента. Чтобы установить также компоненты пакета SDK, укажите в командной строке `ADDLOCAL=All`. Пример:  
+ При инициировании sqlncli.msi по умолчанию устанавливаются только компоненты клиентской части. Клиентские компоненты — это файлы, поддерживающие запуск приложения, разработанного с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента. Чтобы установить также компоненты пакета SDK, укажите в командной строке `ADDLOCAL=All`. Пример:  
   
  `msiexec /i sqlncli.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   
@@ -63,7 +64,7 @@ ms.locfileid: "81388226"
  При использовании параметров /passive, /qn, /qb или /qr программы msiexec необходимо также указать параметр IACCEPTSQLNCLILICENSETERMS=YES, тем самым явно подтверждая принятие условий соглашения конечного пользователя. Этот параметр указывается только прописными буквами.  
   
 ## <a name="uninstalling-sql-server-native-client"></a>Удаление SQL Server Native Client  
- Поскольку такие приложения, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] как сервер и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] средства, зависят от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, важно не удалять [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент, пока не будут удалены все зависимые приложения. Для пользователей с предупреждением о том, что приложение зависит [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] от собственного клиента, используйте параметр APPGUID Install в MSI, как показано ниже.  
+ Поскольку такие приложения [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , как сервер и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] средства, зависят от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, важно не удалять [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент, пока не будут удалены все зависимые приложения. Для пользователей с предупреждением о том, что приложение зависит от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, используйте параметр APPGUID Install в MSI, как показано ниже.  
   
  `msiexec /i sqlncli.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
   

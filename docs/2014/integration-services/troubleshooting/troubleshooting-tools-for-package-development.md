@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62886905"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972718"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Инструменты устранения неполадок при разработке пакета
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат функции и средства, которые можно использовать для устранения неполадок в пакетах при разработке в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
