@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 42791ed9e60ad633ee1331dfc8326d58c0546000
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d242351927276120b8d8f67c94eab9d60db7fe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022553"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060632"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Вопросы управления издателями Oracle
   После завершения настройки издателя Oracle и установки механизмов отслеживания изменения репликаций администраторы систем баз данных Oracle могут использовать стандартные служебные программы Oracle и выполнять типичные задачи системного администратора. Однако необходимо знать о влиянии некоторых административных задач на публикуемые данные.  
@@ -62,7 +61,7 @@ ms.locfileid: "63022553"
   
  Сведения об удалении и повторной настройке издателя см. в подразделе «Изменения, требующие повторной настройки издателя» раздела [Troubleshooting Oracle Publishers](troubleshooting-oracle-publishers.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка издателя Oracle](configure-an-oracle-publisher.md)   
  [Рекомендации по проектированию и ограничения для издателей Oracle](design-considerations-and-limitations-for-oracle-publishers.md)   
  [Обзор публикации Oracle](oracle-publishing-overview.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7730b3cc75c45d0a6a4240a333b0d869a17c26b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925555"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Редактор задачи «Обработка средствами Analysis Services» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи "Обработка средствами Analysis Services"** , чтобы задать имя и описание для задачи "Обработка средствами Analysis Services".  
@@ -36,7 +35,7 @@ ms.locfileid: "66061449"
  **Описание**  
  Введите описание задачи «Обработка средствами Analysis Services».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "обработка Analysis Services" &#40;страница Analysis Services&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [Задача «Выполнение инструкции DDL служб Analysis Services»](control-flow/analysis-services-execute-ddl-task.md)  

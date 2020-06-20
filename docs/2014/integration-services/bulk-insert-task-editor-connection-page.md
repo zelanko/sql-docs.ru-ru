@@ -13,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061222"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924645"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Редактор задачи «Массовая вставка» (страница «Соединение»)
   Страница **Соединение** диалогового окна **Редактор задачи «Массовая вставка»** используется для указания источника и места назначения операции массовой вставки и формата для использования.  
   
  Дополнительные сведения о работе с массовыми вставками см. в разделах [Задача "Массовая вставка"](control-flow/bulk-insert-task.md) и [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-## <a name="options"></a>Параметры  
- **Соединен**  
- Выберите OLE DB диспетчер соединений в списке или нажмите кнопку \< **создать соединение...**>, чтобы создать новое соединение.  
+## <a name="options"></a>Варианты  
+ **Соединение**  
+ Выберите Диспетчер соединений OLE DB в списке или щелкните, \<**New connection...**> чтобы создать новое соединение.  
   
  **См. также:** [Диспетчер подключений OLE DB](connection-manager/ole-db-connection-manager.md), [Настройка диспетчера подключений OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -41,10 +40,10 @@ ms.locfileid: "66061222"
 |Применение|Описание|  
 |-----------|-----------------|  
 |**Использовать файл**|Выберите файл, содержащий спецификацию формата. При выборе этого параметра отображается динамический параметр **FormatFile**.|  
-|**Указать**|Укажите формат. При выборе этого параметра отображаются динамические параметры `RowDelimiter` и. `ColumnDelimiter`|  
+|**Указать**|Укажите формат. При выборе этого параметра отображаются динамические параметры `RowDelimiter` и `ColumnDelimiter` .|  
   
  **Файл**  
- Выберите Диспетчер соединения с файлами или неструктурированными файлами в списке или нажмите \<кнопку **создать соединение...**>, чтобы создать новое соединение.  
+ Выберите Диспетчер соединения с файлами или неструктурированными файлами в списке или щелкните, \<**New connection...**> чтобы создать новое соединение.  
   
  Расположение файла задается относительно компонента SQL Server Database Engine, указанного в диспетчере соединений для выполнения этой задачи. Доступ к тестовому файлу можно получить с помощью компонента SQL Server Database Engine на локальном жестком диске на сервере или через общий диск или сопоставленный диск относительно SQL Server. Этот файл не имеет доступа к среде выполнения служб SSIS.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66061222"
  `ColumnDelimiter`  
  Укажите разделитель столбцов в файле источника. Значение по умолчанию составляет **Табуляция**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "групповые вставки" &#40;общие&#41;страницы](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [Редактор задачи "операции с массовыми вставками" &#40;параметры&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

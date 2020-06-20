@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1eba4cb2f1f5c8825e9cae5751fe230fbe45a835
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44781385a12f880e71e635d2d5e6f76809923453
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061702"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925835"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Редактор источника «ADO.NET» (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источника "ADO.NET"** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
@@ -32,7 +31,7 @@ ms.locfileid: "66061702"
   
 3.  В окне **Редактор источника «ADO.NET»** нажмите кнопку **Столбцы**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные внешние столбцы**  
  Просмотр списка доступных внешних столбцов источника данных. В этой таблице нельзя добавлять или удалять столбцы.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66061702"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Это имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [Редактор источника ADO NET &#40;страница вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
  [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  

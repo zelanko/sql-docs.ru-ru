@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfeade50b36e39f9a4bfa354f71a6bca53e03c16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4a54b2b7c7f809c570eacd0541d798b3f583a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061368"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925253"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Диспетчер подключений Azure HDInsight
 **Диспетчер подключений Azure HDInsight** позволяет пакету служб SSIS подключаться к кластеру Azure HDInsight.
@@ -27,5 +26,5 @@ ms.locfileid: "66061368"
 
 1. В диалоговом окне **Добавление диспетчера соединений со службами SSIS** выберите **AzureHDInsight** и щелкните **Добавить**.
 2. В диалоговом окне **Редактор диспетчера подключений Azure HDInsight** укажите **DNS-имя кластера** (без префикса протокола), **имя пользователя** и **пароль** для кластера HDInsight, к которому необходимо подключиться.
-3. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
+3. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.
 4. Свойства созданного диспетчера соединений можно просмотреть в окне **Свойства** .

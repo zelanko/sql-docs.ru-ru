@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930849"
 ---
 # <a name="memory-optimized-table-variables"></a>Переменные оптимизированной для памяти таблицы
   Помимо оптимизированных для памяти таблиц (которые повышают эффективность доступа к данным) и скомпилированных в собственном коде хранимых процедур (которые повышают эффективность обработки запросов и выполнения бизнес-логики) [!INCLUDE[hek_2](../includes/hek-2-md.md)] также использует третий тип объекта: оптимизированный для памяти табличный тип. Табличная переменная, созданная с использованием оптимизированного для памяти табличного типа, является оптимизированной для памяти табличной переменной.  
@@ -186,7 +185,7 @@ GO
   
  Память учитывается как часть одного потребителя памяти PGPOOL базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка Transact-SQL для In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

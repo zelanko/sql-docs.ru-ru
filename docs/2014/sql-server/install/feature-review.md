@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8e258ac763d8c5e057f8dcdb6f740aacb4fef1c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042638"
 ---
 # <a name="feature-review"></a>Обзор компонента
   Страница «Обзор компонента» содержит список (доступный только для чтения) компонентов, которые подготовлены для настройки и будут готовы к работе по окончании шага завершения создания образа. Список компонентов выбирается на шаге подготовки изображений и не подлежит изменению на шаге завершения создания образа. Помимо отображенных компонентов, подготовленный экземпляр также включает браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , модуль записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

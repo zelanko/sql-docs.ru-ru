@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 807bece28f82759d0a708fa785f23141a0b4407d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964834"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Развертывание проектов и пакетов
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают две модели развертывания: модель развертывания проекта и модель развертывания пакетов. Модель развертывания проектов позволяет развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -62,7 +61,7 @@ ms.locfileid: "62890257"
 ## <a name="related-content"></a>См. также  
  Запись в блоге [О стратегиях ветвления для проектов служб SSIS](https://go.microsoft.com/fwlink/?LinkId=245739)на сайте mattmasson.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программа dtexec](dtexec-utility.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23e6a3225dc8ddd3049f59986924c1fbb71c173b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149849"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007714"
 ---
 # <a name="column-element-for-index-dta"></a>Элемент Column описания индекса (DTA)
   Указывает столбцы, по которым создается индекс для пользовательской конфигурации.  
@@ -47,9 +46,9 @@ ms.locfileid: "63149849"
   
 |Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|Отсутствует.|  
-|**Значение по умолчанию**|Отсутствует.|  
-|**Однократно**|Для элемента `Index` можно задать не более 1 024 столбцов.|  
+|**Тип данных и длина**|Нет.|  
+|**Значение по умолчанию**|Нет.|  
+|**Наличие**|Для элемента `Index` можно задать не более 1 024 столбцов.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -61,7 +60,7 @@ ms.locfileid: "63149849"
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Образец входного XML-файла с пользовательской конфигурацией (DTA)](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

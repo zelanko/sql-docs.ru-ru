@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1c3caf606e8cbf551d7b865b30996ae0f16450a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b2e02de3cb4a4c7be9615b328b8ec0703cab690
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937785"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Функции и задачи служб Data Quality Services
   Найдите сведения, которые потребуются всем — администратору данных, администратору служб Data Quality Services или администратору SQL Server — для подготовки и выполнения проекта служб DQS.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484aafea03bb1b053239e9948ac498403b5ac25d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05d920b21a2e99f5daed06f00183ce8bed85754
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060816"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>Добавление и удаление издателей в мониторе репликации
   Сервер, с которого запускается монитор репликации, автоматически добавляется в монитор, если это издатель. Дополнительные издатели могут быть добавлены в диалоговом окне **Добавление издателя** . После добавления издателя он отображается в группе на левой панели монитора. Группа **Мои издатели** включена в состав по умолчанию, но можно создать новые группы для управления одной или несколькими топологиями репликации. Сведения о запуске монитора репликации см. в [этой статье](start-the-replication-monitor.md).  
@@ -104,7 +103,7 @@ ms.locfileid: "62667422"
   
 2.  Щелкните правой кнопкой мыши группу издателей, затем щелкните **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка распространения](../configure-distribution.md)   
  [Мониторинг репликации](../monitoring-replication.md)  
   

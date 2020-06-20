@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99e1d3377cb5ed4afd4577462e0b436bb16d2fee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 26331e3864940b9c7f2a2588e3d3cbfa9944c900
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941091"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060347"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Указание сопоставления типов данных для издателя Oracle
   В данном разделе описывается указание сопоставления типов данных для издателя Oracle в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Хотя в списке для издателей Oracle имеется набор сопоставлений типов данных, для отдельных публикаций может потребоваться создание дополнительных сопоставлений.  
@@ -33,15 +32,15 @@ ms.locfileid: "68941091"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Укажите сопоставления типов данных на вкладке **Сопоставление данных** диалогового окна **Свойства статьи — \<статья>**. Она доступно на странице **Статьи** мастера создания публикаций и в диалоговом окне **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации из базы данных Oracle](create-a-publication-from-an-oracle-database.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
+ Сопоставление типов данных указывается на вкладке **сопоставление данных** диалогового окна **Свойства статьи — \<Article> ** . Это можно получить на странице **статьи** мастера создания публикаций и в диалоговом окне **Свойства публикации — \<Publication> ** . Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации из базы данных Oracle](create-a-publication-from-an-oracle-database.md) и [Просмотр и изменение свойств публикации](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Указание сопоставления типов данных  
   
-1.  На странице **Статьи** мастера создания публикаций или в диалоговом окне **Свойства публикации — \<публикация>** выберите таблицу и щелкните **Свойства статьи**.  
+1.  На странице **статьи** мастера создания публикаций или в диалоговом окне **Свойства публикации — \<Publication> ** выберите таблицу и щелкните **Свойства статьи**.  
   
 2.  Щелкните **Указать свойства выделенной статьи таблицы**.  
   
-3.  На вкладке **Сопоставление данных** диалогового окна **Свойства статьи — \<статья>** выберите сопоставления из столбца **Тип данных подписчика**:  
+3.  На вкладке **сопоставление данных** диалогового окна **Свойства статьи — \<Article> ** выберите сопоставления из столбца **тип данных подписчика** :  
   
     -   Для некоторых типов данных существует только одно возможное сопоставление, при этом столбец в сетке свойств доступен только для чтения.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "68941091"
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
- Пользовательские сопоставления типов данных могут быть заданы программно с помощью хранимых процедур репликации. Можно также задать сопоставления по умолчанию, используемые при сопоставлении типов данных между [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и системой управления,[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отличной от базы данных (СУБД). Дополнительные сведения см. в статье [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
+ Пользовательские сопоставления типов данных могут быть заданы программно с помощью хранимых процедур репликации. Можно также задать сопоставления по умолчанию, используемые при сопоставлении типов данных между [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и системой управления, отличной от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базы данных (СУБД). Дополнительные сведения см. в статье [Data Type Mapping for Oracle Publishers](../non-sql/data-type-mapping-for-oracle-publishers.md).  
   
 #### <a name="to-define-custom-data-type-mappings-when-creating-an-article-belonging-to-an-oracle-publication"></a>Определение пользовательского сопоставления данных при создании статьи, принадлежащей публикации Oracle  
   
@@ -60,15 +59,15 @@ ms.locfileid: "68941091"
   
 3.  Чтобы просмотреть существующие сопоставления для столбца в опубликованной статье, выполните хранимую процедуру [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) .  
   
-4.  На распространителе выполните хранимую процедуру [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Укажите имя издателя Oracle для ** \@издателя**, а также ** \@публикацию**, ** \@статью**и ** \@столбец** , чтобы определить опубликованный столбец. Укажите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имя типа данных, который будет сопоставляться для ** \@типа**, а также ** \@длину**, ** \@точность**и ** \@масштаб**, где это применимо.  
+4.  На распространителе выполните хранимую процедуру [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql). Укажите имя издателя Oracle для ** \@ издателя**, а также ** \@ публикацию**, ** \@ статью**и ** \@ столбец** , чтобы определить опубликованный столбец. Укажите имя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] типа данных, который будет сопоставляться для ** \@ типа**, а также ** \@ длину**, ** \@ точность**и ** \@ масштаб**, где это применимо.  
   
 5.  На распространителе выполните хранимую процедуру [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql). Она создаст представление, используемое для создания моментального снимка из публикации Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Назначение для типа данных сопоставления по умолчанию  
   
-1.  (Необязательно) На распространителе в любой базе данных выполните хранимую процедуру [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Укажите ** \@source_dbms**, ** \@source_type**, ** \@destination_dbms**, ** \@destination_version**и другие параметры, необходимые для определения исходной СУБД. Сведения о текущем сопоставлении типа данных в целевой базе данных возвращаются в выходных параметрах.  
+1.  (Необязательно) На распространителе в любой базе данных выполните хранимую процедуру [sp_getdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql). Укажите ** \@ source_dbms**, ** \@ source_type**, ** \@ destination_dbms**, ** \@ destination_version**и другие параметры, необходимые для определения исходной СУБД. Сведения о текущем сопоставлении типа данных в целевой базе данных возвращаются в выходных параметрах.  
   
-2.  На распространителе в любой базе данных выполните хранимую процедуру [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)(необязательно). Укажите ** \@source_dbms** и другие параметры, необходимые для фильтрации результирующего набора. В результирующем наборе просмотрите значение параметра **mapping_id** для текущего сопоставления.  
+2.  На распространителе в любой базе данных выполните хранимую процедуру [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql)(необязательно). Укажите ** \@ source_dbms** и другие параметры, необходимые для фильтрации результирующего набора. В результирующем наборе просмотрите значение параметра **mapping_id** для текущего сопоставления.  
   
 3.  На распространителе в любой базе данных выполните хранимую процедуру [sp_setdefaultdatatypemapping](/sql/relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql)(необязательно).  
   
@@ -78,9 +77,9 @@ ms.locfileid: "68941091"
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>Определение допустимых типов данных, соответствующих типу данных Oracle  
   
-1.  На распространителе в любой базе данных выполните хранимую процедуру [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Укажите значение **Oracle** для ** \@source_dbms** и другие параметры, необходимые для фильтрации результирующего набора.  
+1.  На распространителе в любой базе данных выполните хранимую процедуру [sp_helpdatatypemap](/sql/relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql). Укажите значение **Oracle** для ** \@ source_dbms** и другие параметры, необходимые для фильтрации результирующего набора.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  Следующий пример производит сопоставление столбца данных Oracle типа NUMBER с типом данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]`numeric`(38,38) вместо типа данных `float`, используемого по умолчанию.  
   
  [!code-sql[HowTo#sp_changecolumndatatype](../../../snippets/tsql/SQL15/replication/howto/tsql/datatypemapping.sql#sp_changecolumndatatype)]  

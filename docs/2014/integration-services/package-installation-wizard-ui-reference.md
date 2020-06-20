@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964864"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Мастер установки пакета справочника по пользовательскому интерфейсу
   Используйте **Мастер установки пакета** , чтобы развернуть проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , включая пакеты и другие файлы, которые в нем содержатся, а также любые зависимости пакетов.  
@@ -52,7 +51,7 @@ ms.locfileid: "66056830"
 ## <a name="configure-packages-page"></a>Страница настройки пакетов  
  Используйте страницу **Настройка пакетов** , чтобы отредактировать конфигурации пакета.  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  **Файл конфигурации**  
  Редактируйте содержимое файла конфигурации путем выбора файла из списка.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66056830"
  **Путь**  
  Просмотр пути к настраиваемому свойству.  
   
- **Type**  
+ **Тип**  
  Просмотр типа данных указанного свойства.  
   
  **Значение**  
@@ -88,7 +87,7 @@ ms.locfileid: "66056830"
 ## <a name="deploy-ssis-packages-page"></a>Страница развертывания пакетов служб SSIS  
  Страница **Установка пакетов служб SSIS** используется для задания места установки пакетов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и их зависимостей.  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  **Установить в файловую систему**  
  Установить пакеты и зависимости в заданную папку в файловой системе.  
   
@@ -113,7 +112,7 @@ ms.locfileid: "66056830"
 ## <a name="select-installation-folder-page"></a>Страница выбора папки установки  
  Страница **Выбор папки для установки** используется для указания папки в файловой системе, в которую будут установлены пакеты и их зависимости.  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  **Папка**  
  Позволяет указать путь к папке, в которую будет скопирован пакет и его зависимости.  
   
@@ -129,7 +128,7 @@ ms.locfileid: "66056830"
 ## <a name="specify-target-sql-server-page"></a>Страница выбора целевого сервера SQL Server  
  Используйте страницу **Выбор целевого сервера SQL Server** для указания параметров развертывания пакета на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  **Имя сервера**  
  Укажите имя сервера, на котором надо осуществлять развертывание пакетов.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "66056830"
  **Готово**  
  Для завершения работы мастера нажмите кнопку **Готово**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

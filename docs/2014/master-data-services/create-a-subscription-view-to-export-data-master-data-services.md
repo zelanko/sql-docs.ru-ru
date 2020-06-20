@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de6ee4b3ba52dec87d71bb97707a8cd8f748d854
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971774"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>Создание представления подписки (службы Master Data Services)
   Создайте представление подписки, если необходимо создать представление данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] базе данных для использования в системах-подписчиках.  
@@ -53,9 +52,9 @@ ms.locfileid: "65479938"
   
 9. Если выбрано значение из списка **Формат****Явные уровни** или **Производные уровни** , то введите число уровней в иерархии для включения в представление.  
   
-10. Нажмите кнопку **Сохранить**.  
+10. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Экспорт Master Data Services &#40;данных&#41;](overview-exporting-data-master-data-services.md)   
  [Удаление представления подписки &#40;Master Data Services&#41;](delete-a-subscription-view-master-data-services.md)   
  [Создание флага версии (службы Master Data Services)](create-a-version-flag-master-data-services.md)  

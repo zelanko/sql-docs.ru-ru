@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060672"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921755"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Настройка средства просмотра данных (вкладка «Общие»)
   Данные отображаются в средстве просмотра данных по мере движения по пути, соединяющем два компонента потока данных в процессе выполнения пакета.  
@@ -30,13 +29,13 @@ ms.locfileid: "66060672"
  **имя**;  
  Следует задать уникальное имя для средства просмотра данных.  
   
- **Type**  
+ **Тип**  
  Содержит список типов средств просмотра данных. Щелкните тот или иной тип для отображения образца диаграммы.  
   
  **Описание**  
  Здесь отображается образец диаграммы, а также описание.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка средства просмотра данных &#40;вкладка «Гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Настройка средства просмотра данных &#40;вкладке сетки&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Настройка средства просмотра данных &#40;вкладке «гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   

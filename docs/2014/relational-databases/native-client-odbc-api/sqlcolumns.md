@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8fe0a281be62f74a630bcb5be2e0fc3ce935b2d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022761"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`Возвращает SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *TableName*или *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
@@ -88,7 +87,7 @@ ms.locfileid: "82706339"
   
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

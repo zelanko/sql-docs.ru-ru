@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c170fa1b302ccd0a1edec156b3b30429fc2daf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2c9399472c6e67c9e2121a008f9283ba05943da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63224626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045916"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>Аварийное восстановление WSFC через принудительный кворум (SQL Server)
   Обычно сбой кворума бывает вызван системной аварией, постоянным сбоем связи или ошибкой конфигурации, затрагивающей несколько узлов в кластере WSFC.  Для восстановления после сбоя кворума требуется участие пользователя.  
@@ -121,7 +120,7 @@ ms.locfileid: "63224626"
   
 -   [Командлет Get-ClusterLog отказоустойчивого кластера](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
