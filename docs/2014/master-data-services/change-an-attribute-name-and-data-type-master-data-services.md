@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fab40221bcc688b43d62f3841c3ef4873f84a6ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972044"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Изменение имени атрибута (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменять имя атрибутов.  
@@ -49,7 +48,7 @@ ms.locfileid: "65484053"
   
 9. Нажмите кнопку **Сохранить атрибут**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание текстового атрибута &#40;Master Data Services&#41;](create-a-text-attribute-master-data-services.md)   
  [Удаление атрибута &#40;Master Data Services&#41;](delete-an-attribute-master-data-services.md)   
  [Атрибуты (службы Master Data Services)](attributes-master-data-services.md)  

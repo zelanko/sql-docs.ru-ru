@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1941fb85a576835739f1cd975ff93ff336f42065
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042039"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Общие сведения о помощнике по обновлению
   В этом разделе содержатся общие сведения о процессе обновления и сведения, которые помогут в понимании и использовании мастера анализа и средства просмотра отчетов помощника по обновлению.  
@@ -32,7 +31,7 @@ ms.locfileid: "66093539"
 |[Запуск помощника по обновлению &#40;пользовательского интерфейса&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)|Описывает запуск и работу мастера анализа и средства просмотра отчетов помощника по обновлению.|  
 |[Использование отчетов](../../../2014/sql-server/install/using-reports.md)|Описывает просмотр и анализ отчетов, сформированных средством просмотра отчетов помощника по обновлению.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по советнику по переходу](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Запуск помощника по обновлению &#40;командной строки&#41;](../../../2014/sql-server/install/running-upgrade-advisor-command-prompt.md)  

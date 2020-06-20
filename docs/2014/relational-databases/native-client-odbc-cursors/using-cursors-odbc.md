@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 190efb4a3c5343eab9f8654009a4a7b3c6d2a6f2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61afedab4f4a1e309a08d9c2421ca7889811da8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705543"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020462"
 ---
 # <a name="using-cursors-odbc"></a>Использование курсоров (ODBC)
   ODBC поддерживает модель курсора, которая позволяет следующее.  
@@ -64,7 +63,7 @@ ms.locfileid: "82705543"
   
 -   [Позиционированные обновления &#40;ODBC&#41;](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [ЗАКРЫТЬ &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
  [Курсоры](../../relational-databases/cursors.md)   

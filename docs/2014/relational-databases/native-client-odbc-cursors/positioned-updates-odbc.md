@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bb6ed6d38d4294884092ae5c038b5e83d23c6b97
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c9f21d5679e3bc926fc9a824ba11d8283dc9dad6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020754"
 ---
 # <a name="positioned-updates-odbc"></a>Позиционированное обновление (ODBC)
   ODBC поддерживает два метода выполнения позиционированных обновлений в курсоре:  
@@ -78,7 +77,7 @@ ms.locfileid: "82702007"
   
  Параметр **SQLSetPos** предпочтительнее, чем при использовании серверных курсоров. Если используется статический обновляемый курсор с библиотекой курсоров ODBC, то данная библиотека реализует обновления предложения WHERE CURRENT OF путем добавления предложения WHERE с ключевыми значениями базовой таблицы. Это может вызвать непреднамеренные обновления, если ключи в таблице не являются уникальными.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование курсоров &#40;ODBC&#41;](using-cursors-odbc.md)  
   
   

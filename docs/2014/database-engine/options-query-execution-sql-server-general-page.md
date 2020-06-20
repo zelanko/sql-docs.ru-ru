@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d14371c1db5273d66fee327cc03d2b2e2de3edb
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 97fe66f317db25ab36f3e55cf2396f1252f66571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000804"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930222"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Параметры (выполнение запроса-SQL Server-страница "Общие")
   Используйте эту страницу, чтобы задать параметры для запросов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для изменения параметров текущего запроса выберите пункт **Параметры запроса** в меню **Запрос** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **SET ROWCOUNT**  
  Значение по умолчанию, равное 0, указывает на то, что [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет продолжать ожидание результатов, пока все из них не будут получены. При установке значения больше 0 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] прервет запрос после получения указанного числа строк. Для выключения этого параметра (чтобы возвращались все строки) задайте SET ROWCOUNT 0.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "83000804"
  **По умолчанию**  
  Выберите этот пункт для сброса всех значений этой страницы и установки значений по умолчанию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программа sqlcmd](../tools/sqlcmd-utility.md)  
   
   

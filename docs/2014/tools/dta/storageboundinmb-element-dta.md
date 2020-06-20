@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12dad78b6094e940a926fbcde7147d66ca1e2dfe
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63460112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007599"
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
   Определяет максимальный размер в мегабайтах, который может быть использован в рекомендациях по настройке помощника по настройке ядра СУБД (для набора индексов и секционирования).  
@@ -36,7 +35,7 @@ ms.locfileid: "63460112"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
@@ -62,7 +61,7 @@ ms.locfileid: "63460112"
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В следующем примере кода показано, как установить предел в 1 500 мегабайт в качестве максимального места на диске, которое может быть занято согласно рекомендациям.  
   
 ## <a name="code"></a>Код  

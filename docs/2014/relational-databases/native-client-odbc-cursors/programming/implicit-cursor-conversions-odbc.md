@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe29a58d-8448-4512-9ffd-b414784ba338
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 99395f9a8dbcb812f5a7764634d42489526875af
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ff8350c71a853e39ff1d35a1f3fba6e8e1944934
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020657"
 ---
 # <a name="implicit-cursor-conversions-odbc"></a>Неявные преобразования курсора (ODBC)
   Приложения могут запрашивать тип курсора через [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) , а затем выполнять инструкцию SQL, которая не поддерживается серверными курсорами запрошенного типа. Вызов **SQLExecute** или **SQLExecDirect** возвращает SQL_SUCCESS_WITH_INFO и **SQLGetDiagRec** возвращает:  
@@ -31,7 +30,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client] Cursor type changed"
   
  Приложение может определить, какой тип курсора теперь используется, вызвав **SQLGetStmtOption** в значение SQL_CURSOR_TYPE. Преобразование типа курсора применяется только к одной инструкции. Следующие **SQLExecDirect** или **SQLExecute** будут выполняться с использованием параметров курсора исходной инструкции.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сведения о программировании курсора &#40;ODBC&#41;](cursor-programming-details-odbc.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9b2c281-91ee-4e20-bdf0-0cd77d4a4241
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eae7433569972c217161f1681b2f7089c7604335
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74430ab1bed232b8d510a8c28a8a690d88d1f6ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041652"
 ---
 # <a name="upgrade-lookup-transformations"></a>Обновление преобразований «Уточняющий запрос»
   При обновлении с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] полезно изменить пакеты, чтобы использовать преимущества новых возможностей преобразования «Уточняющий запрос». Это преобразование поддерживает типы кэширования и параметры вывода данных, доступные в службах [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)]. Дополнительные сведения о дополнительном кэшировании и выводе данных см. в разделе [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66091510"
   
  Дополнительные сведения см. в разделе [Редактор преобразования "Уточняющий запрос" &#40;общие&#41;страницы ](../../integration-services/general-page-of-integration-services-designers-options.md).  
   
-## <a name="see-also"></a>См. также  
- [Преобразование «Уточняющий запрос»](../../integration-services/data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>См. также:  
+ [Преобразование "Уточняющий запрос"](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
   

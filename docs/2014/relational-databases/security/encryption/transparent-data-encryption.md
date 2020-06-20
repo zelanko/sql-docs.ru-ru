@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8118f0781d7c9e3d839c029c6bdaf8b01e074b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060253"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
   *Прозрачное шифрование данных* (TDE) позволяет шифровать файлы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] ; это называется шифрованием неактивных данных. Можно принять ряд мер предосторожности для защиты базы данных, таких как проектирование безопасной системы, шифрование конфиденциальных ресурсов и создание брандмауэра на серверах базы данных. Однако в случае похищения физического носителя (например, дисков или лент с резервными копиями) злоумышленник может просто восстановить или подключить базу данных и просмотреть данные. Одним из решений может стать шифрование конфиденциальных данных в базе данных и защита ключей, используемых при шифровании, с помощью сертификата. Это не позволит использовать данные ни одному человеку, не имеющему ключей, но такой тип защиты следует планировать заранее.
@@ -36,25 +35,25 @@ ms.locfileid: "78176764"
 >  **См. также:**
 > 
 >  -   [Прозрачное шифрование данных в Базе данных SQL Azure](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)
-> -   [Перемещение базы данных, защищенной TDE, в другую SQL Server](move-a-tde-protected-database-to-another-sql-server.md)
+> -   [Перемещение базы данных, защищаемой прозрачным шифрованием, в другой экземпляр SQL Server](move-a-tde-protected-database-to-another-sql-server.md)
 > -   [Включение TDE с помощью расширенного управления ключами](enable-tde-on-sql-server-using-ekm.md)
 
 ## <a name="about-tde"></a>Сведения о прозрачном шифровании данных (TDE)
  Шифрование файлов базы данных выполняется на уровне страницы. Страницы в зашифрованной базе данных шифруются до записи на диск и дешифруются при чтении в память. Прозрачное шифрование данных не увеличивает размер зашифрованной базы данных.
 
- **Сведения, применимые к [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
+ **Сведения, применимые к[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**
 
  При использовании прозрачного шифрования данных с [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12  ([Предварительная версия в некоторых регионах](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]автоматически создает для вас сертификат на уровне сервера, хранящийся в базе данных master. Чтобы переместить базу данных TDE в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] , вам необходимо расшифровать ее, переместить, а затем повторно включить TDE в целевой [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]. Пошаговые инструкции по прозрачному шифрованию данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]можно найти в разделе [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md).
 
  Просмотр состояния TDE применяется даже в подмножестве географических регионов, в которых сообщается, что версия семейства V12 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] теперь общедоступна. Прозрачное шифрование данных для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] не используется в рабочих базах данных до тех пор, пока [!INCLUDE[msCoName](../../../includes/msconame-md.md)] не объявит, что функция TDE становится общедоступной. Дополнительные сведения о [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 можно найти в разделе [Новые возможности версии 12 базы данных SQL](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
 
- **Сведения, применимые к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
+ **Сведения, применимые к[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
 
  После защиты базы данных ее можно восстановить с помощью правильного сертификата. Дополнительные сведения о сертификатах см. в разделе [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).
 
  При включении функции прозрачного шифрования данных необходимо немедленно создать резервную копию сертификата и закрытого ключа, связанного с этим сертификатом. В случае если сертификат окажется недоступен или понадобится восстановить базу данных на другом сервере либо присоединить ее к другому серверу, необходимо иметь копии сертификата и закрытого ключа. Иначе будет невозможно открыть базу данных. Сертификат шифрования следует сохранить, даже если функция прозрачного шифрования в базе данных будет отключена. Даже если база данных не зашифрована, части журнала транзакций могут по-прежнему оставаться защищенными, а для некоторых операций будет требоваться сертификат до выполнения полного резервного копирования базы данных. Сертификат, который превысил свой срок хранения, все еще может быть использован для шифрования и расшифровки данных с помощью прозрачного шифрования данных.
 
- **Иерархия средств шифрования**
+ **Иерархия шифрования**
 
  На рисунке ниже показана архитектура прозрачного шифрования данных. При использовании прозрачного шифрования данных в [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]пользователь может настраивать только элементы уровня базы данных (ключ шифрования базы данных и фрагменты ALTER DATABASE).
 
@@ -111,8 +110,8 @@ GO
 |Команда или функция|Назначение|
 |-------------------------|-------------|
 |[CREATE DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|Создает ключ, используемый для шифрования базы данных.|
-|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Изменяет ключ, используемый для шифрования базы данных.|
-|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|Удаляет ключ, использовавшийся для шифрования базы данных.|
+|[ALTER DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|Изменяет ключ, используемый для шифрования базы данных.|
+|[DROP DATABASE ENCRYPTION KEY (Transact-SQL)](/sql/t-sql/statements/drop-database-transact-sql)|Удаляет ключ, использовавшийся для шифрования базы данных.|
 |[Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Объясняет параметр `ALTER DATABASE`, который используется для включения TDE.|
 
 ## <a name="catalog-views-and-dynamic-management-views"></a>Представления каталога и динамические административные представления
@@ -121,7 +120,7 @@ GO
 |Представление каталога или динамическое административное представление|Назначение|
 |---------------------------------------------|-------------|
 |[sys.databases (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|Представление каталога со сведениями о базе данных.|
-|[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Представление каталога с сертификатами из базы данных.|
+|[sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|Представление каталога с сертификатами из базы данных.|
 |[sys.dm_database_encryption_keys (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|Динамическое административное представление со сведениями о ключах шифрования, используемых в базе данных, и состоянии шифрования базы данных.|
 
 ## <a name="permissions"></a>Разрешения

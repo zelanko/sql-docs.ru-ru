@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774747"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929697"
 ---
 # <a name="password-expired"></a>Срок действия пароля истек
   Появляется при подключении к серверу с [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] использованием [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверки подлинности и указан правильный пароль, но срок его действия истек. Также появляется при соединении с сервером с применением новой учетной записи, созданной при помощи параметра **Пользователь должен сменить пароль при следующем входе в систему** . Используйте диалоговое окно **Срок действия пароля истек** , чтобы сменить пароль для этого имени входа с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя входа**  
  Отображает используемое имя входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62774747"
  **Подтверждение пароля**  
  Еще раз введите новый пароль для подтверждения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Надежные пароли](../relational-databases/security/strong-passwords.md)   
  [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md)   
  [Изменение режима проверки подлинности сервера](configure-windows/change-server-authentication-mode.md)   

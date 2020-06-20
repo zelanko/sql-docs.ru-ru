@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8ef4d3f57f70641b738b21f86d55021e14606d57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 425699cfc57b9240909414d6515c74dab580b4e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705483"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020279"
 ---
 # <a name="conversions-from-sql-to-c"></a>Преобразования из SQL в C
   В следующей таблице приводится список вопросов, которые следует учитывать при преобразовании типов даты-времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы языка C.  
@@ -64,7 +63,7 @@ ms.locfileid: "82705483"
   
  Таблица в этом разделе описывает преобразования между типами, возвращаемыми клиенту, и типами в привязке. Для выходных параметров, если тип сервера, указанный в SQLBindParameter, не совпадает с фактическим типом на сервере, на сервере будет выполнено неявное преобразование, и тип, возвращаемый клиенту, будет соответствовать типу, указанному с помощью SQLBindParameter. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от правил, перечисленных в предыдущей таблице. Например, если необходима дата по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует не текущую дату, а 01.01.1900.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения даты и времени &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

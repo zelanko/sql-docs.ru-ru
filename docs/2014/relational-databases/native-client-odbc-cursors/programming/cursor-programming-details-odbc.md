@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6bae29c4-7f49-419c-8712-90db734f992e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: baf606baa029024369a00e44293873ecc7b33d1b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4108e195c16d321578a70852dd990f4f8d658832
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020819"
 ---
 # <a name="cursor-programming-details-odbc"></a>Подробные сведения о программировании курсоров (ODBC)
   Выбор правильного типа курсора может повысить производительность приложения. При определенных условиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может неявно преобразовать тип курсора при выполнении инструкции SQL, которая не поддерживается типом запрашиваемого курсора.  
@@ -33,7 +32,7 @@ ms.locfileid: "82705633"
   
 -   [Однопроходные курсоры &#40;ODBC&#41;](fast-forward-only-cursors-odbc.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование курсоров &#40;ODBC&#41;](../using-cursors-odbc.md)  
   
   

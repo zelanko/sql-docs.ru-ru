@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 98772e95-67ed-4010-8108-5113dbe709ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2cf5fbf215338b273be0924e6930906c8698aff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57b18dde2e7134e0ba9eb6a9b2e8f5357d171a55
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043187"
 ---
 # <a name="bidirectional-transactional-replication"></a>двунаправленная репликация транзакций
-  Двунаправленная репликация транзакций представляет собой особую топологию репликации транзакций, которая позволяет двум серверам обмениваться изменениями друг с другом: каждый сервер публикует данные, после чего подписывается на публикацию с теми же данными от другого сервера. **@loopback_detection** Параметру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) присваивается значение true, чтобы гарантировать, что изменения отправляются только подписчику и не приводят к тому, что изменения отправляются обратно издателю.  
+  Двунаправленная репликация транзакций представляет собой особую топологию репликации транзакций, которая позволяет двум серверам обмениваться изменениями друг с другом: каждый сервер публикует данные, после чего подписывается на публикацию с теми же данными от другого сервера. **@loopback_detection**Параметру [Sp_addsubscription &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) присваивается значение true, чтобы гарантировать, что изменения отправляются только подписчику и не приводят к тому, что изменения отправляются обратно издателю.  
   
  В [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и более поздних версиях такая топология поддерживается также одноранговой репликацией транзакций, но двунаправленная репликация позволяет увеличить производительность.  
   
