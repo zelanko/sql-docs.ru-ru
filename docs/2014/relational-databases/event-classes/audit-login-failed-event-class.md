@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b83963b-b685-429d-92ba-5173f6f0000d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2860e10ef74676fb013b43e1740c9cf82223baa9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 72734a0d8fa24cc69fd0f29b34fba4f6b2f61b6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63000361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053222"
 ---
 # <a name="audit-login-failed-event-class"></a>Audit Login Failed, класс событий
   Класс событий **Audit Login Failed** указывает, что пользователь пытался войти в систему [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и потерпел неудачу. События этого класса запускаются новыми соединениями или соединениями, которые многократно используются в пуле соединений.  

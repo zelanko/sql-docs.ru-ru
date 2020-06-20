@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019241"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   Функция **bcp_setcolfmt** заменяет функцию [bcp_colfmt](bcp-colfmt.md). При указании параметров сортировки столбца необходимо использовать функцию **bcp_setcolfmt** . С помощью[bcp_setbulkmode](bcp-setbulkmode.md) можно задать формат нескольких столбцов.  
@@ -121,7 +120,7 @@ cbValue
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

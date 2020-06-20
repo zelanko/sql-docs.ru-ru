@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000744"
 ---
 # <a name="creating-a-login"></a>Создание имени входа
   Чтобы получить доступ к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)], необходимо иметь имя входа. Имя входа может идентифицировать пользователя как учетную запись Windows или как члена группы Windows, или имя входа может быть именем входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которое существует только в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При возможности используйте проверку подлинности Windows.  
@@ -26,7 +25,7 @@ ms.locfileid: "68211208"
   
 ### <a name="to-create-a-new-windows-account"></a>Создание новой учетной записи Windows  
   
-1.  Нажмите кнопку **Пуск**, выберите пункт **выполнить**, в поле **Открыть** введите `%SystemRoot%\system32\compmgmt.msc /s`, а затем нажмите кнопку **ОК** , чтобы открыть программу управления компьютером.  
+1.  Нажмите кнопку **Пуск**, выберите пункт **выполнить**, в поле **Открыть** введите `%SystemRoot%\system32\compmgmt.msc /s` , а затем нажмите кнопку **ОК** , чтобы открыть программу управления компьютером.  
   
 2.  В пункте **Служебные программы**откройте **Локальные пользователи и группы**, щелкните правой кнопкой мыши элемент **Пользователи**и выберите пункт **Новый пользователь**.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "68211208"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Предоставление доступа к базе данных](lesson-2-2-granting-access-to-a-database.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание имени входа &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [Выбор режима проверки подлинности](../relational-databases/security/choose-an-authentication-mode.md)  
   

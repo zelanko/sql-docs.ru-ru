@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49727ad5168bbd5438a57ae161f669482e412cae
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 198505c5d14b9fda510d4635dbaa3d3d49483ddf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930177"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Параметры (выполнение запроса — страница «SQL Server-ANSI»)
   Все вместе эти параметры SET стандарта ANSI (ISO) определяют среду обработки запроса на время выполнения пользовательского запроса, триггера или хранимой процедуры. Однако эти параметры SET включают не все возможности, необходимые для соответствия стандарту ISO. Используйте эту страницу, чтобы указать, что [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] будет выполнять запросы, используя все или часть параметров, указанных в стандарте ISO. Изменения этих параметров применяются только к новым запросам [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить параметры для текущих запросов, в меню **запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] окне запроса и выберите пункт **Параметры запроса**. В диалоговом окне **Параметры запроса** в разделе **Выполнение**щелкните **ANSI**.  

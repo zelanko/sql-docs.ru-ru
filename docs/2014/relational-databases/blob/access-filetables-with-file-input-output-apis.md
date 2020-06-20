@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56118ef2db319abd270ff51259e3537864fdd57e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010360"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955944"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
   Описание работы файловой системы ввода-вывода с таблицами FileTable.  
@@ -77,7 +76,7 @@ ms.locfileid: "66010360"
   
 ##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> Дополнительные соображения при доступе файлового ввода-вывода к таблицам FileTable  
   
-###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a>Использование имен виртуальных сетей (через) с группы доступности AlwaysOn  
+###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a> Использование имен виртуальной сети для групп доступности AlwaysOn  
  Если база данных, содержащая данные FILESTREAM или FileTable, принадлежит к группе доступности AlwaysOn, то любой доступ к данным FILESTREAM или FileTable через API-интерфейсы файловой системы должен осуществляться по именам виртуальной сети, а не по именам компьютеров. Дополнительные сведения см. в разделе [FILESTREAM и FileTable с группами доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
 ###  <a name="partial-updates"></a><a name="partial"></a> Частичные обновления  

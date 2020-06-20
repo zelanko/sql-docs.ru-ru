@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d752817f7d620b2c6e5fdc5eeb2178c50c42040
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066575"
 ---
 # <a name="specify-synchronization-schedules"></a>Указание расписаний синхронизации
   В данном разделе описывается процесс задания расписаний синхронизации в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. При создании подписки можно определить расписание синхронизации, управляющее запуском агента репликации для подписки. Если не указать параметры расписания, подписка использует расписание по умолчанию.  
@@ -46,15 +45,15 @@ ms.locfileid: "62630799"
   
 |Агент|Имя задания|  
 |-----------|--------------|  
-|Агент слияния для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<целое число>**|  
-|Агент слияния для принудительных подписок|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|  
-|Агент распространителя для принудительных подписок|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>** <sup>1</sup>|  
-|Агент распространителя для подписок по запросу|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<база_данных_подписки>-\<идентификатор_GUID>** <sup>2</sup>|  
-|Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|  
+|Агент слияния для подписок по запросу|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|  
+|Агент слияния для принудительных подписок|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
+|Агент распространителя для принудительных подписок|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**<sup>1</sup>|  
+|Агент распространителя для подписок по запросу|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**<sup>2</sup>|  
+|Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
   
- <sup>1</sup> Для принудительных подписок на публикации Oracle значение должно иметь вид **\<Издатель>-\<Издатель**>, а не **\<Издатель>-\<БД_публикации>**  
+ <sup>1</sup> для принудительных подписок на публикации Oracle это * *, \<Publisher> - \<Publisher**> а не**\<Publisher>-\<PublicationDatabase>**  
   
- <sup>2</sup> Для подписок по запросу на публикации Oracle значение должно иметь вид **\<Издатель>-\<БД_распространения**>, а не **\<Издатель>-\<БД_публикации>**  
+ <sup>2</sup> для подписок по запросу на публикации Oracle это * *, \<Publisher> - \<DistributionDatabase**> а не**\<Publisher>-\<PublicationDatabase>**  
   
 #### <a name="to-specify-synchronization-schedules"></a>Указание расписаний синхронизации  
   
@@ -64,9 +63,9 @@ ms.locfileid: "62630799"
   
     -   **Запуск только по запросу**  
   
-    -   **\<Задать расписание...>**  
+    -   **\<Define Schedule...>**  
   
-2.  При выборе **\<Задать расписание...>** укажите расписание в диалоговом окне **Свойства расписания задания**, а затем нажмите кнопку **ОК**.  
+2.  Если выбран параметр **\<Define Schedule...>** , укажите расписание в диалоговом окне **Свойства расписания задания** , а затем нажмите кнопку **ОК**.  
   
 3.  Завершите работу мастера.  
   
@@ -78,9 +77,9 @@ ms.locfileid: "62630799"
   
 3.  Щелкните правой кнопкой мыши подписку, а затем выберите **Просмотреть сведения**.  
   
-4.  В окне **подписка \< SubscriptionName>** щелкните **действие**, а затем выберите ** \<ажентнаме> свойства задания**.  
+4.  В окне **подписка \< SubscriptionName> ** щелкните **действие**и выберите ** \<AgentName> Свойства задания**.  
   
-5.  На странице **Расписания** диалогового окна **Свойства задания — \<имя_задания>** нажмите кнопку **Изменить**.  
+5.  На странице **расписания** диалогового окна **Свойства задания — \<JobName> ** нажмите кнопку **изменить.**  
   
 6.  В диалоговом окне **Свойства расписания задания** выберите значение из раскрывающегося списка **Тип расписания** :  
   
@@ -102,7 +101,7 @@ ms.locfileid: "62630799"
   
 3.  Щелкните правой кнопкой задание для агента распространителя или агента слияния, связанных с подпиской, а затем щелкните **Свойства**.  
   
-4.  На странице **Расписания** диалогового окна **Свойства задания — \<имя_задания>** нажмите кнопку **Изменить**.  
+4.  На странице **расписания** диалогового окна **Свойства задания — \<JobName> ** нажмите кнопку **изменить.**  
   
 5.  В диалоговом окне **Свойства расписания задания** выберите значение из раскрывающегося списка **Тип расписания** :  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62630799"
   
 3.  Щелкните правой кнопкой задание для агента распространителя или агента слияния, связанных с подпиской, а затем щелкните **Свойства**.  
   
-4.  На странице **Расписания** диалогового окна **Свойства задания — \<имя_задания>** нажмите кнопку **Изменить**.  
+4.  На странице **расписания** диалогового окна **Свойства задания — \<JobName> ** нажмите кнопку **изменить.**  
   
 5.  В диалоговом окне **Свойства расписания задания** выберите значение из раскрывающегося списка **Тип расписания** :  
   
@@ -167,25 +166,25 @@ ms.locfileid: "62630799"
   
 1.  Создайте подписку по запросу на публикацию транзакций. Дополнительные сведения см. в статье [Создание подписки по запросу](create-a-pull-subscription.md).  
   
-2.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите **@publisher**, **@publisher_db**, **@publication**и учетные [!INCLUDE[msCoName](../../includes/msconame-md.md)] данные Windows, с которыми работает агент распространения на подписчике, **@job_name** для **@password**и. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
+2.  На подписчике выполните процедуру [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Укажите **@publisher** , **@publisher_db** , **@publication** и [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетные данные Windows, с которыми работает агент распространения на подписчике, для **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>Определение расписания синхронизации для принудительной подписки на публикацию транзакций  
   
 1.  Создайте принудительную подписку на публикацию транзакций. Дополнительные сведения см. в статье [Создание принудительной подписки](create-a-push-subscription.md).  
   
-2.  На подписчике выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите **@subscriber**, **@subscriber_db**, **@publication**и учетные данные Windows, с которыми работает агент распространения на подписчике, **@job_name** для **@password**и. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
+2.  На подписчике выполните процедуру [sp_addpushsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите **@subscriber** , **@subscriber_db** , **@publication** и учетные данные Windows, с которыми работает агент распространения на подписчике, для **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента распространителя, синхронизирующего подписку.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>Определение расписания синхронизации для подписки по запросу для публикации слиянием  
   
 1.  Создайте подписку по запросу на публикацию слиянием. Дополнительные сведения см. в статье [Создание подписки по запросу](create-a-pull-subscription.md).  
   
-2.  Выполните процедуру [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)на подписчике. Укажите **@publisher**, **@publisher_db**, **@publication**и учетные данные Windows, с которыми работает агент слияния на подписчике, **@job_name** для **@password**и. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
+2.  Выполните процедуру [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)на подписчике. Укажите **@publisher** , **@publisher_db** , **@publication** и учетные данные Windows, с которыми работает агент слияния на подписчике, для **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>Определение расписания синхронизации для принудительной подписки на публикацию слиянием  
   
 1.  Создайте принудительную подписку на публикацию слиянием. Дополнительные сведения см. в статье [Создание принудительной подписки](create-a-push-subscription.md).  
   
-2.  Выполните на подписчике хранимую процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Укажите **@subscriber**, **@subscriber_db**, **@publication**и учетные данные Windows, с которыми работает агент слияния на подписчике, **@job_name** для **@password**и. Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
+2.  Выполните на подписчике хранимую процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Укажите **@subscriber** , **@subscriber_db** , **@publication** и учетные данные Windows, с которыми работает агент слияния на подписчике, для **@job_name** и **@password** . Укажите описанные выше параметры синхронизации, определяющие расписание для задания агента слияния, синхронизирующего подписку.  
   
 ##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> При помощи объектов RMO  
  При выполнении репликации агент SQL Server производит планирование заданий для создания моментальных снимков и синхронизации подписок. Расписание заданий агента репликации может быть задано программным путем с помощью объектов RMO.  
@@ -317,7 +316,7 @@ ms.locfileid: "62630799"
   
 3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> , чтобы создать подписку.  
   
-###  <a name="example-rmo"></a><a name="PShellExample"></a> Пример (объекты RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Пример (объекты RMO)  
  В следующем примере производится создание принудительной подписки на публикацию слиянием, а также задается расписание синхронизации указанной подписки.  
   
  [!code-csharp[HowTo#rmo_CreateMergePushSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepushsub)]  
@@ -325,7 +324,7 @@ ms.locfileid: "62630799"
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
 ## <a name="see-also"></a>См. также:  
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   
  [Subscribe to Publications](subscribe-to-publications.md)   
  [Синхронизация принудительной подписки](synchronize-a-push-subscription.md)   
  [Синхронизация подписки по запросу](synchronize-a-pull-subscription.md)   

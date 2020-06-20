@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1103e1715c01cfc868c59af17ee0f95fa7cedff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a76c3aaef623365e419f40f3058308f6217d75d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661688"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067161"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>Создание запросов на удаление (визуальные инструменты для баз данных)
   С помощью запроса на удаление можно удалить все строки таблицы.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766785"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964124"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
   Для защиты данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задать уровень защиты, способствующий защите или только конфиденциальных данных, или всех данных в пакете. Более того, эти данные можно зашифровать с паролем или ключом пользователя или возложить задачу шифрования данных на базу данных. Кроме того, используемый уровень защиты пакета не обязательно является статическим и изменяется в течение жизненного цикла пакета. Часто один уровень защиты устанавливается во время развертывания, а другой — сразу после развертывания пакета.  
@@ -64,7 +63,7 @@ ms.locfileid: "62766785"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Установка уровня защиты и каталог SSISDB  
  Каталог SSISDB использует уровень защиты `ServerStorage`. При развертывании проекта [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] каталог автоматически шифрует данные пакета и конфиденциальные значения. Каталог также автоматически расшифровывает данные после их получения.  
   
- При экспорте проекта (ISPAC-файл) с сервера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в файловую систему система автоматически изменяет уровень защиты на `EncryptSensitiveWithUserKey`. При импорте проекта с помощью **мастера импорта проекта Integration Services** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]свойстве **ProtectionLevel** в окне **Свойства** отображается значение `EncryptSensitiveWithUserKey`.  
+ При экспорте проекта (ISPAC-файл) с сервера [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в файловую систему система автоматически изменяет уровень защиты на `EncryptSensitiveWithUserKey`. При импорте проекта с помощью **мастера импорта проекта Integration Services** в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] свойстве **ProtectionLevel** в окне **Свойства** отображается значение `EncryptSensitiveWithUserKey` .  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Назначение уровня защиты на основе жизненного цикла пакета  
  Уровень защиты пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] задается, когда начинается его разработка в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Позже, когда пакет развернут, импортирован или экспортирован из служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в службы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]либо скопирован из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хранилища пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] или файловой системы, можно изменить уровень защиты пакета. Например, если пользователь создает и сохраняет пакеты на своем компьютере с одним из параметров ключевых пользовательских уровней защиты, возможно, ему захочется изменить уровень защиты, предоставляя пакет другим пользователям, так как иначе они попросту не смогут открыть пакет.  
@@ -81,7 +80,7 @@ ms.locfileid: "62766785"
   
 -   [Установка или изменение уровня защиты пакетов](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Импорт и экспорт пакетов &#40;служб SSIS&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;пакетов&#41; SSIS](../integration-services-ssis-packages.md)   
  [Общие сведения о безопасности (службы Integration Services)](security-overview-integration-services.md)  

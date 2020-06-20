@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d2046882eeed6b04cd1b1c4035b89eccbddc4f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02cd814a3b4e52c8685d0df654c6e74071db9907
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056688"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964654"
 ---
 # <a name="precedence-constraint-editor"></a>Редактор управления очередностью
   Диалоговое окно **Редактор ограничений очередностью** используется для настройки ограничений очередностью.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Вычислительная операция**  
  Определяет вычислительную операцию, которую использует ограничение очередностью. Операциями могут быть: **Ограничение**, **Выражение**, **Выражение и ограничение**и **Выражение или ограничение**.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66056688"
  **Тест**  
  Проверка выражения.  
   
- **Логическое И**  
+ **Логическое и**  
  Выберите, чтобы указать, что несколько ограничений очередности в одном исполняемом объекте должны учитываться вместе. Все ограничения должны иметь значение `True`.  
   
 > [!NOTE]  
@@ -52,7 +51,7 @@ ms.locfileid: "66056688"
 > [!NOTE]  
 >  Этот тип элементов управления очередностью имеет вид пунктирной зеленой или синей линии либо выделяется.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление очередностью](control-flow/precedence-constraints.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Контейнеры Integration Services](control-flow/integration-services-containers.md)   
