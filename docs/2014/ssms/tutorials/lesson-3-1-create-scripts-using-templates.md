@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed48014c-3fc9-48ff-8c0f-8d1822195f14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8387cdaf85d6fd7750229fda86c8cb3122b61d90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7521f6c727d852d1b585d9c2f6ab0b78d8c5d061
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62913561"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040899"
 ---
 # <a name="create-scripts-using-templates"></a>Создание скриптов на основе шаблонов
   Среда Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает большое число шаблонов скриптов, содержащих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , предназначенные для решения многих типовых задач. Эти шаблоны содержат параметры, значения которых вводятся пользователем, такие как имя таблицы. Используя эти параметры, можно ввести имя только один раз, а затем автоматически скопировать его во все требуемые позиции в скрипте. Можно создавать собственные пользовательские шаблоны для поддержки скриптов, которые приходится писать чаще всего. Кроме того, можно реорганизовать дерево шаблонов, перемещая шаблоны или создавая новые папки для их хранения. В следующей практической работе с помощью шаблона будет создана база данных с указанием шаблона параметров сортировки.  

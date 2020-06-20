@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3a1d8542ba5cc689cef60fc81641c37c96ea790
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e677162d88fd1f724b53e0d1838eefd16d1a87af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917394"
 ---
 # <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services
   Данная процедура создает новый проект и новое решение служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -50,7 +49,7 @@ ms.locfileid: "66060215"
   
 8.  Нажмите кнопку **ОК** , чтобы добавить решение в **проводник решения**r и добавить проект в решение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;проектов&#41; SSIS](integration-services-ssis-projects-and-solutions.md)   
  [Добавление или удаление проектом служб Integration Services из решения](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)  
   

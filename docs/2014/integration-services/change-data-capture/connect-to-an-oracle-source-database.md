@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835766"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923465"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
   На странице «Источник Oracle» указываются сведения, необходимые для соединения с базой данных-источником Oracle. Экземпляр CDC считывает журналы повторов базы данных Oracle, с которой установлено соединение.  
@@ -41,7 +40,7 @@ ms.locfileid: "62835766"
 > [!NOTE]
 >  Для выполнения интеллектуального анализа журналов пользователь должен иметь следующие права доступа, предоставленные в базе данных Oracle.  
 > 
->  -   SELECT на \<любая-отслеживаемая-таблица>  
+>  -   Выберите "вкл."\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE на DBMS LOGMNR  
 > -   SELECT на V$LOGMNR CONTENTS  

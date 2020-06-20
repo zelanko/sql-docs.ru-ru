@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 822cb494b7dce35ea965a2a53cab36785a38bc75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06b58b9b6bb8a5c13e0b220ba9eeea5818682abf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066955"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, объект Memory Manager
   Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает счетчики для контроля использования памяти всего сервера. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
@@ -51,7 +50,7 @@ ms.locfileid: "63250627"
 |**Память целевого сервера (КБ)**|Указывает идеальный объем памяти, необходимый серверу.|  
 |**Общая память сервера (КБ)**|Указывает объем памяти, выделенный серверу диспетчером памяти.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, объект диспетчера буферов](sql-server-buffer-manager-object.md)   
  [sys.dm_os_performance_counters (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  

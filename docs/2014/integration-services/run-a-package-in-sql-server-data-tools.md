@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056414"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964552"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Запуск пакета с помощью SQL Server Data Tools
   Обычно пакеты исполняются в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] во время разработки, отладки и тестирования пакетов. Когда пакет запускается из конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , его запуск происходит немедленно.  
@@ -45,11 +44,11 @@ ms.locfileid: "66056414"
   
 1.  В обозревателе решений щелкните правой кнопкой мыши папку проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащую запускаемый пакет, затем выберите пункт **Свойства**.  
   
-2.  В диалоговом окне ** \<страницы свойств "имя проекта>** " щелкните **Сборка**.  
+2.  В диалоговом окне ** \<project name> страницы свойств** щелкните **Сборка**.  
   
 3.  Обновите значения свойства OutputPath для указания папки, которую необходимо использовать для развертывания времени разработки, и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение проектов и пакетов](packages/run-integration-services-ssis-packages.md)   
  [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  
   

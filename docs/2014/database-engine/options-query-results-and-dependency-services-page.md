@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d19228fdf17788e9118367a6f0f0eb3be90cb72a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481207"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930136"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Параметры ("Результаты запроса" и страница "Службы зависимостей")
-  Используйте эту страницу, чтобы указать сервер для подключения к службам зависимостей. Службы зависимостей позволяют извлекать данные о зависимостях между объектами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], сохраненными на разных серверах. Просмотреть зависимости объектов можно с помощью диалогового окна « **зависимости объектов** » в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]среде.  
+  Используйте эту страницу, чтобы указать сервер для подключения к службам зависимостей. Службы зависимостей позволяют извлекать данные о зависимостях между объектами служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], сохраненными на разных серверах. Просмотреть зависимости объектов можно с помощью диалогового окна « **зависимости объектов** » в среде [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
- **Выбор действия**  
+ **Выберите действие**  
   
 1.  [Откройте диалоговое окно «Параметры» (страницу результатов запроса или служб зависимостей)](#open_dialog)  
   
@@ -30,13 +29,13 @@ ms.locfileid: "65481207"
   
 ##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Открытие диалогового окна «Параметры» (страница «результаты запроса/службы зависимостей»)  
   
-1.  В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]выберите пункт **Параметры** в меню **Сервис** .  
+1.  В выберите [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] пункт **Параметры** в меню **Сервис** .  
   
 2.  Разверните **Результаты запроса** и нажмите кнопку **Службы зависимостей**.  
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Настройка параметров  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  **Сервер служб зависимостей**  
  Укажите сервер, на котором установлены службы зависимостей.  
   

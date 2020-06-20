@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85e2c4a1fda84a8575509a863de6e5f2e6fd5dce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c83528f45c6c4174f7714a5f22d8757de4e4fda2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971494"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Явные иерархии (службы основных данных)
   В явных иерархиях в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]элементы из одной сущности упорядочиваются любым заданным способом. Структура может быть неоднородной, причем, в отличие от производных иерархий, явные иерархии не основываются на связях, основанных на доменах атрибутов.

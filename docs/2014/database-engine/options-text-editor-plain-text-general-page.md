@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4253bf2395fc33ecf315a1f092e0203513de90e5
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8a3a172a29949db0ab83bce0d771c98afa6ef64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929835"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Options (Text Editor - Plain Text - General Page)
   Используйте это диалоговое окно для смены режима изменения текстового редактора, который используется для редактирования документа, не связанного с определенным языком разработки. Для отображения этих настроек выберите пункт **Параметры** в меню **Сервис** , раскройте узел **Текстовый редактор**, щелкните **Неформатированный текст** , а затем выберите **Общие**.  
@@ -33,7 +32,7 @@ ms.locfileid: "83000697"
  **Сведения о параметрах**  
  Редактор обычного текста не поддерживает эту возможность.  
   
-## <a name="settings"></a>"Настройки"  
+## <a name="settings"></a>Настройки  
  **Разрешить виртуальные пробелы**  
  Вставьте пробелы в конце каждой строки текста. Установите этот флажок для размещения комментариев в постоянном положении относительно текста.  
   

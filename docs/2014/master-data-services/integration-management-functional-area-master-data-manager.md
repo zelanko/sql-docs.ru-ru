@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12e61f909d7961851983212cd61b709f8a781c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284988"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971298"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Функциональная область управления интеграцией (диспетчер основных данных)
   В функциональной области «Управление интеграцией» администраторы могут выполнять импорт данных из промежуточных таблиц и создавать представления подписки для систем подписки. Дополнительные сведения об администраторах см. в разделе [Администраторы (службы Master Data Services)](administrators-master-data-services.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "67284988"
   
  [Удаление представления подписки (службы Master Data Services)](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Веб-приложение диспетчера основных данных](../../2014/master-data-services/master-data-manager-web-application.md)  
   
   

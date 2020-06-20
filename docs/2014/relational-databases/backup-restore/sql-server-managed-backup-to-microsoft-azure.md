@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8fbe94eace1244b4e5f37b60848d47b69ecc8144
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956350"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>SQL Server управляемого резервного копирования в Azure
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]управляет SQL Server резервным копированием в службу хранилища BLOB-объектов Azure и автоматизирует их. Стратегия резервного копирования, используемая [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], основана на сроке хранения и рабочей нагрузке в базе данных. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает восстановление на момент времени для указанного периода хранения.   
@@ -25,7 +24,7 @@ ms.locfileid: "70175762"
   
 -   В настоящий момент автоматизация резервного копирования множества баз данных требует разработки стратегии резервного копирования, написания специального кода и планирования резервного копирования. С помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] можно предоставить только необходимые параметры срока хранения и места расположения. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]планирует, выполняет и поддерживает резервные копии.  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] можно настроить на уровне базы данных или с параметрами по умолчанию для экземпляра SQL Server. Автоматизация резервного копирования [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с помощью имеет следующие преимущества.  
+     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] можно настроить на уровне базы данных или с параметрами по умолчанию для экземпляра SQL Server. Автоматизация резервного копирования с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] имеет следующие преимущества.  
   
     -   Установив настройки по умолчанию на уровне экземпляра, вы можете применить их к любой базе данных, созданной впоследствии, тем самым обеспечив своевременное резервное копирование и предотвратив потерю данных.  
   
@@ -51,10 +50,10 @@ ms.locfileid: "70175762"
   
   
 ###  <a name="permissions"></a><a name="Security"></a> Permissions  
- Transact-SQL — это основной интерфейс, используемый для настройки и отслеживания [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Как правило, для запуска хранимых процедур конфигурации **db_backupoperator** роль базы данных с разрешениями **ALTER ANY CREDENTIAL** , а `EXECUTE` для **sp_delete_backuphistory** хранимой процедуры требуется разрешение.  Для хранимых процедур и функций, используемых для просмотра информации, обычно требуются разрешения `Execute` для хранимой процедуры и `Select` для функции соответственно.  
+ Transact-SQL — это основной интерфейс, используемый для настройки и отслеживания [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Как правило, для запуска хранимых процедур конфигурации **db_backupoperator** роль базы данных с разрешениями **ALTER ANY CREDENTIAL** , а для `EXECUTE` **sp_delete_backuphistory** хранимой процедуры требуется разрешение.  Для хранимых процедур и функций, используемых для просмотра информации, обычно требуются разрешения `Execute` для хранимой процедуры и `Select` для функции соответственно.  
   
 ###  <a name="prerequisites"></a><a name="Prereqs"></a> Предварительные требования  
- **Требований**  
+ **Предварительные условия.**  
   
  **Служба хранилища Azure** используется [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для хранения файлов резервных копий.    Основные понятия, структура и требования для создания учетной записи хранения Azure подробно описаны в разделе [Общие сведения о ключевых компонентах и концепциях](sql-server-backup-to-url.md#intorkeyconcepts) раздела **SQL Server Backup to URL** .  
   
@@ -63,7 +62,7 @@ ms.locfileid: "70175762"
 ###  <a name="concepts-and-key-components"></a><a name="Concepts_Components"></a>Основные понятия и ключевые компоненты  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] — это функция, управляющая операциями резервного копирования. Он хранит метаданные в базе данных **msdb** и использует системные задания для записи полных резервных копий базы данных и журнала транзакций.  
   
-#### <a name="components"></a>Компоненты  
+#### <a name="components"></a>Components  
  Transact-SQL — это основной интерфейс для взаимодействия с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Системные хранимые процедуры используются для активации, настройки и отслеживания [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Системные функции используются для получения существующих параметров конфигурации, значений параметров и данных файлов резервных копий. Расширенные события используются для отображения ошибок и предупреждений. Механизмы предупреждений включаются с помощью заданий агента SQL Server и управления на основе политик SQL Server. Далее представлен список объектов и описание их функций по отношению к [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  Можно также настроить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]с помощью командлетов PowerShell. SQL Server Management Studio поддерживает восстановление резервных копий, созданных [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , с помощью задачи **Восстановление базы данных** .  
@@ -73,7 +72,7 @@ ms.locfileid: "70175762"
 |Системный объект|Описание|  
 |**MSDB**|Хранит метаданные, журнал резервного копирования для всех резервных копий, созданных [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin. set_db_backup &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/dn451013(v=sql.120).aspx)|Системные хранимые процедуры для включения и настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных.|  
-|[smart_admin. set_instance_backup &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Системная хранимая процедура для включения и настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] параметров по умолчанию для экземпляра SQL Server.|  
+|[smart_admin. set_instance_backup &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/dn451009(v=sql.120).aspx)|Системная хранимая процедура для включения и настройки параметров по умолчанию [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для экземпляра SQL Server.|  
 |[smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql)|Системные хранимые процедуры для приостановки и возобновления [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[smart_admin. sp_set_parameter &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)|Системные хранимые процедуры для включения и настройки мониторинга [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Примеры: включение расширенных событий, настроек почты для уведомлений.|  
 |[smart_admin. sp_backup_on_demand &#40;&#41;Transact-SQL](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-on-demand-transact-sql)|Системная хранимая процедура, используемая для выполнения Специального резервного копирования базы данных, которая может использоваться [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] без нарушения цепочки журналов.|  
@@ -87,7 +86,7 @@ ms.locfileid: "70175762"
 |[Мониторинг управляемого резервного копирования SQL Server в Azure](sql-server-managed-backup-to-microsoft-azure.md)|Расширенные события для наблюдения, уведомления по электронной почте об ошибках и предупреждениях, управления на основе политик SQL Server для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
   
 #### <a name="backup-strategy"></a>Стратегия резервного копирования  
- **Стратегия резервного копирования [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], используемая:**  
+ **Стратегия резервного копирования, используемая [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :**  
   
  Тип запланированных резервных копий и частоты резервного копирования определяется на основе рабочей нагрузки в базе данных. Настройки срока хранения определяют длительность хранения файлов резервных копий в хранилище и для восстановления базы данных на момент времени в течение срока хранения.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "70175762"
   
  Имя файла резервной копии для баз данных, не связанных с доступностью, называется следующим соглашением: оно создается с использованием первых 40 символов имени базы данных, GUID базы данных без символа "-" и метки времени. Между сегментами в качестве разделителей вставляется подчеркивание. Для полной резервной копии используется расширение **BAK** , а для резервной копии журналов — **LOG** . Для баз данных группы доступности в дополнении к схеме именования, описанной выше, после 40 символов имени базы данных добавляется GUID группы доступности. Значение GUID базы данных группы доступности — это значение для group_database_id в sys.databases.  
   
- **Полное резервное копирование базы данных.** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] агент планирует полную резервную копию базы данных, если выполняется одно из следующих условий.  
+ **Полное резервное копирование базы данных:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] агент планирует полную резервную копию базы данных, если выполняется одно из следующих условий.  
   
 -   Функция [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] включается для базы данных впервые, или функция [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] активируется с параметрами по умолчанию на уровне экземпляра.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "70175762"
 -   Каждый раз, когда резервная копия журнала транзакций отстает от полной резервной копии базы данных, целью является сохранение цепочки журналов до полной резервной копии.  
   
 #### <a name="retention-period-settings"></a>Параметры срока хранения  
- При включении резервного копирования необходимо задать срок хранения в днях. Минимальное значение — 1 день, максимальное — 30 дней.  
+ При включении резервного копирования необходимо задать срок хранения в днях: минимальное значение — 1 день, максимальное — 30 дней.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] оценивает возможность восстановления базы данных на момент времени в течение заданного периода, чтобы определить, какие файлы резервной копии необходимо сохранить, а какие — удалить. Параметр backup_finish_date резервной копии используется для определения и сопоставления времени, заданного настройками срока хранения.  
   
@@ -140,7 +139,7 @@ ms.locfileid: "70175762"
   
 -   Служба хранилища BLOB-объектов Azure — это единственный поддерживаемый вариант хранилища резервных копий. Резервные копии на диски или ленточные накопители не поддерживаются.  
   
--   В настоящее время максимальный размер файла, допустимый для страничного BLOB-объекта в службе хранилища Azure, составляет 1 ТБ. Файлы резервных копий, превышающие размер в 1 ТБ, вызовут ошибку. Во избежание этой ситуации рекомендуется для больших баз данных использовать сжатие и проверять размер файла резервной копии до настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Вы можете либо проверить резервное копирование на локальный диск, либо вручную создать резервную копию в службе хранилища Azure `BACKUP TO URL` с помощью инструкции TRANSACT-SQL. Дополнительные сведения см. в разделе [SQL Server Backup to URL](sql-server-backup-to-url.md).  
+-   В настоящее время максимальный размер файла, допустимый для страничного BLOB-объекта в службе хранилища Azure, составляет 1 ТБ. Файлы резервных копий, превышающие размер в 1 ТБ, вызовут ошибку. Во избежание этой ситуации рекомендуется для больших баз данных использовать сжатие и проверять размер файла резервной копии до настройки [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Вы можете либо проверить резервное копирование на локальный диск, либо вручную создать резервную копию в службе хранилища Azure с помощью `BACKUP TO URL` инструкции Transact-SQL. Дополнительные сведения см. в разделе [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
 -   Модели восстановления. поддерживаются только базы данных, для которых настроена модель полного или с неполным протоколированием.  Базы данных с простой моделью восстановления не поддерживаются.  
   
@@ -152,15 +151,15 @@ ms.locfileid: "70175762"
 |-|-|  
 |**Описания задач**|**Раздел**|  
 |Такие базовые задачи, как настройка [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных или настройка параметров по умолчанию на уровне экземпляра, отключение [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] на уровне экземпляра или базы данных, приостановка и перезапуск [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Управляемое резервное копирование SQL Server в Azure — настройки периода хранения и хранилища](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|  
-|**Учебник.** Пошаговые инструкции по настройке и мониторингу [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Настройка управляемого резервного копирования SQL Server в Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
+|**Учебник.** Пошаговые инструкции по настройке и мониторингу [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .|[Настройка управляемого резервного копирования SQL Server в Azure](enable-sql-server-managed-backup-to-microsoft-azure.md)|  
 |**Учебник.** Пошаговые инструкции по настройке и мониторингу [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] баз данных в группе доступности.|[Настройка управляемого резервного копирования SQL Server в Azure для групп доступности](../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md)|  
 |Средства, понятия и задачи, связанные с мониторингом [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Мониторинг управляемого резервного копирования SQL Server в Azure](sql-server-managed-backup-to-microsoft-azure.md)|  
-|Средства и сведения для устранения неполадок [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Устранение неполадок с управляемым резервным копированием SQL Server в Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
+|Средства и сведения для устранения неполадок [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|[Устранение неполадок SQL Server управляемого резервного копирования в Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server резервного копирования и восстановления с помощью службы хранилища BLOB-объектов Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [SQL Server резервное копирование на URL-адрес](sql-server-backup-to-url.md)   
  [SQL Server управляемого резервного копирования в Azure: взаимодействие и сосуществование](../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)   
- [Устранение неполадок с управляемым резервным копированием SQL Server в Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
+ [Устранение неполадок SQL Server управляемого резервного копирования в Azure](../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md)  
   
   

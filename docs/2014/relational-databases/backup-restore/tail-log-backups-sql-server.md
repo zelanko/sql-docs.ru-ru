@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6da8f9de22f1b3191d6fba1918e8c05a64d062f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd7c505701a4edb1f66ca516d06179b2eb1a222d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920670"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956254"
 ---
 # <a name="tail-log-backups-sql-server"></a>Резервные копии заключительного фрагмента журнала (SQL Server)
   В данном разделе рассматриваются вопросы резервного копирования и восстановления только тех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
@@ -49,7 +48,7 @@ ms.locfileid: "62920670"
   
 |Параметр BACKUP LOG|Комментарии|  
 |-----------------------|--------------|  
-|NORECOVERY|Если планируется продолжить операцию восстановления базы данных, используйте параметр NORECOVERY. NORECOVERY переводит базу данных в состояние восстановления. Это гарантирует, что после создания резервной копии заключительного фрагмента журнала база данных не изменится.  Если параметры NO_TRUNCATE или COPY_ONLY не заданы, то журнал усекается.<br /><br /> ** \* \* Важно \* !** Рекомендуется избегать использования NO_TRUNCATE, за исключением случаев, когда база данных повреждена.|  
+|NORECOVERY|Если планируется продолжить операцию восстановления базы данных, используйте параметр NORECOVERY. NORECOVERY переводит базу данных в состояние восстановления. Это гарантирует, что после создания резервной копии заключительного фрагмента журнала база данных не изменится.  Если параметры NO_TRUNCATE или COPY_ONLY не заданы, то журнал усекается.<br /><br /> Важно избегать использования NO_TRUNCATE, за исключением случаев, когда база данных повреждена. ** \* \* \* \* **|  
 |CONTINUE_AFTER_ERROR|Параметр CONTINUE_AFTER_ERROR следует указывать только в том случае, если создается резервная копия заключительного фрагмента журнала поврежденной базы данных.<br /><br /> Примечание. при использовании резервного копирования заключительного фрагмента журнала поврежденной базы данных некоторые метаданные, обычно захваченные в резервных копиях журналов, могут быть недоступны. Дополнительные сведения см. в подразделе [Резервное копирование заключительного фрагмента журнала с неполными метаданными резервной копии](#IncompleteMetadata) ниже в данном разделе.|  
   
 ##  <a name="tail-log-backups-that-have-incomplete-backup-metadata"></a><a name="IncompleteMetadata"></a>Резервные копии заключительного фрагмента журнала с неполными метаданными резервного копирования  
@@ -78,8 +77,8 @@ ms.locfileid: "62920670"
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Резервное копирование и восстановление баз данных SQL Server](back-up-and-restore-of-sql-server-databases.md)   
- [Резервные копии только для копирования &#40;SQL Server&#41;](copy-only-backups-sql-server.md)   
- [Резервные копии журналов транзакций &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Резервные копии только для копирования (SQL Server)](copy-only-backups-sql-server.md)   
+ [Резервные копии журналов транзакций (SQL Server)](transaction-log-backups-sql-server.md)   
  [Применение резервных копий журналов транзакций (SQL Server)](apply-transaction-log-backups-sql-server.md)  
   
   

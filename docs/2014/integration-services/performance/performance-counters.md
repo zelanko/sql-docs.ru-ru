@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42a6051305f1c8999e7cba5e4cb51a7945f1f5c7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889842"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964684"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
@@ -31,7 +30,7 @@ ms.locfileid: "62889842"
   
  В следующей таблице приводятся описания счетчиков производительности.  
   
-|Счетчик производительности|Description|  
+|Счетчик производительности|Описание|  
 |-------------------------|-----------------|  
 |Считано байтов BLOB|Число байт данных BLOB, которое подсистема обработки потока данных считала из всех источников.|  
 |Записано байтов BLOB|Число байтов данных BLOB, которые подсистема обработки потока данных записала во все назначения.|  
@@ -77,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md)  
   
   

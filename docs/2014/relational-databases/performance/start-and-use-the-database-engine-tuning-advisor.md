@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066801"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
   В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](database-engine-tuning-advisor.md).  
@@ -175,7 +174,7 @@ ms.locfileid: "63150645"
   
 2.  Создайте рабочую нагрузку. Дополнительные сведения см. выше в подразделе [Создание рабочей нагрузки](#Create) .  
   
-3.  Запустите помощник по настройке ядра СУБД и войдите в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. выше в подразделе [Запуск помощника по настройке ядра СУБД](#Start) .  
+3.  Запустите помощник по настройке ядра СУБД и войдите в экземпляр [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. выше в подразделе [Запуск помощника по настройке ядра СУБД](#Start) .  
   
 4.  На вкладке **Общие** введите имя в поле **Имя сеанса** , чтобы создать новый сеанс настройки.  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150645"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>Создание входного XML-файла  
  Опытный XML-разработчик может создавать файлы в формате XML, которые помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] сможет использовать для настройки рабочих нагрузок. Чтобы создать эти XML-файлы, используйте наиболее удобные для вас XML-инструменты для изменения файла образца или создания экземпляра из XML-схемы помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- XML [!INCLUDE[ssDE](../../includes/ssde-md.md)] -схема помощника по настройке компонента доступна [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в вашей установке в следующем расположении:  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]XML-схема помощника по настройке компонента доступна в вашей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установке в следующем расположении:  
   
  C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -499,14 +498,14 @@ database_name.owner_name.table_name
  **Состояние**  
  Отображает состояние этапа действия.  
   
- **Сообщение**  
+ **Message**  
  Содержит сообщения, возвращенные этапами действия.  
   
  **Журнал настройки**  
  Содержит сведения, касающиеся этого сеанса настройки. Для распечатки этого журнала щелкните его правой кнопкой мыши и выберите пункт **Печать**.  
   
-## <a name="see-also"></a>См. также  
- [Просмотр и работа с выходными данными из помощник по настройке ядра СУБД](database-engine-tuning-advisor.md)   
- [dta, программа](../../tools/dta/dta-utility.md)  
+## <a name="see-also"></a>См. также:  
+ [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](database-engine-tuning-advisor.md)   
+ [dta Utility](../../tools/dta/dta-utility.md)  
   
   

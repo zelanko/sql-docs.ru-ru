@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 31216e5a6670ff29c0d7e7ab4f1ee31cc5af0564
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c4cc389a0c2421a996e8d9a3498552e0119e401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705379"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020097"
 ---
 # <a name="handling-errors-and-messages"></a>Обработка ошибок и сообщений
   Когда приложение вызывает функцию ODBC, драйвер выполняет функцию и возвращает диагностическую информацию двумя способами: код возврата указывает на общий успех или сбой функции ODBC, а диагностические записи предоставляют подробные сведения о функции. Диагностическая запись состоит из записи заголовка и записи состояния. При успешном выполнении функции возвращается как минимум одна диагностическая запись, запись заголовка.  
@@ -51,9 +50,9 @@ ms.locfileid: "82705379"
   
 -   [SQLSTATE &#40;коды ошибок ODBC&#41;](sqlstate-odbc-error-codes.md)  
   
--   [сообщения об ошибках](error-messages.md)  
+-   [Сообщения об ошибках](error-messages.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

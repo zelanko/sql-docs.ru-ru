@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 407074c7387e30b38d435090ee11216d04acc0b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971344"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Требования веб-приложений (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] — это веб-приложение, размещенное в службах IIS. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] работает только в Internet Explorer (IE) 7 или более поздней версии. Internet Explorer 7 и более ранние версии, а также Microsoft Edge и Chrome не поддерживаются.  
@@ -32,9 +31,9 @@ ms.locfileid: "65482887"
   
 |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer Edition x64 (64-разрядная версия)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise x64 (64-разрядная версия)|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence x64 (64-разрядная версия)|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
-|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)<br /><br /> Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br /><br /> Windows 7 Профессиональная, Корпоративная и Максимальная<br /><br /> Windows 8.0 Профессиональная, Корпоративная и Максимальная|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)<br /><br /> Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)<br /><br /> Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br /><br /> Windows Server 2012|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)<br /><br /> Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br /><br /> Windows 7 Профессиональная, Корпоративная и Максимальная<br /><br /> Windows 8.0 Профессиональная, Корпоративная и Максимальная|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)<br /><br /> Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2)<br /><br /> Windows Server 2008 R2 с пакетом обновления 1 (SP1)<br /><br /> Windows Server 2012|  
   
- Полный список операционных систем Windows, поддерживаемых для вашего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Полный список операционных систем Windows, поддерживаемых для вашего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. в разделе [требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="microsoft-silverlight"></a>Microsoft Silverlight  
  Для работы в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] на клиентском компьютере необходимо установить Silverlight 5. Если требуемая версия Silverlight отсутствует, то при переходе к той части веб-приложения, которая использует Silverlight, программа предложит установить Silverlight. Вы можете установить Silverlight 5 [с этой веб-страницы](https://go.microsoft.com/fwlink/?LinkId=243096).  
@@ -57,7 +56,7 @@ ms.locfileid: "65482887"
   
 ||  
 |-|  
-|службы IIS;<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> [Примечание: не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> Безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows|  
+|Службы IIS<br /><br /> Средства управления веб-сайтом<br /><br /> Консоль управления (IIS)<br /><br /> Веб-службы Интернета<br /><br /> Разработка приложений<br /><br /> Расширяемость платформы .NET версии 3.5<br /><br /> Расширяемость платформы .NET версии 4.5<br /><br /> ASP.NET 3.5<br /><br /> ASP.NET 4.5<br /><br /> Расширения ISAPI<br /><br /> Фильтры ISAPI<br /><br /> Общие функции HTTP<br /><br /> Документ по умолчанию<br /><br /> Обзор каталога<br /><br /> Ошибки HTTP<br /><br /> Статическое содержимое<br /><br /> [Примечание: не устанавливайте протокол публикации WebDAV.]<br /><br /> Исправность и диагностика<br /><br /> Ведение журнала служб HTTP<br /><br /> Монитор запросов<br /><br /> Производительность<br /><br /> Сжатие статического содержимого<br /><br /> Безопасность<br /><br /> Фильтрация запросов<br /><br /> Проверка подлинности Windows|  
   
 ### <a name="features-windows-server-2008-or-windows-server-2008-r2-windows-7-operating-systems"></a>Компоненты (операционные системы Windows Server 2008 или Windows Server 2008 R2, Windows 7)  
  В [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] или Windows Server 2008 R2 приведенные ниже компоненты можно установить с помощью **Диспетчера сервера** .  
@@ -81,12 +80,12 @@ ms.locfileid: "65482887"
   
 ### <a name="accounts-and-permissions"></a>Учетные записи и разрешения  
   
-|Type|Описание|  
+|Тип|Описание|  
 |----------|-----------------|  
 |Учетная запись Windows|Выполнять вход на компьютер веб-сервера необходимо с учетной записью Windows, которая имеет разрешения на настройку ролей Windows, служб ролей и компонентов, а также на создание пулов приложений, веб-сайтов и веб-приложений в службах IIS на локальном компьютере и управление ими.|  
 |Учетная запись службы|При создании веб-приложения [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] в программе [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]необходимо указать удостоверение для пула приложений, в котором оно выполняется. Эта учетная запись может отличаться от учетной записи службы, которая была указана при создании базы данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .<br /><br /> Данное удостоверение должно быть учетной записью пользователя домена, оно добавляется к роли базы данных mds_exec в базе данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для доступа к ней. Дополнительные сведения см. в разделе [Имена входа, пользователи и роли базы данных (службы Master Data Services)](../database-logins-users-and-roles-master-data-services.md). Данная учетная запись также добавляется в группу Windows [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , **MDS_ServiceAccounts**, которой предоставляется разрешение на доступ к временному каталогу компиляции **MDSTempDir**в файловой системе. Дополнительные сведения см. в разделе [Разрешения для папок и файлов (службы Master Data Services)](../folder-and-file-permissions-master-data-services.md).<br /><br /> Учетной записи пула приложений требуется разрешение VIEW SERVER STATE, чтобы исключить ошибки сервера. Например, команда MDS Validate Version завершается неудачно с ошибкой сервера. Дополнительные сведения см. в статье [Неудачное завершение команды MDS Validate Version с ошибкой сервера в SQL Server 2012 и SQL Server 2014](https://go.microsoft.com/fwlink/p/?LinkId=526304).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка Master Data Services](install-master-data-services.md)   
  [Создание диспетчер основных данных &#40;веб-приложения Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
  [Страница "Веб-конфигурация" (диспетчер конфигурации Master Data Services)](../web-configuration-page-master-data-services-configuration-manager.md)  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 754920cac0a832ac5ae1ff8959e710815d68fd70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482674"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971194"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Разрешения объекта модели (службы Master Data Services)
   Разрешения объекта модели являются обязательными. Они определяют атрибуты, к которым пользователь может получить доступ в функциональной области **Обозреватель** пользовательского интерфейса.  
@@ -36,7 +35,7 @@ ms.locfileid: "65482674"
 ## <a name="best-practice"></a>Рекомендации  
  В общем случае следует назначить разрешение **Update** объекту модели, а затем явным образом назначить разрешение для объектов под ним. Если объектам на нижнем уровне не назначить разрешение, то разрешения будут унаследованы, а пользователь станет администратором.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения модели &#40;Master Data Services&#41;](../../2014/master-data-services/model-permissions-master-data-services.md)   
  [Разрешения функциональной области &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   

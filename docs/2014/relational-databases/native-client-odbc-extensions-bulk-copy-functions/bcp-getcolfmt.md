@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 294241eb586a70f4e0a826b1dce5d35879b3ee3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701976"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019512"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Используется для нахождения значения свойства формата столбца.  
@@ -85,7 +84,7 @@ pcbLen
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   
