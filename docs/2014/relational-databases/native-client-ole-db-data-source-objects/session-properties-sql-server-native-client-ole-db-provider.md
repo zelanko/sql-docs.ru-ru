@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2498fbad-b3db-4bea-8fc6-fef5317d3eba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3bb77a93bff358f052d480b74fa33d8021b1754e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 99f2bc6def0f470f653446c87216c3e854b2f819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056343"
 ---
 # <a name="session-properties"></a>Свойства сеанса
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента интерпретирует свойства OLE DB сеанса следующим образом.  
@@ -35,7 +34,7 @@ ms.locfileid: "82705149"
 |Свойство SSPROP_ALLOWNATIVEVARIANT|Тип: VT_BOOL.<br /><br /> Чтение и запись в R/W<br /><br /> Значение по умолчанию: VARIANT_FALSE<br /><br /> Описание: определяет, имеют ли данные, полученные в результате выборки, тип DBTYPE_VARIANT или DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: возвращается тип столбца DBTYPE_SQLVARIANT. В этом случае в буфере сохраняется структура SSVARIANT.<br /><br /> VARIANT_FALSE: возвращается столбец типа DBTYPE_VARIANT, и в буфере сохраняется структура VARIANT.|  
 |SSPROP_ASYNCH_BULKCOPY|Для использования асинхронного режима задайте значение VARIANT_TRUE характерного для поставщика свойства SSPROP_ASYNCH_BULKCOPY сеанса до вызова метода BCPExec. Это свойство доступно в наборе свойств DBPROPSET_SQLSERVERSESSION.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты источников данных (OLE DB)](data-source-objects-ole-db.md)  
   
   

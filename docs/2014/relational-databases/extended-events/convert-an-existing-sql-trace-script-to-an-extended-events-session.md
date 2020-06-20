@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 39a89574fffa57174dc141ee12686798b7d7bd5a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1e5b0d0e20fbf4fd55398c130abf6cfff128ebe8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050908"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Преобразование существующего скрипта трассировки SQL в сеанс расширенных событий
   При наличии существующего скрипта трассировки SQL, который требуется преобразовать для сеанса расширенных событий, можно использовать процедуры из данного раздела для создания эквивалентного сеанса расширенных событий. С помощью системных таблиц trace_xe_action_map и trace_xe_event_map можно собрать сведения, необходимые для выполнения преобразования.  

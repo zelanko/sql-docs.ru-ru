@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2b9d60675ef4c0bdaef1d45c6e8fe230ac70393c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933388"
 ---
 # <a name="send-dataset-sample"></a>Образец отправки DataSet
   Образец Send `DataSet` показывает, как с помощью серверной хранимой процедуры, основанной на среде CLR, возвратить клиенту в виде результирующего набора элемент `DataSet` на основе ADO.NET. Данный способ используется, например, когда хранимая процедура заполняет элемент `DataSet` результатами запроса, а затем манипулирует данными, содержащимися в `DataSet`. Также подобный подход используется при создании и заполнении объекта `DataSet` при помощи хранимых процедур. Образец состоит из двух классов: `DataSetUtilities` и `TestSendDataSet`. Метод `SendDataSet`, принадлежащий к классу `DataSetUtilities`, представляет собой наиболее общий способ передачи содержимого экземпляра `DataSet` клиенту. Метод `DoTest` , определенный в классе `TestSendDataSet` , проверяет работу метода `SendDataSet` . Для этого создается экземпляр `DataSet` , который заполняется данными, поступающими из хранимой процедуры `uspGetTwoBOMTestData` Transact-SQL. Процедура `uspGetTwoBOMTestData` дважды запускает процедуру Transact-SQL `uspGetBillOfMaterials` , чтобы выполнить рекурсивный запрос счетов за материалы по двум видам продуктов, указанным в качестве параметров хранимой процедуры `usp_GetTwoBOMTestData` . Обычно после заполнения набора данных данные изменяются до вызова метода `SendDataSet` для доставки их клиенту в виде результирующего набора. В этом образце для простоты данные передаются без обработки.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

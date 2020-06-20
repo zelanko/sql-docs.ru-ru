@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 130228aee1ba21829651afb5dfd5665692a42315
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 13c588f975a219284ed4ec26b6ed2cfa73dd70a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059390"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Использование результатов FOR XML в коде приложений
   При помощи предложения FOR XML в SQL-запросах можно получать и даже преобразовывать результаты запросов в формат XML. Если приложение способно обрабатывать XML-данные, эта возможность позволяет выполнять следующие задачи:  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59c179c81c1b6b60787603f5953b85e583668c80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f12f0fb8ee3a6118e03799d17836573fb5c733df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061548"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>заморозить топологию репликации (программирование репликации на языке Transact-SQL)
   *Замораживание* системы предполагает прекращение операций с опубликованными таблицами на всех узлах и проверку того, что каждый узел получил все изменения со всех других узлов. В этом разделе показано, как заморозить топологию репликации (что необходимо для решения ряда административных задач) и убедиться в том, что узел получил все изменения от других узлов.  
@@ -79,7 +78,7 @@ ms.locfileid: "63161726"
     > [!NOTE]  
     >  Если во время синхронизации обнаружен конфликт, то изменения, необходимые для разрешения конфликта, могут не распространиться на все узлы после того, как агент слияния будет запущен дважды.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование одноранговой топологии &#40;программирование репликации на языке Transact-SQL&#41;](administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Измерение задержки и проверка правильности соединений для репликации транзакций](../monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

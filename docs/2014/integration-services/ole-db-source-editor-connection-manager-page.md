@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 22b7c9ea4012655043cac7eb7f3d432ef1e2e854
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c86dfee37e9b206643069a2d442b27575324ed17
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057048"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964984"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Редактор источника OLE DB (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника OLE DB** для выбора диспетчера соединений OLE DB для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -30,7 +29,7 @@ ms.locfileid: "66057048"
 >  Чтобы загрузить данные из источника данных, использующего [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel 2003 или более раннюю версию, используйте источник Excel. Дополнительные сведения см. в разделе [Редактор источника Excel (страница "Диспетчер соединений")](../../2014/integration-services/excel-source-editor-connection-manager-page.md).  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство источника OLE DB недоступно в **редакторе источника OLE DB**, но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  `CommandTimeout`Свойство источника OLE DB недоступно в **редакторе источника OLE DB**, но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Дополнительные сведения об источнике OLE DB см. в разделе [OLE DB Source](data-flow/ole-db-source.md).  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66057048"
  **Диспетчер подключений OLE DB**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новый диспетчер соединений с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
  **Режим доступа к данным**  
@@ -63,7 +62,7 @@ ms.locfileid: "66057048"
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне**Предварительный просмотр** может отображаться до 200 строк.  
   
 > [!NOTE]  
->  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображается текст \<значение слишком велико для отображения> или System.Byte[]. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого \<value too big to display> отображаются значения или System. Byte []. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66057048"
  **Имя переменной**  
  Выберите переменную, содержащую текст SQL-запроса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница "&#40;столбцов" редактора источника OLE DB&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   

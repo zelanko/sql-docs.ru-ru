@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57536924-5e66-4b09-a76d-8fcea2131771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0588bdced4d8d11111b02eb7d6a1e1a892d1acb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e82f9d68a5b796c6152531437265a665a9b85a68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052862"
 ---
 # <a name="objectcreated-event-class"></a>Object:Created, класс событий
   События класса Object:Created указывают на то, что объект был создан, например с помощью инструкций CREATE INDEX, CREATE TABLE или CREATE DATABASE.  
@@ -30,11 +29,11 @@ ms.locfileid: "63023933"
   
 |Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
+|ApplicationName|`nvarchar`|Имя клиентского приложения, которое создало соединение с экземпляром [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 46.|27|Нет|  
+|EventClass|`int`|Тип события = 46.|27|нет|  
 |EventSequence|`int`|Порядковый номер данного события в запросе.|51|нет|  
 |EventSubClass|`int`|Тип подкласса события.<br /><br /> 0 = начало<br /><br /> 1 = фиксация<br /><br /> 2 = откат|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
@@ -58,7 +57,7 @@ ms.locfileid: "63023933"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

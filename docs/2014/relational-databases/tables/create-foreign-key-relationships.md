@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761616"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009188"
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
   В данном разделе описывается создание связей внешнего ключа в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Связь создается между двумя таблицами, чтобы связать строки одной таблицы со строками другой.  
@@ -79,7 +78,7 @@ ms.locfileid: "62761616"
   
 3.  В диалоговом окне **Связи внешнего ключа** щелкните **Добавить**.  
   
-     Связь появится в списке **Выбранные связи** с именем, установленным системой, в формате FK_\<*tablename*>_\<*tablename*>, где *tablename* — это имя таблицы внешнего ключа.  
+     Связь отображается в **выбранном списке связей** с именем, предоставленным системой, в формате FK_ \<*tablename*> _ \<*tablename*> , где *TableName* — это имя таблицы внешнего ключа.  
   
 4.  Щелкните нужную связь в списке **Выбранные связи** .  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e4197bf4e4be1ca695778920ba8abe03bf4f7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061178"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924615"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Редактор преобразования «Кэш» (страница «Сопоставления»)
   Используйте страницу **Сопоставления****Редактора преобразования «Кэш»** , чтобы сопоставить входные столбцы в преобразовании «Преобразование кэша» с целевыми столбцами в диспетчере соединений с кэшем.  
@@ -29,7 +28,7 @@ ms.locfileid: "66061178"
   
  Дополнительные сведения о диспетчере соединений с кэшем см. в разделе [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Чтобы сопоставить доступные входные столбцы с целевыми столбцами, воспользуйтесь операцией перетаскивания.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "66061178"
  **Целевой столбец**  
  Просмотр каждого доступного целевого столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор преобразования "Кэш" (страница "Диспетчер соединений")](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

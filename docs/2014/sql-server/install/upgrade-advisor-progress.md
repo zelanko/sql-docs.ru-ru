@@ -16,25 +16,24 @@ helpviewer_keywords:
 ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 692b06051872084ff5e1b16dfaf1f8198a649d62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062336"
 ---
 # <a name="upgrade-advisor-progress"></a>Ход выполнения помощника по обновлению
   Анализ помощника по обновлению начинается с запуска выделенного анализатора, производящего анализ каждого выбранного компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По мере анализа компонентов в диалоговом окне **ход** выполнения отображается ход выполнения.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Действие**  
  Указывает выбранный для анализа компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Состояние**  
  Отображает значение состояния, возвращенное интерфейсом выполнения компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Сообщение**  
+ **Message**  
  Отображает сообщения об ошибке, сбое или успешном завершении, возвращенные каждым отдельным анализатором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
@@ -45,7 +44,7 @@ ms.locfileid: "66091554"
 > [!NOTE]  
 >  Предыдущие отчеты сохраняются при каждом анализе сервера. При сохранении отчетов в качестве имени файла используется отметка времени. Средство просмотра отчетов отображает пять последних сохраненных отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Руководство. Запуск помощника по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [Как запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Компоненты SQL Server](../../../2014/sql-server/install/sql-server-components.md)   

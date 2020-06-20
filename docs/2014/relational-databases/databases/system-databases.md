@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30468a7c-4225-4d35-aa4a-ffa7da4f1282
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 916fd6d996a1a5270173d290c61f262ddf3f797b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65deee685c2205a7c6e41ed86f71c69639555d7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871131"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965724"
 ---
 # <a name="system-databases"></a>Системные базы данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входят следующие системные базы данных.  
@@ -52,7 +51,7 @@ ms.locfileid: "62871131"
 ## <a name="viewing-system-database-data"></a>просмотр данных системной базы данных  
  Не следует создавать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые выполняют запросы непосредственно к системным таблицам, если только это не единственный способ получить данные, необходимые для приложения. Приложения должны получать данные каталога и системные данные с помощью следующих средств:  
   
--   Представления системного каталога  
+-   Системные представления каталога  
   
 -   SQL-SMO;  
   

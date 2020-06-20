@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e8a817421aeca7906d31e4a70c25a12b6af7c0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670934"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064520"
 ---
 # <a name="about-change-tracking-sql-server"></a>Об отслеживании изменений (SQL Server)
   Отслеживание изменений — это простое решение, обеспечивающее эффективный механизм отслеживания изменений для приложений. Обычно, чтобы позволить приложениям направлять запросы об изменениях данных в базе данных и получить доступ к сведениям об изменениях, разработчикам приложений приходится реализовывать специальные механизмы отслеживания изменений. Создание этих механизмов обычно включало много усилий и часто участвует в использовании сочетания триггеров, `timestamp` столбцов, новых таблиц для хранения данных отслеживания и пользовательских процессов очистки.  
@@ -67,7 +66,7 @@ ms.locfileid: "62670934"
   
  Сведения об изменении, внесенном в каждую строку, могут быть получены с помощью отслеживания изменений. Например, тип операции DML, который вызвал изменение (вставку, обновление или удаление), или столбцы, измененные в ходе операции обновления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение и отключение Отслеживание изменений &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
  [Работа с Отслеживание изменений &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
  [Управление Отслеживание изменений &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   

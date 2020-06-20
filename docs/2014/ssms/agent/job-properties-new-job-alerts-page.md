@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46e17ba7281e8289e2209d4e1dfc3ae40f5ef161
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062293"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Свойства задания: создание задания (страница "Оповещения")
   Эта страница используется для просмотра и упорядочения предупреждений для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Список предупреждений**  
  Перечисляет предупреждения для данного задания.  
   
@@ -32,10 +31,10 @@ ms.locfileid: "68189279"
  **Edit** (Изменение)  
  Изменяет выбранное определение предупреждения.  
   
- **Удалить**  
+ **Remove**  
  Удаляет выбранное предупреждение из задания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уведомление](alerts.md)   
  [Реализация заданий](implement-jobs.md)  
   

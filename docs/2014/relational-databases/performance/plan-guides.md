@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150821"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063903"
 ---
 # <a name="plan-guides"></a>Руководства планов
   Структуры планов позволяют оптимизировать производительность запросов, если невозможно или нежелательно непосредственно изменять текст фактически имеющегося запроса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Структуры планов влияют на оптимизацию запросов путем присоединения к ним указаний запроса или постоянного плана запроса. Структуры планов полезны, когда небольшое подмножество запросов в приложении базы данных стороннего разработчика выполняются не так, как ожидается. В структуре плана задается инструкция Transact-SQL, которую нужно оптимизировать, и либо предложение OPTION, содержащее указания запросов, либо конкретный план запроса, с помощью которого планируется оптимизировать запрос. При выполнении запроса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сопоставляет инструкцию Transact-SQL со структурой плана и присоединяет предложение OPTION к запросу во время выполнения или использует указанный план запроса.  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  В структурах плана, основанных на SQL или TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посимвольно сравнивает значения аргументов @module_or_batch и @params, переданных в запросе. Это означает, что необходимо предоставить текст точно в том же виде, в каком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получит его в действительном пакете.  
   
- Если @type = "SQL" и @module_or_batch имеет значение null, для параметра @module_or_batch задается значение. @stmt Это означает, что значение для *statement_text* должно быть указано в идентичном формате, символ — символ — в том виде, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]каком он передан. Для упрощения соответствия формата внутренние преобразования не выполняются.  
+ Если @type = "SQL" и @module_or_batch имеет значение null, для параметра задается @module_or_batch значение @stmt . Это означает, что значение для *statement_text* должно быть указано в идентичном формате, символ — символ — в том виде, в каком он передан [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для упрощения соответствия формата внутренние преобразования не выполняются.  
   
  Если к инструкции могут быть применены и обычная структура плана (SQL или OBJECT), и структура плана TEMPLATE, то используется только обычная структура плана.  
   
@@ -148,8 +147,8 @@ sp_create_plan_guide
 |Описано, как использовать профилировщик SQL Server для создания и проверки структур планов.|[Использование SQL Server Profiler для создания и тестирования структур планов](plan-guides.md)|  
 |Описано, как проверять структуры планов.|[Проверка структур плана после обновления](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>См. также  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [sp_create_plan_guide (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [sys. plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

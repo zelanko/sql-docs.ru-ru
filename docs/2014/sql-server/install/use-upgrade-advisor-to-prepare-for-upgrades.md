@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fa2fce50d7f62f134ef96175ed359c86ea84080
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632739"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058848"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>Использование помощника по обновлению для подготовки к обновлениям
   Помощник по обновлению [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помогает произвести подготовку к обновлениям [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Помощник по обновлению анализирует установленные компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и создает отчет, содержащий список проблем, которые должны быть решены перед началом обновления.  
@@ -66,7 +65,7 @@ ms.locfileid: "73632739"
   
 -   Установщик Windows Installer, начиная с версии 4.5. Установщик Windows можно установить с [веб-сайта установщик Windows](https://www.microsoft.com/download/details.aspx?id=8483).  
   
--   Microsoft .NET Framework 4. .NET Framework 4 доступно на носителе [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] продукта и на [странице загрузки .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
+-   Microsoft .NET Framework 4. .NET Framework 4 доступно на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] носителе продукта и на [странице загрузки .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=209895).  
   
     -   Чтобы установить платформу .NET Framework 4 с установочного диска [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], перейдите в корневой каталог диска. Откройте папку «\redist», а затем папку «DotNetFrameworks», после чего запустите файл dotNetFx40_Full_x86_x64.exe (для 32- и 64-разрядных версий операционных систем).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "73632739"
   
  После установки помощника по обновлению его можно открыть из меню " **Пуск** ":  
   
--   Нажмите кнопку **Пуск**, укажите пункт **все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]а затем выберите ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] советник по переходу**.  
+-   Нажмите кнопку **Пуск**, укажите пункт **все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] а затем выберите ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] советник по переходу**.  
   
  Дополнительные сведения см. в документации помощника по обновлению, включенной в пакет загрузки, и в заметках о выпуске [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

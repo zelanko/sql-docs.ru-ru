@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 176d5a6586008d49ece1430ec03e2c54278eebce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37b6be71c7b62a80491656b98f997dd4eb7ec28f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058020"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Указание нескольких условий поиска для одного столбца (визуальные инструменты для баз данных)
   Иногда может понадобиться сочетание нескольких условий поиска для одного столбца. Например, может понадобиться:  

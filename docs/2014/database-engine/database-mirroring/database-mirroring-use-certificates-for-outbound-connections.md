@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43a55174bae1bb03034ea005749055701884848f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f380f268f8d0f8d033db9c28f83d066d3f134571
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806877"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934215"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-outbound-connections-transact-sql"></a>Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)
   В этом подразделе описаны этапы настройки экземпляров сервера для использования сертификатов проверки подлинности исходящих соединений при зеркальном отображении базы данных. Конфигурацию исходящих соединений необходимо выполнить до настройки входящих соединений.  

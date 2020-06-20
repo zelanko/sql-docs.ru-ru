@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e63db637566cd9e2e481731c4d742f02c261ddd
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 02128dcaad829054fe513d8e5353223502cb1802
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856476"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964764"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши задачу или вкладку «Поток управления» в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и выберите команду **Параметризация**. Следующий список описывает элементы пользовательского интерфейса в диалоговом окне. Дополнительные сведения о параметрах см. в разделе [Параметры служб Integration Services (SSIS)](integration-services-ssis-package-and-project-parameters.md).  

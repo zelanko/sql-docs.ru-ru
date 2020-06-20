@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a16d34ca8865174d9d05dc08f01402a9d87187b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052594"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, класс событий
   Класс событий RPC:Completed указывает, что удаленный вызов процедуры завершен.  
@@ -36,8 +35,8 @@ ms.locfileid: "63046769"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|`bigint`|Количество занятого событием времени. В микросекундах, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. В миллисекундах в более ранних версиях.|13|Да|  
 |EndTime|`datetime`|Время окончания удаленного вызова процедуры (RPC).|15|Да|  
-|Ошибка|`int`|Номер ошибки для данного события.<br /><br /> 0 = ОК<br /><br /> 1 = ошибка<br /><br /> 2 = прервано<br /><br /> 3 = пропущено|31|Да|  
-|EventClass|`int`|Тип события = 10.|27|Нет|  
+|Error|`int`|Номер ошибки для данного события.<br /><br /> 0 = ОК<br /><br /> 1 = ошибка<br /><br /> 2 = прервано<br /><br /> 3 = пропущено|31|Да|  
+|EventClass|`int`|Тип события = 10.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -59,7 +58,7 @@ ms.locfileid: "63046769"
 |Запись|`bigint`|Число операций записи страниц, инициированных удаленным вызовом процедуры (RPC).|17|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b27ea0fa-ab31-424b-80cf-aad1e87f3816
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b841f2afe85c1cf657a4686c2a0e989ecff85715
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 096a767ec57e71b40da67305a42bf18fbbc841a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059743"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolproperty-class"></a>Свойство IPAddressName (класс ServerNetworkProtocolProperty)
   Возвращает имя IP-адреса.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

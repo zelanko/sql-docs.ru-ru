@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965304"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Шаг 3. Добавление и настройка диспетчера соединений OLE DB
   После добавления диспетчера соединений с неструктурированными файлами для подключения к источникам данных предстоит добавить диспетчер соединений OLE DB для соединения с назначением. Диспетчер соединений OLE DB позволяет пакету получать данные из любого источника данных, совместимого с OLE DB, а также загружать данные в такой источник данных. Используя диспетчер соединений OLE DB, можно указать для соединения сервер, метод проверки подлинности и базу данных по умолчанию.  
@@ -34,7 +33,7 @@ ms.locfileid: "62891725"
   
 4.  Убедитесь, что в группе **Вход на сервер** выбран вариант **Использовать проверку подлинности Windows** .  
   
-5.  В группе **соединение с базой данных** в поле **выберите или введите имя базы данных** введите или выберите `AdventureWorksDW2012`.  
+5.  В группе **соединение с базой данных** в поле **выберите или введите имя базы данных** введите или выберите `AdventureWorksDW2012` .  
   
 6.  Нажмите кнопку **Проверить соединение** , чтобы убедиться, что параметры соединения указаны правильно.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62891725"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Этап 4. Добавление задачи потока данных в пакет](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

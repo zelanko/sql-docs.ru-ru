@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f95392c4805df824418f3f9682f2f53b9589ea9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62629736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010506"
 ---
 # <a name="join-filters"></a>фильтры соединения
   Фильтр соединения позволяет фильтровать таблицу на основе фильтрации связанной таблицы в публикации. Родительская таблица, как правило, фильтруется параметризованным фильтром. Затем определяется один или несколько фильтров соединения практически таким же способом, что и соединение таблиц. Фильтры соединения расширяют параметризованные фильтры таким образом, чтобы данные в связанных таблицах реплицировались только в том случае, если они соответствуют предложению фильтра соединения.  

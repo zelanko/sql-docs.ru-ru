@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceec604d9fe07b339af11ed69226d41a7f616678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63182903"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058547"
 ---
 # <a name="select-objects-object-explorer"></a>Выбор объектов (обозреватель объектов)
   Используйте диалоговое окно **Выбор объектов**, чтобы добавить объект к списку в другом диалоговом окне. Заголовок диалогового окна и параметры, доступные в нем, зависят от того, каким способом окно было открыто. Отображаются только доступные параметры; например доступны только имена входа, если необходимо выбрать владельца для нового объекта.  

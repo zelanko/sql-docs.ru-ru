@@ -14,34 +14,33 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03848f6f9cee7339f2148622a4b3b8bbd58a6351
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183470"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064447"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Задания, содержащие ссылки на расписание
   Это диалоговое окно позволяет просматривать данные о заданиях, имеющих ссылки на определенное расписание.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Расписание**  
  Отображается имя просматриваемого расписания.  
   
- **Выбрать**  
+ **Selected**  
  Только для чтения.  
   
- **Имя**  
+ **имя**;  
  Имя задания, использующего это расписание.  
   
- **Включен**  
+ **Enabled**  
  Только для чтения. Показывает, включено ли в настоящее время это задание.  
   
  **Категория**  
  Категория задания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)  
   
   

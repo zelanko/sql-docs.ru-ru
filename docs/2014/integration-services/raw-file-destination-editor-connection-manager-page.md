@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2677d0dd1f4697177171ba0edd4641ec02110310
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964636"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Редактор назначения «Необработанный файл» (страница «Диспетчер соединений»)
   Для настройки назначения «Необработанный файл» на запись необработанных данных в файл используйте редактор назначения «Необработанный файл».  
   
- **Выбор действия**  
+ **Выберите действие**  
   
 -   [Открытие редактора назначения «Необработанный файл»](#open)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66056569"
  **Псевдоним вывода**  
  Укажите альтернативное имя для выходного столбца.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [назначение «Необработанный файл»](data-flow/raw-file-destination.md)  
   
   

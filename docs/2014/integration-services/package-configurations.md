@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c220fc87f726d8ba3d8e8cc92904ce42e3baeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056884"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964884"
 ---
 # <a name="package-configurations"></a>Конфигурации пакетов
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляет конфигурации пакетов, которые можно использовать для обновления значений свойств во время выполнения.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]предоставляет конфигурации пакетов, которые можно использовать для обновления значений свойств во время выполнения.  
   
 > [!NOTE]  
 >  Доступны конфигурации для модели развертывания пакетов. Для моделей развертывания проектов вместо конфигураций используются параметры. Модель развертывания проектов позволяет развертывать проекты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения о моделях развертывания см. в разделе [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  
@@ -79,12 +78,12 @@ ms.locfileid: "66056884"
   
 -   Нельзя использовать параметр **/ConfigFile** для загрузки конфигураций, которые заменяют параметры, указанные во время разработки.  
   
- Дополнительные сведения об этих параметрах и о различиях в работе этих параметров в [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] и более ранних версиях см. в разделе [изменения в работе Integration Services функций в SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
+ Дополнительные сведения об этих параметрах и о различиях в работе этих параметров [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] в и более ранних версиях см. [в разделе изменения в работе Integration Services функций в SQL Server 2014](../../2014/integration-services/behavior-changes-to-integration-services-features-in-sql-server-2014.md).  
   
 ## <a name="package-configuration-types"></a>Типы конфигураций пакета  
  Следующая таблица описывает типы конфигураций пакета.  
   
-|Type|Описание|  
+|Тип|Описание|  
 |----------|-----------------|  
 |XML-файл конфигурации|XML-файл содержит конфигурации. XML-файл может включать несколько конфигураций.|  
 |Переменная среды|Переменная среды содержит конфигурацию.|  
@@ -123,7 +122,7 @@ ms.locfileid: "66056884"
 ### <a name="registry-entry"></a>Запись реестра  
  Если для хранения конфигурации нужно использовать параметр реестра, то можно либо использовать существующий раздел, либо создать новый подраздел в разделе HKEY_CURRENT_USER. Используемый раздел реестра должен иметь значение с именем `Value`. Значение может иметь строковый тип или тип DWORD.  
   
- Если выбран тип конфигурации **Запись реестра** , необходимо ввести имя раздела реестра в соответствующее поле. Формат — \<раздел реестра>. Если нужно использовать раздел реестра, корневым разделом которого является не HKEY_CURRENT_USER, то для его задания используйте формат \<Раздел реестра\раздел реестра\\...>. Например, чтобы использовать раздел MyPackage, расположенный в разделе SSISPackages, введите `SSISPackages\MyPackage`.  
+ Если выбран тип конфигурации **Запись реестра** , необходимо ввести имя раздела реестра в соответствующее поле. Формат — \<registry key>. Если вы хотите использовать раздел реестра, который не находится в корне HKEY_CURRENT_USER, используйте формат, \<Registry key\registry key\\...> чтобы указать ключ. Например, чтобы использовать раздел MyPackage, расположенный в разделе SSISPackages, введите `SSISPackages\MyPackage`.  
   
 ### <a name="sql-server"></a>SQL Server  
  При выборе типа конфигурации **SQL Server** задается соединение с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в которой необходимо хранить конфигурации. Можно сохранить конфигурации в существующей таблице или создать новую в указанной базе данных.  

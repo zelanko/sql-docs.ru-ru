@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8d8ef411c8766ebecb98ca1c9eeaa1be11f156
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954414"
 ---
 # <a name="manipulating-udt-data"></a>Работа с данными определяемого пользователем типа
   В [!INCLUDE[tsql](../../includes/tsql-md.md)] не используется специальный синтаксис для инструкций INSERT, UPDATE или DELETE при изменении данных в столбцах определяемого пользователем типа. Функции [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST и CONVERT используются для приведения собственных типов данных к определяемому пользователем типу.  
@@ -156,7 +155,7 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Вызов методов определяемого пользователем типа  
- Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. Класс **Point** содержит три метода: `Distance`, `DistanceFrom`и. `DistanceFromXY` Примеры кода, определяющие эти три метода, см. в разделе [программирование определяемых пользователем типов](creating-user-defined-types-coding.md).  
+ Можно также вызывать методы, которые определены в определяемом пользователем типе [!INCLUDE[tsql](../../includes/tsql-md.md)]. Класс **Point** содержит три метода: `Distance` , `DistanceFrom` и `DistanceFromXY` . Примеры кода, определяющие эти три метода, см. в разделе [программирование определяемых пользователем типов](creating-user-defined-types-coding.md).  
   
  Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] вызывает метод `PointValue.Distance`:  
   
@@ -177,7 +176,7 @@ IDXYDistance
 319999.0050503762308  
 ```  
   
- `DistanceFrom` Метод принимает аргумент типа данных **Point** и отображает расстояние от указанной точки до PointValue:  
+ `DistanceFrom`Метод принимает аргумент типа данных **Point** и отображает расстояние от указанной точки до PointValue:  
   
 ```  
 SELECT ID, PointValue.ToString() AS Pnt,  
@@ -263,7 +262,7 @@ SET PointValue = null
 WHERE ID = 2  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с определяемыми пользователем типами в SQL Server](working-with-user-defined-types-in-sql-server.md)  
   
   

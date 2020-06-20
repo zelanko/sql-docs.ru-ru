@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a202327ad63cf7ef8f51d3572b257816ee6d9419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064461"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
-  В этом разделе описано, как задать параметры уведомления [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в с [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]помощью [!INCLUDE[tsql](../../includes/tsql-md.md)], или управляющие объекты SQL Server, чтобы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент мог отправлять уведомления операторам о заданиях.  
+  В этом разделе описано, как задать параметры уведомления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] или управляющие объекты SQL Server, чтобы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент мог отправлять уведомления операторам о заданиях.  
   
  **В этом разделе**  
   

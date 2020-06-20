@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 298723c5031299b1b105f686e188e1e27cfd758c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965884"
 ---
 # <a name="model-database"></a>База данных model
   База данных **model** используется в качестве шаблона для всех баз данных, созданных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
@@ -60,13 +59,13 @@ ms.locfileid: "62916950"
 |AUTO_SHRINK|OFF|Да|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|Нет|  
+|CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Да<br /><br /> Да|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> Да<br /><br /> Да|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
-|DB_CHAINING|OFF|Нет|  
+|DB_CHAINING|OFF|нет|  
 |ENCRYPTION|OFF|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
@@ -75,8 +74,8 @@ ms.locfileid: "62916950"
 |READ_COMMITTED_SNAPSHOT|OFF|Да|  
 |RECOVERY|Зависит от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуска<sup>1</sup>|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
-|Параметры компонента Service Broker|DISABLE_BROKER|Нет|  
-|TRUSTWORTHY|OFF|Нет|  
+|Параметры компонента Service Broker|DISABLE_BROKER|нет|  
+|TRUSTWORTHY|OFF|нет|  
   
  <sup>1</sup> чтобы проверить текущую модель восстановления базы данных, см. статью [Просмотр или изменение модели восстановления базы данных &#40;SQL Server&#41;](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) или [sys. databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   

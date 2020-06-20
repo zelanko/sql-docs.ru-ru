@@ -11,29 +11,28 @@ f1_keywords:
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c2fb2860fd80b827e48ad72b59192573d16b8a4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952461"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059083"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Состояние сервера отчетов (службы Reporting Services в собственном режиме)
   Эта страница позволяет просмотреть сведения о состоянии экземпляра сервера отчетов, с которым в настоящий момент установлено соединение. Данная страница является начальной для настройки сервера отчетов. Доступны также дополнительные страницы, предназначенные для настройки URL-адресов, учетной записи службы, базы данных сервера отчетов, доставки электронной почты сервера отчетов, параметров масштабного развертывания и ключей шифрования.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим.  
   
  Чтобы открыть эту страницу, запустите диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и подключитесь к экземпляру сервера отчетов. Дополнительные сведения см. в разделе [диспетчер конфигурации служб Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool. exe) устанавливается с уровнем привилегий «highestAvailable». В этом весь замысел. Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует подключения к API-интерфейсам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI. Для некоторых средств [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI требуется более высокий уровень прав администратора.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Configuration Manager (RSConfigTool.exe) устанавливается с уровнем привилегий "highestAvailable". В этом весь замысел. Диспетчер конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует подключения к API-интерфейсам [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI. Для некоторых средств [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI требуется более высокий уровень прав администратора.  
   
  Если при подключении к серверу отчетов все ссылки страницы затенены, убедитесь, что сервер отчетов запущен. **Состояние службы отчетов:** должно быть "запущено". Для определения состояния сервера также можно использовать консольное приложение «Службы» в «Администрировании».  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Экземпляр SQL Server**  
- Отображает сведения об экземпляре сервера отчетов, с которым имеется соединение в текущий момент. Имена экземпляров сервера отчетов создаются на основе именованных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Имя экземпляра по умолчанию — «MSSQLSERVER», а имя именованного экземпляра — значение, указанное во время установки. Дополнительные сведения об экземплярах служб см. в разделе [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Отображает сведения об экземпляре сервера отчетов, с которым имеется соединение в текущий момент. Имена экземпляров сервера отчетов создаются на основе именованных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Имя экземпляра по умолчанию — «MSSQLSERVER», а имя именованного экземпляра — значение, указанное во время установки. Дополнительные сведения об экземплярах служб см. в разделе [Работа с несколькими версиями и экземплярами SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 > [!NOTE]  
 >  В выпуске SQL Server Express with Advanced Services экземпляром по умолчанию является SQLExpress.  
@@ -47,7 +46,7 @@ ms.locfileid: "71952461"
   
 -   MSRS12.MSSQLSERVER  
   
- Если установить второй экземпляр компонента, который уже установлен, например [!INCLUDE[ssDE](../../includes/ssde-md.md)], и имя экземпляра Contoso, то **идентификатором экземпляра** будет MSSQL12. Компанией.  
+ Если установить второй экземпляр компонента, который уже установлен, например [!INCLUDE[ssDE](../../includes/ssde-md.md)] , и имя экземпляра Contoso, то **идентификатором экземпляра** будет MSSQL12. Компанией.  
   
  **Выпуск**  
  Отображает сведения о выпуске. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](https://go.microsoft.com/fwlink/?linkid=232473).  
@@ -68,7 +67,7 @@ ms.locfileid: "71952461"
  Запускает службу сервера отчетов. Перезапуск службы необходим после некоторых изменений конфигурации (например, при перенастройке сервера отчетов после изменения имени компьютера). При изменении конфигурации резервирования URL-адресов служба перезапустится автоматически. Кроме того, перезапуск необходим для того, чтобы применить изменения.  
   
  **Остановить**  
- Останавливает службу сервера отчетов. Остановка службы приводит к прекращению работы сервера отчетов. Дополнительные сведения см. в разделе [Запуск и завершение службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) электронной [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] документации по.  
+ Останавливает службу сервера отчетов. Остановка службы приводит к прекращению работы сервера отчетов. Дополнительные сведения см. в разделе [Запуск и завершение службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронной документации по.  
   
 ## <a name="see-also"></a>См. также:  
  [Диспетчер конфигурации служб Reporting Services разделы справки F1 &#40;служб SSRS в собственном режиме&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   

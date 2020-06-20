@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 63f13416-c0aa-4480-a336-ef1e6e31a860
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71eabff4c4caf79718fee8e29c675636b6034205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 64cdb71f323a4ac9325da74503d8aebaa8dd4474
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964858"
 ---
 # <a name="package-roles-dialog-box-ui-reference"></a>Диалоговое окно «Роли пакета» справочника по пользовательскому интерфейсу
   Используйте диалоговое окно **Роли пакетов** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], чтобы указать роли на уровне базы данных, которые обладают правами на считывание пакета, и роли на уровне базы данных, которые имеют права на запись пакета. Роли на уровне баз данных определяют права только для пакетов, хранящихся в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **msdb**.  
@@ -30,7 +29,7 @@ ms.locfileid: "66056812"
   
  В столбце **ownersid** таблицы **sysssispackages** указан уникальный идентификатор безопасности пользователя, создавшего пакет.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя пакета**  
  Укажите имя пакета.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66056812"
  **Роль записи**  
  Выберите роль из списка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Роли уровня базы данных](../relational-databases/security/authentication-access/database-level-roles.md)   
  [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)  
   

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: d07956f6-9543-4476-9426-536f95991150
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 09797eac229a4b3b92f94a60b6e1c06c9ec12f08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee791c73a6610761c2086723f9e41c2351b37dd0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919501"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954754"
 ---
 # <a name="handling-large-object-lob-parameters-in-the-clr"></a>Обработка параметров больших объектов в среде CLR
   Используйте `SqlBytes` и `SqlChars` для передачи параметров больших объектов (LOB) двоичного типа (`varbinary(max)`) и символьного типа (`nvarchar(max)`) соответственно. Эти типы позволяют передавать значения LOB в потоке из базы данных в процедуры среды CLR, не копируя все значение в управляемое пространство. Типы данных `SqlBinary` и `SqlString` должны использоваться только для небольших двоичных и строковых значений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных SQL Server в платформе .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

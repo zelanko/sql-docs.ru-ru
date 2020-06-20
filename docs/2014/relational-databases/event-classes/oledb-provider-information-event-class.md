@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68cf4eb253505f6ade040eb0bf0f877f4fb91d94
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15c825a5cd07017929dfaa37a52d78be11cfbf57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052815"
 ---
 # <a name="oledb-provider-information-event-class"></a>Класс событий OLEDB Provider Information
   Класс событий **OLEDB Provider Information** имеет место при выполнении распределенного запроса и собирает сведения, относящиеся к соединению поставщика.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 18789f5bc1d97e1531588d50e2430829f95912b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8eac057177032892ac99f557aa9d18ce497b7b2f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65485241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054290"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Задача 12. Добавление преобразования "Производный столбец" для добавления требуемых столбцов MDS
   В этой задаче в поток данных добавляется преобразование «Производный столбец». В записи, передаваемые в это преобразование, добавляются два производных столбца **ImportType** и **BatchTag**. Необходимо добавить эти столбцы перед отправкой данных в промежуточные таблицы в MDS. Это необходимые столбцы для промежуточных таблиц в MDS. Дополнительные сведения см. в разделе [промежуточные таблицы конечных элементов](../master-data-services/leaf-member-staging-table-master-data-services.md) .  

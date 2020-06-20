@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9fb74bb999019e2e9fa6cbfd30bf29041f807ce
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064553"
 ---
 # <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Поскольку подписки, обновляемые посредством очередей, допускают изменения одних и тех же данных в различных местоположениях, при синхронизации данных у издателя могут возникать конфликты. Системой репликации обнаруживаются любые конфликты, возникающие при синхронизации изменений с издателем, которые затем разрешаются с помощью политики разрешения конфликтов, выбранной при создании публикации. Могут возникнуть следующие конфликты.  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d141a2db9a69603701200bc50dcac57ef402968a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064430"
 ---
 # <a name="operators"></a>Операторы
   Операторы — это псевдонимы людей или групп, которые могут получать электронные уведомления о завершении заданий или предупреждения. Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает уведомление администраторов через операторов. Операторы включают уведомления и мониторинг возможностей агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,7 +46,7 @@ ms.locfileid: "68189017"
  Контактная информация оператора определяет способ уведомления оператора. Операторы могут получать уведомления по электронной почте, по пейджинговой связи или с помощью команды **net send** .  
   
 > [!IMPORTANT]  
->  Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
+>  Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
 -   **Уведомление по электронной почте**  
   
@@ -121,7 +120,7 @@ ms.locfileid: "68189017"
 |Задачи, связанные с созданием оператора|[Create an Operator](create-an-operator.md)<br /><br /> [Назначение резервного оператора](designate-a-fail-safe-operator.md)|  
 |Задачи, связанные с назначением предупреждений|[Assign Alerts to an Operator](assign-alerts-to-an-operator.md)<br /><br /> [Определение реакция на предупреждение (среда SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [Assign Alerts to an Operator](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

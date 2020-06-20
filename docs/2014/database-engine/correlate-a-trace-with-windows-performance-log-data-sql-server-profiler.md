@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d1b66cbbed716a4ce7b2d5cf9611e161141f162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065053"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934585"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>согласовать трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]может сопоставлять счетчики системного монитора Microsoft Windows с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] событиями или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]может сопоставлять счетчики системного монитора Microsoft Windows с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] событиями или. Системный монитор Windows регистрирует системную активность указанных счетчиков журнала производительности.  
   
 > [!NOTE]  
 >  Дополнительные сведения об общем доступе к журналам между различными версиями Windows приведены в конце данного подраздела.  
@@ -63,8 +62,8 @@ ms.locfileid: "66065053"
   
 11. Нажмите кнопку **ОК** для создания журнала производительности.  
   
-## <a name="see-also"></a>См. также  
- [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+## <a name="see-also"></a>См. также:  
+ [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Запуск приложения SQL Server Profiler](../tools/sql-server-profiler/start-sql-server-profiler.md)  
   
   

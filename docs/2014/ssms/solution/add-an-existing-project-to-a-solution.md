@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 84ee67faf36668a297cdfd801a84147ed236ce50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f86c4fd09033f0b50d46a09a35453ec6ef24b5bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62956079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058326"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Добавление к решению существующий проект
   К существующему решению можно добавить один или несколько проектов. Проект может быть связан более чем с одним решением.  

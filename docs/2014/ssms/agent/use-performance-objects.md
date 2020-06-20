@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 830b843a-6b2a-4620-a51b-98358e9fc54b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ccba43aa28cadef1995fab001f66e1f4bebacde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7c1fe3f4a7d9a5fec901f84d8e913e49a4dbd1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062102"
 ---
 # <a name="use-performance-objects"></a>Использование объектов производительности
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент включает объекты и счетчики производительности, позволяющие отслеживать работу служб. Эти объекты производительности дают возможность использования системного монитора, средства Windows для определения задач, выполняемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в фоновом режиме. Например, можно узнать, сколько активных заданий запущено в данный момент в службе агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и определить заблокированные задания.  
@@ -36,7 +35,7 @@ ms.locfileid: "63245851"
   
 |Тип экземпляра|Имя объекта|  
 |-------------------|-----------------|  
-|Значение по умолчанию|**SQLAgent:** *объект*:*счетчик*|  
+|По умолчанию|**SQLAgent:** *объект*:*счетчик*|  
 |именованная|**SQLAgent$**<br /> ***instance_name* :** *объект*:*Counter*|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующие объекты производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -48,8 +47,8 @@ ms.locfileid: "63245851"
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Сведения о количестве предупреждений и уведомлений.|  
 |[SQLAgent:Statistics](../../relational-databases/performance-monitor/sql-server-agent-statistics-object.md)|Общие сведения о производительности.|  
   
-## <a name="see-also"></a>См. также  
- [Мониторинг и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+## <a name="see-also"></a>См. также:  
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Запуск системного монитора (Windows)](../../relational-databases/performance/start-system-monitor-windows.md)  
   
   
