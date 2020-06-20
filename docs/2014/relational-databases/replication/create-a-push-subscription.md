@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2195d96f4337cc60ba213deb5e3cc2831d27da76
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010914"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
-  В данном разделе описывается процесс создания принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Дополнительные сведения о создании принудительной подписки для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от, см. в статье [Создание подписки для подписчика, не являющегося SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
+  В данном разделе описывается процесс создания принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Дополнительные сведения о создании принудительной подписки для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от, см. [в статье Создание подписки для подписчика, не являющегося SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
   
   
@@ -55,7 +54,7 @@ ms.locfileid: "62721736"
   
 #### <a name="to-create-a-push-subscription-from-the-publisher"></a>Создание принудительной подписки с издателя.  
   
-1.  Подключитесь к издателю [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в, а затем разверните узел сервера.  
+1.  Подключитесь к издателю в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , а затем разверните узел сервера.  
   
 2.  Раскройте папку **Репликация** , а затем папку **Локальные публикации** .  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62721736"
   
 3.  Щелкните правой кнопкой мыши папку **Локальные подписки** , затем щелкните **Создать подписку**.  
   
-4.  На странице **Публикация** мастера создания подписки выберите **\<Найти издатель SQL Server>** или **\<Найти издатель Oracle>** из раскрывающегося списка **Издатель**.  
+4.  На странице **Публикация** мастера создания подписки выберите **\<Find SQL Server Publisher>** или **\<Find Oracle Publisher>** из раскрывающегося списка **Издатель** .  
   
 5.  Соединитесь с издателем в диалоговом окне **Соединение с сервером** .  
   
@@ -91,18 +90,18 @@ ms.locfileid: "62721736"
   
     -   Если значение **allow_push** равно **1**, то принудительная подписка поддерживается.  
   
-    -   Если значение **allow_push** равно **0**, выполните [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_push** для **@property** и `true` для. **@value**  
+    -   Если значение **allow_push** равно **0**, выполните [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value** .  
   
-2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber** и **@destination_db**. Укажите значение **push** в **@subscription_type**. Дополнительные сведения об обновлении подписок см. в разделе [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md) .  
+2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication** , **@subscriber** и **@destination_db** . Укажите значение **push** в **@subscription_type**. Дополнительные сведения об обновлении подписок см. в разделе [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md) .  
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   Параметры **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   **@subscriber**Параметры, **@subscriber_db** и **@publication** .  
   
-    -   Учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми работает агент распространения на распространителе **@job_login** , **@job_password**для и.  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Учетные данные Windows, с которыми работает агент распространения на распространителе **@job_login** , для и **@job_password** .  
   
         > [!NOTE]  
-        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в **@job_login** и **@job_password** . Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
     -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62721736"
   
     -   Если значение **allow_push** равно **1**, то публикацией принудительные подписки поддерживаются.  
   
-    -   Если значение **allow_push** не равно **1**, выполните [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_push** для **@property** и `true` для. **@value**  
+    -   Если значение **allow_push** не равно **1**, выполните [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), указав **allow_push** для **@property** и `true` для **@value** .  
   
 2.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql), указав следующие параметры.  
   
@@ -131,12 +130,12 @@ ms.locfileid: "62721736"
   
 3.  На издателе в базе данных публикации выполните хранимую процедуру [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   Параметры **@subscriber**, **@subscriber_db**и **@publication** .  
+    -   **@subscriber**Параметры, **@subscriber_db** и **@publication** .  
   
-    -   Учетные данные Windows, с которыми работает агент слияния на распространителе **@job_login** , **@job_password**для и.  
+    -   Учетные данные Windows, с которыми работает агент слияния на распространителе **@job_login** , для и **@job_password** .  
   
         > [!NOTE]  
-        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в **@job_login** и **@job_password** . Агент слияния всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
     -   (необязательно) Значение **0** в **@subscriber_security_mode** и сведения об имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в параметрах **@subscriber_login** и значение **@subscriber_password**. Эти параметры указываются в том случае, если при соединении с подписчиком необходимо использовать проверку подлинности SQL Server.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "62721736"
     > [!IMPORTANT]  
     >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере создается принудительная подписка на публикацию транзакций. Значения для имени входа и пароля передаются во время выполнения в переменных скрипта **sqlcmd** .  
   
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpushsub.sql#sp_addtranpushsubscription_agent)]  
@@ -168,7 +167,7 @@ ms.locfileid: "62721736"
   
 2.  На основе соединения с издателем, созданного на шаге 1, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> . Задайте свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>и <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, то на шаге 2 свойствам были присвоены неверные значения, или публикация на сервере не существует.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение `false`, то на шаге 2 свойствам были присвоены неверные значения, или публикация на сервере не существует.  
   
 4.  Выполните операцию «поразрядное логическое И» (`&` в Visual C# и `And` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» (`|` в Visual C# и `Or` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить принудительные подписки.  
   
@@ -197,7 +196,7 @@ ms.locfileid: "62721736"
   
     -   (необязательно) при соединении с подписчиком с проверкой подлинности SQL Server укажите значения свойств <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> объекта <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> .  
   
-8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
   
     > [!IMPORTANT]  
     >  При создании принудительной подписки на издателе с удаленным распространителем значения, заданные для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -208,7 +207,7 @@ ms.locfileid: "62721736"
   
 2.  На основе соединения с издателем, созданного на шаге 1, создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> . Задайте свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>и <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение `false`, то на шаге 2 свойствам были присвоены неверные значения, или публикация на сервере не существует.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение `false`, то на шаге 2 свойствам были присвоены неверные значения, или публикация на сервере не существует.  
   
 4.  Выполните операцию «поразрядное логическое И» (`&` в Visual C# и `And` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Если результат равен <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, присвойте свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> результат операции «поразрядное логическое ИЛИ» (`|` в Visual C# и `Or` в Visual Basic) над свойством <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> и флагом <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Затем вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> , чтобы включить принудительные подписки.  
   
@@ -239,7 +238,7 @@ ms.locfileid: "62721736"
   
     -   (необязательно) при соединении с издателем с проверкой подлинности SQL Server укажите значения свойств <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> или <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> объекта <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> .  
   
-8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> .  
+8.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>.  
   
     > [!IMPORTANT]  
     >  При создании принудительной подписки на издателе с удаленным распространителем значения, заданные для всех свойств, включая <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>, отправляются распространителю в виде обычного текста. Перед вызовом метода <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> следует зашифровать подключение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -257,7 +256,7 @@ ms.locfileid: "62721736"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   
  [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   
  [Create a Publication](publish/create-a-publication.md)   

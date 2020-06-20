@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f50f002514977f60fb07358293ecbdd524884e58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cde3c2cd1b72773cfcf17eacedeb3276dd2f63da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011063"
 ---
 # <a name="filestream-support-ole-db"></a>Поддержка FILESTREAM (OLE DB)
   Начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента 10,0, OLE DB поддерживает расширенную функцию FILESTREAM. Дополнительные сведения об этой функции см. в разделе [Поддержка FILESTREAM](../features/filestream-support.md). Примеры см. в статье [Filestream and OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md) (Filestream и OLE DB).  
@@ -29,7 +28,7 @@ ms.locfileid: "82704253"
   
  Это изменение затрагивает все интерфейсы, которые передают данные, в основном IRowset::GetData, ICommand::Execute и IRowsetFastLoad::InsertRow.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   
   

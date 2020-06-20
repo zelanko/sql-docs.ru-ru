@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e890882fe600ed774da2c852bd15c83f1b9f16f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 986a34628f73b2698e4c299d0a2d6182d31415a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712925"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048227"
 ---
 # <a name="log-long-running-queries-odbc"></a>Ведение журналов длительных запросов (ODBC)
   В этом образце демонстрируются параметры ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], относящиеся к драйверу, для долго выполняемых запросов. При запуске этот образец создает файл журнала Odbcqry.log, содержащий список запросов, время выполнения которых превысило интервал, установленный приложением. Этот образец не поддерживается на архитектуре IA64. Этот образец разработан для ODBC версии 3.0 или более поздней.  
@@ -215,7 +214,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
   
   

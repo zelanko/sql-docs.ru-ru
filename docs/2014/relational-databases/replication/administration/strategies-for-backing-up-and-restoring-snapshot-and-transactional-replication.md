@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055743"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций
   При разработке стратегии резервного копирования и восстановления для репликации моментальных снимков и репликации транзакций необходимо учитывать три аспекта.  
@@ -205,7 +204,7 @@ ms.locfileid: "68210771"
   
     1.  Заново создайте публикацию в базе данных **B**. Перейдите к шагу b.  
   
-    2.  Повторно создайте подписку в базе данных **B** на публикацию в базе **данных а**, указав, что подписка должна быть инициализирована с помощью резервной копии (значение **инициализации с резервной копией** для **@sync_type** параметра [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу c.  
+    2.  Повторно создайте подписку в базе данных **B** на публикацию в базе данных **а**, указав, что подписка должна быть инициализирована с помощью резервной копии (значение **инициализации с резервной копией** для **@sync_type** параметра [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу c.  
   
     3.  Повторно создайте подписку в базе данных **A** на публикацию в базе данных **B**, указав, что подписчик уже имеет данные (значение **поддержка репликации только** для **@sync_type** параметра [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Перейдите к шагу 8.  
   
@@ -213,7 +212,7 @@ ms.locfileid: "68210771"
   
 9. После восстановления диапазон идентификаторов, присвоенный каждой таблице в базе данных **A**, будет также использоваться в базе данных **B**. Убедитесь, что восстановленная база данных **B** получила все изменения из поврежденной базы данных **B**, которые были переданы в базы данных **A** и **C**, затем обновите начальные значения диапазона идентификаторов для каждой таблицы.  
   
-    1.  Выполните [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и извлеките выходной **@request_id**параметр. Перейдите к шагу b.  
+    1.  Выполните [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и извлеките выходной параметр **@request_id** . Перейдите к шагу b.  
   
     2.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Дополнительные сведения см. в разделах [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md) и [Запуск и остановка агента репликации (среда SQL Server Management Studio)](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Перейдите к шагу c.  
   
@@ -229,7 +228,7 @@ ms.locfileid: "68210771"
   
     1.  Остановите все действия в опубликованных таблицах в одноранговой топологии. Перейдите к шагу b.  
   
-    2.  Выполните [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и извлеките выходной **@request_id**параметр. Перейдите к шагу c.  
+    2.  Выполните [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) в базе данных **B** и извлеките выходной параметр **@request_id** . Перейдите к шагу c.  
   
     3.  По умолчанию агент распространителя работает непрерывно, поэтому токены отправляются на все узлы автоматически. Если агент распространителя не выполняется в непрерывном режиме, запустите его. Перейдите к шагу d.  
   

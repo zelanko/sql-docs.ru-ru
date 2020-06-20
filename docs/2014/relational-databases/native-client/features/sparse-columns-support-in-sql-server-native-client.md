@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e9396663ad8abab6b75cf5cb0f0f9bb7ff79d9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011196"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Поддержка разреженных столбцов в собственном клиенте SQL Server
   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разреженные столбцы. Дополнительные сведения о разреженных столбцах в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в статьях [Использование разреженных столбцов](../../tables/use-sparse-columns.md) и [Использование наборов столбцов](../../tables/use-column-sets.md).  
@@ -59,6 +58,6 @@ ms.locfileid: "82704333"
   
  Однако, если `queryout` используется для экспорта и пользователь ссылается по имени на разреженные столбцы, являющиеся элементами набора разреженных столбцов, нельзя осуществить импорт напрямую в таблицу такой же структуры. Это происходит потому, что BCP использует метаданные, согласованные с операцией ** \* SELECT** для импорта, и не может сопоставлять `column_set` столбцы элементов с этими метаданными. Для отдельного импорта каждого столбца, входящего в набор разреженных столбцов `column_set`, необходимо определить представление для таблицы, которая ссылается на необходимые столбцы набора `column_set`, и выполнить операцию импорта при помощи этого представления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../sql-server-native-client-programming.md)  
   

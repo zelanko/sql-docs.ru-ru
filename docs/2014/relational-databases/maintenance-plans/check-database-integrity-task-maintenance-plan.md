@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42fa69e6456b23f95d6a203062b580bd04f443fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f786755a3b7ed5d991b4cf0e32c067e355c111ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024752"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Задача «Проверка целостности базы данных» (план обслуживания)
   Диалоговое окно **Задача "Проверка целостности базы данных"** используется для проверки распределения и структурной целостности пользовательских и системных таблиц, а также индексов в базе данных путем запуска инструкции `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . Запуск `DBCC` гарантирует, что будет сообщено обо всех проблемах с целостностью в базе данных, таким образом позволяя системному администратору или владельцу базы данных устранить их позже.  
@@ -88,7 +87,7 @@ ms.locfileid: "63144677"
  **Пароль**  
  Укажите используемый при проверке подлинности пароль. Этот параметр недоступен.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [DBCC CHECKDB (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2318694767ceedfc3deffa925c90d235d115f1ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062842"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Указание логических функций в запросах XPath (SQLXML 4.0)
   В следующих примерах показано, как задаются логические функции в запросах XPath. В данных примерах запросы XPath определены в соответствии со схемой сопоставления, которая содержится в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "82717810"
 ## <a name="examples"></a>Примеры  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Задание логической функции not()  
- Этот запрос возвращает все ** \< клиентские>** дочерние элементы контекстного узла, не имеющие ** \< порядка>** дочерних элементов:  
+ Этот запрос возвращает все **\<Customer>** дочерние элементы контекстного узла, не имеющие **\<Order>** дочерних элементов:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +76,7 @@ ms.locfileid: "82717810"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>Б. Задание логических функций true() и false()  
- Этот запрос возвращает все дочерние элементы ** \<>** элементов для узла контекста, не имеющие ** \< порядка>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
+ Этот запрос возвращает все **\<Customer>** дочерние элементы узла контекста, не имеющие **\<Order>** дочерних элементов. В реляционных терминах этот запрос возвращает всех заказчиков, не разместивших ни одного заказа.  
   
 ```  
 /child::Customer[child::Order=false()]  

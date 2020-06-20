@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50455f67760c920881f9f8daaf42d7abe4037c45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0397d7f5588be7543f71819c93827819bd8d073f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047944"
 ---
 # <a name="metadata-discovery"></a>Обнаружение метаданных
   Улучшение обнаружения метаданных в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] позволяет [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственным клиентским приложениям гарантировать, что метаданные столбца или параметра, возвращаемые при выполнении запроса, идентичны или совместимы с форматом метаданных, указанным перед выполнением запроса. Если формат метаданных, возвращенных в результате выполнения запроса, будет несовместим с форматом, указанным до выполнения запроса, возвращается ошибка.  
@@ -24,7 +23,7 @@ ms.locfileid: "82707282"
   
  Если приложение разрабатывается с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента в [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , но соединение с версией сервера, более ранней [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , чем, функция обнаружения метаданных будет соответствовать версии сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  В [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] были изменены следующие функции bcp, которые теперь обеспечивают улучшенное обнаружение метаданных:  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
@@ -67,7 +66,7 @@ ms.locfileid: "82707282"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 571f6f3a0d44f0fc87c67885249fca441776946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055565"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
   В данном разделе описывается просмотр и изменение свойств распространителя и издателя в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
@@ -58,7 +57,7 @@ ms.locfileid: "68212027"
   
 2.  Щелкните правой кнопкой папку **Репликация** , затем щелкните **Свойства распространителя**.  
   
-3.  Просматривайте и изменяйте свойства в диалоговом окне **Свойства распространителя — <\<Распространитель>**.  
+3.  Просмотр и изменение свойств в диалоговом окне **свойства \<Distributor> распространителя —** .  
   
     -   Для просмотра и изменения свойств базы данных распространителя нажмите кнопку с многоточием (**...**) базы данных на вкладке **Общие** диалогового окна.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "68212027"
   
 2.  Правой кнопкой мыши щелкните папку **Репликация** , а затем выберите пункт **Свойства издателя**.  
   
-3.  Просмотрите и измените свойства в диалоговом окне **свойства \< издателя — издатель >** .  
+3.  Просмотр и изменение свойств в диалоговом окне **свойства \< Publisher > издателя —** .  
   
     -   Пользователь, являющийся членом предопределенной роли сервера **sysadmin** , может разрешить применение репликации для баз данных, выполнив настройки на странице **Базы данных публикации** . Разрешение репликации для базы данных не вызывает ее публикации. Вместо этого оно позволяет любому пользователю, принадлежащему к предопределенной роли базы данных **db_owner** для этой базы данных, создавать в ней одну или несколько публикаций.  
   
@@ -104,7 +103,7 @@ ms.locfileid: "68212027"
   
 4.  Чтобы изменить свойства издателя с помощью распространителя, выполните на распространителе хранимую процедуру [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) .  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В следующем примере скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] возвращает сведения о распространителе и базе данных распространителя.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -170,7 +169,7 @@ ms.locfileid: "68212027"
   
 4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> .  
   
-5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Передайте новое значение пароля в параметре *password* .  
+5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Передайте новое значение пароля в параметре *password* .  
   
     > [!IMPORTANT]  
     >  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо сохранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Windows.  
@@ -185,7 +184,7 @@ ms.locfileid: "68212027"
   
     4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> .  
   
-    5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Передайте новое значение пароля из шага 5 в параметре *password* .  
+    5.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Передайте новое значение пароля из шага 5 в параметре *password* .  
   
 ###  <a name="example-rmo"></a><a name="PShellExample"></a>Пример (объекты RMO)  
  В этом примере показано, как изменить свойства распространителя и базы данных-распространителя.  
@@ -197,7 +196,7 @@ ms.locfileid: "68212027"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
  [Отключение публикации и распространения](disable-publishing-and-distribution.md)   
  [Настройка распространения](configure-distribution.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0d46200df3881d7b24cf582b5c252f4e66e255b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 362699ca4aec82315d86b99a440e8714fe6e0e72
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048099"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Дополнительные метаданные возвращающего табличное значение параметра
   Чтобы получить метаданные для возвращающего табличное значение параметра, приложение вызывает SQLProcedureColumns. Для возвращающего табличное значение параметра SQLProcedureColumns возвращает одну строку. Добавлены два дополнительных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME, для предоставления сведений о схеме и каталоге для табличных типов, связанных с параметрами, возвращающими табличное значение. В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME находятся перед столбцами, зависящими от драйвера, добавленными в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, обязательных для ODBC.  
@@ -50,7 +49,7 @@ ms.locfileid: "82709744"
   
  Если SQL_SOPT_SS_NAME_SCOPE имеет значение SQL_SS_NAME_SCOPE_TABLE, то запросы к связанным серверам завершаются ошибкой. Вызовы SQLColumns или SQLPrimaryKeys с каталогом, содержащим серверный компонент, завершатся ошибкой.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

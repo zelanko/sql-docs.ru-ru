@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ce2cc85f936f49e6769bf3a855f903e5064b4be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a45b8618fd275a8aca20be35083257b8f8d0707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78259490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025943"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Восстановление оптимизированных для памяти таблиц
   Базовый механизм восстановления баз данных с таблицами, оптимизированными для памяти, аналогичен методу для баз данных, содержащих только таблицы на диске. Но в отличие от метода для таблиц на диске оптимизированные для памяти таблицы должны быть загружены в память до того, как база данных будет доступна для доступа пользователей. При этом добавляется новый этап восстановления базы данных. Измененные этапы восстановления баз данных изменяются следующим образом.

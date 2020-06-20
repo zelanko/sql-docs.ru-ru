@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d117f4c974f14671d68a9e99385a04fa9ddb314e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32b32bab5e7105f9f34774c5c59551b30858ee2e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267440"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057764"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>установить определения трассировки по умолчанию (приложение SQL Server Profiler)
   Определение трассировки по умолчанию — это шаблон трассировки по умолчанию, используемый для каждого поставщика или сервера. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно выбирать шаблоны трассировки по умолчанию.  

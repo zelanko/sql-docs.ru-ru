@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d6e70da414127936fa87ad5b410620f266a15a70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056840"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Редактор запросов компонента Database Engine (среда SQL Server Management Studio)
   Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет создавать и запускать скрипты, содержащие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот редактор также поддерживает запуск скриптов, содержащих команды **sqlcmd** .  
@@ -130,7 +129,7 @@ ms.locfileid: "82703991"
  **Команда "Прервать все"**  
  Настраивает отладчик на то, чтобы он прервал все процессы, к которым присоединен отладчик.  
   
- **Отключить отладку**  
+ **Остановить отладку**  
  Выводит выбранное окно редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] из режима отладки и восстанавливает стандартный режим выполнения.  
   
  **Показать следующий оператор**  
@@ -148,7 +147,7 @@ ms.locfileid: "82703991"
  **Windows**  
  Открывает окно **Точка останова** или **Интерпретация** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сочетания клавиш среды SQL Server Management Studio](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

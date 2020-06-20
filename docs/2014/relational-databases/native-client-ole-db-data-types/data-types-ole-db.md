@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 860d188f7a934e707766b157d4c089a88207ce02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705107"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056326"
 ---
 # <a name="data-types-ole-db"></a>Типы данных (OLE DB)
   Для выполнения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций и обработки результатов с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB Provider необходимо иметь представление о том, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB поставщика собственного клиента сопоставляет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы данных с OLE DB типами данных при привязке параметров или столбцов в наборе строк, а также при использовании интерфейса **ITableDefinition** для создания таблицы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "82705107"
   
 -   [Структура SSVARIANT](ssvariant-structure.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (OLE DB)](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

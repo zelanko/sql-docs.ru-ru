@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: edb36bbf0f1a637551a7316748f58f9ed1c7f912
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047727"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   Объекты RMO представляют собой сборку управляемого кода, которая инкапсулирует функциональные средства репликации для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Объекты RMO реализованы в пространстве имен <xref:Microsoft.SqlServer.Replication>.  
@@ -84,7 +83,7 @@ ms.locfileid: "62721796"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог **COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62721796"
     > [!NOTE]  
     >  Чтобы выбрать несколько файлов, удерживайте клавишу CTRL.  
   
-8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор**, перейдите в каталог [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
+8.  (Необязательно) Повторите шаг 6. Щелкните вкладку **Обзор[!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)], перейдите в каталог **COM, выберите файл Microsoft.SqlServer.Replication.BusinessLogicSupport.dll и нажмите кнопку **ОК**.  
   
 9. В меню **Вид** выберите пункт **Код**.  
   
@@ -185,7 +184,7 @@ ms.locfileid: "62721796"
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_ChangeTranPub_cached)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия системных хранимых процедур репликации](replication-system-stored-procedures-concepts.md)   
  [Основные понятия программирования репликации](replication-programming-concepts.md)  
   

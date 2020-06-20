@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29bdc55bde4d5dfb11d669d9e7b4aad06482ce7e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062152"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056617"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Свойства предупреждения — Создание предупреждения (страница «Общие»)
   Эта страница используется для просмотра и изменения общих свойств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента.  
@@ -26,10 +25,10 @@ ms.locfileid: "63062152"
  **имя**;  
  Изменить имя предупреждения.  
   
- **Включение**  
+ **Разрешить**  
  Включить предупреждение. Если предупреждение не активировано, действия, указанные в предупреждении, не совершаются.  
   
- **Type**  
+ **Тип**  
  Выбрать тип предупреждения:  
   
 -   **Предупреждение о событии SQL Server** реагирует на сообщения в журнале событий [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -55,7 +54,7 @@ ms.locfileid: "63062152"
  Укажите строку, которую нужно использовать для фильтрации событий.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>Предупреждения о производительности SQL Server  
- **Объектами**  
+ **Объект**  
  Укажите объект производительности для контроля.  
   
  **Счетчик**  
@@ -77,7 +76,7 @@ ms.locfileid: "63062152"
  **Запрос**  
  Укажите инструкцию WQL, определяющую событие, на которое реагирует предупреждение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уведомление](alerts.md)   
  [Использование WQL с поставщиком WMI для событий сервера](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Создание предупреждения по номеру ошибки](create-an-alert-using-an-error-number.md)   

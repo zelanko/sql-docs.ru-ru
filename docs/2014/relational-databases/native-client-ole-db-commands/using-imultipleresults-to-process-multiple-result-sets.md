@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4c2ee0f7a96ad30f3b13c36625077a74deca9fd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0e601939efb1a1e1650df8c9c951e84649953709
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707517"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011246"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Обработка нескольких результирующих наборов при помощи интерфейса IMultipleResults
   Потребители используют интерфейс **IMultipleResults** для обработки результатов, возвращаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнением команды поставщика OLE DB собственного клиента. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента отправляет команду для выполнения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции и возвращает все результаты.  
@@ -50,7 +49,7 @@ COMPUTE
 > [!NOTE]  
 >  При использовании курсоров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнение команды создает курсор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает успех или ошибку создания курсора, поэтому обмен данными с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершается по выполнении команды. Следовательно, каждый вызов **GetNextRows** становится обменом данными. Таким образом, могут существовать несколько активных объектов команд, каждая из которых обрабатывает набор строк, являющийся результатом выборки из серверного курсора. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Команды](commands.md)  
   
   

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53ddc509c4f44677a2504b791502d530c2104bf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890244"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964878"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
-  Программа `dtexec` командной строки используется для настройки и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов. Служебная программа `dtexec` обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. `dtexec` Программа позволяет загружать пакеты из [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] следующих источников: сервера, файла проекта ISPAC, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, хранилища [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакетов и файловой системы.  
+  `dtexec`Программа командной строки используется для настройки и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов. Служебная программа `dtexec` обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. `dtexec`Программа позволяет загружать пакеты из следующих источников: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера, файла проекта ISPAC, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, [!INCLUDE[ssIS](../../includes/ssis-md.md)] хранилища пакетов и файловой системы.  
   
 > [!NOTE]  
->  При использовании программы `dtexec`, поставляемой вместе со службами [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)], для запуска пакета служб [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на время обновляют пакет до версии служб [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Однако программа `dtexec` не позволяет сохранить обновленный пакет. Дополнительные сведения об окончательном обновлении пакета до [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]см. в разделе [Обновление Integration Services пакетов](../install-windows/upgrade-integration-services-packages.md).  
+>  При использовании программы `dtexec`, поставляемой вместе со службами [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)], для запуска пакета служб [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на время обновляют пакет до версии служб [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Однако программа `dtexec` не позволяет сохранить обновленный пакет. Дополнительные сведения об окончательном обновлении пакета до см. в [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)] разделе [Обновление Integration Services пакетов](../install-windows/upgrade-integration-services-packages.md).  
   
  Этот раздел включает следующие подразделы:  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62890244"
 -   [Примеры](#example)  
   
 ##  <a name="integration-services-server-and-project-file"></a><a name="server"></a>Сервер Integration Services и файл проекта  
- При `dtexec` использовании для запуска пакетов на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере `dtexec` вызывает [каталог. create_execution &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [catalog. Set_execution_parameter_value &#40;SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) и [Catalog. start_execution &#40;базы](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) данных SSISDB&#41;хранимые процедуры для создания выполнения, установки значений параметров и запуска выполнения. Все журналы выполнения можно просматривать на сервере в соответствующих представлениях или с помощью стандартных отчетов, доступных в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения об отчетах см. в разделе [Отчеты для сервера служб Integration Services](../reports-for-the-integration-services-server.md).  
+ При использовании `dtexec` для запуска пакетов на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере `dtexec` вызывает [каталог. CREATE_EXECUTION &#40;базы данных SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [Catalog. set_execution_parameter_value &#40;ssisdb&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) и [Catalog. start_execution &#40;базы](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database) данных SSISDB&#41;хранимые процедуры для создания выполнения, установки значений параметров и запуска выполнения. Все журналы выполнения можно просматривать на сервере в соответствующих представлениях или с помощью стандартных отчетов, доступных в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Дополнительные сведения об отчетах см. в разделе [Отчеты для сервера служб Integration Services](../reports-for-the-integration-services-server.md).  
   
  Ниже приводится пример выполнения пакета на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -58,35 +57,35 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  При использовании `dtexec` для запуска пакета из ISPAC-файла проекта используются параметры /Proj[ect] и /Pack[age] для указания пути к проекту и имени потока проекта. При преобразовании проекта в модель развертывания пакета путем запуска **Мастера преобразования проекта служб Integration Services** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], мастер создает файл проекта ISPAC. Дополнительные сведения см. в разделе [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
- `dtexec` С помощью средств планирования сторонних производителей можно планировать пакеты, развернутые на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере.  
+ `dtexec`С помощью средств планирования сторонних производителей можно планировать пакеты, развернутые на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере.  
   
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a>Рекомендации по установке на 64-разрядных компьютерах  
  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] производят установку 64-разрядной версии программы `dtexec` (dtexec.exe). Если нужно запустить определенные пакеты в 32-разрядном режиме, следует установить 32-разрядную версию программы `dtexec`. Чтобы установить 32-разрядную версию программы `dtexec`, во время установки необходимо выбрать клиентские средства или среду [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
- По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-бит — это * \<диск>*: \Program Files (x86) \Microsoft SQL Server\110\DTS\Binn, а путь к каталогу 64-bit — это * \<диск>*: \Program Files\Microsoft SQL Server\110\DTS\Binn.).  
+ По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Как правило, 32-разрядный путь к каталогу *\<drive>* : \Program Files (x86) \MICROSOFT SQL Server\110\DTS\Binn, а путь к каталогу 64-bit *\<drive>* : \PROGRAM Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > [!NOTE]  
 >  Если для запуска программы используется агент SQL Server, то он автоматически использует 64-разрядную версию программы. Чтобы определить точное расположение исполняемого файла программы, агент SQL Server использует реестр, а не переменную среды PATH.  
   
  Чтобы убедиться, что в командной строке запущена 64-разрядная версия программы, выполните одно из следующих действий.  
   
--   Откройте окно командной строки, перейдите в каталог, содержащий 64-разрядную версию программы (*\<диск>*: \Program Files\Microsoft SQL Server\110\DTS\Binn), а затем запустите программу из этого расположения.  
+-   Откройте окно командной строки, перейдите в каталог, содержащий 64-разрядную версию программы ( *\<drive>* : \Program FILES\MICROSOFT SQL Server\110\DTS\Binn), а затем запустите программу из этого расположения.  
   
--   В командной строке запустите программу, введя полный путь (*\<диск>*: \Program Files\Microsoft SQL Server\110\DTS\Binn) в 64-разрядную версию программы.  
+-   В командной строке запустите программу, введя полный путь ( *\<drive>* : \Program FILES\MICROSOFT SQL Server\110\DTS\Binn) к 64-разрядной версии программы.  
   
--   Безвозвратно измените порядок путей в переменной среды PATH, поместив 64-разрядный путь (*\<диск>*: \Program Files\Microsoft SQL Server\110\DTS\Binn) перед 32-битным путем (*\<диск>*: \ Program Files (x86) \Microsoft SQL Server\110\DTS\Binn) в переменной.  
+-   Безвозвратно измените порядок путей в переменной среды PATH, поместив 64-разрядный путь ( *\<drive>* : \Program FILES\MICROSOFT SQL Server\110\DTS\Binn) перед 32-битным путем ( *\<drive>* : \ Program Files (x86) \Microsoft SQL Server\110\DTS\Binn) в переменной.  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a>Рекомендации на компьютерах с параллельными установками  
  Если [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] установлено на компьютере, где установлено [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)], устанавливаются несколько версий программы `dtexec`.  
   
- Чтобы убедиться, что запущена правильная версия программы, в командной строке запустите программу, введя полный путь (*\<диск>*: \Program Files\Microsoft SQL Server\\<версии\>\DTS\Binn).  
+ Чтобы убедиться, что запущена правильная версия программы, в командной строке запустите программу, введя полный путь ( *\<drive>* : \Program Files\Microsoft SQL Server \\<версии \> \DTS\Binn).  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a>Этапы выполнения  
  Программа во время выполнения проходит четыре стадии. Они перечислены далее.  
   
 1.  Стадия разбора команды. Командная строка производит чтение списка указанных параметров и аргументов. В случае обнаружения параметра **/?** все последующие стадии пропускаются. Или обнаруживается параметр **/HELP** .  
   
-2.  Этап загрузки пакета: загружается пакет, `/SQL`заданный параметром `/DTS` , **/File**или.  
+2.  Этап загрузки пакета: загружается пакет, заданный `/SQL` параметром, **/File**или `/DTS` .  
   
 3.  Стадия настройки. Обрабатываются параметры в следующем порядке:  
   
@@ -140,9 +139,9 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметр **xp_cmdshell** по умолчанию отключен для новых установок. Этот режим можно включить с помощью системной хранимой процедуры **sp_configure** . Дополнительные сведения см. в разделе [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр **xp_cmdshell** по умолчанию отключен для новых установок. Этот режим можно включить с помощью системной хранимой процедуры **sp_configure** . Дополнительные сведения см. в разделе [Параметр конфигурации сервера xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
-##  <a name="syntax"></a><a name="syntax"></a>Syntax  
+##  <a name="syntax"></a><a name="syntax"></a> Синтаксис  
   
 ```  
 dtexec /option [value] [/option [value]]...  
@@ -152,20 +151,20 @@ dtexec /option [value] [/option [value]]...
   
 -   **/?** [*option_name*]: необязательный. Отображает параметры командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
   
-     Если указать аргумент *option_name* , `dtexec` программа запустит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронную документацию и отобразит раздел dtexec Utility.  
+     Если указать аргумент *option_name* , `dtexec` Программа запустит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронную документацию и отобразит раздел dtexec Utility.  
   
 -   **/CA [llerInfo]**:   
                   Необязательный параметр. Задает дополнительные сведения для выполнения пакета. При запуске пакета при помощи агента SQL Server агент устанавливает этот аргумент, чтобы он указывал, что выполнение пакета вызывается агентом SQL Server. Этот параметр не учитывается, если служебная программа `dtexec` запускается из командной строки.  
   
 -   **/CheckF[ile]** _filespec_:   
-                  Необязательный параметр. Задает для `CheckpointFileName` свойства пакета путь и файл указанные в файле *filespec*. Этот файл используется при перезапуске пакета. Если указан этот параметр, но не указано значение для имени файла, в качестве значения для свойства пакета `CheckpointFileName` используется пустая строка. Если этот параметр не указан, то значения пакета сохраняются.  
+                  Необязательный параметр. Задает `CheckpointFileName` для свойства пакета путь и файл указанные в файле *filespec*. Этот файл используется при перезапуске пакета. Если указан этот параметр, но не указано значение для имени файла, в качестве значения для свойства пакета `CheckpointFileName` используется пустая строка. Если этот параметр не указан, то значения пакета сохраняются.  
   
 -   **/CheckP [ointing]** _{on\off}_:   
                   Необязательный параметр. Устанавливает значение, определяющее, будет ли пакет использовать контрольные точки во время выполнения. Значение **on** указывает, что при неудачном выполнении пакета он будет перезапущен. При повторном запуске пакета после его неудачного выполнения ядро времени выполнения использует файл контрольных точек для повторного запуска пакета с момента возникновения ошибки.  
   
      Если параметр объявляется без указания значения, по умолчанию принимается значение «on». Выполнение пакета будет завершено с ошибкой, если значение равно «on», а файл контрольных точек не найден. Если этот параметр не указан, то сохраняется значение, установленное в пакете. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](restart-packages-by-using-checkpoints.md).  
   
-     Параметр **/checkpointing on команды on** программы dtexec эквивалентен присвоению `SaveCheckpoints` свойству пакета значения true, а `CheckpointUsage` свойству — значение Always.  
+     Параметр **/checkpointing on команды on** программы dtexec эквивалентен присвоению `SaveCheckpoints` свойству пакета значения true, а свойству — значение `CheckpointUsage` Always.  
   
 -   **/Com[mandFile]** _filespec_:   
                   (необязательно). Указывает параметры команд, выполняемых с `dtexec`. Файл, указанный в *filespec* , открыт, и параметры файла считываются из этого файла до обнаружения EOF. *filespec* является текстовым файлом. Аргумент *filespec* указывает имя и путь к командному файлу, который связывается с выполнением пакета.  
@@ -240,7 +239,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранит отладочные файлы дампа в папке * \<Drive>*: \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранит отладочные файлы дампа в папке *\<drive>* : \PROGRAM Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > [!NOTE]  
     >  Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
@@ -254,14 +253,14 @@ dtexec /option [value] [/option [value]]...
 -   **/DumpOnError**:   
                   Необязательный параметр. Создает отладочные файлы дампа (. mdmp и. tmp) при возникновении любых ошибок во время выполнения пакета.  
   
-     По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранит отладочные файлы дампа в папке *\<drive>* : \PROGRAM Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > [!NOTE]  
     >  Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
      Чтобы применить этот параметр ко всем пакетам, `dtexec` выполняемым программой, добавьте значение **DumpOnError типа** REG_DWORD в раздел реестра HKEY_LOCAL_MACHINE \софтваре\микрософт\микрософт SQL server\110\ssis\setup\dtspath.. Значение параметра REG_DWORD **DumpOnError типа** определяет, нужно ли использовать параметр **/DumpOnError** в `dtexec` служебной программе:  
   
-    -   Ненулевое значение данных указывает, что система будет создавать отладочные файлы дампа при возникновении любой ошибки независимо от того, используется ли **/DumpOnError** в `dtexec` программе параметр/DumpOnError.  
+    -   Ненулевое значение данных указывает, что система будет создавать отладочные файлы дампа при возникновении любой ошибки независимо от того, используется ли **/DumpOnError** в программе параметр/DumpOnError `dtexec` .  
   
     -   Нулевое значение указывает, что система не будет создавать отладочные файлы дампа, если не использовать параметр **/DumpOnError** с `dtexec` программой.  
   
@@ -283,7 +282,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/H [ELP]** [*option_name*]: необязательный. Отображает справку по параметрам командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
   
-     Если указать аргумент *option_name* , `dtexec` программа запустит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронную документацию и отобразит раздел dtexec Utility.  
+     Если указать аргумент *option_name* , `dtexec` Программа запустит [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] электронную документацию и отобразит раздел dtexec Utility.  
   
 -   `/ISServer`*PackagePath*:  
                   Необязательный параметр. Запускает пакет, развернутый на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Аргумент *PackagePath* указывает имя и полный путь файла пакета, развернутого на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если путь или имя файла, указанные в аргументе *PackagePath* , содержат пробел, необходимо заключить в кавычки аргумент *PackagePath* .  
@@ -395,7 +394,7 @@ dtexec /option [value] [/option [value]]...
   
      **V** — отображаются подробные сообщения.  
   
-     Аргументы V и N являются взаимоисключающими по отношению ко всем остальным аргументам, их следует указывать отдельно. Если параметр **/Reporting** не указан, то по умолчанию используется `E` уровень (ошибки), **W** (предупреждения) и **P** (ход выполнения).  
+     Аргументы V и N являются взаимоисключающими по отношению ко всем остальным аргументам, их следует указывать отдельно. Если параметр **/Reporting** не указан, то по умолчанию используется уровень `E` (ошибки), **W** (предупреждения) и **P** (ход выполнения).  
   
      В начале всех событий ставится отметка времени в формате «ГГ/ММ/ДД ЧЧ:ММ:СС», а также идентификатор GUID или понятное имя, если такое имеется.  
   
@@ -415,7 +414,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Set** [$sensitive::]*PropertyPath; значение*: необязательный параметр. Переопределяет конфигурацию параметра, переменной, свойства, контейнера, регистратора, перечислителя Foreach или соединения в пакете. При использовании этот параметра **/Set** заменяет значение аргумента *propertyPath* на указанное значение. Можно указать несколько параметров **/Set** .  
   
-     В дополнение к использованию параметра **/Set** с параметром **/f [ILE]** можно также использовать параметр **/Set** с `/ISServer` параметром или `/Project` . При использовании **/Set** с `/Project`параметр **/Set** задает значения параметров. При использовании **/Set** с `/ISServer`команда **/Set** устанавливает переопределения свойств. Кроме того, при использовании **/Set** с `/ISServer`можно использовать необязательный префикс $Sensitive, чтобы указать, что свойство должно рассматриваться как конфиденциальное на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере.  
+     В дополнение к использованию параметра **/Set** с параметром **/f [ILE]** можно также использовать параметр **/Set** с `/ISServer` параметром или `/Project` . При использовании **/Set** с `/Project` параметр **/Set** задает значения параметров. При использовании **/Set** с команда `/ISServer` **/Set** устанавливает переопределения свойств. Кроме того, при использовании **/Set** с `/ISServer` можно использовать необязательный префикс $Sensitive, чтобы указать, что свойство должно рассматриваться как конфиденциальное на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере.  
   
      Вы можете определить значение *propertyPath* , запустив мастер настройки пакета. Пути для выбираемых элементов отображаются на последней странице **Завершение работы мастера** и могут быть скопированы в буфер обмена, а затем вставлены из него. Если мастер использовался только для этого, то его действия можно отменить после копирования путей в буфер.  
   
@@ -439,7 +438,7 @@ dtexec /option [value] [/option [value]]...
   
      Аргумент *package_path* задает имя извлекаемого пакета. В случае наличия в пути папок их имена должны завершаться обратной косой чертой ("\\"). Значение *package_path* может быть заключено в кавычки. Если путь или имя файла, указанные в аргументе *package_path* , содержат пробел, то аргумент *package_path* необходимо заключить в кавычки.  
   
-     Параметры **/User**, **/Password**и `/Server` Options можно использовать вместе с `/SQL` параметром.  
+     Параметры **/User**, **/Password**и Options можно использовать `/Server` вместе с `/SQL` параметром.  
   
      В случае отсутствия параметра **/User** для доступа к пакету используется проверка подлинности Windows. При использовании параметра **/User** указанное имя входа **/User** рассматривается как относящееся к проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -461,7 +460,7 @@ dtexec /option [value] [/option [value]]...
     >  [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
 -   **/VA [lidate]**:  
-                  Необязательный параметр. Останавливает выполнение пакета по завершении стадии проверки без фактического запуска пакета. Во время проверки использование параметра **/warnaserror** приводит к тому `dtexec` , что предупреждение обрабатывается как ошибка. Поэтому пакет завершается ошибкой, если во время проверки возникает предупреждение.  
+                  Необязательный параметр. Останавливает выполнение пакета по завершении стадии проверки без фактического запуска пакета. Во время проверки использование параметра **/warnaserror** приводит к тому, `dtexec` что предупреждение обрабатывается как ошибка, поэтому пакет завершается ошибкой, если во время проверки возникает предупреждение.  
   
 -   **/VerifyB [uild]** _основной_[*; дополнительный*[*; Сборка*]]: необязательный. Проверяет соответствие номера сборки пакета номерам сборки, указанным на стадии проверки в аргументах *major*, *minor*и *build* . В случае несоответствия пакет выполняться не будет.  
   
@@ -483,7 +482,7 @@ dtexec /option [value] [/option [value]]...
     >  Если конфигурация предусматривает проверку подписи пакета, службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяют только наличие цифровой подписи, ее правильность и надежность источника. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не проверяют, был ли изменен пакет.  
   
     > [!NOTE]  
-    >  Необязательное значение реестра **BlockedSignatureStates** может указывать параметр, который является более четким, чем параметр цифровой подписи, заданный в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] или `dtexec` в командной строке. В этом случае значение в реестре переопределяет другие параметры.  
+    >  Необязательное значение реестра **BlockedSignatureStates** может указывать параметр, который является более четким, чем параметр цифровой подписи, заданный в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] или в `dtexec` командной строке. В этом случае значение в реестре переопределяет другие параметры.  
   
 -   **/VerifyV [ersionID]** _versionID_: необязательный. Проверяет версию идентификатора GUID выполняемого пакета, сравнивая его со значением, указанным в аргументе *version_id* на стадии проверки пакета.  
   
@@ -514,7 +513,7 @@ dtexec /option [value] [/option [value]]...
 -   Параметры **/Set** и **/ConfigFile** обрабатываются в том порядке, в котором они указаны.  
   
 ##  <a name="examples"></a><a name="example"></a> Примеры  
- В следующих примерах демонстрируется использование программы `dtexec` командной строки для настройки и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов.  
+ В следующих примерах демонстрируется использование `dtexec` программы командной строки для настройки и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов.  
   
  **Запуск пакетов**  
   

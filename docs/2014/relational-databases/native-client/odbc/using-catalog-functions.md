@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9308f9208d75287f3c93112f7f810c8ece3bc18b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6cac35e658343f606c1953f265c752335c70d81f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704267"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011065"
 ---
 # <a name="using-catalog-functions"></a>Использование функций каталога
   Все базы данных имеют структуру, содержащую данные, хранящиеся в базе данных. Определение этой структуры вместе с другими сведениями, например разрешениями, хранится в каталоге (реализованном как набор системных таблиц), который называют словарем данных.  
@@ -73,7 +72,7 @@ ms.locfileid: "82704267"
   
      Необходима во время выполнения. Файл sqlncli11.dll поставляется вместе с драйвером ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../native-client-odbc-api/sqlcolumns.md)   

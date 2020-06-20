@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4bc3c47ea6d356279c5502eaf45abc09c307e7cd
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9e34985a637247a7897fedb3abde66e9d2e664bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704128"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057218"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Системные требования для собственного клиента SQL Server
   Чтобы использовать функции доступа к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например режим MARS, необходимо установить следующее программное обеспечение:  
@@ -67,17 +66,17 @@ ms.locfileid: "82704128"
 |Тип данных|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> приложения OLE DB собственного клиента SQL Server со свойством DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Изображение|  
-|varchar(max)|varchar|varchar|Text|  
+|varbinary(max)|varbinary|varbinary|Образ —|  
+|varchar(max)|varchar|varchar|текст|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |Xml|Xml|Xml|Ntext|  
-|Определяемый пользователем тип CLR (> 8 КБ)|определяемый пользователем тип|varbinary|Изображение|  
-|дата|дата|varchar|Varchar|  
+|Определяемый пользователем тип CLR (> 8 КБ)|определяемый пользователем тип|varbinary|Образ —|  
+|Дата|Дата|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client программирование](sql-server-native-client-programming.md)   
  [Установка собственного клиента SQL Server](applications/installing-sql-server-native-client.md)  
   

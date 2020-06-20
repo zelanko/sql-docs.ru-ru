@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721659"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010989"
 ---
 # <a name="configure-web-synchronization"></a>Настроить веб-синхронизацию
   Поддержка веб-синхронизации для репликации слиянием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет производить репликацию данных по протоколу HTTPS через Интернет. Чтобы использовать веб-синхронизацию, сначала необходимо выполнить следующие действия.  
@@ -124,7 +123,7 @@ ms.locfileid: "62721659"
   
 -   в случае репликации больших объемов данных может возникнуть необходимость в корректировке размера пакета агента слияния.  
   
- Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете задается с помощью`DownloadGenerationsPerBatch` `UploadGenerationsPerBatch` параметров агент слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
+ Размер пакета для репликации слиянием измеряется в *поколениях*, которые представляют собой коллекции изменений для статьи. Число поколений в пакете задается с помощью `DownloadGenerationsPerBatch` `UploadGenerationsPerBatch` параметров агент слияния. Дополнительные сведения см. в статье [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  При работе с большими объемами данных рекомендуется указывать небольшие значения для этих параметров пакетов. Рекомендуем начинать со значения, равного 10, и затем корректировать его с учетом потребностей приложений, а также производительности. Обычно эти параметры задаются в профиле агента. Дополнительные сведения о профилях см. в разделе [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -144,7 +143,7 @@ ms.locfileid: "62721659"
   
      Дополнительные сведения о разрешениях, необходимых для агентов, см. в разделе [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
--   Укажите ту же учетную запись домена, которая используется агент слияния при указании учетной записи и пароля на странице **сведения о веб-сервере** мастера создания подписки или при указании значений для параметров **@internet_url** и **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Для данной учетной записи должно быть предоставлено разрешение на чтение хранилища моментального снимка.  
+-   Укажите ту же учетную запись домена, которая используется агент слияния при указании учетной записи и пароля на странице **сведения о веб-сервере** мастера создания подписки или при указании значений для **@internet_url** параметров и **@internet_login** [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Для данной учетной записи должно быть предоставлено разрешение на чтение хранилища моментального снимка.  
   
 -   Для каждой публикации следует использовать отдельный виртуальный каталог на сервере IIS.  
   

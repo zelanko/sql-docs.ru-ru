@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: e35d37ed-dd9b-4a34-a76a-bc9251f06c4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8b10069c6358849e3ed3dc6f1f8a8de43950520
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a0d3975bb60934af33414ee8028c6dd1322bfe6d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707400"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056212"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавляет столбец DBCOLUMN_BASETABLEINSTANCE в набор, возвращаемый методом IColumnsRowset::GetColumnRowset. Этот столбец имеет тип данных DBTYPE_I2 и зарезервирован корпорацией Майкрософт для будущего использования. В будущих версиях данные из этого столбца могут быть изменены.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерфейсы (OLE DB)](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

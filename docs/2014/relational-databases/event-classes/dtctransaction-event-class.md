@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26da2a16462b9853489c6430a6c80e1ab2a6f3b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c72b8c718237582f5a40c56e40e2a51e79e177e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029906"
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction, класс событий
   Используйте класс событий **DTCTransaction** для контроля состояния транзакций компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "62662971"
 |**ClientProcessID**|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |**DatabaseID**|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**DatabaseName**|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|**EventClass**|`int`|Тип события = 19.|27|Нет|  
+|**EventClass**|`int`|Тип события = 19.|27|нет|  
 |**EventSequence**|`int`|Последовательность данного события в запросе.|51|нет|  
 |**EventSubClass**|`int`|Тип подкласса события.<br /><br /> 0=Получить адрес<br /><br /> 1=Распространить транзакцию<br /><br /> 3=Закрыть соединение<br /><br /> 6=Создание новой транзакции DTC<br /><br /> 7=Прикрепление транзакции с координатором DTC<br /><br /> 9=Внутренняя фиксация<br /><br /> 10=Внутреннее прекращение<br /><br /> 14=Подготовка транзакции<br /><br /> 15=Транзакция подготовлена<br /><br /> 16=Транзакция прекращается<br /><br /> 17=Транзакция фиксируется<br /><br /> 22=Сбой TM в подготовленном состоянии<br /><br /> 23=Неизвестно|21|Да|  
 |**Идентификатор**|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
@@ -53,7 +52,7 @@ ms.locfileid: "62662971"
 |**TransactionID**|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |**XactSequence**|`bigint`|Токен, используемый для описания текущей транзакции.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

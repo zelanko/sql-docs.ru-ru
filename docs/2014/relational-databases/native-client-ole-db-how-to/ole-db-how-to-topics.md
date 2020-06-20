@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4152f1594593de572514929e6a448071145c18c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ed0c66981075fd88b066deac05aa14184ff41c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056248"
 ---
 # <a name="ole-db-how-to-topics"></a>Инструкции по OLE DB
   Чтобы использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный поставщик OLE DB клиента, необходимо понять, как установить соединение с сервером, выполнить команду и обработать результаты.  
@@ -56,7 +55,7 @@ ms.locfileid: "82696988"
   
 -   [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](../native-client/sql-server-native-client-programming.md)  
   
   

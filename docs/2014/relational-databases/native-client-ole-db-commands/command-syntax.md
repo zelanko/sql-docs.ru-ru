@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d463d3d7-e5cb-426d-8e92-aa29980356b6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4002a3e92bc731eaa440fc85da98b7e8b3207d5c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 61d0474b720b24de18a93f016f6485a52b0ab592
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708025"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056430"
 ---
 # <a name="command-syntax"></a>Синтаксис команды
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента распознает синтаксис команд, указанный в макросе DBGUID_SQL. Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB собственного клиента описатель указывает, что АМАЛГАМ ODBC SQL, ISO и [!INCLUDE[tsql](../../includes/tsql-md.md)] является допустимым синтаксисом. Например, следующая инструкция SQL использует escape-последовательность ODBC SQL, чтобы указать строковую функцию LCASE.  
@@ -52,7 +51,7 @@ SELECT customerid=LOWER(CustomerID) FROM Customers
     EXECUTE SalesByCategory 'Produce', '1995'  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Команды](commands.md)  
   
   
