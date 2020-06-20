@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8a2006947cf4e4bffee0365ffbbf0b3b1c76bbf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069072"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940735"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Средство настройки сервера (надстройки интеллектуального анализа данных для Excel)
   При установке надстроек интеллектуального анализа данных для Excel также устанавливается служебная программа настройки сервера, которая будет запускаться при первом открытии надстроек. В этом разделе описывается, как использовать программу для подключения к экземпляру [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и настройки базы данных для работы с моделями интеллектуального анализа данных.  
@@ -86,7 +85,7 @@ ms.locfileid: "66069072"
  **Добавление**  
  Нажмите, чтобы открыть диалоговое окно и добавить пользователей или группы.  
   
- **Удалить**  
+ **Remove**  
  Нажмите, чтобы удалить выбранного пользователя или выбранную группу из списка пользователей с административными разрешениями.  
   
   

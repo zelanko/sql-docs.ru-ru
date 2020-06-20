@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a1b0b28afbb83028af8d71644af08ca660a0b36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f1a7286f15af28f97e488b8b40fd745a0d320108
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753416"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997139"
 ---
 # <a name="files-and-version-numbers"></a>Файлы и номера версий
   Все необходимые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компоненты объектов SMO устанавливаются как часть экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиента или сервера. Объекты SMO реализованы в нескольких управляемых сборках. Можно разрабатывать приложения объектов SMO либо на клиенте, либо на сервере.  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: b51601e9-5454-43c6-bb5e-24eb2ff043c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 667a07744acf4b6d8b0dfa1e83adca738add0b4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058705"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>Свойства агента SQL Server (страница «Общие»)
   Эта страница используется для просмотра и изменения общих свойств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Состояние службы**  
  Отображается текущее состояние службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -47,7 +46,7 @@ ms.locfileid: "63245780"
  **Получатель для команды net send**  
  Введите имя оператора, получающего уведомления, отправленные командой net send, с сообщениями, которые агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает в файл журнала.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операторы](operators.md)   
  [Журнал ошибок агента SQL Server](sql-server-agent-error-log.md)  
   

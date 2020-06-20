@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ad6b25d347de4c832097c05f27854bacbebaf6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478922"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961314"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Создание сущности (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут создавать новые сущности для хранения данных. При создании сущности необходимо загрузить по крайней мере небольшую выборку данных, которые нужно сохранить.  
@@ -69,13 +68,13 @@ ms.locfileid: "65478922"
   
 12. Нажмите кнопку **ОК**. После успешного создания сущности отображается строка с новым заголовком, выделяются ячейки, а имя листа изменяется на имя сущности.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   Для просмотра возникших ошибок в группе **Публикация и проверка** нажмите кнопку **Показать состояние**. Отображаются столбцы ValidationStatus и InputStatus. Дополнительные сведения см. в разделе [Проверка данных (надстройка MDS для Excel)](validating-data-mds-add-in-for-excel.md).  
   
 -   Убедитесь, что созданные атрибуты имеют запланированный тип данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание атрибута на основе домена (надстройка MDS для Excel)](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf6fd1f328366333e5464cb226a8a8ab8e275395
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782282"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935309"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Включение параметра «Блокировка страниц в памяти» (Windows)
   Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске.  
@@ -29,7 +28,7 @@ ms.locfileid: "62782282"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>Включение параметра «Блокировка страниц в памяти»  
   
-1.  В меню **Пуск** выберите команду **Выполнить**. В поле **Открыть** введите `gpedit.msc`.  
+1.  В меню **Пуск** выберите команду **Выполнить**. В поле **Открыть** введите `gpedit.msc` .  
   
 2.  В консоли **Редактор локальных групповых политик** разверните узел **Конфигурация компьютера**, затем узел **Конфигурация Windows**.  
   

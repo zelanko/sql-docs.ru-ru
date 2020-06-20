@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d229d490a9f3a7bc6f613259ee0535218de47975
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874083"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970651"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Доступ к данным из объектов среды CLR для работы с базами данных
   Подпрограммы среды CLR могут легко обращаться к данным, хранящимся в экземпляре служб [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] , в котором она выполняется, а также к данным, хранящимся в удаленных экземплярах. Какие именно это данные — определяет контекст пользователя, в котором выполняется код. Доступ к данным из объекта базы данных CLR с помощью .NET Framework поставщика данных для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] данных из управляемого клиента и приложений среднего уровня. Это позволяет эффективно использовать опыт работы с ADO.NET и `SqlClient` как в клиентских приложениях, так и в приложениях среднего уровня.  

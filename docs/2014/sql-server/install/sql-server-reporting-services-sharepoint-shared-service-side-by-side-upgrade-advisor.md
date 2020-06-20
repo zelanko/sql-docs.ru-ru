@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 6ae1017e-129b-4702-9ea7-00ac9b024062
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 529e07dc7beed8dc37741f6c9dab0b0b080d4898
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a26fedd892dfb26dea4616efd46d3b3748b508
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035991"
 ---
 # <a name="microsoft-sql-server-reporting-services-sharepoint-shared-service-is-installed-side-by-side-upgrade-advisor"></a>Общая служба Microsoft SQL Server Reporting Services SharePoint установлена параллельно (советник по переходу)
-  Советник по переходу обнаружил [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , что общая служба SharePoint установлена параллельно с предыдущей версией [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  Советник по переходу обнаружил, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] что общая служба SharePoint установлена параллельно с предыдущей версией [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  
@@ -28,7 +27,7 @@ ms.locfileid: "71952691"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Описание  
- Советник по переходу обнаружил [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] что общая служба SharePoint установлена параллельно с предыдущей версией, которая не основана на архитектуре общей службы SharePoint. Поскольку на компьютере параллельно установлены старая и новая версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], связанных с технологиями SharePoint, обновление заблокировано.  
+ Советник по переходу обнаружил, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] что общая служба SharePoint установлена параллельно с предыдущей версией [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая не основана на архитектуре общей службы SharePoint. Поскольку на компьютере параллельно установлены старая и новая версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], связанных с технологиями SharePoint, обновление заблокировано.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
  Чтобы продолжить обновление, необходимо удалить одну из существующих установок служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. После удаления одной из установок служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] повторно запустите помощник по обновлению, чтобы убедиться в отсутствии других проблем обновления.  

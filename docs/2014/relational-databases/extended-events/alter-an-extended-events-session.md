@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 66108d50898610949cb5cab7fb3bdd2dcc726801
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14be41e48262bc7ebc8aeeaf55185f5e35d0c72e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050932"
 ---
 # <a name="alter-an-extended-events-session"></a>Изменение сеанса расширенных событий
   После того как создан сеанс расширенных событий, его можно изменить необходимым образом с помощью **Мастера расширенных событий SQL Server**.  
@@ -48,7 +47,7 @@ ms.locfileid: "82706791"
   
 -   В диалоговом окне **Свойства** внесите соответствующие изменения и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)   
  [Создание сеанса расширенных событий с помощью редактора запросов](../../database-engine/create-an-extended-events-session-using-query-editor.md)  
   

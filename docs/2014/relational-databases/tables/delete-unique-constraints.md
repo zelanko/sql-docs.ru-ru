@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8225039ece914c461af34f5344350227d6a39cdc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2fe2264aed4eb2f292a6bd1e4e565cebe2a833f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066435"
 ---
 # <a name="delete-unique-constraints"></a>Удаление ограничений уникальности
   Удалить ограничение уникальности в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Удаление ограничения уникальности приводит к удалению требования уникальности значений, вводимых в столбцы или в сочетание столбцов, указанных в выражении ограничения, а также к удалению соответствующего уникального индекса.  

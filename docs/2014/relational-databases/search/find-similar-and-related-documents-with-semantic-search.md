@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11493b5b04fa9308e3afbe56176251225248338
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004184"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>Поиск похожих и связанных документов с использованием семантического поиска
   Описывает процесс поиска схожих или связанных документов или текстовых значений и сведений об их сходстве или связи в столбцах, настроенных для статистического семантического индексирования.  
@@ -37,7 +36,7 @@ ms.locfileid: "66011321"
 >  Для целевых столбцов должно быть включено полнотекстовое и семантическое индексирование.  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Пример. Поиск лучших документов, которые похожи на другой документ  
- В следующем примере извлекаются 10 лучших кандидатов, которые похожи на кандидат, указанный *@CandidateID* в таблице HumanResources. JobCandidate в образце базы данных AdventureWorks2012.  
+ В следующем примере извлекаются 10 лучших кандидатов, которые похожи на кандидат, указанный в *@CandidateID* таблице HumanResources. JobCandidate в образце базы данных AdventureWorks2012.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

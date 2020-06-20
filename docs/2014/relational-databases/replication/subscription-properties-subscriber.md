@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af9cb7612837021b156fb8f467899f0e23ef1555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a37f7b086f33719d7e55826ff40f2202093119a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250269"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004598"
 ---
 # <a name="sql-server-replication-subscription-properties"></a>Свойства подписки Репликация SQL Server 
 В этом разделе содержатся сведения о диалоговом окне **Свойства подписки** . 
@@ -131,7 +130,7 @@ ms.locfileid: "63250269"
   
  Дополнительные сведения о конфигурации см. в разделе [Configure Web Synchronization](configure-web-synchronization.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md)   
  [Просмотр и изменение свойств принудительной подписки](view-and-modify-push-subscription-properties.md)   
  [Subscribe to Publications](subscribe-to-publications.md)  

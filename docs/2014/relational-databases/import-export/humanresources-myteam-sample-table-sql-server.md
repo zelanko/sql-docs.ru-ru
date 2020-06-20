@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b038c1132cf8c1ccd31da2a5a1e2a600f2505624
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47b8990bfb211b12e97d02d2df77fd94d684ac8a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050473"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>Образец таблицы HumanResources.myTeam (SQL Server)
   Большинству примеров кода в разделе [Импорт и экспорт больших массивов данных](bulk-import-and-export-of-data-sql-server.md) требуется специальная учебная таблица **myTeam**. Перед выполнением примеров необходимо создать таблицу **myTeam** в схеме **HumanResources** базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  

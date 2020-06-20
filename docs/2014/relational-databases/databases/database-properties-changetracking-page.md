@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9b929640-bc62-449b-9b06-b5a77b8cf372
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 926f6227d5a3a2e11dffbf4b9f080b1fc5ec35a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4107f81ef4cdf19df60d4a70d8e79007f2c9270c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970164"
 ---
 # <a name="database-properties-changetracking-page"></a>Свойства базы данных (страница «Отслеживание изменений»)
   Эта страница позволяет просмотреть или изменить параметры отслеживания изменений для выбранной базы данных. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделе [Включение и отключение отслеживания изменений (SQL Server)](../track-changes/enable-and-disable-change-tracking-sql-server.md).  

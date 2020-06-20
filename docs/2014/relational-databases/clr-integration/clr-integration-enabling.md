@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1cb5f1f4bcc3a3e796cc99b4da7f14e5a5976b93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7187906f1376deb81ca7ff4770af7b12b63c022
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953674"
 ---
 # <a name="enabling-clr-integration"></a>Включение интеграции со средой CLR
   Функция интеграции со средой CLR отключена по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR, используйте параметр **clr enabled** хранимой процедуры **sp_configure** .  
@@ -46,7 +45,7 @@ GO
 > [!NOTE]  
 >  Выполнение в среде CLR не поддерживается при использовании упрощенных пулов. Перед включением интеграции со средой CLR необходимо отключить функцию использования упрощенных пулов. Дополнительные сведения см. в разделе [Параметр конфигурации сервера «использование упрощенных пулов»](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Параметр конфигурации сервера «CLR Enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   

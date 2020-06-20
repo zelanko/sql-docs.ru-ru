@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 986e8fbe-f6ca-469a-9c7b-ad9b0b89f832
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd46efd60d81134f04a6bbc44e47c1fe8b5f342e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8df8182305eb90be3286a8281169f075555306f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920165"
 ---
 # <a name="control-flow-tab"></a>Вкладка «Поток управления»
   Используйте вкладку **Поток управления** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы создать поток управления в пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "66060354"
   
  Чтобы добавить эти функции к отдельным задачам или контейнерам в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , щелкните правой кнопкой мыши объект в области конструктора и выберите параметр.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление очередностью](control-flow/precedence-constraints.md)   
  [Конструктор служб SSIS](ssis-designer.md)   
  [Поток управления](control-flow/control-flow.md)  

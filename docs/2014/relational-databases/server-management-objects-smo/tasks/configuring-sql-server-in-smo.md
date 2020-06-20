@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0a372643-15cb-45a7-8665-04f1215df8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13fc00425a12737000a6400c5b9368288de80aa3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a05a318f0db624c2423d43759d4b47913179574b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996978"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Настройка SQL Server в SMO
-  В объектах <xref:Microsoft.SqlServer.Management.Smo.Information> SMO объект <xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions> , объект, объект и <xref:Microsoft.SqlServer.Management.Smo.Configuration> объект содержат параметры и сведения для экземпляра. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+  В объектах SMO объект, объект, объект <xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions> и <xref:Microsoft.SqlServer.Management.Smo.Configuration> объект содержат параметры и сведения для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имеется множество свойств, описывающих поведение установленного экземпляра. Эти свойства описывают параметры запуска, используемые по умолчанию параметры сервера, файлы и каталоги, сведения о системе и процессоре, о продукте и версиях, сведения о соединении, параметры памяти, выбранные язык и параметры сортировки, а также режим проверки подлинности.  
   
@@ -32,9 +31,9 @@ ms.locfileid: "72797239"
   
  В свойствах объекта <xref:Microsoft.SqlServer.Management.Smo.UserOptions> содержатся сведения о текущем поведении соединения, связанном с выполняемыми вычислениями, применяемыми стандартами ANSI и осуществляемыми транзакциями.  
   
- Помимо этого имеется также ряд параметров конфигурации, представленных объектом <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Он содержит набор свойств, представляющих параметры, которые можно изменить с помощью хранимой процедуры `sp_configure`. Такие параметры, как **повышение приоритета**, **интервал восстановления** и **Размер сетевого пакета**, контролируют производительность экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Многие из этих параметров можно менять динамически, но в некоторых случаях значение сначала надо настроить, а затем изменить при перезапуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+ Помимо этого имеется также ряд параметров конфигурации, представленных объектом <xref:Microsoft.SqlServer.Management.Smo.Configuration>. Он содержит набор свойств, представляющих параметры, которые можно изменить с помощью хранимой процедуры `sp_configure`. Такие параметры, как **повышение приоритета**, **интервал восстановления** и **Размер сетевого пакета**, контролируют производительность экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Многие из этих параметров можно менять динамически, но в некоторых случаях значение сначала надо настроить, а затем изменить при перезапуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Для каждого параметра конфигурации существует свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Configuration>. С помощью объекта <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> можно изменить глобальные настройки конфигурации. У многих свойств есть максимальное и минимальное значения, которые также хранятся как свойства <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Для этих свойств требуется <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> , чтобы метод зафиксировал изменения в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Для каждого параметра конфигурации существует свойство объекта <xref:Microsoft.SqlServer.Management.Smo.Configuration>. С помощью объекта <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty> можно изменить глобальные настройки конфигурации. У многих свойств есть максимальное и минимальное значения, которые также хранятся как свойства <xref:Microsoft.SqlServer.Management.Smo.ConfigProperty>. Для этих свойств требуется, <xref:Microsoft.SqlServer.Management.Smo.ConfigurationBase.Alter%2A> чтобы метод зафиксировал изменения в экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Все параметры конфигурации в объекте <xref:Microsoft.SqlServer.Management.Smo.Configuration> должен изменять системный администратор.  
   
@@ -47,14 +46,14 @@ ms.locfileid: "72797239"
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure2](SMO How to#SMO_VBConfigure2)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-basic"></a>Изменение параметров SQL Server на языке Visual Basic  
- В примере кода выводятся [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об экземпляре <xref:Microsoft.SqlServer.Management.Smo.Information> в <xref:Microsoft.SqlServer.Management.Smo.Settings>и, а также изменяются параметры в <xref:Microsoft.SqlServer.Management.Smo.Settings> свойствах объекта и <xref:Microsoft.SqlServer.Management.Smo.UserOptions>.  
+ В примере кода выводятся сведения об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в <xref:Microsoft.SqlServer.Management.Smo.Information> и <xref:Microsoft.SqlServer.Management.Smo.Settings> , а также изменяются параметры в <xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions> свойствах объекта и.  
   
  В этом примере оба объекта, <xref:Microsoft.SqlServer.Management.Smo.UserOptions> и <xref:Microsoft.SqlServer.Management.Smo.Settings>, обладают методом <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>. Для них можно отдельно запустить методы <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBConfigure1](SMO How to#SMO_VBConfigure1)]  -->  
   
 ## <a name="modifying-sql-server-settings-in-visual-c"></a>Изменение параметров SQL Server на языке Visual C#  
- В примере кода выводятся [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об экземпляре <xref:Microsoft.SqlServer.Management.Smo.Information> в <xref:Microsoft.SqlServer.Management.Smo.Settings>и, а также изменяются параметры в <xref:Microsoft.SqlServer.Management.Smo.Settings> свойствах объекта и <xref:Microsoft.SqlServer.Management.Smo.UserOptions>.  
+ В примере кода выводятся сведения об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в <xref:Microsoft.SqlServer.Management.Smo.Information> и <xref:Microsoft.SqlServer.Management.Smo.Settings> , а также изменяются параметры в <xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions> свойствах объекта и.  
   
  В этом примере оба объекта, <xref:Microsoft.SqlServer.Management.Smo.UserOptions> и <xref:Microsoft.SqlServer.Management.Smo.Settings>, обладают методом <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>. Для них можно отдельно запустить методы <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "72797239"
 ```  
   
 ## <a name="modifying-sql-server-settings-in-powershell"></a>Изменение параметров SQL Server в PowerShell  
- В примере кода выводятся [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] сведения об экземпляре <xref:Microsoft.SqlServer.Management.Smo.Information> в <xref:Microsoft.SqlServer.Management.Smo.Settings>и, а также изменяются параметры в <xref:Microsoft.SqlServer.Management.Smo.Settings> свойствах объекта и <xref:Microsoft.SqlServer.Management.Smo.UserOptions>.  
+ В примере кода выводятся сведения об экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в <xref:Microsoft.SqlServer.Management.Smo.Information> и <xref:Microsoft.SqlServer.Management.Smo.Settings> , а также изменяются параметры в <xref:Microsoft.SqlServer.Management.Smo.Settings> <xref:Microsoft.SqlServer.Management.Smo.UserOptions> свойствах объекта и.  
   
  В этом примере оба объекта, <xref:Microsoft.SqlServer.Management.Smo.UserOptions> и <xref:Microsoft.SqlServer.Management.Smo.Settings>, обладают методом <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>. Для них можно отдельно запустить методы <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.Alter%2A>.  
   

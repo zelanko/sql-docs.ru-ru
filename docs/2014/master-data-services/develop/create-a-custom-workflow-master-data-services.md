@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962066"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Создание настраиваемого рабочего процесса (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] использует бизнес-правила для создания таких базовых решений рабочего процесса, как автоматическое обновление и проверка данных, а также отправка уведомлений по электронной почте с учетом заданных условий. Когда требуется более сложная обработка, чем та, которую обеспечивают действия встроенного рабочего процесса, используйте пользовательский рабочий процесс. Пользовательский рабочий процесс ― это создаваемая вами сборка .NET. При вызове вашей сборки рабочего процесса код может выполнять любые действия, которые требуются в данной ситуации. Если рабочему процессу требуется сложная обработка событий, например многоуровневые утверждения или сложные деревья принятия решений, можно настроить [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на запуск пользовательского рабочего процесса, который анализирует данные и определяет, куда их отправить для утверждения.  
@@ -56,7 +55,7 @@ ms.locfileid: "65479547"
   
 1.  В Visual Studio 2010 создайте проект **Библиотека классов**, в котором используется язык по вашему выбору. Чтобы создать библиотеку классов C#, выберите типы проектов **Visual C#\Windows** и шаблон **Библиотека классов**. Введите имя проекта, например **MDSWorkflowTest**, и нажмите кнопку **ОК**.  
   
-2.  Добавьте ссылку на файл Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Эта сборка может находиться в каталоге \<установочная папка>\Master Data Services\WebApplication\bin.  
+2.  Добавьте ссылку на файл Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Эту сборку можно найти в \<Your installation folder> \Мастер данных Services\WebApplication\bin.  
   
 3.  Добавьте строку "using Microsoft.MasterDataServices.Core.Workflow;" в файл с кодом C#.  
   
@@ -64,12 +63,12 @@ ms.locfileid: "65479547"
   
 5.  Реализуйте интерфейс <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. Метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> вызывается службами SQL Server MDS Workflow Integration Service для запуска рабочего процесса.  
   
-6.  Скопируйте сборку в папку, в которой находится исполняемый файл SQL Server MDS Workflow Integration Service с именем Microsoft.MasterDataServices.Workflow.exe, в \<установочная папка>\Master Data Services\WebApplication\bin.  
+6.  Скопируйте сборку в расположение исполняемого файла SQL Server службы интеграции рабочих процессов MDS с именем Microsoft.MasterDataServices.Workflow.exe в \<Your installation folder> \Мастер Data Services\WebApplication\bin.  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>Настройка службы Configure SQL Server MDS Workflow Integration Service  
  Измените файл конфигурации [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], включив в него данные соединения для базы данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], и свяжите тег со сборкой обработчика рабочих процессов, выполнив следующие действия.  
   
-1.  Найдите файл Microsoft.MasterDataServices.Workflow.exe.config в каталоге \<установочная папка>\Master Data Services\WebApplication\bin.  
+1.  Поиск Microsoft.MasterDataServices.Workflow.exe.config в \<Your installation folder> Services\WebApplication\bin. данных \Мастер  
   
 2.  Добавьте сведения о подключении к базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] в параметр ConnectionString. Если в установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются параметры сортировки, учитывающие регистр, то имя базы данных следует ввести в том же регистре, который используется в базе данных. Например, полный тег параметра может выглядеть следующим образом:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "65479547"
     </setting>  
     ```  
   
-     Текст внутри тега \<value> имеет следующую форму: \<тег рабочего процесса>=\<имя типа рабочего процесса с указанием сборки>. \<Тег рабочего процесса> ― это имя, которое используется для определения сборки обработчика рабочего процесса при создании бизнес-правила в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<Имя типа рабочего процесса с указанием сборки> ― это имя класса рабочего процесса с указанием пространства имен, за которым следует запятая, за которой, в свою очередь, следует отображаемое имя сборки. Если сборка имеет строгое имя, то также необходимо указать данные о версии и ее PublicKeyToken. Если вы создали несколько обработчиков рабочих процессов для разных типов этих процессов, то в файл можно включить несколько тегов \<setting>.  
+     Внутренний текст \<value> тега имеет вид \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>— Это имя, которое используется для задания сборки обработчика рабочего процесса при создании бизнес-правила в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>— Это имя класса рабочего процесса с указанием пространства имен, за которым следует запятая, за которым следует отображаемое имя сборки. Если сборка имеет строгое имя, то также необходимо указать данные о версии и ее PublicKeyToken. \<setting>Если вы создали несколько обработчиков рабочих процессов для различных типов рабочих процессов, можно включить несколько тегов.  
   
 > [!NOTE]  
 >  В зависимости от конфигурации сервера при попытке сохранить файл Microsoft.MasterDataServices.Workflow.exe.config на экране может появиться сообщение об ошибке "В доступе отказано". В этом случае временно отключите контроль учетных записей на сервере. Для этого откройте панель управления и выберите пункт **Система и безопасность**. В разделе **Центр уведомлений** щелкните **Изменить параметры контроля учетных записей**. В диалоговом окне **Параметры контроля учетных записей** передвиньте ползунок в самый низ, чтобы не получать никаких уведомлений. Перезагрузите компьютер и повторите описанные ранее действия для изменения файла конфигурации. После сохранения файла, сбросьте параметры контроля учетных записей пользователей на значения по умолчанию.  
@@ -101,7 +100,7 @@ ms.locfileid: "65479547"
   
 3.  Предоставьте пользователю mds_workflow_service разрешение на выполнение сборки обработчика рабочих процессов. Для этого добавьте пользователя mds_workflow_service на вкладку **Безопасность** диалогового окна **Свойства** сборки обработчика рабочих процессов и предоставьте пользователю службы mds_workflow_service разрешение READ и EXECUTE.  
   
-4.  Предоставьте пользователю службы mds_workflow_service разрешение на выполнение исполняемого файла службы SQL Server MDS Workflow Integration Service. Для этого добавьте пользователя mds_workflow_service на вкладку **Безопасность** диалогового окна **Свойства** файла Microsoft.MasterDataServices.Workflow.exe, который расположен в папке \<установочная папка>\Master Data Services\WebApplication\bin, и предоставьте пользователю разрешение READ и EXECUTE.  
+4.  Предоставьте пользователю службы mds_workflow_service разрешение на выполнение исполняемого файла службы SQL Server MDS Workflow Integration Service. Для этого добавьте mds_workflow_service пользователя на вкладку **Безопасность** **свойств** Microsoft.MasterDataServices.Workflow.exe, в поле \<Your installation folder> \Мастер Data Services\WebApplication\bin и предоставьте пользователю MDS_WORKFLOW_SERVICE разрешение на чтение и выполнение.  
   
 5.  Установите службу SQL Server MDS Workflow Integration Service с помощью программы установки .NET с именем InstallUtil.exe. Программа InstallUtil.exe может находиться в установочной папке платформы .NET, например C:\Windows\Microsoft.NET\Framework\v4.0.30319\\. Установите службу SQL Server MDS Workflow Integration Service, введя в командной строке следующую команду:  
   
@@ -118,7 +117,7 @@ ms.locfileid: "65479547"
   
  Создайте бизнес-правило, которое будет запускать пользовательский рабочий процесс в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], выполнив следующие действия.  
   
-1.  В редакторе [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]бизнес-правил, после того как вы указали условия бизнес-правила, перетащите действие **запустить рабочий процесс** из списка **внешние действия** в метку **действия** панели **then** .  
+1.  В редакторе бизнес-правил [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , после того как вы указали условия бизнес-правила, перетащите действие **запустить рабочий процесс** из списка **внешние действия** в метку **действия** панели **then** .  
   
 2.  На панели **Изменение действия** в поле **Тип рабочего процесса** введите тег, который обозначает сборку обработчика рабочего процесса. Это тег, который был задан в файле конфигурации сборки, например, TEST.  
   
@@ -148,7 +147,7 @@ ms.locfileid: "65479547"
 ### <a name="view-the-service-broker-queue"></a>Просмотр очереди компонента Service Broker  
  Очередь компонента Service Broker, в которой содержатся основные данные, переданные в рамках рабочего процесса, находится по адресу mdm.microsoft/mdm/queue/externalaction. В **обозревателе объектов** среды SQL Management Studio очереди находятся в узле компонента Service Broker базы данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Имейте в виду, что если служба должным образом очистила очередь, она будет пуста.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пример настраиваемого рабочего процесса &#40;Master Data Services&#41;](create-a-custom-workflow-example.md)   
  [Описание XML настраиваемого рабочего процесса (службы Master Data Services)](create-a-custom-workflow-xml-description.md)  
   

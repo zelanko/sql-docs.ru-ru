@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 834b26bc-49de-4033-88d5-6aa7b1609720
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 300e3dd81ae7a3de2361c79864130c1361c19588
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd3e075f187118c6c2ab7f6898b911be44d2cf31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095864"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012894"
 ---
 # <a name="database-engine-configuration---account-provisioning"></a>Настройка компонента Database Engine — провизионирование учетных записей
   Эта страница служит для задания режима безопасности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также для добавления пользователей или групп Windows в качестве администраторов компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -23,7 +22,7 @@ ms.locfileid: "66095864"
 ## <a name="considerations-for-running-sscurrent"></a>Рекомендации по запуску [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]группа **BUILTIN\Administrators** применялась в качестве имени входа в компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , а члены локальной группы "Администраторы" могли входить в систему с помощью своих учетных данных администратора. Использовать повышенные разрешения не рекомендуется. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] группа **BUILTIN\Administrators** в качестве имени входа не используется. Поэтому следует создать имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для каждого административного пользователя и добавить это имя входа в предопределенную роль сервера sysadmin во время установки нового экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это нужно также сделать для учетных записей Windows, которые используются для запуска заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это включает задания агента репликации.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Режим безопасности** — выберите для установки параметр "Проверка подлинности Windows" или "Смешанный режим проверки подлинности".  
   
  **Провизионирование участников Windows** — в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]локальная группа Windows "Builtin\Администраторы" помещалась в роль сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin, что в сущности предоставляло администраторам Windows доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]не выполняется подготовка группы «Builtin\Администраторы» в роли сервера sysadmin. Вместо этого необходимо выполнить явную подготовку администраторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для новых экземпляров во время установки.  
@@ -49,7 +48,7 @@ ms.locfileid: "66095864"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Никогда не указывайте пустой или простой пароль для пользователя sa.  
   
- **Смешанный режим (проверка подлинности Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аутентификация)**  
+ **Смешанный режим (проверка подлинности Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Аутентификация)**  
  Возможность подключения пользователей с помощью режима проверки подлинности Windows или проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пользователи, которые подключаются под учетной записью Windows, могут использовать доверенные соединения, которые проверяются Windows.  
   
  При выборе смешанного режима проверки подлинности и наличии условий для использования входных имен SQL для согласования унаследованных приложений необходимо установить надежные пароли для всех учетных записей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -101,7 +100,7 @@ ms.locfileid: "66095864"
   
  Дополнительные сведения о выборе учетной записи для выполнения служб [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]приводятся в разделе **Настройка учетных записей и разрешений служб** электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
   
   

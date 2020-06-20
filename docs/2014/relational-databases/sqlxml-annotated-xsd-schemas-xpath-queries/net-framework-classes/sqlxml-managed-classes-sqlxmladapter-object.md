@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0a16eddf-fc26-4d92-82d4-359b5fb905d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86231096c8eef084b36d6195a1c720bd4f9038a3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f950ad2bd22fa84b5f62711ee4fd290ebab136bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717957"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015297"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>Объект SqlXmlAdapter (управляемые классы SQLXML)
   В этом объекте реализованы методы, облегчающие взаимодействие с набором данных в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [доступ к функциям SQLXML в среде .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  
@@ -52,7 +51,7 @@ public SqlXmlAdapter(
                      )   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlXmlCommand &#40;управляемые классы SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)  
   

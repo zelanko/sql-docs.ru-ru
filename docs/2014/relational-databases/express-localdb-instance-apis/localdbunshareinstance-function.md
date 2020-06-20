@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45972029fdb06f447492ec75e1ab64a54f4adce5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128674"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050964"
 ---
 # <a name="localdbunshareinstance-function"></a>Функция LocalDBUnshareInstance
   Останавливает совместный доступ к указанному экземпляру SQL Server Express LocalDB.  
@@ -44,7 +43,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [Вход] Зарезервировано для использования в будущем. В настоящее время должно быть равным 0.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -69,7 +68,7 @@ HRESULT LocalDBUnShareInstance(
 ## <a name="remarks"></a>Remarks  
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

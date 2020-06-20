@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d452ca155a5187136c910e81e8bd073e34cad56
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935376"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет специальное диагностическое соединение для администраторов, когда стандартное соединение с сервером невозможно. Это диагностическое соединение позволяет администратору получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения диагностических запросов и устранения проблем, даже когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отвечает на стандартные запросы на соединение.  
@@ -36,14 +35,14 @@ ms.locfileid: "62810425"
   
 ||  
 |-|  
-|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)) [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)],.|  
+|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] .|  
   
 ## <a name="connecting-with-dac"></a>Соединение с помощью выделенного административного соединения  
  По умолчанию, соединение разрешено только из клиента, запущенного на сервере. Сетевые подключения не разрешаются, пока они не настроены с помощью хранимой процедуры sp_configure с параметром [remote admin connections](remote-admin-connections-server-configuration-option.md).  
   
  Только члены роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin могут подключаться с использованием выделенного административного соединения.  
   
- Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром ( **-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подсоединить префикс `admin:`к имени экземпляра в формате **sqlcmd-садмин:** _<instance_name>._ Кроме того, приложение уровня данных можно запустить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] из редактора запросов, подключившись `admin:` \<к *instance_name*>.  
+ Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром (**-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подсоединить префикс `admin:` к имени экземпляра в формате **sqlcmd-садмин:** _<instance_name>._ Кроме того, приложение уровня данных можно запустить из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактора запросов, подключившись к `admin:` \<*instance_name*> .  
   
 ## <a name="restrictions"></a>Ограничения  
  Так как выделенное административное соединение существует только для диагностики проблем на сервере в редких обстоятельствах, у подключения есть некоторые ограничения.  
@@ -54,7 +53,7 @@ ms.locfileid: "62810425"
   
 -   Сначала выделенное административное соединение подключается к базе данных по умолчанию, связанной с именем входа. После успешного соединения можно подключиться к базе данных master. Если база данных по умолчанию находится в режиме вне сети или недоступна по другой причине, соединение вернет ошибку 4060. При этом соединение будет успешным, если вместо базы данных по умолчанию подключиться к базе данных master с помощью следующей команды:  
   
-     **sqlcmd -A -d master**  
+     **Мастер SQLCMD-A-d**  
   
      Рекомендуется подключаться через выделенное административное соединение к базе данных master, так как база данных master будет в любом случае доступна, если запущен экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -74,9 +73,9 @@ ms.locfileid: "62810425"
   
 -   Запрос представлений каталога.  
   
--   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не выполняйте такие ресурсоемкие команды, как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
+-   Основные команды DBCC, например DBCC FREEPROCCACHE, DBCC FREESYSTEMCACHE, DBCC DROPCLEANBUFFERS`,` а также DBCC SQLPERF. Не запускайте ресурсоемкие команды, такие как **DBCC** CHECKDB, DBCC DBREINDEX или DBCC SHRINKDATABASE.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] Команда KILL *\<spid>* . В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]*\<spid>* Команда KILL. В зависимости от состояния [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]команда KILL не всегда выполняется успешно. В этом случае единственным выходом остается перезапуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Рассмотрим несколько общих правил.  
   
     -   С помощью запроса `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`убедитесь, что SPID был действительно отключен. Если строки не возвращаются, значит, сеанс был остановлен.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "62810425"
   
  Порт выделенных административных соединений присваивается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] динамически во время запуска. При соединении с экземпляром по умолчанию DAC стремится не использовать запрос протокола разрешения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SSRP) к службе обозревателя SQL Server. Сначала выполняется попытка подключиться через TCP-порт 1434. В случае ошибки следует вызов SSRP на получение порта. Если браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не ожидает запросов SSRP, запрос на подключение возвращает ошибку. Обратитесь к журналу ошибок, чтобы найти номер порта, на котором ожидается выделенное административное соединение. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема удаленных административных подключений, выделенное административное соединение должно быть инициировано с явно указанным номером порта:  
   
- **sqlcmd-stcp:** _ \<сервер>,\<порт>_  
+ **sqlcmd-stcp:** _ \<server> , \<port> _  
   
  Журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приводит номер порта для выделенного административного соединения; по умолчанию он равен 1434. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для приема только локальных выделенных административных соединений, подключайтесь через адаптер замыкания на себя с использованием следующей команды:  
   

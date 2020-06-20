@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8a50e450e009a9d584adc54b4c52cd8b7da457e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066263"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Изменение цвета, размера и стиля шрифта в диаграммах (визуальные инструменты для баз данных)
   Можно настроить способ отображения текста в диаграммах баз данных, изменив цвет, размер и стиль шрифта. Изменения применяются как к новым диаграммам, так и к существующим (при их изменении).  

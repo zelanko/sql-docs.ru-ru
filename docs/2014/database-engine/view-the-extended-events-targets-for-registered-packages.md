@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4985aa5f-ac99-49f6-852c-9d25916549e9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae927a281db54697bbda49e28a58ea4c6e60326a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e796d141ef943399fc2469c232b34b1956cef3b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088731"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927343"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>просмотреть цели расширенных событий для зарегистрированных пакетов
   Перед созданием сеанса расширенных событий [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] полезно определить, какие цели расширенных событий доступны. Эта задача решается с помощью редактора запросов в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для выполнения следующей процедуры.  
@@ -43,7 +42,7 @@ ms.locfileid: "66088731"
     WHERE o.object_type = 'target'  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Serverные цели расширенных событий](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys. dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  

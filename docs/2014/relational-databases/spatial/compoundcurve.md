@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6a899bbe9a17a64083592e1078e8cac93365f02b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176684"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015999"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Объект `CompoundCurve` — это набор из нуля или большего количества непрерывных экземпляров `CircularString` или `LineString` геометрического или географического типов.
@@ -90,7 +89,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. Экземпляр `@g2` недопустим, поскольку экземпляр `LineString` является недопустимым. Экземпляр `@g3` недопустим, поскольку экземпляр `CircularString` является недопустимым. Дополнительные сведения о допустимых `CircularString` экземплярах и `LineString` см. в разделе [CircularString](circularstring.md) и [LineString](linestring.md).
+ `@g1` недопустим, поскольку второй экземпляр не является допустимым LineString. Экземпляр `@g2` недопустим, поскольку экземпляр `LineString` является недопустимым. Экземпляр `@g3` недопустим, поскольку экземпляр `CircularString` является недопустимым. Дополнительные сведения о допустимых `CircularString` `LineString` экземплярах и см. в разделе [CircularString](circularstring.md) и [LineString](linestring.md).
 
 ## <a name="examples"></a>Примеры
 
@@ -102,7 +101,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ```
 
-### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>Б) Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции
+### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>Б. Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции
  В следующем примере показано, как объявить и инициализировать экземпляр `geometry` с `CompoundCurve`в одной инструкции:
 
 ```sql

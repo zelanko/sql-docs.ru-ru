@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ae9ea068-0857-4505-a3b2-f53d256b644c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 13e20c9c4b415ad5dabc53baad813126a81afcae
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 707c1389f1a1a97d904617ebb54cbf5c5495a9d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065702"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Форматирование XML-кода на сервере (SQLXML 4.0)
   В этом разделе содержится информация о форматировании на серверной стороне XML-документов из наборов строк, которые создаются при выполнении запросов к базе данных в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -52,7 +51,7 @@ FROM   Person.Contact
   
  Дополнительные сведения о предложении FOR XML см. в разделе [Создание XML с помощью предложения FOR XML](../../xml/for-xml-sql-server.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Архитектура форматирования XML на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML (SQL Server)](../../xml/for-xml-sql-server.md)  

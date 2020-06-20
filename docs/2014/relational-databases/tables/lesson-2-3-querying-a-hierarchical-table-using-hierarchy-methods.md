@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c86c8e8678fc821dc3796a511349c1c3498bdb7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068020"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Создание запросов к иерархической таблице с помощью иерархических методов
   После того как таблица HumanResources.EmployeeOrg будет заполнена, эта задача продемонстрирует, как можно проводить запросы к иерархии с помощью некоторых иерархических методов.  

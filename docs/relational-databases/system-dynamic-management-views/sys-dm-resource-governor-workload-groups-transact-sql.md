@@ -1,7 +1,7 @@
 ---
 title: sys. dm_resource_governor_workload_groups (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/24/2018
+ms.date: 06/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941039"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82821064"
 |group_id|**int**|Идентификатор группы рабочей нагрузки. Не допускает значение NULL.|  
 |name|**sysname**|Имя группы рабочей нагрузки. Не допускает значение NULL.|  
 |pool_id|**int**|Идентификатор пула ресурсов. Не допускает значение NULL.|  
-|external_pool_id|**int**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий.<br /><br /> ИДЕНТИФИКАТОР внешнего пула ресурсов. Не допускает значение NULL.|  
+|external_pool_id|**int**|**Применимо к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> ИДЕНТИФИКАТОР внешнего пула ресурсов. Не допускает значение NULL.|  
 |statistics_start_time|**datetime**|Время, когда был выполнен сброс коллекции статистики для группы рабочей нагрузки. Не допускает значение NULL.|  
 |total_request_count|**bigint**|Совокупное количество выполненных запросов в группе рабочей нагрузки. Не допускает значение NULL.|  
 |total_queued_request_count|**bigint**|Совокупное количество запросов, помещенных в очередь по достижении предельного значения GROUP_MAX_REQUESTS. Не допускает значение NULL.|  
@@ -62,24 +62,23 @@ ms.locfileid: "82821064"
 |request_max_cpu_time_sec|**int**|Текущее значение параметра максимально допустимого использования ЦП, в секундах, для отдельного запроса. Не допускает значение NULL.|  
 |request_memory_grant_timeout_sec|**int**|Текущее значение параметра времени ожидания предоставления, в секундах, для отдельного запроса. Не допускает значение NULL.|  
 |group_max_requests|**int**|Текущее значение параметра максимального числа параллельных запросов. Не допускает значение NULL.|  
-|max_dop|**int**|Максимальная степень параллелизма для группы рабочей нагрузки. Для значения по умолчанию 0 используются глобальные параметры. Не допускает значение NULL.|  
+|max_dop|**int**|Настроена максимальная степень параллелизма для группы рабочей нагрузки. Для значения по умолчанию 0 используются глобальные параметры. Не допускает значение NULL.| 
+|effective_max_dop|**int**|**Применимо к**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Эффективная максимальная степень параллелизма для группы рабочей нагрузки. Не допускает значение NULL.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**Применимо к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Общее время ЦП, используемое в планировщике в режиме с вытеснением для группы рабочей нагрузки, измеряется в мс. Не допускает значение NULL.<br /><br />Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением.| 
+|request_max_memory_grant_percent_numeric|**float**|**Применимо к**: начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Текущее значение параметра максимального объема предоставляемой памяти, в процентах, для отдельного запроса. Не допускает значение NULL.| 
 |pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
 ## <a name="remarks"></a>Remarks  
- Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть сохраненные метаданные конфигурации, используйте представление каталога sys.resource_governor_workload_groups.  
+ Данное динамическое административное представление отображает конфигурацию, хранимую в памяти. Чтобы просмотреть метаданные сохраненной конфигурации, используйте представление каталога [&#41;инструкции sys. resource_governor_workload_groups &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
- Когда инструкция ALTER RESOURCE GOVERNOR сбросить СТАТИСТИКУ успешно выполняется, следующие счетчики сбрасываются: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count и max_request_grant_memory_kb. statistics_start_time устанавливается в текущую системную дату и время, другие счетчики устанавливаются в ноль (0).  
+ При `ALTER RESOURCE GOVERNOR RESET STATISTICS` успешном выполнении следующие счетчики сбрасываются: `statistics_start_time` , `total_request_count` ,, `total_queued_request_count` , `total_cpu_limit_violation_count` `total_cpu_usage_ms` , `max_request_cpu_time_ms` , `total_lock_wait_count` , `total_lock_wait_time_ms` , `total_query_optimization_count` , `total_suboptimal_plan_generation_count` , `total_reduced_memgrant_count` и `max_request_grant_memory_kb` . Счетчику `statistics_start_time` присваивается значение текущей системной даты и времени, а другим счетчикам присваивается нулевое значение (0).  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо разрешение VIEW SERVER STATE.  
+ Требуется разрешение `VIEW SERVER STATE`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)   
  [sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
-
-
-

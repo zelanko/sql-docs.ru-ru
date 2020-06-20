@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807934"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934295"
 ---
 # <a name="database-mirroring-sql-server"></a>Зеркальное отображение базы данных (SQL Server)
     
@@ -211,7 +210,7 @@ ms.locfileid: "62807934"
 > [!NOTE]  
 >  Зеркальные базы данных независимы друг от друга, поэтому эти базы данных не могут переключаться при сбое как единая группа.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>Клиентские подключения  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Клиентские соединения  
  Поддержка клиентских соединений для сеансов зеркального отображения базы данных предоставлена поставщиком данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Влияние приостановки сеанса на основной журнал транзакций  
@@ -233,7 +232,7 @@ ms.locfileid: "62807934"
   
 -   [Репликация](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>В этом разделе  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> в этом разделе  
  [Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Описание предварительных условий и рекомендаций по настройке зеркального отображения базы данных.  
   
@@ -325,7 +324,7 @@ ms.locfileid: "62807934"
   
 -   [Удаление зеркального отображения базы данных (SQL Server)](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server &#40;конечной точки зеркального отображения базы данных&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Автоматическое восстановление страниц &#40;для групп доступности и зеркального отображения базы данных&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [Устранение неполадок конфигурации зеркального отображения базы данных &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   

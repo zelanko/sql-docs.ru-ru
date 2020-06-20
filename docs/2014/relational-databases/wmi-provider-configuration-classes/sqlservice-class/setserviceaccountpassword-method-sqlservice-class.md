@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 113d84526b34f9f702cd8da68a06c055c3b559e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41823ebcbad3f545a8b516b3fad457230d3fdf8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067879"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Метод SetServiceAccountPassword (класс SqlService)
   Изменяет пароль учетной записи, под именем которой выполняется указанная служба.  

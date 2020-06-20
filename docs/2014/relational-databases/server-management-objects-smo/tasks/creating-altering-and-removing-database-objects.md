@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bf11ece3797f9bbc580339846efb685876b2d0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dd0c0175a23f809fc925c5104ac15ac408805b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188623"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996930"
 ---
 # <a name="working-with-database-objects"></a>Работа с объектами базы данных
   Создание объектов SMO включает следующие этапы:  
@@ -41,7 +40,7 @@ ms.locfileid: "63188623"
   
  Инструкция `Drop` используется для удаления объекта и всех взаимозависимых дочерних объектов, которые требовались для первоначального создания объекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объектная модель SMO](../smo-object-model.md)  
   
   

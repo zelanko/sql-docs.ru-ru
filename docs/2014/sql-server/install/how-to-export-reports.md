@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3d8fd063-266d-49f1-bbf3-b3d53917c471
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e99cbf0f0154a7cda5f237256a8d60cf1ebb085d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c0b625ac90e968cd68911a6527b82da6a988f7d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059298"
 ---
 # <a name="how-to-export-reports"></a>Экспорт отчетов
   Средство просмотра отчетов помощника по обновлению позволяет экспортировать отчет в виде плоского файла. Это позволяет обрабатывать данные в виде электронной таблицы или документа в текстовом редакторе или отправлять их по электронной почте.  
@@ -37,7 +36,7 @@ ms.locfileid: "66094901"
   
 4.  В диалоговом окне **Экспорт файла отчета** введите имя файла, выберите назначение и нажмите кнопку **ОК**. Файл будет сохранен в формате CSV (значения с разделителями-запятыми). Файл можно открыть с помощью программы Microsoft Excel или других подобных приложений. Если данные нужно представить в другом формате, можно скопировать их из программы Excel в программу Microsoft Word или какое-либо другое приложение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Руководство. Запуск помощника по обновлению](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
  [Как запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Устранение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   

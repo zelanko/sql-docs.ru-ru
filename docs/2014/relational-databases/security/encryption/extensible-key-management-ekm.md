@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 7d4fb415f9fbb556240d626aa48453d6d69d8072
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc9b002b57f8118494709f8fe27a8b19ce28d8e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068406"
 ---
 # <a name="extensible-key-management-ekm"></a>Расширенное управление ключами (Extensible Key Management)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] наряду с *расширенным управлением ключами* (EKM) предусматривает возможность шифрования данных с применением поставщика *Microsoft Cryptographic API* (MSCAPI) для шифрования и создания ключа. Ключи шифрования для шифрования данных и ключей создаются в контейнерах временных ключей и перед сохранением в базе данных должны быть экспортированы из поставщика. Благодаря этому подходу управление ключами, содержащее иерархию ключей шифрования и резервирование ключей, может быть обработано [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

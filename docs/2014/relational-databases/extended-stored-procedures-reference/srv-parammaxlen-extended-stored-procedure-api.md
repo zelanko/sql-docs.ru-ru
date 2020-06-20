@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890d87b22e4d91fd50793b5f3cf5ac697fdf8b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050751"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API-интерфейс расширенных хранимых процедур)
     
@@ -55,7 +54,7 @@ n
  *n*  
  Указывает номер параметра. Первый параметр имеет значение 1.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Наибольшая длина данных параметра в байтах. Если отсутствует *n*-й параметр или удаленная хранимая процедура, то возвращается значение -1.  
   
  Эта функция возвращает следующие значения, если параметр имеет один из следующих [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных.  
@@ -69,7 +68,7 @@ n
 |`BIGVARBINARY`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |`NCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |`NVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|`NTEXT`|**Null:** -1<br /><br /> **ZERO:** –1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|`NTEXT`|**Null:** -1<br /><br /> **ZERO:** –1<br /><br /> **>= 255:** -1<br /><br /> ** \< 255:** -1|  
   
 ## <a name="remarks"></a>Remarks  
  У каждого параметра удаленной хранимой процедуры есть максимальная и реальная длина данных. Для стандартных типов данных с фиксированной длиной, которые не поддерживают значений NULL, реальная и максимальная длина одинаковы. У типов данных переменной длины эти длины могут быть разными. Например, параметр, объявленный как **varchar(30)**, может иметь данные длиной всего 10 байт. Фактическая длина параметра — 10, а максимальная — 30. Функция **srv_parammaxlen** возвращает максимальную длину данных удаленной хранимой процедуры. Чтобы получить фактическую длину параметра, используйте функцию **srv_paramlen**.  
@@ -79,7 +78,7 @@ n
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [API srv_paraminfo &#40;расширенных хранимых процедур&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](srv-rpcparams-extended-stored-procedure-api.md)  
   

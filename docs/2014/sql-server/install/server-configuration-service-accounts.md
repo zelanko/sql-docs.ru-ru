@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921138"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036724"
 ---
 # <a name="server-configuration---service-accounts"></a>Настройка сервера — учетные записи служб
   На странице «Настройка сервера» мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно задать учетные записи входа для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Службы, которые можно настраивать на этой странице, зависят от того, какие компоненты были выбраны во время установки.  
   
-Стартовые учетные записи, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для запуска и запуска, могут представлять собой учетные записи пользователей домена, локальные учетные записи пользователей, управляемые учетные записи служб, виртуальные учетные записи или встроенные системные учетные записи.  
+Стартовые учетные записи, используемые для запуска и запуска, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут представлять собой учетные записи пользователей домена, локальные учетные записи пользователей, управляемые учетные записи служб, виртуальные учетные записи или встроенные системные учетные записи.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. В большинстве установок рекомендуется использовать учетную запись по умолчанию.  
   
  В Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 большинство учетных записей по умолчанию представлены виртуальной учетной записью.  

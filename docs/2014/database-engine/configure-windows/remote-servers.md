@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9c2962ab632ba9ac8464fdd1c9ae8f2bda30744
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809879"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935135"
 ---
 # <a name="remote-servers"></a>Удаленные серверы
   Удаленные серверы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются лишь для обратной совместимости. Новые приложения должны использовать вместо них связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  

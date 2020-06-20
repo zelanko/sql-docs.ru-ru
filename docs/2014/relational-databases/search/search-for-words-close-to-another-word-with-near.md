@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2d187ea3ed951ac6f17eb4babc5f4f77451d4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011068"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004004"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
-  Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживает как более раннее [универсальное выражение](#Generic_NEAR)с учетом расположения, которое теперь является устаревшим, так и [настраиваемое выражение](#Custom_NEAR)с учетом расположения, которое является новым в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+  Выражение с учетом расположения (NEAR) может применяться в предикате [CONTAINS](/sql/t-sql/queries/contains-transact-sql) или функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) для поиска слов или фраз, расположенных рядом. Также можно указать максимальное количество слов, которые не включаются в поиск и разделяют первое и последнее из искомых слов. Кроме того, можно искать два слова или две фразы в любом порядке или в порядке, в котором они указаны. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]поддерживает как более раннее [универсальное выражение](#Generic_NEAR)с учетом расположения, которое теперь является устаревшим, так и [настраиваемое выражение](#Custom_NEAR)с учетом расположения, которое является новым в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
   
 ##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Настраиваемое выражение с учетом расположения  
  Настраиваемое выражение с учетом расположения дает следующие новые возможности.  
@@ -101,7 +100,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*выражение1*,*выражение2*),5) OR NEAR((*выражение3*,*выражение4*),2, TRUE)')  
   
- Например, примененная к объекту директива  
+ Например,  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -184,7 +183,7 @@ CONTAINSTABLE (Production.ProductDescription,
 )  
 ```  
   
- Универсальное выражение с учетом расположения нельзя сочетать с настраиваемым выражением с `NEAR((term1,term2),5)`учетом расположения, таким как, взвешенное выражение (FORMSOF...) или выражение с более весомым сроком.  
+ Универсальное выражение с учетом расположения нельзя сочетать с настраиваемым выражением с учетом расположения, таким как `NEAR((term1,term2),5)` , взвешенное выражение (FORMSOF...) или выражение с более весомым сроком.  
   
 ### <a name="example-using-the-generic-proximity-term"></a>Пример. Использование универсального выражения с учетом расположения  
  В следующем примере универсальное выражение с учетом расположения используется для поиска слова «reflector» в одном документе со словом «bracket».  
@@ -224,7 +223,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [CONTAINSTABLE (Transact-SQL)](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [Запрос с полнотекстовым поиском](query-with-full-text-search.md)   
  [CONTAINS (Transact-SQL)](/sql/t-sql/queries/contains-transact-sql)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff5c519fbe9bf8096807962a939677b3a5d58cc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832461"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919611"
 ---
 # <a name="data-flow-task"></a>Задача потока данных
   В состав задачи потока данных входит подсистема обработки потока данных, перемещающая данные между источником и назначением и позволяющая пользователю преобразовывать, очищать и изменять данные в процессе перемещения. Добавление задачи потока данных в поток управления пакета позволяет пакету извлекать, преобразовывать и загружать данные.  
