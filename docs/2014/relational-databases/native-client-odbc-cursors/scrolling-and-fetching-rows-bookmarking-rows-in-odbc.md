@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: def05f478c16dcbcdc91771925a11b0b91da2e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705554"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020537"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>Создание закладок строк в ODBC
   Закладка представляет собой значение, используемое для идентификации строки данных. Содержание значения закладки понятно только драйверу или источнику данных. Например, оно может быть простым (номером строки) или сложным (адрес на диске). В ODBC приложение запрашивает закладку для конкретной строки, сохраняет ее и передает обратно курсору для возврата к строке.  
@@ -30,7 +29,7 @@ ms.locfileid: "82705554"
   
  Закладки также можно использовать с функцией **SQLBulkOperations** для выполнения операций с набором строк, начиная с закладки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Прокрутка и выборка строк](../native-client-ole-db-rowsets/fetching-rows.md)  
   
   

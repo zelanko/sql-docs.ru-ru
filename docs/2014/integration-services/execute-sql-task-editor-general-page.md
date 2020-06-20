@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058991"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966782"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Редактор задачи «Выполнение SQL» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Выполнение SQL»** для настройки задачи «Выполнение SQL» и формирования инструкции SQL, которую запускает задача.  
@@ -27,19 +26,19 @@ ms.locfileid: "66058991"
  Сведения об этой задаче см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md), [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md) и [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md). Дополнительные сведения о языке Transact-SQL см. в [Справочнике по Transact-SQL (компонент Database Engine)](/sql/t-sql/language-reference).  
   
 ## <a name="static-options"></a>Статические параметры  
- **Имя**  
+ **имя**;  
  Укажите уникальное имя для задачи «Выполнение SQL» в рабочем процессе. Предоставляемое имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
  **Описание**  
  Приведите описание задачи «Выполнение SQL». Рекомендуется описать назначение задачи, чтобы сделать пакеты самодокументируемыми и более простыми в обслуживании.  
   
  **Счетчик**  
- Укажите максимальное число секунд, в течение которых будет выполняться задача до истечения времени ожидания. Значение 0 указывает на бесконечное время. Значение по умолчанию — 0.  
+ Укажите максимальное число секунд, в течение которых будет выполняться задача до истечения времени ожидания. Значение 0 указывает на бесконечное время. Значение по умолчанию равно 0.  
   
 > [!NOTE]  
 >  Хранимые процедуры не завершаются по истечении времени ожидания, если в них моделируются функции ожидания при помощи предоставления времени для выполнения соединений и завершения транзакций, большего, чем время в секундах, задаваемое параметром **Время ожидания**. Однако хранимые процедуры, выполняющие запросы, всегда ограничены по времени, что задается параметром **Время ожидания**.  
   
- **Страница**  
+ **CodePage**  
  Укажите кодовую страницу, используемую при преобразовании значений переменных в Юникоде. По умолчанию используется кодовая страница локального компьютера.  
   
 > [!NOTE]  
@@ -56,8 +55,8 @@ ms.locfileid: "66058991"
   
  **См. также:** [Диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md), [Диспетчер соединений ODBC](connection-manager/odbc-connection-manager.md), [Диспетчер соединений ADO](connection-manager/ado-connection-manager.md), [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md), [Диспетчер соединений SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Соединен**  
- Выберите соединение из списка определенных диспетчеров соединений. Чтобы создать новое соединение, выберите \< **создать соединение...**>.  
+ **Соединение**  
+ Выберите соединение из списка определенных диспетчеров соединений. Чтобы создать новое соединение, выберите \<**New connection...**> .  
   
  **SQLSourceType**  
  Выберите тип источника для инструкции SQL, выполняемой этой задачей.  
@@ -101,17 +100,17 @@ ms.locfileid: "66058991"
   
 ### <a name="sqlsourcetype--file-connection"></a>WQLQuerySource = Подключение файла  
  **FileConnection**  
- Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...**>, чтобы создать новый диспетчер подключений.  
+ Выберите существующий диспетчер соединения файлов или щелкните \<**New connection...**> , чтобы создать новый диспетчер соединений.  
   
  **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
- Выберите существующую переменную или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
+ Выберите существующую переменную или щелкните, \<**New variable...**> чтобы создать новую переменную.  
   
  **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "Сопоставление параметров"&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "результирующий набор"&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

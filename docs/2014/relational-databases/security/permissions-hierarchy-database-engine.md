@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 607ac55fe426cd086ce31ade33d3e772e7a3d9a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a04e5595e509de63b362b31b240e113e635581d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063170"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Иерархия разрешений (компонент Database Engine)
   Компонент [!INCLUDE[ssDE](../../../includes/ssde-md.md)] управляет иерархической коллекцией сущностей, защита которых производится при помощи разрешений. Эти сущности называются *защищаемыми объектами*. Важнейшими защищаемыми компонентами являются серверы и базы данных, однако отдельные разрешения можно задавать на гораздо более глубоком уровне. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регулирует действия участников на защищаемых объектах, проверяя, что им были предоставлены соответствующие разрешения.
@@ -34,7 +33,7 @@ ms.locfileid: "81487157"
  ![Диаграмма иерархий разрешений в ядре СУБД](../../database-engine/media/wj-security-layers.gif "Диаграмма иерархий разрешений в ядре СУБД")
 
 ## <a name="chart-of-sql-server-permissions"></a>Диаграмма разрешений SQL Server
- Для получения диаграммы с размером афиши [!INCLUDE[ssDE](../../../includes/ssde-md.md)] всех разрешений в формате PDF см [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf). раздел.
+ Для получения диаграммы с размером афиши всех [!INCLUDE[ssDE](../../../includes/ssde-md.md)] разрешений в формате PDF см [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) . раздел.
 
 ## <a name="working-with-permissions"></a>Работа с разрешениями
  Выполнение различных действий с разрешениями осуществляется при помощи обычных запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] : GRANT, DENY и REVOKE. Сведения о разрешениях доступны через представления каталога [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) и [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) . Существует также поддержка запроса сведений о разрешениях при помощи встроенных функций.

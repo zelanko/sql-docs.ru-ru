@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175425"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024940"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Занятие 8. Восстановление базы данных в службу хранилища Azure
   На этом занятии вы узнаете, как создать файл резервной копии локально, а затем восстановить его в службе хранилища Azure. Обратите внимание, что базу данных можно настроить либо локально, либо на виртуальной машине в Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6 и 7.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175425"
   
 8.  В разделе **Восстановление файлов базы данных** как в поле **восстановить как** введите следующее:  
   
-     Для файла данных введите: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`. В качестве файла журнала введите: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`.  
+     Для файла данных введите: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` . В качестве файла журнала введите: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` .  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

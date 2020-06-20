@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965971"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Оценка размера некластеризованного индекса
   Чтобы оценить объем пространства, необходимого для хранения некластеризованного индекса, можно выполнить следующие шаги.  
@@ -181,7 +180,7 @@ ms.locfileid: "66054121"
   
 5.  Расчет размера индексной строки:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (для служебных данных заголовков строк индекса) + 6 (для указателя на идентификатор дочерней страницы)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (для дополнительных затрат на заголовки строк в строке индекса) + 6 (для указателя на идентификатор дочерней страницы)  
   
 6.  Расчет количества индексных строк на страницу (8 096 свободных байт на страницу):  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054121"
   
 1.  Вычислите количество неконечных уровней индекса:  
   
-     ***Неконечные уровни*** = 1 + Index_Rows_Per_Page журнала (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Неконечные уровни*** = 1 + Index_Rows_Per_Page журнала (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Данное значение округляется в большую сторону до ближайшего целого числа. Это значение не включает конечный уровень некластеризованного индекса.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65ace190004cab911dd8996642720620eba94935
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045157"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>Изменение в работе представления syslockinfo и процедуры sp_lock
   Представление**syslockinfo** и хранимая процедура **sp_lock** могут возвратить непредвиденные значения. Кроме того, они могут вернуть дополнительные строки, в то время как предыдущие версии представления **syslockinfo** и хранимой процедуры **sp_lock** возвращали не более двух строк на каждый ресурс блокировки.  
@@ -36,7 +35,7 @@ ms.locfileid: "66096645"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

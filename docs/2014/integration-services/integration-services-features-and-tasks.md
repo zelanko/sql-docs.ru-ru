@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c0b3f4c2-b77c-4485-be77-cec5fd382c86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64b1945ba990278241d38cebb029feab86d6d7bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab35cd849d020a265fac097f2a0314a81c20dd8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058031"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965445"
 ---
 # <a name="integration-services-features-and-tasks"></a>Функции и задачи служб Integration Services
-  Найдите сведения, необходимые для создания и разработки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] пакетов любым пользователем-конструктором, разработчиком, аналитиком или администратором. Также объясняется, как включать эти пакеты в приложения и веб-сайты.  
+  Найдите сведения, необходимые для создания и разработки пакетов любым пользователем-конструктором, разработчиком, аналитиком или администратором [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Также объясняется, как включать эти пакеты в приложения и веб-сайты.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Integration Services среды &#40;SSIS&#41; и Studio](integration-services-ssis-development-and-management-tools.md)  

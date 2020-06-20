@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b112669457f9e9f675e00466896e4da91abd53d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963699"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Диалоговое окно «Выбор перечисления SMO»
   Диалоговое окно **Выбор перечисления SMO** позволяет указать в заданном экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] управляющий объект [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) для перечисления, а также выбрать тип перечисления.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Перечислить**  
  Разверните сервер и выберите объект SMO.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66055950"
  **Расположения**  
  Применение типа перечисления местонахождений. Этот параметр доступен только для файлов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контейнер «цикл по каждому элементу»](control-flow/foreach-loop-container.md)   
  [Учебник по программированию управляющих объектов SQL Server (SMO)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

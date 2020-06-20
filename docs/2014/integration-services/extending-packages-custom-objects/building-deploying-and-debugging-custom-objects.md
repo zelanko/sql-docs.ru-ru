@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176384"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966624"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Построение, развертывание и отладка пользовательских объектов
   После написания кода пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо построить сборку, развернуть ее, интегрировать ее в конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы сделать ее доступной для использования в пакетах, а затем протестировать и выполнить ее отладку.
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Развертывание сборки
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] Конструктор находит пользовательские объекты, доступные для использования в пакетах, перечисляя файлы, находящиеся в ряде папок, создаваемых при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] установке. При использовании параметров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки по умолчанию этот набор папок находится в папке **C:\Program Files\Microsoft SQL Server\120\DTS**. Однако при создании программы установки для пользовательского объекта следует проверить значение раздела реестра **HKEY_LOCAL_MACHINE \СОФТВАРЕ\МИКРОСОФТ\МИКРОСОФТ SQL Server\120\SSIS\Setup\DtsPath** , чтобы проверить расположение этой папки.
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)]Конструктор находит пользовательские объекты, доступные для использования в пакетах, перечисляя файлы, находящиеся в ряде папок, создаваемых при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] установке. При [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использовании параметров установки по умолчанию этот набор папок находится в папке **C:\PROGRAM Files\Microsoft SQL Server\120\DTS**. Однако при создании программы установки для пользовательского объекта следует проверить значение раздела реестра **HKEY_LOCAL_MACHINE \СОФТВАРЕ\МИКРОСОФТ\МИКРОСОФТ SQL Server\120\SSIS\Setup\DtsPath** , чтобы проверить расположение этой папки.
 
  Можно поместить сборку в папку двумя способами.
 
@@ -82,7 +81,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 |Пользовательский объект|Папка развертывания|
 |-------------------|-----------------------|
-|Задача|Задачи|
+|Задача|Задания|
 |Диспетчер соединений|Соединения|
 |Регистратор|LogProviders|
 |Компонент потока данных|PipelineComponents|
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Тестирование и отладка кода
  Самым простым подходом к отладке методов времени выполнения пользовательского объекта является запуск **dtexec.exe** из среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] после построения пользовательского объекта и выполнение пакета, использующего этот компонент.
 
- Если вы хотите отладить методы времени разработки компонента, такие как `Validate` метод, откройте пакет, который использует этот компонент во втором экземпляре [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], и присоедините его к процессу **devenv. exe** .
+ Если вы хотите отладить методы времени разработки компонента, например `Validate` метод, откройте пакет, который использует этот компонент во втором экземпляре [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , и присоедините его к **devenv.exe** процессу.
 
  Если также требуется выполнить отладку методов времени выполнения компонента, когда пакет открыт и выполняется в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)], необходимо принудительно приостановить выполнение пакета с тем, чтобы можно было также присоединиться к процессу **DtsDebugHost.exe**.
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  Подпишите и постройте проект в конфигурации отладки, выполните развертывание и установку в глобальный кэш сборок, как описано в этом разделе.
 
-2.  На вкладке **Отладка** в **свойствах проекта**выберите **Запуск внешней программы** в качестве **действия при запуске**и укажите **файл dtexec. exe**, установленный по умолчанию в папке C:\Program Files\Microsoft SQL Server\120\DTS\Binn.
+2.  На вкладке **Отладка** в **свойствах проекта**выберите **Запуск внешней программы** в качестве **действия при запуске**и укажите **dtexec.exe**, который устанавливается по умолчанию в папке C:\Program Files\Microsoft SQL Server\120\DTS\Binn.
 
 3.  В текстовом поле **Параметры командной строки** в разделе **Параметры запуска** введите аргументы командной строки, необходимые для выполнения пакета, который использует пользовательский компонент. Часто аргумент командной строки содержит параметр /F[ILE], за которым следуют путь и имя DTSX-файла. Дополнительные сведения см. в статье [dtexec Utility](../packages/dtexec-utility.md).
 

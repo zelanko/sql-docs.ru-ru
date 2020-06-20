@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 561c0fc56e1f1749c57876f16c4d24dadfe4931d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024458"
 ---
 # <a name="maintenance-plan-design-tab"></a>План обслуживания (вкладка «Конструирование»)
   **План обслуживания** (вкладка "Конструирование") используется для указания свойств плана обслуживания и его вложенных планов. Перетащите задачи из области элементов в конструктор планов. Щелкните правой кнопкой мыши группы задач, чтобы создать ветвящиеся пути выполнения. Планы обслуживания сохраняются в виде пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые запускаются заданиями агентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

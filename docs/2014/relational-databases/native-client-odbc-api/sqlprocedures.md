@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1a0464cd8a91db43f9629bed3cc9e45e48a8f7c3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e37f15841a36eb95c1e9263d137ba2734d622367
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705914"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021804"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
   Все хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращают какое-либо значение. **SQLProcedures** reports SQL_PT_FUNCTION для PROCEDURE_TYPE столбца результирующего набора.  
@@ -30,7 +29,7 @@ ms.locfileid: "82705914"
   
  **SQLProcedures** возвращает сведения обо всех процедурах, имена которых совпадают с записями *CNAME* и могут быть выполнены текущим пользователем или для которого текущий пользователь предоставил разрешение View definition.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLProcedures](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1b51762f8fd25ce6fe83ba3f26c8f0200e6938cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 43ccc0f4b72b8ddd6f1fed66ead95d19247dc5c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706627"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027273"
 ---
 # <a name="sql-server-extended-events-engine"></a>Подсистема расширенных событий SQL Server
   Подсистема расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представляет собой набор служб и объектов, которые выполняют следующие действия.  
@@ -56,7 +55,7 @@ ms.locfileid: "82706627"
   
     -   Когда буферы заполняются, они отправляются целям.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](extended-events.md)  
   
   

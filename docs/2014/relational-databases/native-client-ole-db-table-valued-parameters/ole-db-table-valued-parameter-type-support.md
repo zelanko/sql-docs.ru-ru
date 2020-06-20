@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87dcc1df096d72610be680013776748aca1a11ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7ea078b34dee99b3bc2b97f6c0ce2a6ee8d25113
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018118"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Поддержка типа возвращающего табличное значение параметра OLE DB
   Этот раздел содержит описание поддержки типа параметра OLE DB для параметров, возвращающих табличное значение.  
@@ -59,7 +58,7 @@ CoType RowsetTVP
 ## <a name="properties"></a>Свойства  
  Сведения о свойствах OLE DB, поддерживающих параметры, возвращающие табличное значение, см. в статье [Поддержка типа возвращающего табличное значение параметра OLE DB (свойства)](ole-db-table-valued-parameter-type-support-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Возвращающие табличное значение параметры &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

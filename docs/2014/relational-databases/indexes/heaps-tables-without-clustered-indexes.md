@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a39bac2e0352f2adc7749e980d5cc91044f8ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162153"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025328"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Кучи (таблицы без кластеризованных индексов)
   Кучей является таблица без кластеризованного индекса. Для таблиц, сохраненных как куча, может быть создан один или несколько некластеризованных индексов. Данные хранятся в куче без указания порядка. Обычно данные первоначально сохраняются в порядке, в котором строки вставлены в таблицу, но компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может перемещать данные в куче для более эффективного хранения строк. Поэтому порядок данных нельзя прогнозировать. Чтобы гарантировать порядок строк, возвращаемых из кучи, необходимо использовать предложение `ORDER BY`. Чтобы указать порядок хранения строк, подготовьте кластеризованный индекс для таблицы, чтобы таблица не была кучей.  
@@ -50,10 +49,10 @@ ms.locfileid: "63162153"
 >  Создание или удаление кластеризованных индексов требует перезаписи всей таблицы. Если у таблицы есть некластеризованные индексы, то все они должны быть созданы повторно при каждом изменении кластеризованного индекса. Таким образом, для перехода с кучи на кластеризованный индекс и обратно может потребоваться продолжительное время и дополнительное место на диске — для переупорядочения данных в базе данных tempdb.  
   
 ## <a name="related-content"></a>См. также  
- [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
  [DROP INDEX (Transact-SQL)](/sql/t-sql/statements/drop-index-transact-sql)  
   
- [Описания кластеризованных и некластеризованных индексов](clustered-and-nonclustered-indexes-described.md)  
+ [Описание кластеризованных и некластеризованных индексов](clustered-and-nonclustered-indexes-described.md)  
   
   

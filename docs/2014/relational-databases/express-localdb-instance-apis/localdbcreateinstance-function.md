@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f2887d5fa9f4fccc5a37931dfdc1eb6a51331aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128791"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027858"
 ---
 # <a name="localdbcreateinstance-function"></a>Функция LocalDBCreateInstance
   Создает новый экземпляр SQL Server Express LocalDB.  
@@ -48,7 +47,7 @@ HRESULT LocalDBCreateInstance(
  *dwFlags*  
  [Вход] Зарезервировано для использования в будущем. В настоящее время должно быть равным 0.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  S_OK  
  Функция выполнена успешно.  
   
@@ -104,7 +103,7 @@ HRESULT LocalDBCreateInstance(
   
  Образец кода, использующего API LocalDB, см. в разделе [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
   
   

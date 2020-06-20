@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c035446034c5f9f8dfdeeed6a9b6b4be2ea77d72
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966054"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>Этап 2. Проверка пакета развертывания
   На занятии 1 был создан проект учебного развертывания и в него добавлены пакеты и вспомогательные файлы; в предыдущей задаче была построена программа развертывания для проекта.  
@@ -50,7 +49,7 @@ ms.locfileid: "62891773"
   
      `<?xml version="1.0"?><DTSDeploymentManifest GeneratedBy="Domain\UserName" GeneratedFromProjectName="Deployment Tutorial" GeneratedDate="2006-02-24T13:29:02.6537669-08:00" AllowConfigurationChanges="true"><Package>DataTransfer.dtsx</Package><Package>LoadXMLData.dtsx</Package><ConfigurationFile>datatransferconfig.dtsconfig</ConfigurationFile><ConfigurationFile>loadxmldataconfig.dtsconfig</ConfigurationFile><MiscellaneousFile>Readme.txt</MiscellaneousFile><MiscellaneousFile>orders.xml</MiscellaneousFile><MiscellaneousFile>NewCustomers.txt</MiscellaneousFile><MiscellaneousFile>orders.xsd</MiscellaneousFile></DTSDeploymentManifest>`  
   
-4.  Убедитесь, что `AllowConfigurationChanges` значение атрибута равно **true** , а XML включает `Package` элемент для каждого из этих двух пакетов, `MiscellaneousFile` элемент для каждого из четырех файлов, не являющихся пакетами, и `ConfigurationFile` элемент для каждого из двух XML-файлов конфигурации.  
+4.  Убедитесь, что значение `AllowConfigurationChanges` атрибута равно **true** , а XML включает `Package` элемент для каждого из этих двух пакетов, `MiscellaneousFile` элемент для каждого из четырех файлов, не являющихся пакетами, и `ConfigurationFile` элемент для каждого из двух XML-файлов конфигурации.  
   
 5.  Закройте обозреватель Internet Explorer или текстовый редактор.  
   

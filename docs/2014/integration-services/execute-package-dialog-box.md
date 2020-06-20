@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 4f7a806d-4867-4d1f-bc65-b00c1caee7b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b4b920b17e960059e1212be7dd15c176c0b25a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12a6666357bf4e8a6dc68f395a1e2e8e1fd8fcaf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966874"
 ---
 # <a name="execute-package-dialog-box"></a>Execute Package Dialog Box
   Используйте диалоговое окно **Выполнение пакета** , чтобы запустить пакет, хранящийся на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Пакет служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может содержать параметры, значения которых хранятся в переменных среды. Перед выполнением такого пакета необходимо указать, какая среда будет применяться для задания значений переменных среды. Проект может содержать несколько сред, но для привязки значений переменных среды во время выполнения может использоваться только одна среда. Если в пакете не используются переменные среды, среда не требуется.  
   
- Выбор действия  
+ Выберите действие  
   
 -   [Открытие диалогового окна «Выполнение пакета»](#open_dialog)  
   

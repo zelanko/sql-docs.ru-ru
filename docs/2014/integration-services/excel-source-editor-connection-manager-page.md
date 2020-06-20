@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059168"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966824"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Редактор источника Excel (страница «Диспетчер соединений»)
   Используйте раздел **Диспетчер соединений** диалогового окна **Редактор источника «Excel»** , чтобы выбрать используемую рабочую книгу [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] . Источник Excel считывает данные из рабочего листа или из именованного диапазона в существующей рабочей книге.  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство источника Excel недоступно в **редакторе источника Excel**, но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  `CommandTimeout`Свойство источника Excel недоступно в **редакторе источника Excel**, но может быть задано с помощью **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Дополнительные сведения об источнике Excel см. в разделе [Excel Source](data-flow/excel-source.md).  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66059168"
  **Диспетчер подключений OLE DB**  
  Выберите из списка существующий диспетчер подключений к Excel или создайте новое соединение, нажав кнопку **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новый диспетчер подключений с помощью диалогового окна **Диспетчер подключений Excel** .  
   
  **Режим доступа к данным**  
@@ -79,7 +78,7 @@ ms.locfileid: "66059168"
  **Имя переменной**  
  Выберите переменную, содержащую текст SQL-запроса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "Excel" &#40;столбцы "&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Редактор источника "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   

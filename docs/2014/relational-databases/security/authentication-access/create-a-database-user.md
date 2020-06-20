@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97fc758c754f5fc8803e988d55147670fc3ff45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055436"
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
   В этом разделе описано, как в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] создать пользователя базы данных, сопоставленного с именем входа, с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Пользователь базы данных — это идентификатор имени входа при подключении к базе данных. Имя пользователя базы данных может совпадать с именем входа, но это не является обязательным требованием. Этот раздел предполагает наличие имени входа в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения о создании имени входа см. в разделе [Создание имени входа](create-a-login.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "68211968"
   
 -   **Перед началом работы**  
   
-     [Вводная информация](#Restrictions)  
+     [Фон](#Restrictions)  
   
      [Безопасность](#Security)  
   
@@ -135,7 +134,7 @@ ms.locfileid: "68211968"
   
  Дополнительные сведения см. в разделе [CREATE USER (Transact-SQL)](/sql/t-sql/statements/create-user-transact-sql).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Участники (ядро СУБД)](principals-database-engine.md)  
   
   

@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: f56c0736-dccc-41d2-afcf-71344aff143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2371109c8fa28c579cd90735a51a4ad3a790385
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f54f2a3520a0d34290cb81b411a5ce41a59d7c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255064"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062176"
 ---
 # <a name="manage-schedules"></a>Управление расписаниями
   Позволяет просматривать и изменять свойства [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расписаний заданий агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные расписания**  
  Приводит список расписаний, доступных пользователю. Обратите внимание, что у задания и у расписания должен быть один владелец. Следовательно, в этом списке приводятся только расписания, которые принадлежат владельцу задания.  
   
- **Имя**  
+ **имя**;  
  Отображает имя расписания.  
   
- **Включен**  
+ **Enabled**  
  Выберите этот параметр, чтобы включить расписание.  
   
  **Описание**  
@@ -38,7 +37,7 @@ ms.locfileid: "63255064"
  **Задания в расписании**  
  Приводит список номеров заданий, внесенных в расписание. Щелкните номер, чтобы увидеть свойства задания.  
   
- **Создать**  
+ **Новые**  
  Нажмите эту кнопку, чтобы создать новое расписание.  
   
  **Удаление**  
@@ -47,7 +46,7 @@ ms.locfileid: "63255064"
  **Свойства**  
  Нажмите эту кнопку, чтобы изменить свойства выбранного расписания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)  
   
   

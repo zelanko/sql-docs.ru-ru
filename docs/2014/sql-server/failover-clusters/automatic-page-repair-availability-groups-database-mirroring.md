@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b5a5069d019dc452a49179e1c83d78a50e0566
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137514"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046223"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Автоматическое восстановление страниц (для групп доступности и зеркального отображения баз данных)
   Автоматическое восстановление страниц поддерживается за счет зеркального отображения баз данных и с помощью [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После повреждения страниц вследствие ошибок определенных типов, после чего страницы становятся нечитаемыми, база данных, участвующая в зеркальном отображении (главная или зеркало), либо реплика доступности (основная или вторичная) выполняет попытку автоматического восстановления страницы. Участник или реплика, для которой считывание страницы невозможно, запрашивает новую копию у другого участника или реплики. Если этот запрос завершается успешно, нечитаемая страница заменяется читаемой копией, что обычно устраняет ошибку.  
@@ -52,7 +51,7 @@ ms.locfileid: "63137514"
   
 -   Страница 9 (загрузочная страница базы данных).  
   
--   Страницы распределения: страницы глобальной карты распределения (GAM), страницы общей глобальной карты (SGAM) и страницы свободного места на странице (PFS).  
+-   Страницы размещения: страницы глобальной карты распределения (GAM), страницы общей глобальной карты (SGAM) и страницы свободного места на странице (PFS).  
   
 
   
@@ -105,8 +104,8 @@ ms.locfileid: "63137514"
   
  
   
-## <a name="see-also"></a>См. также  
- [Управление таблицей suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Управление таблицей suspect_pages (SQL Server)](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

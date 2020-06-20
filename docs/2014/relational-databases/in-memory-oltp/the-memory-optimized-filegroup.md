@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffcf41775142b0347e4d05d757cdbe971791f969
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025584"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Оптимизированная для памяти файловая группа
   Для создания оптимизированных для памяти таблиц необходимо сначала создать оптимизированную для памяти файловую группу. Оптимизированная для памяти файловая группа содержит один или несколько контейнеров. В каждом контейнере содержатся файлы данных или разностных файлы (или и те и другие).  
@@ -67,7 +66,7 @@ ms.locfileid: "63155574"
 Аналогичным образом следующие файлы данных и разностного файла будут выделены из контейнеров-3 и контейнеров-4, сопоставленных с диском Y. Это позволяет равномерно распространять данные и разностные файлы по двум дискам.  
  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)     
 [Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)    
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 743f8d8930652deadf3698ea16440b3361ae1789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f742ac646b51a7eed6d5a1cab2877fb4802be59
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966804"
 ---
 # <a name="execute-process-task-editor-general-page"></a>Редактор задачи «Выполнение процесса» (страница «Общие»)
   Воспользуйтесь страницей **Общие** диалогового окна **Редактор задачи "Выполнение процесса"** для ввода имени и описания задачи "Выполнение процесса".  
@@ -36,7 +35,7 @@ ms.locfileid: "66059064"
  **Описание**  
  Введите описание задачи "Выполнение процесса".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "выполнение процесса" &#40;страницу процесса&#41;](../../2014/integration-services/execute-process-task-editor-process-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

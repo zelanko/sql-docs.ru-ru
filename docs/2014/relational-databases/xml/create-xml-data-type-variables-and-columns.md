@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046808"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Создание переменных и столбцов типа данных XML
   Тип данных `xml` — это встроенный в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как `int` и `varchar`. Как и в случае с другими встроенными типами, тип данных можно использовать в `xml` качестве типа столбца при создании таблицы в качестве типа переменной, типа параметра, типа возвращаемого функцией значения, а также в случае [приведения и преобразования](/sql/t-sql/functions/cast-and-convert-transact-sql).  

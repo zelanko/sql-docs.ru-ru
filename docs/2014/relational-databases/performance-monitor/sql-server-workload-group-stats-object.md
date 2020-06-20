@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06651ffcfee30d538c8ede09914133a2ed818b3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c92a6c3e746babe0d4e5025250c7ab8c5ccd6d37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016985"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, объект Workload Group Stats
   Объект статистики группы рабочей нагрузки SQLServer:Workload Group Stats содержит счетчики производительности, сообщающие основные данные статистики группы рабочей нагрузки регулятора ресурсов.  
@@ -39,7 +38,7 @@ ms.locfileid: "63151104"
 |Неоптимальных планов/с|Число неоптимальных планов, создаваемых в данной группе рабочей нагрузки за секунду.|  
 |Активные параллельные потоки|Текущее число используемых параллельных потоков.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, объект статистики пула ресурсов](sql-server-resource-pool-stats-object.md)   
  [Регулятор ресурсов](../resource-governor/resource-governor.md)  

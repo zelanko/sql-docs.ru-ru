@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de740430601e3b596a1d4d9717a8e23ef1e528cf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 29153f3e4e9265e87feb0e23ba9ae97118691e95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710385"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018490"
 ---
 # <a name="direct-execution"></a>Прямое выполнение
   Прямое выполнение — это наиболее распространенный способ выполнения инструкции. Приложение создает строку символов, содержащую [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкцию, и отправляет ее для выполнения с помощью функции **SQLExecDirect** . Когда инструкция достигает сервера, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компилирует ее в план выполнения и немедленно запускает план.  
@@ -41,7 +40,7 @@ ms.locfileid: "82710385"
   
  Если все инструкции, выполняемые с **SQLExecDirect** , кодируются с использованием этих соглашений, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] может повторно использовать планы выполнения при возникновении возможной сделки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Исполнение инструкций &#40;ODBC&#41;](executing-statements-odbc.md)  
   
   

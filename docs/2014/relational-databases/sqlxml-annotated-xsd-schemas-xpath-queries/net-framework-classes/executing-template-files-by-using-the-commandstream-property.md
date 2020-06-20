@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c90839d02bd2cebcf9424e38d35f9595a23d210
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad808aaab10cf3fa424f6131be0e3ec968f5ee0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062877"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Выполнение файлов шаблонов через свойство CommandStream
   В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью свойства CommandStream объекта SqlXmlCommand. В этом приложении открывается Филестреамобжект для командного файла, а файловый поток назначается как выполняемый CommandStream.  

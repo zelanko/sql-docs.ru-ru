@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702747"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054942"
 ---
 # <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](specify-metaproperties-in-openxml.md).  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   шаблон XPath ( **.** ), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
   
--   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского элемента, <`OrderDetail`>, узла контекстного узла \<ProductID>.  
+-   Параметр *ColPattern*, **.. / \@ Quantity**, заданное для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского объекта, <`OrderDetail`>, узел контекста \<ProductID> .  
   
 -   аналогично шаблон *ColPattern*, **../../\@OrderID**, заданный для столбца **OID** в наборе строк, определяет атрибут **OrderID** родительского элемента, <`Order`>, родительского узла контекстного узла. Узлом родителя является <`OrderDetail`>, а контекстным узлом является <`ProductID`>.  
   
@@ -604,7 +603,7 @@ id  lname   xmlname                   OverFlow
 -   если столбец в предложении WITH является типизированным XML-столбцом, а экземпляр XML-документа не соответствует схеме, то возвращается ошибка.  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>К. Получение отдельных значений из многозначных атрибутов  
- XML-документ может иметь многозначные атрибуты. Например, атрибут **IDREFS** может быть многозначным. В XML-документе значения многозначных атрибутов задаются в виде строки со значениями, разделенными пробелом. В следующем XML-документе атрибут **attends** элемента \<Student> и атрибут **attendedBy** элемента \<Class> являются многозначными. Получение отдельных значений из многозначных XML-атрибутов и сохранение каждого значения в отдельной строке базы данных требуют дополнительных операций. Данный пример иллюстрирует процесс.  
+ XML-документ может иметь многозначные атрибуты. Например, атрибут **IDREFS** может быть многозначным. В XML-документе значения многозначных атрибутов задаются в виде строки со значениями, разделенными пробелом. В следующем XML-документе атрибут " **attendants** " \<Student> элемента и атрибут **attendedBy** для \<Class> являются многозначными. Получение отдельных значений из многозначных XML-атрибутов и сохранение каждого значения в отдельной строке базы данных требуют дополнительных операций. Данный пример иллюстрирует процесс.  
   
  Данный образец XML-документа состоит из следующих элементов:  
   
@@ -616,13 +615,13 @@ id  lname   xmlname                   OverFlow
   
      Атрибуты **id** (идентификатор класса), **name**и **attendedBy** . Атрибут **attendedBy** является многозначным атрибутом.  
   
- Атрибут **attends** элемента \<Student> и атрибут **attendedBy** элемента \<Class> представляют связь **m:n** между таблицами Student и Class. Студент может посещать множество классов, а класс может иметь множество студентов.  
+ Атрибут " **Attendant** " в \<Student> и атрибут **attendedBy** в \<Class> представлении представляет связь **m:n** между таблицами Student и Class. Студент может посещать множество классов, а класс может иметь множество студентов.  
   
  Предположим, что нужно взять часть этого документа и сохранить ее в базе данных, как показано ниже.  
   
--   Сохраните данные \<Student> в таблице Students.  
+-   Сохраните \<Student> данные в таблице students.  
   
--   Сохраните данные \<Class> в таблице Courses.  
+-   Сохраните \<Class> данные в таблице Courses.  
   
 -   Сохраните данные связи **m:n** между таблицами Student и Class в таблице CourseAttendence. Для извлечения значений требуются дополнительные действия. Для получения этих сведений и их сохранения в таблице используйте следующие хранимые процедуры:  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         Извлекает идентификаторы отдельного студента из каждого элемента \<Course>. Краевая таблица используется для получения этих значений.  
+         Извлекает идентификаторы отдельных учащихся из каждого \<Course> элемента. Краевая таблица используется для получения этих значений.  
   
- Ниже приводятся шаги:  
+ Ниже приведены шаги.  
   
 ```  
 -- Create these tables:  
@@ -801,9 +800,9 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_xml_preparedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
- [OPENXML (Transact-SQL)](/sql/t-sql/functions/openxml-transact-sql)   
+ [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [Инструкция OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML (SQL Server)](openxml-sql-server.md)  
   
   

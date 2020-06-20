@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a0df84bb0a4ee7e933666705a9d1a1d8fb31edf2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e47843558b485bca12f2e15d406f5a7a47db24cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698169"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999062"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра со всеми значениями в памяти (ODBC)
   В этом разделе описывается передача данных хранимой процедуре в виде возвращающего табличное значение параметра, когда все значения хранятся в памяти. Другой пример, демонстрирующий возвращающий табличное значение параметр, см. в разделе [Использование возвращающих табличное значение параметров &#40;ODBC&#41;](table-valued-parameters-odbc.md).  
   
-## <a name="prerequisite"></a>Предварительное требование  
+## <a name="prerequisite"></a>Предварительные требования  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```  
@@ -125,7 +124,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Примеры программирования с использованием возвращающих табличное значение параметров ODBC](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md)  
   
   

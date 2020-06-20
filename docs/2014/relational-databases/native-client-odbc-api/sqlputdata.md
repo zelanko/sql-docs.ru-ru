@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d847c7df84c1d00ed357a40a72839ff52f5737c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702203"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021764"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Следующие ограничения применяются при использовании SQLPutData для отправки более чем 65 535 байт данных (для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 4.21 a) или 400 КБ данных (для SQL Server версии 6,0 и более поздних) для столбца SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) или SQL_LONGVARBINARY ( `image` ):  
@@ -36,7 +35,7 @@ ms.locfileid: "82702203"
 ## <a name="diagnostics"></a>Диагностика  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Для SQLPutData существует один собственный клиент с конкретным кодом SQLSTATE:  
   
-|SQLSTATE|Ошибка|Описание|  
+|SQLSTATE|Error|Описание|  
 |--------------|-----------|-----------------|  
 |22026|Строковые данные, несовпадение длины|Если длина данных в байтах для отправки была задана приложением, например с SQL_LEN_DATA_AT_EXEC (*n*), где *n* больше 0, общее число байтов, заданное приложением через SQLPutData, должно соответствовать указанной длине.|  
   
@@ -63,7 +62,7 @@ ms.locfileid: "82702203"
 ## <a name="sqlputdata-support-for-large-clr-udts"></a>Поддержка функции SQLPutData для больших определяемых пользователем типов данных CLR  
  Функция `SQLPutData` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLPutData](https://go.microsoft.com/fwlink/?LinkId=59365)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

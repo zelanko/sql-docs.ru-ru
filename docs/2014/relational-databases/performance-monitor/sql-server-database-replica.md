@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9ea811d8fcc598342781111aa559795888a889b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8830ae30ad3514e107b718f9a02fef873e20295
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250764"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038777"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
   Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
@@ -39,7 +38,7 @@ ms.locfileid: "63250764"
 |**Число данных журнала, требующих отмены**|Общий объем журнала, который должен быть обработан для отмены, в килобайтах.|Вторичная реплика|  
 |**Задержка транзакции**|Задержки в ожидании подтверждения незавершенной фиксации, в миллисекундах.|Первичная реплика|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мониторинг использования ресурсов &#40;системном мониторе&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, реплика доступности](sql-server-availability-replica.md)   
  [SQL Server, объект databases](sql-server-databases-object.md)   
