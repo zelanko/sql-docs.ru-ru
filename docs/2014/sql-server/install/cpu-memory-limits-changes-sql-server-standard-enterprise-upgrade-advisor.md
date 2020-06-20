@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3645dea1a929295d72c01a31fdc0e1f7999e9ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952576"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012856"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>Изменения ограничений ЦП и памяти для выпусков служб SQL Server Standard и Enterprise (советник по переходу)
   Выпуски [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard и Enterprise поддерживают до 64 ГБ системной памяти.  
@@ -37,7 +36,7 @@ ms.locfileid: "71952576"
   
 -   [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
--   [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)  
+-   [Вычисление ограничения емкости по выпуску SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Reporting Services проблем обновления &#40;советник по переходу&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  

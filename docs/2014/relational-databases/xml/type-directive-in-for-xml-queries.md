@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059437"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Директива TYPE в запросах FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поддержка [&#40;xml&#41;Transact-SQL](/sql/t-sql/xml/xml-transact-sql) позволяет при необходимости вернуть результат запроса FOR XML в качестве `xml` типа данных, УКАЗАВ директиву Type. Это позволяет обрабатывать результат запроса FOR XML на сервере. Например, можно указать для него запрос XQuery, присвоить результат `xml` переменной типа или написать [вложенные запросы FOR XML](use-nested-for-xml-queries.md).  

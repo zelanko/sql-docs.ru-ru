@@ -11,19 +11,18 @@ helpviewer_keywords:
 ms.assetid: d7d2a1e2-1179-4c05-9b0f-555b04dd1199
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8481a6d3e6d7e07753cecb2ce2ff91ea626a4dfe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 548abb55ffcf6b8b0eca4ab7052a7995ef271a54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059281"
 ---
 # <a name="how-to-run-the-upgrade-advisor-analysis-wizard"></a>Как запустить мастер анализа помощника по обновлению
   Мастер анализа помощника по обновлению запускается с начальной страницы помощника по обновлению. В этом разделе описывается запуск мастера анализа помощника по обновлению.  
   
 > [!IMPORTANT]
->  При работе мастера анализа помощника по обновлению помощник по обновлению сохраняет отчеты в папку отчетов по умолчанию. Однако средство просмотра отчетов отображает только пять последних сохраненных отчетов. По умолчанию для отчетов задано расположение "\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мои документы": обновление Advisor\110\Reports.  
+>  При работе мастера анализа помощника по обновлению помощник по обновлению сохраняет отчеты в папку отчетов по умолчанию. Однако средство просмотра отчетов отображает только пять последних сохраненных отчетов. По умолчанию для отчетов задано расположение "Мои документы": \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Обновление Advisor\110\Reports.  
   
 ### <a name="to-run-the-upgrade-advisor-analysis-wizard"></a>Запуск мастера анализа помощника по обновлению  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68811098"
     > [!WARNING]  
     >  Помощник по обновлению не поддерживает соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не настроен на использование стандартного порта (1433) для соединений с клиентами. Если требуется установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не использует стандартный порт (1433), создайте псевдоним с помощью IP-адреса и порта. Дополнительные сведения о настройке клиентских протоколов и создании псевдонима для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  
     >   
-    >  Если на компьютере, на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] котором запущен помощник по обновлению, не установлен, нажмите кнопку **Пуск**и запустите `cliconfg`. Откроется диалоговое окно ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентская сетевая программа** . Для создания псевдонима перейдите на вкладку **Псевдоним** .  
+    >  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, на котором запущен помощник по обновлению, не установлен, нажмите кнопку **Пуск**и запустите `cliconfg` . Откроется диалоговое окно ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Клиентская сетевая программа** . Для создания псевдонима перейдите на вкладку **Псевдоним** .  
   
 3.  Просмотрите список обнаруженных компонентов, при необходимости измените выбор и нажмите кнопку **Далее**.  
   

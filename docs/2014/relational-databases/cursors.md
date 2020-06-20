@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8123179285b94377fff758121f535175705f29af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 055482a8cf64527f58ed983b449121a99960f566
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970544"
 ---
 # <a name="cursors"></a>Курсоры
   Операции в реляционной базе данных выполняются над множеством строк. Например, набор строк, возвращаемый инструкцией SELECT, содержит все строки, которые удовлетворяют условиям, указанным в предложении WHERE инструкции. Такой полный набор строк, возвращаемых инструкцией, называется результирующим набором. Приложения, особенно интерактивные, не всегда эффективно работают с результирующим набором как с единым целым. Им нужен механизм, позволяющий обрабатывать одну строку или небольшое их число за один раз. Курсоры являются расширением результирующих наборов, которые предоставляют такой механизм.  
@@ -115,9 +114,9 @@ ms.locfileid: "62918695"
 ## <a name="related-content"></a>См. также  
  [Режимы работы курсоров](native-client-odbc-cursors/cursor-behaviors.md) [Способы реализации курсоров](native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ОБЪЯВИТь курсор &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-cursor-transact-sql)   
- [Курсоры &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/cursors-transact-sql)   
+ [Курсоры (Transact-SQL)](/sql/t-sql/language-elements/cursors-transact-sql)   
  [Функции курсора &#40;&#41;Transact-SQL](/sql/t-sql/functions/cursor-functions-transact-sql)   
  [Хранимые процедуры курсора (Transact-SQL)](/sql/relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql)  
   

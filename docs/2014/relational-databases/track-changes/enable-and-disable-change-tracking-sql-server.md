@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db1a34a93c740aac5e24734f0a5f07c2d6719b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 402c63ae03df14e3a725fbc440575f5233d502f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670606"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037328"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Включение и отключение отслеживания изменений (SQL Server)
   В этом разделе описано, как включить и отключить отслеживания изменений для базы данных и таблицы.  

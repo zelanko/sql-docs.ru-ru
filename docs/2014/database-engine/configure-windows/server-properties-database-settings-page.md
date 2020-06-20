@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66487dd264f4733e0b8b3345aa5ebd5976165a42
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809536"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934957"
 ---
 # <a name="server-properties-database-settings-page"></a>Свойства сервера (страница «Настройки базы данных»)
   Эта страница позволяет просматривать и изменять параметры базы данных.  

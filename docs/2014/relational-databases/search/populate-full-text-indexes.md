@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ab93a3514fa260c8c3836da85c767da3c3051a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004061"
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
   Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
@@ -104,7 +103,7 @@ ms.locfileid: "66011180"
 > [!NOTE]  
 >  В примерах этого раздела используется таблица `Production.Document` или `HumanResources.JobCandidate` образца базы данных `AdventureWorks` .  
   
-### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>А) Создание полнотекстового индекса без выполнения полного заполнения  
+### <a name="a-creating-a-full-text-index-without-running-a-full-population"></a>A. Создание полнотекстового индекса без выполнения полного заполнения  
  В следующем примере создается полнотекстовый индекс для таблицы `Production.Document` образца базы данных `AdventureWorks` . В этом примере используется параметр WITH CHANGE_TRACKING OFF, NO POPULATION для задержки первоначального полного заполнения.  
   
 ```  
@@ -123,7 +122,7 @@ GO
   
 ```  
   
-### <a name="b-running-a-full-population-on-table"></a>Б) Выполнение полного заполнения в таблице  
+### <a name="b-running-a-full-population-on-table"></a>Б. Выполнение полного заполнения в таблице  
  В следующем примере полное заполнение выполняется в таблице `Production.Document` образца базы данных `AdventureWorks` .  
   
 ```  
@@ -211,7 +210,7 @@ GO
 ##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Устранение ошибок полнотекстового заполнения (сканирование)  
  При возникновении ошибки во время сканирования модуль протоколирования сканирования, входящий в механизм полнотекстового поиска, создает и обновляет журнал сканирования, хранящийся в текстовом файле. Каждый журнал сканирования соответствует конкретному полнотекстовому каталогу. По умолчанию журналы сканирования, соответствующие конкретному экземпляру — в данном случае первому экземпляру, — располагаются в папке «%ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG». Имена файлов журналов сканирования имеют следующий формат.  
   
- SQLFT\<DatabaseID>\<фуллтексткаталогид>. Журнал [\<n>]  
+ SQLFT \<DatabaseID> \<FullTextCatalogID> . LOG [ \<n> ]  
   
  <`DatabaseID`>  
  Идентификатор базы данных. <`dbid`> — это пять цифр с нулем в начале.  
@@ -226,7 +225,7 @@ GO
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_fts_index_population &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
  [Приступая к работе с компонентом Full-Text Search](get-started-with-full-text-search.md)   
  [Создание и управление полнотекстовыми индексами](create-and-manage-full-text-indexes.md)   

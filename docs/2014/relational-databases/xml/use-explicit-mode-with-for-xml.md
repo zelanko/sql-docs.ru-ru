@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0592a7635b0208624ab511af4ef68382548090c8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e3db80333c74166301fcff7bb25edea4aca38a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059396"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
   Как описано в подразделе [Конструирование XML используя FOR XML](../xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
@@ -111,7 +110,7 @@ ElementName!TagNumber!AttributeName!Directive
  Далее следует описание частей формата.  
   
  *ElementName*  
- Результирующий общий идентификатор элемента. Например, если **Customers** задано в качестве *ElementName*, формируется элемент \<Customers>.  
+ Результирующий общий идентификатор элемента. Например, если **Клиенты** указаны как *ElementName*, \<Customers> создается элемент.  
   
  *TagNumber*  
  Уникальное значение тега, присвоенное элементу. Это значение с помощью двух метастолбцов, **Tag** и **Parent**, определяет вложенность элементов в результирующем XML.  
