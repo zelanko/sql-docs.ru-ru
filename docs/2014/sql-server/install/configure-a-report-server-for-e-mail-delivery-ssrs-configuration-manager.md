@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952334"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036976"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "71952334"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Собственный режим|  
   
  
   
@@ -67,7 +66,7 @@ ms.locfileid: "71952334"
   
 -   Воспользуйтесь диспетчером конфигурации служб Reporting Services, если вы задаете SMTP-сервер и учетную запись, имеющую разрешение на отправку сообщений электронной почты. Это минимальные установки, необходимые для настройки модуля доставки электронной почты сервера отчетов. Дополнительные сведения см. в разделе [Параметры электронной почты — Configuration Manager &#40;служб SSRS в собственном режиме&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) и [Доставка электронной почты в Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   С помощью текстового редактора укажите дополнительные параметры в файле конфигурации RSreportserver.config (необязательно). Этот файл содержит все параметры конфигурации доставки отчетов по электронной почте. Задание дополнительных установок в этих файлах необходимо, если используется локальный SMTP-сервер или если доставка сообщений электронной почты ограничивается определенными узлами. Дополнительные сведения о поиске и изменении файлов конфигурации см. в разделе [изменение файла конфигурации Reporting Services &#40;RSReportServer. config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в Электронная документация на SQL Server.  
+-   С помощью текстового редактора укажите дополнительные параметры в файле конфигурации RSreportserver.config (необязательно). Этот файл содержит все параметры конфигурации доставки отчетов по электронной почте. Задание дополнительных установок в этих файлах необходимо, если используется локальный SMTP-сервер или если доставка сообщений электронной почты ограничивается определенными узлами. Дополнительные сведения о поиске и изменении файлов конфигурации см. в разделе [изменение файла конфигурации Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в Электронная документация на SQL Server.  
   
 > [!NOTE]  
 >  Параметры электронной почты сервера отчетов основаны на объектах CDO. Если необходимы дальнейшие подробности о конкретных параметрах, можно обратиться к документации по приложениям CDO.  
@@ -148,12 +147,12 @@ ms.locfileid: "71952334"
   
  Соединение между сервером отчетов и локальным сервером или перенаправителем SMTP определяется следующими параметрами конфигурации:  
   
--   `SendUsing`имеет значение **1**.  
+-   `SendUsing` получает значение **1**.  
   
 -   В качестве значения**SMTPServerPickupDirectory** указана папка на локальном жестком диске.  
   
     > [!NOTE]  
-    >  Убедитесь, что параметр не задан `SMTPServer` , если используется локальный SMTP-сервер.  
+    >  Убедитесь, что параметр не задан, `SMTPServer` Если используется локальный SMTP-сервер.  
   
 -   `From`задает значение, отображаемое в строке **от:** сообщения электронной почты. Это значение обязательно.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "71952334"
   
 7.  Убедитесь в том, что служба запущена, в консоли **Службы** .  
   
-8.  Откройте файл **RSReportServer. config** в текстовом редакторе.  
+8.  Откройте файл **RSReportServer.config** в текстовом редакторе.  
   
 9. Убедитесь, что параметр `<UrlRoot>` настроен на URL-адрес сервера отчетов. Это значение устанавливается при настройке сервера отчетов так, что оно должно быть уже заполнено. Если оно не установлено, введите URL-адрес сервера отчетов.  
   

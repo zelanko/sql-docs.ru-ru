@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91062864b77ba3c62a87d66b8ff93068f9c10c8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010984"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003868"
 ---
 # <a name="semantic-search-sql-server"></a>Семантический поиск (SQL Server)
   Статистический семантический поиск обеспечивает глубокий анализ неструктурированных документов, хранящихся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем извлечения и индексирования статистически соответствующих *ключевых фраз*. Эти ключевые фразы используются также для идентификации и индексирования *схожих или связанных документов*.  

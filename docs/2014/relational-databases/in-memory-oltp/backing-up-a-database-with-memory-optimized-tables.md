@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 176448aa9d4bab4101ab2db12ffc9a8a7fd1a5b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62468330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050320"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Резервное копирование базы данных с оптимизированными для памяти таблицами
   Резервные копии оптимизированных для памяти таблиц создаются в составе обычных резервных копий баз данных. Что же касается таблиц на дисках, то для обнаружения повреждений CHECKSUM пар файлов данных и разностных файлов проверяется в процессе резервного копирования базы данных.  
@@ -67,7 +66,7 @@ ms.locfileid: "62468330"
   
  Для типичных рабочих нагрузок OLTP разностные резервные копии будут намного меньше, чем полные резервные копии баз данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление оптимизированных для памяти таблиц](restore-and-recovery-of-memory-optimized-tables.md)  
   
   

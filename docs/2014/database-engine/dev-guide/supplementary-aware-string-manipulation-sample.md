@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 51fe880ce3865e44620e0f7ae88c2103b0796f38
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928095"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933270"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Образец операций над строками с учетом дополнений
   В данном образце для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] демонстрируется обработка строк с учетом дополнительных символов. В данном образце показана реализация пяти строковых функций Transact-SQL с такими же возможностями работы со строками, как и во встроенных функциях, но с расширенной поддержкой дополнительных символов при обработке как строк в Юникоде, так и строк дополнительных символов. Пять функций — это линза () `lefts(), rights(), subs()` , `replace_s()` которая эквивалентна встроенным функциям `LEN(), LEFT(), RIGHT(), SUBSTRING()` и `REPLACE()` строковым функциям.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
  Для создания и запуска этого проекта должно быть установлено следующее программное обеспечение:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express можно получить бесплатно на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] веб-сайте [с документацией и примерами по](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

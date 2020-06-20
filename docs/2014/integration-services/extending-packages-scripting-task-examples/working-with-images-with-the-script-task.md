@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 74aeb7ab-51b2-4b9f-84ee-0b46a7908ab9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 413d0d42ce629076488b5971408df25ca0ce9d1e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768450"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968444"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Работа с изображениями в задаче «Скрипт»
   База данных продуктов или пользователи часто содержат изображения в дополнение к тексту и числовым данным. Пространство имен `System.Drawing` платформы Microsoft .NET Framework предоставляет классы для управления изображениями.  

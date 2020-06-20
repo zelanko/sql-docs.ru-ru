@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eea255c3-8251-40f0-973b-fe4ef6cb5261
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a51364838173f70c4d5daac794176caa6ea01221
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aefe926d487a78c3ab73ac08483932e2d0a44410
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037503"
 ---
 # <a name="transferring-data"></a>Передача данных
   Класс <xref:Microsoft.SqlServer.Management.Smo.Transfer> является служебным классом, наделенным средствами для передачи объектов и данных.  

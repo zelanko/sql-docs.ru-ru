@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: a888246d-ccfe-415f-bbdc-d6adafac250a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9da36f49927acd2a313bcb9f8647655731006d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7845a84c45015ba3346538030725eb2973490d9b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928557"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler-Tools-Options (страница «Общие параметры»)
   Диалоговое окно **Общие параметры** используется для просмотра или указания следующих параметров.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 ### <a name="display-options"></a>Параметры отображения  
  **Имя шрифта**  
@@ -72,14 +71,14 @@ ms.locfileid: "66089620"
  **Интервал опроса монитора исправности по умолчанию (сек)**  
  Задайте интервал опроса монитора исправности во время воспроизведения в секундах. По умолчанию — 60 секунд. Это значение дает возможность пользователю определить, как часто монитор исправности выполняет опрос кандидатов на завершение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматический запуск трассировки после подключения к серверу &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Задать параметры по умолчанию для отображаемых данных трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Воспроизведение таблицы трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Воспроизведение файла трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Воспроизвести трассировки](../tools/sql-server-profiler/replay-traces.md)   
  [Задать глобальные параметры трассировки &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
- [Шаблоны и разрешения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Приложение SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

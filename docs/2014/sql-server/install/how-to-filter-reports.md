@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a507ba84708a1444c52f49421eda1009ede9adb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094887"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059286"
 ---
 # <a name="how-to-filter-reports"></a>Фильтрация отчетов
   В этом разделе описывается использование средства просмотра отчетов помощника по обновлению для фильтрации отчетов.  
@@ -41,7 +40,7 @@ ms.locfileid: "66094887"
   
     -   **Неразрешенные проблемы**. Отображаются все проблемы, которые еще не были решены.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как запустить мастер анализа помощника по обновлению](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Устранение проблем с обновлением](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Инструкции по советнику по переходу](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   

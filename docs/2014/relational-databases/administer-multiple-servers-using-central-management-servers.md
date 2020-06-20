@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47eec543c21e74565d750035d20fbcee9baa82e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3906165b595f6faa15812f70377a3bc0f550e52e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877314"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960014"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Администрирование нескольких серверов с использованием центральных серверов управления
   Можно администрировать сразу несколько серверов, назначив центральные серверы управления и создав группы серверов.  
@@ -35,7 +34,7 @@ ms.locfileid: "62877314"
 ### <a name="related-tasks"></a>Связанные задачи  
  Для создания сервера централизованного управления и групп серверов воспользуйтесь окном **Зарегистрированные серверы** в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Обратите внимание, что сервер центрального управления не может быть членом группы, которую он обслуживает. Дополнительные сведения о создании центральных серверов управления и групп серверов см. в разделе [Создание центрального сервера управления и группы серверов (среда SQL Server Management Studio)](../ssms/register-servers/create-a-central-management-server-and-server-group.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

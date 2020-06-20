@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a04465712667205674ddd8ea8bab7d82c3250261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 976597ccb9130220ca6fac7fd422c0daf3122845
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630695"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067703"
 ---
 # <a name="operator-properties-new-operator-notifications-page"></a>Свойства оператора: Создание оператора (страница "Уведомления")
   Используйте эту страницу, чтобы определить предупреждения и задания, уведомляющие оператора.  
   
-## <a name="options"></a>Параметры  
- **Предупреждения**  
+## <a name="options"></a>Варианты  
+ **Оповещения**  
  Просмотреть предупреждения в экземпляре.  
   
  **Задания**  
@@ -46,7 +45,7 @@ ms.locfileid: "62630695"
  **NET SEND**  
  Уведомить этого оператора, используя **net send**.  
   
-## <a name="see-also"></a>См. также  
- [Инструкции](operators.md)  
+## <a name="see-also"></a>См. также:  
+ [Операторы](operators.md)  
   
   

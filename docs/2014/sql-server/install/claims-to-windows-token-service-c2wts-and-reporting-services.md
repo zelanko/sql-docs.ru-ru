@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922148"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059349"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Служба Claims to Windows Token Service (C2WTS) и службы Reporting Services
   Служба SharePoint Claims to Windows Token Service (c2WTS) необходима в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме интеграции с SharePoint, если требуется использовать проверку подлинности Windows для источников данных, находящихся за пределами фермы SharePoint. Это верно, даже если пользователь получает доступ к источникам данных с использованием проверки подлинности Windows, поскольку для связи между клиентским веб-интерфейсом и общей службой [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] всегда используется проверка подлинности Claims.  
@@ -69,7 +68,7 @@ ms.locfileid: "82922148"
   
 2.  Настройка c2WTS "AllowedCallers"  
   
-     c2WTS требует явного перечисления удостоверений "Calls" в файле конфигурации **файл c2wtshost. exe. config**. c2WTS не принимает запросы от всех пользователей, прошедших проверку подлинности в системе, если это не настроено. В этом случае вызывающим является группа Windows WSS_WPG. Файл c2wtshost.exe.confi хранится в следующем расположении:  
+     c2WTS требует явного перечисления удостоверений "Calls" в файле конфигурации **c2wtshost.exe.config**. c2WTS не принимает запросы от всех пользователей, прошедших проверку подлинности в системе, если это не настроено. В этом случае вызывающим является группа Windows WSS_WPG. Файл c2wtshost.exe.confi хранится в следующем расположении:  
   
      **\Program Files\Windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   
@@ -98,7 +97,7 @@ ms.locfileid: "82922148"
   
 4.  Запустите SharePoint "Claims to Windows Token Service": запустите службу Claims to Windows Token Service через центр администрирования SharePoint на странице **Управление службами на сервере** . Служба должна быть запущена на сервере, который будет выполнять действие. Например, при наличии сервера, который является интерфейсным веб-сервером, и другого сервера, который служит сервером приложений, где работает общая служба служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , службу c2WTS необходимо запустить только на сервере приложений. Служба c2WTS не требуется на интерфейсном веб-сервере.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обзор службы Claims to Windows Token Service (c2WTS) (https://msdn.microsoft.com/library/ee517278.aspx)](https://msdn.microsoft.com/library/ee517278.aspx)   
  [Общие сведения о проверке подлинности Kerberos для продуктов Microsoft SharePoint 2010 (https://technet.microsoft.com/library/gg502594.aspx)](https://technet.microsoft.com/library/gg502594.aspx)  
   

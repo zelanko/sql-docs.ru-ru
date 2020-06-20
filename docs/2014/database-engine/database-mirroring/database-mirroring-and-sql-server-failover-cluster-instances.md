@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d317e04251b3dedfc587d98898a366cf6a360bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934333"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
   Отказоустойчивый кластер представляет собой сочетание одного или нескольких физических дисков в группе кластеров службы кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] , называемой группой ресурсов, которые являются узлами-участниками кластера. Группа ресурсов настраивается как экземпляр кластера отработки отказа, на котором запускается экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется в сети как одиночный компьютер, при этом он обладает функциональными возможностями, обеспечивающими отработку отказа с одного узла на другой, если один из узлов становится недоступным. Дополнительные сведения см. в статье [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
- Отказоустойчивые кластеры обеспечивают поддержку высокого уровня доступности для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всего экземпляра, в отличие от зеркального отображения базы данных, обеспечивающего поддержку высокого уровня доступности для отдельной базы данных. Зеркальное отображение базы данных может работать между отказоустойчивыми кластерами, а также между отказоустойчивым кластером и некластеризованным узлом.  
+ Отказоустойчивые кластеры обеспечивают поддержку высокого уровня доступности для всего [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, в отличие от зеркального отображения базы данных, обеспечивающего поддержку высокого уровня доступности для отдельной базы данных. Зеркальное отображение базы данных может работать между отказоустойчивыми кластерами, а также между отказоустойчивым кластером и некластеризованным узлом.  
   
 > [!NOTE]  
 >  Базовые сведения о зеркальном отображении базы данных см. в разделе [Зеркальное отображение базы данных (SQL Server)](database-mirroring-sql-server.md).  
@@ -63,7 +62,7 @@ ms.locfileid: "62755584"
   
 -   [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring-sql-server.md)   
  [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)   
  [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) 

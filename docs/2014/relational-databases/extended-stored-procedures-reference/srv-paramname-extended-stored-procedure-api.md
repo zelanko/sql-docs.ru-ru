@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8a5eca5aef966d205ef550b05eff2d7055e4cb28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe32916e0199e846dc44c7f0c8da757d41b41c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127178"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050696"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API-интерфейс расширенных хранимых процедур)
     
@@ -52,7 +51,7 @@ SRV_PROC * srvproc,intn, int *len );
  *len*  
  Содержит указатель на переменную `int`, которая содержит длину имени параметра в байтах. Если параметр *len* равен NULL, то длина имени параметра удаленной хранимой процедуры не возвращается.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Указатель на строку, заканчивающуюся нулевым символом, которая содержит имя параметра. Длина имени параметра хранится в *len*. Если параметра с номером *n* или удаленной хранимой процедуры не существует, то возвращается значение NULL, *len* получает значение -1 и отправляется информационное сообщение об ошибке. Если имя параметра равно NULL, для *len* устанавливается значение 0 и возвращается пустая строка, заканчивающаяся нулевым символом.  
   
 ## <a name="remarks"></a>Remarks  
@@ -61,7 +60,7 @@ SRV_PROC * srvproc,intn, int *len );
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](srv-rpcparams-extended-stored-procedure-api.md)  
   
   

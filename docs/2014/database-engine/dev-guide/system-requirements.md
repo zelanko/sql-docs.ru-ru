@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: 5fd1dbcd-b3bb-4da0-8582-db2e5eeac9a3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a27b6093fc7fae78d2181dd2358e7f070df75903
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781953"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933295"
 ---
-# <a name="system-requirements"></a>Системные требования
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) используют [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` драйвер объектов для подключения к экземплярам и взаимодействия с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ними.  
+# <a name="system-requirements"></a>Требования к системе
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) используют [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` драйвер объектов для подключения к экземплярам и взаимодействия с ними [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Для клиентов SMO требуется собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который входит в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0.  
   
  Для разработки приложений с помощью объектов SMO необходимо [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] установить 2008.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения об установке SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

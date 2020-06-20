@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 40e4fbf76bbed28822cc86cc5c04ea26adb6c7a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702524"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065483"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Получение и запрос XML-данных
   В этом разделе описываются параметры запроса, которые необходимо указать для запроса XML-данных. Кроме того, в нем описаны компоненты экземпляров XML, нефиксируемых при сохранении экземпляров в базах данных.  

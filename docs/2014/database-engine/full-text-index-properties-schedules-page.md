@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 97ba002eafc02f445f3f7104811b2c347668e300
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932955"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Свойства полнотекстового индекса (страница «Расписания»)
   Эта страница предназначена для просмотра и создания расписаний выполнения для задания агента SQL Server, которое запускает добавочное заполнение в ходе обновлений базовой таблицы полнотекстового индекса. Если базовая таблица или представление не содержат столбец типа данных `timestamp`, то выполняется полное заполнение.  

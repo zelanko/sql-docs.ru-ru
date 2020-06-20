@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48c4b11963d8e05ff7787ce9200329daf2e899ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970388"
 ---
 # <a name="data-compression"></a>Сжатие данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает сжатие строк и страниц для таблиц и индексов rowstore, а также поддерживает columnstore и архивное сжатие columnstore для таблиц и индексов columnstore.  
@@ -63,7 +62,7 @@ ms.locfileid: "62873558"
   
 -   С помощью сжатия можно хранить больше строк в странице, максимальный размер строки таблицы или индекса при этом не изменяется.  
   
--   Для таблицы нельзя включить сжатие, если сумма максимального размера строки и служебных данных сжатия превышает максимальный размер строки в 8060 байт. Например, таблица со столбцами C1`char(8000)` и C2`char(53)` не может быть сжата из-за дополнительных затрат на сжатие. При использовании формата хранения vardecimal выполняется проверка размера строки (когда формат включен). При использовании сжатия строк и страниц проверка размера строки выполняется при первичном сжатии объекта, а также при всех последующих вставках и изменениях строк. При использовании сжатия обеспечивается выполнение следующих двух правил.  
+-   Для таблицы нельзя включить сжатие, если сумма максимального размера строки и служебных данных сжатия превышает максимальный размер строки в 8060 байт. Например, таблица со столбцами C1 `char(8000)` и C2 `char(53)` не может быть сжата из-за дополнительных затрат на сжатие. При использовании формата хранения vardecimal выполняется проверка размера строки (когда формат включен). При использовании сжатия строк и страниц проверка размера строки выполняется при первичном сжатии объекта, а также при всех последующих вставках и изменениях строк. При использовании сжатия обеспечивается выполнение следующих двух правил.  
   
     -   Обновление для типа с фиксированной длиной должно всегда завершаться успешно.  
   
@@ -108,7 +107,7 @@ ms.locfileid: "62873558"
   
 ||  
 |-|  
-|**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ### <a name="basics"></a>Основы  
  Таблицы и индексы Columnstore всегда сохраняются со сжатием columnstore. Можно еще более уменьшить размер данных columnstore, настроив дополнительное сжатие, именуемое архивным сжатием.  Чтобы выполнить архивное сжатие, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет к данным алгоритм сжатия XPress корпорации Майкрософт. Добавьте или удалите архивное сжатие, используя следующие типы сжатия данных.  
@@ -119,7 +118,7 @@ ms.locfileid: "62873558"
   
  Чтобы добавить архивное сжатие, используйте команды [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) или [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
   
- Примеры:  
+ Примеры  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -135,7 +134,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
  Чтобы удалить архивное сжатие и восстановление данных для сжатия columnstилиe, используйте [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) или [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) с параметром REBUILD и DATA COMPRESSION = COLUMNSTORE.  
   
- Примеры:  
+ Примеры  
   
 ```  
 ALTER TABLE ColumnstoreTable1   
@@ -167,9 +166,9 @@ REBUILD PARTITION = ALL WITH (
 ### <a name="metadata"></a>Метаданные  
  Следующие системные представления содержат сведения о сжатии данных для кластеризованных индексов.  
   
--   [sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) — столбцы `type` и `type_desc` содержат КЛАСТЕРИЗОВАНный индекс columnstore и некластеризованный Columnstore.  
+-   [sys. indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) — `type` столбцы и `type_desc` содержат кластеризованный индекс columnstore и некластеризованный Columnstore.  
   
--   [sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) — `data_compression` столбцы `data_compression_desc` и включают COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
+-   [sys. partitions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql) — `data_compression` `data_compression_desc` столбцы и включают COLUMNSTORE и COLUMNSTORE_ARCHIVE.  
   
  Процедура [sp_estimate_data_compression_savings (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql) не применяется к индексам columnstore.  
   
@@ -251,7 +250,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   Включение сжатия может вызвать изменение планов запросов, поскольку данные будут занимать при хранении другое число страниц с другим числом строк на страницу.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация сжатия строк](row-compression-implementation.md)   
  [Реализация сжатия страниц](page-compression-implementation.md)   
  [Реализация сжатия в Юникоде](unicode-compression-implementation.md)   

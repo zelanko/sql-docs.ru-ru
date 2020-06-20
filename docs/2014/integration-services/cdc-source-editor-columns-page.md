@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 980b9cf22e2c50cd1de3eb90a06e6496c01cc093
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51fcd038f45fdabbf97d5fafc4d4daf341d5a79d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061028"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924060"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Редактор источника «CDC» (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источника CDC** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
   
  Дополнительные сведения об источнике CDC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="task-list"></a>список задач  
+## <a name="task-list"></a>Список задач  
  **Открытие страницы «Столбцы» редактора источника CDC**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник CDC.  
@@ -33,7 +32,7 @@ ms.locfileid: "66061028"
   
 3.  В окне **Редактор источника CDC**нажмите кнопку **Столбцы**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные внешние столбцы**  
  Список доступных внешних столбцов источника данных. В этой таблице нельзя добавлять или удалять столбцы. Выберите используемые столбцы источника. Выбранные столбцы добавляются в список **Внешний столбец** в порядке выбора.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66061028"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, но можно выбрать любое уникальное описательное имя. Введенное имя отображается в конструкторе служб SSIS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Редактор источника "CDC" (страница "Вывод ошибок")](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   

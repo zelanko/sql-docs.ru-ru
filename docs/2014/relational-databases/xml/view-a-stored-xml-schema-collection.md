@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4c83a6bde711d2e653fdf19d4d3e145efae8d1d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6383fb17183a991d2f83325044663cc9671e9442
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012984"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Просмотр хранимой коллекции схем XML
   После импорта коллекции XML-схем с помощью команды [Создать коллекцию схем XML](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)компоненты схемы будут храниться в метаданных. Можно использовать внутреннюю функцию [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace), чтобы повторно построить коллекцию XML-схем. Эта функция возвращает экземпляр типа данных `xml`.  

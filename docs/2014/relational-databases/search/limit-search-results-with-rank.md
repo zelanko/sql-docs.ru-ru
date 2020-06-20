@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ebb1f67a981396f1f7bb2026f66a528052b0e4df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab1b930b3238cb541965e1984d1561f1a1c22d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011150"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004213"
 ---
 # <a name="limit-search-results-with-rank"></a>Ограничение количества результатов поиска с использованием функции RANK
   Функции [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) и [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) возвращают столбец с именем RANK, содержащий порядковые номера от 0 до 1000 (ранжирующие значения). Эти значения используются для ранжирования возвращенных строк согласно их соответствию критерию выбора. Ранжирующие значения указывают только относительный порядок релевантности строк в результирующем наборе, при этом чем меньше значение, тем меньше релевантность. Фактические значения несущественны и, как правило, различны для каждого выполнения запроса.  

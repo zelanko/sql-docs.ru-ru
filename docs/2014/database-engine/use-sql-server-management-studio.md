@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: f289e978-14ca-46ef-9e61-e1fe5fd593be
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 709707caa9087ceadaa11cfd4b415eadd6c3702c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927935"
 ---
 # <a name="use-sql-server-management-studio"></a>Использование среды SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Служба SSMS сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для обеспечения доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов всех профессиональных уровней.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) — это интегрированная среда для доступа, настройки, управления, администрирования и разработки всех компонентов служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Служба SSMS сочетает в себе обширную группу графических инструментов с рядом отличных редакторов сценариев для обеспечения доступа к службе [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для разработчиков и администраторов всех профессиональных уровней.  
   
  Служба SSMS объединяет в единую среду функции Корпоративного Диспетчера, Анализатора Запросов и Диспетчера Анализа, включенные в прошлые выпуски службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В дополнение, служба SSMS работает со всеми компонентами службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , такими как [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Разработчики получают знакомую среду, а администраторы баз данных — единую полнофункциональную программу, объединяющую простые в использовании графические средства и богатые возможности для создания сценариев.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62773906"
  [Конструкторы визуальных инструментов для баз данных](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Описывает визуальные инструменты для баз данных, с помощью которых можно создавать запросы, конструировать и изменять структуру базы данных или обновлять данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр или изменение свойств сервера (SQL Server)](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

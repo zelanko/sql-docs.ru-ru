@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190337"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037193"
 ---
 # <a name="before-installing-failover-clustering"></a>Подготовка к установке отказоустойчивого кластера
   Перед тем как установить отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо выбрать оборудование и операционную систему, на которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет работать. Кроме того, необходимо настроить отказоустойчивую кластеризацию Windows Server (WSFC) и проверить настройки сети, безопасности и другого программного обеспечения, которое будет запускаться на отказоустойчивом кластере.  
@@ -45,9 +44,9 @@ ms.locfileid: "63190337"
   
     -   Windows PowerShell больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Оболочка Windows PowerShell 2.0 является обязательной для установки компонентов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] и [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Если компонент Windows PowerShell 2.0 отсутствует на компьютере, его можно включить, следуя указаниям на странице [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214).  
   
-    -   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в старых операционных системах Windows. Дополнительные сведения см. в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]разделе [заметки о выпуске](https://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   Платформа .NET Framework 3.5 с пакетом обновления 1 (SP1) больше не устанавливается программой установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , но может потребоваться при установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в старых операционных системах Windows. Дополнительные сведения см. в разделе [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [заметки о выпуске](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Пакет обновления:** Чтобы избежать перезагрузки компьютера из-за установки .NET Framework 4 во [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] время установки, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] программе установки требуется установить на компьютере обновление.  Это обновление включено в установку [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] в Windows 7 с пакетом обновления 1 (SP1) или [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2). При установке в более старой операционной системе Windows загрузите его по ссылке: [Центр обновления Майкрософт для .NET Framework 4.0 в Windows Vista и Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Пакет обновления.** чтобы избежать перезагрузки компьютера из-за установки .NET Framework 4 во время установки, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] программе установки требуется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] установить на компьютере обновление.  Это обновление включено в установку [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] в Windows 7 с пакетом обновления 1 (SP1) или [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] с пакетом обновления 2 (SP2). При установке в более старой операционной системе Windows загрузите его по ссылке: [Центр обновления Майкрософт для .NET Framework 4.0 в Windows Vista и Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: программа установки устанавливает платформу .NET Framework 4 в кластеризованной операционной системе. Чтобы сократить время установки, перед запуском программы установки рекомендуется установить .NET Framework 4.  
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190337"
   
 1.  В конфигурации с несколькими подсетями для зависимости ресурса "IP-адрес" задается значение OR. Дополнительные сведения см. [в разделе Создание нового SQL Server отказоустойчивого кластера &#40;установки&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  Смешанные конфигурации зависимостей IP-адресов со значением AND-OR не поддерживаются. Например, не поддерживается конструкция \<IP1> AND \<IP2> OR \<IP3>.  
+2.  Смешанные конфигурации зависимостей IP-адресов со значением AND-OR не поддерживаются. Например, \<IP1> and \<IP2> или \<IP3> не поддерживается.  
   
 3.  Также не поддерживается несколько IP-адресов в одной в подсети.  
   
@@ -264,7 +263,7 @@ ms.locfileid: "63190337"
   
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Требования к оборудованию и программному обеспечению для установки SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Проверьте параметры средства проверки конфигурации системы.](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Администрирование и обслуживание экземпляров отказоустойчивого кластера](../windows/failover-cluster-instance-administration-and-maintenance.md)  

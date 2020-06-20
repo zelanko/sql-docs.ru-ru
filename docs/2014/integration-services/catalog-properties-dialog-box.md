@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061105"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924575"
 ---
 # <a name="catalog-properties-dialog-box"></a>Диалоговое окно свойств каталога
   Диалоговое окно свойств каталога служит для настройки каталога SSISDB. Свойства каталога определяют, как конфиденциальные данные шифруются, как сохранены данные операций и версий проекта, а затем время ожидания операций проверки. Каталог SSISDB — это центральная точка хранения и администрирования для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проектов, пакетов, параметров и сред.  
@@ -27,7 +26,7 @@ ms.locfileid: "66061105"
   
  Дополнительные сведения о создании каталога SSISDB см. в разделе [Создание каталога служб SSIS](catalog/ssis-catalog.md).  
   
- **Выбор действия**  
+ **Выберите действие**  
   
 -   [Открытие диалогового окна свойств каталога](#open_dialog)  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66061105"
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Настройка параметров  
   
-### <a name="options"></a>Параметры  
+### <a name="options"></a>Варианты  
  В следующей таблице описаны некоторые свойства, определенные в диалоговом окне, а также соответствующие свойства в представлении catalog.catalog_property.  
   
 |Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_property)|Описание|  

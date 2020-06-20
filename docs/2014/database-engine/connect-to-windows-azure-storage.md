@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8e23845e-97f0-4907-9d57-f1acd338b1f0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 172c8cbf13b76c23cd9f4768aaf5162e923bc28d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ace573ddc016c074f1ad5bb29f099d7e62c5c81d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154305"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934569"
 ---
 # <a name="connect-to-azure-storage"></a>Подключение к службе хранилища Azure
   Диалоговое окно **Соединение службы хранилища Azure** позволяет указать учетную запись хранения и проверить соединение с Azure.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Укажите следующие сведения об учетной записи Azure и нажмите кнопку **Далее** для продолжения.  
   
 1.  **Учетная запись хранения** — укажите имя учетной записи хранения.  
