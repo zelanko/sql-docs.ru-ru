@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047222"
 ---
 # <a name="synonyms-database-engine"></a>Синонимы (компонент Database Engine)
   Синонимом является объект базы данных, который выполняет следующие функции:  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Дополнительные сведения о привязанных к схеме функциях см. в разделе [Создание определяемых пользователем функций (компонент Database Engine)](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Получение данных о синонимах  
- Представление каталога sys.synonyms содержит запись для каждого синонима в данной базе данных. Это представление каталога обеспечивает доступ к таким метаданным, как имя синонима и имя базового объекта. Дополнительные сведения о представлении каталога `sys.synonyms` см. в разделе [sys. synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ Представление каталога sys.synonyms содержит запись для каждого синонима в данной базе данных. Это представление каталога обеспечивает доступ к таким метаданным, как имя синонима и имя базового объекта. Дополнительные сведения о `sys.synonyms` представлении каталога см. в разделе [sys. synonyms &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  С помощью расширенных свойств можно добавлять описательный или управляющий текст, маски ввода и правила форматирования в виде свойств синонима. Так как свойства хранятся в базе данных, все приложения, считывающие их, могут таким же образом вычислять объект. Дополнительные сведения см. в разделе [sp_addextendedproperty (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

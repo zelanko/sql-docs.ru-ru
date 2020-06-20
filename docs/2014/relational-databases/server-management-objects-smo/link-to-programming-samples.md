@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 5eb28044-8437-466e-9c55-60941c237fbb
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54b382d3e5623c6fdc43f0b8f4825fc5535b5606
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244516"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055260"
 ---
 # <a name="link-to-programming-samples"></a>Ссылка на образцы программ
-  В следующей таблице перечислены образцы программ с использованием объектов SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые находятся в каталоге [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. Эти образцы доступны как в, [!INCLUDE[csprcs](../../includes/csprcs-md.md)] так [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] и в .NET.  
+  В следующей таблице перечислены образцы программ с использованием объектов SMO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые находятся в каталоге [!INCLUDE[ssSampPathEng](../../includes/sssamppatheng-md.md)]Programmability\SMO directory. Эти образцы доступны как в [!INCLUDE[csprcs](../../includes/csprcs-md.md)] , так и в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET.  
   
  Дополнительные сведения об установке образцов см. в разделе [AdventureWorks for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
-|Заголовок|Описание|  
+|Title|Описание|  
 |-----------|-----------------|  
 |BackRest|Демонстрирует, как создавать резервные копии и восстанавливать базу данных.|  
 |ChangeTableOwner|Показывает, как передать все таблицы, владельцем которых является не dbo, пользователю dbo.|  
@@ -34,7 +33,7 @@ ms.locfileid: "75244516"
 |DatabaseSearch|Отображает все объекты в базе данных.|  
 |DependencyExplorer|Реализует дерево зависимости и окно отображения свойств.|  
 |IndexSizes|Отображает имя индекса и размер для выбранной базы данных.|  
-|LoadRegAssembly|Демонстрирует, как загрузить и зарегистрировать сборку [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Использует сборку UtilityConversion.|  
+|LoadRegAssembly|Демонстрирует, как загрузить и зарегистрировать [!INCLUDE[msCoName](../../includes/msconame-md.md)] сборку .NET в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использует сборку UtilityConversion.|  
 |ManageDatabases|Демонстрирует, как создавать, изменять и удалять базу данных. Включает добавление новой файловой группы и файла журнала.|  
 |ManageDatabaseUsers|Демонстрирует, как добавлять, редактировать и удалять пользователей.|  
 |ManageTables|Демонстрирует, как создавать, изменять и удалять таблицы.|  

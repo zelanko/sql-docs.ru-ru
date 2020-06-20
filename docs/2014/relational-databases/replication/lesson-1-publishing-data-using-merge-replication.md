@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 30d7c1e04c305a74f99d5d2818b344bfd8f83bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000484"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065990"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Урок 1. Публикация данных с помощью репликации слиянием
   На этом занятии с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация слиянием с целью публикации подмножества таблиц **Employee**, **SalesOrderHeader**и **SalesOrderDetail** в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Эти таблицы фильтруются с помощью параметризованных фильтров строк, так что каждая подписка содержит уникальную секцию данных. Также в список доступа к публикации добавляется имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемое агентом слияния. Для работы с этим учебником требуется завершить работу с предыдущим учебником, [Подготовка сервера для репликации](tutorial-preparing-the-server-for-replication.md).  
@@ -83,7 +82,7 @@ ms.locfileid: "83000484"
   
 21. Установите флажок **Создать моментальный снимок немедленно**, снимите флажок **Запланировать запуск агента моментальных снимков в следующее время**и нажмите кнопку **Далее**.  
   
-22. На странице Безопасность агента щелкните **Параметры безопасности**, введите \< _Machine_Name>_ **\ Repl_snapshot** в поле **учетная запись процесса** , укажите пароль для этой учетной записи и нажмите кнопку **ОК**. Нажмите кнопку **Готово**.  
+22. На странице Безопасность агента щелкните **Параметры безопасности**, введите \<_Machine_Name> _**\ repl_snapshot** в поле **учетная запись процесса** , укажите пароль для этой учетной записи и нажмите кнопку **ОК**. Нажмите кнопку **Готово**.  
   
 23. На странице «Завершение работы мастера» введите **AdvWorksSalesOrdersMerge** в поле **Имя публикации** и нажмите кнопку **Готово**.  
   
@@ -109,10 +108,10 @@ ms.locfileid: "83000484"
   
 4.  В диалоговом окне "Добавление доступа к публикации" выберите _<Имя_компьютера>_**\repl_merge** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Публикация слиянием успешно создана. Далее будет создана подписка на эту публикацию. См. [Занятие 2. Создание подписки на публикацию слиянием](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Фильтровать опубликованные данные](publish/filter-published-data.md)   
  [Параметризованные фильтры строк](merge/parameterized-filters-parameterized-row-filters.md)   
  [Определение статьи](publish/define-an-article.md)  

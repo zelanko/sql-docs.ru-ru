@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056268"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964404"
 ---
 # <a name="save-a-copy-of-a-package"></a>Сохранение одной копии пакета
   Эта процедура описывает, как сохранить копию пакета в файле, хранилище пакетов или базе данных **msdb** в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При указании места сохранения копии пакета можно также обновить имя пакета.  
@@ -37,7 +36,7 @@ ms.locfileid: "66056268"
   
 1.  В обозревателе решений дважды щелкните пакет, копию которого необходимо сохранить.  
   
-2.  В меню **Файл** выберите пункт **Сохранить копию \<файл пакета> как**.  
+2.  В меню **файл** выберите команду **сохранить копию \<package file> как**.  
   
 3.  В диалоговом окне **Сохранение копии пакета** выберите размещение пакета в списке **Размещение пакета** .  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66056268"
   
 9. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Настройка служб Integration Services (службы SSIS)](service/integration-services-service-ssis-service.md)  
   

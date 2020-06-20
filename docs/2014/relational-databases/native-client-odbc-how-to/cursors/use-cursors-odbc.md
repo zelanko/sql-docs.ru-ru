@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4be434e4d80a8146b58beb0ae0de07e62415a6ad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63718cf227197cfe6c009311339924a05fd6c665
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701574"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018908"
 ---
 # <a name="use-cursors-odbc"></a>Использование курсоров (ODBC)
     
@@ -27,7 +26,7 @@ ms.locfileid: "82701574"
   
      Задайте атрибуты SQL_ATTR_CURSOR_TYPE и SQL_ATTR_CONCURRENCY (этот параметр предпочтителен).  
   
-     Или  
+     либо  
   
      Задайте атрибуты SQL_CURSOR_SCROLLABLE и SQL_CURSOR_SENSITIVITY.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "82701574"
   
      Типом курсора можно управлять, задавая параметры SQL_ATTR_CURSOR_TYPE и SQL_ATTR_CONCURRENCY либо SQL_ATTR_CURSOR_SENSITIVITY и SQL_ATTR_CURSOR_SCROLLABLE. Не следует смешивать два метода задания режима работы курсоров.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по использованию курсоров &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)  
   
   

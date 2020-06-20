@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 78a03c8fe0a8eaf4948ec56ce07615829aad9085
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962054"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Удаление представления подписки (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]представление подписки удаляется тогда, когда в нем отпадает необходимость. При удалении представления подписки в службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] представление удаляется из базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -42,7 +41,7 @@ ms.locfileid: "65479473"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание представления подписки &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
  [Экспорт Master Data Services &#40;данных&#41;](overview-exporting-data-master-data-services.md)  
   

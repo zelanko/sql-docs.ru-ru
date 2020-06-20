@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d41cc9f3b52c0c5e70ead6b93c0b929ef521f673
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7244984b869a1c68e597984a1cd03e16e53d0306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067460"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066252"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Диалоговое окно «Проверочное ограничение» (визуальные инструменты для баз данных)
   Это диалоговое окно выводится, если в конструкторе таблиц щелкнуть правой кнопкой мыши сетку определения таблицы и выбрать пункт **Проверочные ограничения**. Диалоговое окно содержит набор свойств для ограничений, отличных от ограничений уникальности, присоединенных к таблицам базы данных. Свойства, применяемые к ограничениям уникальности, отображаются в диалоговом окне **Индексы/Ключи** .  

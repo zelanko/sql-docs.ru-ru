@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0534d416d6d821e2d1870e98a42e8281648c6af1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670487"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066192"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Сворачивание групп строк (визуальные инструменты для баз данных)
   Может быть создан результат запроса, в котором каждая результирующая строка соответствует всей группе строк исходных данных. При сворачивании строк следует помнить о следующих моментах.  

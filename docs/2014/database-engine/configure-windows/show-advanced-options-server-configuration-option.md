@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a9ba0dc47b64c537a6d218dc55fdee1c2f0cac83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254c0ba5b0195e54513258ed28b391015bb4beb9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934825"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>Параметр конфигурации сервера «show advanced options»
   Параметр **show advanced options** следует использовать для отображения дополнительных параметров системной хранимой процедуры **sp_configure** . Если параметру **show advanced options** присвоено значение 1, то получить список дополнительных параметров можно с использованием хранимой процедуры **sp_configure**. Значение по умолчанию равно 0.  

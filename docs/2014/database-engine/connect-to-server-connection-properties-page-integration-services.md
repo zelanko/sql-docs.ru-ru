@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f46eb5206e666caeb928c3718c75f093beb6bf4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755240"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934665"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Соединение с сервером (страница «Свойства соединения») — службы Integration Services
   Эта вкладка используется для просмотра или указания параметров при подключении к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssIS](../includes/ssis-md.md)] **зарегистрированным серверам**или регистрации в них. Кнопки**Соединить** и **Параметры** появляются в этом диалоговом окне только при соединении. Кнопки**Проверить** и **Сохранить** появляются в этом диалоговом окне только при регистрации компонента [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Номер порта**  
  Введите номер порта, используемого службами [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
- **Время ожидания соединения**  
+ **Время ожидания подключения**  
  Введите время ожидания (в секундах) до установки соединения. Значение по умолчанию — 15 секунд.  
   
  **Время ожидания выполнения**  

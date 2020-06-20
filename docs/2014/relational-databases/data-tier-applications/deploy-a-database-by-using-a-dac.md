@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0da23febcc1f2e97b1dfaff29a5df5ced16c7e4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873055"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970285"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
   С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62873055"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Параметры базы данных:**  
   
--   выпуск — выберите выпуск [!INCLUDE[ssSDS](../../includes/sssds-md.md)] из раскрывающегося меню. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
+-   ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] выпуск** — выберите выпуск из раскрывающегося [!INCLUDE[ssSDS](../../includes/sssds-md.md)] меню.  
   
 -   **Максимальный размер базы данных** — выберите максимальный размер базы данных в раскрывающемся меню.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62873055"
 ##  <a name="summary-page"></a><a name="Summary"></a> Страница «Сводка»  
  Воспользуйтесь этой страницей для просмотра указанного источника и целевых параметров операции. Чтобы выполнить развертывание с заданными параметрами, нажмите кнопку **Готово**. Чтобы отменить операцию развертывания и выйти из мастера, нажмите кнопку **Отмена**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Страница "выполнение"  
+##  <a name="progress-page"></a><a name="Progress"></a> Страница «Ход выполнения»  
  На этой странице отображается индикатор выполнения, который определяет состояние операции. Чтобы просмотреть подробности состояния, выберите параметр **Просмотр сведений** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Страница «результаты»  
@@ -136,7 +135,7 @@ ms.locfileid: "62873055"
   
 6.  Вызовите метод `Import` типа `Microsoft.SqlServer.Management.Dac.DacStore` для импорта BACPAC. Укажите файл BACPAC, созданный при экспорте.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Приложения уровня данных](data-tier-applications.md)   
  [Экспорт приложения уровня данных](export-a-data-tier-application.md)   
  [Импорт файла BACPAC для создания новой пользовательской базы данных](import-a-bacpac-file-to-create-a-new-user-database.md)  

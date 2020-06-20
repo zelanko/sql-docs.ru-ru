@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d33448c7e17897fd1b5fb7f3aa22c302cdcfdc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015138"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Объект SqlXmlCommand (управляемые классы SQLXML)
   Это конструктор для объекта SqlXmlCommand:  
@@ -63,7 +62,7 @@ public SqlXmlCommand(string cnString)
  Записывает результаты запроса в существующий поток. Этот метод полезен при наличии потока, к которому должны быть добавлены результаты (например, чтобы результаты запроса записывались в System. Web. HttpResponse. OutputStream). Рабочий пример см. в разделе [Выполнение SQL-запросов &#40;управляемых классов SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  XmlReader ExecuteXmlReader ()  
- Возвращает объект XmlReader. Этот метод можно использовать для непосредственного управления данными в объекте XmlReader или подключения к связанной архитектуре System. XML. Дополнительные сведения см. в документации по платформе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [Выполнение SQL-запросов с помощью метода ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Возвращает объект XmlReader. Этот метод можно использовать для непосредственного управления данными в объекте XmlReader или подключения к связанной архитектуре System.Xml. Дополнительные сведения см. в документации по платформе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Рабочий пример см. в разделе [Выполнение SQL-запросов с помощью метода ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Объект Сесклксмлкомманд также поддерживает следующие дополнительные методы:  
   
@@ -115,7 +114,7 @@ public SqlXmlCommand(string cnString)
 |Склксмлкоммандтипе. Диаграмма обновления|Выполняет диаграмму обновления.|  
 |Склксмлкоммандтипе. DiffGram|Выполняет дельту.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объект SqlXmlParameter &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmlparameter-object.md)   
  [Объект Склксмладаптер &#40;управляемые классы SQLXML&#41;](sqlxml-managed-classes-sqlxmladapter-object.md)  
   

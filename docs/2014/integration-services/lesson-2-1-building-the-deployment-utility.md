@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767586"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966094"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Шаг 1. Построение программы развертывания
   В этой задаче будет настроена и построена программа развертывания для проекта «Учебник по развертыванию».  
@@ -34,7 +33,7 @@ ms.locfileid: "62767586"
   
 4.  В диалоговом окне **Страницы свойств учебника по развертыванию** разверните узел "Свойства конфигурации" и выберите "Программа развертывания".  
   
-5.  В правой области диалогового окна **страницы свойств учебника по развертыванию** убедитесь, `AllowConfigurationChanges` что `true`для параметра задано `CreateDeploymentUtility` значение `true`, задано значение, а при необходимости — `DeploymentOutputPath`обновление значения по умолчанию.  
+5.  В правой области диалогового окна **страницы свойств учебника по развертыванию** убедитесь, что для параметра задано значение `AllowConfigurationChanges` `true` , задано `CreateDeploymentUtility` значение, `true` а при необходимости — обновление значения по умолчанию `DeploymentOutputPath` .  
   
 6.  Нажмите кнопку **ОК**.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "62767586"
   
 ![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание программы развертывания](../../2014/integration-services/create-a-deployment-utility.md)  
   
   

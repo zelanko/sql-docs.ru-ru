@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882350"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038060"
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
   После того как публикация создана, большинство свойств публикаций и статей можно изменить, но для некоторых изменений требуется, повторное создание моментального снимка и/или повторная инициализация подписок. В этом разделе содержатся сведения обо всех свойствах, требуемых для одного или обоих этих действий (если они изменяются).  
@@ -56,7 +55,7 @@ ms.locfileid: "73882350"
 |Изменение команды INSERT, UPDATE или DELETE.|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение имени целевой таблицы|**sp_changearticle**|**dest_table**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Изменение владельца (схемы) целевой таблицы.|**sp_changearticle**|**destination_owner**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
-|Изменение сопоставление типов данных (применимо только к публикации Oracle).|**sp_changearticlecolumndatatype**|**\@Тип**<br /><br /> **\@недопустим**<br /><br /> **\@precision**<br /><br /> **\@Измените**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
+|Изменение сопоставление типов данных (применимо только к публикации Oracle).|**sp_changearticlecolumndatatype**|**\@type**<br /><br /> **\@недопустим**<br /><br /> **\@обеспечивают**<br /><br /> **\@Измените**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
   
 ## <a name="publication-properties-for-merge-replication"></a>Свойства публикации для репликации слиянием  
   

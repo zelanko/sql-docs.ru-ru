@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e04a36ca687c57daae2f286025add57a32632c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cc6274933a8399fc9cc60b91135cd24894a842e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767336"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951384"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Шаг 4. Развертывание пакета, созданного на занятии 6
   Развертывание пакета предполагает добавление пакета в каталоге SSISDB в службах Integration Services на экземпляре SQL Server. На этом занятии вы добавите пакет Lesson 6 в каталог SSISDB, зададите параметр и выполните пакет. На этом занятии будет использоваться SQL Server Management Studio для добавления пакета Lesson 6 в каталог SSISDB и развертывания пакета. После развертывания пакета будет изменен параметр для указания нового расположения, а затем выполнен пакет.  
@@ -62,7 +61,7 @@ ms.locfileid: "62767336"
   
 6.  В диалоговом окне "Обзор папок" перейдите в папку, содержащую проект учебника по службам SSIS, а затем нажмите кнопку ОК.  
   
-7.  Нажмите кнопку Далее.  
+7.  Нажмите кнопку "Далее".  
   
 8.  На странице "Выбор пакетов" вы должны увидите все шесть пакетов из учебника по службам SSIS. В списке пакетов выберите Lesson 6.dtsx, а затем нажмите кнопку "Далее".  
   

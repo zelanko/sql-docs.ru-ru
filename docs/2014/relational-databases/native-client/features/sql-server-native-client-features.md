@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a516578a0d72028ec8543d136f571ea62d7520b6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc6fbe3ceb6a00df40ab7a1ac777ffaefa87cfe8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017307"
 ---
 # <a name="sql-server-native-client-features"></a>Компоненты собственного клиента SQL Server
   Помимо возможностей компонентов доступа к данным WDAC (ранее MDAC), в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] реализовано множество других функций, позволяющих пользоваться функциональностью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -95,7 +94,7 @@ ms.locfileid: "82707245"
  [Поддержка SQL Server Native Client для LocalDB](sql-server-native-client-support-for-localdb.md)  
  Обсуждение поддержки клиентом Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] улучшенной функции LocalDB.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
  [Разделы руководства по ODBC](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [OLE DB инструкций](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)   
