@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bbf5bad0a8c8e633149e2868047b88833a400849
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ceb1d222131c14810d3d71bdd8faf13509f97614
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703589"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055138"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Исключение элементов схемы из результирующего XML-документа с помощью sql:mapped (SQLXML 4.0)
   В результате сопоставления по умолчанию каждый элемент и атрибут в схеме XSD будет сопоставлен с таблицей и столбцом в базе данных. Если в схеме XSD нужно создать элемент, не сопоставленный никакой таблице, никакому представлению или столбцу базы данных и не фигурирующий в XML, нужно создать для него заметку `sql:mapped`.  
@@ -40,11 +39,11 @@ ms.locfileid: "82703589"
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Задание заметки sql:mapped  
- Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из элемента ** \< Person. Contact>** с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
+ Предположим, существует схема XSD, полученная из другого источника. Эта схема XSD состоит из **\<Person.Contact>** элемента с атрибутами **ContactID**, **FirstName**, **LastName**и **HomeAddress** .  
   
  При сопоставлении этой схемы XSD с таблицей Person. Contact в базе данных AdventureWorks в `sql:mapped` атрибуте **HomeAddress** указывается, потому что в таблице Employees не хранятся домашние адреса сотрудников. В результате этот атрибут не сопоставлен с базой данных и не возвращается в результирующем XML-документе в ответ на запрос XPath к схеме сопоставления.  
   
- Для остальной части схемы используется сопоставление по умолчанию. Элемент ** \< Person. Contact>** сопоставляется с таблицей Person. Contact, а все атрибуты сопоставляются со столбцами с тем же именем в таблице Person. Contact.  
+ Для остальной части схемы используется сопоставление по умолчанию. **\<Person.Contact>** Элемент сопоставляется с таблицей Person. Contact, и все атрибуты сопоставляются со столбцами с тем же именем в таблице Person. Contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -103,7 +102,7 @@ ms.locfileid: "82703589"
   
  Обратите внимание, что поля ContactID, FirstName и LastName присутствуют, а HomeAddress — нет, потому что в схеме сопоставления было задано значение 0 для атрибута `sql:mapped`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставление элементов и атрибутов XSD с таблицами и столбцами по умолчанию &#40;SQLXML 4,0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

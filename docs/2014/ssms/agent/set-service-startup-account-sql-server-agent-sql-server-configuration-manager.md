@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b822da364fef2831f0f183089ce1cc330ca3118e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63033690"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067583"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   Стартовая учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определяет учетную запись Windows, которая запускает агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также его сетевые разрешения. Этот раздел посвящен назначению учетных записей службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "63033690"
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
- Для выполнения своих функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент должен быть настроен на использование учетных данных учетной записи, которая является членом `sysadmin` предопределенной роли сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в. Эта учетная запись должна иметь следующие разрешения Windows.  
+ Для выполнения своих функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент должен быть настроен на использование учетных данных учетной записи, которая является членом `sysadmin` предопределенной роли сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта учетная запись должна иметь следующие разрешения Windows.  
   
 -   Вход в систему в качестве службы (SeServiceLogonRight)  
   
@@ -71,7 +70,7 @@ ms.locfileid: "63033690"
   
 5.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли выберите **Службы SQL Server**.  
   
-6.  В области сведений щелкните правой кнопкой мыши **Агент SQL Server**_(server_name)_, где *server_name* — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента, для которого необходимо изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
+6.  В области сведений щелкните правой кнопкой мыши **Агент SQL Server**_(server_name)_, где *server_name* — имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра агента, для которого необходимо изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
   
 7.  В диалоговом окне **свойства** **Агент SQL Server**_(server_name)_ на вкладке **Вход** в систему выберите один из следующих параметров в разделе **Вход в систему как**.  
   

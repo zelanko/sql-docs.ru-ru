@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 77f30570-7790-4747-b372-eac71c036e19
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91643240cc79edc34d69988276bbbcac02cfdcd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053447"
 ---
 # <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
     
@@ -39,7 +38,7 @@ ms.locfileid: "62761638"
  Чтобы устранить эту ошибку, завершите все запущенные процессы управляющей программы полнотекстовой фильтрации и при необходимости измените конфигурацию учетной записи этой программы с помощью диспетчера конфигурации SQL Server.  
   
 ## <a name="see-also"></a>См. также:  
- [диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
+ [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
  [Настройка учетной записи службы для средства запуска управляющей программы полнотекстовой фильтрации](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Полнотекстовый поиск](../search/full-text-search.md)  
   

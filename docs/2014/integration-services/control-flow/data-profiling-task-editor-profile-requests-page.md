@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bedc984f75bdd5d78781fbd7a300bfa87a7fe43e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62832068"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919248"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Редактор задачи «Профилирование данных» (страница «Запросы профиля»)
   **Страница «Запросы профиля»** **редактора задачи «Профилирование данных»** используется для выбора и настройки профилей, которые необходимо вычислить. В рамках одной задачи «Профилирование данных» можно вычислить несколько профилей для нескольких столбцов или сочетаний столбцов из нескольких таблиц или представлений.  

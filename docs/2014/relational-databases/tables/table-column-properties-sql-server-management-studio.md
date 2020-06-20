@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49bfc0da1b5e18a4ea486fa68834254bbe82882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1894b074491af1962d2180337288e188d41b2951
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211799"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055071"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Свойства столбца таблицы (среда SQL Server Management Studio)
   Эти свойства отображаются на нижней панели конструктора таблиц. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства» при выборе столбца. **Свойства столбца** можно просматривать по категориям или по алфавитному списку. Многие свойства только отображаются и доступны для изменения только для определенных типов данных.  

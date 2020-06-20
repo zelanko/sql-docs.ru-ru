@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f0623f79c3d17f3e350c151d64bb00372e3ffe56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2f6a9b3b8e5e1f63a2c539c710b03375b7061fd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937885"
 ---
 # <a name="create-a-matching-policy"></a>Создание политики сопоставления
   В этом разделе описывается создание политики сопоставления в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Подготовка процесса сопоставления в DQS с помощью выполнения операции политики сопоставления на образце данных. В данной операции создается и проверяется одно или несколько правил сопоставления в политике, затем публикуется база знаний, что делает правила сопоставления доступными для общего пользования. В базе знаний может быть только одна политика сопоставления, но эта политика может содержать несколько правил сопоставления.  

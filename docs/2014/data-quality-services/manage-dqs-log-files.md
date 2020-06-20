@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fccfd24-aede-4882-be69-ec1e82682e16
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4aa9dc994ddd11c6fad57473d20956d95e46ebeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e22df90d4e5cb08ac5836f78f4940559be266ec
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484167"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937535"
 ---
 # <a name="manage-dqs-log-files"></a>Управление файлами журнала DQS
   Файлы журнала[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) полезны при диагностике и устранении проблем в [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)]. Отдельные файлы журнала создаются для [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]и [!INCLUDE[ssDQSCleansing](../includes/ssdqscleansing-md.md)].  
@@ -73,7 +72,7 @@ ms.locfileid: "65484167"
 |Инструкции по настройке параметров серьезности записи в журнал для файлов журнала DQS с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Настройка степеней серьезности для файлов журнала DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
 |Инструкции по ручной настройке дополнительных параметров для файлов журнала DQS.|[Configure Advanced Settings for DQS Log Files](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [администрирование DQS](../../2014/data-quality-services/dqs-administration.md)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26d3e89fcba41d474ca56637f9e465f17127348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199457"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060534"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
   Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При внесении любого из следующих изменений схемы в соответствующий опубликованный объект на издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это изменение распространяется по умолчанию на все подписчики [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -85,11 +84,11 @@ ms.locfileid: "68199457"
   
 #### <a name="adding-columns"></a>Добавление столбцов  
   
--   Для добавления в таблицу нового столбца и включения этого столбца в существующую публикацию выполните инструкцию ALTER TABLE \<таблица> ADD \<столбец>. По умолчанию этот столбец затем реплицируется на все подписчики. Столбец должен допускать использование значений NULL или содержать ограничение по умолчанию. Дополнительные сведения о добавлении столбцов см. в подразделе «Репликация слиянием» этого раздела.  
+-   Чтобы добавить новый столбец в таблицу и включить этот столбец в существующую публикацию, выполните инструкцию ALTER TABLE \<Table> Add \<Column> . По умолчанию этот столбец затем реплицируется на все подписчики. Столбец должен допускать использование значений NULL или содержать ограничение по умолчанию. Дополнительные сведения о добавлении столбцов см. в подразделе «Репликация слиянием» этого раздела.  
   
--   Чтобы добавить в таблицу новый столбец и не включить его в существующую публикацию, отключите репликацию изменений схемы, а затем выполните инструкцию ALTER TABLE \<таблица> ADD \<столбец>.  
+-   Чтобы добавить новый столбец в таблицу и не включать этот столбец в существующую публикацию, отключите репликацию изменений схемы, а затем выполните инструкцию ALTER TABLE \<Table> Add \<Column> .  
   
--   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>**.  
+-   Чтобы включить существующий столбец в существующую публикацию, используйте [sp_articlecolumn &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)или диалоговое окно **Свойства публикации — \<Publication> ** .  
   
      Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
@@ -97,9 +96,9 @@ ms.locfileid: "68199457"
   
 #### <a name="dropping-columns"></a>Удаление столбцов  
   
--   Для удаления столбца из имеющийся публикации и удаления столбца из таблицы на издателе выполните инструкцию ALTER TABLE \<таблица> DROP \<столбец>. По умолчанию столбец затем удаляется из таблицы на всех подписчиках.  
+-   Чтобы удалить столбец из существующей публикации и удалить столбец из таблицы на издателе, выполните инструкцию ALTER TABLE \<Table> DROP \<Column> . По умолчанию столбец затем удаляется из таблицы на всех подписчиках.  
   
--   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) или диалоговое окно **Свойства публикации — \<публикация>**.  
+-   Чтобы удалить столбец из существующей публикации, оставив столбец в таблице на издателе, используйте [sp_articlecolumn &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)или диалоговое окно **Свойства публикации — \<Publication> ** .  
   
      Дополнительные сведения см. в разделе [Define and Modify a Column Filter](define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   

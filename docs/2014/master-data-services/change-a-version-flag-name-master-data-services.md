@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce3fd9d9758c878ed091d1d3125da6d5a7c299b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972074"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Изменение имени флага версии (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя флага версии.  
@@ -43,7 +42,7 @@ ms.locfileid: "65484047"
   
 6.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Версии &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Назначение флага версии (службы Master Data Services)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab6505ad-3090-453b-bb01-58435e7fa7c0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3d25d369870dc7a4f53e70a61726ffbb7d38d9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16e030b52e4c7f99368efd8054f87df495b67257
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480614"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937715"
 ---
 # <a name="end-the-domain-management-activity"></a>Завершение операции по управлению доменами
   В этом разделе описывается завершение, закрытие и отмена операции управления доменами в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Управление доменами выполняется не в мастере, поэтому описанные ниже элементы управления можно использовать на любых страницах в категории управления доменами.  

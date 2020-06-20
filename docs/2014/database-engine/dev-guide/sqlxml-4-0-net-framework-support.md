@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c18cf801-f893-4fbc-8e2b-c563f6108acf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 99973fe28d18dc28a0d6690567eb3923e74eb812
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2545f41db1571276b3eba53fbe34533ac6a62d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933342"
 ---
 # <a name="sqlxml-40-net-framework-support"></a>Поддержка SQLXML 4.0 на платформе .NET Framework
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 поддерживает функции для создания приложений, которые обращаются к XML-данным в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], переводят данные в среду [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, обрабатывают данные и отправляют обновления назад в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В данном разделе описываются функции поддержки платформы .NET Framework и приводятся примеры их использования.  
@@ -34,7 +33,7 @@ ms.locfileid: "62780517"
  [Использование массовой загрузки SQLXML в среде .NET](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/sqlxml-4-0-net-framework-support-using-bulk-load.md)  
  Описывает использование массовой загрузки SQLXML в среде .NET Framework.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

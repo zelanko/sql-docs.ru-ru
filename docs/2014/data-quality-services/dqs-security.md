@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ae5ff9bf9fe78ca7230865c6f3df5f2b1333f005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0702d85a6f83102a666720cef4692775c08a9ee5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480850"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937735"
 ---
 # <a name="dqs-security"></a>Безопасность DQS
   Инфраструктура обеспечения безопасности [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) основана на инфраструктуре обеспечения безопасности SQL Server. Администратор базы данных предоставляет пользователю набор разрешений, объединяя пользователя с ролью DQS. Это определяет ресурсы служб DQS, к которым пользователь имеет доступ, а также функциональные операции, которые позволено выполнять пользователю.  

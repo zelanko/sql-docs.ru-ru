@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922052"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917224"
 ---
 # <a name="create-the-ssis-catalog"></a>Создание каталога служб SSIS
   После разработки и тестирования пакетов в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]можно выполнить развертывание проектов, содержащих пакеты, на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Прежде чем развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], необходимо создать каталог `SSISDB` на этом сервере. Программа установки [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] не создает этот каталог автоматически. Его необходимо создать вручную, следуя приведенным ниже инструкциям.  
@@ -24,7 +23,7 @@ ms.locfileid: "82922052"
   
 ### <a name="to-create-the-ssisdb-catalog-in-sql-server-management-studio"></a>Создание каталога SSISDB в SQL Server Management Studio  
   
-1.  Откройте файл [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Откройте [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 2.  Соединитесь с ядром СУБД [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
@@ -69,6 +68,6 @@ ms.locfileid: "82922052"
   
      Дополнительные примеры использования Windows PowerShell и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> см. в записи блога [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (Службы SSIS и PowerShell в SQL Server 2012) на сайте blogs.msdn.com. Общие сведения о пространстве имен и примеры кода см. в записи блога [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)на сайте blogs.msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Каталог служб SSIS](catalog/ssis-catalog.md)   
  [Резервное копирование, восстановление и перемещение каталога служб SSIS](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

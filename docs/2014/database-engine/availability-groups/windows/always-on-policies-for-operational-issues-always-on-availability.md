@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9d91876e2efc7ac531ebdce5794024e92cd02959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922015"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937195"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Политики AlwaysOn на случай проблем в работе с группами доступности AlwaysOn (SQL Server)
   Модель правил определения исправности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вычисляет набор стандартных (PBM) политик управления на основе политик. Их можно использовать для просмотра исправности группы доступности и реплики доступности и базы данных в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -48,15 +47,15 @@ ms.locfileid: "82922015"
   
 |Имя политики|Проблема|Категори**<sup>*</sup>**|Аспект|  
 |-----------------|-----------|------------------------------|-----------|  
-|Состояние кластера WSFC|[Служба кластеров WSFC находится в автономном режиме](wsfc-cluster-service-is-offline.md).|Критические важное|Экземпляр SQL Server|  
-|Режим «в сети» группы доступности|[Группа доступности находится в автономном режиме](availability-group-is-offline.md).|Критические важное|группа доступности|  
-|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|[Группа доступности не готова к автоматическому переходу на другой ресурс](availability-group-is-not-ready-for-automatic-failover.md).|Критические важное|группа доступности|  
+|Состояние кластера WSFC|[Служба кластеров WSFC находится в автономном режиме](wsfc-cluster-service-is-offline.md).|Critical|Экземпляр SQL Server|  
+|Режим «в сети» группы доступности|[Группа доступности находится в автономном режиме](availability-group-is-offline.md).|Critical|группа доступности|  
+|Готовность группы доступности к автоматическому переходу на другой ресурс при сбое|[Группа доступности не готова к автоматическому переходу на другой ресурс](availability-group-is-not-ready-for-automatic-failover.md).|Critical|группа доступности|  
 |Состояние синхронизации данных реплик доступности|[Некоторые реплики доступности не синхронизируют данные](some-availability-replicas-are-not-synchronizing-data.md).|Предупреждение|группа доступности|  
 |Состояние синхронизации данных синхронных реплик|[Некоторые синхронные реплики не синхронизированы](some-synchronous-replicas-are-not-synchronized.md).|Предупреждение|группа доступности|  
 |Состояние роли реплик доступности|[Некоторые реплики доступности не имеют работоспособной роли](some-availability-replicas-do-not-have-a-healthy-role.md).|Предупреждение|группа доступности|  
 |Состояние соединения с репликами доступности|[Некоторые реплики доступности отключены](some-availability-replicas-are-disconnected.md).|Предупреждение|группа доступности|  
-|Состояние роли реплики доступности|[Реплика доступности не имеет работоспособной роли](availability-replica-does-not-have-a-healthy-role.md).|Критические важное|Реплика доступности|  
-|Состояние соединения с репликами доступности|[Реплика доступности отключена](availability-replica-is-disconnected.md).|Критические важное|Реплика доступности|  
+|Состояние роли реплики доступности|[Реплика доступности не имеет работоспособной роли](availability-replica-does-not-have-a-healthy-role.md).|Critical|Реплика доступности|  
+|Состояние соединения с репликами доступности|[Реплика доступности отключена](availability-replica-is-disconnected.md).|Critical|Реплика доступности|  
 |Состояние присоединения реплики доступности|[Реплика доступности не присоединена](availability-replica-is-not-joined.md).|Предупреждение|Реплика доступности|  
 |Состояние синхронизации данных реплики доступности|[Состояние синхронизации данных некоторых баз данных доступности не является работоспособным](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Предупреждение|Реплика доступности|  
 |Состояние приостановки базы данных доступности|[База данных доступности приостановлена](availability-database-is-suspended.md).|Предупреждение|База данных доступности|  
@@ -110,7 +109,7 @@ ms.locfileid: "82922015"
   
 -   [Руководство по решениям режима AlwaysOn в Microsoft SQL Server для обеспечения высокой доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Администрирование &#40;SQL Server группы доступности&#41;](administration-of-an-availability-group-sql-server.md)   

@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767186"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964824"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
   Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
   
 ## <a name="sections-in-this-topic"></a>Подразделы данного раздела  
- Этот раздел состоит из следующих подразделов.  
+ В этом разделе содержатся следующие подразделы.  
   
 -   [Планирование заданий в агенте SQL Server](#jobs)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "62767186"
   
  Видеоролик о том, как использовать агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения пакетов, см. на домашней странице [Как автоматизировать выполнение пакетов с помощью агента SQL Server (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771)в библиотеке MSDN.  
   
-##  <a name="troubleshooting"></a><a name="trouble"></a>Выявлен  
+##  <a name="troubleshooting"></a><a name="trouble"></a> Устранение неполадок  
  Возможна ситуация, когда шаг задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не сможет запустить пакет даже в случае успешного выполнения пакета в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или из командной строки. У этой проблемы есть несколько распространенных причин и несколько рекомендуемых решений. Для получения дополнительных сведений см. следующие ресурсы.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] , [Пакет служб SSIS не выполняется при вызове пакета из шага задания агента SQL Server](https://support.microsoft.com/kb/918760)  

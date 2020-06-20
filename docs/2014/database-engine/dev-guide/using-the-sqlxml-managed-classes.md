@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634a0e4110b13931201edd026ee95028cb94e859
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780333"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933195"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>Использование управляемых классов SQLXML
   В этом разделе приводятся образцы приложений, которые демонстрируют способы использования управляемых классов [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML.  

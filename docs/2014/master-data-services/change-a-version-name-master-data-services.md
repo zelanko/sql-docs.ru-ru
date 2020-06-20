@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cd2441424a6728bbaac8c000e54f5737b3d7c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972064"
 ---
 # <a name="change-a-version-name-master-data-services"></a>Изменение имени версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]имя версии можно изменить для ее настройки для нужд организации.  
@@ -39,7 +38,7 @@ ms.locfileid: "65483645"
   
 4.  Нажмите клавишу ВВОД.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка версии на соответствие бизнес-правилам &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [Блокировка &#40;версии Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)   
  [Фиксация &#40;версии Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)   

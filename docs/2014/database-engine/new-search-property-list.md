@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: ffca78e9-8608-4b15-bd38-b2d78da4247a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 23941f8fcf11b874cb459c3a77308534c24ca81f
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 48c9e475b380d5f0c7310e33717f261c38acbbd4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930375"
 ---
 # <a name="new-search-property-list"></a>Новый список свойств поиска
   Это диалоговое окно используется для создания списка свойств поиска.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Имя списка свойств поиска**  
  Введите имя списка свойств поиска.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "83000818"
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Управление списками свойств поиска в среде SQL Server Management Studio  
  Сведения о создании, просмотре, изменении или удалении списка свойств поиска, а также о настройке полнотекстового индекса для поиска свойств см. в разделе [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание списка свойств поиска &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [Поиск свойств документа с помощью списков свойств поиска](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  

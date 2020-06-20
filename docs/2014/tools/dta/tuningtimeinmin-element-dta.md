@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c30c6a4f746ae9aa81b8c1a71c0e380bdd26df03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8690467f33b53588857747b86771b739f4e406dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63268161"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007453"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Элемент TuningTimeInMin (DTA)
   Позволяет задать максимальную длительность сеанса настройки в минутах.  
@@ -36,7 +35,7 @@ ms.locfileid: "63268161"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|`unsignedInt`, неограниченная длина|  
 |**Значение по умолчанию**|480 минут (8 часов)|  
@@ -51,7 +50,7 @@ ms.locfileid: "63268161"
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В следующем примере кода показано, как установить максимальное время настройки — 12 часов:  
   
 ## <a name="code"></a>Код  

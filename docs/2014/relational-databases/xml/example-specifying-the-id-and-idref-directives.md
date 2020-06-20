@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a56fb4684b1326e600860da60858fcfae1d469ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6f7281341cae3f93490d9453619ecdbf426b8e0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067759"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Пример. Указание директив ID и IDREF
   Данный пример почти совпадает с примером [Указание директивы ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . Единственная разница заключается в указании в данном запросе директив **ID** и **IDREF** . Эти директивы перезаписывают типы атрибута **SalesPersonID** в элементах <`OrderHeader`> и <`OrderDetail`>. Образуются связи внутри документа. Для просмотра перезаписанных типов необходима схема. Поэтому в запросе указывается параметр **XMLDATA** в предложении FOR XML для получения схемы.  

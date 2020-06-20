@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 201ccae98886e5126eb347c10d16985cbeeddffe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17ca833a0773b48df0cc3781505b1046e2a63814
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932745"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>Вопросы по установке SQL Server с помощью SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep позволяет подготавливать отдельные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере и завершать настройку позднее. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep для настройки отдельного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]применяется процесс, состоящий из двух действий. Эти действия включают следующие шаги.  
@@ -28,7 +27,7 @@ ms.locfileid: "62779140"
   
      На этом шаге завершается настройка подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При его выполнении можно задать информацию, связанную только с определенным компьютером, сетью или учетной записью.  
   
- Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью Sysprep см. в [статье Установка SQL Server 2014 с помощью Sysprep](install-sql-server-using-sysprep.md).  
+ Дополнительные сведения об установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью Sysprep см. в [статье установка SQL Server 2014 с помощью Sysprep](install-sql-server-using-sysprep.md).  
   
 ## <a name="common-uses-for-ssnoversion-sysprep"></a>Распространенные варианты применения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  Функцию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep можно использовать одним из следующих способов.  
@@ -65,7 +64,7 @@ ms.locfileid: "62779140"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и модуль записи [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подготавливаются автоматически при подготовке экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они создаются по окончании создания экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на шаге завершения создания образа.  
   
- Сведения о поддерживаемых выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. [в разделе функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Сведения о поддерживаемых выпусках см [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [в разделе функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Во время настройки подготовленного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно выполнить обновление выпусков. Этот параметр не поддерживается для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express.  
   

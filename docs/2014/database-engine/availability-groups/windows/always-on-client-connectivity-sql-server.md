@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 446a0f709c35028efd5a39b347919b1e0b40b4b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937182"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Подключение клиента AlwaysOn (SQL Server)
   В этом разделе обсуждаются особенности обеспечения подключений клиентов к группам доступности AlwaysOn, в том числе предварительные условия, ограничения и рекомендации по конфигурации и настройке клиентов.  
@@ -33,17 +32,17 @@ ms.locfileid: "67793434"
   
  В следующей таблице приведены сведения о поддержке драйверов для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
-|Драйвер|Отработка отказа с использованием нескольких подсетей|Назначение приложения|Маршрутизация только для чтения|Переход на другой ресурс с использованием нескольких подсетей: переход на другой ресурс для конечной точки одной более быстрой подсети|Переход на другой ресурс с использованием нескольких подсетей: разрешение именованного экземпляра для кластеризованных экземпляров SQL|  
+|Драйвер|Отработка отказа с использованием нескольких подсетей|Назначение приложения|Маршрутизация только для чтения|Отработка отказа в нескольких подсетях: ускоряет отработку отказа конечной точки одной подсети|Отработка отказа в нескольких подсетях: разрешение именованного экземпляра для кластеризованных экземпляров SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Да|Да|Да|Да|Да|  
-|SQL Native Client 11.0 OLEDB|Нет|Да|Да|Нет|нет|  
+|SQL Native Client 11.0 OLEDB|нет|Да|Да|Нет|нет|  
 |ADO.NET с .NET Framework 4,0 с исправлением подключения**<sup>*</sup>** |Да|Да|Да|Да|Да|  
 |ADO.NET с .NET Framework 3,5 с пакетом обновления 1 (SP1) с исправлением подключения**<sup>**</sup>** |Да|Да|Да|Да|Да|  
 |Драйвер Microsoft JDBC 4.0 для SQL Server|Да|Да|Да|Да|Да|  
   
- **<sup>*</sup>** Скачайте Исправление подключения для ADO .NET с .NET Framework 4,0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  
+ **<sup>*</sup>** Скачайте Исправление подключения для ADO .NET с .NET Framework 4,0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211) .  
   
- **<sup>**</sup>* * Загрузите исправление подключения для ADO.NET с .NET Framework 3,5 с пакетом [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)обновления 1 (SP1):.  
+ **<sup>**</sup>* * Загрузите исправление подключения для ADO.NET с .NET Framework 3,5 с пакетом обновления 1 (SP1): [https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347) .  
   
 > [!IMPORTANT]  
 >  Для подключения к прослушивателю группы доступности клиент должен использовать строку подключения TCP.  
@@ -56,11 +55,11 @@ ms.locfileid: "67793434"
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Общие сведения о группы доступности AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Отказоустойчивая кластеризация и группы доступности AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [Предварительные требования, ограничения и рекомендации для группы доступности AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Прослушиватели групп доступности, подключение клиентов и отработка отказа приложений &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../listeners-client-connectivity-application-failover.md)   
  [Сведения о доступе клиентского подключения к репликам доступности (SQL Server)](about-client-connection-access-to-availability-replicas-sql-server.md)   
  [Microsoft SQL Server рекомендации по решениям AlwaysOn для обеспечения высокого уровня доступности и аварийного восстановления](https://go.microsoft.com/fwlink/?LinkId=227600)   
  [Блог группы SQL Server AlwaysOn: Официальный блог группы SQL Server AlwaysOn](https://blogs.msdn.com/b/sqlalwayson/)   

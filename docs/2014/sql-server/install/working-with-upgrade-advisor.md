@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d529a8ed50a885aa74969fc0cbb3668fc1e5587b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090958"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041420"
 ---
 # <a name="working-with-upgrade-advisor"></a>Работа с помощником по обновлению
   Чтобы обеспечить успешное обновление до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], советник по переходу содержит центральную консоль для выявления проблем с установкой перед обновлением до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -45,7 +44,7 @@ ms.locfileid: "66090958"
 |[Инструкции по работе с помощником по обновлению](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Содержит инструкции по выполнению общих процедур помощника по обновлению.|  
 |[Справочник по пользовательскому интерфейсу помощника по обновлению](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)|Содержит разделы, которые появляются при нажатии клавиши F1 или кнопки **Справка** на страницах мастера анализа помощника по обновлению.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка помощника по обновлению](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Решение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

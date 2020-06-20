@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
-manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: a5181dcf07745fc1bf9cd993ebd65c58f55f96c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054264"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Оценка готовности SQL Serverного пространства данных для переноса в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -62,8 +61,8 @@ ms.locfileid: "82886191"
     | ------------- | ------------- |
     | Азия | Юго-Восточная Азия или Азиатско-Тихоокеанский регион |
     | Европа | Южная Европа или Западная Европа |
-    | Соединенное Королевство | Южная часть Соединенного Королевства или западная часть Соединенного Королевства |
-    | США | Центральная часть США или Западная часть США 2 |
+    | United Kingdom | Южная часть Соединенного Королевства или западная часть Соединенного Королевства |
+    | США | "Центральная часть США" или "Западная часть США 2" |
 
     Метаданные, собранные с локальных виртуальных машин, хранятся только в регионе, который задан для проекта. При выполнении миграции можно выбрать любой целевой регион.
 
@@ -102,7 +101,7 @@ ms.locfileid: "82886191"
 
     Если вы обновляете локальный экземпляр SQL Server до более поздней версии SQL Server или для SQL Server, размещенного на виртуальной машине Azure, задайте для параметра Тип исходного и целевого сервера значение **SQL Server**. Задайте тип целевого сервера **управляемый экземпляр базы данных SQL Azure** для оценки готовности целевой базы данных SQL Azure (PaaS).
 
-3. Щелкните **Создать**.
+3. Нажмите кнопку **создания**.
 
    ![Интерфейс Помощник по миграции данных службы "миграция Azure"](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-interface.png)
 

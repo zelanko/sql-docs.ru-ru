@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76349c0ca91f24a6d8d7942a89eb9683a91b573d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056342"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964262"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Сохранение пакета в качестве шаблона пакета
   В этом разделе описано, как обозначить и использовать пользовательские пакеты в виде шаблонов при создании новых пакетов служб Integration Services в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. По умолчанию в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используется шаблон пакета, который создает пустой пакет при добавлении нового пакета в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот шаблон по умолчанию заменить нельзя, однако можно добавить новые шаблоны.  
@@ -41,13 +40,13 @@ ms.locfileid: "66056342"
   
 2.  В обозревателе решений щелкните проект правой кнопкой мыши, укажите **Добавить** и выберите **Новый элемент**.  
   
-3.  В диалоговом окне **Добавление нового\<элемента — имя проекта>** выберите пакет, который нужно использовать в качестве шаблона.  
+3.  В диалоговом окне **Добавление нового \<project name> элемента —** щелкните пакет, который требуется использовать в качестве шаблона.  
   
      Список шаблонов включает шаблон пакетов по умолчанию с именем «Новый пакет служб SSIS». Значок пакета определяет шаблоны, которые можно использовать в качестве шаблонов пакетов.  
   
 4.  Нажмите кнопку **Добавить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
  [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  
   

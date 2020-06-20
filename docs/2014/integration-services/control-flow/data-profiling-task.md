@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831903"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919259"
 ---
 # <a name="data-profiling-task"></a>Задача «Профилирование данных»
   Задача «Профилирование данных» вычисляет различные профили, помогающие ознакомиться с источниками данных и определить ошибки в данных, требующие исправления.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831903"
 |FunctionalDependencyProfile|Столбцы типа `integer`, типа `char` и типа `datetime`|  
 |InclusionProfile|Столбцы типа `integer`, типа `char` и типа `datetime`|  
   
- \*В предыдущей таблице допустимых типов данных `integer`типы, `char`, `datetime`и `numeric` включают следующие конкретные типы данных:  
+ \*В предыдущей таблице допустимых типов данных `integer` `char` типы,, `datetime` и `numeric` включают следующие конкретные типы данных:  
   
  К целочисленным типам относятся `bit`, `tinyint`, `smallint`, `int` и `bigint`.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831903"
   
  К числовым типам относятся типы `integer` (кроме `bit`), `money`, `smallmoney`, `decimal`, `float`, `real`, а также `numeric`.  
   
- \*\*`image`типы `text`, `XML`, `udt`, и `variant` не поддерживаются для профилей, отличных от профиля соотношения значений NULL в столбцах.  
+ \*\*`image` `text` типы,,, `XML` `udt` и `variant` не поддерживаются для профилей, отличных от профиля соотношения значений NULL в столбцах.  
   
 ### <a name="valid-tables-and-columns"></a>Допустимые таблицы и столбцы  
  Если таблица или столбец пусты, то задача «Профилирование данных» предпринимает следующие действия.  

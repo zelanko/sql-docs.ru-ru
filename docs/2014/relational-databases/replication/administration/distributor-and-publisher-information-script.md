@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35b7c489b49a4463dc0b12f1469d1310f5d26fef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4695b53e52c9c63eaacb4f2f32c6bc9f65958213
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63186988"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060833"
 ---
 # <a name="distributor-and-publisher-information-script"></a>Скрипт вывода сведений о распространителе и издателе
   Этот скрипт использует системные таблицы и хранимые процедуры репликации, позволяющие получить ответы на часто задаваемые вопросы об объектах на распространителе и издателе. Скрипт может использоваться «как есть», а также может служить основой для пользовательских скриптов. Для выполнения в вашей среде, возможно, потребуется внести в скрипт два изменения:  
   
 -   Изменить строку `use AdventureWorks2012` для использования имени вашей базы данных публикации.  
   
--   Удалить комментарии (`--`) из строки `exec sp_helparticle @publication='<PublicationName>'` и заменить \<PublicationName> именем публикации.  
+-   Удалите комментарии ( `--` ) из строки `exec sp_helparticle @publication='<PublicationName>'` и замените \<PublicationName> именем публикации.  
   
 ```  
 --********** Execute at the Distributor in the master database **********--  

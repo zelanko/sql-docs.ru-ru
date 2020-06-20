@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f21a845b6db79390a31c4b26197547a041e76de
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 87af61145c4e09c2713c96e5a451fe30c4d7300c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930105"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Параметры (результаты запроса — страница «SQL Server-Общие»)
   На этой странице можно определить поведение запроса на панели «Результаты» по умолчанию. Чтобы отобразить эти параметры, в меню **Сервис** выберите пункт **Параметры**, откройте папку **Результаты запроса** и выберите раздел **SQL Server**, а затем пункт **Общие**. Изменения этих параметров применяются только к новым запросам [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы изменить эти параметры для текущих запросов, в меню **Запрос** выберите пункт **Параметры запроса** или щелкните правой кнопкой мыши в окне запроса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и выберите пункт **Параметры запроса**.  
