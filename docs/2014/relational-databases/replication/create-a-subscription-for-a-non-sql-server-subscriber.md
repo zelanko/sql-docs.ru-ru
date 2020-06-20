@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010916"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
   В данном разделе описывается процесс создания подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] для подписчика, отличного от подписчика SQL Server, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Репликация транзакций и репликация моментальных снимков поддерживают публикацию данных на подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о поддерживаемых платформах подписчиков см. в разделе [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "62721676"
   
          Моментальный снимок создается после включения публикации для подписчиков, не относящихся к[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы гарантировать, что агент моментальных снимков создаст скрипты моментального снимка и инициализации, пригодные для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  В диалоговом окне **Свойства публикации — \<имя_публикации>** разрешите публикацию для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
+3.  Включите публикацию для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью диалогового окна **Свойства публикации — \<PublicationName> ** . Дополнительные сведения об этом шаге см. в разделе [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
   
 4.  Создайте подписку с помощью мастера создания подписок. В этом разделе содержатся дополнительные сведения об этом шаге.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721676"
   
 2.  Щелкните правой кнопкой мыши публикацию, а затем щелкните **Просмотреть состояние агента моментальных снимков**.  
   
-3.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<Публикация>** щелкните **Запуск**.  
+3.  В диалоговом окне **Просмотр состояния \<Publication> Агент моментальных снимков —** нажмите кнопку **запустить**.  
   
  Когда агент моментальных снимков завершит создание моментального снимка, на экран будет выведено примерно следующее сообщение: «[100%] Создан моментальный снимок 17 статей».  
   
@@ -155,25 +154,25 @@ ms.locfileid: "62721676"
   
     -   Если параметр `enabled_for_het_sub` имеет значение 1, то подписчики, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаются.  
   
-    -   Если значение `enabled_for_het_sub` равно 0, выполните [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) `enabled_for_het_sub` , указав **@property** для и `true` для. **@value**  
+    -   Если значение `enabled_for_het_sub` равно 0, выполните [Sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), указав `enabled_for_het_sub` для **@property** и `true` для **@value** .  
   
         > [!NOTE]  
         >  Перед изменением значения `enabled_for_het_sub` на `true` необходимо удалить все существующие подписки на публикацию. Нельзя присвоить параметру `enabled_for_het_sub` значение `true`, если публикация также поддерживает обновляемые подписки. Изменение параметра `enabled_for_het_sub` отразится на других свойствах публикации. Дополнительные сведения см. в статье [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication**, **@subscriber**, значение **(назначение по умолчанию)** для **@destination_db**, значение **Push** **@subscription_type**в параметре и значение 3 для **@subscriber_type** (указывает поставщика OLE DB).  
+3.  В издателе в базе данных публикации выполните процедуру [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите **@publication** , **@subscriber** , значение **(назначение по умолчанию)** для **@destination_db** , значение **Push** в параметре **@subscription_type** и значение 3 для **@subscriber_type** (указывает поставщика OLE DB).  
   
 4.  В издателе в базе данных публикации выполните процедуру [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Укажите следующее.  
   
-    -   Параметры **@subscriber**и **@publication** .  
+    -   **@subscriber**Параметры и **@publication** .  
   
     -   значение **(назначение по умолчанию)** @property **@subscriber_db**,  
   
-    -   Свойства источника, не являющегося источником[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, для **@subscriber_provider**, **@subscriber_datasrc** **@subscriber_location** **@subscriber_provider_string**,, и **@subscriber_catalog**.  
+    -   Свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника, не являющегося источником данных, для **@subscriber_provider** ,,, **@subscriber_datasrc** **@subscriber_location** **@subscriber_provider_string** и **@subscriber_catalog** .  
   
-    -   Учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, с которыми работает агент распространения на распространителе **@job_login** , **@job_password**для и.  
+    -   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Учетные данные Windows, с которыми работает агент распространения на распространителе **@job_login** , для и **@job_password** .  
   
         > [!NOTE]  
-        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows **@job_login** , **@job_password**всегда используют учетные данные Windows, указанные в и. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
+        >  Соединения, выполняемые с помощью встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в **@job_login** и **@job_password** . Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows;  
   
     -   значение **0** @property **@subscriber_security_mode** и сведения об имени входа поставщика OLE DB для параметров **@subscriber_login** и **@subscriber_password**.  
   
@@ -182,7 +181,7 @@ ms.locfileid: "62721676"
     > [!IMPORTANT]  
     >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подписчики IBM DB2](non-sql/ibm-db2-subscribers.md)   
  [Подписчики Oracle](non-sql/oracle-subscribers.md)   
  [Другие подписчики, не относящиеся к SQL Server](non-sql/other-non-sql-server-subscribers.md)   

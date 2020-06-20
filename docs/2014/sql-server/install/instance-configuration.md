@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065309"
 ---
 # <a name="instance-configuration"></a>Конфигурация экземпляра
   На странице **Конфигурация экземпляра** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выбрать создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию или именованного экземпляра. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] еще не установлен и не указано создание именованного экземпляра, то будет создан экземпляр по умолчанию.  
@@ -36,7 +35,7 @@ ms.locfileid: "68190970"
   
  Дополнительные сведения см. в разделе [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Только экземпляры отказоустойчивого кластера: укажите сетевое имя отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это имя идентифицирует экземпляр отказоустойчивого кластера в сети.  
   
  Экземпляр по умолчанию или именованный экземпляр: принимая решение о типе устанавливаемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], следует руководствоваться приведенными далее соображениями.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190970"
   
 -   Нельзя включать в имена экземпляров символы пробелов и другие специальные символы. В число недопустимых символов входят символы обратной косой черты (\\), запятой (,), двоеточия (:), точки с запятой (;), одиночной кавычки ('), амперсанда (&), дефиса (-) и "собаки" (@).  
   
--   **В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именах экземпляров можно использовать только символы, допустимые в текущей кодовой странице Windows. Если используется неподдерживаемый символ Юникода, возникнет ошибка установки.**  
+-   **В именах экземпляров можно использовать только символы, допустимые в текущей кодовой странице Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если используется неподдерживаемый символ Юникода, возникнет ошибка установки.**  
   
  **Обнаруженные экземпляры и компоненты**  
  Просмотр перечня установленных экземпляров и компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на компьютере, где запущена настройка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

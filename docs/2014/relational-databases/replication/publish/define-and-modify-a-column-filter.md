@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a655976f925f83d8c9446cab99016f32ab14887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68731070"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047692"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Определение или изменение фильтра столбцов
   В этом разделе описывается определение и изменение фильтра столбцов [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -46,7 +45,7 @@ ms.locfileid: "68731070"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
  Определение фильтров столбцов выполняется на странице **Статьи** мастера создания публикации. Дополнительные сведения об использовании мастера создания публикации см. в статье [Создание публикации](create-a-publication.md).  
   
- Определите и измените фильтры столбцов на странице **Статьи** диалогового окна **Свойства публикации — \<публикация>** . Дополнительные сведения об изменении свойств публикаций и статей см. в [этой статье](view-and-modify-publication-properties.md).  
+ Определение и изменение фильтров столбцов на странице « **статьи** » диалогового окна **свойства \<Publication> публикации —** . Дополнительные сведения об изменении свойств публикаций и статей см. в [этой статье](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-column-filter"></a>Определение фильтра столбцов  
   
@@ -56,7 +55,7 @@ ms.locfileid: "68731070"
   
 #### <a name="to-modify-column-filtering"></a>Изменение параметров фильтрации столбцов  
   
-1.  На странице **Статьи** диалогового окна **Свойства публикации — \<публикация>** , на панели **Объекты для публикации** разверните таблицу, которую хотите отфильтровать.  
+1.  На странице **статьи** диалогового окна **Свойства публикации — \<Publication> ** разверните таблицу, которая должна быть отфильтрована, в области **объекты для публикации** .  
   
 2.  Снимите флажки рядом со столбцами, которые необходимо отфильтровать, и проверьте, чтобы были установлены флажки для столбцов, которые должны быть включены в статью.  
   

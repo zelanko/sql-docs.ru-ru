@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e6b6c48860495603ca73842e5617986d5829966
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c6fa704e45e4e85b479ae8a40a3e567bea1ec5e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82709599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049721"
 ---
 # <a name="calling-a-stored-procedure"></a>Вызов хранимой процедуры
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает как escape-последовательность ODBC CALL, так и [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) для выполнения хранимых процедур; в качестве предпочтительного метода используется escape-последовательность вызова ODBC. Использование синтаксиса ODBC позволяет приложению получать коды возврата хранимых процедур, а драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирован в целях использования протокола, первоначально разработанного для отправки вызовов удаленных процедур (RPC) между компьютерами, на которых выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот протокол RPC повышает производительность, устраняя большую часть обработки параметров и синтаксической проверки инструкций на сервере.  
@@ -90,7 +89,7 @@ ms.locfileid: "82709599"
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение хранимых процедур](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

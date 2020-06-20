@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e31789b1f2cf5b2206af400c7c7798f7761f1e6c
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 5ae5b92ace65f255aacff5b49fe789a31d3a69e0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049809"
 ---
 # <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Занятие 7: Перенос файлов данных в службу хранилища Azure
   На этом занятии вы узнаете, как перемещать файлы данных в службу хранилища Azure (но не на экземпляр SQL Server). Для прохождения этого занятия не требуется завершать занятия 4, 5 и 6.  

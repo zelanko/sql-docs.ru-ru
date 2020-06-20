@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011080"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003951"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
   Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных `varbinary`, `varbinary(max)` (включая `FILESTREAM`) или `image`. Такая форма поиска называется *поиск свойств*.  
@@ -86,7 +85,7 @@ ms.locfileid: "66011080"
   
 6.  Дополнительно можно указать владельца списка свойств, отличного от текущего пользователя.  
   
-7.  Выберите один из следующих вариантов.  
+7.  Выберите один из следующих параметров:  
   
     -   **Создание пустого списка свойств поиска**  
   
@@ -239,7 +238,7 @@ GO
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поиск идентификаторов GUID набора свойств и целочисленных идентификаторов свойств для свойств поиска](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Настройка поисковых фильтров и управление ими](configure-and-manage-filters-for-search.md)  
   

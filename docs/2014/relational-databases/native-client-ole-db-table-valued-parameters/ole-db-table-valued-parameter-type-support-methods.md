@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3c2a450-8fd4-44cb-93d8-affe1b65c68e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f0ea289b75085cd4b7e90531eeaf592979707c2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8c7ca5946228ea05708984fb89ebc603061d983d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704643"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049625"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>Поддержка типов параметров OLE DB, возвращающих табличное значение (методы)
   Следующие стандартные методы OLE DB поддерживают возвращающие табличные значения параметры.  
@@ -34,7 +33,7 @@ ms.locfileid: "82704643"
 |IColumnsRowset::GetColumnsRowset|Получает метаданные о таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для возвращающих табличные значения параметров этот же интерфейс предоставляет подробные метаданные о каждом столбце, например:<br /><br /> -DBCOLUMN_FLAGS указывает допустимость значения NULL через DBCOLUMNFLAGS_ISNULLABLE бит.<br />-DBCOLUMN_ISUNIQUE указывает, является ли столбец столбцом идентификаторов.<br />-DBCOLUMN_COMPUTEMODE указывает, является ли столбец вычисляемым.|  
 |IAccessor::CreateAccessor|Для привязки объекта набора строк возвращающего табличное значение параметра создается метод доступа с элементом *wType*, установленным в значение DBTYPE_TABLE. Структура DBOBJECT будет содержать IID_IRowset или любой другой допустимый интерфейс объекта набора строк в элементе *iid*. Оставшиеся поля обрабатываются тем же способом, как и DBTYPE_IUNKNOWN.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка типа возвращающего табличное значение параметра OLE DB](ole-db-table-valued-parameter-type-support.md)   
  [Создание набора строк возвращающего табличное значение параметра](table-valued-parameter-rowset-creation.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)  

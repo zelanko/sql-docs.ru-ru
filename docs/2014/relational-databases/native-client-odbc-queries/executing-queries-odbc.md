@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 597d138832ab5234d0059c25e91fd4d830be255c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6370b5c7d70346ccd801d1800c8411f93d897e9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711082"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018620"
 ---
 # <a name="executing-queries-odbc"></a>Выполнение запросов (ODBC)
   После того, как приложение ODBC инициализирует дескриптор соединения и подключается к источнику данных, оно выделяет один или несколько дескрипторов инструкций на дескриптор соединения. Приложение может затем выполнять [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции в обработчике инструкций. Общая последовательность событий при выполнении инструкции SQL.  
@@ -62,7 +61,7 @@ INSERT INTO MyTable VALUES (?, ?, ?)
   
 -   [Освобождение дескриптора инструкции](freeing-a-statement-handle.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client (ODBC)](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

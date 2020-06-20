@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0cce16636e8f3be542b926170c905353602d95e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ebbcdfb136126911b95c0148a2c8671584170b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250342"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010344"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Программы Microsoft «Средство просмотра конфликтов репликации» и «Интерактивный сопоставитель»
   В этом разделе приведены сведения о средстве просмотра конфликтов репликации для репликации слиянием и репликации транзакций, а также об интерактивном сопоставителе для репликации слиянием.  
@@ -31,7 +30,7 @@ ms.locfileid: "63250342"
   
 -   [Определение фильтров](define-filters.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и разрешение конфликтов данных для публикаций слиянием &#40;SQL Server Management Studio&#41;](view-and-resolve-data-conflicts-for-merge-publications.md)   
  [Просмотр конфликтов данных для публикаций транзакций &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)   
  [Расширенное обнаружение и разрешение конфликтов при репликации слиянием](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

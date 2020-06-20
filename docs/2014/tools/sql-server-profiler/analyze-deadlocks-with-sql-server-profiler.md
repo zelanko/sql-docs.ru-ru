@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3414cda74d75dbacf10ed98b6fc6d50da2feaa18
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316327"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064081"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Анализ взаимоблокировок в приложении SQL Server Profiler
   Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для определения причины взаимоблокировки. Взаимоблокировка возникает, когда имеется циклическая зависимость между несколькими потоками или процессами для некоторого набора ресурсов в сервере SQL Server. При помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]можно создавать трассировку, которая записывает, воспроизводит и отображает для анализа события взаимоблокировки.  

@@ -11,22 +11,21 @@ f1_keywords:
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39acaf350a4d63fc8896b3a55ca88fe4ed91461f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067485"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Целевые серверы (вкладка «Загрузить инструкции»)
   Эта страница предназначена для отображения и изменения инструкций загрузки на один или несколько целевых серверов.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Целевой сервер**  
  Выберите сервер, для которого необходим просмотр или изменение инструкций.  
   
- **Задание**  
+ **Должно**  
  Выберите задание, для которого необходим просмотр или изменение инструкций.  
   
  **Целевой сервер**  
@@ -50,10 +49,10 @@ ms.locfileid: "63245336"
  **Удаление**  
  Удаление выделенной инструкции загрузки.  
   
- **Открытым**  
+ **Очистить**  
  Очистка состояния выделенной инструкции загрузки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   
   

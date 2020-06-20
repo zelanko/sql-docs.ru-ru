@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 946bfd0c05e7739af4bfebf799980a0dc27de245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065016"
 ---
 # <a name="alerts"></a>видны узлы
   События, формируемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , помещаются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  
@@ -76,7 +75,7 @@ ms.locfileid: "62473135"
 ## <a name="selecting-a-performance-condition"></a>Выбор условия производительности  
  Можно определить, чтобы предупреждение создавалось в ответ на определенное условие производительности. В этом случае указывается отслеживаемый счетчик производительности, порог предупреждения и действие, по которому предупреждение создается. Чтобы назначить условие производительности, необходимо определить в агенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значения следующих элементов на странице **Общие** диалогового окна **Создание предупреждения** или **Свойства предупреждения** :  
   
--   **Объектами**  
+-   **Объект**  
   
      Объект — область отслеживания производительности.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "62473135"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-update-alert-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование объектов SQL Server](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036991"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
   Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как сеть периметра, сеть периметра или экранированная подсеть). В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
@@ -55,7 +54,7 @@ ms.locfileid: "68211506"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Определение доступных для компьютера IP-адресов  
   
-1.  На компьютере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен, нажмите кнопку **Пуск**, выберите команду **выполнить**, `cmd` введите, [!INCLUDE[clickOK](../../includes/clickok-md.md)]а затем.  
+1.  На компьютере, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен, нажмите кнопку **Пуск**, выберите команду **выполнить**, введите, `cmd` а затем [!INCLUDE[clickOK](../../includes/clickok-md.md)] .  
   
 2.  В командной строке введите `ipconfig,` и нажмите клавишу ВВОД, чтобы вывести список IP-адресов, доступных на этом компьютере.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211506"
   
 1.  Нажмите кнопку **Пуск**, последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки** и выберите пункт **Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  В области консоли **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Диспетчер конфигурации** разверните узел **Сетевая конфигурация[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , затем **Протоколы для \<имя экземпляра>** , и дважды щелкните **TCP/IP**.  
+2.  В ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**в области консоли разверните узел ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Конфигурация сети**, затем узел **протоколы для \<instance name> **, а затем дважды щелкните **TCP/IP**.  
   
 3.  В диалоговом окне **Свойства TCP/IP** на вкладке **IP-адреса** появится несколько IP-адресов в формате **IP1**, **IP2**до **IPAll**. Одним из приведенных IP-адресов является адрес адаптера заглушки 127.0.0.1. Для каждого IP-адреса, настроенного на компьютере, появятся дополнительные IP-адреса.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211506"
   
 1.  На компьютере, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , войдите в систему в качестве администратора.  
   
-2.  Нажмите кнопку **Пуск**, **Run**выберите команду выполнить `wf.msc`, введите и нажмите кнопку **ОК**.  
+2.  Нажмите кнопку **Пуск**, выберите команду **выполнить**, введите `wf.msc` и нажмите кнопку **ОК**.  
   
 3.  В диалоговом окне **Контроль учетных записей пользователей** нажмите кнопку **Продолжить** , чтобы с помощью учетных данных администратора открыть оснастку брандмауэра Windows в режиме повышенной безопасности.  
   

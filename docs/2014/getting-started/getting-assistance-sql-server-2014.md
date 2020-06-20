@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c8509282897c1938d357f347ada98f7f2c3be4b4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce3a9e88e9de4bf3a825b5f5a02e4268f4f137d0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927005"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Получение помощи (SQL Server 2014)
   Существует три основных источника сведений [!INCLUDE[msCoName](../includes/msconame-md.md)] о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
@@ -39,7 +38,7 @@ ms.locfileid: "82706948"
  [Отзывы по SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Описание способов предоставления предложений и отчетов об ошибках по функциям продукта и пользовательскому интерфейсу, отправки отзывов о документации и автоматической отправки отчетов об ошибках и данных об использовании для [!INCLUDE[msCoName](../includes/msconame-md.md)] анализа.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Новые возможности SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Установка SQL Server 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   

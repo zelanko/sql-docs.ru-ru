@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1f3ea9ee-67c0-46ed-bf02-ceca92d3b8fe
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 00ddaf35a859c0d95172e240537f825b3e9e8b1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c842e142dbf57dda870dbaf0834ae36974614996
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251810"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058362"
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Удаление группы серверов (среда SQL Server Management Studio)
   В этом разделе описывается удаление группы серверов из списка «Зарегистрированные серверы» в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Всегда можно удалить группу серверов. Если группа серверов не пуста, любые серверы или группы серверов, содержащиеся в удаляемой группе серверов, также будут удалены. Перед удалением группы серверов переместите все серверы и группы серверов, которые нужно сохранить, в новую группу серверов.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d03e259bd0aff8fce02558dbe08efb56748493c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024674"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Устранение неполадок при переполнении журнала транзакций (ошибка SQL Server 9002)
   В этом разделе описаны возможные действия при переполнении журнала транзакций, а также советы о том, как его избежать. Когда журнал транзакций переполняется, в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] происходит ошибка 9002. Журнал может заполниться, когда база данных работает в режиме «в сети» или находится в процессе восстановления. Если журнал переполняется при подключенной базе данных, она не отключается, но переходит в режим только для чтения. Если журнал заполняется, когда база данных находится в процессе восстановления, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] помечает базу данных как RESOURCE PENDING. В любом случае необходимо вмешательство пользователя, чтобы сделать журнал транзакций доступным.  
@@ -96,10 +95,10 @@ ms.locfileid: "63144726"
   
 -   [Добавление файлов данных или журналов в базу данных](../databases/add-data-or-log-files-to-a-database.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Управление размером файла журнала транзакций](manage-the-size-of-the-transaction-log-file.md)   
- [Резервные копии журналов транзакций &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
+ [Резервные копии журналов транзакций (SQL Server)](../backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

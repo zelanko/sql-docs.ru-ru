@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ba0605d60bab0b13675f7f9f7ff01cace5755
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049738"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
   В некоторых случаях может оказаться полезным физическое сжатие или расширение размера реального файла журнала или журнала транзакции базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В данном разделе содержатся сведения о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb** , а также об управлении размером файла журнала транзакций.  
@@ -55,7 +54,7 @@ ms.locfileid: "63144335"
 -   [sys.database_files (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (См. столбцы **size**, **max_size** и **growth** файла или файлов журнала.)  
   
 > [!NOTE]  
->  Можно задать автоматическое выполнение сжатия файлов базы данных и журнала. Однако автоматическое сжатие не рекомендуется, поэтому свойство `autoshrink` базы данных по умолчанию имеет значение FALSE. Если свойство `autoshrink` имеет значение TRUE, то автоматическое сжатие уменьшит размер файла только в том случае, если неиспользуемое пространство занимает более 25 % от общего объема. Файл будет сжат либо до размера, в котором 25 % пространства не используется, либо до исходного размера, каким бы большим он ни был. `autoshrink` Сведения об изменении значения свойства см. в разделе [Просмотр или изменение свойств базы данных](../databases/view-or-change-the-properties-of-a-database.md)— используйте свойство **Автоматическое сжатие** на странице **Параметры** или [Параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— используйте параметр AUTO_SHRINK.  
+>  Можно задать автоматическое выполнение сжатия файлов базы данных и журнала. Однако автоматическое сжатие не рекомендуется, поэтому свойство `autoshrink` базы данных по умолчанию имеет значение FALSE. Если свойство `autoshrink` имеет значение TRUE, то автоматическое сжатие уменьшит размер файла только в том случае, если неиспользуемое пространство занимает более 25 % от общего объема. Файл будет сжат либо до размера, в котором 25 % пространства не используется, либо до исходного размера, каким бы большим он ни был. Сведения об изменении значения `autoshrink` свойства см. в разделе [Просмотр или изменение свойств базы данных](../databases/view-or-change-the-properties-of-a-database.md)— используйте свойство **Автоматическое сжатие** на странице **параметры** или [параметры ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)— используйте параметр AUTO_SHRINK.  
   
   
 ##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>Добавление или увеличение файла журнала  

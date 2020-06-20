@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c2996a8ca8471ef59d4781e21239a72262daa759
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068701"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Реализация обработчика бизнес-логики для статьи публикации слиянием
   В данном разделе описывается процесс реализации обработчика бизнес-логики для статьи публикации слиянием в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью программирования репликации или объектов RMO.  
@@ -99,10 +98,10 @@ ms.locfileid: "62721202"
   
 1.  Чтобы убедиться, что сборка не была зарегистрирована ранее как обработчик бизнес-логики, выполните на издателе процедуру [sp_enumcustomresolvers (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql).  
   
-2.  На распространителе выполните [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), указав Понятное имя обработчика бизнес-логики для **@article_resolver**, значение `true` для **@is_dotnet_assembly**, имя сборки для **@dotnet_assembly_name**и полное имя класса, переопределяющий <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для. **@dotnet_class_name**  
+2.  На распространителе выполните [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), указав Понятное имя обработчика бизнес-логики для **@article_resolver** , значение для, `true` **@is_dotnet_assembly** имя сборки для **@dotnet_assembly_name** и полное имя класса, переопределяющий <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> для **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Если сборка не развернута в том же каталоге, что и исполняемый файл агент слияния, в том же каталоге, что и приложение, синхронно запускающее агент слияния, или в глобальном кэше сборок (GAC), необходимо указать полный путь с именем сборки для **@dotnet_assembly_name**. При проведении сеанса веб-синхронизации необходимо указать местоположение сборки на веб-сервере.  
+    >  Если сборка не развернута в том же каталоге, что и исполняемый файл агент слияния, в том же каталоге, что и приложение, синхронно запускающее агент слияния, или в глобальном кэше сборок (GAC), необходимо указать полный путь с именем сборки для **@dotnet_assembly_name** . При проведении сеанса веб-синхронизации необходимо указать местоположение сборки на веб-сервере.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Использование обработчика бизнес-логики со статьей в новой таблице  
   
@@ -110,7 +109,7 @@ ms.locfileid: "62721202"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   
-1.  Выполните [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав **@publication**, **@article**, значение **article_resolver** **@property**в параметре и понятное имя обработчика бизнес-логики для **@value**.  
+1.  Выполните [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), указав **@publication** , **@article** , значение **article_resolver** в параметре **@property** и понятное имя обработчика бизнес-логики для **@value** .  
   
 ###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a> Примеры (программирование репликации)  
  В следующем примере представлен обработчик бизнес-логики, осуществляющий запись в журнал аудита.  
@@ -202,7 +201,7 @@ ms.locfileid: "62721202"
   
     -   Понятное имя обработчика бизнес-логики (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) в свойстве <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Дополнительные сведения см. в статье [определить статью](publish/define-an-article.md).  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.Article.Create%2A>. Дополнительные сведения см. в статье [определить статью](publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Использование обработчика бизнес-логики со статьей в существующей таблице  
   
@@ -237,7 +236,7 @@ ms.locfileid: "62721202"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация пользовательского сопоставителя конфликтов для статьи публикации слиянием](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Отладка обработчика бизнес-логики &#40;программирование репликации&#41;](debug-a-business-logic-handler-replication-programming.md)   
  [Рекомендации по обеспечению безопасности репликации](security/replication-security-best-practices.md)   

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f9f7f7d-f8ab-426e-a85d-4eda3a241eb5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b40f40cea8e4f9c36b74ea87b22c5c2a6633e077
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d88904b45a54073d60c6d3247d1479bae597bd3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659946"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059846"
 ---
 # <a name="servernetworkprotocol-class"></a>Класс ServerNetworkProtocol
-  [Класс servernetworkprotocol Class] класс servernetworkprotocol-Class.md) представляет сетевые протоколы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , установленные на экземпляре, который обеспечивает взаимодействие с клиентами по сети.  
+  [Класс servernetworkprotocol Class] класс servernetworkprotocol-class.md) представляет сетевые протоколы, установленные на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который обеспечивает взаимодействие с клиентами по сети.  
   
  С помощью [класс servernetworkprotocol Class] класс servernetworkprotocol-class.md) можно:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62659946"
   
 -   включать и отключать сетевой протокол сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

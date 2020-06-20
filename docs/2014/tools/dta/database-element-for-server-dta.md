@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b23e8d7f68cca0722691863a2c5c8d5e095c33c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87df538858c9294cb8986da3df0d2b3814411326
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057759"
 ---
 # <a name="database-element-for-server-dta"></a>Элемент Database описания сервера (DTA)
   Позволяет задать базу данных, которую необходимо настроить на конкретном сервере.  
@@ -35,7 +34,7 @@ ms.locfileid: "62661836"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |Тип данных и длина|Нет.|  
 |Значение по умолчанию|Нет.|  
@@ -52,7 +51,7 @@ ms.locfileid: "62661836"
  Этот элемент с именем **DatabaseDetailsTypecomplexType** определен в схеме XML помощника по настройке ядра СУБД. Не путайте этот элемент `Database` с элементом, корневым родительским элементом которого является `Configuration`. Дополнительные сведения см. в разделе [Элемент Database для конфигурации (DTA)](database-element-for-configuration-dta.md).  
   
 ## <a name="example"></a>Пример  
- Пример использования `Database` элемента см. в разделе [Server element &#40;dta&#41;](server-element-dta.md).  
+ Пример использования `Database` элемента см. в разделе [Server Element &#40;dta&#41;](server-element-dta.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по входным XML-файлам (помощник по настройке ядра СУБД)](xml-input-file-reference-database-engine-tuning-advisor.md)  

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 38afa421-2599-404f-8ba6-172668c6325e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b8b0e523020fcb17c49cdfc8ad778ccf59f8a8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7504d34f8b0bfc4d9fa5b14a7bd6d0d6594fbc19
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096330"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037148"
 ---
 # <a name="cluster-security-policy"></a>Политика безопасности кластера
   Страница «Политика безопасности кластера» используется для настройки политики безопасности для экземпляра отказоустойчивого кластера.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  Укажите глобальные или локальные группы доменов для служб, поддерживающих работу в кластере. Управление разрешениями на все ресурсы производится на уровне групп домена, членами которых являются учетные записи служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о функциональных возможностях идентификаторов безопасности (SID) службы в [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
   
