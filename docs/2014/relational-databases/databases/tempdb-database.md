@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916894"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965697"
 ---
 # <a name="tempdb-database"></a>База данных tempdb
   Системная база данных **tempdb** — это глобальный ресурс, доступный всем пользователям, подключенным к данному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором хранятся следующие объекты:  
@@ -43,7 +42,7 @@ ms.locfileid: "62916894"
 |Первичные данные|tempdev|tempdb.mdf|Автоувеличение на 10 % до заполнения диска.|  
 |Журнал|templog|templog.ldf|Автоувеличение на 10 % до максимального размера в 2 ТБ.|  
   
- Размер **базы данных tempdb** может повлиять на производительность системы. Например, если размер базы данных **tempdb** слишком мал, системная обработка может оказаться слишком занятой с автоувеличением базы данных для поддержки требования к рабочей нагрузке при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эту нагрузку можно избежать, увеличив размер **базы данных tempdb**.  
+ Размер **базы данных tempdb** может повлиять на производительность системы. Например, если размер базы данных **tempdb** слишком мал, системная обработка может оказаться слишком занятой с автоувеличением базы данных для поддержки требования к рабочей нагрузке при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эту нагрузку можно избежать, увеличив размер **базы данных tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Увеличение производительности базы данных tempdb  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]производительность базы данных **tempdb** увеличена следующими способами.  
@@ -70,16 +69,16 @@ ms.locfileid: "62916894"
 |ANSI_PADDING|OFF|Да|  
 |ANSI_WARNINGS|OFF|Да|  
 |ARITHABORT|OFF|Да|  
-|AUTO_CLOSE|OFF|Нет|  
+|AUTO_CLOSE|OFF|нет|  
 |AUTO_CREATE_STATISTICS|ON|Да|  
-|AUTO_SHRINK|OFF|Нет|  
+|AUTO_SHRINK|OFF|нет|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
 |CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Нет<br /><br /> Нет|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> Нет<br /><br /> Нет|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
 |DB_CHAINING|ON|нет|  
 |ENCRYPTION|OFF|нет|  
@@ -91,7 +90,7 @@ ms.locfileid: "62916894"
 |RECOVERY|ПРОСТОЙ|нет|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  
-|TRUSTWORTHY|OFF|Нет|  
+|TRUSTWORTHY|OFF|нет|  
   
  Описание этих баз данных см. в статье [Параметры ALTER DATABASE SET (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -142,7 +141,7 @@ ms.locfileid: "62916894"
   
  [Перемещение файлов базы данных](move-database-files.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с базой данных tempdb в SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

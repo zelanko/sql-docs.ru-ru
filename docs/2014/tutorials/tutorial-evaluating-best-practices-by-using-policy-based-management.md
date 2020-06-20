@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42e6b505c71abecce7b56b5cb2544b4e9f4e8f71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061101"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Руководство по Выполнение политик рекомендаций с помощью управления на основе политик
   Добро пожаловать в учебник по выполнению рекомендаций с помощью управления на основе политик. Этот учебник предназначен для пользователей, имеющих представление о [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], но незнакомых с управлением на основе политик. Управление на основе политик — это система определения политик, которые можно использовать для обеспечения принудительного выполнения стандартов администрирования. Управление на основе политик подразумевает использование набора рекомендуемых политик, которые могут быть использованы для анализа экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и дают возможность определить, соответствует ли он советам и рекомендациям.  
@@ -47,7 +46,7 @@ ms.locfileid: "66064433"
 ## <a name="start-the-tutorial"></a>Приступить к изучению  
  [Урок 1. Выполнение политик рекомендаций по запросу](../../2014/tutorials/lesson-1-evaluate-best-practices-on-an-on-demand-basis.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

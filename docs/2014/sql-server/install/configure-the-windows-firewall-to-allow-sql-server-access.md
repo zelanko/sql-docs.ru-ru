@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637859"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037001"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
@@ -159,7 +158,7 @@ ms.locfileid: "73637859"
   
 1.  На вкладке **Исключения** элемента **Брандмауэр Windows** на панели управления нажмите кнопку **Добавить программу**.  
   
-2.  Перейдите в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] расположение экземпляра, который вы хотите разрешить через брандмауэр, например **C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Binn**, выберите файл **sqlservr. exe**и нажмите кнопку **Открыть**.  
+2.  Перейдите в расположение экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который вы хотите разрешить через брандмауэр, например **C:\PROGRAM Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Binn**, выберите **sqlservr.exe**и нажмите кнопку **Открыть**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637859"
 -   Служебную программу **PortQry** можно использовать для вывода состояния портов TCP/IP (прослушивается, не прослушивается, фильтруется). В состоянии фильтрации порт может либо прослушиваться, либо не прослушиваться. Это состояние указывает, что программа не получила ответа от порта. Служебную программу **PortQry** можно скачать из [Центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## <a name="see-also"></a>См. также:  
- [Общие сведения о службе и требования к сетевым портам в системе Windows Server](https://support.microsoft.com/kb/832017)  
+ [Обзор служб и требования к сетевым портам в Windows](https://support.microsoft.com/kb/832017)  

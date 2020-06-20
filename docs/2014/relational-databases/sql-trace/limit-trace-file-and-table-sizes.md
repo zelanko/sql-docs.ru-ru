@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88c31b02-f44c-4a14-be8b-437f2097de12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59e6a79d868e4bfa0ec0af7190d54a8bc13bf395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7795dfdadb8fb3bbaa1b55dcd5c962d24a7ba29
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136459"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068307"
 ---
 # <a name="limit-trace-file-and-table-sizes"></a>Ограничение размеров файла и таблицы трассировки
   Результаты трассировки SQL могут иметь различный размер в зависимости от того, какие классы событий включены в трассировку и каким образом был использован компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Если производится трассировка часто происходящих классов событий, объем собираемых данных может быть уменьшен путем установки максимального размера файла или максимального числа строк. Указывая максимальный размер файла или максимальное число строк, можно гарантировать, что файл или таблица трассировки не превысят указанные размеры.  

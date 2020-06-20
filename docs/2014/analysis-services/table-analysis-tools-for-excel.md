@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af4c8ae7c2ba827e6110602bd21432fec4f74393
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c8610fd3ac9ee92d6e08084c48f14298cb3203f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940195"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Средства анализа таблиц для Excel
   Средства интеллектуального анализа данных на панели инструментов **анализ** — это самый простой способ начать работу с интеллектуальным анализом данных. Каждое средство автоматически анализирует распределение и тип данных, а также задает параметры для получения допустимых результатов. Нет необходимости выбирать алгоритмы и настраивать сложные параметры.  
@@ -81,7 +80,7 @@ ms.locfileid: "66067969"
   
  Если лента **анализ** не отображается, попробуйте сначала щелкнуть внутри таблицы данных. Меню не открывается, пока не выбрана таблица данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Клиент интеллектуального анализа данных для Excel &#40;SQL Server надстройки интеллектуального анализа данных&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)   
  [Устранение неполадок диаграмм интеллектуального анализа данных Visio &#40;SQL Server надстроек интеллектуального анализа данных&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)   
  [Состав надстройки интеллектуального анализа данных для Office](what-s-included-in-the-data-mining-add-ins-for-office.md)  

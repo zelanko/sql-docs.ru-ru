@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 08a46d5f73c485306be2f6d0b5086f715ebb00d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4fa442a237001d7b78e95fd443ec36336c1e769
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061395"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Свойство PropertyIdx (класс ClientNetworkProtocolProperty)
   Возвращает или задает значение индекса свойства в массиве свойств, на которое ссылается свойство [Properties (класс ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) объекта [ClientNetworkProtocol Class](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [настройка клиентских протоколов](../../../database-engine/configure-windows/configure-client-protocols.md)  
   
   

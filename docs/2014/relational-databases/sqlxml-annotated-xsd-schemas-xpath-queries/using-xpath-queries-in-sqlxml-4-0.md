@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3700c706aff2a84eaedb89022c1384ce19f9ea68
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 80d82513b22d2a50aedb37955a210dd33746db86
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014893"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Использование запросов XPath в SQLXML 4.0
   Поддержка Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] аннотированных схем XSD позволяет создавать XML-представления реляционных данных, хранящихся в базе данных. Можно использовать подмножество языка XPath для запроса XML-представлений, созданных аннотированными схемами XSD.  
@@ -41,7 +40,7 @@ ms.locfileid: "82702970"
  [Типы данных XPath &#40;SQLXML 4,0&#41;](xpath-data-types-sqlxml-4-0.md)  
  Содержит описание типов данных XPath, которые значительно отличаются от типов данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и XSD.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](../sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

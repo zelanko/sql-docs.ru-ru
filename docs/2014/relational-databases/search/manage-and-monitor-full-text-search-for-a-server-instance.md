@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6ed18416eadf1c2cc664029588bf0201038c261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ba4b2f081047f25fa775e0c8754caa4ce643e70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004174"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
   С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи.  
@@ -65,7 +64,7 @@ ms.locfileid: "66011172"
          Сведения о выборе режима полнотекстового обновления см. в разделе [Обновление полнотекстового поиска](upgrade-full-text-search.md).  
   
         > [!NOTE]  
-        >  Режим полнотекстового обновления также можно задать с помощью действия [upgrade_option](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) процедуры **sp_fulltext_service**.  
+        >  Режим полнотекстового обновления также можно задать с помощью действия **upgrade_option** процедуры [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql).  
   
 ##  <a name="viewing-additional-full-text-server-properties"></a><a name="metadata"></a> Просмотр дополнительных свойств сервера полнотекстового поиска  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] Функции могут использоваться для получения значений различных свойств полнотекстового поиска уровня сервера. Данные сведения касаются прежде всего администрирования и устранения неполадок в полнотекстовом поиске.  

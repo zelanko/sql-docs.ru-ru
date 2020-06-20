@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6d2e716-5263-477c-ad0e-7bcbfef4c1f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f7332460d3dc25c756e6bd031b1a4b3a1f6743
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f18509d9a18ba8be1f4e40c93bff5abfcae3d69c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62868769"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053984"
 ---
 # <a name="mssqlserver_3181"></a>MSSQLSERVER_3181
     
@@ -42,7 +41,7 @@ ms.locfileid: "62868769"
  Восстановить резервную копию в расположении, где достаточно места на диске, либо обеспечить больше места на диске.  
   
 ## <a name="see-also"></a>См. также:  
- [Восстановление базы данных в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
+ [Восстановление базы данных в новое место (SQL Server)](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [Восстановление файлов в новое расположение &#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE VERIFYONLY (Transact-SQL)](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql)  

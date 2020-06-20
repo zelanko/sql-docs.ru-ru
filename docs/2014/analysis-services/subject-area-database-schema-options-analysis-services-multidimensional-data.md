@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7edc1fc89e9463c7482b47866aa3d12e1bc231a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067978"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940245"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Параметры схемы базы данных предметной области (мастер формирования схем) (службы Analysis Services — многомерные данные)
   Используйте страницу **Параметры схемы базы данных предметной области** для управления формированием схемы, а также для определения типа сохранения данных.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Схема-владелец**  
  Задает имя схемы в новой предметной области базы данных.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66067978"
 |Не заполнять|Предметная область расписаний не заполняется.|  
 |Заполнить, если пуста|Предметная область расписаний заполняется, если она пуста.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 мастера формирования схем &#40;Analysis Services многомерных данных&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

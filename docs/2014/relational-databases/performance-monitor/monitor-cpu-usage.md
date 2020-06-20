@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f08d49348fd25593f27a87f2b0123f7ce43e35b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998339"
 ---
 # <a name="monitor-cpu-usage"></a>Мониторинг использования ЦП
   Периодически контролируйте экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах. Постоянный высокий уровень использования ЦП может указывать на необходимость обновления ЦП или на необходимость добавления нескольких процессоров. Кроме того, высокий уровень использования ЦП может указывать на плохо настроенное или плохо разработанное приложение. Оптимизация работы приложения может снизить уровень загрузки ЦП.  

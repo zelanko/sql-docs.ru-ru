@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892771"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966227"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Сохранение пакета служб SSIS (мастер экспорта и импорта SQL Server)
-  Страница **Сохранение пакета служб SSIS** используется для именования, описания и сохранения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакета Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` базе данных или в файле с расширением DTSX.  
+  Страница **Сохранение пакета служб SSIS** используется для именования, описания и сохранения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пакета Integration Services ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` базе данных или в файле с расширением DTSX.  
   
 > [!NOTE]  
 >  В выпуске [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] пакет, созданный при помощи мастера, сохранить нельзя.  
@@ -30,13 +29,13 @@ ms.locfileid: "62892771"
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
 ## <a name="static-options"></a>Статические параметры  
- **Имя**  
+ **имя**;  
  Введите уникальное имя пакета.  
   
  **Описание**  
  Введите описание пакета. Рекомендуется описывать пакеты в связи с их предназначением, чтобы пакеты описывали сами себя и их легко было обслуживать.  
   
- **Target**  
+ **Целевой объект**  
  Просмотрите цель ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или файл), которая ранее была назначена для целевого файла.  
   
 ## <a name="target-dynamic-options"></a>Целевые динамические параметры  
@@ -64,7 +63,7 @@ ms.locfileid: "62892771"
  **Обзор**  
  Выбрав назначение файла, перейдите к целевому файлу с помощью диалогового окна **сохранить пакет** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение пакетов](../save-packages.md)  
   
   

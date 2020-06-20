@@ -20,29 +20,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16939894f9e43e4538a8d56e76632af891d9714a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8e1cf6bdf4270759a94761e67b94009576ef6ad
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77429025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941085"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Возвращает сведения о каждом запросе, который выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения о запросах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
+Возвращает сведения о каждом запросе, который выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения о запросах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
    
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, к которому относится данный запрос. Не допускает значение NULL.|  
 |request_id|**int**|Идентификатор запроса. Уникален в контексте сеанса. Не допускает значение NULL.|  
 |start_time|**datetime**|Метка времени поступления запроса. Не допускает значение NULL.|  
-|status|**nvarchar(30)**|Состояние запроса. Может иметь одно из следующих значений.<br /><br /> История<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
-|command|**nvarchar(32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
+|status|**nvarchar(30)**|Состояние запроса. Оно может быть одним из следующих.<br /><br /> Историческая справка<br />Запущен<br />Готово к запуску<br />В режиме ожидания<br />Приостановлена<br /><br /> Не допускает значение NULL.|  
+|.|**nvarchar(32)**|Тип выполняемой в данный момент команды. Основные типы команд:<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Текст запроса можно получить при помощи функции sys.dm_exec_sql_text, передав ей значение столбца sql_handle. Внутренние системные процессы устанавливают команду в соответствии с выполняемой задачей. Например:<br /><br /> LOCK MONITOR;<br />CHECKPOINTLAZY;<br />WRITER.<br /><br /> Не допускает значение NULL.|  
 |sql_handle|**varbinary (64)**|Токен, однозначно определяющий пакет или хранимую процедуру, частью которой является запрос. Допускает значение NULL.| 
-|statement_start_offset|**int**|Указывает, что в байтах, начиная с 0, начальной позицией выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с функциями `sql_handle`, и `statement_end_offset` `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
-|statement_end_offset|**int**|Указывает в байтах, начиная с 0, конечную точку выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с функциями `sql_handle`, и `statement_start_offset` `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
+|statement_start_offset|**int**|Указывает, что в байтах, начиная с 0, начальной позицией выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с `sql_handle` `statement_end_offset` функциями, и `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
+|statement_end_offset|**int**|Указывает в байтах, начиная с 0, конечную точку выполняемой в данный момент инструкции для выполняемого в данный момент пакета или сохраненного объекта. Можно использовать вместе с `sql_handle` `statement_start_offset` функциями, и `sys.dm_exec_sql_text` динамической функцией управления, чтобы получить текущую выполняемую инструкцию для запроса. Допускает значение NULL.|  
 |plan_handle|**varbinary (64)**|Токен, однозначно определяющий план выполнения запроса для выполняемого в данный момент пакета. Допускает значение NULL.|  
 |database_id|**smallint**|Идентификатор базы данных, к которой выполняется запрос. Не допускает значение NULL.|  
 |user_id|**int**|Идентификатор пользователя, отправившего данный запрос. Не допускает значение NULL.|  
@@ -66,7 +66,7 @@ ms.locfileid: "77429025"
 |writes|**bigint**|Число операций записи, выполненных данным запросом. Не допускает значение NULL.|  
 |logical_reads|**bigint**|Число логических операций чтения, выполненных данным запросом. Не допускает значение NULL.|  
 |text_size|**int**|Установка параметра TEXTSIZE для данного запроса. Не допускает значение NULL.|  
-|Язык|**nvarchar(128)**|Установка языка для данного запроса. Допускает значение NULL.|  
+|язык|**nvarchar(128)**|Установка языка для данного запроса. Допускает значение NULL.|  
 |date_format|**nvarchar (3)**|Установка параметра DATEFORMAT для данного запроса. Допускает значение NULL.|  
 |date_first|**smallint**|Установка параметра DATEFIRST для данного запроса. Не допускает значение NULL.|  
 |quoted_identifier|**bit**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
@@ -104,7 +104,10 @@ ms.locfileid: "77429025"
 При выполнении параллельных запросов в [режиме строки](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает рабочий поток для координации рабочих потоков, ответственных за выполнение назначенных им задач. В этом динамическом административном отображении для запроса отображается только поток координатора. Столбцы **операций чтения**, **записи**, **logical_reads**и **row_count** **не обновляются** для потока координатора. Столбцы **wait_type**, **wait_time**, **last_wait_type**, **wait_resource**и **granted_query_memory** **обновляются только** для потока координатора. Дополнительные сведения см. в статье [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
 
 ## <a name="permissions"></a>Разрешения
-Если пользователь имеет `VIEW SERVER STATE` разрешение на сервере, он увидит все сеансы выполнения на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE`не может быть предоставлено в базе данных `sys.dm_exec_requests` SQL Azure, поэтому всегда ограничивается текущим соединением.
+Если пользователь имеет `VIEW SERVER STATE` разрешение на сервере, он увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE`не может быть предоставлено в базе данных SQL Azure, поэтому `sys.dm_exec_requests` всегда ограничивается текущим соединением.
+
+В сценариях Always on, если вторичная реплика имеет значение **только для чтения**, соединение с базой данных-получателем должно указывать его назначение приложения в параметрах строки подключения путем добавления `applicationintent=readonly` . В противном случае проверка доступа для `sys.dm_exec_requests` баз данных в группе доступности не будет пройдена, даже если `VIEW SERVER STATE` имеется разрешение.
+
   
 ## <a name="examples"></a>Примеры  
   
@@ -124,9 +127,9 @@ SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);
 GO  
 ```
 
-### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>Б) Поиск всех блокировок, которые содержит выполняемый пакет
+### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>Б. Поиск всех блокировок, которые содержит выполняемый пакет
 
-В следующем примере производится запрос к **sys. dm_exec_requests** для поиска интересного пакета и `transaction_id` копирования его из выходных данных.
+В следующем примере производится запрос к **sys. dm_exec_requests** для поиска интересного пакета и копирования его `transaction_id` из выходных данных.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
@@ -192,5 +195,5 @@ GO
 [sys. dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys. dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      
 [SQL Server, объект статистики SQL](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)     
-[Руководством по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    

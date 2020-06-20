@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062059"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926405"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Добавление журнала для счетчиков производительности потока данных
   В этой процедуре описывается добавление журнала для счетчиков производительности, поставляемых подсистемой обработки потока данных.  
@@ -51,7 +50,7 @@ ms.locfileid: "66062059"
   
 9. Нажмите кнопку **Добавить**.  
   
-10. Нажмите кнопку **Закрыть**.  
+10. Щелкните **Закрыть**.  
   
 11. В диалоговом окне **Мой_журнал** проверьте список счетчиков производительности в списке **Счетчики** .  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66062059"
     > [!NOTE]  
     >  Необходимо запустить службу «Журналы и оповещения производительности» с помощью локальной учетной записи или учетной записи домена, входящей в группу «Администраторы».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Счетчики производительности](performance/performance-counters.md)   
  [Просмотр записей журнала в окне "Регистрация событий"](../../2014/integration-services/view-log-entries-in-the-log-events-window.md)  
   

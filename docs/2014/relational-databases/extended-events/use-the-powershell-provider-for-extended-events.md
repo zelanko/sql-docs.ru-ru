@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4cdb785a5a053e0b839386c5fbb57e9393f5b9dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050916"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Использование поставщика PowerShell для расширенных событий
   Управлять расширенными событиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с помощью поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Вложенная папка XEvent находится на диске SQLSERVER. Получить доступ к папке можно одним из следующих способов.  
@@ -109,7 +108,7 @@ $session.Create()
 ## <a name="security"></a>Безопасность  
  Чтобы создать, изменить или удалить сеанс расширенных событий, требуется разрешение ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [Использование сеанса system_health](use-the-ssms-xe-profiler.md)   
  [Средства расширенных событий](extended-events-tools.md)  

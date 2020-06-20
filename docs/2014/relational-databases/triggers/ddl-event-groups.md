@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 245b383146e30c1fb42a6c6e23874a5c18d0b187
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014658"
 ---
 # <a name="ddl-event-groups"></a>группы DDL-событий
   В следующем перечне таблиц показаны группы DDL-событий, при помощи которых можно вызвать запуск триггеров DDL или уведомлений о событиях, а также инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , охватываемые этими событиями. Обратите внимание на иерархическую природу групп событий. Так, например, триггер DDL или уведомление о событиях, указывающие на событие FOR DDL_TABLE_EVENTS (10018), охватывают инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE и DROP TABLE. Триггер DDL или уведомление о событиях, указывающие на событие FOR DDL_TABLE_VIEW_EVENTS (10017), охватывают все инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] для типов DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS и DDL_STATISTICS_EVENTS.  

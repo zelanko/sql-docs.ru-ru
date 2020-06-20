@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0805ef503f7206ffeb1f7ccaf85fd09e808ac554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe236138242400dd5078877385dddd9fb1b1815d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933239"
 ---
 # <a name="updategram-sample-applications-sqlxml-40"></a>Образцы приложений диаграмм обновления (SQLXML 4.0)
   В этом разделе показаны примеры использования диаграмм обновления.  
   
- Во всех примерах в этом разделе используется образец базы данных AdventureWorks [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в. Все обновления применяются к таблицам базы данных AdventureWorks.  
+ Во всех примерах в этом разделе используется образец базы данных AdventureWorks в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Все обновления применяются к таблицам базы данных AdventureWorks.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Исполнение Диаграмма обновления с помощью ADO &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md)  

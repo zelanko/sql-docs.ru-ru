@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6261e223513c4a33362ef41d6977c04bcfb430a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935325"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
   Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  
@@ -44,19 +43,19 @@ ms.locfileid: "72783042"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a>Использование диспетчер конфигурации SQL Server  
   
 #### <a name="to-enable-a-server-network-protocol"></a>Включение протокола SNP  
   
 1.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли раскройте **Сетевая конфигурация SQL Server**.  
   
-2.  В области консоли щелкните **протоколы для** * \<имени экземпляра>*.  
+2.  В области консоли щелкните **протоколы для** *\<instance name>* .  
   
 3.  В области сведений щелкните правой кнопкой мыши протокол, который необходимо переключить, затем выберите **Включить** или **Отключить**.  
   
 4.  На панели консоли выберите **Службы SQL Server**.  
   
-5.  В области сведений щелкните правой кнопкой мыши **SQL Server (***\<имя экземпляра>***)**, а затем нажмите кнопку **Перезапустить**, чтобы остановить и перезагрузить службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  В области сведений щелкните правой кнопкой мыши **SQL Server ( ***\<instance name>*** )** и выберите команду **перезапустить**, чтобы прерывать и перезапускать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службу.  
   
 ##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
   

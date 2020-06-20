@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6c93f359a81a80af81182120f213564680de0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068028"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Переупорядочение данных в иерархической таблице с помощью иерархических методов
   Реорганизация иерархии — это распространенная задача обслуживания. В этой задаче в первую очередь переместим одну строку в новую позицию в иерархии с помощью инструкции UPDATE с методом [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) . Затем переместим все поддерево в новое место.  

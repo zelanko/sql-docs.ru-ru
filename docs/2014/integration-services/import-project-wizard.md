@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 9247ad6c-4bd1-43ab-b347-583181cb9917
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec71ccf6434cd892be7c44fd4957099965dff6de
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965484"
 ---
 # <a name="import-project-wizard"></a>Мастер импорта проектов
   Мастер импорта проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] служит для создания нового проекта служб Integration Services на основе существующего проекта. Можно импортировать проекты, уже развернутые в каталоге служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , или проекты из файла развертывания проекта (расширение ISPAC).  
   
 ### <a name="to-create-a-project-based-on-a-project-in-ispac-file-or-in-catalog"></a>Создание проекта на основе проекта в файле ISPAC или в каталоге  
   
-1.  Выберите меню **Файл**, **Создать**, а затем «Проект».  
+1.  В меню **файл**выберите пункт **создать**и щелкните проект.  
   
 2.  Разверните узел **Бизнес-аналитика**и выберите **Службы Integration Services**.  
   

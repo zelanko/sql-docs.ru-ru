@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d592b2b4-bc36-4eb9-9385-8fe4dff0dced
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cca2f9e1ff6069a608beb1df1880b37e15f4e869
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871111"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965794"
 ---
 # <a name="resource-database"></a>База данных Resource
   База данных Resource — это доступная только для чтения база данных, которая содержит все системные объекты, включенные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Системные объекты физически хранятся в базе данных Resource, но логически отображаются в схеме sys любой базы данных. База данных Resource не содержит пользовательских данных или метаданных.  
@@ -28,7 +27,7 @@ ms.locfileid: "62871111"
  База данных Resource облегчает и ускоряет обновление до новой версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]при обновлении версии требовалось удаление и создание системных объектов. Поскольку файл базы данных Resource содержит все системные объекты, обновление производится простым копированием одного файла базы данных Resource на локальный сервер.  
   
 ## <a name="physical-properties-of-resource"></a>Физические свойства базы данных Resource  
- Физические файлы базы данных Resource имеют имена mssqlsystemresource.mdf и mssqlsystemresource.ldf. Эти файлы расположены в папке \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия>.\<*имя_экземпляра*>\MSSQL\Binn\, и их не следует перемещать. С каждым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связан один и только один файл mssqlsystemresource.mdf, кроме того, и экземпляры не могут использовать этот файл совместно.  
+ Физические файлы базы данных Resource имеют имена mssqlsystemresource.mdf и mssqlsystemresource.ldf. Эти файлы находятся в \<*drive*> папке: \Program FILES\MICROSOFT SQL Server\MSSQL \<version> . \<*instance_name*> \Мсскл\бинн\ и не должны перемещаться. С каждым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связан один и только один файл mssqlsystemresource.mdf, кроме того, и экземпляры не могут использовать этот файл совместно.  
   
 > [!WARNING]  
 >  Обновления и пакеты обновления иногда предоставляют новую базу данных ресурсов, которая устанавливается в папку BINN. Не рекомендуется изменять расположения базы данных ресурсов. К тому же такая возможность не поддерживается.  

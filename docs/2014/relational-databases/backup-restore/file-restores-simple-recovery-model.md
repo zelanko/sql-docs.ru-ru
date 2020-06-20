@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ed48f48f531e727de5d6e1403ef47f5399f874d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921831"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958070"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Восстановления файлов (простая модель восстановления)
   Сведения в этом разделе относятся только к базам данных, использующим простую модель восстановления и содержащим хотя бы одну вторичную файловую группу только для чтения.  
@@ -46,11 +45,11 @@ ms.locfileid: "62921831"
      Дополнительные сведения о поддержке оперативного восстановления страниц и файлов см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Дополнительные сведения об оперативном восстановлении см. в разделе [Оперативное восстановление (SQL Server)](online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Если желательно, чтобы база данных находилась в режиме "вне сети" при восстановлении файлов, переведите ее в режим "вне сети" перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) : ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
+    >  Если желательно, чтобы база данных находилась в режиме "вне сети" для восстановления файлов, переведите ее в этот режим перед запуском последовательности восстановления, выполнив следующую инструкцию [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options): ALTER DATABASE *имя_базы_данных* SET OFFLINE.  
   
 
   
-##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Общие сведения о восстановлении файлов и файловых групп в простой модели восстановления  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a> Общие сведения о восстановлении файлов и файловых групп в простой модели восстановления  
  Сценарий восстановления файлов состоит из единой последовательности восстановления, в процессе которой производится копирование, накат транзакций и восстановление соответствующих данных.  
   
 1.  Восстановите каждый поврежденный файл из последней резервной копии поврежденного файла.  
@@ -62,13 +61,13 @@ ms.locfileid: "62921831"
   
  Последовательность восстановления содержит только две инструкции [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Первая инструкция восстанавливает вторичный файл `A`, который восстанавливается с параметром WITH NORECOVERY. Вторая операция восстанавливает файлы `B` и `C` , которые восстанавливаются с другого устройства резервного копирования с параметром WITH RECOVERY:  
   
-1.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_A_  
+1.  RESTORE DATABASE *база_данных* FILE **=** _имя_файла_A_  
   
      FROM *резервная_копия_файла_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *база_данных* FILE **=**_имя_файла_Б_**,**_имя_файла_В_  
+2.  RESTORE DATABASE *база_данных* FILE **=** _имя_файла_Б_ **,** _имя_файла_В_  
   
      FROM *резервная_копия_файлов_Б_и_В*  
   
@@ -76,9 +75,9 @@ ms.locfileid: "62921831"
   
 ### <a name="examples"></a>Примеры  
   
--   [Пример. Оперативное восстановление доступного только для чтения файла (простая модель восстановления)](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [Пример. Оперативное восстановление доступного только для чтения файла &#40;простая модель восстановления&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Пример. Автономное восстановление основной и еще одной файловой группы (модель полного восстановления)](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Пример. Автономное восстановление основной и еще одной файловой группы &#40;модель полного восстановления&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
@@ -95,14 +94,14 @@ ms.locfileid: "62921831"
   
   
   
-## <a name="see-also"></a>См. также  
- [Резервное копирование и восстановление: взаимодействие и сосуществование &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
- [Разностные резервные копии &#40;SQL Server&#41;](differential-backups-sql-server.md)   
- [&#40;SQL Server полных резервных копий файлов&#41;](full-file-backups-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Резервное копирование и восстановление: взаимодействие и совместимость &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
+ [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
+ [Полные резервные копии файлов (SQL Server)](full-file-backups-sql-server.md)   
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)   
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Полное восстановление базы данных &#40;простой модели восстановления&#41;](complete-database-restores-simple-recovery-model.md)   
+ [Выполнение полного восстановления базы данных (простая модель восстановления)](complete-database-restores-simple-recovery-model.md)   
  [Поэтапное восстановление (SQL Server)](piecemeal-restores-sql-server.md)  
   
   

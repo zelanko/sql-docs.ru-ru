@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3b1be3f11e3a53ad291ff774cc72468af0d66ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62894768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966231"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server)
   Используйте диалоговое окно **Сохранение и выполнение пакета** , чтобы немедленно запустить пакет, сохранить его для последующего выполнения или и то, и другое.  
@@ -29,7 +28,7 @@ ms.locfileid: "62894768"
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Выполнить немедленно**  
  Этот параметр выбирается для немедленного запуска пакета.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62894768"
 > [!NOTE]  
 >  Этот параметр доступен, только если установлен параметр **уровень защиты пакета** для **шифрования конфиденциальных данных с помощью пароля** или **шифрования всех данных с паролем**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполнение проектов и пакетов](../packages/run-integration-services-ssis-packages.md)   
  [Сохранение пакетов](../save-packages.md)  
   

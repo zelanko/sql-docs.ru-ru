@@ -12,18 +12,17 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc3e6d627bf7e3072d8b6ff40a644773474ba4cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940235"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Диалоговое окно «Настройки хранилища» (службы Analysis Services — многомерные данные)
   Используйте диалоговое окно **Настройки хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для задания свойств упреждающего кэширования, хранилища и уведомлений для измерения, куба, группы мер или секции. Диалоговое окно **Настройки хранилища** в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] можно отобразить:  
   
--   Нажмите кнопку с многоточием (**...**) для значения `ProactiveCaching` свойства измерения, Куба, группы мер или секции в окне **Свойства** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Нажмите кнопку с многоточием (**...**) для `ProactiveCaching` значения свойства измерения, Куба, группы мер или секции в окне **Свойства** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
 -   Путем раскрытия группы мер на вкладке **Секции** окна **Конструктор кубов** , щелкнув **Настройки хранилища**.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66068027"
   
 -   Путем раскрытия группы мер и выбора секции в сетке, соответствующей этой группе мер, на вкладке **Секции** окна **Конструктор кубов** , щелкнув **Настройки хранилища** на панели **Панель инструментов** вкладки **Секции** окна **Конструктор кубов**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
   
 |Термин|Определение|Значения|  
 |----------|----------------|------------|  
@@ -46,7 +45,7 @@ ms.locfileid: "66068027"
 |**Пользовательские настройки**|Выберите, чтобы явно установить параметры режима хранения, упреждающего кэширования и уведомлений.||  
 |**Параметры**|Щелкните, чтобы вывести диалоговое окно **Параметры хранилища** и явно задать параметры режима хранения, упреждающего кэширования и уведомлений. Дополнительные сведения о диалоговом окне **Параметры хранилища** см. в разделе [Диалоговое окно "Параметры хранилища" (службы Analysis Services — многомерные данные)](storage-options-dialog-box-analysis-services-multidimensional-data.md).||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Analysis Services конструкторов и диалоговых окон &#40;многомерных данных&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Упреждающее кэширование &#40;секций&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Хранилище Куба &#40;Analysis Services многомерных данных&#41;](multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)  

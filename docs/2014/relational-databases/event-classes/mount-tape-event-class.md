@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 513792c12833a14b8d1d3fc78f4b3bb6be173627
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8298df4bfd0eaa91cf788fedbffe4e9b2a1389de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052883"
 ---
 # <a name="mount-tape-event-class"></a>Mount Tape, класс событий
   Класс событий Mount Tape происходит при получении запроса на монтирование ленты. Используйте данный класс событий для отслеживания запросов монтирования ленты и их успешного или неуспешного завершения.  
@@ -34,13 +33,13 @@ ms.locfileid: "63023449"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|`bigint`|Длительность события (в микросекундах).|13|Да|  
 |EndTime|`datetime`|Для событий запроса на подключение — время ожидания подключения, если этот срок истек; в противном случае — время самого события (в этом случае StartTime содержит время соответствующего запроса на подключение).|15|Да|  
-|EventClass|`int`|Тип события = 195.|27|Нет|  
-|EventSequence|`int`|Порядковый номер указанного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 195.|27|нет|  
+|EventSequence|`int`|Порядковый номер указанного события в запросе.|51|нет|  
 |EventSubClass|`int`|Тип подкласса события.<br /><br /> 1 = запрос подключения ленты<br /><br /> 2 = завершение подключения ленты<br /><br /> 3 = Отмена подключения ленты.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
-|LoginName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя учетной записи пользователя (имя входа безопасности или учетные данные [!INCLUDE[msCoName](../../includes/msconame-md.md)] входа Windows в формате домен\\*имя_пользователя*).|11|Да|  
+|LoginName|`nvarchar`|Имя учетной записи пользователя (имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа безопасности или [!INCLUDE[msCoName](../../includes/msconame-md.md)] учетные данные входа Windows в формате домен \\ *имя_пользователя*).|11|Да|  
 |NTDomainName|`nvarchar`|Домен Windows, к которому принадлежит пользователь.|7|Да|  
 |NTUserName|`nvarchar`|Имя пользователя Windows.|6|Да|  
 |ServerName|`nvarchar`|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
@@ -49,7 +48,7 @@ ms.locfileid: "63023449"
 |StartTime|`datetime`|Время начала события, если оно известно.|14|Да|  
 |TextData|`ntext`|*имя физического устройства* [ ( *имя логического устройства* ) ]. Имя логического устройства отображается только в том случае, если оно определено в представлении каталога sys.backup_devices.|1|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Резервное копирование и восстановление баз данных SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

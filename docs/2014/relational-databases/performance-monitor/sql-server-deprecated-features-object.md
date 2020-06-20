@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067014"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
   Объект SQLServer:Deprecated Features в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие. В каждом случае этот счетчик использования подсчитывает, сколько раз обнаружены устаревшие функции с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -30,9 +29,9 @@ ms.locfileid: "68206960"
 |Экземпляры счетчика SQL Server Deprecated Features|Описание|  
 |------------------------------------------------------|-----------------|  
 |Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|Обнаружен идентификатор, не содержащий других символов, кроме #. Используйте по крайней мере один дополнительный символ. Происходит один раз на каждую компиляцию.|  
-|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` * \< function_name>* `()`. Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
+|синтаксис вызова функции «::»|Синтаксис вызова функции :: был использован для функции с табличным значением. Замените на `SELECT column_list FROM` *\< function_name>* `()` . Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Происходит один раз на каждую компиляцию.|  
 |"\@" и имена, начинающиеся с "\@\@", в качестве идентификаторов [!INCLUDE[tsql](../../includes/tsql-md.md)]|Обнаружен идентификатор, начинающийся с символов \@ или \@\@. Не используйте в качестве идентификаторов \@ или \@\@, а также имена, начинающиеся символами \@\@. Происходит один раз на каждую компиляцию.|  
-|ADDING TAPE DEVICE|Обнаружена устаревшая функция sp_addumpdevice`tape`"". Используйте вместо него`disk`sp_addumpdevice "". Происходит один раз на каждое выполнение.|  
+|ADDING TAPE DEVICE|Обнаружена устаревшая функция sp_addumpdevice " `tape` ". Используйте `disk` вместо него sp_addumpdevice "". Происходит один раз на каждое выполнение.|  
 |Разрешение ALL.|Число раз, когда был обнаружен синтаксис GRANT ALL, DENY ALL или REVOKE ALL. Измените синтаксис, чтобы запретить конкретные разрешения. Происходит один раз для каждого запроса.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Общее число использований устаревшего параметра TORN_PAGE_DETECTION инструкции ALTER DATABASE с момента последнего запуска экземпляра сервера. Вместо этого параметра используйте синтаксис PAGE_VERIFY. Происходит один раз для каждой инструкции DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|Обнаружен устаревший синтаксис ALTER LOGIN WITH SET CREDENTIAL или ALTER LOGIN WITH NO CREDENTIAL. Вместо него используйте синтаксис ADD или DROP CREDENTIAL. Происходит один раз на каждую компиляцию.|  
@@ -262,7 +261,7 @@ ms.locfileid: "68206960"
 |xp_loginconfig|Обнаружена процедура xp_loginconfig. Вместо нее используйте аргумент IsIntegratedSecurityOnly функции SERVERPROPERTY. Происходит один раз для каждого запроса.|  
 |xp_revokelogin|Обнаружена процедура xp_revokelogin. Вместо нее используйте инструкцию ALTER LOGIN DISABLE DROP LOGIN. Происходит один раз на каждую компиляцию.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Устаревшие функции ядро СУБД в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Нерекомендуемые функции полнотекстового поиска в SQL Server 2014](../search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Класс событий объявления об устаревании](../event-classes/deprecation-announcement-event-class.md)   

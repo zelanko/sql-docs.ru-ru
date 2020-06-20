@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 415d4e2d1aaa3166ae4df2dea53b34e064544e06
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783129"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934755"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Просмотр или изменение свойств сервера (SQL Server)
   В этом разделе описывается просмотр и изменение свойств экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или диспетчера конфигурации SQL Server.  
@@ -59,7 +58,7 @@ ms.locfileid: "72783129"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в статье [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
- Разрешения на выполнение `sp_configure` для без параметров или только по первому параметру по умолчанию предоставляются всем пользователям. Чтобы выполнить `sp_configure` с обоими параметрами для изменения параметра конфигурации или выполнения инструкции RECONFIGURE, пользователю необходимо предоставить разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
+ Разрешения на выполнение для без `sp_configure` параметров или только по первому параметру по умолчанию предоставляются всем пользователям. Чтобы выполнить `sp_configure` с обоими параметрами для изменения параметра конфигурации или выполнения инструкции RECONFIGURE, пользователю необходимо предоставить разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -148,9 +147,9 @@ GO
   
 2.  В **диспетчере конфигурации SQL Server**выберите **Службы SQL Server**.  
   
-3.  В области сведений щелкните правой кнопкой мыши **SQL Server (\<***instanceName***>)** и выберите пункт **Свойства**.  
+3.  В области сведений щелкните правой кнопкой мыши **SQL Server ( \<***instancename***> )** и выберите пункт **Свойства**.  
   
-4.  В диалоговом окне **Свойства SQL Server (\<***instanceName***>)** измените свойства сервера на вкладке **Служба** или **Дополнительно** , а затем нажмите кнопку **ОК**.  
+4.  В диалоговом окне **свойства SQL Server ( \<***instancename***> )** измените свойства сервера на вкладке **Служба** или **Дополнительно** и нажмите кнопку **ОК**.  
   
 ##  <a name="follow-up-after-you-change-server-properties"></a><a name="FollowUp"></a> Дальнейшие действия. После изменения свойств сервера  
  Для некоторых свойств необходимо перезапустить сервер, чтобы изменения вступили в силу.  

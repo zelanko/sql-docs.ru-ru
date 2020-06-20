@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 17fd92b523b5956069299a678139e222c303572b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 423ee36f679467c07a604b9754172f6e261971b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702801"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067765"
 ---
 # <a name="example-specifying-the-hide-directive"></a>Примеры. Указание директивы HIDE
   Этот пример демонстрирует использование директивы **HIDE** . Эта директива полезна, если требуется, чтобы запрос возвращал атрибут сортировки строк в универсальной таблице, возвращаемой запросом, но этот атрибут не должен появиться в конечном XML-документе.  

@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 6e58acd0-73c5-4161-9fbc-8ea531bc681c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724f6e91b911f9edc89188a265364956176d6974
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933139"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Неподдерживаемые возможности средств управления в SQL Server 2014
   В этом разделе описываются функции средств управления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которые недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="features-removed-in-sscurrent"></a>Функции, удаленные в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
- Отсутствуют  
+ None  
   
 ## <a name="features-removed-in-sssql11"></a>Функции, удаленные в [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62780353"
   
  API DACFx 3.0 и средства [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживают чтение DACPAC- и BACPAC-файлов, созданных с помощью более ранних версий средств [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и DACFx: извлечение баз данных из этих версий в DACPAC-файлы и развертывание в поддерживаемые версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] или [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обратная совместимость](../../2014/getting-started/backward-compatibility.md)  
   
   

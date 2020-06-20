@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997777"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Выбор языка при создании полнотекстового индекса
   При создании полнотекстового индекса необходимо указать язык уровня столбца для индексируемого столбца. В полнотекстовых запросах к столбцу будут использоваться [средства разбиения по словам и парадигматические модули](configure-and-manage-word-breakers-and-stemmers-for-search.md) указанного языка. При выборе языка столбца в процессе создания полнотекстового индекса следует учитывать несколько факторов. Они связаны со способом, которым текст размечается на лексемы и затем индексируется средством полнотекстового поиска.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012724"
   
 -   безопасность  
   
-     Новые средства разбиения по [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] словам включены по умолчанию благодаря улучшениям безопасности в лингвистических компонентах. Все внешние компоненты, например средства разбиения по словам и фильтры, рекомендуется подписывать, для повышения общего уровня безопасности и надежности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Проверку наличия подписей у данных компонентов при полнотекстовом поиске можно настроить следующим образом:  
+     Новые средства разбиения по словам включены по умолчанию [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] благодаря улучшениям безопасности в лингвистических компонентах. Все внешние компоненты, например средства разбиения по словам и фильтры, рекомендуется подписывать, для повышения общего уровня безопасности и надежности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Проверку наличия подписей у данных компонентов при полнотекстовом поиске можно настроить следующим образом:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +60,7 @@ ms.locfileid: "66012724"
   
 -   В комплекте с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставляются включенные по умолчанию средства разбиения по словам для большого количества языков.  
   
- Список языков, для которых [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется средство разбиения по словам и парадигматические модули, см. в разделе [sys. fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Список языков, для которых используется средство [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] разбиения по словам и парадигматические модули, см. в разделе [sys. Fulltext_languages &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   

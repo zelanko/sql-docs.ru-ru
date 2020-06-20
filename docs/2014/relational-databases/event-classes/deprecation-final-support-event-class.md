@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09910ec1da0b6d157a3a0a53953f2650a924c314
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053023"
 ---
 # <a name="deprecation-final-support-event-class"></a>класс событий Deprecation Final Support
   Класс событий **Deprecation Final Support** возникает в случае использования функции, которая будет удалена из следующей основной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для увеличения срока службы приложения избегайте использования функций, которые приводят к вызову класса событий **Deprecation Final Support** или **Deprecation Announcement** . Модифицируйте приложения, которые используют устаревшие функции, как можно быстрее.  
@@ -33,8 +32,8 @@ ms.locfileid: "62662985"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. Приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных `ServerName` захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 126.|27|Нет|  
-|EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 126.|27|нет|  
+|EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|`int`|Смещение конца выполняемой инструкции (в байтах).|55|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -55,7 +54,7 @@ ms.locfileid: "62662985"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Класс событий объявления об устаревании](deprecation-announcement-event-class.md)   
  [Устаревшие функции компонента Database Engine в SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  

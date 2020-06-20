@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dfa610b7632455c5d7d7a84efcb6101ffc7575b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052510"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change, класс событий
   Событие класса **Server Memory Change** происходит, когда использование памяти [!INCLUDE[msCoName](../../includes/msconame-md.md)] экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] увеличивается или уменьшается на 1 МБ или на 5 % от максимального объема памяти сервера в зависимости от того, что больше.  
