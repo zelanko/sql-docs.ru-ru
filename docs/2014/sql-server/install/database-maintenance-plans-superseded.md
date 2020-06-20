@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7d41763582632a92b3a38bdbd67ee55b65f95b6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aea75cc4ecc94ccbaeb1f35cecd0b18ff3a65ff
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054931"
 ---
 # <a name="database-maintenance-plans-superseded"></a>Планы обслуживания базы данных заменены
     
 ## <a name="component"></a>Компонент  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент  
   
 ## <a name="description"></a>Описание  
  Существующие планы обслуживания базы данных обновлены и продолжают функционировать. Однако нельзя создать новые планы обслуживания базы данных с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Для просмотра планов обслуживания в обозревателе объектов раскройте узел «Управление», а затем «Объекты прежних версий». Можно перенести существующие планы обслуживания базы данных в новый формат, выбрав пункт **перенести** в контекстном меню для любого плана обслуживания базы данных. Поскольку новые функции плана обслуживания не являются прямой заменой планов обслуживания базы данных, некоторые функциональные возможности после миграции могут быть утеряны. При миграции плана обслуживания базы данных старый план не удаляется, поэтому перед удалением старого плана обслуживания можно проверить новый.  

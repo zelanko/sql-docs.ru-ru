@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca3da66a23292212df7464c8d5966e5c3603e13e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055561"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962944"
 ---
 # <a name="smtp-connection-manager-editor"></a>редактор диспетчера SMTP-сеансов
   Используйте диалоговое окно **Редактор диспетчера SMTP-сеансов** для задания SMTP-сервера.  
@@ -43,12 +42,12 @@ ms.locfileid: "66055561"
 >  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
   
 > [!NOTE]  
->  При использовании Microsoft Exchange в качестве SMTP-сервера может потребоваться задать для `True`параметра **использовать проверку подлинности Windows** значение. Серверы Exchange можно настроить так, чтобы они запрещали использовать соединения SMTP, не прошедшие проверку подлинности.  
+>  При использовании Microsoft Exchange в качестве SMTP-сервера может потребоваться задать для параметра **использовать проверку подлинности Windows** значение `True` . Серверы Exchange можно настроить так, чтобы они запрещали использовать соединения SMTP, не прошедшие проверку подлинности.  
   
  **Включить протокол SSL**  
  Выберите, чтобы отправляемые почтовые сообщения шифровались по протоколу SSL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

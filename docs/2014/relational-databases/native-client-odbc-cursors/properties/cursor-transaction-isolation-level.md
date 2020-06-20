@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c183af3a8db4ad9e08f15083462806244aa8187
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 30f3dc8a9136a7cbe1d5897cb0bcc9fff8c35ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020680"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Уровень изоляции транзакций курсора
   Режим полной блокировки курсоров основывается на взаимодействии между атрибутами параллелизма и уровнем изоляции транзакций, установленным клиентом. Клиенты ODBC устанавливают уровень изоляции транзакции с помощью [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION или атрибутов SQL_COPT_SS_TXN_ISOLATION. Режим блокировки специфической среды курсора определяется комбинацией режимов блокировки параллелизма и параметров уровня изоляции транзакции.  
@@ -40,7 +39,7 @@ ms.locfileid: "82705557"
   
  Обратите внимание, что API ODBC указывает дополнительные уровни изоляции транзакций, но они не поддерживаются [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвером ODBC для собственного клиента.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства курсора](cursor-properties.md)  
   
   

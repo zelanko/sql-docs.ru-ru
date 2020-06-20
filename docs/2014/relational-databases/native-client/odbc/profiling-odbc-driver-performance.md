@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e2b1e0f8ba22eacff01929ed3364dcffe0cf815
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011107"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Создание профилей производительности драйвера ODBC
   Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет при профилировании два типа данных о производительности.  
@@ -64,7 +63,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Профиль приложения  
   
--   Подключение  
+-   Соединение  
   
 -   Сеть  
   
@@ -117,7 +116,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |msExecutionTime|Общее количество времени, затраченного драйвером на обработку после SQL_PERF_START, включая время на ожидание ответов от сервера.|  
 |msNetworkServerTime|Общее количество времени, затраченного драйвером на ожидание ответов от сервера.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](sql-server-native-client-odbc.md)   
  [Инструкции по профилированию производительности драйвера ODBC &#40;ODBC&#41;](../../native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   

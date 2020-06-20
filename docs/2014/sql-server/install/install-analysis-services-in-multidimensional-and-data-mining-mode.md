@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280871"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054783"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных
-  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют средства оперативной аналитической обработки (OLAP) и средства интеллектуального анализа данных для приложений бизнес-аналитики. В этом выпуске поддержка баз данных OLAP и моделей интеллектуального анализа данных доступна при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] установке в *многомерном режиме*. Многомерный режим — один из трех серверных режимов, в котором работают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это режим по умолчанию. При установке служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со значениями по умолчанию получится экземпляр, работающий с многомерными базами данных и моделями интеллектуального анализа данных.  
+  Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют средства оперативной аналитической обработки (OLAP) и средства интеллектуального анализа данных для приложений бизнес-аналитики. В этом выпуске поддержка баз данных OLAP и моделей интеллектуального анализа данных доступна при установке [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в *многомерном режиме*. Многомерный режим — один из трех серверных режимов, в котором работают службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Это режим по умолчанию. При установке служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со значениями по умолчанию получится экземпляр, работающий с многомерными базами данных и моделями интеллектуального анализа данных.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]— Это функция с несколькими экземплярами, которая означает, что можно установить несколько экземпляров [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном компьютере или запустить новый экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] параллельно с более ранней версией. Серверный режим выбирается на уровне конкретного экземпляра. Использование других режимов требует установки дополнительных экземпляров сервера.  
   
- Можно установить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отдельно или с другими компонентами. При установке только [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]следующие компоненты устанавливаются при выборе **Analysis Services** на странице Выбор компонентов мастера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установки.  
+ Можно установить службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отдельно или с другими компонентами. При установке только [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] следующие компоненты устанавливаются при выборе **Analysis Services** на странице Выбор компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастера установки.  
   
 -   Сервер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для запуска баз данных и моделей интеллектуального анализа данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -50,7 +49,7 @@ ms.locfileid: "78280871"
 ## <a name="installation-tasks"></a>Задачи установки  
  К задачам установки относятся следующие.  
   
-|Ссылки|Задачи|  
+|Ссылки|Задания|  
 |-----------|-----------|  
 |[Требования к оборудованию и программному обеспечению для установки SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md) и [настройки учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).|Перед запуском программы установки проверьте предварительные условия для установки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и определите учетную запись, которая будет использоваться для сервера.|  
 |[Установите SQL Server 2014 с помощью мастера установки &#40;&#41;установки ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).|Запустите программу установки SQL Server, чтобы установить программное обеспечение.|  

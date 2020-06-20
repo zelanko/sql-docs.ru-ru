@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26ef6e6f2c7b394191a292bd2d92155eb40450c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6fb949573b73463712e9981cad90e9c7fad9c7c5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939639"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970694"
 ---
 # <a name="creating-a-user-defined-type"></a>Создание определяемого пользователем типа
   Чтобы создать определяемый пользователем тип, пригодный для установки в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо сначала создать класс в одном из поддерживаемых языков программирования среды .NET Framework, таком как Visual C# или Visual Basic, соответствующем требованиям спецификаций по созданию определяемых пользователем типов. Затем класс можно скомпилировать в виде DLL-библиотеки, которая может загружаться в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Создавать и развертывать определяемые пользователем типы также можно с помощью Visual Studio.  

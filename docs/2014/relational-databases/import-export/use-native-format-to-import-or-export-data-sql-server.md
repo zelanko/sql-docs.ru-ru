@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026301"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
   Собственный формат данных рекомендуется использовать при массовой передаче данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, который не содержит символов в расширенной кодировке или символов в двухбайтовой кодировке (DBCS).  
@@ -57,7 +56,7 @@ ms.locfileid: "66011660"
   
 -   Данные типа `char` или `varchar`.  
   
-     В начале каждого `char` поля или `varchar` программа **bcp** добавляет длину префикса.  
+     В начале каждого `char` `varchar` поля или программа **bcp** добавляет длину префикса.  
   
     > [!IMPORTANT]  
     >  Когда используется собственный режим, программа **bcp** по умолчанию преобразует символы из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в символы OEM перед их копированием в файл данных. Программа **bcp** преобразует символы из файла данных в символы ANSI перед их массовым импортом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу. Во время подобных преобразований расширенные символьные данные могут быть потеряны. Для расширенных наборов символов необходимо либо использовать собственный формат в Юникоде, либо задать кодовую страницу.  
@@ -80,7 +79,7 @@ ms.locfileid: "66011660"
 |**bcp**|**-n**|Заставляет служебную программу **bcp** использовать собственные типы данных. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= "** Native **"**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  
   
- <sup>1</sup> чтобы загрузить собственные (**-n**) данные в формате, совместимом с предыдущими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версиями клиентов, используйте параметр **-V** . Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> чтобы загрузить собственные (**-n**) данные в формате, совместимом с предыдущими версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентов, используйте параметр **-V** . Дополнительные сведения см. в разделе [Импорт данных в собственном и символьном формате из предыдущих версий SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Дополнительные сведения см. в статьях [Программа bcp](../../tools/bcp-utility.md), [BULK INSERT (SQL Server)](/sql/t-sql/statements/bulk-insert-transact-sql) и [OPENROWSET (SQL Server)](/sql/t-sql/functions/openrowset-transact-sql).  
   

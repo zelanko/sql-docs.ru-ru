@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c099bf9ea271b5ea93fdebfe8f35c98864bca09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062552"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
    При развертывании решения по обеспечению высокой доступности или аварийного восстановления для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важно воспроизвести значимые данные, хранящиеся в этой базе данных, в базе данных **master** или **msdb**. Обычно к таким данным относятся задания базы данных-источника или основной базы данных, а также имена входа пользователей или процессов, которым требуется подключаться к базе данных. Эти данные следует скопировать на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где размещена база данных-получатель или зеркальная база данных. После переключения ролей рекомендуется по возможности программно воспроизвести эти данные в новой базе данных-источнике или основной базе данных.  
@@ -45,8 +44,8 @@ ms.locfileid: "63252856"
 > [!NOTE]  
 >  Разные экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть настроены по-разному, например, могут различаться буквы, обозначающие диски. Задания для каждого участника должны допускать подобные различия.  
   
-## <a name="see-also"></a>См. также  
- [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](troubleshoot-orphaned-users-sql-server.md)  
   
   

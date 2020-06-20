@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ed6ae10-d212-4ec2-8569-1b94ab1cba6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3a1f10ae77061983a5cf64ddd5a3462bb4be49b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80daa694cd015a83657368902b07da254e6196ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035593"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048610"
 ---
 # <a name="issues-of-database-evolution-visual-database-tools"></a>Проблемы развития базы данных (визуальные инструменты для баз данных)
   При изменении структуры развернутой базы данных необходимо следить, чтобы изменения были совместимы с существующими данными и структурой базы данных. Возможно, необходимо будет принять особые меры при выполнении следующих изменений:  

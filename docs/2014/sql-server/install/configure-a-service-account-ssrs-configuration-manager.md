@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952584"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036948"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Настройка учетной записи службы (диспетчер конфигурации служб SSRS)
   В установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] веб-служба сервера отчетов, диспетчер отчетов и приложение фоновой обработки работают в составе одной службы. Учетная запись, от которой запускается эта служба, должна быть задана в процессе установки на странице «Удостоверение службы», однако если есть необходимость сменить учетную запись или пароль, то можно воспользоваться для этого программой настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Если сервер отчетов настроен для работы в режиме интеграции с SharePoint и вы изменили учетную запись службы с помощью средства [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] настройки служб, необходимо также открыть центр администрирования SharePoint и использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] страницу **предоставление доступа к базе данных** для повторного применения параметров сервера отчетов и экземпляра. Этот шаг предоставит новой учетной записи службы доступ к базам данных SharePoint, которые необходимы для интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] или. [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]  
+ Если сервер отчетов настроен для работы в режиме интеграции с SharePoint и вы изменили учетную запись службы с помощью [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] средства настройки служб, необходимо также открыть центр администрирования SharePoint и использовать [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] страницу **предоставление доступа к базе данных** для повторного применения параметров сервера отчетов и экземпляра. Этот шаг предоставит новой учетной записи службы доступ к базам данных SharePoint, которые необходимы для интеграции [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] или [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .  
   
  Для изменения учетной записи службы всегда пользуйтесь средством настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], которое одновременно обновляет и другие параметры, зависящие от учетных данных службы.  
   

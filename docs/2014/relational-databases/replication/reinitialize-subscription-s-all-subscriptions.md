@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8bcd42996ee35839162ee4e541f5be44c2d602aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93c517ff64ded2a77011f4b0a81be49798aa11d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056943"
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Повторная инициализация подписок — все подписки
   Диалоговое окно **Повторная инициализация подписок** позволяет пометить все подписки публикации для повторной инициализации. Повторная инициализация заключается в том, что к каждому подписчику применяется моментальный снимок; эта задача выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  

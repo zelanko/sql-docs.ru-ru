@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6af4597a4ddf802c80bc98cb38363d59348fa0bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f93f5abc749f589ab4208b3a4c9434ca63b8769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935050"
 ---
 # <a name="prevent-automatic-startup-of-an-instance-of-sql-server-sql-server-configuration-manager"></a>Отключение автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)
   В этом разделе описано, как отключить автоматический запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно настраивается для автоматического запуска. Это вы можете изменить, задав для экземпляра режим запуска вручную.  
@@ -37,11 +36,11 @@ ms.locfileid: "62810054"
   
 3.  В области сведений щелкните правой кнопкой мыши **MSSQLServer**и выберите пункт **Свойства**.  
   
-4.  В поле **Свойства** диалогового окна **Свойства SQL Server \<**_имя_экземпляра_**>** установите для параметра **Режим запуска** значение **Вручную**.  
+4.  В диалоговом окне ** \<**_instancename_**> Свойства SQL Server** в поле **Свойства** установите для параметра **режим запуска** значение **вручную**.  
   
-5.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Свойства SQL Server \<**_имя_экземпляра_**>**, а затем закройте диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно ** \<**_instancename_**> Свойства SQL Server** , а затем закройте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](start-stop-pause-resume-restart-sql-server-services.md)  
   
   

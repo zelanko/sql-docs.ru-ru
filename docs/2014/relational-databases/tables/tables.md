@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211781"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055052"
 ---
 # <a name="tables"></a>Таблицы
   Таблицы являются объектами, которые содержат все данные в базах данных. В таблицах данные логически организованы в виде строк и столбцов по аналогии с электронной таблицей. Каждая строка представляет собой уникальную запись, а каждый столбец — поле записи. Например, таблица, содержащая данные о сотрудниках компании, может иметь строку для каждого сотрудника и столбцы, представляющие сведения о сотрудниках (например, его идентификационный номер, имя, адрес, должность и номер домашнего телефона).  
@@ -83,8 +82,8 @@ ms.locfileid: "68211781"
 |Описывает создание вычисляемого столбца в таблице.|[Указание вычисляемых столбцов в таблице](specify-computed-columns-in-a-table.md)|  
 |Описывает, как установить значение по умолчанию для столбца. Это значение используется, если другое значение не предоставлено.|[Указание значений по умолчанию для столбцов](specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ограничения первичного и внешнего ключей](primary-and-foreign-key-constraints.md)   
- [Ограничения уникальности и проверочные ограничения](unique-constraints-and-check-constraints.md)  
+ [Ограничения UNIQUE и проверочные ограничения](unique-constraints-and-check-constraints.md)  
   
   

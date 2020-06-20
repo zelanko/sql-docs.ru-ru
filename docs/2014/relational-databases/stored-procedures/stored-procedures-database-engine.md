@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197108"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047460"
 ---
 # <a name="stored-procedures-database-engine"></a>Хранимые процедуры (компонент Database Engine)
   Хранимая процедура в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это группа из одной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] или нескольких или ссылка на метод среды CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Процедуры аналогичны конструкциям в других языках программирования, поскольку обеспечивают следующее:  

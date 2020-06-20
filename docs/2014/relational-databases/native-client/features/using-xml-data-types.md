@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 24a4f5750af22e8fd588c9c70c1c0399de948907
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039007"
 ---
 # <a name="using-xml-data-types"></a>Использование типов данных XML
   В версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] был введен тип данных **xml**, позволяющий хранить XML-документы и их фрагменты в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Как и другие встроенные типы данных, тип данных **xml** можно использовать как тип столбца при создании таблицы, как тип переменной, параметра, тип возвращаемого функцией значения, а также в инструкциях CAST и CONVERT.  
@@ -87,7 +86,7 @@ ms.locfileid: "82707162"
 |DBTYPE_BSTR|Передать<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК <sup>3</sup>|Н/Д <sup>2</sup>|  
 |DBTYPE_STR|ОК<sup>6, 9, 10</sup>|Н/Д <sup>2</sup>|ОК<sup>5, 6, 12</sup>|Н/Д <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Байтовый поток через интерфейс **ISequentialStream**<sup>7</sup>|Н/Д <sup>2</sup>|Байтовый поток через интерфейс **ISequentialStream**<sup>11</sup>|Н/Д <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Передать<sup>6,7</sup>|Н/Д <sup>2</sup>|Н/Д|Н/Д <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Передать<sup>6,7</sup>|Н/Д <sup>2</sup>|Недоступно|Н/Д <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Передать<sup>6,10</sup>|Н/Д <sup>2</sup>|ОК<sup>3</sup>|Н/Д <sup>2</sup>|  
   
  <sup>1</sup> Если тип сервера, отличный от DBTYPE_XML, указан с помощью **ICommandWithParameters:: SetParameterInfo** , а тип метода доступа — DBTYPE_XML, то при выполнении инструкции возникает ошибка (DB_E_ERRORSOCCURRED состояние параметра — DBSTATUS_E_BADACCESSOR); в противном случае данные отправляются на сервер, но сервер возвращает ошибку, указывающую на отсутствие неявного преобразования из XML в тип данных параметра.  
@@ -135,7 +134,7 @@ ms.locfileid: "82707162"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Наборы строк схем COLUMNS и PROCEDURE_PARAMETERS  
  К наборам строк схем COLUMNS и PROCEDURE_PARAMETERS добавлены следующие столбцы.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога, в котором определена коллекция схем XML. Значение NULL для столбцов, отличных от XML или нетипизированных XML-столбцов.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы, в которой определена коллекция схем XML. Значение NULL для столбцов, отличных от XML или нетипизированных XML-столбцов.|  
@@ -147,7 +146,7 @@ ms.locfileid: "82707162"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Набор строк схемы SS_XMLSCHEMA  
  Для клиентов добавлен новый набор строк схемы SS_XMLSCHEMA для получения информации о схеме XML. Набор строк SS_XMLSCHEMA содержит следующие столбцы.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция XML.|  
@@ -167,7 +166,7 @@ ms.locfileid: "82707162"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки типа данных **XML** с помощью OLE DB в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте реализован новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
   
-|Имя|Type|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога (базы данных), где определена коллекция схем XML. Часть идентификатора трехкомпонентного имени SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы XML в коллекции схемы XML. Часть идентификатора трехкомпонентного имени SQL.|  
@@ -176,7 +175,7 @@ ms.locfileid: "82707162"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в интерфейсе **ITableDefinition** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client добавляет три новых столбца в набор свойств DBPROPSET_SQLSERVERCOLUMN.  
   
-|Имя|Type|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя каталога, где хранится схема XML. Для других типов столбцов это свойство содержит пустую строку.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя схемы XML, задающей этот столбец.|  
@@ -196,7 +195,7 @@ ms.locfileid: "82707162"
 #### <a name="the-icolumnsrowset-interface"></a>Интерфейс IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент добавляет указанные ниже [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбцы к набору строк, возвращаемому методом **иколумнровсет:: жетколумнсровсет** . Эти столбцы содержат трехчастное имя коллекции схем XML. Для столбцов не в формате XML и нетипизированных столбцов XML все три данных столбца по умолчанию имеют значение NULL.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Каталог, которому принадлежит коллекция схем XML.<br /><br /> В противном случае — значение NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Схема, которой принадлежит коллекция схем XML. В противном случае — значение NULL.|  
@@ -267,7 +266,7 @@ ms.locfileid: "82707162"
   
  Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязкой SQL_C_BINARY [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует и не добавляет спецификацию, так как кодировка подразумевается привязкой. Целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) выяснят кодировку по нескольким первым байтам данных. XML-данные, полученные от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента с помощью привязок SQL_C_BINARY, всегда кодируются в кодировке UTF – 16 с помощью BOM и без внедренного объявления кодировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)   
  [ISSCommandWithParameters (OLE DB)](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

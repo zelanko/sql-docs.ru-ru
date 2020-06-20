@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ee6bdcd-0309-4a20-b5c2-0e6b6839f34f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0bfad3885d6b6842871fddb90f6ce31a71e72f3d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6af4979b9a77c94f52be5197b01179007a971283
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707189"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011134"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Возвращающие табличное значение параметры (собственный клиент SQL Server)
   Возвращающие табличное значение параметры появились в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], и обеспечивают эффективный способ передачи нескольких строк данных на сервер. Возвращающие табличное значение параметры предоставляют функциональные возможности, схожие с массивами параметров, но предлагают большую гибкость и более тесную интеграцию с [!INCLUDE[tsql](../../../includes/tsql-md.md)], и могут значительно улучшить производительность. Возвращающие табличное значение параметры также могут участвовать в операциях на основе набора, а массивы параметров не могут.  
@@ -27,7 +26,7 @@ ms.locfileid: "82707189"
   
  Сведения о параметрах, возвращающих табличное значение, и OLE DB см. этой [статье](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](sql-server-native-client-features.md)  
   
   

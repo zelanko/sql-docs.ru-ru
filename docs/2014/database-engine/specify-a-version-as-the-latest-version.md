@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 407dffb1-3ecf-461e-835d-124781f26ee7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d598ec6f828fc7d8d59b3f998b775a752b94c4a6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773480"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928881"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Указание версии в качестве последней
   При регистрации файла в системе управления версиями версия этого файла становится последней. Пользователи, извлекающие последнюю версию, получают локальные копии возвращенного до этого элемента.  
@@ -40,7 +39,7 @@ ms.locfileid: "62773480"
   
 3.  В меню **файл** выберите пункт **система управления версиями** и щелкните **виевхистори**.  
   
-4.  В диалоговом окне **Журнал** \<> файлов выберите версию, которую необходимо указать в качестве последней, и нажмите кнопку **закрепить**.  
+4.  В **History of** \<file> диалоговом окне Журнал выберите версию, которую необходимо указать в качестве последней, и нажмите кнопку **закрепить**.  
   
      Возле выбранной версии появится символ закрепления, указывающий, что теперь это текущая версия файла. Если в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] загружена другая версия, программа предложит перезагрузить файл.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62773480"
   
 6.  Нажмите кнопку **Да** , чтобы вернуться к выбранной версии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление возвратами](../../2014/database-engine/manage-checkins.md)   
  [Возврат файлов](../../2014/database-engine/check-in-files.md)  
   

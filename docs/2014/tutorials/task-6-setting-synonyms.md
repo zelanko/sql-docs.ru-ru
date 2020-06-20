@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6f4e870dca91e952fbeea95ef8f1198c64d8d6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177232"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054281"
 ---
 # <a name="task-6-setting-synonyms"></a>Задача 6. Задание синонимов
   В этой задаче вы зададите два значения, **USA** и **США**, домена **Страна** как синонимы, при этом **США** будет начальным значением. Поскольку параметр **Использовать начальные значения** был выбран при создании домена **Страна** , все значения **USA** для домена **Страна** будут выводиться как **США** (при этом «США» — начальное значение). Дополнительные сведения см. в разделе [Изменение значений домена](https://msdn.microsoft.com/library/hh510408.aspx) .

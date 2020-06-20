@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00ef2590d21ad0d58acecf690342e92bb843ea2d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07381b5450ecb238d09b96cbf9a3983ff178d1f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706448"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026120"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Миграция в In-Memory OLTP
   В данном разделе рассматривается миграция объектов базы данных для использования In-Memory OLTP.  
@@ -46,7 +45,7 @@ ms.locfileid: "82706448"
   
  Сведения о методологиях миграции см. [в разделе Общие шаблоны рабочих нагрузок в памяти OLTP и рекомендации по миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](memory-optimized-tables.md)  
   

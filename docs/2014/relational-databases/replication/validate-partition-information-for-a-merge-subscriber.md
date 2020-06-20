@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c059553e-df2c-4333-ba79-e8d6e2890c34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bada5fc49dc344510164260330699b60a3288cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3032ff13af69a0690e1f81f08f7b3fb17aae0ee1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047553"
 ---
 # <a name="validate-partition-information-for-a-merge-subscriber"></a>Проверка сведений о секции для подписчика на публикацию слиянием
   При определении параметризованного фильтра строк для публикации слиянием используется функция, ссылающаяся на данные подписчика, например на имя входа подписчика. По умолчанию репликация проверяет данные подписчика на основании этой функции перед каждой синхронизацией и при использовании моментального снимка на подписчике. Процесс проверки обеспечивает правильность секционирования данных для каждого подписчика. Характер проверки контролируется свойством публикации **validate_subscriber_info**, изменить которое можно при помощи процедуры [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) или на странице **Параметры подписки** диалогового окна **Свойства публикаций**. Дополнительные сведения об изменении свойств публикаций см. в разделе [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
@@ -33,7 +32,7 @@ ms.locfileid: "63255309"
   
  Когда агент слияния проверяет секцию, наряду с проверкой значений секции, возвращаемых функциями, используемыми в выражениях фильтрации, агент проверяет также, сформирован ли моментальный снимок перед изменениями, которые сделали его недействительным, например перед выполнением операций очистки метаданных или изменениями схемы. Если секционированный моментальный снимок слишком стар, агент слияния возвращает ошибку, и пользователь должен вновь сформировать секционированный моментальный снимок для этого подписчика на основании текущего стандартного моментального снимка.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы и ответы по администрированию репликации](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Рекомендации по администрированию репликации](administration/best-practices-for-replication-administration.md)   
  [Повторная инициализация подписок](reinitialize-subscriptions.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961924"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Неподдерживаемые функции служб Master Data Services в SQL Server «2014»
   В этой статье описаны функции служб [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , которые больше недоступны в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,9 +57,9 @@ ms.locfileid: "65479446"
  Если существует пакет развертывания модели [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], который содержит правило такого типа, при обновлении базы данных до [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] бизнес-правило будет исключено.  
   
 ### <a name="bulk-updates-and-exporting"></a>Массовое обновление и экспорт  
- В веб-приложении служб [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] теперь нельзя проводить массовое обновление значений атрибутов для нескольких элементов. Чтобы выполнить групповые обновления, используйте промежуточный процесс или [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ В веб-приложении служб [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] теперь нельзя проводить массовое обновление значений атрибутов для нескольких элементов. Чтобы выполнить групповые обновления, используйте промежуточный процесс или [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
- В веб-приложении служб [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] теперь невозможен экспорт элементов в Excel. Для работы с элементами в Excel используйте [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ В веб-приложении служб [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] теперь невозможен экспорт элементов в Excel. Для работы с элементами в Excel используйте [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
 ### <a name="transactions"></a>Transactions  
  В функциональной области **Обозреватель** пользователи больше не могут отменить свои собственные транзакции. Ранее пользователи могли отменить изменения, внесенные в данные в **обозревателе**. Администраторы по-прежнему могут отменить транзакции для всех пользователей в функциональной области **Управление версиями** .  
@@ -73,7 +72,7 @@ ms.locfileid: "65479446"
 ### <a name="powershell-cmdlets"></a>Командлеты PowerShell  
  Теперь службы MDS не содержат командлетов PowerShell.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Устаревшие функции Master Data Services в SQL Server «2014»](deprecated-master-data-services-features.md)  
   
   

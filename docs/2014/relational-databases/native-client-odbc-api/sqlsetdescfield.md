@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ac1f46529dc16c67de7237f191f81decf9a2c0c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 576f6257f3ff5378dc4adb975ab3ef3847dd928c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021622"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField можно использовать для задания полей дескриптора для возвращающих табличное значение параметров и столбцов возвращающих табличное значение параметров. Сведения о доступных полях см. в разделе [поля дескриптора возвращающего](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) табличное значение параметра и [поля дескриптора для составных столбцов возвращающего](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md)табличное значение параметра.  
@@ -44,7 +43,7 @@ ms.locfileid: "82702157"
   
  Дополнительные сведения см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQLSetDescField](https://go.microsoft.com/fwlink/?LinkId=80705)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd25a78e3d3b9be2e7191ce6ed3d6bdcbb0f9606
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965821"
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
   В этом подразделе описывается, как переименовать пользовательскую базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Имя базы данных может содержать все символы, соответствующие правилам для идентификаторов.  
@@ -54,7 +53,7 @@ ms.locfileid: "62916774"
   
 #### <a name="to-rename-a-database"></a>Переименование базы данных  
   
-1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], а затем разверните этот экземпляр.  
+1.  В **обозревателе объектов**подключитесь к экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , а затем разверните этот экземпляр.  
   
 2.  Убедитесь в том, что никто не использует эту базу данных, а затем [переведите ее в однопользовательский режим работы](set-a-database-to-single-user-mode.md).  
   
@@ -84,7 +83,7 @@ GO
 ##  <a name="follow-up-after-renaming-a-database"></a><a name="FollowUp"></a> Дальнейшие действия. После переименования базы данных  
  Создавайте резервную копию базы данных **master** после переименования любой базы данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Идентификаторы баз данных](database-identifiers.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1937f3b81a920312aa1f1a4b804352b9674043dc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62e7188d61ebdad573d8966ed6e262cc819c4c59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702081"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021270"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Выполнение операций массового копирования (ODBC)
   Стандарт ODBC напрямую не поддерживает операции массового копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 или более поздней, драйвер ODBC собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает функции библиотеки DB-Library, выполняющие операции массового копирования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот собственный модуль драйвера обеспечивает легкий путь обновления для существующих приложений DB-Library, использующих функции массового копирования. Специализированная поддержка массового копирования реализована в следующих файлах.  
@@ -61,7 +60,7 @@ ms.locfileid: "82702081"
   
 -   [Перевод массового копирования с DB-Library на ODBC](converting-from-db-library-to-odbc-bulk-copy.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../import-export/bulk-import-and-export-of-data-sql-server.md)  
   

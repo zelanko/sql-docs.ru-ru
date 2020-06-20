@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e2b3318b9aae0412e827875af35cbdf0477e059f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5fe5915240130336bc1f16100a693e4b81e8d163
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736284"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056783"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>Метод SetNumericalValue (класс ServerNetworkProtocolProperty)
   Задает числовое значение указанного свойства.  
@@ -41,7 +40,7 @@ NumValue
   
 ## <a name="parts"></a>Компоненты  
  *object*  
- Объект [класс servernetworkprotocolproperty Class] класс servernetworkprotocolproperty-class.md), представляющий атрибут сетевого протокола в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Объект [класс servernetworkprotocolproperty Class] класс servernetworkprotocolproperty-class.md), представляющий атрибут сетевого протокола в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Параметры  
   
@@ -54,7 +53,7 @@ NumValue
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

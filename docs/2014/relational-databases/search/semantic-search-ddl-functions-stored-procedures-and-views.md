@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce6c23f9a8ff1d0dac8986bf6b44c7725d4badc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011039"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004013"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Инструкции семантического поиска DDL, функции, хранимые процедуры и представления
   Содержит список инструкций Transact-SQL и объектов базы данных, которые поддерживают статистический семантический поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Список инструкций и объектов базы данных, которые поддерживают полнотекстовый поиск, см. в статье [Инструкции полнотекстового поиска DDL, функции, хранимые процедуры и представления](../views/views.md).  
   
-##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Инструкции языка описания данных (DDL) Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Инструкции языка описания данных (DDL) Transact-SQL  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "66011039"
 |[sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Установка и настройка семантического поиска](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Установка и настройка семантического поиска](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---catalog-views"></a><a name="cv"></a>Системные представления — представления каталога  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a> Системные представления — представления каталога  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  
@@ -65,7 +64,7 @@ ms.locfileid: "66011039"
 |[sys.fulltext_semantic_language_statistics_database (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Установка и настройка семантического поиска](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Установка и настройка семантического поиска](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a>Системные представления — динамические административные представления  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Системные представления — динамические административные представления  
   
 |Объект|Дополнительные сведения|  
 |------------|----------------------|  

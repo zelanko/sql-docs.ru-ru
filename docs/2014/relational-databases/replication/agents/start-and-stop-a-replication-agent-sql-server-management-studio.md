@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9074ab3ac56f3457f4ab5ffb877e63a66a1c783
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192465"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068711"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Запуск и остановка агента репликации (среда SQL Server Management Studio)
   Запуск и остановка агентов выполняется из папки **Задания** и папки **Репликация** в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и из монитора репликации. Могут запускаться и останавливаться следующие агенты и задания:  
@@ -55,7 +54,7 @@ ms.locfileid: "63192465"
   
 2.  Раскройте папку **Агент SQL Server** , а затем — папку **Задания** .  
   
-3.  Щелкните правой кнопкой задание для агента и выберите пункт **Запустить задание** или **Остановить задание**. Имя задания для агент чтения очереди имеет вид **[\<распространитель>].\< Целочисленное>**.  
+3.  Щелкните правой кнопкой задание для агента и выберите пункт **Запустить задание** или **Остановить задание**. Имя задания для агент чтения очереди имеет вид **[ \<Distributor> ]. \<integer> **.  
   
 ### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>Запуск и остановка агента моментальных снимков, агента чтения журнала или агента чтения очереди из монитора репликации  
   
@@ -65,7 +64,7 @@ ms.locfileid: "63192465"
   
 3.  Щелкните правой кнопкой агент и затем щелкните **Запустить агент** или **Остановить агент**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мониторинг репликации](../monitoring-replication.md)   
  [Основные понятия исполняемых файлов агента репликации](../concepts/replication-agent-executables-concepts.md)   
  [Replication Agents Overview](replication-agents-overview.md)  

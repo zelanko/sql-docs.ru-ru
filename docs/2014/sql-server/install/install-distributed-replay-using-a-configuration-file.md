@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3259232c-6963-4c9c-9d10-ae42aa262eef
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9db8127a9a43478d891d5955190bd594fb6647b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e05dbb32bb5680e8d123842a4b0b4d1e4cf1a191
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094575"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054727"
 ---
 # <a name="install-distributed-replay-using-a-configuration-file"></a>Установка компонентов распределенного воспроизведения с помощью файла конфигурации
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] дает возможность создать файл конфигурации на основе данных пользователя и значений системы по умолчанию. Если необходимо установить средства управления, можно использовать файл конфигурации для развертывания трех компонентов распределенного воспроизведения (средство администрирования, контроллер распределенного воспроизведения и клиент распределенного воспроизведения). Поддерживает установку, восстановление и удаление компонентов распределенного воспроизведения.  
@@ -41,7 +40,7 @@ ms.locfileid: "66094575"
   
 -   Запустите установку из командной строки и укажите файл ConfigurationFile.ini в параметре ConfigurationFile.  
   
- **Пример синтаксиса**  
+ **Образец синтаксиса**  
   
  Далее приведен пример указания файла конфигурации в командной строке.  
   

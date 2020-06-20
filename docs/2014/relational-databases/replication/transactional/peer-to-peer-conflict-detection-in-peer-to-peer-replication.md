@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198995"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055580"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Обнаружение конфликтов в одноранговой репликации
   Одноранговая репликация транзакций дает возможность вставлять, обновлять и удалять данные в любом узле топологии и передавать изменения в данных на другие узлы. Данные можно изменять в любом узле, поэтому изменения, вносимые на различных узлах, могут конфликтовать друг с другом. Если строка изменяется на нескольких узлах, это может вызвать конфликт или даже потерю обновления, когда эта строка передается на другие узлы.  
@@ -99,7 +98,7 @@ ms.locfileid: "68198995"
   
     5.  Выполнить [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): укажите "p2p_continue_onconflict" для @property параметра и `false` для @value параметра.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Одноранговая репликация транзакций](peer-to-peer-transactional-replication.md)  
   
   

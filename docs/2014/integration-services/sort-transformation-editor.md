@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a565915f4b48cabe5e657175fc1065302b7c7a79
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962894"
 ---
 # <a name="sort-transformation-editor"></a>редактор преобразования «Сортировка»
   Диалоговое окно **Редактор преобразования «Сортировка»** используется для выбора сортируемых столбцов, установки порядка сортировки, а также позволяет указать, следует ли удалять дубликаты.  
   
  Дополнительные сведения о преобразовании «Сортировка» см. в разделе [Sort Transformation](data-flow/transformations/sort-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Доступные входные столбцы**  
  Укажите столбцы, подлежащие сортировке, с помощью соответствующих флажков.  
   
- **Имя**  
+ **имя**;  
  Позволяет просмотреть имя каждого из доступных входных столбцов.  
   
  **Сылка**  
@@ -54,7 +53,7 @@ ms.locfileid: "66055484"
  **Удалить строки с повторяющимися значениями сортировки**  
  Указывает, будут ли повторяющиеся строки при преобразовании скопированы на выход или же для всех дубликатов будет создана единственная запись; дубликаты определяются на основе указанных параметров сравнения строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

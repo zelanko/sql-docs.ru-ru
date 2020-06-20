@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 573be4884c385f8e2c391334bf0f862a66e19efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232848"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044375"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>изменить операторы соединения (визуальные инструменты для баз данных)
   По умолчанию [Конструктор запросов и представлений](visual-database-tools.md) соединяет таблицы с помощью знака равенства (эквисоединение), при котором значения в двух столбцах соединения совпадают. При необходимости можно изменить оператор, используемый для сравнения значений в столбцах соединения.  

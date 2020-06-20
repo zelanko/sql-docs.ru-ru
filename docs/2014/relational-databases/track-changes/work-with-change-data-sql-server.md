@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061472"
 ---
 # <a name="work-with-change-data-sql-server"></a>Работа с информацией об изменениях (SQL Server)
   Информация об изменениях сделана доступной для клиентов системы отслеживания измененных данных через функции с табличным значением. Всем запросам этих функций требуются два параметра для определения диапазона регистрационных номеров транзакций в журнале, которые нужно учитывать при разработке возвращаемого результирующего набора. Необходимо рассмотреть как верхнее, так и нижнее значения номеров LSN, ограничивающие этот интервал.  

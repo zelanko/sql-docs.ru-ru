@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cd2a71e6acd52ba92f44c26f184bbd3141de6f4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919591"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954710"
 ---
 # <a name="clr-scalar-valued-functions"></a>Скалярные функции среды CLR
-  Скалярная функция (SVF) возвращает единственное значение, например строку, целочисленное или битовое значение. Определяемые пользователем скалярные функции можно создавать в управляемом коде на любом языке программирования платформы .NET Framework. Эти функции доступны для [!INCLUDE[tsql](../../includes/tsql-md.md)] и другого управляемого кода. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым [!INCLUDE[tsql](../../includes/tsql-md.md)]кодом и см. в разделе [Обзор интеграции со средой CLR](../clr-integration/clr-integration-overview.md).  
+  Скалярная функция (SVF) возвращает единственное значение, например строку, целочисленное или битовое значение. Определяемые пользователем скалярные функции можно создавать в управляемом коде на любом языке программирования платформы .NET Framework. Эти функции доступны для [!INCLUDE[tsql](../../includes/tsql-md.md)] и другого управляемого кода. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Обзор интеграции со средой CLR](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Требования к скалярным функциям среды CLR  
- Скалярные функции .NET Framework реализуются в виде методов класса в сборке .NET Framework. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Входные параметры и тип, возвращаемый из SVF, могут быть любыми скалярными типами данных, поддерживаемыми `varchar`, `char`за `rowversion`исключением `ntext`, `image` `timestamp` `table` `text`,,,, `cursor`,, или. Скалярные функции должны обеспечивать соответствие типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типа данных, возвращаемого методом реализации. Дополнительные сведения о преобразовании типов см. в разделе [сопоставление данных параметров CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Скалярные функции .NET Framework реализуются в виде методов класса в сборке .NET Framework. Входные параметры и тип, возвращаемый из SVF, могут быть любыми скалярными типами данных, поддерживаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , за исключением,,,,,,, `varchar` `char` `rowversion` `text` `ntext` `image` `timestamp` `table` или `cursor` . Скалярные функции должны обеспечивать соответствие типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и типа данных, возвращаемого методом реализации. Дополнительные сведения о преобразовании типов см. в разделе [сопоставление данных параметров CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  При реализации скалярной функции .NET Framework на одном из языков .NET Framework можно включить дополнительные сведения о функции, задав пользовательский атрибут `SqlFunction`. Атрибут `SqlFunction` указывает, получает ли функция доступ к данным или вносит изменения в данные, является ли детерминированной и предусматривает ли выполнение операций с плавающей запятой.  
   
@@ -150,7 +149,7 @@ GO
   
  Обратите внимание, что имя функции в [!INCLUDE[tsql](../../includes/tsql-md.md)] не обязательно должно соответствовать имени общего статического целевого метода.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставление данных параметров среды CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Общие сведения о настраиваемых атрибутах интеграции со средой CLR](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Определяемые пользователем функции](../user-defined-functions/user-defined-functions.md)   

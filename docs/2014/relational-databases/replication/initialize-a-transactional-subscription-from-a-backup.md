@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1563d58f2d54f77680781e22a162112ade1658e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67793304"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057109"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>инициализировать подписку на публикацию транзакций из резервной копии (программирование репликации на языке Transact-SQL)
   Хотя инициализация подписки на публикацию транзакций осуществляется через моментальный снимок, она также может быть выполнена с помощью хранимых процедур репликации. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](initialize-a-transactional-subscription-without-a-snapshot.md).  
@@ -34,7 +33,7 @@ ms.locfileid: "67793304"
   
     -   Если оно равно **1**, то публикация поддерживает данную функцию.  
   
-    -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) на издателе в базе данных публикации. Укажите значение **allow_initialize_from_backup** для ** \@свойства** и значение `true` для ** \@параметра значение**.  
+    -   Если значение равно **0**, выполните хранимую процедуру [sp_changepublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) на издателе в базе данных публикации. Укажите значение **allow_initialize_from_backup** для ** \@ Свойства** и значение `true` для параметра ** \@ значение**.  
   
 2.  В новой публикации выполните хранимую процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) на издателе в базе данных публикации. Укажите значение `true` для **allow_initialize_from_backup**. Дополнительные сведения см. [в разделе Создание публикации](publish/create-a-publication.md).  
   
@@ -47,30 +46,30 @@ ms.locfileid: "67793304"
   
 5.  На издателе в базе данных издателя выполните хранимую процедуру [sp_addsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Укажите значения следующих параметров.  
   
-    -   sync_type — значение " **инициализировать с резервной копией**". ** \@**  
+    -   ** \@ sync_type** — значение " **инициализировать с резервной копией**".  
   
-    -   backupdevicetype — тип устройства резервного копирования: **логический** (по умолчанию), **диск**или **Лента**. ** \@**  
+    -   ** \@ backupdevicetype** — тип устройства резервного копирования: **логический** (по умолчанию), **диск**или **Лента**.  
   
-    -   backupdevicename — логическое или физическое устройство резервного копирования, используемое для восстановления. ** \@**  
+    -   ** \@ backupdevicename** — логическое или физическое устройство резервного копирования, используемое для восстановления.  
   
          Для логического устройства задайте имя устройства резервного копирования, указанное при создании устройства при помощи хранимой процедуры **sp_addumpdevice** .  
   
          Для физического устройства укажите полный путь и имя файла, например: `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` или `TAPE = '\\.\TAPE0'`.  
   
-    -   Используемых Password — пароль, указанный при создании резервного набора данных. ** \@**  
+    -   Используемых ** \@ Password** — пароль, указанный при создании резервного набора данных.  
   
-    -   Используемых MEDIAPASSWORD — пароль, указанный при форматировании набора носителей. ** \@**  
+    -   Используемых ** \@ MEDIAPASSWORD** — пароль, указанный при форматировании набора носителей.  
   
-    -   Используемых fileidhint — идентификатор восстанавливаемого резервного набора данных. ** \@** Например, значение **1** указывает первый резервный набор данных на носителе данных резервных копий, а значение **2** — второй резервный набор данных.  
+    -   Используемых ** \@ fileidhint** — идентификатор восстанавливаемого резервного набора данных. Например, значение **1** указывает первый резервный набор данных на носителе данных резервных копий, а значение **2** — второй резервный набор данных.  
   
-    -   (Необязательно для ленточных устройств) выгрузка — укажите значение **1** (по умолчанию), если лента должна быть выгружена с диска после завершения восстановления, и **0** , если его не нужно выгружать. ** \@**  
+    -   (Необязательно для ленточных устройств) ** \@ выгрузка** — укажите значение **1** (по умолчанию), если лента должна быть выгружена с диска после завершения восстановления, и **0** , если его не нужно выгружать.  
   
 6.  (Необязательно.) Для подписки по запросу выполните процедуру [sp_addpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) и [sp_addpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) на подписчике в базе данных подписки. Дополнительные сведения см. в статье [Создание подписки по запросу](create-a-pull-subscription.md).  
   
 7.  (Необязательно) Запустите агент распространителя. Дополнительные сведения см. в разделе [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) или [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-## <a name="see-also"></a>См. также  
- [Копирование баз данных с помощью резервного копирования и восстановления](../databases/copy-databases-with-backup-and-restore.md)   
+## <a name="see-also"></a>См. также:  
+ [Копирование баз данных путем создания и восстановления резервных копий](../databases/copy-databases-with-backup-and-restore.md)   
  [Резервное копирование и восстановление баз данных SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

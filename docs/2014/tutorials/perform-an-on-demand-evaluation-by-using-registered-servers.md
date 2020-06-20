@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ffcef923eaeb3ba48eacaca870bd3355fb6661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66822372"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035579"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>выполнить политику по запросу с помощью зарегистрированных серверов
 
@@ -24,7 +23,7 @@ ms.locfileid: "66822372"
 > [!NOTE]  
 >  Выполнение рекомендуемых политик по запросу может быть выполнено по отношению к членам группы серверов, на которых запущен [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] или более поздняя версия [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Однако, если в политике имеется ссылка на некоторые свойства, неподдерживаемые в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] или [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)], может возникнуть исключение.  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой задачи необходимо иметь в настроенном виде один или несколько серверов в окне «Зарегистрированные серверы». Дополнительные сведения см. в следующих разделах:  
   
 -   [Создание или изменение группы серверов (среда SQL Server Management Studio)](../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
@@ -50,7 +49,7 @@ ms.locfileid: "66822372"
   
 4.  В диалоговом окне **Вычисление политик** рядом с полем **источник** нажмите кнопку с многоточием (**...**).  
   
-5.  В диалоговом окне **Выбор источника** можно выбрать **файлы** или **сервер** в качестве источника файлов политики для вычисления. Если щелкнуть **сервер**, можно выполнить оценку всех рекомендаций по запросу, которые ранее были импортированы в управление на основе политик на локальном или удаленном сервере. В этом учебнике вы щелкните **файлы**, а затем выберите отдельные файлы политики, которые нужно оценить. Для этого выполните следующие действия:  
+5.  В диалоговом окне **Выбор источника** можно выбрать **файлы** или **сервер** в качестве источника файлов политики для вычисления. Если щелкнуть **сервер**, можно выполнить оценку всех рекомендаций по запросу, которые ранее были импортированы в управление на основе политик на локальном или удаленном сервере. В этом учебнике вы щелкните **файлы**, а затем выберите отдельные файлы политики, которые нужно оценить. Для этого выполните следующие действия.  
   
     1.  Щелкните **файлы**.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66822372"
 ## <a name="next-lesson"></a>Следующее занятие  
  [Урок 2. Выполнение политик рекомендаций по расписанию](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Мониторинг и применение рекомендаций с помощью управления на основе политик](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   
  [Администрирование нескольких серверов с использованием центральных серверов управления](../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   

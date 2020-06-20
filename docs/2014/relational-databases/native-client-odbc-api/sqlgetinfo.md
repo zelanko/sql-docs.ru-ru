@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2788847a52d47596c38a9f63161d122543fe8099
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a2721e3fc4d46d2cfbf5284986d343d5baca5862
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706006"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022146"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
   В таблице показаны значения, возвращаемые функцией **SQLGetInfo**. Эти значения могут меняться в зависимости от номера версии сервера, с которым установлено соединение.  
   
- **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвере ODBC (SQLSRV32. DLL), когда **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Однако при вызове с ненулевой длиной буфера, которая меньше, чем выходная строка ключевого слова, **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004.  
+ **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте отличается от **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвере ODBC (SQLSRV32.DLL), когда **SQLGetInfo** вызывается с SQL_KEYWORDS и длиной буфера 0.  Драйвер собственного клиента Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS, но драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает SQL_SUCCESS_WITH_INFO.  Однако при вызове с ненулевой длиной буфера, которая меньше, чем выходная строка ключевого слова, **SQLGetInfo** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте возвращает SQL_SUCCESS_WITH_INFO и SQLSTATE 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  
@@ -117,7 +116,7 @@ ms.locfileid: "82706006"
 |SQL_IDENTIFIER_QUOTE_CHAR|" (символ двойной кавычки)|  
 |SQL_INDEX_KEYWORDS|SQL_IK_ASC SQL_IK_DESC|  
 |SQL_INFO_SCHEMA_VIEWS|Запрос не поддерживается драйвером.|  
-|SQL_INFO_SS_NETLIB_NAME|Атрибут, относящийся к драйверу Native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имя сетевой библиотеки, используемой соединением.<br /><br /> По умолчанию возвращается DBNETLIB.  В этом случае DBNETLIB ссылается на сетевую библиотеку и не связана с dbnetlib. dll.|  
+|SQL_INFO_SS_NETLIB_NAME|Атрибут, относящийся к драйверу Native Client ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Имя сетевой библиотеки, используемой соединением.<br /><br /> По умолчанию возвращается DBNETLIB.  В этом случае DBNETLIB ссылается на сетевую библиотеку и не связана с dbnetlib.dll.|  
 |SQL_INTEGRITY|«Y»|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES1|SQL_CA1_ABSOLUTE SQL_CA1_BOOKMARK SQL_CA1_BULK_ADD SQL_CA1_BULK_DELETE_BY_BOOKMARK SQL_CA1_BULK_FETCH_BY_BOOKMARK SQL_CA1_BULK_UPDATE_BY_BOOKMARK SQL_CA1_LOCK_NO_CHANGE SQL_CA1_NEXT SQL_CA1_POS_DELETE SQL_CA1_POS_POSITION SQL_CA1_POS_REFRESH SQL_CA1_POS_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_POSITIONED_UPDATE SQL_CA1_RELATIVE SQL_CA1_SELECT_FOR_UPDATE|  
 |SQL_KEYSET_CURSOR_ATTRIBUTES2|SQL_CA2_CRC_EXACT SQL_CA2_LOCK_CONCURRENCY SQL_CA2_MAX_ROWS_CATALOG SQL_CA2_MAX_ROWS_DELETE SQL_CA2_MAX_ROWS_INSERT SQL_CA2_MAX_ROWS_SELECT SQL_CA2_MAX_ROWS_UPDATE SQL_CA2_OPT_ROWVER_CONCURRENCY SQL_CA2_OPT_VALUES_CONCURRENCY SQL_CA2_READ_ONLY_CONCURRENCY SQL_CA2_SENSITIVITY_ADDITIONS SQL_CA2_SENSITIVITY_UPDATES SQL_CA2_SIMULATE_UNIQUE|  
@@ -207,7 +206,7 @@ ms.locfileid: "82706006"
 |SQL_UNION|SQL_U_UNION SQL_U_UNION_ALL|  
 |SQL_USER_NAME|Текущее имя пользователя.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetInfo](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
