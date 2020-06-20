@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d2a487354f9cebf8f957f49d065a8d32ce109a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990640"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050255"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Настройка хранилища оптимизированных для памяти таблиц
   Необходимо настроить емкость подсистемы хранения и количество операций ввода-вывода в секунду (IOPS).  
@@ -36,7 +35,7 @@ ms.locfileid: "62990640"
   
 -   При наличии четного числа шпинделей необходимо создать в два раза больше контейнеров и сопоставить с каждым шпинделем пару контейнеров. Это необходимо для распределения IOPS в хранилище. Дополнительные сведения см. [в разделе оптимизированная для памяти файловая группа](the-memory-optimized-filegroup.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

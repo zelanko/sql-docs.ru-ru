@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46de12faa52fae61e1f11758f40e1ec8242faca1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011858"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Замена вызовов расширенной хранимой процедуры xp_sqlagent_proxy_account на вызовы новых хранимых процедур
   Агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает несколько посредников. Они должны быть определены при помощи нового набора хранимых процедур. Дополнительные сведения о новых хранимых процедурах агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в следующих разделах электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -45,12 +44,12 @@ ms.locfileid: "66092761"
 -   sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])  
   
 > [!NOTE]  
->  После обновления до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]все инструкции, использующие **xp_sqlagent_proxy_account** расширенную хранимую процедуру, не будут работать. Используйте **sp_xp_cmdshell_proxy_account** вместо **xp_sqlagent_proxy_account** , чтобы задать прокси-сервер для **xp_cmdshell**.  
+>  После обновления до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] все инструкции, использующие **xp_sqlagent_proxy_account** расширенную хранимую процедуру, не будут работать. Используйте **sp_xp_cmdshell_proxy_account** вместо **xp_sqlagent_proxy_account** , чтобы задать прокси-сервер для **xp_cmdshell**.  
   
 ## <a name="component"></a>Компонент  
  Агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления агента SQL Server](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

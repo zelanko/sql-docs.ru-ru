@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 526181bc4bf7ab81df2eaa25f19e7627c9b7af10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059155"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Удаление инструкций, которые изменяют системные объекты
   Советник по переходу обнаружил инструкции, производящие обновление системного каталога. Непосредственное изменение системного каталога не допускается. Измените свои SQL-скрипты так, чтобы они использовали официальные документированные функции API-интерфейса.  
@@ -36,7 +35,7 @@ ms.locfileid: "66428872"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Измените свои SQL-скрипты так, чтобы они использовали официальные документированные функции API-интерфейса. Например, используйте инструкцию ALTER DATABASE *database_name* SET EMERGENCY вместо инструкции UPDATE в системной таблице **sysdatabases** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](https://docs.microsoft.com/sql/sql-server/install/sql-server-2014-upgrade-advisor)  
   

@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5e87f5a13c8f156cd7d2788bb9004ec20fcd3eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245750"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058733"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Свойства агента SQL Server (страница «Система предупреждений»)
-  Эта страница используется для просмотра и изменения параметров сообщений, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправляемых предупреждениями агента.  
+  Эта страница используется для просмотра и изменения параметров сообщений, отправляемых [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждениями агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Почтовый сеанс**  
  Параметры в данном разделе предназначены для настройки почты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63245750"
 >  После изменений системы электронной почты необходимо перезапустить службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы эти изменения вступили в силу.  
   
  **Профиль электронной почты**  
- Устанавливает профиль для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вы также можете выбрать ** \<создать профиль Database Mail... >** , чтобы создать новый профиль.  
+ Устанавливает профиль для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Вы также можете выбрать **\<new Database Mail profile...>** Создание нового профиля.  
   
  **Электронные сообщения на пейджер**  
  Параметры в этом разделе позволяют настроить электронные сообщения, отправляемые на адреса пейджеров для работы с вашей пейджинговой системой.  
@@ -103,7 +102,7 @@ ms.locfileid: "63245750"
  **Заменить токенами всех ответов заданий на предупреждения**  
  Установите этот флажок, чтобы включить замену токенов для заданий, активизированных предупреждениями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операторы](operators.md)   
  [Настройка агент SQL Server почты для использования Database Mail](../../relational-databases/database-mail/configure-sql-server-agent-mail-to-use-database-mail.md)   
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  

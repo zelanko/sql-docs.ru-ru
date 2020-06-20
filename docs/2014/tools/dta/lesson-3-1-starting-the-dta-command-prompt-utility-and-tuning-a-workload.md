@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf882bc731c8e435de808092e990b35ad23ce57e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b051320d2f797fa55c1d84192a1b6246f437b1ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011571"
 ---
 # <a name="starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Начало работы с программой командной строки dta и настройка рабочей нагрузки
    Эта задача помогает запустить программу **dta**, просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. В нем используется рабочая нагрузка, MyScript. SQL, созданная для помощник по настройке ядра СУБДного графического интерфейса пользователя (GUI) для [настройки рабочей нагрузки](lesson-1-1-tuning-a-workload.md).  
@@ -64,7 +63,7 @@ ms.locfileid: "66110158"
   
  Чтобы вернуться к началу учебника, воспользуйтесь ссылкой [Учебник. Помощник по настройке ядра СУБД](tutorial-database-engine-tuning-advisor.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебники по компоненту ядра СУБД](../../relational-databases/database-engine-tutorials.md)  
   
   

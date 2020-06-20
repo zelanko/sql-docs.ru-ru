@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 465d20f425a479f173ed5a9c2b5f5ec96ec7f707
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1d5a938c64ee01a70a34e54c6599880ba2f22e8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937875"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
   Очистка данных — это процесс анализа качества данных в источнике данных с выполняемым вручную утверждением или отклонением рекомендаций, даваемых системой, и внесением изменений в данные. Очистка данных в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) состоит из автоматического процесса, анализирующего соответствие данных знаниям из базы знаний, и интерактивного процесса, позволяющего диспетчеру данных проверять и изменять результаты автоматического процесса, чтобы обеспечить надлежащий результат очистки данных.  
@@ -103,7 +102,7 @@ ms.locfileid: "65480808"
 |Описывает очистку данных с использованием знаний, полученных от службы эталонных данных.|[Очистка данных с использованием набора знаний об эталонных данных &#40;внешних&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
 |Описывает очистку составного домена.|[Очистка данных в составном домене](../../2014/data-quality-services/cleanse-data-in-a-composite-domain.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проекты служб Data Quality &#40;DQS&#41;](../../2014/data-quality-services/data-quality-projects-dqs.md)   
  [Сопоставление данных](../../2014/data-quality-services/data-matching.md)  
   

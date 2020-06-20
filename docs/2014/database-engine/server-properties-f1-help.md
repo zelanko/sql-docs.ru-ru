@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1048ecf02da0df649043034c2d9db5071284017b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 344cb09fe30997a9261e03e67bf8d2ab548e8be9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000524"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929162"
 ---
 # <a name="server-properties-f1-help"></a>Справка F1 свойств сервера
   В данном разделе содержатся подразделы справки F1 для страниц **Свойства сервера** в среде SQL Server Management Studio.  
@@ -36,7 +35,7 @@ ms.locfileid: "83000524"
   
  [Свойства сервера (страница "Безопасность")](configure-windows/server-properties-security-page.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера (SQL Server)](configure-windows/server-configuration-options-sql-server.md)  
   
   

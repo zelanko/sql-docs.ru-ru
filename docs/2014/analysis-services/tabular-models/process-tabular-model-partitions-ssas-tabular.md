@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c498d2b-22d6-4661-bc21-2ee708336c8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4cabfe4f0d28bb74ae1fae0b84de758e7dca565
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96845e99f9d183df8545b1da379ced41496923c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066830"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938735"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Обработка секций табличной модели (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Приведенные в этом разделе задачи описывают обработку секций в базе данных model с помощью диалогового окна **Обработка секций** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -38,7 +37,7 @@ ms.locfileid: "66066830"
   
 4.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции табличной модели &#40;табличные&#41;SSAS](partitions-ssas-tabular.md)   
  [Создание секций табличной модели и управление ими (табличные службы SSAS)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890772"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939145"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Модель интеллектуального анализа данных»)
   Вкладка **Модель интеллектуального анализа данных** диалогового окна **Задача «Запрос интеллектуального анализа данных»** позволяет выбрать используемые структуру и модель интеллектуального анализа данных.  
@@ -37,12 +36,12 @@ ms.locfileid: "68890772"
  Введите описание задачи «Запрос интеллектуального анализа данных».  
   
 ## <a name="mining-model-tab-options"></a>Параметры вкладки «Модель интеллектуального анализа данных»  
- **Соединен**  
+ **Соединение**  
  Выберите из списка диспетчер соединений служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] или нажмите кнопку **Создать** для создания нового диспетчера соединений.  
   
  **См. также:**  [Добавление диспетчера соединений служб Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
- **Создать**  
+ **Новые**  
  Создает новый диспетчер соединений служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **См. также:** [Добавление диалогового окна "Диспетчер соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  

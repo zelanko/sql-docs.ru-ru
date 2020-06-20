@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce8656df63c9d415ca09b54ecb86b87aba8bd83a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3af9d31a54adc5645cab6fcc7104ae7ff27a61b6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092862"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059097"
 ---
 # <a name="rename-user-sys"></a>Переименуйте пользователя с именем sys
   Помощник по обновлению обнаружил в базе данных имя пользователя **sys** . Это имя зарезервировано. Переименуйте пользователя перед обновлением. Если пользователь не переименован, то после обновления база данных будет помечена как подозрительная и недоступна до тех пор, пока не будет переведена в режим «в сети».  
@@ -61,7 +60,7 @@ ms.locfileid: "66092862"
   
 3.  Выполните инструкцию `ALTER DATABASE db_name SET MULTI_USER`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

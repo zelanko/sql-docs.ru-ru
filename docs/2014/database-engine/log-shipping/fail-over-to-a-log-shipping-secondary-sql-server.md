@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 64fa315457361e8d160735f38156e79ea667a4da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 472cff50c247d0dfc47c39cf6b6f3c2ca6c13d08
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774196"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931239"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Переход на вторичный сервер доставки журналов (SQL Server)
   Переход на вторичный сервер доставки журналов может быть полезен в случаях, когда происходит сбой экземпляра сервера-источника или требуется его обслуживание.  
@@ -46,7 +45,7 @@ ms.locfileid: "62774196"
 4.  После синхронизации серверов-получателей можно выполнить переход на любой из них путем восстановления его базы данных-получателя и перенаправления клиентов на этот экземпляр сервера. При восстановлении база данных помещается в согласованное состояние и переводится в режим в сети.  
   
     > [!NOTE]  
-    >  При переводе базы данных-получателя в доступный режим следует убедиться, что ее метаданные согласованы с метаданными исходной базы данных-источника. Дополнительные сведения см. [в разделе Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+    >  При переводе базы данных-получателя в доступный режим следует убедиться, что ее метаданные согласованы с метаданными исходной базы данных-источника. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 5.  После восстановления базы данных-получателя можно перенастроить ее для работы в качестве базы данных-источника для других баз данных-получателей.  
   
@@ -58,9 +57,9 @@ ms.locfileid: "62774196"
   
 -   [Управление именами входа и заданиями после переключения ролей (SQL Server)](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы доставки журналов и хранимые процедуры](log-shipping-tables-and-stored-procedures.md)   
- [SQL Server &#40;доставки журналов&#41;](about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](about-log-shipping-sql-server.md)   
  [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  
   
   

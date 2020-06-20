@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a84f6acf89490bf12b09db6017d305e15b45abd3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916900"
 ---
 # <a name="data-flow-tab"></a>Вкладка «Поток данных»
   Используйте вкладку **Поток данных** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , чтобы создать поток данных в пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -34,7 +33,7 @@ ms.locfileid: "66059900"
   
  Чтобы добавить эти функции в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , щелкните правой кнопкой мыши область конструктора, а затем выберите желаемый параметр.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Задача потока данных](control-flow/data-flow-task.md)   
  [Конструктор служб SSIS](ssis-designer.md)   

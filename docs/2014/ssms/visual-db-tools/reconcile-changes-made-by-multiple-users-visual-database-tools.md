@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdd7d2be3ceefa4bcc90d2907c9bc2dfac0061c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63010700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035608"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Согласование изменений, внесенных несколькими пользователями (визуальные инструменты для баз данных)
   В многопользовательской среде изменение одного и того же объекта могут выполнять одновременно несколько пользователей. Это происходит при работе над структурой объекта в конструкторе таблиц или конструкторе диаграмм баз данных либо при изменении значений, когда они возвращаются в панели результатов конструктора запросов и представлений. Это может приводить к конфликтам, которые придется разрешать.  

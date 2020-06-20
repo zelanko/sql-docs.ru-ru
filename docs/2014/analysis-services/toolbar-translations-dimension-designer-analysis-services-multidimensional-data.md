@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40bf92b2a7ca45e7f4033ec6d6aa44c5d99e852a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938355"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Панель инструментов (вкладка «Переводы» конструктора измерений) (службы Analysis Services — многомерные данные)
   Кнопки панели инструментов используются для выполнения общих операций в представлении **Переводы****конструктора измерений**.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Добавить бизнес-аналитику**  
  Открывает **мастер бизнес-аналитики** для добавления функций бизнес-аналитики.  
   
- **Процесс**  
+ **Process**  
  Открывает диалоговое окно **Обработка** для обработки объекта.  
   
  **Создать перевод**  
@@ -57,7 +56,7 @@ ms.locfileid: "66066002"
  **Отобразить все атрибуты**  
  Нажмите для включения или выключения отображения всех атрибутов, заданных для выбранного измерения, включая атрибуты, для которых отключена иерархия атрибутов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переводы &#40;конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)   
  [Сведения о переводе &#40;вкладка Переводы, конструктор измерений&#41; &#40;Analysis Services многомерных данных&#41;](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
   

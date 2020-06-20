@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4858e4c35263ab3dd1d9fdcf55a2b136dd8eeaf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071789"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050182"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Демонстрация. Улучшение производительности выполняющейся в памяти OLTP
   Это пример демонстрирует улучшение производительности при использовании In-Memory OLTP путем сравнения различий времени ответа при выполнении идентичного запроса Transact-SQL или таблиц, оптимизированных для памяти, и таблиц на диске. Кроме того, в нем также создается (на основе того же запроса) и выполняется компилированная в собственном коде хранимая процедура для демонстрации того, что наилучшего времени ответа, как правило, можно добиться при запросе таблицы, оптимизированной для памяти, с помощью компилированной в собственном коде хранимой процедуры. Это пример показывает лишь один аспект улучшений производительности при доступе к данным в таблицах, оптимизированных для памяти: эффективность доступа к данным при выполнении вставки. В этом примере реализован только один поток, который не позволяет воспользоваться преимуществами параллелизма In-Memory OLTP. Рабочая нагрузка, которая использует параллелизм, получит более заметное повышение производительности.  
@@ -181,14 +180,14 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  Ожидаемые результаты содержат фактическое время ответа и подтверждают тот факт, что использование таблиц, оптимизированных для памяти, и компилированных в собственном коде хранимых процедур, как правило, стабильно обеспечивает более быстрое время ответа по сравнению с аналогичными нагрузками, выполняемыми на основе традиционных таблиц на диске.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения в AdventureWorks для демонстрации выполняющейся в памяти OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
  [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Оптимизированные для памяти таблицы](memory-optimized-tables.md)   
  [Скомпилированные в собственном код хранимые процедуры](natively-compiled-stored-procedures.md)   
  [Требования к использованию таблиц, оптимизированных для памяти](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [Параметры ALTER DATABASE File и FILEGROUP &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [Параметры инструкции ALTER DATABASE для файлов и файловых групп (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [СОЗДАНИЕ процедур и таблиц, оптимизированных для памяти](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

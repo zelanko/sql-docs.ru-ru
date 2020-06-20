@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14b233839901167ca92a1d2aed5a8c1441fefe0e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869599"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034967"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
     
@@ -91,7 +90,7 @@ ms.locfileid: "62869599"
 |Дата|Источник|Сообщение|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Вход в систему|Ошибка: 18456, серьезность: 14, состояние: 8.|  
-|2007-12-05 20:12:56.34|Вход в систему|"Ошибка входа пользователя <имя_пользователя>". [Клиент: \<IP-адрес>]|  
+|2007-12-05 20:12:56.34|Вход в систему|"Ошибка входа пользователя <имя_пользователя>". [КЛИЕНТ: \<ip address>]|  
   
 > [!NOTE]  
 >  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливается в режиме аутентификации Windows, а затем переключается на аутентификацию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows, то имя входа **sa** будет по умолчанию отключено. Это приводит к ошибке с состоянием 7: "Ошибка входа для пользователя sa". Чтобы включить имя для входа **sa**, выполните инструкции из статьи об [изменении режима проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md).  

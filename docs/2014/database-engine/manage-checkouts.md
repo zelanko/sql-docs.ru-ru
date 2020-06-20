@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfa25cdc27e707d4be705e66b215130c9d70ce1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774538"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930911"
 ---
 # <a name="manage-checkouts"></a>Управление извлечениями
   После того как файл был добавлен к системе управления версиями, для изменения этого файла его нужно извлечь. Когда извлекается файл из управления версиями, поставщик управления версиями создает его последнюю версию на локальном диске и снимает с этого файла атрибут «Только для чтения». В некоторых случаях нужно изменить файл, не извлекая его. Дополнительные сведения об изменении файла без проверки файла см. [в разделе изменение возвращенных файлов](../../2014/database-engine/edit-checked-in-files.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "62774538"
 |[Отмена извлечения](../../2014/database-engine/undo-checkouts.md)|Отмена существующего извлечения.|  
 |[Автоматическое извлечение файлов при изменении](../../2014/database-engine/automatically-check-out-files-upon-edit.md)|Конфигурирование системы управления версиями для извлечения файла, если его начинают изменять.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление возвратами](../../2014/database-engine/manage-checkins.md)   
  [Изменение возвращенных файлов](../../2014/database-engine/edit-checked-in-files.md)  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa1be48e3f96c017c36b4bbf1f819565b34e6e69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066334"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938535"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Проекты табличной модели (табличные службы SSAS)
   Для создания новой табличной модели сначала необходимо создать новый проект табличной модели в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. При установке [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]предоставляется три новых шаблона проектов бизнес-аналитики для создания проектов табличной модели. Каждый шаблон проекта представляет собой структуру, которую можно использовать для начала создания модели. В подразделах этого раздела описывается создание нового проекта табличной модели с использованием шаблонов проекта.  

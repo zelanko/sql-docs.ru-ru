@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e439bb29-60cc-4afd-a79a-f629b8d843c1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5555e49a85d50b6b5a48002a176055605ee06913
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3b5e8cec1cac3eb1ce4357480c0f994a33d4c40
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484225"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937725"
 ---
 # <a name="enable-or-disable-profiling-notifications-in-dqs"></a>Включение или отключение уведомлений по профилированию в DQS
   В этом разделе описывается включение или отключение уведомлений по профилированию в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). По умолчанию уведомления по профилированию в DQS включены. Уведомления по профилированию сообщают важные сведения об источнике данных и эффективности текущего действия, выполняемого с данными. Дополнительные сведения см. в разделе [Профилирование данных и уведомления в DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md).  
@@ -41,6 +40,6 @@ ms.locfileid: "65484225"
   
 4.  Установите или снимите флажок **Включить уведомления** , чтобы отключить или включить уведомления по профилированию для различных действий в DQS.  
   
-5.  Нажмите кнопку **Закрыть**.  
+5.  Щелкните **Закрыть**.  
   
   

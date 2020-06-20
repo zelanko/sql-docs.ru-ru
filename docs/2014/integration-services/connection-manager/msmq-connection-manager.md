@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 78377fe5eaf5b9f0639533f17fa7a45cca69a537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833663"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920771"
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
   Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача "Очередь сообщений", содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использует диспетчер соединений MSMQ.  
@@ -37,8 +36,8 @@ ms.locfileid: "62833663"
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Общедоступные|\<имя компьютера>\\<имя очереди\>|  
-|Private|\<имя компьютера>\Private$\\<имя очереди\>|  
+|Общедоступные|\<computer name>\\Имя очереди<\>|  
+|Private|\<computer name>\Привате $ \\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки («.»).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "62833663"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача "очередь сообщений"](../control-flow/message-queue-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   

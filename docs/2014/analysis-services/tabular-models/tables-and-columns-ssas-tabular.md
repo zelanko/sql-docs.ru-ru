@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4dcab58a876881cc9ca76e9159d5bcc68ffd5fdb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58c5529d919861709f382f8cc594608e8c9981b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066513"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938592"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Таблицы и столбцы (табличные службы SSAS)
   После добавления в модель таблиц и данных с помощью мастера импорта таблиц можно начать работу с таблицами — добавление новых столбцов данных, создание связей между таблицами, определение вычислений для расширения данных, фильтрацию и сортировку данных в таблицах для упрощения просмотра.  
@@ -28,7 +27,7 @@ ms.locfileid: "66066513"
   
 -   [Связанные задачи](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Среди  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Преимущества  
  Таблицы в табличных моделях предоставляют платформу, в которой определяются столбцы и другие метаданные. Таблицы включают в себя:  
   
  **Определение таблицы**  

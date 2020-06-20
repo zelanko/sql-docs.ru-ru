@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 293e60f3-15e3-4258-b73a-8baabe15c760
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a868aafff6d9bd389671544b5f1898e82707d933
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930939"
 ---
 # <a name="manage-checkins"></a>Управление возвратами
   Чтобы сохранить изменения в файле, контролируемом системой управления версиями, необходимо вернуть файл. Когда файл возвращается, созданная версия файла копируется поставщику системы управления версиями и становится последней версией файла, как правило, доступной пользователям с соответствующими разрешениями.  
@@ -34,7 +33,7 @@ ms.locfileid: "62774298"
 |[Просмотр списка измененных файлов](../../2014/database-engine/view-a-list-of-modified-files.md)|Отображение списка измененных файлов, которые можно одновременно вернуть при завершении работы.|  
 |[Изменение возвращенных файлов](../../2014/database-engine/edit-checked-in-files.md)|Настройка среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для возможности изменения неизвлеченных файлов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление извлечениями](../../2014/database-engine/manage-checkouts.md)  
   
   

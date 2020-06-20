@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284892"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938615"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Вычисляемые столбцы (табличные службы SSAS)
   Вычисляемые столбцы в табличной модели позволяют добавлять новые данные в модель. Вместо того чтобы вставлять или импортировать значения в столбец, необходимо создать формулу DAX, определяющую значения на уровне строк столбца. Вычисляемый столбец впоследствии может использоваться в отчете, сводной таблице или сводной диаграмме, как и любой другой столбец.  
@@ -33,7 +32,7 @@ ms.locfileid: "67284892"
   
 -   [Связанные задачи](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Среди  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Преимущества  
  Формулы в вычисляемых столбцах очень похожи на формулы, применяемые в Excel. Однако в отличие от Excel невозможно создать разные формулы для разных строк таблицы, вместо этого формула DAX автоматически применяется ко всему столбцу.  
   
  Если столбец содержит формулу, значение вычисляется для каждой строки. Результаты вычисляются для столбца, как только будет введена допустимая формула. Значения столбца затем повторно вычисляются по мере необходимости, например при обновлении базовых данных.  
@@ -83,7 +82,7 @@ ms.locfileid: "67284892"
 |-----------|-----------------|  
 |[Создание вычисляемого столбца (табличные службы SSAS)](ssas-calculated-columns-create-a-calculated-column.md)|Задачи в данном разделе описывают добавление нового вычисляемого столбца в таблицу.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Таблицы и столбцы &#40;табличные&#41;SSAS](tables-and-columns-ssas-tabular.md)   
  [Меры &#40;табличных&#41;SSAS](measures-ssas-tabular.md)   
  [Вычисления (табличные службы SSAS)](calculations-ssas-tabular.md)  

@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58890cc7b9e34a3e8ff9262af1f6b1a67b47841e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec495e7620e6860658c826afdafeaa460f08d35c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003599"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Создание, изменение и удаление хранимых процедур
   В управляющих объектах [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SMO хранимые процедуры представлены объектом <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- Создание объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в SMO требует, чтобы свойство <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> указывало скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)], определяющий хранимую процедуру. Параметры нуждаются в \@ префиксе и должны создаваться по отдельности с помощью <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объектов и <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> добавления в коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта.  
+ Создание объекта <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> в SMO требует, чтобы свойство <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> указывало скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)], определяющий хранимую процедуру. Параметры нуждаются в \@ префиксе и должны создаваться по отдельности с помощью <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> объектов и добавления в <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> коллекцию <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта.  
   
 ## <a name="example"></a>Пример  
  Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в статьях [Создание проекта Visual Basic SMO в Visual Studio .NET](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) или [Создание проекта Visual C&#35; SMO в Visual Studio .NET](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b9a21b23-3a06-4ef8-bc06-9c79cdc54870
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c0a07a1822bc01e4ce5048a48b754ae0ea10d2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938865"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Импорт из служб Analysis Services (табличные службы SSAS)
   В данном разделе описывается создание нового проекта табличной модели путем импорта метаданных из существующей табличной модели с использованием шаблона проекта «Импорт с сервера» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "66067046"
   
 5.  В поле **Имя базы данных**выберите базу данных табличной модели, содержащую метаданные модели для импорта, и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства проекта (табличные службы SSAS)](properties-ssas-tabular.md)  
   
   

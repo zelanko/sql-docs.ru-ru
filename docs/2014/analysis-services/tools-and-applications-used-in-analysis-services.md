@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a48b400196a77a9c59219bc28cdff496229ae7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13da2ecc244c1596789a1d816bac81a13bcd4c62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175563"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938335"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Средства и приложения, использующиеся в службах Analysis Services
   Найдите средства и приложения, которые понадобятся вам для создания моделей Analysis Services и управления связанными базами данных в экземпляре Analysis Services.
@@ -37,12 +36,12 @@ ms.locfileid: "78175563"
 
  ![Новые шаблоны проекта в SSDT](media/ssdt-biprojects.png "Новые шаблоны проекта в SSDT")
 
-## <a name="administrative-tools"></a>Средства администрирования
+## <a name="administrative-tools"></a>Инструменты администрирования
 
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio
  Management Studio — это основное средство администрирования для всех функций SQL Server, включая Analysis Services. SQL Server Management Studio является дополнительным компонентом. Если он не отображается вместе с другими приложениями SQL Server на странице "Приложения" в Windows Server 2012, запустите настройку SQL Server, чтобы добавить его в установку.
 
-### <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
+### <a name="sql-server-profiler"></a>Профилировщик SQL Server
  Хотя он обычно не используется, профилировщик SQL Server предоставляет простой способ мониторинга подключений, выполнения запросов MDX и других операций сервера. Профилировщик SQL Server устанавливается по умолчанию. Его и приложения SQL Server можно найти в разделе "Приложения" в Windows Server 2012.
 
 ### <a name="powershell"></a>PowerShell

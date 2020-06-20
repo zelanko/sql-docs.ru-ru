@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c04d0295fa6add80eb471d8c4c06b2d588b915bb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930509"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Открытие решений и проектов из системы управления версиями
   Можно использовать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для открытия решения или проекта непосредственно из системы управления версиями. Когда решение открывается из системы управления версиями, среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] автоматически получает последнюю версию решения и копирует ее в указанное место.  
@@ -32,7 +31,7 @@ ms.locfileid: "62774787"
 |[Открытие решений из системы управления версиями](../../2014/database-engine/open-solutions-from-source-control.md)|Использование среды [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] для открытия решения непосредственно из системы управления версиями.|  
 |[Открытие проекта из системы управления версиями](../../2014/database-engine/open-projects-from-source-control.md)|Открытие проекта из системы управления версиями для извлечения и изменения файлов проекта.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление решений и проектов в систему управления версиями](../../2014/database-engine/add-solutions-and-projects-to-source-control.md)  
   
   

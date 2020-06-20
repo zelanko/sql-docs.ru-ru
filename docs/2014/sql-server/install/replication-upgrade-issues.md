@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95e77fe1743406d7206b05470b4559fcfb0a6d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011850"
 ---
 # <a name="replication-upgrade-issues"></a>Проблемы репликации при обновлении
   Следующие разделы посвящены проблемам репликации, которые могут возникнуть при обновлении до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В перечисленных разделах описаны меры, которые позволят смягчить последствия изменений в системе.  
@@ -29,7 +28,7 @@ ms.locfileid: "66092749"
   
 -   [Другие проблемы при обновлении репликации](../../../2014/sql-server/install/other-replication-upgrade-issues.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с советником по переходу](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [Решение проблем при обновлении](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   

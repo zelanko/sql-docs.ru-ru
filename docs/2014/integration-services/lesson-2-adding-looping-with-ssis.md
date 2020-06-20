@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed2089257af4f82b0bbb863731a17d396dc8795c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968264"
 ---
 # <a name="lesson-2-adding-looping"></a>Занятие 2. Добавление циклов
   В [уроке 1. Создание проекта и основного пакета](lesson-1-create-a-project-and-basic-package-with-ssis.md)был создан пакет, который извлекает данные из одного источника неструктурированного файла, преобразует данные с помощью преобразований «Уточняющий запрос» и, наконец, загружает данные в таблицу фактов **FactCurrency** образца базы данных **AdventureWorksDW2012** .  
@@ -63,7 +62,7 @@ ms.locfileid: "62767566"
 ## <a name="start-the-lesson"></a>Начало занятия  
  [Шаг 1. Копирование пакета занятия 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Контейнер «цикл по элементам»](control-flow/for-loop-container.md)  
   
   

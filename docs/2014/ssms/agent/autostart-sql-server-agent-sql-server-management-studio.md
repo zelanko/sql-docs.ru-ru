@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2ea332da-0ede-4d2b-b122-c4c10eaca191
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0088ef5797b258d3c765a4548e3b1cae9d5e0a14
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef904e7f8a6011155a0c1aad21af3d6a4d84d847
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473010"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011772"
 ---
 # <a name="autostart-sql-server-agent-sql-server-management-studio"></a>Autostart SQL Server Agent (SQL Server Management Studio)
-  В этом разделе описано, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроить автоматический перезапуск агента в случае непредвиденной остановки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  В этом разделе описано, как настроить [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Автоматический перезапуск агента в случае непредвиденной остановки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  **В этом разделе**  
   

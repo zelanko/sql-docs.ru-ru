@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aeb0c6c47a9203a7124fbe5d9f4739c52ae430d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950dbb7a082af95abfe79e48e18e2cb894e71173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246240"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058742"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>Свойства агента SQL Server (страница «Дополнительно»)
   Эта страница используется для просмотра и изменения дополнительных свойств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Пересылка событий SQL Server**  
  Параметры в данной категории активируют и настраивают пересылку событий.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "63246240"
  **И остается ниже этого уровня в течение**  
  Отрезок времени, который средний ЦП должен простаивать, прежде чем агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запустит задания по расписанию простоя ЦП.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)   
  [Управление событиями](manage-events.md)  
   

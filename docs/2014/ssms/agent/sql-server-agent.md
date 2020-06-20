@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289632"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058700"
 ---
 # <a name="sql-server-agent"></a>Агент SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это служба Microsoft Windows, выполняющая запланированные административные задачи, которые называются *заданиями* в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -61,7 +60,7 @@ ms.locfileid: "79289632"
  Каждый шаг задания выполняется в указанном контексте безопасности. Для шагов заданий, использующих [!INCLUDE[tsql](../../includes/tsql-md.md)], применяйте инструкцию EXECUTE AS, чтобы указать контекст безопасности для шага задания. Для других типов шагов заданий используйте учетную запись-посредник, чтобы указать контекст безопасности для шага задания.  
   
 ### <a name="schedules"></a>Расписания  
- *Расписание* определяет время выполнения задания. Несколько заданий могут выполняться по тому же расписанию, а несколько расписаний могут применяться для одного задания. Расписание может определить следующие условия для времени выполнения задания:  
+ *Расписание* указывает, когда выполняется задание. Несколько заданий могут выполняться по тому же расписанию, а несколько расписаний могут применяться для одного задания. Расписание может определить следующие условия для времени выполнения задания:  
   
 -   при каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];  
   
@@ -111,7 +110,7 @@ ms.locfileid: "79289632"
   
  Для отправки операторам уведомлений по электронной почте или на пейджер необходимо настроить агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для использования компонента Database Mail. Дополнительные сведения см. в разделе о [компоненте Database Mail](../../relational-databases/database-mail/database-mail.md).  
   
- Можно определить оператора как псевдоним для группы лиц. Таким способом все члены этого псевдонима будут уведомлены одновременно. Дополнительные сведения см. в статье [Операторы](operators.md).  
+ Можно определить оператора как псевдоним для группы лиц. Таким способом все члены этого псевдонима будут уведомлены одновременно. Дополнительные сведения см. в разделе [Операторы](operators.md).  
   
 ##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Безопасность для администрирования агент SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Агент использует предопределенные роли базы данных **SQLAgentUserRole**, **SQLAgentReaderRole**и **SQLAgentOperatorRole** в базе данных **msdb** для управления доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агенту для пользователей, не являющихся членами `sysadmin` предопределенной роли сервера. Помимо этих предопределенных ролей базы данных, подсистемы и учетные записи-посредники позволяют администраторам базы данных гарантировать, что каждый шаг задания выполняется с минимальными разрешениями, необходимыми для выполнения задачи.  
@@ -126,7 +125,7 @@ ms.locfileid: "79289632"
   
 |Имя подсистемы|Описание|  
 |--------------------|-----------------|  
-|Скрипт Microsoft ActiveX|Выполните шаг задания со скриптом ActiveX.<br /><br /> ** \* \* Важно \* !** Подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|Скрипт Microsoft ActiveX|Выполните шаг задания со скриптом ActiveX.<br /><br /> ** \* \* Важно \* ! \* ** подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |Операционная система (**CmdExec**)|Запустите исполняемую программу.|  
 |PowerShell|Выполните шаг задания со скриптом PowerShell.|  
 |Распространитель репликации|Выполните шаг задания, на котором активируется агент распространителя репликации.|  
@@ -167,7 +166,7 @@ ms.locfileid: "79289632"
 |||  
 |-|-|  
 |**Описание**|**Раздел**|  
-|Содержит инструкции по настройке агента SQL Server.|[Configure SQL Server Agent](configure-sql-server-agent.md)|  
+|Содержит инструкции по настройке агента SQL Server.|[Настройка агента SQL Server](configure-sql-server-agent.md)|  
 |Описывает запуск, остановку и приостановку службы агента SQL Server.|[Start, Stop, or Pause the SQL Server Agent Service](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Описывает вопросы задания учетных записей для службы агента SQL Server.|[Выбор учетной записи для службы агента SQL Server](select-an-account-for-the-sql-server-agent-service.md)|  
 |Описывает использование журнала ошибок агента SQL Server.|[Журнал ошибок агента SQL Server](sql-server-agent-error-log.md)|  
