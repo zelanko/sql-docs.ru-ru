@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdfbc87d-759f-4abc-acf5-a21de01f78d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d4ffa4b8eed84bd6597552967b3e51b10459749
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7b3b95dbc3a228d2b7f54cea18cad1ba5636527c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014984"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Задание арифметических операторов в запросах XPath (SQLXML 4.0)
   В следующем примере показано, как в запросах XPath указывать арифметические операторы. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -28,13 +27,13 @@ ms.locfileid: "82717854"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Указание арифметического оператора *  
- Этот запрос XPath возвращает ** \< OrderDetail>** элементов, которые соответствуют заданному предикату:  
+ Этот запрос XPath возвращает **\<OrderDetail>** элементы, которые соответствуют заданному предикату:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- В запросе `child` — это ось, а `OrderDetail` — Проверка узла (true, если **OrderDetail** является ** \< узлом элемента>**, поскольку ** \< элемент>ным** узлом является основным узлом для `child` оси). Для всех узлов элементов ** \< OrderDetail>** применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
+ В запросе `child` — это ось, а `OrderDetail` — Проверка узла (значение true, если **OrderDetail** является **\<element node>** **\<element>** основным узлом для `child` оси). Для всех **\<OrderDetail>** узлов элементов применяется тест в предикате и возвращаются только те узлы, которые соответствуют условию.  
   
 > [!NOTE]  
 >  Числа в языке XPath являются числами с плавающей запятой двойной точности, и сравнение чисел с плавающей запятой, как указано в примере, приводит к округлению.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a47dd9575132210bbd5d664fbb3c73b57289693f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 48b57bbf40590f8ad5c049268f25fe66d2f94357
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998492"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Поддержка распределенных запросов в наборах строк схемы
   Для поддержки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] распределенных запросов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интерфейс **IDBSchemaRowset** поставщика собственного OLE DB клиента возвращает метаданные на связанных серверах.  
@@ -45,7 +44,7 @@ ms.locfileid: "82704230"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента определяет набор строк схемы LINKEDSERVERS, возвращая список OLE DB источников данных, зарегистрированных как связанные серверы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#40;OLE DB поддерживает набор строк схемы&#41;](schema-rowset-support-ole-db.md)   
  [Набор строк LINKEDSERVERS (OLE DB)](schema-rowsets-linkedservers-rowset.md)  
   

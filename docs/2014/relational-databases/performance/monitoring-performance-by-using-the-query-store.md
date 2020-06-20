@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175873"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038713"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoring Performance By Using the Query Store
   Хранилище запросов предоставляет DBA подробные сведения о выборе и производительности плана запросов. Оно упрощает устранение неполадок с производительностью, позволяя быстро находить разницу в производительности, вызванную изменениями в планах запросов. Функция автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их для просмотра. Она разделяет данные по временным окнам, позволяя просмотреть шаблоны использования и понять, когда изменения плана запросов произошли на сервере. Хранилище запросов можно настроить с помощью параметра [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) .
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  При использовании `sp_query_store_force_plan` можно принудительно выполнять только планы, записанные хранилищем запросов в качестве плана для этого запроса. Другими словами, единственные доступные планы — это те, которые уже использовались для выполнения Q1, когда хранилище запросов было активно.
 
- **Удаление форсирования плана для запроса.** Чтобы снова использовать оптимизатор [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] запросов для вычисления оптимального плана запроса, используйте `sp_query_store_unforce_plan` команду, чтобы отменить принудительный выбор плана, выбранного для запроса.
+ **Удаление форсирования плана для запроса.** Чтобы снова использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] оптимизатор запросов для вычисления оптимального плана запроса, используйте команду `sp_query_store_unforce_plan` , чтобы отменить принудительный выбор плана, выбранного для запроса.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

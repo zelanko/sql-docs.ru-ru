@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b1dcc6e8a696d6a30be3d38bf30b653f24cac28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63280670"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040862"
 ---
 # <a name="use-the-toolbox"></a>Использование панели элементов
   Из области элементов можно выбирать и перетаскивать элементы, текст и элементы управления на формы, страницы и в окна конструкторов, а также перетаскивать элементы из этих источников обратно в область элементов для повторного использования. Например, в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] можно перетащить задачу на узел плана обслуживания.  

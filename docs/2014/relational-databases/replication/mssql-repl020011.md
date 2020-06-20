@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f72072d7-bbb6-48ad-ac88-afa74aeb4d58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481e0b383fd877ec81385bcd4ca4ee37106bb298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646f25740ebb007f8d04a89690d3b712781efcc8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060718"
 ---
 # <a name="mssql_repl020011"></a>MSSQL_REPL020011
     
@@ -33,7 +32,7 @@ ms.locfileid: "63022770"
 |Текст сообщения|Процессу не удалось выполнить '%1' на '%2'.|  
   
 ## <a name="explanation"></a>Объяснение  
- Эта ошибка может возникать в ряде случаев во время обработки репликации транзакций, например, когда агент чтения журнала выполняет хранимую процедуру **sp_replcmds** (Процесс не смог выполнить 'sp_replcmds' на \<ServerName>) или **sp_repldone** (Процесс не смог выполнить 'sp_repldone' на \<ServerName>).  
+ Эта ошибка может возникать в ряде случаев при обработке репликации транзакций, например когда агент чтения журнала выполняет **sp_replcmds** (процессу не удалось выполнить "sp_replcmds" \<ServerName> ) или **sp_repldone** (процесс не смог выполнить "sp_repldone" в \<ServerName> ).  
   
 ## <a name="user-action"></a>Действие пользователя  
  Если эта ошибка возникает в базе данных, которая только что была восстановлена из резервной копии, убедитесь, что были соблюдены инструкции, приведенные в документации по резервному копированию и восстановлению, включая выполнение хранимой процедуры **sp_replrestart** , если она необходима. Дополнительные сведения см. в статье [Стратегии резервного копирования и восстановления из копии репликации моментальных снимков и репликации транзакций](administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  

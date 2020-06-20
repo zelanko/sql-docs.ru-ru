@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4cdadcb1301a5755b57485ac8e622cd66e850c57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec3677976a82cfb9237c4bcab267ae67f8f6cc5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717320"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059552"
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Замена существующих столбцов на XML-столбцы
   Инструкция ALTER TABLE поддерживает тип данных `xml`. Например, можно преобразовать столбец любого строкового типа в тип данных `xml`. Учтите, что в этом случае документы, содержащиеся в этом столбце, должны быть корректными. Также при изменении типа столбца со строкового на типизированный xml, содержащиеся в столбце документы должны проходить проверку по указанным XSD-схемам.  

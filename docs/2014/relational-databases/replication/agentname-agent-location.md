@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fc39541915b43abd024e1b02022f8a9e61580b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721876"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016654"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Расположение агента &lt;имя_агента&gt;
   Агент слияния (для подписок на публикации слиянием) и агент распространителя (для подписок на публикацию транзакций и на моментальные снимки) работают на распространителе или на подписчике. Если агент работает на распространителе, подписка называется принудительной; если агент работает на подписчике, она называется подпиской по запросу. Дополнительные сведения о подписках см. в статье [Подписка на публикации](subscribe-to-publications.md). Все подписки, созданные в этом сеансе работы мастера, будут иметь выбранный тип. Чтобы создать подписки обоих типов, необходимо дважды запустить мастер.  

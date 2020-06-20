@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00fc90be42bddd7feb43d96c9110def4db60835c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee4528d153cb2bef961ed303b7a36a0ecbec6758
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721816"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060850"
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
   Агенты репликации выполняют многие задачи, связанные с репликацией, включая создание копий схемы и данных, обнаружение обновлений на издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  

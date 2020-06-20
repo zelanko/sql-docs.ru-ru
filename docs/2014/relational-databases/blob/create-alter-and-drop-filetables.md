@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934802"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955584"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
   Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
@@ -35,7 +34,7 @@ ms.locfileid: "76934802"
   
 -   Можно также указать имена, предназначенные для использования в трех первичных ключах и ограничениях уникальности, создаваемых автоматически.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Практическое руководство. Создание таблицы FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Как создать FileTable  
  **Создание таблицы FileTable с помощью Transact-SQL**  
  Создайте объект FileTable, вызвав инструкцию [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql) с параметром **AS FileTable**. Поскольку таблица FileTable имеет фиксированную схему, нет необходимости указывать список столбцов. Можно указать следующие параметры для новой FileTable:  
   
@@ -107,7 +106,7 @@ GO
   
  Сведения об использовании инструкции ALTER TABLE для включения или отключения пространства имен FileTable, включая системные ограничения, см. в разделе [Управление объектами FileTable](manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Практическое руководство. Изменение каталога для таблицы FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Как изменить каталог для таблицы FileTable  
  **Изменение каталога для таблицы FileTable с помощью Transact-SQL**  
  Вызовите инструкцию ALTER TABLE и задайте новое допустимое значение параметра **FILETABLE_DIRECTORY** SET.  
   
@@ -175,11 +174,11 @@ GO
 |Проверочные ограничения|Системные проверочные ограничения обеспечивают следующие требования.<br /><br /> Допустимые имена файлов.<br /><br /> Допустимые атрибуты файлов.<br /><br /> Родительский объект должен быть каталогом.<br /><br /> При обработке файла иерархия пространств имен заблокирована.|  
   
  **Соглашение об именах для системных ограничений**  
- Системные ограничения, описанные выше, должны именоваться в формате **\<тип_ограничения>_\<имя_таблицы>[\_<имя_столбца\<]\_\<уникальный_идентификатор>** , где:  
+ Описанные выше ограничения, определяемые системой, именуются в формате ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> ** , где:  
   
 -   *<тип_ограничения>* может быть равен CK (проверочное ограничение), DF (ограничение по умолчанию), FK (внешний ключ), PK (первичный ключ) или UQ (ограничение уникальности).  
   
--   *<уникальный_идентификатор>\<* — это формируемая системой строка, уникальным образом идентифицирующая ограничение. Эта строка может содержать имя таблицы FileTable и уникальный идентификатор.  
+-   *\<uniquifier>*— это формируемая системой строка, которая делает имя уникальным. Эта строка может содержать имя таблицы FileTable и уникальный идентификатор.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление таблицами FileTable](manage-filetables.md)  

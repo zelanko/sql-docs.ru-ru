@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962474"
 ---
 # <a name="ssis-package-format"></a>Формат пакетов служб SSIS
   В текущем выпуске служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]внесены серьезные изменения в формат пакетов (файл DTSX), чтобы упростить чтение формата и сравнение пакетов. Кроме того, можно более надежно выполнять слияние пакетов, которые не содержат конфликтующих изменений или изменений, хранящихся в двоичном формате.  
   
- Чтобы просмотреть текущий формат файла пакета dtsx, см [ \[. статью MS-\]dtsx: спецификация формата XML-файла пакета служб DTS](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Чтобы просмотреть текущий формат файла пакета DTSX, см. статью [ \[ MS-dtsx \] : спецификация формата XML-файла пакета служб DTS](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  В следующем списке перечислены изменения формата файла. Чтобы просмотреть примеры кода этих изменений, см. раздел [Изменения формата пакета в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255).  
   

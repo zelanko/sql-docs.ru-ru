@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a98f64bc5b9dffc3e2494a0c36c8fc04cdfb6fa2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135369"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041186"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Создание предупреждения по номеру сообщения
-  В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этом разделе описывается создание предупреждения агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] среде, которая будет вызываться при возникновении ошибки определенного числа с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+  В этом разделе описывается создание [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждения агента в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] среде, которая будет вызываться при возникновении ошибки определенного числа с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **В этом разделе**  
   

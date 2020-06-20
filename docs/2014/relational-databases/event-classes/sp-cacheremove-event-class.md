@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ec9f519b6326b0c2188663b558ff099cac75c78
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d0d1a88c7a40bfd10b206e971d22c57ac6cd035
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63058093"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051751"
 ---
 # <a name="spcacheremove-event-class"></a>Класс событий SP:CacheRemove
   Класс событий SP:CacheRemove указывает на то, что хранимая процедура была удалена из кэша планов.  
@@ -32,8 +31,8 @@ ms.locfileid: "63058093"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, в которой выполняется хранимая процедура. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
-|EventClass|`int`|Тип события = 36.|27|Нет|  
-|EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 36.|27|нет|  
+|EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |EventSubClass|`int`|Тип подкласса событий:<br /><br /> 1 = компплан удалить. Скомпилированный план запроса был удален из кэша.<br /><br /> 2 = Очистка кэша процедур. Все записи были удалены из кэша процедур.|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -53,7 +52,7 @@ ms.locfileid: "63058093"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

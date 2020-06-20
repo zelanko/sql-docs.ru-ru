@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e56d68cc46da72de21f07559b7ccb2aa9ac6fda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971784"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Создание числового атрибута (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]числовой атрибут создается, если нужно, чтобы пользователи вводили число в качестве значения атрибута.  
@@ -73,7 +72,7 @@ ms.locfileid: "65483364"
   
 15. На странице **Обслуживание сущности** нажмите кнопку **Сохранить сущность**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;атрибутов&#41;](attributes-master-data-services.md)   
  [Измените имя атрибута &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   

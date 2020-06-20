@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 72505d5c2f00118f3522ac25445822ba17573438
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f84a2c554ae14eb7a99a092d4821b6672f8eee7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277052"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059835"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Свойство Enabled (класс ServerNetworkProtocolIPAddress)
   Возвращает свойство логического типа, указывающее, включен ли IP-адрес.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, указывающее, включен ли IP-адрес: `true`, если включен; в противном случае — `false`.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

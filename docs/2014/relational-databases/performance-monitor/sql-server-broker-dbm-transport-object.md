@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b0347c7f7e19ae5500f8c5be100ef2d0dc663784
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d44aa5b316a076f759d65a17f7e15c0a9ede786
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250732"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016929"
 ---
 # <a name="sql-server-broker-and-dbm-transport-object"></a>SQL Server, объект Broker и DBM Transport
   В объекте производительности **Broker/DBM Transport** содержатся счетчики производительности, сообщающие сведении о работе в сети служб Service Broker и зеркального отображения баз данных. В следующей таблице перечислены счетчики этого объекта.  
@@ -56,7 +55,7 @@ ms.locfileid: "63250732"
 |**Средняя длина отправляемых данных**|Этот счетчик сообщает среднее число байт для каждой транспортной операции отправки. Обратите внимание, что транспортная операция отправки может содержать более одного фрагмента сообщения.|  
 |**Количество отправок данных в сек.**|Этот счетчик сообщает количество выполненных транспортных операций ввода-вывода по отправке за одну секунду. Обратите внимание, что транспортная операция отправки может содержать более одного фрагмента сообщения.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. dm_broker_forwarded_messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)  

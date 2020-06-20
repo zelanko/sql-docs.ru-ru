@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a55f005d-e020-423c-8940-c24ea1b20104
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62dc29f8143f92fc9674ed10c092dc6ad08570fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85bd8f79f7be5a46e8f714f69a0b61de560a0aed
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051691"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Класс событий SQL:StmtCompleted
   Событие класса событий SQL:StmtCompleted указывает на то, что инструкция языка [!INCLUDE[tsql](../../includes/tsql-md.md)] завершена.  
@@ -35,7 +34,7 @@ ms.locfileid: "63060374"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|`bigint`|Длительность события (в микросекундах).|13|Да|  
 |EndTime|`datetime`|Время окончания события.|15|Да|  
-|EventClass|`int`|Тип события = 41.|27|Нет|  
+|EventClass|`int`|Тип события = 41.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
@@ -61,7 +60,7 @@ ms.locfileid: "63060374"
 |Запись|`bigint`|Количество операций записи страницы, выполненных инструкцией SQL.|17|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

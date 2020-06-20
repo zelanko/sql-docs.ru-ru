@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 74fcbb6fb9e9f4fe3f2b50f5fb434cbae6491113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff43cf072f73fca56fefaeedc39a9691e6de50ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091480"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041706"
 ---
 # <a name="upgrade-how-to-topics"></a>Инструкции по обновлению
   В подразделах этого раздела описан процесс обновления изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -29,7 +28,7 @@ ms.locfileid: "66091480"
 |[Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)](../failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|Методологический раздел по обновлению экземпляра отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |[Install SQL Server 2014 from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)|Содержит образцы синтаксиса для установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] из командной строки.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Уменьшение времени простоя зеркальных баз данных при обновлении экземпляров сервера](../../database-engine/database-mirroring/upgrading-mirrored-instances.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Обратная совместимость](../../../2014/getting-started/backward-compatibility.md)  

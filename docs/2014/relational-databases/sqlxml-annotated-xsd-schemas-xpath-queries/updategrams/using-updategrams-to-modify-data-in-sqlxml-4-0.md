@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb266c198b7c828f1f8842cf4ffa3dc9c1de10e9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4844ae1b242db1cc8aace7eecc78d58351bf839b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014962"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Использование диаграмм обновления для изменения данных в SQLXML 4.0
   Можно изменить (вставить, обновить или удалить) базу данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из существующего XML-документа с помощью функции диаграмма обновления или OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  

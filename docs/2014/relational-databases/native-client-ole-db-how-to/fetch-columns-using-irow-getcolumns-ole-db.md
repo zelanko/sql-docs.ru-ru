@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb08c4640265e311a36723af9985af006ec96c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704893"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039223"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Выбор столбцов при помощи метода IRow::GetColumns (OLE DB)
   Интерфейс `IRow` обеспечивает прямой доступ к столбцам одной строки в результирующем наборе. Таким образом, `IRow` является эффективным способом получения столбцов из результирующего набора из одной строки.  
@@ -516,7 +515,7 @@ if exists (select name from sysobjects where name = 'MyTable')
 go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по OLE DB](ole-db-how-to-topics.md)  
   
   

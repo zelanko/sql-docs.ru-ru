@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4f1b4823db4ae961024ac2a786c948d8349f31be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b8000c1c28d5a1d3d129b6e8d01c4ab2fbbbc7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954714"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Допустимость значений NULL и трехзначная логика сравнения
   Знакомые с типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователи найдут сходную семантику и точность в пространстве имен `System.Data.SqlTypes` платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Однако существуют определенные различия. В этом разделе описаны самые важные из них.  
@@ -36,7 +35,7 @@ ms.locfileid: "62919636"
  Пространство имен `System.Data.SqlTypes` вводит тип `SqlBoolean` для представления трехзначной логики. Сравнения каких-либо `SqlTypes` возвращают значения типа `SqlBoolean`. Значение UNKNOWN представлено значением NULL типа `SqlBoolean`. Свойства `IsTrue`, `IsFalse` и `IsNull` обеспечивают возможность проверки значения типа `SqlBoolean`.  
   
 ## <a name="operations-functions-and-null-values"></a>Операции, функции и значения NULL  
- Все арифметические операторы (+,- \*,,/,%), битовые операторы (~, & и |) и большинство функций возвращают значение null, если любой из операндов или аргументов `SqlTypes` имеет значение null. Свойство `IsNull` всегда возвращает значение TRUE или FALSE.  
+ Все арифметические операторы (+,-, \* ,/,%), битовые операторы (~, & и |) и большинство функций возвращают значение null, если любой из операндов или аргументов имеет `SqlTypes` значение null. Свойство `IsNull` всегда возвращает значение TRUE или FALSE.  
   
 ## <a name="precision"></a>Точность  
  Максимальные значения типов данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] отличаются от максимальных значений числовых типов и типов decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, типы данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предполагают использование максимальной точности. Однако в среде CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип `SqlDecimal` обеспечивает такую же максимальную точность и масштаб, а также такую же семантику, как и у типа данных decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "62919636"
 ## <a name="overflow-detection"></a>Обнаружение переполнений  
  В среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сложение двух очень больших чисел не может вызвать исключение. При этом если не использовался оператор проверки, возвращенный результат может «обернуться по кругу» и превратиться в отрицательное целое число. В `System.Data.SqlTypes` исключения возникают для всех ошибок переполнения и потери точности, а также для ошибок деления на ноль.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Типы данных SQL Server в платформе .NET Framework](sql-server-data-types-in-the-net-framework.md)  
   
   

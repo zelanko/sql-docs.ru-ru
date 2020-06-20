@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 33037538a773d27c32522238b14e6ebfc2557eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e2c771dc186fb520c1b59961c523b16a9efa83f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176103"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972674"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>Основные сведения о синхронных и асинхронных преобразованиях
   Чтобы понять разницу между синхронным и асинхронным преобразованием в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], проще всего начать с основных сведений о синхронном преобразовании. Если синхронное преобразование соответствует требованиям пользователя, может потребоваться асинхронное преобразование.

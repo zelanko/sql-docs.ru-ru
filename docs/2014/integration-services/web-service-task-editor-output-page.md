@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 73c83969-7b0e-479d-a436-0a46b2068d01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7924570253bf2f805d91c4dfabc3d5facf44cccc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b8dbb9847f3591d0f26a2dc7ca6e31f1b22da83
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054473"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972454"
 ---
 # <a name="web-service-task-editor-output-page"></a>Редактор задачи «Веб-служба» (страница «Вывод»)
   Используйте страницу **Вывод** диалогового окна **Редактор задачи «Веб-служба»** , чтобы указать, где следует хранить результаты, возвращенные веб-методом.  
@@ -39,17 +38,17 @@ ms.locfileid: "66054473"
   
 ### <a name="outputtype--file-connection"></a>OutputType = Соединение с файлом  
  **Файл**  
- Выберите Диспетчер подключения файлов в списке или нажмите кнопку \< **создать соединение...**>, чтобы создать новый диспетчер соединений.  
+ Выберите Диспетчер подключения файлов в списке или щелкните \<**New Connection...**> , чтобы создать новый диспетчер соединений.  
   
  **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="outputtype--variable"></a>OutputType = Переменная  
  **Переменная**  
- Выберите переменную из списка или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
+ Выберите переменную из списка или щелкните \<**New Variable...**> , чтобы создать новую переменную.  
   
  **См. также:**  [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "веб-служба" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "веб-служба" &#40;"входная страница"&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   

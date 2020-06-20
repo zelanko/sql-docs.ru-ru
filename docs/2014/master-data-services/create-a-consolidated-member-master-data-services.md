@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c41673f6f3bf1f4de2a831ecd659321b273b6af9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176073"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971894"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
   В среде [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]объединенный элемент создается, когда нужен родительский узел для явной иерархии. Консолидированные элементы могут содержать собственные атрибуты. Они используются для группировки. Как показано в следующем примере, консолидированные элементы можно использовать для групп учетных записей, содержащих учетные записи.
 
  ![Консолидированные члены MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Консолидированные члены MDS")
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
  Для выполнения этой процедуры:
 
 -   Необходимо иметь разрешение на доступ к функциональной области **Обозреватель** .
@@ -53,7 +52,7 @@ ms.locfileid: "78176073"
 
 9. Нажмите кнопку **ОК**.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Next Steps
 
 -   [Перемещение элементов в иерархии &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)
 

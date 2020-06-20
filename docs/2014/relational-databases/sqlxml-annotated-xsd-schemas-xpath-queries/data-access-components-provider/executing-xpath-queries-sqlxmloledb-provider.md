@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c6b15235f74ba2765a34f028aba39379fd6beb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eaf7017d2cf3d831f300180f002c004487a317e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015677"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Выполнение запросов XPath (поставщик SQLXMLOLEDB)
   Этот пример показывает использование следующих свойств SQLXMLOLEDB, определяемых поставщиком.  
@@ -32,7 +31,7 @@ ms.locfileid: "82703241"
   
 -   `Mapping Schema`  
   
- В этом образце клиентского приложения ADO запрос XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml). Схема имеет элемент ** \< contacts>** с атрибутами **ContactID**, **FirstName**и **LastName** . В схеме выполняется сопоставление по умолчанию: имя элемента сопоставляется с таблицей с тем же именем, а атрибуты простого типа сопоставляются со столбцами с теми же именами.  
+ В этом образце клиентского приложения ADO запрос XPath (корневой) задается для схемы сопоставления XSD (MySchema.xml). Схема содержит **\<Contacts>** элемент с атрибутами **ContactID**, **FirstName**и **LastName** . В схеме выполняется сопоставление по умолчанию: имя элемента сопоставляется с таблицей с тем же именем, а атрибуты простого типа сопоставляются со столбцами с теми же именами.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d4dc78d946f76161cbe7210e183d9b3b77be955
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d364290ed14ae972327486c5b3da23c57e0a7657
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039551"
 ---
 # <a name="fetching-result-data"></a>Выборка итоговых данных
   Приложение ODBC имеет три параметра для выборки данных результата.  
@@ -60,7 +59,7 @@ ms.locfileid: "82699287"
   
  Эту оптимизацию можно применить к приложениям, чтобы не отображались данные типа **Text**, **ntext**или **Image** , пока пользователь прокручивает курсор вверх и вниз. После того как пользователь выберет строку, приложение может вызвать **SQLGetData** для получения данных типа **Text**, **ntext**или **Image** . Это сохраняет передачу данных типа **Text**, **ntext**или **Image** для любой строки, которую пользователь не выбирает, и может сохранять передачу очень больших объемов данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка результатов &#40;ODBC&#41;](processing-results-odbc.md)  
   
   

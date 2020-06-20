@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2653ec7ef399083f750d80d9ba7a27e361ecc327
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961644"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
   Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] можно обезопасить с помощью протокола HTTPS.  
@@ -53,13 +52,13 @@ ms.locfileid: "65479356"
   
 9. Чтобы закрыть диалоговое окно **Привязки сайтов** , нажмите кнопку **Закрыть**.  
   
-10. Теперь откройте файл Web. config с *диска*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\WebApplication.  
+10. Теперь откройте web.config файл с *диска*: \PROGRAM Files\Microsoft SQL Server\120\Master Data Services\WebApplication.  
   
 11. Найдите строку `<security mode="Message">` и измените ее на строку `<security mode="Transport">`.  
   
 12. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Дополнительные сведения см. в разделе [Отключение контроля учетных записей](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание веб-приложения мастера основных данных (службы Master Data Services)](create-a-master-data-manager-web-application-master-data-services.md)  
   
   

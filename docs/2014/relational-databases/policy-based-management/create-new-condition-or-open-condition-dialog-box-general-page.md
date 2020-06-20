@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 296cdebc8a7a290cf8cdd848359ad776fa290c30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c48a07d3b69c3beb0cf05dee29f89b7078658090
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63057765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005794"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»
   С помощью этого диалогового окна можно создать или изменить условие управления на основе политик. Условие — это логическое выражение, задающее набор допустимых состояний для управляемой цели управления на основе политик по отношению к аспектам. Свойства, которые можно выбрать в поле **Выражение/поле** , зависят от используемого аспекта. Дополнительные сведения о связи условий с аспектами и политиками см. в статье [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "63057765"
   
 -   Нажмите клавишу SHIFT или CTRL, а затем щелкните несколько предложений, чтобы выбрать диапазон. Щелкните правой кнопкой мыши выделенную область и выберите пункт **Предложения группы**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

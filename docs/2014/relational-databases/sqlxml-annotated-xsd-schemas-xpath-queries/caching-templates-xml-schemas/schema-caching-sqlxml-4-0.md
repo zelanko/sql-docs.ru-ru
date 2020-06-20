@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c6c481dbba3f8e077854b12e755544d97af5f692
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63ce2cf7b46545c1c4c92e774054ff00f6e715d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015884"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Кэширование схем (SQLXML 4.0)
   При параллельной установке XML для Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0 и SQLXML 3.0 можно в явном виде контролировать кэширование схем всех версий с помощью следующих разделов реестра.  
@@ -58,7 +57,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
 > [!NOTE]  
 >  Не рекомендуется кэшировать схемы во время разработки программ, поскольку изменения, вносимые в схемы, отражаются в кэше примерно через две минуты.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кэширование шаблонов &#40;SQLXML 4,0&#41;](template-caching-sqlxml-4-0.md)   
  [Кэширование XSL &#40;SQLXML 4,0&#41;](xsl-caching-sqlxml-4-0.md)  
   

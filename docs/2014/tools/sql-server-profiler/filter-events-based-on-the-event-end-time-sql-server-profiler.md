@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ccb13828235b690bad83e3791b945d8584d5e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054386"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>фильтровать события на основе времени окончания события (приложение SQL Server Profiler)
   В этом подразделе описывается, как при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]отфильтровать события трассировки на основе времени окончания события.  
@@ -42,7 +41,7 @@ ms.locfileid: "63184295"
   
 5.  На вкладке **Выбор событий**щелкните столбец данных **EndTime** , чтобы открыть диалоговое окно **Изменение фильтра** . Можно также щелкнуть правой кнопкой мыши заголовок столбца и выбрать пункт **Изменить фильтр столбца**.  
   
-6.  Разверните узел **больше** или **меньше**, а затем введите `datetime`значение в поле, которое отображается под оператором сравнения.  
+6.  Разверните узел **больше** или **меньше**, а затем введите `datetime` значение в поле, которое отображается под оператором сравнения.  
   
 ## <a name="see-also"></a>См. также:  
  [Приложение SQL Server Profiler](sql-server-profiler.md)   

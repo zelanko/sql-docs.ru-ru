@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524270"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014346"
 ---
 # <a name="use-the-eventdata-function"></a>Использование функции EVENTDATA
   Функция EVENTDATA позволяет получить сведения о событии, которое привело к срабатыванию триггера DDL. Эта функция возвращает значение типа `xml`. XML-схема содержит следующие сведения:  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- Инструкция `EVENTDATA()` в триггере DDL захватывает текст инструкции `CREATE TABLE` , что является недопустимым. Это достигается с помощью инструкции XQuery для `xml` данных, ФОРМИРУЕМЫХ функцией EVENTDATA, и получения элемента \<CommandText>. Дополнительные сведения см. в статье [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
+ Инструкция `EVENTDATA()` в триггере DDL захватывает текст инструкции `CREATE TABLE` , что является недопустимым. Это достигается с помощью инструкции XQuery для `xml` данных, формируемых функцией EVENTDATA, и извлечения \<CommandText> элемента. Дополнительные сведения см. в статье [Справочник по языку XQuery (SQL Server)](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  Функция EVENTDATA захватывает данные событий CREATE_SCHEMA, а также элемента <schema_element> соответствующего определения CREATE SCHEMA, если таковые существуют. Кроме этого, функция EVENTDATA распознает определение <schema_element> как отдельное событие. Таким образом, триггер DDL, созданный для события CREATE_SCHEMA и для события, представленного данными <schema_element> определения CREATE SCHEMA, может дважды вернуть одни и те же сведения о событии (например, данные `TSQLCommand`). Допустим, для событий CREATE_SCHEMA и CREATE_TABLE создан триггер DDL и выполняется следующий пакет:  

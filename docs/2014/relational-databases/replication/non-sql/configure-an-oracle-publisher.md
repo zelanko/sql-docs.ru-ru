@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4941a02deb770678f4efcf4d2dfc7b08243fff54
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005398"
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
   Публикации издателей Oracle создаются таким же способом, как и публикации моментальных снимков и публикации транзакций, но перед тем как создать публикацию от издателя Oracle, необходимо выполнить следующие шаги (в данном разделе подробно описаны шаги 1, 3 и 4):  
@@ -41,7 +40,7 @@ ms.locfileid: "63022596"
 > [!NOTE]  
 >   При удалении открытого синонима **MSSQLSERVERDISTRIBUTOR** и пользователя сконфигурированной репликации Oracle с параметром **CASCADE** из издателя Oracle удаляются все объекты репликации.  
   
- Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Скрипт доступен в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: * \<Drive>*:\\\Program Files\Microsoft SQL Server\\*\<имя_экземпляра>* \MSSQL\Install\oracleadmin.SQL. Он также содержится в разделе [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
+ Для помощи в настройке пользовательской схемы репликации предоставляется образец скрипта. Скрипт доступен в следующем каталоге после установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : *\<drive>* : \\ \Program Files\Microsoft SQL Server \\ *\<InstanceName>* \MSSQL\Install\oracleadmin.SQL. Он также содержится в разделе [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md).  
   
  Подключитесь к базе данных Oracle под учетной записью с правами доступа администратора базы данных (DBA) и выполните скрипт. Данный скрипт запрашивает имя пользователя и пароль для схемы администратора репликации, а также табличное пространство по умолчанию, в котором будут создаваться объекты (табличное пространство уже должно существовать в базе данных Oracle). Сведения об указании других табличных пространств для объектов см. в статье [Управление табличными пространствами Oracle](manage-oracle-tablespaces.md). Выберите любое имя пользователя и надежный пароль, запишите их, так как позднее при настройке базы данных Oracle как издателя запрашиваются это имя и пароль. Рекомендуется использовать схему только для объектов, которые требуются для репликации. Не создавайте таблиц, которые будут публиковаться в этой схеме.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "63022596"
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
-     Пример: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
+     Например: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
 4.  Если настройка сети прошла удачно, будет выполнен вход и появится окно сеанса `SQL` .  
   
@@ -128,7 +127,7 @@ ms.locfileid: "63022596"
   
  Чтобы настроить издатель Oracle и создать публикацию, см. раздел [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Рекомендации по администрированию для издателей Oracle](administrative-considerations-for-oracle-publishers.md)   
  [Сопоставление типов данных для издателей Oracle](data-type-mapping-for-oracle-publishers.md)   
  [Глоссарий терминов для публикации Oracle](glossary-of-terms-for-oracle-publishing.md)   

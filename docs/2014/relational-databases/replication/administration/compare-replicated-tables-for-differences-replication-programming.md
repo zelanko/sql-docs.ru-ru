@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd253a17-0c85-42b4-912c-690169ebe799
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 94d3faab4c831fe64e54a582a5f70b2ae6b664e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7d6315a8d8237effe5ae888d303e3aab0dcef1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210786"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038414"
 ---
 # <a name="compare-replicated-tables-for-differences-replication-programming"></a>сравнить реплицируемые таблицы на предмет различий (программирование репликации)
   Проверка статей используется для определения того, совпадают ли опубликованные данные в статьях таблицы на издателе с данными  на подписчике. В результате могут быть выявлены расхождения. Дополнительные сведения см. в статье [Проверка реплицированных данных](../validate-data-at-the-subscriber.md). Однако проверка дает только сведения о том, есть расхождение или нет. Никаких подробностей о расхождении данных в исходной таблице и целевой таблице не сообщается. Программа командной строки **tablediff** возвращает подробные сведения о расхождениях в двух таблицах и даже может создать скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] для приведения подписки в соответствие с данными на издателе.  
@@ -72,7 +71,7 @@ ms.locfileid: "68210786"
   
     -   Используйте **-strict** для строгого сравнения схем исходной и целевой таблиц (необязательно).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка данных на подписчике](../validate-data-at-the-subscriber.md)  
   
   

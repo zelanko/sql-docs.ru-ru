@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08418775cc0b1f865d75cb07536a60956ea4ff0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054360"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972404"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Параметры инструментария WMI»)
   Страница **Параметры инструментария WMI** в диалоговом окне **Редактор задачи "Модуль чтения данных WMI"** используется для указания источника запроса WQL (Windows Management Instrumentation Query Language) и назначения результатов запроса.  
@@ -28,7 +27,7 @@ ms.locfileid: "66054360"
   
 ## <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  
- Выберите диспетчер WMI-соединений из списка или нажмите кнопку \< **Создать WMI-подключение...**>, чтобы создать новый диспетчер соединений.  
+ Выберите диспетчер WMI-соединений из списка или щелкните, \<**New WMI Connection...**> чтобы создать новый диспетчер соединений.  
   
  **См. также** [Диспетчер WMI-соединений](connection-manager/wmi-connection-manager.md), [Редактор диспетчера WMI-сеансов](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -63,13 +62,13 @@ ms.locfileid: "66054360"
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Соединение с файлом  
  **WQLQuerySource**  
- Выберите Диспетчер подключения файлов в списке или нажмите кнопку \< **создать соединение...**>, чтобы создать новый диспетчер соединений.  
+ Выберите Диспетчер подключения файлов в списке или щелкните, \<**New connection...**> чтобы создать новый диспетчер соединений.  
   
  **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Переменная  
  **WQLQuerySource**  
- Выберите переменную из списка или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
+ Выберите переменную из списка или нажмите кнопку, \<**New variable...**> чтобы создать новую переменную.  
   
  **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
@@ -77,17 +76,17 @@ ms.locfileid: "66054360"
   
 ### <a name="destinationtype--file-connection"></a>DestinationType = Соединение с файлом  
  **Назначение**  
- Выберите Диспетчер подключения файлов в списке или нажмите кнопку \< **создать соединение...**>, чтобы создать новый диспетчер соединений.  
+ Выберите Диспетчер подключения файлов в списке или щелкните, \<**New connection...**> чтобы создать новый диспетчер соединений.  
   
  **См. также:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = Переменная  
  **Назначение**  
- Выберите переменную из списка или нажмите кнопку \< **создать переменную...**>, чтобы создать новую переменную.  
+ Выберите переменную из списка или нажмите кнопку, \<**New variable...**> чтобы создать новую переменную.  
   
  **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "модуль чтения данных WMI" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

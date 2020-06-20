@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49f1b0832fb82425874b656715091f793b79dfd5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745763"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004493"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Синхронизация подписки с помощью диспетчера синхронизации Windows (Windows Synchronization Manager)
   Диспетчер синхронизации[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows можно использовать только для синхронизации подписок на публикации Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на том же самом компьютере, что и диспетчер синхронизации (кроме того, его можно использовать для синхронизации файлов и веб-страниц в режиме «вне сети»). Чтобы использовать диспетчер синхронизации, необходимо выполнить следующие действия:  
   
-1.  Синхронизацию подписки по запросу с помощью диспетчера синхронизации Windows можно включить в диалоговом окне **Свойства подписки — \<подписчик>:\<база_данных_подписки>**. Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md).  
+1.  Включите синхронизацию подписок по запросу с помощью диспетчера синхронизации Windows в диалоговом окне **Свойства подписки — \<Subscriber> : \<SubscriptionDatabase> ** . Дополнительные сведения о доступе к этому диалоговому окну см. в статье [Просмотр и изменение свойств подписки по запросу](view-and-modify-pull-subscription-properties.md).  
   
 2.  Запустите диспетчер синхронизации из меню **Пуск** операционной системы Windows.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62745763"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Включение синхронизации подписок по запросу с помощью диспетчера синхронизации Windows  
   
-1.  На странице **Общие** диалогового окна **Свойства подписки — \<подписчик>: \<база_данных_подписки>** выберите значение **Включить** для параметра **Использовать диспетчер синхронизации Windows**.  
+1.  На странице **Общие** диалогового окна **Свойства подписки — \<Subscriber> : \<SubscriptionDatabase> ** выберите значение **включить** для параметра **использовать диспетчер синхронизации Windows** .  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62745763"
   
     -   **Данные о веб-сервере** (для подписок на публикацию слиянием на подписчиках, использующих SQL Server 2005 или более поздние версии)  
   
-    -   **Прочее**  
+    -   **Другое**  
   
      Рекомендуется использовать проверку подлинности Windows для всех соединений. Дополнительные сведения о разрешениях, необходимых агенту распространителя и агенту слияния, см. в разделе [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
@@ -116,6 +115,6 @@ ms.locfileid: "62745763"
 > [!NOTE]  
 >  Правки применяются, только если они являются частью строки, которая выбрана для разрешения конфликта. Например, если правки вносятся от имени **Издателя**и затем выбирается **Принять вариант подписчика**, правки отклоняются.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерактивное разрешение конфликтов](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

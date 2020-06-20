@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: facc534177113bd93e56e50fca3ae14c3e6b2cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524380"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014389"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
   Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
