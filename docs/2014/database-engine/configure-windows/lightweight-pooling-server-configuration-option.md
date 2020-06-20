@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 552a86ba168ab121210b42cc0e462f8fdcbea84b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 549ff7451a31b48459b5a290b94ad406c3768a91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782170"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935251"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>Параметр конфигурации сервера «использование упрощенных пулов»
   Чтобы обеспечить уменьшение системных издержек, связанных с излишним переключением контекста, что иногда случается при симметричной многопроцессорной обработке, воспользуйтесь параметром **lightweight pooling** . В случае, когда наблюдается излишнее переключение контекста, использование упрощенных пулов, может обеспечить лучшую производительность за счет встроенного переключения контекстов, помогая таким образом уменьшить количество переходов пользователь/ядро.  

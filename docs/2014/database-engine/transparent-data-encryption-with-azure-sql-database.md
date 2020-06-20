@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541d6d27dc5dbc31dad98840e7ed6654f48a8dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6af7c52741b85a2733b93c2b1ed8c03a14dd6343
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928225"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Прозрачное шифрование данных в Базе данных SQL Azure
   Прозрачное шифрование данных [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] (предварительная версия) защищает от угроз вредоносных действий, в реальном времени выполняя шифрование и расшифровку неактивных файлов базы данных, связанных резервных копий и журнала транзакций. При этом способ использования не меняется.
@@ -68,9 +67,9 @@ ms.locfileid: "78175407"
 
      ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")
 
-     Кроме того, отслеживать ход шифрования можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите `encryption_state` столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+     Кроме того, отслеживать ход шифрования можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите `encryption_state` Столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
-##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Включение TDE в [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью TRANSACT-SQL
+##  <a name="enabling-tde-on-sssds-by-using-transact-sql"></a><a name="Encrypt"></a>Включение TDE в с [!INCLUDE[ssSDS](../includes/sssds-md.md)] помощью Transact-SQL
  Далее предполагается, что вы уже подписались на предварительную версию.
 
 ###  <a name="TsqlProcedure"></a>
@@ -90,7 +89,7 @@ ms.locfileid: "78175407"
     GO
     ```
 
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]Чтобы отслеживать ход выполнения шифрования в, пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать `encryption_state` столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+3.  Чтобы отслеживать ход выполнения шифрования в [!INCLUDE[ssSDS](../includes/sssds-md.md)] , пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать `encryption_state` столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Включение TDE в Базе данных SQL с помощью PowerShell
  Включить и отключить TDE можно с помощью следующих команд Azure PowerShell. Перед выполнением команды подключите свою учетную запись к окну PS. Далее предполагается, что вы уже подписались на предварительную версию. Дополнительные сведения о PowerShell см. в разделе [Установка и настройка Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).
@@ -128,7 +127,7 @@ ms.locfileid: "78175407"
 
 6.  В колонке **Прозрачное шифрование данных ПРЕДВАРИТЕЛЬНАЯ ВЕРСИЯ** переместите кнопку **Шифрование данных** в положение **ВЫКЛ**и нажмите кнопку **Сохранить** вверху страницы. В разделе **Состояние шифрования** будет отображаться приблизительный ход прозрачной расшифровки данных.
 
-     Кроме того, отслеживать ход расшифровки можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите `encryption_state` столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).
+     Кроме того, отслеживать ход расшифровки можно, подключившись к [!INCLUDE[ssSDS](../includes/sssds-md.md)] с помощью инструмента запросов, например [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , в качестве пользователя базы данных с разрешением **VIEW DATABASE STATE** . Запросите `encryption_state` Столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).
 
 #### <a name="to-disable-tde-by-using-transact-sql"></a>Отключение TDE с помощью Transact-SQL
 
@@ -142,7 +141,7 @@ ms.locfileid: "78175407"
     GO
     ```
 
-3.  [!INCLUDE[ssSDS](../includes/sssds-md.md)]Чтобы отслеживать ход выполнения шифрования в, пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать `encryption_state` столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
+3.  Чтобы отслеживать ход выполнения шифрования в [!INCLUDE[ssSDS](../includes/sssds-md.md)] , пользователи базы данных с разрешением **Просмотр состояния базы данных** могут запрашивать `encryption_state` столбец представления [sys. dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) .
 
 ##  <a name="working-with-tde-protected-databases-on-sssds"></a><a name="Working"></a>Работа с защищенными базами данных TDE в[!INCLUDE[ssSDS](../includes/sssds-md.md)]
  Расшифровывать базы данных для работы в Azure не нужно. Параметры TDE базы данных-источника прозрачно наследуются целевым объектом. Сюда входят операции, связанные с:

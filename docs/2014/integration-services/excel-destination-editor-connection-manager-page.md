@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c55b9daba7e8e1823e1ced43fc9958d4fe5892ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059242"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966884"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
   
 > [!NOTE]  
->  `CommandTimeout` Свойство назначения «Excel» недоступно в **редакторе назначения «Excel**», но может быть задано с помощью **Расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "Excel"» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
+>  `CommandTimeout`Свойство назначения «Excel» недоступно в **редакторе назначения «Excel**», но может быть задано с помощью **Расширенный редактор**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "Excel"» раздела [Excel Custom Properties](data-flow/excel-custom-properties.md).  
   
  Дополнительные сведения о назначении Excel см. в разделе [Excel Destination](data-flow/excel-destination.md).  
   
@@ -33,7 +32,7 @@ ms.locfileid: "66059242"
  **Диспетчер соединений с Excel**  
  Выберите из списка существующий диспетчер подключений к Excel или создайте новое соединение, нажав кнопку **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новый диспетчер подключений с помощью диалогового окна **Диспетчер подключений Excel** .  
   
  **Режим доступа к данным**  
@@ -48,7 +47,7 @@ ms.locfileid: "66059242"
  **Имя листа Excel**  
  Выберите назначение Excel из раскрывающегося списка. Если этот список пустой, выберите **Создать**.  
   
- **Создать**  
+ **Новые**  
  Выберите **Создать** для открытия диалогового окна **Создание таблицы** . После нажатия кнопки **OK**создается файл Excel, на который указывает **Диспетчер соединений с Excel** .  
   
  **Просмотр существующих данных**  
@@ -80,7 +79,7 @@ ms.locfileid: "66059242"
  **Анализ запроса**  
  Проверить синтаксис текста запроса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Excel" &#40;страниц сопоставления&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Редактор назначения "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
