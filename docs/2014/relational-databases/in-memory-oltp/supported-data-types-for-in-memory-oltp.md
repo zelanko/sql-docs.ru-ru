@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7dda500486c39a66f871d5934f957028fc51e9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718841"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025741"
 ---
 # <a name="supported-data-types"></a>Поддерживаемые типы данных
   Следующие типы данных **поддерживаются** для оптимизированных для памяти таблиц и хранимых процедур, скомпилированных в собственном коде.  
@@ -30,7 +29,7 @@ ms.locfileid: "82718841"
 |tinyint|[int, bigint, smallint и tinyint (Transact-SQL)](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql)|  
 |Decimal|[decimal и numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
 |NUMERIC|[decimal и numeric (Transact-SQL)](/sql/t-sql/data-types/decimal-and-numeric-transact-sql)|  
-|плавающее|[Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
+|FLOAT|[Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |real|[Типы данных float и real (Transact-SQL)](/sql/t-sql/data-types/float-and-real-transact-sql)|  
 |money|[Типы money и smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
 |smallmoney|[Типы money и smallmoney (Transact-SQL)](/sql/t-sql/data-types/money-and-smallmoney-transact-sql)|  
@@ -53,7 +52,7 @@ ms.locfileid: "82718841"
   
 |Тип данных|Дополнительные сведения|  
 |---------------|--------------------------|  
-|дата|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|Дата|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time (Transact-SQL)](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime (Transact-SQL)](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
@@ -85,7 +84,7 @@ ms.locfileid: "82718841"
 |HIERARCHYID|Большие объекты (LOB). Например, varchar(max), nvarchar(max), varbinary(max), image, xml, text и ntext.|ROWVERSION|  
 |sql_variant|Функции среды CLR|Определяемые пользователем типы|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддержка Transact-SQL для выполняющейся в памяти OLTP](transact-sql-support-for-in-memory-oltp.md)   
  [Реализация столбцов LOB в таблице, оптимизированной для памяти](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [Реализация SQL_VARIANT в таблице, оптимизированной для памяти](implementing-sql-variant-in-a-memory-optimized-table.md)  
