@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 69bd388e-a86c-4de4-b5d5-d093424d9c57
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c5ddad15af74e45313d3e71b059fae36d166560
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49de4a381de3e998073a73c284e3e3e5960f4921
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808695"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934740"
 ---
 # <a name="transform-noise-words-server-configuration-option"></a>Параметр конфигурации сервера «transform noise words»
-  Параметр конфигурации `transform noise words` сервера используется для подавления сообщения об ошибке, если пропускаемые слова, [стоп-слова](../../relational-databases/search/full-text-search.md), приводят к тому, что логическая операция над полнотекстовым запросом возвращает нулевые строки. Этот параметр удобно использовать в полнотекстовых запросах с предикатом CONTAINS, в котором логические операции или операции NEAR содержат пропускаемые слова. Возможные значения описаны в следующей таблице.  
+  `transform noise words`Параметр конфигурации сервера используется для подавления сообщения об ошибке, если пропускаемые слова, [стоп-слова](../../relational-databases/search/full-text-search.md), приводят к тому, что логическая операция над полнотекстовым запросом возвращает нулевые строки. Этот параметр удобно использовать в полнотекстовых запросах с предикатом CONTAINS, в котором логические операции или операции NEAR содержат пропускаемые слова. Возможные значения описаны в следующей таблице.  
   
 |Значение|Description|  
 |-----------|-----------------|  

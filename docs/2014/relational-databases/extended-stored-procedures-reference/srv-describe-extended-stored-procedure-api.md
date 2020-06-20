@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264781f21e328c4740ee31b53fe3812bbe392305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050784"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API-интерфейс расширенных хранимых процедур)
     
@@ -99,7 +98,7 @@ srcdata
   
  Если значение параметра *desttype* равно SRVDECIMAL или SRVNUMERIC, параметр *srcdata* должен быть указателем на структуру типа DBNUMERIC или DBDECIMAL, в которой полям точности и масштаба уже присвоены требуемые значения. Параметр DEFAULTPRECISION позволяет задать точность по умолчанию, а параметр DEFAULTSCALE — масштаб по умолчанию.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Порядковый номер описываемого столбца. Первый столбец имеет номер 1. При возникновении ошибки возвращается 0.  
   
 ## <a name="remarks"></a>Remarks  
@@ -114,7 +113,7 @@ srcdata
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [API srv_sendrow &#40;расширенных хранимых процедур&#41;](srv-sendrow-extended-stored-procedure-api.md)   
  [API srv_setutype &#40;расширенных хранимых процедур&#41;](srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata (интерфейс API расширенных хранимых процедур)](srv-setcoldata-extended-stored-procedure-api.md)  

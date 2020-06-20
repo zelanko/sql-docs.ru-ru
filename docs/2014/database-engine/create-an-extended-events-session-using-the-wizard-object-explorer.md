@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065060"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934509"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>создать сеанс расширенных событий с помощью пользовательского интерфейса нового сеанса (обозреватель объектов)
   Для повышения удобства выбора и отслеживания событий на сервере в расширенных событиях предусмотрен мастер создания сеансов, который помогает создавать сеансы расширенных событий. Мастер создания сеанса предоставляет доступ к большинству функций для обработки расширенных событий. В диалоговом окне [Создание сеанса](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) также можно задать сеанс расширенных событий, в ходе которого будет выполняться сбор, отображение и анализ данных. Диалоговое окно «Создание сеанса» включает все функции расширенных событий.  
@@ -169,7 +168,7 @@ ms.locfileid: "66065060"
   
 2.  Для просмотра данных, передаваемых в режиме реального времени для этого сеанса, щелкните **Отображать данные в режиме реального времени по мере их отслеживания** . Данные, передаваемые в режиме реального времени, будут отображаться сразу после создания сеанса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание сеанса расширенных событий в диалоговом окне «Создание сеанса»](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md)  
   
   

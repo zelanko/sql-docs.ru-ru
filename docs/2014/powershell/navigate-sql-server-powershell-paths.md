@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797809"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960294"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Перемещение путей SQL Server PowerShell
   Поставщик компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] PowerShell представляет набор объектов в экземпляре SQL Server в структуре, аналогичной пути к файлу. Командлеты Windows PowerShell можно использовать для навигации по пути поставщика и для создания нестандартных дисков, укорачивающих путь, который требуется ввести.  
@@ -44,7 +43,7 @@ ms.locfileid: "72797809"
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Возвращает имя локального компьютера. Если соединения с экземплярами компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на других компьютерах устанавливалось с помощью объектов SMO или инструментария WMI, также будут приведены имена этих компьютеров.|  
 |SQLSERVER:\SQL\\*ИмяКомпьютера*|Список экземпляров компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] на компьютере.|  
-|SQLServer: \ SQL\\*ComputerName*\\*имя_экземпляра*|Список типов объектов верхнего уровня в экземпляре, таких как «Конечные точки», «Сертификаты» и «Базы данных».|  
+|SQLServer: \ SQL \\ *ComputerName* \\ *имя_экземпляра*|Список типов объектов верхнего уровня в экземпляре, таких как «Конечные точки», «Сертификаты» и «Базы данных».|  
 |Узел класса объектов, например «Базы данных»|Список объектов этого типа, например список баз данных: master, model, AdventureWorks20008R2.|  
 |Узел имени объекта, например AdventureWorks2012|Список типов объектов, содержащихся в этом объекте. Например, для базы данных будет выведен список типов объектов, таких как таблицы и представления.|  
   

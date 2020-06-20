@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bacfd3d097d7cccb0a5780328c4db95dc5afc733
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059252"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Неверное имя именованного канала может помешать обновлению
   Обновление завершается ошибкой, если протокол именованных каналов настроен неправильно.  
@@ -27,12 +26,12 @@ ms.locfileid: "66094184"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="description"></a>Описание  
- Во время обновления программа установки запускает [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] экземпляр с поддержкой общей памяти, именованным каналом, который принимает только локальные соединения. Если имя канала, указанное на сервере, не является пустым, оно должно начинаться с строки "\\\\.\pipe\\", которая должна быть допустимой. Если задано недопустимое имя канала, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не запустится и установка завершится ошибкой.  
+ Во время обновления программа установки запускает [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] экземпляр с поддержкой общей памяти, именованным каналом, который принимает только локальные соединения. Если имя канала, указанное на сервере, не является пустым, оно должно начинаться с строки " \\ \\ .\pipe \\ ", которая должна быть допустимой. Если задано недопустимое имя канала, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не запустится и установка завершится ошибкой.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
  Используйте ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служебную программу Network** для указания допустимого имени канала, а затем запустите программу установки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)  
   

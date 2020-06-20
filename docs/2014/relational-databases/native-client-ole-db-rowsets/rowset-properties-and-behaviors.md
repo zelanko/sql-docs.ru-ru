@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9baabcb6-0114-42f2-89f8-d8d66b3c8c14
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6e4cfffc585f6aef50a207df8c095d7153c6beb8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1158650b8029aed9447ce4d11e4273314ad0aa94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011278"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
   Это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Свойства набора строк поставщика собственного клиента OLE DB.  
@@ -99,7 +98,7 @@ ms.locfileid: "82694374"
 |SSPROP_QP_NOTIFICATION_OPTIONS|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_BSTR<br /><br /> По умолчанию: Пустая строка<br /><br /> Описание: параметры уведомления о запросах. Указывается в строке `name=value`. За создание службы и считывание уведомлений из очереди отвечает пользователь. Строка параметров уведомлений запросов имеет следующий синтаксис.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Пример:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Столбец: нет<br /><br /> Ч/З Чтение/запись<br /><br /> Тип: VT_UI4<br /><br /> По умолчанию: 432000 с (5 дней)<br /><br /> Минимум: 1 с<br /><br /> Максимум: 2 ^ 31-1 секунда<br /><br /> Описание: время в секундах, в течение которого уведомление запроса должно оставаться активным.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы строк](rowsets.md)  
   
   

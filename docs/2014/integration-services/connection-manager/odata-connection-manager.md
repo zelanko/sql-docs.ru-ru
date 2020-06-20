@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c20d069a419a4d9f95a31489449a4726e25c304
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833112"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920460"
 ---
 # <a name="odata-connection-manager"></a>Диспетчер соединений OData
   Диспетчер соединений OData позволяет пакету подключаться к источнику OData. Компонент источника OData подключается к источнику OData с помощью диспетчера соединений OData и использует данные из службы. Подробные сведения, включая инструкции по установке этих компонентов, см. в разделе [OData Source](../data-flow/odata-source.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "62833112"
 |Пароль|Пароль, используемый для обычной проверки подлинности.|  
 |ConnectionString|Отражает другие свойства диспетчера соединений.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор диспетчера соединений c OData](../odata-connection-manager-editor.md)  
   
   

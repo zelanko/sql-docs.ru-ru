@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 71bae511-956d-4f23-bfa8-bfcc563b3e11
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 52407fbcdfd1f784128cf4c374ad18cc0255197b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4cfb7af78d9cfb3663e844d8d91036bd40e5dfa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093322"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065238"
 ---
 # <a name="ready-to-complete-image"></a>Все готово к завершению образа
   Страница **Все готово к завершению образа** содержит сводные данные о параметрах конфигурации, применяемых при настройке подготовленного экземпляра.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  На этой странице доступны следующие параметры.  
   
 -   Чтобы продолжить установку, нажмите кнопку **Установить**.  

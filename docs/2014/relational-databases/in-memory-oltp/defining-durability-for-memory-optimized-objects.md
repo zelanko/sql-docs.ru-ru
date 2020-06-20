@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caae904bc1e25288e81d3baba21719be28c05d31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050232"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Определение устойчивости для оптимизированных для памяти объектов
   OLTP в памяти гарантирует полную атомарность, согласованность, изолированность и устойчивость (ACID). Устойчивость в контексте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и оптимизированных для памяти таблиц предоставляет следующие гарантии.  
@@ -57,7 +56,7 @@ ms.locfileid: "63161991"
   
 -   Количество записей журнала в активной части журнала, которые нужно перезаписать.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и управление хранилищем для оптимизированных для памяти объектов](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

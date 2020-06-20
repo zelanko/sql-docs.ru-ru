@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6950199a5da1f4aa773eaa12fee80edb98aba04f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee690ddfc4cc02769db6d07d226cb154f3c4eae
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809421"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934925"
 ---
 # <a name="server-properties-memory-page"></a>Свойства сервера (страница «Память»)
   Используйте данную страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  

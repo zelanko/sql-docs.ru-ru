@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b7d6eca-1df1-47df-bbba-0fc485706a95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f214b01f3e2066708a060c5f3ad1e8aa4a0a23
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094315"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065341"
 ---
 # <a name="installing-upgrade-advisor"></a>Установка помощника по обновлению
   Место установки помощника по обновлению SQL Server 2014 определяется областью анализа. Помощник по обновлению поддерживает удаленный анализ всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , кроме служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Если просмотр экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не производится, помощник по обновлению может быть установлен на любой компьютер, который способен установить соединение с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и соответствует [Upgrade Advisor Prerequisites](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). Для просмотра экземпляров служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]следует установить помощник по обновлению на сервер отчетов.  

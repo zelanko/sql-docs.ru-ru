@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050413"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Определение длины префикса в файлах данных с помощью программы bcp (SQL Server)
   Для наиболее компактного хранения файлов при массовом экспорте данных собственного формата в файл данных команда **bcp** ставит перед каждым полем один или несколько знаков, которые указывают длину этого поля. Эти символы называются *символами префикса длины*.  
@@ -56,11 +55,11 @@ ms.locfileid: "66011759"
 |`varchar`|2|2|2|2|  
 |`nchar`|2|2|2|2|  
 |`nvarchar`|2|2|2|2|  
-|`text` <sup>1</sup>|4|4|4|4|  
-|`ntext` <sup>1</sup>|4|4|4|4|  
+|`text`<sup>1</sup>|4|4|4|4|  
+|`ntext`<sup>1</sup>|4|4|4|4|  
 |`binary`|2|2|2|2|  
 |`varbinary`|2|2|2|2|  
-|`image` <sup>1</sup>|4|4|4|4|  
+|`image`<sup>1</sup>|4|4|4|4|  
 |`datetime`|0|1|0|1|  
 |`smalldatetime`|0|1|0|1|  
 |`decimal`|1|1|1|1|  
@@ -81,7 +80,7 @@ ms.locfileid: "66011759"
 |UDT (определяемый пользователем тип данных)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> типы `ntext`данных `text`, и `image` будут удалены в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Используйте вместо них типы данных `nvarchar(max)`, `varchar(max)` и `varbinary(max)`.  
+ <sup>1</sup> `ntext` `text` типы данных, и `image` будут удалены в следующей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Следует избегать использования этих типов данных при новой разработке и запланировать изменение приложений, использующих их в настоящий момент. Используйте вместо них типы данных `nvarchar(max)`, `varchar(max)` и `varbinary(max)`.  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Длины префиксов для массового импорта  
  При массовом импорте данных длина префикса — это значение, указанное при первоначальном создании файла данных. Если файл данных не создан командой **bcp** , символы префикса длины, возможно, не существуют. В этом случае в качестве длины префикса нужно указать 0.  

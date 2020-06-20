@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a04e581758748d55b9defcab3beaa6a86f0eecf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd9919b17e0422a9308e36cd1befb6865a67ff67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797796"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960404"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Управление проверкой подлинности в компонент Database Engine PowerShell
   По умолчанию компоненты [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell используют при установлении соединения с компонентом [!INCLUDE[ssDE](../includes/ssde-md.md)]проверку подлинности Windows. Для использования проверки подлинности SQL Server необходимо либо определить виртуальный диск PowerShell, либо указать параметры `-Username` и `-Password` для `Invoke-Sqlcmd`.  
@@ -27,7 +26,7 @@ ms.locfileid: "72797796"
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Все действия, которые могут быть выполнены на экземпляре компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] , определяются разрешениями, предоставляемыми учетным данным, которые использовались при подключении к экземпляру. По умолчанию для подключения к компоненту [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с проверкой подлинности Windows поставщик [!INCLUDE[ssDE](../includes/ssde-md.md)]и командлеты используют учетную запись Windows, под которой они работают.  
   
- Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо указать идентификатор имени входа и пароль проверки подлинности SQL Server. При использовании [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поставщика необходимо связать учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] входа с виртуальным диском, а затем использовать команду Change Directory (`cd`) для подключения к этому диску. В Windows PowerShell учетные данные безопасности можно связывать только с виртуальными дисками.  
+ Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] необходимо указать идентификатор имени входа и пароль проверки подлинности SQL Server. При использовании [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поставщика необходимо связать [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетные данные входа с виртуальным диском, а затем использовать команду Change Directory ( `cd` ) для подключения к этому диску. В Windows PowerShell учетные данные безопасности можно связывать только с виртуальными дисками.  
   
 ##  <a name="sql-server-authentication-using-a-virtual-drive"></a><a name="SQLAuthVirtDrv"></a> Проверка подлинности SQL Server с помощью виртуального диска  
  **Создание виртуального диска с именем входа для проверки подлинности SQL Server**  
@@ -47,7 +46,7 @@ ms.locfileid: "72797796"
 ### <a name="example-virtual-drive"></a>Пример (виртуальный диск)  
  В этом примере показано создание функции **sqldrive** для создания виртуального диска, который затем будет связан с указанным именем входа для проверки подлинности и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Функция **sqldrive** запрашивает ввод пароля для имени входа, скрывая символы пароля при их вводе. Затем, когда вы используете команду Change Directory (`cd`) для подключения к пути с помощью имени виртуального диска, все операции выполняются с использованием учетных данных входа для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] проверки подлинности, которые были указаны при создании диска.  
+ Функция **sqldrive** запрашивает ввод пароля для имени входа, скрывая символы пароля при их вводе. Затем, когда вы используете команду Change Directory ( `cd` ) для подключения к пути с помощью имени виртуального диска, все операции выполняются с использованием [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] учетных данных входа для проверки подлинности, которые были указаны при создании диска.  
   
 ```powershell
 ## Create a function that specifies the login and prompts for the password.  

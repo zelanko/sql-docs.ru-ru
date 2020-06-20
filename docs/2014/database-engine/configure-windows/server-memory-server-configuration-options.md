@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38129f2f502f3a3f2ec1be02d718a642e2a52c23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934995"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
   Два параметра памяти сервера, **min server memory** и **max server memory**, используются для изменения в конфигурации объема памяти (в мегабайтах), управляемой диспетчером памяти SQL Server для процесса SQL Server, применяемого экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -68,7 +67,7 @@ ms.locfileid: "69028691"
 |Тип ОС|Минимальный объем памяти, допустимый для параметра **max server memory**|  
 |-------------|----------------------------------------------------------------|  
 |32-разрядная версия|64 МБ|  
-|64-разрядная|128 МБ| 
+|64-разрядная версия|128 МБ| 
 
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>Настройка параметров памяти с помощью среды SQL Server Management Studio  
  Используйте два параметра памяти сервера, **min server memory** и **max server memory**, для настройки объема памяти (в мегабайтах), которая находится в управлении диспетчера памяти SQL Server для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов.  
@@ -96,14 +95,14 @@ ms.locfileid: "69028691"
 3.  Если выбран параметр **макс. пропускная способность для сетевых приложений** , выберите любой другой параметр, нажмите кнопку **ОК**и закройте остальные диалоговые окна.  
   
 ## <a name="lock-pages-in-memory"></a>Блокировка страниц в памяти  
- Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске. Блокировка страниц в памяти может обеспечивать отклик сервера, когда содержимое памяти заносится в файл подкачки. Параметр SQL Server **Блокировка страниц в памяти** установлен в значение ON в 32-разрядных и 64-разрядных экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition и выше, когда учетной записи с привилегиями на запуск sqlservr. exe предоставлено право пользователя Windows "Блокировка страниц в памяти" (LPIM). В более ранних версиях SQL Server задание параметра блокировки страниц для 32-разрядного экземпляра SQL Server требовало, чтобы учетная запись с правами запуска sqlservr.exe имела права пользователя LPIM и параметр конфигурации «awe_enabled» был установлен равным ON.  
+ Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске. Блокировка страниц в памяти может обеспечивать отклик сервера, когда содержимое памяти заносится в файл подкачки. Параметр SQL Server **Блокировка страниц в памяти** установлен в значение ON в 32-разрядных и 64-разрядных экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition и выше, когда учетной записи с правами на запуск sqlservr.exe предоставлено право пользователя Windows "Блокировка страниц в памяти" (LPIM). В более ранних версиях SQL Server задание параметра блокировки страниц для 32-разрядного экземпляра SQL Server требовало, чтобы учетная запись с правами запуска sqlservr.exe имела права пользователя LPIM и параметр конфигурации «awe_enabled» был установлен равным ON.  
   
- Чтобы отключить параметр **Блокировка страниц в памяти** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], удалите право пользователя "заблокированные страницы в памяти" для стартовой учетной записи SQL Server.  
+ Чтобы отключить параметр **Блокировка страниц в памяти** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , удалите право пользователя "заблокированные страницы в памяти" для стартовой учетной записи SQL Server.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>Отключение блокировки страниц в памяти  
  **Чтобы отключить параметр Блокировка страниц в памяти, выполните следующие действия.**  
   
-1.  В меню **Пуск** выберите пункт **Выполнить..**. В поле **Открыть** введите `gpedit.msc`.  
+1.  В меню **Пуск** выберите пункт **Выполнить..**. В поле **Открыть** введите `gpedit.msc` .  
   
      Откроется диалоговое окно **Групповая политика**.  
   
@@ -143,13 +142,13 @@ ms.locfileid: "69028691"
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Выделение SQL Server максимального объема памяти  
   
-||32-разрядная версия|64-разрядная|  
+||32-разрядная версия|64-разрядная версия|  
 |-|-------------|-------------|  
 |Обычная память|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 2 ГБ<br /><br /> 3 ГБ с параметром загрузки **/3gb** *<br /><br /> 4 ГБ на WOW64\*\*|Не более ограничения виртуального адресного пространства процесса во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> 8 ТБ для архитектуры x64|  
   
  ***/3gb** — это параметр загрузки операционной системы. Дополнительные сведения см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
- * * WOW64 (Windows в Windows 64) — это режим, в котором 32- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрядная версия работает в 64-разрядной операционной системе. Дополнительные сведения см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
+ * * WOW64 (Windows в Windows 64) — это режим, в котором 32-разрядная версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает в 64-разрядной операционной системе. Дополнительные сведения см. в [библиотеке MSDN](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -181,7 +180,7 @@ FROM sys.dm_os_process_memory;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Мониторинг и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
+ [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE (Transact-SQL)](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Параметры конфигурации сервера (SQL Server)](server-configuration-options-sql-server.md)   
  [sp_configure (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

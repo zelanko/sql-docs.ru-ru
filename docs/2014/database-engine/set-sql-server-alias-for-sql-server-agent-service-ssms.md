@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 02d6295d-ab52-44f0-8f1b-f3910a507d8f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9f91ec957665975fd956e36a5af3c4261fb47af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929198"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
-  В этом разделе описывается, как задать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] псевдоним [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] агента для подключения к [!INCLUDE[ssDE](../includes/ssde-md.md)] компоненту с помощью. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] По умолчанию служба агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] соединяется с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] через именованные каналы по динамическим именам серверов, которые не требуют дополнительной настройки клиента. Необходимо настроить только псевдоним соединения сервера, если не используется установленный по умолчанию сетевой механизм передачи данных или если происходит подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , прослушивающему по альтернативному именованному каналу.  
+  В этом разделе описывается, как задать [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] псевдоним [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] агента для подключения к [!INCLUDE[ssDE](../includes/ssde-md.md)] компоненту с помощью [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . По умолчанию служба агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] соединяется с экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] через именованные каналы по динамическим именам серверов, которые не требуют дополнительной настройки клиента. Необходимо настроить только псевдоним соединения сервера, если не используется установленный по умолчанию сетевой механизм передачи данных или если происходит подключение к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , прослушивающему по альтернативному именованному каналу.  
   
  **В этом разделе**  
   

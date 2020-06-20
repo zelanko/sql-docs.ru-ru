@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050243"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
   Сборщик производительности транзакций в [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] позволяет оценить производительность приложения базы данных, выполняющаяся в памяти. В отчете об анализе производительности транзакции также показано, сколько работы необходимо выполнить, чтобы включить In-Memory OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру.  
@@ -224,7 +223,7 @@ ms.locfileid: "82706540"
   
  Чтобы просмотреть сведения о преобразовании хранимой процедуры в скомпилированную в собственном код хранимую процедуру, используйте [Помощник по компиляции в машинный](native-compilation-advisor.md)код.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

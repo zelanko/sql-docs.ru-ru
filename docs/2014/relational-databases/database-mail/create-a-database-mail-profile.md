@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872210"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952646"
 ---
 # <a name="create-a-database-mail-profile"></a>Создание профиля компонента Database Mail
   Открытые и закрытые профили компонента Database Mail можно создать с помощью **мастера настройки компонента Database Mail** или [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -96,7 +95,7 @@ ms.locfileid: "62872210"
   
      *@description*= '*Описание*'  
   
-     где *@profile_name* — имя профиля, а *@description* — описание профиля. Это необязательный параметр.  
+     где *@profile_name* — имя профиля, а *@description* — Описание профиля. Этот параметр необязателен.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql), как показано ниже.  
   
@@ -166,7 +165,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@description*= '*Описание*'  
   
-     где *@profile_name* — имя профиля, а *@description* — описание профиля. Это необязательный параметр.  
+     где *@profile_name* — имя профиля, а *@description* — Описание профиля. Этот параметр необязателен.  
   
 -   Для каждой учетной записи выполните хранимую процедуру [sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql), как показано ниже.  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default*= '*Состояние профиля по умолчанию* '  
   
-     где *@profile_name* — имя профиля, а *@principal_name* чтобы указать, что это открытый профиль, *@is_default* определяет, является ли этот профиль значением по умолчанию для пользователя или роли базы данных.  
+     где *@profile_name* — имя профиля, а чтобы указать, что это *@principal_name* открытый профиль, *@is_default* определяет, является ли этот профиль значением по умолчанию для пользователя или роли базы данных.  
   
  В следующем примере создается учетная запись компонента Database Mail, создается закрытый профиль компонента Database Mail, затем учетная запись добавляется к профилю и предоставляется общий доступ к профилю.  
   

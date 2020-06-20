@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2600524da45f9a81f155432397cee2e7e876274
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934785"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Запуск SQL Server в однопользовательском режиме
   При определенных обстоятельствах экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужно запустить в однопользовательском режиме (используется **параметр запуска -m**). Например, может понадобиться изменить параметры конфигурации сервера, восстановить поврежденную базу данных master или другую системную базу данных. Для обоих этих действий необходим запуск экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.  
@@ -36,7 +35,7 @@ ms.locfileid: "62809058"
   
  Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может подключаться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обозреватель объектов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может вызвать ошибку, так как для некоторых операций ему необходимо одновременно несколько соединений. Чтобы управлять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме, выполняйте инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , подключаясь только через редактор запросов в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], или используйте [программу sqlcmd](../../tools/sqlcmd-utility.md).  
   
- При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно ограничить соединения с указанным клиентским приложением. Например, **-m "sqlcmd"** ограничивает соединения с одним соединением, и это соединение должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"**.  
+ При использовании параметра **-m** с **sqlcmd** или [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] можно ограничить соединения с указанным клиентским приложением. Например, **-m "sqlcmd"** ограничивает соединения с одним соединением, и это соединение должно идентифицироваться как клиентская программа **sqlcmd** . Этот параметр следует использовать, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запускается в однопользовательском режиме, а единственное доступное соединение занято неизвестным клиентским приложением. Чтобы подключиться с помощью редактора запросов в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], используйте **-m"Microsoft SQL Server Management Studio - Query"**.  
   
 > [!IMPORTANT]  
 >  Не используйте этот параметр как средство безопасности. Клиентское приложение предоставляет имя клиентского приложения и может указать ложное имя в составе строки подключения.  
@@ -55,11 +54,11 @@ ms.locfileid: "62809058"
   
 4.  Уточните у администратора кластера или с помощью консоли управления отказоустойчивым кластером, остается ли ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в режиме «вне сети».  
   
-5.  Теперь подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните необходимую операцию: SQLCMD -E -S\<имя_сервера>.  
+5.  Подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] теперь с помощью следующей команды и выполните необходимую операцию: sqlcmd-E-S \<servername> .  
   
 6.  После завершения операции закройте командную строку и переведите SQL и другие ресурсы обратно в режим «в сети», обратившись к администратору кластера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск, остановка или приостановка службы агент SQL Server](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)   
  [Диагностическое соединение для администраторов баз данных](diagnostic-connection-for-database-administrators.md)   
  [Программа sqlcmd](../../tools/sqlcmd-utility.md)   

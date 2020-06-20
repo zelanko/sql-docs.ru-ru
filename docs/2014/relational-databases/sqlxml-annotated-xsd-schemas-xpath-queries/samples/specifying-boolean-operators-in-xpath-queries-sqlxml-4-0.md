@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f4373229d6e612a7de401dbd94bc0da1766db45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065693"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Указание логических операторов в запросах XPath (SQLXML 4.0)
   В следующем примере показано, каким образом логические операторы задаются в запросах XPath. В этом примере задается запрос XPath к схеме сопоставления, содержащейся в файле SampleSchema1.xml. Дополнительные сведения об этом образце схемы см. в разделе [Пример схемы XSD с заметками для XPath-примеров &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "82717787"
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Указание логического оператора OR  
- Этот запрос XPath возвращает дочерний элемент ** \< Customer>** элемента контекстного узла с атрибутом **CustomerID** со значением 13 или 31:  
+ Этот запрос XPath возвращает **\<Customer>** дочерние элементы узла контекста с атрибутом **CustomerID** со значением 13 или 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +40,7 @@ ms.locfileid: "82717787"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- В предикате `attribute` является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является ** \< атрибутом>** узле, так как ** \< атрибут>** node является основным узлом для `attribute` оси). Предикат фильтрует элементы ** \<>клиента** и возвращает только те, которые соответствуют условию, указанному в предикате.  
+ В предикате `attribute` является осью и `CustomerID` является тестом узла (значение true, если **CustomerID** является **\<attribute>** узлом, поскольку **\<attribute>** узел является основным узлом для `attribute` оси). Предикат фильтрует **\<Customer>** элементы и возвращает только те, которые соответствуют условию, указанному в предикате.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Проверка запросов XPath к схеме сопоставления  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b21aa5d2834143ab012b90e0fa6f8a1e22a8314
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd58a175eaecc85e8c2bd515041753cf241adf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919250"
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача "Выполнение процесса" запускает приложение или пакетный файл в составе рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -86,7 +85,7 @@ ms.locfileid: "62831875"
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.ExecuteProcess.ExecuteProcess>  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи Integration Services](integration-services-tasks.md)   
  [Поток управления](control-flow.md)  
   
