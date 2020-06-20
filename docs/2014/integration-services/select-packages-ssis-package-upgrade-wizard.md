@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67103eedf14bb405ad1655d21803ec84e6ff0ca
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963744"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>Выбор пакетов (мастер обновления пакетов служб SSIS)
   Страница **Выбор пакетов** используется для выбора пакетов, подлежащих обновлению. Здесь перечислены пакеты, сохраненные в то же расположение, которое было указано на странице мастера **Выбор исходного расположения** .  
@@ -26,7 +25,7 @@ ms.locfileid: "66056021"
   
 -   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Существующее имя пакета**  
  Выберите один или несколько пакетов для обновления.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "66056021"
  **Применить к выбранным объектам**  
  Примените заданный пароль для расшифровки выбранных обновленных пакетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выберите исходное расположение &#40;мастер обновления пакетов служб SSIS&#41;](../../2014/integration-services/select-source-location-ssis-package-upgrade-wizard.md)   
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   

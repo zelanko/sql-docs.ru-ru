@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: babba19f-e67b-450c-b0e6-523a0f9d23ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a07ba7d4af55fa4215a7b08ae34b718d4de46cd4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d4619dc87bf7dfbc34f4d835ee21bced27f1a52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694592"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056237"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   Метод IBCPSession2::BCPSetBulkMode предоставляет альтернативу [IBCPSession::BCPColFmt &#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) для указания формата столбца. В отличие от IBCPSession::BCPColFmt, который устанавливает атрибуты формата отдельных столбцов, метод IBCPSession2::BCPSetBulkMode задает все атрибуты.  
@@ -71,10 +70,10 @@ HRESULT BCPSetBulkMode (
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP. EXE, и для IBCPSession:: BCPColFmt со свойством *еусердататипе* , имеющим значение `BCP_TYPE_SQLCHARACTER` .|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , имеющим значение `BCP_TYPE_SQLNCHAR` .|  
-|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру-N в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , имеющим значение, `BCP_TYPE_SQLNCHAR` Если тип столбца является строкой или `BCP_TYPE_DEFAULT` если не является строкой.|  
-|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру-n в BCP. EXE и IBCPSession:: BCPColFmt со свойством *еусердататипе* , имеющим значение `BCP_TYPE_DEFAULT` .|  
+|BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP.EXE, а для свойства IBCPSession:: BCPColFmt со свойством *еусердататипе* задано значение `BCP_TYPE_SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP.EXE и свойству IBCPSession:: BCPColFmt с *еусердататипе* , для которого задано значение `BCP_TYPE_SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Указывает собственные типы для несимвольных типов и Юникод для символьных типов.<br /><br /> Соответствует параметру-N в BCP.EXE и свойству IBCPSession:: BCPColFmt с *еусердататипе* , для которого задано значение, `BCP_TYPE_SQLNCHAR` Если тип столбца является строкой или `BCP_TYPE_DEFAULT` если не является строкой.|  
+|BCP_OUT_NATIVE_MODE|Указывает типы данных базы данных.<br /><br /> Соответствует параметру-n в BCP.EXE и свойству IBCPSession:: BCPColFmt с *еусердататипе* , для которого задано значение `BCP_TYPE_DEFAULT` .|  
   
  Можно вызвать параметры IBCPSession::BCPControl и IBCPSession2::BCPSetBulkMode для IBCPSession::BCPControl, которые не конфликтуют с методом IBCPSession2::BCPSetBulkMode. Например, можно вызвать IBCPSession:: BCPControl с `BCP_OPTION_FIRST` и метода IBCPSession2:: BCPSetBulkMode.  
   
@@ -360,7 +359,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 716ea070-a3b5-4514-9de2-82ce8a96514b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: cce885929deff7484a4e068bf06ac3b39dbb3062
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2907c33f6d28e5652330051979be6a20aa2be435
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058475"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
   В этом разделе описывается, как сохранить сведения о соединении для серверов, к которым часто выполняется обращение, путем регистрации сервера в компоненте «Зарегистрированные серверы» среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Сервер может быть зарегистрирован в обозревателе объектов до или во время подключения. Для регистрации экземпляра сервера на локальном компьютере существует специальный пункт меню.  
@@ -52,7 +51,7 @@ ms.locfileid: "75244672"
      При регистрации сервера из окна "Зарегистрированные серверы" поле **Тип сервера** доступно только для чтения и соответствует типу сервера, который выводится на панели "Зарегистрированные серверы". Для регистрации сервера другого типа выберите **ядро СУБД**, **службу Analysis Server**, **службы Reporting Services**или **службы Integration Services** на панели инструментов **Зарегистрированные серверы** перед регистрацией нового сервера.  
   
      **Имя сервера**  
-     Выберите экземпляр сервера для регистрации в формате: *\<имя_сервера>* [\\ *\<имя_экземпляра*].  
+     Выберите экземпляр сервера для регистрации в формате: *\<servername>* [ \\ *\<instancename>* ].  
   
      **Аутентификация**  
      При соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]доступны два режима проверки подлинности.  

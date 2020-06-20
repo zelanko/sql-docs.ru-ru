@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2565eb2be68c1e964b82d46d9aa8fc9f39a01f70
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4bc217ad160a0238cc4247600d65eb32f156071f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165021"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010700"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>выполнять скрипты во время синхронизации (программирование репликации на языке Transact-SQL)
   Выполнение скрипта по требованию на подписчике поддерживается для репликации транзакций и публикации слиянием. Эта функция осуществляет копирование скрипта в рабочий каталог репликации, а затем командой **sqlcmd** применяет скрипт на подписчике. По умолчанию при возникновении ошибки применения скрипта к подписке на публикацию транзакций работа агента распространителя будет остановлена. Программным путем можно задать скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] , который будет выполняться с помощью хранимых процедур репликации.  
@@ -32,7 +31,7 @@ ms.locfileid: "74165021"
   
 2.  Сохраните файл скрипта в папке, доступной для агента моментальных снимков публикации.  
   
-3.  В издателе в базе данных публикации выполните процедуру [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Укажите ** \@публикацию**, имя файла скрипта с полным UNC-путем, созданным на шаге 2 для ** \@scriptfile**, и одно из следующих значений для ** \@skiperror**:  
+3.  В издателе в базе данных публикации выполните процедуру [sp_addscriptexec &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql). Укажите ** \@ публикацию**, имя файла скрипта с полным UNC-путем, созданным на шаге 2 для ** \@ scriptfile**, и одно из следующих значений для ** \@ skiperror**:  
   
     -   **0** — выполнение скрипта агентом в случае ошибки будет остановлено.  
   

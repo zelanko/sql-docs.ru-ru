@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ecbca9e7838c4c9395a8bcb6e11351c40f7037f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049891"
 ---
 # <a name="indexes-on-computed-columns"></a>Индексы вычисляемых столбцов
   Индексы вычисляемых столбцов можно определить, если удовлетворяются следующие требования:  
@@ -88,7 +87,7 @@ ms.locfileid: "63162449"
   
  **Data Type Requirements**  
   
--   *Computed_column_expression* , определенные для вычисляемого столбца `text`, не могут оцениваться до `ntext`типов данных `image` , или.  
+-   *Computed_column_expression* , определенные для вычисляемого столбца, не могут оцениваться `text` до `ntext` `image` типов данных, или.  
   
 -   Вычисляемые столбцы, производные от типов данных `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` и `xml`, могут индексироваться, если тип данных вычисляемого столбца допускается в качестве ключевого столбца индекса.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "63162449"
      Если уровень совместимости базы данных равен 90 или более, при установке параметра ANSI_WARNINGS в состояние ON параметр ARITHABORT также устанавливается в состояние ON.  
   
 ##  <a name="creating-indexes-on-persisted-computed-columns"></a><a name="BKMK_persisted"></a> Создание индексов материализованных вычисляемых столбцов  
- Индекс вычисляемого столбца, который определен с помощью детерминированного, но неточного выражения, можно создать, если в инструкции CREATE TABLE или ALTER TABLE этот столбец помечен как PERSISTED. Это означает, что [!INCLUDE[ssDE](../../../includes/ssde-md.md)] компонент использует эти сохраненные значения при создании индекса для столбца, а также при обращении к индексу в запросе. Этот параметр позволяет создать индекс для вычисляемого столбца, если [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], является как детерминированным, так и точным.  
+ Индекс вычисляемого столбца, который определен с помощью детерминированного, но неточного выражения, можно создать, если в инструкции CREATE TABLE или ALTER TABLE этот столбец помечен как PERSISTED. Это означает, что [!INCLUDE[ssDE](../../../includes/ssde-md.md)] компонент использует эти сохраненные значения при создании индекса для столбца, а также при обращении к индексу в запросе. Этот параметр позволяет создать индекс для вычисляемого столбца [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)] , если, является как детерминированным, так и точным.  
   
 ## <a name="related-content"></a>См. также  
  [COLUMNPROPERTY (Transact-SQL)](/sql/t-sql/functions/columnproperty-transact-sql)  

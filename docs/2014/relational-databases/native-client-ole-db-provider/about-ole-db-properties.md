@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0b36a61e-b542-400d-a3d2-e6f643caf2c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87027481170d8f72f91b1923ae6703b9796d5541
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b7336a8076a8e6550e3b36d7ba43545f19f61921
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704774"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056050"
 ---
 # <a name="about-ole-db-properties"></a>О свойствах OLE DB
   Потребитель может устанавливать значения свойств, чтобы запросить определенное поведение объекта. Например, потребитель использует свойства для указания интерфейса, который должен предоставить набор строк. Потребители получают значения свойств для определения возможностей объекта, например набора строк, сеанса или объекта источника данных.  
@@ -45,7 +44,7 @@ ms.locfileid: "82704774"
   
 7.  Вызов метода для установки свойств и передачи счетчика и массива структур DBPROPSET.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание приложения поставщика SQL Server Native Client OLE DB](creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Свойства (OLE DB)](https://go.microsoft.com/fwlink/?LinkId=112207)  
   

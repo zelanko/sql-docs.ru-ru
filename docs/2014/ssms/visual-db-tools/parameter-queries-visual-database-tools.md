@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a3ea199f6e2e86f5dc2e51199386f31b93e9377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03ede58be73ed422c4049eaabb789d09465129fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63194985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001193"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Запросы с параметрами (визуальные инструменты для баз данных)
   В некоторых случаях нужно создать запрос, который можно использовать многократно, на каждый раз с разными значениями. Например: можно часто запускать запрос, чтобы найти все `title_ids` , записанные одним автором, можно выполнять один запрос для каждого поиска, меняя только идентификатор автора.  

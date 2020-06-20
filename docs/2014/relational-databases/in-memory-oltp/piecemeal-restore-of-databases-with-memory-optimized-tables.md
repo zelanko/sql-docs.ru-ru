@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed23f08d40e23b1d43c1b642f4089fe77646b675
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025838"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Поэтапное восстановление баз данных с таблицами, оптимизированными для памяти
   Поэтапное восстановление поддерживается в базах данных с таблицами, оптимизированными для памяти, за исключением одного случая, описанного ниже. Дополнительные сведения о поэтапном резервном копировании и восстановлении см. в разделах [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql) и [Поэтапное восстановление (SQL Server)](../backup-restore/piecemeal-restores-sql-server.md).  

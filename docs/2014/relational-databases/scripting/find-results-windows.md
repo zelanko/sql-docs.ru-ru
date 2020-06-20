@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 406c19cb8cc5609e15206c81fc0297e14c6dd8ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 06f26cb7b606052b2183c90713f0ab0470351ffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703890"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049044"
 ---
 # <a name="find-results-windows"></a>Окна «Результаты поиска»
   В двух окнах «Результаты поиска» отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить** . Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  

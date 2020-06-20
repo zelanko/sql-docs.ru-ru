@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704071"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056885"
 ---
 # <a name="code-outlining"></a>Структурирование кода
   Функция структурирования в редакторах запросов среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] позволяет при редактировании запросов выборочно скрывать участки кода. Это делает просмотр кода при редактировании более удобным, особенно когда файл запроса имеет большой размер.
@@ -36,7 +35,7 @@ ms.locfileid: "82704071"
 
  ![XML-код, демонстрирующий структурирование](../../database-engine/media/editoutlinexmlfull.gif "XML-код, демонстрирующий структурирование")
 
- Если щелкнуть значок "минус" в строке \<InnerTag>, то будет свернут только InnerTag, как показано на следующей иллюстрации.
+ Если щелкнуть знак «минус \<InnerTag> » в строке, то будет свернута только InnerTag, как показано на следующем рисунке.
 
  ![XML-код со скрытым внутренним узлом](../../database-engine/media/editoutlinexmlinnercol.gif "XML-код со скрытым внутренним узлом")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704071"
 
  ![XML-код с подсказками, отображающими скрытый код](../../database-engine/media/editoutlinexmlmouse.gif "XML-код с подсказками, отображающими скрытый код")
 
- Если щелкнуть значок "минус" в строке \<MiddleTag>, то будут свернуты и MiddleTag, и InnerTag, как показано на следующей иллюстрации.
+ Если щелкнуть знак "минус" в \<MiddleTag> строке, будут свернуты как MiddleTag, так и InnerTag, как показано на следующем рисунке.
 
  ![XML-код со скрытыми внутренними и средними тегами](../../database-engine/media/editoutlinexmlmiddlecol.gif "XML-код со скрытыми внутренними и средними тегами")
 
- Если щелкнуть значок "минус" в строке \<OuterTag>, то будут свернуты все три строки, как показано на следующей иллюстрации.
+ Если щелкнуть знак "минус" в \<OuterTag> строке, будут свернуты все три строки, как показано на следующем рисунке.
 
  ![XML-код, где скрыты все три тега](../../database-engine/media/editoutlinexmloutercol.gif "XML-код со скрытыми всеми тремя тегами")
 

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0257d4ee-1f7b-49fd-b4ef-65bfc1ef6951
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20e4e015064dcf0e472c2f3c56ecabf4100e6fe7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d869865a00f8ec1d197cba9448477b1a4147c594
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676583"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055633"
 ---
 # <a name="snapshot-agent-new-publication-wizard"></a>Агент моментальных снимков (мастер создания публикаций)
   Агент моментальных снимков создает файлы, содержащие схему публикации и данные для инициализации новых подписок. По умолчанию агент моментальных снимков запускается сразу же после создания публикации в мастере создания публикаций. Впоследствии этот агент запускается по указанному расписанию. Будет ли этот агент создавать новые файлы моментальных снимков при каждом запуске, зависит от типа репликации и выбранных параметров. Дополнительные сведения см. в статье [Создание и применение моментального снимка](create-and-apply-the-snapshot.md).  

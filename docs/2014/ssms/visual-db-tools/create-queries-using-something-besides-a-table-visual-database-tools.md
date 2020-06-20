@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6cd83135da7e5c9f4dac9e41ff562551d14ab20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d28b8b6ba540ae361c3c6ab74a1a45763f7bee2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058133"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Создание запросов, использующих не только таблицу (визуальные инструменты для баз данных)
   При написании запроса разработчик указывает, какие требуются столбцы, как отбираются строки и откуда обработчик запросов получает исходные данные. Обычно исходные данные поступают из таблицы или нескольких таблиц, участвующих в соединении. Однако исходные данные могут поступать не только из таблиц. Источниками данных могут служить представления, запросы, синонимы или определяемые пользователем функции, которые возвращают таблицу.  

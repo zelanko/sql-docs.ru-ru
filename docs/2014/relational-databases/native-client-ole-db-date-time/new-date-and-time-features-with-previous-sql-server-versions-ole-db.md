@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705011"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056295"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Новые функции даты и времени с предыдущими версиями SQL Server (OLE DB)
   В этом разделе описывается ожидаемое поведение, когда клиентское приложение, использующее улучшенные функции даты и времени, взаимодействует с версией, предшествующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , и когда клиент компилируется с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента раньше, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Отправка команд на сервер, поддерживающий улучшенные функции даты и времени.  
@@ -65,7 +64,7 @@ ms.locfileid: "82705011"
   
 |Тип параметра|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|дата|DBTYPE_WSTR|10|~0|~0|  
+|Дата|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -79,7 +78,7 @@ ms.locfileid: "82705011"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|дата|DBTYPE_WSTR|10|NULL|NULL|  
+|Дата|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -91,7 +90,7 @@ ms.locfileid: "82705011"
   
 |Тип параметра|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|дата|DBTYPE_WSTR|10|~0|~0|  
+|Дата|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -106,7 +105,7 @@ ms.locfileid: "82705011"
   
 |Тип столбца|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|дата|DBTYPE_WSTR|10|20|NULL|  
+|Дата|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -118,7 +117,7 @@ ms.locfileid: "82705011"
   
 |Тип столбца|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|дата|DBTYPE_WSTR|10|20|Дата|  
+|Дата|DBTYPE_WSTR|10|20|Дата|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |DATETIME|DBTYPE_DBTIMESTAMP|NULL|NULL|DATETIME|  
@@ -165,7 +164,7 @@ ms.locfileid: "82705011"
 ## <a name="comparability-for-irowsetfind"></a>Сравнимость для IRowsetFind  
  Все операторы сравнения разрешены для новых типов данных даты-времени, так как они отображаются как строковые типы, а не типы даты-времени.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

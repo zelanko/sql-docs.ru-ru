@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1499020839e615b757fbdbb3a75fc53272249bf
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667bee5e1f3a6fabe47f18a4c36fee5ab8d03382
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82694345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011228"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Наборы строк и курсоры SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает результирующие наборы пользователям двумя способами.  
@@ -89,55 +88,55 @@ ms.locfileid: "82694345"
   
  Чтобы ввести в действие модель курсора определенного типа, определите столбец, соответствующий этой модели курсора, и найдите все свойства набора строк со значением «Т» в этом столбце. Чтобы воспользоваться данной конкретной моделью курсора, присвойте этим свойствам набора строк значение VARIANT_TRUE. Свойствам набора строк, для которых в качестве значения указано «-», можно присваивать либо значение VARIANT_TRUE, либо значение VARIANT_FALSE.  
   
-|Свойства набора строк и модели курсора|По умолчанию<br /><br /> result<br /><br /> set<br /><br /> (RO)|Быстрый<br /><br /> однопроходный<br /><br /> только<br /><br /> (RO)|Статические<br /><br /> (RO)|Keyset<br /><br /> управляемый<br /><br /> (RO)|  
+|Свойства набора строк и модели курсора|По умолчанию<br /><br /> result<br /><br /> set<br /><br /> (RO)|быстрый;<br /><br /> однопроходный<br /><br /> только<br /><br /> (RO)|Статические<br /><br /> (RO)|Keyset<br /><br /> управляемый<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
-|DBPROP_SERVERCURSOR|F|T|T|T|  
-|DBPROP_DEFERRED|F|F|-|-|  
-|DBPROP_IrowsetChange|F|F|F|F|  
-|DBPROP_IrowsetLocate|F|F|-|-|  
-|DBPROP_IrowsetScroll|F|F|-|-|  
-|DBPROP_IrowsetUpdate|F|F|F|F|  
-|DBPROP_BOOKMARKS|F|F|-|-|  
-|DBPROP_CANFETCHBACKWARDS|F|F|-|-|  
-|DBPROP_CANSRCOLLBACKWARDS|F|F|-|-|  
-|DBPROP_CANHOLDROWS|F|F|-|-|  
-|DBPROP_LITERALBOOKMARKS|F|F|-|-|  
-|DBPROP_OTHERINSERT|F|T|F|F|  
-|DBPROP_OTHERUPDATEDELETE|F|T|F|T|  
-|DBPROP_OWNINSERT|F|T|F|T|  
-|DBPROP_OWNUPDATEDELETE|F|T|F|T|  
-|DBPROP_QUICKSTART|F|F|-|-|  
-|DBPROP_REMOVEDELETED|F|F|F|-|  
-|DBPROP_IrowsetResynch|F|F|F|-|  
-|DBPROP_CHANGEINSERTEDROWS|F|F|F|F|  
-|DBPROP_SERVERDATAONINSERT|F|F|F|-|  
-|DBPROP_UNIQUEROWS|-|F|F|F|  
+|DBPROP_SERVERCURSOR|C|T|T|T|  
+|DBPROP_DEFERRED|C|F|-|-|  
+|DBPROP_IrowsetChange|C|F|F|F|  
+|DBPROP_IrowsetLocate|C|F|-|-|  
+|DBPROP_IrowsetScroll|C|F|-|-|  
+|DBPROP_IrowsetUpdate|C|F|F|F|  
+|DBPROP_BOOKMARKS|C|F|-|-|  
+|DBPROP_CANFETCHBACKWARDS|C|F|-|-|  
+|DBPROP_CANSRCOLLBACKWARDS|C|F|-|-|  
+|DBPROP_CANHOLDROWS|C|F|-|-|  
+|DBPROP_LITERALBOOKMARKS|C|F|-|-|  
+|DBPROP_OTHERINSERT|C|T|C|F|  
+|DBPROP_OTHERUPDATEDELETE|C|T|C|T|  
+|DBPROP_OWNINSERT|C|T|C|T|  
+|DBPROP_OWNUPDATEDELETE|C|T|C|T|  
+|DBPROP_QUICKSTART|C|F|-|-|  
+|DBPROP_REMOVEDELETED|C|F|F|-|  
+|DBPROP_IrowsetResynch|C|F|F|-|  
+|DBPROP_CHANGEINSERTEDROWS|C|F|F|F|  
+|DBPROP_SERVERDATAONINSERT|C|F|F|-|  
+|DBPROP_UNIQUEROWS|-|C|F|F|  
 |DBPROP_IMMOBILEROWS|-|-|-|T|  
   
 |Свойства набора строк и модели курсора|Динамический (только для чтения)|С набором ключей (для чтения и записи)|Динамический (для чтения и записи)|  
 |--------------------------------------|--------------------|---------------------|----------------------|  
 |DBPROP_SERVERCURSOR|T|T|T|  
 |DBPROP_DEFERRED|-|-|-|  
-|DBPROP_IrowsetChange|F|-|-|  
-|DBPROP_IrowsetLocate|F|-|F|  
-|DBPROP_IrowsetScroll|F|-|F|  
-|DBPROP_IrowsetUpdate|F|-|-|  
-|DBPROP_BOOKMARKS|F|-|F|  
+|DBPROP_IrowsetChange|C|-|-|  
+|DBPROP_IrowsetLocate|C|-|F|  
+|DBPROP_IrowsetScroll|C|-|F|  
+|DBPROP_IrowsetUpdate|C|-|-|  
+|DBPROP_BOOKMARKS|C|-|F|  
 |DBPROP_CANFETCHBACKWARDS|-|-|-|  
 |DBPROP_CANSRCOLLBACKWARDS|-|-|-|  
-|DBPROP_CANHOLDROWS|F|-|F|  
-|DBPROP_LITERALBOOKMARKS|F|-|F|  
-|DBPROP_OTHERINSERT|T|F|T|  
+|DBPROP_CANHOLDROWS|C|-|F|  
+|DBPROP_LITERALBOOKMARKS|C|-|F|  
+|DBPROP_OTHERINSERT|T|C|T|  
 |DBPROP_OTHERUPDATEDELETE|T|T|T|  
 |DBPROP_OWNINSERT|T|T|T|  
 |DBPROP_OWNUPDATEDELETE|T|T|T|  
 |DBPROP_QUICKSTART|-|-|-|  
 |DBPROP_REMOVEDELETED|T|-|T|  
 |DBPROP_IrowsetResynch|-|-|-|  
-|DBPROP_CHANGEINSERTEDROWS|F|-|F|  
-|DBPROP_SERVERDATAONINSERT|F|-|F|  
-|DBPROP_UNIQUEROWS|F|F|F|  
-|DBPROP_IMMOBILEROWS|F|T|F|  
+|DBPROP_CHANGEINSERTEDROWS|C|-|F|  
+|DBPROP_SERVERDATAONINSERT|C|-|F|  
+|DBPROP_UNIQUEROWS|C|F|F|  
+|DBPROP_IMMOBILEROWS|C|T|C|  
   
  Выбор модели курсора для конкретного ряда свойств набора строк определяется следующим образом.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "82694345"
   
  Независимо от того, какой метод использовался для заполнения набора строк и формирования блока курсора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], этот блок курсора остается активным до выполнения следующего метода извлечения строк применительно к этому набору строк.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы строк](rowsets.md)  
   
   

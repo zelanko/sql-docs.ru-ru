@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 902110d601b9ea4b68fb04e8fb91e66400a452e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704361"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049607"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Доступ к диагностическим сведениям в журнале расширенных событий
   Начиная с версии [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и отслеживание доступа к данным ([Трассировка доступа к данным](https://go.microsoft.com/fwlink/?LinkId=125805)) обновлены. Упрощено получение диагностических сведений об ошибках подключения из кольцевого буфера соединений и сведений о производительности приложений из журнала расширенных событий.  
@@ -211,7 +210,7 @@ class Bid2Etw_SQLNCLI11_1_Trace_TextW : Bid2Etw_SQLNCLI11_1_Trace
 };  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка ошибок и сообщений](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

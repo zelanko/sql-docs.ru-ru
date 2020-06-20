@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac0eae2ad0f6b856495cb3a329cfe2f7e635dc1a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 706b029dbd811f2e1794e451291830bf15d37274
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026231"
 ---
 # <a name="migrating-computed-columns"></a>Перенос вычисляемых столбцов
   Вычисляемые столбцы не поддерживаются в оптимизированных для памяти таблицах. Однако вычисляемый столбец можно смоделировать.  
@@ -85,7 +84,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Миграция в In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

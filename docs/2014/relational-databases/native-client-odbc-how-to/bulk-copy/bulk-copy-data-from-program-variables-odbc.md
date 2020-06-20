@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fe1d4e6989984ef96d525adafc6518cb55b8576b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019128"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Обеспечение массового копирования данных из переменных приложения (ODBC)
   Этот образец демонстрирует использование функций массового копирования для массового копирования данных из переменных программы в SQL Server с помощью функций `bcp_bind` и `bcp_sendrow`. (Код проверки ошибок исключен для упрощения примера.)  
@@ -300,7 +299,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Массовое копирование из переменных приложения](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   

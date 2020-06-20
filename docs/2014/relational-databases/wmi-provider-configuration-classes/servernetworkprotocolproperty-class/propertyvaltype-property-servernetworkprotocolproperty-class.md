@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd42e8e-0642-4a19-b3c8-6ce88345145f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4a69cb8f0817c086537381a87b96dfb237b8d59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be6c42fbaa36080ec8144d95abb045a3b4328057
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62643194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002504"
 ---
 # <a name="propertyvaltype-property-servernetworkprotocolproperty-class"></a>Свойство PropertyValType (класс ServerNetworkProtocolProperty)
   Возвращает тип данных значения, хранящегося в указанном свойстве.  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

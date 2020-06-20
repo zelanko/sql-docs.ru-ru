@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025346"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
   Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
@@ -85,7 +84,7 @@ ms.locfileid: "63145500"
   
      Откроется диалоговое окно **Создание имени входа** .  
   
-2.  На странице **Общие** в поле **имя входа** введите учетную запись Windows в формате * \< \\ домен><имя входа\>*.  
+2.  На странице **Общие** в поле **имя входа** введите учетную запись Windows в формате * \<domain> \\<имя входа \> *.  
   
 3.  В поле **База данных по умолчанию** выберите [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , если она доступна. В противном случае выберите базу данных **master**.  
   

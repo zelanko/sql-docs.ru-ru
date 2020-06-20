@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 465fb7fc-7622-4252-a178-ea51691c935b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 986e38ef42fe1af2aba8ba1625225a336f29158d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f9424846c714070ff6bf22043d174762f873117
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008944"
 ---
 # <a name="create-jobs"></a>Создание заданий
   Задание — это определенная цепочка действий, последовательно выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Задание может выполнять широкий диапазон действий, например запуск скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , приложений командной строки, скриптов Microsoft ActiveX, пакетов Integration Services, команд и запросов Analysis Services и задач репликации. Задания могут запускать повторяющиеся или запланированные задачи, они могут автоматически уведомлять пользователей о состоянии задания, формируя предупреждения и тем самым значительно упрощают администрирование [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -38,8 +37,8 @@ ms.locfileid: "63162463"
 |Описывает переназначение владения заданиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] другому пользователю.|[Give Others Ownership of a Job](give-others-ownership-of-a-job.md)|  
 |Описывает настройку журнала заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Set Up the Job History Log](set-up-the-job-history-log.md)|  
   
-## <a name="see-also"></a>См. также  
- [Управление шагами заданий](manage-job-steps.md)   
+## <a name="see-also"></a>См. также:  
+ [Управление шагами задания](manage-job-steps.md)   
  [Автоматизированное администрирование в масштабах предприятия](automated-administration-across-an-enterprise.md)   
  [Создание и присоединение расписаний к заданиям](create-and-attach-schedules-to-jobs.md)   
  [Запуск заданий](run-jobs.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa8747066433488a8517d2931ad51f082075a66f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031269"
 ---
 # <a name="understanding-database-engine-errors"></a>Основные сведения об ошибках компонента Database Engine
   Ошибки, возникшие в компоненте [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], имеют атрибуты, описанные в следующей таблице.  

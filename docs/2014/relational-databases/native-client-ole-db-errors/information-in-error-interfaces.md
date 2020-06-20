@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 460a0a2cf58d5980b1265db91d053e3088b55a99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8f6718692e07fb6037d7ffcea7b21d94fdca3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056283"
 ---
 # <a name="information-in-error-interfaces"></a>Сведения в интерфейсах обработки ошибок
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента сообщает о некоторых ошибках и состоянии в определяемых OLE DB интерфейсах ошибок **IErrorInfo**, **IErrorRecords**и **ISQLErrorInfo**.  

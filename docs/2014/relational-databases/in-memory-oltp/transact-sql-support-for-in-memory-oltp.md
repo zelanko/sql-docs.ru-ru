@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf3708a258e3bb97231e45b10bea2c59351a06a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025490"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Поддержка Transact-SQL для In-Memory OLTP
   Доступ к оптимизированным для памяти таблицам можно получить с помощью любого запроса Transact-SQL или операции DML (SELECT, INSERT, UPDATE или DELETE), нерегламентированных пакетов и модулей SQL, таких как хранимые процедуры, функции, возвращающие табличное значение, триггеры и представления. Дополнительные сведения см. в разделе [доступ к оптимизированным для памяти таблицам с использованием интерпретированного языка Transact-SQL](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "82702214"
   
 -   [Системные представления, хранимые процедуры, динамические административные представления и типы ожидания для выполняющейся в памяти OLTP](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP &#40;оптимизации в памяти&#41;](in-memory-oltp-in-memory-optimization.md)   
  [Проблемы миграции для хранимых процедур, скомпилированных в собственном виде](migration-issues-for-natively-compiled-stored-procedures.md)   
  [Поддерживаемые функции SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md)   

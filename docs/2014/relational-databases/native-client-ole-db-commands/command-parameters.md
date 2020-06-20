@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93ec7e88dba785b1559512601adebdee64ea9fdb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f6da29add8fd92530e40ebbfb7b94dedd619adf4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82708207"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056442"
 ---
 # <a name="command-parameters"></a>Параметры команд
   Параметры помечаются в тексте команды знаками вопроса. Например, следующая инструкция SQL помечена для одного входного параметра:  
@@ -58,7 +57,7 @@ ms.locfileid: "82708207"
 > [!NOTE]  
 >  Чтобы предоставить поддержку для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XML и определяемых пользователем типов (UDT), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента реализует новый интерфейс [ISSCommandWithParameters](../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Команды](commands.md)  
   
   

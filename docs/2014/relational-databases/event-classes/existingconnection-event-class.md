@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3eae548f-61af-4f91-ae6f-af5c8a152543
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 73437390154de5f573a1ae5d68f7d0e7ae8dec37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029656"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection, класс событий
   Событие класса ExistingConnection содержит свойства существующего соединения пользователя на момент начала трассировки. Сервер создает по одному событию класса ExistingConnection для каждого существующего соединения.  
@@ -33,8 +32,8 @@ ms.locfileid: "63023404"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор текущей базы данных соединения пользователя. Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 17.|27|Нет|  
-|EventSequence|`int`|Порядковый номер этого события в данной трассировке.|51|Нет|  
+|EventClass|`int`|Тип события = 17.|27|нет|  
+|EventSequence|`int`|Порядковый номер этого события в данной трассировке.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData|`int`|Размер сетевого пакета для данного соединения.|25|Да|  
@@ -50,7 +49,7 @@ ms.locfileid: "63023404"
 |StartTime|`datetime`|Время открытия этого соединения пользователем (момент входа).|14|Да|  
 |TextData|`ntext`|Параметры SET, относящиеся к соединению.|1|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Audit Login, класс событий](audit-login-event-class.md)  
   

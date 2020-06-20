@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 003abb67cd66d02294210ddb3f55061abcc804f4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 84d394784a8cd6c85840d155766ac6ece374c184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704146"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057232"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>Новые&#39;в SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] устанавливает [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client отсутствует.  
@@ -54,7 +53,7 @@ ms.locfileid: "82704146"
   
 -   [Изменение поведения драйвера ODBC при обработке преобразования символов](features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](features/sql-server-native-client-features.md)  
   
   

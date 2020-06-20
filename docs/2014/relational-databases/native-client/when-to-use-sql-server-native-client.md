@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08f18b36-209d-4cf7-9623-ebc61859a91d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d16f4dc681042babcedc8d7ddffa8fbc0389506
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f8aeb34525bbe5c1b003e8fd95e7a414025965a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057196"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Когда использовать собственный клиент SQL Server
   Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — одна из технологий для доступа к данным в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Обсуждение других технологий доступа к данным см. в разделе [Схема технологий доступа к данным](https://go.microsoft.com/fwlink/?LinkID=179186).  
@@ -36,7 +35,7 @@ ms.locfileid: "82704101"
   
  Сведения о различиях между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственным клиентом и компонентами MDAC см. в разделе [Обновление приложения для SQL Server Native Client из MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client программирование](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Разделы руководства по ODBC](../native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Инструкции по OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  

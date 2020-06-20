@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ac008fe139adf55376bb50fbf60dddcd6b9ae5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721691"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010887"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Создание и применение исходного моментального снимка
   В данном разделе описывается процесс создания и применения исходного моментального снимка в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Публикации слиянием, использующие параметризованные фильтры, требуют моментальных снимков, состоящих из двух частей. Дополнительные сведения см. в статье [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
@@ -44,7 +43,7 @@ ms.locfileid: "62721691"
   
 3.  Щелкните правой кнопкой мыши публикацию, для которой нужно создать моментальный снимок, а затем выберите **Просмотреть состояние агента моментальных снимков**.  
   
-4.  В диалоговом окне **Просмотр состояния агента моментальных снимков — \<Публикация>** щелкните **Запуск**.  
+4.  В диалоговом окне **Просмотр состояния \<Publication> Агент моментальных снимков —** нажмите кнопку **запустить**.  
   
  Когда агент моментальных снимков закончит создание моментального снимка, на экране появится сообщение: «[100%] Сформирован моментальный снимок 17 статей».  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62721691"
   
     -   **@job_password** — пароль для указанных учетных данных Windows.  
   
-    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае необходимо также указать сведения об имени входа для проверки подлинности SQL Server для **@publisher_login** и **@publisher_password**.  
+    -   (Необязательно) Значение **0** в параметре **@publisher_security_mode** , если агент при соединении с издателем будет использовать проверку подлинности SQL Server. В этом случае необходимо также указать сведения об имени входа для проверки подлинности SQL Server для **@publisher_login** и **@publisher_password** .  
   
     -   (Необязательно) Расписание синхронизации для задания агента моментальных снимков. Дополнительные сведения см. в разделе [Указание расписаний синхронизации](specify-synchronization-schedules.md).  
   
@@ -119,15 +118,15 @@ ms.locfileid: "62721691"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** = **0**  
+    -   **-DistributorSecurityMode**  =  значение **0**  
   
     -   **-PublisherLogin**  
   
     -   **-PublisherPassword**  
   
-    -   **-PublisherSecurityMode** = **0**  
+    -   **-PublisherSecurityMode**  =  значение **0**  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Примеры (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Примеры (Transact-SQL)  
  В этом примере показано, как создавать публикации транзакций и добавлять задания агента моментальных снимков к новым публикациям (с помощью переменных скрипта **sqlcmd** ). В примере также запускается задание.  
   
  [!code-sql[HowTo#sp_trangenerate_snapshot](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpubinitialsnapshot.sql#sp_trangenerate_snapshot)]  
@@ -181,7 +180,7 @@ ms.locfileid: "62721691"
   
 2.  Укажите значение <xref:Microsoft.SqlServer.Replication.ReplicationType.Transactional> или <xref:Microsoft.SqlServer.Replication.ReplicationType.Snapshot> в параметре <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
   
 #### <a name="to-generate-the-initial-snapshot-for-a-merge-publication-by-starting-the-snapshot-agent-job-asynchronous"></a>Создание исходного моментального снимка для публикации слиянием из задания агента моментальных снимков (в асинхронном режиме)  
   
@@ -215,7 +214,7 @@ ms.locfileid: "62721691"
   
 2.  Укажите значение <xref:Microsoft.SqlServer.Replication.ReplicationType.Merge> в параметре <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.ReplicationType%2A>.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A> .  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.SnapshotGenerationAgent.GenerateSnapshot%2A>.  
   
 ###  <a name="examples-rmo"></a><a name="PShellExample"></a> Примеры (объекты RMO)  
  В следующем примере производится синхронный запуск агента моментальных снимков, который создает исходный моментальный снимок публикации транзакций.  

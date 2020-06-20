@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35484da616b4a6fc06d9d112471f87051330f583
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195017"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001224"
 ---
 # <a name="page-setup-dialog-box"></a>Диалоговое окно «Параметры страницы»
   Структуру страницы можно настроить, выбирая параметры в диалоговом окне **Параметры страницы** . Доступность некоторых параметров зависит от языков, установленных и применяемых для изменения.  
