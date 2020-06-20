@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920615"
 ---
 # <a name="multiple-files-connection-manager"></a>диспетчер соединений с несколькими файлами
   Диспетчер соединений с несколькими файлами позволяет пакету обращаться к существующим файлам и папкам или создавать файлы и папки во время выполнения.  
@@ -57,9 +56,9 @@ ms.locfileid: "62833658"
   
  Если диспетчер соединения с несколькими файлами ссылается на множество файлов и папок, пути файлов и папок разделяются символом «|». Свойство `ConnectionString` диспетчера соединений имеет следующий формат:  
   
- \<*путь*>|\<*путь*>  
+ \<*path*>|\<*path*>  
   
- Также можно определить множество файлов и папок, используя символы-шаблоны. Например, чтобы сослаться на все текстовые файлы на диске C, можно задать для `ConnectionString` свойства значение C:\\*. txt.  
+ Также можно определить множество файлов и папок, используя символы-шаблоны. Например, чтобы сослаться на все текстовые файлы на диске C, `ConnectionString` можно задать для свойства значение C: \\ *. txt.  
   
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   

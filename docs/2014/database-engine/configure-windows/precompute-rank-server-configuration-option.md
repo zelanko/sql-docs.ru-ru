@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6d58db4361acd5a97a58c01d17b1f9a78b20916e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7abceb123d124a265a5e4a8a991cee235c06e75a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781486"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935142"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>Параметр конфигурации сервера «precompute rank»
   Этот параметр не реализован в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Это критическое изменение. Как можно скорее измените приложения, в настоящее время использующие эту функцию.  

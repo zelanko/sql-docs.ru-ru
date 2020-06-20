@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4c48d26814b606b4be18ae0c0c21c73f8bf6b1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968294"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Установка Microsoft Connector 1.1 для SAP BW
   Чтобы установить [!INCLUDE[msCoName](../includes/msconame-md.md)] соединитель 1,1 для SAP BW и его документацию, скачайте и запустите пакет установщика Windows на веб-странице SQL Server пакета дополнительных компонентов.  
@@ -32,7 +31,7 @@ ms.locfileid: "62767756"
  Однако необходимо скопировать файл соединителя SAP .NET (librfc32.dll) во вложенную папку в системном каталоге Windows. (Обычно это каталог **C:\Windows\system32**.)  
   
 ## <a name="considerations-for-64-bit-computers"></a>Замечания для 64-разрядных компьютеров  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] Соединитель 1,1 для SAP BW полностью поддерживает 64-разрядную версию [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. На 64-разрядном компьютере [!INCLUDE[msCoName](../includes/msconame-md.md)] соединитель 1,1 для SAP BW имеет следующие дополнительные требования:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)]Соединитель 1,1 для SAP BW полностью поддерживает 64-разрядную версию [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. На 64-разрядном компьютере [!INCLUDE[msCoName](../includes/msconame-md.md)] соединитель 1,1 для SAP BW имеет следующие дополнительные требования:  
   
 -   Для запуска пакетов в 64-разрядном режиме в любой 64-разрядной ОС Windows скопируйте 64-разрядную версию файла графического пользовательского интерфейса SAP librfc32.dll в папку **system32** в каталоге Windows. (Обычно это каталог **C:\Windows\system32**.)  
   

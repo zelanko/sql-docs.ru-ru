@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5d5e35ef1c3f860c58e036f5335e09165acddfb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065971"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Занятие 1. Создание учетных записей Windows для репликации
   На этом занятии будут созданы учетные записи Windows для запуска агентов репликации. На локальном сервере будут созданы отдельные учетные записи Windows для следующих агентов:  
   
 |Агент|Расположение|Имя учетной записи|  
 |-----------|--------------|------------------|  
-|агент моментальных снимков|Publisher|\<*machine_name*> \ repl_snapshot|  
-|Агент чтения журнала.|Publisher|\<*machine_name*> \ repl_logreader|  
-|Агент распространителя|Издатель и подписчик|\<*machine_name*> \ repl_distribution|  
-|Агент слияния.|Издатель и подписчик|\<*machine_name*> \ repl_merge|  
+|агент моментальных снимков|Издатель|\<*machine_name*>\ repl_snapshot|  
+|Агент чтения журнала.|Издатель|\<*machine_name*>\ repl_logreader|  
+|Агент распространителя|Издатель и подписчик|\<*machine_name*>\ repl_distribution|  
+|Агент слияния.|Издатель и подписчик|\<*machine_name*>\ repl_merge|  
   
 > [!NOTE]  
 >  В учебниках по репликации издатель и распространитель совместно используют один и тот же экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Издатель и подписчик могут совместно использовать один и тот же экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], но это не является обязательным. Если издатель и подписчик совместно используют один и тот же экземпляр, то не требуется выполнять шаги по созданию учетных записей на подписчике.  
@@ -45,7 +44,7 @@ ms.locfileid: "83000474"
   
 5.  Повторите предыдущий шаг, чтобы создать учетные записи repl_logreader, repl_distribution и repl_merge.  
   
-6.  Нажмите кнопку **Закрыть**.  
+6.  Щелкните **Закрыть**.  
   
 ### <a name="to-create-local-windows-accounts-for-replication-agents-at-the-subscriber"></a>Создание локальных учетных записей Windows для агентов репликации на подписчике  
   
@@ -59,12 +58,12 @@ ms.locfileid: "83000474"
   
 5.  Повторите предыдущий шаг, чтобы создать учетную запись repl_merge.  
   
-6.  Нажмите кнопку **Закрыть**.  
+6.  Щелкните **Закрыть**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Создание учетных записей Windows для агентов репликации успешно выполнено. Далее предстоит настроить папку моментальных снимков. См. раздел [Занятие 2. Подготовка папки моментальных снимков](lesson-2-preparing-the-snapshot-folder.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Replication Agents Overview](agents/replication-agents-overview.md)  
   
   

@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4fc2701ad53cd0071be40100d168d5d5571d2958
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059571"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951654"
 ---
 # <a name="derived-column-transformation-editor"></a>редактор преобразования «Производный столбец»
   Используйте диалоговое окно **Редактор преобразования «Производный столбец»** для создания выражений, которые заполняют новые или замещающие столбцы.  
   
  Дополнительные сведения о преобразовании «Производный столбец» см. в разделе [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Переменные и столбцы**  
  Создайте выражение, которое использует переменную или входной столбец, путем перетаскивания переменной или столбца из списка в существующую строку таблицы на панели внизу или в новую строку внизу списка.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66059571"
  **Точность**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает точность для числовых данных, основываясь на типе данных. Значение этого столбца доступно только для чтения.  
   
- **Масштабирование**  
+ **Масштаб**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически задает масштаб для числовых данных, основываясь на типе данных. Значение этого столбца доступно только для чтения.  
   
  **Кодовая страница**  
@@ -64,7 +63,7 @@ ms.locfileid: "66059571"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Получение значений столбцов с помощью преобразования «Производный столбец»](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

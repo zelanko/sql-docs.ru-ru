@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 11db1efb-8f5b-4284-b17c-04b4bfcef9ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fb9a0b20947892510f09790b0592bee58b350d87
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473053"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067665"
 ---
 # <a name="post-download-instructions"></a>Публиковать инструкции загрузки
   Эта страница позволяет указать инструкции загрузки для целевого сервера.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Тип инструкции**  
  Укажите тип публикуемой инструкции загрузки.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "62473053"
  **Интервал опроса**  
  Просмотр текущего интервала опроса для целевого сервера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Автоматизация администрирования в масштабах предприятия](automated-administration-across-an-enterprise.md)  
   
   

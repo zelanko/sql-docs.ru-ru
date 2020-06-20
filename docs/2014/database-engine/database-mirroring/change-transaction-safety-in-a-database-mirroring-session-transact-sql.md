@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a79010a4fa59eaebfc743543799a1e83cc5e687d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d8bc9d0fb639770d33507c29a6ec67f60bd0434a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934398"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)
   Безопасность транзакций является атрибутом, который контролирует режим работы сеанса. Однако в любой момент времени владелец базы данных может изменить безопасность транзакций. По умолчанию уровень безопасности транзакций установлен в FULL (синхронный режим работы).  
@@ -34,7 +33,7 @@ ms.locfileid: "62754929"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     где * \<>базы данных* — имя зеркальной базы данных.  
+     где *\<database>* — Имя зеркальной базы данных.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Выключение безопасности транзакций  
   
@@ -46,9 +45,9 @@ ms.locfileid: "62754929"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     где * \<>базы данных* — это зеркально отображаемая база данных.  
+     где *\<database>* — это зеркально отображаемая база данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)  
   

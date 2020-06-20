@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f0cc47-52f9-413d-8c7a-b4298dd874ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1bfe78e7ac5cb497a39ab0b0679bcb2bd9a43a7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5fa76e11cf7d04c5fa2068cf8ea8ea40939f0e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940255"
 ---
 # <a name="standard-view-aggregations-tab-cube-designer"></a>Стандартное представление (вкладка «Агрегаты», конструктор кубов)
   Для просмотра агрегатов используется **Стандартное представление** конструктора агрегатов. С помощью **мастера статистических схем** или **мастера оптимизации с учетом использования**можно также создавать и изменять статистические схемы в этом представлении.  
@@ -32,7 +31,7 @@ ms.locfileid: "66068054"
 |**Удаление**|Нажмите, чтобы удалить выбранную статистическую схему.|  
 |**Свойства**|Нажмите, чтобы просмотреть свойства агрегата.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Агрегаты &#40;&#41;проектирования кубов](aggregations-cube-design.md)  
   
   

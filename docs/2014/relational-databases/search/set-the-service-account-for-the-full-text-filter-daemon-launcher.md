@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1114ed9e206c49a5993028e180ed70bbb7bf1747
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010938"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003767"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Настройка учетной записи службы средства запуска управляющей программы полнотекстовой фильтрации
   В этом разделе объясняется, как задать учетную запись службы для службы запуска управляющей программы полнотекстовой фильтрации SQL Server (MSSQLFDLauncher) при использовании диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Служба запуска управляющей программы полнотекстовой фильтрации SQL используется в полнотекстовом поиске ssNoVersion для запуска хост-процесса управляющей программы полнотекстовой фильтрации, которая выполняет фильтрацию полнотекстового поиска и разбивку по словам. Для использования полнотекстового поиска эта служба должна быть запущена.  
@@ -32,7 +31,7 @@ ms.locfileid: "66010938"
   
 1.  В меню **Пуск** последовательно выберите пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Средства настройки**и щелкните **Диспетчер конфигурации SQL Server**.  
   
-2.  В **Диспетчер конфигурации SQL Server**щелкните **SQL Server службы**, щелкните правой кнопкой мыши **SQL Full-Text Filter DAEMON Launcher (*`instance name`*)** и выберите пункт **Свойства**.  
+2.  В **Диспетчер конфигурации SQL Server**щелкните **SQL Server службы**, щелкните правой кнопкой мыши **SQL Full-Text Filter DAEMON Launcher ( *`instance name`* )** и выберите пункт **Свойства**.  
   
 3.  Перейдите на вкладку **Вход** диалогового окна, а затем выберите или введите учетную запись, применяемую для запуска каждого процесса, созданного службой запуска управляющей программы полнотекстовой фильтрации SQL.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66010938"
      Во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]группе служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляются по умолчанию разрешения для управления, выполнения запросов и запуска службы запуска управляющей программы полнотекстовой фильтрации SQL Server. Если разрешения группы служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на доступ к учетной записи службы запуска управляющей программы полнотекстовой фильтрации (SQL) были удалены после установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , служба запуска управляющей программы полнотекстовой фильтрации SQL не будет запущена и полнотекстовый поиск будет недоступен. Убедитесь в том, что группа служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет разрешения на доступ к учетной записи службы запуска управляющей программы полнотекстовой фильтрации SQL.  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструкции по управлению службами (диспетчер конфигурации SQL Server)](../../database-engine/managing-services-how-to-topics-sql-server-configuration-manager.md)  
  [Обновление полнотекстового поиска](upgrade-full-text-search.md)  
   

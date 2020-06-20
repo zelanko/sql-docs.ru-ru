@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 10813b7bc0a97f0ba8a81f3f48447142659cd596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7242f9fda74288a2b7354ac0550ff4966e05c555
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091331"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058775"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-system_function_schema"></a>В схеме system_function_schema запрещены определяемые пользователем функции
   Советник по переходу обнаружил определяемые пользователем функции, принадлежащие недокументированному пользователю **system_function_schema**. Нельзя создать определяемую пользователем системную функцию с указанием пользователя. Имя пользователя **system_function_schema** не существует, а идентификатор пользователя, связанный с этим именем (UID = 4), зарезервирован для схемы **sys** и ограничен только внутренним использованием.  
@@ -39,9 +38,9 @@ ms.locfileid: "66091331"
   
  Эти изменения влияют на определяемые пользователем системные функции следующим образом.  
   
--   Инструкции языка описания данных DDL, которые ссылаются на **system_function_schema** , завершатся ошибкой. `CREATE FUNCTION system`Например, оператор _`function` \_ `schema.fn` \_ `MySystemFunction` ... не будет выполнена.  
+-   Инструкции языка описания данных DDL, которые ссылаются на **system_function_schema** , завершатся ошибкой. Например, оператор `CREATE FUNCTION system` _ `function` \_ `schema.fn` \_ `MySystemFunction` ... не будет выполнена.  
   
--   После [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]обновления до существующие объекты, принадлежащие **system_function_schema** , содержатся только в схеме **sys** базы данных **master** . Поскольку системные объекты не могут быть изменены, эти функции не могут быть изменены или удалены из базы данных **master** . Кроме того, эти функции не могут быть вызваны из других баз данных с помощью только однокомпонентного имени функции.  
+-   После обновления до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] существующие объекты, принадлежащие **system_function_schema** , содержатся только в схеме **sys** базы данных **master** . Поскольку системные объекты не могут быть изменены, эти функции не могут быть изменены или удалены из базы данных **master** . Кроме того, эти функции не могут быть вызваны из других баз данных с помощью только однокомпонентного имени функции.  
   
 ## <a name="corrective-action"></a>Действие по исправлению  
  Перед началом обновления выполните следующие задачи.  
@@ -64,7 +63,7 @@ ms.locfileid: "66091331"
   
 -   База данных Resource  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Советник по переходу SQL Server 2014 &#91;New&#93;](sql-server-2014-upgrade-advisor.md)   
  [Проблемы обновления ядро СУБД](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Удалите инструкции, изменяющие системные объекты](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
