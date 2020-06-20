@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779598"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932791"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Установка пакета обновления на систему с минимальным временем простоя для зеркально отображаемых баз данных
   В этом разделе описывается, как добиться минимального времени простоя зеркальных баз данных при установке пакетов обновления и исправлений. Этот процесс подразумевает последовательное обновление экземпляров [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], участвующих в зеркальном отображении базы данных. Такая форма обновления, называемая *последовательным обновлением*, сокращает время простоя до одной отработки отказа. Обратите внимание, что в сеансах высокопроизводительного режима при географическом удалении зеркального сервера от основного последовательное обновление может оказаться неподходящим.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779598"
   
     -   В [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: измените параметр **Режим работы** на **Высокая производительность (асинхронный)** с помощью страницы [Зеркальное отображение](../relational-databases/databases/database-properties-mirroring-page.md) диалогового окна **Свойства базы данных** .  
   
-    -   В [!INCLUDE[tsql](../includes/tsql-md.md)]: используйте [инструкцию ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) , чтобы установить безопасность транзакций в значение OFF.  
+    -   В [!INCLUDE[tsql](../includes/tsql-md.md)] : используйте [инструкцию ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) , чтобы установить безопасность транзакций в значение OFF.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Возврат следящего сервера в сеанс зеркального отображения  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62779598"
   
     -   [Добавление следящего сервера для зеркального отображения базы данных с использованием проверки подлинности Windows (Transact-SQL)](database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#41;Transact-SQL для зеркального отображения базы данных ALTER DATABASE &#40;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
  [SQL Server &#40;зеркального отображения базы данных&#41;](database-mirroring/database-mirroring-sql-server.md)   

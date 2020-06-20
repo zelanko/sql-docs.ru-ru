@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19fbd10e-5b59-4cd0-a988-52d5d9206242
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4d70abd6c58b3eb0fa4a53e2806ab1b3fbe9245
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62960803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064622"
 ---
 # <a name="replication-tutorials"></a>Учебники по репликации
   Репликация включает учебники, которые могут быть использованы для изучения установки и запуска топологии репликации при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -39,7 +38,7 @@ ms.locfileid: "62960803"
  [Репликация данных с мобильными клиентами](tutorial-replicating-data-with-mobile-clients.md)  
  Изучите, как использовать репликацию слиянием для обмена данными между сервером и одним или более клиентами, которые подключаются периодически.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Безопасность Репликация SQL Server](security/view-and-modify-replication-security-settings.md)  
   
   

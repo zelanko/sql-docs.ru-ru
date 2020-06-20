@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20f54b913124cdaa8a7dfeebac01ba070cc37d88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196609"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002643"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Просмотр зависимостей таблицы
   Зависимости таблицы в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно просмотреть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "68196609"
   
 2.  Щелкните таблицу правой кнопкой мыши и выберите **Просмотр зависимостей**.  
   
-3.  В диалоговом окне **зависимости**_\<объектов имя>_ выберите либо **объекты, зависящие** от _ \<имени объекта>_, либо объекты, от **которых**_\<зависит имя объекта>_. **depends**  
+3.  В диалоговом окне **зависимости объектов** _\<object name>_ выберите либо **объекты, которые зависят** от _\<object name>_ , либо объекты, от **которых** _\<object name>_ **зависит**.  
   
 4.  Выберите объект в сетке **Зависимости** . Тип объекта (например, "Триггер" или "Хранимая процедура") появится в поле **Тип** .  
   

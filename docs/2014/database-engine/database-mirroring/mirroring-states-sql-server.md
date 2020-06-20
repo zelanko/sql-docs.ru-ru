@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d458939ba233bdfe7a99edd38afc74b5433ae061
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934105"
 ---
 # <a name="mirroring-states-sql-server"></a>Состояния зеркального отображения (SQL Server)
   Во время сеанса зеркального отображения база данных всегда находится в определенном состоянии ( *состояние зеркального отображения*). Состояние базы данных отражает состояние соединения, поток данных и различия между данными, которые имеются у участников. Сеанс зеркального отображения базы данных принимает такое же состояние, что и у основной базы данных.  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c7602d69aa7b821457916d74accf27940d5c147b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065267"
 ---
 # <a name="ready-to-install"></a>Все готово для установки
   На странице «Все готово для установки» приведен сводный список компонентов, которые будут установлены или изменены программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  На этой странице доступны следующие параметры.  
   
 -   Чтобы продолжить установку, нажмите кнопку **Установить**.  
@@ -34,7 +33,7 @@ ms.locfileid: "66093263"
   
 -   Чтобы выйти из программы установки, нажмите кнопку **Отмена**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

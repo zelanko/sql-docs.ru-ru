@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f041821-6a12-4ab5-bb3a-a8345a9bc00b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe3384fe5e5dde96082b0e21805a0e8b915ccb6a
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 56de74cd483162216747aac806f98f7883ea4706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000924"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932972"
 ---
 # <a name="full-text-search-f1-help"></a>Справка F1 по полнотекстовому поиску
   Данный раздел содержит подразделы справки по диалоговым окнам полнотекстового поиска в среде [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пакета [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Чтобы получить доступ к разделу о пользовательском интерфейсе, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне.  
@@ -29,7 +28,7 @@ ms.locfileid: "83000924"
 |[Свойства полнотекстового индекса &#40;общие&#41;страницы](../../2014/database-engine/full-text-index-properties-general-page.md)|[Редактор списка свойств поиска](../../2014/database-engine/search-property-list-editor.md)|  
 |[Свойства полнотекстового индекса &#40;страница "столбцы"&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компонент Full-text Search](../relational-databases/search/full-text-search.md)   
  [CREATE FULLTEXT CATALOG (Transact-SQL)](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   

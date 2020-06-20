@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a809aa628b90d73bed6eecd2d23cdec4dff6aea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968284"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
   Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  

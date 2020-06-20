@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9d80d4ea-a0f6-4a79-885d-79143ca09c00
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1060520a9c1fc6b5db20d1cca5e8c2d19cbd429a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e766b8fbea0aa1e7e1e804474cd8dfa9be92832
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927555"
 ---
 # <a name="view-file-history"></a>Просмотр журнал файла
   Для просмотра журнала версий файлов, управляемых системой управления версиями, можно использовать команду **History** . Этот журнал содержит дату и время добавления или возврата файла в систему управления версиями.  
@@ -45,7 +44,7 @@ ms.locfileid: "62773300"
   
  Чтобы получить сведения о выполнении этих задач, нажмите кнопку **Справка** в диалоговом окне **Журнал файла** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задание и получение сведений о версии](../../2014/database-engine/set-and-retrieve-version-information.md)   
  [Просмотр журнала проекта](../../2014/database-engine/view-project-history.md)   
  [Просмотр состояния файла](../../2014/database-engine/view-file-status.md)   

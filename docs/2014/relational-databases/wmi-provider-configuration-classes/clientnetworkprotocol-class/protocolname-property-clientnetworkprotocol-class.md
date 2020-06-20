@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 81e1081623b363cdcb9610c83301bd424cb3694d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40fdd268536aecd8fc3ce06922d6145188d85a97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065605"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Свойство ProtocolName (класс ClientNetworkProtocol)
   Возвращает имя текущего сетевого протокола, заданного параметром [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx).  
@@ -45,7 +44,7 @@ object
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

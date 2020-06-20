@@ -1,5 +1,5 @@
 ---
-title: Недопустимые типы и элементы в mscorlib. dll | Документация Майкрософт
+title: Недопустимые типы и члены в mscorlib.dll | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: daf82d4b-2f6d-44ca-9148-75193321b6d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc4e42a0f900231bdd28417420cdab19b7345e66
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954324"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Недопустимые типы и элементы в библиотеке mscorlib.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде `HostProtectionAttribute` CLR запрещает использование типа или члена, имеющего тип, который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **шаредстате**, `Synchronization`или. `UI` В следующей таблице перечислены типы и элементы сборки mscorlib.dll, значения атрибута защиты узла которых не допускаются.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде CLR запрещает использование типа или члена, имеющего тип `HostProtectionAttribute` , который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt` ,, `ExternalThreading` `MayLeakOnAbort` , `SecurityInfrastructure` ,, `SelfAffectingProcessMgmnt` `SelfAffectingThreading` , **шаредстате**, `Synchronization` или `UI` . В следующей таблице перечислены типы и элементы сборки mscorlib.dll, значения атрибута защиты узла которых не допускаются.  
   
 > [!NOTE]  
 >  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [supported .NET Framework librarys](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -35,22 +34,22 @@ ms.locfileid: "62874356"
 |System.Collections.Queue.Synchronized()|Синхронизация|  
 |System.Collections.SortedList.Synchronized()|Синхронизация|  
 |System.Collections.Stack.Synchronized()|Синхронизация|  
-|System.Console.Beep()|UI|  
-|System.Console.get_Error()|UI|  
-|System.Console.get_In()|UI|  
-|System.Console.get_KeyAvailable()|UI|  
-|System.Console.get_Out()|UI|  
-|System.Console.OpenStandardError()|UI|  
-|System.Console.OpenStandardInput()|UI|  
-|System.Console.OpenStandardOutput()|UI|  
-|System.Console.Read()|UI|  
-|System.Console.ReadKey()|UI|  
-|System.Console.ReadLine()|UI|  
-|System.Console.SetError()|UI|  
-|System.Console.SetIn()|UI|  
-|System.Console.SetOut()|UI|  
-|System.Console.Write()|UI|  
-|System.Console.WriteLine()|UI|  
+|System.Console.Beep()|ИП|  
+|System.Console.get_Error()|ИП|  
+|System.Console.get_In()|ИП|  
+|System.Console.get_KeyAvailable()|ИП|  
+|System.Console.get_Out()|ИП|  
+|System.Console.OpenStandardError()|ИП|  
+|System.Console.OpenStandardInput()|ИП|  
+|System.Console.OpenStandardOutput()|ИП|  
+|System.Console.Read()|ИП|  
+|System.Console.ReadKey()|ИП|  
+|System.Console.ReadLine()|ИП|  
+|System.Console.SetError()|ИП|  
+|System.Console.SetIn()|ИП|  
+|System.Console.SetOut()|ИП|  
+|System.Console.Write()|ИП|  
+|System.Console.WriteLine()|ИП|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
@@ -98,11 +97,11 @@ ms.locfileid: "62874356"
 |System.Threading.Timer|ExternalThreading, Synchronization|  
 |System.Threading.TimerBase|ExternalThreading, Synchronization|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Недопустимые типы и члены в Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Недопустимые типы и члены в System. dll](disallowed-types-and-members-in-system-dll.md)   
- [Недопустимые типы и члены в System. Data. dll](disallowed-types-and-members-in-system-data-dll.md)   
+ [Недопустимые типы и члены в Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Недопустимые типы и члены в System.dll](disallowed-types-and-members-in-system-dll.md)   
+ [Недопустимые типы и члены в System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)   
  [Недопустимые типы и элементы в библиотеке System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

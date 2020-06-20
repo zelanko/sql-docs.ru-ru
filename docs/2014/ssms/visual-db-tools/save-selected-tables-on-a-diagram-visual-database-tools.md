@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0af9736d247fb823c13d614a081aef43e3d8d9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048564"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Сохранение выбранных таблиц в диаграмме (визуальные инструменты для баз данных)
   Если нет необходимости сохранять все изменения, внесенные в диаграмму базы данных, можно сохранить определенную таблицу или набор таблиц.  

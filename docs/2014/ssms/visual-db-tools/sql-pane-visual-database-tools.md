@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c2d7d92f389b595f149951de6af1dac7fddd6df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63275967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057985"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Панель SQL (визуальные инструменты для баз данных)
   Панель SQL можно использовать для создания собственных инструкций SQL; можно также создать инструкцию на панели критериев или панели диаграмм, и на панели SQL будут созданы инструкции SQL. После того как запрос построен, панель SQL его автоматически обновляет и меняет его формат для удобства чтения.  

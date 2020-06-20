@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717509"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996220"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Выполнение диаграммы обновления с помощью OLE DB (SQLXML 4.0)
   В этом разделе представлен рабочий пример Усинголе DB для выполнения диаграмма обновления.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717509"
 </Schema>  
 ```  
   
- Запрос возвращает все элементы работника. При сопоставлении по умолчанию элемент ** \< Person. Contact>** сопоставляется с таблицей Person. Contact в базе данных AdventureWorks.  
+ Запрос возвращает все элементы работника. При использовании сопоставления по умолчанию **\<Person.Contact>** элемент сопоставляется с таблицей Person. Contact в базе данных AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Установка XML как команды и получение результата как XML-документа  
   

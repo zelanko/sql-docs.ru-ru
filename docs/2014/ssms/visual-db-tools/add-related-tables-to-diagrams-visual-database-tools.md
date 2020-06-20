@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 965bdc8e261fc17d044265cad17bf8d97caa7017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63297578"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058248"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>Добавление связанных таблиц в диаграммы (визуальные инструменты для баз данных)
   Можно быстро добавить в диаграмму базы данных все таблицы, связанные с выбранной таблицей.  

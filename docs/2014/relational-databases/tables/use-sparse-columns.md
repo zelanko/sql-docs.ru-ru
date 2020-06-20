@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3068ac7a3094605bb809ac84c63766b64fda486
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196655"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002899"
 ---
 # <a name="use-sparse-columns"></a>Использование разреженных столбцов
   Разреженные столбцы — это обычные столбцы, имеющие оптимизированное хранилище для значений NULL. Разреженные столбцы уменьшают пространство, необходимое для хранения значений NULL, однако увеличивается стоимость получения значений, отличных от NULL. Разреженные столбцы следует использовать только в том случае, если экономится не менее чем от 20 до 40 процентов места. Наборы столбцов и разреженные столбцы определяются с помощью инструкций [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) и [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -92,10 +91,10 @@ ms.locfileid: "68196655"
 |`datetime2(0)`|6|10|57%|  
 |`datetime2(7)`|8|12|52%|  
 |`time(0)`|3|7|69%|  
-|`time(7)`|5|9|60%|  
+|`time(7)`|5|9|60 %|  
 |`datetimetoffset(0)`|8|12|52%|  
 |`datetimetoffset (7)`|10|14|49%|  
-|`decimal/numeric(1,s)`|5|9|60%|  
+|`decimal/numeric(1,s)`|5|9|60 %|  
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Используйте тип `decimal` в качестве консервативной оценки.|||  
   
@@ -104,11 +103,11 @@ ms.locfileid: "68196655"
 |Тип данных|Неразреженные байты|Разреженные байты|Процент значений NULL|  
 |---------------|---------------------|------------------|---------------------|  
 |`sql_variant`|Зависит от базового типа данных|||  
-|`varchar` или `char`|2*|4*|60%|  
-|`nvarchar` или `nchar`|2*|4*+|60%|  
-|`varbinary` или `binary`|2*|4*|60%|  
-|`xml`|2*|4*|60%|  
-|`hierarchyid`|2*|4*|60%|  
+|`varchar` либо `char`|2*|4*|60 %|  
+|`nvarchar` либо `nchar`|2*|4*+|60 %|  
+|`varbinary` либо `binary`|2*|4*|60 %|  
+|`xml`|2*|4*|60 %|  
+|`hierarchyid`|2*|4*|60 %|  
   
  *Длина равна средней длине данных, содержащихся в типе, плюс 2 или 4 байта.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "68196655"
   
      Репликация слиянием не поддерживает разреженные столбцы и наборы столбцов.  
   
--   отслеживание изменений  
+-   Change tracking  
   
      Отслеживание изменений поддерживает разреженные столбцы и наборы столбцов. Если в таблице обновляется набор столбцов, система отслеживания изменений считает это обновлением целой строки. Более подробное отслеживание изменений для определения точного набора разреженных столбцов, который был изменен в ходе операции обновления набора столбцов, не осуществляется. Если разреженные столбцы обновляются явно с помощью инструкции DML, система отслеживания изменений обрабатывает их обычным образом и можно идентифицировать точный набор измененных столбцов.  
   
@@ -231,7 +230,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование наборов столбцов](../tables/use-column-sets.md)   
  [CREATE TABLE (Transact-SQL)](/sql/t-sql/statements/create-table-transact-sql)   
  [ALTER TABLE (Transact-SQL)](/sql/t-sql/statements/alter-table-transact-sql)   

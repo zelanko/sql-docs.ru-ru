@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4146d59be120b850e1e92e5e43ae73b2928c52cf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842482"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927653"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>Использование блоков try..catch в хранимых процедурах, скомпилированных в собственном коде
   Внутри скомпилированной хранимой процедуры можно использовать блоки try..catch. Поддерживаются приведенные ниже конструкции.  
@@ -60,7 +59,7 @@ exec test_try_catch
 go  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [скомпилированные в собственном коде хранимые процедуры](../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

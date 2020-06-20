@@ -8,19 +8,18 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996404"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   `CurvePolygon` является топологически закрытой областью, определенной внешним ограничивающим кольцом, а также нулем или более внутренних колец.  
   
 > [!IMPORTANT]  
->  Подробное описание и примеры пространственных функций, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], включая `CurvePolygon` подтип, см. в техническом документе с [новыми пространственными функциями в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Подробное описание и примеры пространственных функций, появившихся в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , включая `CurvePolygon` подтип, см. в техническом документе с [новыми пространственными функциями в SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Следующие критерии определяют атрибуты `CurvePolygon` экземпляра.  
   

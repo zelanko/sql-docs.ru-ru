@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84867e56a66a6f35c4de6c95d7cdbc0bfd72769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779375"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932817"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>добавить компоненты в экземпляр SQL Server 2014 (программа установки)
   В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Перечень функций, поддерживаемых в разных выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в разделе [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -115,15 +114,15 @@ ms.locfileid: "62779375"
   
 20. Страница «Конфигурация клиента распределенного воспроизведения» позволяет указать пользователей, которым нужно предоставить административные разрешения для службы клиента распределенного воспроизведения. Пользователи с административными разрешениями будут иметь неограниченный доступ к службе клиента распределенного воспроизведения.  
   
-     **Имя контроллера** — это необязательный параметр со значением по умолчанию \<*blank*>. Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
+     **Имя контроллера** является необязательным параметром, а значение по умолчанию — \<*blank*> . Введите имя контроллера, с которым будет связываться клиентский компьютер для доступа к службе клиента распределенного воспроизведения. Следует отметить следующее.  
   
     -   Если контроллер уже настроен, введите имя этого контроллера при настройке каждого клиента.  
   
     -   Если контроллер еще не настроен, имя контроллера можно оставить пустым. Однако необходимо вручную ввести имя контроллера в файл **конфигурации клиента** .  
   
-     Укажите **рабочий каталог** для службы клиента распределенного воспроизведения. Рабочий каталог по умолчанию — \<*буква диска*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     Укажите **рабочий каталог** для службы клиента распределенного воспроизведения. Рабочий каталог по умолчанию \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
-     Укажите **Каталог результатов** для службы клиента распределенного воспроизведения. Каталог результатов по умолчанию — \<*буква диска*>:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     Укажите **Каталог результатов** для службы клиента распределенного воспроизведения. Каталог результатов по умолчанию \<*drive letter*> : \Program Files \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
      Чтобы продолжить, нажмите кнопку **Далее**.  
   

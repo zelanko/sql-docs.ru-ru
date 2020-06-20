@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39929f4bed6edbd1e8ec5c1b72dbe8f7aefeec68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807300"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934353"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Зеркальное отображение баз данных и полнотекстовые каталоги (SQL Server)
   Чтобы создать зеркало базы данных с полнотекстовым каталогом, воспользуйтесь, как обычно, резервным копированием и восстановлением, чтобы создать полную резервную копию основной базы данных, и скопируйте ее на зеркальный сервер. Дополнительные сведения см. в статье [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
@@ -55,7 +54,7 @@ ms.locfileid: "62807300"
 ## <a name="after-forcing-service"></a>После принудительного запуска службы  
  После того, как обслуживание принудительно переключилось на зеркальный сервер (с возможностью потери данных), запустите полное сканирование. Используемый для запуска полного сканирования метод зависит от слежения за изменениями полнотекстового индекса. Дополнительные сведения см. в подразделе «Полнотекстовые индексы после отработки отказа» ранее в этом разделе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER FULLTEXT INDEX &#40;&#41;Transact-SQL](/sql/t-sql/statements/alter-fulltext-index-transact-sql)   
  [CREATE FULLTEXT INDEX (Transact-SQL)](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP ПОЛНОТЕКСТОВЫЙ индекс &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   

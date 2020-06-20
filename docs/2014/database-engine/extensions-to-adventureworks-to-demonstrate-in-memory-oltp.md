@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 966174c359675a06565b57fe4acb02b43ff39892
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921733"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933092"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Расширения AdventureWorks для демонстрации In-Memory OLTP
     
@@ -95,7 +94,7 @@ ms.locfileid: "82921733"
   
     1.  Не забудьте добавить обратную косую черту \' как часть имени пути  
   
-    2.  Пример.  
+    2.  Пример  
   
         ```  
         :setvar checkpoint_files_location "d:\DBData\"  
@@ -874,6 +873,6 @@ ORDER BY state, file_type
   
  В этом случае будет две пары файлов контрольных точек в состоянии "в разработке", а это означает, что несколько пар файлов были перемещены в состояние "в разработке", вероятнее всего, из-за высокого уровня параллелизма в рабочей нагрузке. Нескольким параллельным потокам одновременно потребовалась новая пара файлов, из-за чего пара была переведена из состояния "создана заранее" в состояние "в разработке".  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ef1a7101a0bd16c3ee2868f47a8dc15f29092621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b909f3602a78f3244ab3cf4479b8745956a7bd62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806716"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934175"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)
   Если в режимах с высокой производительностью и высокой безопасностью без автоматической отработки отказа на основном сервере происходит сбой, в то время как доступен зеркальный сервер, владелец базы данных может сделать базу данных доступной, принудительно переведя ее на другой ресурс (с возможной потерей данных). Этот параметр доступен только при выполнении следующих условий:  
@@ -44,7 +43,7 @@ ms.locfileid: "62806716"
   
      Зеркальный сервер немедленно переходит на основной сервер, а зеркальное отображение приостанавливается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
  [Режимы работы зеркального отображения базы данных](database-mirroring-operating-modes.md)  
   

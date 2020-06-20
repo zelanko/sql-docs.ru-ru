@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eda8dea2-eedd-43a7-85aa-92bd97783b5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d779e6362cc3e2842003b82a092ce48ce4933e8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3d124a72caadc2d802765aa80d80baf5c6a3697
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048587"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>Согласование диаграммы базы данных с измененной базой данных (визуальные инструменты для баз данных)
   Сохраняйте диаграмму базы данных, когда вы готовы обновить базу данных для согласования с текущей диаграммой. Однако если с момента открытия базы данных другие пользователи внесли изменения в базу данных, то внесенные ими изменения могут повлиять на вашу диаграмму, и наоборот.  

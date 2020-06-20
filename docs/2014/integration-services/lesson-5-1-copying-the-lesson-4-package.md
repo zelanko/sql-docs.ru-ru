@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd8de63662b070e317f7c01d1d60f15b6864787
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968194"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>Шаг 1. Копирование пакета занятия 4
   В этой задаче будет создана копия пакета Lesson 4.dtsx, созданного на занятии 4. Либо можно добавить пакет для занятия 4, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 5.  
@@ -36,9 +35,9 @@ ms.locfileid: "62891179"
   
 6.  Щелкните правой кнопкой мыши в любом месте фона вкладки **поток управления** и выберите пункт **свойства**.  
   
-7.  В окно свойств измените `Name` свойство на `Lesson 5`.  
+7.  В окно свойств измените `Name` свойство на `Lesson 5` .  
   
-8.  Установите флажок для свойства **ID** , затем щелкните стрелку раскрывающегося списка и выберите команду ** \<создать новый идентификатор>**.  
+8.  Установите флажок для свойства **ID** , щелкните стрелку раскрывающегося списка, а затем в списке выберите **\<Generate New ID>**.  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>Добавление готового пакета занятия 4  
   

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060152"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917298"
 ---
 # <a name="create-and-map-a-server-environment"></a>Создание и сопоставление серверной среды
   Вы создаете серверную среду, которая должна указывать значения среды выполнения для пакетов, которые содержатся в проекте, развернутом на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Можно сопоставить переменные среды с параметрами для определенного пакета, для пакетов точки входа или для всех пакетов в данном проекте. Пакет точки входа — обычно родительский пакет, который выполняет дочерний пакет.  
@@ -32,7 +31,7 @@ ms.locfileid: "66060152"
   
 ### <a name="to-create-and-use-a-server-environment"></a>Создание и использование серверной среды  
   
-1.  В [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]среде разверните узел [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] каталоги> **SSISDB** в обозревателе объектов и выберите папку **среды** проекта, для которой требуется создать среду.  
+1.  В [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] среде разверните узел каталоги> **SSISDB** в обозревателе объектов и выберите папку **среды** проекта, для которой требуется создать среду.  
   
 2.  Щелкните правой кнопкой мыши папку **Среды** и выберите команду **Создать среду**.  
   

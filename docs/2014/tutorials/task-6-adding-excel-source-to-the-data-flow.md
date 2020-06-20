@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0209055e-cb6b-4a07-909e-836596727a2c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eff79fb144c2bbc4d31a21b2dc263c4ccb087104
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bbb134106fde9607bd51bc84bcd49969aec19ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064733"
 ---
 # <a name="task-6-adding-excel-source-to-the-data-flow"></a>Задача 6. Добавление в поток данных источника Excel
   В этой задаче источник Excel будет добавлен в поток данных, что позволит считывать данные поставщиков из исходного файла Excel. Источник Excel извлекает данные из листов или диапазонов в книгах Microsoft Excel. Дополнительные сведения см. в разделе [Источник Excel](../integration-services/data-flow/excel-source.md) .
@@ -40,7 +39,7 @@ ms.locfileid: "78177242"
 
 8.  Нажмите кнопку **Просмотр** , чтобы просмотреть данные в файле Excel.
 
-9. Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.
+9. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно.
 
 10. Перетащите преобразование **Очистка DQS** из области **Другие преобразования** на **панели элементов служб SSIS** на вкладку **Поток данных** в источнике **Считывание данных о поставщиках из файла Excel**. Преобразование «Очистка DQS» использует службы Data Quality Services (DQS) для исправления данных путем применения утвержденных правил в базе знаний. Это преобразование во время выполнения создает проект очистки DQS на сервере служб DQS. Дополнительные сведения см. в разделе [Преобразование «Очистка DQS»](https://msdn.microsoft.com/library/ee677619.aspx) .
 

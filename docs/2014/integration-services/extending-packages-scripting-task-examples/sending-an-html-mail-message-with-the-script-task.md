@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 537308a0486308ce3cb26227f415f487d69e6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61bd8ddad149198bb3b4111e716228718b3d6e4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176220"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968464"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Отправка почтового сообщения в формате HTML с помощью задачи «Скрипт»
   Задача «Отправка почты» служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживает только почтовые сообщения в текстовом формате. Однако отправлять почтовые сообщения в формате HTML можно с помощью задачи «Скрипт» и почтовых функций платформы .NET Framework.

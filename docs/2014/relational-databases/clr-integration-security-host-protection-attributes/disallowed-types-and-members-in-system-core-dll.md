@@ -1,5 +1,5 @@
 ---
-title: Недопустимые типы и члены в System. Core. dll | Документация Майкрософт
+title: Недопустимые типы и члены в System.Core.dll | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,16 +9,15 @@ ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f078caae791e4009a309e7cc70d7af333ca4c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 724b9010ecd185054b5c0c173d0bf933a37aed2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919558"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954269"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>Недопустимые типы и элементы в библиотеке System.Core.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде `HostProtectionAttribute` CLR запрещает использование типа или члена, имеющего тип, который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **шаредстате**, `Synchronization`или. `UI` В следующей таблице перечислены элементы и типы сборок библиотеки System.Core.dll, значения атрибутов защиты узла которых запрещены.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Программирование в среде CLR запрещает использование типа или члена, имеющего тип `HostProtectionAttribute` , который задает `System.Security.Permissions.HostProtectionResource` перечисление со значением `ExternalProcessMgmt` ,, `ExternalThreading` `MayLeakOnAbort` , `SecurityInfrastructure` ,, `SelfAffectingProcessMgmnt` `SelfAffectingThreading` , **шаредстате**, `Synchronization` или `UI` . В следующей таблице перечислены элементы и типы сборок библиотеки System.Core.dll, значения атрибутов защиты узла которых запрещены.  
   
 > [!NOTE]  
 >  Этот список был создан из поддерживаемых сборок. Дополнительные сведения см. в разделе [supported .NET Framework librarys](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -127,11 +126,11 @@ ms.locfileid: "62919558"
 |System.Threading.LockRecursionException|MayLeakOnAbort|  
 |System.Threading.ReaderWriterLockSlim|MayLeakOnAbort|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты защиты узла и программирование интеграции со средой CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Недопустимые типы и члены в Microsoft. VisualBasic. dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Недопустимые типы и элементы в mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Недопустимые типы и члены в System. dll](disallowed-types-and-members-in-system-dll.md)   
+ [Недопустимые типы и члены в Microsoft.VisualBasic.dll](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Недопустимые типы и члены в mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Недопустимые типы и члены в System.dll](disallowed-types-and-members-in-system-dll.md)   
  [Недопустимые типы и элементы в библиотеке System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)  
   
   
