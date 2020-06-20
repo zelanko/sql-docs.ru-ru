@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 2cab5279-86fd-482d-a690-de24bbc25299
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a716a54ed882be1f3c8d51bd66036dbdbe53d70
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151520"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056571"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Занятие 1. Основные возможности перемещения в среде SQL Server Management Studio
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это мощное и гибкое средство. Однако пользователи, не работавшие с Microsoft Visual Studio, иногда не знают, как быстро воспользоваться той или иной функцией. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]— это мощное и гибкое средство. Однако пользователи, не работавшие с Microsoft Visual Studio, иногда не знают, как быстро воспользоваться той или иной функцией. На этом занятии предстоит изучить, как взаимодействие окон образует область конструктора, которая облегчает выполнение задач. В конце занятия описано, как убирать ненужные окна, быстро открывать окна с требуемыми сведениями и задавать настройки по умолчанию таким образом, чтобы на экране отображались наиболее часто используемые в работе элементы.  
   
  Это занятие содержит следующие разделы:  
   
@@ -41,6 +40,6 @@ ms.locfileid: "63151520"
 -   Сводка  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
- [Запуск среды SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
+ [Запуск SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

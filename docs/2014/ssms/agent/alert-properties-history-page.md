@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d1dbd64c7ffc8f80dacd79f96db5a0025a5805e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189833"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056628"
 ---
 # <a name="alert-properties-history-page"></a>Свойства предупреждения (страница журнала)
   Эта страница используется для просмотра и изменения журнала [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждений агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Дата последнего предупреждения**  
  Показывает дату, когда последний раз происходило указанное событие, или значение **(Не возникало)** , если событие ни разу не происходило с момента создания предупреждения.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "68189833"
  **Сбросить счетчик**  
  Очистить сведения на этой странице.  
   
-## <a name="see-also"></a>См. также  
- [Предупреждения](alerts.md)  
+## <a name="see-also"></a>См. также:  
+ [Оповещения](alerts.md)  
   
   

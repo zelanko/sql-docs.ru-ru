@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 231fe13e-c2dc-4149-a73e-1497e62c49e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65003667a08d198934719ef3a307f1b89b96c6c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62695660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062243"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Свойства задания: создание задания (страница "Шаги")
   Эта страница используется для просмотра и упорядочения шагов заданий для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Список шагов задания**  
  Содержит список шагов данного задания.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "62695660"
  **Начальный шаг**  
  Позволяет выбрать шаг, с которого агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начинает выполнение задания.  
   
- **Создать**  
+ **Новые**  
  Позволяет создать новый шаг задания после выбранного этапа.  
   
  **Вставить**  
@@ -44,7 +43,7 @@ ms.locfileid: "62695660"
  **Удаление**  
  Позволяет удалить выбранный шаг задания. При удалении шагов задания автоматически удаляются их выходные журналы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация заданий](implement-jobs.md)  
   
   

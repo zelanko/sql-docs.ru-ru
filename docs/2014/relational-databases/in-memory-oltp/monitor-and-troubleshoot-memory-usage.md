@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 5805ed06ad78040dbdf6c8557e5f548ad57f618b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925098"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026102"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Мониторинг и устранение неполадок с использованием памяти
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] использует память в шаблонах, отличных от дисковых таблиц. Можно контролировать объем выделенной памяти, используемый оптимизированными для памяти таблицами и индексами в базе данных, с помощью динамических административных представлений (DMV) и счетчиков производительности, предназначенных для подсистемы памяти и сборки мусора.  Это обеспечивает видимость на уровне системы и базы данных и позволяет предотвращать проблемы нехватки памяти.
@@ -270,7 +269,7 @@ MEMORYCLERK_XTP      Default    64             0
 
 3.  Примите меры, чтобы избежать потенциальных проблем с памятью. Дополнительные сведения см. в разделе [Устранение проблем нехватки памяти](resolve-out-of-memory-issues.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Привязка базы данных с таблицами, оптимизированными для памяти, к изменениям пула ресурсов](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) [MIN_MEMORY_PERCENT и max_memory_percent в существующем пуле](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
 
 

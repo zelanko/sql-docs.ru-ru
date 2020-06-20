@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f10c82ef5e0b63e0b81b630ed0340545c876661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064743"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Задача 5. Задание связей на основе термина
   В этой задаче вы определяете несколько связей на основе термина для значений в домене **имени поставщика** . Связь на основе терма позволяет исправить терм, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, **Inc.** можно исправить на « **включено**». Службы DQS используют эти связи при обнаружении знаний, очистке и сопоставлении. Дополнительные сведения см. в разделе [Создание связей на основе термина](https://msdn.microsoft.com/library/hh510404.aspx) .  
@@ -30,7 +29,7 @@ ms.locfileid: "65489112"
   
 5.  Повторите предыдущие два шага для следующих значений:  
   
-    |Применение|Исправить на|  
+    |Значение|Исправить на|  
     |-----------|----------------|  
     |Corp.|Corporation|  
     |Inc.|Incorporated|  

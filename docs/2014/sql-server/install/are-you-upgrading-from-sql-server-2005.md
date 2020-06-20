@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 23e7547e858bf3fd9fe21563bd3b100024372b83
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922162"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045501"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Вы выполняете обновление с версии SQL Server 2005?
   Окончание расширенной поддержки для SQL Server 2005 — еще одна причина выполнить обновление до более новой версии SQL Server и базы данных SQL Azure. Обновление позволяет обеспечить безопасность и соответствие требованиям, достичь высокой производительности и оптимизировать инфраструктуру платформы данных.  
@@ -79,7 +78,7 @@ ms.locfileid: "82922162"
 ## <a name="get-sql-server-2014"></a>Получить SQL Server 2014  
  Чтобы скачать ознакомительную копию SQL Server 2014, [щелкните здесь](https://www.microsoft.com/evalcenter/evaluate-sql-server-2014).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/getting-started-sql-server-2014)   
  [SQL Server 2005. Окончание поддержки](https://www.microsoft.com/sql-server/sql-server-2005)   
  [Обновление с SQL Server 2005 до SQL Server 2016](https://msdn.microsoft.com/library/mt168847.aspx)  

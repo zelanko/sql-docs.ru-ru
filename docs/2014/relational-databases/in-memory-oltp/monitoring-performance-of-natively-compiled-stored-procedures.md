@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d14d27cdc20c0f090c7a030efe05cfce4842f437
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161951"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026077"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Отслеживание производительности скомпилированных в собственном коде хранимых процедур
   В этом разделе показано, как наблюдать за производительностью хранимых процедур, скомпилированных в собственном коде  
@@ -113,7 +112,7 @@ GO
   
  Предполагаемый план выполнения для скомпилированных в собственном коде хранимых процедур показывает операторы и выражения для запросов из процедуры. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] не поддерживает все атрибуты SHOWPLAN_XML для скомпилированных в собственном коде хранимых процедур. Например, атрибуты, связанные с оценкой затрат оптимизатора запросов, не являются частью SHOWPLAN_XML для процедуры.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [скомпилированные в собственном коде хранимые процедуры](natively-compiled-stored-procedures.md)  
   
   

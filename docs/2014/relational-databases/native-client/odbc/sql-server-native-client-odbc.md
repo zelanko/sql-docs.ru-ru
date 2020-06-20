@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ca071567d8151c2b620283c0da422e9963c7c01c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 90ab34064ec5114d352b73474afd6791e73f1f3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011082"
 ---
 # <a name="sql-server-native-client-odbc"></a>Собственный клиент SQL Server (ODBC)
   ODBC — это стандартное определение прикладного программного интерфейса (API), который используется для доступа к данным в реляционных базах данных и базах данных с индексно-последовательным методом доступа (ISAM). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает ODBC через драйвер ODBC клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client как один из собственных API для написания приложений на языках C и C++, взаимодействующих с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -76,7 +75,7 @@ ms.locfileid: "82704294"
   
 -   [ODBC How-to Topics](../../native-client-odbc-how-to/odbc-how-to-topics.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client программирование](../sql-server-native-client-programming.md)   
  [Установка собственного клиента SQL Server](../applications/installing-sql-server-native-client.md)  
   

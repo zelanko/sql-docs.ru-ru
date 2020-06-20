@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f3b4c94ef1c4690af2a333fcdbdef88b475219e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806832"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023762"
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
 
@@ -35,6 +34,6 @@ ms.locfileid: "62806832"
   
  Чтобы добавить или удалить элементы окна **Область элементов** , в меню **Сервис** выберите пункт **Выбрать элементы области элементов**. В виде значков окна **Область элементов** можно сделать доступными только **задачи обслуживания** . Не все компоненты доступны постоянно. Например, задачи обслуживания доступны только при создании плана обслуживания.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование панели элементов](../../ssms/use-the-toolbox.md)   
  [Выбор элементов инструментария (страница "Задачи обслуживания")](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  

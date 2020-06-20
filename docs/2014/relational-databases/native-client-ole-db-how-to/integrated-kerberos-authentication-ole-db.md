@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 275306c40caeb9308401f73c2071458ee8b26a36
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c20a4e4951b518f034332c1851ac238d7103dcaa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998681"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Интеграция проверки подлинности Kerberos (OLE DB)
   Этот образец показывает, как выполнить взаимную проверку подлинности Kerberos с использованием OLE DB в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  

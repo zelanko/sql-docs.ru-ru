@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 90b2b323-babd-464a-8914-9dc5e66aca74
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e7091c4dbb8244476357afba18e973535def8baa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481252"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064809"
 ---
 # <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Задача 10. Добавление преобразования "Нечеткое группирование" для выявления повторов
   В этой задаче вы добавляете в поток данных преобразование «Нечеткое группирование». Преобразование «Нечеткое группирование» помогает выявить повторения в исходных данных. Дополнительные сведения см. в разделе [Преобразование «Нечеткое группирование](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) ».  

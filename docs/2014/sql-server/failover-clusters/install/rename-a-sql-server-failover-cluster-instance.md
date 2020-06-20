@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96bd1cc82f73fd78bd16d0d3fe2f2015fabe4995
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126032"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062596"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>переименовать экземпляр отказоустойчивого кластера SQL Server
   Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] является частью отказоустойчивого кластера, процесс переименования виртуального сервера отличается от процесса переименования изолированного экземпляра. Дополнительные сведения см. в статье [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md).  
@@ -63,15 +62,15 @@ ms.locfileid: "63126032"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Дополнительные меры после операции переименования  
  После изменения сетевого имени кластера отработки отказа необходимо выполнить проверку и следующие инструкции для включения всех сценариев в агенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** После изменения сетевого имени экземпляра [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] отказоустойчивого кластера с помощью средства "Администратор кластера Windows" в будущем операция обновления или удаления может завершиться ошибкой. Чтобы устранить эту проблему, обновите запись реестра **имя_кластера** , следуя инструкциям в разделе "решение [this](https://go.microsoft.com/fwlink/?LinkId=244002) " этойhttps://go.microsoft.com/fwlink/?LinkId=244002)статьи (.  
+ ** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .** После изменения сетевого имени [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] экземпляра отказоустойчивого кластера с помощью средства "Администратор кластера Windows" в будущем может произойти сбой. Чтобы устранить эту проблему, обновите запись реестра **имя_кластера** , следуя инструкциям в разделе "решение" [этой](https://go.microsoft.com/fwlink/?LinkId=244002) статьи ( https://go.microsoft.com/fwlink/?LinkId=244002) .  
   
- ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента:** Проверьте и выполните следующие дополнительные действия для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] службы агента:  
+ ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента:** проверьте и выполните следующие дополнительные действия для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента:  
   
 -   Исправьте параметры в реестре, если агент SQL Server настроен на пересылку событий. Дополнительные сведения см. в статье [Назначение сервера пересылки событий (среда SQL Server Management Studio)](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
 -   Исправьте имена экземпляра главного сервера (MSX) и целевых серверов (TSX), если сетевое имя компьютеров / кластера было изменено. Дополнительные сведения см. в следующих разделах:  
   
-    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Отключение нескольких целевых серверов от главного](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Создание многосерверной среды](../../../ssms/agent/create-a-multiserver-environment.md)  
   
@@ -83,7 +82,7 @@ ms.locfileid: "63126032"
   
 -   Обновите шаги заданий, зависящие от имени сервера. Дополнительные сведения см. в статье [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46994409cc6a5119c9144eb7a3a4b9a8a9a22c44
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002454"
 ---
 # <a name="sqlserveralias-class"></a>Класс SqlServerAlias
   Класс [SqlServerAlias](sqlserveralias-class.md) представляет псевдоним соединения сервера.  
@@ -36,7 +35,7 @@ ms.locfileid: "63223546"
   
  **Примечание.** [Класс SqlServerAlias](sqlserveralias-class.md) наследует `Put` метод от класса поставщика. Однако он не возвращает результаты, как указано методом `Provider::Put`. Дополнительные сведения см. в документации WMI.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e48dfbf5420c6032b8185cf59b2b132df2c82cf2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176193"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966244"
 ---
 # <a name="integration-services-ssis-projects"></a>Проекты служб Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , предназначенную для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .
 
- При развертывании пакетов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базе данных или хранилище [!INCLUDE[ssIS](../includes/ssis-md.md)] пакетов для управления пакетами используется [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] служба. Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о службе см. в разделе [Службы Integration Services (SSIS)](service/integration-services-service-ssis-service.md). Дополнительные сведения о развертывании пакетов см. в разделе [Развертывание пакетов &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).
+ При развертывании пакетов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базе данных или [!INCLUDE[ssIS](../includes/ssis-md.md)] хранилище пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для управления пакетами используется служба. Служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о службе см. в разделе [Службы Integration Services (SSIS)](service/integration-services-service-ssis-service.md). Дополнительные сведения о развертывании пакетов см. в разделе [Развертывание пакетов &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).
 
  При развертывании проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сервер [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для управления проектами используются представления и хранимые процедуры Transact-SQL в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Дополнительные сведения о развертывании проектов см. в разделе [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md). Дополнительные сведения о сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] см. в разделе [Службы Integration Services (SSIS)](catalog/integration-services-ssis-server-and-catalog.md).
 

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d11ef801-dcb3-4fe1-84db-bf943ccf0e99
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cc1ee935e19c4f44dc1c350355edd08371ea6485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb0e43d01057296b73547d6a8256bd4140c5a736
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056736"
 ---
 # <a name="serversettings-class"></a>Класс ServerSettings
-  [Класс serversettings Class] класс serversettings-class.md) представляет параметры сервера в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  [Класс serversettings Class] класс serversettings-class.md) представляет параметры сервера в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  [Класс serversettings Class] класс serversettings-class.md) позволяет выполнять следующие задачи:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "63137314"
   
 -   задавать сертификат безопасности для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

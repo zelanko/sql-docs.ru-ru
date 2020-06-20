@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d6b3911f-68b4-4483-831b-df89d6400add
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3854950962caf61de0edc7c5a910675fdd7ef37e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62636428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061925"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Подключение к зарегистрированным серверам и к обозревателю объектов
   В этом учебнике показано, как использовать зарегистрированные серверы и обозреватель объектов.  
@@ -37,7 +36,7 @@ ms.locfileid: "62636428"
   
 5.  В поле **Имя зарегистрированного сервера** введите [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-6.  На вкладке **Свойства соединения** в списке **Подключение к базе данных** выберите ** \<Обзор сервера... >**.  
+6.  На вкладке **Свойства соединения** в списке **Подключение к базе данных** выберите **\<Browse server...>** .  
   
 7.  В диалоговом окне **Просмотр баз данных** нажмите кнопку **Да**.  
   

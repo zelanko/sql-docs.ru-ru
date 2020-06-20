@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d91ae9fc1bbb404e63abaa2b5037164460d01a25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688903"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063809"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Стратегия резервного копирования и восстановления из копии для репликации слиянием
   Для репликации слиянием регулярно создавайте резервные копии следующих баз данных:  
@@ -56,7 +55,7 @@ ms.locfileid: "62688903"
 > [!IMPORTANT]  
 >  Результатом синхронизации базы данных публикаций с базой данных подписок может быть восстановление опубликованных таблиц до более современного состояния, чем состояние других неопубликованных таблиц, восстановленных из резервной копии.  
   
- При синхронизации с подписчиком, на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] котором выполняется версия до [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], подписка не может быть анонимной. Это должна быть клиентская подписка или серверная подписка (в предыдущих выпусках она называется локальными подписками и глобальными подписками).  
+ При синхронизации с подписчиком, на котором выполняется версия [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , подписка не может быть анонимной. она должна быть клиентской подпиской или серверной подпиской (в предыдущих выпусках она называется "Локальные подписки" и "глобальные подписки").  
   
  Чтобы синхронизировать подписку, см. разделы [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) и [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "62688903"
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Резервное копирование и восстановление переиздаваемой базы данных  
  Когда база данных подписывается на данные издателя и в свою очередь публикует те же самые данные для других баз данных подписок, ее называют переиздающей базой данных. При восстановлении переиздающей базы данных следуйте инструкциям, описанным в подразделах «Резервное копирование и восстановление базы данных публикаций» и «Резервное копирование и восстановление базы данных подписок» этого раздела.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование и восстановление баз данных SQL Server](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Создание резервной копии и восстановление из копий реплицируемых баз данных](back-up-and-restore-replicated-databases.md)  
   

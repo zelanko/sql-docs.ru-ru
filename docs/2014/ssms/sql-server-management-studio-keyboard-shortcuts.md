@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f960b871591785c81bcef84ce1b9cbacd4ba99f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127037"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062025"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Сочетания клавиш среды SQL Server Management Studio
   Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предлагает пользователям две схемы сочетаний клавиш на выбор. По умолчанию используется схема [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], при которой применяются те же сочетания клавиш, что и в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. Среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предлагает схему сочетаний клавиш, аналогичную стандартной схеме из [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Чтобы изменить схему сочетаний клавиш или добавить новые сочетания клавиш, выберите в меню **Сервис** пункт **Параметры**. Выберите предпочтительную клавиатурную схему на вкладке **Среда**страницы **Клавиатура** .  

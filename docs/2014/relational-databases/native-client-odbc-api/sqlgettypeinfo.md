@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4237ebcc22318fdd6a93af09a79d7f8e2bea8989
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f995e3c288435ed55d2f1496894f73409496c06d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705994"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022033"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента сообщает дополнительный столбец USERTYPE в результирующем наборе `SQLGetTypeInfo` . USERTYPE возвращает определение типа данных DB-Library. Этот столбец полезен разработчикам, которые переносят существующие приложения DB-Library в ODBC.  
@@ -45,7 +44,7 @@ ms.locfileid: "82705994"
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>Поддержка SQLGetTypeInfo для больших определяемых пользователем типов данных среды CLR  
  Функция `SQLGetTypeInfo` поддерживает определяемые пользователем типы больших данных CLR. Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функция SQLGetTypeInfo](https://go.microsoft.com/fwlink/?LinkId=59356)   
  [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   

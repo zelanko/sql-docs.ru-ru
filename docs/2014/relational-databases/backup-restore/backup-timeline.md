@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 92cffa7c280aac559433a8fc7ad5a3223c9f6de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb7cd9d51015a4a26cc50608b012542255a880
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876706"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958983"
 ---
 # <a name="backup-timeline"></a>Временная шкала резервного копирования
   Диалоговое окно **Временная шкала резервного копирования** служит для поиска и указания резервных копий для восстановления базы данных на момент времени. Чтобы открыть диалоговое окно **Временная шкала резервного копирования** , нажмите кнопку **Временная шкала** на панели **Восстановление базы данных (страница "Общие")** . В этом диалоговом окне можно просмотреть временную шкалу операций восстановления, применявшихся к базе данных.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 689c3a734a5b4eb424511da52032dc348b5757ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7686f6ee0a5cbce01fb69d36d645ff9787276ef8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231798"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024934"
 ---
 # <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>Занятие 6: Перенос базы данных с исходного локального компьютера на целевой компьютер в Azure
   В этом занятии предполагается, что у вас уже есть другой SQL Server, который может находиться на другом локальном компьютере или на виртуальной машине в Azure. Сведения о том, как создать виртуальную машину SQL Server в Azure, см. в статье [Подготовка виртуальной машины SQL Server в Azure](https://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). После подготовки SQL Server виртуальной машины в Azure убедитесь, что вы можете подключиться к экземпляру SQL Server на этой виртуальной машине с помощью SQL Server Management Studio на другом компьютере.  
@@ -136,9 +135,9 @@ ms.locfileid: "75231798"
   
 5.  Чтобы указать присоединяемую базу данных, в диалоговом окне **Присоединение баз данных** нажмите кнопку **Добавить**. В диалоговом окне « **Размещение файлов базы данных** » выполните следующие действия.  
   
-     В качестве расположения файла данных базы данных введите `https://teststorageaccnt.blob.core.windows.net/testcontainer/`:.  
+     В качестве расположения файла данных базы данных введите: `https://teststorageaccnt.blob.core.windows.net/testcontainer/` .  
   
-     В качестве имени файла введите: `TestDB1Data.mdf`.  
+     В качестве имени файла введите: `TestDB1Data.mdf` .  
   
 6.  Нажмите кнопку **ОК**.  
   

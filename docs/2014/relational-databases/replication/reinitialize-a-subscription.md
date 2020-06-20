@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f751928c05caa5c4acdcc6c667dc59bb7824021b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68199222"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056993"
 ---
 # <a name="reinitialize-a-subscription"></a>Повторная инициализация подписки
   В данном разделе описывается повторная инициализация подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Отдельные подписки можно помечать для повторной инициализации, чтобы во время следующей синхронизации применялся новый моментальный снимок.  
@@ -107,19 +106,19 @@ ms.locfileid: "68199222"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Повторная инициализация подписки по запросу на публикацию транзакций  
   
-1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Укажите **@publisher**, **@publisher_db**и **@publication**. В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
+1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitpullsubscription_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Укажите **@publisher** , **@publisher_db** и **@publication** . В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
 2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент распространителя на подписчике. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Повторная инициализация принудительной подписки на публикацию транзакций  
   
-1.  Выполните процедуру [sp_reinitpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql) на издателе. Укажите **@publication**, **@subscriber**и **@destination_db**. В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
+1.  Выполните процедуру [sp_reinitpullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql) на издателе. Укажите **@publication** , **@subscriber** и **@destination_db** . В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
 2.  (Необязательно) Чтобы синхронизировать подписку, запустите агент распространителя на распространителе. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Повторная инициализация подписки по запросу на публикацию слиянием  
   
-1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Укажите **@publisher**, **@publisher_db**и **@publication**. Чтобы передать изменения с подписчика перед повторной инициализацией, укажите значение `true` для. **@upload_first** Помечает подписку для повторной инициализации при следующем запуске агента слияния.  
+1.  В базе данных подписчика на подписчике выполните процедуру [sp_reinitmergepullsubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Укажите **@publisher** , **@publisher_db** и **@publication** . Чтобы передать изменения с подписчика перед повторной инициализацией, укажите значение `true` для **@upload_first** . Помечает подписку для повторной инициализации при следующем запуске агента слияния.  
   
     > [!IMPORTANT]  
     >  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
@@ -128,7 +127,7 @@ ms.locfileid: "68199222"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Повторная инициализация принудительной подписки на публикацию слиянием  
   
-1.  Выполните процедуру [sp_reinitmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql) на издателе. Укажите **@publication**, **@subscriber**и **@subscriber_db**. Чтобы передать изменения с подписчика перед повторной инициализацией, укажите значение `true` для. **@upload_first** В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
+1.  Выполните процедуру [sp_reinitmergesubscription (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql) на издателе. Укажите **@publication** , **@subscriber** и **@subscriber_db** . Чтобы передать изменения с подписчика перед повторной инициализацией, укажите значение `true` для **@upload_first** . В результате подписка будет помечена к повторной инициализации при следующем запуске агента распространителя.  
   
     > [!IMPORTANT]  
     >  Если добавить, удалить или изменить параметризованный фильтр, ожидающие обработки изменения подписчика нельзя будет передать издателю во время повторной инициализации. Если нужно передать изменения, ожидающие обработки, то перед изменением фильтра необходимо синхронизировать все подписки.  
@@ -175,7 +174,7 @@ ms.locfileid: "68199222"
     > [!NOTE]  
     >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка по запросу не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Этот метод помечает подписку для повторной инициализации.  
   
 5.  Выполните синхронизацию подписки по запросу. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -190,7 +189,7 @@ ms.locfileid: "68199222"
     > [!NOTE]  
     >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо принудительная подписка не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Этот метод помечает подписку для повторной инициализации.  
   
 5.  Выполните синхронизацию принудительной подписки. Дополнительные сведения см. в статье [Синхронизация принудительной подписки](synchronize-a-push-subscription.md).  
   
@@ -205,7 +204,7 @@ ms.locfileid: "68199222"
     > [!NOTE]  
     >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо подписка по запросу не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
   
     > [!NOTE]  
     >  Нельзя передать изменения, если срок действия подписки истек. Дополнительные сведения см. в статье [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -223,7 +222,7 @@ ms.locfileid: "68199222"
     > [!NOTE]  
     >  Если этот метод возвращает значение `false`, значит, на шаге 2 были неправильно заданы свойства подписки либо принудительная подписка не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Передайте значение `true`, чтобы передать изменения на подписчике перед повторной инициализацией, или значение `false`, чтобы выполнить повторную инициализацию с потерей всех изменений, ожидающих на подписчике. Этот метод помечает подписку для повторной инициализации.  
   
     > [!NOTE]  
     >  Нельзя передать изменения, если срок действия подписки истек. Дополнительные сведения см. в статье [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -243,7 +242,7 @@ ms.locfileid: "68199222"
   
  [!code-vb[HowTo#rmo_vb_ReinitMergePullSub_WithUpload](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_reinitmergepullsub_withupload)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Повторная инициализация подписок](reinitialize-subscriptions.md)   
  [Основные понятия объекты Replication Management Objects](concepts/replication-management-objects-concepts.md)   
  [Рекомендации по защите репликации](security/replication-security-best-practices.md)  

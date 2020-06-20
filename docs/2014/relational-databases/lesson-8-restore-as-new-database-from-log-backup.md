@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 37d8344323add8b9b6f520d59862cdd978823e4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049773"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>Занятие 9. Восстановление базы данных из службы хранилища Azure
   На этом занятии вы узнаете, как восстановить файл резервной копии базы данных из хранилища Azure в базу данных, которая находится локально или на виртуальной машине в Azure. Для прохождения этого занятия не требуется завершать занятия 4, 5, 6, 7 и 8.  

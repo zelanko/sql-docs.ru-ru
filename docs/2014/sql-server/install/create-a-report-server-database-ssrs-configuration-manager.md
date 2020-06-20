@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952305"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042824"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Создание базы данных сервера отчетов (диспетчер конфигурации служб SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]В **собственном режиме** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранения метаданных и объектов сервера отчетов используются две реляционные базы данных. Одна база данных используется как основное хранилище, а вторая — для хранения временных данных. Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются `reportserver` и `reportservertempdb`. В совокупности эти две базы данных называются «базой данных сервера отчетов» или «каталогом сервера отчетов».  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]В **собственном режиме** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения метаданных и объектов сервера отчетов используются две реляционные базы данных. Одна база данных используется как основное хранилище, а вторая — для хранения временных данных. Эти базы данных создаются одновременно и связываются по именам. В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию базы данных именуются `reportserver` и `reportservertempdb`. В совокупности эти две базы данных называются «базой данных сервера отчетов» или «каталогом сервера отчетов».  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**Режим** интеграции с SharePoint включает в себя третью базу данных, которая используется для метаданных предупреждений об изменении данных. Эти три базы данных создаются для каждого приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , а в их имена по умолчанию включается идентификатор GUID, представляющий приложение службы. Далее приводятся примеры имен этих трех баз данных, используемых в режиме интеграции с SharePoint.  
   

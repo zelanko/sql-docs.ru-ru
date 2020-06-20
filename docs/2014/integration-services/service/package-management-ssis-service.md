@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ca2e8dd516b995dcf3d2e48b1ed14209677d41f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963524"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
   Управление пакетов требует выполнения следующих задач.  
@@ -83,7 +82,7 @@ ms.locfileid: "62766634"
   
 -   [Просмотр пакетов служб Integration Services в среде SQL Server Management Studio (службы SSIS)](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы Integration Services (службы SSIS)](integration-services-service-ssis-service.md)  
   
   

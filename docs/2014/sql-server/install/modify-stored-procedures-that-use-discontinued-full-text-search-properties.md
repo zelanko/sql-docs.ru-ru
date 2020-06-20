@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f19fa2dc044d5975edfbc201c8fc3eb9e9244936
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044608"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Измените хранимые процедуры, в которых используются неподдерживаемые свойства полнотекстового поиска
   Чтобы обеспечить правильную работу хранимых процедур, нужно изменить существующие процедуры, удалив свойства и настройки, связанные с полнотекстовым поиском, которые были удалены или устарели.  
   
 ## <a name="component"></a>Компонент  
- Компонент Full-text Search  
+ Полнотекстовый поиск  
   
 ## <a name="description"></a>Описание  
  Следующие свойства и настройки, связанные с полнотекстовым поиском, были удалены.  
@@ -46,7 +45,7 @@ ms.locfileid: "66093852"
 ## <a name="corrective-action"></a>Действие по исправлению  
  Измените хранимые процедуры, чтобы удалить эти свойства.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Работа с помощником по обновлению](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

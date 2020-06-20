@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144600"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024744"
 ---
 # <a name="view-offline-log-files"></a>просматривать файлы журнала в режиме «вне сети»
   Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], появилась возможность просматривать файлы журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальных и удаленных экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети или не могут запуститься.  
@@ -50,9 +49,9 @@ ms.locfileid: "63144600"
   
 -   Доступ для чтения к пространству имен WMI **Root\Microsoft\SqlServer\ComputerManagement12** . По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись». Дополнительные сведения см. в описании процедуры «Проверка разрешений WMI» этого раздела.  
   
--   Разрешение на чтение для папки, содержащей файлы журналов ошибок. По умолчанию файлы журналов ошибок находятся по следующему пути (где \<*Диск>* определяет диск, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а \<*Имя_экземпляра*> задает имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Разрешение на чтение для папки, содержащей файлы журналов ошибок. По умолчанию файлы журнала ошибок находятся по следующему пути (где \<*Drive> * обозначает диск, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а \<*InstanceName*> — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **\<Диск>: \Program Files\Microsoft SQL Server\MSSQL12. \<Имя_экземпляра> \MSSQL\LOG**  
+     **\<Drive>: \Program Files\Microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\Log**  
   
  Для проверки параметров безопасности пространства имен WMI можно использовать оснастку «Элемент управления WMI».  
   
@@ -60,9 +59,9 @@ ms.locfileid: "63144600"
   
 1.  Откройте оснастку «Элемент управления WMI». Для этого выполните одно из следующих действий в зависимости от операционной системы.  
   
-    -   Нажмите кнопку **Пуск**, `wmimgmt.msc` введите в поле **начать поиск** и нажмите клавишу ВВОД.  
+    -   Нажмите кнопку **Пуск**, введите `wmimgmt.msc` в поле **начать поиск** и нажмите клавишу ВВОД.  
   
-    -   Нажмите кнопку **Пуск**, выберите команду **выполнить**, введите `wmimgmt.msc`и нажмите клавишу ВВОД.  
+    -   Нажмите кнопку **Пуск**, выберите команду **выполнить**, введите `wmimgmt.msc` и нажмите клавишу ВВОД.  
   
 2.  По умолчанию оснастка «Элемент управления WMI» управляет локальным компьютером.  
   
