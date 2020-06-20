@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965849"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
   В этом разделе описано, как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перемещают системные базы данных. Эта операция может пригодиться в следующих ситуациях:  
@@ -50,7 +49,7 @@ ms.locfileid: "62871541"
 > [!IMPORTANT]  
 >  При перемещении системной базы данных с последующим перестроением базы данных master необходимо заново переместить системную базу данных, поскольку операция перестроения устанавливает все системные базы данных в расположение по умолчанию.  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **В этом разделе**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**В этом разделе**  
   
 -   [Запланированное перемещение и процедура запланированного обслуживания диска](#Planned)  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62871541"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Перемещение базы данных Resource  
- База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
+ База данных Resource находится в папке \<*drive*> : \Program FILES\MICROSOFT SQL Server\MSSQL \<version> . \<*instance_name*> \MSSQL\Binn \\ . Эту базу данных нельзя переместить.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a>Дальнейшие действия. После перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871541"
   
 2.  Щелкните правой кнопкой мыши **Журналы ошибок** и выберите пункт **Настроить**.  
   
-3.  В диалоговом окне **Настройка журналов ошибок агента SQL Server** задайте новое расположение для файла SQLAGENT.OUT. Расположение по умолчанию — C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name>\\\MSSQL\LOG.  
+3.  В диалоговом окне **Настройка журналов ошибок агента SQL Server** задайте новое расположение для файла SQLAGENT.OUT. Расположение по умолчанию — C:\Program Files\Microsoft SQL Server\MSSQL12. <instance_name> \MSSQL\Log \\ .  
   
 #### <a name="change-the-database-default-location"></a>Измените расположение по умолчанию для базы данных  
   
@@ -263,8 +262,8 @@ ms.locfileid: "62871541"
   
 5.  Удалите файлы `tempdb.mdf` и `templog.ldf` из исходного местоположения.  
   
-## <a name="see-also"></a>См. также  
- [База данных ресурсов](resource-database.md)   
+## <a name="see-also"></a>См. также:  
+ [База данных Resource](resource-database.md)   
  [База данных tempdb](tempdb-database.md)   
  [База данных master](master-database.md)   
  [База данных msdb](msdb-database.md)   

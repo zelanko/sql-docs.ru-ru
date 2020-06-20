@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038067"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   В данном разделе описывается процесс создания публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
@@ -45,13 +44,13 @@ ms.locfileid: "73882323"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Названия публикаций и статей не могут содержать следующие символы: %, \*, [ , ], |, :, ", ? , ", \,/, \< , >. Если в базе данных есть объекты, имена которых содержат любые из этих символов, и их нужно реплицировать, необходимо задать для статьи имя, отличное от имени объекта, в диалоговом окне **Свойства статьи — \<статья>** на странице **Статьи** мастера.  
+-   Названия публикаций и статей не могут содержать следующие символы: %, \*, [ , ], |, :, ", ? , ' , \ , / , \< , >. Если объекты в базе данных содержат какие-либо из этих символов и вы хотите их реплицировать, необходимо указать имя статьи, отличное от имени объекта в диалоговом окне **Свойства статьи — \<Article> ** , которое доступно на странице **статьи** мастера.  
   
 ###  <a name="security"></a><a name="Security"></a> безопасность  
  По возможности предлагайте пользователям вводить учетные данные системы безопасности во время выполнения приложения. Если необходимо хранить учетные данные, используйте [службы шифрования](https://go.microsoft.com/fwlink/?LinkId=34733) , предоставляемые платформой [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Создание публикаций и определение статей осуществляется с помощью мастера создания публикаций. После создания публикации вы можете просмотреть и изменить ее свойства в диалоговом окне **Свойства публикации — \<публикация>** . Дополнительные сведения о создании публикаций из базы данных Oracle вы найдете в [этой статье](create-a-publication-from-an-oracle-database.md).  
+ Создание публикаций и определение статей осуществляется с помощью мастера создания публикаций. После создания публикации просмотрите и измените свойства публикации в диалоговом окне **Свойства публикации — \<Publication> ** . Дополнительные сведения о создании публикаций из базы данных Oracle вы найдете в [этой статье](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Создание публикации и определение статей  
   
@@ -108,9 +107,9 @@ ms.locfileid: "73882323"
   
     -   Если неизвестно, существует ли задание агента чтения журнала для публикуемой базы данных, выполните процедуру [sp_helplogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) на издателе в базе данных издателя.  
   
-    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Укажите в параметрах [!INCLUDE[msCoName](../../../includes/msconame-md.md)]**job_name\@ и** **password\@ учетные данные**  Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Перейдите к шагу 3.  
+    -   Если результирующий набор пуст, необходимо создать задание агента чтения журнала. На издателе выполните процедуру [sp_addlogreader_agent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Укажите в параметрах **\@job_name** и **\@password** учетные данные [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, с которыми работает агент. Если агент будет использовать проверку подлинности SQL Server для подключения к издателю, также необходимо указать значение **0** в параметре **\@publisher_security_mode** и данные входа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в параметрах **\@publisher_login** и **\@publisher_password**. Перейдите к шагу 3.  
   
-3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Укажите имя публикации для ** \@публикации**, а для параметра ** \@repl_freq** укажите значение `snapshot` для публикации моментальных снимков или значение `continuous` для публикации транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
+3.  На издателе выполните процедуру [sp_addpublication (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Укажите имя публикации для ** \@ публикации**, а для параметра ** \@ repl_freq** укажите значение `snapshot` для публикации моментальных снимков или значение `continuous` для публикации транзакций. Укажите все остальные параметры публикации. Таким образом будет определена публикация.  
   
     > [!NOTE]  
     >  Имена публикаций не могут содержать следующие символы:  

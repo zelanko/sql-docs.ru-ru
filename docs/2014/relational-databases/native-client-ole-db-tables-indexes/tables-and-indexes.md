@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 72cd2aa4afab66a91351013f9c9141f2d94bff79
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abc7c314e433eb9f107bd191738d951706f1b50d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704503"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017797"
 ---
 # <a name="tables-and-indexes"></a>Таблицы и индексы
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента предоставляет интерфейсы **IIndexDefinition** и **ITableDefinition** , позволяя потребителям создавать, изменять и удалять [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы и индексы. Допустимые определения таблиц и индексов зависят от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -53,7 +52,7 @@ ms.locfileid: "82704503"
   
 -   [Удаление индекса SQL Server](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [DROP TABLE (Transact-SQL)](/sql/t-sql/statements/drop-table-transact-sql)   
  [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql)   

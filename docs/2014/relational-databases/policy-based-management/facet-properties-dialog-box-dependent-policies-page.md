@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a4cd6d60037e83b1ba6c7a83f349a994c9be3f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061679"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Зависимые политики»
   Используйте это диалоговое окно для отображения списка политик, которые в данный момент ссылаются на этот аспект управления на основе политик.  
@@ -26,7 +25,7 @@ ms.locfileid: "62704919"
  **имя**;  
  Перечисляет имена всех политик, упоминающих данный текущий аспект.  
   
- **Включен**  
+ **Enabled**  
  Установленный флажок показывает, что политика включена. Снятый флажок показывает, что политика отключена.  
   
  **Журнал**  
@@ -35,7 +34,7 @@ ms.locfileid: "62704919"
  **Создан**  
  Дата создания политики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

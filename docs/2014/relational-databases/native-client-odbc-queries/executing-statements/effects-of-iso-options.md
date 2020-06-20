@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 813f1397-fa0b-45ec-a718-e13fe2fb88ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bdbf37ee386cb31e8d8dcf29ff1f45d0f21a681f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 79deff1d77f4020aa7484629bac78d360ed7691f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999178"
 ---
 # <a name="effects-of-iso-options"></a>Действие параметров ISO
   Стандарт ODBC близок к стандарту ISO, а приложения ODBC ожидают стандартного поведения от драйвера ODBC. Чтобы обеспечить более тесное соответствие поведения, определенного в стандарте ODBC, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента всегда использует любые параметры ISO, доступные в версии SQL Server, с которой он подключается.  
@@ -40,7 +39,7 @@ ms.locfileid: "82705193"
   
  Чтобы драйвер мог узнавать текущие значения параметров SET, ODBC-приложения не должны задавать эти параметры с помощью инструкции языка [!INCLUDE[tsql](../../../includes/tsql-md.md)] SET. Они могут задавать их только через параметры источника данных или соединения. Если приложение запускает инструкции SET, то инструкции SQL, создаваемые драйвером, могут быть неверными.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Исполнение инструкций &#40;ODBC&#41;](executing-statements-odbc.md)   
  [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)   
  [SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)  

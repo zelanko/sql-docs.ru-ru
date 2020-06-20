@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f6248636338d810127d7006ca87fd91ab359069
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5699ba1f3ef8582cbdbbd41a5f849ff02440d9dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017721"
 ---
 # <a name="supporting-distributed-transactions"></a>Поддержка распределенных транзакций
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители поставщика OLE DB собственного клиента могут использовать метод **ITransactionJoin:: жоинтрансактион** для участия в распределенной транзакции, которая координируется Microsoft координатор распределенных транзакций (MS DTC).  
@@ -138,7 +137,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Транзакции](transactions.md)  
   
   

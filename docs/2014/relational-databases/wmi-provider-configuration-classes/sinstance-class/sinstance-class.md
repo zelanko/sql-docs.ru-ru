@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: ddda92fa-5bb9-45dd-b421-243b02db4caf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 12918f817277eb35f32d96eefeea40c4b4d36bda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50bdac5bdc646c9b152347c161b7dcbdde9ea2f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009127"
 ---
 # <a name="sinstance-class"></a>Класс SInstance
   Класс [SInstance Class](sinstance-class.md) представляет экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Класс [SInstance Class](sinstance-class.md) можно использовать для управления протоколами и сетевыми библиотеками, связанными с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]можно также задать сертификат безопасности.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

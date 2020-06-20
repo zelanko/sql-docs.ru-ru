@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039841"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Занятие 5.: Автоматизация очистки и сопоставления с помощью SSIS
   На занятии 1 вы создали базу знаний «поставщики» и использовали ее для очистки данных на занятии 2 и сопоставления данных на занятии 3 с помощью **клиента DQS**. В реальной ситуации может потребоваться извлечь данные из источника, который не поддерживает DQS, или автоматизировать процесс очистки и сопоставления без использования средства **клиента DQS** . SQL Server Integration Services (SSIS) содержит компоненты, которые можно использовать для интеграции данных из различных разнородных источников и компонента **[преобразования «Очистка DQS](https://msdn.microsoft.com/library/ee677619.aspx)** » для вызова функции очистки, ПРЕДОСТАВЛЯЕМОЙ службами DQS. В настоящее время службы DQS не предоставляют соответствующие функции службам SSIS, но можно использовать преобразование « **[Нечеткое группирование](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** » для обнаружения дубликатов в данных.  

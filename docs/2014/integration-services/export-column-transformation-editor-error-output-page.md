@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 260be463-01a9-460c-9c98-e5265cb2b1e9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7ae69c24138749fa1f3718c94147cd1db12abd1d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966724"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Редактор преобразования «Экспорт столбца» (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** диалогового окна **Редактор преобразования «Экспорт столбца»** , чтобы задать способ обработки ошибок.  
   
  Дополнительные сведения о редакторе преобразований «Экспорт столбца» см. в разделе [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ввод-вывод**  
  Просмотр имени вывода. Щелкните имя, чтобы развернуть представление и отобразить столбцы.  
   
- **Рубрик**  
+ **Столбец**  
  Просмотрите выходные столбцы, выбранные на странице **Столбцы** диалогового окна **Редактор преобразования "Экспорт столбца"** .  
   
  **Error**  
@@ -48,7 +47,7 @@ ms.locfileid: "66058941"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Экспорт столбца" (страница "Столбцы")](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   

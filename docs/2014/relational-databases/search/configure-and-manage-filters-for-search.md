@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 7ccf2ee0-9854-4253-8cca-1faed43b7095
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df228060a5b714d92c9ae200d91851e4b579839d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9a57c95226a9b277cfb718b40b5d0525b1f8eb3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997748"
 ---
 # <a name="configure-and-manage-filters-for-search"></a>Настройка поисковых фильтров и управление ими
   Индексирование документа в столбце типов данных `varbinary`, `varbinary(max)`, `image` или `xml` требует дополнительной обработки. Такая обработка должна выполняться фильтром. Фильтр извлекает из документа текстовые данные (устранение форматирования). Затем фильтр отправляет текст в компонент средства разбиения по словам для языка, связанного со столбцом таблицы.  
   
  Данный фильтр зависит от типа данных документа (DOC, PDF, XLS, XML и т. д.). Такие фильтры реализуют интерфейс IFilter. Для получения дополнительных сведений об этих типах документов выполните запрос к представлению каталога [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
- Двоичные документы можно хранить в одном столбце `varbinary(max)` или `image`. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку расширение файла не отображается, если файл хранится в столбце `varbinary(max)` или `image` , расширение файла (doc, XLS, PDF и т. д.) должно храниться в отдельном столбце таблицы, называемом столбцом типа. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word). В таблице **документа** в [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]столбец **документа** имеет тип `varbinary(max)`, а столбец Type, fileExtension, имеет тип. **FileExtension** `nvarchar(8)`  
+ Двоичные документы можно хранить в одном столбце `varbinary(max)` или `image`. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выбирает для каждого документа правильный фильтр в соответствии с расширением файла. Поскольку расширение файла не отображается, если файл хранится в `varbinary(max)` `image` столбце или, расширение файла (doc, XLS, PDF и т. д.) должно храниться в отдельном столбце таблицы, называемом столбцом типа. Столбец типов может иметь любой символьный тип данных и содержит расширение файла документа (например, DOC в случае документа [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Word). В таблице **документа** в [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] столбец **документа** имеет тип `varbinary(max)` , а столбец Type, **fileExtension**, имеет тип `nvarchar(8)` .  
   
 > [!NOTE]  
 >  Фильтр может быть способен обрабатывать объекты, внедренные в родительский объект, в зависимости от его реализации. Однако в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] фильтры не настроены на переход по ссылкам на другие объекты.  
@@ -42,8 +41,8 @@ EXEC sp_help_fulltext_system_components 'filter';
   
 -   [sys.fulltext_index_columns (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys. fulltext_index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql)   
- [Совместимость FILESTREAM с другими компонентами SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
+ [Совместимость FILESTREAM с другими функциями SQL Server](../blob/filestream-compatibility-with-other-sql-server-features.md)  
   
   

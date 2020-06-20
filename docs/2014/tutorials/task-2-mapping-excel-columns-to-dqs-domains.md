@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484704"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006651"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Задача 2. Сопоставление столбцов Excel с доменами DQS
     
 1.  На странице **Сопоставление** выберите **Файл Excel** как **Источник данных**.  
   
-2.  Нажмите кнопку **Обзор**, выберите **поставщики. xlsx**и нажмите кнопку **Открыть**.  
+2.  Нажмите кнопку **Обзор**, выберите **Suppliers.xlsx**и нажмите кнопку **Открыть**.  
   
 3.  Выберите **инкомингсупплиерс $** для **листа**.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65484704"
     |Строка адреса|Строка адреса|  
     |Город|Город|  
     |Состояние|Состояние|  
-    |Страна (нажмите кнопку **+ (добавить сопоставление столбцов)** , чтобы добавить строку)|Country|  
+    |Страна (нажмите кнопку **+ (добавить сопоставление столбцов)** , чтобы добавить строку)|Страна или регион|  
     |Почтовый индекс|Почтовый индекс|  
   
      ![Сопоставление столбцов Excel с доменами](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Сопоставление столбцов Excel с доменами")  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b7865b3b928c6c6291fdd7cb419b76cae8f1e8b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 94100894323d8d15057c966f3298cf4e7d32c469
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699900"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018403"
 ---
 # <a name="binding-parameters"></a>Привязка параметров
   Каждый маркер параметра в инструкции SQL должен быть сопоставлен переменной в приложении (привязан к ней), прежде чем можно выполнить инструкцию. Это делается путем вызова функции [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) . **SQLBindParameter** описывает переменную программы (адрес, тип данных C и т. д.) для драйвера. Она также определяет маркер параметра, указывая его порядковое значение, а затем описывая характеристики представляемого им объекта SQL (тип данных SQL, точность и т. д.).
@@ -58,7 +57,7 @@ ms.locfileid: "82699900"
 
  Если значение `SQL_DESC_NAME` задано для параметра хранимой процедуры, остальные параметры хранимой процедуры также должны иметь значение `SQL_DESC_NAME`.  Если литералы используются в вызовах хранимых процедур, где `SQL_DESC_NAME` заданы параметры, литералы должны использовать формат *"имя* = *значение*", где *Name* — имя параметра хранимой процедуры (например, @p1 ). Дополнительные сведения см. в разделе [Привязка параметров по имени (именованные параметры)](https://go.microsoft.com/fwlink/?LinkId=167215).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
  [Использование параметров инструкции](using-statement-parameters.md)
 
 

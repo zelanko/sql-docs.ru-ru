@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5eadf89cb6516dcc437b727843cb861b7c04a9c1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 667189cc614f04dca0b5a5043bfbac9512779d94
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038884"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Поиск дополнительных сведений о собственном клиенте SQL Server
   Дополнительные сведения о собственном клиенте для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и других типах программирования доступа к данным см. в следующих ресурсах в сети.  
@@ -36,7 +35,7 @@ ms.locfileid: "82707145"
   
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственном клиенте можно найти, выполнив поиск в [Служба поддержки Майкрософт](https://support.microsoft.com).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Программирование собственного клиента SQL Server](sql-server-native-client-programming.md)  
   
   

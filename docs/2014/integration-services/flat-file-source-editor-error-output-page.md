@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2008ec0db5612b7ceb95fe9a8bbf970e19a31a91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058630"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966414"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Редактор источника «Неструктурированный файл» (страница «Вывод ошибок»)
   На странице **Вывод ошибок** диалогового окна **Редактор источника "Неструктурированный файл"** можно задать параметры обработки ошибок и определить свойства столбцов для вывода ошибок.  
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](data-flow/flat-file-source.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
- **Рубрик**  
+ **Столбец**  
  Просмотрите внешние (исходные) столбцы, выбранные на странице **Диспетчер соединений** диалогового окна **Редактор источника "Неструктурированный файл"**.  
   
  **Error**  
@@ -50,7 +49,7 @@ ms.locfileid: "66058630"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "Неструктурированный файл" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Редактор источника «Неструктурированный файл» &#40;столбцов&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   

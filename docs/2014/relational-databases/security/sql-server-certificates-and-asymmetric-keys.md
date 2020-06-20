@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037811"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
    Криптография с открытым ключом представляет собой форму обеспечения конфиденциальности сообщений, подразумевающую создание *открытого* и *закрытого* ключей. Закрытый ключ хранится в секрете, а открытый ключ передается другим лицам. Хотя ключи математически связаны, закрытый ключ нельзя легко вычислить с помощью открытого ключа. Открытый ключ используется при шифровании данных, а закрытый ключ используется при расшифровке данных. Сообщение, зашифрованное с помощью открытого ключа, можно расшифровать только с помощью правильного закрытого ключа. Поскольку применяются два различных ключа, эти ключи *асимметричные*.  
@@ -67,8 +66,8 @@ ms.locfileid: "75244513"
 |||  
 |-|-|  
 |Инструмент|Назначение|  
-|[программой](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Создает сертификаты.|  
-|[СН](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Создает строгие имена для симметричных ключей.|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Создает сертификаты.|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Создает строгие имена для симметричных ключей.|  
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Выбор алгоритма шифрования](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +77,6 @@ ms.locfileid: "75244513"
  [CREATE CERTIFICATE (Transact-SQL)](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>См. также:  
- [sys. Certificates &#40;&#41;Transact-SQL](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [Прозрачное шифрование данных (TDE)](encryption/transparent-data-encryption.md)  
   

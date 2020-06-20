@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929906"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965974"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)
   Информация в этом разделе применима в следующих ситуациях:  
@@ -124,7 +123,7 @@ ms.locfileid: "76929906"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>Владение базой данных  
  При восстановлении базы данных на другом компьютере имя входа пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или пользователя Windows, начавшего процесс восстановления, автоматически становится владельцем базы данных. При восстановлении базы данных системный администратор или владелец новой базы данных могут сменить ее владельца.  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>Распределенные запросы и связанные серверы  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Распределенные запросы и связанные серверы  
  Распределенные запросы и связанные серверы поддерживаются приложениями OLE DB. Распределенные запросы получают доступ к данным из нескольких разнородных источников, расположенных на одних и тех же или разных компьютерах. Конфигурация связанных серверов позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнять команды в источниках данных OLE DB на удаленных серверах. Дополнительные сведения об этих функциях см. в разделе [Связанные серверы (компонент Database Engine)](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;В начало&#93;](#information_entities_and_objects)  
@@ -318,7 +317,7 @@ ms.locfileid: "76929906"
   
  **Сопоставление сертификата или асимметричного ключа**  
   
--   [CREATE LOGIN (Transact-SQL)](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
  **Выдача разрешений сопоставленному имени входа**  
   
@@ -355,11 +354,11 @@ ms.locfileid: "76929906"
 ## <a name="see-also"></a>См. также:  
  [Автономные базы данных](contained-databases.md)   
  [Копирование баз данных на другие серверы](copy-databases-to-other-servers.md)   
- [Отсоединение и присоединение базы данных &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Присоединение и отсоединение базы данных (SQL Server)](database-detach-and-attach-sql-server.md)   
  [Отработка отказа на SQL Server вторичного &#40;доставки журналов&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Переключение ролей во время сеанса зеркального отображения базы данных &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
+ [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md)   
  [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)  
   
   

@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5a1b4986efe0047d210410b848f1174fdb9ea1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005744"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Диалоговое окно «Создание новой политики» или «Открытие политики», страница «Описание»
   С помощью этого диалогового окна можно добавить описания и дополнительные сведения к политике управления на основе политик.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Категория**  
  Выберите категорию политики при создании новой политики.  
   
@@ -39,16 +38,16 @@ ms.locfileid: "63255228"
  **Дата создания**  
  Дата создания политики.  
   
- **Кем создано**  
+ **Автор**  
  Имя входа, создавшее политику.  
   
  **Дата изменения**  
  Дата последнего изменения политики.  
   
- **Кем изменен**  
+ **Кем изменено**  
  Имя входа, сделавшее последнее изменение в политике.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Администрирование серверов с помощью управления на основе политик](administer-servers-by-using-policy-based-management.md)  
   
   

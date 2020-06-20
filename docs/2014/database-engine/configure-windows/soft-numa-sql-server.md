@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 731ddbf67450c917387df7e104d138c0b35df2d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924780"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934863"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Настройка использования программной архитектуры NUMA (SQL Server) в SQL Server
 Современные процессоры имеют несколько или множество ядер на одном сокете. Каждый сокет обычно представлен одним узлом NUMA. Ядро базы данных SQL Server секционирует разные внутренние структуры и потоки служб в узлы NUMA. С процессорами, содержащими 10 или более ядер на сокет, использование программного NUMA (Soft-NUMA) для разделения аппаратных узлов NUMA обычно повышает масштабируемость и производительность.   
@@ -84,7 +83,7 @@ ms.locfileid: "82924780"
   
      В следующем примере предположим, что имеется сервер DL580 G9 с 18 ядрами на сокет (в 4 сокетах) и каждый сокет находится в собственной K-группе. Конфигурация программной архитектуры NUMA, которую можно создать, выглядит примерно следующим образом. (6 ядер на узел, по 3 узла в группе, 4 группы).  
   
-    |Пример для сервера [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с несколькими K-группами|Type|Имя значения|«Значение»|  
+    |Пример для сервера [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с несколькими K-группами|Тип|Имя значения|«Значение»|  
     |------------------------------------------------------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x3F|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Группа|0|  
@@ -113,7 +112,7 @@ ms.locfileid: "82924780"
   
      Дополнительные примеры  
   
-    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Type|Имя значения|«Значение»|  
+    |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Тип|Имя значения|«Значение»|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\120\NodeConfiguration\Node0|DWORD|Группа|0|  
@@ -125,7 +124,7 @@ ms.locfileid: "82924780"
     > [!TIP]  
     >  Чтобы указать процессоры с 60 по 63, используйте значение QWORD F000000000000000 или значение BINARY 1111000000000000000000000000000000000000000000000000000000000000.  
   
-    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Type|Имя значения|«Значение»|  
+    |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Тип|Имя значения|«Значение»|  
     |---------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node0|DWORD|Группа|0|  
@@ -134,7 +133,7 @@ ms.locfileid: "82924780"
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\110\NodeConfiguration\Node2|DWORD|Группа|0|  
   
-    |SQL Server 2008 R2|Type|Имя значения|«Значение»|  
+    |SQL Server 2008 R2|Тип|Имя значения|«Значение»|  
     |------------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|Группа|0|  
@@ -143,19 +142,19 @@ ms.locfileid: "82924780"
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|Группа|0|  
   
-    |SQL Server 2008|Type|Имя значения|«Значение»|  
+    |SQL Server 2008|Тип|Имя значения|«Значение»|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-    |SQL Server 2005|Type|Имя значения|«Значение»|  
+    |SQL Server 2005|Тип|Имя значения|«Значение»|  
     |---------------------|----------|----------------|----------------|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node0|DWORD|CPUMask|0x03|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node1|DWORD|CPUMask|0x0c|  
     |HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\90\NodeConfiguration\Node2|DWORD|CPUMask|0xf0|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сопоставьте порты TCP IP с узлами NUMA &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
  [Параметр конфигурации сервера «affinity mask»](affinity-mask-server-configuration-option.md)   
  [ALTER SERVER CONFIGURATION (Transact-SQL)](/sql/t-sql/statements/alter-server-configuration-transact-sql)  

@@ -2,7 +2,6 @@
 title: Новые возможности
 description: Узнайте о новых возможностях Microsoft Analytics Platform System, масштабируемом локальном устройстве, где размещается MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039826"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Новые возможности в системе платформы аналитики — масштабируемое хранилище данных MPP
 Узнайте о новых возможностях в последних обновлениях устройств для Microsoft Analytics Platform System (ТД). ТД — это масштабное локальное устройство, которое размещает MPP SQL Server Parallel Data Warehouse. 
@@ -131,7 +130,7 @@ from cte;
 Дата выпуска — июль 2018
 
 ### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Команды DBCC не используют слоты выдачи (изменение поведения)
-ТД поддерживает подмножество команд T-SQL [DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) , таких как [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Раньше эти команды потребляли [слот выдачи](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots), уменьшая количество пользовательских нагрузок и запросов, которые можно было выполнить. Теперь `DBCC` команды выполняются в локальной очереди, которая не использует слоты параллелизма пользователей, что повышает общую производительность выполнения запросов.
+ТД поддерживает подмножество команд T-SQL [DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) , таких как [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Раньше эти команды потребляли [слот выдачи](https://docs.microsoft.com/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots), уменьшая количество пользовательских нагрузок и запросов, которые можно было выполнить. `DBCC`Теперь команды выполняются в локальной очереди, которая не использует слоты параллелизма пользователей, что повышает общую производительность выполнения запросов.
 
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Заменяет некоторые вызовы метаданных объектами каталога
 Использование объектов каталога для вызовов метаданных вместо использования SMO демонстрирует улучшение производительности в ТД. Начиная с CU 7.1, некоторые из этих вызовов метаданных теперь используют объекты каталога по умолчанию. Это поведение можно отключить с помощью [переключателя функций](appliance-feature-switch.md) , если клиенты, использующие запросы метаданных, могут столкнуться с проблемами.
@@ -139,7 +138,7 @@ from cte;
 ### <a name="bug-fixes"></a>Исправления ошибок
 Обновление до SQL Server 2016 с пакетом обновления 2 (SP2) CU2 с ТД CU 7.1. Обновление устраняет некоторые проблемы, описанные ниже.
 
-| Заголовок | Описание |
+| Title | Описание |
 |:---|:---|
 | **Потенциальная взаимоблокировка перемещения кортежей** |Обновление устраняет долговременную возможность взаимной блокировки в распределенной транзакции и фоновом потоке перемещения кортежей. После установки CU 7.1 клиенты, которые использовали TF634 для отключения перемещения кортежей в качестве параметра запуска SQL Server или глобального флага трассировки, могут безопасно удалить его. | 
 | **Сбой определенной задержки или запроса интереса** |При этом обновлении некоторые запросы к таблицам CCI с вложенными функциями Lag и Lead будут устранены. | 
@@ -155,7 +154,7 @@ from cte;
 ТД AU7 автоматически создает и обновляет статистику по умолчанию. Для обновления параметров статистики администраторы могут использовать новый пункт меню переключателя компонента в [Configuration Manager](appliance-configuration.md#CMTasks). [Переключатель функции](appliance-feature-switch.md) управляет режимом автоматического создания, автоматического обновления и асинхронным обновлением статистики. Кроме того, параметры статистики можно обновить с помощью инструкции [ALTER DATABASE (Параллельное хранилище данных)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) .
 
 ### <a name="t-sql"></a>T-SQL
-Теперь @var поддерживается SELECT. Дополнительные сведения см. в разделе [Выбор локальной переменной](/sql/t-sql/language-elements/select-local-variable-transact-sql) . 
+@varТеперь поддерживается SELECT. Дополнительные сведения см. в разделе [Выбор локальной переменной](/sql/t-sql/language-elements/select-local-variable-transact-sql) . 
 
 Теперь поддерживаются хэш-коды и группы заказов указания запросов. Дополнительные сведения см. в разделе [указания (Transact-SQL) — Query](/sql/t-sql/queries/hints-transact-sql-query) .
 
@@ -263,7 +262,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
 [Программа bcp]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
-[NUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
+[ISNUMERIC]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [СТРОКИ или диапазон]:/sql/t-sql/queries/select-over-clause-transact-sql
 [FIRST_VALUE]:/sql/t-sql/functions/first-value-transact-sql
 [LAST_VALUE]:/sql/t-sql/functions/last-value-transact-sql

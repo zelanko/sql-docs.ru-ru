@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 32c0b4ec-c166-45a3-b41e-38a30fd56813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d735fc81e38354630eb4486bbf6ca2bdae570e6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b693cb7a73f63cfbb72bffe45f47360fc503961
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022239"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068535"
 ---
 # <a name="performance-tuning-for-oracle-publishers"></a>Настройка производительности для издателей Oracle
   Архитектура публикации Oracle аналогична архитектуре публикации [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , поэтому первый шаг в настройке производительности репликации Oracle состоит в выполнении следующих общих рекомендаций по настройке, описанных в статье [Enhance General Replication Performance](../administration/enhance-general-replication-performance.md).  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd69935dbfac020c4c75bb391e7932009fd4197
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054563"
 ---
 # <a name="deleting-database-objects"></a>Удаление объектов базы данных
   Чтобы удалить все записи, созданные при использовании учебника, достаточно удалить базу данных. Тем не менее, в данном разделе будет показано, как аннулировать любое действие, совершенное при выполнении заданий из этого учебника.  
@@ -102,14 +101,14 @@ ms.locfileid: "63063127"
 ## <a name="return-to-sql-server-tools-portal"></a>Возвращение к порталу средств SQL Server  
  [Учебник. Составление инструкций Transact-SQL](tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ОТОЗВАТЬ &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
  [Удаление пользователя &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
  [DROP LOGIN &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-login-transact-sql)   
  [УДАЛИТЬ процедуру &#40;языке Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
  [УДАЛИТЬ представление &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE (Transact-SQL)](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;&#41;Transact-SQL](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP TABLE (Transact-SQL)](/sql/t-sql/statements/drop-table-transact-sql)   
  [DROP DATABASE (Transact-SQL)](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

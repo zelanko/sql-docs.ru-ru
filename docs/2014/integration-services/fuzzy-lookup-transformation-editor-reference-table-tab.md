@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966280"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
   Вкладка **Ссылочная таблица** в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»** позволяет указать исходную таблицу и индекс поиска. Эталонный источник данных должен быть таблицей в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -28,15 +27,15 @@ ms.locfileid: "66058308"
 >  Преобразование «Нечеткий уточняющий запрос» создает рабочую копию ссылочной таблицы. В этой рабочей таблице описанные ниже индексы создаются с помощью специальной таблицы, а не обычных индексов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Преобразование не изменяет существующие исходные таблицы, если не выбран параметр **Поддерживать хранимый индекс**. Если параметр выбран, в таблице ссылок создается триггер, который обновляет рабочую таблицу и таблицу индекса уточняющего запроса при изменениях в ссылочной таблице.  
   
 > [!NOTE]  
->  `MaxMemoryUsage` Свойства `Exhaustive` и преобразования «Нечеткий уточняющий запрос» недоступны в **редакторе преобразования «Нечеткий уточняющий запрос**», но могут быть установлены с помощью **Расширенный редактор**. Кроме того, значение, превышающее 100, `MaxOutputMatchesPerInput` может быть указано только в **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  `Exhaustive` `MaxMemoryUsage` Свойства и преобразования «Нечеткий уточняющий запрос» недоступны в **редакторе преобразования «Нечеткий уточняющий запрос**», но могут быть установлены с помощью **Расширенный редактор**. Кроме того, значение, превышающее 100, `MaxOutputMatchesPerInput` может быть указано только в **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Дополнительные сведения о преобразовании «Нечеткий уточняющий запрос» см. в разделе [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Диспетчер подключений OLE DB**  
  Выберите существующий диспетчер соединений OLE DB из списка или создайте новое подключение, выбрав пункт **Создать**.  
   
- **Создать**  
+ **Новые**  
  Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
  **Сформировать новый индекс**  
@@ -65,7 +64,7 @@ ms.locfileid: "66058308"
  **Имя существующего индекса**  
  Выберите из списка ранее созданный индекс уточняющего запроса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" &#40;вкладка "столбцы"&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Дополнительно")](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  

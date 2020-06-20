@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0acc71e2-8004-4dd8-8592-05c022bdd692
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee3dbc4c685337a930a8d7aa5ce741b2e0b876b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e9bfe0a51ec33b310dae0c73f51ff72687811d02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018614"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Конструирование инструкций SQL (ODBC)
   Приложения ODBC почти всегда осуществляют доступ к базе данных, выполняя инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Формат инструкций зависит от требования приложения. Инструкции SQL можно создавать следующими способами.  
@@ -44,7 +43,7 @@ ms.locfileid: "82711260"
   
  Список столбцов в инструкции SELECT должен содержать только столбцы, необходимые для выполнения текущей задачи. Это не только сокращает объем данных, отправляемых по сети, но и снижает эффект изменений в базе данных на приложение. Если приложение не ссылается на столбец в таблице, то оно не затрагивается никакими изменениями, сделанными в этом столбце.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выполняя запросы &#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

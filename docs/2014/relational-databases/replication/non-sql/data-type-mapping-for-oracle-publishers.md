@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b143b0a96045bd9d442beb225047d674c569c92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005366"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
   Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  

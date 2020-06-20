@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 921f8cde043bab21a0ef2d2a54440b07a826a52c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038656"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
   Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
@@ -45,7 +44,7 @@ ms.locfileid: "63183003"
 |**Создано блоков хранилища версий**|Число единиц распределения, созданных в хранилище изоляции моментальных снимков с момента запуска экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
 |**Усечено блоков хранилища версий**|Число единиц распределения, удаленных из хранилища изоляции моментальных снимков с момента запуска экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](monitor-resource-usage-system-monitor.md)  
   
   

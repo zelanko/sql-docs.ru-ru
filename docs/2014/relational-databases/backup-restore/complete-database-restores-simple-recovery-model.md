@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eee8d7d6f44c9ff83795bf2a8bd612309bf0a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959004"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Выполнение полного восстановления базы данных (Простая модель восстановления)
   Задача полного восстановления — восстановить базу данных целиком. В период восстановления база данных находится вне сети. Прежде чем какая-либо часть базы данных перейдет в режим «в сети», все данные восстанавливаются до точки согласования, в которой все части базы данных находятся в одном и том же моменте времени и в которой нет незафиксированных транзакций.  
@@ -60,7 +59,7 @@ ms.locfileid: "62877148"
   
  RESTORE DATABASE *имя_базы_данных* FROM *устройство_резервного_копирования* WITH RECOVERY  
   
-###  <a name="example-transact-sql"></a><a name="Example"></a>Пример (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> Примеры (Transact-SQL)  
  В следующем примере сначала показано, как использовать инструкцию [BACKUP](/sql/t-sql/statements/backup-transact-sql) , чтобы создать полную резервную копию базы данных и разностную резервную копию базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Затем в примере восстанавливаются резервные копии в последовательности восстановления. База данных восстанавливается к состоянию на момент создания разностной резервной копии базы данных.  
   
  В  примере показаны критически важные параметры в последовательности восстановления для полного восстановления базы данных. *Последовательность восстановления* состоит из одной или нескольких операций восстановления, которые выполняют перемещение данных в одном или нескольких этапах восстановления. Синтаксис и прочие подробности, несущественные для данной цели, опущены. При восстановлении базы данных рекомендуется явно указать параметр RECOVERY, несмотря на то, что он подразумевается по умолчанию.  
@@ -113,12 +112,12 @@ GO
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [RESTORE (Transact-SQL)](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP (Transact-SQL)](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
- [&#40;SQL Server полного резервного копирования базы данных&#41;](full-database-backups-sql-server.md)   
- [Разностные резервные копии &#40;SQL Server&#41;](differential-backups-sql-server.md)   
+ [sp_addumpdevice (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Полные резервные копии баз данных (SQL Server)](full-database-backups-sql-server.md)   
+ [Разностные резервные копии (SQL Server)](differential-backups-sql-server.md)   
  [Общие сведения о резервном копировании (SQL Server)](backup-overview-sql-server.md)   
  [Обзор процессов восстановления (SQL Server)](restore-and-recovery-overview-sql-server.md)  
   

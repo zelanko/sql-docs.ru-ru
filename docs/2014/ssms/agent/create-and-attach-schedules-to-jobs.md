@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ced47013b6552725e6350b113a3722b066016a6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136286"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009061"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
   Планирование заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагает определение условия или условий, при которых выполнение задания должно начаться без вмешательства пользователя. Можно запланировать автоматическое выполнение задания, создав новое расписание для задания или присоединив к нему существующее расписание.  
@@ -90,8 +89,8 @@ ms.locfileid: "63136286"
 |Описывает планирование задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Планирование задания](schedule-a-job.md)|  
 |Описывает задание условия простоя ЦП для сервера.|[Установка времени и длительности простоя ЦП (среда SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_help_jobschedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
- [dbo. sysjobschedules &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
+ [dbo.sysжобсчедулес &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   
   
