@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd38e8d1685b23cfeeb1793d02b0fff1d7de0640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a0d610b6541439124d2c289dfd319811c1e0d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662248"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029355"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered, класс событий
   Класс событий Object:Altered указывает на изменение объекта, например инструкциями ALTER INDEX, ALTER TABLE или ALTER DATABASE. Этот класс событий можно использовать для определения, был ли изменен объект, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
@@ -36,7 +35,7 @@ ms.locfileid: "62662248"
 |ClientProcessID|`int`|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент предоставляет идентификатор клиентского процесса.|9|Да|  
 |DatabaseID|`int`|Идентификатор базы данных, указанной в инструкции USE *Database* , или базы данных по умолчанию, если для данного *экземпляра инструкция USE database не* выполнялась. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных ServerName захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
-|EventClass|`int`|Тип события = 164.|27|Нет|  
+|EventClass|`int`|Тип события = 164.|27|нет|  
 |EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |EventSubClass|`int`|Тип подкласса события.<br /><br /> 0 = начало<br /><br /> 1 = фиксация<br /><br /> 2 = откат|21|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
@@ -60,7 +59,7 @@ ms.locfileid: "62662248"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

@@ -1,5 +1,6 @@
 ---
 title: Выполнение операций с массовым копированием (ODBC) | Документация Майкрософт
+description: Узнайте, как драйвер ODBC для SQL Server Native Client поддерживает функции DB-Library, выполняющие SQL Server операции с массовым копированием.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e58c355c437d325e2a0db228f8ed4af83956fecf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 45e7ac1eb4497c055f5dfdce1057541b42f4015b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967711"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Выполнение операций массового копирования (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "73785046"
      Необходима во время выполнения. Файл sqlncli11.dll поставляется вместе с драйвером ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 > [!NOTE]  
->  Функция ODBC **SQLBulkOperations** не имеет отношения к функциям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с массовым копированием. Для выполнения операций массового копирования приложения должны использовать собственные функции массового копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Функция ODBC **SQLBulkOperations** не имеет отношения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциям с массовым копированием. Для выполнения операций массового копирования приложения должны использовать собственные функции массового копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="minimally-logging-bulk-copies"></a>Массовое копирование с минимальным ведением журнала  
  В модели полного восстановления все операции вставки строк, выполняемые при массовой загрузке, полностью регистрируются в журнале транзакций. При загрузке большого количества данных это может привести к быстрому заполнению журнала транзакций. При определенных условиях возможно минимальное протоколирование. Минимальное ведение журнала снижает вероятность заполнения журнала в результате массовой загрузки и является также более эффективным, чем полное ведение журнала.  

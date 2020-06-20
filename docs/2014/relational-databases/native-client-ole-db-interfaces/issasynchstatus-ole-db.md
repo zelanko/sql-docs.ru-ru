@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c643f09f-9ccc-4d8b-9243-3cde86c2bd46
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a4ea32cc0b36f1151c68b06af8f5445d4d46267b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4489f9d1ad576d49d885842f6969f9b61065791c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056131"
 ---
 # <a name="issasynchstatus-ole-db"></a>ISSAsynchStatus (OLE DB)
   Интерфейс**ISSAsynchStatus** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает асинхронные операции. Этот необязательный интерфейс наследует основной интерфейс OLE DB — **IDBAsynchStatus**. Помимо методов **Abort** и **GetStatus** , унаследованных от **IDBAsynchStatus**, **ISSAsynchStatus** предоставляет один новый метод, который используется для ожидания конца асинхронной операции или истечения назначенного времени.  
@@ -43,7 +42,7 @@ ms.locfileid: "82704830"
   
 -   **IMultipleResults::GetResult**  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерфейсы &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
  [Выполнение асинхронных операций](../native-client/features/performing-asynchronous-operations.md)  
   

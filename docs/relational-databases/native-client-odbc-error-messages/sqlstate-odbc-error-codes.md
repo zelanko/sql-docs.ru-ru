@@ -1,5 +1,6 @@
 ---
 title: SQLSTATE (коды ошибок ODBC) | Документация Майкрософт
+description: Когда SQL Server драйвер ODBC запускает хранимые процедуры в качестве удаленных хранимых процедур, процедура может иметь целочисленные коды возврата и выходные параметры.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c7f3fbdf690989830cff2a41028ee0c1e2c9f37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1547fc47aaca643852b5f381567d64ecc3b3f06
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967649"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (коды ошибок ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Код SQLSTATE предоставляет подробные сведения о причине предупреждения или ошибки. Для ошибок, возникающих в источнике данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обнаруженном и возвращенном, драйвер ODBC для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента сопоставляет возвращенный номер собственной ошибки с соответствующим SQLSTATE. Если машинный номер ошибки не имеет кода ошибки ODBC для сопоставлений, драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента ВОЗВРАЩАЕТ значение SQLSTATE 42000 ("Синтаксическая ошибка или нарушение прав доступа"). Для ошибок, обнаруженных драйвером, драйвер ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для собственного клиента создает СООТВЕТСТВУЮЩЕЕ значение SQLSTATE.  
+  Код SQLSTATE предоставляет подробные сведения о причине предупреждения или ошибки. Для ошибок, возникающих в источнике данных, обнаруженном и возвращенном [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента сопоставляет возвращенный номер собственной ошибки с соответствующим SQLSTATE. Если машинный номер ошибки не имеет кода ошибки ODBC для сопоставлений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента возвращает значение SQLSTATE 42000 ("Синтаксическая ошибка или нарушение прав доступа"). Для ошибок, обнаруженных драйвером, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента создает соответствующее значение SQLSTATE.  
   
  Дополнительные сведения о кодах ошибок состояния см. в следующих разделах.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6dafb1e971b85adfee2ecb3579ac20b83906b9dd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228413"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932392"
 ---
 # <a name="installation-for-sql-server-2014"></a>Установка SQL Server 2014
  ## <a name="download-sql-server-2014-express"></a>[Загрузка SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
@@ -45,7 +44,7 @@ ms.locfileid: "75228413"
   
 -   Компоненты соединения  
   
- Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы оптимально выбрать выпуски и компоненты, доступные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Доступны 32-разрядный и 64-разрядный выпуски [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ Каждый компонент можно установить отдельно или выбрать сочетания перечисленных выше компонентов. Чтобы оптимально выбрать выпуски и компоненты, доступные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , см. раздел [выпуски и компоненты SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) и [функции, поддерживаемые различными выпусками SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Доступны 32-разрядный и 64-разрядный выпуски [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
  
  **Попробуйте:**  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0eb1b87-6bb0-475e-8492-0fd3c3f910ea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f81c3b90dc8ef20f7e66bb22c960cd9fd8a7c01a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064172"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Свойства служб SQL Server Integration Services (вкладка «Вход в систему»)
   Используйте вкладку **Вход** в диалоговом окне [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]Свойства**в** для указания учетной записи, используемой службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], а также для запуска и остановки службы.  

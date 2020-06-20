@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fc22c4af9980eb5c1c365c0ce2d0e2f6c8462e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827197"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028997"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, класс событий
   Класс событий Performance Statistics можно использовать для наблюдения за производительностью выполняемых запросов, хранимых процедур и триггеров. Каждый из шести подклассов событий обозначает событие, относящееся ко времени существования запросов, хранимых процедур и триггеров в системе. Сочетая эти подклассы событий и связанные с ними динамические административные представления sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats, можно восстановить историю производительности любого заданного запроса, хранимой процедуры или триггера.  
@@ -81,7 +80,7 @@ ms.locfileid: "62827197"
 |SessionLoginName|`nvarchar`|Имя входа пользователя, создавшего этот сеанс. Например, при соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем Login1 и при выполнении инструкции под именем Login2 SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |EventSubClass|`int`|Тип подкласса события.<br /><br /> 2 = Скомпилированы запросы в нерегламентированной инструкции SQL.<br /><br /> Следующие типы EventSubClass создаются в трассировке для нерегламентированных пакетов.<br /><br /> Для нерегламентированных пакетов, состоящих из *n* запросов.<br /><br /> *n* типа 2|21|Да|  
 |IntegerData2|`int`|Конечное смещение инструкции в пакете:<br /><br /> -1 для конечного смещения пакета.|55|Да|  
-|ObjectID|`int`|Н/Д|22|Да|  
+|ObjectID|`int`|Недоступно|22|Да|  
 |Offset|`int`|Начальное смещение инструкции в пределах пакета.<br /><br /> 0 для начального смещения пакета.|61|Да|  
 |SPID|`int`|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |SqlHandle|`image`|Дескриптор SQL. Может быть использован для получения текста SQL пакета с помощью динамического административного представления dm_exec_sql_text.|63|Да|  
@@ -153,7 +152,7 @@ ms.locfileid: "62827197"
 |PlanHandle|`image`|Дескриптор скомпилированного плана для триггера. Может быть использован для получения плана XML с помощью динамического административного представления dm_exec_query_plan.|65|Да|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Showplan XML для запроса Compile, класс событий](showplan-xml-for-query-compile-event-class.md)   

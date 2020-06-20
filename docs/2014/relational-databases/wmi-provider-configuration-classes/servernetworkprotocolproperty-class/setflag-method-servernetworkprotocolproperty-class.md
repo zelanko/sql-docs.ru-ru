@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95288931-8eb1-4477-ad80-619cf7073e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 95682cc34f67a0d65f62afdc52ec09c5209e3ba4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bca152482145b06aaa4aa89fd035812279bff4fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62642687"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056799"
 ---
 # <a name="setflag-method-servernetworkprotocolproperty-class"></a>Метод SetFlag (класс ServerNetworkProtocolProperty)
   Устанавливает флаг указанного свойства.  
@@ -41,7 +40,7 @@ BoolValue
   
 ## <a name="parts"></a>Компоненты  
  *object*  
- Объект [класс servernetworkprotocolproperty Class] класс servernetworkprotocolproperty-class.md), представляющий атрибут сетевого протокола в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Объект [класс servernetworkprotocolproperty Class] класс servernetworkprotocolproperty-class.md), представляющий атрибут сетевого протокола в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 #### <a name="parameters"></a>Параметры  
   
@@ -54,7 +53,7 @@ BoolValue
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

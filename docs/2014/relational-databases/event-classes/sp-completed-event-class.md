@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7636a433-5d32-4562-8f5a-694f8e2beeca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bcc8cdc62616dd26eb714b78ad07296a794b55f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50a4fc1d3fdc5feacd13e516cfe3b5ddd02277bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63050970"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85028412"
 ---
 # <a name="spcompleted-event-class"></a>SP:Completed, класс событий
   Класс событий SP:Completed указывает, что выполнение хранимой процедуры завершено.  
@@ -34,8 +33,8 @@ ms.locfileid: "63050970"
 |имя_базы_данных|`nvarchar`|Имя базы данных, в которой выполняется хранимая процедура.|35|Да|  
 |Duration|`bigint`|Длительность события (в микросекундах).|13|Да|  
 |EndTime|`datetime`|Время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting.|15|Да|  
-|EventClass|`int`|Тип события = 43.|27|Нет|  
-|EventSequence|`int`|Последовательность данного события в запросе.|51|Нет|  
+|EventClass|`int`|Тип события = 43.|27|нет|  
+|EventSequence|`int`|Последовательность данного события в запросе.|51|нет|  
 |GroupID|`int`|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|`nvarchar`|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|`int`|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
@@ -59,7 +58,7 @@ ms.locfileid: "63050970"
 |TransactionID|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
 |XactSequence|`bigint`|Токен, который описывает текущую транзакцию.|50|Да|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширенные события](../extended-events/extended-events.md)   
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

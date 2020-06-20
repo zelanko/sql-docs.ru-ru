@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d253b44c-7600-4afa-a3a7-03cc937c6a4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bf476175245000ba63e058ca333953d07276076
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62662377"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029431"
 ---
 # <a name="lockescalation-event-class"></a>Класс событий Lock:Escalation
   Класс событий **Lock:Escalation** возникает при укрупнении уровня блокировки, например при преобразовании блокировки строки в блокировку объекта. Класс событий Escalation имеет идентификатор события 60.  
@@ -58,7 +57,7 @@ ms.locfileid: "62662377"
 |**StartTime**|`datetime`|Время начала события, если оно известно.|14|Да|  
 |**TextData**|`ntext`|Текст инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которая вызвала укрупнение блокировки.|1|Да|  
 |**TransactionID**|`bigint`|Назначенный системой идентификатор транзакции.|4|Да|  
-|**Type**|`int`|Гранулярность укрупнения блокировки:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (уровень таблицы)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Да|  
+|**Тип**|`int`|Гранулярность укрупнения блокировки:<br /><br /> 1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT (уровень таблицы)<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = HOBT<br /><br /> 13 = ALLOCATION_UNIT|57|Да|  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере используется процедура `sp_trace_create` для создания трассировки, процедура `sp_trace_setevent` для добавления столбцов укрупнения блокировки в трассировку, затем процедура `sp_trace_setstatus` для запуска трассировки. В таких инструкциях, как `EXEC sp_trace_setevent @TraceID, 60, 22, 1`, число `60` показывает класс события укрупнения блокировки, `22` показывает столбец **ObjectID** , а `1` присваивает событию трассировки значение ON.  
@@ -98,7 +97,7 @@ EXEC sp_trace_setstatus @TraceID, 2;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

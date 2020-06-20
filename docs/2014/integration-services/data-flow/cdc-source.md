@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3452e504072188ea5f4bacf3fa6f10002335fb4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62828121"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916674"
 ---
 # <a name="cdc-source"></a>CDC-источник
   Источник CDC считывает диапазон информации об изменениях из таблиц изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и доставляет изменения другим нижестоящим компонентам SSIS.  
@@ -38,7 +37,7 @@ ms.locfileid: "62828121"
   
 -   Имя переменной пакета состояния CDC, на основе которой определен диапазон обработки CDC. Источник CDC не изменяет значение этой переменной.  
   
- Данные, возвращенные источником CDC, являются теми же, что возвращают следующие функции CDC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **cdc.fn_cdc_get_all_changes_\<имя_экземпляра_отслеживания>** или **cdc.fn_cdc_get_net_changes_\<имя_экземпляра_отслеживания>** (если они доступны). Единственным необязательным добавлением является столбец **__$initial_processing** , который указывает, может ли текущий диапазон обработки перекрывать диапазон начальной загрузки таблицы. Дополнительные сведения о начальной обработке см. в разделе [CDC Control Task](../control-flow/cdc-control-task.md).  
+ Данные, возвращенные источником CDC, совпадают с данными, возвращаемыми [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциями CDC **cdc. fn_cdc_get_all_changes_ \<capture-instance-name> ** или **CDC. fn_cdc_get_net_changes_ \<capture-instance-name> ** (если они доступны). Единственным необязательным добавлением является столбец **__$initial_processing** , который указывает, может ли текущий диапазон обработки перекрывать диапазон начальной загрузки таблицы. Дополнительные сведения о начальной обработке см. в разделе [CDC Control Task](../control-flow/cdc-control-task.md).  
   
  Источник CDC имеет один обычный вывод и один вывод ошибок.  
   
@@ -75,20 +74,20 @@ use <cdc-enabled-database-name>
   
  Где:  
   
--   \<<cdc-enabled-database-name> — имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], содержащей таблицы изменений;  
+-   \<cdc-enabled-database-name>имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, содержащей таблицы изменений.  
   
--   \<value-from-state-cs> — значение, которое появляется в переменной состояния CDC в виде CS/\<value-from-state-cs>/ (CS означает Current-processing-range-Start — начало текущего диапазона обработки);  
+-   \<value-from-state-cs>значение, которое отображается в переменной состояния CDC как CS/ \<value-from-state-cs> /(CS означает Current-Processing-Range-Start).  
   
--   \<value-from-state-ce> — значение, которое появляется в переменной состояния CDC в виде CE/\<value-from-state-cs>/ (CE означает Current-processing-range-End — конец текущего диапазона обработки);  
+-   \<value-from-state-ce>значение, которое отображается в переменной состояния CDC как CE/ \<value-from-state-cs> /(CE означает Current-Processing-Range-End).  
   
--   \<mode> — режимы обработки CDC. Режимы обработки могут иметь одно из следующих значений: **Все**, **Все со старыми значениями**, **Суммарные**, **Суммарные с маской обновления**, **Суммарные со слиянием**.  
+-   \<mode>— Это режимы обработки CDC. Режимы обработки могут иметь одно из следующих значений: **Все**, **Все со старыми значениями**, **Суммарные**, **Суммарные с маской обновления**, **Суммарные со слиянием**.  
   
  Этот скрипт позволяет выявлять проблемы путем воспроизведения их в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], где можно легко воспроизводить и идентифицировать ошибки.  
   
 #### <a name="sql-server-error-message"></a>Сообщение об ошибке SQL Server  
  Следующее сообщение может быть возвращено [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Для функции или процедуры cdc.fn_cdc_get_net_changes_\<..> задано недостаточное количество аргументов.**  
+ **Указано недостаточное количество аргументов для процедуры или функции CDC. fn_cdc_get_net_changes_ \<..> .**  
   
  Эта ошибка не указывает, что отсутствует какой-то аргумент. Она означает, что начало или конец диапазона значений номеров LSN в переменной состояния CDC является недопустимым.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057643"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967044"
 ---
 # <a name="msmq-connection-manager-editor"></a>редактор диспетчера MSMQ-сеансов
   Диалоговое окно **Диспетчер MSMQ-сеансов** используется для указания пути к очереди сообщений MSMQ.  
@@ -41,15 +40,15 @@ ms.locfileid: "66057643"
   
 |Тип очереди|Образец пути|  
 |----------------|-----------------|  
-|Public|\<имя компьютера>\\<имя очереди\>|  
-|Private|\<имя компьютера>\Private$\\<имя очереди\>|  
+|Общедоступные|\<computer name>\\Имя очереди<\>|  
+|Private|\<computer name>\Привате $ \\<имя очереди\>|  
   
  Для представления локального компьютера можно использовать знак точки «.».  
   
  **Тест**  
  После настройки диспетчера MSMQ-сеансов убедитесь, что соединение работоспособно, нажав кнопку **Проверка**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

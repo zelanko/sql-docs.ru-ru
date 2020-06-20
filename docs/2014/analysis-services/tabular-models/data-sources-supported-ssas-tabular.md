@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7de3ea085b3e1d104f9d014317c52dce4585a2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067379"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939775"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
   В этом разделе описаны типы источников данных, которые могут использоваться в табличной модели.  
   
- Эта статья состоит из следующих разделов:  
+ В этом разделе содержатся следующие подразделы:  
   
 -   [Поддерживаемые источники данных](#bkmk_supported_ds)  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66067379"
   
 4.  Поставщики OLE DB иногда обеспечивают повышенную производительность для данных большого объема. Если нужно выбрать один из нескольких поставщиков, подходящих для некоторого источника данных, вначале следует проверить работу поставщика OLE DB.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источники данных &#40;табличные&#41;SSAS](../data-sources-ssas-tabular.md)   
  [Импорт данных (табличные службы SSAS)](../import-data-ssas-tabular.md)  
   

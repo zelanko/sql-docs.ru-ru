@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c3e325cd99276e04a178b89c19b233289edc09fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707351"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056135"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
   Возвращает указатель на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB структуру SSERRORINFO поставщика, содержащую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения об ошибке.  
@@ -52,7 +51,7 @@ OLECHAR**ppErrorStrings);
  E_OUTOFMEMORY  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщику OLE DB собственного клиента не удалось выделить достаточно памяти для завершения запроса.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента выделяет память для строк SSERRORINFO и олечар, возвращаемых с помощью указателей, переданных потребителем. Пользователь должен освободить эту память с помощью метода **IMalloc::Free**, когда последнему уже не будет требоваться доступ к данным ошибки.  
   
  Структура SSERRORINFO определена следующим образом.  
@@ -83,7 +82,7 @@ SSERRORINFO;
   
  Указатели в адресах ссылок на структуры в строке, возвращенной в аргументе *ppErrorStrings*.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ISQLServerErrorInfo &#40;OLE DB&#41;](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md)   
  [RAISERROR (Transact-SQL)](/sql/t-sql/language-elements/raiserror-transact-sql)  
   

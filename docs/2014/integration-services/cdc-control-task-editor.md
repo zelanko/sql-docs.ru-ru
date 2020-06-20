@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a24369829ae8b6fb45098e6ebc0be2f0e676e69
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061118"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924175"
 ---
 # <a name="cdc-control-task-editor"></a>Редактор задачи «Выполнение CDC»
   Диалоговое окно **Редактор задачи «Управление CDC»** служит для настройки задачи «Управление CDC». В процессе настройки задачи «Управление CDC» определяется соединение с базой данных CDC, операция задачи CDC и сведения об управлении состояниями.  
@@ -30,7 +29,7 @@ ms.locfileid: "66061118"
   
 2.  На вкладке **Поток управления** дважды щелкните задачу "Управление CDC".  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Диспетчер соединений ADO.NET базы данных SQL Server CDC**  
  Выберите из списка существующий диспетчер соединений или нажмите кнопку **Создать** , чтобы создать новое соединение. Соединение должно быть установлено с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которая включена для CDC и в которой находится выбранная таблица изменений.  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66061118"
  **Имя состояния**  
  Введите имя, связанное с сохраняемым состоянием CDC. В пакетах полной загрузки и пакетах CDC, работающих в одном контексте CDC, будет указываться общее имя состояния. Это имя используется для подстановки строки состояния в таблице состояния  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Пользовательские свойства задач управления CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

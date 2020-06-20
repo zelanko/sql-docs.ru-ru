@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcfa71becfda386031d6267e2b7f97f1eac5b731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735636"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048346"
 ---
 # <a name="keepexisting-element-dta"></a>Элемент KeepExisting (DTA)
   Задает структуры физического проектирования (индексы, индексированные представления или секции), по которым помощник по настройке ядра СУБД должен формировать свои рекомендации.  
@@ -36,7 +35,7 @@ ms.locfileid: "62735636"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|`string`, ограничение длины определяется сервером.|  
 |**Допустимые значения**|**NONE**<br /> Существующих структур нет.<br /><br /> **ALL**<br /> Все существующие структуры.<br /><br /> **ALIGNED**<br /> Все структуры, выровненные по секциям.<br /><br /> **CL_IDX**<br /> Все кластеризованные индексы по таблицам.<br /><br /> **IDX**<br /> Все кластеризованные и некластеризованные индексы по таблицам.<br /><br /> С этим элементом следует использовать только одно из данных значений.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900649"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939665"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Создание или развертывание кэша для преобразования «Уточняющий запрос»
   Можно создать и развернуть файл кэша (CAW) для преобразования «Уточняющий запрос». Эталонный набор данных хранится в файле кэша.  
@@ -86,7 +85,7 @@ ms.locfileid: "62900649"
   
 4.  Настройте проект для создания программы развертывания, а затем постройте проект. Дополнительные сведения см. в статье [Create a Deployment Utility](../../create-a-deployment-utility.md).  
   
-     Создается файл манифеста \<*имя проекта*>.SSISDeploymentManifest.xml, в котором перечислены различные файлы в проекте, пакеты и конфигурации пакетов.  
+     Создается файл манифеста, \<*project name*>.SSISDeploymentManifest.xml, в котором перечислены прочие файлы проекта, пакеты и конфигурации пакетов.  
   
 5.  Развертывание пакета в файловой системе. Дополнительные сведения см. в статье [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md).  
   

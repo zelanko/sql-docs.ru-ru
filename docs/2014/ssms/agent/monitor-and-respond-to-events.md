@@ -20,25 +20,24 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb16e6e7fc21d3b399d63d2e833eb846d62278ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afdf1beffd6099fce84f03a8ba65f7de9abb8f0b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62720135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001946"
 ---
 # <a name="monitor-and-respond-to-events"></a>Наблюдение и обработка событий
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Агент производит мониторинг и автоматическую обработку различных *событий*: сообщений от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], некоторых условий производительности и событий инструментария управления Windows (WMI).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Предупреждения](alerts.md)  
+ [Оповещения](alerts.md)  
  Содержит сведения об именовании предупреждений и о выборе событий или условий производительности, которые обрабатываются предупреждениями.  
   
  [Создание пользовательского события](create-a-user-defined-event.md)  
  Содержит сведения о том, как создать событие, отличное от стандартного для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Инструкции](operators.md)  
+ [Операторы](operators.md)  
  Содержит сведения о создании псевдонимов для администраторов, которым агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] рассылает уведомления при успешном или неуспешном выполнении заданий.  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>О мониторинге и обработке событий  
@@ -67,7 +66,7 @@ ms.locfileid: "62720135"
   
  Независимо от источника события, служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает его, выполняя задачи, заданные в предупреждении для данного события.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_altermessage &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: afd264701c8e74d4fdb99d186e3bb5be8d2b5e15
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067539"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939843"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Создание связи между двумя таблицами (табличные службы SSAS)
   Если таблицы в источнике данных не участвуют в связях или добавляются новые таблицы, новые связи можно создать с помощью средств конструктора моделей. Сведения об использовании связей в табличных моделях см. в разделе [Связи (табличные службы SSAS)](relationships-ssas-tabular.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66067539"
   
 6.  В поле **Связанный столбец подстановки**выберите столбец, содержащий уникальные значения, которые соответствуют значениям в столбце, выбранном в поле **Столбец**.  
   
-7.  Нажмите кнопку **Create** (Создать).  
+7.  Нажмите кнопку **Создать**.  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Создание связи между двумя таблицами в представлении данных  
   
@@ -67,9 +66,9 @@ ms.locfileid: "66067539"
   
 5.  В поле **Связанный столбец подстановки**выберите столбец, содержащий уникальные значения, которые соответствуют значениям в столбце, выбранном в поле **Столбец**.  
   
-6.  Нажмите кнопку **Create** (Создать).  
+6.  Нажмите кнопку **Создать**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Удаление связей &#40;табличных&#41;SSAS](delete-relationships-ssas-tabular.md)   
  [Связи (табличные службы SSAS)](relationships-ssas-tabular.md)  
   

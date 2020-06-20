@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1246119b72890bc80125034c8ee23bcd0c221b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99d1e2e6f4e4bca69b093aeb9c259db59d503083
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939865"
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>Настройка моделирования данных по умолчанию и свойств развертывания (табличные службы SSAS)
   В этом разделе описано, как настроить свойство уровня совместимости по умолчанию, свойства базы данных развертывания и рабочей области, для которых можно указать предопределенные значения во всех новых проектах табличных моделей, создаваемых в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания нового проекта эти свойства в конкретной модели по-прежнему можно изменить в зависимости от определенных требований.  
@@ -70,7 +69,7 @@ ms.locfileid: "66067584"
 > [!NOTE]  
 >  Изменения параметров модели по умолчанию не затронут свойства существующих моделей, созданных до внесения изменения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства проекта &#40;табличные&#41;SSAS](properties-ssas-tabular.md)   
  [Свойства модели &#40;табличных&#41;SSAS](model-properties-ssas-tabular.md)   
  [Уровень совместимости &#40;табличных SP1 SSAS&#41;](compatibility-level-for-tabular-models-in-analysis-services.md)  

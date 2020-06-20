@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 65f57b330a2b007f8f02df4404597d91fb143fcd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67ae47197636af037f3eb9e648a2d8ce6c4a63a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176457"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939685"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Настройка выходов при помощи мастера медленно изменяющихся измерений
   Мастер медленно изменяющихся измерений выполняет функции редактора преобразования «Медленно изменяющиеся измерения». Построение и настройка потока данных для данных медленно изменяющегося измерения может оказаться сложной задачей. С помощью мастера медленно изменяющихся измерений легко создавать поток данных для выходов преобразования «Медленно изменяющиеся измерения», руководствуясь шагами по сопоставлению столбцов, выбору столбцов с бизнес-ключами, заданию атрибутов изменения столбцов и настройке поддержки выводимого элемента измерения.

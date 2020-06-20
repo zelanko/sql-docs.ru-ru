@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 326a94820876b40128428aac58e47c650ce122b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931896"
 ---
 # <a name="upgrade-replicated-databases"></a>Обновление реплицируемых баз данных
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает обновление реплицируемых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, при этом на время обновления узла прекращать работу с другими узлами не требуется. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации.  
@@ -88,7 +87,7 @@ ms.locfileid: "62775329"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Восстановление из копии реплицированной базы данных из предыдущей версии  
  Чтобы обеспечить неизменность параметров репликации при восстановлении реплицированной базы данных, имеющей более раннюю версию, выполните восстановление на сервер и в базу данных, имеющих те же имена, что и у сервера или базы данных, для которых была сделана резервная копия.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вопросы и ответы по администрированию репликации](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Обратная совместимость репликации](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Поддерживаемые обновления версий и выпусков](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   

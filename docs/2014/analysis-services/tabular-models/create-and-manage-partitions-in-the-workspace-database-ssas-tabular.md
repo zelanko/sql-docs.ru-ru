@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8a03920b20adadc19072f184a0629885d4a3fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067463"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939805"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Создание и управление секциями в базе данных рабочей области (табличные службы SSAS)
   Секции разделяют таблицу на логические части. Все секции можно обработать (обновить) независимо или параллельно с другими секциями. Использование секций позволяет улучшить масштабируемость и управление базами данных большого размера. По умолчанию все таблицы содержат одну секцию, включающую все столбцы. Задачи в этом разделе описывают создание секций и управление ими в базе данных рабочей области модели с помощью диалогового окна « **Диспетчер секций** » в среде[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
@@ -35,7 +34,7 @@ ms.locfileid: "66067463"
 > [!NOTE]  
 >  В базе данных рабочей области модели нельзя выполнять слияние секций с помощью диалогового окна «Диспетчер секций». Слияние секций в развернутой модели можно выполнить только с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="tasks"></a>Задачи  
+## <a name="tasks"></a>Задания  
  Для создания секций и управления ими используется диалоговое окно **Диспетчер секций** . Для вывода диалогового окна **Диспетчер секций** в приложении [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]в меню **Таблица** выберите **Секции**.  
   
 ###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>Создание новой секции  
@@ -68,7 +67,7 @@ ms.locfileid: "66067463"
   
 2.  В списке **Секции** выберите секцию, которую необходимо удалить, и нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции &#40;табличные&#41;SSAS](partitions-ssas-tabular.md)   
  [Обработка секций в базе данных рабочей области &#40;табличных&#41;SSAS](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   

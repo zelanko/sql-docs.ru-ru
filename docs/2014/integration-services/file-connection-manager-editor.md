@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: df54d7fb7562e6019e581b06fd14b00bdba15376
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058821"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967154"
 ---
 # <a name="file-connection-manager-editor"></a>редактор диспетчера подключения файлов
   Диалоговое окно **Редактор диспетчера подключения файлов** задает свойства, используемые при подключении к файлу или папке.  
@@ -29,7 +28,7 @@ ms.locfileid: "66058821"
   
  Дополнительные сведения о диспетчере подключения файлов см. в разделе [File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Варианты  
  **Тип использования**  
  Укажите, будет ли **Диспетчер подключения файлов** подключаться к существующему файлу или папке или создаст новый файл или папку.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "66058821"
  **Обзор**  
  Выберите файл или папку в диалоговом окне **Выбор файла** или **Выбор папки** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

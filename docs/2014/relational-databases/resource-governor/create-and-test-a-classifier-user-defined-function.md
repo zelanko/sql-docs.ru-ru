@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8e5371762e38cf2b3ac8c1d506b467dcfa7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212003"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063642"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Создать и проверить определяемую пользователем функцию-классификатор
   В этом разделе описывается создание и проверка определяемой пользователем функции-классификатора (UDF). Шаги включают выполнение инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в редакторе запросов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -262,17 +261,17 @@ ms.locfileid: "68212003"
         > [!WARNING]  
         >  Рекомендуется использовать именно эти методы. Если что-то не позволяет использовать эти методы, рекомендуем связаться со службой технической поддержки Майкрософт для эффективного устранения возможных проблем.  
   
-## <a name="see-also"></a>См. также  
- [Resource Governor](resource-governor.md)   
- [Включить Resource Governor](enable-resource-governor.md)   
- [Resource Governor пул ресурсов](resource-governor-resource-pool.md)   
- [Группа рабочей нагрузки Resource Governor](resource-governor-workload-group.md)   
- [Настройка Resource Governor с помощью шаблона](configure-resource-governor-using-a-template.md)   
- [Просмотр свойств Resource Governor](view-resource-governor-properties.md)   
- [ИЗМЕНЕНИЕ РЕГУЛЯТОРа ресурсов &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [Создание пула ресурсов &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [Создание группы рабочей нагрузки &#40;&#41;Transact-SQL](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+## <a name="see-also"></a>См. также:  
+ [регулятор ресурсов](resource-governor.md)   
+ [Активация регулятора ресурсов](enable-resource-governor.md)   
+ [Пул ресурсов регулятора ресурсов](resource-governor-resource-pool.md)   
+ [Группа рабочей нагрузки регулятора ресурсов](resource-governor-workload-group.md)   
+ [Настройка регулятора ресурсов с помощью шаблона](configure-resource-governor-using-a-template.md)   
+ [Просмотр свойств регулятора ресурсов](view-resource-governor-properties.md)   
+ [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
+ [CREATE RESOURCE POOL (Transact-SQL)](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP (Transact-SQL)](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION (Transact-SQL)](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR (Transact-SQL)](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

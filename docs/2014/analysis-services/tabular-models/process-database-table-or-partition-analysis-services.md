@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08c0856df10c2b70dc58ab1b52b0b7a4a1041e1b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938745"
 ---
 # <a name="process-database-table-or-partition"></a>Обработка базы данных, таблицы или секции
-  Задачи в этом разделе описывают обработку базы данных, таблицы или секций табличной модели вручную с помощью диалогового окна **« \<обработка>объекта** » в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]среде.  
+  Задачи в этом разделе описывают обработку базы данных, таблицы или секций табличной модели вручную с помощью диалогового окна **« \<object> Обработка** » в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Дополнительные сведения об обработке табличной модели см. в разделе [Обработка данных (табличные службы SSAS)](../process-data-ssas-tabular.md).  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66066846"
   
 4.  В столбце флажков **Обработка** выберите секции для обработки в текущем режиме и нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции табличной модели &#40;табличные&#41;SSAS](tabular-model-partitions-ssas-tabular.md)   
  [Создание секций табличной модели и управление ими (табличные службы SSAS)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   

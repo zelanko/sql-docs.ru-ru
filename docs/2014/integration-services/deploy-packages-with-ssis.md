@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176464"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951846"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Учебник по службам SSIS. Развертывание пакетов
   Службы [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат средства, облегчающие развертывание пакетов на другом компьютере. Средства развертывания управляют любыми зависимостями, такими как конфигурации или требуемые пакету файлы. В данном учебнике демонстрируется, как с помощью этих средств устанавливать пакеты и их зависимости на целевом компьютере.
@@ -46,7 +45,7 @@ ms.locfileid: "78176464"
  Лучшим способом знакомства с новыми инструментами, элементами управления и функциями, доступными в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , является их использование. С помощью данного учебника шаг за шагом создается проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , куда затем добавляются пакеты и другие необходимые файлы. Когда проект полностью завершен, пользователь создает комплект развертывания и копирует его на целевой компьютер, куда затем устанавливаются пакеты.
 
 ## <a name="requirements"></a>Требования
- Этот учебник предназначен для пользователей, уже знакомых с основными операциями файловой системы, но имеющих ограниченный доступ к новым функциям, доступным [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]в. Для лучшего понимания основных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] концепций, которые будут использоваться в этом учебнике, может оказаться полезным сначала выполнить следующие [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] учебники: [запуск мастера импорта и экспорта SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [учебника по службам SSIS. Создание простого пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).
+ Этот учебник предназначен для пользователей, уже знакомых с основными операциями файловой системы, но имеющих ограниченный доступ к новым функциям, доступным в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Для лучшего понимания основных [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] концепций, которые будут использоваться в этом учебнике, может оказаться полезным сначала выполнить следующие [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] учебники: [Запуск мастера импорта и экспорта SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) и [учебника по службам SSIS. Создание простого пакета ETL](../integration-services/ssis-how-to-create-an-etl-package.md).
 
  **Компьютер-источник.** На компьютере, где создается пакет развертывания, должны быть установлены следующие компоненты:
 
@@ -68,7 +67,7 @@ ms.locfileid: "78176464"
 
 -   Пользователь должен иметь разрешение на создание и удаление таблиц в базе данных AdventureWorks, а также на запуск пакетов в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
--   Необходимо иметь разрешение на чтение и запись для таблицы sysssispackages в системной базе данных[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb.
+-   Необходимо иметь разрешение на чтение и запись для таблицы sysssispackages в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] системной базе данных msdb.
 
  Если развертывание пакетов предполагается на том же самом компьютере, где создается комплект развертывания, этот компьютер должен удовлетворять требованиям как компьютера-источника, так и целевого компьютера.
 

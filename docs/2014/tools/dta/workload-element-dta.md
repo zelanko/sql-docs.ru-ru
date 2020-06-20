@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ffd473-6546-4015-98d0-3763165de65c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81ea0aac9cfe7676abba18bc7dffb2e1561597b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f409e978bf977d48fbfc3a9ec56d5ebfe2b545ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62678722"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064085"
 ---
 # <a name="workload-element-dta"></a>Элемент Workload (DTA)
   Позволяет задать рабочую нагрузку для использования в сеансе настройки.  
@@ -36,7 +35,7 @@ ms.locfileid: "62678722"
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

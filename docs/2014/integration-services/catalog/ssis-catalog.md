@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921708"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924326"
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   `SSISDB`Каталог является центральной точкой для работы с [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проектами служб (SSIS), развернутыми на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервере. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "82921708"
 >  Переименовать `SSISDB` базу данных нельзя.  
   
 > [!NOTE]  
->  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, к которому `SSISDB` присоединена база данных, останавливается или не отвечает, процесс ISServerExec. exe завершается. Сообщение записывается в журнал событий Windows.  
+>  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр, к которому `SSISDB` присоединена база данных, останавливается или не отвечает, процесс ISServerExec.exe завершается. Сообщение записывается в журнал событий Windows.  
 >   
 >  Если ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переходят на другой ресурс в процессе отработки отказа кластера, выполняемые пакеты не перезапускаются. Перезапуск пакетов вы можете выполнять с помощью контрольных точек. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921708"
 ### <a name="folder-project-environment"></a>Папка, проект, среда  
  Учитывайте следующие правила при переименовании папки, проекта или среды.  
   
--   Недопустимы символы ASCII и Юникода с кодами от 1 до 31, символ двойных кавычек ("), символ "меньше" (\<), символ "больше" (>), символ вертикальной черты (|), знак возврата на один символ (\b), символ NULL (\0) и знак табуляции (\t).  
+-   Недопустимые символы включают символы ASCII/Unicode от 1 до 31, кавычки ("), символы" меньше ( \<), greater than (> ) "," вертикальный "(|)," Backspace "(\b), null (\ 0) и знак табуляции (\t).  
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921708"
 ### <a name="environment-variable"></a>Переменная среды  
  Учитывайте следующие правила при наименовании переменной среды  
   
--   Недопустимы символы ASCII и Юникода с кодами от 1 до 31, символ двойных кавычек ("), символ "меньше" (\<), символ "больше" (>), символ вертикальной черты (|), знак возврата на один символ (\b), символ NULL (\0) и знак табуляции (\t).  
+-   Недопустимые символы включают символы ASCII/Unicode от 1 до 31, кавычки ("), символы" меньше ( \<), greater than (> ) "," вертикальный "(|)," Backspace "(\b), null (\ 0) и знак табуляции (\t).  
   
 -   Имя не должно содержать начальных и конечных пробелов.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921708"
   
  Изменение алгоритма шифрования занимает длительное время. Сначала сервер использует указанный ранее алгоритм для расшифровки всех значений конфигурации. Затем сервер использует новый алгоритм для повторного шифрования значений. При выполнении этого процесса на сервере не могут выполняться другие операции служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Таким образом, чтобы обеспечить непрерывное выполнение операций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , для алгоритма шифрования задается значение только для чтения в диалоговом окне в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Чтобы изменить значение свойства **алгоритма шифрования** , задайте `SSISDB` для базы данных однопользовательский режим, а затем вызовите хранимую процедуру catalog. configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name*. Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Чтобы изменить значение свойства **алгоритма шифрования** , задайте `SSISDB` для базы данных однопользовательский режим, а затем вызовите хранимую процедуру catalog.configure_catalog. Используйте ENCRYPTION_ALGORITHM для аргумента *property_name*. Список поддерживаемых значений свойств см. в разделе [catalog.catalog_properties (база данных SSISDB)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Дополнительные сведения о хранимой процедуре см. в разделе [catalog.configure_catalog (база данных SSISDB)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Дополнительные сведения об однопользовательском режиме см. в разделе [Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Дополнительные сведения о шифровании и алгоритмах шифрования в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]см. в подразделах раздела [Шифрование SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   

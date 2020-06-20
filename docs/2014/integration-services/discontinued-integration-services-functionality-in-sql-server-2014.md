@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 5ee40ceb-37b9-47a9-b90d-ce1de74b10f7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 915cb42726d27526342870ca39abd7012166270a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c4618c7d985c28497a5e8a30f7865dedd10351
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966965"
 ---
 # <a name="discontinued-integration-services-functionality-in-sql-server-2014"></a>Неподдерживаемые возможности служб Integration Services в SQL Server 2014
-  В этом разделе [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] описаны функции, которые больше не доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  В этом разделе описаны [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] функции, которые больше не доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  В SQL Server 2014 нет неподдерживаемых компонентов служб Integration Services.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции SQL Server, устаревшие в SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)  
   
   

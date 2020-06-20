@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f179ba9-6efb-46ae-90e5-945bbfddb719
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d79b78fbec2a7af13e54547baf294857cebd8dfd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939765"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Секции и режим DirectQuery (табличные службы SSAS)
   В этом разделе объясняется использование секций в моделях DirectQuery. Дополнительные общие сведения о секциях в табличных моделях см. в разделе [Секции (табличные службы SSAS)](partitions-ssas-tabular.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "66067311"
 |DirectQuery|Никогда не обрабатывать эту секцию|Когда модель использует только DirectQuery, обработка не требуется.<br /><br /> В гибридных моделях можно настроить секцию DirectQuery так, чтобы она никогда не обрабатывалась. Например, если выполняется работа с большим набором данных, при этом нет необходимости добавлять все результаты в кэш, можно указать, чтобы секция DirectQuery включала объединение результатов для всех других секций в таблице и не обрабатывала объединение. Это не касается запросов к реляционному источнику, а запросы к кэшированным данным будут содержать объединенные данные из других секций.|  
 |InMemory с DirectQuery|Разрешить обработку секции|Если модель использует гибридный режим, то для запросов в памяти и запросов к источнику данных DirectQuery следует использовать одну и ту же секцию.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции (табличные службы SSAS)](partitions-ssas-tabular.md)  
   
   

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5061b13f-2cb7-457a-b8d0-fbd437b510ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08bacd7a99e45e10163216c69057b167088441ad
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063906"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Открытие, просмотр и печать файла взаимоблокировок (среда SQL Server Management Studio)
   Когда [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] создает взаимоблокировку, можно собрать и сохранить в файле сведения о взаимоблокировке. После того как файл взаимоблокировок был сохранен, его можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , чтобы просмотреть или распечатать.  
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>Открытие и просмотр файла взаимоблокировок  
   
-1.  В меню **файл** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]выберите пункт **Открыть**, а затем выберите пункт **файл**.  
+1.  В меню **файл** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выберите пункт **Открыть**, а затем выберите пункт **файл**.  
   
 2.  В диалоговом окне **Открытие файла** выберите тип файлов XDL в списке **Файлы типа** . Теперь отфильтрованный список содержит только файлы взаимоблокировок.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "63150696"
   
 4.  В меню **Файл** выберите **Печать.**  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение графов взаимоблокировок &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
   
