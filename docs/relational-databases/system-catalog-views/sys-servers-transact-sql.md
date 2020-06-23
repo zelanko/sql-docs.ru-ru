@@ -1,7 +1,7 @@
 ---
 title: sys. Servers (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 06/16/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c4b141520b21902c4dadb26a3ac013b1ee334928
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 89e8424532f12a4111e5a535a8016f3a4fe5ac6a
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818219"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85196041"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,11 +37,11 @@ ms.locfileid: "84818219"
 |**server_id**|**int**|Локальный идентификатор связанного сервера.|  
 |**name**|**sysname**|Если **server_id** = 0, возвращаемое значение является именем сервера.<br /><br /> Если **server_id** > 0, возвращаемое значение является локальным именем связанного сервера.|  
 |**продукта**|**sysname**|Имя продукта связанного сервера. Значение "SQL Server" указывает на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**поставщики**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.|  
+|**поставщики**|**sysname**|Имя поставщика OLE DB для соединения со связанным сервером.<br /><br />Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] , значение SQLNCLI сопоставляется с [драйвером Microsoft OLE DB для SQL Server (мсоледбскл)](../../connect/oledb/oledb-driver-for-sql-server.md) по умолчанию. В более ранних версиях значение SQLNCLI сопоставляется с [поставщиком SQL Server Native Client OLE DB (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|Свойство соединения источника данных OLE DB.|  
 |**расположение**|**nvarchar(4000)**|Свойство соединения местоположения OLE DB. NULL — если нет.|  
-|**provider_string**|**nvarchar(4000)**|Свойство соединения строки поставщика OLE DB.<br /><br /> Имеет значение NULL, если только вызывающий не обладает разрешением ALTER ANY LINKED SERVER.|  
-|**каталога**|**sysname**|Свойство соединения каталога OLE DB. NULL — если нет.|  
+|**provider_string**|**nvarchar(4000)**|Свойство соединения строки поставщика OLE DB.<br /><br /> Имеет значение NULL, если у вызывающего объекта нет `ALTER ANY LINKED SERVER` разрешения.|  
+|**каталога**|**sysname**|Свойство подключения к каталогу OLE DB. NULL — если нет.|  
 |**connect_timeout**|**int**|Время ожидания соединения в секундах; 0 — не указано.|  
 |**query_timeout**|**int**|Время ожидания запроса в секундах; 0 — не указано.|  
 |**is_linked**|**bit**|0 = это сервер со старым стилем, добавленный с помощью **sp_addserver**, с различными поведениями RPC и распределенных транзакций.<br /><br /> 1 = стандартный связанный сервер.|  
@@ -59,7 +59,7 @@ ms.locfileid: "84818219"
 |**is_nonsql_subscriber**|**bit**|Сервер является подписчиком репликации, отличным от SQL Server.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Если 1, вызов удаленной хранимой процедуры приводит к запуску распределенной транзакции и привлекает к выполнению транзакции MS DTC. Дополнительные сведения см. в статье [sp_serveroption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Дата последнего изменения сведений о сервере.|  
-|**is_rda_server**|**bit**|Сервер является удаленным архивом данных включить (Stretch-Enabled). Дополнительные сведения см. в разделе [включение Stretch Database на сервере](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer). Применимо к SQL Server 2016 и более поздних версий.|
+|**is_rda_server**|**bit**|**Применимо к:** Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Сервер является удаленным архивом данных включить (Stretch-Enabled). Дополнительные сведения см. в разделе [включение Stretch Database на сервере](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
   
 ## <a name="permissions"></a>Разрешения  
  Значение в **provider_string** всегда равно null, если у вызывающего объекта нет разрешения ALTER ANY Linked Server.  
@@ -73,10 +73,10 @@ ms.locfileid: "84818219"
 - `ALTER ANY LINKED SERVER` или `ALTER ANY LOGIN ON SERVER`  
 - Членство в предопределенных ролях сервера **setupadmin** или **sysadmin**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога связанных серверов &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
-  
+ 

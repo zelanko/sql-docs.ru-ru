@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 674f40b16437547956178293c5b491b11c8b2f89
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77600129"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215491"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Запуск Database Experimentation Assistant из командной строки
 
@@ -34,11 +34,11 @@ ms.locfileid: "77600129"
 
 Чтобы начать новую запись рабочей нагрузки, в командной строке выполните следующую команду:
 
-`Deacmd.exe -o StartCapture -h <SQLServerInstance> -e <encryptconnection> -u <trustservercertificate> -d <database name> -p <trace file path> -f <trace file name> -t <Max duration>`
+`Deacmd.exe -o StartCapture -n <Trace FileName> -x <Trace Format> -h <SQLServerInstance> -f <database name> -e <Encrypt Connection> -m <Authetication Mode> -u <user name> -p <password> -l <Location of Output Folder> -d <duration>`
 
 **Пример**
 
-`Deacmd.exe -o StartCapture -h localhost -e -d adventureworks -p c:\test -f sql2008capture -t 60`
+`Deacmd.exe -o StartCapture -n sql2008capture -x 0 -h localhost -f adventureworks -e --trust -m 0 -l c:\test  -d 60`
 
 **Дополнительные параметры**
 
@@ -72,11 +72,11 @@ ms.locfileid: "77600129"
 
 3. Запустите запись трассировки на целевом компьютере, на котором работает SQL Server с помощью Стартреплайкаптуретраце. SQL.
 
-    а.  В SQL Server Management Studio (SSMS) откройте <Dea_InstallPath\>\скриптс\стартреплайкаптуретраце.скл.
+    а.  В SQL Server Management Studio (SSMS) откройте <Dea_InstallPath \> \скриптс\стартреплайкаптуретраце.скл.
 
     b.  Запустите `Set @durationInMins=0` , чтобы запись трассировки не была автоматически прервана через указанное время.
 
-    c.  Чтобы задать максимальный размер файла для каждого файла трассировки, выполните `Set @maxfilesize`команду. Рекомендуемый размер — 200 (в МБ).
+    c.  Чтобы задать максимальный размер файла для каждого файла трассировки, выполните команду `Set @maxfilesize` . Рекомендуемый размер — 200 (в МБ).
 
     d.  Измените `@Tracefile` , чтобы задать уникальное имя для файла трассировки.
 
@@ -86,12 +86,12 @@ ms.locfileid: "77600129"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    а.  Чтобы отслеживать состояние, в командной строке выполните `DReplay status -f 1`команду.
+    а.  Чтобы отслеживать состояние, в командной строке выполните команду `DReplay status -f 1` .
 
-    b.  Чтобы прерывать воспроизведение, например, если вы видите, что уровень прохождения% ниже ожидаемого, в командной строке выполните `DReplay cancel`команду.
+    b.  Чтобы прерывать воспроизведение, например, если вы видите, что уровень прохождения% ниже ожидаемого, в командной строке выполните команду `DReplay cancel` .
 
 5. Останавливает запись трассировки на целевом экземпляре SQL Server.
-6. В среде SSMS откройте `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.
+6. В среде SSMS откройте `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql` .
 7. Измените `@Tracefile` в соответствии с путем к файлу трассировки на целевом компьютере, на котором работает SQL Server.
 8. Запустите сценарий на целевом компьютере с SQL Server.
 
@@ -103,11 +103,11 @@ ms.locfileid: "77600129"
 
 Чтобы запустить новый анализ трассировки, в командной строке выполните следующую команду:
 
-`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <trustservercertificate>`
+`Deacmd.exe -o analysis -a <Target1 trace filepath> -b <Target2 trace filepath> -r reportname -h <SQLserverInstance> -e <encryptconnection> -u <username>`
 
 **Пример**
 
-`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
+`Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -h localhost -e`
 
 Чтобы просмотреть отчеты об анализе этих файлов трассировки, необходимо использовать графический интерфейс пользователя для просмотра диаграмм и упорядоченных метрик.  Однако база данных анализа записывается в указанный экземпляр SQL Server, поэтому можно также напрямую запрашивать созданные таблицы анализа.
 
