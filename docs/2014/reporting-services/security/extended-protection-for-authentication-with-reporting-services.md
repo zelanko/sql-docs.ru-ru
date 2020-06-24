@@ -10,25 +10,25 @@ ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89aae3981d88c25104a29a6abfe81f09bb04de53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74da8e34feb100edce52457536f7e19a49464eba
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177090"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263894"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
   Расширенная защита — это набор усовершенствований, внесенных в последние версии операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью расширенной защиты приложения могут лучше защищать учетные данные и проверку подлинности. Сама эта функция не обеспечивает защиту от определенных атак, например, таких как переадресация учетных данных, однако она предоставляет таким приложениям, как службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , инфраструктуру для ввода в действие расширенной защиты проверки подлинности.
 
  Основными улучшениями процесса проверки подлинности, которые входят в расширенную защиту, являются привязка службы и привязка канала. Для привязки канала используется токен привязки канала (CBT), позволяющий удостовериться в целостности канала, установленного между двумя конечными точками. При привязке службы для проверки пункта назначения токенов проверки подлинности используются имена участников-служб (SPN). Дополнительные сведения о расширенной защите см. в разделе [Интегрированная проверка подлинности Windows с расширенной защитой](https://go.microsoft.com/fwlink/?LinkId=179922).
 
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает и обеспечивает расширенную защиту, включенную в операционной системе и настроенную в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]поддерживает и обеспечивает расширенную защиту, включенную в операционной системе и настроенную в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . По умолчанию [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .
 
 > [!IMPORTANT]
 >  По умолчанию расширенная защита в Windows отключена. Дополнительные сведения о включении расширенной защиты в Windows см. в разделе [Расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkID=178431). Для успешного прохождения проверки подлинности и операционная система, и стек проверки подлинности клиента должны поддерживать расширенную защиту. При использовании старых операционных систем для реализации на компьютере расширенной защиты может потребоваться установка нескольких обновлений. Сведения о последних изменениях, внесенных в расширенную защиту, см. в статье [Новые сведения о расширенной защите](https://go.microsoft.com/fwlink/?LinkId=183362).
 
 ## <a name="reporting-services-extended-protection-overview"></a>Общие сведения о расширенной защите служб Reporting Services
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддерживает и обеспечивает расширенную защиту, включенную в операционной системе. Если операционная система не поддерживает расширенную защиту или если эта функция в операционной системе отключена, то функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не сможет провести проверку подлинности. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] также требуется сертификат SSL. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](configure-ssl-connections-on-a-native-mode-report-server.md).
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]поддерживает и обеспечивает расширенную защиту, включенную в операционной системе. Если операционная система не поддерживает расширенную защиту или если эта функция в операционной системе отключена, то функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] не сможет провести проверку подлинности. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] также требуется сертификат SSL. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](configure-ssl-connections-on-a-native-mode-report-server.md).
 
 > [!IMPORTANT]
 >  По умолчанию в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] расширенная защита отключена. Эту функцию можно включить, изменив файл конфигурации `rsreportserver.config` или обновив этот файл с помощью средств WMI API. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] нет пользовательского интерфейса для изменения или просмотра параметров расширенной защиты. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.
@@ -45,9 +45,9 @@ ms.locfileid: "78177090"
 
 ### <a name="upgrade"></a>Обновление
 
--   При обновлении сервера служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] в файл `rsreportserver.config` добавляются параметры конфигурации со значениями по умолчанию. Если параметры уже существуют, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] установка сохранит их в `rsreportserver.config` файле.
+-   При обновлении сервера служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] до версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] в файл `rsreportserver.config` добавляются параметры конфигурации со значениями по умолчанию. Если параметры уже существуют, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Установка сохранит их в `rsreportserver.config` файле.
 
--   Когда параметры конфигурации добавляются в файл `rsreportserver.config` конфигурации, по умолчанию используется функция [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] расширенной защиты, которую необходимо включить, как описано в этом разделе. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.
+-   Когда параметры конфигурации добавляются в `rsreportserver.config` файл конфигурации, по умолчанию используется [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] функция расширенной защиты, которую необходимо включить, как описано в этом разделе. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.
 
 -   Значение по умолчанию для параметра `RSWindowsExtendedProtectionLevel` равно `Off`.
 
@@ -101,7 +101,7 @@ ms.locfileid: "78177090"
 |Непрямой и прямой доступ от клиента к серверу отчетов, когда клиент устанавливает соединение SSL с прокси или сервером отчетов.|![RS_ExtendedProtection_CombinationSSL](../media/rs-extendedprotection-combinationssl.gif "RS_ExtendedProtection_CombinationSSL")<br /><br /> 1) Клиентское приложение<br /><br /> 2) Сервер отчетов<br /><br /> 3) Прокси<br /><br /> 4) Клиентское приложение|Можно использовать привязку канала.<br /><br /> Сервер отчетов должен знать имя прокси, а администратор сервера отчетов должен либо создать для прокси резервирование URL-адреса с заголовком узла, либо указать имя прокси в записи реестра Windows `BackConnectionHostNames`.<br /><br /> Присвойте параметру `RSWindowsExtendedProtectionLevel` значение `Allow` или `Require`.<br /><br /> Присвойте параметру `RSWindowsExtendedProtectionScenario` значение `Proxy`.|
 
 ## <a name="configuring-reporting-rervices-extended-protection"></a>Настройка расширенной защиты служб Reporting Services
- `rsreportserver.config` Файл содержит значения конфигурации, управляющие поведением [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] расширенной защиты.
+ `rsreportserver.config`Файл содержит значения конфигурации, управляющие поведением [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] расширенной защиты.
 
  Дополнительные сведения об использовании и редактировании `rsreportserver.config` файла см. в разделе [файл конфигурации RSReportServer](../report-server/rsreportserver-config-configuration-file.md). Параметры расширенной защиты также можно изменить и просмотреть с помощью средств WMI API. Дополнительные сведения см. в разделе [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md).
 
@@ -113,7 +113,7 @@ ms.locfileid: "78177090"
 |Параметр|Описание|
 |-------------|-----------------|
 |`RSWindowsExtendedProtectionLevel`|Указывает степень использования расширенной защиты. Допустимые значения: `Off`, `Allow` и `Require`.<br /><br /> Значение по умолчанию — `Off`.<br /><br /> Значение `Off` указывает отсутствие проверки привязки канала или привязки службы.<br /><br /> Значение `Allow` означает поддержку расширенной защиты, при этом она не является обязательной. Значение Allow указывает следующее:<br /><br /> Расширенная защита будет действовать для клиентских приложений, работающих в операционных системах, которые поддерживают расширенную защиту. То, как защита вводится в действие, определяется параметром `RsWindowsExtendedProtectionScenario`.<br /><br /> Проверка подлинности будет разрешена для приложений, работающих в операционных системах, которые не поддерживают расширенную защиту.<br /><br /> Значение `Require` указывает, что:<br /><br /> Расширенная защита будет действовать для клиентских приложений, работающих в операционных системах, которые поддерживают расширенную защиту.<br /><br /> Проверка подлинности **не** будет разрешена для приложений, работающих в операционных системах, которые не поддерживают расширенную защиту.|
-|`RsWindowsExtendedProtectionScenario`|Указывает, какие формы расширенной защиты проверяются: привязка канала, привязка службы или оба варианта. Допустимые значения: `Any`, `Proxy` и `Direct`.<br /><br /> Значение по умолчанию — `Proxy`.<br /><br /> Значение `Any` указывает, что:<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate и привязка канала не требуется.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение `Proxy` указывает, что:<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии маркера привязки канала.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение `Direct` указывает, что:<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии компьютеризованного обучения, соединения SSL с текущей службой и совпадении компьютеризованного обучения для соединения SSL с компьютеризованным обучением маркера NTLM, Kerberos или Negotiate.<br /><br /> — Привязка службы не применяется принудительно.<br /><br /> <br /><br /> Примечание. Этот параметр игнорируется, `RsWindowsExtendedProtectionLevel` если для `OFF`параметра задано значение.|
+|`RsWindowsExtendedProtectionScenario`|Указывает, какие формы расширенной защиты проверяются: привязка канала, привязка службы или оба варианта. Допустимые значения: `Any`, `Proxy` и `Direct`.<br /><br /> Значение по умолчанию — `Proxy`.<br /><br /> Значение `Any` указывает, что:<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate и привязка канала не требуется.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение `Proxy` указывает, что:<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии маркера привязки канала.<br /><br /> — Привязка службы применяется принудительно.<br /><br /> Значение `Direct` указывает, что:<br /><br /> — Аутентификация Windows NTLM, Kerberos и Negotiate при наличии компьютеризованного обучения, соединения SSL с текущей службой и совпадении компьютеризованного обучения для соединения SSL с компьютеризованным обучением маркера NTLM, Kerberos или Negotiate.<br /><br /> — Привязка службы не применяется принудительно.<br /><br /> <br /><br /> Примечание. Этот параметр игнорируется, если `RsWindowsExtendedProtectionLevel` для параметра задано значение `OFF` .|
 
  Образцы записей из файла конфигурации `rsreportserver.config`:
 
@@ -153,15 +153,9 @@ ms.locfileid: "78177090"
 |ComputerNamePhysicalDnsHostname|Имя узла DNS локального компьютера. Если локальный компьютер является узлом или кластером, используется имя узла DNS локального компьютера, а не виртуального сервера кластера.|
 |ComputerNamePhysicalNetBIOS|Имя NetBIOS локального компьютера. Если локальный компьютер является узлом или кластером, используется имя NetBIOS локального компьютера, а не виртуального сервера кластера.|
 
- По мере добавления SPN в журнал трассировки заносится запись, аналогичная следующей:
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalNetBIOS> - <theservername>.`
-
- `rshost!rshost!10a8!01/07/2010-19:29:38:: i INFO: SPN Whitelist Added <ComputerNamePhysicalDnsHostname> - <theservername>.`
-
  Дополнительные сведения см. в статьях [Регистрация имени участника-службы для сервера отчетов](../report-server/register-a-service-principal-name-spn-for-a-report-server.md) и [Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)](../install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Подключитесь к ядро СУБД с помощью расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md) [Расширенная защита для проверки подлинности обзор](https://go.microsoft.com/fwlink/?LinkID=177943) [Встроенная проверка подлинности Windows с помощью расширенной защиты Советы по](https://go.microsoft.com/fwlink/?LinkId=179922) [безопасности Майкрософт: Расширенная защита для проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=179923) [Журнал трассировки службы сервера отчетов](../report-server/report-server-service-trace-log.md) , [файл конфигурации](../report-server/rsreportserver-config-configuration-file.md) [SetExtendedProtectionSettings метод &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)
 
 

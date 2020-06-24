@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102117"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263898"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  
@@ -32,9 +32,9 @@ ms.locfileid: "66102117"
     > [!IMPORTANT]  
     >  Использование `RSWindowsNegotiate` приведет к ошибке проверки подлинности протокола Kerberos, если служба сервера отчетов настроена на запуск с доменной учетной записью пользователя и для учетной записи не зарегистрировано имя участника-службы (SPN). Дополнительные сведения см. в разделе [Разрешение ошибок проверок подлинности протокола Kerberos при соединении с сервером отчетов](#proxyfirewallRSWindowsNegotiate) в этом разделе.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] должна быть настроена для проверки подлинности Windows. По умолчанию файлы Web. config для веб-службы сервера отчетов и диспетчер отчетов включают режим \<проверки подлинности = "Windows" > параметр. Если изменить его на \<authentication mode="Forms">, проверка подлинности Windows для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] завершится ошибкой.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] должна быть настроена для проверки подлинности Windows. По умолчанию файлы Web.config для веб-службы сервера отчетов и диспетчер отчетов включают \<authentication mode="Windows"> параметр. Если изменить его на \<authentication mode="Forms"> , проверка подлинности Windows для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] завершится ошибкой.  
   
--   Файлы Web. config для веб-службы сервера отчетов и диспетчер отчетов должны иметь \<удостоверение IMPERSONATE = "true"/>.  
+-   Файлы Web.config для веб-службы сервера отчетов и диспетчер отчетов должны иметь \<identity impersonate= "true" /> .  
   
 -   Клиентское приложение или браузер должны поддерживать встроенную безопасность Windows.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66102117"
   
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.  
   
-2.  Найдите> `Authentication` <.  
+2.  Найдите `Authentication`> <.  
   
 3.  Выберите и скопируйте наиболее подходящую из следующих XML-структур. `RSWindowsNegotiate`, `RSWindowsNTLM` и `RSWindowsKerberos` можно указывать в любом порядке. Включите сохраняемость проверки подлинности, если нужно проверить подлинность соединений, а не каждого отдельного запроса. При сохраняемости проверки подлинности все запросы, для которых требуется проверка подлинности, разрешены в продолжение существования соединения.  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102117"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Перезапустите службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и найдите в файле журнала трассировки записи, похожие на следующие:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Значения в столбце \<Явные> — это имена субъектов-служб, настроенные в Active Directory для учетной записи службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
+-   Перезапустите службу [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
  Если дальнейшей необходимости в использовании расширенной защиты нет, восстановите параметры по умолчанию и перезапустите учетную запись службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ```  
