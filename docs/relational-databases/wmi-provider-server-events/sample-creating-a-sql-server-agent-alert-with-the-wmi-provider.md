@@ -1,5 +1,6 @@
 ---
 title: Создание агент SQL Server оповещения с помощью поставщика WMI
+description: Создание агент SQL Server оповещения, отвечающего на определенные события. Это простое оповещение сохраняет события графа взаимоблокировок XML в таблице для последующего анализа.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1678379c2120ba4f2edbc2868d5651cbf403587
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660530"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295417"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Образец. Создание предупреждения агента SQL Server с помощью поставщика WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "73660530"
  Предупреждение запускает задание каждый раз, когда регистрируется событие трассировки графа взаимоблокировок. Для предупреждения WMI агент SQL Server создает запрос уведомления с использованием пространства имен и указанной инструкции WQL. Применительно к этому предупреждению агент SQL Server наблюдает за экземпляром по умолчанию на локальном компьютере. Инструкция WQL запрашивает любое событие `DEADLOCK_GRAPH` в экземпляре по умолчанию. Чтобы изменить экземпляр, за которым ведется наблюдение с помощью предупреждения, измените имя экземпляра на `MSSQLSERVER` в `@wmi_namespace` для события.  
   
 > [!NOTE]  
->  Для агент SQL Server получения событий WMI [!INCLUDE[ssSB](../../includes/sssb-md.md)] необходимо включить в **msdb** и. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
+>  Для агент SQL Server получения событий WMI [!INCLUDE[ssSB](../../includes/sssb-md.md)] необходимо включить в **msdb** и [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Тестирование образца  
- Чтобы увидеть выполнение задания, следует искусственно вызвать взаимоблокировку. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]среде Откройте две вкладки **SQL запроса** и подключите оба запроса к одному и тому же экземпляру. Запустите следующий скрипт в одной из вкладок запроса. Этот скрипт выдает один результирующий набор и завершает работу.  
+ Чтобы увидеть выполнение задания, следует искусственно вызвать взаимоблокировку. В [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] среде Откройте две вкладки **SQL запроса** и подключите оба запроса к одному и тому же экземпляру. Запустите следующий скрипт в одной из вкладок запроса. Этот скрипт выдает один результирующий набор и завершает работу.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +104,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Выполните следующий скрипт на вкладке второго запроса. Этот скрипт создает один результирующий набор, а затем блокирует, ожидая получения блокировки `Production.Product`.  
+ Выполните следующий скрипт на вкладке второго запроса. Этот скрипт создает один результирующий набор, а затем блокирует, ожидая получения блокировки `Production.Product` .  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +120,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Выполните следующий скрипт на вкладке первого запроса. Этот скрипт блокирует, ожидая получения блокировки `Production.Location`. После короткого времени ожидания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберет этот скрипт или скрипт в образце в качестве жертвы взаимоблокировки и завершит транзакцию.  
+ Выполните следующий скрипт на вкладке первого запроса. Этот скрипт блокирует, ожидая получения блокировки `Production.Location` . После короткого времени ожидания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выберет этот скрипт или скрипт в образце в качестве жертвы взаимоблокировки и завершит транзакцию.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  
@@ -135,7 +136,7 @@ GO
   
  Столбец `DeadlockGraph` должен содержать XML-документ, который показывает все свойства события графа взаимоблокировок.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия о поставщике WMI для событий сервера](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

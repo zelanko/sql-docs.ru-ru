@@ -1,5 +1,6 @@
 ---
 title: Использование поставщика WMI для управления конфигурацией
+description: Сведения о поставщике WMI для управления конфигурацией, включая привязку, указание строки подключения и разрешений/проверки подлинности сервера.
 ms.custom: seo-lt-2019
 ms.date: 04/12/2019
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c064c2927919ab4760903a9a3457f9c0be816647
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657378"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295397"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Работа с поставщиком WMI для управления конфигурацией
 
@@ -39,13 +40,13 @@ ms.locfileid: "73657378"
 
 Приложения направляют поставщика WMI для управления конфигурацией к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем соединения с пространством имен WMI, определенным поставщиком. Служба WMI Windows сопоставляет это пространство имен с библиотекой DLL поставщика и загружает библиотеку DLL в память. Все экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представлены одним пространством имен WMI.
 
-Пространство имен по умолчанию имеет следующий формат. В формате `VV` — основной номер версии SQL Server. Число можно обнаружить, выполнив `SELECT @@VERSION;`.
+Пространство имен по умолчанию имеет следующий формат. В формате `VV` — основной номер версии SQL Server. Число можно обнаружить, выполнив `SELECT @@VERSION;` .
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-При подключении с помощью PowerShell начальный `\\.\` элемент должен быть удален. Например, следующий код PowerShell перечисляет все классы WMI для SQL Server 2016, которая является основной версией 13.
+При подключении с помощью PowerShell начальный элемент `\\.\` должен быть удален. Например, следующий код PowerShell перечисляет все классы WMI для SQL Server 2016, которая является основной версией 13.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -80,7 +81,7 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  Поставщик WMI для управления конфигурацией поддерживает сертификаты безопасности. Дополнительные сведения о сертификатах см. в разделе [Иерархия шифрования](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)  
   
   
