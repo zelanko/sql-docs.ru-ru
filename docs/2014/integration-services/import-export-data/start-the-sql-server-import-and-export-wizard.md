@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1803dd3357d2a725f2196e2c692f7470e27a03f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965584"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436861"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Запуск мастера импорта и экспорта SQL Server
   Мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет самый простой способ копирования данных между источниками и создания основных пакетов. Дополнительные сведения о мастере см. в разделе [SQL Server мастер импорта и экспорта](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "84965584"
   
     -   Укажите, нужно ли создавать новую базу данных, а также укажите свойства базы данных. Следующие свойства не могут быть изменены, и мастер воспользуется указанными значениями по умолчанию.  
   
-        |Свойство|Применение|  
+        |Свойство|Значение|  
         |--------------|-----------|  
         |Параметры сортировки|Latin1_General_CS_AS_KS_WS|  
         |Модель восстановления|Полное|  
@@ -125,7 +125,7 @@ ms.locfileid: "84965584"
     > [!NOTE]  
     >  В выпуске [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] пакет, созданный при помощи мастера, сохранить нельзя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Мастер импорта и экспорта SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Создание пакетов в SQL Server Data Tools](../create-packages-in-sql-server-data-tools.md)  
   

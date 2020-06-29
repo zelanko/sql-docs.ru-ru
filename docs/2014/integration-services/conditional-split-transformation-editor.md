@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Conditional Split Transformation Editor
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 405d20ce5711f3e3378b0037b6d4c1f753a8f09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921995"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434921"
 ---
 # <a name="conditional-split-transformation-editor"></a>редактор преобразования «Условное разбиение»
   Диалоговое окно **Редактор преобразования «Условное разбиение»** используется для создания выражений, определения порядка, в котором производится вычисление выражений, а также для именования выходных данных условных разбиений. В этом диалоговом окне вызываются математические, строковые функции, функции даты и времени, а также операторы, которые можно использовать при построении выражений. Первое условие, значение которого вычисляется как TRUE, определяет вывод, на который направляется строка.  
@@ -28,7 +28,7 @@ ms.locfileid: "84921995"
   
  Дополнительные сведения о редакторе преобразований "Условное разбиение" см. в разделе [Преобразование "Условное разбиение"](data-flow/transformations/conditional-split-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Заказ**  
  Выберите строку и с помощью расположенных справа клавиш-стрелок измените порядок, в соответствии с которым будут оцениваться выражения.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84921995"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Разбиение набора данных с помощью преобразования «Условное разбиение»](data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   

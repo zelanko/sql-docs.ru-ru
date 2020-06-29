@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fe1db6400922188a93b55aa36d72ef3f9bef25b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965425"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436681"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Мастером преобразования проекта служб Integration Services
   **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта.  
@@ -167,7 +167,7 @@ ms.locfileid: "84965425"
  **Пакет**  
  Выводит список файлов пакета.  
   
- **Тип**  
+ **Type**  
  Выводит список типов конфигурации, например XML-файл конфигурации.  
   
  **Строка конфигурации**  
@@ -196,14 +196,14 @@ ms.locfileid: "84965425"
  **Имя параметра**  
  Выводит список имен параметра.  
   
- **Область**  
+ **Область действия**  
  Выбор области параметра, пакета или проекта.  
   
 ##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>Задание параметров на странице «Настройка параметров»  
  **имя**;  
  Выводит список имен параметра.  
   
- **Область**  
+ **Область действия**  
  Отображает область действия параметров.  
   
  **Значение**  
@@ -240,7 +240,7 @@ ms.locfileid: "84965425"
  **Сохранить отчет**  
  Нажмите эту кнопку, чтобы сохранить сводку по преобразованию проекта в XML-файл.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Развертывание проектов на сервере служб Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

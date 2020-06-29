@@ -17,14 +17,14 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 81bb8b079142b2b6c4597fa2fdfeddd034841f93
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61ae4361464c335d8a178582c27df34851b539dd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968984"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437061"
 ---
 # <a name="developing-a-custom-destination-component"></a>Разработка пользовательского компонента назначения
   Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создания пользовательских компонентов назначения, которые могут соединяться с любым пользовательским источником данных и хранить в нем свои данные. Пользовательские компоненты назначения полезны при необходимости соединения с источниками данных, доступ к которым не может быть осуществлен с помощью одного из существующих исходных компонентов, включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -482,7 +482,7 @@ End Namespace
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Разработка пользовательского компонента источника](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) , [создающего назначение с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)
 
 

@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - signing policies [Integration Services]
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95a812cf5c5faa7e367d4e39a8edac8d7bab89de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968324"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436901"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Реализация политики подписывания путем задания параметра реестра
   Для управления организационной политикой при загрузке подписанных и неподписанных пакетов можно использовать необязательный параметр реестра. При использовании данного параметра реестра его необходимо создать на каждом компьютере, где будут выполняться пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и где требуется принудительное выполнение этой политики. После задания такого параметра реестра службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будут проверять наличие и верность подписи перед загрузкой пакетов.  
@@ -33,7 +33,7 @@ ms.locfileid: "84968324"
   
  Следующая таблица перечисляет допустимые значения параметра типа DWORD и связанные с ними политики.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |0|Нет административного ограничения.|  
 |1|Заблокировать недопустимые подписи.<br /><br /> Этот параметр не блокирует неподписанные пакеты.|  
@@ -63,7 +63,7 @@ ms.locfileid: "84968324"
   
 9. В меню **Файл** выберите пункт **Выход**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о безопасности &#40;Integration Services&#41;](security/security-overview-integration-services.md)   
  [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md)  
   

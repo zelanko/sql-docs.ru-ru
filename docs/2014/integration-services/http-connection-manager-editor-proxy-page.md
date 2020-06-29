@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71880421f9f692c3d2c33aa6439e409c84851293
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968344"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436921"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Редактор диспетчера HTTP-соединений (страница «Прокси-сервер»)
   Используйте вкладку **Прокси-сервер** диалогового окна **Редактор диспетчера HTTP-соединений** , чтобы настроить диспетчер HTTP-соединений для работы с прокси-сервером. HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы.  
   
  Дополнительные сведения о диспетчере HTTP-соединений см. в разделе [HTTP Connection Manager](connection-manager/http-connection-manager.md). Дополнительные сведения о распространенном сценарии использования диспетчера HTTP-соединений см. в разделе [Web Service Task](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Использовать прокси-сервер**  
  Укажите, должен ли диспетчер HTTP-сеансов подключаться через прокси-сервер.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84968344"
  **Пароль**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
- **Доменная**  
+ **Домен**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
  **Список адресов, не требующих прокси-сервера**  
@@ -56,7 +56,7 @@ ms.locfileid: "84968344"
  **Remove**  
  Выберите адрес и затем удалите его, нажав кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   

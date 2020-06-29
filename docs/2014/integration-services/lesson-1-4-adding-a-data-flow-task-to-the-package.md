@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 37275d31837a700f5e69c433630839529c2ac0ae
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9e15e5c621aed464c31057752d406deced4f8c57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965284"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435951"
 ---
 # <a name="step-4-adding-a-data-flow-task-to-the-package"></a>Этап 4. Добавление задачи потока данных в пакет
   После того как были созданы диспетчеры соединений для исходных и целевых данных, предстоит добавить в пакет задачу потока данных. Задача потока данных включает в себя подсистему обработки потока данных, которая осуществляет передачу данных между источниками и назначениями, а также преобразует, очищает и изменяет данные при их перемещении. В задаче потока данных сосредоточена большая часть работы в процессе извлечения, преобразования и загрузки.  
@@ -40,7 +40,7 @@ ms.locfileid: "84965284"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 5. Добавление и настройка источника неструктурированных файлов](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача потока данных](control-flow/data-flow-task.md)  
   
   

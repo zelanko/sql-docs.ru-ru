@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d55463001f880cdc831a9c49ad86c5978c5e1d3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70796501bfe397cd2d8526944a17de5d4dc021be
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968838"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436941"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Обновление версии компонента потока данных
   Пакеты, созданные с устаревшей версией компонента, могут содержать недопустимые метаданные, например, пользовательские свойства, применение которых было изменено в более новых версиях компонента. Можно переопределить метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, чтобы обеспечить обновление метаданных, которые были сохранены в ранее созданных пакетах, для соответствия текущим свойствам компонента.  

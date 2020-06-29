@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3694eeb93e9edbc053a8534841a1edf438489ca9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ab0e8bfe2d0cda5ded11566023406b73ed7058c4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968334"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436891"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Редактор диспетчера HTTP-сеансов (страница «Сервер»)
   Используйте вкладку **Сервер** диалогового окна **Редактор диспетчера HTTP-соединений** , чтобы настроить диспетчер HTTP-соединений, указав такие свойства, как URL-адрес и учетные данные безопасности. HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. После настройки диспетчера HTTP-соединений можно проверить соединение.  
@@ -28,7 +28,7 @@ ms.locfileid: "84968334"
   
  Дополнительные сведения о диспетчере HTTP-соединений см. в разделе [HTTP Connection Manager](connection-manager/http-connection-manager.md). Дополнительные сведения о распространенном сценарии использования диспетчера HTTP-соединений см. в разделе [Web Service Task](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **URL-адрес сервера**  
  Введите URL-адрес для сервера.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "84968334"
  **Пароль**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
- **Доменная**  
+ **Домен**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
  **Использовать сертификат клиента**  
@@ -61,7 +61,7 @@ ms.locfileid: "84968334"
  **Проверить подключение**  
  После настройки диспетчера HTTP-подключений проверьте работоспособность соединения, нажав кнопку **Проверить соединение**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../2014/integration-services/http-connection-manager-editor-proxy-page.md)  
   

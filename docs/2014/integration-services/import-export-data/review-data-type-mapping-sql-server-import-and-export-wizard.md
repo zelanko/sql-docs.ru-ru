@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 108256e1d8a3638da5cd676a0ee57894b3ee874c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 68a9517222c6d5a3c2fecbddff9d3e811f3c2280
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966221"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436801"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Просмотр сопоставления типов данных (мастер импорта и экспорта SQL Server)
   Страница **Проверка сопоставления типов данных** используется для просмотра подробных сведений о преобразованиях типов данных, которые мастер должен выполнить, чтобы исходные данные были совместимы с назначением. Эти сведения включают в себя визуальные отличия преобразований, для которых ожидается успешное выполнение, от преобразований, которые могут вызвать ошибки или усечения. Для каждого преобразования можно указать, принимать ли предлагаемое мастером преобразование, а также способ обработки возможных ошибок.  
@@ -25,7 +25,7 @@ ms.locfileid: "84966221"
   
  Мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для копирования данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  Страница **Просмотр сопоставления типов данных** содержит список **Таблица** , список **Сопоставление типов данных** и параметры обработки ошибок.  
   
 ### <a name="table-list"></a>Список «Таблица»  

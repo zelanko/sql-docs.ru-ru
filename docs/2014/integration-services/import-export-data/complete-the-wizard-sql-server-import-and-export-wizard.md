@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77cb816a2ecf86b2a535b2e15e34271982ae39fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fe5409fd131c7a5b532ecfb462c530c88d0faacd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966194"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436781"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Завершение работы мастера (мастер импорта и экспорта SQL Server)
   Прежде чем начать копирование данных, подтвердите выбор, сделанный в мастере, на странице **Завершение работы мастера** .  
@@ -25,7 +25,7 @@ ms.locfileid: "84966194"
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Сводка параметров**  
  Просмотр сводки, содержащей следующие сведения:  
   

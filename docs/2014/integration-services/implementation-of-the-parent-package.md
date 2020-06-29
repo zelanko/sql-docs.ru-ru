@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04b99a2607e73bbcd612b43be1bdb30324a37e9f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965681"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436871"
 ---
 # <a name="implementation-of-the-parent-package"></a>Осуществление родительского пакета
   После создания и развертывания дочерних пакетов, а также назначения заданий удаленного агента SQL Server для запуска дочерних пакетов следующим шагом при распределении нагрузки пакетов служб SSIS по различным серверам является создание родительского пакета. В родительском пакете будет содержаться множество задач «Выполнение задания агента SQL Server», каждая из которых отвечает за вызов своего задания агента SQL Server, запускающего один из дочерних пакетов. Задачи «Выполнение задания агента SQL Server» в родительском пакете в свою очередь запускают различные задания агента SQL Server. Каждая задача в родительском пакете содержит сведения о подключении к удаленному серверу и имя задания, которое необходимо запустить на этом сервере. Дополнительные сведения см. в статье [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md).  

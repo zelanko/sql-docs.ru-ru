@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 79967f4244749f5e0e14d823b4e04832e8ccb3e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d07502256418b1d528f73bac3296045c393ddc1b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965334"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436121"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами
   В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -100,7 +100,7 @@ ms.locfileid: "84965334"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Шаг 3. Добавление и настройка диспетчера подключений OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер соединений с неструктурированными файлами](connection-manager/file-connection-manager.md)   
  [Типы данных служб Integration Services](data-flow/integration-services-data-types.md)  
   

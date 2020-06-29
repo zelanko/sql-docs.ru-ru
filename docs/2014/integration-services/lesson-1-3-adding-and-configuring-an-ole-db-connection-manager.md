@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e7ba771b404ac7d0fad5721fa6056333634e7246
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965304"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436081"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Шаг 3. Добавление и настройка диспетчера соединений OLE DB
   После добавления диспетчера соединений с неструктурированными файлами для подключения к источникам данных предстоит добавить диспетчер соединений OLE DB для соединения с назначением. Диспетчер соединений OLE DB позволяет пакету получать данные из любого источника данных, совместимого с OLE DB, а также загружать данные в такой источник данных. Используя диспетчер соединений OLE DB, можно указать для соединения сервер, метод проверки подлинности и базу данных по умолчанию.  
@@ -48,7 +48,7 @@ ms.locfileid: "84965304"
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
  [Этап 4. Добавление задачи потока данных в пакет](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [диспетчер соединений OLE DB](connection-manager/ole-db-connection-manager.md)  
   
   

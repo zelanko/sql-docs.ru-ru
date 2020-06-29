@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a4aec2f63a5f811b8e61a5ac9c107394f3d53db
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1c15c17a752b11550c2ca40e8098d357802c3150
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968894"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436981"
 ---
 # <a name="implementing-external-metadata"></a>Реализация внешних метаданных
   Если компонент отключен от источника данных, можно выполнить проверку столбцов во входных и выходных коллекциях столбцов относительно внешнего источника данных с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Он позволяет сохранять моментальный снимок столбцов внешнего источника данных и сопоставлять эти столбцы со столбцами входных и выходных коллекций столбцов компонента.  
@@ -109,7 +109,7 @@ End Function
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../../data-flow/data-flow.md)  
   
   

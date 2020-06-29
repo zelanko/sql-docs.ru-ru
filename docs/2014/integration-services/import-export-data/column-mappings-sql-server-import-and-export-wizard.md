@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d381ec773499fdcf018375c7a51740880d3d9b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965637"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436791"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Сопоставления столбцов (мастер импорта и экспорта SQL Server)
   Используйте диалоговое окно **сопоставления столбцов** для изменения параметров преобразования.  
@@ -28,7 +28,7 @@ ms.locfileid: "84965637"
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Source**  
  Определяет выбранную исходную таблицу, представление или запрос.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "84965637"
  **Назначение**  
  Укажите, должен ли столбец пропускаться во время операции копирования. Можно скопировать только подмножество столбцов, выбрав **\<ignore>** в этом столбце столбцы, которые нужно пропустить. Перед сопоставлением столбцов необходимо установить пропуск всех столбцов, которые не будут сопоставляться.  
   
- **Тип**  
+ **Type**  
  Укажите тип данных столбца.  
   
  **Допускает значения NULL**  

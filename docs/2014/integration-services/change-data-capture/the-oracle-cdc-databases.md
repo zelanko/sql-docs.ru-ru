@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f99e6a65a699bae09df61f1de8a1a7c1ee88c52
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7313fb40ec44873e980d3063219c9c9ca55bff1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922338"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435311"
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  

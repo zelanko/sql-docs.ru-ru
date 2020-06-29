@@ -14,14 +14,14 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 15cea1ab511324cad52ed197f9f612bbedb2b162
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e480e7720fc6515417d28ae7b2d6c46c484f1989
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969174"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437181"
 ---
 # <a name="literals-ssis"></a>Литералы (службы SSIS)
   Выражения могут содержать числовые, строковые и логические литералы. Средство оценки выражений поддерживает различные числовые литералы, такие как целые числа, десятичные дроби и константы с плавающей точкой. Средство оценки выражений также поддерживает суффиксы для длинных чисел и чисел с плавающей точкой, указывающие, как механизм вычисления выражений обрабатывает значения, а также экспоненциальное представление чисел в числовых литералах.  
@@ -96,7 +96,7 @@ ms.locfileid: "84969174"
   
  Строки могут включать другие символы, требующие управляющей последовательности. Следующая таблица содержит escape-последовательности строковых литералов.  
   
-|Escape-последовательность|Описание|  
+|Escape-последовательность|Описание:|  
 |---------------------|-----------------|  
 |\a|Предупреждение|  
 |\b|Backspace|  

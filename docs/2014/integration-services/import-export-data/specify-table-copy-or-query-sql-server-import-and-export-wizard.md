@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 784bd4649fb2169c78f38414c6c400e34582aa99
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965534"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436731"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Выбор копирования таблицы или запроса (мастер импорта и экспорта SQL Server)
   Используйте страницу **Выбор копирования таблицы или запроса** , чтобы указать способ копирования данных. Можно при помощи графического интерфейса выбрать существующие объекты базы данных или при помощи языка Transact-SQL создать более сложный запрос.  
@@ -25,7 +25,7 @@ ms.locfileid: "84965534"
   
  Назначение мастера импорта и экспорта SQL Server заключается в копировании данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Копирование данных из одной или нескольких таблиц или представлений**  
  Копировать поля из выбранных исходных таблиц и представлений в указанные места назначения или назначения с помощью диалогового окна **Выбор исходных таблиц и представлений** . Используйте этот режим, если нужно копировать все данные из источника без фильтрации или упорядочения записей.  
   

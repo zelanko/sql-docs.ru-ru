@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8fe20a8bafae1a9f8dd331d1db5ae16fba5c3ee1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 65287938d3cdbe45a0853dcd47280f68f0443b3f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968964"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437031"
 ---
 # <a name="developing-a-custom-source-component"></a>Разработка пользовательского компонента источника
   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создавать компоненты источника, которые могут подключаться к пользовательским источникам данных и предоставлять данные из этих источников другим компонентам в задаче потока данных. Возможность создавать пользовательские источники становится полезной, если возникает необходимость подключаться к источникам данных, доступ к которым нельзя получить с помощью одного из существующих источников служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -667,7 +667,7 @@ End Namespace
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Разработка пользовательского компонента назначения](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) [Создание источника с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)
 
 

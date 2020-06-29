@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18b97b67590bfff4f01e5dff332722a3aba1cf7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966275"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436881"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Выбор источника данных (мастер импорта и экспорта SQL Server)
   Используйте страницу **Выбор источника данных** , чтобы указать источник данных, который нужно копировать.  
@@ -25,7 +25,7 @@ ms.locfileid: "84966275"
   
  Мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначен для копирования данных из исходного расположения в целевое. Этот мастер может также создать целевую базу данных и целевые таблицы. Однако если нужно скопировать несколько баз данных, таблиц или других объектов базы данных, следует использовать мастер копирования баз данных. Дополнительные сведения см. в статье [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Источник данных**  
  Выберите поставщик данных, который соответствует формату хранения данных источника. Для источника данных может существовать несколько поставщиков. Например, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использоваться собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик данных платформы .NET Framework для SQL Server или поставщик OLE DB для SQL Server (Майкрософт).  
   
