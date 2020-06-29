@@ -14,14 +14,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5dcad5e767f16054385f30e95e15bd8a598d9fdd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 15084294d26be8afc8e933c7c7c4066506ef3fd9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920669"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438371"
 ---
 # <a name="multiple-flat-files-connection-manager"></a>диспетчер соединения с несколькими неструктурированными файлами
   Диспетчер соединения с несколькими неструктурированными файлами позволяет пакету получить доступ к данным в нескольких неструктурированных файлах. Например, источник неструктурированных файлов может использовать диспетчер соединения с несколькими неструктурированными файлами, если задача потока данных находится в контейнере цикла, например в контейнере «цикл по элементам». В каждом цикле контейнера источник неструктированных файлов загружает данные из следующего имени файла, которое предоставляет диспетчер соединения с несколькими неструктурированными файлами.  
@@ -71,7 +71,7 @@ ms.locfileid: "84920669"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Источник "Неструктурированный файл"](../data-flow/flat-file-source.md)   
  [Назначение "Неструктурированный файл"](../data-flow/flat-file-destination.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  

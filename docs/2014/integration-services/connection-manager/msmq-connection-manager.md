@@ -12,14 +12,14 @@ helpviewer_keywords:
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a92d6ee495c31e788e7924f00d5469d538155da3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 392b52142992baad8761ec1c25689db6726c8d67
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920771"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438401"
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
   Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача "Очередь сообщений", содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использует диспетчер соединений MSMQ.  
@@ -48,7 +48,7 @@ ms.locfileid: "84920771"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача "очередь сообщений"](../control-flow/message-queue-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   

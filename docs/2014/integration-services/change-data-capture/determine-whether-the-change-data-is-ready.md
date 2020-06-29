@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 96a59d4b9088dd2281efaa85f97e229d12223e0b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a6035aa3af7dbb55ee4f3b948806d9dc63626e13
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923425"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438761"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>Определение готовности информации об  изменениях данных
   В потоке управления пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку измененных данных, вторая задача состоит в том, чтобы убедиться, что изменения данных за выбранный интервал времени подготовлены. Этот шаг необходим потому, что процесс асинхронной записи, возможно, еще не дошел до выбранной конечной точки.  

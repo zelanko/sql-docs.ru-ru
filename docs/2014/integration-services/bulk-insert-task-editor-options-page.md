@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1751d1e0ac01d5459a8c76e6a48626c2ad6deafd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924675"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439181"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Редактор задачи «Массовая вставка» (страница «Параметры»)
   Страница **Параметры** диалогового окна **Редактор задачи «Массовая вставка»** используется для установки свойств операции массовой вставки. Задача «Глобальная Вставка» копирует большие объемы данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] таблицу или представление.  
   
  Сведения о работе с массовой вставкой см. в разделах [Задача "Массовая вставка"](control-flow/bulk-insert-task.md) и [BULK INSERT(Transact-SQL)](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **CodePage**  
  Задает кодовую страницу данных в файле данных.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "84924675"
 > [!NOTE]  
 >  Каждая строка, которая не может быть импортирована операцией массовой загрузки, считается за одну ошибку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "групповые вставки" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Вставка в &#40;"&#41;страницу "соединение"](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   

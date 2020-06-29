@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 701ea85cafc22d9ea850e18310c3c2d06748cb08
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920515"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438361"
 ---
 # <a name="odbc-connection-manager"></a>диспетчер соединений ODBC
   Диспетчер соединений ODBC позволяет пакету подключаться к разнообразным системам управления базами данных, используя открытый интерфейс взаимодействия с базами данных (ODBC).  
@@ -45,7 +45,7 @@ ms.locfileid: "84920515"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   
   

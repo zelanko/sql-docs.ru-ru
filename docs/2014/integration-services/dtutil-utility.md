@@ -22,14 +22,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7dc27ea31f17d011a8ad486f6dd9f4a101db2ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11dd13bbf431413efe10f4ecdb0031b5a1650242
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966980"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437511"
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
   Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)], который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами `/SQL`, `/FILE` и `/DTS`.  
@@ -111,12 +111,12 @@ dtutil /option [value] [/option [value]]...
 |/SourceP[assword] *пароль*|Указывает пароль, который используется вместе с параметрами *SQL* и *SOURCEUSER* , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в базе данных экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующему проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание *SOURCEPASSWORD* в командной строке, не включающей параметр, является ошибкой `SOURCEUSER` .<br /><br /> Примечание. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
 |/SourceS[erver] *экземпляр_сервера*|Указывает имя сервера, которое используется с параметром `SQL`, чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)], сохраненного в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Указание *SOURCESERVER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY* *SQL* или *MOVE* *SQL*, является ошибкой.<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, добавив обратную косую черту и имя экземпляра к имени сервера.|  
 |/SourceU[ser] *имя пользователя*|Указывает имя пользователя, используемое с параметрами *SOURCESERVER* , чтобы обеспечить получение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , сохраненного в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , где используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание *SOURCEUSER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY SQL*или *MOVE SQL* , является ошибкой.<br /><br /> Примечание. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]|  
-|/SQ[L] *путь_к_пакету*|Указывает местоположение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Этот параметр указывает, что пакет сохранен в базе данных **msdb** . Аргумент *путь_к_пакету* указывает путь и имя пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Название каждой папки заканчивается обратной косой чертой.  Если параметр *SQL* указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL*. Параметр *SQL* может сопровождаться следующими параметрами, каждый из которых указывается один раз или не указывается: <br />*SOURCEUSER*<br />*SOURCEPASSWORD*<br />*SOURCESERVER*<br /><br /> В случае отсутствия параметра *SOURCEUSERNAME* для доступа к пакету используется проверка подлинности Windows. *SOURCEPASSWORD* можно использовать только при наличии *SOURCEUSER* . Если параметр *SOURCEPASSWORD* не указан, используется пустой пароль.<br /><br /> ** \* \* Важно \* ! \* **[!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
+|/SQ[L] *путь_к_пакету*|Указывает местоположение пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Этот параметр указывает, что пакет сохранен в базе данных **msdb** . Аргумент *путь_к_пакету* указывает путь и имя пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Название каждой папки заканчивается обратной косой чертой.  Если параметр *SQL* указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> *DTS*<br /><br /> *FILE*<br /><br /> *SQL.* Параметр *SQL* может сопровождаться следующими параметрами, каждый из которых указывается один раз или не указывается: <br />*SOURCEUSER*<br />*SOURCEPASSWORD*<br />*SOURCESERVER*<br /><br /> В случае отсутствия параметра *SOURCEUSERNAME* для доступа к пакету используется проверка подлинности Windows. *SOURCEPASSWORD* можно использовать только при наличии *SOURCEUSER* . Если параметр *SOURCEPASSWORD* не указан, используется пустой пароль.<br /><br /> ** \* \* Важно \* ! \* **[!INCLUDE[ssNoteStrongPass](../includes/ssnotestrongpass-md.md)]|  
   
 ## <a name="dtutil-exit-codes"></a>Коды завершения программы dtutil  
  Если обнаружены синтаксические ошибки, указаны неправильные аргументы или недопустимые сочетания параметров, программа**dtutil** возвращает код завершения, который создает соответствующие предупреждения. В противном случае программа выдает сообщение "Операция успешно завершена". В следующей таблице перечислены значения, которые программа **dtutil** может возвращать при завершении.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |0|Программа выполнена успешно.|  
 |1|Программа завершилась с ошибкой.|  
@@ -124,7 +124,7 @@ dtutil /option [value] [/option [value]]...
 |5|Программе не удалось загрузить запрошенный пакет|  
 |6|Программе не удалось разрешить командную строку, потому что та содержит синтаксические или семантические ошибки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Вместе с программой **dtutil**нельзя использовать командные файлы или перенаправление.  
   
  Порядок параметров в пределах командной строки не имеет значения.  
@@ -272,7 +272,7 @@ dtutil /FILE srcPackage.dtsx /SIGN FILE;destpkg.dtsx;1767832648918a9d989fdac9819
 dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск пакета с помощью SQL Server Data Tools](../../2014/integration-services/run-a-package-in-sql-server-data-tools.md)  
   
   

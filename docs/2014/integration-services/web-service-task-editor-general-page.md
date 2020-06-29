@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c642c100e41574a525578c3392aedbc82ac419a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972482"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439851"
 ---
 # <a name="web-service-task-editor-general-page"></a>Редактор задачи «Веб-служба» (страница «Общие»)
   Страница **Общие** в диалоговом окне **Редактор задачи "Веб-служба"** применяется для указания диспетчера HTTP-соединений, расположения файла WSDL, используемого задачей веб-службы, описания задачи веб-службы и загрузки файла WSDL.  
   
  Дополнительные сведения об этой задаче см. в разделе [Задача "Веб-служба"](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **хттпконнектион**  
  Выберите Диспетчер соединений из списка или щелкните, \<**New connection...**> чтобы создать новый диспетчер соединений.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "84972482"
   
  Эта кнопка недоступна, пока не указано имя существующего локального файла в поле **WSDLFile** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "веб-служба" &#40;"входная страница"&#41;](../../2014/integration-services/web-service-task-editor-input-page.md)   
  [Редактор задачи "веб-служба" &#40;страница "выходные данные"&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   

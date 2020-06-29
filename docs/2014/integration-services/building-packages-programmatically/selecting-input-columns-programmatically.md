@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 987548418e78999e0c247c65aac5e67912b5385f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca5a5eb430e9ecae3d9508cd230a244ad5d7dac5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924795"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439191"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Выбор входных столбцов программным образом
   После соединения компонентов программным способом, выберите столбцы из вышестоящих компонентов, которые должны быть преобразованы или переданы нижестоящим компонентам. Если не выбрать входные столбцы для компонента, компонент не получит строк от задачи потока данных.  
@@ -211,7 +211,7 @@ End Module
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранение пакета программным образом](../building-packages-programmatically/saving-a-package-programmatically.md)  
   
   

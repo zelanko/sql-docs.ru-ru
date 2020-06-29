@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a969ad04f8ba5bc86167beecfab5fec85e87caa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b2a485077f501d38d5d6bab2a4d5b309f47dc6a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966884"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437391"
 ---
 # <a name="excel-destination-editor-connection-manager-page"></a>Редактор назначения «Excel» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** в диалоговом окне **Редактор назначения «Excel»** , чтобы задать сведения об источнике данных и просмотреть результаты. Назначение «Excel» загружает данные в лист или именованный диапазон в книге [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -38,7 +38,7 @@ ms.locfileid: "84966884"
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Таблица или представление|Загружает данные в лист или именованный диапазон источника данных Excel.|  
 |Переменная, содержащая имя таблицы или представления|Укажите переменную, содержащую имя листа или диапазона.<br /><br /> **См. также**: [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -79,7 +79,7 @@ ms.locfileid: "84966884"
  **Анализ запроса**  
  Проверить синтаксис текста запроса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Excel" &#40;страниц сопоставления&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Редактор назначения "Excel" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   

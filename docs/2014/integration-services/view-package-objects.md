@@ -16,14 +16,14 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8ab1a510ec348ca30ffd1b8946b71ab935c0057c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffe46be35db26186f715b18ba6114732d130e02e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972530"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439881"
 ---
 # <a name="view-package-objects"></a>просмотр объектов пакета
   В конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] вкладка **Обозреватель пакетов** предоставляет режим обозревателя. В данном режиме отображается иерархия контейнеров архитектуры [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Контейнер пакетов стоит на самом верху иерархии. При разворачивании пакета можно просмотреть все соединения, исполняемые объекты, обработчики событий, регистраторы, объекты управления очередностью и переменные.
@@ -42,7 +42,7 @@ ms.locfileid: "84972530"
 
 -   [Просмотр объектов пакета в обозревателе пакетов](../../2014/integration-services/view-package-objects-in-package-explorer.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Integration Services задачи](control-flow/integration-services-tasks.md) [Integration Services](control-flow/integration-services-containers.md) управление [очередностью](control-flow/precedence-constraints.md) контейнеров [Integration Services &#40;SSIS&#41; переменные](integration-services-ssis-variables.md) [Integration Services &#40;службы](integration-services-ssis-event-handlers.md) SSIS&#41; [Журнал](performance/integration-services-ssis-logging.md) Integration Services
 
 

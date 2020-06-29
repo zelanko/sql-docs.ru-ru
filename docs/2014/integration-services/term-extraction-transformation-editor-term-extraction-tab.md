@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 4c305b7d-a231-4d03-a09f-8e2d6564fa76
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2ba82ed1dac3cf992ca181e5795b33721eca4d86
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 00a1ecae07fe4babf433d199d069fc6200b52269
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962224"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440031"
 ---
 # <a name="term-extraction-transformation-editor-term-extraction-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Извлечение терминов»)
   Вкладка **Извлечение терминов** диалогового окна **Редактор преобразования «Извлечение терминов»** служит для указания текстового столбца, из которого будет извлекаться текст.  
   
  Дополнительные сведения о преобразовании «Извлечения терминов» см. в разделе [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  С помощью флажков выберите отдельные текстовые столбцы для извлечения терминов.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84962224"
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Извлечение терминов" &#40;вкладка "исключения"&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Редактор преобразования "Извлечение терминов" &#40;вкладка "Дополнительно"&#41;](../../2014/integration-services/term-extraction-transformation-editor-advanced-tab.md)   

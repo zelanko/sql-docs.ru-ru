@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.columns.f1
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 44781385a12f880e71e635d2d5e6f76809923453
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 339f3de18df4a06533f97eaef8c69d01e6294491
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925835"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439551"
 ---
 # <a name="ado-net-source-editor-columns-page"></a>Редактор источника «ADO.NET» (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источника "ADO.NET"** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
@@ -31,7 +31,7 @@ ms.locfileid: "84925835"
   
 3.  В окне **Редактор источника «ADO.NET»** нажмите кнопку **Столбцы**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные внешние столбцы**  
  Просмотр списка доступных внешних столбцов источника данных. В этой таблице нельзя добавлять или удалять столбцы.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "84925835"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, однако можно выбрать любое уникальное описательное имя. Это имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
  [Редактор источника ADO NET &#40;страница вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
- [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  
+ [Диспетчер подключений ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

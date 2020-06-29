@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Select Variables dialog box
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 47bf9fcd831cc8ca0a56b7687013104ba6b30c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963547"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440071"
 ---
 # <a name="select-variables"></a>Выбор переменных
   Используйте диалоговое окно **Выбор переменных** для указания переменных, которые следует использовать при выполнении операции отправки сообщения в задаче «Очередь сообщений». Список **Доступные переменные** включает системные и пользовательские переменные, находящиеся в области действия задачи "Очередь сообщений" или ее родительского контейнера. Задача использует переменные, перечисленные в списке **Выбранные переменные** .  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные переменные**  
  Выберите одну или несколько переменных.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84963547"
   
  **См. также:** [Добавление переменной](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также:  
- [Message Queue Task](control-flow/message-queue-task.md)  
+## <a name="see-also"></a>См. также  
+ [Задача «Очередь сообщений»](control-flow/message-queue-task.md)  
   
   

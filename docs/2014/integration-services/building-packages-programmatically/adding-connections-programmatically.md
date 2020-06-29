@@ -21,14 +21,14 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4db1a3f76c6ebbef22d0bbe01e19dd6aca56e3c7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7acd460d4dfe3a33da26170847509ae9b418a726
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925265"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439381"
 ---
 # <a name="adding-connections-programmatically"></a>Добавление соединений программным образом
   Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> представляет физические соединения с внешними источниками данных. Класс <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> изолирует данные о реализации соединения от среды выполнения. Это обеспечивает согласованное и прогнозируемое взаимодействие среды выполнения с каждым диспетчером соединений. Диспетчеры соединений содержат набор основных свойств, общих для всех соединений, например, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Однако, как правило, только свойства <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> требуются для настройки диспетчера соединений. Обычно классами соединения используются такие методы, как `Open` или `Connect`, чтобы установить физическое соединение с источником данных, однако обработчик среды выполнения управляет всеми соединениями пакета во время его выполнения.  
@@ -210,7 +210,7 @@ End Class
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;соединений&#41; SSIS](../connection-manager/integration-services-ssis-connections.md)   
  [Создание диспетчеров соединений](../create-connection-managers.md)  
   

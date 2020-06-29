@@ -13,14 +13,14 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc99e29d95aa08ce9363ca1fa6971d7602824868
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9ab514b8d9e9a312b6d91d453235d99b837f6781
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439901"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "84972774"
 |Зеленый|Успешное завершение.|  
 |красный|Завершение с ошибками.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструменты устранения неполадок при разработке пакета](troubleshooting-tools-for-package-development.md)  
   
   

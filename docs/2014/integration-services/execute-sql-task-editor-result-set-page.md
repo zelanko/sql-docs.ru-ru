@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 027f3c77e84b47958e9fb6567acdb308c14eb1e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437361"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Редактор задачи «Выполнение SQL» (страница «Результирующий набор»)
   Страница **Результирующий набор** диалогового окна **Редактор задачи «Выполнение SQL»** применяется для сопоставления результатов инструкции SQL с новыми или существующими переменными. Эти параметры в диалоговом окне отключены, если параметр **Результирующий набор** на странице «Общие» установлен в **Нет**.  
   
  Дополнительные сведения об этой задаче см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md) и [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Имя результата**  
  После того как с помощью кнопки **Добавить**было добавлено сопоставление результирующего набора, укажите имя результата. В зависимости от типа результирующего набора необходимо использовать определенные имена результирующих наборов.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84966754"
  **Remove**  
  Выберите в списке сопоставление результирующего набора и нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи «Выполнение SQL» &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "Сопоставление параметров"&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   

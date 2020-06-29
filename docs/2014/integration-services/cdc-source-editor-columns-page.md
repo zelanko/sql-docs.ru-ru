@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 51fcd038f45fdabbf97d5fafc4d4daf341d5a79d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1d48eaab07915ddbfafea3c0396f8d8cd914260c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924060"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438991"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Редактор источника «CDC» (страница «Столбцы»)
   Страница **Столбцы** диалогового окна **Редактор источника CDC** используется для сопоставления выходного столбца с каждым внешним (исходным) столбцом.  
   
  Дополнительные сведения об источнике CDC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
  **Открытие страницы «Столбцы» редактора источника CDC**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник CDC.  
@@ -32,7 +32,7 @@ ms.locfileid: "84924060"
   
 3.  В окне **Редактор источника CDC**нажмите кнопку **Столбцы**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные внешние столбцы**  
  Список доступных внешних столбцов источника данных. В этой таблице нельзя добавлять или удалять столбцы. Выберите используемые столбцы источника. Выбранные столбцы добавляются в список **Внешний столбец** в порядке выбора.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "84924060"
  **Выходной столбец**  
  Введите уникальное имя для каждого выходного столбца. По умолчанию используется имя выбранного внешнего (исходного) столбца, но можно выбрать любое уникальное описательное имя. Введенное имя отображается в конструкторе служб SSIS.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Редактор источника "CDC" (страница "Вывод ошибок")](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   

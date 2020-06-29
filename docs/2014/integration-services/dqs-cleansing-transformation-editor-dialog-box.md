@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eaff1c5ac8ae5a804f546fc5e551dcb62e2fda7a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3f16adec193cebde1d30d1455e68240622b4ded8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966911"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437431"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Диалоговое окно редактора преобразования «Очистка DQS»
   Диалоговое окно **Редактор преобразования "Очистка DQS"** служит для исправления данных с помощью служб Data Quality Services (DQS). Дополнительные сведения см. в статье [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "84966911"
  **Входной столбец**  
  Показывает входной столбец, выбранный в области **Доступные входные столбцы** .  
   
- **Доменная**  
+ **Домен**  
  Выберите домен, сопоставляемый с входным столбцом.  
   
  **Псевдоним источника**  
@@ -103,7 +103,7 @@ ms.locfileid: "84966911"
  **Уровень**  
  Показывает, включается ли уровень достоверности для исправленных данных. Уровень достоверности определяет степень уверенности в правильности изменений, выполненных или рекомендуемых службами DQS. Дополнительные сведения об уровнях достоверности см. в разделе [Очистка данных](../../2014/data-quality-services/data-cleansing.md).  
   
- **Оправдан**  
+ **Причина**  
  Указывает, включается ли причина исправления данных.  
   
  **Добавленные данные**  
@@ -127,7 +127,7 @@ ms.locfileid: "84966911"
   
 3.  Нажмите кнопку **Добавить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Применение правил качества данных к источнику данных](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

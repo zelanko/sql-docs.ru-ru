@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b2cd722fd8520ff011c0d57040a55d624178e15e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924645"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439171"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Редактор задачи «Массовая вставка» (страница «Соединение»)
   Страница **Соединение** диалогового окна **Редактор задачи «Массовая вставка»** используется для указания источника и места назначения операции массовой вставки и формата для использования.  
   
  Дополнительные сведения о работе с массовыми вставками см. в разделах [Задача "Массовая вставка"](control-flow/bulk-insert-task.md) и [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Соединение**  
  Выберите Диспетчер соединений OLE DB в списке или щелкните, \<**New connection...**> чтобы создать новое соединение.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "84924645"
  **Формат**  
  Выберите источник формата для массовой вставки. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Использовать файл**|Выберите файл, содержащий спецификацию формата. При выборе этого параметра отображается динамический параметр **FormatFile**.|  
 |**Указать**|Укажите формат. При выборе этого параметра отображаются динамические параметры `RowDelimiter` и `ColumnDelimiter` .|  
@@ -67,7 +67,7 @@ ms.locfileid: "84924645"
  `ColumnDelimiter`  
  Укажите разделитель столбцов в файле источника. Значение по умолчанию составляет **Табуляция**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "групповые вставки" &#40;общие&#41;страницы](../../2014/integration-services/bulk-insert-task-editor-general-page.md)   
  [Редактор задачи "операции с массовыми вставками" &#40;параметры&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   

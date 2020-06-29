@@ -12,14 +12,14 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 71e8a21d4e83a37e647ff3bb27aaae14cd62c5a8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25ee5f9ba6a17f0d7e0e7b5416079c19bb885c30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939385"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437601"
 ---
 # <a name="ole-db-command-transformation"></a>преобразование «Команда OLE DB»
   Преобразование «Команда OLE DB» выполняет инструкцию SQL для каждой строки потока данных. Например, можно выполнить инструкцию SQL, с помощью которой создаются, обновляются или удаляются строки в таблице базы данных.  
@@ -48,7 +48,7 @@ ms.locfileid: "84939385"
 ## <a name="related-tasks"></a>Связанные задачи  
  Преобразование можно настроить с помощью конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или объектной модели. Сведения о настройке преобразования с помощью конструктора [!INCLUDE[ssIS](../../../includes/ssis-md.md)] см. в разделе  [Настройка преобразования "Команда OLE DB"](../../configure-the-ole-db-command-transformation.md). Сведения о настройке этого преобразования программными средствами см. в руководстве разработчика.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

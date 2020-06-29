@@ -20,14 +20,14 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4eb09433e2b2db77e6a2f40c1acf204513585a9f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da6fa76641aaf7a2a712158eb33808df9e672d40
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924929"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439261"
 ---
 # <a name="enabling-logging-programmatically"></a>Программное включение ведения журнала
   Ядро выполнения предоставляет коллекцию объектов <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>, которые позволяют перехватывать во время проверки и выполнения пакета сведения, относящиеся к конкретному событию. Объекты <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> доступны для объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, включая объекты <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> и <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Ведение журналов включается для индивидуальных контейнеров или пакета в целом.

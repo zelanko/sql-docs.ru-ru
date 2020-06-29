@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963490"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440061"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)
   Страница **Почта** диалогового окна **Редактор задачи «Отправка почты»** служит для определения получателей, типа и приоритета сообщения. К сообщению можно также прикрепить файлы. Текстом сообщения может быть введенная строка, соединение с файлом, содержащим текст, или имя переменной, содержащей текст.  
   
  Дополнительные сведения об этой задаче см. в разделе [Send Mail Task](control-flow/send-mail-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **SMTPConnection**  
  Выберите Диспетчер соединений SMTP в списке или щелкните, **\<New connection...>** чтобы создать новый диспетчер соединений.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "84963490"
  **MessageSourceType**  
  Выберите тип источника сообщения. Это свойство имеет параметры, указанные в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Прямой ввод**|Задание источника текста сообщения. При выборе этого значения отображается динамический параметр **MessageSource**.|  
 |**Соединение с файлом**|Задание в качестве источника файла, содержащего текст сообщения. При выборе этого значения отображается динамический параметр **MessageSource**.|  
@@ -85,7 +85,7 @@ ms.locfileid: "84963490"
   
  **См. также:** [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md), [Добавить переменную](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи «Отправка почты» &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

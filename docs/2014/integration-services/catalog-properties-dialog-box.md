@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f1a4a9d7a74e47d609c319f90b07d8ebfdce00e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924575"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439141"
 ---
 # <a name="catalog-properties-dialog-box"></a>Диалоговое окно свойств каталога
   Диалоговое окно свойств каталога служит для настройки каталога SSISDB. Свойства каталога определяют, как конфиденциальные данные шифруются, как сохранены данные операций и версий проекта, а затем время ожидания операций проверки. Каталог SSISDB — это центральная точка хранения и администрирования для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проектов, пакетов, параметров и сред.  
@@ -42,10 +42,10 @@ ms.locfileid: "84924575"
   
 ##  <a name="configure-the-options"></a><a name="options"></a>Настройка параметров  
   
-### <a name="options"></a>Варианты  
+### <a name="options"></a>Параметры  
  В следующей таблице описаны некоторые свойства, определенные в диалоговом окне, а также соответствующие свойства в представлении catalog.catalog_property.  
   
-|Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_property)|Описание|  
+|Имя свойства (диалоговое окно свойств каталога)|Имя свойства (представление catalog.catalog_property)|Описание:|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Имя алгоритма шифрования|ENCRYPTION_CLEANUP_ENABLED|Указывает тип шифрования, который используется при шифровании значений конфиденциальных параметров каталога. Допустимы следующие значения:<br /><br /> **3DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (по умолчанию)|  
 |Время ожидания проверки (в секундах)|VALIDATION_TIMEOUT|Задайте максимальное время в секундах, в течение которого может выполняться операция проверки проекта или пакета до того, как будет остановлена. Значение по умолчанию — 300 секунд.<br /><br /> Выполнение проверки является асинхронной операцией. Чем больше проект или пакет, тем больше времени необходимо для проверки.<br /><br /> Дополнительные сведения о проверке проектов и пакетов см. в разделе [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md).|  

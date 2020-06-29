@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e9821521e793092c62843dd9bdab0c16bb0f26b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6b526b314cbe025e531ae5d64222a104c9ea935a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915634"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437791"
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  

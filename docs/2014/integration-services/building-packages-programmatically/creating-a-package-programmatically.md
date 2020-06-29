@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2818898e790aa92a27de1f224581a17a7ae4fa06
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924945"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439281"
 ---
 # <a name="creating-a-package-programmatically"></a>Создание пакета программным способом
   Объект <xref:Microsoft.SqlServer.Dts.Runtime.Package> представляет собой контейнер верхнего уровня для всех остальных объектов в решении служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Пакет, являющийся контейнером верхнего уровня, создается в качестве первого объекта, а последующие объекты добавляются в него и затем выполняются в контексте пакета. Сам пакет перемещения или преобразования данных не осуществляет. Для выполнения этих функций используются задачи, содержащиеся в пакете. Задачи выполняют основную работу пакета. Они определяют функциональность пакета. Пакет создается и выполняется всего тремя строками кода, однако к нему могут быть добавлены различные задачи и объекты <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, что обеспечивает дополнительную функциональность пакета. В этом разделе описывается программное создание пакета. В нем не содержатся сведения о создании задач или диспетчера соединений <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Эти темы рассматриваются в последующих разделах.  
@@ -155,7 +155,7 @@ End Module
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программное добавление задач](../building-packages-programmatically/adding-tasks-programmatically.md)  
   
   

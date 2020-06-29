@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetsource.connection.f1
 ms.assetid: 7de3f438-bdd6-49b5-937a-47369e754943
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d6dc089acb1d15491817d8876dee82951e4495d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ae18b66e93d7c3c363596b2bf0bc42d4357191f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925905"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439581"
 ---
 # <a name="ado-net-source-editor-connection-manager-page"></a>Редактор источника данных «ADO.NET» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначения «ADO.NET»** для выбора соединения [!INCLUDE[vstecado](../includes/vstecado-md.md)] применительно к источнику. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -41,7 +41,7 @@ ms.locfileid: "84925905"
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Таблица или представление|Выборка данных из таблицы или представления в источнике данных [!INCLUDE[vstecado](../includes/vstecado-md.md)] .|  
 |Команда SQL|Выборка данных из источника данных [!INCLUDE[vstecado](../includes/vstecado-md.md)] с использованием SQL-запроса.|  
@@ -68,9 +68,9 @@ ms.locfileid: "84925905"
  **Обзор**  
  Воспользуйтесь диалоговым окном **Открыть** для выбора файла, содержащего текст SQL-запроса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника «ADO NET» &#40;столбцы&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [Редактор источника ADO NET &#40;страница вывода ошибок&#41;](../../2014/integration-services/ado-net-source-editor-error-output-page.md)   
- [Диспетчер соединений ADO.NET](connection-manager/ado-net-connection-manager.md)  
+ [Диспетчер подключений ADO.NET](connection-manager/ado-net-connection-manager.md)  
   
   

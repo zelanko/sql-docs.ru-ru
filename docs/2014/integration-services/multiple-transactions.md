@@ -10,14 +10,14 @@ helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0527336a5d6774b1c7114d523d0847b3d10d6a3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ff909c92a23c965047edc0fcf278e17e4c76d94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965124"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440101"
 ---
 # <a name="multiple-transactions"></a>Множественные транзакции
   В одном пакете служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может содержаться несколько самостоятельных транзакций. Каждый раз, когда контейнер в середине иерархии вложенных контейнеров не поддерживает транзакции, контейнеры выше и ниже по иерархии начинают отдельные транзакции, если настроены для поддержки транзакций. Транзакции фиксируются или откатываются, начиная с самой глубокой задачи в иерархии вложенных контейнеров пакета. Однако после фиксации вложенной транзакции она не откатывается, если внешняя транзакция прервана.

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 89d33637317029c174b71597088d19531a58b31f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bf206182c73f179857ab6197fac3b7ae36a1dbc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920775"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438461"
 ---
 # <a name="http-connection-manager"></a>диспетчер HTTP-соединений
   HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. Задача "Веб-служба" из состава служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует этот диспетчер соединений.  
@@ -53,7 +53,7 @@ ms.locfileid: "84920775"
   
  Дополнительные сведения о программной настройке диспетчера соединений см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «веб-служба»](../control-flow/web-service-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e77b1aabeebdec6c5b5744f8a331b9709bfcef7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925886"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439591"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Редактор назначения «ADO.NET» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «ADO.NET»** используется для сопоставления входных столбцов с целевыми.  
@@ -31,7 +31,7 @@ ms.locfileid: "84925886"
   
 3.  В окне **Редактор назначения «ADO.NET»** нажмите кнопку **Сопоставления**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Для сопоставления доступных входных столбцов с целевыми столбцами используется операция перетаскивания.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84925886"
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор назначения «ADO NET» &#40;«диспетчер соединений»&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
  [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   

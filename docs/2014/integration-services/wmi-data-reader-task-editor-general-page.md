@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Data Reader Task Editor
 ms.assetid: 1ee4fd97-defc-4a63-adfe-5f2df548e62a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 48227317d06df138010b6d265b299dc803004547
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 57de6dba3a2aec845bd92b3698e526228fd0120d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972424"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439811"
 ---
 # <a name="wmi-data-reader-task-editor-general-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Модуль чтения данных WMI»** позволяет дать имя и описание задаче «Модуль чтения данных WMI».  
@@ -35,7 +35,7 @@ ms.locfileid: "84972424"
  **Описание**  
  Введите описание задачи «Модуль чтения данных WMI».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "модуль чтения данных WMI" &#40;странице "параметры WMI"&#41;](../../2014/integration-services/wmi-data-reader-task-editor-wmi-options-page.md)   
  [Страница "выражения"](expressions/expressions-page.md)   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972814"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440001"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Редактор задачи «Передача имен входа» (страница «Имена входа»)
   Страница **Имена входа** диалогового окна **Редактор задачи «Передача имен входа»** используется для задания свойств для копирования одного или более имен входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в другой. Дополнительные сведения об этой задаче см. в разделе [Transfer Logins Task](control-flow/transfer-logins-task.md).  
@@ -26,7 +26,7 @@ ms.locfileid: "84972814"
 > [!IMPORTANT]  
 >  При выполнении задачи «Передача имен входа» имена создаются на целевом сервере со случайными паролями, и эти пароли отключаются. Для использования этих имен входа элемент предопределенной роли сервера **sysadmin** должен изменить пароли и затем включить их. Не удается передать имя входа **SA** .  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **SourceConnection**  
  Выберите в списке Диспетчер соединений SMO или щелкните, **\<New connection...>** чтобы создать новое соединение с исходным сервером.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "84972814"
  **LoginsToTransfer**  
  Выберите имена входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для копирования их с исходного сервера на целевой. Параметры этого свойства приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**AllLogins**|Все имена входа [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на исходном сервере будут скопированы на целевой сервер.|  
 |**Значение selectedlogins**|На целевой сервер будут скопированы только имена входа, заданные списком **LoginsList** .|  
@@ -53,16 +53,16 @@ ms.locfileid: "84972814"
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**FailTask**|Задача не выполняется, если такое же имя входа уже существует на целевом сервере.|  
 |**Overwrite**|Задача перезаписывает имя входа на целевом сервере.|  
-|**Сразу**|Задача пропускает обработку имени входа, если такое же имя входа уже существует на целевом сервере.|  
+|**Пропустить**|Задача пропускает обработку имени входа, если такое же имя входа уже существует на целевом сервере.|  
   
  **CopySids**  
  Определяет, будут ли скопированы на целевой сервер идентификаторы безопасности, связанные с именами входа. Параметр**CopySids** должен иметь значение **True** , если задача «Передача имен входа» используется вместе с задачей «Передача базы данных». В противном случае скопированные имена входа не будут распознаны переданными базами данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "Перемещение имен входа" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   

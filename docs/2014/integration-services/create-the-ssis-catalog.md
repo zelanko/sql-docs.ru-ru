@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38f2e94ab794accb8f3b951d0affab2451624748
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2572cc131f34a21171054a159e3b7968c453a780
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917224"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437901"
 ---
 # <a name="create-the-ssis-catalog"></a>Создание каталога служб SSIS
   После разработки и тестирования пакетов в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]можно выполнить развертывание проектов, содержащих пакеты, на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Прежде чем развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], необходимо создать каталог `SSISDB` на этом сервере. Программа установки [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] не создает этот каталог автоматически. Его необходимо создать вручную, следуя приведенным ниже инструкциям.  
@@ -68,6 +68,6 @@ ms.locfileid: "84917224"
   
      Дополнительные примеры использования Windows PowerShell и пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices> см. в записи блога [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (Службы SSIS и PowerShell в SQL Server 2012) на сайте blogs.msdn.com. Общие сведения о пространстве имен и примеры кода см. в записи блога [Обзор модели управляемых объектов каталога служб SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)на сайте blogs.msdn.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Каталог служб SSIS](catalog/ssis-catalog.md)   
  [Резервное копирование, восстановление и перемещение каталога служб SSIS](../../2014/integration-services/backup-restore-and-move-the-ssis-catalog.md)  

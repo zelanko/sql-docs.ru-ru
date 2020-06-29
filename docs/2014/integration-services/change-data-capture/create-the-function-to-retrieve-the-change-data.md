@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 90f754abc2e10732c33c011fdaf8fcd06c0175a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc1d5af0a64225aca4ff54570ad6504d25d62812
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923455"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438801"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Создание функции для получения информации об изменениях
   После завершения потока управления для пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполняющего добавочную загрузку информации об изменениях, нужно выполнить следующую задачу: создать функцию с табличным значением, которая получает измененные данные. Создавать эту функцию необходимо только один раз — перед первой добавочной загрузкой.  

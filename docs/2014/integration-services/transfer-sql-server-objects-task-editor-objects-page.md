@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc54343ef930d4fbca1bbe25f2e03ba4e539d44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972763"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439911"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Редактор задачи «Передача объектов SQL Server» (страница «Объекты» )
   Страница **Объекты** диалогового окна **Редактор задачи «Передача объектов SQL Server»** используется для задания свойств копирования одного или нескольких объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на другой. Примерами объектов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которые можно копировать, являются таблицы, представления, хранимые процедуры и функции, определяемые пользователем. Дополнительные сведения об этой задаче см. в разделе [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "84972763"
  **ExistingData**  
  Позволяет указать, как данные будут копироваться на целевой сервер. Параметры этого свойства приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Восстановить**|Данные на целевом сервере будут перезаписаны.|  
 |**Append**|Данные, копируемые с исходного сервера, будут присоединяться к существующим данным на целевом сервере.|  
@@ -207,7 +207,7 @@ ms.locfileid: "84972763"
  **XmlSchemaCollectionsList**  
  Выберите этот пункт, чтобы открыть диалоговое окно **Выбрать коллекции XML-схем** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перемещение SQL Server объектов" &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   

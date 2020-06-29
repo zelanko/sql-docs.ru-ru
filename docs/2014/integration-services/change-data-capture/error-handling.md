@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cac3a3feb6b4d3126b9c1629d4f2e4c8884e8dbf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923275"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438731"
 ---
 # <a name="error-handling"></a>Обработка ошибок
   Экземпляр Oracle CDC извлекает изменения из одной базы данных-источника Oracle (кластер Oracle RAC считается одной базой данных) и записывает зафиксированные изменения в таблицы изменений в базе данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "84923275"
   
  В следующей таблице описаны различные коды состояния, которые экземпляр Oracle CDC может публиковать в своей таблице состояний.  
   
-|Состояние|Код состояния активности|Код состояния ошибки|Описания|  
+|Status|Код состояния активности|Код состояния ошибки|Описания|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Экземпляр Oracle CDC не выполняется. Подтип состояния ABORTED указывает, что экземпляр Oracle CDC был активен, а затем неожиданно остановился.<br /><br /> Подтип состояния ABORTED задается главным экземпляром службы Oracle CDC Service, когда служба обнаруживает, что экземпляр Oracle CDC не выполняется, хотя имеет состояние ACTIVE.|  
 |ОШИБКА|0|1|Экземпляр Oracle CDC не выполняется. Состояние ERROR означает, что экземпляр CDC находился в состоянии ACTIVE, но затем произошла ошибка, которая исключает дальнейшую работу, и экземпляр отключился. Состояние ERROR содержит следующие коды подсостояния:<br /><br /> MISCONFIGURED: обнаружена неисправимая ошибка конфигурации.<br /><br /> PASSWORD-REQUIRED: для конструктора системы отслеживания измененных данных для Oracle от Attunity не был задан пароль или заданный пароль недействителен. Причиной может быть изменение пароля асимметричного ключа службы.|  
@@ -47,7 +47,7 @@ ms.locfileid: "84923275"
 ## <a name="error-handling"></a>Обработка ошибок  
  В этом разделе описана обработка ошибок службой Oracle CDC Service.  
   
-### <a name="logging"></a>Logging  
+### <a name="logging"></a>Ведение журнала  
  Служба Oracle CDC Service записывает сведения об ошибках в одно из следующих мест.  
   
 -   Журнал событий Windows. Сюда записываются сведения об ошибках и события жизненного цикла службы Oracle CDC Service (запуск, остановка, подключение (или повторное подключение) к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ).  
@@ -111,6 +111,6 @@ ms.locfileid: "84923275"
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Обработка неожиданных сбоев экземпляра Oracle CDC  
  Служба Oracle CDC Service отслеживает подпроцессы свих экземпляров CDC. Если выполнение подпроцесса экземпляра CDC прерывается, служба CDC Service отключает его в таблице MSXDBCDC.dbo.xdbcdc_databases и меняет его состояние в таблице cdc.xdbcdc_state на ABORTED. В этом случае можно использовать стандартное диалоговое окно отчета об ошибках Windows, чтобы передать сообщение об этой ошибке для анализа в дальнейшем.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Change Data Capture Designer для Oracle по Attunity](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Экземпляр CDC Oracle](the-oracle-cdc-instance.md)  

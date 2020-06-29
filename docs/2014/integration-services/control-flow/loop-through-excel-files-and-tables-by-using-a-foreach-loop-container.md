@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d93bb5d5d1625c4d558b865bdd28445e377abbfa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1c3272afb28c50b721cbd22d9bca77b6c90adac0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918575"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438191"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"
   Процедуры в этом разделе описывают, как выполнить цикл по книгам Excel в папке или цикл по таблицам в книге Excel с помощью контейнера «цикл по каждому элементу» с соответствующим перечислителем.  
@@ -89,7 +89,7 @@ ms.locfileid: "84918575"
   
 9. Создайте задачи в контейнере «цикл по каждому элементу», которые используют диспетчер соединений Excel для выполнения одинаковых операций для каждой таблицы Excel в заданной книге. Если задача "Скрипт" используется для анализа имени перечисляемой таблицы или работы с каждой таблицей, не забудьте добавить строковую переменную к свойству ReadOnlyVariables задачи "Скрипт".  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Импорт данных из Excel или экспорт данных в Excel с помощью SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [Настройка контейнера «цикл по каждому элементу](foreach-loop-container.md) »   
  [Добавление или изменение выражения свойства](../expressions/add-or-change-a-property-expression.md)   
  [Диспетчер соединений с Excel](../connection-manager/excel-connection-manager.md)   

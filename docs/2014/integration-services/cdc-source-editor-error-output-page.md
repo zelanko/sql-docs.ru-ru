@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 54d61b7696f00aeacdd92a3803630838f6f3ad1a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e4e44aea5cfd2cee5a4da920687d0f063df11460
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923985"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438971"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Редактор источника «CDC» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника CDC** используется для выбора параметров обработки ошибок.  
   
  Дополнительные сведения об источнике CDC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
  **Открытие страницы «Вывод ошибок» редактора источника CDC**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник CDC.  
@@ -32,7 +32,7 @@ ms.locfileid: "84923985"
   
 3.  В окне **Редактор источника CDC**нажмите кнопку **Вывод ошибок**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "84923985"
  **Перенаправление потока**  
  Ошибка или строка данных усечения направляется на выход ошибок источника CDC. В этом случае используется обработка ошибок источника CDC. Дополнительные сведения см. в статье [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника "CDC" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Редактор источника "CDC" (страница "Столбцы")](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   

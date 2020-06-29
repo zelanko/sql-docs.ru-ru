@@ -19,14 +19,14 @@ helpviewer_keywords:
 - custom variables [Integration Services]
 - variables [Integration Services], customizing
 ms.assetid: c4b76a3d-94ca-4a8e-bb45-cb8bd0ea3ec1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9d9ce228394ac5e11e9d526aee98dc1c012ef511
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cb2cd5b00ddb8f6d334ace778305b5814c915b62
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924765"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439251"
 ---
 # <a name="working-with-variables-programmatically"></a>Программная работа с переменными
   С помощью переменных можно динамически задавать значения и управлять процессами в пакетах, контейнерах, задачах и обработчиках событий. Переменные могут также использоваться элементами управления очередностью для управления направлением потока данных к различным задачам. С помощью переменных можно:
@@ -229,7 +229,7 @@ End Module
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Integration Services &#40;переменные&#41; служб SSIS](../integration-services-ssis-variables.md) [используют переменные в пакетах](../use-variables-in-packages.md)
 
 

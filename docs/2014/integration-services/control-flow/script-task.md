@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c44017e7f3746861209b62bcb8c7b8999712076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 024c499d882a515286904229a9d9f7942d9b8056
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918381"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438211"
 ---
 # <a name="script-task"></a>Задача «Скрипт»
   Задача "Скрипт" представляет код для выполнения функций, недоступных в задачах и преобразованиях, предоставляемых средствами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Задача «Скрипт» также позволяет объединять функции в одном скрипте вместо использования нескольких задач и преобразований. Задачу «Скрипт» следует использовать для выполнения операций над пакетом (или над каждым перечисленным объектом), а не над каждой строкой данных.  
@@ -65,7 +65,7 @@ ms.locfileid: "84918381"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Настройка задачи «Скрипт» в конструкторе  
  В следующей таблице описано событие `ScriptTaskLogEntry`, которое может быть зарегистрировано для задачи «Скрипт». `ScriptTaskLogEntry`Событие выбирается для ведения журнала на вкладке **сведения** диалогового окна **Настройка журналов служб SSIS** . Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](../performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../custom-messages-for-logging.md).  
   
-|Запись журнала|Описание|  
+|Запись журнала|Описание:|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Сообщает о результатах выполнения операции ведения журнала в скрипте. Задача формирует запись журнала для каждого вызова метода `Log` объекта `Dts`. Задача формирует эти записи в момент запуска кода. Дополнительные сведения см. в разделе [ведения журналов в задаче «скрипт»](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   

@@ -11,28 +11,28 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95c144141e26415ac576589d36b98b54c52eecb6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925542"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439441"
 ---
 # <a name="audit-transformation-editor"></a>редактор преобразования «Аудит»
   Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  
   
  Дополнительные сведения о преобразовании «Аудит» см. в разделе [Audit Transformation](data-flow/transformations/audit-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Имя выходного столбца**  
  Введите имя для нового выходного столбца, который будет содержать данные аудита.  
   
  **Тип аудита**  
  Выберите доступную системную переменную для предоставления данных аудита.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Идентификатор GUID экземпляра выполнения**|Укажите идентификатор GUID, который уникально идентифицирует экземпляр выполнения пакета.|  
 |**Идентификатор пакета**|Укажите идентификатор GUID, который уникально идентифицирует пакет.|  
@@ -44,7 +44,7 @@ ms.locfileid: "84925542"
 |**Имя задачи**|Укажите имя задачи потока данных, с которой связано преобразование «Аудит».|  
 |**Идентификатор задачи**|Укажите идентификатор GUID, который уникально идентифицирует задачу потока данных, с которой связано преобразование «Аудит».|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

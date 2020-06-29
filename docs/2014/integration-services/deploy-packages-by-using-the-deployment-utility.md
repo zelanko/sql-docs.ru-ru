@@ -12,14 +12,14 @@ helpviewer_keywords:
 - dependencies [Integration Services]
 - deploying packages [Integration Services], installing
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 371a2ba0b88266e076cf4e3e438fbe5b0216cf1f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e91890553cf06845ae35960f75120a87dbec68de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437501"
 ---
 # <a name="deploy-packages-by-using-the-deployment-utility"></a>Развертывание пакетов с помощью программы развертывания
   Если сборка программы развертывания, предназначенной для установки пакетов из проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , выполнена на компьютере, отличном от того, на котором находится сам проект, прежде всего необходимо скопировать папку развертывания на целевой компьютер.  
@@ -63,7 +63,7 @@ ms.locfileid: "84951754"
   
 8.  Если выбрана функция проверки пакетов после установки, посмотрите результаты проверки развернутых пакетов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Развертывание пакетов &#40;&#41;SSIS](packages/legacy-package-deployment-ssis.md)  
   
   

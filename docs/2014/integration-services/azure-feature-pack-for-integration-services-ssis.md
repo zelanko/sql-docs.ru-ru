@@ -10,14 +10,14 @@ f1_keywords:
 - SQL11.SSIS.AZURE.F1
 - SQL12.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7c99d4c9c561345a49faa595e080985731656bc3
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abcad704ed02655c03a970d3fe4b80556b96cf69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925425"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439401"
 ---
 # <a name="azure-feature-pack"></a>Пакет дополнительных компонентов Azure
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -36,7 +36,7 @@ ms.locfileid: "84925425"
     
     -   [Диспетчер подключений Azure HDInsight](../../2014/integration-services/azure-hdinsight-connection-manager.md)
   
--   Задания  
+-   Задачи  
   
     -   [Задача передачи больших двоичных объектов Azure](control-flow/azure-blob-upload-task.md)  
   
@@ -72,7 +72,7 @@ ms.locfileid: "84925425"
   
 -   [Пакет дополнительных компонентов служб SQL Server Integration Services 2014 для Azure](https://www.microsoft.com/download/details.aspx?id=47366)  
 
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой этого пакета необходимо установить следующие компоненты:  
   
 -   SQL Server Integration Services  

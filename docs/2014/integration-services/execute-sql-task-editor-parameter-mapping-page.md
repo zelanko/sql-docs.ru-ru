@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfbb4468cb69947dfa54fb519b7698286393d578
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437371"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Редактор задачи «Выполнение SQL» (страница «Сопоставление параметров»)
   Используйте страницу **Сопоставление параметров** диалогового окна **Редактор задачи «Выполнение SQL»** для сопоставления переменных с параметрами в инструкции SQL.  
   
  Сведения об этой задаче см. в разделах [Задача "Выполнение SQL"](control-flow/execute-sql-task.md) и [Параметры и коды возврата в задаче "Выполнение SQL"](../../2014/integration-services/parameters-and-return-codes-in-the-execute-sql-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Имя переменной**  
  После добавления сопоставления параметров нажмите кнопку **Добавить**, выберите системную или пользовательскую переменную из списка или щелкните, \<**New variable...**> чтобы добавить новую переменную с помощью диалогового окна **Добавление переменной** .  
   
@@ -55,7 +55,7 @@ ms.locfileid: "84966764"
  **Remove**  
  Выберите сопоставление параметра из списка, затем нажмите **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи «Выполнение SQL» &#40;страница «Общие»&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Выполнение SQL" &#40;страница "результирующий набор"&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)   

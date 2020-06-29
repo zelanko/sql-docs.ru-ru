@@ -17,14 +17,14 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: db78d2aef82e04846e7dff823c3448005beb1b22
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6765b2f0021aaa0ad787eb6685d1eb512f01c94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920805"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438451"
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
   Пакеты [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют соединения для выполнения различных задач и реализации функций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -65,27 +65,27 @@ ms.locfileid: "84920805"
 ### <a name="built-in-connection-managers"></a>Встроенные диспетчеры соединений  
  В следующей таблице перечислены типы диспетчеров соединений, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляемые службами.  
   
-|Тип|Описание|Раздел|  
+|Type|Описание|Раздел|  
 |----------|-----------------|-----------|  
-|ADO|Подключается к объектам данных ActiveX (ADO).|[Диспетчер соединений ADO](ado-connection-manager.md)|  
-|ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер соединений ADO.NET](ado-net-connection-manager.md)|  
+|ADO|Подключается к объектам данных ActiveX (ADO).|[Диспетчер подключений объектов данных ActiveX](ado-connection-manager.md)|  
+|ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер подключений ADO.NET](ado-net-connection-manager.md)|  
 |CACHE|Считывает данные из потока данных или из файла кэша (CAW) и может сохранять данные в файле кэша.|[диспетчер соединений с кэшем](cache-connection-manager.md)|  
 |DQS|Подключается к серверу служб качества данных и базе данных служб Data Quality Services на сервере.|[Диспетчер соединений «Очистка DQS»](dqs-cleansing-connection-manager.md)|  
-|EXCEL|Подключается к файлу книги Excel.|[Диспетчер соединений с Excel](excel-connection-manager.md)|  
-|FILE|Подключается к файлу или папке.|[диспетчер соединения файлов](file-connection-manager.md)|  
-|FLATFILE|Подключается к данным в отдельном неструктурированном файле.|[Диспетчер соединений с неструктурированными файлами](flat-file-connection-manager.md)|  
-|FTP|Подключается к FTP-серверу.|[диспетчер FTP-соединений](ftp-connection-manager.md)|  
-|HTTP|Подключается к веб-серверу.|[диспетчер HTTP-соединений](http-connection-manager.md)|  
-|MSMQ|Подключается к очереди сообщений.|[диспетчер соединений MSMQ](msmq-connection-manager.md)|  
-|MSOLAP100|Подключается к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекту.|[диспетчер соединений служб Analysis Services](analysis-services-connection-manager.md)|  
-|MULTIFILE|Подключается к нескольким файлам и папкам.|[диспетчер соединений с несколькими файлами](multiple-files-connection-manager.md)|  
-|MULTIFLATFILE|Подключается к нескольким файлам данных и папкам.|[диспетчер соединения с несколькими неструктурированными файлами](multiple-flat-files-connection-manager.md)|  
+|EXCEL|Подключается к файлу книги Excel.|[Диспетчер подключений Excel](excel-connection-manager.md)|  
+|FILE|Подключается к файлу или папке.|[Диспетчер подключений файлов](file-connection-manager.md)|  
+|FLATFILE|Подключается к данным в отдельном неструктурированном файле.|[Диспетчер подключений неструктурированных файлов](flat-file-connection-manager.md)|  
+|FTP|Подключается к FTP-серверу.|[Диспетчер FTP-подключений](ftp-connection-manager.md)|  
+|HTTP|Подключается к веб-серверу.|[Диспетчер HTTP-соединений](http-connection-manager.md)|  
+|MSMQ|Подключается к очереди сообщений.|[Диспетчер подключений MSMQ](msmq-connection-manager.md)|  
+|MSOLAP100|Подключается к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекту.|[Диспетчер подключений служб Analysis Services](analysis-services-connection-manager.md)|  
+|MULTIFILE|Подключается к нескольким файлам и папкам.|[Диспетчер подключений нескольких файлов](multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|Подключается к нескольким файлам данных и папкам.|[Диспетчер подключений нескольких неструктурированных файлов](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Подключается к источнику данных при помощи поставщика OLE DB.|[диспетчер соединений OLE DB](ole-db-connection-manager.md)|  
-|ODBC|Подключается к источнику данных через ODBC.|[диспетчер соединений ODBC](odbc-connection-manager.md)|  
-|SMOServer|Подключается к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[SMO, диспетчер соединений](smo-connection-manager.md)|  
-|SMTP|Подключается к почтовому серверу SMTP.|[Диспетчер соединений SMTP](smtp-connection-manager.md)|  
-|SQLMOBILE|Подключается к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Диспетчер соединений SQL Server Compact Edition](sql-server-compact-edition-connection-manager.md)|  
-|WMI|Подключается к серверу и определяет на нем область инструментария управления Windows (WMI).|[Диспетчер WMI-соединений](wmi-connection-manager.md)|  
+|ODBC|Подключается к источнику данных через ODBC.|[Диспетчер подключений ODBC](odbc-connection-manager.md)|  
+|SMOServer|Подключается к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[Диспетчер соединений SMO](smo-connection-manager.md)|  
+|SMTP|Подключается к почтовому серверу SMTP.|[Диспетчер SMTP-подключений](smtp-connection-manager.md)|  
+|SQLMOBILE|Подключается к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Диспетчер подключений SQL Server Compact Edition](sql-server-compact-edition-connection-manager.md)|  
+|WMI|Подключается к серверу и определяет на нем область инструментария управления Windows (WMI).|[Диспетчер WMI-подключений](wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>Диспетчеры соединений, доступные для загрузки  
  В следующей таблице перечислены дополнительные типы диспетчеров соединений, которые вы можете загрузить с веб-сайта [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -93,7 +93,7 @@ ms.locfileid: "84920805"
 > [!IMPORTANT]  
 >  Перечисленные в следующей таблице диспетчеры соединений работают только с выпусками [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Тип|Описание|Раздел|  
+|Type|Описание|Раздел|  
 |----------|-----------------|-----------|  
 |ORACLE|Подключается к \<version info> серверу Oracle.|Диспетчер соединений Oracle — это компонент диспетчера соединений соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
 |SAPBI|Подключается к системе SAP NetWeaver BI версии 7.|Диспетчер соединений SAP BI — это компонент диспетчера соединений соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, в состав соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=30440)(на английском языке).|  

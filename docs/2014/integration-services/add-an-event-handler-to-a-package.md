@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 378b8c95f5b7f4ed1e247a89f3e3ad6111654303
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926285"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439711"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>Добавление к пакету обработчик событий
   При выполнении контейнеров и задач происходят разные события. Возможно создание обработчиков пользовательских событий, которые отвечают на возникающие события запуском рабочего процесса. Например, можно создать обработчик событий, который по электронной почте посылает сообщение, если задача завершается неудачей.  
@@ -53,7 +53,7 @@ ms.locfileid: "84926285"
   
 9. Чтобы сохранить пакет, в меню **Файл** выберите пункт **Сохранить выбранные элементы** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../../2014/integration-services/sql-server-integration-services.md)   
  [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md)  
   

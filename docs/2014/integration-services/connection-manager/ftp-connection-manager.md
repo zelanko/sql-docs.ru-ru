@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02501b845254301a8370fcd208d849a6c6e3e3a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: caeba8ad0baa8104a3d56a3e8b4f95cb0d4f563f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438481"
 ---
 # <a name="ftp-connection-manager"></a>диспетчер FTP-соединений
   Диспетчер FTP-соединений позволяет пакету подключаться к серверу, использующему протокол передачи файлов (FTP). Задача "FTP", включенная в комплект служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], использует этот диспетчер соединений.  
@@ -56,7 +56,7 @@ ms.locfileid: "84920878"
   
  Дополнительные сведения о программной настройке диспетчера подключений см. в разделах <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> и [Добавление соединений программным образом](../building-packages-programmatically/adding-connections-programmatically.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «FTP»](../control-flow/ftp-task.md)   
  [Соединения в службах Integration Services (SSIS)](integration-services-ssis-connections.md)  
   

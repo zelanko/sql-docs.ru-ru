@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42b73f3657b668e63f7f02025e7902e19074a7eb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 14fd00565c011b04c28345faca8ee5db5ae821f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918406"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438201"
 ---
 # <a name="precedence-constraints"></a>Управление очередностью
   Элементы управления очередностью связывает исполняемые объекты, контейнеры и задачи в пакетах в поток управления и задают условия, которые определяют, выполняются ли исполняемые объекты. В качестве исполняемого объекта могут быть контейнеры «цикл по элементам» и «цикл по каждому элементу», контейнеры последовательности, задача или обработчик события. Обработчики событий также используют управление очередностью для связывания своих исполняемых объектов в поток управления.
@@ -96,7 +96,7 @@ ms.locfileid: "84918406"
 ## <a name="related-content"></a>См. также
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Добавление выражений в элементы управления очередностью с](../add-expressions-to-precedence-constraints.md) [несколькими ограничениями очередностью](../multiple-precedence-constraints.md)
 
 

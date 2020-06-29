@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Term Extraction Transformation Editor
 ms.assetid: 87118281-6e3c-499e-bac4-fa4c24bb12c6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6c783a06d5d5518639e6368f5c1eb572e60206b5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 377d6161f7aeb7be5b0ab4278967ac2cd6b6c057
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962264"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440051"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Редактор преобразования «Извлечение терминов» (вкладка «Дополнительно»)
   Вкладка **Дополнительно** диалогового окна **Редактор преобразования «Извлечение терминов»** используется для задания свойств извлечения, таких как частота, длина и предмет извлечения (слова или фразы).  
   
  Дополнительные сведения о преобразовании «Извлечения терминов» см. в разделе [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Сочетание**  
  Указывает, что при преобразовании будут извлекаться только отдельные существительные.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "84962264"
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) для указания метода обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Извлечение терминов" &#40;вкладка "Извлечение терминов"&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Редактор преобразования "Извлечение терминов" &#40;вкладка "исключения"&#41;](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   

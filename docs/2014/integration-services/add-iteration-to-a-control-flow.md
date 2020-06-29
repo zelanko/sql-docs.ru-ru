@@ -14,14 +14,14 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 039f1dff39f5bc89dbe360d49ad0d4174d665074
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926065"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439641"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Добавление итерации к потоку управления
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включает в себя контейнер "Цикл по элементам" — элемент потока управления, который позволяет легко использовать циклы, в зависимости от определенных условий повторяющие поток управления в пакете. Дополнительные сведения см. в статье [For Loop Container](control-flow/for-loop-container.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "84926065"
   
 4.  Задайте параметры контейнера «цикл по элементам». Дополнительные сведения см. в разделе [Настройка контейнера «цикл по элементам»](../../2014/integration-services/configure-a-for-loop-container.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление или удаление задачи или контейнера в потоке управления](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Группирование или разгруппирование компонентов](group-or-ungroup-components.md)   
  [Подключение задач и контейнеров с помощью управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   

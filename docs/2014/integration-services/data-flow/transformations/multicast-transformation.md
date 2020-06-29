@@ -14,14 +14,14 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e1cfee8c4e569ca504fd5dbd5693dfe76be059bd
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b5c0a38c966c89f426a213f302b45c390b77cfe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939415"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437611"
 ---
 # <a name="multicast-transformation"></a>преобразование «Многоадресная доставка»
   Преобразование «Многоадресная доставка» распределяет данные на входе на один или более выходов. Это преобразование схоже с преобразованием «Условное разбиение». Оба вида преобразований направляют данные на входе на несколько выходов. Их различие состоит в том, что преобразование «Многоадресная доставка» направляет каждую строку на все выходы, а преобразование «Условное разбиение» направляет одну строку на один выход. Дополнительные сведения см. в статье [Conditional Split Transformation](conditional-split-transformation.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "84939415"
 ## <a name="related-tasks"></a>Связанные задачи  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

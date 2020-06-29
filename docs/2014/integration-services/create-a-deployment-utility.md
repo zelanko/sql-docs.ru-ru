@@ -10,14 +10,14 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0a5f0f4db3f2e3ab5f961de99db0e92ca7009e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917364"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437961"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Первый шаг в развертывании пакетов — это создание программы развертывания для проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа развертывания — это папка, которая содержит файлы, требуемые для развертывания пакетов проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на другом сервере. Программа развертывания создается на компьютере, где хранится проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -28,7 +28,7 @@ ms.locfileid: "84917364"
   
  В следующей таблице производится перечисление свойств программы развертывания.  
   
-|Свойство|Описание|  
+|Свойство|Описание:|  
 |--------------|-----------------|  
 |AllowConfigurationChange|Значение, указывающее, возможно ли обновление конфигураций во время развертывания.|  
 |CreateDeploymentUtility|Значение, указывающее, будет ли во время построения пакета производиться создание программы развертывания. Для создания программы развертывания значение свойства должно быть равно `True`.|  
@@ -58,7 +58,7 @@ ms.locfileid: "84917364"
   
 9. Просмотрите ход компоновки и ошибки в окне **Выход** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Развертывание пакетов с помощью программы развертывания](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   

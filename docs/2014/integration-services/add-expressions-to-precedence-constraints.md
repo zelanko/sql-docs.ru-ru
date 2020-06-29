@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b86869a2b5d2e1ecd93227355509170db2bd5c7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926115"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439671"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Добавление выражений к элементам управления очередностью
   Элементы управления очередностью могут использовать выражение для определения зависимости между двумя исполняемыми объектами: приоритетным исполняемым объектом и исполняемым объектом с ограничением. Исполняемыми объектами могут быть задачи или контейнеры. Выражение может быть использовано само по себе или в сочетании с результатом выполнения приоритетного исполняемого объекта. Выполнение любого исполняемого объекта может закончиться успешно или со сбоем. При настройке результата выполнения управления очередностью доступны варианты `Success`, `Failure` или `Completion`. Для варианта `Success` требуется успешное выполнение ограничивающего исполняемого объекта, для `Failure` — его неудачное выполнение, а `Completion` означает, что ограничивающий исполняемый объект должен запускаться независимо от успешности выполнения приоритетной задачи. Дополнительные сведения см. в статье [Precedence Constraints](control-flow/precedence-constraints.md).  
@@ -67,7 +67,7 @@ ms.locfileid: "84926115"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Техническая статья [Примеры выражений служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Несколько элементов управления очередностью](../../2014/integration-services/multiple-precedence-constraints.md)   
  [Управление очередностью](control-flow/precedence-constraints.md)  
   

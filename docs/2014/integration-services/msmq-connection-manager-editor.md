@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d452aa1edc21af067f1deac0e4544b117cecf13b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967044"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440201"
 ---
 # <a name="msmq-connection-manager-editor"></a>редактор диспетчера MSMQ-сеансов
   Диалоговое окно **Диспетчер MSMQ-сеансов** используется для указания пути к очереди сообщений MSMQ.  
@@ -48,7 +48,7 @@ ms.locfileid: "84967044"
  **Тест**  
  После настройки диспетчера MSMQ-сеансов убедитесь, что соединение работоспособно, нажав кнопку **Проверка**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

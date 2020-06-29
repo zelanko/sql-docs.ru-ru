@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cfb36f73366487ae413bdbeb7d62cc9aa1026f0b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dacf81cef76f2c0a2cbc4bc8501e75ef0e10ba4b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914344"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437701"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Редактор источников SAP BW (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника SAP BW** , чтобы выбрать диспетчер соединений SAP BW для источника SAP BW. На этой странице можно также выбрать режим выполнения и параметры для извлечения данных из источника данных системы SAP Netweaver BW.  

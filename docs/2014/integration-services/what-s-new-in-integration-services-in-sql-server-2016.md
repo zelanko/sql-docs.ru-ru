@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1d17451c8706722b0dac21d777f35a17fe319799
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84f0b668407c89e1d6acc3c8cfbda73f129ca19a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972484"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439861"
 ---
 # <a name="what39s-new-integration-services"></a>Новые&#39;(Integration Services)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]не изменяется из предыдущего выпуска.  
@@ -31,7 +31,7 @@ ms.locfileid: "84972484"
   
  В [!INCLUDE[ssIS](../includes/ssis-md.md)] свойство `ValidationDetails` появилось с выходом пакета обновления 2 для [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. В то время о новом свойстве не было никакой информации. Свойство `ValidationDetails` доступно также в [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] и SQL Server 2016.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возможности, поддерживаемые различными выпусками SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.ssis.ssms.isenvprop.permissions.f1
 - sql12.ssis.ssms.isenvprop.general.f1
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02fecbe0a98770a116a0ae2558dc354ddae24755
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437881"
 ---
 # <a name="create-and-map-a-server-environment"></a>Создание и сопоставление серверной среды
   Вы создаете серверную среду, которая должна указывать значения среды выполнения для пакетов, которые содержатся в проекте, развернутом на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Можно сопоставить переменные среды с параметрами для определенного пакета, для пакетов точки входа или для всех пакетов в данном проекте. Пакет точки входа — обычно родительский пакет, который выполняет дочерний пакет.  

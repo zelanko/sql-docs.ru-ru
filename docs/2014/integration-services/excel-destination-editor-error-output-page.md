@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6076b28e932ac03d211ab6ba1a84fe6c832f72ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c57cccb71819c86874e83bb105c9270ec456648
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966854"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437381"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Редактор назначения «Excel» (страница «Вывод ошибок»)
   Используйте страницу **Дополнительно** диалогового окна **Редактор назначения «Excel»** , чтобы указать параметры обработки ошибок.  
   
  Дополнительные сведения о назначении Excel см. в разделе [Excel Destination](data-flow/excel-destination.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Входные или выходные данные**  
  Просмотр имени источника данных.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84966854"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Excel" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
  [Редактор назначения "Excel" &#40;страниц сопоставления&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   

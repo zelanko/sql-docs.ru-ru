@@ -11,26 +11,26 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1111b0d8f2903de9b690f269498a93d01c2afa0c
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9001c5f3890bfb3623715ff6c6deeb70116bb73
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921661"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438501"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Настройка средства просмотра данных (вкладка «Точечная диаграмма»)
   Используйте вкладку **Точечная диаграмма (x,y)** в диалоговом окне **Настройка средства просмотра данных** , чтобы указать столбцы, по которым надо строить диаграмму. На точечную диаграмму наносятся точки, координатами которых служат значения данных из двух числовых столбцов. Каждая запись данных становится одной точкой на графике. Диаграмма отображает содержимое только одного буфера.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Столбец значений по оси X**  
  Выберите столбец, значения которого надо расположить по оси Х. Для каждой оси можно выбрать только один столбец.  
   
  **Столбец значений по оси Y**  
  Выберите столбец, значения которого надо расположить по оси Y. Для каждой оси можно выбрать только один столбец.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка средства просмотра данных &#40;вкладка «Общие»&#41;](../../2014/integration-services/configure-data-viewer-general-tab.md)   
  [Настройка средства просмотра данных &#40;вкладка «Гистограмма»&#41;](../../2014/integration-services/configure-data-viewer-column-chart-tab.md)   
  [Настройка средства просмотра данных &#40;вкладке сетки&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   

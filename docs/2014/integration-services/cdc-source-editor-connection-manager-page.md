@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1e455f049d70d3a6ad889d820f79e2fed70e326d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924065"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438981"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Редактор источника «CDC» (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор источника CDC** позволяет выбрать диспетчер соединений ADO.NET для базы данных [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , из которой источник CDC считывает изменения строк (базы данных CDC). После выбора базы данных CDC необходимо выбрать в базе данных отслеживаемую таблицу.  
   
  Дополнительные сведения об источнике CDC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
  **Открытие страницы диспетчера соединений в редакторе источника CDC**  
   
 1.  В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник CDC.  
@@ -32,7 +32,7 @@ ms.locfileid: "84924065"
   
 3.  В окне **Редактор источника CDC**нажмите кнопку **Диспетчер соединений**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Диспетчер соединений ADO.NET**  
  Выберите из списка существующий диспетчер соединений или нажмите кнопку **Создать** , чтобы создать новое соединение. Соединение должно быть установлено с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которая включена для CDC и в которой находится выбранная таблица изменений.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "84924065"
   
  Дополнительные сведения см. в статье [CDC Source Custom Properties](data-flow/cdc-source-custom-properties.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника «CDC» &#40;столбцов&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
  [Редактор источника "CDC" (страница "Вывод ошибок")](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: be6942f419e8b13df12268363520c0f293e1a429
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6085a6fde388cf65ed9fa8eddaf8ffc898a29999
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966784"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437401"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Диалоговое окно «Экспорт пакета» справочника по пользовательскому интерфейсу
   Диалоговое окно **Экспорт пакета** , доступное в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], используется для экспорта пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в другое место и, при необходимости, изменения уровня защиты пакета.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Размещение пакета**  
  Выберите тип хранилища для экспорта пакета. Доступны следующие параметры.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "84966784"
  **Server**  
  Введите имя сервера или выберите его из списка.  
   
- **Аутентификация**  
+ **Authentication**  
  Выберите проверку подлинности Windows или проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Этот параметр доступен, только если в качестве места хранения указан [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
@@ -57,7 +57,7 @@ ms.locfileid: "84966784"
  **Уровень защиты**  
  Нажмите кнопку обзора **(...)** и обновите уровень защиты в диалоговом окне **уровень защиты пакета** . Дополнительные сведения см. в разделе [Диалоговое окно уровня защиты пакета и проекта](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сохранить копию пакета](../../2014/integration-services/save-copy-of-package.md)   
  [Справочник по пользовательскому интерфейсу диалогового окна "Импорт пакета"](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Сохранение пакетов](save-packages.md)   

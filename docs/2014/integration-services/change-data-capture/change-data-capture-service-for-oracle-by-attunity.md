@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3d15836fb551f5c7c0b04712dbcb0b783cc317a9
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 40c845334c2a323f8212109664f65a2898e994d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923605"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438831"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Служба системы отслеживания измененных данных для Oracle компании Attunity
   Служба CDC Service для Oracle ― это служба Windows, которая просматривает журналы транзакций Oracle и регистрирует изменения выбранных таблиц Oracle в таблицах изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Таблицы изменений SQL, где хранятся отслеженные изменения из базы данных Oracle, принадлежат к тому же типу, что и таблицы изменений, используемые в собственной системе отслеживания изменений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому использовать эти изменения так же легко, как и изменения баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -83,7 +83,7 @@ ms.locfileid: "84923605"
   
 -   [Руководство по службе системы отслеживания измененных данных для Oracle компании Attunity](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа со службой CDC Oracle](working-with-the-oracle-cdc-service.md)  
   
   

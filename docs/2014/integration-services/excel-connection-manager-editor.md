@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Connection Manager Editor
 ms.assetid: 7ff097e4-cafb-4885-a898-05b2a46628c1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08dc39cb21eec03a7cbdc5bd56c68212044dd211
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d9951d9bfe7e95499c2b967e6329d206cdc4aa44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966894"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437411"
 ---
 # <a name="excel-connection-manager-editor"></a>редактор диспетчера соединений с Excel
   Диалоговое окно **Редактор диспетчера соединений с Excel** используется для добавления подключения к существующему или новому файлу книги [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] .  
@@ -28,7 +28,7 @@ ms.locfileid: "84966894"
 > [!NOTE]  
 >  Подключить защищенный паролем файл Excel нельзя.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Путь к файлу Excel**  
  Введите путь и имя существующего или нового файла книги Excel с расширением XLS.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84966894"
  **Версия Excel**  
  Позволяет указать версию Microsoft Excel, в которой был создан файл.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Excel 97-2003|Файл был создан с помощью Excel 97 или более поздней версии.|  
 |Excel 3,0|Файл был создан с помощью Excel 3,0.|  
@@ -51,7 +51,7 @@ ms.locfileid: "84966894"
  **Первая строка содержит имена столбцов**  
  Позволяет указать, содержит ли первая строка данных выбранного листа имена столбцов. По умолчанию значение этого параметра равно **True**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](control-flow/foreach-loop-container.md)  
   

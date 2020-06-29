@@ -11,13 +11,13 @@ f1_keywords:
 - SQL11.DTS.DESIGNER.AFPDWUPTASK.F1
 ms.assetid: 112cf764-f85a-4c1a-b732-d299d717c0d4
 author: yualan
-ms.author: janinez
-ms.openlocfilehash: 249f29e40701658ddcc85f4a2a79fc8c0ac2cff5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.author: chugu
+ms.openlocfilehash: adcc4cc06ac01ea833972ffcd7c1a5ade411bfb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925135"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439321"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Задача отправки информации в хранилище данных SQL Azure
 **Задача отправки информации в хранилище данных SQL Azure** позволяет отправить локальные данные в таблицу хранилища данных SQL Azure с использованием пакета SSIS. В настоящее время в качестве формата исходного файла данных поддерживается текст с разделителями в кодировке UTF-8. Процесс передачи соответствует эффективному подходу Polybase. В частности, данные сначала будут переданы в хранилище BLOB-объектов Azure и лишь затем в хранилище данных SQL Azure. Поэтому для использования этой задачи требуется учетная запись хранилища BLOB-объектов Azure.
@@ -26,7 +26,7 @@ ms.locfileid: "84925135"
 
 На странице **Общие** настройте следующие свойства.
 
-Поле|Описание
+Поле|Описание:
 -----|-----------
 LocalDirectory|Указывает локальный каталог с файлами данных для отправки.
 Рекурсивно|Указывает, выполнять ли рекурсивный поиск в подкаталогах.
