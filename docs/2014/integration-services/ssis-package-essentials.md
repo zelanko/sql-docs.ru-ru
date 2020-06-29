@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 608fae64df45e8cf84c1b72e37eb501df7758613
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2c4e3f6637c4e9fd65b0218b8489372355b3608f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962544"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421052"
 ---
 # <a name="ssis-package-essentials"></a>Основы работы с пакетами служб SSIS
   Пакет представляет собой объект, который реализует функциональность служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] по извлечению, преобразованию и загрузке данных. Пакет создается с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Его можно также создать с помощью мастера импорта и экспорта [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] либо мастера проекта соединений служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Для получения дополнительных сведений [Создайте пакеты в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md) в КОНСТРУКТОРЕ служб SSIS и [мастере импорта проектов](../../2014/integration-services/import-project-wizard.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "84962544"
   
 1.  Видеоматериал [Создание основного пакета (видеоматериал SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131023)на сайте MSDN.Microsoft.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;пакетов&#41; SSIS](../../2014/integration-services/integration-services-ssis-packages.md)   
  [Управление очередностью](control-flow/precedence-constraints.md)  
   

@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages Task Editor
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b21476bb6b696b51cc1932c171bdd8dfa1d0e6d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b551d60d36948cb4c950dfcd9a17e2c16229420
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972841"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420701"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Сообщения»)
   Используйте страницу **Сообщения** диалогового окна **Редактор задачи "Передача сообщений об ошибках"** , чтобы указать свойства копирования одного или более определенных пользователем сообщений об ошибках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в другой. Дополнительные сведения об этой задаче см. в разделе [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **SourceConnection**  
  Выберите в списке Диспетчер соединений SMO или щелкните, **\<New connection...>** чтобы создать новое соединение с исходным сервером.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84972841"
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Да**|Копировать все пользовательские сообщения.|  
 |**IsFalse**|Копировать только указанные пользовательские сообщения.|  
@@ -55,12 +55,12 @@ ms.locfileid: "84972841"
 > [!NOTE]  
 >  Необходимо указать значение параметра **SourceConnection** прежде, чем можно будет выбрать сообщения об ошибках для копирования.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перенаправление сообщений об ошибках" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Диспетчер соединений SMO](connection-manager/smo-connection-manager.md)   
  [Редактор задачи "перенаправление сообщений об ошибках" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
- [SMO, диспетчер соединений](connection-manager/smo-connection-manager.md)  
+ [Диспетчер соединений SMO](connection-manager/smo-connection-manager.md)  
   
   

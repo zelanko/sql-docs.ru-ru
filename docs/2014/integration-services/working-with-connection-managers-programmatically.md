@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - connection managers [Integration Services], programming
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6e9725f7ecdbc1625c74f4c650f6f3215dc64ee
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972444"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85419911"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Работа с диспетчерами соединений программным образом
   В службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] метод AcquireConnection связанного класса диспетчера соединений вызывается наиболее часто при работе с диспетчерами соединений в управляемом коде. При создании управляемого кода необходимо вызвать метод AcquireConnection, чтобы воспользоваться функциональностью диспетчера соединений. Этот метод должен быть вызван вне зависимости от того, создается ли управляемый код для задачи «Скрипт», компонента скрипта, пользовательского объекта или пользовательского приложения.  
@@ -60,13 +60,13 @@ ms.locfileid: "84972444"
 |MULTIFILE|диспетчер соединений с несколькими файлами|`System.String`|Путь к одному из файлов.|  
 |MULTIFLATFILE|диспетчер соединения с несколькими неструктурированными файлами|`System.String`|Путь к одному из файлов.|  
 |SMOServer|SMO, диспетчер соединений|`Microsoft.SqlServer.Management.Smo.Server`||  
-|SMTP|Диспетчер соединений SMTP|`System.String`|Например: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
+|SMTP|Диспетчер соединений SMTP|`System.String`|Пример: `SmtpServer=<server name>;UseWindowsAuthentication=True;EnableSsl=False;`|  
 |WMI|Диспетчер WMI-соединений|`System.Management.ManagementScope`||  
 |SQLMOBILE|Диспетчер соединений SQL Server Compact|`System.Data.SqlServerCe.SqlCeConnection`||  
   
 ![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Подключение к источникам данных в задаче «Скрипт»](extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md)   
  [Подключение к источникам данных в компоненте скрипта](extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md)   
  [Соединение с источниками данных в пользовательской задаче](extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  

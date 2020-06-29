@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed35218c84c77d3116ab8c897fe51fab5d6359aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962404"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420891"
 ---
 # <a name="ssis-toolbox"></a>Область элементов служб SSIS
   Все компоненты, установленные на локальный компьютер, в том числе компоненты сторонних производителей, разработанные для SQL Server 2008 и 2008 R2, автоматически появляются на новой **панели элементов служб SSIS**. При установке дополнительных компонентов щелкните правой кнопкой мыши на панели элементов и выберите **Обновить панель элементов** для добавления этих компонентов.  

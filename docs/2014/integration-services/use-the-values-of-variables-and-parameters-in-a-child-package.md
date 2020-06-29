@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972614"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420201"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Использование значений переменных и параметров в дочернем пакете
   Данная процедура описывает создание конфигурации пакета, которая использует тип конфигурации родительской переменной. Данный тип конфигурации, позволяет дочернему пакету, который запускается из родительского, получить доступ к переменной в родительском элементе.  
@@ -88,11 +88,11 @@ ms.locfileid: "84972614"
   
     -   Выберите **Сведения о расположении файла конфигурации хранятся в переменной среды** , затем в узле **Список переменных среды**выберите переменную окружения, содержащую имя переменной.  
   
-7.  Щелкните **Далее**.  
+7.  Нажмите кнопку **Далее**.  
   
 8.  В окне «Выбор целевого свойства» разверните узел **Переменная** , разверните узел **Свойства** переменной для настройки и выберите свойство для установки в конфигурации.  
   
-9. Щелкните **Далее**.  
+9. Нажмите кнопку **Далее**.  
   
 10. На странице «Завершение работы мастера» при необходимости измените имя конфигурации и просмотрите сведения о конфигурации.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "84972614"
   
 13. Щелкните **Закрыть**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурации пакетов](../../2014/integration-services/package-configurations.md)   
  [Создание конфигураций пакетов](../../2014/integration-services/create-package-configurations.md)   
  [Integration Services &#40;переменные&#41; SSIS](integration-services-ssis-variables.md)   

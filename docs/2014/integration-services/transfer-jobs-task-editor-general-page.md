@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2d37f63d85875340ada295fda19ea7e9ec6af3bc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d824c1904b8a3ffd0078f778a78dea898ab53577
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972827"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420691"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Редактор задачи «Передача заданий» (страница «Общие»)
   Используйте страницу **Общие** в диалоговом окне **Редактор задачи «Передача заданий»** , чтобы назвать и описать задачу передачи заданий. Дополнительные сведения о задаче «Передача заданий» см. в разделе [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "84972827"
  **Описание**  
  Введите описание задачи «Передача заданий».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "перемещение заданий", &#40;страница "задания"&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   

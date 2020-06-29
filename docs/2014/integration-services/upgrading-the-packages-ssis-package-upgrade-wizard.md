@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.upgradingpackage.f1
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 238a4c936f1e0de5c993e2535a16106c502aece9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972664"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420381"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Обновление пакетов (мастер обновления пакетов служб SSIS)
   Страница **Обновление пакетов** используется для слежения за ходом обновления пакетов и прерывания процесса обновления. Мастер обновления пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] обновляет выбранные пакеты один за другим.  
@@ -29,7 +29,7 @@ ms.locfileid: "84972664"
   
 -   В обозревателе решений среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а затем разверните узел **Пакеты служб SSIS** , чтобы увидеть обновленные пакеты.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Панель сообщений**  
  Отображает сообщения о ходе обновления и сводку в течение процесса обновления.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84972664"
   
 -   отправка отчета по электронной почте.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

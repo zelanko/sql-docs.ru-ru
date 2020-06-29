@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 3ca00cf8-3460-43e9-9705-af4c530f7fbd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d2ad2ed1689494918080aaad85eb8f84efedc711
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c65f4fece56a32c184afb7e983b075f4820a1876
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962674"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421121"
 ---
 # <a name="sql-destination-editor-mappings-page"></a>Редактор назначения "SQL" (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения «SQL»** используется для сопоставления входных столбцов с целевыми столбцами.  
   
  Дополнительные сведения о назначении «SQL Server» см. в разделе [SQL Server Destination](data-flow/sql-server-destination.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Для сопоставления доступных входных столбцов с целевыми столбцами используется операция перетаскивания.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84962674"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "SQL" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Редактор назначения "SQL" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/sql-destination-editor-advanced-page.md)   

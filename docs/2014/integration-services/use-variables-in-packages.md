@@ -11,14 +11,14 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ddf6086306d24c4f92dfef2b9f4522dc2002733f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4955eb023e7785e85cce96e7b2097c0340da7916
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972594"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420181"
 ---
 # <a name="use-variables-in-packages"></a>Использование переменных в пакетах
   Переменные — полезное и гибкое дополнение к пакетам служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ; переменные могут обеспечивать взаимодействие между объектами в пакете и между родительскими и дочерними пакетами. Переменные также можно использовать в выражениях и скриптах.  

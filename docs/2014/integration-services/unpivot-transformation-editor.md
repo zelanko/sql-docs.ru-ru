@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Unpivot Transformation Editor
 ms.assetid: 72a36ef0-4070-4f6c-9c74-0720109617dd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45430eea18d533855e00021f5fda46d80ac0e0c2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45aeb428f0905b7bf96900b6d592ff11963d8f4d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972654"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420321"
 ---
 # <a name="unpivot-transformation-editor"></a>Редактор преобразования «Отмена свертывания»
   Используйте диалоговое окно **Редактор преобразования «Отмена свертывания»** , чтобы выбрать столбцы для сведения в строки, а также указать столбцы данных и новый выходной столбец сведенных значений.  
@@ -28,7 +28,7 @@ ms.locfileid: "84972654"
   
  Дополнительные сведения о преобразовании отмены свертывания см. в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Используя флажки, укажите столбцы, которые должны быть сведены в строки.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "84972654"
   
  В сценарии отмены свертывания, описанном в разделе [Unpivot Transformation](data-flow/transformations/unpivot-transformation.md), именем столбца значений ключа сведения является **Product** , оно обозначает новый столбец **Product** , в который осуществляется отмена свертывания столбцов **Ham**, **Soda**, **Milk**, **Beer**и **Chips** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование «Сведение»](data-flow/transformations/pivot-transformation.md)  
+ [Преобразование "Сведение"](data-flow/transformations/pivot-transformation.md)  
   
   

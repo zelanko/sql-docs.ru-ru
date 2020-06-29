@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fddfbf70b298614767429a8a006d264ad4853aa0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962094"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420851"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Редактор задачи «Передача базы данных» (страница «Базы данных»)
   Используйте страницу **Базы данных** в диалоговом окне **Редактор задачи «Передача базы данных»** , чтобы указать свойства для базы данных-источника и целевой базы данных, участвующих в задаче «Передача базы данных». Задача «Передача базы данных» копирует или перемещает базу данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера. Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **SourceConnection**  
  Выберите в списке Диспетчер соединений SMO или щелкните, **\<New connection...>** чтобы создать новое соединение с исходным сервером.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "84962094"
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Да**|Перезаписать базу данных целевого сервера.|  
 |**IsFalse**|Не перезаписывать базу данных целевого сервера.|  
@@ -81,16 +81,16 @@ ms.locfileid: "84962094"
   
  Параметры этого свойства приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Да**|Присоединить повторно базу данных-источник.|  
 |**IsFalse**|Не присоединять повторно базу данных-источник.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Задачи Integration Services](control-flow/integration-services-tasks.md)   
  [Редактор задачи "Перемещение базы данных" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Страница "выражения"](expressions/expressions-page.md)   
- [SMO, диспетчер соединений](connection-manager/smo-connection-manager.md)  
+ [Диспетчер соединений SMO](connection-manager/smo-connection-manager.md)  
   
   

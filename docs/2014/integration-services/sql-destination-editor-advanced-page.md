@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d7a3cdc57f48c61894a51386c5671c98e00ba711
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 916de5dabdc64c22821a4984b8632baa0d9515b8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962715"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421151"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Редактор назначения SQL (страница «Дополнительно»)
   Используйте страницу **Дополнительно** в диалоговом окне **Редактор назначения «SQL»** , чтобы указать дополнительные параметры массовой вставки.  
   
  Дополнительные сведения о назначении «SQL Server» см. в разделе [SQL Server Destination](data-flow/sql-server-destination.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Сохранять ИД**  
  Укажите, должна ли задача вставлять значения в столбцы идентификаторов. Значение по умолчанию этого свойства равно `False`.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "84962715"
  **Порядок столбцов**  
  Введите имена столбцов сортировки. Любой столбец можно сортировать в порядке возрастания или в порядке убывания. Если нужно задать несколько столбцов сортировки, используйте в качестве разделителей запятые.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "SQL" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/sql-destination-editor-connection-manager-page.md)   
  [Редактор назначения "SQL &#40;страниц сопоставления"&#41;](../../2014/integration-services/sql-destination-editor-mappings-page.md)   

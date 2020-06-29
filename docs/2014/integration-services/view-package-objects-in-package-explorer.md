@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - objects [Integration Services]
 ms.assetid: 3da1ee6e-489d-4436-9fcb-bb0a57f9ae9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 74da8a87ee5ea7797af31d0b01033d361dd9f673
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae987cbd8e22fc5a9be28676eb2a8e4dfbb34bfa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420081"
 ---
 # <a name="view-package-objects-in-package-explorer"></a>Просмотр объектов пакета в обозревателе пакетов
   Эта процедура описывает, как просмотреть объекты пакета [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с помощью обозревателя пакетов.  
@@ -41,7 +41,7 @@ ms.locfileid: "84972524"
   
 -   Щелкните объект правой кнопкой мыши и выберите пункт **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [просмотр объектов пакета](view-package-objects.md)  
   
   

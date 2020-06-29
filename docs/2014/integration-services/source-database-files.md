@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.sourcedbfiles.f1
 ms.assetid: 7dc6bfeb-37c1-45e8-a705-a87564922265
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb40764ee279d98b6b63906ed08b26afe156aee4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 426f84123b84b7b2a7892f0143a4a64b44b680a2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962864"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421241"
 ---
 # <a name="source-database-files"></a>Файлы базы данных-источника
   Диалоговое окно **Файлы базы данных-источника** используется для просмотра имен файлов базы данных и их размещения на исходном сервере, а также для указания общей сетевой папки в задаче «Передача базы данных». Дополнительные сведения об этой задаче см. в разделе [Задача "Передача базы данных"](control-flow/transfer-database-task.md).  
   
  Чтобы наполнить диалоговое окно именами файлов базы данных и ресурсов исходного сервера, сначала укажите параметры **SourceConnection** (Подключение к источнику) и **SourceDatabaseName** (Имя базы данных-источника) на странице **Базы данных** диалогового окна **Редактор задачи «Передача базы данных»** .  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Исходный файл**  
  Имена файлов базы данных на исходном сервере, которые будут перенесены. Параметр**Исходный файл** доступен только для чтения.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "84962864"
   
  При переносе базы данных в режиме вне сети файлы базы данных копируются в заданную параметром **Сетевая общая папка** папку на исходном сервере, прежде чем они будут перенесены на целевой сервер.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Перемещение базы данных" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Передача базы данных" (страница "Базы данных")](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
