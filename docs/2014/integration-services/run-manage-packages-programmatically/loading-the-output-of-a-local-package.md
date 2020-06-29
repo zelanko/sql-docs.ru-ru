@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49c4814daf0463c99c7ccda6f16adb039fd58d64
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9919db21f87b5b178d8893b55f0db93f9a48f23e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964504"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422791"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Загрузка выхода локального пакета
   Клиентские приложения могут считывать значения на выходе пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], если этот выход сохранен в назначения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием [!INCLUDE[vstecado](../../includes/vstecado-md.md)], либо если выход сохранен в назначение "Неструктурированный файл" с использованием классов в пространстве имен **System.IO**. Кроме того, клиентское приложение может считывать выход пакета непосредственно из памяти, без необходимости промежуточного шага для сохранения данных. Ключом к этому решению является `Microsoft.SqlServer.Dts.DtsClient` пространство имен, которое содержит специализированные реализации `IDbConnection` `IDbCommand` интерфейсов, и **IDbDataParameter** из пространства имен **System. Data** . По умолчанию сборка Microsoft.SqlServer.Dts.DtsClient.dll устанавливается в каталог **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.
@@ -28,7 +28,7 @@ ms.locfileid: "84964504"
 > [!NOTE]
 >  Для процедуры, описанной в этом разделе, необходимо, чтобы свойству DelayValidation задачи потока данных и любых родительских объектов было присвоено значение по умолчанию**False**.
 
-## <a name="description"></a>Описание
+## <a name="description"></a>Описание:
  В этой процедуре демонстрируется, как разработать на управляемом коде клиентское приложение, которое загружает выход пакета с назначением DataReader непосредственно из памяти. Описанные здесь шаги демонстрируются в следующем образце кода.
 
 #### <a name="to-load-data-package-output-into-a-client-application"></a>Загрузка данных с выхода пакета в клиентское приложение
@@ -294,7 +294,7 @@ namespace DtsClientWParamCS
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Основные сведения о различиях между локальной и удаленной](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md) [загрузкой и запуском локального пакета](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md) программным путем к программной [загрузке и запуску удаленного пакета](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)
 
 

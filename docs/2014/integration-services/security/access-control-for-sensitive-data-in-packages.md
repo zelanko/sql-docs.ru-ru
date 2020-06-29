@@ -15,14 +15,14 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd685e8afc8e2571d055f3c49d1ce0c26d45d02d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964124"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422261"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Контроль доступа для конфиденциальных данных в пакетах
   Для защиты данных в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно задать уровень защиты, способствующий защите или только конфиденциальных данных, или всех данных в пакете. Более того, эти данные можно зашифровать с паролем или ключом пользователя или возложить задачу шифрования данных на базу данных. Кроме того, используемый уровень защиты пакета не обязательно является статическим и изменяется в течение жизненного цикла пакета. Часто один уровень защиты устанавливается во время развертывания, а другой — сразу после развертывания пакета.  
@@ -80,7 +80,7 @@ ms.locfileid: "84964124"
   
 -   [Установка или изменение уровня защиты пакетов](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Импорт и экспорт пакетов &#40;служб SSIS&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;пакетов&#41; SSIS](../integration-services-ssis-packages.md)   
  [Общие сведения о безопасности (службы Integration Services)](security-overview-integration-services.md)  

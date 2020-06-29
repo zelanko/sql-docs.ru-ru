@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Percentage Sampling Transformation Editor
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1734dd95a0744e08e57bcdff3a80f882b926c2ba
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee1227c874839c81625d054793e554a07e95b4a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964695"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423331"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>редактор преобразования «Процентная выборка»
   Используйте диалоговое окно **Редактор преобразования «Процентная выборка»** для выборки части входных данных по заданному проценту строк. Это преобразование разделяет входные данные на два отдельных вывода.  
   
  Дополнительные сведения о преобразовании «Процентная выборка» см. в разделе [Percentage Sampling Transformation](data-flow/transformations/percentage-sampling-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Процент строк**  
  Задает процент строк во входных данных для использования в качестве выборки.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "84964695"
  **Использовать следующее начальное значение**  
  Задайте начальное значение выборки для генератора случайных чисел, который преобразование использует для создания выборки. Рекомендуется только для разработки и тестирования. Если начальное значение выборки не задано, преобразование использует счетчик тактов Microsoft Windows.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [преобразование «Выборка строк»](data-flow/transformations/row-sampling-transformation.md)  
+ [Преобразование "Выборка строк"](data-flow/transformations/row-sampling-transformation.md)  
   
   

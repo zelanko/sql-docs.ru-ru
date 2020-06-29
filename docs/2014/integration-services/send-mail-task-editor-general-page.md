@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: daaad6f1c340d92f7bdc6f0b4faf46598cdae31c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a8841d2fada07d0dd0997015100cf1c380fea69
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963522"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421751"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Редактор задачи «Отправка почты» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «Отправка почты»** , чтобы задать имя и описание для задачи «Отправка почты».  
@@ -34,7 +34,7 @@ ms.locfileid: "84963522"
  **Описание**  
  Введите описание задачи «Отправка почты».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "Отправка почты" &#40;страницу почты&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

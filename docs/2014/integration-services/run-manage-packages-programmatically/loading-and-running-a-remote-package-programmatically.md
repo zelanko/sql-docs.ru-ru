@@ -11,14 +11,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e7042b026046860c2e6fad03d084e74f176ae50
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964511"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422781"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Программная загрузка и запуск удаленного пакета
   Чтобы выполнить удаленные пакеты с локального компьютера, на котором не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запустите пакеты таким образом, чтобы они выполнялись на удаленном компьютере, на котором установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Чтобы запустить пакеты на удаленном компьютере с локального компьютера, понадобится агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], веб-служба или удаленный компонент. Если попытаться запустить удаленные пакеты непосредственно с локального компьютера, пакеты будут загружены на локальный компьютер и будут запущены оттуда. Если на локальном компьютере не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запуск пакетов окажется невозможен.  
@@ -423,7 +423,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о различиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Программная загрузка и запуск локального пакета](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Загрузка выхода локального пакета](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

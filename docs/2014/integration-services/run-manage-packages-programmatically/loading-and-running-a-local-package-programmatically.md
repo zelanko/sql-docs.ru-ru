@@ -17,14 +17,14 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - programmatically load and run packages [SSIS]
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d5b43d91de2fd22f0198cdb7550af7fd295e2b2a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964514"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422941"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Программная загрузка и запуск локального пакета
   Пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно выполнять по мере необходимости или в заранее определенное время с помощью методов, описанных в разделе [Выполнение пакетов](../packages/run-integration-services-ssis-packages.md). Однако с помощью всего нескольких строк кода можно выполнить пакет из пользовательского приложения, такого как приложение Windows Forms, приложение командной строки, веб-форма ASP.NET, веб-служба или служба Windows.  
@@ -224,7 +224,7 @@ namespace RunFromClientAppWithEventsCS
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные сведения о различиях между локальным и удаленным выполнением](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
  [Программная загрузка и запуск удаленного пакета](../run-manage-packages-programmatically/loading-and-running-a-remote-package-programmatically.md)   
  [Загрузка выхода локального пакета](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  

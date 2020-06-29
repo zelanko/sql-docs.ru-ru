@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 93da0e0d-83f5-406d-b144-4cce216571cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8e9e9aef856276508ef557d465c20210e16f3073
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 743f6dcd75cc43bc3aa603ccb5d8733d983c8f97
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964204"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422341"
 ---
 # <a name="script-task-editor-script-page"></a>Редактор задачи «Скрипт» (страница «Скрипт»)
   Используйте страницу **Скрипт** в диалоговом окне **Редактор задачи «Скрипт»** , чтобы задать свойства скрипта и указать переменные, к которым скрипт будет иметь доступ.  
@@ -28,7 +28,7 @@ ms.locfileid: "84964204"
   
  Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **ScriptLanguage**  
  Выберите используемый для задачи язык скрипта: [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84964204"
  **Изменение скрипта**  
  Открывает среду VSTA IDE, в которой можно создать или изменить скрипт.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница "Общие"](general-page-of-integration-services-designers-options.md)   
  [Редактор задачи "Скрипт" &#40;страница "Общие"&#41;](../../2014/integration-services/script-task-editor-general-page.md)   

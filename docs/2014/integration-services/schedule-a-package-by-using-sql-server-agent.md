@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56fc015eb3bf089e573ece9df73f8ff08c3423be
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f4dd958ebeae0a62f73e23e5b8fad66c3ec4e665
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964354"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422501"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Планирование пакета с помощью агента SQL Server
   Следующая процедура описывает шаги для автоматизации выполнения пакета с помощью шага задания агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для выполнения пакета.  
@@ -50,7 +50,7 @@ ms.locfileid: "84964354"
   
      **В следующей таблице приведены возможные источники пакетов.**  
   
-    |Источник пакета|Описание|  
+    |Источник пакета|Описание:|  
     |--------------------|-----------------|  
     |**Каталог служб SSIS**|Пакеты, хранимые в базе данных SSISDB. Пакеты хранятся в проектах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , развернутых на сервере [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Пакеты, хранимые в базе данных MSDB. Для управления этими пакетами используется служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
@@ -64,7 +64,7 @@ ms.locfileid: "84964354"
   
      **Источник пакета**: Каталог служб SSIS  
   
-    |Вкладка|Варианты|  
+    |Вкладка|Параметры|  
     |---------|-------------|  
     |**Пакет**|**Server**<br /><br /> Введите или выберите имя экземпляра сервера базы данных, на котором размещен каталог служб SSISDB.<br /><br /> Если источник пакета — **каталог служб SSIS** , можно войти на сервер только с использованием учетной записи Microsoft Windows. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] недоступна.|  
     ||**Пакет**<br /><br /> Нажмите кнопку с многоточием и выберите пакет.<br /><br /> Пакет выбирается в папке в узле **Каталоги служб Integration Services** в **обозревателе объектов**.|  
@@ -79,7 +79,7 @@ ms.locfileid: "84964354"
   
      Большинство параметров, которые можно задать для пакетов, хранящихся в SQL Server, хранилище пакетов служб SSIS и файловой системе, соответствуют параметрам командной строки для программы командной строки `dtexec`. Дополнительные сведения о программе и параметрах командной строки см. в разделе [Программа dtexec](packages/dtexec-utility.md).  
   
-    |Вкладка|Варианты|  
+    |Вкладка|Параметры|  
     |---------|-------------|  
     |**Пакет**<br /><br /> Это параметры вкладки для пакетов, хранящихся в хранилище пакетов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .|**Server**<br /><br /> Введите или выберите имя экземпляра сервера базы данных для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
     ||**Использовать проверку подлинности Windows**<br /><br /> Выберите этот параметр для входа в систему с учетной записью Microsoft Windows.|  
@@ -110,7 +110,7 @@ ms.locfileid: "84964354"
     > [!TIP]  
     >  При задании имени расписания используйте уникальное и описательное имя, чтобы было легче отличить это расписание от других расписаний агента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск проектов и пакетов](packages/run-integration-services-ssis-packages.md)  
   
   

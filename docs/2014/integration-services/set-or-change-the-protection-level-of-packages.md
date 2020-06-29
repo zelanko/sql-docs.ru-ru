@@ -12,14 +12,14 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae909a1f7a61c5ae2aa3d6319fd03c54dd70b0e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963414"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421831"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Установка и изменение уровня защиты пакетов
   Для управления доступом к содержимому пакетов и конфиденциальным данным в них, таким как пароли, необходимо задать значение свойства `ProtectionLevel`. Пакеты, которые содержатся в проекте, должны обладать тем же уровнем защиты, что и сам проект. Это необходимо для создания проекта. При изменении настройки свойства `ProtectionLevel` в проекте потребуется вручную обновить настройку свойства для пакетов.  
@@ -71,7 +71,7 @@ ms.locfileid: "84963414"
   
          Если подобную команду использовать в пакетном файле, то в него необходимо включить заполнитель «%f» в виде «%%f».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программа dtutil](dtutil-utility.md)  
   
   

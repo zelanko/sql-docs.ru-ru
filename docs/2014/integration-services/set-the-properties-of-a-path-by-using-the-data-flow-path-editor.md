@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bf0b609574bc9ac12d5bc17210f89e7441bd2a3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963157"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421581"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Задание свойств пути с помощью редактора пути потока данных
   Пути соединяют два компонента потока данных. Перед тем как установить свойства пути, необходимо, чтобы поток данных содержал как минимум два подключенных компонента потока данных. Дополнительные сведения см. в разделах [Добавление или удаление компонента в потоке данных](data-flow/add-or-delete-a-component-in-a-data-flow.md) и [Соединение компонентов в потоке данных](data-flow/connect-components-in-a-data-flow.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "84963157"
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пути Integration Services](data-flow/integration-services-paths.md)   
  [Поток данных](data-flow/data-flow.md)  
   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 45eff63fe3f5cf3bf4e764cb741b19656cf7f254
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 124f9ad43d9e03beb666df678b4956fea53f419e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963954"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422101"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Редактор преобразования «Скрипт» (страница «Входы и выходы»)
   Используйте страницу **Входы и выходы** в диалоговом окне **Редактор преобразования «Скрипт»** , чтобы добавить, удалить или настроить входы и выходы преобразования «Скрипт».  
@@ -28,7 +28,7 @@ ms.locfileid: "84963954"
   
  Дополнительные сведения о компоненте скрипта см. в разделах [Script Component](data-flow/transformations/script-component.md) и [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Дополнительные сведения о программировании компонента скрипта см. в разделе [Расширение потока данных с помощью компонента скрипта](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Входные и выходные данные**  
  Выберите вход или вывод слева, чтобы посмотреть его свойства в таблице справа. Свойства, доступные для редактирования, варьируются в зависимости от выбора. Многие отображаемые параметры доступны только для чтения. Дополнительные сведения об индивидуальных свойствах см. в следующих разделах:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "84963954"
  **Удалить столбец**  
  Выберите столбец и удалите его, нажав кнопку **Удалить столбец**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Выбор типа компонента скрипта](../../2014/integration-services/select-script-component-type.md)   
  [Редактор преобразования "Скрипт" &#40;страница "входные столбцы"&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   

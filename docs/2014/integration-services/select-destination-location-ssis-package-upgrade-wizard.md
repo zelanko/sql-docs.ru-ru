@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c397e1e174703b40a7bada8ed6fe42675a0c9c24
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: abe5be4a11e0f7db4f6e8078395aef0fbdf8d10a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963876"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422041"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>Выбор целевого расположения (мастер обновления пакетов служб SSIS)
   Страница **Выбор целевого расположения** используется для указания назначения, в которое сохраняются обновленные пакеты.  
@@ -40,7 +40,7 @@ ms.locfileid: "84963876"
  **Источник пакета**  
  Позволяет указать, где будут храниться обновленные пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что обновленные пакеты должны быть сохранены в папку на локальном компьютере.|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновленные пакеты должны быть сохранены в хранилище пакетов служб Integration Services. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службами Integration Services. Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображаются соответствующие динамические параметры **Источник пакета** .|  
@@ -74,7 +74,7 @@ ms.locfileid: "84963876"
  **Пароль**  
  Введите пароль, который будет использован, если при подключении к серверу применяется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

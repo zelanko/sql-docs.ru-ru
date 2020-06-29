@@ -12,14 +12,14 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e9009bfb7b44f6690d123697059e105d76688ce0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdc32e103642e086e81f6499bf56e5fbb71c3bd1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423561"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Параметры и коды возврата в задаче «Выполнение SQL»
   В инструкциях SQL и хранимых процедурах часто используются входные параметры `input`, выходные параметры `output` и коды возврата. В службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] задача «Выполнение SQL» поддерживает типы параметров `Input`, `Output` и `ReturnValue`. Используйте тип `Input` для входных параметров, `Output` — для выходных и `ReturnValue` — для кодов возврата.  
@@ -200,7 +200,7 @@ ms.locfileid: "84964774"
   
 -   Образец CodePlex, [Параметры задачи «Выполнение SQL» и результирующие наборы](https://go.microsoft.com/fwlink/?LinkId=157863), на сайте msftisprodsamples.codeplex.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «Выполнение SQL»](control-flow/execute-sql-task.md)   
  [Результирующие наборы в задаче "Выполнение SQL"](../../2014/integration-services/result-sets-in-the-execute-sql-task.md)  
   

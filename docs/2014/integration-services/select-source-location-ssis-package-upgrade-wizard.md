@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6a38fc05df2ec463243a5bbd2b4514e9b28c22c8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963704"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421911"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Выбор расположения источника (мастер обновления пакетов служб SSIS)
   Используйте страницу **Выбор исходного расположения** для задания местонахождения источника обновляемых пакетов.  
@@ -32,7 +32,7 @@ ms.locfileid: "84963704"
  **Источник пакета**  
  Укажите место хранения, содержащее обновляемые пакеты. Все возможные значения этого параметра приведены в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Файловая система**|Указывает, что пакеты, подлежащие обновлению, находятся в папке на локальном компьютере.<br /><br /> Чтобы мастер создавал резервные копии исходных пакетов перед их обновлением, исходные пакеты должны храниться в файловой системе. Дополнительные сведения см. в разделе «Как».|  
 |**Хранилище пакетов служб SSIS**|Указывает, что обновляемые пакеты находятся в хранилище пакетов. Хранилище пакетов представляет собой набор папок в файловой системе, управляемый службой Windows служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Управление пакетами (службы SSIS)](service/package-management-ssis-service.md).<br /><br /> При выборе этого значения отображается соответствующий динамический параметр **Источник пакета** .|  
@@ -66,7 +66,7 @@ ms.locfileid: "84963704"
  **Пароль**  
  Введите пароль, который будет использован для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подключении к серверу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

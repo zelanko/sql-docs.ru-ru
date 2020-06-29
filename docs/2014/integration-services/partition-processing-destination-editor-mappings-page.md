@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42663cf447b2fe974e7cbe655f726f741fa0dab8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a179e78b2e17391ce243a4e6b51ef5bb49f67d68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964722"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423401"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Редактор назначения «Обработка секций» (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначения обработки секций** используется для сопоставления входных столбцов со столбцами секционирования.  
@@ -28,7 +28,7 @@ ms.locfileid: "84964722"
 > [!NOTE]  
 >  Описанные здесь задачи не применимы к табличным моделям служб Analysis Services.  Нельзя связать входные столбцы со столбцами секционирования для табличных моделей. Вместо этого для обработки секции следует использовать задачу выполнения DDL [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) служб Analysis Services.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Для сопоставления доступных входных столбцов с целевыми столбцами используется операция перетаскивания.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "84964722"
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "Обработка секций" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
  [Редактор назначения "Обработка секций" (страница "Дополнительно")](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  

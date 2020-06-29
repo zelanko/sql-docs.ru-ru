@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationconnectionmanager.f1
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a50ec57973deca40accbc98970919363681be63f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a85e0a0c15e42d90f49ebb207ede92a0d8ae3994
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964636"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423171"
 ---
 # <a name="raw-file-destination-editor-connection-manager-page"></a>Редактор назначения «Необработанный файл» (страница «Диспетчер соединений»)
   Для настройки назначения «Необработанный файл» на запись необработанных данных в файл используйте редактор назначения «Необработанный файл».  
@@ -60,7 +60,7 @@ ms.locfileid: "84964636"
  **Псевдоним вывода**  
  Укажите альтернативное имя для выходного столбца.  
   
-## <a name="see-also"></a>См. также:  
- [назначение «Необработанный файл»](data-flow/raw-file-destination.md)  
+## <a name="see-also"></a>См. также  
+ [Назначение «Необработанный файл»](data-flow/raw-file-destination.md)  
   
   

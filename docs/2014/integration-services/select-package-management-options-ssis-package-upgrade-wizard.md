@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackagemgtoptions.f1
 ms.assetid: 810fc020-51cd-43ed-9f35-af99b4f35947
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3e3a7d2ec134ff9b7a3fb63aed29a029ef6fc9bf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bb9102551c56d82bc3cf32ca31e02f7eed4625
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963794"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422001"
 ---
 # <a name="select-package-management-options-ssis-package-upgrade-wizard"></a>Выбор параметров управления пакетами (мастер обновления пакетов служб SSIS)
   Страница **Выбор параметров управления пакетами** используется для выбора параметров обновления пакетов.  
@@ -25,7 +25,7 @@ ms.locfileid: "84963794"
   
 -   [обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Обновить строки соединения для использования новых имен поставщиков**  
  Обновите строки соединения, чтобы в них использовались имена для следующих поставщиков текущего выпуска служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -73,7 +73,7 @@ ms.locfileid: "84963794"
   
  Дополнительные сведения см. в разделе [Обновление пакетов служб Integration Services с помощью мастера обновления пакетов служб SSIS](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обновление пакетов служб Integration Services](install-windows/upgrade-integration-services-packages.md)  
   
   

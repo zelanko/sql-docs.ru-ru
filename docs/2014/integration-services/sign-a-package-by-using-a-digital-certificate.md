@@ -11,14 +11,14 @@ helpviewer_keywords:
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 609189366cbce63b671c3c93538146ff647e4576
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0cf5ff8cf0192968c94300977f38d3dd05984a1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963004"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421491"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Подписание пакета цифровым сертификатом
   Данный раздел описывает подписание пакета служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] цифровым сертификатом. Цифровая подпись может использоваться совместно с другими методами предотвращения загрузки и выполнения недействительного пакета.  
@@ -65,7 +65,7 @@ ms.locfileid: "84963004"
   
      Теперь пакет подписан, но службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] необходимо настроить для проверки наличия и корректности цифровой подписи перед загрузкой пакета. Дополнительные сведения см. в разделе [Определение источника пакетов с помощью цифровых подписей](security/identify-the-source-of-packages-with-digital-signatures.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о безопасности (службы Integration Services)](security/security-overview-integration-services.md)  
   
   

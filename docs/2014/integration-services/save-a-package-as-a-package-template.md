@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reusing packages
 - templates [Integration Services]
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: daf617a088dd781cf40bf85bedbd2e5b52ad7e5a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964262"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422401"
 ---
 # <a name="save-a-package-as-a-package-template"></a>Сохранение пакета в качестве шаблона пакета
   В этом разделе описано, как обозначить и использовать пользовательские пакеты в виде шаблонов при создании новых пакетов служб Integration Services в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. По умолчанию в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используется шаблон пакета, который создает пустой пакет при добавлении нового пакета в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот шаблон по умолчанию заменить нельзя, однако можно добавить новые шаблоны.  
@@ -46,7 +46,7 @@ ms.locfileid: "84964262"
   
 4.  Нажмите кнопку **Добавить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание пакетов в SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)   
  [Пакеты служб Integration Services (SSIS)](../../2014/integration-services/integration-services-ssis-packages.md)  
   

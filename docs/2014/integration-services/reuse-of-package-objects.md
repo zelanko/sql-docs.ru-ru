@@ -13,14 +13,14 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 086f3d6808668003fa03d79fcbf2911c18b3c0da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b7612cb2684bb842108068b062e54fbe9dee4327
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964564"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422931"
 ---
 # <a name="reuse-of-package-objects"></a>Повторное использование объектов пакета
   Функциональные возможности пакетов, которые требуется использовать повторно. Например, создан набор задач, и необходимо повторно совместно использовать элементы как группу, или необходимо повторно использовать отдельный элемент, такой как диспетчер соединений, созданный в другом проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

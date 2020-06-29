@@ -10,14 +10,14 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 113bc3d3c16912681a0136b058b49715bf0b4455
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6c0180cbe0753d53cd1d42acde35fc549e48856e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964704"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423361"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Регистрация событий в пакете служб Integration Services
   Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] записывает различные сообщения о событиях в журнал событий приложений Windows. Пакет записывает эти сообщения при запуске пакета при остановке пакета и возникновении определенных неполадок.  
@@ -77,7 +77,7 @@ ms.locfileid: "84964704"
 ## <a name="related-tasks"></a>Связанные задачи  
  Сведения о просмотре записей журнала в режиме реального времени см. в разделе [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Cобытия, зарегистрированные службами Integration Services](../service/events-logged-by-the-integration-services-service.md)  
   
   

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42a6051305f1c8999e7cba5e4cb51a7945f1f5c7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b20ac056894066114883153030943bec1c05963
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964684"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423301"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
@@ -76,7 +76,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 -   Статья поддержки [Счетчик производительности служб SSIS больше недоступен в системном мониторе после обновления до Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=235319)на узле support.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск проектов и пакетов](../packages/run-integration-services-ssis-packages.md)  
   
   

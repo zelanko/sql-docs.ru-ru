@@ -11,14 +11,14 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5cfe2595607a1da955942e9f2687322f977f3a22
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964784"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423571"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Перезапуск пакетов с помощью контрольных точек
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут перезапустить пакеты, при выполнении которых произошел сбой, начиная с момента этого сбоя вместо перезапуска всего пакета. Если настройка пакета предполагает использование контрольных точек, сведения о выполнении пакета записываются в файл контрольных точек. Файл контрольных точек используется при перезапуске давшего сбой пакета для осуществления повторного запуска пакета с момента сбоя. В случае успешного выполнения пакета файл контрольных точек удаляется, а затем при следующем выполнении пакета создается повторно.  
@@ -87,7 +87,7 @@ ms.locfileid: "84964784"
   
 -   Статья службы поддержки [Контрольные точки служб SSIS не соблюдаются элементами контейнера «цикл по элементам» и «цикл по каждому элементу»](https://go.microsoft.com/fwlink/?LinkId=241633)на сайте support.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   
