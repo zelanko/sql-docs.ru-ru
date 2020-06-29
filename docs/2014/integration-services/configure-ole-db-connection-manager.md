@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Configure OLE DB Connection Manager dialog box
 ms.assetid: 66b60dda-1f1b-45d0-9818-8434ea1121eb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 999ae60465bd459abb1d4a68c35520b33c6410fb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 66bf68534b2e1659be7ef48c465dd31c40e20a7e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921523"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434725"
 ---
 # <a name="configure-ole-db-connection-manager"></a>настройка диспетчера соединений OLE DB
   Используйте диалоговое окно **Настройка диспетчера соединений OLE DB** , чтобы добавить соединение с источником данных. Это может быть либо новое соединение, либо копия существующего соединения.  
   
  Дополнительные сведения о диспетчере соединений OLE DB см. в разделе [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Подключения к данным**  
  Выберите из списка существующее подключение к данным OLE DB.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "84921523"
  **Удаление**  
  Выберите подключение к данным и удалите его с помощью кнопки **Удалить** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

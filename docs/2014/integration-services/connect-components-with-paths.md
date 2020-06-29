@@ -11,14 +11,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8d6cc5a5fb14fff5fd92d5120f56c06d57ddcbaf
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8635ced29f28781bba9d67408ce69f61171ab660
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921395"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434501"
 ---
 # <a name="connect-components-with-paths"></a>Соединение компонентов с путями
   Поток данных пакета проектируется в области конструктора на вкладке **Поток данных** конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Если поток данных содержит два компонента потока данных, можно соединить их, подключив выход источника или преобразования ко входу преобразования или назначения. Соединитель компонентов потока данных называется путем.
@@ -47,7 +47,7 @@ ms.locfileid: "84921395"
 
 -   [Добавление средства просмотра данных к потоку данных](../../2014/integration-services/add-a-data-viewer-to-a-data-flow.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Поток](data-flow/data-flow.md) данных [задачи потока](control-flow/data-flow-task.md) данных [Преобразование данных с помощью](data-flow/transformations/transform-data-with-transformations.md) преобразований [Обработка ошибок в данных](data-flow/error-handling-in-data.md)
 
 
