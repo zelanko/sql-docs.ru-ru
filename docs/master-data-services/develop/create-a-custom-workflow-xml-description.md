@@ -10,18 +10,18 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 72c8ec8fb062566c3d071c0e62a1acf6775d3700
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: b584b65135d950ce06abd9c15db5f3ccf132bbce
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83730784"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469419"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Создание настраиваемого рабочего процесса — описание XML
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  В веб-службе [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> вызывается службой SQL Server MDS Workflow Integration Service при запуске рабочего процесса. Этот метод получает метаданные и данные об элементе, вызвавшем срабатывание бизнес-правила рабочего процесса, в виде блока XML-данных. Пример кода, который реализует обработчик рабочего процесса, см. в разделе [Пример пользовательского рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md).  
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] метод [Microsoft. MasterDataServices. Воркфловтипикстендер. Иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) вызывается службой интеграции рабочего процесса MDS SQL Server при запуске рабочего процесса. Этот метод получает метаданные и данные об элементе, вызвавшем срабатывание бизнес-правила рабочего процесса, в виде блока XML-данных. Пример кода, который реализует обработчик рабочего процесса, см. в разделе [Пример пользовательского рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md).  
   
  В следующем примере показано, как могут выглядеть XML-данные, которые отправляются обработчику рабочего процесса.  
   
@@ -68,16 +68,16 @@ ms.locfileid: "83730784"
 |Тег|Описание|  
 |---------|-----------------|  
 |\<Type>|Текст, введенный в поле **Тип рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], указывает пользовательскую сборку рабочего процесса, которая будет загружаться.|  
-|\<SendData>|Логическое значение, которое в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] управляется флажком **Включить в сообщение данные элементов**. Значение 1 означает, что раздел \<MemberData> отправляется. В противном случае раздел \<MemberData> не отправляется.|  
+|\<SendData>|Логическое значение, которое в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] управляется флажком **Включить в сообщение данные элементов**. Значение 1 означает, что \<MemberData> раздел отправляется; в противном случае \<MemberData> раздел не отправляется.|  
 |<Server_URL>|Текст, введенный в поле **Сайт рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
 |<Action_ID>|Текст, введенный в поле **Имя рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  
-|\<MemberData>|Содержит данные элемента, вызвавшего срабатывание действия рабочего процесса. Эти данные включаются, только если значение \<SendData> равно 1.|  
-|\<Введите*xxx*>|Этот набор тегов содержит метаданные о создании элемента, например дату создания и автора.|  
-|\<Ластчг*xxx*>|Этот набор тегов содержит метаданные о последнем изменении, внесенном в элемент, например дату внесения изменения и автора.|  
+|\<MemberData>|Содержит данные элемента, вызвавшего срабатывание действия рабочего процесса. Он включается, только если значение \<SendData> равно 1.|  
+|\<Enter*xxx*>|Этот набор тегов содержит метаданные о создании элемента, например дату создания и автора.|  
+|\<LastChg*xxx*>|Этот набор тегов содержит метаданные о последнем изменении, внесенном в элемент, например дату внесения изменения и автора.|  
 |\<Name>|Первый атрибут элемента, который был изменен. Этот пример элемента содержит только атрибуты Name и Code.|  
 |\<Code>|Следующий атрибут элемента, который был изменен. Если бы этот пример элемента содержал больше атрибутов, то они следовали бы за первым.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание настраиваемого &#40;рабочего процесса Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [Пример настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   
