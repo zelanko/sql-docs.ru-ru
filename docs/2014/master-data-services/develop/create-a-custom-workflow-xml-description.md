@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7cceedac33c3f368f99fd87ab3aa2453f1cf9ba9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 4920844de9e20c3c4a4a89a192c2d67f0e58f0b8
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84971514"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469039"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Описание XML настраиваемого рабочего процесса (службы Master Data Services)
-  В веб-службе [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] метод <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> вызывается службой SQL Server MDS Workflow Integration Service при запуске рабочего процесса. Этот метод получает метаданные и данные об элементе, вызвавшем срабатывание бизнес-правила рабочего процесса, в виде блока XML-данных. Пример кода, который реализует обработчик рабочего процесса, см. в разделе [Пример пользовательского рабочего процесса (службы Master Data Services)](create-a-custom-workflow-example.md).  
+  В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] метод [Microsoft. MasterDataServices. Воркфловтипикстендер. Иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) вызывается службой интеграции рабочего процесса MDS SQL Server при запуске рабочего процесса. Этот метод получает метаданные и данные об элементе, вызвавшем срабатывание бизнес-правила рабочего процесса, в виде блока XML-данных. Пример кода, который реализует обработчик рабочего процесса, см. в разделе [Пример пользовательского рабочего процесса (службы Master Data Services)](create-a-custom-workflow-example.md).  
   
  В следующем примере показано, как могут выглядеть XML-данные, которые отправляются обработчику рабочего процесса.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "84971514"
 |\<Name>|Первый атрибут элемента, который был изменен. Этот пример элемента содержит только атрибуты Name и Code.|  
 |\<Code>|Следующий атрибут элемента, который был изменен. Если бы этот пример элемента содержал больше атрибутов, то они следовали бы за первым.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание настраиваемого &#40;рабочего процесса Master Data Services&#41;](create-a-custom-workflow-master-data-services.md)   
  [Пример настраиваемого рабочего процесса (службы Master Data Services)](create-a-custom-workflow-example.md)  
   

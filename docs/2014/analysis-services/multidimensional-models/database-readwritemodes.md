@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: aa44924311e412c348a92b0e6abb522ae36bbc14
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547116"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468999"
 ---
 # <a name="database-readwritemodes"></a>Режимы ReadWriteModes базы данных
   Часто возникает ситуация, когда администратору базы данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переключить базу данных из режима для чтения и записи в режим только для чтения или наоборот. Обычно это продиктовано производственной необходимостью, например, чтобы обеспечить общий доступ нескольким серверам к папке базы данных для масштабирования решения и повышения производительности. В таких ситуациях `ReadWriteMode` свойство Database позволяет [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратору базы данных легко изменять режим работы базы данных.  
@@ -44,9 +44,9 @@ ms.locfileid: "84547116"
 > [!NOTE]  
 >  Локальные кубы могут быть созданы только из базы данных, находящейся в режиме только для чтения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Перемещение базы данных Analysis Services](move-an-analysis-services-database.md)   
  [Detach, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: e904333dc25e7ae58d8eae29ba00279d7e599033
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 4373c881fae6599b0a470d154153250614b50627
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84547106"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468989"
 ---
 # <a name="database-storage-location"></a>Место хранения базы данных
   Часто администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо расположить определенную базу данных вне папки данных сервера. Обычно это связано с производственной необходимостью (например, чтобы повысить производительность или расширить хранилище). В этих ситуациях `DbStorageLocation` свойство Database позволяет [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратору базы данных указать расположение базы на локальном диске или сетевом устройстве.  
@@ -40,8 +40,8 @@ ms.locfileid: "84547106"
 > [!IMPORTANT]  
 >  Место хранения базы данных не следует изменять командой `Alter`. Вместо этого рекомендуется использовать последовательность `Detach` / `Attach` команд базы данных (см. раздел [Перемещение базы данных Analysis Services](move-an-analysis-services-database.md), [Присоединение и отсоединение Analysis Services баз данных](attach-and-detach-analysis-services-databases.md)).  
   
-## <a name="see-also"></a>См. также:  
- <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
+## <a name="see-also"></a>См. также  
+ [Microsoft. AnalysisServices. Database. DbStorageLocation *](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [Присоединение и отсоединение баз данных Analysis Services](attach-and-detach-analysis-services-databases.md)   
  [Перемещение базы данных Analysis Services](move-an-analysis-services-database.md)   
  [DbStorageLocation, элемент](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   

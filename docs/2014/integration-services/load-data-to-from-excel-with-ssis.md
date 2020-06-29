@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.technology: integration-services
 ms.topic: conceptual
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f347d00fff1f43c1c926e3ac87bcf023b6b6b89f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951254"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440301"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Импорт данных из Excel или экспорт данных в Excel с помощью служб SQL Server Integration Services (SSIS)
 
@@ -246,9 +246,9 @@ ms.locfileid: "84951254"
 Дополнительные сведения о компонентах и процедурах, описываемых в этой статье, см. в следующих статьях:
 
 ### <a name="about-ssis"></a>Сведения о службах SSIS
-[Диспетчер соединений с Excel](connection-manager/excel-connection-manager.md)  
+[Диспетчер подключений Excel](connection-manager/excel-connection-manager.md)  
 [Источник Excel](data-flow/excel-source.md)  
-[Назначение Excel](data-flow/excel-destination.md)  
+[Назначение «Excel»](data-flow/excel-destination.md)  
 [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
 [Работа с файлами Excel в задаче "Скрипт"](extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)
 

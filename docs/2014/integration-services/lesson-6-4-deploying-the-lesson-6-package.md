@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9cc6274933a8399fc9cc60b91135cd24894a842e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29887f45d89a0c8501e25089f53ab661d23ceba6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951384"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440321"
 ---
 # <a name="step-4-deploying-the-lesson-6-package"></a>Шаг 4. Развертывание пакета, созданного на занятии 6
   Развертывание пакета предполагает добавление пакета в каталоге SSISDB в службах Integration Services на экземпляре SQL Server. На этом занятии вы добавите пакет Lesson 6 в каталог SSISDB, зададите параметр и выполните пакет. На этом занятии будет использоваться SQL Server Management Studio для добавления пакета Lesson 6 в каталог SSISDB и развертывания пакета. После развертывания пакета будет изменен параметр для указания нового расположения, а затем выполнен пакет.  

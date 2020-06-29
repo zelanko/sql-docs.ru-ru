@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440711"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (база данных SQL Azure)
 
@@ -53,7 +53,7 @@ ms.locfileid: "82833764"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы использовать это представление, необходимо подключиться к базе данных **master** . Используйте `sys.dm_operation_status` представление в базе данных **master** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера для наблюдения за состоянием следующих операций, выполняемых над [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Создание базы данных  
@@ -73,7 +73,9 @@ ms.locfileid: "82833764"
 -   Восстановление базы данных  
   
 -   Удаление базы данных  
-  
+
+Информация в этом представлении хранится примерно в течение 1 часа. Используйте [Журнал действий Azure](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) для просмотра сведений об операциях за последние 90 дней. Для хранения данных более 90 дней рекомендуется [отправлять записи журнала действий](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) в log Analytics рабочую область.
+
 ## <a name="example"></a>Пример  
  Отображение последних операций георепликации, связанных с базой данных "MyDB".  
   

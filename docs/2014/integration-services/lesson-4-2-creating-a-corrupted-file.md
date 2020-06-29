@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4095d76eb4710d67abd1e5ed25a05544142d1e3c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968204"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440451"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Этап 2. Создание поврежденного файла
   Для демонстрации настройки и обработки ошибок преобразования необходимо создать образец неструктурированного файла, который при обработке вызовет сбой в работе компонента.  
@@ -59,7 +59,7 @@ ms.locfileid: "84968204"
     > [!NOTE]  
     >  Число 27 представляет собой идентификатор компонента. Это значение присваивается при создании потока данных, так что в пакете оно может отличаться от приведенного в учебнике.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Шаг 3. Добавление перенаправления потока ошибок](lesson-4-3-adding-error-flow-redirection.md)  
   
   

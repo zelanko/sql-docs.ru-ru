@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6afb7c8bcb0b6873ff0040eccdcf86dd90997851
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: 299c45662bc4034ba9db3331d09980b4fa31afe7
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85427641"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469319"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Разработка пользовательских объектов для служб Integration Services
   Если объекты потока управления и потока данных, поставляемые со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не отвечают потребностям пользователя, можно разработать множество типов собственных пользовательских объектов, в том числе следующие.
@@ -60,7 +60,7 @@ ms.locfileid: "85427641"
 
 |Пользовательский объект|Базовый класс|attribute|Важные методы|
 |-------------------|----------------|---------------|-----------------------|
-|Задача|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
+|Задача|[Microsoft. SqlServer. DTS. Runtime. Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task)|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|
 |Диспетчер соединений|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|
 |Регистратор|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.OpenLog%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.CloseLog%2A>|
 |Перечислитель|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator.GetEnumerator%2A>|
@@ -69,19 +69,19 @@ ms.locfileid: "85427641"
 ## <a name="providing-links-to-samples-and-help-content"></a>Предоставление ссылок на образцы кода и содержимое справки
  Для отображения в **панели элементов служб SSIS** ссылки на образцы кода и содержимое справки по пользовательскому объекту, использующему управляемый код, используются следующие свойства.
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.SamplesTag%2A>
+-   [Microsoft. SqlServer. DTS. Pipeline. Дтспипелинекомпонентаттрибуте. Самплестаг *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpCollection%2A>
+-   [Microsoft. SqlServer. DTS. Pipeline. Дтспипелинекомпонентаттрибуте. Хелпколлектион *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Pipeline.DTSPipelineComponentAttribute.HelpKeyword%2A>
+-   [Microsoft. SqlServer. DTS. Pipeline. Дтспипелинекомпонентаттрибуте. HelpKeyword *](/dotnet/api/microsoft.sqlserver.dts.pipeline.dtspipelinecomponentattribute.helpkeyword)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.SamplesTag%2A>
+-   [Microsoft. SqlServer. DTS. Runtime. Дтстаскаттрибуте. Самплестаг *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.samplestag)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpCollection%2A>
+-   [Microsoft. SqlServer. DTS. Runtime. Дтстаскаттрибуте. Хелпколлектион *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpcollection)
 
--   <xref:Microsoft.SqlServer.Dts.Runtime.DTSTaskAttribute.HelpKeyword%2A>
+-   [Microsoft. SqlServer. DTS. Runtime. Дтстаскаттрибуте. HelpKeyword *](/dotnet/api/microsoft.sqlserver.dts.runtime.dtstaskattribute.helpkeyword)
 
- Чтобы отобразить ссылку на образцы кода и содержимое справки по пользовательскому объекту, использующему собственный код, добавьте в файл скрипта реестра (RGS-файл) записи SamplesTag, HelpKeyword и HelpCollection. Пример приведен ниже.
+ Чтобы отобразить ссылку на образцы кода и содержимое справки по пользовательскому объекту, использующему собственный код, добавьте в файл скрипта реестра (RGS-файл) записи SamplesTag, HelpKeyword и HelpCollection. Пример.
 
  `val HelpKeyword = s 'sql11.dts.designer.executepackagetask.F1'`
 

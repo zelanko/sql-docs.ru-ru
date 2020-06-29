@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 44698c89eff608d6c993c3cec030098883eb5aee
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544836"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469009"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Подключение и отключение баз данных служб Analysis Services
   Часто администратору базы данных (dba) служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо на некоторое время перевести базу данных в режим "вне сети", а затем перевести ее в режим "в сети" на том же или на другом экземпляре сервера. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта. Для всех этих случаев `Attach` `Detach` команды и позволяют [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратору базы данных перевести базу в режим «вне сети» и вернуть ее в оперативный режим с небольшими усилиями.  
@@ -55,9 +55,9 @@ ms.locfileid: "84544836"
 > [!IMPORTANT]  
 >  Чтобы выполнить команду `Attach`, необходимы права администратора сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft. AnalysisServices. Database. Detach *](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Перемещение базы данных Analysis Services](move-an-analysis-services-database.md)   
  [Режимы readwritemodes базы данных](database-readwritemodes.md)   
  [Переключение базы данных Analysis Services между режимами ReadOnly и ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

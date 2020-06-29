@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 31f12cd8abde0262c499d8a889f28041a9e3974c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c8d2f5e7cc6453c67a8a11eb558a678924ed4cef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965247"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440561"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Шаг 3. Тестирование развернутых пакетов
   В этой задаче вы проверите пакеты, развернутые на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -104,7 +104,7 @@ ms.locfileid: "84965247"
 
 ![Значок Integration Services (маленький)](media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Программа dtexec](packages/dtexec-utility.md)
 
 

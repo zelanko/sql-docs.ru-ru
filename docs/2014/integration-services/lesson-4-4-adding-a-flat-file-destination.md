@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 177654c7bfe8d7acb7559139ef784dfd66611572
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968190"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440401"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Шаг 4. Добавление назначения «Неструктурированный файл»
   Выход ошибок преобразования «Ключ уточняющего запроса валют» перенаправляет в преобразование «Скрипт» все строки данных, завершившиеся ошибкой в операции поиска. Для расширения сведений о возникших ошибках преобразование «Скрипт» выполняет скрипт, получающий описания ошибок.  
@@ -57,7 +57,7 @@ ms.locfileid: "84968190"
   
 15. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Дальнейшие действия  
  [Шаг 5. Проверка учебного пакета, созданного на занятии 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

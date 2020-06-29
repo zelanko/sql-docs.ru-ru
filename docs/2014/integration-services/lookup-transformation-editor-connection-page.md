@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ace9abbbb16f7b2d048dc5ddc41b217c1dafaaee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 788075ce45ca09da585fd3675258062ef2e8a054
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966034"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440251"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Соединение»)
   Используйте страницу **Соединение** диалогового окна **Редактор преобразования «Уточняющий запрос»** для выбора диспетчера соединения. При выборе диспетчера соединений OLE DB также выбирается и запрос, таблица или представление для формирования эталонного набора данных.  
   
  Дополнительные сведения о преобразовании «Уточняющий запрос» см. в разделе [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  При выборе пунктов **Полное кэширование** и **Диспетчер соединений с кэшем** на странице «Общие» диалогового окна **Редактор преобразования «Уточняющий запрос»** доступны следующие параметры.  
   
  **Диспетчер соединений с кэшем**  
@@ -69,7 +69,7 @@ ms.locfileid: "84966034"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись в блоге [Режимы кэша уточняющих запросов](https://go.microsoft.com/fwlink/?LinkId=219518) на сайте blogs.msdn.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор преобразования "Уточняющий запрос" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Редактор преобразования «Уточняющий запрос» &#40;столбцов&#41;](../../2014/integration-services/lookup-transformation-editor-columns-page.md)   
  [Редактор преобразования "Уточняющий запрос" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   

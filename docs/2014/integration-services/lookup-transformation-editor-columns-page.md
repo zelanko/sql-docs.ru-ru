@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e6b410a2a32aadd14631aa02c6c46f8dde5ba9e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e6384d856cb84d095bcea8ce5b8209f4e815138
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951224"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440261"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Редактор преобразования «Уточняющий запрос» (страница «Столбцы»)
   Используйте страницу **Столбцы** диалогового окна **Редактор преобразования «Уточняющий запрос»** , чтобы указать соединение между исходной и ссылочной таблицами и выбрать уточняющие столбцы из ссылочной таблицы.  
   
  Дополнительные сведения о преобразовании «Уточняющий запрос» см. в разделе [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Доступные входные столбцы**  
  Просмотрите список доступных входных столбцов. Входные столбцы — это столбцы в потоке данных из подключенного источника. Входной и уточняющий столбец должны иметь одинаковый тип данных.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "84951224"
  **Псевдоним вывода**  
  Введите псевдоним выхода для каждого уточняющего столбца. По умолчанию используется имя уточняющего столбца, однако можно выбрать любое уникальное описательное имя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор преобразования "Уточняющий запрос" &#40;общие&#41;страницы](general-page-of-integration-services-designers-options.md)   
  [Редактор преобразования "Уточняющий запрос" &#40;страница подключения&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
  [Редактор преобразования "Уточняющий запрос" &#40;страница "Дополнительно"&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
