@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55e71b6615afc15c2963b4dbb9bfbf2790e90b3b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963135"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421544"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Установка свойств управления очередностью
   Для установки свойств элементов управления очередностью можно использовать следующие средства.  
@@ -67,19 +67,19 @@ ms.locfileid: "84963135"
   
     |Свойство, доступное для чтения-записи|Действие настройки|  
     |--------------------------|--------------------------|  
-    |Описание|Введите описание.|  
+    |Описание:|Введите описание.|  
     |EvalOp|Выберите операцию вычисления. Если `Expression` выбрана операция, **ExpressionAndConstant**или **ExpressionOrConstant** , можно указать выражение.|  
     |Выражение|Если операция вычисления включает в себя выражение, введите выражение. Выражение должно иметь логическое значение. Дополнительные сведения о языке выражений см. в разделе [Выражения служб Integration Services (SSIS)](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Задайте значение, `LogicalAnd` указывающее, вычисляется ли управление очередностью вместе с другими ограничениями очередностью, когда несколько исполняемых объектов предшествуют и связываются с исполняемым объектом с ограничением.|  
-    |Название|Обновите имя элемента управления очередностью.|  
+    |Имя|Обновите имя элемента управления очередностью.|  
     |ShowAnnotation|Укажите тип заметки, который должен использоваться. Выберите значение **Never** , чтобы отключить заметки, **AsNeeded** , чтобы разрешить заметки по запросу, **ConstraintName** , чтобы автоматически вставлять заметки, используя значения свойства Name, **ConstraintDescription** , чтобы автоматически вставлять заметки, используя значения свойства Description, и **ConstraintOptions** , чтобы автоматически вставлять заметки, используя значения свойств Value и Expression.|  
-    |Применение|Если операция вычисления, указанная в свойстве EvalOP, содержит ограничение, выберите результат выполнения исполняемого объекта с ограничением.|  
+    |Значение|Если операция вычисления, указанная в свойстве EvalOP, содержит ограничение, выберите результат выполнения исполняемого объекта с ограничением.|  
   
 5.  Закройте окно «Свойства».  
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление очередностью](control-flow/precedence-constraints.md)   
  [Подключение задач и контейнеров с помощью управления очередностью по умолчанию](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [Установка значения управления очередностью с помощью контекстного меню](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   

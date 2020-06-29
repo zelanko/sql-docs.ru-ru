@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 86441b7ec5750ca4b7fce07fb7e0b5025e8a6eef
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6005c92d0d48850461c01353ddf94c61140d0f2e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939125"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437451"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Редактор задачи «Запрос интеллектуального анализа данных» (вкладка «Запрос»)
   Используйте вкладку **Запрос** диалогового окна **Задача «Запрос интеллектуального анализа данных»** , чтобы создать запросы прогноза, основанные на модели интеллектуального анализа данных. В этом диалоговом окне также можно привязать параметры и результирующие наборы к переменным.  
@@ -77,7 +77,7 @@ ms.locfileid: "84939125"
  **Remove**  
  Выберите результат, а затем нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи «Запрос интеллектуального анализа данных» &#40;вкладку «модель интеллектуального анализа»&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Редактор задачи "запрос интеллектуального анализа данных" &#40;вкладка "выходные данные"&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   

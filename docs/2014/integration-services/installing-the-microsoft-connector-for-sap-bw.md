@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae4c48d26814b606b4be18ae0c0c21c73f8bf6b1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a4362773ab6e0ec0252062d1695a921e7054226
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968294"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424751"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Установка Microsoft Connector 1.1 для SAP BW
   Чтобы установить [!INCLUDE[msCoName](../includes/msconame-md.md)] соединитель 1,1 для SAP BW и его документацию, скачайте и запустите пакет установщика Windows на веб-странице SQL Server пакета дополнительных компонентов.  

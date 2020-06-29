@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9128f73dc8fec388ae111781b9beeb52bbab138b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ae883d085b1f6416096255a3b87d6e5872bc5e9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967154"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425711"
 ---
 # <a name="file-connection-manager-editor"></a>редактор диспетчера подключения файлов
   Диалоговое окно **Редактор диспетчера подключения файлов** задает свойства, используемые при подключении к файлу или папке.  
@@ -28,11 +28,11 @@ ms.locfileid: "84967154"
   
  Дополнительные сведения о диспетчере подключения файлов см. в разделе [File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Тип использования**  
  Укажите, будет ли **Диспетчер подключения файлов** подключаться к существующему файлу или папке или создаст новый файл или папку.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |Создать файл|Во время выполнения создается новый файл.|  
 |Существующий файл|Использовать существующий файл.|  
@@ -47,7 +47,7 @@ ms.locfileid: "84967154"
  **Обзор**  
  Выберите файл или папку в диалоговом окне **Выбор файла** или **Выбор папки** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

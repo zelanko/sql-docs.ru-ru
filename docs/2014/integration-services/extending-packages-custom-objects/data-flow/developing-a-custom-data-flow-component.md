@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee2b30cf0796953d12f976745fb195169de86c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437081"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Разработка пользовательского компонента потока данных
   Задача потока данных состоит из компонентов, которые соединяются с различными источниками данных, а затем преобразуют и перенаправляют данные с высокой скоростью. Службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют модель расширяемых объектов, которая позволяет разработчикам создавать пользовательские источники, преобразования и назначения, которые можно использовать в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и в развернутых пакетах. В этом разделе содержатся инструкции и рекомендации по разработке пользовательских компонентов потока данных.
@@ -54,7 +54,7 @@ ms.locfileid: "84966524"
 
  [Разработка конкретных типов компонентов потока данных](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md) Содержит сведения о разработке трех типов компонентов потока данных: источников, преобразований и назначений.
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
  <xref:Microsoft.SqlServer.Dts.Pipeline>Содержит классы и интерфейсы, используемые для создания пользовательских компонентов потока данных.
 
  <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper>Содержит классы и интерфейсы, которые составляют объектную модель задачи «Поток данных» и используются для создания пользовательских компонентов потока данных или построения задачи потока данных.
@@ -87,7 +87,7 @@ ms.locfileid: "84966524"
 
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Расширение потока данных с помощью компонента скрипта] (.. /.. /екстендинг-паккажес-скриптинг/Дата-Флов-скрипт-компонент/екстендинг-СЕ-Дата-Флов-ВИС-СЕ-скрипт-компонент.МД [Сравнение решений сценариев и пользовательских объектов](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)
 
 

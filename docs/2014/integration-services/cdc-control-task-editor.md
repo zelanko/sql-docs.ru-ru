@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdccontroltask.config.f1
 ms.assetid: 4f09d040-9ec8-4aaa-b684-f632d571f0a8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a24369829ae8b6fb45098e6ebc0be2f0e676e69
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 35d20d475b8f6da9c899c389419233f8e90bf555
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924175"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439021"
 ---
 # <a name="cdc-control-task-editor"></a>Редактор задачи «Выполнение CDC»
   Диалоговое окно **Редактор задачи «Управление CDC»** служит для настройки задачи «Управление CDC». В процессе настройки задачи «Управление CDC» определяется соединение с базой данных CDC, операция задачи CDC и сведения об управлении состояниями.  
@@ -29,7 +29,7 @@ ms.locfileid: "84924175"
   
 2.  На вкладке **Поток управления** дважды щелкните задачу "Управление CDC".  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Диспетчер соединений ADO.NET базы данных SQL Server CDC**  
  Выберите из списка существующий диспетчер соединений или нажмите кнопку **Создать** , чтобы создать новое соединение. Соединение должно быть установлено с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , которая включена для CDC и в которой находится выбранная таблица изменений.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "84924175"
  **Имя состояния**  
  Введите имя, связанное с сохраняемым состоянием CDC. В пакетах полной загрузки и пакетах CDC, работающих в одном контексте CDC, будет указываться общее имя состояния. Это имя используется для подстановки строки состояния в таблице состояния  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательские свойства задач управления CDC](control-flow/cdc-control-task-custom-properties.md)  
   
   

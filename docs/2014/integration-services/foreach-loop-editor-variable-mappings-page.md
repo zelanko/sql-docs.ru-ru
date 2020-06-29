@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.mapping.f1
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 043077496e1ec1a1cad147725d7f722364f6a54c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966404"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425501"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Редактор циклов по каждому элементу (страница «Сопоставления переменных»)
   Страница **Сопоставления переменных** диалогового окна **Редактор циклов по каждому элементу** используется для сопоставления переменных со значениями коллекции. Значение переменной обновляется значениями из коллекции при каждом повторе цикла.  
@@ -25,7 +25,7 @@ ms.locfileid: "84966404"
   
  Руководство по [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] созданию простого пакета ETL содержит урок, позволяющий добавить и настроить цикл foreach.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Переменная**  
  Выберите существующую переменную или щелкните, \<**New variable...**> чтобы создать новую переменную.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "84966404"
  **Удаление**  
  Выберите переменную и нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор циклов по каждому элементу &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор циклов по каждому элементу &#40;страница коллекции&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   

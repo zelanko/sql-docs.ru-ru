@@ -21,14 +21,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30f65b7bfd4563bbc9ada1d615f0d48af225895d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964724"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423411"
 ---
 # <a name="integration-services-ssis-logging"></a>Ведение журналов в службах Integration Services (SSIS)
   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат регистраторы, которые могут использоваться для реализации ведения журналов в пакетах, контейнерах и задачах. При ведении журнала можно записать текущие сведения о пакете, что поможет при каждом выполнении пакета проводить его аудит и устранять неисправности. Например, журнал может записать имя оператора, запускающего пакет, и время, в которое пакет был начат или завершен.  
@@ -165,9 +165,9 @@ ms.locfileid: "84964724"
 #### <a name="use-the-pipelinecomponenttime-event"></a>Использование события PipelineComponentTime  
  Возможно, самой полезной записью журнала является событие PipelineComponentTime. Эта запись журнала сообщает о времени в миллисекундах, которое каждый компонент потока данных тратит на каждом из пяти основных шагов обработки. В следующей таблице описываются эти шаги обработки. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Разработчикам эти шаги будут знакомы как основные методы класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Шаг|Описание|  
+|Шаг|Описание:|  
 |----------|-----------------|  
-|Validate|Компонент проверяется на допустимость значений свойств и параметров настройки.|  
+|Проверить|Компонент проверяется на допустимость значений свойств и параметров настройки.|  
 |PreExecute|Компонент выполняет однократную обработку перед началом обработки строк данных.|  
 |PostExecute|Компонент выполняет однократную обработку после обработки всех строк данных.|  
 |ProcessInput|Компонент преобразования или назначения обрабатывает входящие строки данных, которые передает ему вышестоящий источник или преобразование.|  
@@ -213,7 +213,7 @@ ms.locfileid: "84964724"
 ## <a name="related-content"></a>См. также  
  [Инструмент DTLoggedExec для полного и подробного ведения журнала (проект CodePlex)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр записей журнала в окне "Регистрация событий"](../view-log-entries-in-the-log-events-window.md)  
   
   

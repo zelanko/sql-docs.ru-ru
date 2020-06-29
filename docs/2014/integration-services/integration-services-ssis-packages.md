@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 72dfbb5873728efb87a797f1fee9fb4aa469275c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f2a7c3c1e70e8d402bcd73add2be04d93d182fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965427"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436501"
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
   Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  
@@ -90,7 +90,7 @@ ms.locfileid: "84965427"
 ## <a name="custom-log-entries-available-on-the-package"></a>Пользовательские записи журнала, доступные в пакете  
  В следующей таблице перечислены пользовательские записи в журнале для пакетов. Дополнительные сведения см. в разделах [Ведение журналов в службах Integration Services (SSIS)](performance/integration-services-ssis-logging.md) и [Пользовательские сообщения для ведения журнала](../../2014/integration-services/custom-messages-for-logging.md).  
   
-|Запись журнала|Описание|  
+|Запись журнала|Описание:|  
 |---------------|-----------------|  
 |`PackageStart`|Указывает, что выполнение пакета началось.<br /><br /> Примечание. Эта запись журнала формируется автоматически. Ее нельзя исключить.|  
 |`PackageEnd`|Указывает, что выполнение пакета завершено.<br /><br /> Примечание. Эта запись журнала формируется автоматически. Ее нельзя исключить.|  
