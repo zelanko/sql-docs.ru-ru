@@ -15,14 +15,14 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c35f135671411b34394a885ef3f857e516dea298
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ad603915ae20c7959a5cd74e441135f88fd3ebfc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916888"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432481"
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
@@ -84,7 +84,7 @@ ms.locfileid: "84916888"
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение DataReader](datareader-destination.md)   
  [Назначение ADO NET](ado-net-destination.md)   
  [Поток данных](data-flow.md)  

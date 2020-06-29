@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ec0fe7952fbcca3be13d93c24247cc0434232096
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2683b86699da075be54f6d5ad6720beccbee1add
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918800"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432961"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Параметры запроса для профиля функциональной зависимости (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля функциональной зависимости** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль функциональной зависимости показывает, в какой степени значения в одном столбце (зависимом) зависят от значений в другом столбце или наборе столбцов (определяющем). Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Например, выполняется профилирование зависимости между столбцом почтовых индексов США и столбцом штатов США. В этом профиле один и тот же почтовый индекс всегда должен соответствовать одному и тому же штату, но профиль обнаруживает нарушения этой зависимости.  

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ea5c088bf16576cf6711e9f01ee21452dd001b8e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb04140fc5a065b93f8a08533b24ca786fc9202c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916474"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432341"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Соединение компонентов в потоке данных
   Эта процедура описывает способ соединения выхода компонентов в потоке данных с другими компонентами того же потока.  
@@ -39,7 +39,7 @@ ms.locfileid: "84916474"
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление или удаление компонента в потоке данных](data-flow.md)   
  [Настройка вывода ошибок в компоненте потока данных](../configure-an-error-output-in-a-data-flow-component.md)   
  [Поток данных](data-flow.md)  

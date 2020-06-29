@@ -7,16 +7,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fe4af63e4252f95bd0e234d318e264ff0adc7017
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16e970112cbf55adf68ddf3bb246aa46a04a2f33
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914864"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431661"
 ---
-# <a name="preview"></a>Preview (Предварительный просмотр)
+# <a name="preview"></a>Предварительный просмотр
   В диалоговом окне **Предварительный просмотр** можно просмотреть данные, извлекаемые источником SAP BW.  
   
 > [!IMPORTANT]  
@@ -45,12 +45,12 @@ ms.locfileid: "84914864"
     > [!NOTE]  
     >  При щелчке **Предварительный просмотр** также открывается диалоговое окно **Журнал запросов** . Дополнительные сведения об этом диалоговом окне см. в разделе [Request Log](request-log.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  В диалоговом окне **Предварительный просмотр** отображаются строки, запрошенные в системе SAP Netweaver BW. Отображаемые столбцы — это столбцы, определенные в исходных данных.  
   
  В этом диалоговом окне отсутствуют другие параметры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор SAP BWного источника &#40;страница "Диспетчер соединений"&#41;](sap-bw-source-editor-connection-manager-page.md)   
  [Справка F1 по Microsoft Connector 1.1 для SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61ecaa07074ed21d6f0b93c7cc544f4487431a64
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915994"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432191"
 ---
 # <a name="define-a-state-variable"></a>Определение переменной состояния
   Эта процедура описывает, как определить переменную пакета, в которой хранится информация состояния CDC.  
@@ -83,7 +83,7 @@ ms.locfileid: "84915994"
   
  Если не используется задача «Управление CDC» с параметром автоматического сохранения состояния, то необходимо загружать значение переменной из постоянного хранилища, в котором это значение было сохранено в последний раз при прогоне пакета, а затем снова записывать его в постоянное хранилище после завершения работы с текущим диапазоном обработки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Задача «Управление CDC»](../control-flow/cdc-control-task.md)   
  [Редактор задачи «Выполнение CDC»](../cdc-control-task-editor.md)  
   

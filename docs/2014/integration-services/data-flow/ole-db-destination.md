@@ -17,14 +17,14 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9f414053bcc3f51ffc737a84a3b693fb0e924a7b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5227175e80db3a8f31a8b8db8c3d6bee3061bae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915064"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431921"
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -82,7 +82,7 @@ ms.locfileid: "84915064"
   
  Помимо параметров быстрой загрузки, отображенных в диалоговом окне **Редактор назначения "OLE DB"** , можно настроить назначение "OLE DB" для использования параметров массовой загрузки. Для этого введите параметры в свойство FastLoadOptions в диалоговом окне **Расширенный редактор** .  
   
-|Параметры быстрой загрузки|Описание|  
+|Параметры быстрой загрузки|Описание:|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Устанавливает размер в килобайтах для вставки. Параметр имеет форму `KILOBYTES_PER_BATCH`  =  \<positive integer value**> * *.|  
 |FIRE_TRIGGERS|Устанавливает запуск триггеров при вставке таблицы. Параметр имеет форму **FIRE_TRIGGERS**. Наличие параметра означает, что триггер запускается.|  

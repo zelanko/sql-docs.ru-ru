@@ -16,14 +16,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 567c5d95c2ee7c15ea5c541f7fe2010d46ba36f5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939495"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430461"
 ---
 # <a name="lookup-transformation"></a>Преобразование «Уточняющий запрос»
   Преобразование «Уточняющий запрос» выполняет уточняющие запросы, объединяя данные во входных столбцах со столбцами в ссылочном наборе данных. Уточняющие запросы используются для доступа к дополнительной информации в связанной таблице, основанной на значениях в общих столбцах.  
@@ -138,7 +138,7 @@ ms.locfileid: "84939495"
   
      Дополнительные сведения об установке образцов продукта и баз данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] см. в разделе [Образцы продукта служб SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Преобразование "Нечеткий уточняющий запрос"](fuzzy-lookup-transformation.md)   
  [Преобразование «Уточняющий запрос термина»](term-lookup-transformation.md)   
  [Поток данных](../data-flow.md)   

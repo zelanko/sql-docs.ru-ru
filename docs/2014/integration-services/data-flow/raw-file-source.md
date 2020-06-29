@@ -13,14 +13,14 @@ helpviewer_keywords:
 - raw data [Integration Services]
 - Raw File source
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5171de39727578028ed4cf01c090b98e3d70e0d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53b9b4a38e82fe37f0f1f114969f2f71fb4848a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914754"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85431541"
 ---
 # <a name="raw-file-source"></a>источник «Необработанный файл»
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ. Это означает, что источник необработанных файлов в состоянии считывать данные быстрее, чем другие источники, такие как источник «Неструктурированный файл» и источник «OLE DB».  
@@ -52,7 +52,7 @@ ms.locfileid: "84914754"
   
 -   Запись в блоге [Необработанные файлы ― это здорово](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131)на сайте sqlservercentral.com  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение «Необработанный файл»](raw-file-destination.md)   
  [Поток данных](data-flow.md)  
   

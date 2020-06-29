@@ -16,14 +16,14 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ae30620804f81653fa6d28e881ca7896685fa458
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7039d02b6cc55355c3b27e5694474df4666570ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939295"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430131"
 ---
 # <a name="sort-transformation"></a>преобразование «Сортировка»
   Это преобразование сортирует входные данные по возрастанию или убыванию и копирует отсортированные данные на выход преобразования. К входным данным можно применять несколько сортировок, при этом каждая сортировка будет иметь свой номер, определяющий ее последовательность. Данные будут сначала упорядочены по столбцу с наименьшим номером, затем по столбцу со следующим наименьшим номером и т. д. Например, если у столбца **Страна** номер сортировки 1, а у столбца **Город** номер сортировки 2, выходные данные будут отсортированы сначала по названиям стран, а затем по названиям городов. Положительный номер сортировки означает, что данные будут упорядочены по возрастанию, а отрицательный — по убыванию. У столбцов, по которым сортировка производиться не будет, номер сортировки равен 0. Такие столбцы автоматически копируются на выход преобразования вместе с отсортированными столбцами.  
@@ -56,7 +56,7 @@ ms.locfileid: "84939295"
 ## <a name="related-content"></a>См. также  
  Образец [Пользовательский компонент SortDeDuplicateDelimitedString служб SSIS](https://go.microsoft.com/fwlink/?LinkId=220821)на сайте codeplex.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поток данных](../data-flow.md)   
  [Преобразования служб Integration Services](integration-services-transformations.md)  
   

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 320f7fc2255e9f665141929836d2e7bb7375429f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916354"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432301"
 ---
 # <a name="data-flow-performance-features"></a>Возможности для повышения производительности потока данных
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -195,7 +195,7 @@ ms.locfileid: "84916354"
   
 -   Видеоматериал [Balanced Data Distributor](https://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на сайте technet.microsoft.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Средства устранения неполадок при разработке пакетов](../troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Устранение неполадок инструментов с помощью отчетов](../troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

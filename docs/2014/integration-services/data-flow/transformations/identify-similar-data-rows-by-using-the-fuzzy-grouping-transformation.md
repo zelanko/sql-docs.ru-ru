@@ -12,14 +12,14 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 991940b819e3d72fcb7b94eb031b0e40b7102667
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c860bad3b8453c58b1eb035b8d1f16db90b5a09c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939545"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430591"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Определение подобных строк данных с помощью преобразования «Нечеткое группирование»
   Перед добавлением и настройкой преобразования «Нечеткое группирование» в пакете уже должен содержаться хотя бы один источник и задача потока данных.  
