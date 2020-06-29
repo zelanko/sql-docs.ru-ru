@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], creating
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d9226cfd55b6851779564baced0c745e8a17686b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78b344d355a048a9933648283af4654f8ff692cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968767"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427531"
 ---
 # <a name="creating-a-custom-foreach-enumerator"></a>Создание пользовательского перечислителя по каждому элементу
   Создание пользовательского перечислителя по каждому элементу, как и любого другого пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], осуществляется за несколько шагов, а именно:  
@@ -78,7 +78,7 @@ namespace Microsoft.Samples.SqlServer.Dts
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Написание кода пользовательского перечислителя Foreach](coding-a-custom-foreach-enumerator.md)   
  [Разработка пользовательского интерфейса для пользовательского перечислителя по каждому элементу](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   

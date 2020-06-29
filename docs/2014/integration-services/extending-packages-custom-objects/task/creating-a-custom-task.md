@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84ce9053d16e0b00cfb5d04b0ee23fc08067a28c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc1aeb650810f9b6d580dabcd22091a2e1eb9d49
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968656"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427261"
 ---
 # <a name="creating-a-custom-task"></a>Создание пользовательской задачи
   Шаги, необходимые для создания пользовательской задачи, аналогичны шагам, необходимым для создания любого другого пользовательского объекта служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
@@ -92,7 +92,7 @@ End Class 'MyTask
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание пользовательской задачи](creating-a-custom-task.md)   
  [Написание кода пользовательской задачи](coding-a-custom-task.md)   
  [Разработка пользовательского интерфейса для пользовательской задачи](developing-a-user-interface-for-a-custom-task.md)  

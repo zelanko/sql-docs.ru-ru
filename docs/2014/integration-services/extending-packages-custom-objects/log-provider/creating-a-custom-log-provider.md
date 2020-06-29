@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - custom log providers [Integration Services], creating
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e6486f87072b203da5240f01dc5c3a4e1a948fa8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f382500373abe5dd35380c2ad901362c44d26413
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968774"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427511"
 ---
 # <a name="creating-a-custom-log-provider"></a>Создание пользовательского регистратора
   Среда времени выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] располагает обширными возможностями по ведению журналов. С помощью журнала можно отслеживать события, происходящие во время выполнения пакета. Службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают целый ряд регистраторов, используя которые можно создавать и сохранять журналы в различных форматах, например в XML, текстовом файле, базе данных или в журнале событий Windows. Если ни один из этих регистраторов или предлагаемых ими выходных форматов не соответствует потребностям пользователя, можно создать пользовательский регистратор.
@@ -74,7 +74,7 @@ public class MyLogProvider : LogProviderBase
 
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Программирование пользовательского](coding-a-custom-log-provider.md) регистратора [Разработка пользовательского интерфейса для пользовательского регистратора](developing-a-user-interface-for-a-custom-log-provider.md)
 
 

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76cff13a67d0109e7215ee16285e49e05b0a72c6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967234"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425991"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
   После настройки задачи "Скрипт" в окне **Редактор задачи "Скрипт"** нужно создать пользовательский код в среде разработки задачи "Скрипт".
@@ -246,7 +246,7 @@ To open Help, press F1.
 
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы [!INCLUDE[msCoName](../../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Создание ссылок на другие сборки в решениях скриптов](../referencing-other-assemblies-in-scripting-solutions.md) [Настройка задачи «Скрипт» в редакторе задачи «Скрипт](configuring-the-script-task-in-the-script-task-editor.md) »
 
 

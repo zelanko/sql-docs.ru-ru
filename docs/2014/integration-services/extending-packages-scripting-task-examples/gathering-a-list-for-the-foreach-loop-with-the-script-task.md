@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 897c0f48c27f8836e4ccb0f84b43069bfcac9233
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f7bbaccf2580b4c7b8781a5de20c53f0729b9506
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968484"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426691"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
   Перечислитель по объекту из переменной перечисляет элементы в списке, передаваемом ему в переменной, и выполняет одни и те же задачи для каждого элемента. Чтобы заполнить список, можно использовать пользовательский код в задаче «Скрипт». Дополнительные сведения о перечислителе см. в разделе [Контейнер "Цикл по каждому элементу"](../control-flow/foreach-loop-container.md).  
@@ -246,7 +246,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Контейнер «цикл по каждому элементу»](../control-flow/foreach-loop-container.md)   
  [Настройка контейнера "цикл по каждому элементу"](../configure-a-foreach-loop-container.md)  
   

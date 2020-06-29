@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SSIS Script task, empty flat files
 - Script task [Integration Services], examples
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2936d94f07d5bd8ba046811ad632a5be81f15a8a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9abeb4a6e2447fad64a821496568abbba0794f63
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968524"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426741"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Обнаружение пустого неструктурированного файла в задаче «Скрипт»
   Источник данных «Неструктурированный файл» не проверяет до начала обработки, содержит ли неструктурированный файл строки данных. Можно повысить эффективность пакета, особенно работающего с многочисленными неструктурированными файлами, если пропускать файлы, не содержащие строки данных. Задача «Скрипт» может проверять, не является ли неструктурированный файл пустым, до начала обработки пакетом потока данных.  
@@ -140,7 +140,7 @@ public void Main()
   
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Примеры задачи «Скрипт»](../extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

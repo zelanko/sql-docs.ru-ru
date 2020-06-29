@@ -13,14 +13,14 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - input columns [Integration Services]
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f4151c889e83555e81352f606bd1876961a933fe
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c20fbb5ade8d9ba37e463426cb49b2591b9da785
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968584"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426981"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Создание назначения с помощью компонента скрипта
   Компонент назначения в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используется для сохранения данных, полученных из вышестоящих источников и преобразований, в источник данных. Обычно компонент назначения подключается к источнику данных через существующий диспетчер соединений.
@@ -350,7 +350,7 @@ public class ScriptMain:
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Создание источника с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md) [Разработка пользовательского компонента назначения](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)
 
 

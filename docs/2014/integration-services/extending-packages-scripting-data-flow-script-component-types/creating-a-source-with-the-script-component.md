@@ -13,14 +13,14 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - sources [Integration Services], components
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ce3cd275cea40ad3485066157b3fe02ceedd98ad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968591"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426961"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Создание источника с помощью компонента скрипта
   Компонент источника в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно использовать для загрузки данных из источника данных для передачи в нижележащие преобразования и назначения. Обычно подключение к источнику данных осуществляется через существующий диспетчер соединений.
@@ -387,7 +387,7 @@ ms.locfileid: "84968591"
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Создание назначения с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md) [Разработка пользовательского компонента источника](../extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)
 
 

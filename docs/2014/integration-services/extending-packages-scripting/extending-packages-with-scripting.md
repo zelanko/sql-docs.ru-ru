@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SSIS, scripting
 - scripts [Integration Services], about scripting
 ms.assetid: 67fe18ef-f3aa-41d4-9b9d-5defd4618c4b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad036177e6265c31697a98c9e24fc4d1c11b310b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a640847dbc6846b4045ea7f2f6ac1afe9294c160
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967254"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426021"
 ---
 # <a name="extending-packages-with-scripting"></a>Расширение пакетов с помощью сценариев
   Если встроенные компоненты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не соответствуют требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Существует два варианта расширения пакетов: можно написать код с использованием возможностей многофункциональных оболочек, предоставляемых задачей «Скрипт» и компонентом скрипта или самостоятельно создать пользовательские расширения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], используя классы, производные от базовых классов, предоставляемых объектной моделью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].
@@ -38,7 +38,7 @@ ms.locfileid: "84967254"
 
  [Расширение потока данных с помощью компонента скрипта](data-flow-script-component/extending-the-data-flow-with-the-script-component.md) Описывает, как создавать пользовательские источники потока данных, преобразования и назначения с помощью компонента скрипта. Компонент потока данных обычно вызывается один раз для каждой обрабатываемой строки данных.
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Справочник
  [Справочник по ошибкам и сообщениям Integration Services](../integration-services-error-and-message-reference.md) Список стандартных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] кодов ошибок со своими символическими именами и описаниями.
 
 ## <a name="related-sections"></a>Связанные разделы
@@ -48,7 +48,7 @@ ms.locfileid: "84967254"
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы [!INCLUDE[msCoName](../../includes/msconame-md.md)], а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [SQL Server Integration Services](../sql-server-integration-services.md)
 
 

@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 950754193be1aaad13423b371af0175a0370f473
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967251"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426101"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Основные сведения о модели объектов компонента скрипта
   Как описано в разделе [написание кода и отладка компонента скрипта] (.. /екстендинг-паккажес-скриптинг/Дата-Флов-скрипт-компонент/кодинг-Анд-дебуггинг-СЕ-скрипт-компонент.МД, проект компонента скрипта содержит три элемента проекта:
@@ -202,7 +202,7 @@ public override void ReleaseConnections()
 
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Настройка компонента скрипта в редакторе компонента скрипта](configuring-the-script-component-in-the-script-component-editor.md) [написание кода и отладка компонента скрипта] (.. /екстендинг-паккажес-скриптинг/дата-флов-скрипт-компонент/кодинг-анд-дебуггинг-се-скрипт-компонент.мд
 
 

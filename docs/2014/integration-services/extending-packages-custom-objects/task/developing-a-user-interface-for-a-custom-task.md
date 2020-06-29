@@ -18,14 +18,14 @@ helpviewer_keywords:
 - user interface [Integration Services]
 - SSIS custom tasks, user interface
 ms.assetid: 1e940cd1-c5f8-4527-b678-e89ba5dc398a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4e4246898e5b054af8cbbdc86aff41cb7ea087e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a460e70865f9018361f307ab42049b72c3a4602
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968644"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427221"
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Разработка пользовательского интерфейса для пользовательской задачи
   Объектная модель служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляет разработчикам пользовательских задач удобный способ создания собственного пользовательского интерфейса для задачи, который можно затем интегрировать и вывести в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Пользовательский интерфейс может предоставлять пользователю полезную информацию в конструкторе служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] и помогать пользователям правильно конфигурировать свойства и настройки пользовательской задачи.  
@@ -198,7 +198,7 @@ End Class
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание пользовательской задачи](creating-a-custom-task.md)   
  [Написание кода пользовательской задачи](coding-a-custom-task.md)   
  [Разработка пользовательского интерфейса для пользовательской задачи](developing-a-user-interface-for-a-custom-task.md)  

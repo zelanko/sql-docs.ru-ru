@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78c5cf8c893f25e01b50c8fd7121569aad781fcd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968573"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426951"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Создание синхронного преобразования с помощью компонента скрипта
   Компонент преобразования используется в потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для изменения и анализа данных, передаваемых из источника в назначение. Преобразование с синхронными выходами обрабатывает каждую входную строку, проходящую через компонент. Преобразование с асинхронными выходами ожидает, пока не получит все входные строки, чтобы завершить обработку. В этом разделе рассматривается синхронное преобразование. Сведения об асинхронных преобразованиях см. в разделе [Создание асинхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Дополнительные сведения о различиях между синхронными и асинхронными компонентами см. в разделе [Основные сведения о синхронных и асинхронных преобразованиях](../understanding-synchronous-and-asynchronous-transformations.md).
@@ -259,7 +259,7 @@ public override void MyAddressInput_ProcessInputRow(MyAddressInputBuffer Row)
 
 |![](./media/creating-a-synchronous-transformation-with-the-script-component/dts-16.gif)  **Следите за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/msconame-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Основные сведения о синхронных и асинхронных преобразованиях](../understanding-synchronous-and-asynchronous-transformations.md) [Создание асинхронного преобразования с помощью компонента скрипта](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md) [Разработка пользовательского компонента преобразования с синхронными выходами](../extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md)
 
 

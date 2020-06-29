@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom foreach enumerators [Integration Services], coding
 ms.assetid: 279cf6de-d06f-40e7-b8ca-569310449f36
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d760636fbb80da36f7efe7c3dc6d04b1fe92cf92
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1edd30c7891b830063b4dc344a353c968342a51
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968789"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427521"
 ---
 # <a name="coding-a-custom-foreach-enumerator"></a>Написание кода пользовательского перечислителя по каждому элементу
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumerator>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsForEachEnumeratorAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
@@ -108,7 +108,7 @@ End Function
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание пользовательского перечислителя Foreach](creating-a-custom-foreach-enumerator.md)   
  [Разработка пользовательского интерфейса для пользовательского перечислителя по каждому элементу](developing-a-user-interface-for-a-custom-foreach-enumerator.md)  
   

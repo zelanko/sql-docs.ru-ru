@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Script task [Integration Services], comparing to Script component
 - Script component [Integration Services], comparing to Script task
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e5061308e416396c268e2fdcbea3e35572496719
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 134cce74fc88cc9a7358c8aa4ba8de3fb7e58c5e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968432"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426411"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Сравнение задачи «Скрипт» и компонента скрипта
   Задача "Скрипт", доступная в окне "Поток управления" конструктора служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], и компонент скрипта, доступный в окне "Поток данных", предназначены в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для разных целей. Задача представляет собой универсальное средство потока управления, а компонент служит источником, преобразованием или назначением в потоке данных. Несмотря на то что они предназначены для разных целей, между задачей «Скрипт» и компонентом скрипта имеются некоторые подобия в используемых средствах разработки кода и объектах в пакете, которые доступны разработчику с их помощью. Понимание их подобия и различия может помочь использовать задачи и компоненты более эффективно.  
