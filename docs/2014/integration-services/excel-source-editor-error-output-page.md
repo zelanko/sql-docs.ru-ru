@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f1f5983048c1301e210c2ac64e0a092898f31e0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 74e252782a40039e4d5709fabc4ae6ecd7a37932
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966814"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429271"
 ---
 # <a name="excel-source-editor-error-output-page"></a>Редактор источника Excel (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника «Excel»** используется для выбора параметров обработки ошибок, а также для установки свойств выходных столбцов ошибок.  
   
  Дополнительные сведения об источнике Excel см. в разделе [Excel Source](data-flow/excel-source.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Входные или выходные данные**  
  Просмотр имени источника данных.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84966814"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "Excel" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Редактор источника "Excel" &#40;столбцы "&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba4e73ea495456e8f9e452108ab09106a65543ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969334"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428721"
 ---
 # <a name="expressions-page"></a>Страница «Выражения»
   На странице **Выражения** можно изменить выражения свойств и открыть диалоговые окна **Редактор выражений свойств** и **Построитель выражений для свойств** .  
@@ -34,7 +34,7 @@ ms.locfileid: "84969334"
  **\<property name>**  
  Нажмите кнопку с многоточием, чтобы открыть диалоговое окно **Построитель выражений** . Дополнительные сведения см. в статье [Expression Builder](expression-builder.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Integration Services &#40;переменные&#41; SSIS](../integration-services-ssis-variables.md)   
  [Системные переменные](../system-variables.md)   
  [Выражения служб Integration Services (SSIS)](integration-services-ssis-expressions.md)  

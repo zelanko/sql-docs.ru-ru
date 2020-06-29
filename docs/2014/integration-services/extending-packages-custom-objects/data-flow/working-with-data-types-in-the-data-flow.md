@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc30f175ce11051fc4ab578180da0a1df75e5fd9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b36c9faa501301ae73c32807e1d3b5172fc661ad
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968804"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427811"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Работа с типами данных в потоке данных
   При разработке пользовательского компонента потока данных в службах Integration Services постоянно идет работа с типами данных: копирование данных в буферы потока и из буферов потока, а также преобразование значений. Сведения, представленные в этом разделе, помогут выбрать нужные типы данных служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] и использовать правильные методы работы с ними.
@@ -156,7 +156,7 @@ ms.locfileid: "84968804"
 
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> 
  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ConvertBufferDataTypeToFitManaged%2A> 
  [Типы данных служб Integration Services](../../data-flow/integration-services-data-types.md)

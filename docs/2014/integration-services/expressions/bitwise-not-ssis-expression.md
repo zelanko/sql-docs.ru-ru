@@ -10,14 +10,14 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d7434dd2b5d6ecaa1f72474e7fc3d450de18b8d2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd0226e3f96e2a2d77b80fc36e5ee41b949094da
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967474"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429111"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (битовое НЕ) (выражение служб SSIS)
   Выполняет битовую инверсию целого числа. Этот оператор может быть применен к целочисленному типу данных со знаком или без знака.  

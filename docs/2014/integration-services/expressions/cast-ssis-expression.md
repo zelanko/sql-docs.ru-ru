@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d878306f095725c459a8d45ae8482d5f73e5f30
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967484"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429081"
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
   Явно приводит выражение одного типа данных к другому типу. Оператор приведения может также выполнять функцию оператора усечения.
@@ -41,7 +41,7 @@ ms.locfileid: "84967484"
 ## <a name="result-types"></a>Типы результата
  Тип данных *type_spec*. Дополнительные сведения см. в разделе [типы данных Integration Services](../data-flow/integration-services-data-types.md).
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
  На следующей диаграмме перечислены допустимые операторы приведения.
 
  ![Допустимые и недопустимые приведения между типами данных](../media/data-conversion.gif "Допустимые и недопустимые приведения между типами данных")
@@ -139,7 +139,7 @@ ms.locfileid: "84967484"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  Операторы [очередности и ассоциативности](operator-precedence-and-associativity.md) операторов [&#40;выражение служб ssis&#41;](operators-ssis-expression.md) [Integration Services &#40;SSIS&#41; выражения](integration-services-ssis-expressions.md) [Integration Services типы данных в выражениях](integration-services-data-types-in-expressions.md)
 
 

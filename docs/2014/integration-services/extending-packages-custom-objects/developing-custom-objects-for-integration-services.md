@@ -10,14 +10,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e2c4d65e421915fa67f1e3700fdfa91998c0c36e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6afb7c8bcb0b6873ff0040eccdcf86dd90997851
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966474"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427641"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Разработка пользовательских объектов для служб Integration Services
   Если объекты потока управления и потока данных, поставляемые со службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], не отвечают потребностям пользователя, можно разработать множество типов собственных пользовательских объектов, в том числе следующие.
@@ -111,7 +111,7 @@ ms.locfileid: "84966474"
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Сохранение пользовательских объектов](persisting-custom-objects.md) [Сборка, развертывание и отладка пользовательских объектов](building-deploying-and-debugging-custom-objects.md)
 
 

@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e3af4d446e33dcfa251020778c047bcfac71a05
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966624"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427941"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Построение, развертывание и отладка пользовательских объектов
   После написания кода пользовательского объекта для служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо построить сборку, развернуть ее, интегрировать ее в конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], чтобы сделать ее доступной для использования в пакетах, а затем протестировать и выполнить ее отладку.
@@ -81,7 +81,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 |Пользовательский объект|Папка развертывания|
 |-------------------|-----------------------|
-|Задача|Задания|
+|Задача|Задачи|
 |Диспетчер соединений|Соединения|
 |Регистратор|LogProviders|
 |Компонент потока данных|PipelineComponents|
@@ -152,7 +152,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 ![Значок Integration Services (маленький)](../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Разработка пользовательских объектов для Integration Services](developing-custom-objects-for-integration-services.md) [Сохранение пользовательских объектов](persisting-custom-objects.md) [средства устранения неполадок для разработки пакетов](../troubleshooting/troubleshooting-tools-for-package-development.md)
 
 

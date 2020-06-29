@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 16377c286a870c311486f5c128b5eddc058f07f7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da648b3b09b25fa2a7b1cf886ad1bf770296f5ef
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967004"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429581"
 ---
 # <a name="development-of-an-integration-services-project"></a>Разработка проекта служб Integration Services
   Добавление пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] осуществляется в проекты. Для создания проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и работы с ними необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в статье [Установка служб Integration Services](install-windows/install-integration-services.md).  

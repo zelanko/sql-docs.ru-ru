@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3983e75bdde3379fac48a74a595959af2568a3ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0d866559ebb185321b0e30b4f4df1454da4c0a03
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951654"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429561"
 ---
 # <a name="derived-column-transformation-editor"></a>редактор преобразования «Производный столбец»
   Используйте диалоговое окно **Редактор преобразования «Производный столбец»** для создания выражений, которые заполняют новые или замещающие столбцы.  
   
  Дополнительные сведения о преобразовании «Производный столбец» см. в разделе [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Переменные и столбцы**  
  Создайте выражение, которое использует переменную или входной столбец, путем перетаскивания переменной или столбца из списка в существующую строку таблицы на панели внизу или в новую строку внизу списка.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "84951654"
  **Настройка вывода ошибок**  
  Укажите способ обработки ошибок в диалоговом окне [Настройка вывода ошибок](../../2014/integration-services/configure-error-output.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Получение значений столбцов с помощью преобразования «Производный столбец»](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   

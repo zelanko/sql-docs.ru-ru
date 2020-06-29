@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process Task Editor
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 51b06136ce1380f04f64bc079f5db41f3d851c8a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966794"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429181"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Редактор задачи «Выполнение процесса» (страница «Процесс»)
   Страница **Процесс** диалогового окна **Редактор задачи «Выполнение процесса»** позволяет настраивать параметры выполнения процесса. Эти параметры включают исполняемый объект, его расположение, аргументы командной строки и переменные для входных и выходных данных.  
   
  Дополнительные сведения об этой задаче см. в разделе [Execute Process Task](control-flow/execute-process-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Требуется полное имя файла**  
  Указывает, закончится ли задача ошибкой, если исполняемый объект не найден в указанном месте.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "84966794"
  **WindowStyle**  
  Указывает стиль окна, в котором выполняется процесс.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  
   

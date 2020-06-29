@@ -9,14 +9,14 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7354c9152d075c2ebc3611a342bbf8d7594cde79
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e9a81dc40d0578d6e133d608e3d8022c6fd09ae
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966534"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427801"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Создание пользовательского диспетчера соединений
   Создание пользовательского диспетчера соединений осуществляется за несколько шагов, аналогично созданию любого другого пользовательского объекта служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -74,7 +74,7 @@ ConnectionManagerBase
   
 ![Значок Integration Services (маленький)](../../media/dts-16.gif "Значок служб Integration Services (маленький)")  **следит за обновлениями Integration Services**<br /> Чтобы загрузить новейшую документацию, статьи, образцы и видеоматериалы корпорации Майкрософт, а также лучшие решения участников сообщества, посетите страницу служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] на сайте MSDN:<br /><br /> [Посетить страницу «Службы Integration Services» на сайте MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Чтобы получать автоматические уведомления об этих обновлениях, подпишитесь на RSS-каналы, предлагаемые на этой странице.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Написание кода пользовательского диспетчера соединений](coding-a-custom-connection-manager.md)   
  [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](developing-a-user-interface-for-a-custom-connection-manager.md)  
   
