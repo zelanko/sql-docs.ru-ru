@@ -9,21 +9,21 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4653b963bd5e8f997832f153a09d87aaeef9c39c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53661c456ca8cf72508e32a534dfaa8d711ea146
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965004"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424251"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Редактор источника «ODBC» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор источника ODBC** используется для выбора параметров обработки ошибок.  
   
  Дополнительные сведения об источнике ODBC см. в разделе [CDC Source](data-flow/cdc-source.md).  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
  **Открытие страницы «Вывод ошибок» редактора источника ODBC**  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник ODBC.  
@@ -32,7 +32,7 @@ ms.locfileid: "84965004"
   
 -   В окне **Редактор источника ODBC**нажмите кнопку **Вывод ошибок**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
   
 ### <a name="inputoutput"></a>Ввод-вывод  
  Просмотр имени источника данных.  
@@ -40,13 +40,13 @@ ms.locfileid: "84965004"
 ### <a name="column"></a>Столбец  
  Не используется.  
   
-### <a name="error"></a>Error  
+### <a name="error"></a>Ошибка  
  Выберите порядок обработки ошибок в потоке источником ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
 ### <a name="truncation"></a>Усечение  
  Выберите порядок обработки усечений в потоке источником ODBC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  Не используется.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Присвоить указанное значение выбранным ячейкам  
@@ -67,7 +67,7 @@ ms.locfileid: "84965004"
 ### <a name="redirect-flow"></a>Перенаправление потока  
  Строка, вызывающая ошибку или усечение, направляется на вывод ошибок источника ODBC. Дополнительные сведения см. в статье [ODBC Source](data-flow/odbc-source.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника ODBC &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Редактор источника ODBC (страница "Столбцы")](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   

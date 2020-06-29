@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c86dfee37e9b206643069a2d442b27575324ed17
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 981a4c81330c8cc4cb667ad0dca730dd3ca7ec7a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964984"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424211"
 ---
 # <a name="ole-db-source-editor-connection-manager-page"></a>Редактор источника OLE DB (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника OLE DB** для выбора диспетчера соединений OLE DB для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -51,7 +51,7 @@ ms.locfileid: "84964984"
  **Режим доступа к данным**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Таблица или представление|Получение данных из таблицы или представления в источнике данных OLE DB.|  
 |Переменная, содержащая имя таблицы или представления|Задайте переменную, содержащую имя таблицы или представления.<br /><br /> **См. также:** [Использование переменных в пакетах](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -94,7 +94,7 @@ ms.locfileid: "84964984"
  **Имя переменной**  
  Выберите переменную, содержащую текст SQL-запроса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Страница "&#40;столбцов" редактора источника OLE DB&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Редактор источника OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30bac381b301de4d94f8b587f324b41985dd221f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966314"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425311"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Редактор преобразования «Нечеткое группирование» (вкладка «Дополнительно»)
   На вкладке **Дополнительно** диалогового окна **Редактор преобразования «Нечеткое группирование»** можно определить входные и выходные столбцы, пороги подобия и разделители токенов.  
@@ -28,7 +28,7 @@ ms.locfileid: "84966314"
   
  Дополнительные сведения о преобразовании «Нечеткое группирование» см. в разделе [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Имя входного ключевого столбца**  
  Укажите имя выходного столбца, содержащего уникальный идентификатор для каждой входной строки. Столбец `_key_in` содержит значение, уникально идентифицирующее каждую строку.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "84966314"
  **Разделители токенов**  
  В преобразовании имеется набор разделителей по умолчанию для разделения данных на лексемы. При необходимости можно добавить или удалить разделители в списке.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Определение подобных строк данных с помощью преобразования «Нечеткое группирование»](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

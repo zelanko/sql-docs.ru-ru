@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 381493758306e3f7c638f46f7c331f0e6cc3e83f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966341"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425321"
 ---
 # <a name="ftp-task-editor-general-page"></a>Редактор задачи «FTP» (страница «Общие»)
   Используйте страницу **Общие** диалогового окна **Редактор задачи «FTP»** для задания диспетчера FTP-соединений, выполняющего соединение с FTP-сервером, с которым задача обменивается данными. Также здесь можно указать имя и описание задачи «FTP».  
   
  Дополнительные сведения об этой задаче см. в разделе [Задача FTP](control-flow/ftp-task.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **FtpConnection**  
  Выберите существующий диспетчер FTP-соединений или щелкните \<**New connection...**> для создания диспетчера соединений.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84966341"
  **Описание**  
  Введите описание задачи «FTP».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор задачи "FTP" &#40;страницу "перенос файлов"&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Страница «Выражения»](expressions/expressions-page.md)  

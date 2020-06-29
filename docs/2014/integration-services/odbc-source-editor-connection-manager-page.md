@@ -9,28 +9,28 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a9c4049681e671993f48594eb7ac18bad403e3e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0935ba4cd76a458bd26438556bab56e6cfa091c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965014"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424261"
 ---
 # <a name="odbc-source-editor-connection-manager-page"></a>Редактор источника «ODBC» (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор источника ODBC** , чтобы выбрать диспетчер соединений ODBC для источника. На этой странице также можно выбрать таблицу или представление базы данных.  
   
  Дополнительные сведения об источнике ODBC см. в разделе [ODBC Source](data-flow/odbc-source.md).  
   
-## <a name="task-list"></a>Список задач  
+## <a name="task-list"></a>список задач  
  **Открытие страницы диспетчера соединений в редакторе источника ODBC**  
   
 -   В среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]откройте пакет служб [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] , содержащий источник ODBC.  
   
 -   На вкладке **Поток данных** дважды щелкните источник ODBC.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
   
 ### <a name="connection-manager"></a>Диспетчер соединений  
  Выберите из списка существующий диспетчер соединений ODBC или нажмите кнопку **создать** , чтобы создать новое соединение. Соединение может устанавливаться с любой базой данных, поддерживающей ODBC.  
@@ -41,7 +41,7 @@ ms.locfileid: "84965014"
 ### <a name="data-access-mode"></a>Режим доступа к данным  
  Выберите метод выбора данных из источника. Доступные параметры показаны в следующей таблице.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Имя таблицы|Получение данных из таблицы или представления в источнике данных ODBC. Если выбран этот параметр, выберите значение из следующего списка.|  
 ||**Имя таблицы или представления**. Выберите доступную таблицу или представление из списка или введите регулярное выражение, определяющее таблицу.|  
@@ -51,10 +51,10 @@ ms.locfileid: "84965014"
 ||Нажмите кнопку **Обзор** , чтобы загрузить SQL-запрос из текстового файла.|  
 ||Чтобы проверить синтаксис текста запроса, нажмите кнопку **Анализ запроса** .|  
   
-### <a name="preview"></a>Preview (Предварительный просмотр)  
+### <a name="preview"></a>Предварительный просмотр  
  Нажмите кнопку **Просмотр** , чтобы просмотреть первые 200 строк данных, извлеченных из выбранной таблицы или представления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательские свойства источника «ODBC»](data-flow/odbc-source-custom-properties.md)   
  [Редактор источника «ODBC» &#40;столбцы&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)   
  [Редактор источника ODBC (страница "Вывод ошибок")](../../2014/integration-services/odbc-source-editor-error-output-page.md)  

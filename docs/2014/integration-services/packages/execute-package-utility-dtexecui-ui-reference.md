@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eae2f119e2d1fb8c52c00fc7dbe96af1d593193d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964844"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423851"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Программа выполнения пакетов справочника по пользовательскому интерфейсу (DtExecUI)
   **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или ввести `dtexecui` в командной строке, является альтернативой запуску пакетов с помощью программы командной строки **dtexec** .  

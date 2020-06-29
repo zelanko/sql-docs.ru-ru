@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2039968976df2e22a16c47abbcc3f51ba25bbeb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968314"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424811"
 ---
 # <a name="integration-services-deployment-wizard"></a>Мастер развертывания служб Integration Services
   Мастер развертывания служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] разворачивает проекты в каталоге SSISDB на экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью модели развертывания проектов.  
@@ -49,9 +49,9 @@ ms.locfileid: "84968314"
 ## <a name="deployresults"></a>Развертывание/результаты  
  При нажатии кнопки **развернуть** на странице **Просмотр** проект развертывается, а на странице **результаты** отображается успех или неудача каждого действия. Если действие не выполнено, нажмите кнопку **Ошибка** в столбце **Результат** для отображения описания ошибки. Нажмите кнопку **сохранить отчет...** , чтобы сохранить результаты в XML-файл.  
   
- Чтобы выйти из мастера, нажмите кнопку **Закрыть**.  
+ Нажмите кнопку **Закрыть**, чтобы выйти из мастера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Развертывание проектов на сервере Integration Services](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   
  [Развертывание проектов и пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)  
   

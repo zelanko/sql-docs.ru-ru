@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 20d50565b9687f18af95e820be90d16ab643de28
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5aebb659db6eabd79c6e707b8b47abf21909a88
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966364"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425341"
 ---
 # <a name="ftp-connection-manager-editor"></a>редактор диспетчера FTP-сеансов
   Диалоговое окно **Редактор диспетчера FTP-соединений** используется для задания свойств подключения к серверу FTP.  
@@ -28,7 +28,7 @@ ms.locfileid: "84966364"
   
  Дополнительные сведения о диспетчере FTP-сеансов см. в разделе [FTP Connection Manager](connection-manager/ftp-connection-manager.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Имя сервера**  
  Позволяет задать имя сервера FTP.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "84966364"
  **Проверить подключение**  
  После настройки диспетчера FTP-соединений следует проверить доступность подключения, нажав кнопку **Проверить соединение**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

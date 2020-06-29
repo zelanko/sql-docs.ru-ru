@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e06b670e80d1f63d35d4d37b264c8dd9c9d9ad4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965084"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424431"
 ---
 # <a name="odata-source-editor-connection-page"></a>Редактор источника OData (страница «Подключение»)
   Страница **Диспетчер соединений** диалогового окна **Редактор источника OData** служит для выбора диспетчера соединений OData для источника. На этой странице также можно задать путь к коллекции или ресурсу, а также параметры запроса, чтобы указать, какие данные нужно получить из источника OData. Дополнительные сведения об источнике OData см. в разделе [OData Source](data-flow/odata-source.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "84965084"
  **Использование пути к коллекции или ресурсу**  
  Укажите метод выбора данных из источника.  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Коллекция|Извлечение данных из источника OData с помощью имени коллекции.|  
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  
@@ -55,7 +55,7 @@ ms.locfileid: "84965084"
  **Путь к ресурсу**  
  Введите путь к ресурсу. Например: Employees  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Редактор источника OData — страница &#40;столбцы&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Редактор источника OData &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
  [Диспетчер соединений OData](connection-manager/odata-connection-manager.md)  

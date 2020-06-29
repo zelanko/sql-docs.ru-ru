@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.previewdata.f1
 ms.assetid: 423ac26a-ba02-4fdf-88b4-07995fe4a97e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 49566ab97aa832c7e61d4056749fcfa90af1b167
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17debc001d8ba7826fe845c006e944e5a3dc87a0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965574"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424831"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Диалоговое окно «Просмотр данных» (мастер импорта и экспорта SQL Server)
   Используйте диалоговое окно **Просмотр данных** , чтобы просмотреть запрос, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Мастер импорта и экспорта будет отправлять в источник данных. Это диалоговое окно можно также использовать для просмотра до 200 строк образца данных.  
@@ -29,7 +29,7 @@ ms.locfileid: "84965574"
   
 -   На странице **Выбор исходных таблиц и представлений** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастера импорта и экспорта нажмите кнопку **Предварительный просмотр**.  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Source**  
  Отображает запрос, посылаемый мастером источнику данных.  
   

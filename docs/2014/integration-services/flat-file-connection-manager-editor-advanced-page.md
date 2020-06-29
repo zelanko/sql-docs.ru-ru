@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967124"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425691"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Редактор диспетчера соединений с неструктурированными файлами (страница «Дополнительно»)
   Страница **Дополнительно** диалогового окна **Редактор диспетчера соединения с неструктурированными файлами** используется для установки свойств, указывающих, как службы Integration Services считывают и записывают данные в неструктурированные файлы. Можно изменить имена столбцов неструктурированного файла и установить свойства, включающие тип данных и разделители для каждого столбца файла.  
@@ -27,7 +27,7 @@ ms.locfileid: "84967124"
   
  Дополнительные сведения о диспетчере соединений с неструктурированными файлами см. в разделе [Flat File Connection Manager](connection-manager/file-connection-manager.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Имя диспетчера соединений**  
  Введите уникальное имя для диспетчера соединений с неструктурированными файлами в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "84967124"
  **Новые**  
  Добавьте новый столбец, нажав кнопку **Создать**. По умолчанию, кнопка **Создать** добавляет новый столбец в конец списка. Эта кнопка также имеет следующие параметры, доступные в раскрывающемся списке.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Добавление столбца.**|Добавить новый столбец в конец списка.|  
 |**Вставить до**|Вставить новый столбец перед выделенным столбцом.|  
@@ -64,7 +64,7 @@ ms.locfileid: "84967124"
  **Предложить типы...**  
  Используйте диалоговое окно **Предлагаемые типы столбцов** , чтобы оценить образец данных в файле и получить предложения для типа данных и длины каждого столбца. Дополнительные сведения см. в разделе [Диалоговое окно "Предложение типов столбцов" справочника по пользовательскому интерфейсу](connection-manager/suggest-column-types-dialog-box-ui-reference.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор диспетчера соединений с неструктурированными файлами &#40;страница "Общие"&#41;](general-page-of-integration-services-designers-options.md)   
  [Редактор диспетчера соединений с неструктурированными файлами &#40;столбцы&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   

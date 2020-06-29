@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: ae2200c6-8ba0-49b7-b01a-53425b84d2ed
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b19c61cf736ad888cdcb2ecb1f36060eebf30812
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21ec7d4d38996ecf4cb5522fcfdf29fb6e80db89
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964994"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424171"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Редактор назначения OLE DB (страница «Диспетчер соединений»)
   Страница **Диспетчер соединений** диалогового окна **Редактор назначения «OLE DB»** используется для выбора подключения OLE DB для назначения. На этой странице также можно выбрать таблицу или представление базы данных.  
@@ -38,7 +38,7 @@ ms.locfileid: "84964994"
  **Режим доступа к данным**  
  Укажите метод загрузки данных в назначение. Загрузка данных с двухбайтовой кодировкой (DBCS) требует одного из режимов быстрой загрузки. Дополнительные сведения о режимах доступа для быстрой загрузки данных, оптимизированных для массовой вставки, см. в разделе [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |Таблица или представление|Загрузка данных в таблицу или представление назначения «OLE DB».|  
 |Быстрая загрузка таблицы или представления|Загрузка данных в таблицу или представление назначения «OLE DB» и использование параметра быстрой загрузки. Дополнительные сведения о режимах доступа для быстрой загрузки данных, оптимизированных для массовой вставки, см. в разделе [OLE DB Destination](data-flow/ole-db-destination.md).|  
@@ -155,7 +155,7 @@ ms.locfileid: "84964994"
  **Анализ запроса**  
  Проверить синтаксис текста запроса.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения "OLE DB &#40;страница" сопоставления "&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Редактор назначения OLE DB &#40;странице вывода ошибок&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   

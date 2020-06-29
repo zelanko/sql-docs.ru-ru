@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53ddc509c4f44677a2504b791502d530c2104bf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45820aa673f31ae9cea7d1f2f4e8b61d63b8670c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964878"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423951"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
   `dtexec`Программа командной строки используется для настройки и выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов. Служебная программа `dtexec` обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. `dtexec`Программа позволяет загружать пакеты из следующих источников: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера, файла проекта ISPAC, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, [!INCLUDE[ssIS](../../includes/ssis-md.md)] хранилища пакетов и файловой системы.  
@@ -102,7 +102,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  При выполнении пакета `dtexec` может вернуть код завершения. Код завершения используется для заполнения переменной ERRORLEVEL, значение которой впоследствии можно будет проверить в условных инструкциях или логике ветвления в пакетном файле. В следующей таблице перечисляются значения, которые программа `dtexec` может вернуть при завершении.  
   
-|Применение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |0|Пакет успешно выполнен.|  
 |1|Ошибка выполнения пакета.|  

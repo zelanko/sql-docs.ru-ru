@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 33a152e645706507b00a6ae261fdaec8d9450f12
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86da6b855756fa6aca7d8423623638615eb7a981
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964974"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424131"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Редактор назначения «OLE DB» (страница «Вывод ошибок»)
   Страница **Вывод ошибок** диалогового окна **Редактор назначения «OLE DB»** используется для задания параметров обработки ошибок.  
   
  Дополнительные сведения о назначении «OLE DB» см. в разделе [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Ввод-вывод**  
  Просмотрите имя входных данных.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84964974"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор назначения OLE DB &#40;странице Диспетчер соединений&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
  [Редактор назначения "OLE DB &#40;страница" сопоставления "&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   

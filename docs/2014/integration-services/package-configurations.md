@@ -18,14 +18,14 @@ helpviewer_keywords:
 - direct configurations [Integration Services]
 - packages [Integration Services], configurations
 ms.assetid: d20e0311-1fc9-4ddc-a381-6d127cf11b69
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84acc1541e8c66da15405330ca48b41f256811ab
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 84ad905a0b9e19c27e8b24bf9d4b2d0329a7db2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964884"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423921"
 ---
 # <a name="package-configurations"></a>Конфигурации пакетов
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]предоставляет конфигурации пакетов, которые можно использовать для обновления значений свойств во время выполнения.  
@@ -83,7 +83,7 @@ ms.locfileid: "84964884"
 ## <a name="package-configuration-types"></a>Типы конфигураций пакета  
  Следующая таблица описывает типы конфигураций пакета.  
   
-|Тип|Описание|  
+|Type|Описание:|  
 |----------|-----------------|  
 |XML-файл конфигурации|XML-файл содержит конфигурации. XML-файл может включать несколько конфигураций.|  
 |Переменная среды|Переменная среды содержит конфигурацию.|  

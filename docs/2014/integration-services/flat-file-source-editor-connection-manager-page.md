@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43a0251b63d7a0519a2a19b6bec4c5117f0dcef0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966431"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425491"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Редактор источника «Неструктурированный файл» (страница «Диспетчер соединений»)
   Для выбора диспетчера соединений, который будет использоваться источником «Неструктурированный файл», используется страница **Диспетчер соединений** диалогового окна **Редактор источника «Неструктурированный файл»** . Источник «Неструктурированный файл» считывает данные из текстового файла, который может содержать разделители, поля фиксированной ширины или иметь смешанный формат.  
@@ -31,7 +31,7 @@ ms.locfileid: "84966431"
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](data-flow/flat-file-source.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Диспетчер соединений с неструктурированными файлами**  
  Выберите существующий диспетчер соединений из списка или создайте новый диспетчер соединений, нажав кнопку **Создать**.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "84966431"
  **Предварительный просмотр**  
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне «Предварительный просмотр» может отображаться до 200 строк.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника «Неструктурированный файл» &#40;столбцов&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
  [Редактор источника "Неструктурированный файл" &#40;страница "вывод ошибок"&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
- [Диспетчер соединений с неструктурированными файлами](connection-manager/file-connection-manager.md)  
+ [Диспетчер подключений неструктурированных файлов](connection-manager/file-connection-manager.md)  
   
   

@@ -11,21 +11,21 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6df7faa3dbb88ba8df836b59c47cad6a391e0d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38bc7adf218327c8718295a4300ff6a5c4b53f0c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966414"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425481"
 ---
 # <a name="flat-file-source-editor-error-output-page"></a>Редактор источника «Неструктурированный файл» (страница «Вывод ошибок»)
   На странице **Вывод ошибок** диалогового окна **Редактор источника "Неструктурированный файл"** можно задать параметры обработки ошибок и определить свойства столбцов для вывода ошибок.  
   
  Дополнительные сведения об источнике «Неструктурированный файл» см. в разделе [Flat File Source](data-flow/flat-file-source.md).  
   
-## <a name="options"></a>Варианты  
+## <a name="options"></a>Параметры  
  **Ввод-вывод**  
  Просмотр имени источника данных.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "84966414"
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по ошибкам и сообщениям Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Редактор источника "Неструктурированный файл" &#40;страница "Диспетчер соединений"&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
  [Редактор источника «Неструктурированный файл» &#40;столбцов&#41;](../../2014/integration-services/flat-file-source-editor-columns-page.md)   
- [Диспетчер соединений с неструктурированными файлами](connection-manager/file-connection-manager.md)  
+ [Диспетчер подключений неструктурированных файлов](connection-manager/file-connection-manager.md)  
   
   
