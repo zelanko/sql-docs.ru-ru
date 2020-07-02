@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626985"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о подписке на публикацию слиянием (как принудительной, так и по запросу). Эта хранимая процедура выполняется на издателе в базе данных публикации или на переиздаваемом подписчике для базы данных подписки.  
   
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`Тип подписки. *subscription_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**Push** (по умолчанию)|Принудительная подписка|  
 |**собирает**|Подписка по запросу|  
@@ -76,7 +76,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**status**|**int**|Состояние подписки.<br /><br /> **0** = все задания ожидают запуска<br /><br /> **1** = одно или несколько заданий запускаются<br /><br /> **2** = все задания выполнены успешно<br /><br /> **3** = по крайней мере одно задание исполняется<br /><br /> **4** = все задания запланированы и бездействуют<br /><br /> **5** = по крайней мере одно задание пытается выполнить после предыдущего сбоя<br /><br /> **6** = не удалось успешно выполнить по крайней мере одно задание|  
 |**subscriber_type**|**int**|Тип подписчика.|  
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = оба|  
-|**приоритеты**|**float (8)**|Число, показывающее приоритет подписки.|  
+|**priority**|**float (8)**|Число, показывающее приоритет подписки.|  
 |**sync_type**|**tinyint**|Тип синхронизации подписки.|  
 |**nописание**|**nvarchar(255)**|Короткое описание данной подписки слиянием.|  
 |**merge_jobid**|**двоичный (16)**|Идентификатор задания агента слияния.|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergesubscription** используется в репликации слиянием для возврата сведений о подписке, хранящихся на издателе, или при повторной публикации подписчика.  
   
  Для анонимных подписок значение *subscription_type*всегда равно **1** (Pull). Однако для получения сведений о анонимных подписках необходимо выполнить [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) на подписчике.  

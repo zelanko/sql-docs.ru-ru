@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f66891393527b12f859d1a0aa6447470473a4d49
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd907c83ad7c2fc2751134003f820d43a1023129
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808661"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626222"
 ---
 # <a name="syssp_cdc_enable_table-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Активирует систему отслеживания измененных данных в указанной исходной таблице текущей базы данных. Когда таблица доступна для системы отслеживания измененных данных, запись каждой операции языка обработки данных DML, применяемая к каждой из таблиц, записывается в журнал транзакций. Процесс системы отслеживания измененных данных получает эти сведения из журнала и записывает их в таблицу изменений, к которой осуществляется доступ с помощью набора функций.  
   

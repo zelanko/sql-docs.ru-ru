@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648594"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает строку для каждого исполнителя в системе. Дополнительные сведения о рабочих ролях см. в разделе " [архитектура потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)". 
   
@@ -38,7 +38,7 @@ ms.locfileid: "82811538"
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|Адрес памяти исполнителя.|  
-|status|**int**|Только для внутреннего использования.|  
+|status|**int**|Только для внутреннего применения.|  
 |is_preemptive|**bit**|1 = исполнитель работает по расписанию с вытеснением. Любой исполнитель, запускающий внешний код, работает по расписанию с вытеснением.|  
 |is_fiber|**bit**|1 = исполнитель работает с использованием упрощенных пулов. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = работа исполнителя приостановлена при попытке получить спин-блокировку. Такое значение этого параметра может указывать на проблему конфликта в связи с объектом, к которому часто запрашивается доступ.|  
@@ -58,14 +58,14 @@ ms.locfileid: "82811538"
 |exception_severity|**int**|Серьезность последнего исключения, возникшего у этого исполнителя.|  
 |exception_address|**varbinary(8)**|Адрес кода, откуда было получено исключение|  
 |affinity|**bigint**|Сходство рабочих потоков. Соответствует сходству потока в [sys. dm_os_threads &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar(60)**|Состояние исполнителя. Может иметь одно из следующих значений:<br /><br /> INIT = исполнитель в настоящий момент инициализируется.<br /><br /> RUNNING = исполнитель в настоящий момент выполняется, в режиме без приоритетного прерывания или с приоритетным прерыванием.<br /><br /> RUNNABLE = исполнитель готов к запуску в соответствии с планировщиком.<br /><br /> SUSPENDED = исполнитель в настоящий момент приостановлен, находится в режиме ожидания сигнала от события.|  
+|state|**nvarchar(60)**|Состояние исполнителя. Может использоваться одно из следующих значений:<br /><br /> INIT = исполнитель в настоящий момент инициализируется.<br /><br /> RUNNING = исполнитель в настоящий момент выполняется, в режиме без приоритетного прерывания или с приоритетным прерыванием.<br /><br /> RUNNABLE = исполнитель готов к запуску в соответствии с планировщиком.<br /><br /> SUSPENDED = исполнитель в настоящий момент приостановлен, находится в режиме ожидания сигнала от события.|  
 |start_quantum|**bigint**|Время начала текущего выполнения этого исполнителя (в миллисекундах).|  
 |end_quantum|**bigint**|Время окончания текущего выполнения этого исполнителя (в миллисекундах).|  
 |last_wait_type|**nvarchar(60)**|Тип последнего ожидания. Список типов ожидания см. в разделе [sys. dm_os_wait_stats &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|return_code|**int**|Возвращенное значение от последнего ожидания. Может иметь одно из следующих значений:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**bigint**|Только для внутреннего использования.|  
-|max_quantum|**bigint**|Только для внутреннего использования.|  
-|boost_count|**int**|Только для внутреннего использования.|  
+|return_code|**int**|Возвращенное значение от последнего ожидания. Может использоваться одно из следующих значений:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
+|quantum_used|**bigint**|Только для внутреннего применения.|  
+|max_quantum|**bigint**|Только для внутреннего применения.|  
+|boost_count|**int**|Только для внутреннего применения.|  
 |tasks_processed_count|**int**|Количество задач, обработанных этим исполнителем.|  
 |fiber_address|**varbinary(8)**|Адрес памяти волокна, с которым связан этот исполнитель.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не настроен для использования упрощенных пулов.|  
 |task_address|**varbinary(8)**|Адрес памяти текущей задачи. Дополнительные сведения см. в разделе [sys. dm_os_tasks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
@@ -138,4 +138,4 @@ SELECT
 ## <a name="see-also"></a>См. также  
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
 [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md#DOP)       
-[Инструкции по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    
+[Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)    

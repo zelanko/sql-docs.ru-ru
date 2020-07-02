@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828356"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634226"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Отображает сведения о статье. Эта хранимая процедура выполняется на издателе в базе данных публикации. Для издателей Oracle данная хранимая процедура выполняется распространителем для любой базы данных.  
   
@@ -85,7 +85,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Флаг, показывающий включение автоматической обработки диапазонов идентификаторов для публикации при ее создании. **1** означает, что автоматический диапазон идентификаторов включен; **0** означает, что она отключена.|  
 |**publisher_identity_range**|**int**|Размер диапазона для диапазона идентификаторов на издателе, если в статье *identityrangemanagementoption* задано значение **Auto** или **auto_identity_range** задано значение **true**.|  
 |**identity_range**|**bigint**|Размер диапазона для диапазона идентификаторов на подписчике, если в статье *identityrangemanagementoption* задано значение **Auto** или **auto_identity_range** установлен в **значение true**.|  
-|**значениями**|**bigint**|Процентное значение, показывающее момент, когда агент распространителя выделяет новый диапазон идентификаторов.|  
+|**threshold**|**bigint**|Процентное значение, показывающее момент, когда агент распространителя выделяет новый диапазон идентификаторов.|  
 |**identityrangemanagementoption**|**int**|Указывает способ управления диапазоном идентификаторов для статьи.|  
 |**fire_triggers_on_snapshot**|**bit**|Используется в случае, когда реплицированные пользовательские триггеры срабатывают при применении исходного моментального снимка:<br /><br /> **1** = выполняются пользовательские триггеры.<br /><br /> **0** = пользовательские триггеры не выполняются.|  
   

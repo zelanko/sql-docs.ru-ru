@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da7068d-6388-465a-b708-a2f27ded1efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 128d62aceec5a847e721d6227372e1ff115706ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65cafaf2a4ea26b620bbcf5932031a8781cb9a14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647022"
 ---
 # <a name="change-data-capture-stored-procedures-transact-sql"></a>Хранимые процедуры системы отслеживания измененных данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Система отслеживания измененных данных предоставляет в удобном реляционном формате запись журнала операций на языке обработки данных DML, которые выполнялись с таблицами, для которых включено отслеживание. Следующие хранимые процедуры используются для настройки системы отслеживания измененных данных, для управления заданиями агента по отслеживанию измененных данных и для передачи текущих метаданных потребителям информации об изменениях.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68078231"
 |[sys. sp_cdc_enable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md)|[sys. sp_cdc_start_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md)|  
 |[sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)|[sys. sp_cdc_stop_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы системы отслеживания измененных данных (Transact-SQL)](../../relational-databases/system-tables/change-data-capture-tables-transact-sql.md)  
   
   

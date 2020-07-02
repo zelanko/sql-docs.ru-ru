@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104586"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646526"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Добавляет план обслуживания и возвращает его идентификатор.  
   
@@ -47,13 +47,13 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="arguments"></a>Аргументы  
 `[ @plan_name = ] 'plan_name'`Указывает имя добавляемого плана обслуживания. *plan_name* имеет тип **varchar (128)**.  
   
- *plan_id* ** @plan_id = '** plan_id **'**  
+ ** @plan_id = '** *plan_id* **'**  
  Указывает идентификатор плана обслуживания. *plan_id* имеет тип **uniqueidentifier**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_add_maintenance_plan** необходимо запустить из базы данных **msdb** и создать новый, но пустой план обслуживания. Чтобы добавить одну или несколько баз данных и связать их с заданием или заданиями, выполните **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -75,7 +75,7 @@ GO
 'The id for the maintenance plan "Myplan" is:' FAD6F2AB-3571-11D3-9D4A-00C04FB925FC  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Хранимые процедуры плана обслуживания базы данных &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

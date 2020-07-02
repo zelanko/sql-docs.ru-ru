@@ -20,16 +20,16 @@ ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5acf2b0afd2285025112d6e3f224a5f44241a0b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634934"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Возвращает по одной строке для каждой определяемой пользователем сущности, на которую ссылается имя в определении указанной ссылающейся сущности в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Зависимость между двумя сущностями создается, когда одна определяемая пользователем сущность, называемая *упоминаемой сущностью*, отображается по имени в сохраненном выражении SQL другой определяемой пользователем сущности, называемой *ссылающейся сущностью*. Например, если в качестве ссылающейся сущности выступает хранимая процедура, то данная функция выводит список всех определяемых пользователем сущностей, упоминаемых в данной хранимой процедуре. К упоминаемым определяемым пользователем сущностям относятся: таблицы, представления, определяемые пользователем типы (UDT), а также другие хранимые процедуры.  
   

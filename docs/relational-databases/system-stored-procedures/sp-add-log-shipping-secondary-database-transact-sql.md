@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ec2f258b02df154c2c629f19f8ea99f1a3950d4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046212"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647370"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Настраивает базы данных-получателей для доставки журналов.  
   
@@ -55,7 +55,7 @@ sp_add_log_shipping_secondary_database
 ## <a name="arguments"></a>Аргументы  
 `[ @secondary_database = ] 'secondary_database'`Имя базы данных-получателя. Аргумент *secondary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @primary_server = ] 'primary_server'`Имя основного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
+`[ @primary_server = ] 'primary_server'`Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
 `[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
@@ -108,7 +108,7 @@ sp_add_log_shipping_secondary_database
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано использование хранимой процедуры **sp_add_log_shipping_secondary_database** для добавления базы данных **LogShipAdventureWorks** в качестве базы данных-получателя в конфигурации доставки журналов с базой [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] данных-источником, находящейся на сервере-источнике Трибека.  
+ В этом примере показано использование хранимой процедуры **sp_add_log_shipping_secondary_database** для добавления базы данных **LogShipAdventureWorks** в качестве базы данных-получателя в конфигурации доставки журналов с базой данных-источником, [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] находящейся на сервере-источнике Трибека.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

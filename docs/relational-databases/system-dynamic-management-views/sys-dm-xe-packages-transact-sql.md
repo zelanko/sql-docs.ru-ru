@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15a7b6a0fd05821e652160606002c1cef8edc717
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc554af539aca8579e02f36eca7bc02f7c3e5dac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648410"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит список всех пакетов, зарегистрированных подсистемой расширенных событий.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82829078"
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Имя пакета. Это описание берется из самого пакета. Не допускает значение NULL.|  
 |guid|**uniqueidentifier**|Идентификатор GUID пакета. Не допускает значение NULL.|  
-|description;|**nvarchar (3072)**|Описание пакета. Описание задано автором пакета и не допускает значения NULL.|  
+|description|**nvarchar (3072)**|Описание пакета. Описание задано автором пакета и не допускает значения NULL.|  
 |capabilities|**int**|Битовая карта, описывающая возможности этого пакета. Допускает значение NULL.|  
 |capabilities_desc|**nvarchar(256)**|Список всех возможностей, допустимых для этого пакета. Допускает значение NULL.|  
 |module_guid|**nvarchar(60)**|Идентификатор GUID модуля, содержащегося в пакете. Не допускает значение NULL.|  

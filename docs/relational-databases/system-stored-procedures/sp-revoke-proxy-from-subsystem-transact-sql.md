@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8901c46c5654b6c633e03d62e8eaec2a3e903e02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645439"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отменяет доступ к подсистеме у учетной записи-посредника.  
   
@@ -49,9 +49,9 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`Идентификационный номер подсистемы, к которой нужно отозвать доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**2**|ActiveX-скрипт<br /><br /> ** \* \* Важно \* !** Подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**2**|ActiveX-скрипт<br /><br /> ** \* \* Важно \* ! \* ** подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |**3**|Операционная система (CmdExec)|  
 |**4**|Агент моментальных снимков репликации|  
 |**5**|Агент чтения журнала репликации|  
@@ -65,13 +65,13 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, к которой нужно отозвать доступ. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
-|Моментальный снимок|Агент моментальных снимков репликации|  
+|Снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
-|Distribution|Агент распространения репликации|  
+|Распределение|Агент распространения репликации|  
 |Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  
@@ -79,11 +79,11 @@ sp_revoke_proxy_from_subsystem
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
 |PowerShell|Скрипт PowerShell|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При отмене доступа к подсистеме разрешения для участника, указанного в учетной записи-посреднике, не изменяются.  
   
 > [!NOTE]  
->  Чтобы определить, какие шаги задания ссылаются на прокси-сервер, щелкните правой кнопкой мыши узел " **прокси** " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]в разделе **Агент SQL Server** в Microsoft и выберите пункт **Свойства**. В диалоговом окне **Свойства учетной записи-посредника** перейдите на страницу **ссылки** , чтобы просмотреть все шаги задания, ссылающиеся на этот прокси-сервер.  
+>  Чтобы определить, какие шаги задания ссылаются на прокси-сервер, щелкните правой кнопкой мыши узел " **прокси** " в разделе **Агент SQL Server** в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и выберите пункт **Свойства**. В диалоговом окне **Свойства учетной записи-посредника** перейдите на страницу **ссылки** , чтобы просмотреть все шаги задания, ссылающиеся на этот прокси-сервер.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_revoke_proxy_from_subsystem**.  
@@ -100,7 +100,7 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
     @subsystem_name = N'Dts';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Реализация агент SQL Server безопасности](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  

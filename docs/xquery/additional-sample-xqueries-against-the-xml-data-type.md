@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2af66304-c021-427c-b3b3-e000ec0896cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e32773f7a93b9fdf951a4d532ba51c16206f8248
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 09748289c5f40950b35588bee197088c7b31de9c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643894"
 ---
 # <a name="additional-sample-xqueries-against-the-xml-data-type"></a>Дополнительные примеры запросов на языке XQuery к XML-данным
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   В подразделах этого раздела приводятся дополнительные примеры, демонстрирующие использование запросов XQuery к типу данных **XML** :  
   
@@ -40,7 +40,7 @@ ms.locfileid: "84882044"
   
 -   [Поддержка пространств имен в XQuery](../xquery/handling-namespaces-in-xquery.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [Сравнение операторов XQuery с XML-данными](../xquery/xquery-operators-against-the-xml-data-type.md)  
   

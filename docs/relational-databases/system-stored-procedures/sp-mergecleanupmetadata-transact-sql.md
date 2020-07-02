@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c2691bb443da95ee04e49dcccf7e9888805ea573
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3670565137456fe32206072ac91fa0b5f90b410c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640371"
 ---
 # <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Следует использовать только в топологиях репликации, включающих серверы под управлением версий, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предшествовавших [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] пакету обновления 1 (** SP1). sp_mergecleanupmetadata** позволяет администраторам очищать метаданные в **MSmerge_genhistory**, **MSmerge_contents** и **MSmerge_tombstone** системных таблицах. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   

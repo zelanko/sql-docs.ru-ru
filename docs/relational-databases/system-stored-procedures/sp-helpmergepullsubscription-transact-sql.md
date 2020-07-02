@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834518"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626934"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о подписках по запросу, существующих на стороне подписчика. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -61,7 +61,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**status**|**int**|Состояние подписки:<br /><br /> **0** = неактивная подписка<br /><br /> **1** = активная подписка<br /><br /> **2** = удаленная подписка<br /><br /> **3** = отсоединенная подписка<br /><br /> **4** = подключенная подписка<br /><br /> **5** = подписка помечена для повторной инициализации с передачей<br /><br /> **6** = не удалось присоединить подписку.<br /><br /> **7** = подписка восстановлена из резервной копии|  
 |**subscriber_type**|**int**|Тип подписчика:<br /><br /> **1** = глобальный<br /><br /> **2** = локальный<br /><br /> **3** = анонимный|  
 |**subscription_type**|**int**|Тип подписки:<br /><br /> **0** = принудительная отправка<br /><br /> **1** = по запросу<br /><br /> **2** = анонимный|  
-|**приоритеты**|**float (8)**|Приоритет подписки. Значение должно быть меньше **100,00**.|  
+|**priority**|**float (8)**|Приоритет подписки. Значение должно быть меньше **100,00**.|  
 |**sync_type**|**tinyint**|Тип синхронизации подписки:<br /><br /> **1** = автоматический<br /><br /> **2** = моментальный снимок не используется.|  
 |**nописание**|**nvarchar(255)**|Краткое описание подписки по запросу.|  
 |**merge_jobid**|**двоичный (16)**|Идентификатор задания агента слияния.|  
@@ -101,7 +101,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergepullsubscription** используется в репликации слиянием. В результирующем наборе дата, возвращаемая в **last_updated** , форматируется как *ГГГГММДД чч: мм: СС. FFF*.  
   
 ## <a name="permissions"></a>Разрешения  

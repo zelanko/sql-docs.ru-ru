@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ca6787abae22722a7bbb99d335e63d47051bb46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 973d7ea13a52ce70b6a6bef35d59f63d8f9b3c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637482"
 ---
 # <a name="creating-an-assembly"></a>Создание сборки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Управляемые объекты базы данных, например хранимые процедуры или триггеры, компилируются и развертываются в единицах, называемых сборками. Управляемые сборки DLL должны быть зарегистрированы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в, прежде чем можно будет использовать функциональные возможности, предоставляемые сборкой. Для регистрации сборки в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется инструкция CREATE ASSEMBLY. В этом разделе описывается регистрация сборки с помощью инструкции CREATE ASSEMBLY и способы указания параметров безопасности для сборки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Управляемые объекты базы данных, например хранимые процедуры или триггеры, компилируются и развертываются в единицах, называемых сборками. Управляемые сборки DLL должны быть зарегистрированы в, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] прежде чем можно будет использовать функциональные возможности, предоставляемые сборкой. Для регистрации сборки в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используется инструкция CREATE ASSEMBLY. В этом разделе описывается регистрация сборки с помощью инструкции CREATE ASSEMBLY и способы указания параметров безопасности для сборки.  
   
 ## <a name="the-create-assembly-statement"></a>Инструкция CREATE ASSEMBLY  
  Инструкция CREATE ASSEMBLY используется для создания сборки в базе данных. Например:  
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   Сборка, которая вызывается или на которую указывает ссылка, была создана в этой базе данных.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Уровни безопасности при создании сборки  
- При создании сборки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в базе данных можно указать один из трех уровней безопасности, в которых может выполняться код: **безопасный**, **EXTERNAL_ACCESS**или **небезопасный**. При выполнении инструкции **CREATE ASSEMBLY** в сборке кода выполняются определенные проверки, которые могут вызвать сбой регистрации сборки на сервере. Дополнительные сведения см. в примере олицетворения на [сайте CodePlex](https://msftengprodsamples.codeplex.com/).  
+ При создании сборки в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базе данных можно указать один из трех уровней безопасности, в которых может выполняться код: **безопасный**, **EXTERNAL_ACCESS**или **небезопасный**. При выполнении инструкции **CREATE ASSEMBLY** в сборке кода выполняются определенные проверки, которые могут вызвать сбой регистрации сборки на сервере. Дополнительные сведения см. в примере олицетворения на [сайте CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **Безопасность** является набором разрешений по умолчанию и работает в большинстве сценариев. Чтобы задать определенный уровень безопасности, измените синтаксис инструкции CREATE ASSEMBLY следующим образом.  
   
@@ -75,7 +75,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  Разрешение **НЕбезопасного** кода предназначено для тех случаев, когда сборка не безопасно проверена или требует дополнительного доступа к ограниченным ресурсам, таким как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] API Win32.  
   
- Чтобы создать **EXTERNAL_ACCESS** или **незащищенную** сборку в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], необходимо выполнить одно из следующих двух условий.  
+ Чтобы создать **EXTERNAL_ACCESS** или **незащищенную** сборку в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , необходимо выполнить одно из следующих двух условий.  
   
 1.  Сборка должна иметь строгое имя, подписанное обычной подписью или кодом Authenticode с сертификатом. Это строгое имя (или сертификат) создается внутри [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в виде асимметричного ключа (или сертификата) и имеет соответствующее имя входа с разрешениями **внешнего доступа к сборке** (для сборок внешнего доступа) или разрешение **ненадежной сборки** (для ненадежных сборок).  
   
@@ -130,7 +130,7 @@ WITH PERMISSION_SET = UNSAFE;
   
  Дополнительные сведения о разрешениях для каждого из параметров см. в разделе [безопасность интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление сборками интеграции со средой CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
  [Изменение сборки](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Удаление сборки](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   

@@ -20,15 +20,15 @@ ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3aa9409d45586d996d28032df9e2af6e02ce36c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68102384"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635081"
 ---
 # <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
 Содержит строку для каждой внутренней оптимизированной для памяти таблицы, которая используются для хранения пользовательских таблиц, оптимизированных для памяти. Каждая пользовательская таблица соответствует одной или нескольким внутренним таблицам. Одна таблица используется для хранения основных данных. Дополнительные внутренние таблицы используются для поддержки таких функций, как темпоральные таблицы, индекс columnstore и хранилище (LOB) "вне строки" для таблиц, оптимизированных для памяти.
  
@@ -75,7 +75,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>Б) Возвращение сведений о потреблении памяти для всех столбцов, которые хранятся вне строки
+### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>Б. Возвращение сведений о потреблении памяти для всех столбцов, которые хранятся вне строки
 
 Чтобы получить дополнительные сведения о потреблении памяти для столбцов, хранящихся вне строки, можно использовать следующий запрос, который показывает потребление памяти для всех внутренних таблиц и их индексов, используемых для хранения столбцов вне строки:
 

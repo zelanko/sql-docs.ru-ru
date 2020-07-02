@@ -19,15 +19,15 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71778517a9c6711a157bfe6f79df34ad05d9ee7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820522"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634820"
 ---
 # <a name="sp_executesql-transact-sql"></a>Хранимая процедура sp_executesql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Выполняет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или пакет инструкций, которые могут выполняться много раз или создаваться динамически. Инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] или пакет инструкций могут содержать параметры.  
   
@@ -75,7 +75,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующие наборы всех заданных инструкций SQL, встроенные в строку SQL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  sp_executesql параметры должны быть указаны в определенном порядке, как описано в разделе "синтаксис" ранее в этом разделе. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
  Относительно пакетов инструкций, области имен и контекста базы данных процедура sp_executesql ведет себя аналогично инструкции EXECUTE. [!INCLUDE[tsql](../../includes/tsql-md.md)]Инструкция или пакет в \@ параметре sp_executesql stmt не компилируются до тех пор, пока не будет выполнена инструкция sp_executesql. Содержимое \@ stmt компилируется и выполняется в виде плана выполнения, отделенного от плана выполнения пакета, который вызывал sp_executesql. Пакет, содержащийся в процедуре sp_executesql, не может ссылаться на переменные, объявленные в пакете, вызвавшем sp_executesql. Локальные курсоры или переменные в пакете sp_executesql недоступны пакету, вызвавшему sp_executesql. Изменения в контексте базы данных длятся только до завершения выполнения инструкции sp_executesql.  

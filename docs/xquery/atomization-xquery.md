@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 70d623d8583535aae7ddcc23f26ab7c5e4e36fc7
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0264c6d5c533510e7350e2f88e270d2cc7538dd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886885"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643596"
 ---
 # <a name="atomization-xquery"></a>Атомизация (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Атомизация — это процесс извлечения типизированного значения элемента. В определенных обстоятельствах подразумевается, что этот процесс будет осуществлен. Некоторые из операторов XQuery (например, арифметические и операторы сравнения), зависят от этого процесса. Например, при применении арифметических операторов непосредственно к узлам типизированное значение узла сначала извлекается путем неявного вызова [функции данных](../xquery/data-accessor-functions-data-xquery.md). При этом атомарное значение передается в качестве операнда арифметическому оператору.  
   
@@ -77,7 +77,7 @@ where ProductModelID=7
   
  Атомарность также возникает в параметрах выражений сравнения, передаваемых функциям, значения, возвращаемые функциями, выражениями **Cast ()** и выражениями сортировки, передаваемыми в предложении ORDER BY.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы XQuery](../xquery/xquery-basics.md)   
  [Выражения сравнения &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

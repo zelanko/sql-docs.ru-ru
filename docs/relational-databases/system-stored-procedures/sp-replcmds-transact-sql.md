@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645645"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает команды для транзакций, помеченных для репликации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**Идентификатор статьи**|**int**|Идентификатор статьи.|  
 |**partial_command**|**bit**|Показывает, частичная эта команда или нет.|  
-|**кнопки**|**varbinary (1024)**|Значение команды.|  
+|**command**|**varbinary (1024)**|Значение команды.|  
 |**xactid**|**binary(10)**|Идентификатор транзакции.|  
 |**xact_seqno**|**varbinary (16)**|Номер последовательности транзакции.|  
 |**publication_id**|**int**|Идентификатор публикации.|  
@@ -56,12 +56,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|Тип команды.|  
 |**originator_srvname**|**sysname**|Сервер, на котором была начата транзакция.|  
 |**originator_db**|**sysname**|База данных, в которой была начата транзакция.|  
-|**pkHash**|**int**|Только для внутреннего использования.|  
+|**pkHash**|**int**|Только для внутреннего применения.|  
 |**originator_publication_id**|**int**|Идентификатор публикации, в которой началась транзакция.|  
 |**originator_db_version**|**int**|Версия базы данных, в которой началась транзакция.|  
 |**originator_lsn**|**varbinary (16)**|Указывает регистрационный номер транзакции в журнале (номер LSN) для команды в порождающей публикации.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_replcmds** используется процессом чтения журнала в репликации транзакций.  
   
  Репликация обрабатывает первый клиент, выполняющий **sp_replcmds** в заданной базе данных как средство чтения журнала.  

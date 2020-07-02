@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820275"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644847"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Применяет фильтр к трассировке. **sp_trace_setfilter** может выполняться только для существующих трассировок, которые остановлены (*Status* имеет значение **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Возвращает ошибку, если эта хранимая процедура выполняется для трассировки, которая не существует или имеет *состояние* , не равное **0**.  
   
@@ -54,9 +54,9 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`Указывает тип выполняемого сравнения. *comparison_operator* имеет **тип int**и не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
   
-|Значение|Оператор сравнения|  
+|Применение|Оператор сравнения|  
 |-----------|-------------------------|  
-|**0**;|= (равно)|  
+|**0**|= (равно)|  
 |**1**|<>  (не равно)|  
 |**2**|> (больше)|  
 |**3**|< (Меньше)|  
@@ -91,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_trace_setfilter** — это [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимая процедура, которая выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setfilter** вместо **xp_trace_set \* фильтрации** расширенных хранимых процедур для создания, применения и удаления фильтров в трассировке. Дополнительные сведения см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Все фильтры для определенного столбца должны быть включены одновременно в одном выполнении **sp_trace_setfilter**. Например, если пользователь собирается применить два фильтра к столбцу имен приложений и один фильтр к столбцу имен пользователей, то ему потребуется указать фильтры для имен приложений последовательно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку, когда пользователь пытается указать фильтр по имени приложения в пределах одного хранимого вызова процедуры, за которым указывается фильтр по имени пользователя, после чего — второй фильтр по имени приложения.  

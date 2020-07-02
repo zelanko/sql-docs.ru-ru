@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e9e9502dda9eab45c27065c37b31109c99c4c4f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05a08c554aabdb8e99a756e10e63f5dc3eb82184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829028"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648016"
 ---
 # <a name="sysdm_xtp_gc_stats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Предоставляет сведения (общую статистику) о текущем поведении процесса сборки мусора [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82829028"
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |rows_examined|**bigint**|Число строк, просмотренных подсистемой сборки мусора после запуска сервера.|  
 |rows_no_sweep_needed|**bigint**|Количество строк, которые были удалены без сканирования «пыльных углов».|  

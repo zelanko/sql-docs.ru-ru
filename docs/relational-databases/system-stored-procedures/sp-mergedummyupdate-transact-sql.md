@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac9221ee6a2e9b50cec8800ebb4e611211634b60
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ecb59448ff76114d25dbb8422cf7dc1fefc44e15
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640269"
 ---
 # <a name="sp_mergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Производит фиктивное обновление данной строки, чтобы вновь переслать ее в ходе следующего объединения. Эта хранимая процедура может выполняться на издателе в базе данных публикации или на подписчике в базе данных подписки.  
   
@@ -47,7 +47,7 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ## <a name="remarks"></a>Примечания  
  **sp_mergedummyupdate** используется в репликации слиянием.  
   
- **sp_mergedummyupdate** удобно использовать при написании собственной альтернативы средство просмотра конфликтов репликации (взкнфлкт. exe).  
+ **sp_mergedummyupdate** удобно использовать при написании собственной альтернативы средство просмотра конфликтов репликации (Wzcnflct.exe).  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли базы данных **db_owner** могут выполнять **sp_mergedummyupdate**.  

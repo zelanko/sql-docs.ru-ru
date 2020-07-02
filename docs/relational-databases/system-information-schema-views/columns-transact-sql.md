@@ -19,15 +19,15 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4215b5f677061926b13ec5d7b5411454fb818bbb
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647638"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает одну строку для каждого столбца, доступного для текущего пользователя в текущей базе данных.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "83670138"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Если столбец имеет определяемый пользователем тип данных, то столбец возвращает имя схемы этого типа данных. Иначе возвращается значение NULL.<br /><br /> **&#42;&#42; важно &#42;&#42;** Не используйте INFORMATION_SCHEMA представления для определения схемы типа данных. Единственный надежный способ найти схему типа — использовать функцию TYPEPROPERTY.|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Если столбец имеет определяемый пользователем тип данных, то столбец является именем этого типа данных. Иначе возвращается значение NULL.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Столбец **ORDINAL_POSITION** **INFORMATION_SCHEMA. Представление COLUMNs** несовместимо с битовым шаблоном столбцов, возвращаемых функцией COLUMNS_UPDATED. Чтобы получить битовый шаблон, совместимый с COLUMNS_UPDATED, необходимо сослаться на свойство **columnid** системной функции COLUMNPROPERTY при запросе **INFORMATION_SCHEMA. Представление СТОЛБЦОВ** . Пример:  
   
 ```  
@@ -71,7 +71,7 @@ WHERE TABLE_NAME = 'Person';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.sysнаборов символов &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f21e6db8e9c1cb8ec33f9bddd9610d8179b3e5ac
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2a0f6f23d38cb0841ba6e1b7891d9d32fc95b1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820629"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646262"
 ---
 # <a name="sp_cursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Закрывает и размещает курсор, а также освобождает все связанные ресурсы; то есть удаляется временная таблица, используемая для поддержки ключевого набора ключей или статического **курсора**. sp_cursorclose вызывается путем указания ID = 9 в пакете потока табличных данных (TDS).  
   
@@ -45,7 +45,7 @@ sp_cursorclose cursor
 > [!NOTE]  
 >  Входное значение -1 относится ко всем курсорам в текущем соединении.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  *курсор* возвратит сообщения об ошибках, если процедура была выполнена после закрытия курсора или если указан недопустимый маркер.  
   
  Состояние RPC обозначает общий успех или общий неуспех.  

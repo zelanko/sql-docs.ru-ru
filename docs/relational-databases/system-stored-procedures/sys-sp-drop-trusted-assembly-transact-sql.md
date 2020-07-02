@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905140"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625925"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Удаляет сборку из списка доверенных сборок на сервере.
 
@@ -43,16 +43,16 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>Аргументы
 
-[ @hash = ] "*значение*"  
+[ @hash =] "*значение*"  
 SHA2_512 значение хэша сборки, которое нужно удалить из списка доверенных сборок для сервера. Доверенные сборки могут загружаться, когда включена строгая безопасность CLR, даже если сборка не подписана или база данных не помечена как заслуживающая доверия.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
 
 Эта процедура удаляет сборку из [sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="permissions"></a>Разрешения
 
-Требуется членство в `sysadmin` предопределенной роли сервера `CONTROL SERVER` или в разрешении.
+Требуется членство в `sysadmin` предопределенной роли сервера или в `CONTROL SERVER` разрешении.
 
 ## <a name="examples"></a>Примеры  
 

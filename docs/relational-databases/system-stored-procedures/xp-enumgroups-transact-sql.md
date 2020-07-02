@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0e228f2a2363cab777c2b7ae44185e3c215e8f93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633694"
 ---
 # <a name="xp_enumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет список локальных групп Microsoft Windows или список глобальных групп, определенных в указанном домене Windows.  
   
@@ -50,10 +50,10 @@ xp_enumgroups [ 'domain_name' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**group**|**sysname**|Имя группы Windows|  
-|**Метки**|**sysname**|Описание группы Windows, предоставленное Windows|  
+|**comment**|**sysname**|Описание группы Windows, предоставленное Windows|  
   
-## <a name="remarks"></a>Remarks  
- Если *domain_name* — имя компьютера под управлением Windows, на котором выполняется экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , или не указано имя домена, **xp_enumgroups** перечисляет локальные группы на компьютере, где работает. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="remarks"></a>Примечания  
+ Если *domain_name* — имя компьютера под управлением Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором выполняется экземпляр, или не указано имя домена, **xp_enumgroups** перечисляет локальные группы на компьютере, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **xp_enumgroups** нельзя использовать, если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] работает под Windows 98.  
   
@@ -67,7 +67,7 @@ xp_enumgroups [ 'domain_name' ]
 EXEC xp_enumgroups 'sales';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

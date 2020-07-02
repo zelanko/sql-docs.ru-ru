@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830952"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626625"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает сведения о строке в таблице, которая используется как статья в репликации слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Имя базы данных, содержащей данную запись.|  
 |**db_nickname**|**двоичный (6)**|Псевдоним базы данных, содержащей данную запись.|  
 |**version**|**int**|Версия записи.|  
-|**current_state**|**nvarchar (9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** -строка Data представляет текущее состояние строки.<br /><br /> **n** -строковые данные не представляют текущее состояние строки.<br /><br /> ** \< н/д>** неприменимо.<br /><br /> ** \< неизвестное>** — текущее состояние не может быть определено.|  
+|**current_state**|**nvarchar (9)**|Возвращает сведения о текущем состоянии строки.<br /><br /> **y** -строка Data представляет текущее состояние строки.<br /><br /> **n** -строковые данные не представляют текущее состояние строки.<br /><br /> **\<n/a>**— Неприменимо.<br /><br /> **\<unknown>**-Не удается определить текущее состояние.|  
 |**rowversion_table**|**nchar (17)**|Указывает, хранятся ли версии строк в таблице [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) или в [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) таблице.|  
 |**comment**|**nvarchar(255)**|Дополнительные сведения о данной записи версии строки. Обычно это поле не заполнено.|  
   
@@ -74,7 +74,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Результирующий набор для значения both  
  Если значение **обоих** параметров выбрано для параметра *Показывать*, возвращаются результирующие наборы строк и столбцов.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_showrowreplicainfo** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
