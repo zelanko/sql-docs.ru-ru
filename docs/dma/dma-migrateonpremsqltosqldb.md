@@ -1,7 +1,7 @@
 ---
 title: Перенос SQL Server в базу данных SQL Azure с помощью Помощник по миграции данных
 description: Узнайте, как использовать Помощник по миграции данных для переноса локальной SQL Server в базу данных SQL Azure.
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749779"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Миграция локальных SQL Server или SQL Server на виртуальные машины Azure в базу данных SQL Azure с помощью Помощник по миграции данных
 
@@ -75,7 +75,7 @@ ms.locfileid: "82885931"
 4. Выберите одну целевую базу данных, в которую вы перенесете свою базу данных.
 
    > [!NOTE]
-   > Если планируется миграция пользователей Windows, в текстовом поле **целевой домен имя внешнего пользователя** убедитесь, что имя внешнего пользователя целевой указано правильно.
+   > Если планируется миграция пользователей Windows, в текстовом поле **целевой домен с именем внешнего пользователя** убедитесь, что указано правильное имя конечного домена.
 
     ![Выбор целевой базы данных](../dma/media/select-target-database.png)
 
@@ -87,8 +87,8 @@ ms.locfileid: "82885931"
 
     ![Выбор объектов схемы](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Некоторые объекты, которые невозможно преобразовать без изменений, представлены с возможностями автоматического исправления. Щелкните эти объекты на панели слева, чтобы просмотреть рекомендованные исправления в правой области. Просмотрите исправления и примите или пропустите все изменения поочередно для каждого объекта. Обратите внимание, что принятие или пропуск всех изменений для одного объекта не влияет на другие объекты базы данных. Инструкции, которые невозможно преобразовать или исправить автоматически, воспроизводятся в целевой базе данных с комментариями.
 
     ![Предлагаемое исправление](../dma/media/suggested-fix.png)
 
@@ -118,7 +118,7 @@ ms.locfileid: "82885931"
 
    ![Состояние миграции](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 * [Помощник по миграции данных (DMA)](../dma/dma-overview.md)
 * [Помощник по миграции данных: параметры конфигурации](../dma/dma-configurationsettings.md)

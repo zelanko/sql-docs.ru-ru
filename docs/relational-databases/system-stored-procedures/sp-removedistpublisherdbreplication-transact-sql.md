@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e169a1d8c7b68afaab973eb3f6dbb617e5bc032
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6801079c3d16871712e5ba4494ca2c3dbf5bb662
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751667"
 ---
 # <a name="sp_removedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Удаляет метаданные публикации, относящиеся к определенной публикации на распространителе. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
   
@@ -45,7 +45,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_removedistpublisherdbreplication** используется репликацией транзакций и моментальными снимками.  
   
  **sp_removedistpublisherdbreplication** используется, когда опубликованная база данных должна быть создана повторно, не удаляя базу данных распространителя. Следующие метаданные будут удалены:  

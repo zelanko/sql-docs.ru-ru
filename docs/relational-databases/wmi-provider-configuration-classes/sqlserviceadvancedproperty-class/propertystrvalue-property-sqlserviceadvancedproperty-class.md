@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e538a7cfb9b922bd7960fa5833f5a3c3d14da918
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c14423f5c8ad3ddd65293ae65195bb78a422fc9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749991"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>Свойство PropertyStrValue (класс SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает строковое значение дополнительного свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,9 +42,9 @@ object.PropertyStrValue [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строка, указывающая значение дополнительного свойства.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

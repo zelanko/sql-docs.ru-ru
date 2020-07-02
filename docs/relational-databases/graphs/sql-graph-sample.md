@@ -15,16 +15,16 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751153"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Создание базы данных Graph и выполнение некоторых запросов сопоставления шаблонов с помощью T-SQL
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Этот пример предоставляет [!INCLUDE[tsql-md](../../includes/tsql-md.md)] скрипт для создания базы данных графа с узлами и краями, а затем использует новое предложение Match для сопоставления некоторых шаблонов и обхода графа. Этот пример скрипта будет работать как в базе данных SQL Azure, так и в[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>Описание скрипта  
-Этот сценарий использует новый синтаксис T-SQL для создания таблиц node и ребра. Показывает, как вставлять данные в таблицы node и ребра с `INSERT` помощью инструкции, а также показывает, `MATCH` как использовать предложение для сопоставления шаблонов и навигации.
+Этот сценарий использует новый синтаксис T-SQL для создания таблиц node и ребра. Показывает, как вставлять данные в таблицы node и ребра с помощью `INSERT` инструкции, а также показывает, как использовать `MATCH` предложение для сопоставления шаблонов и навигации.
 
 |Get-Help    |Примечания
 |---  |---  |

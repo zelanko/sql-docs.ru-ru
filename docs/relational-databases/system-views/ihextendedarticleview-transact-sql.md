@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752655"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Представление **IHextendedArticleView** предоставляет сведения о статьях в публикации, отличной от SQL Server. Это представление хранится в базе данных **распространителя** .  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68029544"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Уникальный идентификатор издателя.|  
 |**publication_id**|**int**|Уникальный идентификатор публикации.|  
-|**рассмотрен**|**sysname**|Имя статьи.|  
+|**статья**|**sysname**|Имя статьи.|  
 |**destination_object**|**sysname**|Имя объекта, опубликованного на стороне подписчика.|  
 |**source_owner**|**sysname**|Владелец объекта, опубликованного на стороне издателя.|  
 |**source_object**|**sysname**|Имя объекта, опубликованного на стороне издателя.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68029544"
 |**schema_option**|**binary**|Указывает, что должно быть включено в скрипт. Список поддерживаемых параметров схемы см. в разделе [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) .|  
 |**dest_owner**|**sysname**|Владелец объекта, опубликованного в целевой базе данных.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации (Transact-SQL)](../../relational-databases/system-views/replication-views-transact-sql.md)  

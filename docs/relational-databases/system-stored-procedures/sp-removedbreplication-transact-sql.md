@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60004b81134b550761e65eba2ce38e155732c77f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751677"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Эта хранимая процедура удаляет все объекты репликации в базе данных публикации в экземпляре издателя SQL Server или в базе данных подписки в экземпляре подписчика SQL Server. Выполняйте в соответствующей базе данных или укажите базу данных, где необходимо удалить объекты репликации, при выполнении в контексте другой базы данных в том же экземпляре. Эта процедура не удаляет объекты из других баз данных, например базы данных распространителя.  
   
@@ -55,7 +55,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_removedbreplication** используется во всех типах репликации.  
   
  **sp_removedbreplication** удобно использовать при восстановлении реплицированной базы данных, не требующей восстановления объектов репликации.  

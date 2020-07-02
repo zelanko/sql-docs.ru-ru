@@ -26,15 +26,15 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: af964cd3561a28db049baa49c2e74140db994784
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81b6570f0301d501f1f8899da70e60f04f1c5c44
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750753"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Скрытие элементов и атрибутов при помощи sql:hide
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   При выполнении запроса XPath к схеме XSD результирующий XML-документ содержит элементы и атрибуты, указанные в схеме. Можно указать, что некоторые элементы и атрибуты будут скрыты в схеме с помощью аннотации **SQL: Hide** . Это может оказаться полезным в тех случаях, когда критерий выбора запроса требует определенных элементов или атрибутов в схеме, но они не должны возвращаться в формируемом XML-документе.  
   
  Аннотация **SQL: Hide** принимает логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false.  
@@ -42,10 +42,10 @@ ms.locfileid: "81388170"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>А) Указание sql:hide для атрибута  
- Схема XSD в этом примере состоит из элемента ** \<Person. Contact>** с атрибутами **ContactID**, **FirstName**и **LastName** .  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Указание sql:hide для атрибута  
+ Схема XSD в этом примере состоит из **\<Person.Contact>** элемента с атрибутами **ContactID**, **FirstName**и **LastName** .  
   
- Элемент ** \<Person. Contact>** имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты элемента ** \<Person. Contact>** имеют простой тип и сопоставляются со столбцами с теми же именами в поле Person. контакттабле в базе данных AdventureWorks. В схеме заметка **SQL: Hide** задается для атрибута **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  
+ **\<Person.Contact>** Элемент имеет сложный тип и, следовательно, сопоставляется с таблицей с тем же именем (сопоставление по умолчанию). Все атрибуты **\<Person.Contact>** элемента имеют простой тип и сопоставляются со столбцами с теми же именами в контакттабле в базе данных AdventureWorks. В схеме заметка **SQL: Hide** задается для атрибута **ContactID** . Если для этой схемы задан запрос XPath, то объект **ContactID** не возвращается в XML-документе.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -92,7 +92,7 @@ ms.locfileid: "81388170"
 </ROOT>  
 ```  
   
- Если для элемента задано значение **SQL: Hide** , элемент и его атрибуты или дочерние элементы не отображаются в СОЗДАВАЕМОМ XML-документе. Ниже приведена другая схема XSD, в которой для элемента ** \<>OD** задано значение **SQL: Hide** :  
+ Если для элемента задано значение **SQL: Hide** , элемент и его атрибуты или дочерние элементы не отображаются в СОЗДАВАЕМОМ XML-документе. Ниже приведена другая схема XSD, в которой для элемента задано значение **SQL: Hide** **\<OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +147,7 @@ ms.locfileid: "81388170"
 </xsd:schema>  
 ```  
   
- Если для этой схемы указан запрос XPath `/Customers[@CID="1"]`(например,), создаваемый XML-документ не включает элемент ** \<>OD** и его дочерние элементы, как показано в этом частичном результате:  
+ Если для этой схемы указан запрос XPath (например `/Customers[@CID="1"]` ,), создаваемый XML-документ не включает **\<OD>** элемент и его дочерние элементы, как показано в этом частичном результате:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304852"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749341"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает имена и значения для указанного набора свойств пространственного индекса **Geometry** . Результат запроса возвращается в виде таблицы. Можно задать возврат основного набора свойств или всех свойств индекса.  
   
@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Разрешения  
  Пользователю должна быть назначена роль PUBLIC для получения доступа к процедуре. Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `sp_help_spatial_geometry_index` для исследования пространственного индекса **SIndx_SpatialTable_geometry_col2** , определенного в таблице **geometry_col** для данного примера запроса в ** \@QS**. Этот пример возвращает только основные свойства указанного индекса.  
+ В следующем примере используется `sp_help_spatial_geometry_index` для исследования пространственного индекса **SIndx_SpatialTable_geometry_col2** , определенного в таблице **geometry_col** для данного примера запроса в ** \@ QS**. Этот пример возвращает только основные свойства указанного индекса.  
   
 ```  
 declare @qs geometry  
@@ -62,7 +62,7 @@ declare @qs geometry
 exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry_col2', 0, @qs;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md)   

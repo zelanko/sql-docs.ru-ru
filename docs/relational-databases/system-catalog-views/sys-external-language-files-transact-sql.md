@@ -19,15 +19,15 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a991761e26f8f63ae6431d7d242fb2625135d3ac
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e90925354a9a48d3a2b0ff8e789d940ece6cb476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751740"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Это представление каталога содержит список файлов внешних расширений языка в базе данных. **R** и **Python** являются зарезервированными именами, поэтому создать внешние языки с такими именами невозможно.
 
@@ -47,7 +47,7 @@ ms.locfileid: "84627478"
 |параметры|nvarchar(4000)|Внешний язык праметерс|
 |environment_variables |nvarchar(4000)|Переменные среды внешнего языка|
 
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [СОЗДАТЬ ВНЕШНИЙ ЯЗЫК](../../t-sql/statements/create-external-language-transact-sql.md)  

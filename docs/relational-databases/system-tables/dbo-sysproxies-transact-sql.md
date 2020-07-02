@@ -1,5 +1,5 @@
 ---
-title: dbo. sysproxies (Transact-SQL) | Документация Майкрософт
+title: dbo.sysпрокси (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08a0400e67dced91ca1a2340b70fd83dda2f83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1e49698ae6692a06c141a4182df3c54cd4f61d43
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750306"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Определяет атрибуты учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта таблица хранится в базе данных **msdb** .  
   
@@ -41,12 +41,12 @@ ms.locfileid: "82829921"
 |**user_sid**|**varbinary(85)**|*Security_identifier* Microsoft Windows для пользователя или группы, связанных с учетными данными прокси-сервера.|  
 |**credential_date_created**|**datetime**|Дата и время создания учетных данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Только члены предопределенной роли сервера **sysadmin** могут обращаться к таблице **sysproxies** .  
   
 ## <a name="see-also"></a>См. также  
- [dbo. сиспроксилогин &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
- [dbo. сиспроксисубсистем &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo. заполнения таблицы syssubsystems &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
+ [dbo.sysпроксилогин &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxylogin-transact-sql.md)   
+ [dbo.sysпроксисубсистем &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo.sysподсистемы &#40;&#41;Transact-SQL](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)  
   
   

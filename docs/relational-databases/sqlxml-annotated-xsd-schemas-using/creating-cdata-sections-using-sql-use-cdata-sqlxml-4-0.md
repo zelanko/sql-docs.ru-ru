@@ -21,19 +21,19 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa359c1c1e855c3652d7c6486d3993f588bae46d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 700d2cb18bad966e1a2edfd1f11e5fde9ac1b040
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750848"
 ---
 # <a name="creating-cdata-sections-using-sqluse-cdata-sqlxml-40"></a>Создание разделов CDATA с использованием sql:use-cdata (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В XML разделы CDATA используются для экранирования блоков текста, содержащих символы, которые в противном случае распознаются как символы разметки.  
   
- База данных в Майкрософт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] иногда может содержать символы, которые обрабатываются синтаксическим анализатором XML как символы разметки. Например, угловые скобки (< и >), символ "меньше или равно" (<=), а амперсанд (&) обрабатываются как символы разметки. Но специальные символы такого типа можно заключить в раздел CDATA во избежание их обработки в качестве символов разметки. Текст в разделе CDATA обрабатывается средством синтаксического анализа XML как простой текст.  
+ База данных в корпорации Майкрософт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] иногда может содержать символы, которые обрабатываются синтаксическим анализатором XML как символы разметки, например угловые скобки (< и >), символ "меньше или равно" (<=), а амперсанд (&) обрабатывается как символы разметки. Но специальные символы такого типа можно заключить в раздел CDATA во избежание их обработки в качестве символов разметки. Текст в разделе CDATA обрабатывается средством синтаксического анализа XML как простой текст.  
   
  Аннотация **SQL: use-CDATA** указывает, что возвращаемые данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть заключены в раздел CDATA (то есть указывает, следует ли заключать значение из столбца, указанного в параметре **SQL: field** в раздел CDATA). Аннотация **SQL: use-CDATA** может быть указана только для элементов, сопоставленных со столбцом базы данных.  
   
@@ -44,8 +44,8 @@ ms.locfileid: "81388194"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqluse-cdata-on-an-element"></a>А) Указание заметки sql:use-cdata для элемента  
- В следующей схеме **SQL: use-CDATA** устанавливается в значение 1 (true) для ** \<>AddressLine1** в элементе ** \<>адреса** . В результате этого данные возвращаются в разделе CDATA.  
+### <a name="a-specifying-sqluse-cdata-on-an-element"></a>A. Указание заметки sql:use-cdata для элемента  
+ В следующей схеме **SQL: use-CDATA** устанавливается в значение 1 (true) для в **\<AddressLine1>** пределах **\<Address>** элемента. В результате этого данные возвращаются в разделе CDATA.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

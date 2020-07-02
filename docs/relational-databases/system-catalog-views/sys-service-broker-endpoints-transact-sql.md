@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752900"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Это представление каталога содержит по одной строке на каждую конечную точку компонента Service Broker. Для каждой строки в этом представлении имеется соответствующая строка с тем же **endpoint_id** в представлении **sys. tcp_endpoints** , которое содержит метаданные конфигурации TCP. TCP — единственный разрешенный протокол для компонента Service Broker.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы>**|**--**|Наследует столбцы из представления [sys. endpoints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**\<inherited columns>**|**--**|Наследует столбцы из представления [sys. endpoints &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|Осуществляет пересылку сообщений поддержки конечных точек. Изначально это значение равно **0** (отключено). Не допускает значения NULL.|  
 |**message_forwarding_size**|**int**|Максимальное число мегабайт пространства **tempdb** , которое может использоваться для перенаправляемых сообщений. Изначально это значение равно **10**. Не допускает значения NULL.|  
 |**connection_auth**|**tinyint**|Тип проверки подлинности соединения, требуемый при подключении к этой конечной точке, один из следующих.<br /><br /> **1** — NTLM<br /><br /> **2** — Kerberos<br /><br /> **3** . согласование<br /><br /> **4** . сертификат<br /><br /> **5** — NTLM, сертификат<br /><br /> **6** — Kerberos, сертификат<br /><br /> **7** . согласование, сертификат<br /><br /> **8** — сертификат, NTLM<br /><br /> **9** — сертификат, Kerberos<br /><br /> **10** — сертификат, согласование<br /><br /> Не допускает значения NULL.|  
@@ -42,7 +42,7 @@ ms.locfileid: "82832677"
 |**encryption_algorithm**|**tinyint**|Алгоритм шифрования. Ниже приведены возможные значения с описаниями и соответствующими параметрами DDL.<br /><br /> **0** : нет. Соответствующий параметр DDL: отключен.<br /><br /> **1** : RC4. Соответствующий параметр DDL: {required &#124; требуемый алгоритм RC4}.<br /><br /> **2** : AES. Соответствующий параметр DDL: требуется алгоритм AES.<br /><br /> **3** : нет, RC4. Соответствующий параметр DDL: {Supported &#124; поддерживаемый алгоритм RC4}.<br /><br /> **4** : нет, AES. Соответствующий параметр DDL: поддерживаемый алгоритм AES.<br /><br /> **5** : RC4, AES. Соответствующий параметр DDL: требуется алгоритм RC4 AES.<br /><br /> **6** : AES, RC4. Соответствующий параметр DDL: требуется алгоритм AES RC4.<br /><br /> **7** : нет, RC4, AES. Соответствующий параметр DDL: поддерживаемый алгоритм RC4 AES.<br /><br /> **8** : нет, AES, RC4. Соответствующий параметр DDL: поддерживаемый алгоритм AES RC4.<br /><br /> Не допускает значения NULL.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Описание алгоритма шифрования. Ниже перечислены возможные значения и соответствующие параметры DDL.<br /><br /> Нет: отключено<br /><br /> RC4: {требуется &#124; требуемый алгоритм RC4}<br /><br /> AES: требуемый алгоритм AES<br /><br /> НЕТ, RC4: {Supported &#124; поддерживаемый алгоритм RC4}<br /><br /> НЕТ, AES: поддерживаемый алгоритм AES<br /><br /> RC4, AES: требуемый алгоритм RC4 AES<br /><br /> AES, RC4: требуемый алгоритм AES RC4<br /><br /> НЕТ, RC4, AES: поддерживаемый алгоритм RC4 AES<br /><br /> NONE, AES, RC4: поддерживаемый алгоритм AES RC4<br /><br /> Допускает значение NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 > [!NOTE]  
 >  Алгоритм RC4 поддерживается только в целях обратной совместимости. Когда база данных имеет уровень совместимости 90 или 100, новые материалы могут шифроваться только с помощью алгоритмов RC4 или RC4_128. (Не рекомендуется.) Используйте вместо этого более новые алгоритмы, например AES. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях материалы, зашифрованные с помощью алгоритмов RC4 или RC4_128, могут быть расшифрованы на любом уровне совместимости.  

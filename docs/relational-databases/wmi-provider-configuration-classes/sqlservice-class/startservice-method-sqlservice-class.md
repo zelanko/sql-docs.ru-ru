@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67297de6badb15b493a5f17cbfe63bacc940a882
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b23785da37e2968385a7d6f4848b20e24edae69f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660841"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750042"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Метод StartService (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Пытается перевести службу в состояние запуска.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -117,9 +117,9 @@ object.StartService()
  24  
  Служба уже приостановлена. Служба в данный момент приостановлена в системе.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

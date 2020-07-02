@@ -19,15 +19,15 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 9165a4a371a611a5b9c2d962e700b424a60a9384
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 174c4e6c864dab1866326fdd69b5c588ec26b3b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175160"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738722"
 ---
 # <a name="sysdm_db_resource_stats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает сведения об использовании ЦП, ввода-вывода и памяти для базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Существует одна строка для каждых 15 секунд, даже если в базе данных не выполняется никаких действий. Исторические данные хранятся примерно один час.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "78175160"
 ## <a name="permissions"></a>Разрешения
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
  Данные, возвращаемые **sys. dm_db_resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.
  
  Если база данных была переключена на другой сервер за последние 60 минут, представление будет возвращать данные только за время отработки отказа.  
@@ -100,5 +100,5 @@ FROM sys.dm_db_resource_stats;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. resource_stats &#40;&#41;уровней служб базы данных SQL Azure](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md) [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

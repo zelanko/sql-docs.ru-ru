@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2868afcf85895ce1e7456bc2eea3693d9b25e679
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be9ad08f1591ef6f7e8893b09031a2e695be031d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831169"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750551"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет подписку на публикацию слиянием и соответствующий агент слияния. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -50,11 +50,11 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscription_type = ] 'subscription_type'`Тип подписки. *subscription_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**каждого**|Принудительные подписки, подписки по запросу и анонимные подписки.|  
 |**подключившихся**|Анонимная подписка.|  
-|**распространение**|Принудительная подписка.|  
+|**push**|Принудительная подписка.|  
 |**собирает**|Подписка по запросу.|  
 |**both** (по умолчанию)|Как принудительная подписка, так и подписка по запросу.|  
   
@@ -65,7 +65,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_dropmergesubscription** используется в репликации слиянием.  
   
 ## <a name="example"></a>Пример  

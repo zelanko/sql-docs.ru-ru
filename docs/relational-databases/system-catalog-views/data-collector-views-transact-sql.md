@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d2df9fd85f77a2fa0207562a5b2a8be3e991489
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91542894eeb00fc6c44e3d824bb7fd857cef8897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823635"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752993"
 ---
 # <a name="data-collector-views-transact-sql"></a>Представления сборщика данных (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Тип сборщика данных предоставляет следующие представления для вывода сведений о конфигурации сборщика данных, например свойств сборщика данных, наборов сбора и элементов наборов сбора, а также для вывода статистики выполнения при работе сборщика данных. Эти представления, которые находятся в базе данных **msdb** , также предоставляют уровень абстракции для базовых таблиц. Уровень абстракции повышает безопасность, предотвращая прямой доступ к таблицам и одновременно разрешая изменять таблицы, не затрагивая связанных с ними приложений.  
   

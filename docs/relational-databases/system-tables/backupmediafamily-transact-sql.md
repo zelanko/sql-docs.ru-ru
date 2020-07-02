@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807486"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750377"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого семейства носителей. Если семейство носителей хранится на зеркальном наборе носителей, семейство имеет отдельную строку для каждого зеркала в наборе носителей. Эта таблица хранится в базе данных **msdb** .  
     
@@ -40,7 +40,7 @@ ms.locfileid: "82807486"
 |**physical_device_name**|**nvarchar(260)**|Физическое имя устройства резервного копирования. Может иметь значение NULL. Это поле совместно используется процессом резервного копирования и восстановления. Он может содержать исходный путь назначения резервной копии или исходный путь восстановления источника. В зависимости от того, выполнялась ли резервное копирование или восстановление на сервере для базы данных. Обратите внимание, что последовательные операции восстановления из одного и того же файла резервной копии не будут обновлять путь независимо от их расположения во время восстановления. Поэтому **physical_device_name** поле нельзя использовать для просмотра используемого пути восстановления.|  
 |**device_type**|**tinyint**|Тип устройства резервного копирования:<br /><br /> 2 = диск;<br /><br /> 5 = лента;<br /><br /> 7 = виртуальное устройство<br /><br /> 9 = служба хранилища Azure<br /><br /> 105 = постоянное устройство резервного копирования.<br /><br /> Может иметь значение NULL.<br /><br /> Все постоянные имена устройств и номера устройств можно найти в **sys. backup_devices**.|  
 |**physical_block_size**|**int**|Физический размер блока, используемого для записи семейства носителей. Может иметь значение NULL.|  
-|**Отображение**|**tinyint**|Номер зеркала (0-3).|  
+|**mirror**|**tinyint**|Номер зеркала (0-3).|  
   
 ## <a name="remarks"></a>Примечания  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  

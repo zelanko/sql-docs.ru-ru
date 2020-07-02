@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751632"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Добавляет столбец к существующей статье таблицы, которая была опубликована. Позволяет добавить новый столбец всем издателям, которые публикуют эту статью, или просто добавить столбец к определенной публикации, которая публикует таблицы. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] "*столбец*"  
  Имя столбца таблицы, добавляемого для репликации. *столбец* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @typetext =] '*TypeText*'  
+ [ @typetext = ] '*TypeText*'  
  Определение добавляемого столбца. *TypeText* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию. Например, если добавляется столбец order_filled и это поле с одним символом, а не NULL, и имеет значение по умолчанию **N**, order_filled будет параметром *столбца* , а определение столбца, **char (1) NOT NULL constraint_name значением по умолчанию "N"** будет значение параметра *TypeText* .  
   
  [ @publication_to_add =] "*publication_to_add*"  

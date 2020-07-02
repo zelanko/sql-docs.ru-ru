@@ -19,15 +19,15 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752817"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Размещает блокировку на ресурсе приложения.  
   
@@ -78,7 +78,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |–3|Запрос блокировки был выбран как жертва взаимоблокировки.|  
 |— 999|Указывает ошибку при проверке параметра или другую ошибку вызова.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Блокировки, помещенные на ресурс, связаны либо с текущей транзакцией, либо с текущим сеансом. Блокировки, связанные с текущей транзакцией, снимаются, когда транзакция фиксируется или откатывается. Блокировки, связанные с сеансом, освобождаются при выходе из сеанса. Когда сервер завершает работу по какой либо причине, освобождаются все блокировки.  
   
  Ресурс блокировки, созданный процедурой sp_getapplock, создается в текущей базе данных сеанса. Каждый ресурс блокировки определяется объединенными значениями следующих аргументов.  
@@ -111,7 +111,7 @@ GO
   
  Взаимоблокировка с блокировкой приложения не откатывает транзакцию, запросившую блокировку приложения. Любой откат, который может потребоваться как результат возвращаемого значения, должен быть сделан вручную. Следовательно, рекомендуется включить в код проверку на ошибки с тем, чтобы в случае возврата определенного значения (например -3) могла быть запущена инструкция ROLLBACK TRANSACTION или предпринято другое действие.  
   
- Пример:  
+ Например:  
   
 ```  
 USE AdventureWorks2012;  
@@ -163,7 +163,7 @@ COMMIT TRAN;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
  [sp_releaseapplock (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  

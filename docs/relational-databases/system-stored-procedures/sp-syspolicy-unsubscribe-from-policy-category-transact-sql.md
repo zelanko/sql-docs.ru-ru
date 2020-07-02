@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d606cbca53810eaa9e19153e5de8b821391b2659
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752777"
 ---
 # <a name="sp_syspolicy_unsubscribe_from_policy_category-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет подписку на категорию политики для текущей базы данных.  
   
@@ -41,12 +41,12 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="arguments"></a>Аргументы  
 `[ @policy_category = ] 'policy_category'`— Имя подписки на категорию политики, которую необходимо удалить. Аргумент *policy_category* имеет тип **sysname**и является обязательным.  
   
- Чтобы получить значения для *policy_category*, запросите системное представление msdb. dbo. syspolicy_policy_categories.  
+ Чтобы получить значения для *policy_category*, запросите msdb.dbo.syspolicy_policy_categories системное представление.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_unsubscribe_from_policy_category должна выполняться в контексте базы данных, из которой удаляется подписка на категорию политики.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -63,7 +63,7 @@ EXEC sys.sp_syspolicy_unsubscribe_from_policy_category @policy_category = N'Fina
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_subscribe_to_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   

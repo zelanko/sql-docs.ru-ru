@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056402"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753253"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   Задает условие поиска для диаграммы, поиск которого выполняется рекурсивно или повторяется. SHORTEST_PATH можно использовать внутри в инструкции SELECT для СОПОСТАВЛЕНИЯ с узлами графа и граничными таблицами. 
   
@@ -85,7 +85,7 @@ ms.locfileid: "74056402"
 ### <a name="last_value"></a>LAST_VALUE
 Для атрибутов проекта, начиная с последнего узла пути, можно использовать агрегатную функцию LAST_VALUE. Указание псевдонима краевой таблицы в качестве входных данных для этой функции является ошибкой, можно использовать только имена таблиц узлов или псевдонимы.
 
-**Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
+**Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например, `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
 
 В то время как последний узел — это последний n-й узел в пути выходного графа для этого шаблона:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -93,7 +93,7 @@ ms.locfileid: "74056402"
 Эта функция возвращает сумму указанных значений атрибутов node/ребра или выражение, которое отображалось в пути обхода.
 
 ### <a name="count"></a>COUNT
-Эта функция возвращает количество значений, отличных от NULL, требуемого атрибута node/ребр в пути. Функция COUNT поддерживает оператор "\*" с псевдонимом узла или краевой таблицы. Без псевдонима таблицы node или ребро использование \* является неоднозначным и приведет к ошибке.
+Эта функция возвращает количество значений, отличных от NULL, требуемого атрибута node/ребр в пути. Функция COUNT поддерживает \* оператор "" с псевдонимом узла или краевой таблицы. Без псевдонима таблицы node или ребро использование \* является неоднозначным и приведет к ошибке.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -107,7 +107,7 @@ ms.locfileid: "74056402"
 ### <a name="max"></a>MAX
 Возвращает максимальное значение из указанных значений атрибута node/ребра или выражение, которое отображалось в пути обхода.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
 Функция shortest_path может использоваться только внутри MATCH.     
 LAST_NODE поддерживается только в shortest_path.     
 Поиск взвешенного кратчайшего пути, все пути или все короткие пути не поддерживаются.         
@@ -117,7 +117,7 @@ LAST_NODE поддерживается только в shortest_path.
 ## <a name="examples"></a>Примеры 
 В приведенных здесь примерах запросов мы будем использовать таблицы node и ребра, созданные в [примере SQL Graph](./sql-graph-sample.md) .
 
-### <a name="a--find-shortest-path-between-2-people"></a>А)  Найти кратчайший путь между 2 людьми
+### <a name="a--find-shortest-path-between-2-people"></a>A.  Найти кратчайший путь между 2 людьми
  В следующем примере мы найдут кратчайший путь между Джейкоб и Алисой. Нам потребуется узел Person и Фриендоф ребро, созданные на основе примера сценария Graph. 
 
  ```
@@ -137,7 +137,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
- ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>Б)  Поиск кратчайшего пути от заданного узла ко всем остальным узлам в графе. 
+ ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>Б.  Поиск кратчайшего пути от заданного узла ко всем остальным узлам в графе. 
  В следующем примере выполняется поиск всех людей, к которым подключен Джейкоб, в графе и кратчайшего пути, начиная с Джейкоб, для всех этих пользователей. 
 
  ```
@@ -208,7 +208,7 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОВПАДЕНИе (SQL Graph)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [Вставить (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  

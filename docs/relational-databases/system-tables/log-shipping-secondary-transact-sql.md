@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 58bc0af5be721d30211617a18095213e76991a24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750154"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Хранит одну запись для каждого вторичного идентификатора. Эта таблица хранится в базе данных **msdb** .  
   
@@ -47,12 +47,12 @@ ms.locfileid: "82805997"
 ## <a name="remarks"></a>Примечания  
  Несколько баз данных-получателей на одном вторичном сервере для данной основной базы данных имеют некоторые параметры в таблице **log_shipping_secondary** . Если общий параметр изменяется для одной из них, он изменяется и для всех остальных таких же баз данных.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
- [sp_help_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
+ [sp_help_log_shipping_secondary_database (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)   
  [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: dbo. sysdac_instances (Transact-SQL) | Документация Майкрософт
+title: dbo.sysdac_instances (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752975"
 ---
-# <a name="data-tier-application-views---dbosysdac_instances"></a>Представления приложения уровня данных — dbo. sysdac_instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-tier-application-views---dbosysdac_instances"></a>Представления приложений уровня данных — dbo.sysdac_instances
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает по одной строке для каждого экземпляра приложения уровня данных (DAC), развернутого на экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances принадлежит схеме dbo в базе данных msdb. В следующей таблице описаны столбцы в представлении sysdac_instances.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "82823654"
 |имя_экземпляра|**sysname**|Имя экземпляра приложения уровня данных, указанное при развертывании DAC.|  
 |type_name|**sysname**|Имя DAC, указанное при создании пакета DAC.|  
 |type_version|**nvarchar (64)**|Версия DAC, указанная при создании пакета DAC.|  
-|description;|**nvarchar(4000)**|Описание DAC, записанное при создании пакета DAC.|  
+|description|**nvarchar(4000)**|Описание DAC, записанное при создании пакета DAC.|  
 |type_stream|**varbinary(max)**|Битовый поток, который содержит закодированное представление логических объектов, таких как таблицы и представления, содержащихся в DAC.|  
 |date_created|**datetime**|Дата и время создания экземпляра DAC.|  
 |created_by|**sysname**|Имя входа, создавшее экземпляр DAC.|  
 |database_name|**sysname**|Имя базы данных, созданной для экземпляра DAC.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  DAC включает тип DAC, который представляет собой определение логических объектов уровня данных, используемых приложением, таких как таблицы и представления. Пакет DAC представляет собой файл, используемый для развертывания DAC. Пакет DAC содержит представление всех логических объектов, содержащихся в типе DAC. Пакет DAC может использоваться для развертывания одной или нескольких копий или экземпляров DAC на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Каждый экземпляр DAC, развернутый одним и тем же пакетом DAC, имеет одинаковый с другими экземплярами тип, но ему присваиваются уникальные имя и идентификатор экземпляра.  
   
 ## <a name="permissions"></a>Разрешения  

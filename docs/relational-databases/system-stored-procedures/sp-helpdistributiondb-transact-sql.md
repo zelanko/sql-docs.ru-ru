@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824502"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749316"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает свойства указанной базы данных распространителя. Эта хранимая процедура выполняется на распространителе в базе данных распространителя.  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Количество часов, в течение которых будет храниться журнал.|  
 |**history_cleanup_agent**|**sysname**|Имя агента очистки журнала.|  
 |**distribution_cleanup_agent**|**sysname**|Имя агента очистки распространителя.|  
-|**status**|**int**|Только для внутреннего использования.|  
+|**status**|**int**|Только для внутреннего применения.|  
 |**data_folder**|**nvarchar(255)**|Имя каталога, используемого для хранения файлов базы данных.|  
 |**data_file**|**nvarchar(255)**|Имя файла базы данных.|  
 |**data_file_size**|**int**|Исходный размер файла данных в мегабайтах.|  

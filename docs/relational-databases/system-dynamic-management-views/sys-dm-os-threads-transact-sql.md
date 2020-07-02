@@ -20,15 +20,15 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752867"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает список всех потоков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в операционной системе, запущенных процессом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,14 +50,14 @@ ms.locfileid: "82829318"
 |stack_bytes_committed|**int**|Число байтов, сохраненных в стеке.|  
 |stack_bytes_used|**int**|Число байтов, используемых потоком в данный момент.|  
 |affinity|**bigint**|Маска ЦП, на которой выполняется данный поток. Это зависит от значения, настроенного инструкцией **ALTER Server Configuration Set Process сходства** . Может отличаться от планировщика в случае мягкой привязки.|  
-|Priority|**int**|Приоритет данного потока.|  
+|Приоритет|**int**|Приоритет данного потока.|  
 |Языковой стандарт|**int**|Кэшированное значение идентификатора локали (LCID) для данного потока.|  
 |Токен|**varbinary(8)**|Кэшированный дескриптор токена олицетворения для данного потока.|  
 |is_impersonating|**int**|Указывает, использует ли данный поток олицетворение Win32:<br /><br /> 1 = поток использует учетные данные для обеспечения безопасности, отличающиеся от данных для процесса по умолчанию. Это значит, что поток олицетворяет сущность, отличную от созданной процессом.|  
 |is_waiting_on_loader_lock|**int**|Состояние операционной системы, указывающее, ожидает ли поток завершения блокировки загрузчика.|  
 |fiber_data|**varbinary(8)**|Текущее волокно Win32, запущенное для потока. Применимо только в случае, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для использования упрощенных пулов.|  
-|thread_handle|**varbinary(8)**|Только для внутреннего использования.|  
-|event_handle|**varbinary(8)**|Только для внутреннего использования.|  
+|thread_handle|**varbinary(8)**|Только для внутреннего применения.|  
+|event_handle|**varbinary(8)**|Только для внутреннего применения.|  
 |scheduler_address|**varbinary(8)**|Адрес в памяти связанного с данным потоком планировщика. Дополнительные сведения см. в разделе [sys. dm_os_schedulers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |worker_address|**varbinary(8)**|Адрес в памяти связанного с данным потоком исполнителя. Дополнительные сведения см. в разделе [sys. dm_os_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8)**|Адрес контекста внутреннего волокна. Применимо только в случае, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] настроен для использования упрощенных пулов.|  

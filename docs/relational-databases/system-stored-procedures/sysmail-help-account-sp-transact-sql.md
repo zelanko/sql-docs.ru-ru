@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814148"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752745"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет сведения (за исключением паролей) об учетных записях компонента Database Mail.  
   
@@ -60,7 +60,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**replyto_address**|**nvarchar(128)**|Адрес, на который посылаются ответы на сообщения данной учетной записи.|  
 |**serverType**|**sysname**|Тип почтового сервера для учетной записи.|  
 |**имя**|**sysname**|Имя почтового сервера для учетной записи.|  
-|**порту**|**int**|Номер порта, который использует почтовый сервер.|  
+|**port**|**int**|Номер порта, который использует почтовый сервер.|  
 |**username**|**nvarchar(128)**|Имя пользователя, используемое для входа на почтовый сервер в случае, если почтовый сервер использует проверку подлинности. Если параметр **username** имеет значение NULL, Database Mail не использует для этой учетной записи проверку подлинности.|  
 |**use_default_credentials**|**bit**|Указывает, посылать ли почту серверу SMTP с помощью учетных данных компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** имеет бит и не имеет значения по умолчанию. Если этот параметр равен 1, компонент Database Mail использует учетные данные службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Если этот параметр равен 0, Database Mail использует ** \@ имя пользователя** и ** \@ пароль** для проверки подлинности на SMTP-сервере. Если ** \@ имя пользователя** и ** \@ пароль** имеют значение null, Database Mail использует анонимную проверку подлинности. Перед указанием этого параметра проконсультируйтесь с администратором SMTP-сервера.|  
 |**enable_ssl**|**bit**|Указывает, будет ли Database Mail шифровать связь с помощью протокола TLS, который ранее назывался SSL (SSL). Используйте этот параметр, если на SMTP-сервере требуется TLS. **enable_ssl** имеет бит и не имеет значения по умолчанию. 1 указывает, Database Mail шифрует связь с помощью TLS. значение 0 указывает, Database Mail отправляет почту без шифрования TLS.|  

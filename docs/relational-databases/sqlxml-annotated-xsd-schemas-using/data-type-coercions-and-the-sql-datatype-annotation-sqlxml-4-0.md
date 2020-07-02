@@ -23,15 +23,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d2a4789dfc29cdd581ab50f9f0a0f3d5d69ff0f
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 926f9588ad5bf9a29490a84017f3317f8ec5c424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750779"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Преобразования типов данных и аннотации SQL: DataType (SQLXML 4,0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В схеме XSD атрибут **xsd: Type** указывает тип данных XSD элемента или атрибута. Если схема XSD используется для получения данных из базы данных, указанный тип данных используется для форматирования данных.  
   
  Помимо указания типа XSD в схеме, можно также указать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тип данных Майкрософт с помощью аннотации **SQL: DataType** . Атрибуты **xsd: Type** и **SQL: DataType** управляют сопоставлением между типами данных XSD и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типами данных.  
@@ -48,7 +48,7 @@ ms.locfileid: "84885610"
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Время|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Все остальные|Дополнительное преобразование не выполняется|  
   
 > [!NOTE]  
@@ -62,29 +62,29 @@ ms.locfileid: "84885610"
 |**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**строка**|  
+|**char**|**string**|  
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
 |**изображение**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
-|**nchar**|**строка**|  
-|**ntext**|**строка**|  
-|**nvarchar**|**строка**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
 |**numeric**|**decimal**|  
 |**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
 |**smallmoney**|**decimal**|  
-|**sql_variant**|**строка**|  
-|**sysname**|**строка**|  
-|**text**|**строка**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**строка**|  
-|**uniqueidentifier**|**строка**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>Заметка sql:datatype  
  Для указания типа данных используется аннотация **SQL: DataType** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта заметка должна быть указана в следующих случаях:  

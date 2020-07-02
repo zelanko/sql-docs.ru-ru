@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f7b0c3e906fdd9576970ed1e8dfd69893b0759a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944724"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750471"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>Хранимая процедура sp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Удаляет записи входа из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователя или группы Windows, созданных с помощью инструкции CREATE login, **sp_grantlogin**или **sp_denylogin**.  
+  Удаляет записи входа из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для пользователя или группы Windows, созданных с помощью инструкции CREATE LOGIN, **sp_grantlogin**или **sp_denylogin**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [инструкцию DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md) .  
@@ -42,23 +42,23 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'`Имя пользователя или группы Windows. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. именем для *входа* может быть любое существующее имя пользователя или группа Windows в формате *компьютер имя*\\*пользователь или домен*\\*пользователь*.  
+`[ @loginame = ] 'login'`Имя пользователя или группы Windows. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. именем для *входа* может быть любое существующее имя пользователя или группа Windows в формате *компьютер имя* \\ *пользователь или домен* \\ *пользователь*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_revokelogin** отключает соединения, используя учетную запись, указанную параметром *Login* . Но пользователи Windows, которым доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был предоставлен через членство в группе Windows, тем не менее, могут установить соединение после того, как был запрещен их индивидуальный доступ. Аналогично, если параметр *Login* указывает имя группы Windows, то члены этой группы, которым был предоставлен доступ к экземпляру по отдельности, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будут по-прежнему иметь возможность подключения.  
   
- Например, если пользователь **Адвворкс\жохн** Windows является членом группы Windows **адвворкс\админс**, а **sp_revokelogin** отменяет доступ к `ADVWORKS\john`:  
+ Например, если пользователь **Адвворкс\жохн** Windows является членом группы Windows **адвворкс\админс**, а **sp_revokelogin** отменяет доступ к `ADVWORKS\john` :  
   
 ```  
 sp_revokelogin [ADVWORKS\john]  
 ```  
   
- Пользователь **адвворкс\жохн** по-прежнему может подключиться, если **адвворкс\админс** предоставил доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аналогично, если доступ к группе Windows **адвворкс\админс** был отменен, но **адвворкс\жохн** получает доступ, **адвворкс\жохн** может подключиться.  
+ Пользователь **адвворкс\жохн** по-прежнему может подключиться, если **адвворкс\админс** предоставил доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Аналогично, если доступ к группе Windows **адвворкс\админс** был отменен, но **адвворкс\жохн** получает доступ, **адвворкс\жохн** может подключиться.  
   
- Используйте **sp_denylogin** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы явно запретить пользователям подключаться к экземпляру, независимо от членства в группе Windows.  
+ Используйте **sp_denylogin** , чтобы явно запретить пользователям подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , независимо от членства в группе Windows.  
   
  **sp_revokelogin** не может быть выполнена в пользовательской транзакции.  
   
@@ -66,7 +66,7 @@ sp_revokelogin [ADVWORKS\john]
  Необходимо разрешение ALTER ANY LOGIN на сервере.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляются записи входа для пользователя `Corporate\MollyA`Windows.  
+ В следующем примере удаляются записи входа для пользователя Windows `Corporate\MollyA` .  
   
 ```  
 EXEC sp_revokelogin 'Corporate\MollyA';  
@@ -78,7 +78,7 @@ EXEC sp_revokelogin 'Corporate\MollyA';
 EXEC sp_revokelogin [Corporate\MollyA];  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;&#41;Transact-SQL](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

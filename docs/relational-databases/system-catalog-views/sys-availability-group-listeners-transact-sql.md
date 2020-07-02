@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8b4257c7a4eba52ece199ee3a3426774e92ce0da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829121"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750717"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Для каждой группы доступности AlwaysOn не возвращает ни одной строки, указывая на то, что с группой доступности не связаны имена сети, либо возвращает по одной строке для каждой конфигурации прослушивателей групп доступности в кластере WSFC. Это представление отображает получаемые из кластера в реальном времени сведения о конфигурации.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82829121"
 |**group_id**|**uniqueidentifier**|Идентификатор группы доступности (**group_id**) из [sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|Идентификатор GUID из идентификатора ресурса кластера.|  
 |**dns_name**|**nvarchar (63)**|Настроенное сетевое имя (hostname) прослушивателя группы доступности.|  
-|**порту**|**int**|Номер TCP-порта, заданного для прослушивателя группы доступности.<br /><br /> NULL = прослушиватель настроен вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его номер порта не был добавлен в группу доступности. Чтобы добавить порт, плеасеусе параметр MODIFY LISTENER инструкции [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**port**|**int**|Номер TCP-порта, заданного для прослушивателя группы доступности.<br /><br /> NULL = прослушиватель настроен вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его номер порта не был добавлен в группу доступности. Чтобы добавить порт, плеасеусе параметр MODIFY LISTENER инструкции [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**is_conformant**|**bit**|Соответствует ли стандартам эта конфигурация IP-адресов, одно из следующих значений:<br /><br /> 1 = прослушиватель соответствует стандартам. Между IP-адресами существует только отношение "или". *Согласование* охватывает каждую IP-конфигурацию, созданную инструкцией [CREATE Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Кроме того, если конфигурация IP-адресов была создана вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например с помощью диспетчера отказоустойчивого кластера WSFC (но ее можно изменить с помощью инструкции ALTER AVAILABILITY GROUP), то конфигурация IP-адресов считается соответствующей стандартам.<br /><br /> 0 = прослушиватель не соответствует стандартам. Как правило, это указывает на наличие IP-адреса, который не удалось настроить с помощью команд [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и который вместо этого был определен непосредственно в кластере WSFC.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Строки конфигурации IP-адресов кластера для этого прослушивателя, если они имеются. NULL = прослушиватель не имеет виртуальных IP-адресов. Пример:<br /><br /> IPv4-адрес: `65.55.39.10` .<br /><br /> IPv6-адрес:`2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41d2c1aa64bc3d7913cadbb5e54e9895af55e554
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750480"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет пользователя из текущей базы данных.  
   
@@ -47,7 +47,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При удалении пользователя базы данных также удаляются разрешения и псевдонимы этого пользователя.  
   
  **sp_revokedbaccess** может удалять только пользователей базы данных из текущей базы данных. Перед удалением пользователя базы данных, которому принадлежат объекты в текущей базе данных, необходимо передать принадлежность этих объектов или удалить их из базы данных. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  
@@ -58,14 +58,14 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
  Необходимо разрешение ALTER ANY USER для базы данных.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере удаляется пользователь базы данных, `Edmonds\LolanSo` сопоставленный с текущей базой данных.  
+ В следующем примере удаляется пользователь базы данных, сопоставленный с `Edmonds\LolanSo` текущей базой данных.  
   
 ```  
 EXEC sp_revokedbaccess 'Edmonds\LolanSo';  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Удаление пользователя &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   

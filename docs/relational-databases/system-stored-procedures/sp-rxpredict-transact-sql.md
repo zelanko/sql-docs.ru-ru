@@ -4,7 +4,7 @@ ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_rxPredict
@@ -16,19 +16,19 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9663b4cd51a7aca9e9e30ccafcdcb0652ec4229a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3f6ee7c1f0b1dc1ccbcd4db260621dc5bda3168
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488551"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750464"
 ---
 # <a name="sp_rxpredict"></a>sp_rxPredict  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Создает прогнозируемое значение для заданного ввода, состоящего из модели машинного обучения, хранящейся в двоичном формате в базе данных SQL Server.
 
-Обеспечивает оценку моделей машинного обучения R и Python практически в реальном времени. `sp_rxPredict`— это хранимая `rxPredict` процедура, предоставляемая как оболочка для функции R в [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) и [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), а также функция [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python в [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) и [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Она написана на языке C++ и оптимизирована специально для операций оценки.
+Обеспечивает оценку моделей машинного обучения R и Python практически в реальном времени. `sp_rxPredict`— это хранимая процедура, предоставляемая как оболочка для `rxPredict` функции R в [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) и [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package), а также функция [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) Python в [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) и [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Она написана на языке C++ и оптимизирована специально для операций оценки.
 
 Несмотря на то, что модель должна быть создана с помощью R или Python, после ее сериализации и сохранения в двоичном формате в целевом экземпляре ядра СУБД его можно использовать в экземпляре ядра СУБД, даже если интеграция R или Python не установлена. Дополнительные сведения см. [в статье Оценка в реальном времени с помощью sp_rxPredict](https://docs.microsoft.com/sql/machine-learning/real-time-scoring).
 
@@ -40,7 +40,7 @@ sp_rxPredict  ( @model, @input )
 
 ### <a name="arguments"></a>Аргументы
 
-**для базы данных модели**
+**model**
 
 Предварительно обученная модель в поддерживаемом формате. 
 
@@ -53,7 +53,7 @@ sp_rxPredict  ( @model, @input )
 Возвращается столбец оценки, а также все передаваемые столбцы из источника входных данных.
 Дополнительные столбцы оценки, например доверительный интервал, могут быть возвращены, если алгоритм поддерживает создание таких значений.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 Чтобы включить использование хранимой процедуры, в экземпляре необходимо включить SQLCLR.
 
@@ -77,7 +77,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="r-microsoftml-models"></a>R: модели MicrosoftML
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [рксфастфорест](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
+  + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
   + [rxLogisticRegression](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxlogisticregression)
   + [rxOneClassSvm](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxoneclasssvm)
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
@@ -86,7 +86,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="r-transformations-supplied-by-microsoftml"></a>R: преобразования, предоставляемые MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
-  + [сцеплен](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
+  + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical)
   + [categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalHash)
   + [selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectFeatures)
@@ -112,7 +112,7 @@ sp_rxPredict  ( @model, @input )
 #### <a name="python-transformations-supplied-by-microsoftml"></a>Python: преобразования, предоставляемые microsoftml
 
   + [featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees)
-  + [сцеплен](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
+  + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
   
@@ -120,7 +120,7 @@ sp_rxPredict  ( @model, @input )
 
 Следующие типы моделей не поддерживаются:
 
-+ Модели, `rxGlm` использующие алгоритмы или `rxNaiveBayes` в RevoScaleR
++ Модели, использующие `rxGlm` `rxNaiveBayes` алгоритмы или в RevoScaleR
 + Модели PMML в R
 + Модели, созданные с помощью других сторонних библиотек 
 
@@ -135,7 +135,7 @@ EXEC sp_rxPredict @model = @model,
 @inputData = N'SELECT * FROM data';
 ```
 
-В дополнение к допустимому SQL-запросу входные данные в * \@inputData* должны включать столбцы, совместимые со столбцами в хранимой модели.
+В дополнение к допустимому SQL-запросу входные данные в * \@ inputData* должны включать столбцы, совместимые со столбцами в хранимой модели.
 
 `sp_rxPredict`поддерживает только следующие типы столбцов .NET: Double, float, Short, ushort, Long, ulong и String. Может потребоваться отфильтровать неподдерживаемые типы во входных данных, прежде чем использовать их для оценки в реальном времени. 
 

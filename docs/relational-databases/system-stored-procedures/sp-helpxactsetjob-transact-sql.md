@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac90a8a3e892aef0bb5d45a6864fb2291f52d60f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751736"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает сведения о задании набора транзакций для издателя Oracle. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**varchar (22)**|Время изменения.|  
 |**nextdate**|**varchar (22)**|Следующая дата, когда задание будет запущено.|  
 |**broken**|**varchar(1)**|Флаг, означающий неудачное выполнение задания.|  
-|**interval**|**varchar (200)**|Интервал для задания.|  
+|**пределах**|**varchar (200)**|Интервал для задания.|  
 |**сбоев**|**int**|Количество неудачных выполнений для задания.|  
 |**xactsetjobwhat**|**varchar (200)**|Имя процедуры, выполняемой заданием.|  
 |**xactsetjob**|**varchar(1)**|Показывает состояние задания, может быть одним из следующих:<br /><br /> **1** — задание включено.<br /><br /> **0** — задание отключено.|  

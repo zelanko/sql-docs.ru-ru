@@ -20,15 +20,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689410"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750777"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Фильтрация значений при помощи sql:limit-field и sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Количество строк, возвращаемых запросом к базе данных, можно ограничить на основе какого-либо значения. Заметки **SQL: limit-field** и **SQL: limit-value** используются для определения столбца базы данных, содержащего ограничивающие значения, и для указания конкретного ограничивающего значения, используемого для фильтрации возвращаемых данных.  
   
  Заметка **SQL: limit-field** используется для задания столбца, содержащего ограничивающее значение; он разрешается для каждого сопоставленного элемента или атрибута.  
@@ -47,7 +47,7 @@ ms.locfileid: "83689410"
   
  В этих примерах для задания запросов XPath к схеме сопоставления XSD используются шаблоны.  
   
-### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>А) Ограничение адресов заказчиков определенным типом адреса  
+### <a name="a-limiting-the-customer-addresses-returned-to-a-specific-address-type"></a>A. Ограничение адресов заказчиков определенным типом адреса  
  В этом примере база данных содержит две таблицы  
   
 -   Customer (CustomerID, CompanyName)  
@@ -307,7 +307,7 @@ ms.locfileid: "83689410"
     </root>  
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [&#41;с плавающей запятой и реальным &#40;Transact-SQL](../../t-sql/data-types/float-and-real-transact-sql.md)   
  [nchar и nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)   
  [Установка SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   

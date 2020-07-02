@@ -20,16 +20,16 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 854378b57a4798375e4f97841c8bd72ef0d7d0f3
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 50e2a6efad0cf14739fe2ef28135ea797ce6140e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750821"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Создание постоянных элементов при помощи sql:is-constant (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Чтобы задать постоянный элемент, т. е. элемент в схеме XSD, не сопоставленный ни с одной таблицей или столбцом базы данных, можно использовать аннотацию **SQL: —-Constant** . Эта заметка имеет логическое значение (0 = false, 1 = true). Допустимые значения: 0, 1, true и false. Заметка **SQL: имеет значение константы** может быть указана для элемента, у которого нет атрибутов. Если она задана для элемента, имеющего значение true (или 1), то этот элемент не будет сопоставлен с базой данных, но будет по-прежнему отображаться в XML-документе.  
   
  Заметку **SQL: имеет значение константы** можно использовать для:  
@@ -43,7 +43,7 @@ ms.locfileid: "84524920"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>А) Указание sql:is-constant для добавления элемента контейнера  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Указание sql:is-constant для добавления элемента контейнера  
  В этой схеме XSD с заметками **\<CustomerOrders>** определяется как постоянный элемент путем указания атрибута **SQL: имеет** значение, равное 1. Таким образом, **\<CustomerOrders>** не сопоставляется ни с одной таблицей или столбцом базы данных. Этот постоянный элемент состоит из **\<Order>** дочерних элементов.  
   
  Хотя не **\<CustomerOrders>** сопоставляется ни с одной таблицей или столбцом базы данных, он по-прежнему отображается в результирующем XML как элемент контейнера, содержащий **\<Order>** дочерние элементы.  

@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750809"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Создание допустимых атрибутов типа ID, IDREF и IDREFS с использованием sql:prefix (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Атрибут может быть задан как атрибут типа ID. Атрибуты, заданные как IDREF или IDREFS, могут затем использоваться для ссылки на атрибуты типа ID, создавая ссылки между документами.  
   
  ID, IDREF и IDREFS соответствуют связям PK/FK («первичный ключ-внешний ключ») в базе данных, не считая некоторых отличий. В XML-документе значения атрибутов типа ID должны быть различными. Если атрибуты **CustomerID** и **OrderID** указаны в XML-документе как тип идентификатора, эти значения должны быть разными. Но в базе данных столбцы CustomerID и OrderID могут иметь одинаковые значения. (Например, в базе данных допустимы значения CustomerID = 1 и OrderID = 1.)  
@@ -54,10 +54,10 @@ ms.locfileid: "81388188"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-id-and-idrefs-types"></a>А) Задание типов ID и IDREFS  
- В следующей схеме элемент ** \<>клиента** состоит из дочернего элемента ** \<Order>** . Элемент ** \<Order>** также имеет дочерний элемент, элемент ** \<OrderDetail>** .  
+### <a name="a-specifying-id-and-idrefs-types"></a>A. Задание типов ID и IDREFS  
+ В следующей схеме **\<Customer>** элемент состоит из **\<Order>** дочернего элемента. **\<Order>** Элемент также имеет дочерний элемент — **\<OrderDetail>** элемент.  
   
- Атрибут **ордеридлист** ** \<клиента>** является атрибутом типа IDREFS, который ссылается на атрибут **OrderID** элемента ** \<Order>** .  
+ Атрибут **ордеридлист** атрибута **\<Customer>** является атрибутом типа IDREFS, который ссылается на атрибут **OrderID** **\<Order>** элемента.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

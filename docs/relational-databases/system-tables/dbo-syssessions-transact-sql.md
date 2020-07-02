@@ -1,5 +1,5 @@
 ---
-title: dbo. таблице syssessions (Transact-SQL) | Документация Майкрософт
+title: Сеансы dbo.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 12/30/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf5ede04576a8d79611d7aea93f5963d25b73d55
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91da4b73125c61f23d027bf99d2550a1d449a7a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806809"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750259"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
 При каждом запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается новый сеанс. С помощью сеансов агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохраняет состояние заданий при непредвиденном перезапуске или остановке службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка таблицы **таблице syssessions** содержит сведения об одном сеансе. Используйте таблицу **sysjobactivity** для просмотра состояния задания в конце каждого сеанса.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "82806809"
  Только пользователи, являющиеся членами предопределенной роли сервера **sysadmin** , могут получить доступ к этой таблице.  
   
 ## <a name="see-also"></a>См. также  
- [dbo. sysjobactivity &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
+ [dbo.sysжобактивити &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobactivity-transact-sql.md)  
   
   

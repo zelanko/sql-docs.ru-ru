@@ -19,23 +19,23 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942578"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752921"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (база данных SQL Azure)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> Это относится только к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]версии 11. * *  
+> Это относится только к [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11. * *  
   
  Возвращает сведения о пропускной способности сети, используемой каждой базой данных на ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] сервере базы данных версии 11**. Каждая строка, возвращенная для конкретной базы данных, содержит одно направление и класс использования в течение одного часа.  
   
- **Он является устаревшим в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
+ **Он является устаревшим в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
  Представление **sys. bandwidth_usage** содержит следующие столбцы.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67942578"
 |-----------------|-----------------|  
 |**time**|Время (час) использования пропускной полосы. Строки в этом представлении указаны для каждого часа. Например, 2009-09-19 02:00:00.000 означает, что пропускная способность использовалась 19 сентября 2009 г. c 02:00 до 03:00.|  
 |**database_name**|Имя базы данных, использовавшей полосу пропускания.|  
-|**двух**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящий трафик: данные, которые перемещаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Исходящий трафик: данные, которые перемещаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**direction**|Тип полосы пропускания, которая была использована. Одно из следующих значений.<br /><br /> Входящий трафик: данные, которые перемещаются в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Исходящий трафик: данные, которые перемещаются из [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|  
 |**class**|Класс полосы пропускания, которая была использована. Одно из следующих значений.<br />Внутренняя: данные, перемещаемые на платформе Azure.<br />Внешние: данные, перемещаемые из платформы Azure.<br /><br /> Этот класс возвращается, только если база данных участвует в связи непрерывного копирования между регионами ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Если данная база данных не участвует в связи непрерывного копирования, то строки "Interlink" не возвращаются. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
 |**time_period**|Период времени, в течение которого происходило потребление, помечен как Пиковое время или Непиковое время. The Peak time is based on the region in which the server was created. Например, если сервер был создан в регионе «US_Northwest», параметр Peak определяется как время от 10:00 до 18:00. по тихоокеанскому времени.|  
 |**quantity**|Объем использованной полосы пропускания в килобайтах (КБ).|  
@@ -52,7 +52,7 @@ ms.locfileid: "67942578"
 
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ### <a name="external-and-internal-classes"></a>Внешние и внутренние классы
 
@@ -60,8 +60,8 @@ ms.locfileid: "67942578"
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
-|2012-04-21 17:00:00|Db1|Входящий трафик|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Исходящие|External|Peak|741|  
+|2012-04-21 17:00:00|Db1|Входящий трафик|Внешняя|Peak|66|  
+|2012-04-21 17:00:00|Db1|Исходящие|Внешняя|Peak|741|  
 |2012-04-21 17:00:00|Db1|Входящий трафик|Внутренние|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Исходящие|Внутренние|Peak|3525|  
   

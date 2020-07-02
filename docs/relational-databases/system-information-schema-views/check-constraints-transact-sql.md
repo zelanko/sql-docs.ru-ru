@@ -19,15 +19,15 @@ ms.assetid: e9577fd2-c349-4dff-874c-9e57d2e5a3ec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4d9ab825760659741d17e9154a90779e2ae3b47
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 8e11221d32ff632d339330f2a97f78bc6615965f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752837"
 ---
 # <a name="check_constraints-transact-sql"></a>CHECK_CONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает одну строку для каждого проверочного ограничения в текущей базе данных. Это представление информационной схемы возвращает сведения об объектах, на которые у текущего пользователя есть разрешения.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "83670151"
 |**CONSTRAINT_NAME**|**sysname**|Имя ограничения.|  
 |**CHECK_CLAUSE**|**nvarchar (** 4000 **)**|Фактический текст инструкции определения [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   

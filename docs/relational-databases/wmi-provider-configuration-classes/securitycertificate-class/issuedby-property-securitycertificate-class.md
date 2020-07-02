@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fef4503345588dcd72132727a4ad632244dccc4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62bd64f6be26e9eecda402c96939397ecd723f00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660142"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752607"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>Свойство IssuedBy (класс SecurityCertificate)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает объект, выдавший сертификат безопасности.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,9 +42,9 @@ object.IssuedBy [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее объект, выдавший сертификат безопасности.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e2f1c1ae33bd94ffcbe6faef16523d7d808ac70
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35d035779b5d26fe47c41c06a2b91a39f8da407
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750382"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждой файловой группы во время резервного копирования. **backupfilegroup** хранится в базе данных **msdb** .  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82827397"
 |**name**|**sysname**|Имя файловой группы.|  
 |**filegroup_id**|**int**|Идентификатор файловой группы, уникальный в пределах базы данных. Соответствует **data_space_id** в **sys. FILEGROUP**.|  
 |**filegroup_guid**|**uniqueidentifier**|Глобальный уникальный идентификатор файловой группы. Может иметь значение NULL.|  
-|**type**|**char (2)**|Тип содержимого, может принимать одно из двух значений:<br /><br /> FG = файловая группа «Строки»<br /><br /> SL = файловая группа журнала сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type**|**char(2)**|Тип содержимого, может принимать одно из двух значений:<br /><br /> FG = файловая группа «Строки»<br /><br /> SL = файловая группа журнала сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**type_desc**|**nvarchar(60)**|Описание типа функции, может принимать одно из двух значений:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|Файловая группа по умолчанию; используется, если в инструкции CREATE TABLE или CREATE INDEX не указана ни одна из файловых групп.|  
 |**is_readonly**|**bit**|1 = Файловая группа доступна только для чтения.|  

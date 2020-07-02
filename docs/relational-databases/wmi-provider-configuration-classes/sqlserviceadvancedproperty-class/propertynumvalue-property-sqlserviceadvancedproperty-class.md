@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 724d5b531f15d94a686c91f71e8cfee5ef83e239
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bbae479dc9f3f7f4a105496fb4dfad728932e55e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749999"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Свойство PropertyNumValue (класс SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает числовое значение дополнительного свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,9 +38,9 @@ object.PropertyNumValue [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, определяющее числовое значение дополнительного свойства.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

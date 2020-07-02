@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42ecb7a4199bd42c6f522e447f260c37e3ba3368
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bcc9d30d457e9042f2a667a7a71f846f6e07eb63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738755"
 ---
 # <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого объекта, который является расширенной хранимой процедурой, с **sys. objects. Type** = X. Поскольку расширенные хранимые процедуры устанавливаются в базу данных **master** , они видимы только из контекста базы данных. Выбор из представления **sys. extended_procedures** в любом другом контексте базы данных приведет к возврату пустого результирующего набора.  
 
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, унаследованные из sys. Objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**dll_name**|**nvarchar(260)**|Имя, включая путь, библиотеки DLL для данной расширенной хранимой процедуры.|  
   
 ## <a name="permissions"></a>Разрешения  

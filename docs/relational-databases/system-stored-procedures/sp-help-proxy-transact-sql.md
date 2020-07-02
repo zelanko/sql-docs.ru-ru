@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750534"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Выводит сведения об одной и нескольких учетных записях-посредниках.  
   
@@ -51,13 +51,13 @@ sp_help_proxy
   
  В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
 |Снимок|Агент моментальных снимков репликации|  
 |LogReader|Агент чтения журнала репликации|  
-|Distribution|агент распространения репликации|  
+|Распределение|агент распространения репликации|  
 |Объединить|Replication Merge Agent|  
 |QueueReader|Агент чтения очереди репликации|  
 |ANALYSISQUERY|Команда служб Analysis Services|  

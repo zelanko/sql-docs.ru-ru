@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 913a584c2bdd15a57596f4a51168a8b5c6f7e873
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49c45013b02bd6c1e6a49d229d6c9be6ad635964
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035441"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752756"
 ---
 # <a name="sp_syspolicy_set_config_history_retention-transact-sql"></a>sp_syspolicy_set_config_history_retention (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Указывает число дней, в течение которых хранится журнал выполнения политик для управления на основе политик.  
   
@@ -44,7 +44,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_set_config_history_retention должна выполняться в контексте системной базы данных msdb.  
   
  Если *значение* равно 0, то журнал не будет автоматически удален.  
@@ -60,7 +60,7 @@ WHERE name = 'HistoryRetentionInDays'
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере устанавливается 28-дневный срок хранения журнала выполнения политик.  
@@ -71,7 +71,7 @@ EXEC msdb.dbo.sp_syspolicy_set_config_history_retention @value = 28;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-configure-transact-sql.md)  
   
