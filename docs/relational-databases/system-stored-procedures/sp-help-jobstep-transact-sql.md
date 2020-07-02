@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55fcc73b489a781601a2a6c5bbe139ee449cd60d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773828"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об этапах задания, используемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для автоматизации выполнения.  
   
@@ -65,14 +65,14 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_id**|**int**|Уникальный идентификатор шага.|  
 |**step_name**|**sysname**|Имя шага задания.|  
 |**подсистемы**|**nvarchar(40)**|Подсистема, в которой выполняется команда этапа.|  
-|**кнопки**|**nvarchar(max)**|Выполняемая на шаге команда.|  
+|**command**|**nvarchar(max)**|Выполняемая на шаге команда.|  
 |**flags**|**int**|Битовая маска значений, управляющая режимом шага.|  
 |**cmdexec_success_code**|**int**|Для шага **CmdExec** это код завершения процесса успешной команды.|  
 |**on_success_action**|**tinyint**|Операция, выполняемая в случае успешного завершении шага:<br /><br /> **1** = завершить задание с сообщением об успешном завершении.<br /><br /> **2** = завершить задание отчета о сбое.<br /><br /> **3** = перейти к следующему шагу.<br /><br /> **4** = перейти к шагу.|  
 |**on_success_step_id**|**int**|Если значение **on_success_action** равно 4, это указывает на следующий шаг для выполнения.|  
 |**on_fail_action**|**tinyint**|Операция, совершаемая в случае сбоя при выполнении шага. Значения совпадают с **on_success_action**.|  
 |**on_fail_step_id**|**int**|Если значение **on_fail_action** равно 4, это указывает на следующий шаг для выполнения.|  
-|**сервером**|**sysname**|Зарезервировано.|  
+|**server**|**sysname**|Зарезервировано.|  
 |**database_name**|**sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это база данных, в которой выполняется команда.|  
 |**database_user_name**|**sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это контекст пользователя базы данных, в котором выполняется команда.|  
 |**retry_attempts**|**int**|Максимальное количество повторных попыток выполнения команды (в случае сбоев).|  

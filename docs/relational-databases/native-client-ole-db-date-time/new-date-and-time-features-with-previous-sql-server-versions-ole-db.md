@@ -11,24 +11,24 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a90863fb061912dd0a6c44fe23ba2baa402662c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08a88db90322a3618cc53e60113f5d17ce749ec9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773414"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Новые функции даты и времени с предыдущими версиями SQL Server (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  В этом разделе описывается ожидаемое поведение, когда клиентское приложение, использующее улучшенные функции [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] даты и времени [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], взаимодействует с версией, предшествующей, и когда клиент компилируется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с версией собственного клиента [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] раньше, чем отправка команд на сервер, поддерживающий улучшенные функции даты и времени.  
+  В этом разделе описывается ожидаемое поведение, когда клиентское приложение, использующее улучшенные функции даты и времени, взаимодействует с версией, предшествующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , и когда клиент компилируется с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента раньше, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Отправка команд на сервер, поддерживающий улучшенные функции даты и времени.  
   
 ## <a name="down-level-client-behavior"></a>Работа в клиентах низкого уровня  
- Клиентские приложения, использующие версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента, более раннюю [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , чем новые типы даты и времени как столбцы типа **nvarchar** . Содержимое столбца представлено литералом. Дополнительные сведения см. в разделе "форматы данных: строки и литералы" статьи [Поддержка типов данных для OLE DB улучшения даты и времени](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Размер столбца представляет максимальную длину литерала для точности, указанной для столбца.  
+ Клиентские приложения, использующие версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента, более раннюю, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] новые типы даты и времени как столбцы типа **nvarchar** . Содержимое столбца представлено литералом. Дополнительные сведения см. в разделе "форматы данных: строки и литералы" статьи [Поддержка типов данных для OLE DB улучшения даты и времени](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md). Размер столбца представляет максимальную длину литерала для точности, указанной для столбца.  
   
  API-интерфейсы каталога будут возвращать метаданные, соответствующие коду типа данных нижнего уровня, возвращаемому клиенту (например, **nvarchar**), и связанному представлению нижнего уровня (например, соответствующему литеральному формату). Тем не менее, будет возвращено реальное имя типа данных [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
- Если клиентское приложение нижнего уровня выполняется на сервере [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
+ Если клиентское приложение нижнего уровня выполняется [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] на сервере (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
   
 |Тип клиента OLE DB|Тип SQL Server 2005|Тип SQL Server 2008 (или более поздних версий)|Преобразование результата (сервер-клиент)|Преобразование параметра (клиент-сервер)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
@@ -56,10 +56,10 @@ ms.locfileid: "81301027"
   
 -   Переключение на **datetime2** , так как это предпочтительный тип данных для даты и времени.  
   
- Приложения, использующие метаданные сервера, полученные с помощью ICommandWithParameters:: GetParameterInfo или наборов строк схемы для задания сведений о типе параметра через ICommandWithParameters:: SetParameterInfo, завершатся ошибкой во время преобразования клиента, где строковое представление исходного типа больше, чем строковое представление целевого типа. Например, если в клиентской привязке используется DBTYPE_DBTIMESTAMP и столбец Server имеет значение Date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , собственный клиент преобразует его в «гггг-дд-мм чч: мм: СС. FFF», но метаданные сервера будут возвращены как **nvarchar (10)**. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с помощью IRowsetChange, так как метаданные набора строк задаются из метаданных ResultSet.  
+ Приложения, использующие метаданные сервера, полученные с помощью ICommandWithParameters:: GetParameterInfo или наборов строк схемы для задания сведений о типе параметра через ICommandWithParameters:: SetParameterInfo, завершатся ошибкой во время преобразования клиента, где строковое представление исходного типа больше, чем строковое представление целевого типа. Например, если в клиентской привязке используется DBTYPE_DBTIMESTAMP и столбец Server имеет значение Date, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент преобразует его в «гггг-дд-мм чч: мм: СС. FFF», но метаданные сервера будут возвращены как **nvarchar (10)**. В результате переполнение приведет к ошибке DBSTATUS_E_CATCONVERTVALUE. Аналогичные проблемы возникают при преобразовании данных с помощью IRowsetChange, так как метаданные набора строк задаются из метаданных ResultSet.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Метаданные параметров и наборов строк  
- В этом разделе описываются метаданные для параметров, столбцов результатов и наборов строк схемы для клиентов, компилируемых с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, предшествующей версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+ В этом разделе описываются метаданные для параметров, столбцов результатов и наборов строк схемы для клиентов, компилируемых с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, предшествующей версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
 #### <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Структура DBPARAMINFO возвращает следующие сведения с помощью параметра *пргпараминфо* :  
@@ -100,7 +100,7 @@ ms.locfileid: "81301027"
 |datetimeoffset|DBTYPE_WSTR|26, 28.34|~0|~0|  
   
 ### <a name="schema-rowsets"></a>Наборы строк схемы  
- В этом разделе рассматриваются метаданные для параметров, результирующих столбцов и наборов строк схемы для новых типов данных. Эта информация полезна при наличии поставщика клиента, разработанного с помощью средств, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предшествующих Native Client.  
+ В этом разделе рассматриваются метаданные для параметров, результирующих столбцов и наборов строк схемы для новых типов данных. Эта информация полезна при наличии поставщика клиента, разработанного с помощью средств, предшествующих [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 #### <a name="columns-rowset"></a>COLUMNS, набор строк  
  Для типов даты-времени возвращаются значения следующих столбцов.  
@@ -154,7 +154,7 @@ ms.locfileid: "81301027"
 |IS_FIXEDLENGTH|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
   
 ## <a name="down-level-server-behavior"></a>Работа сервера низкого уровня  
- При соединении с сервером более ранней версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]любая попытка использовать имена новых типов серверов (например, с ICommandWithParameters:: SetParameterInfo или ITableDefinition:: CreateTable) приведет к DB_E_BADTYPENAME.  
+ При соединении с сервером более ранней версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] любая попытка использовать имена новых типов серверов (например, с ICommandWithParameters:: SetParameterInfo или ITableDefinition:: CreateTable) приведет к DB_E_BADTYPENAME.  
   
  Если новые типы привязываются к параметрам или результатам без указания имени типа и новый тип неявным образом указывает на серверный тип данных либо отсутствует допустимое преобразование из серверного типа данных в клиентский, то возвращается ошибка DB_E_ERRORSOCCURRED, а DBBINDSTATUS_UNSUPPORTED_CONVERSION устанавливается в состояние привязки для метода доступа, используемого Execute.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "81301027"
 ## <a name="comparability-for-irowsetfind"></a>Сравнимость для IRowsetFind  
  Все операторы сравнения разрешены для новых типов данных даты-времени, так как они отображаются как строковые типы, а не типы даты-времени.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

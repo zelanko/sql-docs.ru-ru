@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 56dd5919565d1cbb7d0b95ae4476aef9140cecd0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529210"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773714"
 ---
 # <a name="constructor-functions-xquery"></a>Функции-конструкторы (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Функции-конструкторы по указанным входным данным создают экземпляры любых встроенных атомарных типов XSD или пользовательских атомарных типов.  
   
@@ -44,7 +44,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *Тип*  
  Любой встроенный тип XSD.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Конструкторы поддерживаются и базовыми, и производными атомарными типами XSD. Однако подтипы **xs: Duration**, включающие **xdt: еармонсдуратион и xdt: dayTimeDuration**, и **xs: QName**, **xs: NMTOKEN**и **xs: Notation** , не поддерживаются. Пользовательские атомарные типы, доступные в ассоциированных коллекциях схем, также доступны, если они прямо или косвенно произведены от следующих типов.  
   
 #### <a name="supported-base-types"></a>Поддерживаемые базовые типы  
@@ -138,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>А) Использование функции dateTime() языка XQuery для получения описаний старой продукции  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Использование функции dateTime() языка XQuery для получения описаний старой продукции  
  В этом примере образец XML-документа сначала присваивается переменной типа **XML** . Этот документ содержит три примера <`ProductDescription`> элементов, каждый из которых содержит `DateCreated` дочерний элемент <>.  
   
  После этого выполняется запрос переменной, получающей описания только тех продуктов, которые были произведены до указанной даты. В целях сравнения запрос использует функцию конструктора **xs: DateTime ()** для ввода дат.  
@@ -188,7 +188,7 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   

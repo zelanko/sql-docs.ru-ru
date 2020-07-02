@@ -10,17 +10,17 @@ ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82e9e3b1ed8487e864e91edfd3067f9fb97bbb71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73d448e1a012fd27de748e810940b598b2b89044
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773202"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Изменение поведения драйвера ODBC при обработке преобразования символов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Драйвер [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ODBC для собственного клиента (sqlncli11. dll) изменил то, как он выполняет преобразования SQL_WCHAR * (nchar/NVARCHAR/nvarchar (max))\* и SQL_CHAR (char/varchar/нарчар (max)). При использовании драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 функции ODBC, например SQLGetData, SQLBindCol и SQLBindParameter, возвращают (-4) SQL_NO_TOTAL в качестве параметра длины или индикатора. Предыдущие версии драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращали значение длины, которое могло быть неверным.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Драйвер ODBC для собственного клиента (SQLNCLI11.dll) изменил то, как он выполняет преобразование SQL_WCHAR * (nchar/nvarchar/nvarchar (max)) и SQL_CHAR \* (char/varchar/НАРЧАР (max)). При использовании драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 функции ODBC, например SQLGetData, SQLBindCol и SQLBindParameter, возвращают (-4) SQL_NO_TOTAL в качестве параметра длины или индикатора. Предыдущие версии драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращали значение длины, которое могло быть неверным.  
   
 ## <a name="sqlgetdata-behavior"></a>Поведение SQLGetData  
  Многие функции Windows позволяют указывать нулевой размер буфера, при этом возвращаемая длина является размером возвращаемых данных. Следующий вариант является стандартным для программистов Windows:  
@@ -57,7 +57,7 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Версия драйвера Native Client ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Итоговая длина или индикатор|Описание|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |Native Client [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] или более ранняя версия|6|Драйвер ошибочно предположил, что преобразование CHAR в WCHAR можно было выполнить как умножение длины на 2.|  
-|Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|Драйвер больше не предполагает, что преобразование типа CHAR в тип WCHAR или WCHAR в CHAR является действием ( \*умножение) 2 или (деление)/2.<br /><br /> Вызов **SQLGetData** больше не возвращает длину ожидаемого преобразования. Драйвер обнаруживает преобразование из CHAR в WCHAR или обратное преобразование и возвращает (-4) SQL_NO_TOTAL вместо *2 или /2, что могло быть неверным.|  
+|Native Client [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] (версия 11.0.2100.60) или более поздняя версия|-4 (SQL_NO_TOTAL)|Драйвер больше не предполагает, что преобразование типа CHAR в тип WCHAR или WCHAR в CHAR является действием (умножение) \* 2 или (деление)/2.<br /><br /> Вызов **SQLGetData** больше не возвращает длину ожидаемого преобразования. Драйвер обнаруживает преобразование из CHAR в WCHAR или обратное преобразование и возвращает (-4) SQL_NO_TOTAL вместо *2 или /2, что могло быть неверным.|  
   
  Используйте **SQLGetData** для извлечения фрагментов данных. (Показан псевдокод).  
   
@@ -109,7 +109,7 @@ SQLBindParameter(... SQL_W_CHAR, ...)   // Only bind up to first 64 characters
   
 -   Если не выполнить привязку, можно получить данные в блоках с помощью **SQLGetData** и **метод SQLParamData**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

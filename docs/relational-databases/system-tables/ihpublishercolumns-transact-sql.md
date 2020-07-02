@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5347750-224c-40d9-ae12-57e7213b7db9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6abe1290b0d635a615a4c83709a8e208bab2b487
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1de331740a0c67642de314155bfdd4ee53ef8f3f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813471"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773797"
 ---
 # <a name="ihpublishercolumns-transact-sql"></a>Таблица IHpublishercolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Системная таблица **ихпублишерколумнс** представляет метаданные, хранящиеся на издателе. Эта таблица содержит по одной строке для каждого столбца, реплицируемого из издателей, отличных от SQL Server, с помощью текущего распространителя. Сведения о типах данных в **ихпублишерколумнс** относятся только к неSQL Serverной системе управления базами данных (СУБД), из которой публикуются данные. Эта таблица хранится в базе данных распространителя.  
   

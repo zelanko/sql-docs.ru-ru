@@ -14,17 +14,17 @@ ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b52f83e36c315ccd86d1516df9e11b913c80ba8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b9777fb07714eb0d3c23c6ad4e9385921746771
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773486"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Дополнительные метаданные возвращающего табличное значение параметра
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Чтобы получить метаданные для возвращающего табличное значение параметра, приложение вызывает SQLProcedureColumns. Для возвращающего табличное значение параметра SQLProcedureColumns возвращает одну строку. Добавлены два [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]дополнительных столбца, SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME, для предоставления сведений о схеме и каталоге для табличных типов, связанных с параметрами, возвращающими табличное значение. В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME находятся перед столбцами, зависящими от драйвера, добавленными в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, обязательных для ODBC.  
+  Чтобы получить метаданные для возвращающего табличное значение параметра, приложение вызывает SQLProcedureColumns. Для возвращающего табличное значение параметра SQLProcedureColumns возвращает одну строку. Добавлены два дополнительных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбца, SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME, для предоставления сведений о схеме и каталоге для табличных типов, связанных с параметрами, возвращающими табличное значение. В соответствии со спецификацией ODBC столбцы SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME находятся перед столбцами, зависящими от драйвера, добавленными в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, обязательных для ODBC.  
   
  В следующей таблице приводится список столбцов, имеющих отношение к возвращаемым табличное значение параметрам.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "81304544"
   
  Если SQL_SOPT_SS_NAME_SCOPE имеет значение SQL_SS_NAME_SCOPE_TABLE, то запросы к связанным серверам завершаются ошибкой. Вызовы SQLColumns или SQLPrimaryKeys с каталогом, содержащим серверный компонент, завершатся ошибкой.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

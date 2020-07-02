@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 683b181b-0091-4a9c-86db-bc577af43cec
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 61379adc04eddaf276fae37879674b63833b76e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c341ae73981eb0d06a2a1e64e804db9f81297fdd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990137"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773753"
 ---
 # <a name="integration-services-tables-transact-sql"></a>Таблицы служб Integration Services (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В подразделах этого раздела описываются системные таблицы базы данных msdb, в которых хранятся сведения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]используемые.  
+  В подразделах этого раздела описываются системные таблицы базы данных msdb, в которых хранятся сведения, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [sysssislog](../../relational-databases/system-tables/sysssislog-transact-sql.md)  

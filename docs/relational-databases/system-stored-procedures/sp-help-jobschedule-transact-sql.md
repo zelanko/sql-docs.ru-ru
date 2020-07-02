@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30ffe0203b3f9aacf23d811e48e6e6d8094a4ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 34cc7495b526b75f8da55046393aa45f3fd9a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773875"
 ---
 # <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о расписании выполнения заданий, используемом средой [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для выполнения автоматических действий.  
  
@@ -77,13 +77,13 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**active_start_time**|**int**|Время суток, когда начинает действовать расписание.|  
 |**active_end_time**|**int**|Время суток, когда прекращает действовать расписание.|  
 |**date_created**|**datetime**|Дата создания расписания.|  
-|**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке, полученное из значений в **msdb. dbo. sysschedules**. Если значение *include_description* равно **0**, этот столбец содержит текст, указывающий, что описание не было запрошено.|  
+|**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке, полученное из значений в **msdb.dbo.sysрасписаниях**. Если значение *include_description* равно **0**, этот столбец содержит текст, указывающий, что описание не было запрошено.|  
 |**next_run_date**|**int**|Дата следующего выполнения задания в соответствии с расписанием.|  
 |**next_run_time**|**int**|Время следующего выполнения задания в соответствии с расписанием.|  
 |**schedule_uid**|**uniqueidentifier**|Идентификатор расписания.|  
 |**job_count**|**int**|Возвращенное количество заданий.|  
   
-> **Примечание. sp_help_jobschedule** возвращает значения из системных таблиц **dbo. sysjobschedules** и **dbo. sysschedules** в **базе данных msdb**. **sysjobschedules** обновляются каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
+> **Примечание. sp_help_jobschedule** возвращает значения из **dbo.sysжобсчедулес** и **dbo.sysрасписаний** системных таблиц в **базе данных msdb**. **sysjobschedules** обновляются каждые 20 минут. Это может повлиять на значения, возвращаемые этой хранимой процедурой.  
   
 ## <a name="remarks"></a>Примечания  
  Параметры **sp_help_jobschedule** могут использоваться только в определенных сочетаниях. Если указан *schedule_id* , нельзя указать ни *job_id* , ни *job_name* . В противном случае можно использовать параметры *job_id* или *job_name* с *schedule_name*.  

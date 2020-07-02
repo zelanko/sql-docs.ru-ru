@@ -21,17 +21,17 @@ ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4bada5561a4e9af4b779ea26c13fac7ea57dad2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f75555473e529b44d0b1fa99d0b526db8be1e64b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303861"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773236"
 ---
 # <a name="changing-passwords-programmatically"></a>Смена пароля программным способом
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  В версиях, предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], при истечении пароля пользователя переустановить его мог только администратор. Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает обработку истечения срока действия пароля программным способом с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиентского [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB поставщика и драйвера ODBC собственного клиента, а также путем изменения диалоговых окон **входа в SQL Server** .  
+  В версиях, предшествующих [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], при истечении пароля пользователя переустановить его мог только администратор. Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент поддерживает обработку истечения срока действия пароля программным способом с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиентского OLE DB поставщика и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера ODBC собственного клиента, а также путем изменения диалоговых окон **входа в SQL Server** .  
   
 > [!NOTE]  
 >  По возможности следует предлагать пользователям вводить свои учетные данные во время выполнения, избегая их сохранения. Если необходимо сохранить учетные данные пользователей, зашифруйте их с помощью [интерфейса API шифрования Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Дополнительные сведения об использовании паролей см. в разделе [Надежные пароли](../../../relational-databases/security/strong-passwords.md).  
@@ -52,10 +52,10 @@ ms.locfileid: "81303861"
 |18488|Ошибка входа пользователя «%.*ls». Причина: пароль для данной учетной записи необходимо изменить.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает истечение срока действия пароля, хотя пользовательский интерфейс и программный.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает истечение срока действия пароля, хотя пользовательский интерфейс и программный.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Пользовательский интерфейс OLE DB для истечения срока действия пароля  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает истечение срока действия пароля через изменения, внесенные в диалоговые окна **входа SQL Server** . Если свойство DBPROP_INIT_PROMPT установлено в значение DBPROMPT_NOPROMPT, то в случае истечения срока действия пароля попытка начального соединения завершится с ошибкой.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает истечение срока действия пароля через изменения, внесенные в диалоговые окна **входа SQL Server** . Если свойство DBPROP_INIT_PROMPT установлено в значение DBPROMPT_NOPROMPT, то в случае истечения срока действия пароля попытка начального соединения завершится с ошибкой.  
   
  Если свойство DBPROP_INIT_PROMPT установлено в любое другое значение, диалоговое окно **Имя входа SQL Server** появится независимо от того, истек срок действия пароля или нет. Чтобы сменить пароль, пользователь может нажать кнопку **Параметры** и установить флажок **Сменить пароль**.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "81303861"
  Если попытка восстановления завершилась неудачно, то соединение удаляется из пула и возвращается ошибка.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Программное истечение срока действия пароля OLE DB  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает истечение срока действия пароля с помощью добавления свойства SSPROP_AUTH_OLD_PASSWORD (типа VT_BSTR), добавленного в набор свойств DBPROPSET_SQLSERVERDBINIT.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает истечение срока действия пароля с помощью добавления свойства SSPROP_AUTH_OLD_PASSWORD (типа VT_BSTR), добавленного в набор свойств DBPROPSET_SQLSERVERDBINIT.  
   
  Существующее свойство «Password» ссылается на свойство DBPROP_AUTH_PASSWORD и используется для хранения нового пароля.  
   
@@ -91,10 +91,10 @@ ms.locfileid: "81303861"
  Дополнительные сведения о наборе свойств DBPROPSET_SQLSERVERDBINIT см. в статье [Свойства инициализации и авторизации](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает истечение срока действия пароля, хотя пользовательский интерфейс и программный.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает истечение срока действия пароля, хотя пользовательский интерфейс и программный.  
   
 ### <a name="odbc-user-interface-password-expiration"></a>Пользовательский интерфейс ODBC истечения срока действия пароля  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает истечение срока действия пароля через изменения, внесенные в диалоговые окна **SQL Server login** .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает истечение срока действия пароля через изменения, внесенные в диалоговые окна **SQL Server login** .  
   
  Если [SQLDriverConnect](../../../relational-databases/native-client-odbc-api/sqldriverconnect.md) вызывается и для параметра **DriverCompletion** задано значение SQL_DRIVER_NOPROMPT, то попытка первоначального подключения завершится неудачей, если срок действия пароля истек. При последующих вызовах **SqlError** или **SQLGETDIAGREC**возвращаются значение SQLSTATE 28000 и значение машинного кода ошибки 18487.  
   
@@ -111,13 +111,13 @@ ms.locfileid: "81303861"
  Если попытка восстановления завершилась неудачно, то соединение удаляется из пула и возвращается ошибка.  
   
 ### <a name="odbc-programmatic-password-expiration"></a>Программное истечение срока действия пароля ODBC  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает истечение срока действия пароля с помощью добавления атрибута SQL_COPT_SS_OLDPWD, который задается перед подключением к серверу с помощью функции [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает истечение срока действия пароля с помощью добавления атрибута SQL_COPT_SS_OLDPWD, который задается перед подключением к серверу с помощью функции [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) .  
   
  Атрибут SQL_COPT_SS_OLDPWD дескриптора соединения ссылается на пароль с истекшим сроком действия. Для этого атрибута не существует атрибута строки соединения, поскольку это может повлиять на пул соединений. При успешном входе драйвер очищает этот атрибут.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента возвращает SQL_ERROR в четырех случаях для этой функции: истечение срока действия пароля, конфликт политики паролей, блокировка учетной записи и при установке свойства старого пароля при использовании проверки подлинности Windows. Драйвер возвращает пользователю соответствующие сообщения об ошибках при вызове [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) .  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента возвращает SQL_ERROR в четырех случаях для этой функции: истечение срока действия пароля, конфликт политики паролей, блокировка учетной записи и при установке свойства старого пароля при использовании проверки подлинности Windows. Драйвер возвращает пользователю соответствующие сообщения об ошибках при вызове [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

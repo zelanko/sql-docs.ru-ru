@@ -13,15 +13,15 @@ ms.assetid: 31b318a4-20e7-4db0-b367-eb9938859029
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e272f7c545130ac5a0f6d66ec6991037123ed8c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e26d334a360b42ba1bdaa6311eb09bcffd70489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301031"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773444"
 ---
 # <a name="metadata---parameter-and-rowset"></a>Метаданные — параметры и наборы строк
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом разделе приведены сведения о следующем типе и элементах типа, связанных с усовершенствованиями даты и времени OLE DB.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81301031"
   
  Параметр *bPrecision* не учитывается.  
   
- Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". Параметр *bScale* не учитывается, если используются имена типов "**datetime**" или "**smalldatetime**" для конкретного поставщика. В противном случае аппикатионс должен убедиться, что *bScale* задан правильно. Приложения, обновленные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью MDAC и [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Native Client с, используют "DBTYPE_DBTIMESTAMP", будут завершаться ошибкой, если они не устанавливают *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
+ Значение «DBPARAMFLAGS_SS_ISVARIABLESCALE» не учитывается при отправке данных на сервер. Приложения могут принудительно использовать унаследованные типы потоков табличных данных за счет применения имен типов "**datetime**" и "**smalldatetime**", характерных для поставщика. При соединении с серверами [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии) используется формат "**datetime2**", а также при необходимости происходит неявное преобразование сервера, когда тип имеет имя "**datetime2**" или "DBTYPE_DBTIMESTAMP". Параметр *bScale* не учитывается, если используются имена типов "**datetime**" или "**smalldatetime**" для конкретного поставщика. В противном случае аппикатионс должен убедиться, что *bScale* задан правильно. Приложения, обновленные с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью MDAC и Native Client с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , используют "DBTYPE_DBTIMESTAMP", будут завершаться ошибкой, если они не устанавливают *bScale* правильно. При соединении с экземплярами сервера версии ниже [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] значение параметра *bScale*, отличное от 0 или 3 с именем "DBTYPE_DBTIMESTAMP", является ошибкой. В этом случае будет возвращено E_FAIL.  
   
  Если ICommandWithParameters:: SetParameterInfo не вызывается, поставщик имплес тип сервера из типа привязки, как указано в IAccessor:: CreateAccessor следующим образом:  
   
@@ -144,7 +144,7 @@ ms.locfileid: "81301031"
   
  В *dwFlags* предусмотрен новый флаг DBCOLUMNFLAGS_SS_ISVARIABLESCALE, чтобы приложения могли определять тип сервера столбцов, где *wType* является DBTYPE_DBTIMESTAMP. Кроме того, для определения типа сервера необходимо использовать *bScale*.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Метаданные (OLE DB)](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
   
   
