@@ -1,5 +1,5 @@
 ---
-title: sys. sysfiles (Transact-SQL) | Документация Майкрософт
+title: Файлы sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23f0a88653887177a84da079d00550dc9915f0d2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053476"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786384"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого файла базы данных.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "68053476"
 |**status**|**int**|Биты состояния для значения **роста** в мегабайтах (МБ) или килобайтах (КБ).<br /><br /> 0x2 = дисковый файл.<br /><br /> 0x40 = файл журнала.<br /><br /> 0x100000 = масштаб увеличения базы данных. Это значение определяет увеличение в процентах, а не в количестве страниц.|  
 |**Счетчик**|**int**|Зарезервировано.|  
 |**name**|**sysname**|Логическое имя файла.|  
-|**файлов**|**nvarchar(260)**|Имя физического устройства. Включает полный путь к файлу.|  
+|**filename**|**nvarchar(260)**|Имя физического устройства. Включает полный путь к файлу.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

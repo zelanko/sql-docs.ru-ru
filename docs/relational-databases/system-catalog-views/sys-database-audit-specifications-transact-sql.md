@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2fc5e725a86f974c14922d620c2a55af1340409f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ef58ef70135368bd6a87c24a6157086e0e914d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832029"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787157"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "82832029"
 |is_state_enabled|**bit**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕНО<br /><br /> 1 — ВКЛЮЧЕНО|  
 |audit_GUID|**uniqueidentifer**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядовой базы данных при присоединении или запуске базы данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если база данных находится в режиме «только для чтения», компонент аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может добавить спецификацию аудита базы данных.  
   
 ## <a name="permissions"></a>Разрешения  
  Доступ к этому представлению каталога имеют участники с разрешениями **ALTER ANY DATABASE AUDIT** или **View definition** , роль dbo и члены предопределенной роли базы данных db_owners. Кроме того, участнику не должно быть запрещено разрешение **View definition** .  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)].  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

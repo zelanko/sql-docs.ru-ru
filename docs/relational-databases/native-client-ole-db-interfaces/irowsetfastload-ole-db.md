@@ -14,15 +14,15 @@ ms.assetid: d19a7097-48d9-409a-aff9-277891b7aca7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: feea17329a8e809083263a83217aeb87fbf91bc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df9a4ca772571a5ea0022cf13a8f2062768184b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307254"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785374"
 ---
 # <a name="irowsetfastload-ole-db"></a>Метод IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Интерфейс **IRowsetFastLoad** обеспечивает поддержку операций массового копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в памяти. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребители поставщика собственного клиента OLE DB используют интерфейс для быстрого добавления данных в существующую [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81307254"
 |[IRowsetFastLoad::Commit (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md)|Обозначает конец пакета вставляемых строк и записывает эти строки в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[IRowsetFastLoad::InsertRow (OLE DB)](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-insertrow-ole-db.md)|Добавляет строку в набор строк для массового копирования.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интерфейсы &#40;OLE DB&#41;](https://msdn.microsoft.com/library/34c33364-8538-45db-ae41-5654481cda93)   
  [Групповое Копирование данных с использованием IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)   
  [Отправка данных BLOB-объектов в SQL Server с помощью интерфейсов IROWSETFASTLOAD и ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  

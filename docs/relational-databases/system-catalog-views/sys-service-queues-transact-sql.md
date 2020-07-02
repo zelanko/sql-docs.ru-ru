@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f0ffcc306a6b8194aeadcaa473e6eb981e7b97cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc4f4b7ea3cca4b0dd7a3f2bbe643786ae3324ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834046"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786424"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого объекта в базе данных, который является очередью обслуживания, с **sys. objects. Type** = sq.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<inherited columns>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**max_readers**|**smallint**|Максимальное количество параллельных чтений, допустимых для очереди.|  
 |**activation_procedure**|**nvarchar (776)**|Трехсоставное имя для процедуры активации.|  
-|**execute_as_principal_id**|**int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> ИДЕНТИФИКАТОР указанного участника, если он выполняется как \< основной>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> ИДЕНТИФИКАТОР указанного субъекта при выполнении инструкции EXECUTE AS \<principal> .<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**is_activation_enabled**|**bit**|1 = Активация разрешена.|  
 |**is_receive_enabled**|**bit**|1 = Прием разрешен.|  
 |**is_enqueue_enabled**|**bit**|1 = Разрешена постановка в очередь.|  

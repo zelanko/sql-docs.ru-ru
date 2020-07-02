@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6194e803367de5c66df6e270f196e6a8316ce203
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: 98c966ecb91bebb4f11db49028ecf53a885cc888
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627120"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786203"
 ---
 # <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Добавляет подписку по запросу к моментальному снимку или публикации транзакций. Эта хранимая процедура выполняется на подписчике в базе данных, в которой создается подписка по запросу.  
   
@@ -61,7 +61,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @update_mode = ] 'update_mode'`Тип обновления. *update_mode* имеет тип **nvarchar (30)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**только для чтения** (по умолчанию)|Подписка только для чтения. Никакие изменения на подписчике не передаются на издатель. Используется в том случае, когда данные на подписчике изменяться не будут.|  
 |**синктран**|Включает поддержку немедленно обновляемых подписок.|  
@@ -74,7 +74,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_addpullsubscription** используется в репликации моментальных снимков и репликации транзакций.  
   
 > [!IMPORTANT]  

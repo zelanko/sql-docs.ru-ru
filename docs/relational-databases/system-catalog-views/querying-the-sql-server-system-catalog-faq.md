@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78a0a77cc02512d031f7a6749871150026647acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787203"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Данный раздел содержит список часто задаваемых вопросов. Ответы на эти вопросы — запросы, основанные на представлениях каталога.  
   
@@ -139,7 +139,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-owners-of-entities-contained-in-a-specified-schema"></a><a name="_FAQ2"></a>Разделы справки найти всех владельцев сущностей, содержащихся в указанной схеме?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name>` действительными именами.  
@@ -167,7 +167,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-a-primary-key"></a><a name="_FAQ3"></a>Разделы справки найти все таблицы, у которых нет первичного ключа?  
  Перед запуском следующих запросов замените `<database_name>` действительным именем базы данных.  
@@ -202,7 +202,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-do-not-have-an-index"></a><a name="_FAQ4"></a>Разделы справки найти все таблицы, у которых нет индекса?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем базы данных.  
@@ -219,7 +219,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-that-have-an-identity-column"></a><a name="_FAQ5"></a>Разделы справки найти все таблицы, имеющие столбец идентификаторов?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем базы данных.  
@@ -254,7 +254,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-data-types-of-the-columns-of-a-specified-table"></a><a name="_FAQ7"></a>Разделы справки найти типы данных столбцов указанной таблицы?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.table_name>` действительными именами.  
@@ -279,7 +279,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-dependencies-on-a-specified-function"></a><a name="_FAQ8"></a>Разделы справки найти зависимости от указанной функции?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.function_name>` действительными именами.  
@@ -297,7 +297,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-stored-procedures-in-a-database"></a><a name="_FAQ9"></a>Разделы справки найти все хранимые процедуры в базе данных?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем.  
@@ -316,7 +316,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-parameters-for-a-specified-stored-procedure-or-function"></a><a name="_FAQ10"></a>Разделы справки найти параметры для указанной хранимой процедуры или функции?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.object_name>` действительными именами.  
@@ -342,7 +342,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-user-defined-functions-in-a-database"></a><a name="_FAQ12"></a>Разделы справки найти все определяемые пользователем функции в базе данных?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем базы данных.  
@@ -361,7 +361,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-views-in-a-database"></a><a name="_FAQ13"></a>Разделы справки найти все представления в базе данных?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем базы данных.  
@@ -379,7 +379,7 @@ FROM sys.views;
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-entities-that-have-been-modified-in-the-last-n-days"></a><a name="_FAQ6"></a>Разделы справки найти все объекты, которые были изменены за последние N дней?  
  Перед запуском следующего запроса замените `<database_name>` и `<n_days>` действительными значениями.  
@@ -399,7 +399,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-lob-data-types-of-a-specified-table"></a><a name="_FAQ14"></a>Разделы справки найти типы данных LOB указанной таблицы?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.table_name>` действительными именами.  
@@ -427,7 +427,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-view-the-definition-of-a-module"></a><a name="_FAQ15"></a>Разделы справки Просмотреть определение модуля?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.object_name>` действительными именами.  
@@ -452,7 +452,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-view-the-definition-of-a-server-level-trigger"></a><a name="_FAQ19"></a>Разделы справки Просмотреть определение триггера уровня сервера?  
   
@@ -463,7 +463,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-of-a-primary-key-for-a-specified-table"></a><a name="_FAQ16"></a>Разделы справки найти столбцы первичного ключа для указанной таблицы?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.table_name>` действительными именами.  
@@ -506,7 +506,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-of-a-foreign-key-for-a-specified-table"></a><a name="_FAQ17"></a>Разделы справки найти столбцы внешнего ключа для указанной таблицы?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.table_name>` действительными именами.  
@@ -530,7 +530,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-permissions-granted-or-denied-to-a-specified-principal"></a><a name="_FAQ18"></a>Разделы справки найти разрешения, предоставленные или запрещенные для указанного участника?  
  В следующем примере создается функция, возвращающая имя сущности, для которой проверяются разрешения. Эта функция вызывается в следующих ниже запросах. Эту функцию нужно создать в каждой базе данных, в которой проверяются разрешения.  
@@ -613,7 +613,7 @@ WHERE grantee_principal_id = DATABASE_PRINCIPAL_ID('public');
 GO  
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>Разделы справки определить, используется ли столбец в выражении вычисляемого столбца?  
  Перед выполнением следующего запроса замените `<database_name>` , `<schema_name.table_name>` и `<column_name`> допустимыми именами.  
@@ -635,7 +635,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-columns-that-are-used-in-a-computed-column-expression"></a><a name="_FAQ21"></a>Разделы справки найти все столбцы, используемые в выражении вычисляемого столбца?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем.  
@@ -657,7 +657,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ22"></a>Разделы справки найти столбцы, зависящие от указанного определяемого пользователем типа или псевдонима среды CLR?  
  Перед выполнением следующего запроса замените на `<database_name>` допустимое имя, а — на `<schema_name.data_type_name>` допустимый, определяемый пользователем тип данных CLR с указанием схемы или на имя типа псевдонима с указанием схемы. Следующий запрос требует членства в роли **db_owner** или разрешений для просмотра всех зависимых столбцов и метаданных вычисляемых столбцов в базе данных.  
@@ -695,7 +695,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-computed-columns-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ23"></a>Разделы справки найти вычисленные столбцы, зависящие от указанного определяемого пользователем типа или псевдонима среды CLR?  
  Перед выполнением следующего запроса замените `<database_name>` на допустимое имя, а `<schema_name.data_type_name>` — на допустимый, определяемый пользователем тип данных CLR с указанием схемы, имя псевдонима типа.  
@@ -712,7 +712,7 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-parameters-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ24"></a>Разделы справки найти параметры, зависящие от указанного определяемого пользователем типа или псевдонима среды CLR?  
  Перед выполнением следующего запроса замените `<database_name>` на допустимое имя, а `<schema_name.data_type_name>` — на допустимый, определяемый пользователем тип данных CLR с указанием схемы, имя псевдонима типа. Следующий запрос требует членства в роли **db_owner** или разрешений для просмотра всех зависимых столбцов и метаданных вычисляемых столбцов в базе данных.  
@@ -754,7 +754,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-check-constraints-that-depend-on-a-specified-clr-user-defined-type"></a><a name="_FAQ25"></a>Разделы справки найти ПРОВЕРОЧные ограничения, зависящие от указанного определяемого пользователем типа данных CLR?  
  Перед выполнением следующего запроса замените на `<database_name>` допустимое имя и на `<schema_name.data_type_name>` допустимое имя определяемого пользователем типа данных CLR с указанием схемы.  
@@ -774,7 +774,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-views-transact-sql-functions-and-transact-sql-stored-procedures-that-depend-on-a-specified-clr-user-defined-type-or-alias-type"></a><a name="_FAQ26"></a>Разделы справки найти представления, функции Transact-SQL и хранимые процедуры Transact-SQL, зависящие от указанного определяемого пользователем типа или псевдонима среды CLR?  
  Перед выполнением следующего запроса замените `<database_name>` на допустимое имя, а `<schema_name.data_type_name>` — на допустимый, определяемый пользователем тип данных CLR с указанием схемы, имя псевдонима типа.  
@@ -802,7 +802,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-constraints-for-a-specified-table"></a><a name="_FAQ27"></a>Разделы справки найти все ограничения для указанной таблицы?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.table_name>` действительными именами.  
@@ -826,7 +826,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-indexes-for-a-specified-table"></a><a name="_FAQ28"></a>Разделы справки найти все индексы для указанной таблицы?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.table_name>` действительными именами.  
@@ -855,7 +855,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-objects-that-have-a-specified-column-name"></a><a name="_FAQ30"></a>Разделы справки найти все объекты, у которых есть указанное имя столбца?  
  Перед запуском следующего запроса замените `<database_name>` и `<column_name>` действительными именами.  
@@ -870,7 +870,7 @@ GO
   
 ```  
   
- Или  
+ либо  
   
 ```  
 USE <database_name>;  
@@ -885,7 +885,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-user-defined-tables-in-a-specified-database"></a><a name="_FAQ31"></a>Разделы справки найти все определяемые пользователем таблицы в указанной базе данных?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем.  
@@ -899,7 +899,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-tables-and-indexes-that-are-partitioned"></a><a name="_FAQ32"></a>Разделы справки найти все таблицы и индексы, которые секционированы?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем.  
@@ -921,7 +921,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-statistics-on-a-specified-object"></a><a name="_FAQ33"></a>Разделы справки найти всю статистику по указанному объекту?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем и `<schema_name.object_name>` действительным именем таблицы, индексированного представления или возвращающей табличное значение функции.  
@@ -940,7 +940,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-all-the-statistics-and-statistics-columns-on-a-specified-object"></a><a name="_FAQ34"></a>Разделы справки найти все столбцы статистики и статистики для указанного объекта?  
  Перед запуском следующего запроса замените `<database_name>` действительным именем и `<schema_name.object_name>` действительным именем таблицы, индексированного представления или возвращающей табличное значение функции.  
@@ -961,7 +961,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ###  <a name="how-do-i-find-the-definition-of-a-view"></a><a name="_FAQ35"></a>Разделы справки найти определение представления?  
  Перед запуском следующего запроса замените `<database_name>` и `<schema_name.object_name>` действительными именами.  
@@ -986,7 +986,7 @@ GO
   
 ```  
   
- [В начало](#_TOP)  
+ [Вверх](#_TOP)  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4f2f0888daf214e91127e8caed3c3bbb04424f0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f8f07a38d612375030f43e2faf2194d4bc65bca8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786124"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает сведения о количестве ожидающих выполнения команд для подписки на публикацию транзакциями и грубую оценку времени, требуемого для их выполнения. Эта хранимая процедура возвращает одну строку для каждой возвращенной подписки. Эта хранимая процедура, используемая для наблюдения за репликацией, выполняется на распространителе в базе данных распространителя.  
   
@@ -55,7 +55,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`Тип подписки. *publication_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Принудительная подписка|  
 |**1**|Подписка по запросу|  
@@ -70,7 +70,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorsubscriptionpendingcmds** используется с репликацией транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -1,5 +1,5 @@
 ---
-title: sys. sysindexes (Transact-SQL) | Документация Майкрософт
+title: Индексы sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ae519a06d98c3c70cdd01064c220e5f2e4ed424
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786323"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого индекса и таблицы в текущей базе данных. XML-индексы в этом представлении не поддерживаются, Секционированные таблицы и индексы в этом представлении поддерживаются не полностью. Вместо этого используйте представление каталога [sys. indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68053443"
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор таблицы, которой принадлежит данный индекс.|  
 |**status**|**int**|Сведения о состоянии системы.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**началь**|**двоичный (6)**|Указатель на первую или корневую страницу.<br /><br /> Не используется, если **столбец indid** = 0.<br /><br /> NULL = индекс секционирован, если **столбец indid** > 1.<br /><br /> NULL = таблица секционирована, если **столбец indid** имеет значение 0 или 1.|  
+|**first**|**двоичный (6)**|Указатель на первую или корневую страницу.<br /><br /> Не используется, если **столбец indid** = 0.<br /><br /> NULL = индекс секционирован, если **столбец indid** > 1.<br /><br /> NULL = таблица секционирована, если **столбец indid** имеет значение 0 или 1.|  
 |**столбец indid**|**smallint**|Идентификатор индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный индекс;<br /><br /> >1 = некластеризованный индекс|  
 |**root**|**двоичный (6)**|Для **indid** >= 1 **корень** является указателем на корневую страницу.<br /><br /> Не используется, если **столбец indid** = 0.<br /><br /> NULL = индекс секционирован, если **столбец indid** > 1.<br /><br /> NULL = таблица секционирована, если **столбец indid** имеет значение 0 или 1.|  
 |**minlen**|**smallint**|Минимальный размер строки.|  
@@ -61,13 +61,13 @@ ms.locfileid: "68053443"
 |**impid**|**smallint**|Флаг реализации индекса.<br /><br /> Возвращает 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**lockflags**|**smallint**|Используется для ограничения рассматриваемой гранулярности блокировки для индекса. Например, для минимизации стоимости блокировки уровень блокировки таблицы подстановки, находящейся в режиме только для чтения, может быть установлен только на уровне таблицы.|  
 |**pgmodctr**|**int**|Возвращает 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**ключ**|**varbinary (816)**|Список идентификаторов столбцов, составляющих ключ индекса.<br /><br /> Возвращает значение NULL.<br /><br /> Чтобы отобразить ключевые столбцы индекса, используйте представление [sys. sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**ключ**|**varbinary (816)**|Список идентификаторов столбцов, составляющих ключ индекса.<br /><br /> Возвращает значение NULL.<br /><br /> Чтобы отобразить ключевые столбцы индекса, используйте [sys.sysиндекскэйс](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Имя индекса или статистики. Возвращает значение NULL, если **столбец indid** = 0. Измените приложение, чтобы оно выполняло поиск кучи с именем NULL.|  
-|**statblob**|**image**|Статистический большой двоичный объект (BLOB).<br /><br /> Возвращает значение NULL.|  
+|**statblob**|**изображение**|Статистический большой двоичный объект (BLOB).<br /><br /> Возвращает значение NULL.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**сквоз**|**int**|Количество строк на уровне данных, основанное на столбцах с **indid** = 0 и **indid** = 1, и значение повторяется для **indid** >1.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Столбцы, определенные как зарезервированные, не должны использоваться.  
   
  Столбцы **дпажес**, **reserved**и **used** не будут возвращать точные результаты, если таблица или индекс содержат данные в единице распределения ROW_OVERFLOW. Кроме того, счетчики страниц для каждого индекса отслеживаются отдельно и не суммируются для базовой таблицы. Для просмотра количества страниц используйте представления каталога [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) или [sys. partitions](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) либо динамическое административное представление [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) .  
@@ -84,7 +84,7 @@ ms.locfileid: "68053443"
   
 -   Использовать данные уровня приложения для определения времени обновления статистики. Например, каждый раз, когда максимальное значение столбца **идентификаторов** изменяется более чем на 10 000, или каждый раз при выполнении операции выполнения операций с массовыми вставками.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  

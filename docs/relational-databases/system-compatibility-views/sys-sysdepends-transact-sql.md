@@ -1,5 +1,5 @@
 ---
-title: sys. обнаружены таблицу sysdepends (Transact-SQL) | Документация Майкрософт
+title: sys.sysзависит (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: f9c182cb-386f-4e72-859f-9f1115b389f9
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5d928926294bb3e80f860a535a266b5c106e3f18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c163fb545c5eef4b1d4e10a7dcf0bfea79f3b4a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786401"
 ---
 # <a name="syssysdepends-transact-sql"></a>sys.sysdepends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит данные о зависимостях между объектами (представлениями, процедурами и триггерами) в базе данных и объектами (таблицы, представления и процедуры), которые содержатся в их определениях.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "68053505"
 |**resultobj**|**bit**|1 = Объект обновляется.<br /><br /> 0 = Нет.|  
 |**readobj**|**bit**|1 = Объект производит считывание.<br /><br /> 0 = Нет.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [sp_depends &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-depends-transact-sql.md)   

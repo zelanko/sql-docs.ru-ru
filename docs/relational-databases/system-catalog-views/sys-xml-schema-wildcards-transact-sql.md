@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_wildcards (Transact-SQL) | Документация Майкрософт
+title: sys.xml_schema_wildcards (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 ms.assetid: 7cedfe9a-e99e-4777-8a28-98674b6e5cff
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d7687acb160e872fbe85dc7789115a14e14e875f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c73cdf4cbc1c366f3266dd81883f428897ee928
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833868"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787054"
 ---
 # <a name="sysxml_schema_wildcards-transact-sql"></a>sys.xml_schema_wildcards (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает по одной строке на каждый компонент схемы XML, являющийся подстановочным знаком атрибута (**тип** **V**) или подстановочным знаком элемента (**тип** **W**), с **symbol_space** **N**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы>**||Наследует столбцы из [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**||Наследует столбцы от [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**process_content**|**char (1)**|Указывает способ обработки содержимого:<br /><br /> S = строгая проверка (необходимо проверять)<br /><br /> L = необязательная проверка (проверять по возможности)<br /><br /> P = пропустить проверку|  
 |**process_content_desc**|**nvarchar(60)**|Описание способа обработки содержимого:<br /><br /> **STRICT_VALIDATION**<br /><br /> **LAX_VALIDATION**<br /><br /> **SKIP_VALIDATION**|  
-|**disallow_namespaces**|**bit**|0 = пространства имен, перечисленные в [sys. xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) , являются допустимыми.<br /><br /> 1 = запрещены только пространства имен.|  
+|**disallow_namespaces**|**bit**|0 = разрешены только пространства имен, перечисленные в [sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md) .<br /><br /> 1 = запрещены только пространства имен.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

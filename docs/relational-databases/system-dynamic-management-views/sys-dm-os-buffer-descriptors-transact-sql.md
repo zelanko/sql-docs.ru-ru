@@ -20,15 +20,15 @@ ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61a84a655bced5a053f47d0aae1493ec80dd9ff8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787013"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает сведения обо всех страницах данных, расположенных в данный момент в буферном пуле [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это представление может использоваться, чтобы определить распределение страниц баз данных в буферном пуле в соответствии с базой данных, объектом или типом. В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] это динамическое административное представление также возвращает сведения о страницах данных в файле расширения буферного пула. Дополнительные сведения см. в разделе [расширение буферного пула](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
@@ -63,8 +63,8 @@ ms.locfileid: "82827902"
 |Исходный тип|Кому|Включено|Связь|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|«многие к одному»|  
-|sys.dm_os_buffer_descriptors|\<UserDB>. sys. allocation_units|allocation_unit_id|«многие к одному»|  
-|sys.dm_os_buffer_descriptors|\<UserDB>. sys. database_files|file_id|«многие к одному»|  
+|sys.dm_os_buffer_descriptors|\<userdb>sys. allocation_units|allocation_unit_id|«многие к одному»|  
+|sys.dm_os_buffer_descriptors|\<userdb>sys. database_files|file_id|«многие к одному»|  
 |sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|«многие к одному»|  
   
 ## <a name="examples"></a>Примеры  

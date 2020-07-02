@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 396e370e7cb271c516033eb160332ac749a27aca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787007"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает сведения о зависимостях объектов базы данных, таких как представления и процедуры, зависящие от таблицы или представления, а также таблицы и представления, зависящие от представления или процедуры. О ссылках на объекты вне текущей базы данных не сообщается.  
   
@@ -63,7 +63,7 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Результирующие наборы  
  **sp_depends** отображает два результирующих набора.  
   
- Следующий результирующий набор показывает объекты, от которых зависит * \< объект>* .  
+ Следующий результирующий набор показывает объекты, от которых *\<object>* зависит.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -73,7 +73,7 @@ sp_depends [ @objname = ] '<object>'
 |**выбрать**|**nvarchar (8)**|Используется ли объект в инструкции SELECT.|  
 |**column**|**sysname**|Столбец или параметр, от которого существует зависимость.|  
   
- Следующий результирующий набор показывает объекты, зависящие от * \<>объектов *.  
+ В следующем результирующем наборе показаны объекты, зависящие от *\<object>* .  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  

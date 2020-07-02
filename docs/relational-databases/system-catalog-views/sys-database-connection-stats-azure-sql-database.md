@@ -20,20 +20,20 @@ author: CarlRabeler
 ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 047e6d6f9f6e7c0405eab27655ee9e2d97e1236b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787140"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (база данных SQL Azure)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Содержит статистику для [!INCLUDE[ssSDS](../../includes/sssds-md.md)] событий **подключения к** базе данных, предоставляя обзор успешных и неудачных попыток подключения к базе данных. Дополнительные сведения о событиях подключения см. в статье типы событий в [sys. event_log &#40;&#41;базы данных SQL Azure ](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Статистика|Type|Описание|  
+|Статистика|Тип|Описание|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных.|  
 |**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -44,7 +44,7 @@ ms.locfileid: "82828528"
 |**terminated_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число прерванных соединений.|  
 |**throttled_connection_count**|**int**|**_Применимо только для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 11._**<br /><br /> Число регулируемых соединений.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 

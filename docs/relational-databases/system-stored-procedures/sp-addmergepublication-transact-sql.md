@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d5b7870faed5423d4b12861d18f9bdb85e40c68
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09e3c873ecdab8f967fb454854ae66b3a367ab87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826318"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786243"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает новую публикацию слиянием. Эта хранимая процедура выполняется на издателе в публикуемой базе данных.  
   
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`Режим первоначальной синхронизации подписчиков с публикацией. *sync_mode* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**native** (по умолчанию)|Производит выходные данные программы массового копирования всех таблиц.|  
 |**символов**|Производит выходные данные программы массового копирования всех таблиц в символьном режиме. Требуется для поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] и подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -162,7 +162,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`Указывает, что для оптимизации процесса синхронизации должны использоваться предварительно вычисленные секции. *use_partition_groups* имеет тип **nvarchar (5)** и может принимать одно из следующих значений:  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**true**|Публикация использует предварительно вычисляемые секции.|  
 |**false**|Публикация не использует предварительно вычисляемые секции.|  
@@ -172,7 +172,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @publication_compatibility_level = ] backward_comp_level`Указывает обратную совместимость публикации. *backward_comp_level* имеет тип **nvarchar (6)** и может принимать одно из следующих значений:  
   
-|Значение|Version|  
+|Применение|Версия|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,7 +200,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Указывает единицы срока хранения, заданные в параметре *retention*. *retention_period_unit* имеет тип **nvarchar (10)** и может принимать одно из следующих значений.  
   
-|Значение|Version|  
+|Применение|Версия|  
 |-----------|-------------|  
 |**Day** (по умолчанию)|Срок хранения указан в днях.|  
 |**week**|Срок хранения указан в неделях.|  
@@ -216,7 +216,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`Указывает, где хранятся конфликтующие записи. *conflict_logging* имеет тип **nvarchar (15)** и может принимать одно из следующих значений:  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**publisher**|Конфликтующие записи хранятся на издателе.|  
 |**абонент**|Конфликтующие записи хранятся на подписчике, вызвавшем конфликт. Не поддерживается подписчиками [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b9af4f3564c5834b856632db70bd6b12368a22c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826308"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786240"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Добавляет новое задание агента для планирования синхронизации подписки по запросу на публикацию слиянием. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -149,13 +149,13 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**глубин**|Ежемесячно|  
+|**8**|Weekly (Еженедельно);|  
+|**16**|Ежемесячная|  
 |**32**|Ежемесячно с относительной датой|  
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
@@ -166,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`День или дни выполнения агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
@@ -182,20 +182,20 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Дата агент слияния. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Указывает, что веб-синхронизация включена. *use_web_sync* имеет **бит**и значение по умолчанию 0. **1** указывает, что подписка по запросу может быть синхронизирована через Интернет по протоколу HTTP.  
   
-`[ @internet_url = ] 'internet_url'`— Это расположение прослушивателя репликации (REPLISAPI. DLL) для веб-синхронизации. *internet_url* имеет тип **nvarchar (260)** и значение по умолчанию NULL. *internet_url* является полным URL-адресом в формате `http://server.domain.com/directory/replisapi.dll` . Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
+`[ @internet_url = ] 'internet_url'`Расположение прослушивателя репликации (REPLISAPI.DLL) для веб-синхронизации. *internet_url* имеет тип **nvarchar (260)** и значение по умолчанию NULL. *internet_url* является полным URL-адресом в формате `http://server.domain.com/directory/replisapi.dll` . Если сервер настроен для прослушивания порта, отличного от 80-го, необходимо также задать номер порта в формате `http://server.domain.com:portnumber/directory/replisapi.dll`, где `portnumber` указывает номер порта.  
   
 `[ @internet_login = ] 'internet_login'`Имя входа, используемое агент слияния при соединении с веб-сервером, на котором размещается веб-синхронизация, с использованием обычной проверки подлинности HTTP. Аргумент *internet_login* имеет тип **sysname**и значение по умолчанию NULL.  
   
@@ -266,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`Метод проверки подлинности, используемый агент слияния при подключении к веб-серверу во время веб-синхронизации по протоколу HTTPS. *internet_security_mode* имеет **тип int** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Используется обычная проверка подлинности (проверка пароля и имени входа, входящая в протокол HTTP).|  
 |**1** (по умолчанию)|Используется встроенная проверка подлинности Windows.|  

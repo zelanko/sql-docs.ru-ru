@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786521"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Выражения пути — указание проверки узла
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Шаг оси в выражении пути содержит следующие компоненты:  
   
@@ -111,7 +111,7 @@ child::comment()
 ## <a name="examples"></a>Примеры  
  В следующем примере сравниваются имена и типы узлов.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>А) Результаты указания имени и типа узла в качестве проверки узла в выражении пути  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. Результаты указания имени и типа узла в качестве проверки узла в выражении пути  
  В следующем примере для переменной типа **XML** присваивается простой XML-документ. К этому документу выполняется запрос с помощью разных выражений пути. Результаты сравниваются.  
   
 ```  

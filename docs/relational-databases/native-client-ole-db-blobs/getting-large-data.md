@@ -16,15 +16,15 @@ ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ba1762bdc54c5ffe3e3879d21edd5e48c096f03
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4927ffc7ded9a291e5910cd359cb59edea0bf3bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785564"
 ---
 # <a name="getting-large-data"></a>Возврат больших данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Как правило, потребители должны изолировать код, который создает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DB объект хранилища поставщика из другого кода, обрабатывающего данные, на которые не ссылается указатель интерфейса **ISequentialStream** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81303625"
   
  Если свойству DBPROP_ACCESSORDER (в группе свойств набора строк) присвоено одно из значений, DBPROPVAL_AO_SEQUENTIAL или DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, потребитель должен получить только одну строку данных в вызове метода **GetNextRows** , так как данные большого двоичного объекта не буферизованы. Если свойство DBPROP_ACCESSORDER имеет значение DBPROPVAL_AO_RANDOM, потребитель может получать несколько строк данных в одном вызове метода **GetNextRows**.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента не получает большие объемы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пока не запрашивается потребителем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента не получает большие объемы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пока не запрашивается потребителем. Потребитель должен связывать все короткие типы данных в методе доступа, а затем, если потребуется, использовать один или несколько временных методов доступа для получения значений больших типов данных.  
   
 ## <a name="example"></a>Пример  
  В этом примере значение большого типа данных получается из одного столбца.  
@@ -148,7 +148,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты и OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Использование типов больших значений](../../relational-databases/native-client/features/using-large-value-types.md)  
   

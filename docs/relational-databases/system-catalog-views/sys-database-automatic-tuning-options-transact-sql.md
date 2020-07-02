@@ -22,15 +22,15 @@ ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6660bc43a6db9437ba628c0856760aac4ccd52f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67940222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787151"
 ---
-# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. Database\_,\_автоматическое TUNING_OPTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+# <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>sys. Database, \_ автоматическое \_ Tuning_options (TRANSACT-SQL)
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Возвращает параметры автоматической настройки для этой базы данных.  
 
@@ -47,7 +47,7 @@ ms.locfileid: "67940222"
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение `VIEW DATABASE STATE`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Автоматическая настройка](../../relational-databases/automatic-tuning/automatic-tuning.md)   
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys. database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   

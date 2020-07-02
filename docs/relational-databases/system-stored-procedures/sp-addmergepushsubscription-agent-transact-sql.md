@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f29d2f67f50ecda28b0675ed6e716afd390ca899
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820760"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786260"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Вводит новое задание агента для подготовки расписания синхронизации принудительной подписки для публикации слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -97,13 +97,13 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`Частота, с которой следует запланировать агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Один раз.|  
 |**2**|По запросу|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**глубин**|Ежемесячно|  
+|**8**|Weekly (Еженедельно);|  
+|**16**|Ежемесячная|  
 |**32**|Ежемесячно с относительной датой|  
 |**64**|Автозапуск|  
 |**128**|Повторяющееся задание|  
@@ -114,7 +114,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Дни, в которые выполняется агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
@@ -130,20 +130,20 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Дата агент слияния. Этот параметр используется, если *frequency_type* установлен в значение **32** (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor* имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Частота повторного планирования в течение заданного периода. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
@@ -166,7 +166,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addmergepushsubscription_agent** используется в репликации слиянием и использует функции, аналогичные [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
 ## <a name="example"></a>Пример  

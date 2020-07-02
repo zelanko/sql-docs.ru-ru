@@ -19,15 +19,15 @@ ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b8e40091f88c4e9fc739f125a2e44715e62c9ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 19914bb99a2812035e6833b389a62e6ed3139463
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774267"
 ---
 # <a name="bcp_init"></a>bcp_init
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Инициализирует операцию массового копирования.  
 
@@ -66,11 +66,11 @@ RETCODE bcp_init (
  *eDirection*  
  Направление копирования (DB_IN или DB_OUT). Значение DB_IN указывает на копирование из переменных программы или пользовательского файла в таблицу. Значение DB_OUT указывает на копирование из таблицы базы данных в пользовательский файл. Если используется значение DB_OUT, необходимо указать имя пользовательского файла.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Remarks  
- Вызовите **bcp_init** перед вызовом любой другой функции небольшого копирования. **bcp_init** выполняет необходимые операции инициализации для выполнения операций с массовым копированием данных между рабочей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]станцией и.  
+## <a name="remarks"></a>Примечания  
+ Вызовите **bcp_init** перед вызовом любой другой функции небольшого копирования. **bcp_init** выполняет необходимые операции инициализации для выполнения операций с массовым копированием данных между рабочей станцией и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Функция **bcp_init** должна быть предоставлена с помощью обработчика соединений ODBC, включенного для использования с функциями операций с массовым копированием. Чтобы включить этот маркер, используйте [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром SQL_COPT_SS_BCP, чтобы SQL_BCP_ON для выделенного, но не подключенного обработчика соединения. Попытка назначения атрибута для подключенного дескриптора приведет к ошибке.  
   
@@ -84,7 +84,7 @@ RETCODE bcp_init (
   
 -   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файл данных должен содержать данные для каждого столбца таблицы базы данных. При копировании на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные из всех столбцов в таблице, представлении или результирующем наборе инструкции SELECT базы данных копируются в файл данных.  
   
--   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]из **bcp_exec** помещает данные в зависимости от порядкового номера столбца в таблице базы данных.  
+-   При копировании в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] порядковый номер столбца в файле данных должен совпадать с порядковым номером столбца таблицы базы данных. При копировании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из **bcp_exec** помещает данные в зависимости от порядкового номера столбца в таблице базы данных.  
   
 -   Если тип данных базы данных имеет переменную длину (например, **varbinary (22)**) или столбец базы данных может содержать значения NULL, то данные в файле данных имеют префикс длины или значения NULL. Ширина признака изменяется в зависимости от типа данных и версии массового копирования.  
   
@@ -223,7 +223,7 @@ int main() {
   
 ```  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

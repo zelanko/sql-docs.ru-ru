@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 61229514cb837a40537b6a363d2ebba81a5cef5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786869"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает сведения об определенных сопоставлениях типов данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и системами управления, не являющимися [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] БАЗАМИ данных (СУБД). Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Аргументы  
 `[ @source_dbms = ] 'source_dbms'`Имя СУБД, с которой сопоставляются типы данных. Аргумент *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание:|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Источником является база данных Oracle.|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`Имя целевой СУБД. Аргумент *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание:|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Целевая база данных — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Целевой является база данных Oracle.|  

@@ -25,15 +25,15 @@ ms.assetid: fbec2efa-5fe9-4121-9b34-60497b0b2aca
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1883f6d4f70aa085ad5d69c595e59f37664b98cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73594524"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787184"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Возвращает по одной строке для каждого главного ключа базы данных, добавленного с помощью инструкции [создания главного ключа](../../t-sql/statements/create-column-master-key-transact-sql.md) . Каждая строка представляет один главный ключ столбца (CMK).  
     
@@ -44,7 +44,7 @@ ms.locfileid: "73594524"
 |**create_date**|**datetime**|Дата создания главного ключа столбца.|  
 |**modify_date**|**datetime**|Дата последнего изменения главного ключа столбца.|  
 |**key_store_provider_name**|**sysname**|Имя поставщика для хранилища главных ключей столбцов, содержащего CMK. Допустимые значения:<br /><br /> MSSQL_CERTIFICATE_STORE — если хранилищем главных ключей столбцов является хранилище сертификатов.<br /><br /> Определяемое пользователем значение, если хранилище главных ключей столбцов имеет настраиваемый тип.|  
-|**key_path**|**nvarchar(4000)**|Путь к главному столбцу главного ключа, относящийся к ключу. Формат пути зависит от типа хранилища главных ключей столбцов. Пример.<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для пользовательского хранилища главного ключа столбца разработчик несет ответственность за определение пути к ключу для пользовательского хранилища главного ключа столбца.|  
+|**key_path**|**nvarchar(4000)**|Путь к главному столбцу главного ключа, относящийся к ключу. Формат пути зависит от типа хранилища главных ключей столбцов. Пример<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Для пользовательского хранилища главного ключа столбца разработчик несет ответственность за определение пути к ключу для пользовательского хранилища главного ключа столбца.|  
 |**allow_enclave_computations**|**bit**|Указывает, можно ли использовать главный ключ столбца анклава (если ключи шифрования столбца, зашифрованные с помощью этого главного ключа, могут использоваться для вычислений в защищенном енклавес на стороне сервера). Дополнительные сведения см. в статье [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
 |**подпись**|**varbinary(max)**|Цифровая подпись **key_path** и **allow_enclave_computations**, созданная с помощью главного ключа столбца, на которую ссылается **key_path**.|
 
@@ -55,7 +55,7 @@ ms.locfileid: "73594524"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание главного ключа СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
