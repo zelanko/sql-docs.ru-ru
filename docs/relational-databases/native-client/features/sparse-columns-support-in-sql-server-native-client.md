@@ -14,19 +14,19 @@ ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54fe59caad74c856ef7a548fb54433f66c216a2c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bfabd9ad0a5ff9e59e8e7f91f1fc9709abef17f7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787897"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Поддержка разреженных столбцов в собственном клиенте SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает разреженные столбцы. Дополнительные сведения о разреженных столбцах в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]см. в статьях [Использование разреженных столбцов](../../../relational-databases/tables/use-sparse-columns.md) и [Использование наборов столбцов](../../../relational-databases/tables/use-column-sets.md).  
   
- Дополнительные сведения о поддержке разреженных столбцов в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте см. в разделе [Поддержка разреженных столбцов &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) и [разреженные столбцы поддерживают &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
+ Дополнительные сведения о поддержке разреженных столбцов в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте см. в разделе [Поддержка разреженных СТОЛБЦОВ &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md) и [разреженные столбцы поддерживают &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sparse-columns-support-ole-db.md).  
   
  Сведения о примерах приложений, которые демонстрируют эту функцию, см. в разделе [Образцы программирования для SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "81388458"
 |Поведение **queryout** для программы BCP.|Отличий от предыдущих версий собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в обработке столбцов с явно заданными именами нет.<br /><br /> Сценарии, задействующие импорт и экспорт между таблицами с различными схемами, могут потребовать специальной обработки.<br /><br /> Дополнительные сведения о программе BCP см. в подразделе «Поддержка массового копирования (BCP) для разреженных столбцов» далее в данном разделе.|  
   
 ## <a name="down-level-client-behavior"></a>Работа в клиентах низкого уровня  
- Клиенты низкого уровня вернут метаданные только для столбцов, которые не являются элементами набора разреженных столбцов **column_set** для SQLColumns и DBSCHMA_COLUMNS. Дополнительные OLE DB наборы строк схемы, появившиеся [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] в собственном клиенте, будут недоступны, и изменения в SQLCOLUMNS в ODBC с помощью SQL_SOPT_SS_NAME_SCOPE не будут.  
+ Клиенты низкого уровня вернут метаданные только для столбцов, которые не являются элементами набора разреженных столбцов **column_set** для SQLColumns и DBSCHMA_COLUMNS. Дополнительные OLE DB наборы строк схемы, появившиеся в [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] собственном клиенте, будут недоступны, и изменения в SQLColumns в ODBC с помощью SQL_SOPT_SS_NAME_SCOPE не будут.  
   
  Клиенты низкого уровня могут получить доступ к столбцам, являющимся элементами набора разреженных столбцов **column_set**, по имени. Столбец **column_set** будет доступен как XML-столбец для клиентов [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
@@ -61,7 +61,7 @@ ms.locfileid: "81388458"
   
  Однако, если **queryout** используется для экспорта и пользователь ссылается по имени на разреженные столбцы, являющиеся элементами набора разреженных столбцов, нельзя осуществить импорт напрямую в таблицу такой же структуры. Это происходит потому, что BCP использует метаданные, согласованные с операцией **select &#42;** для импорта и не может сопоставлять столбцы **column_set** элементов с этими метаданными. Для отдельного импорта каждого столбца, входящего в набор разреженных столбцов **column_set**, необходимо определить представление для таблицы, которая ссылается на необходимые столбцы набора **column_set**, и выполнить операцию импорта с помощью этого представления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программирование собственного клиента SQL Server](../../../relational-databases/native-client/sql-server-native-client-programming.md)  
   
   

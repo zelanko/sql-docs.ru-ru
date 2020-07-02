@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790345"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет тип сборщика для элемента сбора. Обновляет по заданному имени и идентификатору GUID конфигурацию типа сборщика, включая пакет сбора и передачи, схему параметров и схему модуля форматирования параметров.  
   
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`XML-схема для этого типа сборщика. *parameter_schema* является **XML** и может потребоваться для некоторых типов сборщиков. Если этот аргумент не задан, он может принимать значение NULL.  
   
-`[ @collection_package_id = ] collection_package_id`Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет сбора, используемый набором сбора. *collection_package_id* является **уникуеидентифер** и является обязательным. Чтобы получить значение для *collection_package_id*, запросите системное представление dbo. syscollector_collector_types в базе данных msdb.  
+`[ @collection_package_id = ] collection_package_id`Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет сбора, используемый набором сбора. *collection_package_id* является **уникуеидентифер** и является обязательным. Чтобы получить значение для *collection_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
   
-`[ @upload_package_id = ] upload_package_id`Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет отправки, используемый набором сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным. Чтобы получить значение для *upload_package_id*, запросите системное представление dbo. syscollector_collector_types в базе данных msdb.  
+`[ @upload_package_id = ] upload_package_id`Локальный уникальный идентификатор, указывающий на [!INCLUDE[ssIS](../../includes/ssis-md.md)] пакет отправки, используемый набором сбора. *upload_package_id* имеет тип **uniqueidentifier** и является обязательным. Чтобы получить значение для *upload_package_id*, запросите системное представление dbo.syscollector_collector_types в базе данных msdb.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  

@@ -5,7 +5,7 @@ ms.date: 05/28/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: language-reference
 f1_keywords:
 - sp_execute_external_script_TSQL
@@ -20,16 +20,16 @@ ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions'
-ms.openlocfilehash: 45273b83d5beb033d8c3aad60fa9919a885e55c4
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 10c29ab8faed05c2fb2750e1e4de17b2fc1fb2b3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203491"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790399"
 ---
 # <a name="sp_execute_external_script-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 Хранимая процедура **sp_execute_external_script** выполняет скрипт, предоставленный в качестве входного аргумента для процедуры, и используется с [службы машинного обучения](../../machine-learning/sql-server-machine-learning-services.md) и [расширениями языка](../../language-extensions/language-extensions-overview.md). 
@@ -137,7 +137,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]`Список значений входных параметров, используемых внешним скриптом.  
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 > [!IMPORTANT]
 > Дерево запросов управляется машинным обучением SQL, и пользователи не могут выполнять произвольные операции с запросом.
@@ -229,7 +229,7 @@ sp_execute_external_script
 
 В этом разделе содержатся примеры того, как эта хранимая процедура может использоваться для выполнения скриптов R или Python с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>А) Возврат набора данных R в SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Возврат набора данных R в SQL Server  
 
 В следующем примере создается хранимая процедура, которая использует **sp_execute_external_script** для возврата набора данных IRI, входящего в состав R.  
 
@@ -322,7 +322,7 @@ GO
 
 Для оценки можно также применять собственную функцию [PREDICT](../../t-sql/queries/predict-transact-sql.md), которая обычно выполняется быстрее, так как не вызывает среду выполнения Python или R.
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также
 
 + [Машинное обучение SQL](../../machine-learning/index.yml)
 + [Расширения языка SQL Server](../../language-extensions/language-extensions-overview.md). 

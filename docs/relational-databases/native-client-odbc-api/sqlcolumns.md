@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789368"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLColumns** возвращает значение, SQL_SUCCESS, существуют ли значения для параметров *CatalogName*, *TableName*или *ColumnName* . Функция**SQLFetch** возвращает значение SQL_NO_DATA, если в этих параметрах заданы недопустимые значения.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81302613"
   
  Для параметров определяемого пользователем типа можно использовать новые, зависящие от драйвера дескрипторы, определенные выше, для получения или задания дополнительных свойств метаданных определяемого пользователем типа, если сервер должен вернуть или запросить данные сведения.  
   
- Когда клиент подключается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к и вызывает SQLColumns, использование значений NULL или подстановочных знаков для входного параметра каталога не приведет к возврату сведений из других каталогов. Вместо этого будут возвращены сведения только о текущем каталоге. Клиент может сначала вызвать SQLTables, чтобы определить, в каком каталоге находится нужная таблица. Затем клиент может использовать это значение каталога для входного параметра каталога в его вызове SQLColumns для получения сведений о столбцах в этой таблице.  
+ Когда клиент подключается к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и вызывает SQLColumns, использование значений NULL или подстановочных знаков для входного параметра каталога не приведет к возврату сведений из других каталогов. Вместо этого будут возвращены сведения только о текущем каталоге. Клиент может сначала вызвать SQLTables, чтобы определить, в каком каталоге находится нужная таблица. Затем клиент может использовать это значение каталога для входного параметра каталога в его вызове SQLColumns для получения сведений о столбцах в этой таблице.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>Функция SQLColumns и возвращающие табличное значение параметры  
  Результирующий набор, возвращаемый функцией SQLColumns, зависит от значения параметра SQL_SOPT_SS_NAME_SCOPE. Дополнительные сведения см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Следующие столбцы добавлены для возвращающих табличное значение параметров.  
@@ -77,20 +77,20 @@ ms.locfileid: "81302613"
  **SQLColumns** поддерживает большие определяемые пользователем типы данных CLR (UDT). Дополнительные сведения см. в разделе [большие определяемые пользователем типы данных CLR &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Поддержка функцией SQLColumns разреженных столбцов  
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результирующий набор для SQLColumns были добавлены два указанных столбца:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]В результирующий набор для SQLColumns были добавлены два указанных столбца:  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Если столбец является разреженным, то значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Если столбец является столбцом **column_set** , это SQL_TRUE. в противном случае SQL_FALSE.|  
   
- В соответствии со спецификацией ODBC SS_IS_SPARSE и SS_IS_COLUMN_SET отображаются перед всеми столбцами, которые были добавлены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранние версии, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], и после всех столбцов, заданные самим ODBC.  
+ В соответствии со спецификацией ODBC SS_IS_SPARSE и SS_IS_COLUMN_SET отображаются перед всеми столбцами, которые были добавлены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] более ранние версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , чем, и после всех столбцов, заданные самим ODBC.  
   
  Результирующий набор, возвращаемый функцией SQLColumns, зависит от значения параметра SQL_SOPT_SS_NAME_SCOPE. Дополнительные сведения см. в разделе [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLColumns](https://go.microsoft.com/fwlink/?LinkId=59336)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

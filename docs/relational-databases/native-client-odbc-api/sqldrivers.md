@@ -14,19 +14,19 @@ ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 838604dd896de595fd585b63c9b95e86dbef291c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61bd4432444b61984c4f13bd71b641657097e414
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789324"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Диспетчер драйверов ODBC возвращает все спецификации атрибутов **SQLDrivers** . Дополнительные сведения о строках атрибутов и определении значений см. в [Data Access and Storage Developer Center (центре разработчиков средств доступа к данным и их хранения)](https://go.microsoft.com/fwlink/?LinkId=4173)или [справочник по программированию ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) в сети.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

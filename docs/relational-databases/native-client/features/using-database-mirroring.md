@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787834"
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -60,22 +60,22 @@ ms.locfileid: "81303233"
 >  Кроме того, в именах сервера не учитывается регистр клавиатуры, но имена баз данных зависят от регистра клавиатуры. Поэтому следует убедиться, что в DSN-именах и строках соединения используются символы с одинаковым регистром.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Поставщик OLE DB для собственного клиента SQL Server  
- Поставщик [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента OLE DB поддерживает зеркальное отображение базы данных через атрибуты соединения и строки подключения. К набору свойств DBPROPSET_SQLSERVERDBINIT было добавлено свойство SSPROP_INIT_FAILOVERPARTNER, а ключевое слово **FailoverPartner** является новым атрибутом строки подключения для DBPROP_INIT_PROVIDERSTRING. Дополнительные сведения см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Поставщик собственного клиента OLE DB поддерживает зеркальное отображение базы данных через атрибуты соединения и строки подключения. К набору свойств DBPROPSET_SQLSERVERDBINIT было добавлено свойство SSPROP_INIT_FAILOVERPARTNER, а ключевое слово **FailoverPartner** является новым атрибутом строки подключения для DBPROP_INIT_PROVIDERSTRING. Дополнительные сведения см. в разделе [Использование ключевых слов строки подключения с SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- Кэш отработки отказа поддерживается при условии, что поставщик загружен, то есть до вызова **CoUninitialize** или пока приложение имеет ссылку на некоторый объект, управляемый поставщиком OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, например объект источника данных.  
+ Кэш отработки отказа поддерживается при условии, что поставщик загружен, то есть до вызова **CoUninitialize** или пока приложение имеет ссылку на некоторый объект, управляемый [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщиком OLE DB собственного клиента, например объект источника данных.  
   
  Дополнительные сведения о [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддержке собственного клиента OLE DB поставщика зеркального отображения базы данных см. в разделе [Свойства инициализации и авторизации](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
- Драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC для собственного клиента поддерживает зеркальное отображение базы данных через соединения и атрибуты строки подключения. В частности, добавлен атрибут SQL_COPT_SS_FAILOVER_PARTNER для использования с функциями [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . и ключевое слово **Failover_Partner** было добавлено в качестве нового атрибута строки подключения.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента поддерживает зеркальное отображение базы данных через соединения и атрибуты строки подключения. В частности, добавлен атрибут SQL_COPT_SS_FAILOVER_PARTNER для использования с функциями [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) и [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . и ключевое слово **Failover_Partner** было добавлено в качестве нового атрибута строки подключения.  
   
  Кэш отработки отказа хранится, пока в приложении имеется хотя бы один дескриптор среды. Он теряется при освобождении дескриптора среды.  
   
 > [!NOTE]  
 >  Диспетчер драйвера ODBC улучшен для поддержки спецификации имени сервера отработки отказа.  
   
-## <a name="see-also"></a>См. также:  
- [SQL Server Native Client функции](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+## <a name="see-also"></a>См. также  
+ [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

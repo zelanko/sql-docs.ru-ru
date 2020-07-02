@@ -14,15 +14,15 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a2b6d1b5bdc722a362c5ed67bff611602a860e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789418"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLBrowseConnect** использует ключевые слова, которые можно классифицировать по трем уровням сведений о соединении. Для каждого ключевого слова в следующей таблице указано, возвращается ли список допустимых значений и является ли ключевое слово необязательным.  
   
@@ -31,13 +31,13 @@ ms.locfileid: "81302665"
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|Недоступно|Нет|Имя источника данных, возвращаемого функцией **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
-|DRIVER|Недоступно|Нет|Имя драйвера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента Microsoft®:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] {Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
+|DRIVER|Недоступно|Нет|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Имя драйвера ODBC для собственного клиента Microsoft®: { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
   
 ## <a name="level-2"></a>Уровень 2  
   
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Да|Нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
+|SERVER|Да|нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
 |ИД пользователя|Нет|Да|Идентификатор входа пользователя.|  
 |PWD|Нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
 |APP|Нет|Да|Имя приложения, вызывающего **SQLBrowseConnect**.|  
@@ -74,7 +74,7 @@ ms.locfileid: "81302665"
 |---------------------|  
 |Добавлена документация по SQL_COPT_SS_BROWSE_CACHE_DATA.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLBrowseConnect](https://go.microsoft.com/fwlink/?LinkId=59329)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

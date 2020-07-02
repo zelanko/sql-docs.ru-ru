@@ -13,26 +13,26 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304375"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787701"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
   
- Дополнительные сведения о поддержке больших определяемых пользователем типов CLR [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в собственном клиенте см. в разделе [типы больших пользовательских данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в статье [об использовании больших определяемых пользователем типов CLR в OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Дополнительные сведения о поддержке больших определяемых пользователем типов CLR в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте см. в разделе [типы больших пользовательских данных CLR](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Пример см. в статье [об использовании больших определяемых пользователем типов CLR в OLE DB](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Формат данных  
  Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует значение ~0 для представления значений с неограниченным размером типа больших объектов. Значение ~0 также представляет размер определяемых пользователем типов данных CLR, превышающий 8 000 байт.  
   
  В следующей таблице показано сопоставление типов данных в параметрах и наборах строк.  
   
-|Тип данных SQL Server|Тип данных OLE DB|Организация памяти|Значение|  
+|Тип данных SQL Server|Тип данных OLE DB|Организация памяти|Применение|  
 |--------------------------|----------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|DBTYPE_UDT|BYTE[](массив байтов\)|132 (oledb.h)|  
   
@@ -121,13 +121,13 @@ ms.locfileid: "81304375"
 |Привязка типов данных|Определяемый пользователем тип к серверному типу|Тип, не определяемый пользователем, к серверному типу|Серверный тип к определяемому пользователем типу|Серверный тип к типу, не определяемому пользователем|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Поддерживается (5)|Ошибка (1)|Поддерживается (5)|Ошибка (4)|  
-|DBTYPE_BYTES|Поддерживается (5)|Недоступно|Поддерживается (5)|Недоступно|  
-|DBTYPE_WSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5), (6)|Недоступно|  
-|DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_IUNKNOWN|Поддерживается (6)|Недоступно|Поддерживается (6)|Недоступно|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
+|DBTYPE_BYTES|Поддерживается (5)|Н/Д|Поддерживается (5)|Н/Д|  
+|DBTYPE_WSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5), (6)|Н/Д|  
+|DBTYPE_BSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_STR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_IUNKNOWN|Поддерживается (6)|Н/Д|Поддерживается (6)|Н/Д|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Н/Д|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
   
@@ -172,7 +172,7 @@ ms.locfileid: "81304375"
   
  Если **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) имеет значение 80, то большие пользовательские типы представляются всем клиентам так же, как клиентам низкого уровня.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие определяемые пользователем типы данных CLR](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

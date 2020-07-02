@@ -33,17 +33,17 @@ ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3107dbb5771731fd15bb1432b2a180af612c86fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983211"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790451"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Возвращает пустую таблицу или таблицу из одной или нескольких строк. Столбцы этой таблицы содержат символьные данные, точно или нечетко (менее точно) соответствующие отдельным словам и фразам, расстоянию между словами или взвешенным совпадениям. Функция CONTAINSTABLE используется в [предложении from](../../t-sql/queries/from-transact-sql.md) инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT и упоминается как обычное имя таблицы. Выполняет полнотекстовый поиск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по столбцам полнотекстового индекса, содержащим символьные типы данных.  
+  Возвращает пустую таблицу или таблицу из одной или нескольких строк. Столбцы этой таблицы содержат символьные данные, точно или нечетко (менее точно) соответствующие отдельным словам и фразам, расстоянию между словами или взвешенным совпадениям. Функция CONTAINSTABLE используется в [предложении from](../../t-sql/queries/from-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT и упоминается как обычное имя таблицы. Выполняет полнотекстовый поиск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по столбцам полнотекстового индекса, содержащим символьные типы данных.  
   
  Функция CONTAINSTABLE полезна для тех же типов совпадений, что и [предикат CONTAINS](../../t-sql/queries/contains-transact-sql.md) , и использует те же условия поиска, что и Contains.  
   
@@ -132,7 +132,7 @@ CONTAINSTABLE
   
  Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. Указание аргумента *LANGUAGE**language_term* при запросе к такому столбцу может повысить вероятность хорошего соответствия.  
   
- При указании в виде строки *language_term* соответствует значению столбца **Alias** в представлении совместимости [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
+ Если указано в виде строки, *language_term* соответствует значению столбца **Alias** в представлении совместимости [языковsys.sys](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  Строка должна быть заключена в одиночные кавычки: '*language_term*'. Если значением аргумента *language_term* является целое число, оно представляет собой действительный код языка. Если значение *language_term* задано в шестнадцатеричной форме, то после символов "0x" должна следовать шестнадцатеричная запись кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
   
  Если значение находится в формате двухбайтовой кодировки (DBCS), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразует его в Юникод.  
   
@@ -144,7 +144,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Текст, который необходимо найти в столбце *column_name*, и условия соответствия. Дополнительные сведения об условиях поиска см. в разделе [CONTAINS &#40;&#41;Transact-SQL ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Возвращаемая таблица содержит столбец с именем **Key** , содержащий значения полнотекстовых ключей. Каждая таблица с полнотекстовым индексом содержит столбец, значения которого гарантированно уникальны, а значения, возвращаемые в **ключевом** столбце, являются значениями полнотекстового ключа строк, соответствующих условию выбора, указанному в условии поиска CONTAINS. Свойство **TableFulltextKeyColumn** , полученное из функции OBJECTPROPERTYEX, предоставляет идентификатор этого уникального ключевого столбца. Чтобы получить идентификатор столбца, связанного с полнотекстовым ключом полнотекстового индекса, используйте представление **sys. fulltext_indexes**. Дополнительные сведения см. в разделе [sys. fulltext_indexes &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
@@ -190,7 +190,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>Б) Получение значений ранга  
+### <a name="b-returning-rank-values"></a>Б. Получение значений ранга  
  В следующем примере выполняется поиск всех названий продуктов, содержащих слова «frame», «wheel» или «tire», при этом для каждого слова задается определенный вес. Для каждой строки набора результатов, удовлетворяющей условию поиска, отображается относительная «близость» к совпадению (ранг). Кроме того, строки с более высоким рангом возвращаются первыми.  
   
 ```  
@@ -280,7 +280,7 @@ GO
 > [!NOTE]  
 >  Аргумент LANGUAGE *language_term* не требуется для использования *top_n_by_rank.*  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ограничение результатов поиска по РАНГу](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

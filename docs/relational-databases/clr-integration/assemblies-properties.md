@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c667434348cfcb8a7f901b69bc7df86c09a34c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789587"
 ---
 # <a name="assemblies---properties"></a>Свойства сборок
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Эта страница используется для просмотра или изменения свойств сборки.  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Элемент Options  
  **Имя сборки**  
  Отображает имя сборки, которое всегда совпадает с именем сборки CLR.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "81488023"
  **Строгое имя**  
  Отображает **True** , если сборка подписана цифровой подписью, и **False** , если она не подписана.  
   
- **Версия**  
+ **Version**  
  Отображает номер версии сборки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

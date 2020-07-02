@@ -18,16 +18,16 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 9af1f5a9431c9ccfd5b51b26f9574a3960898102
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950478"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787792"
 ---
 # <a name="create-a-distributed-transaction"></a>Создание распределенной транзакции
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 <!--
 The following includes .md file is Empty, as of long before 2019/May/13.
@@ -76,6 +76,6 @@ MSDTC не поддерживается для базы данных SQL Azure �
 - Связанный сервер с использованием Transact-SQL
 - Драйверы JDBC
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Выполнение транзакций (ODBC)](performing-transactions-in-odbc.md)

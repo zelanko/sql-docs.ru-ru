@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 48c4bc9a4d7cbcb01839bc37b1f74819252c3ea9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f824085977135eba54bc04679e3cd8fd82d58644
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824936"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790497"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает сведения из журнала выполнения для набора элементов сбора или пакета.   
   
@@ -39,8 +39,8 @@ ms.locfileid: "82824936"
 |start_time|**datetime**|Время, когда был задан набор элементов сбора или запущен пакет. Не допускает значение NULL.|  
 |last_iteration_time|**datetime**|Для непрерывно выполняемых пакетов это время, когда пакет последний раз создал моментальный снимок. Допускает значение NULL.|  
 |finish_time|**datetime**|Время окончания выполнения завершенных пакетов и наборов элементов сбора. Допускает значение NULL.|  
-|runtime_execution_mode|**smallint**|Указывает на род деятельности набора элементов сбора: сбор данных или их отправка. Допускает значение NULL.<br /><br /> Возможны следующие значения.<br /><br /> 0 = сбор<br /><br /> 1 = передача|  
-|status|**smallint**|Указывает текущее состояние набора элементов сбора или пакета. Не допускает значение NULL.<br /><br /> Возможны следующие значения.<br /><br /> 0 = запущен<br /><br /> 1 = завершен<br /><br /> 2 = ошибка|  
+|runtime_execution_mode|**smallint**|Указывает на род деятельности набора элементов сбора: сбор данных или их отправка. Допускает значение NULL.<br /><br /> Доступны следующие значения:<br /><br /> 0 = сбор<br /><br /> 1 = передача|  
+|status|**smallint**|Указывает текущее состояние набора элементов сбора или пакета. Не допускает значение NULL.<br /><br /> Доступны следующие значения:<br /><br /> 0 = запущен<br /><br /> 1 = завершен<br /><br /> 2 = ошибка|  
 |оператор|**nvarchar(128)**|Определяет, кто запустил набор элементов сбора или пакет. Не допускает значение NULL.|  
 |package_id|**uniqueidentifier**|Определяет набор элементов сбора или пакет, создавший данную запись журнала. Допускает значение NULL.|  
 |package_name|**nvarchar(4000)**|Имя пакета, сформировавшего этот журнал. Допускает значение NULL.|  
