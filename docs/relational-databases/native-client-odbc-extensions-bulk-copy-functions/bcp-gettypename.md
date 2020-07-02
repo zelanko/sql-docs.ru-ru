@@ -18,15 +18,15 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774282"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает имя типа SQL для указанного токена типа BCP.  
   
@@ -46,15 +46,15 @@ RETCODE bcp_gettypename (
  *полями*  
  Указывает, запрашивает ли токен тип max.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Токены типа BCP определены в файле заголовка sqlncli.h и библиотеке sqlncli11.lib.  
   
  В следующей таблице указаны возможные типы BCP, независимо от того, являются ли они типами max или нет, а также ожидаемые выходные данные.  
   
-|Имя типа BCP|MaxType|Выходные данные|  
+|Имя типа BCP|MaxType|Вывод|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|Можно использовать|**decimal**|  
 |**SQLNUMERIC**|Можно использовать|**numeric**|  
@@ -75,14 +75,14 @@ RETCODE bcp_gettypename (
 |**SQLBINARY**|Нет|**Двоичный**|  
 |**SQLBIGVARBINARY**|Нет|**Varbinary**|  
 |**SQLVARBINARY**|Нет|**Varbinary**|  
-|**SQLIMAGE**|Можно использовать|**ОС контейнера**|  
+|**SQLIMAGE**|Можно использовать|**Изображение**|  
 |**SQLINTN**|Можно использовать|**int-null**|  
 |**SQLDATETIMN**|Можно использовать|**datetime-null**|  
 |**SQLMONEYN**|Можно использовать|**money-null**|  
 |**SQLFLTN**|Можно использовать|**float-null**|  
 |**склаопсум**|Можно использовать|**Функции**|  
 |**склаопавг**|Можно использовать|**Обращения**|  
-|**склаопкнт**|Можно использовать|**Count**|  
+|**склаопкнт**|Можно использовать|**Количество**|  
 |**склаопмин**|Можно использовать|**Минимум**|  
 |**склаопмакс**|Можно использовать|**Максимальной**|  
 |**SQLDATETIM4**|Можно использовать|**smalldatetime**|  
@@ -112,7 +112,7 @@ RETCODE bcp_gettypename (
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

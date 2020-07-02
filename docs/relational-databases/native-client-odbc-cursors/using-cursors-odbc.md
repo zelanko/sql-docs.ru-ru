@@ -18,15 +18,15 @@ ms.assetid: 51322f92-0d76-44c9-9c33-9223676cf1d3
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d39b26cfdbbba543700d040bac575a48efe65813
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: ed61c8198b48144a52671969c222d8fa6808b707
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967696"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774349"
 ---
 # <a name="using-cursors-odbc"></a>Использование курсоров (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC поддерживает модель курсора, которая позволяет следующее.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "84967696"
   
 -   [Позиционированные обновления &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [ЗАКРЫТЬ &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Курсоры](../../relational-databases/cursors.md)   

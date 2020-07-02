@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a83d216b0830b035da72ad579a2448a12f41adba
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a711624214b262560766f49e8294b36291ad9d91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783726"
 ---
 # <a name="sp_server_info-transact-sql"></a>sp_server_info (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает список имен атрибутов и соответствующие значения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], шлюза базы данных или базового источника данных.  
   
@@ -43,7 +43,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 `[ @attribute_id = ] 'attribute_id'`Целочисленный идентификатор атрибута. *attribute_id* имеет **тип int**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ Отсутствуют  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -65,8 +65,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**13**|TABLE_LENGTH<br /><br /> Указывает максимальное количество символов в имени таблицы.|128|  
 |**14**|MAX_QUAL_LENGTH<br /><br /> Указывает максимальную длину имени квалификатора таблицы (первой части трехкомпонентного имени таблицы).|128|  
 |**15**|COLUMN_LENGTH<br /><br /> Указывает максимальное количество символов в имени столбца.|128|  
-|**глубин**|IDENTIFIER_CASE<br /><br /> Указывает на учет регистра в именах, определяемых пользователем (имена таблиц, столбцов, хранимых процедур), в базе данных (в системных каталогах).|SENSITIVE|  
-|**широкоэкранны**|TX_ISOLATION<br /><br /> Определяет начальный уровень изоляции транзакции, применяемый сервером по умолчанию, в соответствии с уровнями изоляции, определяемыми стандартом SQL-92.|2|  
+|**16**|IDENTIFIER_CASE<br /><br /> Указывает на учет регистра в именах, определяемых пользователем (имена таблиц, столбцов, хранимых процедур), в базе данных (в системных каталогах).|SENSITIVE|  
+|**17**|TX_ISOLATION<br /><br /> Определяет начальный уровень изоляции транзакции, применяемый сервером по умолчанию, в соответствии с уровнями изоляции, определяемыми стандартом SQL-92.|2|  
 |**стр**|COLLATION_SEQ<br /><br /> Определяет упорядочивание кодировок на данном сервере.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**стр**|SAVEPOINT_SUPPORT<br /><br /> Определяет, поддерживает ли базовая СУБД именованные точки сохранения.|Да|  
 |**20**|MULTI_RESULT_SETS<br /><br /> Определяет, поддерживает ли базовая база данных или сам шлюз множественные результирующие наборы (т.е. могут ли несколько инструкций отправляться через шлюз, возвращая клиенту несколько результирующих наборов).|Да|  

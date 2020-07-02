@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: aa9033b52851b6b678671e94c6d10d71b5a488fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d7409d28b6a21a033c139c63ca6d6e7524e6ba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783765"
 ---
 # <a name="sp_dsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об источнике данных ODBC или OLE DB, полученные от распространителя, связанного с текущим сервером. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -45,7 +45,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @infotype = ] 'info_type'`Тип возвращаемых данных. Если *info_type* не указан или указано значение null, возвращаются все типы данных. *info_type* имеет тип **varchar (128)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**DBMS_NAME**|Указывает имя поставщика источника данных.|  
 |**DBMS_VERSION**|Указывает версию источника данных.|  
@@ -58,7 +58,7 @@ sp_dsninfo [ @dsn =] 'dsn'
   
 `[ @dso_type = ] dso_type`Тип источника данных. *dso_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**1** (по умолчанию)|Источник данных ODBC|  
 |**3**|OLE DB, источник данных|  
@@ -73,7 +73,7 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**Тип сведений**|**nvarchar (64)**|Типы данных, например: DBMS_NAME, DBMS_VERSION, DATABASE_NAME, SQL_SUBSCRIBER.|  
 |**Значение**|**nvarchar(512)**|Значение связанного типа данных.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_dsninfo** используется во всех типах репликации.  
   
  **sp_dsninfo** извлекает сведения об источнике данных ODBC или OLE DB, которые показывают, может ли база данных использоваться для репликации или выполнения запросов.  

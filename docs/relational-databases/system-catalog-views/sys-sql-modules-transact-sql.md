@@ -20,15 +20,15 @@ ms.assetid: 23d3ccd2-f356-4d89-a2cd-bee381243f99
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11c4b17c786506f3cad456a766fa6b0394ef3e72
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dd05afece6814beb84e3fa079b02f661f14990bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833942"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783945"
 ---
 # <a name="syssql_modules-transact-sql"></a>sys.sql_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает по строке для каждого объекта, который является определенным языком SQL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , включая скалярно скомпилированную определяемую пользователем функцию. Объекты типа P, RF, V, TR, FN, IF, TF и R имеют сопоставленный с ними SQL модуль. Изолированные значения по умолчанию и объекты типа D в этом представлении также имеют определение SQL модуля. Описание этих типов см. в столбце **тип** в представлении каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) .  
   
@@ -44,13 +44,13 @@ ms.locfileid: "82833942"
 |**uses_database_collation**|**bit**|1 = определение модуля, ограниченное схемой, зависит от принятых по умолчанию параметров сортировки базы данных для правильной оценки; в противном случае — 0. Такая зависимость предотвращает изменение параметров сортировки по умолчанию для базы данных.|  
 |**is_recompiled**|**bit**|Процедура была создана с параметром WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Модуль был объявлен, чтобы обеспечить выходные значения NULL для любых входных значений NULL.|  
-|**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> ИДЕНТИФИКАТОР указанного участника, если он выполняется как SELF или выполняется как \< основной>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**Int**|ID-идентификатор участника базы данных, указанного в инструкции EXECUTE AS.<br /><br /> По умолчанию и в случае EXECUTE AS CALLER имеет значение NULL.<br /><br /> ИДЕНТИФИКАТОР указанного участника, если он выполняется как SELF или EXECUTE AS \<principal> .<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|**bit**|**Применимо к**: с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].<br /><br /> 0 = не скомпилированы в собственном коде<br /><br /> 1 = скомпилированы в собственном коде<br /><br /> Значение по умолчанию — 0.|  
 |**is_inlineable**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br/><br />Указывает, является ли модуль встроенным. Встраивание зависит от условий, указанных [здесь](../user-defined-functions/scalar-udf-inlining.md#inlineable-scalar-udfs-requirements).<br /><br /> 0 = невстраиваемые<br /><br /> 1 = является встроенным. <br /><br /> Для скалярных пользовательских функций значение будет равно 1, если определяемая пользователем функция является встроенной, и 0 в противном случае. Он всегда содержит значение 1 для встроенного возвращающие табличное, а 0 — для всех других типов модулей.<br />|  
 |**inline_type**|**bit**|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)] и более поздних версий.<br /><br />Указывает, включено ли встраивание для модуля в настоящее время. <br /><br />0 = встраивание отключено<br /><br /> 1 = Встраивание включено.<br /><br /> Для скалярных пользовательских функций значение будет равно 1, если встраивание включено (явно или неявно). Значение всегда будет равно 1 для встроенных возвращающие табличное и 0 для других типов модулей.<br />|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Выражение SQL для ограничения по УМОЛЧАНИю, объект типа D, находится в представлении каталога [sys. default_constraints](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md) . Выражение SQL для ПРОВЕРОЧного ограничения, объект типа C, находится в представлении каталога [sys. CHECK_CONSTRAINTS](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md) .  
   
  Эти сведения также описаны в статье [sys. dm_db_uncontained_entities &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md).  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257592ce6bd3c8080a6f4244a7528e79259e5cfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783791"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет отображение удаленного имени входа на локальное имя входа, используемое для выполнения хранимых процедур удаленно, а не на локальном сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -53,7 +53,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если указан только параметр *remoteserver* , то все удаленные имена входа для этого удаленного сервера удаляются с локального сервера. Если указано также *имя для входа* , то все удаленные имена *входа с удаленного* сервера, сопоставленные с этим конкретным локальным именем входа, удаляются из локальной службы. Если также указан параметр *remote_name* , то только удаленное имя входа удаленного пользователя из *remoteserver* удаляется с локального сервера.  
   
  Чтобы добавить пользователей локального сервера, используйте **sp_addlogin**. Чтобы удалить пользователей локального сервера, используйте **sp_droplogin**.  
@@ -74,7 +74,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-dropping-a-login-mapping"></a>Б) Удаление сопоставления имени входа  
+### <a name="b-dropping-a-login-mapping"></a>Б. Удаление сопоставления имени входа  
  Следующий пример удаляет сопоставление удаленных имен входа с удаленного сервера `ACCOUNTS` на локальное имя входа `Albert`.  
   
 ```sql
@@ -88,7 +88,7 @@ EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   

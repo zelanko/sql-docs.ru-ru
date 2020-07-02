@@ -20,15 +20,15 @@ ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9ab99e0ce3e63a42795d17fc859bbbd3b6c8059d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823492"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785022"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Содержит по одной строке для каждого из файлов базы данных, в которых она хранится. Это представление на каждую базу данных.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82823492"
 |**type_desc**|**nvarchar(60)**|Описание типа файла:<br /><br /> ROWS <br /><br /> LOG<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|Значение может быть больше или равно 0. Значение, равное 0, представляет файл журнала базы данных, а значение больше 0 представляет идентификатор файловой группы, в которой хранится этот файл данных.|  
 |**name**|**sysname**|Логическое имя файла в базе данных.|  
-|**physical_name**|**nvarchar(260)**|Имя файла в операционной системе. Если база данных размещена на [вторичной реплике, доступной для чтения](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** указывает расположение файла базы данных первичной реплики. Для правильного расположения файла базы данных-получателя, доступной для чтения, запросите представление [sys. sysaltfiles](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
+|**physical_name**|**nvarchar(260)**|Имя файла в операционной системе. Если база данных размещена на [вторичной реплике, доступной для чтения](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)AlwaysOn, **physical_name** указывает расположение файла базы данных первичной реплики. Для правильного расположения файла базы данных-получателя, доступной для чтения, запросите [sys.sysалтфилес](../../relational-databases/system-compatibility-views/sys-sysaltfiles-transact-sql.md).|  
 |**state**|**tinyint**|Состояние файла:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY_PENDING<br /><br /> 4 = SUSPECT<br /><br /> 5 = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT|  
 |**state_desc**|**nvarchar(60)**|Описание состояния файла:<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Дополнительные сведения см. в разделе [Состояния файлов](../../relational-databases/databases/file-states.md).|  
 |**size**|**int**|Текущий размер файла в страницах по 8 КБ.<br /><br /> 0 = не определено.<br /><br /> Для моментального снимка базы данных аргумент size отражает максимальное пространство, которое моментальный снимок может использовать только для файла.<br /><br /> Для контейнеров файловой группы FILESTREAM размер отражает текущий используемый размер контейнера.|  
@@ -68,7 +68,7 @@ ms.locfileid: "82823492"
 >  При удалении или перестройке больших индексов либо удалении или усечении больших таблиц компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает фактическое освобождение страниц и связанных блокировок до момента фиксации транзакции. Отложенные операции удаления не освобождают выделенное место немедленно. Следовательно, значения, полученные из sys.database_files сразу после удаления или усечения больших объектов, могут не соответствовать фактическому размеру свободного места на диске.  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Примеры  
 Следующая инструкция возвращает имя, размер файла и объем пустого пространства для каждого файла базы данных.

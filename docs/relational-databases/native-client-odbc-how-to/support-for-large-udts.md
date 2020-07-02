@@ -11,15 +11,15 @@ ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebd3d8439b70930039ec6fee37c7195dbb23ca0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3d7ea543843d22433072867a30df814a6bd095f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281788"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783236"
 ---
 # <a name="support-for-large-udts"></a>Поддержка больших, определяемых пользователем типов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом образце решения содержатся два проекта. Один проект создает сборку (библиотеку DLL) из исходного кода на C#. Эта сборка содержит тип CLR. В базу данных будет добавлена таблица. Столбец в этой таблице будет иметь тип, определенный в сборке. По умолчанию в этом образце используется база данных master. Второй проект является собственным приложением C, которое считывает данные из таблицы.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "81281788"
 ## <a name="example"></a>Пример  
  Первым листингом кода является исходный код на C#. Вставьте его в файл LargeStringUDT.cs и скомпилируйте его в DLL-библиотеку. Скопируйте файл LargeStringUDT.dll в корневой каталог диска C.  
   
- Второй листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает сборку в базе данных master.  
+ Второй [!INCLUDE[tsql](../../includes/tsql-md.md)] листинг кода () создает сборку в базе данных master.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и user32.lib. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81281788"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Четвертый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет сборку из базы данных master.  
+ Четвертый [!INCLUDE[tsql](../../includes/tsql-md.md)] листинг кода () удаляет сборку из базы данных master.  
   
 ```  
 // LargeStringUDT.cs  

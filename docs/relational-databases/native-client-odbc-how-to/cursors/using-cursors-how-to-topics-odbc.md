@@ -13,15 +13,15 @@ ms.assetid: 4e07d2a6-f389-4685-841c-71e34f948816
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 959110f3e240553bd94dab6c26e208b40c8d43ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0a87ab71ef062ad78c4b466bd2e75a6a36d4fdf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783312"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Использование инструкций по курсорам (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Чтобы использовать курсоры, сначала необходимо задать атрибуты соединения и инструкции, которые управляют режимом работы курсоров ODBC. Курсоры позволяют приложению получать несколько строк для каждой выборки и выполнять инструкции UPDATE, INSERT и DELETE для текущего положения курсора.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "81294192"
   
 -   [Получение и обновление наборов строк &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

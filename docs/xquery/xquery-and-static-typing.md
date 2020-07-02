@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775466"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery и статическая типизация
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] XQuery является языком со статической типизацией. Это означает, что при компиляции запросов, если выражение возвращает значение, тип или количество элементов которого неприемлемы для указанной функции или оператора, будет выдана ошибка преобразования типов. В дополнение к этому статическая проверка типов может также обнаружить несоответствие типа выражения пути в типизированном документе XML. Компилятор XQuery сначала применяет фазу нормализации, во время которой добавляются неявные операции (например атомизация), а затем производит статический вывод и статическую проверку типов.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "84529732"
 ### <a name="example-operator-over-union-type"></a>Пример: оператор над типом объединения  
  Оператор сложения ('+') требует использования точных типов операндов. В результате выражение `(//r)[1] + 1` возвращает статическую ошибку с ранее описанным определением типа элемента <`r`>. Единственное решение — переписать его как `(//r)[1] cast as xs:int? +1`, где «?» обозначает появление 0 или 1. В [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] требуется указывать «cast as» с «?», так как любое приведение может вызвать пустую последовательность в результате ошибок во время выполнения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку XQuery (SQL Server)](../xquery/xquery-language-reference-sql-server.md)  
   
   

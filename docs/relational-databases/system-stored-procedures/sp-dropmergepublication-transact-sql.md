@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27fb3a99167dce450a3d4f50e9d19036db8d896f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ff7b235f27b11749673019de222d555d57f364c1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830082"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783821"
 ---
 # <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет публикацию слиянием и ассоциированный с ней агент моментальных снимков. Прежде чем удалять публикацию слиянием, необходимо удалить все подписки. Статьи в публикации удаляются автоматически. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -51,12 +51,12 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_dropmergepublication** используется в репликации слиянием.  
   
  **sp_dropmergepublication** рекурсивно удаляет все статьи, связанные с публикацией, а затем удаляет саму публикацию. Публикацию нельзя удалить, если у нее есть хотя бы одна подписка. Сведения об удалении подписок см. в разделе [Удаление принудительной подписки](../../relational-databases/replication/delete-a-push-subscription.md) и [Удаление подписки по запросу](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- При запуске **sp_dropmergepublication** для удаления публикации не удаляются опубликованные объекты из базы данных публикации или соответствующие объекты из базы данных подписки. \<При необходимости удалите эти объекты вручную при помощи перетаскивания объекта>.  
+ При запуске **sp_dropmergepublication** для удаления публикации не удаляются опубликованные объекты из базы данных публикации или соответствующие объекты из базы данных подписки. Используйте инструкцию DROP \<object> для удаления этих объектов вручную при необходимости.  
   
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  

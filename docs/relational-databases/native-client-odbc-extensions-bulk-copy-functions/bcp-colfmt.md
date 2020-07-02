@@ -18,15 +18,15 @@ ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bebe50f7a31168455d21c45aa28cc7c0efa796e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783447"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Указывает исходный или целевой формат данных в пользовательском файле. При использовании в качестве исходного формата **bcp_colfmt** задает формат существующего файла данных, используемого в качестве источника данных при выполнении операции с массовым копированием в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицу. При использовании в качестве целевого формата файл данных создается с использованием форматов столбцов, указанных в **bcp_colfmt**.  
   
@@ -57,11 +57,11 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]Добавлена поддержка токенов типа данных SQLXML и SQLUDT в параметре *еусердататипе* .  
   
- Параметр *еусердататипе* перечисляется маркерами типа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных в sqlncli. h, а не в перечислителях типа данных ODBC C. Например, можно указать символьную строку SQL_C_CHAR типа ODBC с помощью специфического для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа SQLCHARACTER.  
+ Параметр *еусердататипе* перечисляется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] маркерами типа данных в sqlncli. h, а не в перечислителях типа данных ODBC C. Например, можно указать символьную строку SQL_C_CHAR типа ODBC с помощью специфического для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типа SQLCHARACTER.  
   
  Чтобы задать представление данных по умолчанию для типа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , установите этот параметр в значение 0.  
   
- Для полного копирования из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файл, если *ЕУСЕРДАТАТИПЕ* имеет значение SQLDECIMAL или SQLNUMERIC:  
+ Для полного копирования из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в файл, если *еусердататипе* имеет значение SQLDECIMAL или SQLNUMERIC:  
   
 -   Если исходный столбец не является **десятичным** или **числовым**, используются точность и масштаб по умолчанию.  
   
@@ -108,10 +108,10 @@ RETCODE bcp_colfmt (
   
  Если это значение равно 0, операция массового копирования пропускает столбец в файле данных.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Функция **bcp_colfmt** позволяет указать формат пользовательского файла для операций с массовым копированием. Формат для массового копирования состоит из следующих частей:  
   
 -   сопоставление столбцов файла пользователя со столбцами базы данных;  
@@ -145,7 +145,7 @@ RETCODE bcp_colfmt (
   
  Дополнительные сведения см. в разделе [улучшения даты и времени &#40;&#41;ODBC ](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Bulk Copy Functions](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

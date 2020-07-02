@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea779dfb66d9fce2053fcee0b6fd3eedbc26a4ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784853"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает значение регистрационного номера транзакции в журнале (LSN) из столбца **start_lsn** в системной таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) за указанное время. Эту функцию можно использовать для систематического соотнесения диапазонов DateTime с диапазоном номеров LSN, необходимым для функций перечисления отслеживания измененных данных [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) и [cdc. fn_cdc_get_net_changes_<](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md) capture_instance>для возврата изменений данных в пределах этого диапазона.  
   
@@ -60,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы понять, как можно использовать **sys. fn_cdc_map_time_lsn** для преобразования диапазонов DateTime в диапазоны номеров LSN, рассмотрим следующий сценарий. Предположим, что потребителю нужно получать изменения данных ежедневно. То есть потребителю нужны изменения только за определенные сутки. Нижней границей диапазона будет полночь предыдущего дня, не входя в диапазон. Верхней границей будет полночь заданного дня. В следующем примере показано, как функция **sys. fn_cdc_map_time_to_lsn** может быть использована для систематического соотнесения этого диапазона с ДИАПАЗОНОМ номеров LSN, необходимым функциями перечисления для отслеживания измененных данных, для возврата всех изменений в пределах этого диапазона.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
@@ -75,13 +75,13 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
   
  `SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@begin_lsn, @end_lsn, 'all` `');`  
   
- Оператор отношения '`smallest greater than`' используется для ограничения изменений теми, которые произошли после полуночи предыдущего дня. Если несколько записей с разными значениями LSN совместно используют значение **tran_end_time** , определенное как нижняя граница в таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , функция возвратит наименьший номер LSN, гарантируя, что все записи включены. Для верхней границы используется реляционный оператор "`largest less than or equal to`", чтобы гарантировать, что диапазон включает все записи за день, включая значения, равные полуночи, в качестве их **tran_end_time** значений. Если несколько записей с разными значениями LSN совместно используют **tran_end_time** значение, определенное как верхняя граница, функция возвратит максимальный номер LSN, гарантируя, что все записи будут включены.  
+ Оператор отношения '`smallest greater than`' используется для ограничения изменений теми, которые произошли после полуночи предыдущего дня. Если несколько записей с разными значениями LSN совместно используют значение **tran_end_time** , определенное как нижняя граница в таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) , функция возвратит наименьший номер LSN, гарантируя, что все записи включены. Для верхней границы используется реляционный оператор "", `largest less than or equal to` чтобы гарантировать, что диапазон включает все записи за день, включая значения, равные полуночи, в качестве их **tran_end_time** значений. Если несколько записей с разными значениями LSN совместно используют **tran_end_time** значение, определенное как верхняя граница, функция возвратит максимальный номер LSN, гарантируя, что все записи будут включены.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере `sys.fn_cdc_map_time_lsn` функция используется для определения наличия строк в таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) со значением **tran_end_time** , которое больше или равно полуночи. Запрос может применяться, например, для определения того, обработал ли процесс отслеживания изменения, зафиксированные до полуночи предыдущего дня, чтобы продолжить извлечение данных изменений для этого дня.  
+ В следующем примере функция используется `sys.fn_cdc_map_time_lsn` для определения наличия строк в таблице [cdc. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) со значением **tran_end_time** , которое больше или равно полуночи. Запрос может применяться, например, для определения того, обработал ли процесс отслеживания изменения, зафиксированные до полуночи предыдущего дня, чтобы продолжить извлечение данных изменений для этого дня.  
   
 ```  
 DECLARE @extraction_time datetime, @lsn binary(10);  

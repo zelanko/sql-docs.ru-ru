@@ -9,15 +9,15 @@ ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7384cf9bfcf08f307a4e81cb0cdebe78e8011ea3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2246ea5cb32aed2c49aa5d7a609362c9dffd1d73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823549"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785025"
 ---
 # <a name="sysdatabase_event_sessions-azure-sql-database"></a>sys.database_event_sessions (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Перечисляет все определения сеансов событий, существующие в текущей базе данных, в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .  
   
@@ -32,7 +32,7 @@ ms.locfileid: "82823549"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Уникальный идентификатор сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Определяемое пользователем имя, идентифицирующее сеанс событий. имя является уникальным. Не допускает значение NULL.|  
-|event_retention_mode|**nchar (1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> Х. Сопоставляется event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Сопоставляется event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Сопоставляется event_retention_mode_desc = NO_EVENT_LOSS|  
+|event_retention_mode|**nchar (1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> S. Сопоставляется event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Сопоставляется event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Сопоставляется event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Описывает способ обработки потери события. Значение по умолчанию ALLOW_SINGLE_EVENT_LOSS. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Возможна потеря событий в сеансе. Одиночные события удаляются только в том случае, если все буферы событий полны. Потеря одиночных событий при заполнении буферов событий обеспечивает приемлемые характеристики производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одновременно уменьшая до минимума потери данных в потоке обработанных событий.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. Возможна потеря полных буферов событий в сеансе. Число потерянных событий зависит от размера памяти, выделенной для сеанса, способа секционирования памяти и размера событий в буфере. Этот параметр уменьшает влияние быстрого заполнения буферов событий на производительность сервера. Однако возможна потеря большого числа событий в сеансе.<br /><br /> NO_EVENT_LOSS. Потеря событий не разрешена. Этот параметр обеспечивает сохранение всех произошедших событий. При использовании этого параметра все задачи, которые инициируют события, должны ждать освобождения пространства в буфере событий. Это может привести к заметному снижению производительности во время активного сеанса событий.|  
 |max_dispatch_latency|**int**|Промежуток времени в миллисекундах, в течение которого события находятся в буферной памяти перед отправкой целям сеанса. Допустимые значения: от 1 до 2 147 483 648 и -1. Значение «-1» указывает на то, что задержка диспетчера является бесконечной. Допускает значение NULL.|  
 |max_memory|**int**|Объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. Допускает значение NULL.|  

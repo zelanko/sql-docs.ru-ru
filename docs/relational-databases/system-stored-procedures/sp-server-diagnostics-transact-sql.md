@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 044b5e79ba558dd5bb38331d9b2a07410a3a50de
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 6524de89a96f64d2eed6a9f01b38b492ffb0fc04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84294011"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783740"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Записывает диагностические данные и сведения о работоспособности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выявления потенциальных неполадок. Процедура работает в повторяющемся режиме и периодически отправляет результаты. Ее можно вызывать из обычного соединения или соединения приложения уровня данных.  
   
@@ -79,12 +79,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<name of the availability group>**: Собирает данные для указанной группы доступности (если component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
   
-|Компоненты|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
+|Components|Удовлетворительно (1)|Предупреждение (2)|Ошибка (3)|Неизвестно (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |система|x|x|x||  
 |ресурс|x|x|x||  
@@ -240,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Политика отработки отказа для экземпляров отказоустойчивого кластера](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

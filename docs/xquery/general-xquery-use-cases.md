@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6ef05644d0d36f8cc784afbf7e4face426817a30
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 4756d86070e933f4c281922d54d80974832e9f5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775507"
 ---
 # <a name="general-xquery-use-cases"></a>Общие способы применения запросов XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   В этом подразделе приведены примеры использования запросов XQuery.  
   
@@ -339,7 +339,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   Так как все описания продуктов включают `Picture` элемент> <, результирующий набор в этом случае пуст.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запросы XQuery использующие, включающая иерархию](../xquery/xqueries-involving-hierarchy.md)   
  [Запросы XQuery использующие, включающий порядок](../xquery/xqueries-involving-order.md)   
  [Запросы XQuery использующие обработка реляционных данных](../xquery/xqueries-handling-relational-data.md)   

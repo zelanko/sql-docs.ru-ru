@@ -15,15 +15,15 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428155"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776466"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Обработка графов в SQL Server и Базы данных SQL Azure
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]предоставляет возможности баз данных Graph для моделирования связей "многие ко многим". Связи графов интегрированы в [!INCLUDE[tsql-md](../../includes/tsql-md.md)] и получают преимущества использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве базовой системы управления базами данных.
 
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Узлы и грани хранятся в виде таблиц.  
 
 ### <a name="query-language-extensions"></a>Расширения языка запросов  
-Введено предложение New `MATCH` для поддержки сопоставления шаблонов и навигации с несколькими прыжками через граф. `MATCH` Функция использует синтаксис стиля ASCII для сопоставления шаблонов. Пример:  
+`MATCH`Введено предложение New для поддержки сопоставления шаблонов и навигации с несколькими прыжками через граф. `MATCH`Функция использует синтаксис стиля ASCII для сопоставления шаблонов. Пример:  
 
 ```   
 -- Find friends of John
@@ -68,12 +68,12 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-ssnoversion-engine"></a>Полностью интегрировано [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в подсистему 
-Расширения Graph полностью интегрированы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подсистему. Используйте ту же подсистему хранилища, метаданные, обработчик запросов и т. д. для хранения данных графа и запросов к ним. Запрос по графу и реляционным данным в одном запросе. Объединение возможностей графа с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] другими технологиями, такими как COLUMNSTORE, Ha, R Services и т. д. База данных SQL Graph также поддерживает все функции обеспечения безопасности и соответствия требованиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], доступные в.
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Полностью интегрировано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подсистему 
+Расширения Graph полностью интегрированы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подсистему. Используйте ту же подсистему хранилища, метаданные, обработчик запросов и т. д. для хранения данных графа и запросов к ним. Запрос по графу и реляционным данным в одном запросе. Объединение возможностей графа с другими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] технологиями, такими как columnstore, Ha, R Services и т. д. База данных SQL Graph также поддерживает все функции обеспечения безопасности и соответствия требованиям, доступные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
 ### <a name="tooling-and-ecosystem"></a>Инструментарий и экосистема
 
-Преимущества существующих средств и экосистемы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] которые предлагают. Такие средства, как резервное копирование и восстановление, импорт и экспорт, просто работают с программой BCP. Другие средства или службы, такие как SSIS, SSRS или Power BI, будут работать с таблицами графов так же, как они работают с реляционными таблицами.
+Преимущества существующих средств и экосистемы, которые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предлагают. Такие средства, как резервное копирование и восстановление, импорт и экспорт, просто работают с программой BCP. Другие средства или службы, такие как SSIS, SSRS или Power BI, будут работать с таблицами графов так же, как они работают с реляционными таблицами.
 
 ## <a name="edge-constraints"></a>Ограничения ребер
 Ограничение ребра определяется в краевой таблице графа и является парой таблиц узлов, к которым может подключаться данный тип ребра. Это позволяет пользователям лучше управлять схемой графа. С помощью ограничений границ пользователи могут ограничивать типы узлов, к которым может подключаться данная граница. 
@@ -88,7 +88,7 @@ AND Person1.Name = 'John';
 ## <a name="shortest-path"></a>Кратчайший путь
 Функция [SHORTEST_PATH](./sql-graph-shortest-path.md) находит кратчайший путь между любыми двумя узлами в графе или начиная с заданного узла и до всех остальных узлов графа. Кратчайший путь можно также использовать для поиска транзитивное замыкания или для произвольного обхода длины в графе. 
 
- ## <a name="next-steps"></a>Дальнейшие действия  
+ ## <a name="next-steps"></a>Следующие шаги  
 Ознакомьтесь с [архитектурой базы данных SQL Graph](./sql-graph-architecture.md)
    
 

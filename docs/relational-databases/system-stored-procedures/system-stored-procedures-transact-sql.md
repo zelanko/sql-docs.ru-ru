@@ -22,15 +22,15 @@ ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 020d75e780dcc2036b70348fa57cf1007ce0e401
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f6d46a0e06f96f646ebd68e383ad26f99e309082
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783636"
 ---
 # <a name="system-stored-procedures-transact-sql"></a>Системные хранимые процедуры (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] многие задачи администрирования и сбора информации можно выполнять с помощью системных хранимых процедур. Системные хранимые процедуры объединяются в категории, перечисленные в следующей таблице.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68037319"
 |[Хранимые процедуры для работы с ядром СУБД](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)|Используются для выполнения общих задач по обслуживанию компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].|  
 |[Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)|Используются для работы с электронной почтой в пределах экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Хранимые процедуры для работы с планами обслуживания базы данных](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)|Используются для выполнения основных задач, необходимых для управления производительностью базы данных.|  
-|[Хранимые процедуры для работы с распределенными запросами](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Используются для реализации распределенных запросов и управления ими.|  
+|[Хранимые процедуры распределенных запросов](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)|Используются для реализации распределенных запросов и управления ими.|  
 |[Хранимые процедуры FILESTREAM и FileTable &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/54beca08-c012-4ebd-aa68-d8a10d221b64)|Используется для настройки и управления функциями FILESTREAM и FileTable.|  
 |[Правила брандмауэра хранимые процедуры &#40;базе данных SQL Azure&#41;](../../relational-databases/system-stored-procedures/firewall-rules-stored-procedures-azure-sql-database.md)|Используется для настройки брандмауэра базы данных SQL Azure.|  
 |[Хранимые процедуры для работы с полнотекстовым поиском](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)|Используются для создания полнотекстовых индексов и запросов к ним.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68037319"
 >  Если не оговорено другое, все системные хранимые процедуры возвращают значение 0, что означает успешное выполнение процедуры. Для сигнализации об ошибке возвращается ненулевое значение.  
   
 ## <a name="api-system-stored-procedures"></a>Системные хранимые процедуры для работы с API  
- Пользователи, запускающие приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для приложений ADO, OLE DB и ODBC, могут заметить, что эти приложения используют системные хранимые процедуры, не описанные в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти хранимые процедуры используются [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком собственного клиента OLE DB и драйвером ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента для реализации функций API базы данных. Эти хранимые процедуры — всего лишь механизм, задействованный поставщиком или драйвером для передачи запросов пользователя экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они предназначены только для внутреннего использования поставщиком или драйвером. Явное обращение из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]приложения на основе не поддерживается.  
+ Пользователи, запускающие приложение [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для приложений ADO, OLE DB и ODBC, могут заметить, что эти приложения используют системные хранимые процедуры, не описанные в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти хранимые процедуры используются [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком собственного клиента OLE DB и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвером ODBC собственного клиента для реализации функций API базы данных. Эти хранимые процедуры — всего лишь механизм, задействованный поставщиком или драйвером для передачи запросов пользователя экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они предназначены только для внутреннего использования поставщиком или драйвером. Явное обращение из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приложения на основе не поддерживается.  
   
  Хранимые процедуры sp_createorphan и sp_droporphans используются для обработки в ODBC **ntext**, **Text**и **Image** .  
   
@@ -171,7 +171,7 @@ ms.locfileid: "68037319"
 |sp_views_rowset2|sp_xml_schema_rowset|  
 |sp_xml_schema_rowset2||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [&#40;ядро СУБД хранимых процедур&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [Выполнение хранимых процедур &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)   

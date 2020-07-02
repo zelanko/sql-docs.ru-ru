@@ -20,16 +20,16 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee626b9eef8cf2f2e80217b2a3709271a227f293
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa2a3f7436574d43f0cfc04d5cb7147b1c15f629
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67906127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783141"
 ---
 # <a name="sysfn_helpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает список всех поддерживаемых параметров сортировки.  
   
@@ -47,10 +47,10 @@ fn_helpcollations ()
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Имя|**sysname**|Имя стандартных параметров сортировки|  
+|name|**sysname**|Имя стандартных параметров сортировки|  
 |Описание|**nvarchar (1000)**|Описание параметров сортировки|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также поддерживает ограниченное число (<80) параметров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сортировки, которые были разработаны до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки параметров сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметры сортировки по-прежнему поддерживаются для обеспечения обратной совместимости, но не должны использоваться для новых задач разработки. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md). Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает параметры сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]также поддерживает ограниченное число (<80) параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые были разработаны до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддержки параметров сортировки Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметры сортировки по-прежнему поддерживаются для обеспечения обратной совместимости, но не должны использоваться для новых задач разработки. Дополнительные сведения о параметрах сортировки Windows см. в статье [Имя параметров сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md). Дополнительные сведения о параметрах сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Примеры
 

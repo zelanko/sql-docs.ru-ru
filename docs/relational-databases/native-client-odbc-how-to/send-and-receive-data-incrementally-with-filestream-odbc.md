@@ -11,15 +11,15 @@ ms.assetid: b82ecf4c-f151-4a99-8717-a73ee5ec994f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba9829fc2273959f2292d8a3e9ed8e3975c0a525
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d58e2658f4dde3cbbe083c73b203b1a3f803a13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81281854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783250"
 ---
 # <a name="send-and-receive-data-incrementally-with-filestream-odbc"></a>Выполнение добавочной отправки и получение данных с помощью FILESTREAM (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом образце показывается, как использовать функцию FILESTREAM для добавочной передачи и получения данных с помощью функций SQLPutData и SQLGetData.  
   
@@ -28,11 +28,11 @@ ms.locfileid: "81281854"
 ## <a name="example"></a>Пример  
  Прежде чем переходить к компиляции и запуску этого примера, включите поддержку FILESTREAM ([включение и настройка FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Первый листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() создает базу данных, используемую этим образцом. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
+ Первый [!INCLUDE[tsql](../../includes/tsql-md.md)] листинг кода () создает базу данных, используемую этим образцом. Для выполнения этого скрипта экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь доступ с возможностью (например, войдите в систему с учетной записью Local System).  
   
  Вторым листингом кода является код на C++. Необходимо указать сервер, для этого в листинге кода C++ измените значение «MyServer» на допустимое имя сервера. Убедитесь, что переменная среды INCLUDE включает каталог, содержащий файл sqlncli.h. Скомпилируйте листинг кода на C++ с параметрами odbc32.lib, user32.lib, /D "_UNICODE", /D "UNICODE", odbc32.lib и /EHsc.  
   
- Третий листинг кода [!INCLUDE[tsql](../../includes/tsql-md.md)]() удаляет базу данных, используемую этим образцом.  
+ Третий [!INCLUDE[tsql](../../includes/tsql-md.md)] листинг кода () удаляет базу данных, используемую этим образцом.  
   
 ```sql
 USE master  

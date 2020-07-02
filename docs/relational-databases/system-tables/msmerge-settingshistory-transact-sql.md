@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9ac532e5212f32e5ee3bda029a2a7fb5a1231974
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 89a936fa8dad5df860f72295c93c915b055a3c48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829229"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784805"
 ---
 # <a name="msmerge_settingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица **MSmerge_settingshistory** используется для ведения журнала изменений, внесенных в статьи и свойства публикации для репликации слиянием, с одной строкой для каждого изменения, внесенного в топологию репликации слиянием. Данная таблица также хранит сведения о том, когда были произведены исходные настройки свойств. Эта таблица хранится в базах данных публикации и подписки.  
   

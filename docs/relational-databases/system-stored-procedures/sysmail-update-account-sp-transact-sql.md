@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783674"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет данные в существующей учетной записи компонента Database Mail.  
  
@@ -64,7 +64,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @description = ] 'description'`Новое описание учетной записи. *Description* имеет тип **nvarchar (256)** и значение по умолчанию NULL.  
   
-`[ @mailserver_name = ] 'server_name'`Новое имя почтового SMTP-сервера, который будет использоваться для этой учетной записи. Компьютер, на котором [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется, должен иметь возможность разрешить *server_name* IP-адресу. Аргумент *server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @mailserver_name = ] 'server_name'`Новое имя почтового SMTP-сервера, который будет использоваться для этой учетной записи. Компьютер, на котором выполняется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность разрешить *server_name* IP-адресу. Аргумент *server_name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @mailserver_type = ] 'server_type'`Новый тип почтового сервера. Аргумент *server_type* имеет тип **sysname**и не имеет значения по умолчанию. Поддерживается только значение **"SMTP"** .  
   
@@ -76,14 +76,14 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`Новый пароль, используемый для входа на почтовый сервер. Аргумент *Password* имеет тип **sysname**и не имеет значения по умолчанию.  
   
-`[ @use_default_credentials = ] use_default_credentials`Указывает, следует ли отправлять почту на SMTP-сервер, используя учетные данные [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] службы. **use_default_credentials** имеет бит и не имеет значения по умолчанию. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, Database Mail использует ** \@имя пользователя** и ** \@пароль** для проверки подлинности на SMTP-сервере. Если ** \@имя пользователя** и ** \@пароль** имеют значение null, будет использоваться анонимная проверка подлинности. Перед указанием этого аргумента следует проконсультироваться с администратором SMTP  
+`[ @use_default_credentials = ] use_default_credentials`Указывает, следует ли отправлять почту на SMTP-сервер, используя учетные данные [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] службы. **use_default_credentials** имеет бит и не имеет значения по умолчанию. Если этот аргумент равен 1, компонент Database Mail использует учетные данные компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Если этот параметр равен 0, Database Mail использует ** \@ имя пользователя** и ** \@ пароль** для проверки подлинности на SMTP-сервере. Если ** \@ имя пользователя** и ** \@ пароль** имеют значение null, будет использоваться анонимная проверка подлинности. Перед указанием этого аргумента следует проконсультироваться с администратором SMTP  
   
 `[ @enable_ssl = ] enable_ssl`Указывает, будет ли Database Mail шифровать связь с помощью протокола TLS, который ранее назывался SSL (SSL). Используйте этот параметр, если на SMTP-сервере требуется TLS. **enable_ssl** имеет бит и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если указаны имя учетной записи и идентификатор учетной записи, то хранимая процедура изменяет имя учетной записи наряду с изменением данных учетной записи. Изменение имени учетной записи может быть полезно для исправления ошибок в имени учетной записи.  
   
  Хранимая процедура **sysmail_update_account_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
@@ -113,7 +113,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>Б) Изменение имени учетной записи и ее данных  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>Б. Изменение имени учетной записи и ее данных  
  В следующем примере изменяется имя, а также обновляются данные учетной записи с идентификатором `125`. Новое имя учетной записи -`Backup Mail Server`.  
   
 ```  
@@ -134,7 +134,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

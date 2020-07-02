@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 395a7c2227fb23a177cb1b3980b26014f0651c0c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e04daaa5be757df60f07a8bd9205e1fd44f95502
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775746"
 ---
 # <a name="sp_helpreplicationoption-transact-sql"></a>Хранимая процедура sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Показывает типы параметров репликации, включенных на сервере. Эта хранимая процедура выполняется на любом сервере в любой базе данных.  
   
@@ -39,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @optname = ] 'option_name'`Имя параметра репликации, для которого необходимо выполнить запрос. Аргумент *option_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**транзакций**|Результирующий набор возвращается, если включена репликация транзакций.|  
 |**AutoMerge**|Результирующий набор возвращается, если включена репликация слиянием.|  

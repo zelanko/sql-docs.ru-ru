@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775489"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Функции с числовыми значениями — ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает наименьшее целое число, которое не меньше значения, переданного как аргумент функции. Если аргумент представляет собой пустую последовательность, то возвращается пустая последовательность.  
   
@@ -39,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double**или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* .  
   
  Если тип *$arg* является типом, производным от одного из числовых типов, то возвращаемым типом является базовый числовой тип.  
@@ -51,7 +51,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>А) Использование функции XQuery ceiling()  
+### <a name="a-using-the-ceiling-xquery-function"></a>A. Использование функции XQuery ceiling()  
  Для модели продуктов 7 этот запрос вернет список адресов цехов, участвующих в производстве продуктов этой модели. Для каждого адреса цеха запрос вернет идентификатор адреса, рабочее время и размер территории, если они указаны. Запрос использует функцию **Ceiling** для возврата рабочих часов в качестве значений типа **Decimal**.  
   
 ```  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **Инструкции** — это столбец типа **XML** . Поэтому для указания XQuery используется [метод query () (тип данных XML)](../t-sql/xml/query-method-xml-data-type.md) . Инструкция XQuery задана как аргумент метода query.  
   
--   **для... Return** является конструкцией цикла. В запросе цикл **for** определяет список \< расположений> элементов. Для каждого расположения рабочего центра оператор **return** в цикле **for** описывает создаваемый XML:  
+-   **для... Return** является конструкцией цикла. В запросе цикл **for** определяет список \<Location> элементов. Для каждого расположения рабочего центра оператор **return** в цикле **for** описывает создаваемый XML:  
   
-    -   \<Элемент Location>, содержащий атрибуты LocationID и лаборхрс. Соответствующее выражение в фигурных скобках ({ }) получает запрашиваемые значения из документа.  
+    -   \<Location>Элемент с атрибутами LocationID и лаборхрс. Соответствующее выражение в фигурных скобках ({ }) получает запрашиваемые значения из документа.  
   
     -   Выражение {$ i/@LotSize } извлекает из документа атрибут LotSize, если он есть.  
   
@@ -100,7 +100,7 @@ ProductModelID Result
   
 -   Функция **ceiling ()** сопоставляет все целочисленные значения с типом xs: Decimal.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [Функция Round &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
   

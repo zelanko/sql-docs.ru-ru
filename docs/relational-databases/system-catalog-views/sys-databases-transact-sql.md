@@ -20,16 +20,16 @@ ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05901a97ea85deb6f45b5ee440d0eefaac1c8fd6
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7bc0873bcafa37c0fa35118fcd033caae2049449
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785013"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Содержит одну строку для каждой базы данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -93,8 +93,8 @@ ms.locfileid: "84529382"
 |**log_reuse_wait_desc**|**nvarchar(60)**|Описание повторного использования места в журнале транзакций, ожидаемого в настоящее время по состоянию на последнюю контрольную точку.|  
 |**is_date_correlation_on**|**bit**|1 = DATE_CORRELATION_OPTIMIZATION в состоянии ON<br /> 0 = DATE_CORRELATION_OPTIMIZATION в состоянии OFF|  
 |**is_cdc_enabled**|**bit**|1 = в базе данных включена система отслеживания измененных данных. Дополнительные сведения см. в разделе [sys. sp_cdc_enable_db &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md).|  
-|**is_encrypted**|**bit**|Указывает, зашифрована ли база данных (отражает состояние, Последнее заданное с помощью `ALTER DATABASE SET ENCRYPTION` предложения). Может иметь одно из следующих значений:<br /> 1 = зашифрована<br /> 0 = не зашифрована.<br /> Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Если база данных находится в процессе расшифровки, `is_encrypted` показывает значение 0. Состояние процесса шифрования можно просмотреть с помощью динамического административного представления [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
-|**is_honor_broker_priority_on**|**bit**|Указывает, учитывает ли база данных приоритеты диалога (отражает состояние Last, установленное с помощью `ALTER DATABASE SET HONOR_BROKER_PRIORITY` предложения). Может иметь одно из следующих значений:<br /> 1 = HONOR_BROKER_PRIORITY имеет значение ON;<br /> 0 = HONOR_BROKER_PRIORITY имеет значение OFF.<br /> По умолчанию восстановленные или присоединенные базы данных имеют приоритет компонента Service Broker.|  
+|**is_encrypted**|**bit**|Указывает, зашифрована ли база данных (отражает состояние, Последнее заданное с помощью `ALTER DATABASE SET ENCRYPTION` предложения). Может использоваться одно из следующих значений:<br /> 1 = зашифрована<br /> 0 = не зашифрована.<br /> Дополнительные сведения о шифровании баз данных см. в статье [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md).<br /> Если база данных находится в процессе расшифровки, `is_encrypted` показывает значение 0. Состояние процесса шифрования можно просмотреть с помощью динамического административного представления [sys. dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) .|  
+|**is_honor_broker_priority_on**|**bit**|Указывает, учитывает ли база данных приоритеты диалога (отражает состояние Last, установленное с помощью `ALTER DATABASE SET HONOR_BROKER_PRIORITY` предложения). Может использоваться одно из следующих значений:<br /> 1 = HONOR_BROKER_PRIORITY имеет значение ON;<br /> 0 = HONOR_BROKER_PRIORITY имеет значение OFF.<br /> По умолчанию восстановленные или присоединенные базы данных имеют приоритет компонента Service Broker.|  
 |**replica_id**|**uniqueidentifier**|Уникальный идентификатор локальной реплики доступности [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] группы доступности, если таковая имеется, частью которой является база данных.<br /> NULL = база данных не является частью реплики доступности в группе доступности.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**group_database_id**|**uniqueidentifier**|Уникальный идентификатор базы данных в Always On группе доступности (при наличии), в которой участвует база данных. **group_database_id** одинаковы для этой базы данных в первичной реплике и на каждой вторичной реплике, в которой база данных была присоединена к группе доступности.<br /> NULL = база данных не является частью реплики доступности в любой группе доступности.<br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**resource_pool_id**|**int**|Идентификатор пула ресурсов, сопоставленного с этой базой данных. Этот пул ресурсов управляет общим объемом памяти, доступным оптимизированным для памяти таблицам из этой базы данных.<br /> **Применимо к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздним версиям|  
@@ -171,7 +171,7 @@ SELECT a.name, a.is_temporal_history_retention_enabled
 FROM sys.databases AS a;
 ```  
   
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [sys.database_mirroring_witnesses (Transact-SQL)](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 776e7b0c713e36f0d9f67112592dff6d24a46fbd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 933774af820c80abb70c5fbdad0441053533b451
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783706"
 ---
 # <a name="sp_serveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Устанавливает параметры сервера для удаленных и связанных серверов.  
   
@@ -46,7 +46,7 @@ sp_serveroption [@server = ] 'server'
   
 `[ @optname = ] 'option_name'`Параметр, заданный для указанного сервера. *option_name* имеет тип **varchar (** 35 **)** и не имеет значения по умолчанию. *option_name* может иметь любое из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**совместимые параметры сортировки**|Влияет на выполнение распределенных запросов на связанных серверах. Если этот параметр имеет значение **true**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предполагается, что все символы на связанном сервере совместимы с локальным сервером, в зависимости от набора символов и порядка сортировки (или порядка сортировки). Это позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отправлять поставщику сравнения по символьным столбцам. Если этот параметр не задан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда выполняет сравнения по символьным столбцам локально.<br /><br /> Этот параметр необходимо задать только в том случае, если источник данных, соответствующий связанному серверу, имеет тот же набор символов и тот же порядок сортировки, что и локальный сервер.|  
 |**имя параметров сортировки**|Задает имя параметров сортировки, используемых удаленным источником данных, если параметр **use remote collation** имеет **значение true** , а источник данных не является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источником данных. Этот имя должно быть одним из параметров сортировки, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Этот параметр используется при доступе к источнику данных OLE DB, отличному от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], параметры сортировки которого совпадают с одним из параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Связанный сервер должен поддерживать использование единых параметров сортировки для всех столбцов на этом сервере. Не задавайте этот параметр, если связанный сервер поддерживает несколько параметров сортировки для одного источника данных, или если невозможно определить, соответствуют ли параметры сортировки связанного сервера одному из параметров сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

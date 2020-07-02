@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dbff2968-3011-41d6-a141-52d814af0213
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db0a9b0d2461e392f981ba3699a9efd3c1f3f8f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 878552c37b9d8d0345969e47f297df85089ce184
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660875"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784687"
 ---
 # <a name="sqlservicetype-property-sqlservice-class"></a>Свойство SqlServiceType (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает тип управляемой службы.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.SqlServiceType [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, задающее тип службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Может возвращаться одно из следующих значений:  
   
 |Тип|Определение|  
@@ -54,13 +54,13 @@ object.SqlServiceType [= value]
 |*5*|MSSQLServerOLAPService — служба [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .|  
 |*6*|ReportServer — служба [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|  
 |*7*|SQLBrowser — служба « [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обозреватель».|  
-|*8*|Нссервице — это [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] служба уведомлений.|  
-|*9*|MSSQLFDLauncher — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба запуска управляющей программы полнотекстовой фильтрации.|  
-|*10*|СКЛПБЕНГИНЕ — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба ядра polybase.|  
-|*11*|СКЛПБДМС — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба перемещения данных polybase.|  
+|*8*|Нссервице — это [!INCLUDE[ssNoVersion](../../../includes/ssns-md.md)] Служба уведомлений.|  
+|*9*|MSSQLFDLauncher — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба запуска управляющей программы полнотекстовой фильтрации.|  
+|*10*|СКЛПБЕНГИНЕ — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба ядра polybase.|  
+|*11*|СКЛПБДМС — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба перемещения данных polybase.|  
 |*12*|MSSQLLaunchpad — это [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служба панели запуска.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

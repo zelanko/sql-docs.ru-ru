@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7a0a99f46cdd3ec5d2b6b9ac96cae7a1dc5c55e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dca09294b86e1654cab12331b2b72462dd1598f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775213"
 ---
 # <a name="sysserver_triggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит набор всех триггеров DDL уровня сервера с object_type, равным TR или TA. В случае триггеров CLR сборка должна быть загружена в базу данных **master** . Все имена триггеров DDL существуют в одной, глобальной области.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82832751"
 |**parent_class**|**tinyint**|Класс родителя. Всегда:<br /><br /> 100 = Сервер|  
 |**parent_class_desc**|**nvarchar(60)**|Описание класса родителя. Всегда:<br /><br /> SERVER.|  
 |**parent_id**|**int**|Всегда равно 0 для триггеров на SERVER.|  
-|**type**|**char (2)**|Тип объекта:<br /><br /> TA = триггер сборки (среда CLR)<br /><br /> TR = триггер SQL|  
+|**type**|**char(2)**|Тип объекта:<br /><br /> TA = триггер сборки (среда CLR)<br /><br /> TR = триггер SQL|  
 |**type_desc**|**nvarchar(60)**|Описание класса объекта.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Дата создания триггера.|  
 |**modify_date**|**datetime**|Дата последней модификации триггера с помощью инструкции ALTER.|  

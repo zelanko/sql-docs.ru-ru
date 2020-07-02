@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b736415400adfdfbdc21a3a217c03673cbe91130
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783777"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет роль базы данных из текущей базы данных.  
   
@@ -47,7 +47,7 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  С помощью **sp_droprole**можно удалять только роли базы данных.  
   
  Роль базы данных, содержащая членов, не может быть удалена. Прежде чем удалить роли базы данных, необходимо удалить всех ее членов. Чтобы удалить пользователей из роли, используйте **sp_droprolemember**. Если какие-либо пользователи все еще являются членами роли, **sp_droprole** отображает эти члены.  

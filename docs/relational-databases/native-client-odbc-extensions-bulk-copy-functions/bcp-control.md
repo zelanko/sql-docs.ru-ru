@@ -18,15 +18,15 @@ ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b3d09d1f577c9af59ea085eefbf51e9a70558a36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a58b41665d1b10a1e9f9868796b98b80e43e92d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774301"
 ---
 # <a name="bcp_control"></a>bcp_control
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Изменяет значения по умолчанию различных параметров управления для массового копирования между файлом и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -56,7 +56,7 @@ RETCODE bcp_control (
  BCPDELAYREADFMT  
  Логическое значение, если установлено значение true, вызовет [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) чтение во время выполнения. Если значение равно false (по умолчанию), bcp_readfmt немедленно прочитает файл форматирования. Если BCPDELAYREADFMT имеет значение true и вы вызываете bcp_columns или bcp_setcolfmt, возникнет ошибка последовательности.  
   
- Ошибка последовательности также возникает при `bcp_control(hdbc,` вызове BCPDELAYREADFMT`, (void *)FALSE)` после вызова `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` и bcp_writefmt.  
+ Ошибка последовательности также возникает при вызове `bcp_control(hdbc,` BCPDELAYREADFMT `, (void *)FALSE)` после вызова `bcp_control(hdbc,` BCPDELAYREADFMT `, (void *)TRUE)` и bcp_writefmt.  
   
  Дополнительные сведения см. в разделе [Обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
   
@@ -70,7 +70,7 @@ RETCODE bcp_control (
  BCPFILE_RAW: данные в файле хранятся в кодовой странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  BCPFILEFMT  
- Номер версии для формата файла данных. Это может быть 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) или 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 используется по умолчанию. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера. Например, чтобы импортировать данные, полученные из текстового столбца [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера в столбец **varchar (max)** на сервере [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует указать 80. Аналогично, если указать 80 при экспорте данных из столбца **varchar (max)** , они будут сохранены так же, как текстовые столбцы, сохраняются в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] формате и могут быть импортированы в текстовый столбец [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера.  
+ Номер версии для формата файла данных. Это может быть 80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ), 90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ), 100 ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ), 110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ) или 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ). 120 используется по умолчанию. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера. Например, чтобы импортировать данные, полученные из текстового столбца [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера в столбец **varchar (max)** на [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] сервере или более поздней версии, следует указать 80. Аналогично, если указать 80 при экспорте данных из столбца **varchar (max)** , они будут сохранены так же, как текстовые столбцы, сохраняются в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] формате и могут быть импортированы в текстовый столбец [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера.  
   
  BCPFIRST  
  Первая строка данных, копируемых в файл или таблицу. Значение по умолчанию равно 1. Если задать для этого параметра значение меньше 1, то будет установлено значение по умолчанию.  
@@ -94,10 +94,10 @@ RETCODE bcp_control (
  *iValue* содержит указатель на SQLTCHAR строку символов. Адресуемая строка задает указания для обработки массового копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или инструкцию Transact-SQL, которая возвращает результирующий набор. Если задана инструкция Transact-SQL, которая возвращает несколько результирующих наборов, все результирующие наборы после первого пропускаются. Дополнительные сведения о указаниях по обработке массовых копий см. в разделе [программа bcp](../../tools/bcp-utility.md).  
   
  BCPKEEPIDENTITY  
- Если *iValue* имеет значение true, то указывает, что функции операций с массовым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] копированием вставляют значения данных, предоставляемые для столбцов, определенных с помощью ограничения IDENTITY. Входной файл должен содержать значения для столбцов идентификаторов. Если эти значения не заданы, то для вставляемых строк создаются новые значения идентификаторов. Данные в файле, предназначенные для столбцов идентификаторов, не учитываются.  
+ Если *iValue* имеет значение true, то указывает, что функции операций с массовым копированием вставляют значения данных, предоставляемые для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] столбцов, определенных с помощью ограничения IDENTITY. Входной файл должен содержать значения для столбцов идентификаторов. Если эти значения не заданы, то для вставляемых строк создаются новые значения идентификаторов. Данные в файле, предназначенные для столбцов идентификаторов, не учитываются.  
   
  BCPKEEPNULLS  
- Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если *iValue* имеет значение true, пустые значения будут преобразованы в значение NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в таблице. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если значение по умолчанию существует.  
+ Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если *iValue* имеет значение true, пустые значения будут преобразованы в значение NULL в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблице. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если значение по умолчанию существует.  
   
  BCPLAST  
  Последняя строка для копирования. По умолчанию установлено копирование всех строк; если задать для этого параметра значение меньше 1, то ему будет установлено значение по умолчанию.  
@@ -129,15 +129,15 @@ RETCODE bcp_control (
  *iValue*  
  Значение для указанного *eOption*. *iValue* — это целочисленное значение (лонглонг), приведенное к указателю void, чтобы обеспечить будущее расширение до 64 битовых значений.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта функция задает различные параметры управления для операций массового копирования, включая число ошибок, после которого массовое копирование будет отменено, номера первой и последней строк для копирования из файла данных, а также размер пакета.  
   
  Эта функция также используется для указания инструкции SELECT при массовом копировании результирующего набора инструкции SELECT из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Присвойте параметру *eOption* значение bcphints а и задайте для *iValue* значение указатель на строку SQLTCHAR, содержащую инструкцию SELECT.  
   
- Эти параметры управления имеют значение только при копировании между пользовательским файлом и таблицей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры управления параметрами не влияют на строки, скопированные [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
+ Эти параметры управления имеют значение только при копировании между пользовательским файлом и таблицей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметры управления параметрами не влияют на строки, скопированные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md).  
   
 ## <a name="example"></a>Пример  
   

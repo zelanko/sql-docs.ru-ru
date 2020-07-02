@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 246081eb5c362cb76a4c037693ee6c40b999fcdd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24c6674c35bdbe626cc703e84e773d33d3b7f47a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783658"
 ---
 # <a name="sysmail_update_profileaccount_sp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет порядковый номер учетной записи в профиле компонента Database Mail.  
   
@@ -71,7 +71,7 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
  По умолчанию разрешения EXECUTE для этой процедуры имеют члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере изменяется порядковый номер учетной записи `Admin-BackupServer` в профиле `AdventureWorks Administrator` в базе данных **msdb** . После выполнения этого кода порядковым номером для этой учетной записи будет `3`, и, следовательно, эта учетная запись будет использована, если использование первых двух учетных записей завершится с ошибкой.  
+ В следующем примере изменяется порядковый номер учетной записи в `Admin-BackupServer` профиле `AdventureWorks Administrator` в базе данных **msdb** . После выполнения этого кода порядковым номером для этой учетной записи будет `3`, и, следовательно, эта учетная запись будет использована, если использование первых двух учетных записей завершится с ошибкой.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  
@@ -80,7 +80,7 @@ EXECUTE msdb.dbo.sysmail_update_profileaccount_sp
     ,@sequence_number = 3;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создание учетной записи Database Mail](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

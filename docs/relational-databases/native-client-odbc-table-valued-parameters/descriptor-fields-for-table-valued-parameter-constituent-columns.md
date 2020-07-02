@@ -13,19 +13,19 @@ ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08074ad57ca4f0e4f7c2c56d9eca595baf595b5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4fc2ea564bff8899b3df82fd5d82297b7997c08c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783206"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Поля дескриптора для столбцов, содержащих параметры, возвращающие табличные значения
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Поля дескриптора возвращающего табличное значение параметра, описанные в этом разделе, управляются с помощью [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) и [SQLSetDescField](../../relational-databases/native-client-odbc-api/sqlsetdescfield.md) с дескриптором для дескриптора параметра реализации (IPD).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  SQL_DESC_AUTO_UNIQUE_VALUE используется для параметров, возвращающих табличные значения, и других компонентов.  
   
 |Имя атрибута|Тип|Описание|  
@@ -46,9 +46,9 @@ ms.locfileid: "81297864"
 
  Эти атрибуты доступны только для столбцов возвращающих табличные значения параметров. Для других параметров они не учитываются.  
   
- Если для столбца, возвращающего табличное значение параметра, установлен атрибут SQL_CA_SS_COL_HAS_DEFAULT_VALUE, то SQL_DESC_DATA_PTR для этого столбца должен быть равен null. В противном случае SQLExecute или SQLExecDirect возвратит SQL_ERROR. Будет создана диагностическая запись с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по \<умолчанию для параметра p \<>, столбец c> \<", где p> — это \<порядковый номер параметра, а в> — порядковый номер столбца.  
+ Если для столбца, возвращающего табличное значение параметра, установлен атрибут SQL_CA_SS_COL_HAS_DEFAULT_VALUE, то SQL_DESC_DATA_PTR для этого столбца должен быть равен null. В противном случае SQLExecute или SQLExecDirect возвратит SQL_ERROR. Будет создана диагностическая запись с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по умолчанию для параметра \<p> , столбца \<c> ", где \<p> — это порядковый номер параметра, а \<c> — порядковый номер столбца.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

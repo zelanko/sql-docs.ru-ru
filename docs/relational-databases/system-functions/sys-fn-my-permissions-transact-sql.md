@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3698431316b86a40e70e144bfac23d81678db45c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68122626"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783086"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает список разрешений на защищаемый объект, фактически предоставленных участнику. Связанная функция — [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
@@ -51,13 +51,13 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
  В следующей таблице перечислены столбцы, возвращаемые **fn_my_permissions** . Каждая возвращаемая строка описывает разрешение относительно защищаемого объекта в текущем контексте безопасности. Возвращает NULL в случае неудачного завершения запроса.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Имя защищаемого объекта, на который предоставлены перечисленные разрешения.|  
 |subentity_name|**sysname**|Имя столбца, если у защищаемого объекта есть столбцы, в противном случае — NULL.|  
 |permission_name|**nvarchar**|Имя разрешения.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта функция возвращает список действующих разрешений вызывающего участника в отношении указанного защищаемого объекта. Действующим разрешением будет одно из следующих:  
   
 -   Действующее разрешение, предоставленное непосредственно участнику.  
@@ -92,7 +92,7 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### <a name="b-listing-effective-permissions-on-the-database"></a>Б) Перечисление действующих разрешений в базе данных  
+### <a name="b-listing-effective-permissions-on-the-database"></a>Б. Перечисление действующих разрешений в базе данных  
  Следующий пример возвращает список действующих разрешений для вызывающей стороны в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

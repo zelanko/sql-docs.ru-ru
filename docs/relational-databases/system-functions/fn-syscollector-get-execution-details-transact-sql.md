@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042818"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775183"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает записи журнала служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] (sysssislog), совпадающие с идентификатором package_execution_id для данного пакета. Таблица содержит одну строку для каждой записи журнала, сформированной пакетами или их задачами и контейнерами во время выполнения.  
   
@@ -56,13 +56,13 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Время начала выполнения пакета.|  
 |endtime|**datetime**|Время завершения выполнения пакета.|  
 |datacode|**int**|Целочисленное значение, которое указывает на событие, связанное с записью журнала. Значение 0 указывает, что событие не передало идентификатор.|  
-|databytes|**image**|Массив байтов, который указывает на возвращаемое значение.|  
-|сообщение|**nvarchar**|Описание события и сведения, связанные с событием.|  
+|databytes|**изображение**|Массив байтов, который указывает на возвращаемое значение.|  
+|message|**nvarchar**|Описание события и сведения, связанные с событием.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение SELECT для **dc_operator**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Включение ведения журнала пакетов в SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9f1e69c10e4930a4a039528cffc4dbb13a67548
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 5ebd9c4d2bae1c491d2bd7a23e52c83457942fb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689482"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775477"
 ---
 # <a name="xqueries-handling-relational-data"></a>Запросы XQuery, обрабатывающие реляционные данные
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Запрос XQuery указывается для столбца или переменной типа **XML** с помощью одного из [методов типа данных XML](../t-sql/xml/xml-data-type-methods.md). К ним относятся **запрос ()**, **значение ()**, **exist ()** или **Modify ()**. Запрос XQuery выполняется для экземпляра XML, указанного в запросе, создающем XML-код.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "83689482"
   
  Дополнительные сведения см. в разделе [функции SQL: column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md) и [SQL: variable () (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  

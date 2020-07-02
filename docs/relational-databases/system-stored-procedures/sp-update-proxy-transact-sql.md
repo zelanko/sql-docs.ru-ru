@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 66ca1f35a5920f6f6d26bea0663e51d305fc1c3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775151"
 ---
 # <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет свойства существующей учетной записи-посредника.  
   
@@ -64,10 +64,10 @@ sp_update_proxy
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
- Необходимо указать либо ** \@proxy_name** , либо ** \@proxy_id** . Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
+## <a name="remarks"></a>Примечания  
+ Необходимо указать либо ** \@ proxy_name** , либо ** \@ proxy_id** . Если указаны оба аргумента, они должны ссылаться на одну и ту же учетную запись-посредник, в противном случае хранимая процедура завершается ошибкой.  
   
- Для изменения учетных данных прокси-сервера необходимо указать либо ** \@credential_name** , либо ** \@credential_id** . Если указаны оба аргумента, они должны ссылаться на одни и те же учетные данные, в противном случае хранимая процедура завершается ошибкой.  
+ Для изменения учетных данных прокси-сервера необходимо указать либо ** \@ credential_name** , либо ** \@ credential_id** . Если указаны оба аргумента, они должны ссылаться на одни и те же учетные данные, в противном случае хранимая процедура завершается ошибкой.  
   
  Эта процедура вносит изменения в учетную запись-посредник, но не меняет порядок доступа к нему. Чтобы изменить доступ к учетной записи-посреднику, используйте **sp_grant_login_to_proxy** и **sp_revoke_login_from_proxy**.  
   
@@ -87,7 +87,7 @@ EXEC dbo.sp_update_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Реализация агент SQL Server безопасности](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

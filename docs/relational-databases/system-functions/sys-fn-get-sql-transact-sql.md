@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d5fe49b5-0813-48f2-9efb-9187716b2fd4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 58cb9c4b35329a24db954460097dca5f7d87e4f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8ba54cf16819164bb8d356cae0a5a1b7569a373
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783933"
 ---
 # <a name="sysfn_get_sql-transact-sql"></a>sys.fn_get_sql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает текст инструкции SQL для указанного дескриптора SQL.  
   
@@ -61,14 +61,14 @@ sys.fn_get_sql ( SqlHandle )
 |objectid|**int**|Идентификатор объекта базы данных. Имеет значение NULL для нерегламентированных инструкций SQL.|  
 |number|**smallint**|Указывает на номер группы, если процедуры сгруппированы.<br /><br /> 0 = записи не являются процедурами.<br /><br /> NULL = нерегламентированные инструкции SQL.|  
 |encrypted|**bit**|Указывает, зашифрован ли объект.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
-|текст|**text**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
+|text|**text**|Текст инструкции SQL. Имеет значение NULL для зашифрованных объектов.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Допустимый обработчик SQL можно получить из столбца sql_handle в динамическом административном представлении [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) .  
   
  Если передается обработчик, который больше не существует в кэше, fn_get_sq**l** возвращает пустой результирующий набор. Если передается недопустимый дескриптор, выполнение пакета прекращается и возвращается сообщение об ошибке.  
   
- Инструкция [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может кэшировать [!INCLUDE[tsql](../../includes/tsql-md.md)] некоторые инструкции, такие как инструкции и инструкции инструкций Copy с строковыми литералами, размер которых превышает 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
+ Инструкция [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] не может кэшировать некоторые [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, такие как инструкции и инструкции инструкций Copy с строковыми литералами, размер которых ПРЕВЫШАЕТ 8 КБ. Дескрипторы этих инструкций не могут быть извлечены при помощи функции fn_get_sql.  
   
  Столбец **Text** результирующего набора фильтруется по тексту, который может содержать пароли. Дополнительные сведения о хранимых процедурах, связанных с безопасностью, которые не отслеживаются, см. [в разделе Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
@@ -95,7 +95,7 @@ GO
   
 ## <a name="see-also"></a>См. также  
  [DBCC INPUTBUFFER &#40;&#41;Transact-SQL](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)   
- [sys. sysprocesses &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys.sysные процессы &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
   

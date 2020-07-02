@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f488c50518f0a1dd06d72532f1e9edad865e26a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68037379"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783665"
 ---
 # <a name="sysmail_update_principalprofile_sp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет данные о взаимосвязи между каким-либо участником и профилем.  
   
@@ -62,7 +62,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Если имя участника для ассоциации является **открытым** или идентификатор субъекта для ассоциации равен **0**, эта хранимая процедура изменяет открытый профиль. Может быть только один открытый (public) профиль по умолчанию.  
   
- Если ** \@is_default** имеет значение**1**и участник связан с более чем одним профилем, указанный профиль становится профилем по умолчанию для участника. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
+ Если ** \@ is_default** имеет значение**1**и участник связан с более чем одним профилем, указанный профиль становится профилем по умолчанию для участника. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
   
  Хранимая процедура **sysmail_update_principalprofile_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  
   
@@ -72,7 +72,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="examples"></a>Примеры  
  **А. Установка профиля в открытый профиль по умолчанию для базы данных**  
   
- В следующем примере профиль `General Use Profile` задается как открытый профиль по умолчанию для пользователей в базе данных **msdb** .  
+ В следующем примере профиль задается как `General Use Profile` открытый профиль по умолчанию для пользователей в базе данных **msdb** .  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -83,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **Б. Настройка профиля в профиль по умолчанию для пользователя**  
   
- В следующем примере профиль `AdventureWorks Administrator` задается как профиль по умолчанию для участника `ApplicationUser` в базе данных **msdb** . Профиль должен быть заранее связан с участником. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
+ В следующем примере профиль задается как `AdventureWorks Administrator` профиль по умолчанию для участника `ApplicationUser` в базе данных **msdb** . Профиль должен быть заранее связан с участником. Профиль, который ранее был профилем по умолчанию, все еще связан с участником, но не является более профилем по умолчанию.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -92,7 +92,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1' ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Database Mail объекты конфигурации](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Database Mail хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

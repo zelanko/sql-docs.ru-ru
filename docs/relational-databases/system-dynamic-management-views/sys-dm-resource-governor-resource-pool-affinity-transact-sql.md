@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7738b79c85c8a36eab671799ebf01797b67a3080
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 649bb3d5278337db4bda4b3f3622823bd3b35a17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830446"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784889"
 ---
 # <a name="sysdm_resource_governor_resource_pool_affinity-transact-sql"></a>Представление sys.dm_resource_governor_resource_pool_affinity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отслеживает сходство пула ресурсов.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82830446"
 |Processor_group|**smallint**|Идентификатор логической группы процессоров Windows. Не допускает значение NULL.|  
 |Scheduler_mask|**bigint**|Двоичная маска, представляющая планировщики, связанные с этим пулом. Не допускает значение NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Пулы, которые созданы со сходством AUTO, не будут появляться в этом представлении, поскольку не имеют сходства. Дополнительные сведения см. в статьях [Создание пула ресурсов &#40;Transact-sql&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) и [изменение пула ресурсов &#40;инструкций transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md) .  
   
 ## <a name="see-also"></a>См. также  

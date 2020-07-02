@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1171740ae04b4fc03609659fa27a711bf36fa6f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84880515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775457"
 ---
 # <a name="xqueries-involving-order"></a>Запросы XQuery, использующие упорядочивание
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Реляционные базы данных не используют концепцию последовательности. Например, нельзя создать запрос типа «Получить первого заказчика из базы данных». Однако можно запросить XML-документ и получить первый \<Customer> элемент. Затем всегда будет появляться информация об этом же заказчике.  
   
@@ -246,7 +246,7 @@ where ProductModelID=7
 </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server &#40;XML-данных&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  

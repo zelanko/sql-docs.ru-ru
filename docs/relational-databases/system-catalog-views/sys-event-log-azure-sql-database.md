@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784933"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает успешные [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] подключения к базе данных, сбои подключений и взаимоблокировки. С помощью этих данных можно отслеживать и устранять неполадки операций с базой данных, используя [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82832008"
 |**event_type**|**nvarchar (64)**|Тип события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**event_subtype_desc**|**nvarchar (64)**|Описание подтипа события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
-|**severity**|**int**|Степень серьезности ошибки. Доступны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
+|**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество раз, которое произошло это событие для указанной базы данных в течение указанного интервала времени (**start_time** и **end_time**).|  
 |**nописание**|**nvarchar(max)**|Подробное описание события.<br /><br /> Список возможных значений см. в разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) .|  
 |**additional_data**|**XML**|*Примечание. это значение всегда равно NULL для базы данных SQL Azure версии 12. Дополнительные сведения о получении событий взаимоблокировок для версии 12 см. в разделе " [примеры](#Deadlock) ".*<br /><br /> Для событий **взаимоблокировок** этот столбец содержит граф взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
@@ -76,19 +76,19 @@ ms.locfileid: "82832008"
 |**установлен**|**connection_failed**|9|**перенастройки**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> При подключении возникла ошибка, так как в это время выполнялась настройка базы данных.|  
 |**установлен**|**connection_terminated**|0|**idle_connection_timeout**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Соединение бездействует дольше заданного системой порогового периода.|  
 |**установлен**|**connection_terminated**|1|**перенастройки**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс прерван из-за изменения конфигурации базы данных.|  
-|**установлен**|**регулирования**|*\<код причины>*|**reason_code**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Запрос регулируется.  Код причины регулирования: * \< код причины>*. Дополнительные сведения см. в разделе [регулирование подсистемы](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**установлен**|**регулирования**|*\<reason code>*|**reason_code**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Запрос регулируется.  Код причины регулирования: *\<reason code>* . Дополнительные сведения см. в разделе [регулирование подсистемы](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**установлен**|**throttling_long_transaction**|40549|**long_transaction**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс завершен по причине долго выполняющейся транзакции. Рекомендуется сократить транзакцию. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**установлен**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с тем, что он получил слишком много блокировок. Рекомендуется сократить число строк, считываемых или изменяемых в одной транзакции. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**установлен**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием базы данных TEMPDB. Попробуйте изменить запрос, чтобы сократить объем использования временных таблиц. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**установлен**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием объема журнала транзакций. Рекомендуется сократить число строк, изменяемых в одной транзакции. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**установлен**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Примечание. применяется только к версии 11 базы данных SQL Azure.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием памяти. Рекомендуется изменить запрос, сократив число обрабатываемых строк. Дополнительные сведения см. в разделе [ограничения ресурсов](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
-|**ядре**|**блокировку**|0|**блокировку**|2|Возникла взаимоблокировка.|  
+|**ядре**|**взаимоблокировка**|0|**взаимоблокировка**|2|Возникла взаимоблокировка.|  
   
 ## <a name="permissions"></a>Разрешения
 
  Пользователи с разрешением на доступ к базе данных **master** имеют доступ только для чтения к этому представлению.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий
 

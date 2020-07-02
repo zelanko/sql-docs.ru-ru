@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de61da8e636ff3f6e38dac6fe85d45eaff75df3c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783872"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает новый профиль для агента репликации. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -48,7 +48,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @agent_type = ] 'agent_type'`Тип агента репликации. *agent_type* имеет **тип int**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|агент моментальных снимков|  
 |**2**|Агент чтения журнала.|  
@@ -58,7 +58,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
 `[ @profile_type = ] profile_type`Тип профиля. *profile_type* имеет **тип int**и значение по умолчанию **1**.  
   
- значение **0** указывает на системный профиль. **1** указывает на пользовательский профиль. С помощью этой хранимой процедуры можно создавать только пользовательские профили. Поэтому единственным допустимым значением является **1**. Создает [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только системные профили.  
+ значение **0** указывает на системный профиль. **1** указывает на пользовательский профиль. С помощью этой хранимой процедуры можно создавать только пользовательские профили. Поэтому единственным допустимым значением является **1**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Создает только системные профили.  
   
 `[ @description = ] 'description'`Описание профиля. *Description* имеет тип **nvarchar (3000)** и не имеет значения по умолчанию.  
   
@@ -67,7 +67,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_add_agent_profile** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
  Пользовательские профили агента добавляются со значениями параметров агента по умолчанию. Используйте [sp_change_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) для изменения этих значений по умолчанию или [sp_add_agent_parameter &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) для добавления дополнительных параметров.  
@@ -77,7 +77,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_agent_profile**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

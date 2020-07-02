@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bbac8f5c9afd5fd8603764824757e33d103354d0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ef0cfbc64b3918d5b9be21573c1567dbcd96799
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784969"
 ---
 # <a name="sysdestination_data_spaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждой цели пространства данных в схеме секционирования.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82828201"
 |**data_space_id**|**int**|Идентификатор пространства данных, с которым сопоставлены данные для цели этой схемы.|  
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

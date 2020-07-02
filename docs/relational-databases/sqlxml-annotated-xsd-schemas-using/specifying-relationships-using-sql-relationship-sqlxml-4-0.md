@@ -30,15 +30,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58155c9ec390259410538e9716dad87146acda2a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775761"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Указание связей при помощи sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Элементы в XML-документе могут участвовать в связях. Элементы могут иметь иерархическую вложенность, и между ними могут быть заданы связи ID, IDREF или IDREFS.  
   
  Например, в схеме XSD **\<Customer>** элемент содержит **\<Order>** дочерние элементы. Когда схема сопоставляется с базой данных AdventureWorks, **\<Customer>** элемент сопоставляется с таблицей Sales. Customer, а **\<Order>** элемент сопоставляется с таблицей Sales. SalesOrderHeader. Базовые таблицы Sales.Customer и Sales.SalesOrderHeader связаны, так как заказчики размещают заказы. CustomerID в таблице Sales.SalesOrderHeader представляет собой внешний ключ, ссылающийся на первичный ключ CustomerID в таблице Sales.Customer. Эти связи можно установить между элементами схемы сопоставления с помощью аннотации **SQL: relationship** .  
@@ -53,7 +53,7 @@ ms.locfileid: "84215719"
   
  Чтобы указать имена таблиц и необходимые сведения о соединении, в заметке **SQL: relationship** указаны следующие атрибуты. Эти атрибуты являются допустимыми только с **\<sql:relationship>** элементом.  
   
- **имя**;  
+ **Name**  
  Указывает уникальное имя связи.  
   
  **Родительский объект**  
@@ -78,7 +78,7 @@ ms.locfileid: "84215719"
 ## <a name="examples"></a>Примеры  
  Чтобы создать рабочие образцы на основе следующих примеров, необходимо выполнить определенные требования. Дополнительные сведения см. в разделе [требования для запуска примеров SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>А) Определение заметки sql:relationship для элемента  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Определение заметки sql:relationship для элемента  
  Следующие помеченные схемы XSD включают **\<Customer>** элементы и **\<Order>** . **\<Order>** Элемент является дочерним элементом **\<Customer>** элемента.  
   
  В схеме Аннотация **SQL: relationship** указана в **\<Order>** дочернем элементе. Сама связь определяется в **\<xsd:appinfo>** элементе.  

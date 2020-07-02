@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833832"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783897"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает одну строку для каждого условия управления на основе политик в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_conditions принадлежит схеме dbo в базе данных msdb. В следующей таблице описываются столбцы представления syspolicy_conditions.  
   
@@ -34,16 +34,16 @@ ms.locfileid: "82833832"
 |condition_id|**int**|Идентификатор условия. Каждое условие представляет собой коллекцию, состоящую из одного или нескольких выражений условий.|  
 |name|**sysname**|Имя условия.|  
 |date_created|**datetime**|Дата и время создания условия.|  
-|description;|**nvarchar(max)**|Описание условия. Столбец описания является необязательным и может принимать значение NULL.|  
+|description|**nvarchar(max)**|Описание условия. Столбец описания является необязательным и может принимать значение NULL.|  
 |created_by|**sysname**|Имя пользователя, создавшего условие.|  
 |modified_by|**sysname**|Имя пользователя, изменившего это условие последним. Содержит значение NULL, если изменений не было.|  
 |date_modified|**datetime**|Дата и время создания условия. Содержит значение NULL, если изменений не было.|  
 |is_name_condition|**smallint**|Указывает, является ли условие условием именования.<br /><br /> 0 = выражение условия не содержит переменной @Name.<br /><br /> 1 = выражение условия содержит переменную @Name.|  
 |facet|**nvarchar(max)**|Имя аспекта, на котором основано условие.|  
-|Выражение|**nvarchar(max)**|Выражение для состояний аспекта.|  
+|Expression|**nvarchar(max)**|Выражение для состояний аспекта.|  
 |obj_name|**sysname**|Имя объекта, присвоенного @Name, если выражение условия содержит переменную.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При устранении неполадок управления на основе политик, выполнив запрос представления syspolicy_conditions, можно определить, кто создал или последним изменил условие.  
   
 ## <a name="permissions"></a>Разрешения  

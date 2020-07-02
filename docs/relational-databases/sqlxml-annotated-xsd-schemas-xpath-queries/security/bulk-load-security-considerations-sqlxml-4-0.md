@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd641fe3d3843fe853a16db4833d40bdcbec4e1a
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 43cf00aef7e1ce571f41c08d4d9033aee7bd43a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305943"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775267"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>Вопросы безопасности массовой загрузки (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Ниже приведены рекомендации по обеспечению безопасности при использовании массовой загрузки XML.  
   
 -   При указании того, что операция групповой загрузки должна выполняться как транзакция, используйте свойство **TempFilePath** , чтобы указать папку для создания временных файлов.  
@@ -56,7 +56,7 @@ ms.locfileid: "84305943"
   
 -   Если пользователь задает для SQLXML файл журнала ошибок для записи ошибок, то каждый раз при выполнении массовой загрузки этот файл будет перезаписываться данными последнего процесса массовой загрузки.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение массовой загрузки XML-данных &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   
