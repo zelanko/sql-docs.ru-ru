@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cffa7327162b4ae333719ad0e50c02002d0a4528
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734555"
 ---
 # <a name="sysdm_fts_index_keywords_by_property-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает данные, связанные со свойством, в полнотекстовом индексе данной таблицы. Сюда включаются все данные, принадлежащие любому свойству, зарегистрированному списком свойств поиска, связанным с этим полнотекстовым индексом.  
   
@@ -74,7 +74,7 @@ OBJECT_ID('table_name')
 |document_id|**int**|Идентификатор документа или строки, содержащей текущий термин, индексированный полнотекстовым индексом. Данный идентификатор соответствует значению полнотекстового ключа этого документа или строки.|  
 |property_id|**int**|Внутренний идентификатор свойства свойства поиска в полнотекстовом индексе таблицы, указанной в параметре OBJECT_ID ("*table_name*").<br /><br /> После добавления свойства к списку свойств поиска механизм полнотекстового поиска регистрирует это свойство и назначает ему внутренний идентификатор свойства, относящийся к указанному списку свойств. Внутренний идентификатор свойства, являющийся целым числом, не повторяется в заданном списке свойств поиска. Если данное свойство зарегистрировано в нескольких списках свойств поиска, каждому списку свойств поиска может быть назначен отдельный внутренний идентификатор свойств.<br /><br /> Примечание. идентификатор внутреннего свойства отличается от целочисленного идентификатора свойства, указанного при добавлении свойства в список свойств поиска. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Для просмотра связи между property_id и именем свойства:<br />                    [sys.registered_search_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Динамическое административное представление может давать ответы на вопросы. Например:  
   
 -   Какое содержимое хранится в данном свойстве данного DocID?  
@@ -85,7 +85,7 @@ OBJECT_ID('table_name')
   
  Если полнотекстовый ключевой столбец, как и рекомендовано, имеет тип данных integer, значение document_id прямо сопоставляется со значением полнотекстового ключа базовой таблицы.  
   
- Напротив, если полнотекстовый ключевой столбец имеет тип данных, отличный от integer, значение document_id не представляет значение полнотекстового ключа базовой таблицы. В этом случае для обнаружения строки в базовой таблице, возвращаемой dm_fts_index_keywords_by_property, необходимо присоединить это представление к результатам, возвращаемым [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Чтобы выполнить соединение, нужно сохранить выход хранимой процедуры во временной таблице. Затем можно соединить столбец document_id dm_fts_index_keywords_by_property с столбцом DocId, возвращаемым этой хранимой процедурой. Обратите внимание, что столбец **отметок времени** не может принимать значения во время вставки, так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]они создаются автоматически. Поэтому столбец **timestamp** должен быть преобразован в столбцы типа **varbinary (8)** . Следующий пример показывает эти шаги. В этом примере *table_id* — идентификатор таблицы, *database_name* — имя базы данных, а *table_name* — имя таблицы.  
+ Напротив, если полнотекстовый ключевой столбец имеет тип данных, отличный от integer, значение document_id не представляет значение полнотекстового ключа базовой таблицы. В этом случае для обнаружения строки в базовой таблице, возвращаемой dm_fts_index_keywords_by_property, необходимо присоединить это представление к результатам, возвращаемым [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Чтобы выполнить соединение, нужно сохранить выход хранимой процедуры во временной таблице. Затем можно соединить столбец document_id dm_fts_index_keywords_by_property с столбцом DocId, возвращаемым этой хранимой процедурой. Обратите внимание, что столбец **отметок времени** не может принимать значения во время вставки, так как они создаются автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому столбец **timestamp** должен быть преобразован в столбцы типа **varbinary (8)** . Следующий пример показывает эти шаги. В этом примере *table_id* — идентификатор таблицы, *database_name* — имя базы данных, а *table_name* — имя таблицы.  
   
 ```  
 USE database_name;  
@@ -130,7 +130,7 @@ SELECT KWBPOP.* FROM
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
  [Повышение производительности полнотекстовых индексов](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   

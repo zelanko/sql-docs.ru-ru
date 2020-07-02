@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 641086797c9d6b8ddf6a86a83de1b5d7b69dcb39
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 21710c1cda732c09eed0a71da2286a12b8496783
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831722"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733327"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Компилирует инструкцию или пакет курсора в план выполнения, но не создает курсор. Скомпилированная инструкция может позже использоваться процедурой sp_cursorexecute. Эта процедура в сочетании с sp_cursorexecute имеет ту же функцию, что и sp_cursoropen, но разбивается на две фазы. sp_cursorprepare вызывается путем указания ID = 3 в пакете потока табличных данных (TDS).  
   
@@ -61,14 +61,14 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *options*  
  Необязательный параметр, возвращающий описание столбцов результирующего набора курсора. для *параметров* требуется следующее входное значение **int** .  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Параметр прокрутки. *scrollopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (прежнее название — LOCKCC)|  
@@ -106,13 +106,13 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
   
  Как и в случае с *скроллпт*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может назначить другое значение из запрошенного.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Параметр состояния RPC может иметь следующие значения.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|0|Успешно|  
-|0x0001|Сбой|  
+|0|Успех|  
+|0x0001|Failure|  
 |1FF6|Невозможно вернуть метаданные.<br /><br /> Примечание. Причина в том, что инструкция не создает результирующий набор; Например, это инструкция INSERT или DDL.|  
   
 ## <a name="examples"></a>Примеры  
@@ -144,7 +144,7 @@ exec sp_cursorclose @p2
  
  Если параметр *stmt* является параметризованным, а PARAMETERIZED_STMT *SCROLLOPT* имеет значение ON, формат строки выглядит следующим образом:  
   
- { * \< имя локальной переменной> * * \< тип данных>* } [,... *n* ]  
+ { *\<local variable name>**\<data type>* } [ ,... *n* ]  
   
 ## <a name="see-also"></a>См. также  
  [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

@@ -19,16 +19,16 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552dbdce5da12db4fedadecb5a4bd7e9c55c278
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738659"
 ---
 # <a name="sysdm_fts_parser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает окончательный результат разметки после применения заданного сочетания [разделителей слов](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md), [тезауруса](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)и [списка стоп-слов](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) к входным строкам запроса. Результат разметки эквивалентен выходным данным службы полнотекстового поиска для указанной строки запроса.  
   
@@ -61,7 +61,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |1|Закрытые данные<br /><br /> Слова, сходные по начертанию, но различающиеся диакритическими знаками, рассматриваются как разные.|  
   
 > [!NOTE]  
->  Чтобы просмотреть текущее значение этого параметра для полнотекстового каталога [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполните следующую инструкцию: `SELECT fulltextcatalogproperty('` *CATALOG_NAME*`', 'AccentSensitivity');`.  
+>  Чтобы просмотреть текущее значение этого параметра для полнотекстового каталога, выполните следующую [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию: `SELECT fulltextcatalogproperty('` *CATALOG_NAME* `', 'AccentSensitivity');` .  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -76,11 +76,11 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |expansion_type|**int**|Содержит сведения о природе расширения данного термина, в том числе:<br /><br /> 0 — отдельное слово;<br /><br /> 2 — расширение-словоформа;<br /><br /> 4 — расширение/замена тезауруса.<br /><br /> Например, предположим, что тезаурус определяет слово run как расширение слова `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Термин `FORMSOF (FREETEXT, run)` формирует следующие выходные данные:<br /><br /> `run` со значением expansion_type=0;<br /><br /> `runs` со значением expansion_type=2;<br /><br /> `running` со значением expansion_type=2;<br /><br /> `ran` со значением expansion_type=2;<br /><br /> `jog` со значением expansion_type=4.|  
 |source_term|**nvarchar(4000)**|Термин или фраза, из которой сформирован или создан в результате анализа данный термин. Например, запрос для `word breakers" AND stemmers'` выдает следующие значения source_term для английского языка.<br /><br /> `word breakers`для display_term`word`<br />`word breakers`для display_term`breakers`<br />`stemmers`для display_term`stemmers`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sys. dm_fts_parser** поддерживает синтаксис и функции полнотекстовых предикатов, таких как [Contains](../../t-sql/queries/contains-transact-sql.md) и [FREETEXT](../../t-sql/queries/freetext-transact-sql.md), и функций, таких как [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Использование формата Юникода для синтаксического анализа специальных символов  
- При синтаксическом анализе строки запроса **sys. dm_fts_parser** использует параметры сортировки базы данных, к которой вы подключаетесь, если строка запроса не указана как Юникод. Следовательно, для строки не в формате Юникод, которая содержит специальные символы, такие как u или c, выходные данные могут оказаться непредвиденными, поскольку зависят от параметров сортировки базы данных. Чтобы обработать строку запроса независимо от параметров сортировки базы данных, добавьте перед строкой строку `N`с параметром, `N'`т. е. *QUERY_STRING*`'`.  
+ При синтаксическом анализе строки запроса **sys. dm_fts_parser** использует параметры сортировки базы данных, к которой вы подключаетесь, если строка запроса не указана как Юникод. Следовательно, для строки не в формате Юникод, которая содержит специальные символы, такие как u или c, выходные данные могут оказаться непредвиденными, поскольку зависят от параметров сортировки базы данных. Чтобы обработать строку запроса независимо от параметров сортировки базы данных, добавьте перед строкой строку с параметром `N` , т `N'` *query_string* `'` . е. QUERY_STRING.  
   
  Дополнительные сведения см. в подразделе «C. Отображение выходных данных строки, которая содержит специальные символы» далее в этом разделе.  
   
@@ -139,7 +139,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis" ', 1033, 0, 0);  
 ```  
   
-### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>Б) Отображение выходных данных указанного средства разбиения по словам в контексте фильтрации по списку стоп-слов  
+### <a name="b-displaying-the-output-of-a-given-word-breaker-in-the-context-of-stoplist-filtering"></a>Б. Отображение выходных данных указанного средства разбиения по словам в контексте фильтрации по списку стоп-слов  
  В следующем примере средство разбиения по словам для английского языка с кодом языка 1033, имеющее список английских стоп-слов с идентификатором 77, возвращает выходные данные для следующей строки запроса:  
   
  `"The Microsoft business analysis" OR "MS revenue"`  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93f3a4c8-b91f-4ebb-8e96-9397bb3a1c43
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c51a69eb3604b937b9bf2aaf9a09aa383f2c1490
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e53bd1b53dded0515696daa4c422161b07c5027c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734358"
 ---
 # <a name="sysfn_cdc_get_max_lsn-transact-sql"></a>sys.fn_cdc_get_max_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает максимальный регистрационный номер транзакции в журнале (LSN) из столбца start_lsn в системной таблице [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Эту функцию можно использовать для возврата верхней конечной точки временной шкалы системы отслеживания измененных данных для любого экземпляра отслеживания.  
   
@@ -44,7 +44,7 @@ sys.fn_cdc_get_max_lsn ()
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта функция возвращает максимальный номер LSN в столбце start_lsn таблицы [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Этот последний номер LSN, обрабатываемый процессом отслеживания, когда изменения передаются в таблицы изменений базы данных. Он служит в качестве верхней конечной точки для любой временной шкалы, связанной с экземплярами отслеживания, определенными для базы данных.  
   
  Эта функция обычно используется, чтобы получить подходящую верхнюю конечную точку для интервала запроса.  
@@ -63,7 +63,7 @@ GO
 SELECT sys.fn_cdc_get_max_lsn()AS max_lsn;  
 ```  
   
-### <a name="b-setting-the-high-endpoint-of-a-query-range"></a>Б) Установка верхней конечной точки запроса по диапазону  
+### <a name="b-setting-the-high-endpoint-of-a-query-range"></a>Б. Установка верхней конечной точки запроса по диапазону  
  В следующем примере номер LSN, возвращенный функцией `sys.fn_cdc_get_max_lsn`, используется для установки верхней конечной точки запроса по диапазону для экземпляра отслеживания `HumanResources_Employee`.  
   
 ```  

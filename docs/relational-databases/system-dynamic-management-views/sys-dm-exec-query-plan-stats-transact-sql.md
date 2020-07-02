@@ -17,15 +17,15 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 279f1a8fbe3ec78dc0cae30d9879615b169075bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bd7aa786466f3bde9aa42d75437d2406ef1e808
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734751"
 ---
 # <a name="sysdm_exec_query_plan_stats-transact-sql"></a>sys. dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Возвращает эквивалент последнего известного реального плана выполнения для ранее кэшированного плана запроса.
 
@@ -61,8 +61,8 @@ sys.dm_exec_query_plan_stats(plan_handle)
 |**Шифрование**|**bit**|Указывает, зашифрована ли соответствующая хранимая процедура.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована<br /><br /> Столбец не может содержать значение NULL.|  
 |**query_plan**|**xml**|Содержит Последнее известное представление среды выполнения Showplan о фактическом плане выполнения запроса, указанном с помощью *plan_handle*. Представление Showplan имеет формат XML. Для каждого пакета, содержащего, например нерегламентированные инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)], вызовы хранимых процедур и вызовы определяемых пользователем функций, формируется один план.<br /><br /> Столбец может содержать значение NULL.| 
 
-## <a name="remarks"></a>Remarks
-Эта системная функция доступна начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] версии CTP 2,4.
+## <a name="remarks"></a>Примечания
+Эта системная функция доступна начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4.
 
 Эта функция активируется явным образом и требует включения [флага трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451. Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.5 эта задача выполняется на уровне базы данных в соответствии с инструкциями, которые можно найти в описании параметра LAST_QUERY_PLAN_STATS в статье [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
@@ -84,16 +84,16 @@ sys.dm_exec_query_plan_stats(plan_handle)
     **ПЕРЕТАСКИВАНИ**    
 -   Запрос достаточно прост, обычно разбитый на категории в рамках рабочей нагрузки OLTP.
 
-<sup>1</sup> начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] версии CTP 2,5 это относится к инструкции Showplan, которая содержит только оператор корневого узла (SELECT). Для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 это — кэшированный план, доступный через `sys.dm_exec_cached_plans`.
+<sup>1</sup> начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,5 это относится к инструкции Showplan, которая содержит только оператор корневого узла (SELECT). Для [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2,4 это — кэшированный план, доступный через `sys.dm_exec_cached_plans` .
 
 В следующих случаях выходные данные **sys. dm_exec_query_plan_stats** **не возвращаются** .
 
 -   План запроса, указанный с помощью *plan_handle* , был исключен из кэша планов.     
-    **НИ**    
+    **OR**    
 -   На первом месте план запроса не был кэширован. Дополнительные сведения см. в разделе [кэширование и повторное использование плана выполнения ](../../relational-databases/query-processing-architecture-guide.md#execution-plan-caching-and-reuse).
   
 > [!NOTE] 
-> Из-за ограничения количества вложенных уровней, разрешенных в типе данных **XML** , **sys. dm_exec_query_plan** не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]версиях это условие не позволило возвратить план запроса и выдает [ошибку 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетах обновления 2 (SP2) и более поздних версиях столбец **query_plan** возвращает значение null.  
+> Из-за ограничения количества вложенных уровней, разрешенных в типе данных **XML** , **sys. dm_exec_query_plan** не может возвращать планы запросов, которые соответствуют или превышают 128 уровней вложенных элементов. В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это условие не позволило возвратить план запроса и выдает [ошибку 6335](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors-6000-to-6999). В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] пакетах обновления 2 (SP2) и более поздних версиях столбец **query_plan** возвращает значение null.  
 
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
@@ -101,7 +101,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-looking-at-last-known-actual-query-execution-plan-for-a-specific-cached-plan"></a>A. Просмотр последнего известного фактического плана выполнения запроса для определенного кэшированного плана  
- В следующем примере производится запрос к **sys. dm_exec_cached_plans** для поиска интересного плана и `plan_handle` копирования его из выходных данных.  
+ В следующем примере производится запрос к **sys. dm_exec_cached_plans** для поиска интересного плана и копирования его `plan_handle` из выходных данных.  
   
 ```sql  
 SELECT * FROM sys.dm_exec_cached_plans;  
@@ -115,7 +115,7 @@ SELECT * FROM sys.dm_exec_query_plan_stats(< copied plan_handle >);
 GO  
 ```   
 
-### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>Б) Просмотр последнего известного плана выполнения запроса для всех кэшированных планов
+### <a name="b-looking-at-last-known-actual-query-execution-plan-for-all-cached-plans"></a>Б. Просмотр последнего известного плана выполнения запроса для всех кэшированных планов
   
 ```sql  
 SELECT *   
@@ -146,7 +146,7 @@ WHERE objtype ='Trigger';
 GO
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
   [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления, связанные с выполнением &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  

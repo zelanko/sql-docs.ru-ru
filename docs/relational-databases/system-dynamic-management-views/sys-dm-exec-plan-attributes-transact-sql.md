@@ -18,20 +18,20 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1c3e0e4f48037f471ad260f709879ea7ce8ff5e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734793"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает по одной строке для каждого атрибута плана, ассоциированного с планом, заданным посредством дескриптора плана. Функция с табличным значением может использоваться для получения подробных сведений об определенном плане, например значения ключа кэша или количество одновременных текущих выполнений плана.  
   
 > [!NOTE]  
->  Некоторые сведения, возвращаемые этой функцией, сопоставляются с представлением обратной совместимости [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
+>  Некоторые сведения, возвращаемые этой функцией, сопоставлены с представлением обратной совместимости [sys.sysкачеобжектс](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) .
 
 ## <a name="syntax"></a>Синтаксис  
 ```  
@@ -46,8 +46,8 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|Атрибут|**varchar (128)**|Имя атрибута, ассоциированного с этим планом. В таблице ниже приведен список возможных атрибутов, их типов данных и их описания.|  
-|значение|**sql_variant**|Значение атрибута, ассоциированного с этим планом.|  
+|Атрибут|**varchar(128)**|Имя атрибута, ассоциированного с этим планом. В таблице ниже приведен список возможных атрибутов, их типов данных и их описания.|  
+|value|**sql_variant**|Значение атрибута, ассоциированного с этим планом.|  
 |is_cache_key|**bit**|Указывает, используется ли атрибут в качестве части ключа уточняющего запроса к кэшу для плана.|  
 
 В приведенной выше таблице **атрибут** может иметь следующие значения:
@@ -59,7 +59,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |dbid|**int**|Идентификатор базы данных, содержащей сущность, к которой относится план.<br /><br /> Для нерегламентированных и подготовленных планов это идентификатор базы данных, из которой выполняется пакет.|  
 |dbid_execute|**int**|Для системных объектов, хранящихся в базе данных **Resource** , это идентификатор базы данных, из которой выполняется кэшированный план. Во всех остальных случаях это значение равно 0.|  
 |user_id|**int**|Значение «-2» означает, что представленный пакет не зависит от неявного разрешения имен и может совместно использоваться разными пользователями. Это является предпочтительным методом. Любое другое значение обозначает идентификатор пользователя, отправившего запрос к базе данных.| 
-|language_id|**smallint**|Идентификатор языка соединения, в результате которого был создан объект кэша. Дополнительные сведения см. в разделе [sys. syslanguages &#40;&#41;Transact-SQL ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|language_id|**smallint**|Идентификатор языка соединения, в результате которого был создан объект кэша. Дополнительные сведения см. в разделе [языкиsys.sys&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Формат даты соединения, во время которого был создан объект кэша. Дополнительные сведения см. в разделе [SET DATEFORMAT (Transact-SQL)](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Значение первой даты. Дополнительные сведения см. в разделе [SET DATEFIRST (Transact-SQL)](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**int**|Биты внутреннего состояния, являющиеся частью ключа уточняющего запроса к кэшу.|  
@@ -91,7 +91,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>Оценка параметров SET  
  Чтобы перевести значение, возвращаемое в **set_options** , в параметры, с помощью которых был скомпилирован план, вычтите значения из **set_options** значения, начиная с максимально возможного значения, пока не будет достигнуто значение 0. Каждое вычитаемое значение соответствует одному параметру, который использовался в плане запроса. Например, если значение в **set_options** равно 251, то параметры, с которыми был скомпилирован план, — это ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), параллельный план (2) и ANSI_PADDING (1).  
   
-|Параметр|Значение|  
+|Параметр|Применение|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -119,9 +119,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>Оценка параметров курсора  
  Чтобы перевести значение, возвращаемое в **required_cursor_options** и **acceptable_cursor_options** в параметры, с помощью которых был скомпилирован план, вычтите значения из значения столбца, начиная с максимально возможного значения, пока не будет достигнуто значение 0. Каждое вычитаемое значение соответствует одному курсору, который использовался в плане запроса.  
   
-|Параметр|Значение|  
+|Параметр|Применение|  
 |------------|-----------|  
-|Нет|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  

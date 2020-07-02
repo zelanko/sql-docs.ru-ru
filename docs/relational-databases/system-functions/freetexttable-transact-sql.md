@@ -22,17 +22,17 @@ ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae1f88ba7694f99546382d9b1450aea4c555f4d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734381"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Функция, используемая в [предложении from](../../t-sql/queries/from-transact-sql.md) инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстового поиска по столбцам полнотекстовых индексов, содержащим символьные типы данных. Эта функция возвращает таблицу из нуля, одну или несколько строк для столбцов, содержащих значения, которые соответствуют значению, а не просто точному слову текста в заданном *freetext_string*. Ссылки на функцию FREETEXTTABLE указываются так, как если бы это было имя обычной таблицы.  
+  Функция, используемая в [предложении from](../../t-sql/queries/from-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстового поиска по столбцам полнотекстовых индексов, содержащим символьные типы данных. Эта функция возвращает таблицу из нуля, одну или несколько строк для столбцов, содержащих значения, которые соответствуют значению, а не просто точному слову текста в заданном *freetext_string*. Ссылки на функцию FREETEXTTABLE указываются так, как если бы это было имя обычной таблицы.  
   
  Функция FREETEXTTABLE полезна для тех же типов совпадений, что и [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)  
   
@@ -91,7 +91,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
  *top_n_by_rank*  
  Указывает, что возвращаются только *n*соответствий с наивысшим рангом в порядке убывания. Применяется только в том случае, если указано целочисленное значение *n*. Если параметр *top_n_by_rank* скомбинирован с другими параметрами, то запрос может вернуть меньше строк, чем фактически соответствует всем предикатам. *top_n_by_rank* позволяет повысить производительность запросов, вызвав только наиболее актуальные попадания.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Функция FREETEXTTABLE использует те же условия поиска, что и предикат FREETEXT.  
@@ -124,8 +124,8 @@ SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Blue');
 SELECT * FROM FREETEXTTABLE (Flags, FlagColors, 'Yellow');  
 ```  
   
-### <a name="b-using-freetext-in-an-inner-join"></a>Б) Использование функции FREETEXT в INNER JOIN  
- В следующем примере возвращается описание и ранг всех продуктов с описанием, которое соответствует значению `high level of performance`.  
+### <a name="b-using-freetext-in-an-inner-join"></a>Б. Использование функции FREETEXT в INNER JOIN  
+ В следующем примере возвращается описание и ранг всех продуктов с описанием, которое соответствует значению `high level of performance` .  
   
 ```  
 USE AdventureWorks2012;  
@@ -143,7 +143,7 @@ GO
 ```  
   
 ### <a name="c-specifying-language-and-highest-ranked-matches"></a>В. Указание языка и соответствий с наивысшими ранжирующими значениями  
- Следующий пример идентичен и демонстрирует использование `LANGUAGE`параметров *language_term* и *top_n_by_rank* .  
+ Следующий пример идентичен и демонстрирует использование `LANGUAGE` параметров *language_term* и *top_n_by_rank* .  
   
 ```  
 USE AdventureWorks2012;  

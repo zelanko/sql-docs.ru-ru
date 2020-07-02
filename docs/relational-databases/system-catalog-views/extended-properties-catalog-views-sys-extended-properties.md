@@ -20,26 +20,26 @@ ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fb36dddcab514692a7d6b59dee969846430d75b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 35d2682709e1f9d19fe51dfae331e0999c0e3570
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823443"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733572"
 ---
 # <a name="extended-properties-catalog-views---sysextended_properties"></a>Представления каталога расширенных свойств — sys. extended_properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает по одной строке для каждого из расширенных свойств в текущей базе данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|класс|**tinyint**|Идентифицирует класс элемента, для которого определено свойство. Может принимать следующие значения:<br /><br /> 0 = база данных;<br /><br /> 1 = Объект или столбец<br /><br /> 2 = параметр<br /><br /> 3 = схема<br /><br /> 4 = участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = индекс<br /><br /> 10 = коллекция схем XML<br /><br /> 15 = тип сообщений<br /><br /> 16 = контракт службы<br /><br /> 17 = служба<br /><br /> 18 = привязка удаленной службы<br /><br /> 19 = Маршрут<br /><br /> 20 = пространство данных (файловая группа или схема секционирования)<br /><br /> 21 = функция секционирования<br /><br /> 22 = файл базы данных<br /><br /> 27 = структура плана|  
-|class_desc|**nvarchar(60)**|Описание класса элемента, для которого определено расширенное свойство. Может принимать следующие значения:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> ПАРАМЕТР<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
+|class|**tinyint**|Идентифицирует класс элемента, для которого определено свойство. Может применяться один из перечисленных ниже типов.<br /><br /> 0 = база данных;<br /><br /> 1 = Объект или столбец<br /><br /> 2 = параметр<br /><br /> 3 = схема<br /><br /> 4 = участник базы данных<br /><br /> 5 = Сборка<br /><br /> 6 = Тип<br /><br /> 7 = индекс<br /><br /> 10 = коллекция схем XML<br /><br /> 15 = тип сообщений<br /><br /> 16 = контракт службы<br /><br /> 17 = служба<br /><br /> 18 = привязка удаленной службы<br /><br /> 19 = Маршрут<br /><br /> 20 = пространство данных (файловая группа или схема секционирования)<br /><br /> 21 = функция секционирования<br /><br /> 22 = файл базы данных<br /><br /> 27 = структура плана|  
+|class_desc|**nvarchar(60)**|Описание класса элемента, для которого определено расширенное свойство. Может применяться один из перечисленных ниже типов.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> ПАРАМЕТР<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|Идентификатор элемента, для которого определено расширенное свойство, интерпретируемый в соответствии с его классом. Для большинства элементов этот идентификатор отражает сущность, которую представляет класс. Большинство нестандартных идентификаторов интерпретируются следующим образом:<br /><br /> Если столбец class равен 0, то столбец major_id всегда равен 0.<br /><br /> Если столбец class равен 1, 2 или 7, то столбец major_id равен столбцу object_id.|  
 |minor_id|**int**|Вторичный идентификатор элемента, для которого определено расширенное свойство, интерпретируемый в соответствии с его классом. Для большинства элементов содержит 0. В противном случае интерпретируется следующим образом:<br /><br /> Если столбец class = 1, то столбец minor_id равен столбцу column_id для столбцов и 0 для объектов.<br /><br /> Если столбец class = 2, то столбец minor_id равен столбцу parameter_id.<br /><br /> Если столбец class = 7, то столбец minor_id равен столбцу index_id.|  
 |name|**sysname**|Имя свойства, уникальное в пределах столбцов class, major_id и minor_id.|  
-|значение|**sql_variant**|Значение расширенного свойства.|  
+|value|**sql_variant**|Значение расширенного свойства.|  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

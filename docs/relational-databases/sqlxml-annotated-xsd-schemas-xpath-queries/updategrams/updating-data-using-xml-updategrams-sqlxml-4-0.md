@@ -28,15 +28,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e4cfa5ef312bc9048a53405a6c1083183b10054
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 01fd8e99d6eb770c2f5680ead1e2c4d9b9ec98b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529785"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733664"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Обновление данных при помощи диаграмм обновления XML (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   При обновлении существующих данных необходимо указать оба **\<before>** **\<after>** блока и. Элементы, указанные в **\<before>** **\<after>** блоках и, описывают требуемое изменение. Диаграмма обновления использует элементы, указанные в **\<before>** блоке, для обнаружения существующих записей в базе данных. Соответствующие элементы в **\<after>** блоке указывают, как должны выглядеть записи после выполнения операции обновления. На основе этих сведений диаграмма обновления создает инструкцию SQL, которая соответствует **\<after>** блоку. Затем диаграмма обновления использует эту инструкцию для обновления базы данных.  
   
  Ниже представлен формат диаграммы обновления для операции обновления.  
@@ -94,7 +94,7 @@ ms.locfileid: "84529785"
   
 -   В большинстве примеров задействован образец базы данных AdventureWorks. Все обновления применяются к таблицам в этой базе данных. Базу данных AdventureWorks можно восстановить.  
   
-### <a name="a-updating-a-record"></a>А) Обновление записи  
+### <a name="a-updating-a-record"></a>A. Обновление записи  
  Следующая диаграмма обновления используется для изменения фамилии сотрудника в таблице Person.Contact базы данных AdventureWorks на Fuller. В диаграмме обновления не задана схема сопоставления, поэтому применяется сопоставление по умолчанию.  
   
 ```  
@@ -557,7 +557,7 @@ ms.locfileid: "84529785"
   
  Дополнительные примеры диаграмм обновления, в которых используются схемы сопоставления, см. [в разделе Указание схемы сопоставления с заметками в диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

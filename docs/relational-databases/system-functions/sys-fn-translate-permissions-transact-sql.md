@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3d7a464f3faba633dd09be12ef4c3d006ef19ef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68055374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738593"
 ---
 # <a name="sysfn_translate_permissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Преобразует битовую маску разрешений, возвращаемую трассировкой SQL, в таблицу имен разрешений.  
   
@@ -43,17 +43,17 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *уровню*  
+ *уровень*  
  Вид защищаемого объекта, к которому применяется разрешение. *Level* имеет тип **nvarchar (60)**.  
   
  *perms*  
  Битовая маска, возвращаемая в столбце разрешений. *разрешение* имеет тип **varbinary (16)**.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  **table**  
   
-## <a name="remarks"></a>Remarks  
- Значение, возвращаемое в столбце **Permissions** трассировки SQL, является целочисленным представлением битовой маски, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используемой для вычисления действующих разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys. fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
+## <a name="remarks"></a>Примечания  
+ Значение, возвращаемое в столбце **Permissions** трассировки SQL, является целочисленным представлением битовой маски, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления действующих разрешений. Каждый из 25 вида защищаемых объектов имеет собственный набор разрешений с соответствующими числовыми значениями. **sys. fn_translate_permissions** преобразует эту битовую маску в таблицу имен разрешений.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
