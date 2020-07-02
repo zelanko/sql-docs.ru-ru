@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef8b40ceea2be0963d21dddc7c2cbef37474f6cf
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85810755"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Базы знаний и домены DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описывается значение базы знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Для очистки данных необходимо иметь знания об этих данных. Чтобы подготовить знания для проекта качества данных, строится и ведется база знаний, которая используется DQS для выявления неверных или недопустимых данных. DQS позволяет использовать автоматические и интерактивные процессы для создания, построения и обновления базы знаний. Знания в базе знаний хранятся в доменах, каждый из которых относится к некоторому полю данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
   

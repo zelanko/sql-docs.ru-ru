@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 91f5e7effe54b9955537d90d639a820b5428a5c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d6eebcf079fbb509838e2a3c08efbee5340c4ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246010"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85809908"
 ---
 # <a name="open-a-knowledge-base"></a>Открытие базы знаний
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описано, как открыть существующую базу знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) и подготовить ее для управления доменами, обнаружения знаний или добавления политики сопоставления.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "75246010"
 ##  <a name="state-of-a-knowledge-base"></a><a name="State"></a>Состояние базы знаний  
  Поле «Состояние» указывает, на какой стадии действия находится база знаний. При открытии база знаний откроется на этой стадии.  
   
--   Пустой>: поле штат пусто для базы знаний, если база знаний опубликована путем нажатия кнопки **опубликовать** в действии управления доменами и нажатия кнопки **Да-опубликовать базу знаний и выйти**. ** \< **  
+-   **\<Empty>**: Поле штат пусто для базы знаний, если база знаний опубликована путем нажатия кнопки **опубликовать** в действии управления доменами и нажатия кнопки **Да-опубликовать базу знаний и выйти**.  
   
 -   **В работе**: работа над базой знаний была сохранена путем нажатия кнопки **опубликовать** в действии Управление доменами и нажатия кнопки **нет — сохранение работы в базе знаний и выход из**нее.  
   

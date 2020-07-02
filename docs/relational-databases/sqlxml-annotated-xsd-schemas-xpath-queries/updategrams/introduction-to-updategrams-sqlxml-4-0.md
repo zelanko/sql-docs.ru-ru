@@ -24,15 +24,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a9a45a265b55c93fab82683b13da4c4c519f012
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 49c28dd3104ff7ec64f12e9f0a3c8544ad6a5811
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882241"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790880"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Общие сведения о диаграммах обновления (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Можно изменить (вставить, обновить или удалить) базу данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] из существующего XML-документа с помощью функции диаграмма обновления или OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
  Функция OPENXML изменяет базу данных, разделяя существующий XML-документ и формируя набор строк, который можно передавать инструкциям INSERT, UPDATE и DELETE. С помощью функции OPENXML операции выполняются непосредственно с таблицами базы данных. Поэтому использование функции OPENXML является наиболее оптимальным вариантом во всех случаях, когда поставщики наборов строк, например таблицы, могут быть источниками.  
@@ -174,7 +174,7 @@ ms.locfileid: "84882241"
   
 -   с помощью команды OLE DB.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вопросы безопасности диаграмма обновления &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   
