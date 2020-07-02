@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06e7b913533451aec82098bcd22b23a64bb3dc61
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814112"
 ---
 # <a name="dqs-administration"></a>администрирование DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Службы[!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) позволяют администрировать различные операции DQS, которые выполняются на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], и управлять ими, настраивать свойства уровня сервера, связанные с операциями DQS, настраивать параметры службы эталонных данных и задавать параметры журнала DQS. Эти задачи выполняются в компоненте **Администрирование** клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. В зависимости от уровня доступа (роли) в DQS вам предоставляется или запрещается доступ к определенным функциям в этой области.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75251668"
 ### <a name="activity-monitoring"></a>Мониторинг активности  
  Экран **Мониторинг активности** в клиенте [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] показывает подробные сведения о каждой операции, выполняемой на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Этот экран рассчитан в основном на диспетчеров данных и предназначен для высокоуровневого мониторинга всех действий, выполняемых на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , к которому подключено приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Он не предоставляет средств мониторинга на системном уровне. Кроме того, этот экран позволяет администраторам DQS управлять операцией или входящим в нее процессом, завершая выполняющуюся операцию или останавливая выполняющийся процесс в случае необходимости. Отображаются данные для обнаружения знаний, управления доменами, политики сопоставления, очистки, сопоставления и очистки на основе служб SQL Server Integration Services (SSIS).  
   
-### <a name="configuration"></a>Конфигурация  
+### <a name="configuration"></a>Параметр Configuration  
  Экран **Конфигурация** в клиенте [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет администратору DQS выполнять следующие действия.  
   
 -   **Ссылочные данные**: Настройте поставщики служб ссылочных данных: Azure Marketplace или прямые поставщики служб ссылочных данных. После настройки поставщиков служб ссылочных данных вы можете сопоставить домен или составной домен с эталонными данными в рамках операции управления доменами в базе знаний, а затем использовать эту же базу знаний для операции очистки в проекте качества данных. Он также позволяет указать параметры прокси-сервера для подключения к Интернету для использования Azure Marketplace.  
@@ -82,7 +82,7 @@ ms.locfileid: "75251668"
 |Описывает создание резервной копии и восстановление баз данных DQS.|[Резервное копирование и восстановление баз данных DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Описывает, как отсоединять и присоединять базы данных DQS.|[Присоединение и отсоединение баз данных DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы эталонных данных в DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Управление файлами журналов DQS](../data-quality-services/manage-dqs-log-files.md)   
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 693eeda37e65dbf1d83fdf59eaf546e711827b7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b98dff0acf3b2d7a8c3eed5d79e284bfca8f92fd
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728057"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813280"
 ---
 # <a name="lock-a-version-master-data-services"></a>Блокировка версии (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]блокировка версии модели препятствует изменениям элементов модели и их атрибутов.  
   
@@ -48,13 +48,13 @@ ms.locfileid: "73728057"
   
 4.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [Фиксация версии (службы Master Data Services)](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Разблокировка версии (службы Master Data Services)](../master-data-services/unlock-a-version-master-data-services.md)  
   

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: cff5cf3a2a6095b79537571d63ee428c500789c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc77f107fe0b3e57e1e8f48fb0e413d9ea22f31f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75558174"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813778"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Поддерживаемые типы данных SQL Server и SSIS для доменов DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В SQL Server и службах SQL Server Integration Services (SSIS) имеется много типов данных, но только четыре из них предназначены для доменов DQS: Date, Decimal, Integer и String. В DQS поддерживаются не все типы данных SQL Server и служб SSIS. Сопоставление исходных данных с доменом DQS для проведения действия по обеспечению качества данных возможно только в том случае, если исходный тип данных поддерживается службами DQS и совпадает с типом данных домена DQS. В данном разделе приведены сведения о типах данных SQL Server и службах SSIS, которые поддерживаются и доступны для сопоставления с каждым из четырех типов данных для доменов DQS.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "75558174"
   
 |Тип данных доменов DQS|Поддерживаемый тип данных SQL Server|  
 |--------------------------|------------------------------------|  
-|Дата|Дата|  
+|Дата|дата|  
 |Decimal|Decimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> real<br /><br /> smallmoney|  
 |Целое число|BIGINT<br /><br /> INT<br /><br /> smallint<br /><br /> tinyint|  
 |Строка|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
@@ -51,7 +51,7 @@ ms.locfileid: "75558174"
   
  Остальные типы данных служб SSIS в DQS не поддерживаются. Дополнительные сведения обо всех типах данных служб SSIS см. в разделе [Integration Services Data Types](../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление доменом](../data-quality-services/managing-a-domain.md)  
   
   

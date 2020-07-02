@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a18de9c33def5b0603f4460f87e7c5589ead4521
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da814796cb4f03008857b20d6f8f7d00b70a8b4a
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813086"
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Создайте пользовательский индекс списка часто запрашиваемых атрибутов, чтобы повысить производительность запросов.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73728419"
 |Имя столбца|Описание|  
 |-----------------|-----------------|  
 |Состояние|Состояние индекса.<br /><br /> При нажатии кнопки **сохранить**отображается ![значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий, что индекс обновляется.<br /><br /> При возникновении ошибок при создании или изменении индекса отображается изображение ![состояния ошибки значок](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
-|Имя|Имя индекса.|  
+|name|Имя индекса.|  
 |Уникальный|Указывает, является ли индекс уникальным.|  
 |On Attributes|Показывает отображаемые имена атрибутов, для которых определен индекс.|  
   
@@ -67,10 +67,10 @@ ms.locfileid: "73728419"
   
 -   **Когда обновлено**— дата и время последнего обновления индекса.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  [Изменение и удаление индекса (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательский индекс (Master Data Services)](../master-data-services/custom-index-master-data-services.md)  
   
   

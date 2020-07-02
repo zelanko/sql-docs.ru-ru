@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e42e54689b5b6a576a24fe57f2f9f4dcaccd1b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36e2b4cacd6636b2580aff1d8c27ea5a3a444906
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813255"
 ---
 # <a name="model-permissions-master-data-services"></a>Разрешения модели (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Разрешения модели применяются ко всем сущностям, явным и производным иерархиям и коллекциям, существующим в модели. Разрешения, назначенные для модели, можно переопределить для любого отдельного объекта.  
   
@@ -32,15 +32,15 @@ ms.locfileid: "73728974"
 |Разрешение|Описание|  
 |----------------|-----------------|  
 |**Чтение**|Пользователь может просматривать элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Создать**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
-|**Обновление**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Удаление**|Пользователь может удалять элементы.|  
-|**Запрет**|Запрет любого доступа к сущности.|  
-|**Администрирование**|Административные разрешения для модели. Административные разрешения доступны только на уровне модели.|  
+|**Создание**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
+|**Update**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
+|**Удалить**|Пользователь может удалять элементы.|  
+|**Запретить**|Запрет любого доступа к сущности.|  
+|**Администратор**|Административные разрешения для модели. Административные разрешения доступны только на уровне модели.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных комбинациях. Когда назначаются разрешения на создание, обновление и удаление, автоматически добавляется и разрешение на чтение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Разрешения объекта модели &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [Разрешения сущности &#40;Master Data Services&#41;](../master-data-services/entity-permissions-master-data-services.md)   

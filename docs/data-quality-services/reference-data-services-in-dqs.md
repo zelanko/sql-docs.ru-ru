@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d3c4f15dcb62e36918c81baa5f2bd40c38b7c6a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ccf09eab698827b76a02f31eb1bc8593e9c120c0
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244139"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813813"
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Эталонными данными называется точный и полный набор взаимосвязанных или категорированных глобальных данных (выходящих за пределы предприятия), доступных в доверенных общедоступных доменах или у поставщиков дополнительного коммерческого содержания.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "75244139"
 -   Поддерживает использование эталонных данных из Azure Marketplace, а также непосредственно от сторонних поставщиков ссылочных данных.  
   
 ##  <a name="using-reference-data-from-azure-marketplace"></a><a name="Marketplace"></a>Использование эталонных данных из Azure Marketplace  
- DQS поддерживает использование эталонных данных из Azure Marketplace, чтобы предоставить поставщикам содержимого возможность предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. в разделе [сведения о Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) (https://azuremarketplace.microsoft.com/about).
+ DQS поддерживает использование эталонных данных из Azure Marketplace, чтобы предоставить поставщикам содержимого возможность предоставлять службы эталонных данных через Marketplace. Marketplace — это служба Microsoft, которая предоставляет отдельный рынок и канал доставки для высококачественных данных и приложений в виде облачных служб. Дополнительные сведения о Marketplace см. в разделе [сведения о Microsoft Azure Marketplace](https://azuremarketplace.microsoft.com/about) ( https://azuremarketplace.microsoft.com/about) .
   
  Органичная интеграция между Marketplace и DQS упрощает шаги, связанные с обнаружением, исследованием и получением информации для проектов служб DQS из среды служб DQS. Данные из DQS обрабатываются, что помогает пользователям DQS обеспечивать высокое качество данных за счет нового подхода — использования DQS, Marketplace и поставщиков служб ссылочных данных вместе друг с другом.  
   
- Чтобы использовать эталонные данные из Marketplace в DQS для очистки, требуется наличие ключа учетной записи Marketplace. Ключ учетной записи Marketplace создается бесплатно. Платить нужно только за подписку на платные наборы данных. Сама подписка является бесплатной, также не требуется платить за использование бесплатных наборов данных. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936).  
+ Чтобы использовать эталонные данные из Marketplace в DQS для очистки, требуется наличие ключа учетной записи Marketplace. Ключ учетной записи Marketplace создается бесплатно. Платить нужно только за подписку на платные наборы данных. Сама подписка является бесплатной, также не требуется платить за использование бесплатных наборов данных. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) .  
   
  Кроме того, в рамках DQS вы можете выполнить следующие операции Marketplace:  
   

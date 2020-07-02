@@ -12,16 +12,16 @@ keywords:
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9444eff3f471074c08a62c5aafa36a919f81c5ca
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813996"
 ---
 # <a name="entity-dependencies-explorer"></a>Обозреватель зависимостей сущности
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016 представлена новая страница обозревателя — "Зависимости сущностей". Здесь применяется новый подход к визуализации отношений между элементами сущности в модели в соответствии со значениями атрибута на основе домена (DBA). При этом нет необходимости предварительно определять производную иерархию.   

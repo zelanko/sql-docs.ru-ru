@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: c2687e39-dc20-494f-a707-2aa29f4c329e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 404faa39224c74e7768aa011fffd8818d6274455
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 4db2e08ebda6b4f3b34eaceb79eb29fe1b94601e
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813090"
 ---
 # <a name="create-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Создание пакета развертывания модели при помощи MDSModelDeploy
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]для создания пакетов используется средство MDSModelDeploy. В зависимости от указанных команд, пакет может содержать:  
   
@@ -71,13 +71,13 @@ ms.locfileid: "84796435"
   
     -   Если службы MDS установлены не в папку по умолчанию, найдите файл MDSModelDeploy.exe на локальном компьютере.  
   
-3.  Необязательный параметр. Просмотрите параметры и справку.  
+3.  Необязательный элемент. Просмотрите параметры и справку.  
   
     -   Чтобы показать все доступные параметры, введите `MDSModelDeploy` и нажмите клавишу ВВОД.  
   
     -   Чтобы вывести справку для параметра, введите следующую строку, где *OptionName* — имя параметра: `MDSModelDeploy help OptionName`.  
   
-4.  Необязательный параметр. При наличии нескольких веб-приложений определите имя развертываемой службы, введя следующую команду, и нажмите клавишу ВВОД.  
+4.  Необязательный элемент. При наличии нескольких веб-приложений определите имя развертываемой службы, введя следующую команду, и нажмите клавишу ВВОД.  
   
     ```  
     MDSModelDeploy listservices  
@@ -99,7 +99,7 @@ ms.locfileid: "84796435"
   
 -   [Развертывание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры развертывания модели &#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)   
  [Развертывание моделей (службы Master Data Services)](../master-data-services/deploying-models-master-data-services.md)  
   

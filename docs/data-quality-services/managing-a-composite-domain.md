@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae41076d014e86e0f37978cfa72a49f0d3002959
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75258453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814081"
 ---
 # <a name="managing-a-composite-domain"></a>Управление составным доменом
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описывается использование составных доменов в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Иногда один домен не позволяет удовлетворительно представить данные в поле. Чтобы представить данные, необходимо группировать отдельные домены. Для этого создается составной домен. Составной домен состоит из нескольких отдельных доменов и сопоставляется с полем данных, включающим несколько связанных терминов, которые не обработаны с помощью анализа, а включены в одно составное значение. Каждый термин в значении представляется другим, отдельным доменом. Только после включения отдельных доменов в составные домены и последующего сопоставления составного домена с полем данных вы можете создать набор знаний в базе знаний о данных в этом поле с помощью создания набора знаний в отдельных доменах. Составной домен, как и отдельный домен, — это семантическое представление данных в одном поле данных.  
   

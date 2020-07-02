@@ -13,16 +13,16 @@ ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb7d82f63f41baa88523f97e45a65635e1d49486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813468"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>Изменение имени атрибута и типа данных (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменять имя атрибутов.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "73729679"
   
 9. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание текстового атрибута &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
  [Удаление атрибута &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)   
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  

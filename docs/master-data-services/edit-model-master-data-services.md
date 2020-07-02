@@ -12,22 +12,22 @@ helpviewer_keywords:
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 89fa4dea57c4936a2d6a51e08f48668215ba53a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a0a2bd63e5b69cd9e0b206f18414b41c823441d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812997"
 ---
 # <a name="edit-model-master-data-services"></a>Изменение модели (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменить имя и описание модели и указать, сколько дней необходимо хранить журналы транзакций.  
   
  Дополнительные сведения см. в разделе [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md).  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
  Для выполнения этой процедуры:  
   
 -   Необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
@@ -42,7 +42,7 @@ ms.locfileid: "73728206"
   
 3.  На странице **Управление моделями** в сетке выберите строку модели, имя или описание которой необходимо изменить.  
   
-4.  Щелкните **Правка**.  
+4.  Нажмите кнопку **Изменить**.  
   
 5.  Введите новое имя модели в поле **Имя** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "73728206"
   
 8.  Нажмите **Сохранить модель**.  
   
- В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Updating") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
+ В столбце **Состояние** в сетке отображается состояние операции с моделью. При нажатии кнопки **сохранить модель** отображается изображение ![обновления](../master-data-services/media/mds-model-status-updating.png "Обновление") , которое указывает на то, что модель обновляется. При возникновении ошибок при создании или изменении модели отображается изображение ![ошибки](../master-data-services/media/mds-model-status-error.png "Ошибка") . В противном случае отображается состояние "ОК" и появляется изображение ![ОК](../master-data-services/media/mds-model-status-ok.png "OK") .  
   
 ## <a name="see-also"></a>См. также  
  [Создание &#40;модели Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7bc13897797e8f782a1dbe83401fa658107eb5b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7446ea090bb0776b2a55e7be10e9c35bc566c8b1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813130"
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.
 
@@ -44,7 +44,7 @@ ms.locfileid: "78177394"
 |Столбец|Описание|
 |------------|-----------------|
 |Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|
-|Имя|Имя атрибута.|
+|name|Имя атрибута.|
 |Отображаемое имя|Отображаемое имя атрибута.|
 |Описание|Описание атрибута.|
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|
@@ -95,11 +95,11 @@ ms.locfileid: "78177394"
 
      Сведения об ограничении допустимых значений см. в публикации [How to filter Domain Based Attribute drop down lists](https://blogs.msdn.microsoft.com/mds/2015/12/03/in-sql-server-2016-master-data-services-how-to-filter-domain-based-attribute-drop-down-lists/)(Как отфильтровывать раскрывающиеся списки атрибута на основе домена) в блоге, посвященном Master Data Services.
 
-12. **Необязательный параметр.** Чтобы отслеживать изменения в группах атрибутов, выберите **Enable change tracking** . Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
+12. **Необязательный элемент.** Чтобы отслеживать изменения в группах атрибутов, выберите **Enable change tracking** . Дополнительные сведения см. в разделе [Добавление атрибутов в группу отслеживания изменений (службы Master Data Services)](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).
 
 13. Выберите команду **Сохранить**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Атрибуты на основе домена &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md) [создания производной иерархии &#40;Master Data Services](../master-data-services/create-a-derived-hierarchy-master-data-services.md)&#41;[изменение имени атрибута и типа данных &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md) [Удаление атрибута &#40;](../master-data-services/delete-an-attribute-master-data-services.md) Master Data Services
 
 

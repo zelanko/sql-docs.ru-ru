@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ce0f10316be9aa9f9b2b23a24642d8cd7d0eda1b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c64bacdec9e0d8640b5b5884a6dcaf04f99214
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175183"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813110"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Создание файлового атрибута (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]файловый атрибут создается для заполнения значений атрибута файлами.
 
@@ -41,7 +41,7 @@ ms.locfileid: "78175183"
 |Столбец|Описание|
 |------------|-----------------|
 |Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|
-|Имя|Имя атрибута.|
+|name|Имя атрибута.|
 |Отображаемое имя|Отображаемое имя атрибута.|
 |Описание|Описание атрибута.|
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|
@@ -90,7 +90,7 @@ ms.locfileid: "78175183"
 
 12. Выберите команду **Сохранить**.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [Атрибуты &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md) [изменить имя атрибута и тип данных &#40;Master Data Services](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)&#41;[создания атрибута на основе домена &#40;](../master-data-services/create-a-domain-based-attribute-master-data-services.md) Master Data Services&#41;[создания текстового атрибута](../master-data-services/create-a-text-attribute-master-data-services.md) &#40;Master Data Services
 
 

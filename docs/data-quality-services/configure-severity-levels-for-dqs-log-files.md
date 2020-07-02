@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8b2c1a1ec0bb6c1417fa68720f2d345c6bc4ccb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813849"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Настройка степеней серьезности для файлов журнала DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В данном разделе описывается, как настраивать степени серьезности для различных операций и модулей в службе [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) при помощи [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Степени серьезности определяют интенсивность событий, которые происходят в DQS. События DQS имеют следующие степени серьезности, в порядке убывания серьезности:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "75255639"
  Для настройки параметров серьезности для записи в журнал необходимо иметь роль dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Настройка степени серьезности на уровне действия  
- Можно настроить параметры серьезности записи в журнал для следующих операций в DQS: управление доменами, обнаружение знаний, политика сопоставления, очистка данных, сопоставление данных и службы ссылочных данных. Для этого выполните следующие действия.  
+ Можно настроить параметры серьезности записи в журнал для следующих операций в DQS: управление доменами, обнаружение знаний, политика сопоставления, очистка данных, сопоставление данных и службы ссылочных данных. Для этого сделайте следующее:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Запустите приложение Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "75255639"
     > [!NOTE]  
     >  По умолчанию для всех операций установлена степень серьезности **Ошибка** . Это означает, что по умолчанию для всех операций в файлы журнала DQS будут записываться сообщения об ошибках и неустранимых ошибках.  
   
-5.  Нажмите кнопку **Закрыть**.  
+5.  Щелкните **Закрыть**.  
   
 ##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Настройка степени серьезности на уровне модуля (дополнительно)  
  Выполнить настройку параметров серьезности записи в журнал на уровне модуля можно в разделе **Дополнительно** на вкладке **Параметры журнала** . Модули являются системными сборками DQS, которые реализуют различные функциональные возможности в функции DQS. Например, операция управления доменами содержит различные функциональные возможности такие, как правила определения доменов, условия определения правил, правила определения нескольких доменов для составных доменов и т. д.  
@@ -88,9 +88,9 @@ ms.locfileid: "75255639"
   
 4.  При необходимости повторите шаги 2 и 3 для других модулей. Кроме того, можно добавлять или удалять строки из сетки с помощью значков **Добавить модуль** и **Удалить модуль** .  
   
-5.  Нажмите кнопку **Закрыть**.  
+5.  Щелкните **Закрыть**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Configure Advanced Settings for DQS Log Files](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

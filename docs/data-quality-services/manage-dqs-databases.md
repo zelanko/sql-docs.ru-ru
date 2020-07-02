@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ce7b0239168a0a85e5d0f559b042dac0562ead94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3bf01fad638c5ab88f96f5d438ed6f29b28f93a4
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814084"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе приведены сведения о действиях по управлению базами данных, которые можно выполнять с базами данных DQS, например резервное копирование и восстановление или отсоединение и присоединение.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75246976"
 |Описывает создание резервных копий и восстановление базы данных DQS.|[Резервное копирование и восстановление баз данных DQS](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Описывает, как отсоединять и присоединять базы данных DQS.|[Присоединение и отсоединение баз данных DQS](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [администрирование DQS](../data-quality-services/dqs-administration.md)  
   
   

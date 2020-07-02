@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2794b4c7dc7d8196845a83509accca085f23f396
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9de8fba3f5a9ba04cccf475ed4a1ebcef1dced74
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728673"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813648"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>Изменение имени бизнес-правила (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]изменение имени бизнес-правила может потребоваться в том случае, если заданное имя не соответствует потребностям предприятия.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "73728673"
   
 10. В диалоговом окне подтверждения нажмите кнопку **ОК**. Значение в столбце **Состояние бизнес-правила**изменится на **Активно**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Бизнес-правила (службы Master Data Services)](../master-data-services/business-rules-master-data-services.md)  
   
   

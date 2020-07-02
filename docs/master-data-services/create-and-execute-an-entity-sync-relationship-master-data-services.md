@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dee8767cc5d8d975ef327073d5767967207eed2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729530"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813047"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Создание и выполнение отношений синхронизации сущностей (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "73729530"
   
 -   **Когда обновлено**: дата и время последнего обновления синхронизации.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
  [Создание и удаление отношения синхронизации сущностей (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

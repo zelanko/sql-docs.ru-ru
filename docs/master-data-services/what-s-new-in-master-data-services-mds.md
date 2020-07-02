@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 09553815997bcc529d30c0760faf2a75059b50a5
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: f45667dad4466789823a8ff36ccc0b665f531db3
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813928"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Новые возможности служб Master Data Services (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе перечислены изменения и обновления в версии [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
@@ -232,7 +232,7 @@ ms.locfileid: "84796455"
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции, поддерживаемые различными выпусками SQL Server 2016 служб Master Data Services и качества данных](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [Устаревшие функции Master Data Services](../master-data-services/deprecated-master-data-services-features.md)  
  [Неподдерживаемые функции служб Master Data Services](../master-data-services/discontinued-master-data-services-features.md)

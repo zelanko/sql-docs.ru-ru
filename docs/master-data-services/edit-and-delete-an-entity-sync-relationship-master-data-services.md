@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92b67b981c5eb7dbd1e05b1d18af291cae78aaa1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728235"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814001"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Создание и удаление отношения синхронизации сущностей (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей. Созданное отношение синхронизации можно изменить или удалить.  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
  Для изменения отношения синхронизации сущностей требуется следующее.  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [разрешения функциональной области &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -66,11 +66,11 @@ ms.locfileid: "73728235"
   
 3.  На странице **Обслуживание синхронизации сущностей** выберите в сетке отношения синхронизации.  
   
-4.  Щелкните **Правка**. С правой стороны появится панель.  
+4.  Нажмите кнопку **Изменить**. С правой стороны появится панель.  
   
 5.  Измените параметр **Частота**. Выберите **синхронизацию по требованию**или **автоматическую синхронизацию** и укажите частоту.  
   
-6.  Нажмите кнопку **Сохранить**.  
+6.  Выберите команду **Сохранить**.  
   
  **Удаление отношения синхронизации сущностей**  
   

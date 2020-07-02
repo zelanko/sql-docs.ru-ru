@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: eacd28629c8e4fdeb9de17147a315b172aa3bbd3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a81be69eee7a0fa8ea61b4491a296552aca51ff
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78937690"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814053"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Создание администратора модели (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]администратор модели создается, когда группе или пользователю необходимо предоставить все разрешения на все объекты из одной или нескольких моделей.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "78937690"
   
 5.  По желанию выберите модель из списка **Модель** .  
   
-6.  Щелкните **Правка**.  
+6.  Нажмите кнопку **Изменить**.  
   
 7.  Щелкните модель, разрешение на которую необходимо предоставить.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "78937690"
   
 10. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администраторы &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
  [Назначение разрешений объекта модели &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Назначение разрешений элемента иерархии &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

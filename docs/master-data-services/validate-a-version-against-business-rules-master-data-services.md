@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2995a02e738b2c185edff26ee0d6a395df14f59f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 66a934d1cddad1e7fdb2e36291611fa50e9c8ce5
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813210"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Подтверждение исправления проблемы, обнаруженной при проверке на соответствие бизнес-правилам (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]проверьте версию на применение бизнес-правил ко всем элементам версии модели.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "73727826"
     > [!NOTE]  
     >  Когда исчезнет индикатор выполнения, проверка версии будет закончена.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Состояния проверки &#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
  [Master Data Services &#40;хранимой процедуры проверки&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
  [Версии &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   

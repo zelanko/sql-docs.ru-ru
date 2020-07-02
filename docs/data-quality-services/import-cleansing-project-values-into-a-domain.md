@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 34060c3fc5416f7244b400b506faad9097d66880
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ffc5e2c36590fc1128eb1c073d51051fed2e4d1
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241803"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85814102"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) можно импортировать в домен знания о качестве данных, собранные в проекте очистки данных о качестве или в пакете служб Integration Services с компонентом DQS Cleansing. Это позволяет не допустить потери надежных знаний и обеспечить постоянное улучшение базы знаний.  
   
@@ -112,8 +112,8 @@ ms.locfileid: "75241803"
   
 -   Импортировать значения из проекта можно только тогда, когда база знаний имеет состояние «в обработке» и заблокирована пользователем, выполняющим импорт.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Очистка данных](../data-quality-services/data-cleansing.md)   
- [Преобразование «Очистка DQS»](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
+ [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   

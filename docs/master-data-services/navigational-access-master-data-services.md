@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e6be5541cb431c68ecc2f3630308981ed6fc77d
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729001"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813257"
 ---
 # <a name="navigational-access-master-data-services"></a>Навигационный доступ (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Навигационный доступ применяется к модели объекта безопасности, которая назначается на вкладке **Модель** .  
   
@@ -32,7 +32,7 @@ ms.locfileid: "73729001"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
- **Entities**  
+ **Сущности**  
   
  При назначении разрешения на сущность, ее конечные или консолидированные элементы, навигационный доступ означает возможность чтения и обновления имени и кода для всех элементов. Предоставляется также возможность считывать имя модели.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73729001"
   
  При назначении разрешений на коллекции это будет возможность чтения и обновления имени, кода, описания и идентификатора владельца. Предоставляется также возможность считывать имя модели.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Способ определения разрешений (службы Master Data Services)](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

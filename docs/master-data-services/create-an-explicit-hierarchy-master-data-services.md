@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: ba768393-6990-4eda-8cb0-d58cb3cfc2e2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b366c29412a3a698e793d3153784a8d1450bc81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13eab8e856ecb690cf0aa9badb77c8c91fc790ce
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813072"
 ---
 # <a name="create-an-explicit-hierarchy-master-data-services"></a>Создание явной иерархии (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]явные иерархии создаются, если необходима неоднородная иерархия, элементы которой могут располагаться на любом уровне. Явные иерархии содержат элементы из одной сущности.  
   
@@ -58,23 +58,23 @@ ms.locfileid: "73729516"
 ## <a name="grid-columns"></a>Столбцы сетки  
  Для каждой создаваемой явной иерархии в сетке создается строка с семью столбцами. Ниже приведено описание этих столбцов.  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |Состояние|Состояние сущности. После нажатия кнопки **Сохранить** появится следующее изображение, которое указывает на то, что сущность обновляется.<br /><br /> ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния")<br /><br /> При наличии ошибок во время создания или изменения сущности появляется следующее изображение.<br /><br /> ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки")<br /><br /> Если ее состояние нормальное, появится следующее изображение.<br /><br /> ![Значок состояния "ОК"](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"")|  
-|Имя|Имя явной иерархии.|  
+|name|Имя явной иерархии.|  
 |Необязательно|Указывает, является ли явная иерархия обязательной.|  
 |Автор|Имя пользователя, создавшего явную иерархию.|  
 |Создана|Дата и время создания явной иерархии.|  
 |Кем обновлена|Имя последнего пользователя, обновившего явную иерархию.|  
 |Обновлено|Дата и время последнего обновления явной иерархии.|  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Создание объединенного элемента (службы Master Data Services)](../master-data-services/create-a-consolidated-member-master-data-services.md)  
   
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Явные иерархии &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
  [Производные иерархии с явно заданными ограничениями &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-with-explicit-caps-master-data-services.md)   
  [Изменение имени явной иерархии (службы Master Data Services)](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)  

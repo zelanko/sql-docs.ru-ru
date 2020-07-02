@@ -1,7 +1,7 @@
 ---
 title: КРАТЧАЙШий путь (SQL Graph) | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753253"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834638"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "85753253"
 ## <a name="graph-path-aggregate-functions"></a>Агрегатные функции пути к графу
 Поскольку узлы и грани, участвующие в шаблоне произвольной длины, возвращают коллекцию (узлов и границ, проходящих по этому пути), пользователи не могут проецировать атрибуты напрямую, используя стандартный синтаксис TableName. AttributeName. Для запросов, в которых необходимо использовать значения атрибутов из промежуточных узлов или граничных таблиц, в пути обхода используйте следующие агрегатные функции пути к графу: STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX и COUNT. Общий синтаксис для использования этих агрегатных функций в предложении SELECT:
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ ms.locfileid: "85753253"
 ### <a name="count"></a>COUNT
 Эта функция возвращает количество значений, отличных от NULL, требуемого атрибута node/ребр в пути. Функция COUNT поддерживает \* оператор "" с псевдонимом узла или краевой таблицы. Без псевдонима таблицы node или ребро использование \* является неоднозначным и приведет к ошибке.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>AVG
 Возвращает среднее для указанных значений атрибутов node/ребра или выражение, которое присутствовало в пути обхода.
@@ -120,7 +121,7 @@ LAST_NODE поддерживается только в shortest_path.
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  Найти кратчайший путь между 2 людьми
  В следующем примере мы найдут кратчайший путь между Джейкоб и Алисой. Нам потребуется узел Person и Фриендоф ребро, созданные на основе примера сценария Graph. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>Б.  Поиск кратчайшего пути от заданного узла ко всем остальным узлам в графе. 
  В следующем примере выполняется поиск всех людей, к которым подключен Джейкоб, в графе и кратчайшего пути, начиная с Джейкоб, для всех этих пользователей. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>В.  Подсчитайте число прыжков/уровней, пройденных одним лицом к другому в графе.
  В следующем примере выполняется поиск кратчайшего пути между Джейкоб и Алисой и выводится число прыжков, которое требуется для перехода от Джейкоб к Алисе. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>Г. Поиск людей 1-3 прыжков от определенного человека
 В следующем примере выполняется поиск кратчайшего пути между Джейкоб и всеми людьми, к которым он подключен, в графе 1-3 на расстоянии от него. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>Д. Поиск людей на расстоянии не более 2 прыжков от данного лица
 В следующем примере выполняется поиск кратчайшего пути между Джейкоб и людьми, на которых ровно два прыжка от него в графе. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

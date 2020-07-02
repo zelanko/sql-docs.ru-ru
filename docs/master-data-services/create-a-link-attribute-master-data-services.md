@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 929e363228b30889e163519786d802dd4caee049
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b22b60f005ab7e982491685db0ff59dd2c73346
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813100"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Создание атрибута ссылки (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] атрибут ссылки создается, если нужно, чтобы пользователи вводили в качестве значения атрибута гиперссылку, такую как `https://www.contoso.com`.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73728496"
 |Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние атрибута.<br /><br /> При нажатии кнопки сохранить отображается ![значок для обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что атрибут обновляется.<br /><br /> Если при создании или изменении атрибута возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
-|Имя|Имя атрибута.|  
+|name|Имя атрибута.|  
 |Отображаемое имя|Отображаемое имя атрибута.|  
 |Описание|Описание атрибута.|  
 |Ширина отображаемой области (в пикселях)|Ширина атрибута.|  
@@ -95,7 +95,7 @@ ms.locfileid: "73728496"
   
 13. Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)   
  [Измените имя атрибута и тип данных &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

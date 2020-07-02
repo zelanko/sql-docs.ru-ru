@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a9f1ab0eaca67eb1e5266f11381f316607031635
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24227f2afa1f48afe18e5334bfa176d22e59c6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251712"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813858"
 ---
 # <a name="data-quality-services-concepts"></a>Основные понятия служб Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе содержится краткая сводка по основным понятиям служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) в управлении набором знаний, проектах служб DQS и их администрировании.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "75251712"
   
  Дополнительные сведения об администрировании DQS см. в разделе [DQS Administration](../data-quality-services/dqs-administration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Data Quality Services](../data-quality-services/data-quality-services.md)  
   
   

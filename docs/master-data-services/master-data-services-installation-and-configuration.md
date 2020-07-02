@@ -2,7 +2,7 @@
 title: Установка и настройка
 description: Узнайте, как установить Master Data Services на компьютере под Windows Server 2012 R2, настроить базу данных и веб-сайт MDS и развернуть образцы моделей и данных.
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
@@ -11,16 +11,16 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 777d0b497bae5e52c49fb95e1e7ff3e7387ea676
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796285"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834775"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этой статье рассматривается установка [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютере под управлением Windows Server 2012 R2, настройка базы данных и веб-сайта MDS, а также развертывание образцов моделей и данных. Службы[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) позволяют организациям управлять надежной версией данных.   
   
@@ -90,7 +90,7 @@ ms.locfileid: "84796285"
    
 9. На странице **Компоненты** выберите следующие компоненты и нажмите кнопку **Далее**. Они требуются для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] в [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
   
-    |Компоненты|Компоненты|  
+    |Функции|Функции|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -209,7 +209,7 @@ ms.locfileid: "84796285"
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+Дополнительные сведения о параметрах на странице "Веб-конфигурация" см. в разделе [Страница "Веб-конфигурация" (диспетчер конфигурации Master Data Services)](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
  Также можно использовать [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] для указания других параметров веб-приложений и служб, связанных с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . К примеру, можно указать, как часто загружаются данные или как часто отправляются сообщения проверки. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
@@ -217,9 +217,7 @@ ms.locfileid: "84796285"
  В состав  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]входят три перечисленных ниже пакета с образцами моделей.   Эти образцы моделей включают в себя данные. **Расположение по умолчанию для пакетов с образцами моделей: %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  Вы можете развернуть эти пакеты с помощью средства MDSModelDeploy. Расположение по умолчанию для средства MDSModelDeploy — *диск*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration.  
@@ -248,28 +246,26 @@ ms.locfileid: "84796285"
     >  `MDSModelDeploy listservices`  
     >   
     >  Для развертывания модели указывается первое значение службы из списка возвращенных значений.  
-    >
+
     > [!NOTE]
     > Дополнительные сведения о метаданных образцов моделей см. в файле сведений в расположении "c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration".
-    >
    
      **Развертывание образца модели chartofaccounts_en.pkg**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **Развертывание образца модели customer_en.pkg**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **Развертывание образца модели product_en.pkg**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      После успешного развертывания модели появляется сообщение **Работа MDSModelDeploy завершена** .  
@@ -293,7 +289,7 @@ ms.locfileid: "84796285"
   
  Общие сведения об использовании модели и сущностей для создания структуры данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] см. в разделе [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
     
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [База данных Master Data Services](../master-data-services/master-data-services-database.md)   
  [Веб-приложение диспетчер основных данных](../master-data-services/master-data-manager-web-application.md)   
  [Страница конфигурации базы данных &#40;диспетчер конфигурации Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

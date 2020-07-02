@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 534e8bed6596c9b15e05ec179ece3d37a64b15ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2075a9b9faddf7028f0b0b27b52cf34db20a17ba
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728439"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813458"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>Создание группы атрибутов (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]группы атрибутов создаются, когда нужно отобразить атрибуты на отдельных вкладках сетки **обозревателя** .  
   
@@ -67,11 +67,11 @@ ms.locfileid: "73728439"
   
 12. Выберите команду **Сохранить**.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Превращение группы атрибутов в видимую для пользователей (службы Master Data Services)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Группы атрибутов &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
  [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)   
  [Изменение имени группы атрибутов &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

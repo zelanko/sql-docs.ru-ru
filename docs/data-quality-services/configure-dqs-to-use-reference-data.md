@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 8dfc5a65659efe71fd3389a770af06f360f980bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 542e32606858604e59cdbf204bbf39eba6d214a6
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813870"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Настройка служб DQS для использования справочных данных
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описывается настройка служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) на использование ссылочных данных для очистки данных. Можно либо использовать эталонные данные из Azure Marketplace, либо напрямую обращаться к сторонним поставщикам ссылочных данных.  
 
@@ -32,7 +32,7 @@ ms.locfileid: "75255654"
 ## <a name="before-you-begin"></a>Перед началом  
   
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Предварительные требования  
- Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) (https://go.microsoft.com/fwlink/?LinkId=212936). Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
+ Чтобы использовать ссылочные данные из Marketplace, необходим действительный ключ учетной записи Marketplace. Подробные сведения о создании ключа учетной записи Marketplace см. в разделе [Создание учетной записи](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) . Ключ учетной записи Marketplace также можно создать с помощью [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , выбрав команду **Настройка** в разделе **Администрирование** главной страницы [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , а затем нажав кнопку **Создать идентификатор учетной записи DataMarket** на вкладке **Ссылочные данные** .  
   
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   
@@ -69,7 +69,7 @@ ms.locfileid: "75255654"
   
     3.  В поле **Категория** введите категорию данных, предоставляемых новым поставщиком служб ссылочных данных с прямой ссылкой для подключения.  
   
-    4.  В поле «Схема» укажите схему, определяющую строку полей (имен столбцов), которые будут получаться от поставщика служб ссылочных данных с прямой ссылкой для подключения. Имя поля не должно содержать пробелов, а поля должны разделяться запятыми. Например: `FirstName, LastName, City, State`.  
+    4.  В поле «Схема» укажите схему, определяющую строку полей (имен столбцов), которые будут получаться от поставщика служб ссылочных данных с прямой ссылкой для подключения. Имя поля не должно содержать пробелов, а поля должны разделяться запятыми. Например, `FirstName, LastName, City, State`.  
   
     5.  В поле **URI** введите URI нового поставщика служб ссылочных данных с прямой ссылкой для подключения. В службах DQS разрешены только безопасные идентификаторы URI (адрес начинается с "https://").  
   

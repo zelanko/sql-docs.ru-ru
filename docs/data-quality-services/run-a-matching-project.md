@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 473b30d2dcc4809feece4e6a1cc59e38bb82ac2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f560af1a8163fae126ea3b6c63cd6b1be48afb7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813788"
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описано, как выполнить сопоставление данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). В процессе сопоставления выявляются кластеры соответствующих друг другу записей согласно правилам сопоставления в политике сопоставления, одна запись из каждого кластера обозначается как «выжившая» согласно правилу выживания, и результаты экспортируются. Процесс сопоставления в службах DQS, называемый также удалением дубликатов, является автоматизированным, однако правила сопоставления можно создавать интерактивно, также можно выбирать правило выживания из нескольких вариантов, таким образом можно управлять процессом сопоставления.  
   

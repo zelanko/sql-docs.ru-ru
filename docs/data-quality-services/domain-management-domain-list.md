@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 3986854293f50a34f51170e00b4204b78fba1b63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74486901a641b42f5f3c2c324b97307ef17c0182
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251656"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813856"
 ---
 # <a name="domain-management-domain-list"></a>Управление доменами. Список доменов
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описаны элементы управления в списке «Домены» страницы **Управление доменами** в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Эта панель управления используется для выбора домена с целью выполнения операций управления. Одна панель управления используется для всех страниц с вкладками на странице **Управление доменами** .  
   
-## <a name="options"></a>Параметры  
+## <a name="options"></a>Элемент Options  
   
 ### <a name="domains-list"></a>Список доменов  
- **Поддомен**  
+ **Домен**  
  Этот список содержит все домены в базе знаний. Операции, выполняемые на страницах с вкладками на правой панели, будут применяться к домену, выбранному в списке. Дополнительные сведения см. в разделе  
   
  **Создание составного домена**  

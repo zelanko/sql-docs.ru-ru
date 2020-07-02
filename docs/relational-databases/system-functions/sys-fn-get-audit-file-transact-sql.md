@@ -3,7 +3,7 @@ title: sys. fn_get_audit_file (Transact-SQL) | Документация Майк
 ms.custom: ''
 ms.date: 02/19/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5c8aeffd66f812b682610ad16abc6c4336b77b9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
+ms.openlocfilehash: aa14b65d527de3efa82f54212e6668e232197486
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813916"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]    
 
   Возвращает сведения из файла аудита, созданного аудитом сервера в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -51,19 +51,19 @@ fn_get_audit_file ( file_pattern,
     
     Этот аргумент должен содержать как путь (букву диска или сетевой ресурс), так и имя файла, которое может включать символ-шаблон. Для получения нескольких файлов из набора файлов аудита можно использовать одну звездочку (*). Пример:  
   
-    -   ** \< путь \\>\* ** — получение всех файлов аудита в указанном расположении.  
+    -   **\<path>\\\***— Получение всех файлов аудита в указанном расположении.  
   
-    -   ** \< путь> \ LOGINSAUDIT_ {GUID}*** — получение всех файлов аудита с указанным именем и парой GUID.  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID}*** — получение всех файлов аудита с указанным именем и парой GUID.  
   
-    -   ** \< путь> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** — получение конкретного файла аудита.  
+    -   ** \<path> \ LOGINSAUDIT_ {GUID} _00_29384. sqlaudit** — получение конкретного файла аудита.  
   
  - **База данных SQL Azure**:
  
     Этот аргумент используется для указания URL-адреса большого двоичного объекта (включая конечную точку хранилища и контейнер). Хотя она не поддерживает подстановочные знаки, можно использовать префикс имени файла (BLOB) (вместо полного имени большого двоичного объекта) для получения нескольких файлов (больших двоичных объектов), начинающихся с этого префикса. Пример:
  
-      - ** \< Storage_endpoint \> / \< Container \> / \< ServerName \> / \< DatabaseName \> — / ** собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
+      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\>/**— собирает все файлы аудита (BLOB-объекты) для конкретной базы данных.    
       
-      - ** \< Storage_endpoint \> / \< Container \> / \< ServerName \> / \< имя_базы_данных \> / \< аудитнаме \> / \< CreationDate \> / \< filename \> . XEL-** — собирает конкретный файл аудита (BLOB).
+      - ** \<Storage_endpoint\> / \<Container\> / \<ServerName\> / \<DatabaseName\> / \<AuditName\> / \<CreationDate\> / \<FileName\> . XEL-** — собирает конкретный файл аудита (BLOB-объект).
   
 > [!NOTE]  
 >  При передаче пути без имени файла сформируется ошибка.  
@@ -93,7 +93,7 @@ fn_get_audit_file ( file_pattern,
 | audit_schema_version | **int** | Всегда 1 |  
 | class_type | **varchar(2)** | Тип доступной для аудита сущности, для которой проводится аудит. Не допускает значение NULL. |  
 | client_ip | **nvarchar(128)** | Область **применения**: база данных SQL Azure + SQL Server (начиная с 2017)<br /><br />    Исходный IP-адрес клиентского приложения |  
-| connection_id | Код GUID | Область **применения**: база данных SQL Azure и управляемый экземпляр<br /><br /> Идентификатор соединения на сервере |
+| connection_id | Идентификатор GUID | Область **применения**: база данных SQL Azure и управляемый экземпляр<br /><br /> Идентификатор соединения на сервере |
 | data_sensitivity_information | nvarchar(4000) | Область **применения**: только база данных SQL Azure<br /><br /> Типы сведений и метки чувствительности, возвращаемые отслеживаемым запросом, на основе классифицированных столбцов в базе данных. Дополнительные сведения об [обнаружении и классификации данных в базе данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | Контекст базы данных, в котором выполнялось действие. Допускает значение NULL. Возвращает значение NULL для аудита, происходящих на уровне сервера. |  
 | database_principal_id | **int** |Идентификатор контекста пользователя базы данных, в котором выполнено действие. Не допускает значение NULL. Поддерживает 0, если это неприменимо. Например, операция сервера.|
@@ -127,7 +127,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | Область **применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздней версии, база данных SQL Azure и управляемый экземпляр<br /><br /> Используется для записи дополнительных сведений, которые пользователь хочет записать в журнал аудита с помощью хранимой процедуры **sp_audit_write** . |  
 
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если аргумент *file_pattern* , передаваемый в **fn_get_audit_file** , ссылается на несуществующий путь или файл, или если файл не является файлом аудита, возвращается сообщение об ошибке **MSG_INVALID_AUDIT_FILE** .  
   
 ## <a name="permissions"></a>Разрешения
@@ -178,7 +178,7 @@ fn_get_audit_file ( file_pattern,
 
 Сведения о настройке аудита базы данных SQL Azure см. в разделе Начало [работы с аудитом базы данных](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)SQL.
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [Удаление аудита сервера &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

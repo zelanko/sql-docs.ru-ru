@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: adb0a6798291148cc03c7e9a0a80ca8a59f3952f
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 056335a32c0e7f1ae02979190cdf64b0829177df
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813688"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Действия бизнес-правил (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]действия бизнес-правил являются следствием оценки условий бизнес-правил. Действие выполняется, если условие истинно.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "84796552"
 |-----------------|-----------------|  
 |**запуск рабочего процесса**|Инициирует внешний рабочий процесс. Данные, вызвавшие это действие, передаются рабочему процессу. Дополнительные сведения см. в статье [Интеграция рабочих процессов SharePoint со службами Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Это действие допустимо для текстовых, числовых значений, дат и ссылок.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Условия бизнес-правил &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Создание и публикация бизнес-правила (службы Master Data Services)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

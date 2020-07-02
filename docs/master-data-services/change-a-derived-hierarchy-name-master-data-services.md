@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ac272f3087d970c22d30fd3d4b9f105855d783f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4437060371cb15daa68df439b9fe4d679710f8f
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813658"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>Изменение имени производной иерархии (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно изменять имя производной иерархии.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "73728663"
   
 4.  Выберите строку производной иерархии, имя которой требуется изменить.  
   
-5.  Щелкните **Правка**.  
+5.  Нажмите кнопку **Изменить**.  
   
 6.  На странице **Изменить производную иерархию** щелкните значок с карандашом рядом с именем производной иерархии.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "73728663"
   
 8.  Нажмите кнопку **Сохранить производную иерархию**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Производные иерархии &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)   
  [Создание производной иерархии &#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
  [Удаление производной иерархии (службы Master Data Services)](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)  
