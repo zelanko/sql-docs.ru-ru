@@ -13,15 +13,15 @@ ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8e5147a8eef08c70605bf13f6c1cb04887d0d926
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a73fbe7709e30156f198205a21644153fad10240
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725185"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Улучшенная работа типа даты-времени с предыдущими версиями SQL Server (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом разделе описывается ожидаемое поведение клиентских приложений, использующих улучшенные функции даты и времени, которые подключаются к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версий более ранних, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], а также в случаях, когда клиентское приложение использует компоненты доступа к данным MDAC, Windows DAC или собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] для отправки команд на сервер, поддерживающий улучшенные функции даты и времени.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81301903"
   
  Метаданные инструкции, возвращаемые SQLDescribeCol, SQLDescribeParam, Скжетдескфиелд и SQLColAttribute, будут возвращать метаданные, которые согласуются с типом нижнего уровня во всех отношениях, включая имя типа. Примером такого типа нижнего уровня является **nvarchar**.  
   
- Если клиентское приложение нижнего уровня выполняется на сервере [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
+ Если клиентское приложение нижнего уровня выполняется [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] на сервере (или более поздней версии), на котором изменения схемы производятся в типах даты и времени, то ожидаемое поведение выглядит следующим образом:  
   
 |Тип SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Тип  (или более поздних версий)|Клиентский тип ODBC|Преобразование результата (из SQL в C)|Преобразование параметров (из C в SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
@@ -115,5 +115,5 @@ ms.locfileid: "81301903"
 ## <a name="down-level-server-behavior"></a>Работа сервера низкого уровня  
  При соединении с экземпляром сервера версии более ранней, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], любые попытки использовать новые серверные типы или связанные с ними коды метаданных и поля дескрипторов приводят к возврату ошибки SQL_ERROR. Будет сформирована диагностическая запись с ошибкой SQLSTATE HY004 и сообщением «Недопустимый тип данных SQL для версии сервера при соединении» или с ошибкой 07006 и сообщением «Нарушение атрибута ограниченного типа данных».  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

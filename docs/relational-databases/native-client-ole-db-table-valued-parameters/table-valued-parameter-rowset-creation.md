@@ -13,15 +13,15 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3541f354af26f32f4071c2a6d09648cd53af6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1c474427c4c62b667e27f299e2e7b4d9a65e1b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283206"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719655"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Создание набора строк возвращающего табличное значение параметра
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Несмотря на то, что потребители могут предоставить для возвращающих табличные значения параметров любой объект набора строк, типичные объекты наборов строк реализуются для конечных хранилищ данных и таким образом предоставляют ограниченную производительность. По этой причине поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает пользователям создавать специализированный объект набора строк на основе данных в памяти. Этот специальный объект набора строк в памяти — это новый COM-объект, называемый набором строк возвращающего табличное значение параметра. Он предлагает функциональные возможности, аналогичные набору параметров.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "81283206"
   
  В этом сценарии поставщик получает сведения о типе объекта набора строк возвращающего табличные значения параметра из сервера от лица потребителя.  
   
- Параметры *pTableID* и *pUnkOuter* устанавливаются так же, как и в статическом сценарии. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента получает сведения о типе (сведения о столбцах и ограничениях) с сервера и возвращает объект набора строк возвращающего табличное значение параметра через параметр *ппровсет* . Данная операция требует связи с сервером, поэтому выполняется не так быстро, как статический сценарий. Динамический сценарий работает только с параметризованными вызовами процедур.  
+ Параметры *pTableID* и *pUnkOuter* устанавливаются так же, как и в статическом сценарии. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента получает сведения о типе (сведения о столбцах и ограничениях) с сервера и возвращает объект набора строк возвращающего табличное значение параметра через параметр *ппровсет* . Данная операция требует связи с сервером, поэтому выполняется не так быстро, как статический сценарий. Динамический сценарий работает только с параметризованными вызовами процедур.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Использование возвращающих табличные значения параметров &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

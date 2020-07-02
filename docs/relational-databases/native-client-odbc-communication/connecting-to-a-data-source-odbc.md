@@ -24,15 +24,15 @@ ms.assetid: ae30dd1d-06ae-452b-9618-8fd8cd7ba074
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd54f05b336284f08892022537641a1e1af99712
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719834"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Соединение с источником данных (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   После определения среды и дескрипторов соединения, а также установки любых атрибутов соединения приложение устанавливает соединение с источником данных или драйвером. Существует три функции, которые можно использовать для установки соединения:  
   
@@ -81,7 +81,7 @@ ms.locfileid: "81307735"
   
  Когда **SQLBrowseConnect** завершает успешное подключение, он возвращает строку подключения, которую можно использовать при последующих вызовах **SQLDriverConnect**.  
   
- Драйвер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента всегда возвращает SQL_SUCCESS_WITH_INFO для успешных **SQLConnect**, **SQLDriverConnect**или **SQLBrowseConnect**. Когда приложение ODBC вызывает **SQLGetDiagRec** после получения SQL_SUCCESS_WITH_INFO, оно может получать следующие сообщения:  
   
  5701  
  Показывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помещает пользовательский контекст в базу данных по умолчанию, которая определена в источнике данных, или в базу данных, определенную для идентификатора входа, который использовался в соединении, если источник данных не имеет базы данных по умолчанию.  
@@ -114,7 +114,7 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
   
  Функция обработки ошибок приложения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключений должна вызывать **SQLGetDiagRec** до тех пор, пока не вернет SQL_NO_DATA. Затем он должен работать с любыми сообщениями, кроме тех, с *pfNative* кодом 5701 или 5703.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Взаимодействие с SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

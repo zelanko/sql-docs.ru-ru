@@ -18,15 +18,15 @@ ms.assetid: d51c53c2-1332-407f-b725-4983f2e710eb
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c559c8a6af6add669e1cc4630b7bcfc9fc0aacc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86b1c7ec67a19e18dcc5daa6d14e55acc9b34c64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936738"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722977"
 ---
 # <a name="sp_validname-transact-sql"></a>sp_validname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Проверяет на правильность имена идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Все недвоичные и ненулевые данные, включая данные в Юникоде, которые могут храниться с использованием типов данных **nchar**, **nvarchar**или **ntext** , принимаются как допустимые символы для имен идентификаторов.  
   
@@ -51,7 +51,7 @@ sp_validname [@name =] 'name'
 ## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [&#41;&#40;языка Transact-SQL на языке NCHAR](../../t-sql/functions/nchar-transact-sql.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9c1f313a5316059a05cb30a5af6ef7a451353a3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724225"
 ---
 # <a name="functions-on-string-values---contains"></a>Функции со строковыми значениями — contains
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает значение типа xs: Boolean, указывающее, содержит ли значение *$arg 1* строковое значение, заданное *$arg 2*.  
   
@@ -42,7 +42,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 2*  
  Подстрока для поиска.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если значение *$arg 2* является строкой нулевой длины, функция возвращает **значение true**. Если значение *$arg 1* является строкой нулевой длины, а значение *$arg 2* не является строкой нулевой длины, функция возвращает **значение false**.  
   
  Если значение *$arg 1* или *$arg 2* является пустой последовательностью, аргумент рассматривается как строка нулевой длины.  
@@ -109,7 +109,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

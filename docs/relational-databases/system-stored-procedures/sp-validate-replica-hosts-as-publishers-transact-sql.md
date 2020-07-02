@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75320013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723043"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** является расширением **sp_validate_redirected_publisher** , позволяющим проверять все вторичные реплики, а не только текущую первичную реплику. **sp_validate_replicat_hosts_as_publisher** проверяет всю топологию репликации Always on. **sp_validate_replica_hosts_as_publishers** должны выполняться непосредственно на распространителе с помощью сеанса удаленного рабочего стола, чтобы избежать ошибки безопасности двойного прыжка (21892).  
   
@@ -51,10 +51,10 @@ sp_validate_replica_hosts_as_publishers
  **0** (успешное завершение) или **1** (сбой)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствует.  
+ Нет.  
   
-## <a name="remarks"></a>Remarks  
- Если для издателя и базы данных публикации не существует записи, **sp_validate_redirected_publisher** возвращает значение NULL для выходного параметра * \@redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
+## <a name="remarks"></a>Примечания  
+ Если для издателя и базы данных публикации не существует записи, **sp_validate_redirected_publisher** возвращает значение NULL для выходного параметра * \@ redirected_publisher*. В противном случае происходит возврат связанного перенаправленного издателя как в случае успеха, так и в случае неудачи.  
   
  Если проверка завершается успешно, **sp_validate_redirected_publisher** Возвращает индикатор успеха.  
   
@@ -72,7 +72,7 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="permissions"></a>Разрешения  
  Участник должен быть членом предопределенной роли сервера **sysadmin** , **db_owner** предопределенной роли базы данных для базы данных распространителя или членом списка доступа к публикации для определенной публикации, связанной с базой данных издателя.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   

@@ -13,21 +13,21 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b7eecfdac3d42b7a3d8d66ffe1f8ac68652230f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2581625d9b86badd1cbfd36a0f1d072d0412d8ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722264"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Привязка и передача данных возвращающих табличное значение параметров и значений столбцов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращающие табличное значение параметры, как и другие параметры, нуждаются в привязке до их передачи на сервер. Приложение привязывает возвращающие табличное значение параметры так же, как привязывает другие параметры: с помощью SQLBindParameter или эквивалентных вызовов SQLSetDescField или SQLSetDescRec. Типом данных на сервере для параметра, возвращающего табличное значение, является SQL_SS_TABLE. Тип C может иметь значение SQL_C_DEFAULT или SQL_C_BINARY.  
   
  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях возвращающие табличное значение параметры поддерживаются только как входные. Поэтому любая попытка установить для SQL_DESC_PARAMETER_TYPE значение, отличное от SQL_PARAM_INPUT, приведет к возникновению ошибки SQL_ERROR с SQLSTATE = HY105 и появлению сообщения «Недопустимый тип параметра».  
   
- Можно назначать значение по умолчанию для целых столбцов возвращающих табличное значение параметров с помощью атрибута SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Однако отдельные значения столбцов возвращающего табличное значение параметра не могут быть назначены значениями по умолчанию с помощью SQL_DEFAULT_PARAM в *StrLen_or_IndPtr* с SQLBindParameter. Возвращающие табличные значения параметры не могут быть установлены в значение по умолчанию с помощью SQL_DEFAULT_PARAM в *StrLen_or_IndPtr* с SQLBindParameter. Если эти правила не выполняются, SQLExecute или SQLExecDirect возвратит SQL_ERROR. Запись диагностики будет создана с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по умолчанию \<для параметра p>" \<, где p> является порядковым номером TVP в инструкции запроса.  
+ Можно назначать значение по умолчанию для целых столбцов возвращающих табличное значение параметров с помощью атрибута SQL_CA_SS_COL_HAS_DEFAULT_VALUE. Однако отдельные значения столбцов возвращающего табличное значение параметра не могут быть назначены значениями по умолчанию с помощью SQL_DEFAULT_PARAM в *StrLen_or_IndPtr* с SQLBindParameter. Возвращающие табличные значения параметры не могут быть установлены в значение по умолчанию с помощью SQL_DEFAULT_PARAM в *StrLen_or_IndPtr* с SQLBindParameter. Если эти правила не выполняются, SQLExecute или SQLExecDirect возвратит SQL_ERROR. Будет создана диагностическая запись с параметром SQLSTATE = 07S01 и сообщением "Недопустимое использование параметра по умолчанию для параметра \<p> ", где \<p> — это порядковый номер TVP в инструкции запроса.  
   
  После привязки возвращающего табличное значение параметра приложение должно выполнить привязку каждого столбца параметров, возвращающих табличное значение. Для этого приложение сначала вызывает SQLSetStmtAttr, чтобы задать SQL_SOPT_SS_PARAM_FOCUS порядковому номеру возвращающего табличное значение параметра. Затем приложение привязывает столбцы возвращающего табличное значение параметра с помощью вызовов к следующим подпрограммым: SQLBindParameter, SQLSetDescRec и SQLSetDescField. При установке SQL_SOPT_SS_PARAM_FOCUS в 0 восстанавливается обычный результат SQLBindParameter, SQLSetDescRec и SQLSetDescField в работе с обычными параметрами верхнего уровня.
  
@@ -38,7 +38,7 @@ ms.locfileid: "81304505"
 |Параметр|Связанный атрибут для типов параметров, не являющихся табличными, включая столбцы|Связанные атрибуты для возвращающих табличное значение параметров|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
 |*InputOutputType*|SQL_DESC_PARAMETER_TYPE в IPD.<br /><br /> Для столбцов, возвращающих табличное значение параметров, этот атрибут должен совпадать с настройкой для самого возвращающего табличное значение параметра.|SQL_DESC_PARAMETER_TYPE в IPD.<br /><br /> Это должен быть атрибут SQL_PARAM_INPUT.|  
-|*Внедрен*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE в APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE в APD.<br /><br /> Это должен быть атрибут SQL_C_DEFAULT или SQL_C_BINARY.|  
+|*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE в APD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE в APD.<br /><br /> Это должен быть атрибут SQL_C_DEFAULT или SQL_C_BINARY.|  
 |*ParameterType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE в IPD.|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE в IPD.<br /><br /> Это должен быть атрибут SQL_SS_TABLE.|  
 |*ColumnSize*|SQL_DESC_LENGTH или SQL_DESC_PRECISION в IPD.<br /><br /> Это зависит от значения *ParameterType*.|SQL_DESC_ARRAY_SIZE<br /><br /> Значение этого атрибута можно задать также с помощью атрибута SQL_ATTR_PARAM_SET_SIZE, когда фокус параметра установлен на возвращающий табличное значение параметр.<br /><br /> Для возвращающего табличное значение параметра эта величина равна количеству строк в буферах столбцов данного параметра.|  
 |*DecimalDigits*|SQL_DESC_PRECISION или SQL_DESC_SCALE в IPD.|Не используется. Атрибут должен иметь значение 0.<br /><br /> Если этот параметр не равен 0, SQLBindParameter возвратит SQL_ERROR, и будет создана диагностическая запись с параметром SQLSTATE = HY104 и сообщением "недопустимая точность или масштаб".|  
@@ -64,7 +64,7 @@ ms.locfileid: "81304505"
   
 3.  Вызывает SQLSetStmtAttr, чтобы задать SQL_SOPT_SS_PARAM_FOCUS 0. Это необходимо сделать до вызова SQLExecute или SQLExecDirect. В противном случае функция вернет значение SQL_ERROR и будет создана диагностическая запись с параметром SQLSTATE=HY024 и сообщением «Недопустимое значение атрибута SQL_SOPT_SS_PARAM_FOCUS (атрибут должен быть равен нулю во время выполнения)».  
   
-4.  Задает *StrLen_or_IndPtr* или SQL_DESC_OCTET_LENGTH_PTR SQL_DEFAULT_PARAM для возвращающего табличное значение параметра, не имеющего строк, или числа строк, которые будут переданы при следующем вызове SQLExecute или SQLExecDirect, если возвращающий табличное значение параметр содержит строки. Значения *StrLen_or_IndPtr* и SQL_DESC_OCTET_LENGTH_PTR не могут быть SQL_NULL_DATA для возвращающего табличное значение параметра, так как возвращающие табличное значение параметры не допускают значения NULL (хотя возвращающие табличное значение параметр может допускать значения NULL). Если задано недопустимое значение, SQLExecute или SQLExecDirect возвращает SQL_ERROR, а диагностическая запись создается с параметром SQLSTATE = HY090 и сообщением "Недопустимая строка или длина буфера для параметра \<p>", где p — номер параметра.  
+4.  Задает *StrLen_or_IndPtr* или SQL_DESC_OCTET_LENGTH_PTR SQL_DEFAULT_PARAM для возвращающего табличное значение параметра, не имеющего строк, или числа строк, которые будут переданы при следующем вызове SQLExecute или SQLExecDirect, если возвращающий табличное значение параметр содержит строки. Значения *StrLen_or_IndPtr* и SQL_DESC_OCTET_LENGTH_PTR не могут быть SQL_NULL_DATA для возвращающего табличное значение параметра, так как возвращающие табличное значение параметры не допускают значения NULL (хотя возвращающие табличное значение параметр может допускать значения NULL). Если задано недопустимое значение, SQLExecute или SQLExecDirect возвращает SQL_ERROR, а диагностическая запись создается с параметром SQLSTATE = HY090 и сообщением "Недопустимая строка или длина буфера для параметра \<p> ", где p — номер параметра.  
   
 5.  Вызывает SQLExecute или SQLExecDirect.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81304505"
   
 6.  Вызывает метод SQLParamData еще раз. Если между столбцами возвращающего табличное значение параметра находятся какие-либо параметры обработки данных, они будут идентифицированы по значению *валуептрптр* , возвращаемому параметром метод SQLParamData. Когда все значения столбцов доступны, метод SQLParamData снова возвращает значение *параметервалуептр* для возвращающего табличное значения параметра, и приложение начинает снова запускаться.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46d4d6598a2a1c4f7c7bb7d8eca7ac3deb6962d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724929"
 ---
 # <a name="conversions-ole-db"></a>Преобразования (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этой статье описано, как выполнять преобразование между значениями типа **datetime** и **datetimeoffset**. Преобразования, описанные в этом разделе, либо уже предоставлены OLE DB, либо являются согласованным расширением OLE DB.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "81304416"
   
 -   Строки **DateTime** и **DateTimeOffset** имеют следующий формат:  
   
-     *гггг*-*mm*мм-*дд*[ *чч*:*мм*:*СС*[.* 9999999*] [± *чч*:*мм*]]  
+     *гггг* - *mm* - *дд*[ *чч*:*мм*:*СС*[.* 9999999*] [± *чч*:*мм*]]  
   
 -   Формат строк типа **time**:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81304416"
   
 -   Строка **date** имеет такой формат:  
   
-     *гггг*-*mm*мм-*дд*  
+     *гггг* - *mm* - *дд*  
   
 > [!NOTE]  
 >  Предыдущие версии собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и SQLOLEDB реализовали преобразования OLE в случаях, когда стандартные преобразования возвращали ошибку. В результате некоторые преобразования, проводимые собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий, отличаются от спецификации OLE DB.  
@@ -71,7 +71,7 @@ ms.locfileid: "81304416"
  [Преобразования, выполняемые при передаче от сервера к клиенту](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-server-to-client.md)  
  Описывает преобразования даты-времени, проводимые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с помощью собственного клиента OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

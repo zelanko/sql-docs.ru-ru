@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c757e46f861d6652b3c8c151c3e002dba13e84ef
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 9fa783dfb2ac1d7e3cbca735c9f2a2cbca19dbda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720024"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Функции со строковыми значениями — upper-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Эта функция преобразует каждый символ в *$arg* в его эквивалент в верхнем регистре. В двоичном преобразовании регистра Microsoft Windows для кодовых точек Юникода указано, как символы преобразуются в верхний регистр. Этот стандарт отличается от сопоставления для стандарта кодовых точек Юникода.  
   
@@ -42,7 +42,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |Термин|Определение|  
 |*$arg*|Строковое значение для преобразования в верхний регистр.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
@@ -119,7 +119,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

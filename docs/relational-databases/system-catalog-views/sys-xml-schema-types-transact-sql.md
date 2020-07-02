@@ -1,5 +1,5 @@
 ---
-title: sys. xml_schema_types (Transact-SQL) | Документация Майкрософт
+title: sys.xml_schema_types (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,27 +19,27 @@ helpviewer_keywords:
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 356e73e2b90d059117cadef436bcea27498c9871
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04bf8e407315c98d6db6583e1403e939a9489aea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720385"
 ---
 # <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строку на каждый компонент схемы XML, являющийся типом **Symbol_space** **T**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<наследуемые столбцы>**||Наследует столбцы из [sys. xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<inherited columns>**||Наследует столбцы от [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Это абстрактный тип. Все экземпляры элемента этого типа должны использовать **xsi: Type** для обозначения производного типа, который не является абстрактным.<br /><br /> 0 = Это неабстрактный тип. (по умолчанию).|  
 |**allows_mixed_content**|**bit**|1 = Разрешено смешанное содержимое.<br /><br /> 0 = Смешанное содержимое не допускается (по умолчанию).|  
-|**is_extension_blocked**|**bit**|1 = замена с расширением типа блокируется в экземплярах, если атрибуту Block в определении **complexType** или атрибуту **blockDefault** схемы-предка \<> элемента сведений о элементе задано значение "Extension" или "#all".<br /><br /> 0 = Замещение с расширением не блокировано.|  
-|**is_restriction_blocked**|**bit**|1 = замена с ограничением типа блокируется в экземплярах, если атрибуту Block в определении **complexType** или атрибуту **blockDefault** схемы предка \<> элемент сведений об элементе задано значение "restriction" или "#all".<br /><br /> 0 = замещение с ограничением не блокировано (по умолчанию).|  
-|**is_final_extension**|**bit**|1 = наследование по расширению типа блокируется, если атрибуту Final в определении **complexType** или атрибуту **finalDefault** схемы предка \<> элемент сведений о элементе задано значение "Extension" или "#all".<br /><br /> 0 = расширение разрешено (по умолчанию).|  
-|**is_final_restriction**|**bit**|1 = производное ограничение типа блокируется, если атрибуту Final в определении Simple или **complexType** или атрибутом **finalDefault** схемы предка> элемент \< сведений об элементе задано значение "ограничение" или "#all".<br /><br /> 0 = ограничение разрешено (по умолчанию).|  
+|**is_extension_blocked**|**bit**|1 = замена с расширением типа блокируется в экземплярах, если атрибуту Block в определении **complexType** или атрибуту **blockDefault** элемента-предка \<schema> задано значение "Extension" или "#all".<br /><br /> 0 = Замещение с расширением не блокировано.|  
+|**is_restriction_blocked**|**bit**|1 = замена с ограничением типа блокируется в экземплярах, если атрибуту Block в определении **complexType** или атрибуту **blockDefault** элемента-предка \<schema> задано значение "restriction" или "#all".<br /><br /> 0 = замещение с ограничением не блокировано (по умолчанию).|  
+|**is_final_extension**|**bit**|1 = наследование по расширению типа блокируется, если атрибуту Final в определении **complexType** или атрибуту **finalDefault** элемента-предка \<schema> задано значение "Extension" или "#all".<br /><br /> 0 = расширение разрешено (по умолчанию).|  
+|**is_final_restriction**|**bit**|1 = производное ограничение типа блокируется, если атрибуту Final в определении Simple или **complexType** или атрибуту **finalDefault** элемента-предка \<schema> задано значение "restriction" или "#all".<br /><br /> 0 = ограничение разрешено (по умолчанию).|  
 |**is_final_list_member**|**bit**|1 = этот простой тип не может быть использован в качестве типа элемента списка.<br /><br /> 0 = этот тип является составным, либо он может быть использован в качестве типа элемента списка (по умолчанию).|  
 |**is_final_union_member**|**bit**|1 = этот простой тип не может быть использован в качестве типа члена объединения.<br /><br /> 0 = сложный тип. или он может быть использован как тип члена объединения. (по умолчанию).|  
   

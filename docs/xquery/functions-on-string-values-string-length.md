@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689250"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720053"
 ---
 # <a name="functions-on-string-values---string-length"></a>Функции со строковыми значениями — string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает длину строки в символах.  
   
@@ -40,7 +40,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Строка источника, длина которой подлежит вычислению.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если значение *$arg* является пустой последовательностью, возвращается значение **xs: integer** , равное 0.  
   
  Поведение суррогатных пар в функциях XQuery зависит от уровня совместимости базы данных. Если уровень совместимости 110 или выше, каждая суррогатная пара рассматривается как один символ. При более низких уровнях совместимости они рассматриваются как два символа. Дополнительные сведения см. в разделе [уровень совместимости ALTER database &#40;&#41;Transact-SQL](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) , а [Параметры сортировки и поддержка Юникода](../relational-databases/collations/collation-and-unicode-support.md).  
@@ -61,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>А) Использование функции string-length() языка XQuery для получения продуктов с длинными сводными описаниями  
+### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Использование функции string-length() языка XQuery для получения продуктов с длинными сводными описаниями  
  Для продуктов, сводное описание которых превышает 50 символов, следующий запрос получает идентификатор продукта, длину сводного описания и саму сводку, `Summary` элемент> <.  
   
 ```  

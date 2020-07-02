@@ -20,15 +20,15 @@ ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17c8ab2013a1ad36d298039c5706bd518765dd3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c6c0fcffae318e13025d63c7a244f44de8689f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831976"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724669"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Содержит по одной строке для каждого события, для которого срабатывает триггер или уведомление о событии. Эти события представляют типы событий, которые указываются при создании триггера или уведомления о событии с помощью команды [создать триггер](../../t-sql/statements/create-trigger-transact-sql.md) или [создать уведомление о событии](../../t-sql/statements/create-event-notification-transact-sql.md).  
   

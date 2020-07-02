@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720273"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает имена и значения для указанного набора свойств пространственного индекса **Geometry** . Можно задать возврат основного набора свойств или всех свойств индекса.  
   
@@ -53,11 +53,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом роли **Public** . Необходимо разрешение READ ACCESS на сервере и объекте.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Свойства, которые содержат значения NULL, не включаются в набор возвращаемых значений XML.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется `sp_help_spatial_geometry_index_xml` для исследования пространственного индекса **SIndx_SpatialTable_geometry_col2** , определенного в таблице **geometry_col** для данного примера запроса в ** \@QS**. В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
+ В следующем примере используется `sp_help_spatial_geometry_index_xml` для исследования пространственного индекса **SIndx_SpatialTable_geometry_col2** , определенного в таблице **geometry_col** для данного примера запроса в ** \@ QS**. В этом примере основные свойства указанного индекса возвращаются в XML-фрагменте, в котором отображаются имя и значение выбранных свойств.  
   
  Затем в результирующем наборе выполняется [запрос XQuery](../../xquery/xquery-basics.md) , возвращающий определенное свойство.  
   
@@ -73,7 +73,7 @@ SELECT @x.value('(/Primary_Filter_Efficiency/text())[1]', 'float');
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Аргументы и свойства хранимых процедур пространственного индекса](../../relational-databases/system-stored-procedures/spatial-index-stored-procedures-arguments-and-properties.md)   
  [Хранимые процедуры пространственного индекса](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   

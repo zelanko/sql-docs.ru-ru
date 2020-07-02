@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee01092f-9caf-4e88-888b-ec7b84223705
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e96326c97dde209f37104e66e562b66e96c8acd3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9fb4347ca545a695f2ab1f223f564ca152ba8d0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723052"
 ---
 # <a name="sp_upgrade_log_shipping-transact-sql"></a>sp_upgrade_log_shipping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Sp_upgrade_log_shipping хранимая процедура вызывается автоматически для обновления метаданных, относящихся к доставке журналов.  
   
@@ -55,8 +55,8 @@ sp_upgrade_log_shipping
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
-## <a name="see-also"></a>См. также  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

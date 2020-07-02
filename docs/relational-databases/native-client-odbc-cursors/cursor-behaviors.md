@@ -21,15 +21,15 @@ ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e3400e52cd0b7574c07a3cf813b4cbca317df2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7996ab9b83c48940d11751bfcfd3b6f65afe417c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719798"
 ---
 # <a name="cursor-behaviors"></a>Режимы работы курсоров
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   ODBC поддерживает параметры ISO, предназначенные для указания поведения курсоров, задавая их прокручиваемость и чувствительность. Эти поведения задаются путем установки параметров SQL_ATTR_CURSOR_SCROLLABLE и SQL_ATTR_CURSOR_SENSITIVITY для вызова [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализует эти параметры, запрашивая серверные курсоры со следующими характеристиками.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "81305498"
 ## <a name="sensitivity"></a>Чувствительность  
  Если параметр SQL_ATTR_CURSOR_SENSITIVITY имеет значение SQL_SENSITIVE, курсор отражает изменения данных, произведенные текущим пользователем или зафиксированные другими пользователями. Если параметр SQL_ATTR_CURSOR_SENSITIVITY имеет значение SQL_INSENSITIVE, курсор не отражает изменения данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  Использование [свойств курсора](properties/cursor-properties.md) [(ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
   
   

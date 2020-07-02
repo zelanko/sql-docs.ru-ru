@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724656"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Возвращает по одной строке для каждого набора строк, который отслеживает внутренние данные для индексов columnstore на дисковых таблицах. Эти наборы строк являются внутренними индексами columnstore и отслеживанием удаленных строк, группы строк сопоставлений и разностного хранилища групп строк. Они отписывают данные для каждой секции таблицы. Каждая таблица имеет по крайней мере одну секцию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает наборы строк каждый раз при пересборке индекса columnstore.   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304819"
 |optimize_for_sequential_key|**bit**|1 = для секции включена оптимизация вставки последней страницы.<br><br>0 = значение по умолчанию. Для секции включена оптимизация вставки последней страницы.|
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо членство в роли `public`.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо членство в роли `public`. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Общие замечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает новые внутренние индексы columnstore каждый раз при создании или пересборке индекса columnstore.  
@@ -59,7 +59,7 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу сервера SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

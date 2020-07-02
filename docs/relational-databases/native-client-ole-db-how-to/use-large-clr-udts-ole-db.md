@@ -11,15 +11,15 @@ ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e9d49440e52d54db9865a96f3f3b8e6fb4fa09da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5cdbc5f5b41ef76844d376757f1d91e10be8614
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724856"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Использование определяемых пользователем типов больших данных CLR (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом образце показывается выборка строк с большими, определяемыми пользователем типами из результирующего набора. Дополнительные сведения об определяемых пользователем типах данных CLR см. в [этой статье](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). Данный образец работает с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздней версией.  
   

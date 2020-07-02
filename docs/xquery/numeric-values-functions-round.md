@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 320b572f-bd5b-4055-95a6-dec5718c0041
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53686410ff6dc36af5cc50a0210e33e9a1fb6ad1
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 7433ab9f3bd6bcadda324db1a5907f4d83040575
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881488"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720010"
 ---
 # <a name="numeric-values-functions---round"></a>Функции с числовыми значениями — round
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает ближайшее к аргументу целое значение. Если таких значений несколько, то возвращается набольшее из них. Пример:  
   
@@ -47,7 +47,7 @@ fn:round ( $arg as numeric?) as numeric?
  *$arg*  
  Число, к которому применяется функция.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если тип *$arg* является одним из трех числовых базовых типов, **xs: float**, **xs: double**или **xs: decimal**, возвращаемый тип совпадает с типом *$arg* . Если тип *$arg* является типом, производным от одного из числовых типов, то возвращаемым типом является базовый числовой тип.  
   
  Если в качестве входных данных для функций **fn: Floor**, **fn: Ceiling**или **fn: Round** задано значение **xdt: untypedAtomic**, нетипизированные данные, то неявно приводится к типу **xs: Double**.  
@@ -66,7 +66,7 @@ fn:round ( $arg as numeric?) as numeric?
   
 -   Функция **Round ()** для значений xs: Double и xs: float в диапазоне от-0,5 E0 до-0e0 сопоставлена с 0e0 вместо-0e0.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция Floor &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
  [Функция CEILING &#40;XQuery&#41;](../xquery/numeric-values-functions-ceiling.md)  
   

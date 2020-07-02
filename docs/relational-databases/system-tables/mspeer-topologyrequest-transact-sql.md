@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 940bd63d1d0cfb5abbc0081deee7cd57bfd3c5a4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2b929b9d01468a18175aa99470f425418bfcfe89
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725454"
 ---
 # <a name="mspeer_topologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Используется в одноранговой репликации для отслеживания запросов состояния топологии для публикации. Эта таблица хранится в базе данных публикации.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|id|**int**|Идентифицирует запрос состояния топологии. Столбец request_id в [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) использует это значение.|  
+|идентификатор|**int**|Идентифицирует запрос состояния топологии. Столбец request_id в [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) использует это значение.|  
 |публикация|**sysname**|Имя публикации, из которой был сформирован запрос состояния топологии.|  
 |sent_date|**datetime**|Дата и время выдачи запроса состояния топологии.|  
   

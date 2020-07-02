@@ -16,15 +16,15 @@ ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32000dbe2cd4a01b544bd11f6c5b282933dc013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d03eea8744bce4176551264b10cf2b90507b3473
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724844"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Создает привязку между переменными программы и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -42,7 +42,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Метод **BCPColFmt** используется для создания привязки между полями файла данных BCP и столбцами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В качестве параметров он принимает длину, тип, признак конца и длину префикса столбца, а также задает каждое из этих свойств для отдельных полей.  
   
  Если пользователь работает в интерактивном режиме, этот метод вызывается дважды для каждого столбца: один раз, чтобы задать формат столбца согласно значениям по умолчанию (которые соответствуют типу столбца на сервере), а второй раз, чтобы задать формат согласно типу столбца, выбранному клиентом в интерактивном режиме.  
@@ -128,7 +128,7 @@ HRESULT BCPColFmt(
  E_OUTOFMEMORY  
  Ошибка, связанная с нехваткой памяти.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

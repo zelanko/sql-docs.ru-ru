@@ -17,24 +17,24 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965d8530b38aad7d01d9735e603eb3c3a7be0876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0e7d5c15bd0ff4a20b4b8fe93719c573e03e2cd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820999"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722875"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица **MSsub_identity_range** предоставляет поддержку управления диапазонами идентификаторов для подписок. Эта таблица хранится в базе данных подписки.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**objid**|**int**|Идентификатор таблицы, содержащей столбец идентификаторов, управляемый репликацией.|  
-|**разнообраз**|**bigint**|Определяет размер интервала последовательных значений идентичности, которые могут быть назначены на подписчике при настройке.|  
+|**range**|**bigint**|Определяет размер интервала последовательных значений идентичности, которые могут быть назначены на подписчике при настройке.|  
 |**last_seed**|**bigint**|Нижняя граница текущего диапазона.|  
-|**значениями**|**int**|Процентное значение, определяющее, когда агентом распространителя выделяется новый диапазон идентификаторов. При использовании процента значений, указанных в *пороговом значении* , агент распространения создает новый диапазон идентификаторов.|  
+|**threshold**|**int**|Процентное значение, определяющее, когда агентом распространителя выделяется новый диапазон идентификаторов. При использовании процента значений, указанных в *пороговом значении* , агент распространения создает новый диапазон идентификаторов.|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

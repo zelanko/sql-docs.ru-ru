@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7003ce993893261d2381f11895ee4df2e6fef71b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ba9110c12249db334443af3744efd3cdb6125bee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725412"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого восстановленного файла, включая файлы, восстановленные косвенно по имени файловой группы. Эта таблица хранится в базе данных **msdb** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82834158"
 |**destination_phys_drive**|**nvarchar(260)**|Диск или секция, где был восстановлен файл. Может иметь значение NULL.<br /><br /> Когда база данных возвращается в моментальный снимок базы данных, это значение заполняется так же, как и в случае полного восстановления.|  
 |**destination_phys_name**|**nvarchar(260)**|Имя файла без указания сведений о диске или секции, где был восстановлен файл. Может иметь значение NULL.<br /><br /> Когда база данных возвращается в моментальный снимок базы данных, это значение заполняется так же, как и в случае полного восстановления.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  
   
 ## <a name="see-also"></a>См. также  

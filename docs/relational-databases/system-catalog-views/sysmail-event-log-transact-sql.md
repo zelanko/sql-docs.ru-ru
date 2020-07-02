@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e80d631e4470e04d0ab5ab7edf6883350335586e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824924"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724641"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого из сообщений Windows или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возвращаемых компонентом Database Mail  (Сообщение в этом контексте означает сообщение об ошибке, а не сообщение электронной почты.) Настройте параметр **уровня ведения журнала** с помощью диалогового окна **Настройка системных параметров** мастера настройки Database Mail или хранимой процедуры [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) , чтобы определить возвращаемые сообщения.  
   

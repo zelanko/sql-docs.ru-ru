@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720042"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Функции, связанные с QName — expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает значение типа xs: QName с URI пространства имен, указанным в *$paramURI* , и локальным именем, указанным в *$paramLocal*. Если *$paramURI* является пустой строкой или пустой последовательностью, она не представляет пространство имен.  
   
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Часть локального имени QName.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Следующее относится к **расширенной функции-QName ()** :  
   
 -   Если указанное значение *$paramLocal* не находится в правильной лексической форме для типа xs: NCName, возвращается пустая последовательность, представляющая динамическую ошибку.  
@@ -53,7 +53,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>А) Замещение значения узла типа QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>A. Замещение значения узла типа QName  
  Данный пример иллюстрирует изменение значения узла элемента типа QName. В примере выполняются следующие действия.  
   
 -   Создается коллекция XML-схем, которая определяет элемент типа QName.  
@@ -203,7 +203,7 @@ FROM T
 ### <a name="implementation-limitations"></a>Ограничения реализации  
  Существует одно ограничение: функция **расширенного параметра-QName ()** принимает в качестве второго аргумента пустую последовательность и возвращает пустое значение вместо возникновения ошибки времени выполнения, если второй аргумент неверен.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции, связанные с QName &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

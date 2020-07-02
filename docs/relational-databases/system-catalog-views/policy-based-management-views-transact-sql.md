@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1f6123c-669e-469b-ac9a-a464d78ad60c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 224d19231eae84658580e17666221d6b76d99f69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: aed4c953f7f9c14b899f034d58f74d2ceb22862a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720420"
 ---
 # <a name="policy-based-management-views-transact-sql"></a>Административные представления на основе политик (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Ниже перечислены представления, с помощью которых при управлении на основе политик выводятся сведения об используемых в управлении политиках, условиях, выражениях, группах и фильтрах. Эти представления находятся в базе данных msdb и принадлежат схеме dbo.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68018440"
 |[syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md)|[syspolicy_system_health_state](../../relational-databases/system-catalog-views/syspolicy-system-health-state-transact-sql.md)|  
 |[syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

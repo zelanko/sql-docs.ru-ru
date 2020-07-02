@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f016abf2113afef3e02f01fd9842b91b742d50a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c81ba685de223f213da150da0edb930385b84d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488479"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719922"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Допустимость значений NULL и трехзначная логика сравнения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Если вы знакомы с типами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данных, вы увидите схожую семантику и точность в пространстве имен **System. Data. SqlTypes** в. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Однако существуют определенные различия. В этом разделе описаны самые важные из них.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Если вы знакомы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типами данных, вы увидите схожую семантику и точность в пространстве имен **System. Data. SqlTypes** в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Однако существуют определенные различия. В этом разделе описаны самые важные из них.  
   
 ## <a name="null-values"></a>Значения NULL  
  Главное различие между типами данных среды CLR и типами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] заключается в том, что первые не допускают значений NULL, а вторые реализуют полную семантику NULL.  
@@ -37,15 +37,15 @@ ms.locfileid: "81488479"
  Пространство имен **System. Data. SqlTypes** вводит тип **SqlBoolean** для представления этой логики из трех значений. Сравнения любых **sqltypes** возвращают тип значения **SqlBoolean** . Неизвестное значение представлено значением NULL типа **SqlBoolean** . Для проверки значения типа **SqlBoolean** предоставляются свойства **IsTrue**, **IsFalse**и **IsNull** .  
   
 ## <a name="operations-functions-and-null-values"></a>Операции, функции и значения NULL  
- Все арифметические операторы (+,- \*,,/,%), битовые операторы (~, & и |) и большинство функций возвращают значение null, если любой из операндов или аргументов **sqltypes** имеет значение null. Свойство **IsNull** всегда возвращает значение true или false.  
+ Все арифметические операторы (+,-, \* ,/,%), битовые операторы (~, & и |) и большинство функций возвращают значение null, если любой из операндов или аргументов **sqltypes** имеет значение null. Свойство **IsNull** всегда возвращает значение true или false.  
   
 ## <a name="precision"></a>Точность  
- Максимальные значения типов данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] отличаются от максимальных значений числовых типов и типов decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, типы данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предполагают использование максимальной точности. Однако в CLR для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]среда **SqlDecimal** предоставляет такую же максимальную точность и масштаб и ту же семантику, что и тип данных Decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Максимальные значения типов данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] отличаются от максимальных значений числовых типов и типов decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, типы данных decimal в среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] предполагают использование максимальной точности. Однако в CLR для Среда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SqlDecimal** предоставляет такую же максимальную точность и масштаб и ту же семантику, что и тип данных Decimal в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="overflow-detection"></a>Обнаружение переполнений  
  В среде CLR платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] сложение двух очень больших чисел не может вызвать исключение. При этом если не использовался оператор проверки, возвращенный результат может «обернуться по кругу» и превратиться в отрицательное целое число. В **System. Data. SqlTypes**исключения вызываются для всех ошибок переполнения и потери точности, а ошибки деления на ноль.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных SQL Server в платформе .NET Framework](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

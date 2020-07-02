@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 72e124ad-a610-405a-8749-b2508068b348
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1a4414c944edd6518d3971e12d06be7b59e65598
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c230b6ac7ee56670ce3b74e588d63f05de242b2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725325"
 ---
 # <a name="servernetworkprotocolproperty-class"></a>Класс ServerNetworkProtocolProperty
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Класс [ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) представляет свойства сетевого протокола сервера.  
   
  При работе с классом [ServerNetworkProtocolProperty](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)могут быть выполнены следующие задачи.  
@@ -40,7 +40,7 @@ ms.locfileid: "73659343"
   
 -   Установка флагов для текущего свойства.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

@@ -14,15 +14,15 @@ ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ebabedb2c801881a4dc908ead93515dc9119fc3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62951ec956282201ae2b61a82c6a72dcd2831307
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299618"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725139"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Обеспечение массового копирования данных из переменных приложения (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом примере показано, как использовать функции пакетного копирования для выполнения операций копирования данных из переменных программы в SQL Server с помощью **bcp_bind** и **bcp_sendrow**. (Код проверки ошибок исключен для упрощения примера.)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "81299618"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода [!INCLUDE[tsql](../../../includes/tsql-md.md)](), чтобы создать таблицы, которые будут использоваться в образце.  
+ Выполните первый [!INCLUDE[tsql](../../../includes/tsql-md.md)] листинг кода (), чтобы создать таблицы, которые будут использоваться в образце.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и odbcbcp.lib. При работе с программой MSBuild.exe сначала скопируйте файлы Bcpfmt.fmt и Bcpodbc.bcp из каталога проекта в тот каталог, где находится исполняемый файл, а затем вызовите этот исполняемый файл.  
   
- Выполните третий листинг кода [!INCLUDE[tsql](../../../includes/tsql-md.md)](), чтобы удалить таблицы, используемые образцом.  
+ Выполните третий [!INCLUDE[tsql](../../../includes/tsql-md.md)] листинг кода (), чтобы удалить таблицы, используемые образцом.  
   
 ```  
 // compile with: odbc32.lib odbcbcp.lib  
@@ -303,7 +303,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Массовое копирование из переменных приложения](../../../relational-databases/native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   

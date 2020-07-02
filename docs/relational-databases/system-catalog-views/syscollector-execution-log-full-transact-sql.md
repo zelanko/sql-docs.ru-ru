@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bd195499313eaa24afd12ab424ae3bf832841b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e01cc51b12d92fefbca760541d433fbf27bb0191
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824905"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724655"
 ---
 # <a name="syscollector_execution_log_full-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет сведения о наборе элементов сбора или пакете, если журнал выполнения заполнен.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82824905"
 |log_id|**bigint**|Определяет выполнение каждого набора элементов сбора. Используется для соединения этого представления с другими подробными журналами. Допускает значение NULL.|  
 |parent_log_id|**bigint**|Определяет родительский пакет или набор элементов сбора. Не допускает значение NULL. Идентификаторы соединяются в связь типа «родитель-потомок», что позволяет определить, какой пакет был запущен тем или иным набором сбора. Это представление группирует записи журнала по связям типа «родители-потомки» и делает отступ перед именами пакетов, чтобы была ясно видна цепочка вызовов.|  
 |name|**nvarchar(4000)**|Имя набора элементов сбора или пакета, который представляет эта запись журнала. Допускает значение NULL.|  
-|status|**smallint**|Указывает текущее состояние набора элементов сбора или пакета. Допускает значение NULL.<br /><br /> Возможны следующие значения.<br /><br /> 0 = запущен<br /><br /> 1 = завершен<br /><br /> 2 = ошибка|  
+|status|**smallint**|Указывает текущее состояние набора элементов сбора или пакета. Допускает значение NULL.<br /><br /> Доступны следующие значения:<br /><br /> 0 = запущен<br /><br /> 1 = завершен<br /><br /> 2 = ошибка|  
 |runtime_execution_mode|**smallint**|Указывает на род деятельности набора элементов сбора: сбор данных или их отправка. Допускает значение NULL.|  
 |start_time|**datetime**|Время, когда был задан набор элементов сбора или запущен пакет. Допускает значение NULL.|  
 |last_iteration_time|**datetime**|Для непрерывно выполняемых пакетов это время, когда пакет последний раз создал моментальный снимок. Допускает значение NULL.|  

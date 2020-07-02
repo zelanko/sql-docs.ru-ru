@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ef69c7a4b9c0284772204981e8d01c793a683e19
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ebf0d2071d0687535479d8899c6f7c9b0f6b1eec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720200"
 ---
 # <a name="sp_replmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает пороговые показатели, заданные для контролируемой публикации. Эта хранимая процедура, используемая для наблюдения за репликацией, выполняется на распространителе в базе данных распространителя.  
   
@@ -50,7 +50,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Тип публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Публикация транзакций.|  
 |**1**|Публикация моментальных снимков.|  
@@ -70,7 +70,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorhelppublicationthresholds** используется со всеми типами репликации.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f16db803-d8dc-45a5-8050-e8f4f41c04a8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 441d5649c7342773f7e977a8aafd7fced8ab60c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf92cace1565ce8e48cbb4855aac5a0baf02131b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73657941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722809"
 ---
 # <a name="instancename-property-serversettings-class"></a>Свойство InstanceName (класс ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Возвращает имя экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , к которому применяются параметры сервера.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  Возвращает имя экземпляра, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] к которому применяются параметры сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,9 +42,9 @@ object.InstanceName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

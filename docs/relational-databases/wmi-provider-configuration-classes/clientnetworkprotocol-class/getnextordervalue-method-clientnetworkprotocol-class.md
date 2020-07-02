@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1f9b9a8d69dad76d2ec1d6e38f7151238d0e91c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e7de3636f0d65bd9459ee1c54883f927d1dc92c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660749"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722835"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>Метод GetNextOrderValue (класс ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Выбирает следующий протокол в списке протоколов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,9 +42,9 @@ object.GetNextOrderValue()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)   
  [Настройка сетевых протоколов клиента и сетевых библиотек](https://technet.microsoft.com/library/ms181035.aspx)  
   

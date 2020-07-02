@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388108"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724761"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Использование заметок sql:identity и sql:guid
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Можно указать заметки **SQL: Identity** и **SQL: GUID** в схеме XSD на любом узле, сопоставленном со столбцом базы данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В то время как формат Диаграмма обновления поддерживает атрибуты **атрибута updg: at-identity** и **атрибута updg: GUID** , Формат DiffGram не имеет значение. Атрибут **атрибута updg: at-identity** определяет поведение при обновлении СТОЛБЦА типа Identity. Атрибут **атрибута updg: GUID** позволяет получить значение GUID из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использовать его в диаграмма обновления. Дополнительные сведения и рабочие образцы см. в статье [Вставка данных с помощью XML диаграмм обновления &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Можно указать заметки **SQL: Identity** и **SQL: GUID** в схеме XSD на любом узле, сопоставленном со столбцом базы данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В то время как формат Диаграмма обновления поддерживает атрибуты **атрибута updg: at-identity** и **атрибута updg: GUID** , Формат DiffGram не имеет значение. Атрибут **атрибута updg: at-identity** определяет поведение при обновлении СТОЛБЦА типа Identity. Атрибут **атрибута updg: GUID** позволяет получить значение GUID из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использовать его в диаграмма обновления. Дополнительные сведения и рабочие образцы см. в статье [Вставка данных с помощью XML диаграмм обновления &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Заметки **SQL: Identity** и **SQL: GUID** расширяют эту функцию на дельтами.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388108"
  Заметки **SQL: Identity** и **SQL: GUID** могут быть определены для сложного элемента содержимого.  
   
 ## <a name="sqlidentity-annotation"></a>Заметка sql:identity  
- Заметку **SQL: Identity** в схеме XSD можно указать на любом узле, который сопоставляется со столбцом базы данных типа Identity. Значение, заданное для этой заметки, определяет способ обновления столбца типа IDENTITY (либо с помощью значения, указанного в диаграмма обновления для изменения столбца, либо путем игнорирования значения, в этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]для этого столбца используется созданное значение).  
+ Заметку **SQL: Identity** в схеме XSD можно указать на любом узле, который сопоставляется со столбцом базы данных типа Identity. Значение, заданное для этой заметки, определяет способ обновления столбца типа IDENTITY (либо с помощью значения, указанного в диаграмма обновления для изменения столбца, либо путем игнорирования значения, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этом случае для этого столбца используется созданное значение).  
   
  Заметке **SQL: Identity** может быть присвоено два значения:  
   

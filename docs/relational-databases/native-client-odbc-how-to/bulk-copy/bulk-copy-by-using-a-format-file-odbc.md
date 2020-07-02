@@ -14,15 +14,15 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 46639c02c606ed317d0d0bfe94bcf0ae9734a62b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01221bcb23dea7dc78777620fe580bcf0e1287c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725147"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Выполнение массового копирования при использовании файла форматирования (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом образце демонстрируется использование функции ODBC bcp_init с файлом форматирования.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81299624"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода [!INCLUDE[tsql](../../../includes/tsql-md.md)](), чтобы создать таблицу, которую будет использовать образец.  
+ Выполните первый [!INCLUDE[tsql](../../../includes/tsql-md.md)] листинг кода (), чтобы создать таблицу, которую будет использовать образец.  
   
  Скопируйте второй листинг кода и вставьте его в файл Bcpfmt.fmt. Каждый столбец в таблице отделен символом табуляции.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "81299624"
   
  Скомпилируйте четвертый листинг кода (C++) с библиотеками odbc32.lib и odbcbcp.lib. При работе с программой MSBuild.exe сначала скопируйте файлы Bcpfmt.fmt и Bcpodbc.bcp из каталога проекта в тот каталог, где находится исполняемый файл, а затем вызовите этот исполняемый файл.  
   
- Выполните Пятый листинг кода [!INCLUDE[tsql](../../../includes/tsql-md.md)](), чтобы удалить таблицу, используемую образцом.  
+ Выполните пятый [!INCLUDE[tsql](../../../includes/tsql-md.md)] листинг кода (), чтобы удалить таблицу, используемую образцом.  
   
 ```  
 use AdventureWorks  
@@ -187,7 +187,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Использование файлов данных и файлов форматирования](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   

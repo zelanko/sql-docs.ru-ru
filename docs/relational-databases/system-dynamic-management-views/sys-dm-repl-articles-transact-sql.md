@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e102411819a28e5798779a19c6f12f57b80fdd35
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68c8f086cfd7482820b5f1cd4728620cbfd0855
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833719"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724601"
 ---
 # <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает информацию об объектах базы данных, опубликованных как статьи в текущей топологии репликации.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82833719"
 ## <a name="permissions"></a>Разрешения  
  Для вызова **dm_repl_articles**требуется разрешение на просмотр состояния базы данных публикации.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
 ## <a name="see-also"></a>См. также  

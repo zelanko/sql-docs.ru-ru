@@ -18,15 +18,15 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723061"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Выполняется `UPDATE STATISTICS` для всех определяемых пользователем и внутренних таблиц в текущей базе данных.  
   
@@ -46,7 +46,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Аргументы  
 `[ @resample = ] 'resample'`Указывает, что **sp_updatestats** будет использовать параметр ресамплинг инструкции [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Если параметр **"ресамплинг"** не указан, **sp_updatestats** обновляет статистику с использованием выборки по умолчанию. **ресамплинг** имеет тип **varchar (8)** со ЗНАЧЕНИЕМ по умолчанию No.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_updatestats** выполняется `UPDATE STATISTICS` путем указания `ALL` ключевого слова для всех определяемых пользователем и внутренних таблиц в базе данных. sp_updatestats отображает сообщения, указывающие ход выполнения. По завершении обновления выдается отчет о том, что обновление статистики произведено для всех таблиц.  
   
 **sp_updatestats** обновляет статистику отключенных некластеризованных индексов и не обновляет статистику отключенных кластеризованных индексов.  
@@ -73,7 +73,7 @@ EXEC sp_updatestats;
 ## <a name="automatic-index-and-statistics-management"></a>Автоматическое управление индексами и статистикой
 Используйте такие решения, как [Адаптивная дефрагментация индексов](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), чтобы автоматически управлять дефрагментацией индексов и обновлениями статистики для одной базы данных или нескольких. Эта процедура автоматически выбирает, следует ли перестроить или реорганизовать индекс, сверяясь с уровнем фрагментации и другими параметрами, и обновляет статистику на основе линейных пороговых значений.
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Создание статистики &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   

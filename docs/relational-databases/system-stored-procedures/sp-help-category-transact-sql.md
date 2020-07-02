@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827777"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724583"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает сведения об указанных классах заданий, предупреждений или операторов.  
    
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @class = ] 'class'`Класс, для которого запрашиваются сведения. *класс* имеет тип **varchar (8)** и значение по умолчанию **Job**. *класс* может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**ДОЛЖНО**|Выдает сведения о категории заданий.|  
 |**ПОЛУЧАЕТЕ**|Выдает сведения о категории предупреждений.|  
@@ -52,9 +52,9 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Тип категории, для которой запрашиваются сведения. *Type имеет тип* **varchar (12)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
-|**LOCAL**|Категория локальных заданий.|  
+|**Языковые**|Категория локальных заданий.|  
 |**MULTI -SERVER**|Категория многосерверных заданий.|  
 |**NONE**|Категория для класса, отличного от **Job**.|  
   

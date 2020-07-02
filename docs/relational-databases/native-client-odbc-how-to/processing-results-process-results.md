@@ -13,15 +13,15 @@ ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de9adbcc2d89895a4162b5c7f7b2921f024d03e7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3c9fcbe8d7a1d6c5f2ed7d8cfb8eb1005f3969ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725017"
 ---
 # <a name="processing-results---process-results"></a>Результаты обработки — обработка результатов
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 Обработка результатов в приложении ODBC заключается в том, чтобы сначала определить характеристики результирующего набора, а затем извлечь данные в переменные программы с помощью [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) или [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "81300409"
 > [!NOTE]  
 >  Чтобы отменить обработку результирующего набора прежде, чем функция [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) вернет значение SQL_NO_DATA, вызовите функцию [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Получение сведений о результирующем наборе &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/processing-results-retrieve-result-set-information.md)   
   
   

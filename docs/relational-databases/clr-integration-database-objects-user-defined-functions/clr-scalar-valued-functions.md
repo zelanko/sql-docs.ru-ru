@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e69f48867cc5dd66d72d30f6fa72b2d44d5fc54c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719896"
 ---
 # <a name="clr-scalar-valued-functions"></a>Скалярные функции среды CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Скалярная функция возвращает единственное значение, например строку, целочисленное или битовое значение. В управляемом коде можно создавать скалярные определяемые пользователем функции, используя любой язык программирования .NET Framework. Эти функции доступны для [!INCLUDE[tsql](../../includes/tsql-md.md)] и другого управляемого кода. Сведения о преимуществах интеграции со средой CLR и выборе между управляемым кодом и [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Обзор интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Требования к скалярным функциям среды CLR  
@@ -151,7 +151,7 @@ GO
   
  Обратите внимание, что имя функции в [!INCLUDE[tsql](../../includes/tsql-md.md)] не обязательно должно соответствовать имени общего статического целевого метода.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление данных параметров среды CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
  [Общие сведения о настраиваемых атрибутах интеграции со средой CLR](https://msdn.microsoft.com/library/ecf5c097-0972-48e2-a9c0-b695b7dd2820)   
  [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md)   

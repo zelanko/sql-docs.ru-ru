@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19ccc16b-0afe-4e28-a7ac-d5ff25b873b6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d049434b53fee9f90d02a35e9e0284a4a266812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33934b29bc0943272f867ba49b66c575275201f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722847"
 ---
 # <a name="clientnetworkprotocol-class"></a>Класс ClientNetworkProtocol
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Класс [ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md) представляет сетевые протоколы, установленные на экземпляре клиента, позволяющем связываться с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по сети.  
   
  Работая с классом [ClientNetworkProtocol](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/clientnetworkprotocol-class.md), можно выполнять следующие задачи:  

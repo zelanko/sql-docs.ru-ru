@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298347"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725115"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Создание файла форматирования массового копирования (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В этом образце показано использование функций массового копирования для создания как файла данных, так и файла форматирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298347"
   
  Этот образец соединяется с установленным на компьютер экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Чтобы соединиться с именованным экземпляром, измените определение источника данных ODBC, указав экземпляр в следующем формате: Сервер\ИменованныйЭкземпляр. По умолчанию [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] устанавливается на именованный экземпляр.  
   
- Выполните первый листинг кода [!INCLUDE[tsql](../../../includes/tsql-md.md)](), чтобы создать таблицу, которую будет использовать образец.  
+ Выполните первый [!INCLUDE[tsql](../../../includes/tsql-md.md)] листинг кода (), чтобы создать таблицу, которую будет использовать образец.  
   
  Скомпилируйте второй листинг кода (C++) с библиотеками odbc32.lib и odbcbcp.lib.  
   
- Выполните третий листинг кода [!INCLUDE[tsql](../../../includes/tsql-md.md)](), чтобы удалить таблицу, используемую образцом.  
+ Выполните третий [!INCLUDE[tsql](../../../includes/tsql-md.md)] листинг кода (), чтобы удалить таблицу, используемую образцом.  
   
 ```  
 use AdventureWorks  
@@ -214,7 +214,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции по групповому копированию с помощью драйвера ODBC SQL Server &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Использование файлов данных и файлов форматирования](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
