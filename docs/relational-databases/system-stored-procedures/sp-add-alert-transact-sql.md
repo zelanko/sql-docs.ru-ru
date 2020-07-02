@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e917afd75495ed2e6c2506bc0c012d4bfa7a8e4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71174259"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727221"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Создает предупреждение.  
   
@@ -53,14 +53,14 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @name = ] 'name'`Имя предупреждения. Имя появляется в сообщении электронной почты или пейджера, отправленном в ответ на предупреждение. Он должен быть уникальным и может содержать символ процента (**%**). Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @name = ] 'name'`Имя предупреждения. Имя появляется в сообщении электронной почты или пейджера, отправленном в ответ на предупреждение. Он должен быть уникальным и может содержать символ процента ( **%** ). Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 `[ @message_id = ] message_id`Номер ошибки сообщения, определяющего оповещение. (Обычно это соответствует номеру ошибки в таблице **sysmessages** .) *message_id* имеет **тип int**и значение по умолчанию **0**. Если для определения предупреждения используется *серьезность* , *message_id* должны быть равны **0** или null.  
   
 > [!NOTE]  
 >  Отправка предупреждений может быть вызвана только ошибками **sysmessages** , записанными в журнал приложений Microsoft Windows.  
   
-`[ @severity = ] severity`Степень серьезности (от **1** до **25**), определяющая предупреждение. Все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщения, хранящиеся в таблице **sysmessages** , отправленной в журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows с указанной степенью серьезности, приводят к отправке оповещения. *уровень серьезности* — **int**и значение по умолчанию 0. Если для определения предупреждения используется *message_id* , *уровень серьезности* должен быть **равен 0**.  
+`[ @severity = ] severity`Степень серьезности (от **1** до **25**), определяющая предупреждение. Все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщения, хранящиеся в таблице **sysmessages** , отправленной в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows с указанной степенью серьезности, приводят к отправке оповещения. *уровень серьезности* — **int**и значение по умолчанию 0. Если для определения предупреждения используется *message_id* , *уровень серьезности* должен быть **равен 0**.  
   
 `[ @enabled = ] enabled`Указывает текущее состояние предупреждения. *Enabled* имеет тип **tinyint**и значение по умолчанию 1 (включено). Если значение **равно 0**, предупреждение не включено и не срабатывает.  
   
@@ -77,18 +77,18 @@ sp_add_alert [ @name = ] 'name'
 `[ @include_event_description_in = ] include_event_description_in`Указывает, следует ли включать описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки как часть сообщения уведомления. *include_event_description_in*имеет тип **tinyint**, значение по умолчанию — **5** (электронная почта и **net send**) и может иметь одно или несколько из этих значений в сочетании с логическим оператором **or** .  
   
 > [!IMPORTANT]
->  Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
+>  Параметры пейджера и **команды net send** будут удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Старайтесь не использовать эти функции в новых разработках и предусмотрите соответствующие изменения в приложениях, которые используют их в настоящее время.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**0**|None|  
+|**0**|Отсутствуют|  
 |**1**|электронная почта;|  
 |**2**|Пейджер|  
 |**4**|**команда net send.**|  
   
 `[ @database_name = ] 'database'`База данных, в которой должна произойти ошибка для срабатывания предупреждения. Если *база данных*не указана, предупреждение срабатывает независимо от того, где произошла ошибка. *база данных* имеет тип **sysname**. Символы, заключенные в квадратные скобки ([ ]), являются недопустимыми. Значение по умолчанию — NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'`Последовательность символов, которая должна быть похожа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] описание ошибки. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword_pattern* имеет тип **nvarchar (100)** и значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'`Последовательность символов, которая [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть похожа на описание ошибки. Могут использоваться символы-шаблоны выражений [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE. *event_description_keyword_pattern* имеет тип **nvarchar (100)** и значение по умолчанию NULL. Этот параметр полезен для фильтрации имен объектов (например, **% customer_table%**).  
   
 `[ @job_id = ] job_id`Идентификационный номер задания, выполняемого в ответ на это предупреждение. *job_id* имеет тип **uniqueidentifier**и значение по умолчанию NULL.  
   
@@ -97,7 +97,7 @@ sp_add_alert [ @name = ] 'name'
 > [!NOTE]  
 >  Необходимо указать либо *job_id* , либо *job_name* , но нельзя указать оба значения.  
   
-`[ @raise_snmp_trap = ] raise_snmp_trap`Не реализовано [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в версии 7,0. *raise_snmp_trap* имеет тип **tinyint**и значение по умолчанию 0.  
+`[ @raise_snmp_trap = ] raise_snmp_trap`Не реализовано в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7,0. *raise_snmp_trap* имеет тип **tinyint**и значение по умолчанию 0.  
   
 `[ @performance_condition = ] 'performance_condition'`— Это значение, выраженное в формате "*итемкомпараторвалуе*". *performance_condition* имеет тип **nvarchar (512)** со ЗНАЧЕНИЕМ по умолчанию NULL и состоит из этих элементов.  
   
@@ -166,13 +166,13 @@ EXEC dbo.sp_add_alert
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_delete_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys. sysperfinfo &#40;&#41;Transact-SQL](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [sys.sysперфинфо &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

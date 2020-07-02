@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c212c587efbf32067d575f488416256f35312f2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c59a7c87c2252497a8a7865c179939a601039157
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832644"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733185"
 ---
 # <a name="sp_helpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает имена и атрибуты файловых групп, связанных с текущей базой данных.  
   
@@ -58,7 +58,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Логическое имя файла в файловой группе.|  
 |**ИД**|**smallint**|Числовой идентификатор файла.|  
-|**файлов**|**nchar (260)**|Физическое имя, включающее путь к каталогу.|  
+|**filename**|**nchar (260)**|Физическое имя, включающее путь к каталогу.|  
 |**size**|**nvarchar (15)**|Размер файла в килобайтах.|  
 |**MAXSIZE**|**nvarchar (15)**|Максимальный размер файла.<br /><br /> Максимальный размер, до которого может вырасти файл. Значение UNLIMITED в этом поле означает, что файл может расти, пока диск не будет заполнен.|  
 |**growth**|**nvarchar (15)**|Значение прироста размера файла. Параметр задает объем пространства, добавляемого к файлу каждый раз, когда требуется дополнительное пространство.<br /><br /> 0 = файл имеет фиксированный размер и не может расти.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: ad25db1aa5a10039bc80766b30e1d2ba478df123
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730978"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Функции XQuery для типа данных xml
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе и его подразделах описываются функции, которые можно использовать при указании XQuery для типа данных **XML** . Спецификации W3C см. в разделе [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
@@ -49,7 +49,7 @@ ms.locfileid: "84305745"
 ||[Функция local-name (XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[Функция namespace-uri (XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
 |[Функции контекста](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
-||[разместить](../xquery/context-functions-position-xquery.md)|  
+||[position](../xquery/context-functions-position-xquery.md)|  
 |[Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[Функция id (XQuery)](../xquery/functions-on-sequences-id.md)|  
@@ -69,7 +69,7 @@ ms.locfileid: "84305745"
 |[Функции расширения запросов XQuery в SQL Server](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)|[функция SQL: column () (XQuery)](../xquery/xquery-extension-functions-sql-column.md)|  
 ||[функция sql:variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [методов типа данных xml](../t-sql/xml/xml-data-type-methods.md)   
  [Справочник по языку XQuery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Данные XML (SQL Server)](../relational-databases/xml/xml-data-sql-server.md)  

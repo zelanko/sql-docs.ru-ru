@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e870c1411382fc38494a899fa3621c80342c1a8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059226"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730084"
 ---
 # <a name="sysfn_trace_gettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает содержимое одного или нескольких файлов трассировки в табличном формате.  
   
@@ -49,7 +49,7 @@ fn_trace_gettable ( 'filename' , number_files )
  *number_files*  
  Указывает число считываемых файлов продолжения. Это число включает исходный файл, указанный в поле *filename*. *number_files* является типом **int**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если *number_files* указан в качестве **значения по умолчанию**, **fn_trace_gettable** считывает все файлы продолжения, пока не достигнет конца трассировки. **fn_trace_gettable** возвращает таблицу со всеми столбцами, допустимыми для указанной трассировки. Дополнительные сведения см. в разделе [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
  Имейте в виду, что функция fn_trace_gettable не будет загружать файлы продолжения (если этот параметр указан с помощью аргумента *number_files* ), где исходное имя файла трассировки заканчивается символом подчеркивания и числовым значением. (Это не относится к символам подчеркивания и номеру, которые автоматически добавляются при пересчете файла.) В качестве обходного решения можно переименовать файлы трассировки, чтобы удалить символы подчеркивания в исходном имени файла. Например, если исходный файл называется **Trace_Oct_5. trc** , а файл продолжения имеет имя **Trace_Oct_5_1. trc**, можно переименовать файлы в **TraceOct5. trc** и **TraceOct5_1. trc**.  
@@ -72,7 +72,7 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-### <a name="b-using-fn_trace_gettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>Б) Получение с помощью функции fn_trace_gettable таблицы со столбцом IDENTITY, которая может быть загружена в таблицу SQL Server  
+### <a name="b-using-fn_trace_gettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>Б. Получение с помощью функции fn_trace_gettable таблицы со столбцом IDENTITY, которая может быть загружена в таблицу SQL Server  
  Следующий пример вызывает функцию из инструкции `SELECT...INTO` и возвращает таблицу со столбцом `IDENTITY`, которая может быть загружена в таблицу `temp_trc`.  
   
 ```  

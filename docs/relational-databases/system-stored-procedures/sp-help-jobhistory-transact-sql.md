@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2229da0158f746928be16ac190ecae2e36726da5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730048"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет сведения о заданиях серверов в многосерверном административном домене.  
   
@@ -75,7 +75,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`Состояние выполнения задания. *run_status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Ошибка|  
 |**1**|Успешно|  
@@ -116,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Оператор, которому было отправлено сетевое сообщение относительно этого задания (NULL для журнала этапов).|  
 |**operator_paged**|**nvarchar (20)**|Оператор, которому было отправлено сообщение на пейджер относительно этого задания (NULL для журнала этапов).|  
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
-|**сервером**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
+|**server**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда имеет (**Local**).|  
   
 ## <a name="remarks"></a>Примечания  
  **sp_help_jobhistory** возвращает отчет с историей указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  

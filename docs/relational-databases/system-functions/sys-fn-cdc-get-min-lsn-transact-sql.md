@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2a78a6d30b9e79364178401f4d9d2ef52aceace
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046403"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728236"
 ---
 # <a name="sysfn_cdc_get_min_lsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает start_lsn значение столбца для указанного экземпляра отслеживания из системной таблицы [CDC. change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) . Это значение представляет нижнюю конечную точку интервала допустимости для экземпляра отслеживания.  
   
@@ -48,7 +48,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Возвращает значение 0x00000000000000000000, если экземпляр отслеживания не существует или если участник не авторизован для доступа к данным изменений, связанным с этим экземпляром отслеживания.  
   
  Эта функция обычно используется, чтобы вернуть нижнюю конечную точку временной шкалы системы отслеживания измененных данных для экземпляра отслеживания. Эту функцию можно также использовать для проверки того, входят ли конечные точки диапазона запроса во временную шкалу экземпляра отслеживания, перед запросом данных изменений. Важно выполнять такие проверки, поскольку нижняя конечная точка экземпляра отслеживания изменяется во время очистки таблиц изменений. Если между запросами информации об изменениях прошло достаточно много времени, даже нижняя конечная точка, установленная на верхнюю конечную точку предыдущего запроса информации об изменениях, может лежать вне текущей временной шкалы.  
@@ -68,7 +68,7 @@ SELECT sys.fn_cdc_get_min_lsn ('HumanResources_Employee')AS min_lsn;
   
 ```  
   
-### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>Б) Проверка нижней конечной точки диапазона запроса  
+### <a name="b-verifying-the-low-endpoint-of-a-query-range"></a>Б. Проверка нижней конечной точки диапазона запроса  
  Следующий пример использует минимальное значение номера LSN, возвращенное функцией `sys.fn_cdc_get_min_lsn` для проверки того, является ли предложенная нижняя конечная точка запроса данных изменений действительной для текущей временной шкалы экземпляра отслеживания `HumanResources_Employee`. В примере предполагается, что предыдущая верхняя точка номера LSN для экземпляра отслеживания была сохранена и является доступной для установки переменной `@save_to_lsn`. Для этого примера переменной `@save_to_lsn` присвоено значение 0x000000000000000000, чтобы принудительно запустить раздел обработки ошибок.  
   
 ```  

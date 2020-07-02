@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1972670a39dbd0fdb3f12b58df5116a83bf0a58d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fc69a273dfa331e558f076429be95c2462b551d8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827654"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730044"
 ---
 # <a name="sp_help_job-transact-sql"></a>sp_help_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о заданиях, используемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения автоматических действий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -61,7 +61,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @job_aspect = ] 'job_aspect'`Атрибут задания для вывода. *job_aspect* имеет тип **varchar (9)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**ALL**|Сведения об аспекте задания|  
 |**ДОЛЖНО**|Сведения о задании|  
@@ -81,7 +81,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @execution_status = ] status`Состояние выполнения заданий. *Status* имеет **тип int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Возвращает только те задания, которые не находятся в состоянии бездействия или приостановки.|  
 |**1**|Выполняющиеся.|  
@@ -91,7 +91,7 @@ sp_help_job { [ @job_id = ] job_id
 |**5**|Приостановленные.|  
 |**7**|Выполняющие завершающие действия.|  
   
-`[ @date_comparator = ] 'date_comparison'`Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение =, \< или >.  
+`[ @date_comparator = ] 'date_comparison'`Оператор сравнения, используемый в сравнениях *date_created* и *date_modified*. *date_comparison* имеет **тип char (1)** и может иметь значение =, \<, or > .  
   
 `[ @date_created = ] date_created`Дата создания задания. *date_created*имеет тип **DateTime**и значение по умолчанию NULL.  
   
@@ -149,14 +149,14 @@ sp_help_job { [ @job_id = ] job_id
 |**step_id**|**int**|Уникальный для данного задания идентификатор этапа.|  
 |**step_name**|**sysname**|Имя этапа.|  
 |**подсистемы**|**nvarchar(40)**|Подсистема, в которой выполняется команда этапа.|  
-|**кнопки**|**nvarchar (3200)**|Команда для выполнения.|  
+|**command**|**nvarchar (3200)**|Команда для выполнения.|  
 |**flags**|**nvarchar(4000)**|**Битовая маска** значений, управляющих поведением шага.|  
 |**cmdexec_success_code**|**int**|Для шага **CmdExec** это код завершения процесса успешной команды.|  
 |**on_success_action**|**nvarchar(4000)**|Что делать в случае успешного выполнения этапа:<br /><br /> **1** = завершить успешно.<br /><br /> **2** = завершить с ошибкой.<br /><br /> **3** = перейти к следующему шагу.<br /><br /> **4** = перейти к шагу.|  
 |**on_success_step_id**|**int**|Если значение **on_success_action** равно **4**, это указывает на следующий шаг для выполнения.|  
 |**on_fail_action**|**nvarchar(4000)**|Действие, предпринимаемое в случае ошибки этапа. Значения совпадают с значениями для **on_success_action**.|  
 |**on_fail_step_id**|**int**|Если значение **on_fail_action** равно **4**, это указывает на следующий шаг для выполнения.|  
-|**сервером**|**sysname**|Зарезервировано.|  
+|**server**|**sysname**|Зарезервировано.|  
 |**database_name**|**sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это база данных, в которой выполняется команда.|  
 |**database_user_name**|**sysname**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] это контекст пользователя базы данных, в котором выполняется команда.|  
 |**retry_attempts**|**int**|Максимальное число попыток повтора команды (в случае неудачи) перед тем, как этап будет учтен как ошибочный.|  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: eb3e9c64-7486-42e7-baf6-c956fb311a2c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7d161135c8c8b0c7d7932eb08aa98509efc4bc45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0200cec59d12f8311a280bd16b3cb1c5b0eb5374
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727622"
 ---
 # <a name="clr-integration---enabling"></a>Включение интеграции со средой CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Функция интеграции со средой CLR отключена по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR, используйте параметр **clr enabled** хранимой процедуры **sp_configure** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+  Функция интеграции со средой CLR отключена по умолчанию, поэтому ее нужно включить, чтобы использовать объекты, использующие интеграцию со средой CLR. Чтобы включить интеграцию со средой CLR, используйте параметр **clr enabled** хранимой процедуры **sp_configure** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :  
   
 ```sql  
 EXEC sp_configure 'clr enabled', 1;  
@@ -30,7 +30,7 @@ RECONFIGURE;
 GO  
 ```  
   
- Вы можете отключить интеграцию со средой CLR, задав для параметра **clr enabled** значение 0. При отключении интеграции со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекращает выполнение всех определяемых пользователем подпрограмм CLR и выгружает все домены приложений. Этот параметр не влияет на функции, зависящие от **hierarchyid** среды CLR, например тип `FORMAT` данных hierarchyid, функцию, репликацию и управление на основе политик, и будет продолжать функционировать.
+ Вы можете отключить интеграцию со средой CLR, задав для параметра **clr enabled** значение 0. При отключении интеграции со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] прекращает выполнение всех определяемых пользователем ПОДПРОГРАММ CLR и выгружает все домены приложений. Этот параметр не влияет на функции, зависящие от среды CLR, например тип данных **hierarchyid** , `FORMAT` функцию, репликацию и управление на основе политик, и будет продолжать функционировать.
   
 > [!NOTE]  
 >  Чтобы включить интеграцию со средой CLR, необходимо иметь разрешение ALTER SETTINGS на уровне сервера, которое неявно удерживается членами предопределенных ролей сервера **sysadmin** и **serveradmin** .  
@@ -41,7 +41,7 @@ GO
 > [!NOTE]  
 >  Выполнение в среде CLR не поддерживается при использовании упрощенных пулов. Перед включением интеграции со средой CLR необходимо отключить функцию использования упрощенных пулов. Дополнительные сведения см. в разделе [Параметр конфигурации сервера «использование упрощенных пулов»](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Параметр конфигурации сервера «CLR Enabled»](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   

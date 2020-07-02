@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055315"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728187"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Создает имя входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -42,12 +42,12 @@ sp_grantlogin [@loginame=] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @loginame = ] 'login'`Имя пользователя или группы Windows. Имя пользователя или группы Windows должно быть дополнено именем домена Windows в форме "пользователь *домена*\\*User*". Например, **London\Joeb**. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию.  
+`[ @loginame = ] 'login'`Имя пользователя или группы Windows. Имя пользователя или группы Windows должно быть дополнено именем домена Windows в форме "пользователь *домена*" \\ *User*, например **London\Joeb**. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_grantlogin** вызывает создание имени входа, которое поддерживает дополнительные параметры. Сведения о создании SQL Serverных имен входа см. в разделе [Create login &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin** не может быть выполнена в пользовательской транзакции.  
@@ -56,14 +56,14 @@ sp_grantlogin [@loginame=] 'login'
  Необходимо разрешение ALTER ANY LOGIN на сервере.  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере используется `CREATE LOGIN` для создания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа для пользователя `Corporate\BobJ.` Windows. это предпочтительный метод.  
+ В следующем примере используется `CREATE LOGIN` для создания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имени входа для пользователя Windows `Corporate\BobJ.` . это предпочтительный метод.  
   
 ```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Создание имени входа &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f88c438206551e170810f467e7944b21232e245d
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3713f0fadfe186c31a26f2f19adea88da2f28384
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729520"
 ---
 # <a name="context-functions---last-xquery"></a>Функции контекста — last (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает количество элементов в обрабатываемой в данный момент последовательности. Точнее, эта функция возвращает целочисленный индекс последнего элемента в последовательности. Значение индекса первого элемента в последовательности — 1.  
   
@@ -35,13 +35,13 @@ ms.locfileid: "84529708"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  В SQL Server функция **fn: Last ()** может использоваться только в контексте контекстно-зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
   
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>А) Использование функции last() языка XQuery для получения последних двух этапов производства  
+### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Использование функции last() языка XQuery для получения последних двух этапов производства  
  Следующий запрос получает последние два этапа производства для определенной модели продукта. Значение, число этапов производства, возвращаемое функцией **Last ()** , используется в этом запросе для получения последних двух этапов производства.  
   
 ```  
@@ -78,7 +78,7 @@ ProductModelID Result
        </LastTwoManuSteps>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

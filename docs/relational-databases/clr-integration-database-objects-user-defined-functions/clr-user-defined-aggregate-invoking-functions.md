@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 286967567a48b35252f097ce6b88193c4e3bcb95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9e28d6e5a83595cc052d25f0c2e425c041a89932
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488416"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727889"
 ---
 # <a name="clr-user-defined-aggregate---invoking-functions"></a>Вызов определяемых пользователем агрегатных функций среды CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT можно вызывать определяемые пользователем статистические функции CLR, на которые распространяются те же правила, что и на системные агрегатные функции.  
   
  Применяются следующие дополнительные правила.  
@@ -197,7 +197,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- После компиляции кода в **мягг. dll**можно зарегистрировать статистическую функцию в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующим образом:  
+ После компиляции кода в **MyAgg.dll**можно зарегистрировать статистическое выражение в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] следующим образом:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -442,7 +442,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пользовательские агрегатные функции среды CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)  
   
   

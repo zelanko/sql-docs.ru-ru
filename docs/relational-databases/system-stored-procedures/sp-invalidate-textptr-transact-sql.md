@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f479daec811e9953bdb0b9e23727dd1a58ad15e4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b229db409520275fa1b043fa54c8ce6e6421096e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733062"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Делает недействительным указанный указатель текста строки в транзакции или все подобные указатели. **sp_invalidate_textptr** можно использовать только для текстовых указателей в строке. Эти указатели относятся к таблицам, для которых включен параметр **text in row** .  
   

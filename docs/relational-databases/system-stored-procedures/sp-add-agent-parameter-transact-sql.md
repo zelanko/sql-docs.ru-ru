@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf8704f4106cd701c5c5d2bbeab324ed2f75e731
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770964"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731757"
 ---
 # <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Добавляет в профиль агента новый параметр и его значение. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -43,7 +43,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
  Чтобы узнать, какой тип агента представляет этот *profile_id* , найдите *profile_id* в&#41;таблице [MSagent_profiles &#40;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) и обратите внимание на значение поля *agent_type* . Возможны следующие значения.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|агент моментальных снимков|  
 |**2**|Агент чтения журнала.|  
@@ -53,28 +53,28 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 `[ @parameter_name = ] 'parameter_name'`Имя параметра. Аргумент *parameter_name* имеет тип **sysname**и не имеет значения по умолчанию. Список параметров, уже определенных в системных профилях, см. в разделе [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md). Полные списки допустимых аргументов каждого агента см. в следующих разделах.  
   
--   [Агент моментальных снимков репликации](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Агент чтения журнала репликации](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Агент распространения репликации](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Агент чтения очереди репликации](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
 `[ @parameter_value = ] 'parameter_value'`Значение, присваиваемое параметру. *parameter_value* имеет тип **nvarchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_add_agent_parameter** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_add_agent_parameter**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Работа с профилями агента репликации](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [Профили агента репликации](../../relational-databases/replication/agents/replication-agent-profiles.md)   
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

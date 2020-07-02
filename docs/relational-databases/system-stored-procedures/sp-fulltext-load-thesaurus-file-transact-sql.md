@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b13792fb7a5d151987983a959751dd94f12e0a9b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827795"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731680"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Запускает на экземпляре сервера синтаксический анализ и загрузку данных из файла тезауруса, который соответствует языку с указанным кодом языка. Эту хранимую процедуру полезно использовать после обновления файла тезауруса. Выполнение **sp_fulltext_load_thesaurus_file** вызывает повторную компиляцию полнотекстовых запросов, использующих ТЕЗАУРУС указанного LCID.  
   
@@ -47,13 +47,13 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  ** \@ **  =  *действие* лоадонлифнотлоадед  
  Указывает, нужно ли загружать файл тезауруса во внутренние таблицы тезауруса в случае, если он уже загружен. *действие* является одним из следующих:  
   
-|Значение|Определение|  
+|Применение|Определение|  
 |-----------|----------------|  
-|**0**;|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию для **sp_fulltext_load_thesaurus_file**.|  
+|**0**|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию для **sp_fulltext_load_thesaurus_file**.|  
 |1|Загружать файл тезауруса только в случае, если он еще не загружен.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ Отсутствуют  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  

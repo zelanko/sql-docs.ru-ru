@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 356357df8d2c8a3202a5ff088ba2c277aa9fd73c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3e3cb3c3a3d5b623bdac08f2cf97d203db632ebd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731698"
 ---
 # <a name="sp_enum_sqlagent_subsystems-transact-sql"></a>sp_enum_sqlagent_subsystems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает список подсистем агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,7 +39,7 @@ sp_enum_sqlagent_subsystems
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Нет  
+ Отсутствуют  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -58,7 +58,7 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|Максимальное число потоков, запускаемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для этой подсистемы.|  
 |**subsystem_id**|**int**|Идентификатор подсистемы.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура перечисляет подсистемы, доступные для экземпляра.  
   
 ## <a name="permissions"></a>Разрешения  

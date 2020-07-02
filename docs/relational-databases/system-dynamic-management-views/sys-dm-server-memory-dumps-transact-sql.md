@@ -18,21 +18,21 @@ helpviewer_keywords:
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 643cd663510877760893bf33944f01dac93d4ded
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c7b1401be0d9926874bf4025fbce964994f86f04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730105"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку для каждого файла дампа памяти, созданного [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. При помощи этого динамического административного представления можно устранять потенциальные неполадки.  
  
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**файлов**|**nvarchar(256)**|Полный путь и имя файла дампа памяти. Не может иметь значение null.|  
+|**filename**|**nvarchar(256)**|Полный путь и имя файла дампа памяти. Не может иметь значение null.|  
 |**creation_time**|**datetimeoffset(7)**|Дата и время создания файла. Не может иметь значение null.|  
 |**size_in_bytes**|**bigint**|Размер файла (в байтах). Допускает значение NULL.|  
   

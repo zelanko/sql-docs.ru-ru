@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 268078df-63ca-4c03-a8e7-7108bcea9697
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2aeaeb5d4eb06d6d632a59300225d01cc4376369
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 593318f929f3e0cb7862aab957e8864a35a618e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727693"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Атрибуты защиты узла и программирование средств интеграции со средой CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Среда CLR предоставляет механизм для аннотирования управляемых API, входящих в состав платформы .NET Framework, при помощи определенных атрибутов, которые могут потребоваться серверу CLR (такому как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]), начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Примеры таких атрибутов защиты сервера включают следующее:  
   
 -   **Шаредстате**, который указывает, предоставляет ли API возможность создания общего состояния или управления им (например, поля статических классов).  
@@ -50,7 +50,7 @@ ms.locfileid: "81488063"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]запрещает использование типа или члена с **HostProtectionAttribute** , который указывает перечисление **System. Security. Permissions. Хостпротектионресаурце** со значением **екстерналпроцессмгмт**, **екстерналсреадинг**, **майлеаконаборт**, **секуритинфраструктуре**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**или **UI**. В силу этого сборки утрачивают возможность вызывать элементы, которые включают общее состояние, выполняют синхронизацию, могут вызвать утечку ресурсов при завершении или повлиять на целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Запрещенные типы и элементы  
- В следующих разделах определяются типы и члены, значения **хостпротектионресаурце** которых запрещены [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ В следующих разделах определяются типы и члены, значения **хостпротектионресаурце** которых запрещены [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  Списки в этих разделах содержат поддерживаемые сборки.  Дополнительные сведения см. в разделе [supported .NET Framework librarys](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "81488063"
  [Недопустимые типы и элементы в библиотеке System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Приведены типы и элементы из файла System.Core.dll, для которых запрещены значения атрибутов защиты сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность доступа к коду при интеграции со средой CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Ограничения модели программирования интеграции со средой CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
  [Создание сборки](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

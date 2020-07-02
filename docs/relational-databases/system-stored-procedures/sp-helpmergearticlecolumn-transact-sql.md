@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c0090d721c0367ab4e4ca5395c1032693624ad07
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1094ce4844686a6d0bebb11e6c95830dd783a843
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733119"
 ---
 # <a name="sp_helpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает список столбцов в статье указанной таблицы или представления для публикации слиянием. Поскольку хранимые процедуры не имеют столбцов, эта хранимая процедура возвращает ошибку, если в качестве статьи указана хранимая процедура. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -48,12 +48,12 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
 |-----------------|---------------|-----------------|  
 |**column_id**|**sysname**|Идентификатор столбца.|  
 |**column_name**|**sysname**|Имя столбца для таблицы или представления.|  
-|**published**|**bit**|Указывает, опубликовано ли имя столбца.<br /><br /> значение **1** указывает, что столбец публикуется.<br /><br /> значение **0** указывает, что она не опубликована.|  
+|**выпущен**|**bit**|Указывает, опубликовано ли имя столбца.<br /><br /> значение **1** указывает, что столбец публикуется.<br /><br /> значение **0** указывает, что она не опубликована.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergearticlecolumn** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

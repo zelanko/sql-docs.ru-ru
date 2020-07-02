@@ -16,15 +16,15 @@ ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 64e93ae57c89ec63627433a8ba29ba354074fb5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60319a7911ec1545dd1bd634a2e6c5a8be86c0bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730852"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>Метод IBCPSession::BCPControl (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Задает параметры для операции массового копирования.  
   
@@ -37,7 +37,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Метод **BCPControl** задает различные параметры управления для операций массового копирования, в том числе количество ошибок, допустимых перед отменой массового копирования, номера первой и последней строк, копируемых из файла данных, и размер пакетов.  
   
  Этот метод также применяется, чтобы указать на использование инструкции SELECT при массовом копировании данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно присвоить аргументу **eOption** значение BCP_OPTION_HINTS, а аргументу **iValue** указатель на строку знаков в Юникоде, содержащую инструкцию SELECT.  
@@ -53,7 +53,7 @@ HRESULT BCPControl(
 |BCP_OPTION_FILEFMT|Номер версии для формата файла данных. Может иметь значение 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) или 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 используется по умолчанию. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера.  Например, чтобы импортировать данные, полученные из текстового столбца на сервере [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , в столбец типа **varchar(max)** на сервере [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует указать значение 80. Аналогично при указании значения 80 при экспорте данных из столбца **varchar(max)** данные столбца сохраняются точно так же, как сохраняются текстовые столбцы в формате [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], и их можно будет импортировать в текстовый столбец сервера [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |BCP_OPTION_FIRST|Первая строка данных копируемого файла или таблицы. Значение по умолчанию равно 1. Если задать для этого параметра значение меньше 1, то будет установлено значение по умолчанию.|  
 |BCP_OPTION_FIRSTEX|В операциях bcp out задает первую строку таблицы базы данных для копирования в файл данных.<br /><br /> В операциях bcp in задает первую строку файла данных для копирования в таблицу базы данных.<br /><br /> Параметр *iValue* должен представлять адрес 64-разрядного целого числа со знаком, содержащего значение. Максимальное значение, которое можно передать в BCPFIRSTEX, составляет 2^63-1.|  
-|BCP_OPTION_FMTXML|Используется, чтобы указать, что созданный файл форматирования должен быть в формате XML. Отключен по умолчанию, и по умолчанию файлы форматирования сохраняются как текстовые файлы. XML-файл форматирования обеспечивает более высокую гибкость, но связан с некоторыми дополнительными ограничениями. Например, нельзя указать для поля одновременно префикс и признак конца, что было возможно в старых файлах форматирования.<br /><br /> Примечание. XML-файлы форматирования поддерживаются только [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при установке средств вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственным клиентом.|  
+|BCP_OPTION_FMTXML|Используется, чтобы указать, что созданный файл форматирования должен быть в формате XML. Отключен по умолчанию, и по умолчанию файлы форматирования сохраняются как текстовые файлы. XML-файл форматирования обеспечивает более высокую гибкость, но связан с некоторыми дополнительными ограничениями. Например, нельзя указать для поля одновременно префикс и признак конца, что было возможно в старых файлах форматирования.<br /><br /> Примечание. XML-файлы форматирования поддерживаются только при [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установке средств вместе с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственным клиентом.|  
 |BCP_OPTION_HINTS|Аргумент *iValue* содержит указатель на расширенный символ. Адресуемая строка задает подсказки для обработки массового копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , которая возвращает результирующий набор. Если указана инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] , которая возвращает более одного результирующего набора, все результирующие наборы после первого не учитываются.|  
 |BCP_OPTION_KEEPIDENTITY|Если аргумент *iValue* имеет значение TRUE, этот параметр указывает, что методы массового копирования вставляют значения данных, предоставленные для столбцов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], определенных с ограничением IDENTITY. Входной файл должен содержать значения для столбцов идентификаторов. Если эти значения не заданы, то для вставляемых строк создаются новые значения идентификаторов. Данные в файле, предназначенные для столбцов идентификаторов, не учитываются.|  
 |BCP_OPTION_KEEPNULLS|Указывает, будут ли пустые значения данных в файле преобразовываться в значения NULL в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если аргумент *iValue* имеет значение TRUE, пустые значения в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] преобразуются в NULL. По умолчанию пустые значения преобразовываются в значения по умолчанию для столбца в таблице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , если значение по умолчанию существует.|  
@@ -84,7 +84,7 @@ HRESULT BCPControl(
  E_OUTOFMEMORY  
  Недостаточно памяти.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

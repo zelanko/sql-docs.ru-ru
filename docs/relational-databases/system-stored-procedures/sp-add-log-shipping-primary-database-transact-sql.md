@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee4fd4f6b8ea67fd9e1b973fd2b283a10d525437
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68140450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731776"
 ---
 # <a name="sp_add_log_shipping_primary_database-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Настраивает базу данных-источник для конфигурации доставки журналов, включая задания резервного копирования, запись локального монитора и запись удаленного монитора.  
   
@@ -71,7 +71,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
  1 = проверка подлинности Windows.  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности. *monitor_server_security_mode* имеет **бит** и не может иметь значение null.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности. *monitor_server_security_mode* имеет **бит** и не может иметь значение null.  
   
 `[ @monitor_server_login = ] 'monitor_server_login'`Имя пользователя учетной записи, используемой для доступа к серверу мониторинга.  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 `[ @history_retention_period = ] history_retention_period`Продолжительность времени в минутах, в течение которого будет храниться журнал. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
-`[ @backup_job_id = ] backup_job_id OUTPUT`Идентификатор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента, связанного с заданием резервного копирования на сервере источника. *backup_job_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
+`[ @backup_job_id = ] backup_job_id OUTPUT`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Идентификатор задания агента, связанного с заданием резервного копирования на сервере источника. *backup_job_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
 `[ @primary_id = ] primary_id OUTPUT`Идентификатор базы данных источника для конфигурации доставки журналов. *primary_id* имеет тип **uniqueidentifier** и не может иметь значение null.  
   
@@ -146,7 +146,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

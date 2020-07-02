@@ -21,15 +21,15 @@ ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85678c5b03a77910c73bd5b8bac8d0e40d52c252
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9bd93e3ac61c81bf7e61f9fd98cd05685877f287
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291612"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730349"
 ---
 # <a name="allocating-a-statement-handle"></a>Выделение дескриптора инструкции
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Прежде чем приложение сможет выполнить инструкцию, оно должно выделить дескриптор инструкции. Для этого вызывается **функцию SQLAllocHandle** с параметром *параметром handletype* , для которого задано значение SQL_HANDLE_STMT и *инпусандле* указывает на маркер подключения.  
   
@@ -39,11 +39,11 @@ ms.locfileid: "81291612"
   
  Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в значение SQL_ATTR_QUERY_TIMEOUT задает интервал времени ожидания запроса для защиты сервера и пользователя от длительных запросов.  
   
- Вызов **SQLSetStmtAttr** с *параметром fOption* , для которого задано значение SQL_ATTR_MAX_LENGTH ограничивает объем данных **текста** и **изображений** , которые может получить отдельная инструкция. Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в SQL_ATTR_MAX_ROWS, также ограничивает набор строк первыми *n* строками, если это требуется для всего приложения. Обратите внимание, что по значению SQL_ATTR_MAX_ROWS драйвер выполняет инструкцию SET ROWCOUNT на сервере. Это влияет на [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все инструкции, включая триггеры и обновления.  
+ Вызов **SQLSetStmtAttr** с *параметром fOption* , для которого задано значение SQL_ATTR_MAX_LENGTH ограничивает объем данных **текста** и **изображений** , которые может получить отдельная инструкция. Вызов **SQLSetStmtAttr** с *параметром fOption* , установленным в SQL_ATTR_MAX_ROWS, также ограничивает набор строк первыми *n* строками, если это требуется для всего приложения. Обратите внимание, что по значению SQL_ATTR_MAX_ROWS драйвер выполняет инструкцию SET ROWCOUNT на сервере. Это влияет на все [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инструкции, включая триггеры и обновления.  
   
  Соблюдайте осторожность при установке этих параметров. Лучше, если все дескрипторы инструкций в дескрипторе соединения будут иметь одинаковые значения SQL_ATTR_MAX_LENGTH и SQL_ATTR_MAX_ROWS. Если драйвер переключается с одного дескриптора инструкции на другой с разными значениями этих параметров, то он должен для изменения значений формировать соответствующие инструкции SET TEXTSIZE и SET ROWCOUNT. Драйвер не может поместить эти инструкции в один пакет как пользовательские инструкции SQL, поскольку пользовательские инструкции SQL могут содержать инструкцию, которая должна быть первой в пакете. Драйвер должен отправлять инструкции SET TEXTSIZE и SET ROWCOUNT в отдельных пакетах, что приводит к появлению дополнительного обращения к серверу.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполняя запросы &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

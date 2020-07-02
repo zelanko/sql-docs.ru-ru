@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818164"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733128"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о статье. Эта хранимая процедура выполняется на издателе в базе данных публикации или на переиздаваемом подписчике для базы данных подписки.  
   
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Значение, если включена автоматическая обработка диапазона идентификаторов. , где **1** включен и **0** отключен.|  
 |**pub_identity_range**|**bigint**|Размер диапазона, используемого при выделении новых значений идентификаторов. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
 |**identity_range**|**bigint**|Размер диапазона, используемого при выделении новых значений идентификаторов. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
-|**значениями**|**int**|Процентное значение, используемое для подписчиков, выполняющих [!INCLUDE[ssEW](../../includes/ssew-md.md)] или предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **пороговое значение** определяет, когда агент слияния назначает новый диапазон идентификаторов. Если превышен указанный процент использованных значений, агент слияния выделяет новый диапазон идентификаторов. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
+|**threshold**|**int**|Процентное значение, используемое для подписчиков, выполняющих [!INCLUDE[ssEW](../../includes/ssew-md.md)] или предыдущих версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **пороговое значение** определяет, когда агент слияния назначает новый диапазон идентификаторов. Если превышен указанный процент использованных значений, агент слияния выделяет новый диапазон идентификаторов. Дополнительные сведения см. в подразделе «репликация слиянием» статьи « [Репликация столбцов идентификаторов](../../relational-databases/replication/publish/replicate-identity-columns.md)».|  
 |**verify_resolver_signature**|**int**|Если цифровая подпись проверяется перед использованием распознавателя в репликации слиянием; значение **0** означает, что подпись не проверена, а значение **1** означает, что подпись проверена, чтобы узнать, является ли она доверенным источником.|  
 |**destination_object**|**sysname**|Имя целевого объекта. Применяется только к хранимым процедурам слияния, представлениям и к статьям схемы определяемых пользователем функций.|  
 |**allow_interactive_resolver**|**int**|Значение, если в статье используется интерактивный сопоставитель; где **1** означает, что используется этот сопоставитель, а **0** означает, что он не используется.|  
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_helpmergearticle** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

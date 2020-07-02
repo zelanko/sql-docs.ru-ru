@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 59f47194e94e256ddb6e2ded61dc61198dea26b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b4c5d3157c6683a793f30eccd878aa9e691c7023
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824513"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729223"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает сведения о публикации. Для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] публикации эта хранимая процедура выполняется на издателе в базе данных публикации. В публикации Oracle эта хранимая процедура выполняется в распространителе для любой базы данных.  
   
@@ -59,7 +59,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |задача||Используется для обратной совместимости.|  
 |replication frequency|**tinyint**|Тип частоты репликации:<br /><br /> **0** = транзакционное<br /><br /> **1** = моментальный снимок|  
 |synchronization method|**tinyint**|Режим синхронизации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа**bcp** )<br /><br /> **1** = символьное групповое копирование<br /><br /> **3** = одновременные. Это означает, что используется собственная операция копирования (программа**bcp**), но таблицы не блокируются во время создания моментального снимка.<br /><br /> **4** = Concurrent_c. Это означает, что используется символьное групповое копирование, но таблицы не блокируются во время создания моментального снимка.|  
-|description;|**nvarchar(255)**|Дополнительное описание публикации.|  
+|description|**nvarchar(255)**|Дополнительное описание публикации.|  
 |immediate_sync|**bit**|Указывает, выполняется ли создание (повторное создание) файлов синхронизации при каждом запуске агента моментальных снимков.|  
 |enabled_for_internet|**bit**|Указывает доступность файлов синхронизации для публикации через Интернет по протоколу FTP, а также их доступность для других служб.|  
 |allow_push|**bit**|Указывает, разрешена ли для данной публикации принудительная подписка.|  

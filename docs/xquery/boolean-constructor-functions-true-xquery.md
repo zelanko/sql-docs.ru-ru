@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 614128995edaefae4fb5f6746d092a6d3f74c1ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886572"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726764"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Функции логического конструктора — true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает значение True типа xs:boolean. Это равносильно `xs:boolean("1")`.  
   
@@ -89,7 +89,7 @@ DROP XML SCHEMA COLLECTION SC
 go  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Логические функции конструктора &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

@@ -18,15 +18,15 @@ ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cdde96f57f813dbc25434867ed78ff884c2e7ab
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1ea5643c3299a7716b2e350d6bbc2e7bdb2f9c22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820313"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725661"
 ---
 # <a name="sp_statistics-transact-sql"></a>sp_statistics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает список всех индексов и статистику для указанной таблицы или индексированного представления.  
   
@@ -80,7 +80,7 @@ sp_statistics [ @table_name = ] 'table_name'
 |**ПАРАМЕТРЫ сортировки**|**char (1)**|Порядок сортировки. Возможны следующие варианты:<br /><br /> A = по возрастанию<br /><br /> D = по убыванию<br /><br /> NULL = неприменимо|  
 |**КОЛИЧЕСТВА элементов**|**int**|Число строк в таблице или уникальных значений в индексе.|  
 |**СМ**|**int**|Число страниц для хранения индекса или таблицы.|  
-|**FILTER_CONDITION**|**varchar (128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  None  

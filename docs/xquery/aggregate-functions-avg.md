@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e7b88b5e28794ff8bc27c02b64b49471af92a05
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: a5ee393faed7f88bb155527d2233285d142b3a09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726793"
 ---
 # <a name="aggregate-functions---avg"></a>Агрегатные функции — avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает среднее значение для последовательности чисел.  
   
@@ -39,7 +39,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Последовательность атомарных значений, для которых вычисляется среднее значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Все типы разделенных значений, которые передаются в **AVG ()** , должны быть подтипами только одного из трех встроенных числовых базовых типов или xdt: untypedAtomic. Они не могут быть смешанными. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Результат функции **AVG ()** получает базовый тип переданных типов, например xs: Double в случае xdt: untypedAtomic.  
   
  Если вход статически пуст, подразумевается пустое значение, и формируется статическая ошибка.  
@@ -69,7 +69,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 -   не поддерживаются последовательности, в которых смешиваются типы на основе разных базовых типов;  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

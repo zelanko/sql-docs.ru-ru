@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07b1dc9d3f7beca9f048ec0e367c33922e388f32
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488230"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727826"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Доступ к определяемым пользователем типам — обновление определяемых пользователем столбцов с помощью DataAdapter
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Определяемые пользователем типы (UDT) поддерживаются с помощью **System. Data. DataSet** и **System. Data. SqlClient. SqlDataAdapter** для извлечения и изменения данных.  
   
 ## <a name="populating-a-dataset"></a>Заполнение набора данных  
@@ -370,7 +370,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к определяемым пользователем типам в ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

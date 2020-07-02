@@ -20,24 +20,24 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5878b5f1e52241a8d733bd6414d73db4e7e7cb8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725767"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку для каждого объекта какой-либо внутренней таблицы. Внутренние таблицы создаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически для поддержки различных функций. Например, при создании первичного XML-индекса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает внутреннюю таблицу для сохранения разобранных данных XML-документа. Внутренние таблицы отображаются в схеме **sys** каждой базы данных и имеют уникальные, созданные системой имена, указывающие на их функции, например **xml_index_nodes_2021582240_32001** или **queue_messages_1977058079**  
   
- Данные внутренних таблиц недоступны для пользователей, а их схема является жесткой и неизменной. Невозможно ссылаться на имена внутренних таблиц в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, нельзя выполнить инструкцию, такую как SELECT \* из * \< sys. internal_table_name>*. Однако можно обращаться с запросами к представлениям каталогов для просмотра метаданных внутренних таблиц.  
+ Данные внутренних таблиц недоступны для пользователей, а их схема является жесткой и неизменной. Невозможно ссылаться на имена внутренних таблиц в инструкциях языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например, нельзя выполнить инструкцию, такую как SELECT \* FROM *\<sys.internal_table_name>* . Однако можно обращаться с запросами к представлениям каталогов для просмотра метаданных внутренних таблиц.  
   
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, унаследованные из sys. Objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<Columns inherited from sys.objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**internal_type**|**tinyint**|Тип внутренней таблицы:<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (например, пространственный индекс)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **CHANGE_TRACKING**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
 |**internal_type_desc**|**nvarchar(60)**|Описание типа внутренней таблицы:<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
 |**parent_id**|**int**|Идентификатор родителя, независимо от того, находится он в пределах области видимости схемы или нет. Принимает значение 0, если родитель отсутствует.<br /><br /> **queue_messages**  =  **object_id** очереди<br /><br /> **xml_index_nodes**  =  **object_id** XML-индекса<br /><br /> **fulltext_catalog_freelist**  =  **fulltext_catalog_id** полнотекстового каталога<br /><br /> **fulltext_index_map**  =  **object_id** полнотекстового индекса<br /><br /> **query_notification**или **service_broker_map** = 0<br /><br /> **extended_indexes**  =  **object_id** расширенного индекса, например пространственного индекса<br /><br /> **object_id** таблицы, для которой включено отслеживание таблиц = **CHANGE_TRACKING**|  

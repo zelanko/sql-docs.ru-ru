@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4c0837db9666ab6b49aee30b81b5585cbf5d5ee0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 819c6c91b2fc57ca077b82797626cf255dcc6357
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056773"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725697"
 ---
 # <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Устанавливает аргументы репликации указанной базы данных. Эта хранимая процедура выполняется на издателе или подписчике в любой базе данных.  
   
@@ -45,11 +45,11 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
 `[ @optname = ] 'optname'`Параметр базы данных репликации для включения или отключения. *optname* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Публикация слиянием**|База данных может использоваться для публикации слиянием.|  
 |**отменить**|База данных может использоваться для других типов публикаций.|  
-|**subscribe**|База данных является базой данных подписки.|  
+|**наблюдателя**|База данных является базой данных подписки.|  
 |**sync with backup**|База данных доступна для скоординированного создания резервных копий. Дополнительные сведения см. в разделе [Включение координированных резервных копий для репликации транзакций &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'`Указывает, следует ли включить или отключить данный параметр базы данных репликации. **аргумент** *value* имеет тип sysname и может принимать **значение true** или **false**. Если это значение равно **false** и *optname* является **публикацией слиянием**, то подписки на опубликованную базу данных слияния также удаляются.  
@@ -61,7 +61,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_replicationdboption** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
  Эта процедура создает или удаляет определенные системные таблицы репликации, учетные записи безопасности и так далее в зависимости от указанного аргумента. Задает соответствующее **is_published** (репликация трансакатионал или моментального снимка), **is_merge_published** (репликация слиянием) или **is_distributor** бит в системной таблице **master. databases** и создает необходимые системные таблицы.  
@@ -71,7 +71,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_replicationdboption**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Удаление публикации](../../relational-databases/replication/publish/delete-a-publication.md)   

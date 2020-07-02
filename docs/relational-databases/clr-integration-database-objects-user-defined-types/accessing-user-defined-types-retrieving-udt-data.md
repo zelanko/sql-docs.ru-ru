@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e3d14c6d24d6db5d27b12bcc3f28c1b6ba383442
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ab209dccc53db8f1c90a5b25c6372be4af71025
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488233"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727838"
 ---
 # <a name="accessing-user-defined-types---retrieving-udt-data"></a>Доступ к определяемым пользователем типам — извлечение определяемых пользователем данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Чтобы создать на клиенте определяемый пользователем тип, сборка, зарегистрированная в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] как определяемый пользователем тип, должна быть доступна для клиентского приложения. Сборку определяемого пользователем типа можно разместить в одном каталоге с приложением или в глобальном кэше сборок. Также можно задать ссылку на сборку в проекте.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>Требования к использованию определяемых пользователем типов в ADO.NET  
@@ -457,7 +457,7 @@ static void Main()
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Доступ к определяемым пользователем типам в ADO.NET](../../relational-databases/clr-integration-database-objects-user-defined-types/accessing-user-defined-types-in-ado-net.md)  
   
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 971226c9f53932bf8214304a7c166ad75a11853c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 00a7499fb3050a5ab13fa3e9b454b4335200f55a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833228"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731665"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает тип удаления слияния. Эта хранимая процедура выполняется на издателе в базе данных публикации или на подписчике в базе данных подписки.  
   
@@ -43,13 +43,13 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 `[ @delete_type = ] delete_type OUTPUT`— Это код, указывающий тип удаления. *delete_type* имеет **тип int**и не имеет значения по умолчанию. *delete_type* также является выходным параметром и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Пользовательское удаление|  
 |**5**|Частичное удаление|  
 |**6**|Системное удаление|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_getmergedeletetype** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -18,15 +18,15 @@ ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 03a1d909dc1d3a89b68895e05953cc0ed0da2a7b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725509"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает список объектов, к которым можно выполнять запросы в текущем окружении. Это означает применение любой таблицы или представления, кроме объектов-синонимов.  
   
@@ -64,7 +64,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'`Определяет, будут ли символы подчеркивания (_), процента (%) и квадратных скобок ([или]) интерпретироваться как подстановочные знаки. Допустимые значения: 0 (сопоставление с шаблоном отключено) и 1 (сопоставление с шаблоном включено). *фусепаттерн* имеет **бит**и значение по умолчанию 1.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ Отсутствуют  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -73,10 +73,10 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_QUALIFIER**|**sysname**|Имя квалификатора таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. Это поле может иметь значение NULL.|  
 |**TABLE_OWNER**|**sysname**|Имя владельца таблицы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя пользователя базы данных, создавшего таблицу. Это поле всегда возвращает значение.|  
 |**TABLE_NAME**|**sysname**|Имя таблицы. Это поле всегда возвращает значение.|  
-|**TABLE_TYPE**|**varchar (32)**|Таблица, системная таблица или представление.|  
+|**TABLE_TYPE**|**varchar(32)**|Таблица, системная таблица или представление.|  
 |**ЗАМЕЧАНИЯ**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не возвращает значение для этого столбца.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Для максимальной совместимости клиент шлюза должен принимать только сопоставление шаблонов стандарта SQL-92 (символы-шаблоны «%» и «_»).  
   
  Данные о правах доступа текущего пользователя на чтение и запись в конкретную таблицу не всегда проверяются. Поэтому доступ не гарантируется. Этот результирующий набор включает не только таблицы и представления, но и синонимы, и псевдонимы для шлюзов к СУБД, поддерживающим эти типы. Если атрибут сервера **ACCESSIBLE_TABLES** имеет значение Y в результирующем наборе для **sp_server_info**, возвращаются только таблицы, к которым текущий пользователь может получить доступ.  

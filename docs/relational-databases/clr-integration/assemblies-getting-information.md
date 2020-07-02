@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6aa7f18e-baad-4481-9777-8c3b230b392f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fcdd4c8c834d8c250716b6c887c3b08248fac67d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26ef36810a1c3ed188d6457ecb02e7e0411c9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68028023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727662"
 ---
 # <a name="assemblies---getting-information"></a>Получение сведений о сборках
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Чтобы получить метаданные о сборках можно использовать следующие представления каталога и функции.  
   
  **Получение сведений об отдельных сборках**  
@@ -54,7 +54,7 @@ ms.locfileid: "68028023"
   
 -   [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сборки &#40;ядро СУБД&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
  [Проектирование сборок](../../relational-databases/clr-integration/assemblies-designing.md)   
  [Реализация сборок](../../relational-databases/clr-integration/assemblies-implementing.md)  

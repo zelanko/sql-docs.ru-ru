@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f520ddd8443699ef4d1fe388f165648b0ff188c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b666426cd7f1d7eb2395ec4a67f0b166564de17d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733014"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Свойство ErrorControl (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает или задает серьезность ошибки, если служба не запускается во время запуска системы.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -45,22 +45,22 @@ object.ErrorControl [= value]
  Игнорировать  
  Пользователь не получает уведомление.  
   
- Нормальный  
+ Норм.  
  Пользователь получает уведомление.  
   
  Severe  
  Система перезапускается в последней известной рабочей конфигурации.  
   
- Critical  
+ Критические важное  
  Попытка перезапустить систему в рабочей конфигурации.  
   
  Неизвестно  
  Серьезность ошибки неизвестна.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Значение задает действие, предпринимаемое программой запуска при возникновении ошибки. Все ошибки записываются в журнал системой компьютера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

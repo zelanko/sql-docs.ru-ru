@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 49cfb9c44956f5d51f8671f2f891475b8794c053
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 093c04b63b9b99a777f7b20af70ea06677b0c917
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831150"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727197"
 ---
 # <a name="sp_dropsubscriber-transact-sql"></a>sp_dropsubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Удаляет назначение подписчика с зарегистрированного сервера. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -51,7 +51,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_dropsubscriber** используется во всех типах репликации.  
   
  Эта хранимая процедура удаляет **подпараметр сервера** и удаляет сопоставление удаленного имени входа системного администратора для **repl_subscriber**.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 64c30629cf7608a7816ec16c458f55f4dfad1e75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5779e5982ee6c9c3729b2995b25771b993a5e442
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727611"
 ---
 # <a name="clr-integration---overview"></a>Общие сведения об интеграции со средой CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Среда CLR является сердцем платформы Microsoft .NET Framework и предоставляет среду выполнения для всего кода .NET Framework. Код, выполняемый в среде CLR, называется управляемым кодом. Среда CLR предоставляет различные функции и услуги, требуемые для выполнения программы, включая JIT-компиляцию, распределение и управление памятью, соблюдение безопасности типов, обработку исключений, управление потоками и безопасность.  Дополнительные сведения см. в пакете .NET Framework SDK.  
   
  Если среда CLR размещается в Microsoft SQL Server (что принято называть интеграцией со средой CLR), то появляется возможность разрабатывать в управляемом коде хранимые процедуры, триггеры, определяемые пользователем функции, определяемые пользователем типы и определяемые пользователем статистические функции. Из-за того, что управляемый код перед выполнением производит компиляцию в машинный код, можно достичь значительного увеличения производительности в некоторых сценариях.  
@@ -59,7 +59,7 @@ ms.locfileid: "81488112"
 ## <a name="choosing-between-extended-stored-procedures-and-managed-code"></a>Выбор между расширенными хранимыми процедурами и управляемым кодом  
  Расширенные хранимые процедуры позволяют реализовать возможности, недоступные в хранимых процедурах [!INCLUDE[tsql](../../includes/tsql-md.md)]. Однако расширенные хранимые процедуры могут нарушить целостность процесса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а управляемый код, проверенный на строгую типизацию, — нет. Далее, управление памятью, планирование потоков и волокон, а также службы Synchronization Services более тесно интегрированы между управляемым кодом среды CLR и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Интеграция со средой CLR обеспечивает более защищенный по сравнению с расширенными хранимыми процедурами способ создания хранимых процедур при необходимости выполнения задач, недоступных для [!INCLUDE[tsql](../../includes/tsql-md.md)]. Дополнительные сведения об интеграции со средой CLR и расширенных хранимых процедурах см. в статье [производительность интеграции со средой CLR](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Архитектура интеграции со средой CLR](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Доступ к данным из объектов базы данных CLR](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   

@@ -14,15 +14,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76481db7044deb3cc7f9c4e1c99230ef16ea3a3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5617630853a700c906949cfa9a9bc2acf719c2ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727908"
 ---
 # <a name="automatic-tuning"></a>Автоматическая настройка
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Функция автоматической настройки базы данных предоставляет сведения о возможных проблемах с обработкой запросов и рекомендуемые решения. Она также может автоматически исправлять выявленные проблемы.
 
@@ -90,7 +90,7 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 В [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] среде можно найти регрессию выбора плана с помощью системных представлений хранилища запросов. В [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] [!INCLUDE[ssde_md](../../includes/ssde_md.md)] обнаруживает и отображает возможные регрессии выбора планов и рекомендуемые действия, которые следует применить в представлении [sys. dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) . В представлении отображаются сведения о проблеме, важности проблемы и такие сведения, как идентифицированный запрос, идентификатор регрессионного плана, идентификатор плана, который использовался в качестве базового для сравнения, и [!INCLUDE[tsql_md](../../includes/tsql-md.md)] инструкция, которая может быть выполнена для устранения проблемы.
 
-| тип | description | DATETIME | score | подробности | ... |
+| type | description | DATETIME | score | подробности | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Время ЦП изменено с 4 мс до 14 мс | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Время ЦП изменено с 37 МС на 84 МС | 16.03.2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -171,7 +171,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]упрощает этот процесс. [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]анализирует рабочую нагрузку, определяет запросы, которые могут выполняться быстрее с новым индексом, и определяет неиспользуемые или дублирующиеся индексы. Дополнительные сведения об идентификации индексов, которые необходимо изменить, см. в статье [Использование помощника по базам данных SQL на портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-advisor-portal).
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER DATABASE SET AUTOMATIC_TUNING &#40;&#41;Transact-SQL](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [sys. database_automatic_tuning_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md)  
  [sys. dm_db_tuning_recommendations &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md)   

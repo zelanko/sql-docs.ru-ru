@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf93b6f3045a9eb48c64e50c789e0ce79dec7f4c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a1dc48a88bd9a180b7cb0ce65a24c607b80cd6a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834418"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725760"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает сведения об агенте моментальных снимков для данной публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -72,7 +72,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_help_publication_snapshot** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

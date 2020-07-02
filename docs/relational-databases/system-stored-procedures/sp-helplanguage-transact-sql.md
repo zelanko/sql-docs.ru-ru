@@ -19,15 +19,15 @@ ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097629a1642c952384ed96ac8349f241237332b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2878d206d4bc90d801e1e8f42f4f3f2c04d2c121
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82818526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733204"
 ---
 # <a name="sp_helplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Выдает отчет о конкретном альтернативном языке или обо всех языках из [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -41,7 +41,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @language = ] 'language'`Имя альтернативного языка, для которого отображаются сведения. *Language* имеет тип **sysname**и значение по умолчанию NULL. Если указан *язык* , возвращаются сведения об указанном языке. Если язык не указан, возвращаются сведения обо всех языках в представлении совместимости **sys. syslanguages** .  
+`[ @language = ] 'language'`Имя альтернативного языка, для которого отображаются сведения. *Language* имеет тип **sysname**и значение по умолчанию NULL. Если указан *язык* , возвращаются сведения об указанном языке. Если язык не указан, возвращаются сведения обо всех языках в представлении совместимости **sys.sysязыков** .  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  

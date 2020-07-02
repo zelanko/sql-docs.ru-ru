@@ -33,16 +33,16 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e4383e245048035d4c05f7be3bedb7d3d13f835d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8918b20e02eb0d7045ad7e6603ed1f6cf4db40b8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486946"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727778"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Регистрация определяемых пользователем типов в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Чтобы использовать определяемый пользователем тип (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], его необходимо зарегистрировать. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  Чтобы использовать определяемый пользователем тип (UDT) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , его необходимо зарегистрировать. Регистрация определяемого пользователем типа включает регистрацию сборки и создание типа в базе данных, в которой его нужно использовать. Определяемые пользователем типы находятся в одной базе данных и не могут использоваться в нескольких базах данных, пока идентичная сборка и определяемый пользователем тип не будут зарегистрированы в каждой базе данных. После регистрации сборки определяемого пользователем типа и создания типа этот тип можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] и клиентском коде. Дополнительные сведения об определяемых пользователем типах данных CLR см. в разделе [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Использование среды Visual Studio для развертывания определяемых пользователем типов  
  Самым простым способом развертывания определяемого пользователем типа является использование среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio. Однако для более сложных сценариев развертывания и большей гибкости используется язык [!INCLUDE[tsql](../../includes/tsql-md.md)], как описано далее в этом разделе.  
@@ -70,7 +70,7 @@ ms.locfileid: "81486946"
  Если инструкция CREATE ASSEMBLY выполняется с наборами разрешений SAFE или EXTERNAL_ACCESS, сборка проверяется на совместимость и безопасность типа. Если набор разрешений не указан, предполагается набор разрешений SAFE. Код с набором разрешений UNSAFE не проверяется. Дополнительные сведения о наборах разрешений сборки см. в разделе [Проектирование сборок](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Пример  
- Следующая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция регистрирует сборку Point в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных **ADVENTUREWORKS** с набором разрешений Сейф. Если предложение WITH PERMISSION_SET не указано, сборка регистрируется с набором разрешений SAFE.  
+ Следующая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкция регистрирует сборку Point в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных **AdventureWorks** с набором разрешений Сейф. Если предложение WITH PERMISSION_SET не указано, сборка регистрируется с набором разрешений SAFE.  
   
 ```  
 USE AdventureWorks;  
@@ -216,7 +216,7 @@ SELECT CAST(content AS varchar(8000))
   
  Обратите внимание, что при [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] создании рабочих таблиц в системной базе данных **tempdb** не нужно предпринимать никаких действий с использованием определяемых пользователем типов. Это включает в себя обработку курсоров, табличных переменных и определяемых пользователем функций с табличным значением, которые включают пользовательские типы и прозрачно используют **базу данных tempdb**. Однако при явном создании временной таблицы в базе данных **tempdb** , определяющей столбец ОПРЕДЕЛЯЕМОГО пользователем типа, определяемый пользователем тип должен быть зарегистрирован в базе данных **tempdb** так же, как и для пользовательской.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Определяемые пользователем типы данных CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

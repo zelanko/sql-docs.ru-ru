@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87c243c1eaffdcbf471347a677bb7e5d9c9ffbb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731739"
 ---
 # <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Настраивает первичные данные, добавляет ссылки на локальные и удаленные мониторы, а также создает задания копирования и восстановления на сервере-получателе для указанной базы данных-источника.  
   
@@ -53,7 +53,7 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-`[ @primary_server = ] 'primary_server'`Имя основного экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
+`[ @primary_server = ] 'primary_server'`Имя основного экземпляра в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] конфигурации доставки журналов. *primary_server* имеет тип **sysname** и не может иметь значение null.  
   
 `[ @primary_database = ] 'primary_database'`Имя базы данных на сервере-источнике. Аргумент *primary_database* имеет тип **sysname**и не имеет значения по умолчанию.  
   
@@ -61,9 +61,9 @@ sp_add_log_shipping_secondary_primary
   
 `[ @backup_destination_directory = ] 'backup_destination_directory'`Каталог на сервере-получателе, куда копируются файлы резервных копий. *backup_destination_directory* имеет тип **nvarchar (500)** и не может иметь значение null.  
   
-`[ @copy_job_name = ] 'copy_job_name'`Имя, используемое для создаваемого задания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* имеет тип **sysname** и не может иметь значение null.  
+`[ @copy_job_name = ] 'copy_job_name'`Имя, используемое для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаваемого задания агента для копирования резервных копий журналов транзакций на сервер-получатель. *copy_job_name* имеет тип **sysname** и не может иметь значение null.  
   
-`[ @restore_job_name = ] 'restore_job_name'`Имя задания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента на сервере-получателе, которое восстанавливает резервные копии в базе данных-получателе. *restore_job_name* имеет тип **sysname** и не может иметь значение null.  
+`[ @restore_job_name = ] 'restore_job_name'`Имя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задания агента на сервере-получателе, которое восстанавливает резервные копии в базе данных-получателе. *restore_job_name* имеет тип **sysname** и не может иметь значение null.  
   
 `[ @file_retention_period = ] 'file_retention_period'`Продолжительность времени в минутах, в течение которого файл резервной копии сохраняется на сервере-получателе по пути, указанному @backup_destination_directory параметром, перед удалением. *history_retention_period* имеет **тип int**и значение по умолчанию NULL. Если ничего не указано, подразумевается значение 14420.  
   
@@ -114,7 +114,7 @@ sp_add_log_shipping_secondary_primary
  Эту процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
- В этом примере показано использование хранимой процедуры **sp_add_log_shipping_secondary_primary** для настройки сведений о базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -источнике на сервере-получателе.  
+ В этом примере показано использование хранимой процедуры **sp_add_log_shipping_secondary_primary** для настройки сведений о базе данных-источнике [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на сервере-получателе.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -134,7 +134,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
