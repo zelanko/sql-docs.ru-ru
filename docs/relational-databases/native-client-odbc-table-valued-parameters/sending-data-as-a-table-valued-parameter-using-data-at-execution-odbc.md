@@ -13,15 +13,15 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b07341dbf3beba66ee7ad6e7cc4861142792fa0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297834"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760688"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Это похоже на процедуру « [все в памяти](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) », но использует для возвращающего табличное значение параметра данные при выполнении.  
   
@@ -187,7 +187,7 @@ from @Items
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом примере показано, как можно использовать потоковую передачу строк, по одной строке на каждый вызов SQLPutData с помощью ODBC TVP, аналогично использованию программы BCP. exe для загрузки данных в базу данных.  
+ В этом примере показано, как можно использовать потоковую передачу строк, по одной строке на вызов SQLPutData с помощью ODBC TVP, аналогично использованию BCP.exe для загрузки данных в базу данных.  
   
  Перед построением образца измените имя сервера в строке соединения.  
   
@@ -375,7 +375,7 @@ EXIT:
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В этом примере показано, как можно использовать потоковую передачу строк, несколько строк для каждого вызова SQLPutData с помощью ODBC TVP, аналогично использованию программы BCP. exe для загрузки данных в базу данных.  
+ В этом примере показано, как можно использовать потоковую передачу строк, несколько строк для каждого вызова SQLPutData с помощью ODBC TVP, аналогично использованию BCP.exe для загрузки данных в базу данных.  
   
  Перед построением образца измените имя сервера в строке соединения.  
   

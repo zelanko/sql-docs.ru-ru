@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc41c237e81c943dacd5d0ecdfe4b9f7eec56d36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764216"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Сохраняет подробное описание ошибок для заданий доставки журналов. Эта таблица хранится в базе данных **msdb** .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82813214"
 |**log_time**|**datetime**|Дата и время создания записи.|  
 |**log_time_utc**|**datetime**|Дата и время создания записи по Гринвичу.|  
 |**message**|**nvarchar**|Текст сообщения.|  
-|**источника**|**nvarchar**|Источник сообщения об ошибке или событии.|  
+|**source**|**nvarchar**|Источник сообщения об ошибке или событии.|  
 |**help_url**|**nvarchar**|URL-адрес, по которому в случае доступности могут быть найдены дополнительные сведения о данной ошибке.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -51,10 +51,10 @@ ms.locfileid: "82813214"
   
  Для обнаружения сеанса агента используйте столбцы **agent_id**, **agent_type**и **session_id**. Отсортируйте по **log_time** , чтобы просмотреть ошибки в том порядке, в котором они были зарегистрированы.  
   
-## <a name="see-also"></a>См. также  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также:  
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_cleanup_log_shipping_history (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
