@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0951bd857b6fbf2e3bdc8f5bc1ff850f80c43bcd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 99e2db4ca29fc39a4cebbd0b2dfb0564a5837e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820489"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760050"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает внешние ключи, ссылающиеся на первичные ключи в таблице на связанном сервере.  
   
@@ -60,7 +60,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 `[ @fktab_catalog = ] 'fktab_catalog'`Имя каталога с внешним ключом. Аргумент *fktab_catalog*имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ Отсутствуют  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей (_Catalog_)**.** _схема_**.** _Table_), представленного в результирующем наборе.  

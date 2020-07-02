@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758013"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Добавляет к объекту базы данных новое расширенное свойство.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  Имя свойства, которое необходимо добавить. *property_name* имеет тип **sysname** и не может иметь значение null. Имена могут также включать пустые или не являющиеся алфавитно-цифровыми строки символов, а также двоичные значения.  
   
- [ @value= ] {"*значение*"}  
+ [ @value =] {'*значение*'}  
  Значение, связываемое со свойством. *значение* равно **sql_variant**и значение по умолчанию NULL. Размер аргумента *value* не может превышать 7 500 байт.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  Тип объекта уровня 0. *level0_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL.  
   
  Допустимые входные данные: ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE и NULL.  
@@ -67,24 +67,24 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  Возможность указать USER как тип уровня 0 в расширенном свойстве объекта типа уровня 1 будет исключена из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте вместо этого в качестве типа уровня 0 схему (SCHEMA). Например, при определении расширенного свойства таблицы задайте схему таблицы вместо имени пользователя. Возможность указывать TYPE как тип уровня 0 будет исключена в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В значении аргумента TYPE следует указывать тип SCHEMA в качестве типа уровня 0 и TYPE в качестве типа уровня 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  Имя указанного типа объекта уровня 0. Аргумент *level0_object_name* имеет тип **sysname** и значение по умолчанию NULL.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  Тип объекта уровня 1. *level1_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимыми входными значениями являются агрегат, значение по умолчанию, функция, логическое имя файла, процедура, очередь, правило, последовательность, синоним, таблица, TABLE_TYPE, тип, представление, коллекция схем XML и значение NULL.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  Имя указанного типа объекта уровня 1. Аргумент *level1_object_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  Тип объекта уровня 2. *level2_object_type* имеет тип **varchar (128)** и значение по умолчанию NULL. Допустимые входные данные: COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER и NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  Имя указанного типа объекта уровня 2. Аргумент *level2_object_name* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы указывать расширенные свойства, объекты в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] классифицируются по трем уровням: 0, 1 и 2. Уровень 0 является самым высоким и определен как «объекты, содержащиеся в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней.  
   
  Ссылки на объект определенного уровня должны быть уточнены именами объектов более высокого уровня, в которых они содержатся или которым они принадлежат. Например, при добавлении расширенного свойства к столбцу таблицы (уровень 2) необходимо также задать имя таблицы (уровень 1), содержащей этот столбец, а также схему (уровень 0), содержащую таблицу.  
@@ -120,7 +120,7 @@ EXEC sp_addextendedproperty
 @value = 'AdventureWorks2012 Sample OLTP Database';  
 ```  
   
-### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>Б) Добавление расширенного свойства к столбцу в таблице  
+### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>Б. Добавление расширенного свойства к столбцу в таблице  
  В следующем примере свойство Caption добавляется к столбцу `PostalCode` в таблице `Address`.  
   
 ```  

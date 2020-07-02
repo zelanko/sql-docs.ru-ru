@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4e37e40aea88ec90da7c95065f33f2becfe2b5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760028"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Устанавливает, сколько раз будет выполняться попытка передачи данных в случае ошибки. Повторная попытка передачи при сбое снижает угрозу потери собранных данных.  
 
@@ -44,7 +44,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
  [ @cache_window =] *cache_window*  
  Количество повторных передач данных в хранилище данных управления без потери данных в случае ошибки. *cache_window* имеет **тип int** и значение по умолчанию 1. *cache_window* может иметь одно из следующих значений:  
   
-|Значение|Описание:|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |-1|Кэширует все данные из предыдущих неудавшихся передач.|  
 |0|Не кэширует данные из неудавшейся передачи.|  

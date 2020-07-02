@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 240fe92693fcd811c1f87744cb9a60dddda16369
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758647"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждой статьи из локальной базы данных. Данная таблица хранится в опубликованной базе данных.  
   

@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 715318b0b0ea38870317d05815845e1b6eaa3227
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760186"
 ---
 # <a name="sp_addextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Регистрирует имя новой расширенной хранимой процедуры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Регистрирует имя новой расширенной хранимой процедуры в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Вместо этого используйте [интеграцию со средой CLR](../../relational-databases/clr-integration/common-language-runtime-integration-overview.md) .  
@@ -51,14 +51,14 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствуют  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- После создания расширенной хранимой процедуры ее необходимо добавить в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью **sp_addextendedproc**. Дополнительные сведения см. [в разделе Добавление расширенной хранимой процедуры в SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
+ После создания расширенной хранимой процедуры ее необходимо добавить в с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] помощью **sp_addextendedproc**. Дополнительные сведения см. [в разделе Добавление расширенной хранимой процедуры в SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  
   
  Эту процедуру можно выполнить только в базе данных **master** . Для выполнения расширенной хранимой процедуры из базы данных, отличной от **master**, следует определить имя расширенной хранимой процедуры с помощью **master**.  
   
- **sp_addextendedproc** добавляет записи в представление каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , регистрируя имя новой расширенной хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он также добавляет запись в представление каталога [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
+ **sp_addextendedproc** добавляет записи в представление каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) , регистрируя имя новой расширенной хранимой процедуры с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он также добавляет запись в представление каталога [sys. extended_procedures](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) .  
   
 > [!IMPORTANT]  
 >  Существующие DLL-библиотеки, которые зарегистрированы без указания полного пути, перестанут работать после обновления до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Чтобы устранить эту проблему, используйте **sp_dropextendedproc** , чтобы отменить регистрацию библиотеки DLL, а затем повторно зарегистрируйте ее с помощью **sp_addextendedproc**, указав полный путь.  

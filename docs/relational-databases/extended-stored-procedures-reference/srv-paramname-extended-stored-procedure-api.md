@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f44209b2fb700bf885575f2ed4c0d2c65b82329b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9905b5f148ccbf94bb4ca85f85164b5289d0dcec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005663"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756698"
 ---
 # <a name="srv_paramname-extended-stored-procedure-api"></a>srv_paramname (API-интерфейс расширенных хранимых процедур)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
@@ -52,16 +52,16 @@ SRV_PROC * srvproc,intn, int *len );
  *len*  
  Содержит указатель на переменную **int**, которая содержит длину имени параметра в байтах. Если параметр *len* равен NULL, то длина имени параметра удаленной хранимой процедуры не возвращается.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Указатель на строку, заканчивающуюся нулевым символом, которая содержит имя параметра. Длина имени параметра хранится в *len*. Если параметра с номером *n* или удаленной хранимой процедуры не существует, то возвращается значение NULL, *len* получает значение -1 и отправляется информационное сообщение об ошибке. Если имя параметра равно NULL, для *len* устанавливается значение 0 и возвращается пустая строка, заканчивающаяся нулевым символом.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Эта функция возвращает имя параметра вызова удаленной хранимой процедуры. Когда удаленная хранимая процедура вызывается с параметрами, эти параметры могут быть переданы либо по имени, либо по позиции — без указания имени. Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC по-прежнему вызывается, однако он отображается так, как если бы не имел параметров, а функция **srv_rpcparams** возвращает 0.  
   
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

@@ -16,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 834c41b00945d9de09cf9964ee8aa2ca6e63c414
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6170a5c13f083db35c518dd2b8c30116f39b81c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660675"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759874"
 ---
 # <a name="clientsettings-class"></a>Класс ClientSettings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [Класс ClientSettings](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md) представляет [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметры на клиенте.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+  [Класс ClientSettings](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md) представляет [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Параметры на клиенте.  
   
  Этот класс обеспечивает программное управление клиентом.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

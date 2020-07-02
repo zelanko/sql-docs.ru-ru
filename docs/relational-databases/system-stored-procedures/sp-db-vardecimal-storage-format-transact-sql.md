@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 431572ccdb71cbad37708932a3313a543026272c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757960"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает текущее состояние формата хранения vardecimal для базы данных либо включает этот формат в базе данных.  Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], пользовательские базы данных всегда включены. Включение формата хранения vardecimal для баз данных необходимо только в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -61,7 +61,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Если @vardecimal_storage_format аргумент не указан, возвращает имя базы данных Columns и состояние vardecimal.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_db_vardecimal_storage_format возвращает состояние vardecimal, но не может изменить его.  
   
  Хранимая процедура sp_db_vardecimal_storage_format завершается неуспешно в следующих случаях:  

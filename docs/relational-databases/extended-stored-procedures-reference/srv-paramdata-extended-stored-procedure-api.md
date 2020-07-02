@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9f8a7f5ebb1b85740735c6070a784423b3258012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83af5231fd9403e0c77d6cad8a5abda5d27275d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064032"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756752"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API-интерфейс расширенных хранимых процедур)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
@@ -54,7 +54,7 @@ n
  *n*  
  Номер параметра. Первый параметр имеет номер 1.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Указатель на значение параметра. Если параметр с номером *n* имеет значение NULL, или если параметра с номером *n* или удаленной хранимой процедуры не существует, то возвращается значение NULL. Если значением параметра является строка, она не может завершаться нулевым байтом. Используйте функцию **srv_paramlen**, чтобы определить длину строки.  
   
  Эта функция возвращает следующие значения, если параметр относится к одному из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов данных. В данных указателя показано, является ли этот указатель допустимым для типа данных (VP), NULL или не применимым (N/A), а также содержимое тех данных, на которые он указывает.  
@@ -68,11 +68,11 @@ n
 |BIGVARBINARY|**NULL:** NULL, недоступно<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 байт<br /><br /> **<255:** VP, фактические данные|  
 |NCHAR|**NULL:** NULL, недоступно<br /><br /> **ZERO:** VP, 255 пробелов<br /><br /> **>=255:** VP, 255 символов<br /><br /> **<255:** VP, фактические данные + заполнение (до 255)|  
 |NVARCHAR|**NULL:** NULL, недоступно<br /><br /> **ZERO:** VP, NULL<br /><br /> **>=255:** VP, 255 символов<br /><br /> **<255:** VP, фактические данные|  
-|NTEXT|**NULL:** недоступно<br /><br /> **ZERO:** недоступно<br /><br /> **>= 255:** Н/Д<br /><br /> ** \<255:** Н/Д|  
+|NTEXT|**NULL:** недоступно<br /><br /> **ZERO:** недоступно<br /><br /> **>= 255:** Н/Д<br /><br /> ** \< 255:** н/д|  
   
  \* Данные не завершаются нулевым байтом; при отсечении данных >255 символов предупреждение не выдается.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если известно имя параметра, то с помощью функции **srv_paramnumber** можно возвратить его номер. Используйте функцию **srv_paramlen**, чтобы определить, имеет ли параметр значение NULL.  
   
  Когда удаленная хранимая процедура вызывается с параметрами, то эти параметры могут быть переданы либо по имени, либо по позиции (без указания имени). Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC вызывается и при возникновении ошибки, однако он действует так, как будто параметры не были переданы, и функция **srv_rpcparams** возвращает значение 0.  
@@ -80,7 +80,7 @@ n
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757882"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет подсистеме доступ к учетной записи-посреднику.  
   
@@ -47,9 +47,9 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`Идентификационный номер подсистемы, к которой предоставляется доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* \* Важно \* !** Подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
+|**2**|Скрипт [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* \* Важно \* ! \* ** подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |**3**|Операционная система (**CmdExec**)|  
 |**4**|Агент моментальных снимков репликации|  
 |**5**|Агент чтения журнала репликации|  
@@ -64,14 +64,14 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, к которой предоставляется доступ. Аргумент **subsystem_name** имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX-скрипт|  
 |**CmdExec**|Операционная система (**CmdExec**)|  
 |**Моментальный снимок**|Агент моментальных снимков репликации|  
 |**LogReader**|Агент чтения журнала репликации|  
-|**Distribution**|агент распространения репликации|  
-|**AutoMerge**|Replication Merge Agent|  
+|**Распределение**|агент распространения репликации|  
+|**Объединить**|Replication Merge Agent|  
 |**QueueReader**|Агент чтения очереди репликации|  
 |**ANALYSISQUERY**|Запрос служб Analysis Services|  
 |**ANALYSISCOMMAND**|Команда служб Analysis Services|  
@@ -79,7 +79,7 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|Скрипт PowerShell|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Предоставление подсистеме доступа к учетной записи-посреднику не изменяет разрешений, предоставленных участнику, указанному в учетной записи-посреднике.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -100,7 +100,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>Б) Предоставление доступа к подсистеме по имени.  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>Б. Предоставление доступа к подсистеме по имени.  
  В следующем примере учетной записи-посреднику `Catalog application proxy` предоставляется доступ к подсистеме «Выполнение пакета служб SSIS».  
   
 ```sql
@@ -113,7 +113,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Реализация агент SQL Server безопасности](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_revoke_proxy_from_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-proxy-from-subsystem-transact-sql.md)   
  [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 60c948cd-11c0-4ff7-a336-dd9ea7b2a3c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2202569c00d06371d4e34c4841ecded6b40e1fca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 73334e515ec2d3da0073510bae03d79ecfd61209
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659043"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757560"
 ---
 # <a name="flagname-property-clientsettingsgeneralflag-class"></a>Свойство FlagName (класс ClientSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает имя флага.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,9 +42,9 @@ object.FlagName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя флага.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [настройка клиентских протоколов](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

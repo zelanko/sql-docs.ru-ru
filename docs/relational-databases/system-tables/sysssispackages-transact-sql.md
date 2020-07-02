@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e400905801f3186f2eb54956bad612c17d686d14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029639"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757742"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Содержит по одной строке для каждого пакета, сохраненного [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в. Эта таблица хранится в базе данных **msdb** .  
+  Содержит по одной строке для каждого пакета, сохраненного в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта таблица хранится в базе данных **msdb** .  
   
   
 |Имя столбца|Тип данных|Описание|  
@@ -38,9 +38,9 @@ ms.locfileid: "68029639"
 |**креатедате**|**datetime**|Дата создания пакета.|  
 |**FolderId**|**uniqueidentifier**|Идентификатор GUID логической папки, в которой среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] содержит данный пакет.|  
 |**ownersid**|**varbinary**|Уникальный идентификатор защиты пользователя, создавшего пакет.|  
-|**packagedata**|**image**|Пакет.|  
-|**packageformat**|**int**|Формат, в котором пакет сохранен:<br /><br /> Значение 2 указывает, что пакет сохранен в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] формате.<br /><br /> Значение 3 указывает, что пакет сохранен в формате [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]или более поздней версии.|  
-|**packagetype**|**int**|Клиент, создавший пакет. Возможны следующие значения:<br /><br /> 0 (значение по умолчанию);<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мастер импорта и экспорта)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] репликация)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] конструктор)<br /><br /> 6 (конструктор или мастер планов обслуживания базы данных).<br /><br /> <br /><br /> Обратите внимание, что значения в этом столбце соответствуют <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> перечислению.|  
+|**packagedata**|**изображение**|Пакет.|  
+|**packageformat**|**int**|Формат, в котором пакет сохранен:<br /><br /> Значение 2 указывает, что пакет сохранен в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] формате.<br /><br /> Значение 3 указывает, что пакет сохранен в формате [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или более поздней версии.|  
+|**packagetype**|**int**|Клиент, создавший пакет. Возможны следующие значения:<br /><br /> 0 (значение по умолчанию);<br /><br /> 1 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Мастер импорта и экспорта)<br /><br /> 3 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] репликация)<br /><br /> 5 ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] конструктор)<br /><br /> 6 (конструктор или мастер планов обслуживания базы данных).<br /><br /> <br /><br /> Обратите внимание, что значения в этом столбце соответствуют <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> перечислению.|  
 |**vermajor**|**int**|Последняя основная версия пакета.|  
 |**verminor**|**int**|Последняя вспомогательная версия пакета.|  
 |**verbuild**|**int**|Последняя сборка пакета.|  
@@ -50,7 +50,7 @@ ms.locfileid: "68029639"
 |**readrolesid**|**varbinary**|Роль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая может загрузить пакет.|  
 |**writerolesid**|**varbinary**|Роль [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая может сохранить пакет.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)  
   
   

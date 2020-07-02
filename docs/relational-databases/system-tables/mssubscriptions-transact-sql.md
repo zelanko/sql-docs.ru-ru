@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4ed943e0768e031c07fa1748961e311373af8ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 787217996a491b37bb7b46ec505ac7d374d9aed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812264"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758678"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица **мссубскриптионс** содержит по одной строке для каждой опубликованной статьи в подписке, обслуживаемой локальным распространителем. Эта таблица хранится в базе данных распространителя.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82812264"
 |**subscription_seqno**|**varbinary (16)**|Порядковый номер транзакции моментального снимка памяти.|  
 |**snapshot_seqno_flag**|**bit**|Указывает источник порядкового номера транзакции моментального снимка, где значение **1** означает, что **subscription_seqno** является порядковым номером моментального снимка.|  
 |**independent_agent**|**bit**|Указывает, имеется ли для данной публикации изолированный агент распространителя.|  
-|**subscription_time**|**datetime**|Только для внутреннего использования.|  
+|**subscription_time**|**datetime**|Только для внутреннего применения.|  
 |**loopback_detection**|**bit**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **1** = не отправляет обратно.<br /><br /> **0** = отправляет обратно.<br /><br />|  
 |**agent_id**|**int**|Идентификатор агента.|  
 |**update_mode**|**tinyint**|Тип обновления.|  

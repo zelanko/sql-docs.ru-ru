@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: af202181425b751d684d833946a52df036633afb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760234"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает запись в таблице [серверовsys.sys](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (если она не существует), помечает запись сервера как распространитель и сохраняет сведения о свойствах. Данная хранимая процедура выполняется на распространителе в базе данных master, чтобы зарегистрировать и пометить сервер как распространитель. В случае с удаленным распространителем хранимая процедура выполняется также и на издателе от базы данных master, чтобы зарегистрировать удаленный распространитель.  
   
@@ -59,7 +59,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **sp_adddistributor** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="example"></a>Пример  
@@ -68,7 +68,7 @@ sp_adddistributor [ @distributor= ] 'distributor'
 ## <a name="permissions"></a>Разрешения  
  Только члены предопределенной роли сервера **sysadmin** могут выполнять **sp_adddistributor**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   

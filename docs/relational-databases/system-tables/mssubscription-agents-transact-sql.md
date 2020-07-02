@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 740610a9fa20d3c47472f3737548a4c22fe20a19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757770"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   **MSsubscription_agents** таблица используется агент распространения и триггерами обновляемых подписок для наблюдения за свойствами подписки. Эта таблица хранится в базе данных подписки.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82823376"
 |**last_sync_status**|**int**|Последнее состояние выполнения агента распространителя, выполняющегося в настоящее время или только что запущенного. Состояние может быть следующим:<br /><br /> **1** = запущено.<br /><br /> **2** = успех.<br /><br /> **3** = выполняется.<br /><br /> **4** = бездействие.<br /><br /> **5** = повторная попытка.<br /><br /> **6** = ошибка.|  
 |**last_sync_summary**|**sysname**|Последнее сообщение агента распространителя, выполняющегося в настоящее время или только что запущенного. Состояние может быть следующим:<br /><br /> **Начинать.**<br /><br /> **Успешно.**<br /><br /> **Выполняется.**<br /><br /> **Выключен.**<br /><br /> **Повторите.**<br /><br /> **Cчетчик.**|  
 |**last_sync_time**|**datetime**|Дата и время обновления столбцов *last_sync_summary* и *last_sync_status* . Агенты распространителя по запросу или анонимные, выполняющиеся как задания службы агента SqlServer, не обновляют эти столбцы. Вместо этого данные журнала заносятся в таблицу журнала заданий.|  
-|**queue_server**|**sysname**|Только для внутреннего использования.|  
+|**queue_server**|**sysname**|Только для внутреннего применения.|  
   
 ## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

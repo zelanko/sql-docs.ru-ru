@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 976109aa0ef09575f818ff6daf82e742626dede7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756647"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Задает сведения о конфигурации и безопасности, применяемые триггерами синхронизации немедленно обновляемых подписок при подключении к издателю. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -57,7 +57,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`Режим безопасности, используемый подписчиком для подключения к удаленному издателю для немедленного обновления. *security_mode* имеет **тип int**и может принимать одно из следующих значений. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверку подлинности с именем входа, указанным в этой хранимой процедуре, в качестве *имени входа* и *пароля*.<br /><br /> Примечание. в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот параметр использовался для указания динамического удаленного вызова процедур (RPC).|  
 |**1**|Использует контекст безопасности (проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или Windows) пользователя, редактирующего подписчика.<br /><br /> Примечание. Эта учетная запись также должна существовать у издателя с достаточными привилегиями. В случае использования проверки подлинности Windows должно поддерживаться делегирование учетной записи безопасности.|  
@@ -72,7 +72,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_link_publication** используется немедленно обновляемыми подписками в репликации транзакций.  
   
  **sp_link_publication** можно использовать как для принудительной подписки, так и для подписок по запросу. Ее можно вызывать как до, так и после создания подписки. Запись вставляется или обновляется в MSsubscription_properties &#40;в системной таблице [&#41;Transact-SQL](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  

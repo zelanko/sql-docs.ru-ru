@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55d9c6bf2e64509872faf02fa653499a28efb300
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68005700"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756725"
 ---
 # <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (API-интерфейс расширенных хранимых процедур)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
@@ -54,7 +54,7 @@ n
  *n*  
  Указывает номер параметра. Первый параметр имеет значение 1.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Фактическая длина данных параметра в байтах. Если параметра с номером *n* или удаленной хранимой процедуры не существует, возвращается значение -1. Если параметр с номером *n* имеет значение NULL, то возвращается 0.  
   
  Эта функция возвращает следующие значения, если параметр является одним из следующих [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] системных типов данных.  
@@ -68,11 +68,11 @@ n
 |**BIGVARBINARY**|**NULL:** 0<br /><br /> **Ноль:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** фактическое значение *len*|  
 |**NCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |**NVARCHAR**|**NULL:** 0<br /><br /> **Ноль:** 1<br /><br /> **>= 255:** 255<br /><br /> **<255:** фактическое значение *len*|  
-|**ТИПЫ**|**Null:** -1<br /><br /> **ZERO:** –1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|**ТИПЫ**|**Null:** -1<br /><br /> **ZERO:** –1<br /><br /> **>= 255:** -1<br /><br /> ** \< 255:** -1|  
   
  \* фактическое значение *len* = длина многобайтовой символьной строки (cch)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  У каждого параметра удаленной хранимой процедуры есть максимальная и реальная длина данных. Для стандартных типов данных с фиксированной длиной, которые не поддерживают значений NULL, реальная и максимальная длина одинаковы. У типов данных переменной длины эти длины могут быть разными. Например, параметр, объявленный как **varchar(30)**, может иметь данные длиной всего 10 байт. Фактическая длина параметра — 10, а максимальная — 30. Функция **srv_paramlen** возвращает фактическую длину данных в байтах удаленной хранимой процедуры. Для получения максимальной длины данных параметра используется функция **srv_parammaxlen**.  
   
  Когда удаленная хранимая процедура вызывается с параметрами, эти параметры могут быть переданы либо по имени, либо по позиции — без указания имени. Если при вызове удаленной хранимой процедуры часть параметров передается по имени, а часть — по позиции, возникает ошибка. Обработчик SRV_RPC по-прежнему вызывается, но он выглядит так, как если бы параметры не существовали, а **srv_rpcparams** возвращает 0.  
@@ -80,7 +80,7 @@ n
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [API srv_paraminfo &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760034"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>Хранимая процедура sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает сведения о текущем состоянии подписок, относящихся к одной или нескольким публикациям на издателе, и одну строку для каждой возвращенной подписки. Эта хранимая процедура, используемая для наблюдения за репликацией, выполняется на распространителе в базе данных распространителя.  
   
@@ -52,7 +52,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Тип публикации. *publication_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0**|Публикация транзакций.|  
 |**1**|Публикация моментальных снимков.|  
@@ -61,7 +61,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode`Режим фильтрации, используемый при возврате сведений мониторинга подписки. *mode* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**0** (по умолчанию)|Возвращать все подписки.|  
 |**1**|Возвращать подписки с ошибками.|  
@@ -116,7 +116,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_replmonitorhelpsubscription** используется со всеми типами репликации.  
   
  **sp_replmonitorhelpsubscription** упорядочивает результирующий набор на основе серьезности состояния подписки, которая определяется значением *мониторранкинг*. Например, строки всех подписок в состоянии ошибки находятся выше строк подписок с предупреждениями.  

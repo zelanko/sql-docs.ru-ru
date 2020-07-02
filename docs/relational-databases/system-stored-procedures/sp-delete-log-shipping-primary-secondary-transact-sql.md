@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d6f71a12-f7b1-4a1c-9639-a533b8287b0c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8276a23224495b7bcc69721fd5317d0b2b87821a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3dfcffef20ba6caf1217d4b445b85109b9667ad6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68009168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760078"
 ---
 # <a name="sp_delete_log_shipping_primary_secondary-transact-sql"></a>sp_delete_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет запись базы данных-получателя на сервере-источнике.  
   
@@ -52,9 +52,9 @@ sp_delete_log_shipping_primary_secondary
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Отсутствует.  
+ Нет.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_delete_log_shipping_primary_secondary** должны быть запущены из базы данных **master** на сервере источника. Эта хранимая процедура удаляет запись для базы данных-получателя из **log_shipping_primary_secondaries** на сервере-источнике.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

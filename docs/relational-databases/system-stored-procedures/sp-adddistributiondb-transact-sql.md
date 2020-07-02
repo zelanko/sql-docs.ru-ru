@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 13ba20770fd97d0db193ab492ae0958cf4c7ad35
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771352"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758032"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает новую базу данных распространителя и устанавливает схему Distributor. В базе данных распространителя хранятся процедуры, схема и метаданные, используемые при репликации. С помощью этой хранимой процедуры на стороне распространителя в базе данных master создается база данных распространителя и устанавливаются необходимые таблицы и хранимые процедуры, которые требуются для включения распространения репликации.  
   
@@ -55,7 +55,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="arguments"></a>Аргументы  
 `[ @database = ] database'`Имя создаваемой базы данных распространителя. Аргумент *Database* имеет тип **sysname**и не имеет значения по умолчанию. Если указанная база данных существует и не помечена как база данных распространителя, то устанавливаются объекты, необходимые для включения распространения, и база данных помечается как база данных распространителя. Если указанная база данных уже включена как база данных распространителя, то возвращается сообщение об ошибке.  
   
-`[ @data_folder = ] 'data_folder'_`Имя каталога, используемого для хранения файла данных базы данных распространителя. *DATA_FOLDER* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Если значение равно null, используется каталог данных для этого [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра, например `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @data_folder = ] 'data_folder'_`Имя каталога, используемого для хранения файла данных базы данных распространителя. *DATA_FOLDER* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Если значение равно NULL, используется каталог данных для этого экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` .  
   
 `[ @data_file = ] 'data_file'`Имя файла базы данных. *data_file* имеет тип **nvarchar (255)** и значение по умолчанию **Database**. Если аргумент имеет значение NULL, то хранимая процедура создает имя файла на основе имени базы данных.  
   
@@ -65,7 +65,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @log_file = ] 'log_file'`Имя файла журнала. *log_file* имеет тип **nvarchar (255)** и значение по умолчанию NULL. Если аргумент имеет значение NULL, то хранимая процедура создает имя файла на основе имени базы данных.  
   
-`[ @log_file_size = ] log_file_size`Начальный размер файла журнала в мегабайтах (МБ). *log_file_size* имеет **тип int**и значение по умолчанию 0 МБ, что означает, что размер файла создается с минимальным размером файла журнала, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]разрешенным.  
+`[ @log_file_size = ] log_file_size`Начальный размер файла журнала в мегабайтах (МБ). *log_file_size* имеет **тип int**и значение по умолчанию 0 МБ, что означает, что размер файла создается с минимальным размером файла журнала, разрешенным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @min_distretention = ] min_distretention`Минимальный срок хранения (в часах) перед удалением транзакций из базы данных распространителя. *min_distretention* имеет **тип int**и значение по умолчанию 0 часов.  
   
@@ -73,7 +73,7 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @history_retention = ] history_retention`Число часов, в течение которых будет храниться журнал. *history_retention* имеет **тип int**и значение по умолчанию 48 часов.  
   
-`[ @security_mode = ] security_mode`Режим безопасности, используемый при соединении с распространителем. *security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверка подлинности; **1** указывает встроенную проверку подлинности Windows.  
+`[ @security_mode = ] security_mode`Режим безопасности, используемый при соединении с распространителем. *security_mode* имеет **тип int**и значение по умолчанию 1. **0** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Проверка подлинности; **1** указывает встроенную проверку подлинности Windows.  
   
 `[ @login = ] 'login'`Имя входа, используемое при соединении с распространителем для создания базы данных распространителя. Это необходимо, если параметру *security_mode* присвоено значение **0**. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL.  
   
@@ -97,7 +97,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_adddistributiondb** используется во всех типах репликации. Однако эта хранимая процедура может выполняться только на стороне распространителя.  
   
  Необходимо настроить распространитель, выполнив [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) перед выполнением **sp_adddistributiondb**.  

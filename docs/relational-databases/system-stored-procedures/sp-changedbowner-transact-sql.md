@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760195"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет владельца текущей базы данных.  
   
@@ -43,16 +43,16 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @loginame= ] "*Login*"  
- Идентификатор имени входа нового владельца текущей базы данных. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя для входа* должно быть уже [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существующим именем входа или пользователем Windows. *имя входа* не может стать владельцем текущей базы данных, если у нее уже есть доступ к базе данных через существующую учетную запись безопасности пользователя в базе данных. Чтобы избежать этой ситуации, сначала удалите данного пользователя в текущей базе данных.  
+ [ @loginame =] "*Login*"  
+ Идентификатор имени входа нового владельца текущей базы данных. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя для входа* должно быть уже существующим [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или пользователем Windows. *имя входа* не может стать владельцем текущей базы данных, если у нее уже есть доступ к базе данных через существующую учетную запись безопасности пользователя в базе данных. Чтобы избежать этой ситуации, сначала удалите данного пользователя в текущей базе данных.  
   
- [ @map= ] *remap_alias_flag*  
- Параметр *remap_alias_flag* является устаревшим, так как псевдонимы для входа были [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]удалены из. Использование параметра *remap_alias_flag* не приводит к ошибке, но не оказывает никакого влияния.  
+ [ @map =] *remap_alias_flag*  
+ Параметр *remap_alias_flag* является устаревшим, так как псевдонимы для входа были удалены из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Использование параметра *remap_alias_flag* не приводит к ошибке, но не оказывает никакого влияния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  После выполнения процедуры sp_changedbowner новый владелец становится известным в базе данных как пользователь dbo. Пользователь dbo имеет неявные разрешения на выполнение любых действий в базе данных.  
   
  Владельца системных баз данных master, model или tempdb нельзя изменить.  
@@ -73,7 +73,7 @@ sp_changedbowner [ @loginame = ] 'login'
 EXEC sp_changedbowner 'Albert';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sp_dropalias &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropalias-transact-sql.md)   

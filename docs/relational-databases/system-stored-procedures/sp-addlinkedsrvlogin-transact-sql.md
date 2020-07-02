@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758000"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Создает или обновляет сопоставления имен входа в локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с учетной записью на удаленном сервере.  
   
@@ -51,10 +51,10 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Значение TRUE указывает, что имена входа используют собственные учетные данные для подключения к *рмтсрвнаме*с пропущенными аргументами *рмтусер* и *рмтпассворд* . Значение FALSE указывает, что аргументы *рмтусер* и *рмтпассворд* используются для подключения к *рмтсрвнаме* для указанного *локаллогин*. Если для *рмтусер* и *рмтпассворд* также задано значение null, то имя входа или пароль для подключения к связанному серверу не используются.  
   
  `[ @locallogin = ] 'locallogin'`  
- Имя входа на локальный сервер. *локаллогин* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL указывает, что эта запись применяется ко всем локальным именам входа, подключающимся к *рмтсрвнаме*. Если значение не равно NULL, *локаллогин* может [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] быть именем входа или именем входа Windows. Имени входа Windows должен быть предоставлен либо прямой доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо доступ через членство в группе Windows, обладающей нужными правами доступа.  
+ Имя входа на локальный сервер. *локаллогин* имеет тип **sysname**и значение по умолчанию NULL. Значение NULL указывает, что эта запись применяется ко всем локальным именам входа, подключающимся к *рмтсрвнаме*. Если значение не равно NULL, *локаллогин* может быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа или именем входа Windows. Имени входа Windows должен быть предоставлен либо прямой доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо доступ через членство в группе Windows, обладающей нужными правами доступа.  
   
  `[ @rmtuser = ] 'rmtuser'`  
- Удаленное имя входа, используемое для *rmtsrvname* подключения к @useself рмтсрвнаме, если имеет значение false. Если удаленный сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не использует проверку подлинности Windows, *рмтусер* является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа. *рмтусер* имеет тип **sysname**и значение по умолчанию NULL.  
+ Удаленное имя входа, используемое для подключения к *рмтсрвнаме* @useself , если имеет значение false. Если удаленный сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который не использует проверку подлинности Windows, *рмтусер* является [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа. *рмтусер* имеет тип **sysname**и значение по умолчанию NULL.  
   
  `[ @rmtpassword = ] 'rmtpassword'`  
  Пароль, связанный с *рмтусер*. *рмтпассворд* имеет тип **sysname**и значение по умолчанию NULL.  
@@ -62,7 +62,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Когда пользователь входит на локальный сервер и выполняет распределенный запрос, который обращается к таблице на связанном сервере, то для открытия таблицы локальный сервер должен войти на связанный сервер под именем данного пользователя. Учетные данные входа, с помощью которых локальный сервер будет входить на связанный сервер, задаются с помощью хранимой процедуры sp_addlinkedsrvlogin.  
   
 > [!NOTE]  
@@ -97,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- Или  
+ либо  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
@@ -106,7 +106,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'true';
 > [!NOTE]  
 >  Если для отдельных имен входа созданы явные сопоставления, то они имеют преимущество перед любыми глобальными сопоставлениями для данного связанного сервера.  
   
-### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>Б) Подключение указанного имени входа к связанному серверу с помощью других учетных данных  
+### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>Б. Подключение указанного имени входа к связанному серверу с помощью других учетных данных  
  В следующем примере создается сопоставление, гарантирующее, что пользователь Windows `Domain\Mary` будет подключаться к связанному серверу `Accounts` с помощью имени входа `MaryP` и пароля `d89q3w4u`.  
   
 ```  

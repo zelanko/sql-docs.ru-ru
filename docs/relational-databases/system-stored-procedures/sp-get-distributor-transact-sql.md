@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0e714018ed35a7b6c12c0c00bd8eeffda5630b67
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 545bc84b8b68f89428912aba635c87ce23dcbd22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757927"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>Хранимая процедура sp_get_distributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Определяет, установлен ли на сервере распространитель. Хранимая процедура выполняется на компьютере, где выполняется поиск распространителя, в любой базе данных.  
   
@@ -46,7 +46,7 @@ sp_get_distributor
 |**is distribution publisher**|**int**|**0** = нет; **1** = да|  
 |**есть Удаленный распространяющий издатель**|**int**|**0** = нет; **1** = да|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_get_distributor** используется главным образом в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в репликации моментальных снимков, транзакций и слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

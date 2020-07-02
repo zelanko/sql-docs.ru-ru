@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: 9d2163610d1ea537301ec61e1a34c8b6e727d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759457"
 ---
 # <a name="type-system---sequence-type-matching"></a>Система типов — сопоставление типов последовательности
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Значением выражения языка XQuery всегда является последовательность из нуля или более элементов. Элемент может быть атомарным значением или узлом. Тип элементов последовательности соответствует типу результатов, возвращаемых выражением запроса. Пример:  
   
@@ -433,7 +433,7 @@ RETURN
   
 -   Явное выполнение запроса для **xsi: Type** или **xsi: nil** не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Введите System &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   
