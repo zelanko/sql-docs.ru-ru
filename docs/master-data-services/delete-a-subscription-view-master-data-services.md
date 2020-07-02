@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2805e1c9faafa24b78b64a2fcc6082010099429f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44ee02d2397f0f17573e48ccf056b3e768b15240
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811573"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Удаление представления подписки (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]представление подписки удаляется тогда, когда в нем отпадает необходимость. При удалении представления подписки в службах [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] представление удаляется из базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Можно также изменить представление подписки.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "73729387"
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание представления подписки для экспорта &#40;данных Master Data Services&#41;](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)   
  [Обзор. Экспорт данных (службы Master Data Services)](../master-data-services/overview-exporting-data-master-data-services.md)  
   

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78dcf9320312f93dd08495f21bf0f6cc1b71516b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727920"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811469"
 ---
 # <a name="reserved-words-master-data-services"></a>Зарезервированные слова (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]при создании элементов и объектов модели нельзя использовать некоторые слова. В противном случае могут возникнуть ошибки.  
   
@@ -31,13 +31,13 @@ ms.locfileid: "73727920"
   
 -   [Модели](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [Entities](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [Сущности](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [Явные иерархии](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
 -   [Атрибуты](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Участники](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Члены](../master-data-services/reserved-words-master-data-services.md#members)  
   
 ##  <a name="models"></a><a name="models"></a>Моделью  
  Если модель создается с именем **Name** или **Code**, не выбирайте **Создать сущность с именем модели** , поскольку **Name** или **Code** нельзя использовать в качестве имени сущности.  
@@ -50,15 +50,15 @@ ms.locfileid: "73727920"
   
 ##  <a name="attributes"></a><a name="attributes"></a>Атрибута  
   
--   **Идентификатор**  
+-   **ID**  
   
--   **Приведен**  
+-   **Код**  
   
 -   **EnterUserName**  
   
 -   **LastChgUserName**  
   
--   **имя**;  
+-   **Name**  
   
 -   **EnterDTM**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "73727920"
 ##  <a name="members"></a><a name="members"></a>Участниками  
  Для элементов нельзя использовать **MDMMemberStatus**, **MDMUnused**или **ROOT** в качестве значения атрибута **Code** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
   

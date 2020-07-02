@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6deb778d5b15ed76256fa0d22366f0be9eb25b02
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812538"
 ---
 # <a name="data-quality-projects-dqs"></a>Проекты служб Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Проект служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) предназначен для использования базы знаний для повышения качества источника данных путем выполнения операций *очистки данных* и *сопоставления данных* с последующим экспортом результирующих данных в базу данных SQL Server или файл .csv. Вы можете создать проект служб DQS как проект очистки или проект сопоставления для выполнения соответствующих операций. Проекты очистки и сопоставления вы можете выполнять с использованием одной базы знаний, так как знания для очистки и сопоставления данных могут быть встроены в ту же базу знаний.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "75251709"
  Дополнительные сведения об очистке данных в проекте служб DQS см. в разделе [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
 ##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a> Проект качества данных: операция сопоставления  
- Проект сопоставления данных позволяет выполнить операцию сопоставления на основе политики сопоставления в базе знаний с целью предотвратить дублирование данных путем определения точных и приблизительных совпадений. Таким образом, пользователь может удалить повторяющиеся данные. Рекомендуется очистить данные перед их сопоставлением. Для этого выполните следующие действия.  
+ Проект сопоставления данных позволяет выполнить операцию сопоставления на основе политики сопоставления в базе знаний с целью предотвратить дублирование данных путем определения точных и приблизительных совпадений. Таким образом, пользователь может удалить повторяющиеся данные. Рекомендуется очистить данные перед их сопоставлением. Для этого сделайте следующее:  
   
 1.  Создайте проект служб DQS, выберите операцию **Очистка** , выполните операцию очистки исходных данных, а затем экспортируйте их в таблицу в базе данных SQL Server.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75251709"
 |Описывает, как открывать, разблокировать, переименовывать и удалять проекты служб DQS.|[Открытие, разблокировка, переименование и удаление проекта качества данных](open-unlock-rename-and-delete-a-data-quality-project.md)|  
 |Описывает, как открыть проект служб Integration Services в [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|[Открытие проектов служб Integration Services в клиенте DQS](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Базы знаний и домены DQS](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

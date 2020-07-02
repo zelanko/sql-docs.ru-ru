@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: a8f4fd055394df55b96b8694621d430bbac6c320
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812841"
 ---
 # <a name="administrators-master-data-services"></a>Администраторы (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этой статье описываются типы администраторов в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: администраторы моделей, администраторы сущностей и суперпользователь.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "84796610"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Запись блога [Security Improvements](https://go.microsoft.com/fwlink/p/?LinkId=615376)(Улучшения безопасности) на портале msdn.com.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание администратора модели &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [Создание базы данных Master Data Services](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Уведомления (службы Master Data Services)](../master-data-services/notifications-master-data-services.md)  

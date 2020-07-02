@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 381d089aa124f44161b3fd5f1102f7377719f142
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812772"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Создание представления подписки для экспорта данных (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Создайте представление подписки, чтобы экспортировать данные служб Master Data Services в системы-подписчики. Представление данных создается в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
@@ -61,7 +61,7 @@ ms.locfileid: "84796433"
   
 10. Если выбрано значение из списка **Формат****Явные уровни** или **Производные уровни** , то введите число уровней в иерархии для включения в представление.  
   
-11. Нажмите кнопку **Сохранить**.  
+11. Выберите команду **Сохранить**.  
   
 ## <a name="view-information"></a>Сведения о представлении  
  Для всех созданных представлений в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
@@ -69,7 +69,7 @@ ms.locfileid: "84796433"
 |Столбец|Описание|  
 |------------|-----------------|  
 |Состояние|Состояние представления.<br /><br /> При нажатии кнопки **сохранить**отображается ![значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния") , указывающий на то, что представление обновляется.<br /><br /> Если при создании или изменении представления возникли ошибки, отображается ![значок изображение состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки") .<br /><br /> В противном случае отображается состояние ОК, а ![для значка состояния ОК](../master-data-services/media/mds-statusicon-ok.png "Значок состояния "ОК"") — изображение.|  
-|Имя|Имя представления подписки.|  
+|name|Имя представления подписки.|  
 |Модель|Имя модели.|  
 |Версия|Имя версии.|  
 |Флаг версии|Имя флага версии.|  
@@ -89,7 +89,7 @@ ms.locfileid: "84796433"
   
 -   **Когда обновлено**— дата и время последнего обновления представления.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обзор: экспорт &#40;данных Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Удаление представления подписки &#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
  [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1ae1d6732b3661ca70511f0de8b3be0730ed63b
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289872"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812590"
 ---
 # <a name="create-a-composite-domain"></a>Создание составного домена
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описывается, как создать составной домен в базе знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов, применимых к одному полю данных. Дополнительные сведения о составных доменах см. в разделе [Управление составным доменом](../data-quality-services/managing-a-composite-domain.md).  
   
@@ -77,7 +77,7 @@ ms.locfileid: "79289872"
   
 2.  В **Списке доменов**выберите домены, которые будут входить в состав составного домена, и щелкните стрелку вправо, чтобы переместить эти домены в таблицу **Домены в составном домене** . Это список отдельных доменов, доступных для добавления в создаваемый составной домен. Доступны только предварительно созданные отдельные домены, которые еще не добавлены к существующим составным доменам. Отдельный домен можно добавить только к одному составному домену в базе знаний. Составной домен невозможно добавить в другой составной домен.  
   
-3.  Щелкните **Дополнительно**.  
+3.  Нажмите кнопку **Дополнительно**.  
   
 4.  Выберите одно из следующих значений для параметра **Метод анализа**:  
   

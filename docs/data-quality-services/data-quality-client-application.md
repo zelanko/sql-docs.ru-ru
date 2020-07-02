@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 4a789386fbbef91590ec025787e47c7655753a3b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c788f20aa0b24d4058578119dc7b4bc139ded73
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75251737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812601"
 ---
 # <a name="data-quality-client-application"></a>Клиентское приложение DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет выполнять операции по обеспечению качества данных с помощью изолированного средства. Это приложение позволяет создавать базы знаний, создавать и выполнять проекты качества данных и выполнять административные задачи.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75251737"
 |Описывает выполнение сопоставления в DQS.|[Сопоставление данных](../data-quality-services/data-matching.md)|  
 |Описывает администрирование DQS.|[администрирование DQS](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Главный экран клиента DQS](../data-quality-services/data-quality-client-home-screen.md)  
   
   

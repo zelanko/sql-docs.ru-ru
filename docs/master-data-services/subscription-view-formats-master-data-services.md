@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc0fc6dad3771b051859130f13a9b0f3bab54389
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812324"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Форматы представления подписки (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   На основании выбранной сущности или производной иерархии для представления подписки будут доступны следующие форматы.  
   
 ## <a name="subscription-view-formats"></a>Форматы представлений подписки  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |**Конечные элементы**|Содержит конечные элементы и значения связанных с ними атрибутов.|  
 |**Журнал конечных элементов**|Содержит данные журнала о конечных элементах и значениях связанных с ними атрибутов. Формат представления соответствует стилю медленно изменяющегося измерения типа 4.|  
@@ -42,7 +42,7 @@ ms.locfileid: "73728888"
 |**Производная связь «родители-потомки» (представление производных иерархий)**|Содержит структуру производных иерархий в формате «родители-потомки».|  
 |**Производные уровни (представление производных иерархий)**|Содержит структуру производных иерархий в уровневом формате.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обзор: экспорт &#40;данных Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
  [Создание представления подписки для экспорта данных (службы Master Data Services)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

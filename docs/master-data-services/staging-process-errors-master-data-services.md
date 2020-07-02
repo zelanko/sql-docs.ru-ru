@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 10c5dfcc5dcebefe617e065ab525012533f8c967
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 0a038abb5ac1152a09face7a4838f18a69b65400
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812344"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Ошибки промежуточного процесса (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   После завершения промежуточного процесса все обработанные записи в промежуточных таблицах содержат значение в столбце ErrorCode. Эти значения перечислены в следующей таблице.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84796495"
 |210047|Элемент не может быть одноуровневым с Unused.|Это происходит, когда **RelationshipType**  =  **2** (одноуровневый элемент) и либо **ParentCode** , **Unused**либо **ChildCode** не используются. Элементами могут быть только дочерние элементы из неиспользуемого узла.|Связь|  
 |210048|**ParentCode** и **ChildCode** не могут совпадать.|Значение **ParentCode** совпадает со значением **ChildCode** . Эти значения должны быть разными.|Связь|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр ошибок, возникающих во время промежуточного хранения &#40;Master Data Services&#41;](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

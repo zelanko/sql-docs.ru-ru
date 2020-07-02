@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3ab7e110b66f27ecb738585215567e1aa96f9788
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85812719"
 ---
 # <a name="member-revision-history-master-data-services"></a>Журнал изменений элемента (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Если тип журнала транзакций сущностей является элементом, то при каждом изменении элемента записывается журнал изменений элемента.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "73729111"
 |----------------------|-----------|  
 |Откат журнала изменений элемента|[Откат журнала изменений элемента (Master Data Services)](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание &#40;модели Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
  [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md)  
   

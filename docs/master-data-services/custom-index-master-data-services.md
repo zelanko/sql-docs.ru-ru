@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18eaba26b326b95871594e46ae5c55355e2ac199
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729496"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811996"
 ---
 # <a name="custom-index-master-data-services"></a>Пользовательский индекс (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Пользовательские индексы создают некластеризованный индекс для одного атрибута (одного индекса) или для списка атрибутов (составной индекс) в сущности. Как правило, индексы улучшают производительность обработки запросов. Дополнительные сведения об индексах SQL Server см. в разделе [Индексы](../relational-databases/indexes/indexes.md).  
   

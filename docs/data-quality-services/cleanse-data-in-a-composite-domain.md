@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 6d8bdf65a4225bbb915c5596db641f4635775953
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07879417c216e6d66085539ed6c177891a4e8bfb
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85811353"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Очистка данных в составном домене
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В этом разделе описывается очистка составных доменов в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Составной домен состоит из нескольких отдельных доменов и соответствует полю данных, которое включает несколько связанных терминов. Отдельные домены в составном домене должны иметь общие области набора знаний. Дополнительные сведения о составных доменах см. в разделе [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "75255679"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- При тестировании определительного междоменного правила *Then* , **Value is equal to**диалоговое окно **Тестирование правила для составного домена** содержит новый столбец **Исправить на**, в котором отображаются правильные данные. В проекте очистки DQS это определяющее междоменное правило меняет данные со 100-процентной достоверностью, а в столбце **Причина** отображается следующее сообщение: "Исправлено правилом *\<имя_междоменного_правила>*". Дополнительные сведения о междоменных правилах см. в разделе [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ При тестировании определительного междоменного правила *Then* , **Value is equal to**диалоговое окно **Тестирование правила для составного домена** содержит новый столбец **Исправить на**, в котором отображаются правильные данные. В проекте "Очистка данных" это полное междоменное правило изменяет данные с уверенностью на 100%, а в столбце **Причина** отображается следующее сообщение: Исправлено правилом ' *\<Cross-Domain Rule Name>* '. Дополнительные сведения о междоменных правилах см. в разделе [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  Определительное междоменное правило не работает для составных доменов, присоединенных к службе ссылочных данных.  
