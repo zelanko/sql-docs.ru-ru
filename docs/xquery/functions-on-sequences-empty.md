@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2b80437f4c5a51fa649a291673fc212483fd43ae
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c522e0756ca846558acbf6ac1b96c7d4abeef57e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881833"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753558"
 ---
 # <a name="functions-on-sequences---empty"></a>Функции с последовательностями — empty
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает значение true, если значение *$arg* является пустой последовательностью. В противном случае функция возвращает значение False.  
   
@@ -39,7 +39,7 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Последовательность элементов. Если последовательность пуста, функция возвращает значение True. В противном случае функция возвращает значение False.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Функция **fn: Exists ()** не поддерживается. В качестве альтернативы можно использовать функцию **NOT ()** .  
   
 ## <a name="examples"></a>Примеры  
@@ -111,7 +111,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных XML](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist (метод) (тип данных xml)](../t-sql/xml/exist-method-xml-data-type.md)  
   

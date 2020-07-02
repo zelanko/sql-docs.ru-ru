@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 19e94b01667d666a714db22d85d866b0df2ec3fc
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: c1a4d3014286618639b045f5028935368321a3a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881845"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753586"
 ---
 # <a name="functions-on-nodes---number"></a>Функции с узлами — number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает числовое значение узла, обозначенное *$arg*.  
   
@@ -40,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  Узел, значение которого будет возвращено в виде числа.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если *$arg* не указан, возвращается числовое значение узла контекста, преобразованное в Double. В SQL Server **fn: Number ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, она может использоваться только внутри квадратных скобок ([ ]). Например, следующее выражение возвращает `ROOT` элемент <>.  
   
 ```  
@@ -99,7 +99,7 @@ ProductModelID   Result
   
 -   Если значения не могут быть возвращены в виде числа, функция **Number ()** возвращает пустую последовательность вместо NaN.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

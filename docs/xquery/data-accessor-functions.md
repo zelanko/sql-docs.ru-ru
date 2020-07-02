@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d25fa2236feb02ba8ed726dc56b946dc09350d1c
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 4c8ce28b47fddca3a9c948cf913759e9a07d4419
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881887"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753660"
 ---
 # <a name="data-accessor-functions"></a>Функции метода доступа к данным
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   В темах этого раздела приводятся и обсуждаются образцы кода с использованием функций доступа к данным.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "84881887"
   
 -   [Функция данных &#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения пути &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

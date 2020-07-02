@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 26253e3a19b31dce94249a09dcf7cee71fbffeeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c69f0ed73b638fd17183c5efba1c1f5e8e3c74f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488214"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756300"
 ---
 # <a name="deploying-clr-database-objects"></a>Развертывание объектов базы данных CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Развертывание — это процесс, посредством которого распространяется завершенное приложение или модуль, который необходимо запустить на другом компьютере. С помощью среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio можно разрабатывать объекты базы данных среды CLR и развертывать их на тестовом сервере. Вместо среды Visual Studio управляемые объекты базы данных можно компилировать с помощью файлов распространения платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. После компиляции сборки, содержащие объекты базы данных CLR можно развернуть на тестовом сервере с помощью среды Visual Studio или инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. Обратите внимание, что среду Visual Studio .NET 2003 нельзя использовать для программирования или развертывания в интеграции со средой CLR. В состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входит предварительно установленная платформа .NET Framework, а Visual Studio .NET 2003 не может использовать сборки .NET Framework версии 2.0.  
   
  После тестирования и проверки методов CLR на тестовом сервере их можно распространить на рабочих серверах с помощью скрипта развертывания. Скрипт развертывания можно создать вручную или с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (см. процедуру далее в этом разделе).  
@@ -40,7 +40,7 @@ ms.locfileid: "81488214"
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>Развертывание сборки с помощью среды Visual Studio  
   
-1.  Постройте проект, выбрав **Build** \<Project Name> в меню **Сборка** .  
+1.  Постройте проект, выбрав **Сборка** \<project name> в меню **Сборка** .  
   
 2.  Перед развертыванием сборки на тестовом сервере устраните все ошибки и предупреждения, полученные во время построения.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "81488214"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Процедура, функция, статистическое выражение, определяемый пользователем тип или триггер должны быть созданы в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборка **HelloWorld** содержит метод с именем **HelloWorld** **в классе** Procedures, в запрос можно [!INCLUDE[tsql](../../includes/tsql-md.md)] добавить следующую строку для создания процедуры с именем Hello in. **hello** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+1.  Процедура, функция, статистическое выражение, определяемый пользователем тип или триггер должны быть созданы в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборка **HelloWorld** содержит метод с именем **HelloWorld** **в классе** Procedures, в [!INCLUDE[tsql](../../includes/tsql-md.md)] запрос можно добавить следующую строку для создания процедуры с именем **Hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  `CREATE PROCEDURE hello`  
   
@@ -76,7 +76,7 @@ ms.locfileid: "81488214"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Дополнительные сведения о создании различных типов управляемых объектов базы данных в см. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в разделе [определяемые пользователем функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [статистические выражения](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)CLR, [определяемые пользователем типы CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)и [триггеры CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Дополнительные сведения о создании различных типов управляемых объектов базы данных в см [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . в разделе [определяемые пользователем функции CLR](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [статистические выражения](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md)CLR, [определяемые пользователем типы CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)и [триггеры CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Развертывание сборки на рабочих серверах  
  После тестирования и проверки CLR-объектов базы данных на тестовом сервере их можно распространить на рабочих серверах с помощью сценария развертывания. Дополнительные сведения об отладке объектов управляемой базы данных см. в разделе [Отладка объектов базы данных CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "81488214"
   
 1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и соединитесь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в котором зарегистрирована управляемая сборка или объект баз данных, который необходимо развернуть.  
   
-2.  В **обозревателе объектов**разверните узел ** \<имя сервера>** и деревья **баз данных** . Щелкните правой кнопкой мыши базу данных, в которой зарегистрирован объект управляемой базы данных, выберите пункт **задачи**, а затем выберите команду **Сформировать скрипты**. Откроется мастер скриптов.  
+2.  В **обозревателе объектов**разверните **\<server name>** деревья **баз данных** и. Щелкните правой кнопкой мыши базу данных, в которой зарегистрирован объект управляемой базы данных, выберите пункт **задачи**, а затем выберите команду **Сформировать скрипты**. Откроется мастер скриптов.  
   
 3.  Выберите базу данных из списка и нажмите кнопку **Далее**.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "81488214"
   
 5.  На панели **Выбор типов объектов** выберите тип развертываемого объекта базы данных. Щелкните **Далее**.  
   
-6.  Для каждого типа объектов, выбранного на панели **Выбор типов объектов** , отображается **панель \<выбор типа>** . На этой панели можно выбирать из всех экземпляров этого типа объекта базы данных, зарегистрированного в указанной базе данных. Выберите один или несколько объектов и нажмите кнопку **Далее**.  
+6.  Для каждого типа объектов, выбранного на панели **Выбор типов объектов** , отображается **панель \<type> выбора** . На этой панели можно выбирать из всех экземпляров этого типа объекта базы данных, зарегистрированного в указанной базе данных. Выберите один или несколько объектов и нажмите кнопку **Далее**.  
   
 7.  Область **Параметры вывода** появляется, когда выбраны все необходимые типы объектов базы данных. Выберите **скрипт для файла** и укажите путь к файлу скрипта. Выберите **Далее**. Проверьте параметры и нажмите кнопку **"Готово"**. Скрипт развертывания сохранится в указанном файле.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "81488214"
   
  При выполнении развертывания среда Visual Studio запустит данный скрипт после развертывания проекта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия о программировании интеграции со средой (CLR)](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

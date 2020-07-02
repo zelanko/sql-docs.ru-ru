@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 24235099ec742d4c6d62e3d97ee1f551af24f7d4
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: db4fbd8e78827ff8818f74e83bf9f2d8ca8d0d39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84524430"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753601"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Функции с логическими значениями — функция not 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает значение TRUE, если действительное логическое значение *$arg* равно false, и возвращает значение false, если действительное логическое значение *$arg* равно true.  
   
@@ -44,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>А) Использование функции XQuery not () для поиска моделей продуктов, описания каталогов которых не включают \<Specifications> элемент.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Использование функции XQuery not () для поиска моделей продуктов, описания каталогов которых не включают \<Specifications> элемент.  
  Следующий запрос конструирует XML-код, содержащий идентификаторы модели продукта для моделей продукции, описания каталогов которых не включают `Specifications` элемент <>.  
   
 ```  
@@ -109,7 +109,7 @@ ProductModelID Result
   
 -   Функция **NOT ()** поддерживает только аргументы типа xs: Boolean или node () * или пустую последовательность.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

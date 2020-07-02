@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45b7f9f7ee9fa301b10c29fafb663c3a307509d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dacb3e54898ece6222d2f9eb3d7a546c8aa7b76
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388514"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753553"
 ---
 # <a name="functions-on-sequences---id"></a>Функции с последовательностями — id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает последовательность узлов элементов со значениями xs: ID, которые соответствуют значениям одного или нескольких значений xs: IDREF, представленных в *$arg*.  
   
@@ -39,18 +39,18 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Одно или несколько значений xs:IDREF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Результатом функции является последовательность элементов в экземпляре XML, в порядке документов, имеющих значение xs:ID, равное одному или нескольким значениям xs:IDREF в списке кандидатов xs:IDREF.  
   
  Если значение xs:IDREF не совпадает ни с одним элементом, функция возвращает пустую последовательность.  
   
 ## <a name="examples"></a>Примеры  
- В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] типа **XML** в базе данных.  
+ В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] базе данных.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>А) Получение элементов, основанных на значении атрибута IDREF  
- В следующем примере метод fn: ID используется для получения <`employee`> элементов на основе атрибута диспетчера IDREF. В данном примере атрибут управляющего является атрибутом типа IDREF, а атрибут eid — атрибутом типа ID.  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Получение элементов, основанных на значении атрибута IDREF  
+ В следующем примере метод fn: ID используется для получения <`employee`> элементов на основе атрибута ДИСПЕТЧЕРА IDREF. В данном примере атрибут управляющего является атрибутом типа IDREF, а атрибут eid — атрибутом типа ID.  
   
- Для конкретного значения атрибута Manager функция **ID ()** находит элемент <`employee`>, значение атрибута ID которого соответствует входному значению IDREF. Иными словами, для конкретного сотрудника функция **ID ()** возвращает менеджера сотрудников.  
+ Для конкретного значения атрибута Manager функция **ID ()** находит `employee` элемент <>, значение атрибута ID которого соответствует входному значению IDREF. Иными словами, для конкретного сотрудника функция **ID ()** возвращает менеджера сотрудников.  
   
  Вот что происходит в примере:  
   
@@ -58,7 +58,7 @@ fn:id($arg as xs:IDREF*) as element()*
   
 -   Типизированная **XML-** переменная создается с помощью коллекции XML-схем.  
   
--   Запрос получает элемент, имеющий значение атрибута ID, на который ссылается атрибут **Manager** IDREF элемента <`employee`>.  
+-   Запрос получает элемент, имеющий значение атрибута ID, на который ссылается атрибут **Manager** IDREF `employee` элемента <>.  
   
 ```  
 -- If exists, drop the XML schema collection (SC).  
@@ -98,10 +98,10 @@ Go
   
  Запрос возвращает значение «Dave». Это значит, что Дэйв является управляющим Джо.  
   
-### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>Б) Извлечение элементов, основанных на значении атрибута OrderList IDREFS  
- В следующем примере атрибут OrderList элемента> <`Customer` является атрибутом типа IDREFS. Он перечисляет идентификаторы заказов определенного заказчика. Для каждого идентификатора заказа имеется <`Order`> дочерний элемент в <`Customer`>, предоставляющий значение порядка.  
+### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>Б. Извлечение элементов, основанных на значении атрибута OrderList IDREFS  
+ В следующем примере атрибут OrderList `Customer` элемента> <является атрибутом типа IDREFS. Он перечисляет идентификаторы заказов определенного заказчика. Для каждого идентификатора заказа имеется <`Order`> дочерний элемент в <>, `Customer` предоставляющий значение порядка.  
   
- Выражение запроса `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` получает первое значение из списка IDRES для первого заказчика. Затем это значение передается в функцию **ID ()** . Затем функция находит элемент <`Order`>, значение атрибута OrderID которого совпадает с входными данными для функции **ID ()** .  
+ Выражение запроса `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` получает первое значение из списка IDRES для первого заказчика. Затем это значение передается в функцию **ID ()** . Затем функция находит `Order` элемент <>, значение атрибута OrderID которого совпадает с входными данными для функции **ID ()** .  
   
 ```  
 drop xml schema collection SC  
@@ -181,7 +181,7 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]требует, чтобы тип аргумента **ID ()** был подтипом xs: IDREF *.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции над последовательностями](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

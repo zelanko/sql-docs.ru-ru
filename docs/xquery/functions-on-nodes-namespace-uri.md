@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a87e6108e68c3b9a2648abf7394f03f7e5c8d1ea
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: e22aadcb6da106c28ff38fc5b9d455f04152d0ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84306063"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753589"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Функции с узлами — namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает URI пространства имен QName, указанного в *$arg* , как xs: String.  
   
@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Имя узла, для которого будет получена часть URI-кода пространства имен.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
   
 -   Если аргумент опускается, значением по умолчанию является узел контекста.  
   
@@ -52,7 +52,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>А) Получение URI-адреса пространства имен определенного узла  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. Получение URI-адреса пространства имен определенного узла  
  Следующий запрос обращается к нетипизированному экземпляру XML. В выражении запроса выражение `namespace-uri(/ROOT[1])` получает часть URI-кода пространства имен указанного узла.  
   
 ```  
@@ -106,7 +106,7 @@ WHERE ProductModelID=19
   
 -   Функция **Namespace-URI ()** возвращает экземпляры типа xs: String вместо xs: anyURI.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Функция локального имени &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 4c634614b6cfad036146081436ce31efcf1cd464
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689571"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753617"
 ---
 # <a name="functions-on-nodes---local-name"></a>Функции с узлами — local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает локальную часть имени *$arg* в виде строки xs: String, которая будет либо строкой нулевой длины, либо будет иметь лексическую форму типа xs: NCName. Если аргумент не указан, по умолчанию используется узел контекста.  
   
@@ -39,7 +39,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  Имя узла, локальную часть имени которого нужно получить.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
   
 -   В SQL Server **fn: local-name ()** без аргумента может использоваться только в контексте контекстно-зависимого предиката. Точнее, ее использование возможно только внутри квадратных скобок (`[ ]`).  
   
@@ -50,7 +50,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>Примеры  
  В этом разделе приведены примеры запросов XQuery к экземплярам XML, хранящимся в различных столбцах типа **XML** в базе данных AdventureWorks.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>А) Получение локального имени конкретного узла  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. Получение локального имени конкретного узла  
  Следующий запрос обращается к нетипизированному экземпляру XML. Выражение запроса `local-name(/ROOT[1])` получает локальную часть имени указанного узла.  
   
 ```  
@@ -84,7 +84,7 @@ WHERE ProductModelID=7
   
  Запрос возвращает все `Location` дочерние элементы <> элемента <`root`>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Namespace — функция URI &#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   

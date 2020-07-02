@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a676688176e164736552460667432919250f8e99
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: 610dcca5103e4a819b0e6c59629ddd4d510f5469
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82261847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756356"
 ---
 # <a name="supported-net-framework-libraries"></a>Поддерживаемые библиотеки платформы .NET Framework
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Если среда CLR размещается в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то появляется возможность разрабатывать на управляемом коде хранимые процедуры, триггеры, определяемые пользователем функции, определяемые пользователем типы и определяемые пользователем статистические функции. Функциональность, реализованная в библиотеках классов платформы .NET Framework, предоставляет доступ к предварительно построенным классам для операций со строками, сложных математических операций, доступа к файлам, шифрования и т. д. Доступ к этим классам легко получить из любой управляемой хранимой процедуры, определяемого пользователем типа, триггера, определяемой пользователем функции или определяемой пользователем статистической функции.  
   
 > [!NOTE]  
@@ -57,7 +57,7 @@ https://docs.microsoft.com/sql/relational-databases/clr-integration/assemblies-d
 ## <a name="unsupported-libraries"></a>Неподдерживаемые библиотеки  
  Неподдерживаемые библиотеки могут быть вызваны из управляемых хранимых процедур, триггеров, определяемых пользователем функций, определяемых пользователем типов и определяемых пользователем статистических функций. Неподдерживаемая библиотека должна быть сначала зарегистрирована в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] базе данных с помощью инструкции **CREATE ASSEMBLY** , прежде чем ее можно будет использовать в коде. Любая неподдерживаемая библиотека, зарегистрированная и работающая на сервере, должна быть просмотрена и проверена в отношении безопасности и надежности.  
   
- Например, пространство имен **System. DirectoryServices** не поддерживается. Необходимо зарегистрировать сборку System. DirectoryServices. dll с **НЕнадежными** разрешениями, прежде чем можно будет вызывать ее из кода. **НЕнадежное** разрешение необходимо, так как классы в пространстве имен **System. DirectoryServices** не соответствуют требованиям для **безопасного** или **EXTERNAL_ACCESS**. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) и [Безопасность доступа к коду интеграции CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
+ Например, пространство имен **System. DirectoryServices** не поддерживается. Необходимо зарегистрировать System.DirectoryServices.dll сборку с **НЕнадежными** разрешениями, прежде чем можно будет вызвать ее из кода. **НЕнадежное** разрешение необходимо, так как классы в пространстве имен **System. DirectoryServices** не соответствуют требованиям для **безопасного** или **EXTERNAL_ACCESS**. Дополнительные сведения см. в разделе [ограничения модели программирования интеграции со средой CLR](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md) и [Безопасность доступа к коду интеграции CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md).  
   
 ## <a name="see-also"></a>См. также  
  [Создание сборки](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)   

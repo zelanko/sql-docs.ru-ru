@@ -19,15 +19,15 @@ ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f63469fb4955895b1eb1e3e8466dfbce6306e502
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d4371de1240e64aa5465f6f2d58f5e2eef029acf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824637"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754268"
 ---
 # <a name="sysdm_database_copies-azure-sql-database"></a>sys.dm_database_copies (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает сведения о копии базы данных.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82824637"
 |**copy_guid**|**uniqueidentifier**|Уникальный идентификатор операции копирования.|  
 |**partner_server**|**sysname**|Имя сервера базы данных SQL, на котором создана копия.|  
 |**partner_database**|**sysname**|Имя копии базы данных на сервере-участнике.|  
-|**replication_state**|**tinyint**|Состояние репликации непрерывного копирования для этой базы данных. Возможны следующие значения.<br /><br /> 0 = ожидание. Создание копии базы данных запланировано, но необходимые шаги подготовки еще не завершены или временно заблокированы квотой заполнения.<br /><br /> 1 = заполнение. Заполненная база данных копирования еще не полностью синхронизирована с базой данных-источником. В этом состоянии невозможно подключиться к копии. Чтобы отменить выполняемую операцию заполнения, необходимо удалить базу данных копирования.|  
+|**replication_state**|**tinyint**|Состояние репликации непрерывного копирования для этой базы данных. Доступны следующие значения:<br /><br /> 0 = ожидание. Создание копии базы данных запланировано, но необходимые шаги подготовки еще не завершены или временно заблокированы квотой заполнения.<br /><br /> 1 = заполнение. Заполненная база данных копирования еще не полностью синхронизирована с базой данных-источником. В этом состоянии невозможно подключиться к копии. Чтобы отменить выполняемую операцию заполнения, необходимо удалить базу данных копирования.|  
 |**replication_state_desc**|**nvarchar(256)**|Описание replication_state (одно из следующих значений):<br /><br /> PENDING<br /><br /> SEEDING<br />|  
 |**maximum_lag**|**int**|Зарезервированное поле.|  
 |**is_continuous_copy**|**bit**|0 = возвращает 0|  
@@ -58,7 +58,7 @@ ms.locfileid: "82824637"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно в базе данных **master** только для входа субъекта уровня сервера.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Представление **sys. dm_database_copies** можно использовать в базе данных **master** исходного или целевого [!INCLUDE[ssSDS](../../includes/sssds-md.md)] сервера. Когда копирование базы данных завершается успешно и новая база данных переходит в режим «в сети», строка в представлении **sys. dm_database_copies** удаляется автоматически.  
   
   

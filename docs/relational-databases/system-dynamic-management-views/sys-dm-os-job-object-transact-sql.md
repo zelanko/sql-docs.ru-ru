@@ -19,15 +19,15 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3fe2f22206d0882cafc8428d0fb9ccda22151ea2
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: dfed6ad282fe702b0f7f3fa484476524118805ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423438"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754150"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Возвращает одну строку, описывающую конфигурацию объекта задания, управляющего SQL Server процессом, а также определенную статистику потребления ресурсов на уровне объектов задания. Возвращает пустой набор, если SQL Server не выполняется в объекте задания.
 
@@ -54,7 +54,7 @@ ms.locfileid: "84423438"
 ## <a name="permissions"></a>Разрешения  
 Для Управляемый экземпляр Базы данных SQL требуется `VIEW SERVER STATE` разрешение. В Базе данных SQL требуется соответствующее разрешение `VIEW DATABASE STATE`.  
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 
 Дополнительные сведения об управляемых экземплярах см. в разделе [управляемый экземпляр базы данных SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
   
