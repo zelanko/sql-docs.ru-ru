@@ -18,15 +18,15 @@ ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a180f10f0b0ac4bb1836d529ac437d917b559e16
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 42985c60b7057904291bbf196e3faae27e77ae68
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820540"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771079"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Создает и удаляет полнотекстовый каталог, запускает и останавливает действие индексирования для каталога. Для каждой базы данных можно создать несколько полнотекстовых каталогов.  
   
@@ -52,9 +52,9 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  Полнотекстовые каталоги можно создавать, удалять или изменять по мере необходимости. Однако не следует изменять схемы нескольких каталогов одновременно. Эти действия можно выполнить с помощью хранимой процедуры **sp_fulltext_table** , которая является рекомендуемым способом.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**Создать**|Создает пустой полнотекстовый каталог в файловой системе и добавляет связанную строку в **таблицы sysfulltextcatalogs** с *fulltext_catalog_name* и *root_directory*, если она есть, значения. *fulltext_catalog_name* должны быть уникальными в пределах базы данных.|  
+|**Создание**|Создает пустой полнотекстовый каталог в файловой системе и добавляет связанную строку в **таблицы sysfulltextcatalogs** с *fulltext_catalog_name* и *root_directory*, если она есть, значения. *fulltext_catalog_name* должны быть уникальными в пределах базы данных.|  
 |**Тени**|Удаляет *fulltext_catalog_name* , удаляя его из файловой системы и удаляя связанную строку в **таблицы sysfulltextcatalogs**. Действие не будет выполнено, если каталог содержит индексы для одной или нескольких таблиц. **sp_fulltext_table** для удаления таблиц из каталога необходимо выполнить "*table_name*", "Drop".<br /><br /> Если каталог не существует, появится сообщение об ошибке.|  
 |**start_incremental**|Запускает добавочное заполнение для *fulltext_catalog_name*. Если каталог не существует, появится сообщение об ошибке. Если заполнение полнотекстового индекса уже выполняется, то появляется предупреждение, а заполнение отменяется. При добавочном заполнении только измененные строки извлекаются для полнотекстового индексирования. при условии, что в таблице имеется столбец **timestamp** , в котором выполняется полнотекстовое индексирование.|  
 |**start_full**|Запускает полное заполнение для *fulltext_catalog_name*. Для полнотекстового индексирования извлекаются все строки всех таблиц, связанных с полнотекстовым каталогом, даже если они уже проиндексированы.|  

@@ -18,23 +18,23 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
-ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
+ms.openlocfilehash: dbf165b1121b35ccc1b68578841108866832bb80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84305823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765603"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Последовательность и QNames (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описаны следующие основные понятия XQuery.  
   
--   Sequence  
+-   Последовательность  
   
 -   QNames и стандартные пространства имен.  
   
-## <a name="sequence"></a>Sequence  
+## <a name="sequence"></a>Последовательность  
  Результат выражения в XQuery является последовательностью XML-узлов и экземпляров атомарных типов XSD. Отдельная запись последовательности называется элементом. Элемент последовательности может быть одним из следующих объектов.  
   
 -   Такой узел, как элемент, атрибут, текст, инструкция по обработке, комментарий или документ.  
@@ -149,7 +149,7 @@ WHERE ProductModelID=7;
 > [!NOTE]  
 >  Эта реализация не поддерживает префикс, `local` как описано в спецификации XQuery в http://www.w3.org/2004/07/xquery-local-functions .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   
   

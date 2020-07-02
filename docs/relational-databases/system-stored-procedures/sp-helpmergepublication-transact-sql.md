@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9e821b1ea7688ed80adba7385e465366e7f69e6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772974"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает данные о публикации слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -64,9 +64,9 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|id|**int**|Порядковый номер публикации в списке результирующего набора.|  
+|идентификатор|**int**|Порядковый номер публикации в списке результирующего набора.|  
 |name|**sysname**|Имя публикации.|  
-|description;|**nvarchar(255)**|Описание публикации.|  
+|description|**nvarchar(255)**|Описание публикации.|  
 |status|**tinyint**|Указывает, когда доступны данные публикации.|  
 |retention|**int**|Количество времени, необходимое для сохранения метаданных об изменениях статей в публикации. Единицами измерения этого периода времени могут быть дни, недели, месяцы или года. Сведения о единицах измерений см. в столбце retention_period_unit.|  
 |sync_mode|**tinyint**|Режим синхронизации этой публикации:<br /><br /> **0** = собственная программа для выполнения операций копирования (программа**bcp** )<br /><br /> **1** = символьное групповое копирование|  
@@ -117,7 +117,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_helpmergepublication используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

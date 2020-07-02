@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a26f9ab251bbea3de121a26035d397d17cee5f24
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124683"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771141"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает связи между учетными записями-посредниками и субъектами безопасности.  
   
@@ -58,10 +58,10 @@ sp_enum_login_for_proxy
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
 |**name**|**sysname**|Имя субъекта безопасности для связи.|  
-|**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа<br /><br /> **1** = предопределенная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
+|**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа<br /><br /> **1** = предопределенная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_enum_login_for_proxy** выводит сведения обо всех именах входа в экземпляре для каждого прокси-сервера.  
   
  При указании идентификатора прокси-сервера или имени прокси-сервера **sp_enum_login_for_proxy** список имен входа, имеющих доступ к учетной записи-посреднику. Если указано имя входа, **sp_enum_login_for_proxy** выводит список учетных записей-посредников, к которым у имени входа есть доступ.  
@@ -86,7 +86,7 @@ EXEC dbo.sp_enum_login_for_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-proxies-for-a-specific-login"></a>Б) Вывод списка учетных записей-посредников для конкретного имени входа  
+### <a name="b-listing-proxies-for-a-specific-login"></a>Б. Вывод списка учетных записей-посредников для конкретного имени входа  
  Следующий пример отображает список учетных записей-посредников, к которым имя входа `terrid` имеет доступ.  
   
 ```sql
@@ -98,7 +98,7 @@ EXEC dbo.sp_enum_login_for_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_help_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-proxy-transact-sql.md)   
  [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
  [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  

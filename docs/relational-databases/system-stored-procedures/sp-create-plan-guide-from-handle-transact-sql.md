@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bac08516b4a0b0f30bf8314ac056e17f94f8f7b7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5f4141dc0a7c424ce1ccee021da7cf82c2a6b44b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771190"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Создает одну или несколько структур плана из плана запроса в кэше планов. Эту хранимую процедуру можно использовать для обеспечения использования оптимизатором запросов для конкретного запроса конкретного плана запроса. Дополнительные сведения о структурах планов см. в разделе [Руководства планов](../../relational-databases/performance/plan-guides.md).  
   
@@ -53,7 +53,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Если указано значение NULL или смещение инструкции не задано, структура плана создается для каждой инструкции в пакете с помощью плана запроса для указанного дескриптора плана. Полученные в результате структуры планов эквивалентны структурам планов, применяющим указание запроса USE PLAN для принудительного использования определенного плана.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Структура плана не может быть создана для всех типов инструкций. Если структура плана не может быть создана для какой-либо инструкции в пакете, хранимая процедура пропускает эту инструкцию и переходит к следующей инструкции в пакете. Если инструкция повторяется в одном и том же пакете несколько раз, активируется план для последнего вхождения, а предыдущие планы для инструкции отключаются. Если ни одна из инструкций в пакете не может быть использована в структуре плана, выдается сообщение об ошибке 1053, а данная инструкция завершается неудачно. Рекомендуется всегда получать дескриптор плана из динамического административного представления sys.dm_exec_query_stats для снижения вероятности возникновения этой ошибки.  
   
 > [!IMPORTANT]  

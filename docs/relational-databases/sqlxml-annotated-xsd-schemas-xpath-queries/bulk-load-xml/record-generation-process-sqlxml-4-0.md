@@ -23,15 +23,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c4d5ed47b77d32fed9d8775bc43f9e052ce6fcb
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 380698d9d164012f8e0be53f19be6cef8b7c56e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773049"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Процесс создания записей (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Массовая загрузка XML обрабатывает входные XML-данные и готовит записи для соответствующих таблиц в Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Логика массовой загрузки XML определяет, когда формируется новая запись, какие значения дочерних элементов или атрибута копировать в поля записи, и когда запись завершена и готова к отправке в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для вставки.  
   
  Массовая загрузка XML не загружает все входные XML-данные в память и не формирует полные наборы записей перед отправкой данных в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Это объясняется тем, что входные XML-данные могут быть большим документом, и загрузка всего документа в память может быть дорогостоящей. Вместо этого массовая загрузка XML выполняет следующие действия.  

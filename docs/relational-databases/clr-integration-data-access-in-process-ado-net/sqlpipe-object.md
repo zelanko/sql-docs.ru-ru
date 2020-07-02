@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e090faf-085f-4c01-a565-79e3f1c36e3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7b95788d37fa8f8c2e57c2b20aa222938c65dc6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 17a26c5897ff10ce636297151cef9f300f4f3056
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765426"
 ---
 # <a name="sqlpipe-object"></a>Объект SqlPipe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]обычным было написание хранимой процедуры (или расширенной хранимой процедуры), которая отправляет результаты или выдает выходные параметры вызывающему клиенту.  
   
  В хранимой процедуре [!INCLUDE[tsql](../../includes/tsql-md.md)] любая инструкция **SELECT** , которая возвращает ноль или более строк, отправляет результаты в «канал» подключенного вызывающего.  
@@ -31,7 +31,7 @@ ms.locfileid: "81487539"
  Результаты по объектам базы данных CLR, работающей на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], могут отправляться в подключенный канал при помощи методов **Send** объекта **SqlPipe** . Обратитесь к свойству **Pipe** объекта **SqlContext** , чтобы получить объект **SqlPipe** . Класс **SqlPipe** принципиально подобен классу **Response** в ASP.NET. Дополнительные сведения см. в справочной документации по классу SqlPipe в пакете средств разработки программного обеспечения .NET Framework.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Возврат табличных результатов и сообщений  
- Класс **SqlPipe** имеет метод **Send** , который имеет три перегрузки. Они приведены ниже.  
+ Класс **SqlPipe** имеет метод **Send** , который имеет три перегрузки. К ним относятся:  
   
 -   `void Send(string message)`  
   
@@ -140,7 +140,7 @@ End Class
 EXEC uspGetProductLineVB 'T';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект SqlDataRecord](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqldatarecord-object.md)   
  [Хранимые процедуры CLR](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)   
  [Внутрипроцессные расширения SQL Server для ADO.NET](../../relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  

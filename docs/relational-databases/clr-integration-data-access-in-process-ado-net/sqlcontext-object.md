@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc3dc5787693345c531e7afb3384bf093dc17aa6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487543"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765447"
 ---
 # <a name="sqlcontext-object"></a>Объект SqlContext
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   На сервере управляемый код запускается при вызове процедуры, функции или метода для определяемого пользователем типа данных CLR или когда действие вызывает срабатывание триггера, определенного на одном из языков платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Так как выполнение этого кода необходимо как часть соединения пользователя, требуется доступ к контексту участника из кода, работающего на сервере. Кроме того, определенные операции доступа к данным могут быть допустимы, только если они выполняются в контексте участника. Например, доступ к вставленным или удаленным псевдотаблицам, применяемым в операциях триггеров, допустим только в контексте участника.  
   
  Контекст вызывающего объекта является абстрактным в объекте **SqlContext** . Дополнительные сведения о методах и свойствах **SqlTriggerContext** см. в справочной документации по классу **Microsoft. SqlServer. Server. SqlTriggerContext** в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] пакете SDK.  
@@ -42,7 +42,7 @@ ms.locfileid: "81487543"
  Выполните запрос к классу **SqlContext** , чтобы узнать, выполняется ли выполняющийся в процессе код. Для этого проверьте свойство **Available** объекта **SqlContext** . Свойство **Available** доступно только для чтения и возвращает **значение true** , если вызывающий код выполняется внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и если доступ к другим членам **SqlContext** возможен. Если свойство **Available** возвращает **значение false**, все остальные члены **SqlContext** создают исключение **InvalidOperationException**, если оно используется. Если **функция** IsTrue возвращает **значение false**, то любая попытка открыть объект соединения, в строке соединения которого задано контекстное соединение = true, завершается ошибкой.  
   
 ## <a name="retrieving-windows-identity"></a>Извлечение удостоверения Windows  
- Код CLR, выполняющийся внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], всегда запускается в контексте учетной записи процесса. Если код должен выполнять определенные действия, используя удостоверение вызывающего пользователя, а не удостоверение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] процесса, то токен олицетворения должен быть получен через свойство **WindowsIdentity** объекта **SqlContext** . Свойство **WindowsIdentity** возвращает экземпляр **WindowsIdentity** , представляющий удостоверение [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows вызывающего объекта, или значение null, если клиент прошел проверку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подлинности. Доступ к этому свойству имеют только сборки, помеченные как **EXTERNAL_ACCESSные** , так и **ненадежные** разрешения.  
+ Код CLR, выполняющийся внутри [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], всегда запускается в контексте учетной записи процесса. Если код должен выполнять определенные действия, используя удостоверение вызывающего пользователя, а не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удостоверение процесса, то токен олицетворения должен быть получен через свойство **WindowsIdentity** объекта **SqlContext** . Свойство **WindowsIdentity** возвращает экземпляр **WindowsIdentity** [!INCLUDE[msCoName](../../includes/msconame-md.md)] , представляющий удостоверение Windows вызывающего объекта, или значение null, если клиент прошел проверку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подлинности. Доступ к этому свойству имеют только сборки, помеченные как **EXTERNAL_ACCESSные** , так и **ненадежные** разрешения.  
   
  После получения объекта **WindowsIdentity** вызывающие объекты могут олицетворять учетную запись клиента и выполнять действия от их имени.  
   
@@ -129,7 +129,7 @@ Public Shared Sub  WindowsIDTestProcVB ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объект SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [Объект SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
  [Триггеры CLR](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   

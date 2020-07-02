@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 5f329d4e4684997138d3c54e6b2831d70b961a93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886931"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765657"
 ---
 # <a name="aggregate-functions---sum"></a>Агрегатные функции — sum
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сумму последовательности чисел.  
   
@@ -39,7 +39,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Последовательность атомарных значений, сумма которых должна быть вычислена.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Все типы атомарных значений, передаваемых **функции Sum ()** , должны быть подтипами одного и того же базового типа. Базовые типы, которые принимаются, — это три встроенных числовых базовых типа или тип xdt:untypedAtomic. Значения типа xdt:untypedAtomic приводятся к типу xs:double. Если существует смесь этих типов или передаются другие значения других типов, возникает статическая ошибка.  
   
  Результат **Sum ()** получает базовый тип переданных типов, таких как xs: Double в случае xdt: untypedAtomic, даже если входные данные при необходимости являются пустой последовательностью. Если вход статически пуст, результатом будет значение 0 со статическим и динамическим типом xs:integer.  
@@ -118,7 +118,7 @@ ProductModelID Name                 TotalLaborHours
   
 -   Сумма ((xs: Double ("INF"), xs: Double ("-INF"))) вызывает ошибку домена.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

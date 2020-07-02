@@ -21,22 +21,22 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 545b729a5d89a258c38d7eb180ee2f3400ebd67c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981774"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764712"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-  Это представление каталога содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В каждой строке отображаются код и имя языка. При регистрации средств разбиения по словам для языка другие лингвистические ресурсы — парадигматические модули, неучитываемые слова (стоп-слова) и файлы тезауруса становятся доступными для операций полнотекстового индексирования и запросов. В полнотекстовых запросах и **lcid** инструкциях полнотекстового индекса [!INCLUDE[tsql](../../includes/tsql-md.md)] можно указать значение **Name** или LCID.  
+  Это представление каталога содержит одну строку для каждого языка, средства разбиения по словам которого зарегистрированы с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В каждой строке отображаются код и имя языка. При регистрации средств разбиения по словам для языка другие лингвистические ресурсы — парадигматические модули, неучитываемые слова (стоп-слова) и файлы тезауруса становятся доступными для операций полнотекстового индексирования и запросов. В полнотекстовых запросах и инструкциях полнотекстового индекса можно указать значение **Name** или **LCID** [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
    
 |Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|Код локали [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для языка.|  
-|**name**|**sysname**|Либо значение псевдонима в [таблице sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , соответствующее значению **LCID** , либо строковое представление числового идентификатора LCID.|  
+|**name**|**sysname**|Является либо значением псевдонима в [sys.sysязыках](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , соответствующих значению **LCID** , либо строковым представлением числового кода языка.|  
   
 ## <a name="values-returned-for-default-languages"></a>Значения, возвращаемые для языков по умолчанию  
  В следующей таблице показаны значения для тех языков, средства разбиения по словам которых зарегистрированы по умолчанию.  
@@ -80,7 +80,7 @@ ms.locfileid: "73981774"
 |Португальский (Португалия)|2070|  
 |Панджаби|1094|  
 |Румынский|1048|  
-|Русский|1049|  
+|русском языке|1049|  
 |Сербский (кириллица)|3098|  
 |Сербский (латиница)|2074|  
 |Китайский, упрощенное письмо|2052|  
@@ -97,13 +97,13 @@ ms.locfileid: "73981774"
 |Урду|1056|  
 |Вьетнамский|1066|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Чтобы обновить список языков, зарегистрированных в полнотекстовом поиске, используйте [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Настройка средств разбиения по словам и парадигматические модули для поиска и управление ими](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

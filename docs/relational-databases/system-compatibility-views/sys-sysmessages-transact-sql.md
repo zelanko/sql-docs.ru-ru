@@ -1,5 +1,5 @@
 ---
-title: sys. sysmessages (Transact-SQL) | Документация Майкрософт
+title: Сообщения sys.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a70c96b28665141ada5138ac5dd99477d37de1ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68076548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764334"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждой из системных ошибок и предупреждений, которые может вернуть компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] отображает описание ошибки на экране пользователя.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68076548"
 |**nописание**|**nvarchar(255)**|Объяснение ошибки с заполнителями для параметров.|  
 |**msglangid**|**smallint**|Идентификатор группы системного сообщения.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

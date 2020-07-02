@@ -21,15 +21,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3daeaabe86d91d0986fb764c3a60304ec5e09faf
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: bfa6234aae5e2744a88c4fcfb158575cb07000f5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885161"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764901"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Задание целевого пространства имен с помощью атрибута targetNamespace (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   При написании XSD-схем можно использовать атрибут XSD **targetNamespace** , чтобы указать целевое пространство имен. В этом разделе описано, как работают атрибуты XSD **targetNamespace**, **elementFormDefault**и **attributeFormDefault** , как они влияют на создаваемый экземпляр XML и как задаются запросы XPath с пространствами имен.  
   
  Атрибут **xsd: targetNamespace** можно использовать для размещения элементов и атрибутов из пространства имен по умолчанию в другом пространстве имен. Можно указать, будут ли локально объявленные элементы и атрибуты схемы уточняться пространством имен, использоваться явно путем применения префикса либо использоваться неявно. Вы можете использовать атрибуты **elementFormDefault** и **attributeFormDefault** в элементе, **\<xsd:schema>** чтобы глобально указать квалификацию локальных элементов и атрибутов, или можно использовать атрибут **Form** для указания отдельных элементов и атрибутов по отдельности.  

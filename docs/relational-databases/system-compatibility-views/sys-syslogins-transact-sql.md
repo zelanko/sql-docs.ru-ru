@@ -1,5 +1,5 @@
 ---
-title: sys. syslogins (Transact-SQL) | Документация Майкрософт
+title: sys.sysимена входа (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -20,26 +20,26 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c0a8eaf44c5a893cb9d8dfbd8395a2e0b8b5504
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68020016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764378"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждой учетной записи входа.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**Применимо к** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] с по [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**трансляцию**|**varbinary(85)**|Идентификатор защиты.|  
+|**sid**|**varbinary(85)**|Идентификатор защиты.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**креатедате**|**datetime**|Дата добавления имени входа.|  
 |**updatedate**|**datetime**|Дата обновления имени входа.|  
@@ -52,7 +52,7 @@ ms.locfileid: "68020016"
 |**name**|**sysname**|Имя входа пользователя.|  
 |**dbname**|**sysname**|Имя базы данных по умолчанию для пользователя при установлении соединения.|  
 |**password**|**nvarchar(128)**|Возвращает значение NULL.|  
-|**языке**|**sysname**|Язык по умолчанию для пользователя.|  
+|**language**|**sysname**|Язык по умолчанию для пользователя.|  
 |**denylogin**|**int**|1 = Имя входа принадлежит пользователю или группе [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, и ему отказано в доступе.|  
 |**hasaccess**|**int**|1 = Имени входа разрешен доступ на сервер.|  
 |**isntname**|**int**|1 = Имя входа принадлежит пользователю или группе Windows.<br /><br /> 0 = Имя входа является именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -68,7 +68,7 @@ ms.locfileid: "68020016"
 |**bulkadmin**|**int**|1 = имя входа является членом предопределенной роли сервера **bulkadmin** .|  
 |**LoginName**|**nvarchar(128)**|Имя входа пользователя. Предоставляется для обратной совместимости.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

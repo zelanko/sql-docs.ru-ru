@@ -16,15 +16,15 @@ ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b0aa184d2ee8ea61162a15319f3df3696824b135
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b7ca9a1106746ed631917c7da921c5b27809f216
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949495"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773169"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Поддержка имени участника-службы в клиентских соединениях
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Начиная с [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] поддержка имен субъектов-служб была расширена для поддержки взаимной проверки подлинности во всех протоколах. В предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] имена субъектов-служб поддерживались только для протокола Kerberos через TCP, когда имя по умолчанию для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] было зарегистрировано в Active Directory.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "84949495"
   
  Дополнительные сведения об образцах приложений, которые демонстрируют эту функцию, см. в разделе [Образцы программирования для данных SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
 [Регистрация имени участника-службы для соединений Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

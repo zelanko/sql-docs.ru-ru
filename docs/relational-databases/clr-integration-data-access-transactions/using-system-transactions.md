@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1fed4e8106fc5348c94a3c7afda0ec903f570eff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765364"
 ---
 # <a name="using-systemtransactions"></a>Использование System.Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Пространство имен **System.Transactions** предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и со средой CLR [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Класс **System.Transactions.TransactionScope** делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока **Complete** , перед тем, как выйти из него, необходимо вызвать метод **TransactionScope**. Когда выполнение программы покидает блок кода, вызывается метод **Dispose** , что вызывает прерывание транзакции, если не поддерживается метод **Complete** . При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  
   
  Рекомендуется использовать блок **using** , чтобы гарантировать вызов метода **Dispose** для объекта **TransactionScope** при выходе из блока **using** . Неудачная попытка зафиксировать или откатить незавершенные транзакции может значительно снизить производительность, поскольку время ожидания по умолчанию для объекта **TransactionScope** составляет одну минуту. Если инструкция **using** не используется, необходимо явно выполнить все действия в блоке **Try** и вызвать метод **Dispose** в блоке **Finally** .  
@@ -106,7 +106,7 @@ using (TransactionScope transScope = new TransactionScope())
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Интеграция со средой CLR и транзакции](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

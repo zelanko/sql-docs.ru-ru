@@ -19,15 +19,15 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e85a74b203d270223d215ace08a58a0eea980fa1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772980"
 ---
 # <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Возвращает данные об использовании ЦП, операции ввода-вывода и данных хранилища для Управляемый экземпляр Azure SQL. Эти данные собираются и объединяются с пятиминутными интервалами. Для отчетов каждые 15 секунд имеется одна строка. Возвращаемые данные включают загрузку ЦП, размер хранилища, использование операций ввода-вывода и SKU управляемого экземпляра. Данные предыстории хранятся приблизительно в течение 14 суток.
 
@@ -59,7 +59,7 @@ ms.locfileid: "68133071"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к базе данных **master** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Данные, возвращаемые **sys. server_resource_stats** , выражаются в виде общего числа, используемого в байтах или мегабайтах (указанных в именах столбцов), отличном от avg_cpu, который выражается в процентах от максимально допустимого количества ограничений для уровня службы/производительности, который вы используете.  
  
 ## <a name="examples"></a>Примеры  
@@ -77,5 +77,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровни служб Управляемого экземпляра](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

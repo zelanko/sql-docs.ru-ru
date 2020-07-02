@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b857472b72081c6368fa3c0a112c7d4729e2c72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124665"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771117"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает список разрешений для учетных записей-посредников агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на доступ к подсистемам.  
   
@@ -64,7 +64,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения обо всех учетных записях-посредниках в экземпляре для каждой подсистемы.  
   
  При указании идентификатора прокси-сервера или имени прокси-сервера **sp_enum_proxy_for_subsystem** перечисляет подсистемы, к которым прокси-сервер имеет доступ. Если указано имя подсистемы или подсистемы, **sp_enum_proxy_for_subsystem** выводит список учетных записей-посредников, имеющих доступ к этой подсистеме.  
@@ -89,7 +89,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem ;
 GO  
 ```  
   
-### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>Б) Определение наличия доступа к указанной подсистеме у учетной записи-посредника  
+### <a name="b-determining-if-a-proxy-has-access-to-a-specific-subsystem"></a>Б. Определение наличия доступа к указанной подсистеме у учетной записи-посредника  
  В следующем примере при наличии у учетной записи-посредника `Catalog application proxy` доступа к подсистеме `ActiveScripting` возвращается строка. В противном случае возвращается пустой результирующий набор.  
   
 ```sql
@@ -102,7 +102,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

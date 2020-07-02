@@ -1,5 +1,5 @@
 ---
-title: sys. syslockinfo (Transact-SQL) | Документация Майкрософт
+title: sys.sysлоккинфо (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90573a28292ac4f4de973dc2a5a0c5e1f331d2f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764385"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит сведения обо всех удовлетворенных, преобразованных и ожидающих запросах на блокировку.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "68053337"
 |**req_refcnt**|**smallint**|Счетчик обращений к блокировке. Каждый раз, когда транзакция запрашивает блокировку определенного ресурса, счетчик обращений увеличивается. Блокировка не может быть снята до тех пор, пока счетчик обращений не будет равен 0.|  
 |**req_cryrefcnt**|**smallint**|Зарезервировано для использования в будущем. Всегда равен 0.|  
 |**req_lifetime**|**int**|Битовая карта времени действия блокировки. Во время определенных стратегий обработки запросов блокировка должна сохраняться на ресурсах до тех пор, пока обработчик запросов не завершит определенную фазу запроса. Битовая карта времени действия блокировки используется обработчиком запросов и диспетчером транзакций для указания групп блокировок, которые могут быть сняты по завершении выполнения определенной фазы запроса. Определенные биты в битовой карте используются для указания блокировок, которые будут поддерживаться до конца транзакции, даже если их счетчик обращений равен 0.|  
-|**req_spid**|**int**|Идентификатор [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] внутреннего процесса сеанса, запрашивающего блокировку.|  
+|**req_spid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Идентификатор внутреннего процесса сеанса, запрашивающего блокировку.|  
 |**req_ecid**|**int**|Идентификатор контекста выполнения (ECID). Используется для указания того, какой поток в параллельной операции владеет конкретной блокировкой.|  
 |**req_ownertype**|**smallint**|Тип объекта, ассоциированного с блокировкой:<br /><br /> 1 = Транзакция;<br /><br /> 2 = Курсор;<br /><br /> 3 = Сеанс;<br /><br /> 4 = Экс-сеанс.<br /><br /> Обратите внимание, что 3 и 4 представляют собой особые варианты блокировки сеанса, соответственно блокировки трассировки базы данных и файловых групп.|  
 |**req_transactionID**|**bigint**|Уникальный идентификатор транзакции, используемый в **syslockinfo** и в событии профилировщика|  
@@ -62,7 +62,7 @@ ms.locfileid: "68053337"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

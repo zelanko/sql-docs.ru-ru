@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 6c1186623b334d3eea465c632bc23ec58ba231ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765615"
 ---
 # <a name="primary-expressions-xquery"></a>Первичные выражения (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Первичные выражения XQuery включают литералы, ссылки на переменные, выражения элементов контекста, конструкторы и вызовы функций.  
   
@@ -182,6 +182,6 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
 -   Импорт функций не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание XML &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)
  

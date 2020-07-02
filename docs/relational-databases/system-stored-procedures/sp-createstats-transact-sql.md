@@ -18,15 +18,15 @@ ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 608f969ab70a0bd9a35b64918a29053caf26c385
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771155"
 ---
 # <a name="sp_createstats-transact-sql"></a>Хранимая процедура sp_createstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Вызывает инструкцию [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) для создания статистики по отдельным столбцам для столбцов, которые еще не являются первым столбцом в объекте статистики. Создание статистики по отдельным столбцам увеличивает число гистограмм, что может улучшить оценку количества элементов, усовершенствовать планы запросов и повысить производительность запросов. Первый столбец объекта статистики содержит гистограмму, а прочие — не содержат.  
   

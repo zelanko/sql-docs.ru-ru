@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: beca05cca35d0c410f7e9671d011d913c5ac2f22
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 77595c353522dc2db3452b51f3a0395346c85619
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814928"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768629"
 ---
 # <a name="syssp_cdc_help_jobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает сведения о всех заданиях очистки системы отслеживания измененных данных и заданиях записи в текущей базе данных.  
   
@@ -54,7 +54,7 @@ sys.sp_cdc_help_jobs
 |**обеспечения**|**bit**|Флаг, указывающий, следует ли выполнять задание записи непрерывно (1) или запускать однократно (0). Дополнительные сведения см. в разделе [sys. sp_cdc_add_job &#40;&#41;Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Непрерывная** допустима только для заданий отслеживания.|  
 |**PollingInterval**|**bigint**|Число секунд между циклами просмотра журнала.<br /><br /> **PollingInterval** является допустимым только для заданий отслеживания.|  
 |**хранения**|**bigint**|Число минут, в течение которого строки изменений нужно хранить в таблицах изменений.<br /><br /> **Хранение** допустимо только для заданий очистки.|  
-|**значениями**|**bigint**|Максимальное число записей, подлежащих удалению, которые могут быть удалены с помощью одной инструкции при очистке.|  
+|**threshold**|**bigint**|Максимальное число записей, подлежащих удалению, которые могут быть удалены с помощью одной инструкции при очистке.|  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных **db_owner** .  
