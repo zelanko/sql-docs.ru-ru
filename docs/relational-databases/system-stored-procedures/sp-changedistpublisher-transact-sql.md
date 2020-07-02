@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8aec9e25008c8dfe3b14bbe838f8122bb93fb756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833440"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717406"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Изменяет свойства распространяющего издателя. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -53,7 +53,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  В следующей таблице описаны свойства издателей и значения этих свойств.  
   
-|Свойство|Значения|Описание|  
+|Свойство.|Значения|Описание|  
 |--------------|------------|-----------------|  
 |**active**|**true**|Активирует издатель.|  
 ||**false**|Отключает издатель.|  
@@ -61,7 +61,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**пользователей**||Имя входа.|  
 |**password**||Надежный пароль для указанного имени входа.|  
 |**security_mode**|**1**|При подключении к подписчику используется проверка подлинности Windows. *Его нельзя изменить для не относящегося к* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
-||**0**;|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для не относящегося к* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
+||**0**|При подключении к издателю используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Его нельзя изменить для не относящегося к* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *издатель.*|  
 |**working_directory**||Рабочий каталог, в котором хранятся данные и файлы схемы для публикации.|  
 |NULL (по умолчанию)||Выводятся все доступные параметры *свойств* .| 
 |**storage_connection_string**| Ключ доступа | Ключ доступа для рабочего каталога при Управляемый экземпляр Базы данных SQL Azure базы данных. 
@@ -69,7 +69,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_changedistpublisher** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

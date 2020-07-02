@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487433"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718530"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Рабочий процесс ETL WideWorldImportersDW
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Используйте *WWI_Integration* пакет ETL для переноса данных из базы данных WideWorldImporters в базу данных WideWorldImportersDW при изменении данных. Пакет выполняется периодически (обычно ежедневно).
 
 Пакет обеспечивает высокую производительность, используя SQL Server Integration Services для управления массовыми операциями T-SQL (вместо отдельных преобразований в Integration Services).
@@ -59,11 +59,11 @@ ms.locfileid: "81487433"
    5. Нажмите кнопку **развернуть** , чтобы завершить работу мастера.
 
 2. Создайте агент SQL Server задание для процесса ETL:
-   1. В Management Studio щелкните правой кнопкой мыши **Агент SQL Server**и выберите **создать** > **Задание**.
+   1. В Management Studio щелкните правой кнопкой мыши **Агент SQL Server**и выберите **создать**  >  **Задание**.
    2. Введите имя, например *WIDEWORLDIMPORTERS ETL*.
    3. Добавьте **шаг задания** типа **SQL Server Integration Services пакета**.
    4. Выберите сервер, на котором находится каталог Integration Services, а затем выберите *ежедневный пакет ETL* .
-   5. В разделе**Диспетчеры соединений** **конфигурации** > убедитесь, что подключения к источнику и целевому объекту настроены правильно. По умолчанию устанавливается соединение с локальным экземпляром.
+   5. В **Configuration**разделе  >  **Диспетчеры соединений**конфигурации убедитесь, что подключения к источнику и целевому объекту настроены правильно. По умолчанию устанавливается соединение с локальным экземпляром.
    6. Нажмите кнопку **ОК** , чтобы создать задание.
 
 3. Выполните или Запланируйте задание.

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1d4dedd9a7451daa97b3e1ad130f7f6dd95d8dd9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b0084338c2629b8ffeb208edc5ac7532105e1271
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715938"
 ---
 # <a name="sp_change_agent_profile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Изменяет параметр профиля агента репликации, хранящегося в [MSagent_profiles &#40;таблице&#41;Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) . Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -47,14 +47,14 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
  В приведенной ниже таблице описаны изменяемые свойства.  
   
-|Свойство|Описание|  
+|Свойство.|Описание|  
 |--------------|-----------------|  
 |**nописание**|Описание профиля.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_change_agent_profile** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  

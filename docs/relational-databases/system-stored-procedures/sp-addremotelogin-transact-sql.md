@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b4a3586625fa0a20d59ca0222ea1abbde6a6fef5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030959"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716435"
 ---
 # <a name="sp_addremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Добавляет новый идентификатор удаленного имени входа на локальный сервер. Это позволяет удаленным серверам подключаться и выполнять удаленные вызовы процедуры (RPC).  
   
@@ -48,7 +48,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
  Имя удаленного сервера, к которому применяется удаленный вход. Аргумент *remoteserver* имеет тип **sysname**и не имеет значения по умолчанию. Если указан только параметр *remoteserver* , все пользователи на *remoteserver* сопоставляются с существующими именами входа на локальном сервере. Сервер должен быть известен локальному серверу. Его можно добавить при помощи хранимой процедуры sp_addserver. Когда пользователи на *remoteserver* подключаются к локальному серверу, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на котором выполняется удаленная хранимая процедура, они подключаются как локальное имя входа, совпадающее с собственным именем входа на *remoteserver*. *remoteserver* — это сервер, инициирующий удаленный вызов процедуры.  
   
  [ @loginame **=** ] **"**_Login_**"**  
- Идентификатор имени входа для пользователя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *имя входа*должно уже существовать на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если указано *имя входа* , все пользователи на *remoteserver* сопоставляются с определенным локальным именем входа. Когда пользователи на *remoteserver* подключаются к локальному [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляру для выполнения удаленной хранимой процедуры, они подключаются к *имени входа*.  
+ Идентификатор имени входа для пользователя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. *имя входа*должно уже существовать на локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если указано *имя входа* , все пользователи на *remoteserver* сопоставляются с определенным локальным именем входа. Когда пользователи на *remoteserver* подключаются к локальному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры, они подключаются к *имени входа*.  
   
  [ @remotename **=** ] **"**_remote_name_**"**  
  Идентификатор имени входа пользователя на удаленном сервере. Аргумент *remote_name* имеет тип **sysname**и значение по умолчанию NULL. *remote_name* должен существовать на *remoteserver*. Если указан *remote_name* , то конкретный пользователь *remote_name* сопоставляется с *именем входа* на локальном сервере. Когда *remote_name* на *remoteserver* соединяется с локальным экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения удаленной хранимой процедуры, она подключается как *имя входа*. Идентификатор входа *remote_name* может отличаться от идентификатора имени входа на удаленном сервере, *имени входа*.  
@@ -56,7 +56,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Два выполнения распределенных запросов используйте хранимую процедуру sp_addlinkedsrvlogin.  
   
  Хранимую процедуру sp_addremotelogin нельзя использовать внутри пользовательской транзакции.  
@@ -73,7 +73,7 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 EXEC sp_addremotelogin 'ACCOUNTS';  
 ```  
   
-### <a name="b-mapping-many-to-one"></a>Б) Сопоставление «многие к одному»  
+### <a name="b-mapping-many-to-one"></a>Б. Сопоставление «многие к одному»  
  В следующем примере создается запись, которая сопоставляет всех пользователей удаленного сервера `ACCOUNTS` локальному идентификатору входа `Albert`.  
   
 ```  
@@ -87,7 +87,7 @@ EXEC sp_addremotelogin 'ACCOUNTS', 'Albert';
 EXEC sp_addremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

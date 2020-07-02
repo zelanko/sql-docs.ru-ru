@@ -13,15 +13,15 @@ ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83e4a72ba995d4fff796cdf8ec081a9ef9828936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 435ca8d8685f62e7a8f2fad172f66414edafb756
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718989"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Преобразования типа данных datetime из SQL в C
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В следующей таблице приводится список вопросов, которые следует учитывать при преобразовании типов даты-времени [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в типы языка C.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81301768"
   
  Таблица в этом разделе описывает преобразования между типами, возвращаемыми клиенту, и типами в привязке. Для выходных параметров, если тип сервера, указанный в SQLBindParameter, не совпадает с фактическим типом на сервере, на сервере будет выполнено неявное преобразование, и тип, возвращаемый клиенту, будет соответствовать типу, указанному с помощью SQLBindParameter. Это может привести к непредвиденным результатам преобразования, если правила преобразования сервера отличаются от правил, перечисленных в предыдущей таблице. Например, если необходима дата по умолчанию, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует не текущую дату, а 01.01.1900.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

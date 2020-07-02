@@ -14,15 +14,15 @@ ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e88092c6566d9e5838f8a2cb59cd7c23564af9b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5be9838e0c4e989c6b802d9c74e240a0d01c354b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297752"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715318"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>Сценарии использования возвращающих табличное значение параметров ODBC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В данном разделе обсуждаются основные пользовательские сценарии для использования возвращающих табличное значение параметров ODBC.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "81297752"
   
  После того как все столбцы возвращающего табличное значение параметра были обработаны, драйвер снова обращается к возвращающему табличное значение параметру для обработки следующих строк данных возвращающего табличное значение параметра. Поэтому для возвращающих табличное значение параметров с данными времени выполнения драйвер не выполняет обычный последовательный просмотр привязанных параметров. Связанный возвращающий табличное значение параметр будет опрашиваться до тех пор, пока SQLPutData не вызовется с *StrLen_or_IndPtr* равно 0, когда драйвер пропускает столбцы возвращающего табличное значение параметра и переходит к следующему реальному параметру хранимой процедуры.  Когда SQLPutData передает значение индикатора, большее или равное 1, драйвер обрабатывает столбцы и строки возвращающих табличные значения параметров последовательно до тех пор, пока они не поступают со значениями для всех привязанных строк и столбцов. Затем драйвер возвращается к возвращающему табличное значение параметру. Между получением маркера для возвращающего табличное значение параметра из метод SQLParamData и вызовом SQLPutData (хстмт, NULL, n) для возвращающего табличное значение параметра приложение должно установить возвращающий табличное значение параметр, составляющий данные столбцов и содержимое буфера индикаторов для следующей строки или строк, которые будут переданы на сервер.  
   
- Пример кода для этого сценария приведен в подпрограмме `demo_variable_TVP_binding` , в которой [используются возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Пример кода для этого сценария приведен в подпрограмме, `demo_variable_TVP_binding` в которой [используются возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>Получение метаданных возвращающих табличное значение параметров из системного каталога  
  Когда приложение вызывает SQLProcedureColumns для процедуры, которая содержит параметры возвращающего табличное значение параметра, DATA_TYPE возвращается как SQL_SS_TABLE, а TYPE_NAME — имя табличного типа для возвращающего табличное значение параметра. В результирующий набор, возвращаемый функцией SQLProcedureColumns, добавляются два дополнительных столбца. SS_TYPE_CATALOG_NAME возвращает имя каталога, в котором определен табличный тип параметра table-value, и SS_TYPE_SCHEMA_NAME возвращает имя схемы, в которой определен тип таблицы параметра table-value. В соответствии со спецификацией ODBC SS_TYPE_CATALOG_NAME и SS_TYPE_SCHEMA_NAME применяются до всех столбцов драйвера, которые были добавлены в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], и после всех столбцов, применяемых ODBC.  
@@ -71,7 +71,7 @@ ms.locfileid: "81297752"
   
  Приложение использует SQLColumns, чтобы определить столбцы для табличного типа так же, как и для постоянных таблиц, но сначала необходимо задать SQL_SOPT_SS_NAME_SCOPE, чтобы указать, что она работает с табличными типами, а не с реальными таблицами. SQLPrimaryKeys также можно использовать с табличными типами, опять же используя SQL_SOPT_SS_NAME_SCOPE.  
   
- Пример кода для этого сценария приведен в подпрограмме `demo_metadata_from_catalog_APIs` , в которой [используются возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Пример кода для этого сценария приведен в подпрограмме, `demo_metadata_from_catalog_APIs` в которой [используются возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="retrieving-table-valued-parameter-metadata-for-a-prepared-statement"></a>Получение метаданных возвращающих табличное значение параметров для подготовленной инструкции  
  В этом сценарии приложение использует Склнумпараметерс и SQLDescribeParam для получения метаданных для возвращающих табличное значение параметров.  
@@ -84,9 +84,9 @@ ms.locfileid: "81297752"
   
  Приложение использует SQLColumns для получения метаданных столбца для возвращающего табличное значение параметра в этом сценарии, так как SQLDescribeParam не возвращает метаданные для столбцов возвращающего табличное значение параметра столбца.  
   
- Пример кода для этого варианта использования — в подпрограмме `demo_metadata_from_prepared_statement` , [использующей возвращающие табличное значение параметры, &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Пример кода для этого варианта использования — в подпрограмме, `demo_metadata_from_prepared_statement` [использующей возвращающие табличное значение параметры, &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возвращающие табличное значение параметры &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
   

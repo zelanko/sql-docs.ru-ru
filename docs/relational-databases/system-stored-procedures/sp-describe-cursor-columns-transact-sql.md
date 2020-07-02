@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 11dde97040adf3005c7e417a38f66088b8f3f7d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830267"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717493"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает отчет об атрибутах столбцов результирующего набора серверного курсора.  
   
@@ -65,7 +65,7 @@ sp_describe_cursor_columns
  Имя переменной курсора, связанной с открытым курсором. *input_cursor_variable* имеет тип **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Нет  
+ Отсутствуют  
   
 ## <a name="cursors-returned"></a>Возвращенные курсоры  
  sp_describe_cursor_columns инкапсулирует свой отчет в качестве [!INCLUDE[tsql](../../includes/tsql-md.md)] выходного параметра **курсора** . Это позволяет пакетам [!INCLUDE[tsql](../../includes/tsql-md.md)], хранимым процедурам и триггерам построчно обрабатывать выходные данные. Это также означает, что процедуру нельзя вызывать непосредственно из функций API баз данных. Параметр вывода **курсора** должен быть привязан к программной переменной, но API-интерфейсы базы данных не поддерживают привязку параметров или переменных **курсора** .  
@@ -89,7 +89,7 @@ sp_describe_cursor_columns
 |dbid|**int**|Идентификатор базы данных, в которой находится таблица этого столбца. Если столбец результирующего набора строится из выражения, значение dbid равно -1.|  
 |dbname|**sysname**<br /><br /> (допускает значение NULL)|Имя базы данных, содержащей базовую таблицу, служащую источником столбца. Если столбец результирующего набора строится из выражения, значение dbname равно NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_describe_cursor_columns описывает атрибуты столбцов в результирующем наборе серверного курсора, такие как имя и тип данных, для каждого курсора. Процедура sp_describe_cursor используется для получения описания глобальных атрибутов серверного курсора. Процедура sp_describe_cursor_tables используется для получения отчета по базовым таблицам, на которые ссылается курсор. Чтобы получить отчет по серверным курсорам [!INCLUDE[tsql](../../includes/tsql-md.md)], видимым в соединении, используется процедура sp_cursor_list.  
   
 ## <a name="permissions"></a>Разрешения  

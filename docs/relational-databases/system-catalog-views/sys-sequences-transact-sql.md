@@ -21,21 +21,21 @@ ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5afddee7cf2d8d5e61db8833df45b839e6f70eca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4a6588e142fb17f0b90dfb302dda242255513ed3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82815844"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717562"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Содержит строку для каждого объекта последовательности в базе данных.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|\<наследуемые столбцы>||Наследует все столбцы из представления [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Наследует все столбцы из представления [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant NOT NULL**|Стартовое значение для объекта последовательности. Если объект последовательности перезапускается с помощью инструкции ALTER SEQUENCE, он начинается с этого значения. Когда объект последовательности выполняет цикл, он переходит к **minimum_value** или **maximum_value**, а не **start_value**.|  
 |**increment**|**sql_variant NOT NULL**|Значение, на которое увеличивается значение объекта последовательности после каждого созданного значения.|  
 |**minimum_value**|**sql_variant NULL**|Минимальное значение, возвращаемое объектом последовательности. По достижении этого значения объект последовательности либо возвращает ошибку при попытке создать дополнительные значения, либо перезапускается, если для него указан параметр CYCLE. Если значение MINVALUE не задано, этот столбец возвращает минимальное значение, поддерживаемое типом данных генератора последовательностей.|  
@@ -52,7 +52,7 @@ ms.locfileid: "82815844"
 |**last_used_value**|**sql_variant NULL**|Возвращает последнее значение, созданное функцией [Next value for](../../t-sql/functions/next-value-for-transact-sql.md) . Применимо к SQL Server 2017 и более поздних версий.|  
   
 ## <a name="permissions"></a>Разрешения  
- В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях видимость метаданных в представлениях каталогов ограничивается защищаемыми объектами, которыми пользователь владеет или на которые ему были предоставлены разрешения. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Порядковые номера](../../relational-databases/sequence-numbers/sequence-numbers.md)   

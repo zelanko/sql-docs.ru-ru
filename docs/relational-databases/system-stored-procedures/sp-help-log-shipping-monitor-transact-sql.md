@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6bf5b4c74b39c9326382089579e111b118235170
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000930"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715854"
 ---
 # <a name="sp_help_log_shipping_monitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает результирующий набор, содержащий сведения о состоянии и другие данные о зарегистрированных базах данных-источниках и базах данных-получателях на сервере-источнике, сервере-получателе или сервере мониторинга.  
   
@@ -39,7 +39,7 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Отсутствует.  
+ Нет.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
@@ -50,7 +50,7 @@ sp_help_log_shipping_monitor
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|Общее состояние агентов базы данных доставки журналов:<br /><br /> **0** = работоспособное состояние и сбои без агента.<br /><br /> **1** = в противном случае.|  
 |**is_primary**|**bit**|Указывает, относится ли эта строка к базе данных-источнику:<br /><br /> **1** = строка предназначена для базы данных-источника.<br /><br /> **0** = строка предназначена для базы данных-получателя.|  
-|**сервером**|**sysname**|Имя сервера-источника или получателя, где находится эта база данных.|  
+|**server**|**sysname**|Имя сервера-источника или получателя, где находится эта база данных.|  
 |**database_name**|**sysname**|Имя базы данных.|  
 |**time_since_last_backup**|**int**|Время (в минутах), прошедшее с момента создания последней резервной копии журнала.<br /><br /> NULL = данные недоступны или нерелевантны.|  
 |**last_backup_file**|**nvarchar (500)**|Имя последнего файла успешно созданной резервной копии журнала.<br /><br /> NULL = данные недоступны или нерелевантны.|  
@@ -64,14 +64,14 @@ sp_help_log_shipping_monitor
 |**restore_threshold**|**int**|Время (в минутах), которое может пройти между операциями восстановления, прежде чем сформируется предупреждение. **restore_threshold** не может иметь значение null.|  
 |**is_restore_alert_enabled**|**bit**|Указывает, возникает ли предупреждение при превышении **restore_threshold** . Значение по умолчанию (**1**) означает, что создается предупреждение.<br /><br /> NULL = данные недоступны или нерелевантны.<br /><br /> Чтобы задать пороговое значение восстановления, используйте [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_help_log_shipping_monitor** должны быть запущены из базы данных **master** на сервере мониторинга.  
   
 ## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;доставки журналов&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

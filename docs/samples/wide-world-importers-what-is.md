@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2fb0c990c03e0dfbf1cd279efa7a249bb5bc9645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: adc2e7d74f8479384bd9f34b5442e796e4b74d66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112380"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718548"
 ---
 # <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Примеры баз данных для широкого мира импорта для Microsoft SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 В этом обзор вымышленных средств импорта мирового уровня компании и рабочих процессов, которые решаются в образцах баз данных WideWorldImporters для SQL Server и базы данных SQL Azure.  
 
 Мировые импортеры (WWI) — это оптовое средство импорта и распространения новизнаных товаров, работающее в области Сан-Франциско.
@@ -63,6 +63,6 @@ SQL Server Analysis Services используется для создания м
 
 ## <a name="terms-of-use"></a>Условия использования
 
-Лицензия для образца базы данных и образца кода описана здесь: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+Лицензия для образца базы данных и примера кода описана здесь: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
 Образец базы данных включает общедоступные данные, загруженные из data.gov и естественного Еарсдата. Условия использования:[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

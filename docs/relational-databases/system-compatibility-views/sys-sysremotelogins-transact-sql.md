@@ -1,5 +1,5 @@
 ---
-title: sys. таблице sysremotelogins (Transact-SQL) | Документация Майкрософт
+title: sys.sysремотелогинс (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 520749113c3e9aeea8f2d0c3c3125965b1511a5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718842"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Содержит по одной строке для каждого удаленного пользователя, которому разрешено вызывать удаленные хранимые процедуры на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Содержит по одной строке для каждого удаленного пользователя, которому разрешено вызывать удаленные хранимые процедуры на экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -40,10 +40,10 @@ ms.locfileid: "68018133"
 |**remoteserverid**|**smallint**|Идентификация удаленного сервера.|  
 |**remoteusername**|**sysname**|Имя входа пользователя на удаленном сервере.|  
 |**status**|**smallint**|Возвращает 0.|  
-|**трансляцию**|**varbinary(85)**|Идентификатор безопасности пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|**sid**|**varbinary(85)**|Идентификатор безопасности пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |**changedate**|**datetime**|Дата и время, когда был добавлен удаленный пользователь.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

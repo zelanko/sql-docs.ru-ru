@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718595"
 ---
 # <a name="wideworldimporters-data-generation"></a>Создание данных WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Выпущенные версии баз данных WideWorldImporters и WideWorldImportersDW содержат данные с 1 января 2013 до дня создания баз данных.
 
 При использовании этих образцов баз данных может потребоваться включить более свежие образцы данных.
@@ -41,7 +41,7 @@ ms.locfileid: "79112311"
 
     Эта инструкция добавляет пример данных о продажах и покупках в базу данных вплоть до текущей даты. В нем отображается ход создания данных по дням. Создание данных может занять около 10 минут каждый год, требующий данных. Из-за случайного коэффициента в создании данных существуют некоторые различия в данных, создаваемых между запусками.
 
-    Чтобы увеличить или уменьшить объем данных, создаваемых для заказов в день, измените значение параметра `@AverageNumberOfCustomerOrdersPerDay`. Используйте параметры `@SaturdayPercentageOfNormalWorkDay` и `@SundayPercentageOfNormalWorkDay` , чтобы определить объем заказа для выходных дней.
+    Чтобы увеличить или уменьшить объем данных, создаваемых для заказов в день, измените значение параметра `@AverageNumberOfCustomerOrdersPerDay` . Используйте параметры `@SaturdayPercentageOfNormalWorkDay` и, `@SundayPercentageOfNormalWorkDay` чтобы определить объем заказа для выходных дней.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Импорт созданных данных в WideWorldImportersDW
 
@@ -63,11 +63,11 @@ WideWorldImportersDW может произвольно увеличить раз
 
 Одна из проблем заключается в том, чтобы размер загружаемого файла был достаточно мал для легкого скачивания, но достаточно велик, чтобы продемонстрировать SQL Server функции производительности. Например, значительные преимущества для индексов columnstore достигаются только при работе с большим количеством строк. 
 
-Для увеличения количества строк `Application.Configuration_PopulateLargeSaleTable` в `Fact.Sale` таблице можно использовать процедуру. Строки вставляются в 2012 календарного года, чтобы избежать конфликта с существующими данными в мире импорта, которые начинаются с 1 января 2013.
+`Application.Configuration_PopulateLargeSaleTable`Для увеличения количества строк в таблице можно использовать процедуру `Fact.Sale` . Строки вставляются в 2012 календарного года, чтобы избежать конфликта с существующими данными в мире импорта, которые начинаются с 1 января 2013.
 
 ### <a name="procedure-details"></a>Сведения о процедуре
 
-#### <a name="name"></a>Имя
+#### <a name="name"></a>name
 
     Application.Configuration_PopulateLargeSaleTable
 

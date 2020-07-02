@@ -16,19 +16,19 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ebeae6c016746f9c6b43dcb700acedea8e6688b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0297fe59e998afd50eb7bb2320c59ab54e59b0e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715299"
 ---
 # <a name="preparing-commands"></a>Подготовка команд
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает подготовку команды для оптимизированного многократного выполнения, однако подготовка команды создает дополнительную нагрузку; поэтому потребителю нет необходимости подготавливать команду для ее выполнения более одного раза. Как правило, подготовку команды следует выполнять в том случае, если планируется ее не менее чем четырехкратное выполнение.  
   
- По соображениям производительности подготовка команды откладывается до ее выполнения. Это поведение по умолчанию. Об ошибках, содержащихся в подготавливаемой команде, не будет ничего известно до ее выполнения или до выполнения операции с метасвойством. При установке свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE в значение FALSE это поведение по умолчанию может быть отключено.  
+ По соображениям производительности подготовка команды откладывается до ее выполнения. Это поведение установлено по умолчанию. Об ошибках, содержащихся в подготавливаемой команде, не будет ничего известно до ее выполнения или до выполнения операции с метасвойством. При установке свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSPROP_DEFERPREPARE в значение FALSE это поведение по умолчанию может быть отключено.  
   
  Если команда выполняется напрямую (без предварительной подготовки), то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает и кэширует план выполнения. При повторном выполнении инструкции SQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] применяет эффективный алгоритм сопоставления новой инструкции с существующим планом выполнения и повторно использует для этой инструкции тот же план выполнения.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "81304465"
   
  Объект команды имеет в базе данных **tempdb** не более одной хранимой процедуры. Любая существующая временная хранимая процедура представляет текущий текст команды для этого объекта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Команды](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

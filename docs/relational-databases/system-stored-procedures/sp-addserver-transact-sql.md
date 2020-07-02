@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 73f9bb5e2201b9c8b7577c54228e038310e7a141
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716385"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Определяет имя локального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переименовании компьютера используйте **sp_addserver** , чтобы сообщить экземпляру [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] имя нового компьютера. Эта процедура должна быть выполнена на всех экземплярах компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , размещенных на компьютере. Невозможно изменить имя компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Чтобы изменить имя экземпляра, установите новый экземпляр с нужным именем, отключите файлы базы данных от старого экземпляра, подключите базы данных к новому экземпляру и удалите старый экземпляр. Кроме того, вы можете создать имя псевдонима клиента на клиентском компьютере, перенаправив подключение на другой сервер, и имя экземпляра или комбинацию **сервер:порт** , не изменяя имя экземпляра на сервере.
 
@@ -59,7 +59,7 @@ sp_addserver [ @server = ] 'server' ,
 ## <a name="return-code-values"></a>Значения кода возврата
  0 (успешное завершение) или 1 (неуспешное завершение)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
  Чтобы задать или очистить параметры сервера, используйте **sp_serveroption**.
 
  **sp_addserver** нельзя использовать внутри определяемой пользователем транзакции.

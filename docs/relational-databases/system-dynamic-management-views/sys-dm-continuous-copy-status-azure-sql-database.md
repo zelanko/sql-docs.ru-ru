@@ -20,15 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824671"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717473"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает строку для каждой пользовательской базы данных (версии 11), которая в настоящее время находится в связи непрерывного копирования георепликации. Если для базы данных-источника инициировано несколько связей непрерывного копирования, эта таблица содержит по одной строке для каждой активной базы данных-получателя.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "82824671"
 ## <a name="permissions"></a>Разрешения  
  Для получения данных необходимо членство в роли базы данных **db_owner** . Пользователь dbo, члены роли базы данных **DBManager** и имя входа sa могут также запрашивать это представление.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Представление **sys. dm_continuous_copy_status** создается в базе данных **ресурсов** и отображается во всех базах данных, включая логическую реплику. Однако запрос этого представления для логической базы данных master возвращает пустой набор.  
   
  Если отношение непрерывного копирования к базе данных завершается, строка для этой базы данных в представлении **sys. dm_continuous_copy_status** исчезает.  

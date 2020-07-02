@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 96240f605762be382065268fa39198baeeaaa53f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215761"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717174"
 ---
 # <a name="path-expressions---specifying-axis"></a>Выражения пути — указание оси
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Шаг оси в выражении пути содержит следующие компоненты:  
   
@@ -60,7 +60,7 @@ ms.locfileid: "84215761"
 ## <a name="examples"></a>Примеры  
  Примеры запросов в этом разделе указываются для столбцов типа **XML** в базе данных **AdventureWorks** .  
   
-### <a name="a-specifying-a-child-axis"></a>А) Указание дочерней оси  
+### <a name="a-specifying-a-child-axis"></a>A. Указание дочерней оси  
  Для конкретной модели продукта следующий запрос получает \<Features> дочерние узлы узла \<ProductDescription> element из описания каталога продуктов, хранящегося в `Production.ProductModel` таблице.  
   
 ```  

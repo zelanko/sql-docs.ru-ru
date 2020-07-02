@@ -17,16 +17,16 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ca2b9f7c93b9473c6dbafd309a1a6075031d06f
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: 5ad17bb63dc60accb220799d62a81e625f20d5c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716617"
 ---
 # <a name="sequences-transact-sql"></a>ПОСЛЕДОВАТЕЛЬНОСТИ (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Возвращает по одной строке для каждой последовательности, к которой может получить доступ текущий пользователь в текущей базе данных.
 
@@ -56,7 +56,7 @@ ms.locfileid: "83767395"
 SELECT * FROM test.INFORMATION_SCHEMA.SEQUENCES;
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Представления информационной схемы &#40;&#41;Transact-SQL](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [sys.sequences (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)

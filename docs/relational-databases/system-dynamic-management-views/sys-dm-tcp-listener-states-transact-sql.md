@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bc0867408dfd7b950029b1a66163dcccbddb4f21
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 185a125c2197a7f5788c69a432315b46b1969369
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716634"
 ---
 # <a name="sysdm_tcp_listener_states-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строку, содержащую сведения о динамическом состоянии для каждого прослушивателя TCP.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82811168"
 |**listener_id**|**int**|Внутренний идентификатор прослушивателя. Не допускает значение NULL.<br /><br /> Первичный ключ.|  
 |**ip_address**|**nvarchar (48)**|IP-адрес прослушивателя, который доступен в сети и по которому в настоящее время идет прослушивание. Допустимы адреса IPv4 и IPv6. Если прослушиватель имеет адреса обоих типов, то они указываются в списке раздельно. Подстановочный знак IPv4 отображается как "0.0.0.0". Подстановочный знак IPv6 отображается как "::".<br /><br /> Не допускает значение NULL.|  
 |**is_ipv4**|**bit**|Тип IP-адреса<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
-|**порту**|**int**|Номер порта, на котором работает прослушиватель. Не допускает значение NULL.|  
+|**port**|**int**|Номер порта, на котором работает прослушиватель. Не допускает значение NULL.|  
 |**type**|**tinyint**|Тип прослушивателя, может принимать одно из следующих значений:<br /><br /> 0 =[!INCLUDE[tsql](../../includes/tsql-md.md)]<br /><br /> 1 = компонент Service Broker<br /><br /> 2 = зеркальное отображение базы данных<br /><br /> Не допускает значение NULL.|  
 |**type_desc**|**nvarchar (20)**|Описание **типа**, одно из следующих:<br /><br /> TSQL<br /><br /> SERVICE_BROKER<br /><br /> DATABASE_MIRRORING<br /><br /> Не допускает значение NULL.|  
 |**state**|**tinyint**|Состояние прослушивателя группы доступности, одно из следующих значений:<br /><br /> 1 = в сети. Прослушиватель принимает и обрабатывает запросы.<br /><br /> 2 = ожидание перезапуска. Прослушиватель не в сети и ожидает перезапуска.<br /><br /> Если прослушиватель группы доступности работает на том же порту, что и экземпляр сервера, то состояние этих двух прослушивателей всегда совпадает.<br /><br /> Не допускает значение NULL.<br /><br /> Примечание. значения в этом столбце берутся из объекта TSD_listener. Столбец не поддерживает состояние «вне сети», так как, если прослушиватель TDS_listener находится вне сети, запросить у него состояние невозможно.|  

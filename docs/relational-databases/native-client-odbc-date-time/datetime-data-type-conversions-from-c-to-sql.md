@@ -13,19 +13,19 @@ ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f8161ea07e394192e972caf4f772d9e7def36e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97867fb2debffab4684aaef302773ebe531d820b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719012"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Преобразования типа данных datetime из C в SQL
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  В этом разделе перечислены проблемы, которые следует учитывать при преобразовании из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типов C в типы даты-времени.  
+  В этом разделе перечислены проблемы, которые следует учитывать при преобразовании из типов C в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] типы даты-времени.  
   
- Преобразования, описанные в следующей таблице, относятся к преобразованиям, совершаемым на клиенте. В случаях, когда клиент задает точность доли секунды для параметра, отличающегося от того, который определен на сервере, преобразование клиента может быть выполнено, но сервер возвратит ошибку при вызове **SQLExecute** или **склексекутедирект** . В частности, ODBC обрабатывает любое усечение долей секунды как ошибку, в то время как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение является округлением; Например, Округление выполняется при переходе с **datetime2 (6)** на **datetime2 (2)**. Значения столбцов даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime сервер устанавливает для секунд значение, равное нулю.  
+ Преобразования, описанные в следующей таблице, относятся к преобразованиям, совершаемым на клиенте. В случаях, когда клиент задает точность доли секунды для параметра, отличающегося от того, который определен на сервере, преобразование клиента может быть выполнено, но сервер возвратит ошибку при вызове **SQLExecute** или **склексекутедирект** . В частности, ODBC обрабатывает любое усечение доли секунды в качестве ошибки, в то время как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поведение является округленным. Например, Округление выполняется при переходе с **datetime2 (6)** на **datetime2 (2)**. Значения столбцов даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime сервер устанавливает для секунд значение, равное нулю.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -33,17 +33,17 @@ ms.locfileid: "81301805"
 |SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
 |SQL_C_TIME|-|1|1|1,7|1, 5, 7|1,13|1,13|  
 |SQL_C_SS_TIME2|-|1,3|1,10|1,7|1, 5, 7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Недоступно|Недоступно|1,10,11|Недоступно|Недоступно|Недоступно|Недоступно|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|Н/Д|Н/Д|1,10,11|Н/Д|Н/Д|Н/Д|Н/Д|  
 |SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
 |SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|Недоступно|Недоступно|Недоступно|Недоступно|1,10,11|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|Недоступно|Недоступно|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|Недоступно|Недоступно|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
-|SQL_C_BINARY(SQL_TIME_STRUCT)|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
-|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|Н/Д|Н/Д|Н/Д|Н/Д|1,10,11|Н/Д|Н/Д|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|Н/Д|Н/Д|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9, 3|9,10|9,7,10|9,5,7,10|Н/Д|Н/Д|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9, 3, 4|9,4,10|9,10|9,5,10|Н/Д|Н/Д|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9, 3, 4, 8|9,4,8,10|9,8,10|9,10|Н/Д|Н/Д|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|  
+|SQL_C_BINARY(SQL_TIME_STRUCT)|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|  
+|SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|Н/Д|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
@@ -92,7 +92,7 @@ ms.locfileid: "81301805"
   
 -   **Н/д**: существующее [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более раннее поведение сохраняется.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

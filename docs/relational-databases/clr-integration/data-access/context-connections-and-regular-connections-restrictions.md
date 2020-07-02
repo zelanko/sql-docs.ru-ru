@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485373"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717906"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Контекстные соединения и обычные соединения — ограничения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  В этом разделе обсуждаются ограничения, связанные с кодом, который [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняется в процессе через контекст и обычные соединения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  В этом разделе обсуждаются ограничения, связанные с кодом, который выполняется в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] процессе через контекст и обычные соединения.  
   
 ## <a name="restrictions-on-context-connections"></a>Ограничения контекстных соединений  
  При проектировании приложения учитывайте следующие ограничения, которые применяются к контекстным соединениям.  
@@ -52,7 +52,7 @@ ms.locfileid: "81485373"
   
 -   Объект**SqlDependency** не поддерживается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Контекстное соединение](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

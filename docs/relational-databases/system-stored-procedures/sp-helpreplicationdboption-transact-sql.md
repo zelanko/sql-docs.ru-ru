@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0376653d2466bf756ba76575f90841f78956ade7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824456"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718673"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Отображает, доступны ли для репликации базы данных на издателе. Эта хранимая процедура выполняется на подписчике в любой базе данных. *Не поддерживается для издателей Oracle.*  
   
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Разрешает результирующий набор содержать только те базы данных, для которых было включено указанное значение *типа* параметра репликации. Аргумент *Type имеет тип* **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**отменить**|Разрешена репликация транзакций.|  
 |**Публикация слиянием**|Разрешена репликация слиянием.|  

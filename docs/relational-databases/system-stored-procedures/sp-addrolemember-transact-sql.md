@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030906"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716427"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>Хранимая процедура sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных.  
   
@@ -43,16 +43,16 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Аргументы  
- [ @rolename= ] "*Role*"  
+ [ @rolename =] "*роль*"  
  Имя роли базы данных в текущей базе данных. *Role* имеет тип **sysname**и не имеет значения по умолчанию.  
   
- [ @membername= ] "*security_account*"  
+ [ @membername =] "*security_account*"  
  Учетная запись безопасности, добавляемая к роли. *security_account* имеет тип **sysname**и не имеет значения по умолчанию. *security_account* может быть пользователь базы данных, роль базы данных, имя входа Windows или группа Windows.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Член роли, добавляемый с помощью процедуры sp_addrolemember, наследует разрешения этой роли. Если добавляемый член — участник уровня Windows, не имеющий соответствующего пользователя базы данных, этот пользователь будет создан, но может быть не полностью сопоставлен с именем входа. Всегда проверяйте, существует ли имя входа, и предоставлен ли ему доступ к базе данных.  
   
  Роль не может быть членом самой себя. Такие «циклические» определения недопустимы, даже если подразумевается только косвенное членство через несколько промежуточных ролей.  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-adding-a-windows-login"></a>A. Добавление имени входа Windows  
- В следующем примере имя входа `Contoso\Mary5` Windows добавляется в `AdventureWorks2012` базу данных в `Mary5`качестве пользователя. Затем пользователь `Mary5` добавляется к роли `Production`.  
+ В следующем примере имя входа Windows добавляется `Contoso\Mary5` в `AdventureWorks2012` базу данных в качестве пользователя `Mary5` . Затем пользователь `Mary5` добавляется к роли `Production`.  
   
 > [!NOTE]  
 >  Так как `Contoso\Mary5` известен как пользователь базы данных `Mary5` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , имя пользователя `Mary5` должно быть определено. Выражение будет завершаться с ошибкой `Contoso\Mary5` , пока существует имя для входа. Можно проверить, используя имя входа в домене.  
@@ -87,7 +87,7 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>Б) Добавление пользователя базы данных  
+### <a name="b-adding-a-database-user"></a>Б. Добавление пользователя базы данных  
  В следующем примере пользователь базы данных `Mary5` добавляется к роли базы данных `Production` текущей базы данных.  
   
 ```  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>Примеры: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>В. Добавление имени входа Windows  
- В следующем примере имя входа `LoginMary` добавляется в `AdventureWorks2008R2` базу данных от `UserMary`имени пользователя. Затем пользователь `UserMary` добавляется к роли `Production`.  
+ В следующем примере имя входа добавляется `LoginMary` в `AdventureWorks2008R2` базу данных от имени пользователя `UserMary` . Затем пользователь `UserMary` добавляется к роли `Production`.  
   
 > [!NOTE]  
->  Так как имя `LoginMary` входа известно как пользователь `UserMary` базы данных в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базе данных, `UserMary` необходимо указать его. Выражение будет завершаться с ошибкой `Mary5` , пока существует имя для входа. Имена входа и пользователи обычно имеют одинаковые имена. В этом примере используются разные имена для различения действий, влияющих на имя входа и пользователя.  
+>  Так как имя входа `LoginMary` известно как пользователь базы данных `UserMary` в [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базе данных, `UserMary` необходимо указать его. Выражение будет завершаться с ошибкой `Mary5` , пока существует имя для входа. Имена входа и пользователи обычно имеют одинаковые имена. В этом примере используются разные имена для различения действий, влияющих на имя входа и пользователя.  
   
 ```  
 -- Uses AdventureWorks  
@@ -117,7 +117,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   

@@ -20,15 +20,15 @@ ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c5dc4f2dc42452560162d214844e2264cd0e5e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c9c17ef0384d1b4ef1bc5534ffeffa8b2ba3d598
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718882"
 ---
 # <a name="syscolumn_encryption_key_values-transact-sql"></a>sys. column_encryption_key_values (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает сведения о зашифрованных значениях ключей шифрования столбцов (Цекс), созданных с помощью инструкции [CREATE Column Encryption Key](../../t-sql/statements/create-column-encryption-key-transact-sql.md) или [ALTER COLUMN Encrypt &#40;инструкций Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md) . Каждая строка представляет значение CEK, зашифрованное с помощью главного ключа столбца (CMK).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73593806"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание ключа шифрования СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [ИЗМЕНЕНИЕ ключа шифрования СТОЛБЦА &#40;языке Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
  [УДАЛИТЬ ключ шифрования СТОЛБЦА &#40;&#41;Transact-SQL](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   

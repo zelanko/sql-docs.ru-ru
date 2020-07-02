@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718690"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Устанавливает значения параметров для определяемых пользователем таблиц. sp_tableoption можно использовать для управления поведением строк таблиц с типами **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Text**, **ntext**, **Image**или Large определяемого пользователем типа данных.  
   
@@ -52,7 +52,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName =] "*option_name*"  
  Название параметра таблицы. *option_name* имеет тип **varchar (35)** и не имеет значения по умолчанию NULL. *option_name* может иметь одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |table lock on bulk load|Если отключено (по умолчанию), то процесс массовой загрузки в пользовательских таблицах получает блокировку строк. Если включено, то процесс массовой загрузки в пользовательских таблицах получает блокировку массовых обновлений.|  
 |блокировка вставки строк|Больше не поддерживается.<br /><br /> Этот параметр не влияет на свойства блокировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и включается только для совместимости существующих скриптов и процедур.|  
@@ -68,7 +68,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или номер ошибки (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_tableoption может использоваться только для установки значений параметра для пользовательских таблиц. Чтобы отобразить свойства таблицы, используйте OBJECTPROPERTY или запрос sys. Tables.  
   
  Параметр text in row процедуры sp_tableoption может быть включен или выключен только на таблицах, содержащих текстовые столбцы. Если таблица не содержит текстового столбца, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] происходит ошибка.  

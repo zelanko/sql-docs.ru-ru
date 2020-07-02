@@ -19,15 +19,15 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e88d3916f5122564b443bc3c439200526b1f2d5e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a72bb16eddc55f5cf741a7809665b44ada4a7a30
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246912"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717574"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает загрузку ЦП и данные хранилища для базы данных SQL Azure. Эти данные собираются и объединяются с пятиминутными интервалами. Для каждой пользовательской базы данных существует одна строка для каждого 5-минутного окна отчетов, в которой изменяется потребление ресурсов. Возвращаемые данные включают загрузку ЦП, изменение размера хранилища и изменение номера SKU базы данных. Неактивные базы данных без изменений могут не иметь строк на каждые пять минут. Данные предыстории хранятся приблизительно в течение 14 суток.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75246912"
 ## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной базе данных **master** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Данные, возвращаемые **sys. resource_stats** , выражаются в процентах от максимально допустимого уровня обслуживания и производительности, который вы используете.  
   
  Если база данных является членом эластичного пула, то статистика ресурсов, представленная в виде процентных значений, выражается в процентах от максимального предела для баз данных, как указано в конфигурации эластичного пула.  
@@ -83,7 +83,7 @@ GROUP BY database_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровни служб](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Возможности и ограничения уровней служб](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

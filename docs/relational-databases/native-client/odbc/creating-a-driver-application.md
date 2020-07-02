@@ -24,15 +24,15 @@ ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4e65eaac59bcc16e123bda3e47af29dc4a836ce5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d393936953ead282578f69e8ad1945914a252e66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719568"
 ---
 # <a name="creating-a-driver-application"></a>Создание приложения драйвера
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   В архитектуре ODBC имеется четыре компонента, которые выполняют следующие функции.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388390"
 |Драйвер|Обрабатывает вызовы всех функций ODBC из приложения, передает инструкции SQL из приложения в источник данных и возвращает результаты приложению. При необходимости драйвер переводит ODBC SQL из приложения в собственный SQL, используемый источником данных.|  
 |Источник данных|Содержит все необходимые драйверу сведения для доступа к конкретному экземпляру данных в СУБД.|  
   
- Приложение, использующее драйвер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC собственного клиента для взаимодействия с экземпляром служб, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет следующие задачи:  
+ Приложение, использующее [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента для взаимодействия с экземпляром служб, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] выполняет следующие задачи:  
   
 -   соединяется с источником данных;  
   
@@ -55,7 +55,7 @@ ms.locfileid: "81388390"
   
 -   Закрывает соединение с источником данных.  
   
- Более сложное приложение, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] написанное для драйвера ODBC для собственного клиента, также может выполнять следующие задачи:  
+ Более сложное приложение, написанное для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера ODBC для собственного клиента, также может выполнять следующие задачи:  
   
 -   использовать курсоры для управления расположением в результирующем наборе;  
   
@@ -77,7 +77,7 @@ ms.locfileid: "81388390"
   
  Для использования функций ODBC приложение на языке C или C++ должно включать файлы заголовка sql.h, sqlext.h и sqltypes.h. Для использования функций API-интерфейса установщика ODBC, приложение должно включать файл заголовка odbcinst.h. Приложение, использующее ODBC и Юникод, должно включать файл заголовка sqlucode.h. Приложения ODBC должны быть связаны с файлом odbc32.lib. Приложения ODBC, вызывающие функции API-интерфейса установщика ODBC, должны быть связаны с файлом odbccp32.lib. Эти файлы включены в пакет SDK платформы Windows.  
   
- Многие драйверы ODBC, в том [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] числе драйвер ODBC для собственного клиента, предлагают расширения ODBC для конкретного драйвера. Чтобы воспользоваться преимуществами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] расширений ODBC для собственного клиента, приложение должно включать заголовочный файл sqlncli. h. Этот файл заголовка содержит следующее:  
+ Многие драйверы ODBC, в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC для собственного клиента, предлагают расширения ODBC для конкретного драйвера. Чтобы воспользоваться преимуществами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] РАСШИРЕНИЙ ODBC для собственного клиента, приложение должно включать заголовочный файл sqlncli. h. Этот файл заголовка содержит следующее:  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Особые атрибуты подключения для драйвера ODBC собственного клиента.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "81388390"
   
 -   вызов функций API-интерфейса метаданных распределенного запроса для списков связанных серверов и их каталогов.  
   
- Любое приложение ODBC C или C++, использующее функцию копирования драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, должно быть связано с файлом sqlncli11. lib. Приложения, вызывающие функции API-интерфейса метаданных распределенного запроса, также должны компоноваться с файлом sqlncli11.lib. Файлы sqlncli. h и sqlncli11. lib распространяются в составе средств [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] разработчика. Каталоги [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include и Lib должны находиться в пути компилятора INCLUDE и LIB, как показано ниже:  
+ Любое приложение ODBC C или C++, использующее функцию копирования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвера ODBC собственного клиента, должно быть связано с файлом sqlncli11. lib. Приложения, вызывающие функции API-интерфейса метаданных распределенного запроса, также должны компоноваться с файлом sqlncli11.lib. Файлы sqlncli. h и sqlncli11. lib распространяются в составе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] средств разработчика. Каталоги [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Include и Lib должны находиться в пути компилятора INCLUDE и LIB, как показано ниже:  
   
 ```  
 LIB=c:\Program Files\Microsoft Data Access SDK 2.8\Libs\x86\lib;C:\Program Files\Microsoft SQL Server\100\Tools\SDK\Lib;  
@@ -118,7 +118,7 @@ INCLUDE=c:\Program Files\Microsoft Data Access SDK 2.8\inc;C:\Program Files\Micr
   
 -   [Многопоточные приложения](../../../relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

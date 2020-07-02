@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 39caf91dc69639be4207e3417982acfccf429bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717542"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит сведения об элементах (действиях) спецификации аудита сервера в подсистеме аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Чтобы получить список всех audit_action_id и их имена, запросите представление [sys. dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82834075"
 |server_specification_id|**int**|Идентификатор спецификации аудита сервера|  
 |audit_action_id|**int**|Идентификатор действия аудита|  
 |audit_action_name|**sysname**|Имя группы или имя действия аудита|  
-|класс|**tinyint**|Зарезервированное|  
+|class|**tinyint**|Зарезервированное|  
 |class_desc|**nvarchar(60)**|Зарезервированное|  
 |major_id|**int**|Зарезервированное|  
 |minor_id|**int**|Зарезервированное|  

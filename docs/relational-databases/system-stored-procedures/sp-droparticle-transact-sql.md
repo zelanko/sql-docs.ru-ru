@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8f9e7e8124ec0aa1246a7ef9805ad9761ec9baf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830216"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717299"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Удаляет статью из моментального снимка или публикации транзакций. Статья не может быть удалена, если на нее есть подписка. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -64,7 +64,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_droparticle** используется в моментальных снимках и репликации транзакций.  
   
  Для статей с горизонтальной фильтрацией **sp_droparticle** проверяет столбец **Type** статьи в таблице [&#41;&#40;Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) , чтобы определить, следует ли также удалить представление или фильтр. Если представление или фильтр были созданы автоматически, они удаляются вместе со статьей. Если они были созданы вручную, они не удаляются.  

@@ -25,22 +25,22 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca0e048d09b838663895d31de155d84c6294ed01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b560aa650140e4b94bbea4491fb28e5f1bf656f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487093"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717891"
 ---
 # <a name="getting-started-with-clr-integration"></a>Приступая к работе с интеграцией со средой CLR
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
-В этом разделе приводятся общие сведения о пространствах имен и библиотеках, необходимых для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] компиляции объектов базы данных с помощью интеграции с .NET Framework среды CLR. В этом разделе также показано, как написать, скомпилировать и выполнить простую хранимую процедуру CLR на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
+В этом разделе приводятся общие сведения о пространствах имен и библиотеках, необходимых для компиляции объектов базы данных с помощью [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] интеграции с .NET Framework среды CLR. В этом разделе также показано, как написать, скомпилировать и выполнить простую хранимую процедуру CLR на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Необходимые пространства имен  
 
-Компоненты, необходимые для разработки базовых объектов базы данных среды CLR, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]устанавливаются вместе с. Функции интеграции со средой CLR доступны через сборку под названием system.data.dll, которая является частью платформы .NET Framework. Эту сборку можно найти в глобальном кэше сборок (GAC), а также в каталоге .NET Framework. Ссылка на эту сборку обычно добавляется автоматически и при использовании инструментов с интерфейсом командной строки, и при работе в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, поэтому нет необходимости добавлять ее вручную.  
+Компоненты, необходимые для разработки базовых объектов базы данных среды CLR, устанавливаются вместе с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Функции интеграции со средой CLR доступны через сборку под названием system.data.dll, которая является частью платформы .NET Framework. Эту сборку можно найти в глобальном кэше сборок (GAC), а также в каталоге .NET Framework. Ссылка на эту сборку обычно добавляется автоматически и при использовании инструментов с интерфейсом командной строки, и при работе в среде [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, поэтому нет необходимости добавлять ее вручную.  
   
 Сборка system.data.dll содержит следующие пространства имен, необходимые для компиляции объектов базы данных среды CLR:  
   
@@ -92,7 +92,7 @@ End Class
   
 Эта простая программа содержит единственный статический метод общего класса. Этот метод использует два новых класса, **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** и **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)**, для создания управляемых объектов базы данных для вывода простого текстового сообщения. Метод также назначает строку "Hello World!" в качестве значения параметра out. Этот метод можно объявить как хранимую процедуру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а затем выполнить так же, как и любую хранимую процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-Скомпилируйте эту программу как библиотеку, загрузите ее в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и запустите ее как хранимую процедуру.  
+Скомпилируйте эту программу как библиотеку, загрузите ее в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и запустите ее как хранимую процедуру.  
   
 ## <a name="compile-the-hello-world-stored-procedure"></a>Компиляция хранимой процедуры "Hello World"  
 
@@ -171,7 +171,7 @@ IF EXISTS (SELECT name FROM sys.assemblies WHERE name = 'helloworld')
    drop assembly helloworld  
 ```  
   
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения об интеграции со средой CLR в SQL Server см. в следующих статьях:
 

@@ -19,16 +19,16 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3c94f7f23697539b000c9c76dc1d0970a56a96d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5af0f04d9fce1fbcb455590d0e68a79bd98bdd73
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834117"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717624"
 ---
 # <a name="sysquery_store_wait_stats-transact-sql"></a>sys. query_store_wait_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Содержит сведения о времени ожидания для запроса.  
   
@@ -54,24 +54,24 @@ ms.locfileid: "82834117"
   
 |Целочисленное значение|Категория ожидания|Типы ожидания включают в категорию|  
 |-----------------|---------------|-----------------|  
-|**0**;|**Неизвестно**|Неизвестно |  
+|**0**|**Неизвестно**|Неизвестно |  
 |**1**|**ЦП**|SOS_SCHEDULER_YIELD|
 |**2**|**Рабочий поток**|THREADPOOL|
-|**3**|**Скрыть**|LCK_M_%|
+|**3**|**Блокировка**|LCK_M_%|
 |**4**|**Периода**|LATCH_%|
 |**5**|**Кратковременная блокировка буфера**|PAGELATCH_%|
 |**6**|**Операции ввода-вывода буфера**|PAGEIOLATCH_%|
 |**7**|**Компиляции***|RESOURCE_SEMAPHORE_QUERY_COMPILE|
 |**8**|**SQL CLR**|CLR%, SQLCLR%|
 |**9**|**Зеркального**|ДБМИРРОР%|
-|**10**|**Транзакция**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
+|**10**|**Операции**|ТРАНЗАКЦИИ%, DTC%, TRAN_MARKLATCH_%, MSQL_XACT_%, TRANSACTION_MUTEX|
 |**11**|**Бездействие**|SLEEP_%, LAZYWRITER_SLEEP, SQLTRACE_BUFFER_FLUSH, SQLTRACE_INCREMENTAL_FLUSH_SLEEP, SQLTRACE_WAIT_ENTRIES, FT_IFTS_SCHEDULER_IDLE_WAIT, XE_DISPATCHER_WAIT, REQUEST_FOR_DEADLOCK_SEARCH, LOGMGR_QUEUE, ONDEMAND_TASK_QUEUE, CHECKPOINT_QUEUE, XE_TIMER_EVENT|
 |**12**|**PreEmptive**|PREEMPTIVE_%|
 |**13**|**Service Broker**|BROKER_% **(но не BROKER_RECEIVE_WAITFOR)**|
 |**14**|**Ввод-вывод журнала транзакций**|LOGMGR, ЛОГБУФФЕР, LOGMGR_RESERVE_APPEND, LOGMGR_FLUSH, LOGMGR_PMM_LOG, CHKPT, WRITELOG|
 |**15**|**Сетевые операции ввода-вывода**|ASYNC_NETWORK_IO, NET_WAITFOR_PACKET, PROXY_NETWORK_IO, EXTERNAL_SCRIPT_NETWORK_IOF|
-|**глубин**|**Параллелизма**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
-|**широкоэкранны**|**Память**|RESOURCE_SEMAPHORE, КМЕМСРЕАД, КМЕМПАРТИТИОНЕД, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
+|**16**|**Параллелизма**|CXPACKET, EXCHANGE, HT%, BMP%, BP%|
+|**17**|**Память**|RESOURCE_SEMAPHORE, КМЕМСРЕАД, КМЕМПАРТИТИОНЕД, EE_PMOLOCK, MEMORY_ALLOCATION_EXT, RESERVED_MEMORY_ALLOCATION_EXT, MEMORY_GRANT_UPDATE|
 |**стр**|**Ожидание пользователя**|WAITFOR, WAIT_FOR_RESULTS, BROKER_RECEIVE_WAITFOR|
 |**стр**|**Трассировка**|ТРАЦЕВРИТЕ, SQLTRACE_LOCK, SQLTRACE_FILE_BUFFER, SQLTRACE_FILE_WRITE_IO_COMPLETION, SQLTRACE_FILE_READ_IO_COMPLETION, SQLTRACE_PENDING_BUFFER_WRITERS, SQLTRACE_SHUTDOWN, QUERY_TRACEOUT, TRACE_EVTNOTIFF|
 |**20**|**Полнотекстовый поиск**|FT_RESTART_CRAWL, ПОЛНОТЕКСТОВЫЙ СБОР, MSSEARCH, FT_METADATA_MUTEX, FT_IFTSHC_MUTEX, FT_IFTSISM_MUTEX, FT_IFTS_RWLOCK, FT_COMPROWSET_RWLOCK, FT_MASTER_MERGE, FT_PROPERTYLIST_CACHE, FT_MASTER_MERGE_COORDINATOR, PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC|

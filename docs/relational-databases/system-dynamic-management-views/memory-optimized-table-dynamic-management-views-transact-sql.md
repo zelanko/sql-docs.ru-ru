@@ -1,5 +1,6 @@
 ---
 title: Динамические административные представления оптимизированной для памяти таблицы (Transact-SQL)
+description: Сведения о SQL Server динамических административных представлениях и представлениях каталога объектов, используемых в выполняющейся в памяти OLTP в SQL Server.
 ms.custom: seo-dt-2019
 ms.date: 02/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: ccd82fed-1a3f-47de-85c4-1c9bdd80b027
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fed156af798fe13380a576e96ea76416a9bcbfcc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9fd50f8b5e7a33a1acd38c99d1ace52c8070b703
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718838"
 ---
 # <a name="memory-optimized-table-dynamic-management-views-transact-sql"></a>Оптимизированные для памяти динамические административные представления таблиц (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]

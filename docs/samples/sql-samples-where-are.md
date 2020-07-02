@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718590"
 ---
 # <a name="sql-samples"></a>Примеры SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Расположения образцов баз данных и примеров кода для продуктов Microsoft SQL.
 
@@ -26,9 +26,9 @@ ms.locfileid: "74318982"
 
 Примеры кода для продуктов SQL находятся в репозитории [Microsoft SQL Server примеров](https://github.com/microsoft/sql-server-samples) на сайте GitHub. Каждый пример содержит файл README, в котором объясняется, как запустить и использовать пример. В основном файле README для репозитория примеров объясняется, как вносить изменения. 
 
-Примеры и шаблоны лицензированы по лицензии MIT. См. файл License. txt в корне.
+Примеры и шаблоны лицензированы по лицензии MIT. См. файл license.txt в корне.
 
-Вопросы по электронной почте sqlserversamples@microsoft.com:.
+Вопросы по электронной почте: sqlserversamples@microsoft.com .
 
 
 ## <a name="wideworldimporters-sample-database"></a>Образец базы данных WideWorldImporters
@@ -49,7 +49,7 @@ WideWorldImporters (WWI) — это образец базы данных, дем
 
 
 ## <a name="azure-samples-and-templates"></a>Примеры и шаблоны Azure
-Существует несколько примеров кода Microsoft Azure и примеры, доступных на сайте GitHub на платформе .NET, Java, Python, Node. js, PHP и Ruby. Кроме того, Azure Resource Manager позволяет подготавливать приложения с помощью декларативного шаблона. В одном шаблоне можно развернуть несколько служб и их зависимые компоненты. Один шаблон используется для развертывания приложения на каждом этапе его жизненного цикла.
+Существует ряд Microsoft Azure примеров кода и примеры, доступных на сайте GitHub на платформе .NET, Java, Python, Node.js, PHP и Ruby. Кроме того, Azure Resource Manager позволяет подготавливать приложения с помощью декларативного шаблона. В одном шаблоне можно развернуть несколько служб и их зависимые компоненты. Один шаблон используется для развертывания приложения на каждом этапе его жизненного цикла.
 
 - [Примеры Azure](https://github.com/Azure-Samples)
 - [Шаблоны быстрого запуска Azure](https://azure.microsoft.com/resources/templates/)

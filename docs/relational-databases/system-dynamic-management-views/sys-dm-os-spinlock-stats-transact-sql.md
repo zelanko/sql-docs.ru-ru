@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718776"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Возвращает сведения обо всех ожиданиях взаимоблокировок, упорядоченных по типу.  
   
@@ -47,14 +47,14 @@ ms.locfileid: "68265689"
 
 
 ## <a name="permissions"></a>Разрешения  
-В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]необходимо `VIEW SERVER STATE` разрешение.   
+В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .    
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  
  sys. dm_os_spinlock_stats можно использовать для обнаружения источника конфликтов спина. В некоторых случаях может быть разрешено или устранено состязание за взаимоблокировки. Но возможны и такие ситуации, когда будет необходимо обратиться в службу поддержки пользователей [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Можно сбросить содержимое sys. dm_os_spinlock_stats, `DBCC SQLPERF` выполнив следующую команду:  
+ Можно сбросить содержимое sys. dm_os_spinlock_stats, выполнив следующую команду `DBCC SQLPERF` :  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -404,7 +404,7 @@ GO
  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  
  [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  

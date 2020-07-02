@@ -13,22 +13,22 @@ ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5fa94f57a783fc4bdb12f17baa0dbbcb54f61ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 571affb61db00386bc7e325c5491e5364d526ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719004"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Изменения в функции массового копирования для работы с улучшенными типами даты и времени (OLE DB и ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Описываются новые возможности даты-времени для поддержки операций массового копирования. Приведенные в данном разделе сведения верны как для OLE DB, так и для ODBC в собственном клиенте [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="format-files"></a>Файлы форматирования  
  При интерактивном построении файлов форматирования следующая таблица описывает вводные данные для задания типов даты-времени и соответствующих имен типов данных из файлов размещения.  
   
-|Тип файла хранилища|Тип данных файла|Ответ на запрос: "введите тип файлового хранилища поля <field_name> [\<по умолчанию>]:"|  
+|Тип файла хранилища|Тип данных файла|Ответ на запрос: "введите тип файлового хранилища поля <field_name> [ \<default> ]:"|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -95,7 +95,7 @@ ms.locfileid: "81301835"
 ## <a name="bcp-types-in-sqlnclih"></a>Типы BCP в sqlncli.h  
  В файле sqlncli.h определены следующие типы, используемые в расширениях API-интерфейсов BCP для ODBC. Эти типы передаются с помощью параметра *eUserDataType* IBCPSession::BCPColFmt в OLE DB.  
   
-|Тип файла хранилища|Тип данных файла|Введите в sqlncli. h для использования с IBCPSession:: BCPColFmt|Значение|  
+|Тип файла хранилища|Тип данных файла|Введите в sqlncli. h для использования с IBCPSession:: BCPColFmt|Применение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
@@ -113,15 +113,15 @@ ms.locfileid: "81301835"
 |Кому --><br /><br /> Исходный тип|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Время|Недоступно|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Время|Н/Д|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Недоступно|Недоступно|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|Недоступно|Недоступно|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|Недоступно|Недоступно|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|Недоступно|Недоступно|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Н/Д|Н/Д|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|Н/Д|Н/Д|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|Н/Д|Н/Д|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|Н/Д|Н/Д|  
 ||||||||||
 
 #### <a name="key-to-symbols"></a>Расшифровка символов  
@@ -141,9 +141,9 @@ ms.locfileid: "81301835"
 |10|Если в преобразовании с сервера на клиент происходит усечение с потерей данных, в случае OLE DB выдается сообщение об ошибке, а в случае ODBC создается запись диагностики ODBC с кодом SQLSTATE 22008 и сообщением «Недопустимый формат даты-времени». Эта ошибка также возникает в том случае, если значение выходит за пределы диапазона, который может быть представлен диапазоном времени в формате UTC, используемым сервером. Если в преобразовании с сервера на клиент происходит усечение секунд или долей секунд, выдается только предупреждение.|  
 |11|Если происходит усечение с потерей данных, создается запись диагностики.<br /><br /> В преобразовании с сервера на клиент это предупреждение (ODBC SQLSTATE S1000).<br /><br /> В преобразовании с клиента на сервер это ошибка (ODBC SQLSTATE 22001).|  
 |12|Для секунд устанавливается значение 0, а доли секунды отбрасываются. Ошибка усечения невозможна.|  
-|Недоступно|Существующий способ работы [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более ранних версий сохранен.|  
+|Н/Д|Существующий способ работы [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более ранних версий сохранен.|  
 |||
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Улучшения даты и времени &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)   
  [Улучшения функций даты и времени &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

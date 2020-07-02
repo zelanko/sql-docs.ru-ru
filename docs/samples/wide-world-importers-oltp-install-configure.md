@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 355eaa254fcc7bb6cd4aa9a39c2cbcb269d88396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487073"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718663"
 ---
 # <a name="installation-and-configuration"></a>Установка и настройка
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Инструкции по установке и настройке базы данных OLTP для широкого мира.
 
 ## <a name="prerequisites"></a>Предварительные требования
@@ -64,7 +64,7 @@ ms.locfileid: "81487073"
 5. В разделе **Параметры базы данных** измените имя базы данных на *WideWorldImporters* и выберите целевой выпуск и цель службы для использования.
 6. Нажмите кнопку **Далее** и **Готово** , чтобы запустить развертывание. Выполнение через P1 займет несколько минут. Если требуется более низкая Ценовая категория, рекомендуется импортировать в новую базу данных P1, а затем изменить ценовую категорию на нужный уровень.
 
-## <a name="configuration"></a>Конфигурация
+## <a name="configuration"></a>Параметр Configuration
 
 ### <a name="full-text-indexing"></a>Полнотекстовое индексирование
 

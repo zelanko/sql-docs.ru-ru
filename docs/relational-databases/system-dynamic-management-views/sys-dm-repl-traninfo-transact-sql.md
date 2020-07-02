@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830498"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716642"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о каждой транзакции репликации или системы отслеживания измененных данных.  
 
@@ -43,7 +43,7 @@ ms.locfileid: "82830498"
 |**сквоз**|**int**|Идентификатор реплицированной команды в транзакции.|  
 |**xdesid**|**nvarchar (64)**|Идентификатор транзакции.|  
 |**artcache_table_address**|**varbinary(8)**|Адрес в памяти структуры кэшированной таблицы статьи, использованной в последний раз для данной транзакции.|  
-|**сервером**|**nvarchar (514)**|Имя сервера.|  
+|**server**|**nvarchar (514)**|Имя сервера.|  
 |**server_len_in_bytes**|**smallint**|Длина символьной строки имени сервера, в байтах.|  
 |**database**|**nvarchar (514)**|имя базы данных.|  
 |**db_len_in_bytes**|**smallint**|Длина символьной строки имени базы данных, в байтах.|  
@@ -70,7 +70,7 @@ ms.locfileid: "82830498"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на базу данных публикации или базу данных, для которой включена система отслеживания измененных данных.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Сведения возвращаются только для объектов или таблиц реплицированной базы данных, для которых включена система отслеживания измененных данных и которые загружены в данный момент времени в кэш статьи.  
   
 ## <a name="see-also"></a>См. также  

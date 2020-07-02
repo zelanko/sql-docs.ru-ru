@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718718"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает информацию отслеживания изменений для таблицы. Можно использовать эту инструкцию для возвращения всех изменений таблицы или информации отслеживания изменений для конкретной строки.  
   
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**nchar (1)**|Задает тип изменения:<br /><br /> **U** = обновление<br /><br /> **I** = вставить<br /><br /> **D** = удалить|  
 |SYS_CHANGE_COLUMNS|**varbinary (4100)**|Содержит список столбцов, измененных после last_sync_version (базовой версии). Обратите внимание, что вычисленные столбцы никогда не перечисляются как измененные.<br /><br /> Принимает значение NULL, если выполняется любое из следующих условий.<br /><br /> Отслеживание изменений столбцов не включено.<br /><br /> Операция представляет собой операцию вставки или удаления.<br /><br /> Все ключевые столбцы, не являющиеся первичными, были обновлены одной операцией. Это двоичное значение не следует интерпретировать непосредственно. Вместо этого, чтобы интерпретировать его, используйте [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Изменение контекстной информации, которую можно дополнительно указать с помощью предложения [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) как части инструкции INSERT, UPDATE или DELETE.|  
-|\<значение столбца первичного ключа>|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
+|\<primary key column value>|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  При указании значения VERSION возвращается одна строка, содержащая следующие столбцы.  
@@ -110,9 +110,9 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Текущее значение версии изменений, связанное со строкой.<br /><br /> Принимает значение NULL, если изменение не производилось в течение периода времени, превышающего срок хранения данных отслеживания изменений, либо если строка не изменялась с момента включения отслеживания изменений.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, который указывается дополнительно с использованием предложения WITH как часть инструкции INSERT, UPDATE или DELETE.|  
-|\<значение столбца первичного ключа>|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
+|\<primary key column value>|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Функция CHANGETABLE обычно используется в предложении FROM запроса, как если бы она была таблицей.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -162,7 +162,7 @@ CROSS APPLY CHANGETABLE
     (VERSION Employees, ([Emp ID], SSN), (e.[Emp ID], e.SSN)) AS c;  
 ```  
   
-### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>Б) Список всех изменений, внесенных после определенной версии  
+### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>Б. Список всех изменений, внесенных после определенной версии  
  В следующем примере показано, как получить список всех изменений, внесенных в таблицу после указанной версии (`@last_sync_version)`. [Emp ID] и SSN являются столбцами составного первичного ключа.  
   
 ```sql  
@@ -209,7 +209,7 @@ WHERE
         0);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции Отслеживание изменений &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [Отслеживание изменений данных &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [CHANGE_TRACKING_IS_COLUMN_IN_MASK &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md)   

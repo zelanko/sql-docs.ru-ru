@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 22d91d3422a9d2c6152d26a82c9e17754d0e21c9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: da76e1c4d2c2700951a20df82502cc09739bc8cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716267"
 ---
 # <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет пароль роли приложения в текущей базе данных.  
   
@@ -52,7 +52,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_approlepassword** не может быть выполнена в пользовательской транзакции.  
   
 ## <a name="permissions"></a>Разрешения  

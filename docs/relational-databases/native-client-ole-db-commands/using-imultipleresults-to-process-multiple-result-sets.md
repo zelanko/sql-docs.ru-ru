@@ -16,17 +16,17 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5e19cef4e00fc1c55e29e51ccea13c2fdb7a0e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dffa6e47370864a60acc4df372fbe7146759e3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304457"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715280"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Обработка нескольких результирующих наборов при помощи интерфейса IMultipleResults
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Потребители используют интерфейс **IMultipleResults** для обработки результатов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращаемых выполнением команды поставщика OLE DB собственного клиента. Когда поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента отправляет команду для выполнения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции и возвращает все результаты.  
+  Потребители используют интерфейс **IMultipleResults** для обработки результатов, возвращаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнением команды поставщика OLE DB собственного клиента. Когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента отправляет команду для выполнения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции и возвращает все результаты.  
   
  Клиент должен обработать все результаты выполнения команды. Так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнение команды поставщика OLE DB собственного клиента может создавать объекты с несколькими наборами строк в качестве результатов, используйте интерфейс **IMultipleResults** , чтобы убедиться, что получение данных приложением завершает циклическое обращение, инициированное клиентом.  
   
@@ -42,9 +42,9 @@ COMPUTE
     BY OrderID  
 ```  
   
- Если потребитель выполняет команду, содержащую этот текст, и запрашивает набор строк в качестве интерфейса возвращаемых результатов, возвращается только первый набор строк. Потребитель может обработать все строки в возвращенном наборе строк. Но если свойство источника данных DBPROP_MULTIPLECONNECTIONS имеет значение VARIANT_FALSE, а для соединения не включен режим MARS, никакие другие команды не могут быть выполнены в объекте сеанса (поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB не будет создавать другое подключение), пока команда не будет отменена. Если режим MARS не включен для соединения, поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB возвращает ошибку DB_E_OBJECTOPEN, если DBPROP_MULTIPLECONNECTIONS VARIANT_FALSE и возвращает E_FAIL при наличии активной транзакции.  
+ Если потребитель выполняет команду, содержащую этот текст, и запрашивает набор строк в качестве интерфейса возвращаемых результатов, возвращается только первый набор строк. Потребитель может обработать все строки в возвращенном наборе строк. Но если свойство источника данных DBPROP_MULTIPLECONNECTIONS имеет значение VARIANT_FALSE, а для соединения не включен режим MARS, никакие другие команды не могут быть выполнены в объекте сеанса ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB не будет создавать другое подключение), пока команда не будет отменена. Если режим MARS не включен для соединения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB возвращает ошибку DB_E_OBJECTOPEN, если DBPROP_MULTIPLECONNECTIONS VARIANT_FALSE и возвращает E_FAIL при наличии активной транзакции.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента также возвращает DB_E_OBJECTOPEN при использовании потоковых выходных параметров, и приложение не потребляет все возвращенные значения выходного параметра перед вызовом **IMultipleResults::** GetNext для получения следующего результирующего набора. Если режим MARS не включен и соединение занято выполнением команды, которая не создает набор строк, или если свойство источника данных DBPROP_MULTIPLECONNECTIONS имеет значение VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента создает дополнительные соединения для поддержки параллельных объектов команд, если только транзакция не активна, и в этом случае возвращается ошибка. Управление транзакциями и блокировками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит отдельно для каждого соединения. Если создано второе соединение, команда в отдельном соединении не использует общие блокировки. Необходимо соблюдать осторожность и убедиться, что одна команда не блокирует другую, удерживая блокировки строк, запрошенных другой командой. Если включен режим MARS, в одном соединении могут быть активными несколько команд, а если выполняются явные транзакции, все команды совместно используют общую транзакцию.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента также возвращает DB_E_OBJECTOPEN при использовании потоковых выходных параметров, и приложение не потребляет все возвращенные значения выходного параметра перед вызовом **IMultipleResults::** GetNext для получения следующего результирующего набора. Если режим MARS не включен и соединение занято выполнением команды, которая не создает набор строк, или если свойство источника данных DBPROP_MULTIPLECONNECTIONS имеет значение VARIANT_TRUE, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента создает дополнительные соединения для поддержки параллельных объектов команд, если только транзакция не активна, и в этом случае возвращается ошибка. Управление транзакциями и блокировками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит отдельно для каждого соединения. Если создано второе соединение, команда в отдельном соединении не использует общие блокировки. Необходимо соблюдать осторожность и убедиться, что одна команда не блокирует другую, удерживая блокировки строк, запрошенных другой командой. Если включен режим MARS, в одном соединении могут быть активными несколько команд, а если выполняются явные транзакции, все команды совместно используют общую транзакцию.  
   
  Потребитель может отменить команду с помощью метода [ISSAbort::Abort](../../relational-databases/native-client-ole-db-interfaces/issabort-abort-ole-db.md) или освободив все удерживаемые ссылки на объект команды и производный набор строк.  
   
@@ -53,7 +53,7 @@ COMPUTE
 > [!NOTE]  
 >  При использовании курсоров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнение команды создает курсор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает успех или ошибку создания курсора, поэтому обмен данными с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] завершается по выполнении команды. Следовательно, каждый вызов **GetNextRows** становится обменом данными. Таким образом, могут существовать несколько активных объектов команд, каждая из которых обрабатывает набор строк, являющийся результатом выборки из серверного курсора. Дополнительные сведения см. в статье [Наборы строк и курсоры SQL Server](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Команды](../../relational-databases/native-client-ole-db-commands/commands.md)  
   
   

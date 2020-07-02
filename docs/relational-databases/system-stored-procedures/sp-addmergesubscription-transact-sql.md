@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820716"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716584"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает подписку на принудительную публикацию слиянием или публикацию слиянием по запросу. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Тип подписчика. *subscriber_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**Local** (по умолчанию)|Подписчик известен только издателю.|  
 |**global**|Подписчик известен всем серверам.|  
@@ -90,19 +90,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Значение, указывающее, когда будет выполняться агент слияния. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Еженедельно|  
-|**10**|Ежемесячно|  
+|**8**|Weekly (Еженедельно);|  
+|**10**|Ежемесячная|  
 |**20**|Ежемесячно, в соответствии с заданным интервалом|  
 |**40**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_interval = ] frequency_interval`День или дни выполнения агент слияния. *frequency_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
@@ -118,20 +118,20 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`— Это запланированное слияние вхождений интервала частоты в каждом месяце. *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
 |NULL (по умолчанию)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Коэффициент повторения, используемый *frequency_type*. *frequency_recurrence_factor*имеет **тип int**и значение по умолчанию NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Единица измерения для *frequency_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
@@ -174,7 +174,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addmergesubscription** используется в репликации слиянием.  
   
  Если **sp_addmergesubscription** выполняется членом предопределенной роли сервера **sysadmin** для создания принудительной подписки, то агент слияния задание создается неявно и выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетной записи службы агента. Рекомендуется выполнить [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для ** \@ job_login** и ** \@ job_password**. Дополнительные сведения см. в разделе [модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716574"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Добавляет новый фильтр слияния для создания секции на базе соединения с другой таблицей. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -74,7 +74,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Указывает тип добавляемого фильтра. *filter_type* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Только фильтр соединения. Необходим для поддержки подписчиков [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 |**2**|Только связь логических записей.|  
@@ -85,7 +85,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addmergefilter** используется в репликации слиянием.  
   
  **sp_addmergefilter** можно использовать только с статьями таблицы. Статьи представлений и индексированных представлений не поддерживаются.  

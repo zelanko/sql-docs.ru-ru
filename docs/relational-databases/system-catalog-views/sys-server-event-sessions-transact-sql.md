@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0867820ddc410295bfb6ce137c32b0f7fce1b43c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22c26bd691fc12c492ab03fc073b12f02ba9adb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832745"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717520"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Перечисляет все определения сеанса событий, которые существуют в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82832745"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Уникальный идентификатор сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Определяемое пользователем имя, идентифицирующее сеанс событий. имя является уникальным. Не допускает значение NULL.|  
-|event_retention_mode|**nchar (1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> Х. Сопоставляется event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Сопоставляется event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Сопоставляется event_retention_mode_desc = NO_EVENT_LOSS|  
+|event_retention_mode|**nchar (1)**|Определяет способ обработки потери события. Значение по умолчанию — S. Не допускает значения NULL. Принимает одно из следующих значений.<br /><br /> S. Сопоставляется event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> Н. Сопоставляется event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> О. Сопоставляется event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Описывает способ обработки потери события. Значение по умолчанию ALLOW_SINGLE_EVENT_LOSS. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Возможна потеря событий в сеансе. Одиночные события удаляются только в том случае, если все буферы событий полны. Потеря одиночных событий при заполнении буферов событий обеспечивает приемлемые характеристики производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], одновременно уменьшая до минимума потери данных в потоке обработанных событий.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. Возможна потеря полных буферов событий в сеансе. Число потерянных событий зависит от размера памяти, выделенной для сеанса, способа секционирования памяти и размера событий в буфере. Этот параметр уменьшает влияние быстрого заполнения буферов событий на производительность сервера. Однако возможна потеря большого числа событий в сеансе.<br /><br /> NO_EVENT_LOSS. Потеря событий не разрешена. Этот параметр обеспечивает сохранение всех произошедших событий. При использовании этого параметра все задачи, которые инициируют события, должны ждать освобождения пространства в буфере событий. Это может привести к заметному снижению производительности во время активного сеанса событий.|  
 |max_dispatch_latency|**int**|Промежуток времени в миллисекундах, в течение которого события находятся в буферной памяти перед отправкой целям сеанса. Допустимые значения: от 0 до 2147483648 и 0. Значение 0 указывает, что задержка диспетчеризации бесконечно. Допускает значение NULL.|  
 |max_memory|**int**|Объем памяти, выделенной в сеансе для буферов событий. Значение по умолчанию — 4 МБ. Допускает значение NULL.|  

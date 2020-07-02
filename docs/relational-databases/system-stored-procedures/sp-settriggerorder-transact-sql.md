@@ -18,15 +18,15 @@ ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b90b91773ab0497452e0c12c5f485a36f81b6e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824299"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719184"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Указывает триггеры AFTER, срабатывающие первыми или последними. Порядок запуска триггеров AFTER, срабатывающих в промежутке между первым и последним триггерами, не определен.  
   
@@ -50,11 +50,11 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  **Первый** и **последний** триггеры должны быть двумя разными триггерами.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
-|**Началь**|Триггер срабатывает первым.|  
-|**Последний**|Триггер срабатывает последним.|  
-|**Нет**|Порядок срабатывания триггера не определен.|  
+|**Первый**|Триггер срабатывает первым.|  
+|**Последняя**|Триггер срабатывает последним.|  
+|**None**|Порядок срабатывания триггера не определен.|  
   
 `[ @stmttype = ] 'statement_type'`Указывает инструкцию SQL, которая запускает триггер. *statement_type* имеет тип **varchar (50)** и может использоваться для вставки, обновления, удаления, входа в систему или любого [!INCLUDE[tsql](../../includes/tsql-md.md)] события инструкции, указанного в [DDL-событиях](../../relational-databases/triggers/ddl-events.md). Группы событий задавать нельзя.  
   

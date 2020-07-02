@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 68540299b14af875f6625771d9d47f81f048f43d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820689"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716539"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает агент моментальных снимков для указанной публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -61,12 +61,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Частота, с которой выполняется агент моментальных снимков. *frequency_type* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно.|  
 |**4** (по умолчанию)|Ежедневно.|  
 |**8**|Еженедельно.|  
-|**глубин**|Ежемесячно.|  
+|**16**|Ежемесячно.|  
 |**32**|Ежемесячно относительно интервала частоты.|  
 |**64**|При запуске агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускать, когда компьютер простаивает|  
@@ -78,14 +78,14 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**1**|*frequency_interval* не используется.|  
 |**4** (по умолчанию)|Каждые *frequency_interval* дней и по умолчанию ежедневно.|  
 |**8**|*frequency_interval* является одним или несколькими следующими (в сочетании с логическим оператором [&#124; (побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) ):<br /><br /> **1** = воскресенье &#124;<br /><br /> **2** = понедельник &#124;<br /><br /> **4** = вторник &#124;<br /><br /> **8** = среда &#124;<br /><br /> **16** = четверг &#124;<br /><br /> **32** = Пятница &#124;<br /><br /> **64** = Суббота|  
-|**глубин**|В *frequency_interval* день месяца.|  
+|**16**|В *frequency_interval* день месяца.|  
 |**32**|*frequency_interval* является одним из следующих:<br /><br /> **1** = воскресенье &#124;<br /><br /> **2** = понедельник &#124;<br /><br /> **3** = вторник &#124;<br /><br /> **4** = среда &#124;<br /><br /> **5** = четверг &#124;<br /><br /> **6** = Пятница &#124;<br /><br /> **7** = Суббота &#124;<br /><br /> **8** = день &#124;<br /><br /> **9** = &#124; дня недели<br /><br /> **10** = выходной день|  
 |**64**|*frequency_interval* не используется.|  
 |**128**|*frequency_interval* не используется.|  
   
 `[ @frequency_subday = ] frequency_subday`Единица измерения для *freq_subday_interval*. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**2**|Секунда|  
@@ -135,7 +135,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_addpublication_snapshot** используется в репликации моментальных снимков, репликации транзакций и репликации слиянием.  
   
 ## <a name="example"></a>Пример  

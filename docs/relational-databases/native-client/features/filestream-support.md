@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: bf8ddb4e3794c8ad7889f395726fb325e071deb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 97ee05c8deb88efcd451eb55007983833d0b1879
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303896"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719678"
 ---
 # <a name="filestream-support"></a>Поддержка FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
 
   Компонент FILESTREAM предоставляет способ хранения и доступа к большим двоичным значениям либо с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], либо путем непосредственного доступа к файловой системе Windows. Большим двоичным значением считается значение с размером больше 2 гигабайт (ГБ). Дополнительные сведения о поддержке усовершенствованного компонента FILESTREAM см. в статье [FILESTREAM (SQL Server)](../../../relational-databases/blob/filestream-sql-server.md).  
   
- При открытии ** \@ \@** подключения к базе данных значение TEXTSIZE по умолчанию равно-1 ("неограниченно").  
+ При открытии подключения к базе данных значение ** \@ \@ TEXTSIZE** по умолчанию равно-1 ("неограниченно").  
   
  Предусмотрена также возможность получения доступа и обновления столбцов FILESTREAM с помощью API файловой системы Windows.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "81303896"
   
  Чтобы создать столбцы FILESTREAM или определить, какие существующие столбцы являются столбцами FILESTREAM, можно использовать столбец **is_filestream** представления каталога [sys.columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).  
   
- Ниже представлен пример такого кода:  
+ Ниже приведен пример:  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -58,13 +58,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Совместимость на низком уровне  
- Если клиент был скомпилирован с использованием [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии собственного клиента, которая была включена в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], а приложение подключается к [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], то поведение **varbinary (max)** будет совместимо с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа".  
+ Если клиент был скомпилирован с использованием версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, которая была включена в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , а приложение подключается к [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , то поведение **varbinary (max)** будет совместимо с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Это означает, что максимальный размер возвращаемых данных будет ограничен 2 ГБ. Для результирующих значений больше 2 ГБ произойдет усечение, и будет возвращено сообщение "Усечение строковых данных справа".  
   
  Если уровень совместимости типов данных установлен равным «80», то поведение клиента будет согласовано с поведением клиента низкого уровня.  
   
- Для клиентов, использующих SQLOLEDB или других поставщиков, освобожденных [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] до версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, тип **varbinary (max)** будет сопоставлен с изображением.  
+ Для клиентов, использующих SQLOLEDB или других поставщиков, освобожденных до [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента, тип **varbinary (max)** будет сопоставлен с изображением.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

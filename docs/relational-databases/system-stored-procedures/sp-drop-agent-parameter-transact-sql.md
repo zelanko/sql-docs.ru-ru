@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ce01a218fd2185c5904baf41014bc0c7caa5ec25
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4f0e89192e985463ecfbce622629a35215f5ec36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717334"
 ---
 # <a name="sp_drop_agent_parameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет один или все параметры из профиля в таблице **MSagent_parameters** . Эта хранимая процедура выполняется на распространителе в любой базе данных с запущенным агентом.  
   
@@ -45,7 +45,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_drop_agent_parameter** используется во всех типах репликации.  
   
 ## <a name="permissions"></a>Разрешения  
