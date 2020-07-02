@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3b7922921c64c9afb7ef37be57db23a32470eaf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 90f2d7e20d4cb490e738a3dd813ce6037a1bfac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649501"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Выполнение файлов шаблонов через свойство CommandStream
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   В этом примере показано, как можно указать файлы шаблонов, состоящие из запросов SQL или XPath, с помощью свойства CommandStream объекта SqlXmlCommand. В этом приложении открывается Филестреамобжект для командного файла, а файловый поток назначается как выполняемый CommandStream.  
   
  В следующем примере свойство CommandType указано как Склксмлкоммандтипе. Template (не AS TemplateFile).  

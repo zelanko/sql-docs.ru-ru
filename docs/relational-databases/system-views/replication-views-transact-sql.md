@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ae0c1245bdf9ff7fe1d1eb712745cbc15d2479af
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 01c5c21ef7886773e162fe1f17cbcbaae177075b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692663"
 ---
 # <a name="replication-views-transact-sql"></a>Представления репликации (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Эти представления содержат сведения, используемые репликацией в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Представления обеспечивают более простой доступ к данным в [системных таблицах репликации](../../relational-databases/system-tables/replication-tables-transact-sql.md). Представления создаются в пользовательской базе данных, когда эта база данных используется в качестве базы данных публикации или подписки. Все объекты репликации удаляются из пользовательской базы данных, когда эта база данных удаляется из топологии репликации. Предпочтительным методом доступа к метаданным репликации является использование [хранимых процедур репликации](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "83807938"
 |[сисмержеекстендедартиклесвиев &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[сисмержепартитионинфовиев &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
 |[systranschemas &#40;Transact-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации (Transact-SQL)](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

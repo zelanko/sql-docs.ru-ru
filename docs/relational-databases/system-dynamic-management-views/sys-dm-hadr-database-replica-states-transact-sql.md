@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: dbfd5f0fc29efd4d2f6a02d680c9a6df34c5392b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663031"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строку для каждой базы данных, участвующей в Always On группе доступности, для которой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] размещается реплика доступности на локальном экземпляре. Это динамическое административное представление предоставляет сведения о состоянии первичной и вторичной реплик. На вторичной реплике это представление возвращает по строке для каждой из баз данных-получателей на экземпляре сервера. На первичной реплике это представление возвращает по строке для каждой из баз данных-источников и по дополнительной строке для соответствующих баз данных-получателей.  
   

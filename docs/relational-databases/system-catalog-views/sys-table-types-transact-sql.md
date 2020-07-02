@@ -23,21 +23,21 @@ ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e000d4e4f7f46d57bb1ae9a4e5c370169eb1227f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8faf838b12c82fd2dff25db87dbae96ff891e81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664033"
 ---
 # <a name="systable_types-transact-sql"></a>sys.table_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Отображает свойства определенных пользователем табличных типов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Табличный тип — это тип, на основании которого могут быть объявлены переменные таблицы или возвращающие табличное значение параметры. Каждый тип таблицы имеет **type_table_object_id** , который является внешним ключом в представлении каталога [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) . Этот столбец ИДЕНТИФИКАТОРов можно использовать для запроса различных представлений каталога способом, аналогичным **object_id** столбцу обычной таблицы, для обнаружения структуры табличного типа, например ее столбцов и ограничений.    
  
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|*\<наследуемые столбцы>*||Список столбцов, наследуемых этим представлением, см. в разделе [sys. types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
+|*\<inherited columns>*||Список столбцов, наследуемых этим представлением, см. в разделе [sys. types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|Идентификационный номер объекта. Является уникальным в пределах базы данных.|  
 |**is_memory_optimized**|**bit**|**Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> Допустимы следующие значения:<br /><br /> 0 = не оптимизировано для памяти<br /><br /> 1 = оптимизировано для памяти<br /><br /> Значение по умолчанию — 0.<br /><br /> Типы таблиц всегда создаются с DURABILITY = SCHEMA_ONLY. Только схема сохраняется на диске.|  
   

@@ -1,5 +1,5 @@
 ---
-title: dbo. сисалертс (Transact-SQL) | Документация Майкрософт
+title: Оповещения dbo.sys(Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 277cd9ae3fdbe2414c9c3eb96208e79730ebdde6
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6169691af84576e37a8f4b5a7cfc09757305c95b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814013"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675324"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит одну строку для каждого предупреждения. Предупреждение — это сообщение, отправляемое как реакция на событие. Предупреждения могут направлять сообщения не только в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, предупреждение может быть сообщением электронной почты или пейджера. Предупреждения также могут создавать задачи.  Эта таблица хранится в базе данных **msdb** .
   
@@ -61,12 +61,12 @@ ms.locfileid: "82814013"
   
  ## <a name="remarks"></a>Примечания
 
-В следующей таблице показаны значения битовой маски include_event_description. Значение десятичного числа возвращается dbo. сисалертс. 
+В следующей таблице показаны значения битовой маски include_event_description. Десятичное значение возвращается dbo.sysпредупреждениях. 
 
 |Decimal | binary | значение |
 |------|------|------|
 |0 |0000 |нет сообщения |
-|1 |0001 |электронная почта |
+|1 |0001 |email |
 |2 |0010 |pager |
 |3 |0011 |пейджер и электронная почта |
 |4 |0100 |Net send |

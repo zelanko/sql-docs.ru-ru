@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7be99181-d221-49d0-9cb2-c930d8c044a0
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 2624ed4800a247b0847adc5839346758aa50f140
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 213b8301a471e00107ce7d3ac6bf493e6aea87c4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67463562"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662465"
 ---
 # <a name="sp_dropsrvrolemember-transact-sql"></a>sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Удаляет из предопределенной роли сервера имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] либо пользователя или группу Windows.
 
@@ -43,10 +43,10 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 
 ## <a name="arguments"></a>Аргументы
 
-**[ @loginame = ]** "_Login_"  
+**[ @loginame =]** "_Login_"  
 Имя входа, удаляемое из предопределенной роли сервера. Аргумент *Login* имеет тип **sysname**и не имеет значения по умолчанию. *имя для входа* должно существовать.  
 
-**[ @rolename = ]** "_Role_"  
+**[ @rolename =]** "_роль_"  
 Имя роли сервера. Аргумент *Role* имеет тип **sysname**и значение по умолчанию NULL. значение *Role* должно быть одним из следующих:  
 
 -   sysadmin  
@@ -68,7 +68,7 @@ sp_dropsrvrolemember [ @loginame = ] 'login' , [ @rolename = ] 'role'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Для удаления имени входа из предопределенной роли сервера может использоваться только хранимая процедура sp_dropsrvrolemember. Для удаления члена из роли базы данных следует использовать хранимую процедуру sp_droprolemember.  
   
  Имя входа sa нельзя удалить ни из какой предопределенной роли сервера.  

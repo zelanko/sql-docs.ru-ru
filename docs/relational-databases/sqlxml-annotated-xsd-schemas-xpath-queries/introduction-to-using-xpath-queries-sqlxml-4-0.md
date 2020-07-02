@@ -16,15 +16,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ed8de737a350181a62eb12b8c9f2f19a762a44c
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 544a8741557c222577f124014d6a04a9d066add1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649766"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Основные сведения об использовании запросов XPath (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Запрос на языке XPath может быть указан как часть URL-адреса или внутри шаблона. Схема сопоставления определяет структуру этого результирующего фрагмента, а значения извлекаются из базы данных. Этот процесс имеет сходные концепции с созданием представлений при помощи инструкции CREATE VIEW и написания SQL-запросов к ним.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "84882243"
 ## <a name="supported-functionality"></a>Поддерживаемые функции  
  В следующей таблице приведены возможности языка XPath, реализованные в SQLXML 4.0.  
   
-|Компонент|Item|Ссылка на образцы запросов|  
+|Функция|Элемент|Ссылка на образцы запросов|  
 |-------------|----------|----------------------------|  
 |Оси|**атрибуты**, **дочерние**, **родительские**и **собственные** оси|[Указание осей в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Предикаты с логическими значениями, включая последовательные и вложенные предикаты.||[Указание арифметических операторов в запросах XPath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -106,7 +106,7 @@ ms.locfileid: "84882243"
 ## <a name="unsupported-functionality"></a>Неподдерживаемые функциональные возможности  
  В следующей таблице приведены функции языка XPath, не реализованные в SQLXML 4.0.  
   
-|Компонент|Item|  
+|Функция|Элемент|  
 |-------------|----------|  
 |Оси|**предка**, **предка или-Self**, **потомка**, **потомка или самого себя (//)**, **следующего**, следующего **элемента**, **пространство имен**, **предшествующее**, **предшествующее одноуровневый**|  
 |Предикаты с числовыми значениями||  
@@ -121,7 +121,7 @@ ms.locfileid: "84882243"
   
 -   XPath может содержать такие символы, как < или &, которые имеют особые значения в XML (а шаблон — это XML-документ). Эти символы необходимо отформатировать с помощью & кодировки XML или указать XPath в URL-адресе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Использование запросов XPath в SQLXML 4.0](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
   
   

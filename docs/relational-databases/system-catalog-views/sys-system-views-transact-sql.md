@@ -1,5 +1,5 @@
 ---
-title: sys. system_views (Transact-SQL) | Документация Майкрософт
+title: sys.system_views (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dbfca799f3c3dc4b3930f487fb45413c7711af48
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d53f54e18c464a61d0a4b5b6cfb4cdb0cc866642
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664121"
 ---
 # <a name="syssystem_views-transact-sql"></a>Представление sys.system_views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого системного представления, автоматически создаваемого [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Все системные представления содержатся в схемах с именами **sys** или **INFORMATION_SCHEMA**.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|\<наследуемые столбцы>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|\<inherited columns>||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**is_replicated**|**bit**|1 = представление реплицировано.|  
 |**has_replication_filter**|**bit**|1 = представление имеет фильтр репликации.|  
 |**has_opaque_metadata**|**bit**|1 = для представления указан параметр VIEW_METADATA. Дополнительные сведения см. в статье [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md).|  

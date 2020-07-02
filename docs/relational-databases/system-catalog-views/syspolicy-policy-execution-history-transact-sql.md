@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2dc0b47ce2723215d03886f7dfc5dab3f121e617
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed3bca383e5f6ad1960274145327f915c6e8ca5c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663765"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Указывает время выполнения политик, результат каждого выполнения и сведения об ошибках, возникших при выполнении. В следующей таблице приведено описание столбцов представления syspolicy_policy_execution_history.  
   
@@ -35,17 +35,17 @@ ms.locfileid: "68121106"
 |policy_id|**int**|Идентификатор политики.|  
 |start_date|**datetime**|Дата и время последней попытки запуска политики.|  
 |end_date|**datetime**|Время, когда политика закончила выполняться.|  
-|набор по|**bit**|Успешность или неуспешность выполнения политики. 0 = неуспешное завершение, 1 = успешное завершение.|  
+|result|**bit**|Успешность или неуспешность выполнения политики. 0 = неуспешное завершение, 1 = успешное завершение.|  
 |exception_message|**nvarchar(max)**|Сообщение, выданное в результате возникшего исключения.|  
 |exception|**nvarchar(max)**|Описание возникшего исключения.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Представление [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) содержит связанные сведения о целевых объектах политики и тестируемых выражениях условий.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

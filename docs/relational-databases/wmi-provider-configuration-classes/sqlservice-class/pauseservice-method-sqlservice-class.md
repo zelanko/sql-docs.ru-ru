@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c3a8feb-58b8-4385-b4c8-bf33cf4d276d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 37b0020c00af771096a2e9066ef99752c66d9e04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75cd8fd66ef7ca0f0cfc06ce7ab18b8140b73b94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659271"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662255"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>Метод PauseService (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Пытается перевести службу в состояние приостановки.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,9 +42,9 @@ object.PauseService()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если служба была успешно остановлена, равное 1, если запрос не поддерживается, и равное любому другому числу для указания ошибки.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

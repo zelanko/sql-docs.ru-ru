@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6c181ad19d3027c5262b988a8c32fdcff52e901
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064123"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678593"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API-интерфейс расширенных хранимых процедур)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
@@ -98,10 +98,10 @@ srcdata
   
  Если значение параметра *desttype* равно SRVDECIMAL или SRVNUMERIC, параметр *srcdata* должен быть указателем на структуру типа DBNUMERIC или DBDECIMAL, в которой полям точности и масштаба уже присвоены требуемые значения. Параметр DEFAULTPRECISION позволяет задать точность по умолчанию, а параметр DEFAULTSCALE — масштаб по умолчанию.  
   
-## <a name="returns"></a>Результаты  
+## <a name="returns"></a>Возвращаемое значение  
  Порядковый номер описываемого столбца. Первый столбец имеет номер 1. При возникновении ошибки возвращается 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Функция **srv_describe** должна быть вызвана по одному разу для каждого столбца данной строки перед первым вызовом функции **srv_sendrow**. Столбцы в строке могут быть описаны в любом порядке.  
   
  Для изменения местонахождения и длины исходных данных в строках столбцов до передачи полного результирующего набора можно использовать функции **srv_setcoldata** и **srv_setcollen**, соответственно.  
@@ -113,7 +113,7 @@ srcdata
 > [!IMPORTANT]  
 >  Необходимо тщательно просмотреть исходный код расширенных хранимых процедур и проверить скомпилированные библиотеки DLL перед их установкой на рабочий сервер. Сведения о проверке безопасности см. на следующем [веб-сайте Майкрософт](https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [API srv_sendrow &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [API srv_setutype &#40;расширенных хранимых процедур&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata (интерфейс API расширенных хранимых процедур)](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

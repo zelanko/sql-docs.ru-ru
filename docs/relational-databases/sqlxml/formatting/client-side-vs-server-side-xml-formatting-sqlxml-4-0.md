@@ -20,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: b80124c112f4a64044ea54040b8085b73f9ff83e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882891"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666132"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Форматирование XML-кода на клиенте и на сервере (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   В этом разделе описываются основные различия между форматированием XML-кода в SQLXML на стороне клиента и на стороне сервера.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>Запросы к нескольким наборам строк не поддерживаются при форматировании на стороне клиента  
@@ -215,7 +215,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
   
 -   При указании **Client-Side-XML = "1"** (true) в шаблоне выполняется запрос форматирования XML на стороне клиента. В этом случае можно указать предложение FOR XML NESTED. Если для XML AUTO задано значение, то форматирование XML происходит на стороне сервера, хотя в шаблоне указан параметр **Client-Side-XML = "1"** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Рекомендации по безопасности XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [Форматирование XML на стороне клиента &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)   
  [Форматирование XML на стороне сервера &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  

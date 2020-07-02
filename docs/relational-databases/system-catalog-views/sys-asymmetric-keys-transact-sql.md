@@ -20,15 +20,15 @@ ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5266b758c965574e7b810804fbbbfd3bb4958ca
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fdd5636a3b3cf700dccc855e26bb64f85f0c1207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652372"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает строку для каждого асимметричного ключа.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "82829170"
 |**name**|**sysname**|Имя ключа. Уникален в пределах базы данных.|  
 |**principal_id**|**int**|Идентификатор участника базы данных, который является владельцем этого ключа.|  
 |**asymmetric_key_id**|**int**|Идентификатор ключа. Уникален в пределах базы данных.|  
-|**pvt_key_encryption_type**|**char (2)**|Способ шифрования ключа.<br /><br /> NA = не зашифрован<br /><br /> MK = ключ шифруется главным ключом<br /><br /> PW = ключ шифруется пользовательским паролем<br /><br /> MK = ключ шифруется главным ключом службы.|  
+|**pvt_key_encryption_type**|**char(2)**|Способ шифрования ключа.<br /><br /> NA = не зашифрован<br /><br /> MK = ключ шифруется главным ключом<br /><br /> PW = ключ шифруется пользовательским паролем<br /><br /> MK = ключ шифруется главным ключом службы.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Описание способа шифрования закрытого ключа.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**отпечатк**|**varbinary(32)**|Хэш ключа SHA-1. Хэш глобально уникален.|  
-|**Microsof**|**char (2)**|Алгоритм, используемый с ключом.<br /><br /> 1R = 512-разрядный RSA<br /><br /> 2R = 1024-разрядный RSA<br /><br /> 3R = 2048-разрядный RSA|  
+|**Microsof**|**char(2)**|Алгоритм, используемый с ключом.<br /><br /> 1R = 512-разрядный RSA<br /><br /> 2R = 1024-разрядный RSA<br /><br /> 3R = 2048-разрядный RSA|  
 |**algorithm_desc**|**nvarchar(60)**|Описание алгоритма, используемого с ключом.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|Длина ключа в битах.|  
-|**трансляцию**|**varbinary(85)**|Идентификатор безопасности имени входа для этого ключа. Для ключей системы расширенного управления ключами это значение будет равно NULL.|  
+|**sid**|**varbinary(85)**|Идентификатор безопасности имени входа для этого ключа. Для ключей системы расширенного управления ключами это значение будет равно NULL.|  
 |**string_sid**|**nvarchar(128)**|Строковое представление входного идентификатора SID ключа. Для ключей системы расширенного управления ключами это значение будет равно NULL.|  
 |**public_key**|**varbinary(max)**|Открытый ключ.|  
 |**attested_by**|**nvarchar(260)**|Только для системного использования.|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67f25c6f4d39eb8cbd3b09d2e7710462f91ed397
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 727943423817c51b646ed151c79d7fdfc255d8b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821615"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664945"
 ---
 # <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82821615"
 |**create_date**|**datetime**|Дата и время создания аудита в формате UTC.|  
 |**modify_date**|**datetime**|Дата и время последнего изменения аудита в формате UTC.|  
 |**principal_id**|**int**|Идентификатор владельца аудита, зарегистрированного на сервере.|  
-|**type**|**char (2)**|Тип аудита:<br /><br /> Журнал событий безопасности SL-NT<br /><br /> AL — журнал событий приложений NT<br /><br /> FL — файл в файловой системе|  
+|**type**|**char(2)**|Тип аудита:<br /><br /> Журнал событий безопасности SL-NT<br /><br /> AL — журнал событий приложений NT<br /><br /> FL — файл в файловой системе|  
 |**type_desc**|**nvarchar(60)**|ЖУРНАЛ БЕЗОПАСНОСТИ<br /><br /> ЖУРНАЛ ПРИЛОЖЕНИЙ<br /><br /> FILE|  
 |**on_failure**|**tinyint**|В случае ошибки записи данных о действии:<br /><br /> 0 — продолжить<br /><br /> 1. Завершение работы экземпляра сервера<br /><br /> 2 — сбой операции|  
 |**on_failure_desc**|**nvarchar(60)**|В случае ошибки записи данных о действии:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  

@@ -19,15 +19,15 @@ ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7b770e22ccf2da14d0ad88d6f93725ef93410c84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830858"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677587"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Возвращает данные обо всех случаях ожидания, обнаруженных выполнявшимися потоками. Это агрегированное представление можно использовать для диагностики проблем производительности как всего [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], так и конкретных запросов и пакетов.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82830858"
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 -   В этом динамическом административном представлении отображаются данные только для текущей базы данных.  
   
@@ -256,8 +256,8 @@ ms.locfileid: "82830858"
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER database &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Возникает, когда фоновая задача ожидает завершения фоновой задачи, которая получает уведомления WSFC (путем опроса).  Только для внутреннего использования.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Операция добавления, замены и (или) удаления ожидает захвата блокировки записи на Always On внутренний список (например, список сетей, сетевых адресов или прослушивателей групп доступности).  Только для внутреннего использования.|  
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Возникает, когда фоновая задача ожидает завершения фоновой задачи, которая получает уведомления WSFC (путем опроса).  Только для внутреннего применения.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Операция добавления, замены и (или) удаления ожидает захвата блокировки записи на Always On внутренний список (например, список сетей, сетевых адресов или прослушивателей групп доступности).  Только для внутреннего применения.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Операция удаления группы доступности Always On ожидает перехода целевой группы доступности в режим «вне сети» перед уничтожением объектов отказоустойчивой кластеризации Windows Server.|  
 |PWAIT_HADR_ONLINE_COMPLETED|Операция создания или отработки отказа группы доступности Always On ожидает перехода целевой группы доступности в режим "в сети".|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Операция удаления группы доступности Always On ожидает завершения выполнения фоновой задачи, которая была запланирована как часть предыдущей команды. Например, это может быть фоновая задача, которая превращает базы данных доступности в основные базы данных. Команда DROP AVAILABILITY GROUP языка DDL должна дождаться завершения этой фоновой задачи во избежание взаимоблокировки.|  

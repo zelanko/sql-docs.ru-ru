@@ -20,21 +20,21 @@ ms.assetid: d17af274-b2dd-464e-9523-ee1f43e1455b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 894bcc1a5dc6400fe6e13ae66b63af6cec4cb128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5e6d1842989766c0cf77f141a62ebb6e146281f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85678301"
 ---
 # <a name="sysprocedures-transact-sql"></a>sys.procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Содержит по одной строке для каждого объекта, который является процедурой какого-либо типа, с **sys. objects. Type** = P, X, RF и PC.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**\<Столбцы, унаследованные из sys. Objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
+|**\<Columns inherited from sys.objects>**||Список столбцов, наследуемых этим представлением, см. в разделе [sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_auto_executed**|**bit**|1 = процедура автоматически выполняется при запуске сервера, иначе 0. Может устанавливаться только для процедур в базе данных master.|  
 |**is_execution_replicated**|**bit**|Выполнение этой процедуры реплицируется.|  
 |**is_repl_serializable_only**|**bit**|Репликация выполнения процедуры производится, только если транзакция может быть сериализована.|  

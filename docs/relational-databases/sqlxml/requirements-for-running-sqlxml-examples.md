@@ -17,15 +17,15 @@ ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8cd9e57f2ca7b9da3f13ef0438b7aa8ffc01b3a
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: aefb58e8f483c22772bf228dc7707efff50ee47f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882125"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666169"
 ---
 # <a name="requirements-for-running-sqlxml-examples"></a>Требования к запуску примеров SQLXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В разделе [программирование SQLXML 4,0](../../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md) содержатся многочисленные примеры. Далее перечисляются требования для создания работающих образцов из этих примеров.  
   
  Чтобы создать рабочие образцы на основе примеров SQLXML 4.0, должны быть установлены следующие компоненты:  

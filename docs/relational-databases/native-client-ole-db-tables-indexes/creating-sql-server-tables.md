@@ -18,15 +18,15 @@ ms.assetid: a7b8d142-d76a-44d9-a583-86ac5109fbe8
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8fd8d21aee81366ca00567967a8a48dd88b95ce
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 1802e5ded5d894fbe1c9405d3f02932a8783ebe5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658501"
 ---
 # <a name="creating-sql-server-tables"></a>Создание таблиц SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик собственного клиента OLE DB предоставляет функцию **ITableDefinition:: CreateTable** , позволяющую потребителям создавать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] таблицы. Потребители используют **CreateTable** для создания постоянных таблиц с именами потребителей, а также для постоянных или временных таблиц с уникальными именами, созданными [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком OLE DB собственного клиента.  
   

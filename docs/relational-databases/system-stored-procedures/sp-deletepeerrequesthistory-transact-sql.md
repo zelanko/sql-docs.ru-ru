@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 986fd717ede9d8fb81bfb42a818921cf3d1b553e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7605a1f05fd99dcbd5b870cb78e15d6192708537
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830269"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693093"
 ---
 # <a name="sp_deletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет журнал, связанный с запросом состояния публикации, который включает журнал запросов ([MSpeer_request &#40;Transact-sql&#41;](../../relational-databases/system-tables/mspeer-request-transact-sql.md)), а также журнал ответов ([MSpeer_response &#40;transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)). Эта хранимая процедура выполняется в базе данных публикации на издателе, участвующем в топологии одноранговой репликации. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
@@ -48,7 +48,7 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  **sp_deletepeerrequesthistory** используется в одноранговой топологии репликации транзакций. Дополнительные сведения см. в разделе [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  При выполнении **sp_deletepeerrequesthistory**необходимо указать либо *request_id* , либо *cutoff_date* .  

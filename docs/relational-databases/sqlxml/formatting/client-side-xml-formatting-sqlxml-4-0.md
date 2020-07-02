@@ -17,15 +17,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 526f47678e09f10bdd412bb35287d6363c41cabc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84530018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666148"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Форматирование XML на стороне клиента (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   В этом разделе содержатся сведения о форматировании XML на стороне клиента. Форматирование на стороне означает форматирование XML на среднем уровне.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ AS
 > [!NOTE]  
 >  Если вы выполняете XML-шаблон в приложении ADO, использующем поставщик SQLXMLOLEDB, и задаете атрибут **Client-Side-XML** в шаблоне и свойстве клиентсидексмл поставщика, приоритет получает значение, заданное в шаблоне.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Архитектура форматирования XML на стороне клиента и на стороне сервера &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
  [ДЛЯ SQL Server &#40;XML&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
  [Рекомендации по безопасности XML &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

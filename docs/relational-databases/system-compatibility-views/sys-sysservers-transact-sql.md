@@ -1,5 +1,5 @@
 ---
-title: sys. sysservers (Transact-SQL) | Документация Майкрософт
+title: sys.sysсерверы (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5406f97a14d92aed63e60e946da9f16bd183d611
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68941104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652238"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит одну строку для каждого сервера, к которому экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может обращаться как к источнику данных OLE DB.  
   
@@ -48,27 +48,27 @@ ms.locfileid: "68941104"
 |**schemadate**|**datetime**|Дата последнего обновления этой строки.|  
 |**topologyx**|**int**|Не используется.|  
 |**topologyy**|**int**|Не используется.|  
-|**каталога**|**sysname**|Каталог, который используется при соединении с поставщиком OLE DB.|  
+|**catalog**|**sysname**|Каталог, который используется при соединении с поставщиком OLE DB.|  
 |**srvcollation**|**sysname**|Параметры сортировки сервера.|  
-|**connecttimeout**|**int**|Время ожидания соединения с сервером.|  
+|**ConnectTimeout**|**int**|Время ожидания соединения с сервером.|  
 |**QueryTimeout**|**int**|Время ожидания выполнения запросов на сервере.|  
 |**srvnetname**|**char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = удаленный сервер.<br /><br /> 0 = связанный сервер.|  
-|**удаленного**|**bit**|1 = **sp_serveroption\@RPC** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@** параметру RPC присвоено значение **false** или **Off**.|  
-|**pub**|**bit**|1 = **sp_serveroption\@Pub** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@параметр pub** **имеет значение false** или **Off**.|  
-|**Директор**|**bit**|1 = **sp_serveroption\@** **имеет значение true** или **On**.<br /><br /> 0 = **sp_serveroption\@** значение **false** или **Off**.|  
-|**dist**|**bit**|1 = **sp_serveroption\@расп** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@расп** имеет значение **false** или **Off**.|  
-|**dpub**|**bit**|1 = **sp_serveroption\@дпуб** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@дпуб** имеет значение **false** или **Off**.|  
-|**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@RPC out** установлено в **значение false** или **Off**.|  
-|**DataAccess**|**bit**|1 = **sp_serveroption\@доступ к данным** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@доступ к данным** имеет значение **false** или **Off**.|  
-|**collationcompatible**|**bit**|1 = **Параметры\@сортировки, совместимые с sp_serveroption** , имеют значение **true** или **On**.<br /><br /> 0 = **Параметры\@сортировки, совместимые с sp_serveroption** , имеют значение **false** или **Off**.|  
-|**система**|**bit**|1 = **sp_serveroption\@система** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@система** имеет значение **false** или **Off**.|  
-|**useremotecollation**|**bit**|1 = **sp_serveroption\@параметру remote collation** задано **значение true** или **On**.<br /><br /> 0 = **sp_serveroption\@параметрам удаленных параметров сортировки** присвоено **значение false** или **Off**.|  
-|**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@для отложенной проверки схемы** задано значение **true** или **On**.<br /><br /> 0 = **sp_serveroption\@для отложенной проверки схемы** задано значение **false** или **Off**.|  
-|**параметры сортировки**|**sysname**|Параметры сортировки сервера задаются **sp_serveroption\@именем параметров сортировки**.|  
+|**удаленного**|**bit**|1 = **sp_serveroption \@ RPC** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption \@ ** параметру RPC присвоено значение **false** или **Off**.|  
+|**pub**|**bit**|1 = **sp_serveroption \@ Pub** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption параметр \@ Pub** **имеет значение false** или **Off**.|  
+|**sub**|**bit**|1 = **sp_serveroption \@ ** **имеет значение true** или **On**.<br /><br /> 0 = **sp_serveroption \@ ** значение **false** или **Off**.|  
+|**dist**|**bit**|1 = **sp_serveroption \@ расп** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption \@ расп** имеет значение **false** или **Off**.|  
+|**dpub**|**bit**|1 = **sp_serveroption \@ дпуб** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption \@ дпуб** имеет значение **false** или **Off**.|  
+|**rpcout**|**bit**|1 = **sp_serveroption \@ RPC out** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption \@ RPC out** установлено в **значение false** или **Off**.|  
+|**DataAccess**|**bit**|1 = **sp_serveroption \@ доступ к данным** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption \@ доступ к данным** имеет значение **false** или **Off**.|  
+|**collationcompatible**|**bit**|1 = ** \@ Параметры сортировки, совместимые с sp_serveroption** , имеют значение **true** или **On**.<br /><br /> 0 = ** \@ Параметры сортировки, совместимые с sp_serveroption** , имеют значение **false** или **Off**.|  
+|**система**|**bit**|1 = **sp_serveroption \@ система** имеет значение **true** или **On**.<br /><br /> 0 = **sp_serveroption \@ система** имеет значение **false** или **Off**.|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption \@ параметру remote collation** задано **значение true** или **On**.<br /><br /> 0 = **sp_serveroption \@ параметрам удаленных параметров сортировки** присвоено **значение false** или **Off**.|  
+|**lazyschemavalidation**|**bit**|1 = **sp_serveroption для \@ отложенной проверки схемы** задано значение **true** или **On**.<br /><br /> 0 = **sp_serveroption для \@ отложенной проверки схемы** задано значение **false** или **Off**.|  
+|**параметры сортировки**|**sysname**|Параметры сортировки сервера задаются **sp_serveroption \@ именем параметров сортировки**.|  
 |**nonsqlsub**|bit|0 = сервер является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1= сервер не является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

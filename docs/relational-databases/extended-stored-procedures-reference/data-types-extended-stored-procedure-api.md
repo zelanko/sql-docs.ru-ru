@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b510e74d507cb540fa617b6c0da48c3090429192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68064208"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85679058"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>Типы данных (API-интерфейс расширенных хранимых процедур)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Используйте вместо этого интеграцию со средой CLR.  
@@ -34,7 +34,7 @@ ms.locfileid: "68064208"
 |SRVBIGCHAR|**char**|Данные типа **character** с длиной от 0 до 8000 байт.|  
 |SRVBIGVARBINARY|**varbinary**|Данные типа **binary** с переменной длиной от 0 до 8000 байт.|  
 |SRVBIGVARCHAR|**varchar**|Данные типа **character** с переменной длиной от 0 до 8000 байт.|  
-|SRVBINARY|**binary**|Тип данных **binary**.|  
+|SRVBINARY|**binary**|тип данных **binary** .|  
 |SRVBIT|**Версий**|тип данных **bit** .|  
 |SRVBITN|**bit null**|Данные типа **bit**, значения NULL допускаются.|  
 |SRVCHAR|**char**|Тип данных **character**.|  
@@ -46,7 +46,7 @@ ms.locfileid: "68064208"
 |SRVFLT4|**real**|Тип данных **real** длиной 4 байта.|  
 |SRVFLT8|**float**|Тип данных **float** длиной 8 байт.|  
 |SRVFLTN|**real** &#124; **float null**|Данные типа **real** или **float**, значения NULL допускаются.|  
-|SRVIMAGE|**image**|Тип данных **image**.|  
+|SRVIMAGE|**изображение**|Тип данных **image**.|  
 |SRVINT1|**tinyint**|Тип данных **tinyint** длиной 1 байт.|  
 |SRVINT2|**smallint**|Тип данных **smallint** длиной 2 байта.|  
 |SRVINT4|**int**|Тип данных **int** длиной 4 байта.|  

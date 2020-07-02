@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9acfa4eecb97902f20a0ba25762e2b14f2d5c756
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 214c7b27c06ba9b8ba19c86dcd8474da7f0c720f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387998"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649660"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Выполнение SQL-запросов с использованием метода ExecuteXMLReader
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Вместо использования метода Ексекутетостреам можно использовать метод ExecuteXmlReader объекта SqlXmlCommand для выполнения команд. Этот метод возвращает объект XmlReader, который можно использовать для дальнейшей обработки результата (в этом примере выполняется печать имен элемента или атрибута и значений).  
   
 > [!NOTE]  

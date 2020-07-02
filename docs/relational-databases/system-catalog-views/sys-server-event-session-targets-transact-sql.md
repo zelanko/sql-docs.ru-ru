@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 707060599513e765e702755251015899eb6732d7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac4e6a7bb6f850c2bec6ae8bcbf0b21bb5d3ed39
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821805"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85664709"
 ---
 # <a name="sysserver_event_session_targets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строку для каждой цели события для сеанса событий.  
   
@@ -37,13 +37,13 @@ ms.locfileid: "82821805"
 |event_session_id|**int**|Идентификатор сеанса событий. Не допускает значение NULL.|  
 |target_id|**int**|Идентификатор цели. Идентификатор уникален внутри объекта сеанса событий. Не допускает значение NULL.|  
 |name|**sysname**|Имя цели события. Не допускает значение NULL.|  
-|Пакет|**sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
+|пакет|**sysname**|Имя пакета событий, который содержит цель события. Не допускает значение NULL.|  
 |module|**sysname**|Имя модуля, который содержит цель события. Не допускает значение NULL.|  
   
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Это представление имеет следующее количество элементов связей.  
   
 ||||  

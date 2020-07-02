@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820617"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646421"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Запрашивает позиционированные обновления. Эта процедура выполняет операции с одной или несколькими строками в пределах буфера выборки курсора. sp_cursor вызывается путем указания ID = 1 в пакете потока табличных данных (TDS).  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Если \< указано имя таблицы обновления>, любое значение, заданное для параметра *Table* , будет пропущено.  
+>  Если \<table name> указано Update, любое значение, заданное для параметра *Table* , будет пропущено.  
   
  При использовании нескольких параметров первый параметр должен быть строкой в следующем формате:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- В этом случае \< имя таблицы,> в созданной инструкции UPDATE, является либо указанным, либо по умолчанию параметром *Table* .  
+ В этом случае в \<table name> созданной инструкции UPDATE указана либо по умолчанию в параметре *Table* .  
   
  Для INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Если указана инструкция INSERT * \< table name>* , любое значение, заданное для параметра *Table* , будет пропущено.  
+>  Если *\<table name>* указан параметр INSERT, то любое значение, заданное для параметра *Table* , будет пропущено.  
   
  При использовании нескольких параметров первый параметр должен быть строкой в следующем формате:  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- За исключением случаев, когда указан параметр VALUES, в этом случае после последнего выражения должен стоять символ ). В этом случае * \< имя таблицы,>* в СОЗДАНной инструкции UPDATE, является либо указанным, либо по умолчанию параметром *Table* .  
+ За исключением случаев, когда указан параметр VALUES, в этом случае после последнего выражения должен стоять символ ). В этом случае в *\<table name>* созданной инструкции UPDATE указана либо по умолчанию в параметре *Table* .  
   
 > [!NOTE]  
 >  Возможно передать один параметр как именованный, то есть «`@VALUES`». В этом случае другие параметры использовать нельзя.  

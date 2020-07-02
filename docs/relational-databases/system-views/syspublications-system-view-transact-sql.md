@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a1048a31ab0970165a82abb332e29c7f814e5f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094772"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692636"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (System View) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Представление **syspublications** предоставляет сведения о публикации. Это представление хранится в базе данных распространителя.  
   
@@ -66,14 +66,14 @@ ms.locfileid: "68094772"
 |**conflict_policy**|**int**|Задает политику устранения конфликтов при обновлении подписчика посредством очередей. Может принимать одно из следующих значений:<br /><br /> **1** = побеждает конфликт с издателем.<br /><br /> **2** = конфликт побеждает подписчиком.<br /><br /> **3** = подписка повторно инициализирована.|  
 |**queue_type**|**int**|Задает используемый тип очереди. Может принимать одно из следующих значений:<br /><br /> **1** =. MSMQ, которая использует [!INCLUDE[msCoName](../../includes/msconame-md.md)] очередь сообщений для хранения транзакций.<br /><br /> **2** =. SQL, который использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для хранения транзакций.<br /><br /> Примечание. Использование [!INCLUDE[msCoName](../../includes/msconame-md.md)] очереди сообщений устарело и больше не поддерживается.|  
 |**ad_guidname**|**sysname**|Указывает, опубликована ли публикация в каталоге [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Допустимый глобальный уникальный идентификатор GUID указывает, что публикация опубликована в каталоге Active Directory, а GUID является соответствующим идентификатором объекта Active Directory. Если значение равно NULL, то публикация не опубликована в Active Directory.<br /><br /> Примечание. Публикация в Active Directory больше не поддерживается.|  
-|**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Уровень совместимости базы данных может иметь одно из следующих значений:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|Показывает, может ли подписчик инициализировать подписку на данную публикацию из резервной копии, а не из исходного моментального снимка. **1** означает, что подписки можно инициализировать из резервной копии, а **0** — нет. Дополнительные сведения см. в статье [Инициализация подписки на публикацию транзакций без моментального снимка](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**двоичный (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Показывает, поддерживается ли в публикации репликация схемы.<br /><br /> **1** = реплицируются инструкции DDL, выполненные на издателе.<br /><br /> **0** = указывает, что инструкции DDL не реплицируются. Дополнительные сведения см. в статье [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения для одноранговой репликации.<br /><br /> **0x4** — включено для[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.<br /><br /> **0x8** — включено для обнаружения конфликтов в одноранговой сети.|  
+|**options**|**int**|Битовая карта, указывающая дополнительные параметры публикации, со следующими значениями битов:<br /><br /> **0x1** — включается для одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения для одноранговой репликации.<br /><br /> **0x4** — включено для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подписчиков, отличных от.<br /><br /> **0x8** — включено для обнаружения конфликтов в одноранговой сети.|  
 |**originator_id**|**smallint**|Определяет каждый узел в одноранговой топологии репликации для обнаружения конфликтов. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Хранимые процедуры репликации &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ae3e555f48958aec87ed012244fae9775fae1619
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 24a95d193d483c35dac0f94a839555fecb52afca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662451"
 ---
 # <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Отображает профиль указанного агента. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -40,7 +40,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ## <a name="arguments"></a>Аргументы  
 `[ @agent_type = ] agent_type`Тип агента. *agent_type* имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |**1**|агент моментальных снимков|  
 |**2**|Агент чтения журнала.|  

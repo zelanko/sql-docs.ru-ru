@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a4bfcd7d9f03e41e32551653788386612a43835
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820385"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715148"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Отображает или изменяет свойства издателя для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателей, отличных от. Эта хранимая процедура выполняется на распространителе.  
   
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`Имя устанавливаемого свойства. Аргумент *PropertyName* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Значение|Описание|  
+|Применение|Описание:|  
 |-----------|-----------------|  
 |**xactsetbatching**|Показывает, группируются ли транзакции на издателе для последующей обработки в транзакционно целостные наборы, известные как наборы транзакций. Значение **Enabled** означает, что наборы транзакций можно создать, что является значением по умолчанию. Значение **disabled** означает, что существующие наборы транзакций обрабатываются без создания новых наборы транзакций.|  
 |**xactsetjob**|Разрешен ли запуск задания набора транзакций для создания набора транзакций. Значение **Enabled** означает, что задание по набору транзакций периодически выполняется для создания наборы транзакций на издателе. Значение **disabled** означает, что наборы транзакций создаются только агент чтения журнала при опросе издателем изменений.|  

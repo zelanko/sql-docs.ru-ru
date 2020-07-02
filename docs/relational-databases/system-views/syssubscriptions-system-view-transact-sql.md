@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8162726591f08329ddfc5cb800adece8bfd1fd59
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692715"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (системное представление) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Представление **syssubscriptions** предоставляет сведения о подписке. Это представление хранится в базе данных распространителя.  
   
@@ -43,10 +43,10 @@ ms.locfileid: "72304786"
 |**update_mode**|**tinyint**|Режим обновления.<br /><br /> **0** = только для чтения.<br /><br /> **1** = немедленное обновление.|  
 |**loopback_detection**|**bit**|Применяется к подпискам, которые являются частью двунаправленной топологии репликации транзакций. Механизм распознавания обратной связи определяет, отправляет ли агент распространителя транзакции, созданные в подписчике, обратно подписчику:<br /><br /> **0** = отправляет обратно.<br /><br /> **1** = не отправляет обратно.|  
 |**queued_reinit**|**bit**|Определяет, помечена ли статья для инициализации или повторной инициализации. Значение **1** указывает, что статья, на которую оформлена подписка, помечена как для инициализации, так и для повторной инициализации.|  
-|**nosync_type**|**tinyint**|Тип инициализации подписки:<br /><br /> **0** = автоматический (моментальный снимок)<br /><br /> **1** = только поддержка репликации<br /><br /> **2** = инициализировать с помощью резервного копирования<br /><br /> **3** = инициализировать из регистрационного номера транзакции в журнале (LSN)<br /><br /> Дополнительные сведения см. в ** \@** описании параметра sync_type [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3-5** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|Тип инициализации подписки:<br /><br /> **0** = автоматический (моментальный снимок)<br /><br /> **1** = только поддержка репликации<br /><br /> **2** = инициализировать с помощью резервного копирования<br /><br /> **3** = инициализировать из регистрационного номера транзакции в журнале (LSN)<br /><br /> Дополнительные сведения см. в описании параметра ** \@ sync_type** [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md).<br /><br /> **3-5** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**срвнаме**|**sysname**|Имя подписчика.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы репликации &#40;&#41;Transact-SQL](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40;&#41;Transact-SQL](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [syssubscriptions (Transact-SQL)](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  

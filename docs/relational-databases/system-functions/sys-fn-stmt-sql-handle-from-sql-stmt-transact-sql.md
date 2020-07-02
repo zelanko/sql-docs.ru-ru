@@ -13,15 +13,15 @@ ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f7111f4e0f67e1102712c140737b68914feada6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68059273"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652019"
 ---
 # <a name="sysfn_stmt_sql_handle_from_sql_stmt-transact-sql"></a>sys. fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Возвращает **stmt_sql_handle** для [!INCLUDE[tsql](../../includes/tsql-md.md)] оператора с данным типом параметризации (Simple или forced). Это позволяет обращаться к запросам, хранящимся в хранилище запросов, с помощью их **stmt_sql_handle** , если известно их текстовое значение.  
   
@@ -57,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>Возвращаемые столбцы  
  В следующей таблице перечислены столбцы, возвращаемые sys. fn_stmt_sql_handle_from_sql_stmt.  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary (64)**|Маркер SQL.|  
 |**query_sql_text**|**nvarchar(max)**|Текст [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции.|  
@@ -66,7 +66,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **EXECUTE** на базу данных и разрешение **Delete** для представлений каталога хранилища запросов.  
@@ -79,7 +79,7 @@ SELECT * FROM sys.databases;
 SELECT * FROM sys.fn_stmt_sql_handle_from_sql_stmt('SELECT * FROM sys.databases', NULL);  
 ```  
   
- Используйте функцию для корреляции данных хранилища запросов с другими динамическими административными представлениями. В следующем примере происходит следующее:  
+ Используйте функцию для корреляции данных хранилища запросов с другими динамическими административными представлениями. Следующий пример:  
   
 ```  
 SELECT qt.query_text_id, q.query_id, qt.query_sql_text, qt.statement_sql_handle,  

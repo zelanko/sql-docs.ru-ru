@@ -20,15 +20,15 @@ ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f41a5cc500ef8d893180804091e5f905961aa637
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079468"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665354"
 ---
 # <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает одну строку для каждого члена каждой роли базы данных.  Пользователи базы данных, роли приложений и другие роли базы данных могут быть членами роли базы данных. Чтобы добавить членов в роль, используйте инструкцию [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) с `ADD MEMBER` параметром. Присоединитесь к [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) , чтобы получить имена `principal_id` значений.
   
@@ -38,7 +38,7 @@ ms.locfileid: "68079468"
 |**member_principal_id**|**int**|Идентификатор участника базы данных элемента.|  
   
 ## <a name="permissions"></a>Разрешения  
- Любой пользователь может просматривать данные о своем членстве в роли. Для просмотра членства в других ролях требуется членство в `db_securityadmin` предопределенной роли базы `VIEW DEFINITION` данных или в базе данных.  
+ Любой пользователь может просматривать данные о своем членстве в роли. Для просмотра членства в других ролях требуется членство в `db_securityadmin` предопределенной роли базы данных или `VIEW DEFINITION` в базе данных.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
@@ -57,7 +57,7 @@ WHERE DP1.type = 'R'
 ORDER BY DP1.name;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

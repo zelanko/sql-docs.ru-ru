@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: baf0ebbea6eb78d8a125b5ea786039880addf032
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7785671c7233b9e696c4471075740f6ba0941684
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997311"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85675385"
 ---
 # <a name="sp_syspolicy_rename_policy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Переименовывает существующую политику в управлении на основе политик.  
   
@@ -50,7 +50,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_rename_policy должна выполняться в контексте системной базы данных msdb.  
   
  Необходимо указать значение для *имени* или *policy_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_policies.  
@@ -59,7 +59,7 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере имя политики «Test Policy 1» меняется на «Test Policy 2».  
@@ -71,7 +71,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_policy @name = N'Test Policy 1'
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

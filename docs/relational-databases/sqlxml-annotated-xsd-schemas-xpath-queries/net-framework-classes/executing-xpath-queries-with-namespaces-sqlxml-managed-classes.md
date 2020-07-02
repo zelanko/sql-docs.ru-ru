@@ -20,15 +20,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee37e30506eb9b41d3b94b2f76f1cf6a5149e6a2
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 74f829c7db7ee5c4c0c848c69b9cc447c3bff506
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83688737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85649391"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Выполнение запросов XPath с пространствами имен (управляемые классы SQLXML)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   В запросы XPath могут быть включены пространства имен. Если имена элементов схемы уточнены именем пространства имен (используйте целевое пространство имен), оно должно быть указано в запросах XPath к этой схеме.  
   
  Поскольку символ-шаблон (*) в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 не поддерживается, запрос XPath нужно задавать с указанием префикса пространства имен. Для разрешения префикса используйте свойство namespaces, чтобы указать привязку пространства имен.  

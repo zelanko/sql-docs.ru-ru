@@ -18,15 +18,15 @@ ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bf2dff5e5d7a3cb1581de9c0b15ff8a58dc6be7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d0c08c6e0d41781783cf7aaffd1f26d6e7b4e417
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85676761"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Эта функция динамического управления принимает в @object_id качестве параметра и описывает первый результирующий набор метаданных для модуля с таким идентификатором. Заданный параметр @object_id может быть идентификатором [!INCLUDE[tsql](../../includes/tsql-md.md)] хранимой процедуры или [!INCLUDE[tsql](../../includes/tsql-md.md)] триггера. Если же передан идентификатор любого другого объекта (представления, функции, таблицы или процедуры CLR), то в столбцах ошибки результата будет содержаться ошибка.  
   

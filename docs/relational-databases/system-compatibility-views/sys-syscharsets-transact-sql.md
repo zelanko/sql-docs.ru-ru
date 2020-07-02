@@ -1,5 +1,5 @@
 ---
-title: sys. syscharsets (Transact-SQL) | Документация Майкрософт
+title: sys.sysнаборов символов (Transact-SQL) | Документация Майкрософт
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,15 +21,15 @@ ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4332159765791addfdfcc32a9d19d29836f2460c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f414dbf0fc210f742db305cc49023399e091fc65
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663549"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Содержит по одной строке для каждой кодировки и порядок сортировки, определенный для использования в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Один из порядков сортировки помечен в **sysconfigures** как порядок сортировки по умолчанию. Это единственный фактически используемый объект.  
   
@@ -42,9 +42,9 @@ ms.locfileid: "68053544"
 |**name**|**sysname**|Уникальное имя для кодировки или порядка сортировки. Это поле должно содержать только буквы A–Z или a–z, цифры 0–9, символ подчеркивания (_) и должно начинаться с буквы.|  
 |**nописание**|**nvarchar(255)**|Необязательное описание характеристик кодировки или порядка сортировки.|  
 |**binarydefinition**|**varbinary (6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**definition**|**image**|Уникальное описание для кодировки или порядка сортировки. Структура данных в этом поле зависит от типа.|  
+|**definition**|**изображение**|Уникальное описание для кодировки или порядка сортировки. Структура данных в этом поле зависит от типа.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сопоставление системных таблиц с системными представлениями &#40;&#41;Transact-SQL](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Представления совместимости (Transact-SQL)](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

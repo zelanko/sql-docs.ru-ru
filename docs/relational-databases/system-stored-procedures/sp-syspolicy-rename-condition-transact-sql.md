@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 077ec13d8a4cfa5fb42c0b728cd36842a6672e52
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4109b122f37c12cb9c01be2ceb36d185b9d6418c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68081480"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651859"
 ---
 # <a name="sp_syspolicy_rename_condition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Переименовывает существующее условие в управлении на основе политик.  
   
@@ -49,7 +49,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Процедура sp_syspolicy_rename_condition должна выполняться в контексте системной базы данных msdb.  
   
  Необходимо указать значение для *имени* или *condition_id*. Они не могут одновременно иметь значения NULL. Чтобы получить эти значения, запросите системное представление msdb.dbo.syspolicy_conditions.  
@@ -58,7 +58,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Возможное повышение уровня учетных данных. пользователи в роли PolicyAdministratorRole могут создавать серверные триггеры и планировать выполнение политик, которые могут повлиять на работу экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Например, пользователи в роли PolicyAdministratorRole могут создать политику, которая может запретить создание большинства объектов в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Вследствие возможного повышения прав учетных данных роль PolicyAdministratorRole должна предоставляться только пользователям, имеющим право изменять конфигурацию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере изменяется имя условия, имеющего имя «Change Tracking Enabled».  
@@ -70,7 +70,7 @@ EXEC msdb.dbo.sp_syspolicy_rename_condition @name = N'Change Tracking Enabled'
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры управления на основе политик &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6be1b5454fd134cd6c5de0473d404ec38cddedf3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 26a9c4a3001d2a5b4f5709311e23c0023307ce92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830297"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692801"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Удаляет записи трассировочного токена из [MStracer_tokens &#40;Transact-sql&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) и [MStracer_history &#40;системных таблиц&#41;Transact-SQL](../../relational-databases/system-tables/mstracer-history-transact-sql.md) . Эта хранимая процедура выполняется на издателе в базе данных публикации или на распространителе в базе данных распространителя.
 
@@ -67,7 +67,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 **0** (успешное завершение) или **1** (сбой)
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Примечания
 
 **sp_deletetracertokenhistory** используется в репликации транзакций.  
 

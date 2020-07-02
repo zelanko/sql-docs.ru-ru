@@ -18,50 +18,50 @@ ms.assetid: 78f2e5fc-b6fb-4eda-9f71-991a4d6c4902
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8533747bbe5ccb79a06b10a754c4af45ab241843
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d01be082c524c2fbee559f3ca761352be4ad52bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85658153"
 ---
 # <a name="supporting-local-transactions"></a>Поддержка локальных транзакций
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Сеанс разделяет область действия транзакции для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB локальной транзакции поставщика. Если, в направлении потребителя, поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента отправляет запрос к подключенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запрос создает единицу работы для поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB. Локальные транзакции всегда заключают одну или несколько единиц работы на один [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DBного сеанса поставщика.  
+  Сеанс разделяет область действия транзакции для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB локальной транзакции поставщика. Если, в направлении потребителя, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента отправляет запрос к подключенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запрос создает единицу работы для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика собственного клиента OLE DB. Локальные транзакции всегда заключают одну или несколько единиц работы на один [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственный клиент OLE DBного сеанса поставщика.  
   
- При использовании режима [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматической фиксации поставщика OLE DB собственного клиента по умолчанию одна единица работы рассматривается как область локальной транзакции. В локальной транзакции участвует только одна единица работы. При создании сеанса поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента начинает транзакцию для сеанса. При успешном завершении единицы работы выполненная работа фиксируется. При сбое выполняется откат всей начатой работы; потребителю сообщается об ошибке. В любом случае поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента начинает новую локальную транзакцию для сеанса, чтобы вся работа выполнялась в рамках транзакции.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]При использовании режима автоматической фиксации поставщика OLE DB собственного клиента по умолчанию одна единица работы рассматривается как область локальной транзакции. В локальной транзакции участвует только одна единица работы. При создании сеанса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента начинает транзакцию для сеанса. При успешном завершении единицы работы выполненная работа фиксируется. При сбое выполняется откат всей начатой работы; потребителю сообщается об ошибке. В любом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента начинает новую локальную транзакцию для сеанса, чтобы вся работа выполнялась в рамках транзакции.  
   
- Потребитель [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB собственного клиента может направить более точный контроль над областью локальной транзакции с помощью интерфейса **ITransactionLocal** . Если сеанс потребителя инициирует транзакцию, все рабочие единицы сеанса между точкой начала транзакции и последующими неизбежными вызовами методов **Commit** или **Abort** рассматриваются как единая операция. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента неявным образом начинает транзакцию, когда она направляется потребителю. Если потребитель не запрашивает хранения, сеанс восстанавливает режим родительской транзакции. Как правило, это режим автозавершения.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Потребитель поставщика OLE DB собственного клиента может направить более точный контроль над областью локальной транзакции с помощью интерфейса **ITransactionLocal** . Если сеанс потребителя инициирует транзакцию, все рабочие единицы сеанса между точкой начала транзакции и последующими неизбежными вызовами методов **Commit** или **Abort** рассматриваются как единая операция. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента неявным образом начинает транзакцию, когда она направляется потребителю. Если потребитель не запрашивает хранения, сеанс восстанавливает режим родительской транзакции. Как правило, это режим автозавершения.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента поддерживает параметры **ITransactionLocal:: StartTransaction** , как показано ниже.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента поддерживает параметры **ITransactionLocal:: StartTransaction** , как показано ниже.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальных транзакциях поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB поддерживает следующие действия:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] уровень изоляции ISOLATIONLEVEL_SNAPSHOT допустим для аргумента *isoLevel* независимо от того, включено ли в базе данных управление версиями. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если для *isoLevel* задано значение ISOLATIONLEVEL_SNAPSHOT при соединении с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|*isoFlags*[in]|Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает ошибку для любого значения, отличного от нуля.|  
-|*pOtherOptions*[in]|Если значение не равно NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик OLE DB собственного клиента запрашивает объект параметров из интерфейса. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOTIMEOUT, если элемент *ултимеаут* объекта параметров не равен нулю. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента игнорирует значение элемента *сздескриптион* .|  
-|*pulTransactionLevel*[out]|Если значение не равно NULL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поставщик OLE DB собственного клиента возвращает вложенный уровень транзакции.|  
+|*isoLevel*[in]|Уровень изоляции, который должен использоваться с этой транзакцией. В локальных транзакциях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB поддерживает следующие действия:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] уровень изоляции ISOLATIONLEVEL_SNAPSHOT допустим для аргумента *isoLevel* независимо от того, включено ли в базе данных управление версиями. Однако произойдет ошибка, если пользователь попытается выполнить инструкцию, когда управление версиями не включено, а база данных предназначена не только для чтения. Кроме того, ошибка XACT_E_ISOLATIONLEVEL возникнет, если для *isoLevel* задано значение ISOLATIONLEVEL_SNAPSHOT при соединении с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|*isoFlags*[in]|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента возвращает ошибку для любого значения, отличного от нуля.|  
+|*pOtherOptions*[in]|Если значение не равно NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента запрашивает объект параметров из интерфейса. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента возвращает XACT_E_NOTIMEOUT, если элемент *ултимеаут* объекта параметров не равен нулю. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента игнорирует значение элемента *сздескриптион* .|  
+|*pulTransactionLevel*[out]|Если значение не равно NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента возвращает вложенный уровень транзакции.|  
   
- Для локальных транзакций поставщик OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента реализует параметры **ITransaction:: Abort** , как показано ниже.  
+ Для локальных транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента реализует параметры **ITransaction:: Abort** , как показано ниже.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
 |*pboidReason*[in]|При установке не учитывается. Может иметь значение NULL.|  
-|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если значение равно " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] false", поставщик OLE DB собственного клиента возвращается в режим автоматической фиксации для сеанса.|  
-|*fAsync*[in]|Асинхронное прерывание не поддерживается поставщиком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOTSUPPORTED, если значение не равно false.|  
+|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если значение равно "FALSE", [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента возвращается в режим автоматической фиксации для сеанса.|  
+|*fAsync*[in]|Асинхронное прерывание не поддерживается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком собственного клиента OLE DB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента возвращает XACT_E_NOTSUPPORTED, если значение не равно false.|  
   
- Для локальных транзакций поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB реализует параметры **ITransaction:: Commit** , как показано ниже.  
+ Для локальных транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB реализует параметры **ITransaction:: Commit** , как показано ниже.  
   
 |Параметр|Описание|  
 |---------------|-----------------|  
-|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если значение равно " [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] false", поставщик OLE DB собственного клиента возвращается в режим автоматической фиксации для сеанса.|  
-|*grfTC*[in]|Асинхронные и одноэтапные возвраты не поддерживаются поставщиком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента OLE DB. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента возвращает XACT_E_NOTSUPPORTED для любого значения, кроме XACTTC_SYNC.|  
+|*fRetaining*[in]|Если задано значение TRUE, то для сеанса неявным образом запускается новая транзакция. Эта транзакция должна быть зафиксирована или завершена объектом-получателем. Если значение равно "FALSE", [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB собственного клиента возвращается в режим автоматической фиксации для сеанса.|  
+|*grfTC*[in]|Асинхронные и одноэтапные возвраты не поддерживаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщиком собственного клиента OLE DB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента возвращает XACT_E_NOTSUPPORTED для любого значения, кроме XACTTC_SYNC.|  
 |*grfRM*[in]|Должно быть равно 0.|  
   
- Наборы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] строк поставщика собственного клиента OLE DB в сеансе сохраняются в локальной операции фиксации или прерывания на основе значений свойств набора строк DBPROP_ABORTPRESERVE и DBPROP_COMMITPRESERVE. По умолчанию эти свойства VARIANT_FALSE и все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборы строк поставщика собственного клиента OLE DB в сеансе теряются после операции прерывания или фиксации.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Наборы строк поставщика собственного клиента OLE DB в сеансе сохраняются в локальной операции фиксации или прерывания на основе значений свойств набора строк DBPROP_ABORTPRESERVE и DBPROP_COMMITPRESERVE. По умолчанию эти свойства VARIANT_FALSE и все [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] наборы строк поставщика собственного клиента OLE DB в сеансе теряются после операции прерывания или фиксации.  
   
- Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB собственного клиента не реализует интерфейс **итрансактионобжект** . При попытке потребителя получить ссылку на интерфейс возвращается E_NOINTERFACE.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Поставщик OLE DB собственного клиента не реализует интерфейс **итрансактионобжект** . При попытке потребителя получить ссылку на интерфейс возвращается E_NOINTERFACE.  
   
  В этом примере используется интерфейс **ITransactionLocal**.  
   
@@ -128,7 +128,7 @@ if (FAILED(hr))
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Провод](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Работа с изоляцией моментального снимка](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)  
   

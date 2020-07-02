@@ -22,15 +22,15 @@ helpviewer_keywords:
 - removing SQL Server Native Client
 ms.assetid: c6abeab2-0052-49c9-be79-cfbc50bff5c1
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a6ecaaa2abcc65c24519a1d078bb5792b4cd8173
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: fb6371dfe91f23840b1d63f7f51cb8bc4baf19e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657450"
 ---
 # <a name="installing-sql-server-native-client"></a>Установка собственного клиента SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
 
   Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 устанавливается при установке [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]. 
@@ -70,7 +70,7 @@ ms.locfileid: "84965219"
   
  Значением, передаваемым в APPGUID, служит код продукта. Код продукта необходимо создать при использовании установщика (Майкрософт) для формирования пакета установки приложения.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание приложений с помощью SQL Server Native Client](../../../relational-databases/native-client/applications/installing-sql-server-native-client.md)   
  [Инструкции по установке](https://msdn.microsoft.com/library/59de41e7-557f-462a-8914-53ec35496baa)  
   

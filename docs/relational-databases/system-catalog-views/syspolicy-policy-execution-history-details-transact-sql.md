@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68094827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85663973"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Показывает выполненные условные выражения, целевые объекты выполнения выражений, результат каждого выполнения и сведения об ошибках, возникших при выполнении. В следующей таблице приведено описание столбцов представления syspolicy_execution_history_details.  
   
@@ -36,12 +36,12 @@ ms.locfileid: "68094827"
 |history_id|**bigint**|Идентификатор события в журнале. Каждое событие в журнале соответствует одной попытке выполнения политики. Поскольку одно условие может включать несколько условных выражений и несколько целевых объектов, history_id может создавать несколько детализированных записей. Используйте столбец history_id, чтобы присоединить это представление к представлению [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) .|  
 |target_query_expression|**nvarchar(max)**|Целевой объект политики и представления syspolicy_policy_execution_history.|  
 |execution_date|**datetime**|Дата и время создания этой детализированной записи.|  
-|набор по|**bit**|Успешный или неуспешный результат вычисления условного выражения для данного целевого объекта:<br /><br /> 0 (успешное завершение) или 1 (неуспешное завершение)|  
+|result|**bit**|Успешный или неуспешный результат вычисления условного выражения для данного целевого объекта:<br /><br /> 0 (успешное завершение) или 1 (неуспешное завершение)|  
 |result_detail|**nvarchar(max)**|Результирующее сообщение. Генерируется только в том случае, когда обеспечивается аспектом.|  
 |exception_message|**nvarchar(max)**|Сообщение, выданное в результате возникшего исключения.|  
 |exception|**nvarchar(max)**|Описание возникшего исключения.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  При устранении неполадок управления на основе политик с помощью запроса представления syspolicy_policy_execution_history_details можно определить, для каких сочетаний целевого объекта и условного выражения результат был неуспешным, когда это произошло, и просмотреть соответствующие ошибки.  
   
  Далее приводится запрос, сочетающий представления `syspolicy_policy_execution_history_details`, `syspolicy_policy_execution_history_details` и `syspolicy_policies` и выводящий имя политики, имя условия и подробные сведения об ошибках.  
@@ -68,7 +68,7 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>Разрешения  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

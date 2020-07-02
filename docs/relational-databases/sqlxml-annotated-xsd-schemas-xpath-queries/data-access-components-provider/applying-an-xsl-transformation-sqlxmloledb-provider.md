@@ -18,15 +18,15 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c02c5f41ec11ec15d849e5b7fc6897ee0c798d01
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 567eb423d4def73169fc8d06828af1c34e536136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882709"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650419"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Применение преобразования XSL (поставщик SQLXMLOLEDB)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   В этом образце приложения ADO выполняется SQL-запрос, и к результату применяется преобразование XSL. Присвоение свойству Клиентсидексмл значения true обеспечивает обработку набора строк на стороне клиента. Диалект команды имеет значение {5d531cb2-e6ed-11d2-b252-00c04f681b71}, поскольку SQL-запрос задан в шаблоне, а при выполнении шаблона должен указываться этот диалект. Свойство XSL определяет XSL-файл, используемый для применения преобразования. Значение свойства базового пути используется для поиска XSL-файла. Если указать путь в значении свойства XSL, то путь будет относиться к пути, указанному в свойстве базового пути.  
   
  В этом примере показано, как использовать следующие свойства, определяемые поставщиком SQLXMLOLEDB.  

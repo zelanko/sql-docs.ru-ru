@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d9aaa6550c34518c0c153dfa91cf3a5e8b8c0be
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85662885"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает путь в виде большого двоичного объекта (BLOB) FILESTREAM. API OpenSqlFilestream использует этот путь для возврата маркера, который приложение может использовать для работы с данными большого двоичного объекта с помощью API-интерфейсов Win32. Функция PathName доступна только для чтения.  
   
@@ -45,9 +45,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Запрос пути к столбцу любого другого типа данных или для колумнсат **varbinary (max)** не имеет атрибута хранилища FILESTREAM, что вызовет ошибку во время компиляции запроса.  
   
  *\@функцию*  
- Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. параметр может принимать одно из следующих значений. * \@* Значение по умолчанию — 0.  
+ Целочисленное [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющее способ форматирования серверного компонента пути. * \@ параметр* может принимать одно из следующих значений. Значение по умолчанию равно 0.  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |0|Возвращает имя сервера, преобразованное в формат BIOS, например:`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Возвращает имя сервера без преобразования, например:`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Если база данных принадлежит к Always On группе доступности, то в выходных данных функции **PathName** значение *use_replica_computer_name* имеет следующий результат:  
   
-|Значение|Описание|  
+|Применение|Описание|  
 |-----------|-----------------|  
 |Не указано.|Функция возвращает в пути имя виртуальной сети.|  
 |0|Функция возвращает в пути имя виртуальной сети.|  
@@ -72,7 +72,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращаемое значение является полным логическим путем или путем NETBIOS объекта BLOB. PathName не возвращает IP-адрес. Возвращается значение NULL, если объект FILESTREAM BLOB не создан.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Столбец ROWGUID должен быть виден любому запросу, который вызывает функцию PathName.  
   
  Объект FILESTREAM BLOB можно создать только с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -91,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>Б) Отображение путей объектов FILESTREAM BLOB в таблице  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>Б. Отображение путей объектов FILESTREAM BLOB в таблице  
  В следующем примере создаются и отображаются пути трех объектов FILESTREAM BLOB.  
   
 ```sql  
@@ -147,7 +147,7 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие двоичные объекты &#40;данные&#41; &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Доступ к данным FILESTREAM с OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  

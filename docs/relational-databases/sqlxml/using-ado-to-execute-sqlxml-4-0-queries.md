@@ -18,15 +18,15 @@ ms.assetid: 3d54e3bb-7c5f-427e-82f8-1403a54c4f53
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e0a26c534aeb25bd445deb087bef06a2137bfa3
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: f7c2db9cc01bfa50092e5849d869d43da8a622e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84882107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665544"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Использование ADO для выполнения запросов SQLXML 4.0
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В предыдущих версиях SQLXML выполнение запросов по HTTP поддерживалось с помощью виртуальных каталогов SQLXML в IIS и ISAPI-фильтра SQLXML. В SQLXML 4.0 эти компоненты были удалены, так как похожая и перекрывающаяся функциональность предоставляется собственными веб-службами с поддержкой XML, начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  В качестве альтернативы можно выполнять запросы и использовать SQLXML 4.0 с приложениями на основе COM, используя расширения SQLXML для объектов данных ActiveX (ADO), которые появились в компонентах доступа к данным (MDAC) версии 2.6 и более поздних.  

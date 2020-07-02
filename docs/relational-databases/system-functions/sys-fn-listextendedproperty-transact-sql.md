@@ -26,15 +26,15 @@ ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11249fd563bd892c79edd4f3393c82f34b211684
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68082701"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652192"
 ---
 # <a name="sysfn_listextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает значения расширенных свойств объектов базы данных.  
  
@@ -92,11 +92,11 @@ fn_listextendedproperty (
 |objtype|**sysname**|  
 |objname|**sysname**|  
 |name|**sysname**|  
-|значение|**sql_variant**|  
+|value|**sql_variant**|  
   
  Возвращение пустой таблицы означает отсутствие у объекта расширенных свойств или отсутствие у пользователя разрешений на просмотр этих свойств. При возвращении расширенных свойств самой базы данных столбцы objtype и objname принимают значения NULL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Примечания  
  Если значение для *property_name* равно null или по умолчанию, fn_listextendedproperty возвращает все свойства для указанного объекта.  
   
  Если указан тип объекта, а значение, соответствующее имени объекта, равно NULL или значению по умолчанию, функция fn_listextendedproperty возвращает все расширенные свойства всех объектов заданного типа.  
@@ -141,7 +141,7 @@ GO
   
  `(1 row(s) affected)`  
   
-### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>Б) Отображение расширенных свойств для всех столбцов таблицы  
+### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>Б. Отображение расширенных свойств для всех столбцов таблицы  
  В следующем примере перечисляются расширенные свойства для столбцов в `ScrapReason` таблице. Она хранится в схеме `Production`.  
   
 ```  
@@ -167,7 +167,7 @@ GO
  `(3 row(s) affected)`  
   
 ### <a name="c-displaying-extended-properties-on-all-tables-in-a-schema"></a>В. Отображение расширенных свойств для всех таблиц схемы  
- В следующем примере перечисляются расширенные свойства для всех таблиц, `Sales` содержащихся в схеме.  
+ В следующем примере перечисляются расширенные свойства для всех таблиц, содержащихся в `Sales` схеме.  
   
 ```  
 USE AdventureWorks2012;  

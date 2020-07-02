@@ -16,15 +16,15 @@ ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 47a7021093710c8ebb4e300880ea58af037dcd70
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 618fabb71d61aeee4543f7c2c869aa02f7b3e987
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84949610"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85657096"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Использование ADO с собственным клиентом SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Чтобы воспользоваться преимуществами новых функций, появившихся в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] таких случаях, как режим MARS, уведомления о запросах, определяемые пользователем типы (UDT) или новый тип данных **XML** , существующие приложения, ИСПОЛЬЗУЮЩИЕ объекты данных ActiveX (ADO), должны использовать [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщик собственного клиента OLE DB в качестве поставщика доступа к данным.  
   

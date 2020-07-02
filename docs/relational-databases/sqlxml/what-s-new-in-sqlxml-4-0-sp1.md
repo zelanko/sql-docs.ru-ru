@@ -21,15 +21,15 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 684711a9fc1fbab2d4556868d051df0b503eac23
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: cdb176233f3490daa428e7cf6bb8f7c9b0b58255
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85665609"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Новые&#39;в SQLXML 4,0 SP1
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 с пакетом обновления 1 (SP1) содержит различные обновления и улучшения. В этом разделе содержится описание всех обновлений и предоставляются ссылки на более подробные сведения (если они доступны). SQLXML 4.0 с пакетом обновления 1 (SP1) предоставляет улучшения для поддержки новых типов данных, появившихся в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В этом разделе рассматриваются следующие вопросы.  
   
 -   Установка SQLXML 4.0 с пакетом обновления 1 (SP1)  

@@ -20,15 +20,15 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
-ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
+ms.openlocfilehash: 4a0de9b0fe69b611f802b354cd1fe0265adfc16c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84748731"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85652332"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Возвращает одну строку для каждой активной задачи в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Задача — это базовая единица выполнения в SQL Server. К примерам задач относятся запрос, имя входа, выход из системы и системные задачи, такие как действие очистки фантомов, активность контрольных точек, модуль записи журнала, параллельное действие повтора. Дополнительные сведения о задачах см. в разделе [руководств по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md).
   
@@ -95,7 +95,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [Руководство по архитектуре потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)     
   

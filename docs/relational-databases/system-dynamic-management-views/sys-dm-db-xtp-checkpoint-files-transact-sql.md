@@ -1,5 +1,6 @@
 ---
 title: sys. dm_db_xtp_checkpoint_files (Transact-SQL) | Документация Майкрософт
+description: Отображает сведения о файлах контрольных точек, включая размер файла, физическое расположение и идентификатор транзакции. Узнайте, как это представление отличается для версий SQL Server.
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,12 +21,12 @@ ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ddf365b81a6e973da8348ad011dea9e23aabba50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830850"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85677524"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "82830850"
 ##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий  
  В следующей таблице описаны столбцы `sys.dm_db_xtp_checkpoint_files` , начиная с **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединяет с file_id в [sys. database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Идентификатор GUID контейнера, в состав которого входит корневой, разностный файл данных. Объединяется с file_guid в таблице sys. database_files.|  
@@ -69,7 +70,7 @@ ms.locfileid: "82830850"
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  В следующей таблице описаны столбцы для `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Имя столбца|Type|Описание|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Идентификатор контейнера (представленного в виде файла с типом FILESTREAM в таблице sys.database_files), частью которого является файл данных или разностный файл. Соединяет с file_id в [sys. database_files &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|Идентификатор GUID контейнера, частью которого является файл данных или разностный файл.|  
