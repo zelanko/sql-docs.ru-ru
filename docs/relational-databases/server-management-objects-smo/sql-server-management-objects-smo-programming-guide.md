@@ -15,17 +15,17 @@ ms.assetid: 4cde2b85-2a31-4cac-8d16-7a4196066193
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 707ee3cc48cbc459cab98d5d97aa252697cd307f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095387"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883021"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>Учебник по программированию управляющих объектов SQL Server (SMO)
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это набор объектов, предназначенных для программирования всех аспектов управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO — это набор объектов, который инкапсулирует управление репликацией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Управляющие объекты (SMO) — это набор объектов, предназначенных для программирования всех аспектов управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO — это набор объектов, который инкапсулирует управление репликацией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |Раздел|Описание|  
 |-----------|-----------------|
@@ -33,7 +33,7 @@ ms.locfileid: "74095387"
 |[Создание приложений SMO](../../relational-databases/server-management-objects-smo/create-program/creating-smo-programs.md)<br /><br /> [Задачи, связанные с программированием](../../relational-databases/server-management-objects-smo/tasks/programming-specific-tasks.md)|Содержит сведения о программировании объектов SMO в пространствах имен Microsoft.SqlServer.management, Microsoft.SqlServer.Management.NotificationServices, Microsoft.SqlServer.Management.Smo, Microsoft.SqlServer.Management.Smo.Agent, Microsoft.SqlServer.Management.Smo.Broker, Microsoft.SqlServer.Management.Smo.Mail, Microsoft.SqlServer.Management.Smo.RegisteredServers, Microsoft.SqlServer.Management.Smo.Wmi и Microsoft.SqlServer.Management.Trace.<br /><br /> Включает инструкции по созданию программ, определяющих базы данных и управляющих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать, чтобы создавать базы данных, создавать резервные копии, создавать задания, настраивать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], назначать разрешения и выполнять многие другие административные задачи.|  
 |[Руководство разработчика по репликации](../../relational-databases/replication/concepts/replication-developer-documentation.md)|Содержит сведения о программировании объектов RMO в пространстве имен Microsoft.SqlServer.Replication.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Руководство разработчика по репликации](../../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
   

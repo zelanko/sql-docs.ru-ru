@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 692eda0029e60121422244f8829bac9785269423
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf1f87043075fdf44adec9d61f379f20d898c2fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775630"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888165"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Использование WQL с поставщиком WMI для событий сервера
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Приложения управления могут получать доступ к событиям [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью поставщика WMI для событий сервера путем выполнения инструкций WMI Query Language (WQL). WQL является упрощенным подмножеством языка SQL с некоторыми расширениями, специфичными для WMI. При использовании WQL приложение извлекает тип события из определенного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], базы данных или объекта базы данных (в настоящее время поддерживаются только объекты очереди). Поставщик WMI для событий сервера преобразует запрос в уведомление о событии, которое создается в целевой базе данных для уведомлений о событиях уровня базы данных или области объекта, или в базе данных **master** для уведомлений о событиях на уровне сервера.  
   
  Например, рассмотрим следующий WQL-запрос.  
@@ -84,7 +84,7 @@ WHERE where_condition
   
  Только `=` операнд можно использовать вместе с **DatabaseName**, **SchemaName**и **objectname**. Другие выражения нельзя использовать с этими свойствами событий.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  *Where_condition* синтаксиса поставщика WMI для событий сервера определяет следующее:  
   
 -   Область, с помощью которой поставщик пытается получить указанный *event_type*: уровень сервера, уровень базы данных или уровень объекта (в настоящее время поддерживается только текущий объект). В конечном счете эта область определяет тип уведомления о событии, создаваемого в базе данных-получателе. Этот процесс называется регистрацией уведомления о событии.  

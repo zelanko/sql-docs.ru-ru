@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a5e1056b-0b75-4ad6-99c1-89246010d815
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a3bf50a8a44f70f39cbd09fc44637478c68a1eb9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 619b06f1279c36716538535050b4e2795724dad7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717195"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888295"
 ---
 # <a name="setnumvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetNumValue (класс SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Задает числовое значение свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,7 +48,7 @@ object.SetNumValue(NumValue)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы для свойства можно было задать числовое значение, свойство должно иметь числовой тип.  
   
 ## <a name="see-also"></a>См. также  

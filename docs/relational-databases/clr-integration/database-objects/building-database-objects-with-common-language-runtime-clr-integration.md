@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ce34132c-bfa3-447b-9131-b6e17c672efe
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5dc38fc39a0f4d876adc99a0aff87d2acaad1545
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 75521866bd7fb151921e972bf4ee1d49089dd5a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789559"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885915"
 ---
 # <a name="building-database-objects-with-common-language-runtime-clr-integration"></a>Создание объектов базы данных с интеграцией со средой CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Объекты базы данных можно создавать с помощью интеграции [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] со средой CLR платформы .NET Framework. Управляемый код, выполняемый внутри, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] называется подпрограммой среды CLR. Эти подпрограммы включают:  
   
 -   определяемые пользователем функции, возвращающие скалярное значение (скалярные определяемые пользователем функции);  

@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f7be51122765131e8681c11a7c84759e173f1517
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 9f1d6865a4c432694201c9b5a666fff3fd46d117
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813804"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883398"
 ---
 # <a name="perform-knowledge-discovery"></a>Обнаружение набора знаний
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описывается создание базы знаний посредством обнаружения набора знаний. В процессе обнаружения службы [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) анализируют данные из образца данных источника данных посредством автоматизированного процесса и добавляют обнаруженные знания в базу знаний. Эти наборы знаний можно изменять и расширять на шаге **Управление значениями домена** действия обнаружения набора знаний или в действии управления доменами.  
   

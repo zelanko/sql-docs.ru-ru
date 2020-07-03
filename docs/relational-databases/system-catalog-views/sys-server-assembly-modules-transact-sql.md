@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9e60d1bca57e68da621eaef448cc9a83ede5aa7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cfbeafd7ef52674adbd8fc6898baf663373b91a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887887"
 ---
 # <a name="sysserver_assembly_modules-transact-sql"></a>sys.server_assembly_modules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке о каждом модуле сборки триггеров серверного уровня типа TA. Это представление сопоставляет триггеры сборок с базовой реализацией среды CLR. Это отношение можно присоединить к **sys. server_triggers**. Сборка должна быть загружена в базу данных **master** . Ключом отношения является кортеж (object_id).  
   

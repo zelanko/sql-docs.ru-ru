@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1fededc3-81ba-4b08-83f9-189b96140799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 760b2ebef2163dce2ea41fb41b93e6213d03c7d8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b7e2ffa75190d8699e0110664dd179ab3f096ae
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85692346"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888287"
 ---
 # <a name="setstrvalue-method-sqlserviceadvancedproperty-class"></a>Метод SetStrValue (класс SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Задает строковое значение свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,7 +48,7 @@ object.SetStrValue(StrValue)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы задать строковое значение, свойство должно иметь тип *string* .  
   
 ## <a name="see-also"></a>См. также  

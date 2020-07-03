@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: e83f8c2f75725c5de0dc7fa6e3e78666568fad8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937775"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886015"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  
@@ -82,14 +82,13 @@ ms.locfileid: "84937775"
   
 9. В окно редактора запросов скопируйте следующие инструкции SQL:  
   
-    ```  
+    ```sql  
     ALTER DATABASE [DQS_MAIN] SET TRUSTWORTHY ON;  
     EXEC sp_configure 'clr enabled', 1;  
     RECONFIGURE WITH OVERRIDE  
     ALTER DATABASE [DQS_MAIN] SET ENABLE_BROKER  
     ALTER AUTHORIZATION ON DATABASE::[DQS_MAIN] TO [##MS_dqs_db_owner_login##]  
     ALTER AUTHORIZATION ON DATABASE::[DQS_PROJECTS] TO [##MS_dqs_db_owner_login##]  
-  
     ```  
   
 10. Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область «Результаты», чтобы удостовериться в успешном выполнении инструкций. На экране появится следующее сообщение: `Configuration option 'clr enabled' changed from 1 to 1. Run the RECONFIGURE statement to install.`  
@@ -98,7 +97,7 @@ ms.locfileid: "84937775"
   
  Базы данных DQS также можно присоединять с помощью инструкций Transact-SQL. Дополнительные сведения о присоединении баз данных с помощью инструкций Transact-SQL см. в подразделе [Using Transact-SQL](../relational-databases/databases/attach-a-database.md#TsqlProcedure) раздела [Attach a Database](../relational-databases/databases/attach-a-database.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

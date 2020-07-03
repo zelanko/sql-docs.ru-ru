@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: af6de293d3b5054e90f79a3f2f8f5cae4fbca04a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84938055"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886019"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Резервное копирование и восстановление баз данных DQS
   В этом разделе описывается, как проводить резервное копирование и восстановление баз данных DQS.  
@@ -61,17 +61,16 @@ ms.locfileid: "84938055"
   
 11. В окне редактора запросов скопируйте следующие инструкции SQL и замените *\<PASSWORD>* паролем, который вы указали при установке служб DQS для главного ключа базы данных:  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     EXECUTE [internal_core].[RestoreDQDatabases] '<PASSWORD>'  
     GO  
-  
     ```  
   
 12. Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md)  
   
   

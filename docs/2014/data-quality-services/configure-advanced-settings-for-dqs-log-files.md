@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b4054be2d956bccecd1d64dc807671caf8f980f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 998f1079044f530a824600fede88c99ca91f793e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84937995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886046"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configure Advanced Settings for DQS Log Files
   В этом разделе описано, как настроить дополнительные параметры файлов журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , такие как скользящий предельный размер файла для файлов журнала, шаблон метки времени для событий и т. д.  
@@ -38,8 +38,8 @@ ms.locfileid: "84937995"
 ##  <a name="configure-data-quality-server-log-settings"></a><a name="DQSServer"></a>Настройка параметров журнала сервера Data Quality Services  
  Параметры журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] представлены в формате XML в столбце **VALUE** строки **ServerLogging** в таблице A_CONFIGURATION базы данных DQS_MAIN. Вы можете выполнить следующий SQL-запрос для просмотра сведений о конфигурации:  
   
-```  
-select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
+```sql  
+select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'; 
 ```  
   
  Необходимо обновить соответствующие сведения в столбце **VALUE** строки **ServerLogging** , чтобы изменить параметры конфигурации для журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . В этом примере обновляются параметры журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , устанавливается скользящий предел файла данных равным 25 000 KБ (по умолчанию он равен 20 000 KБ).  
@@ -50,7 +50,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  В окно редактора запросов скопируйте следующие инструкции SQL:  
   
-    ```  
+    ```sql  
     -- Begin the transaction.  
     BEGIN TRAN  
     GO  
@@ -96,14 +96,13 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 5.  Чтобы применить изменения, внесенные в конфигурацию журнала [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] , необходимо выполнить следующие инструкции Transact-SQL. Откройте новое окно редактора запросов и вставьте следующие инструкции Transact-SQL:  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     DECLARE @return_value int  
     EXEC @return_value = [internal_core].[RefreshLogSettings]  
     SELECT 'Return Value' = @return_value  
     GO  
-  
     ```  
   
 6.  Нажмите клавишу F5, чтобы выполнить инструкции. Откройте область **Результаты** , чтобы удостовериться в успешном выполнении инструкций.  
@@ -120,7 +119,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  Внесите необходимые изменения и сохраните этот файл, чтобы изменения журнала были применены.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка степеней серьезности для файлов журнала DQS](../../2014/data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: d17fa458e1699ab73bb8105fa2cc4cccc44dd597
-ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
+ms.openlocfilehash: 34a91283d735730bcc5f011377b1f1e729e7e753
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84544670"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883349"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Предоставление доступа к объектам и операциям (Analysis Services)
   Доступ неадминистративных пользователей к кубам, измерениям и моделям интеллектуального анализа данных внутри базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется посредством включения пользователя в одну или несколько ролей базы данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы создают указанные роли базы данных, предоставляют разрешения на чтение или чтение и запись объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем добавляют к каждой роли пользователей и группы Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -40,7 +40,7 @@ ms.locfileid: "84544670"
   
 2.  Введите следующий запрос и нажмите клавишу F5, чтобы выполнить его:  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   
@@ -89,7 +89,7 @@ ms.locfileid: "84544670"
   
  Использование подобного подхода снижает время обработки определений ролей и членства ролей в модели, а также предоставляет видимость назначений ролей, что упрощает реализацию и поддержание разрешений кубов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Предоставление разрешений администратора сервера &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Роли и разрешения &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  

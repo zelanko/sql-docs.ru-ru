@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: ab254c9deaee5a9e31a89d2a44d281e83a2beead
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: af0464a307d77531c5d11624dc86a836ddf77711
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812573"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882548"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Профилирование данных и уведомления в DQS
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Профилирование данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) — это процесс анализа данных в существующем источнике данных и отображения статистики по данным в действиях DQS. Оно дает возможности автоматического измерения качества данных. Профилирование DQS интегрировано в проекты управления наборами знаний и качества данных в службах DQS. Он является динамическим и изменяемым. Профилирование служит двум основным задачам: во-первых, оно предоставляет рекомендации по процессам обеспечения качества данных и поддержке решений, во-вторых, помогает оценивать эффективность процессов. Процесс профилирования DQS имеет следующие преимущества.  
   

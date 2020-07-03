@@ -13,16 +13,16 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42acad11884fa9edc779d6aa52a94ccf38ee5444
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 577b6e8dfcf74407f4c233f4330e9f653de7e4d1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095515"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882995"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>Создание, изменение и удаление индексов
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   В иерархии управляющих объектов [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO) индексы представлены объектом <xref:Microsoft.SqlServer.Management.Smo.Index>. Индексированные столбцы представлены коллекцией объектов <xref:Microsoft.SqlServer.Management.Smo.IndexedColumn>, соответствующих свойству <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A>.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "74095515"
  Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Создание некластеризованного составного индекса на языке Visual Basic  
- В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте для <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **значение false** для некластеризованного индекса.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> для свойства **значение false** для некластеризованного индекса.  
   
 ```  
 ' /r:Microsoft.SqlServer.Smo.dll  
@@ -89,7 +89,7 @@ End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Создание некластеризованного составного индекса на языке Visual C#  
- В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте для <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **значение false** для некластеризованного индекса.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> для свойства **значение false** для некластеризованного индекса.  
   
 ```  
 // /r:Microsoft.SqlServer.Smo.dll  
@@ -147,7 +147,7 @@ public class A {
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>Создание некластеризованного составного индекса в PowerShell  
- В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте для <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> свойства **значение false** для некластеризованного индекса.  
+ В этом примере кода показано, как создать составной некластеризованный индекс. Для составного индекса необходимо добавить в индекс более чем один столбец. Задайте <xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> для свойства **значение false** для некластеризованного индекса.  
   
 ```  
 # Set the path context to the local, default instance of SQL Server and to the  
@@ -363,7 +363,7 @@ $i.IndexedColumns.Add($ic)
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
   
   

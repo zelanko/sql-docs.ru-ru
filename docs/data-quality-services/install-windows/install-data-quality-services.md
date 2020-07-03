@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: b7a9d9ce36a3419883adae9050ffabd0d1f9b012
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ef1d88921555a30c74c09a0c768e7a29ca9c894
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252186"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887969"
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
-  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) содержит два следующих компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и. **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**  
+  [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)](DQS) содержит два следующих компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** .  
   
 |Компонент DQS|Описание|  
 |-------------------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "75252186"
   
 |Страница|Действие|  
 |----------|------------|  
-|Выбор компонентов|Выберите<br /><br /> **Службы Data Quality Services** на странице **Службы компонента Database Engine** , чтобы установить сервер служб [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Если вы установите флажок **Службы Data Quality Services** , программа установки SQL Server скопирует файл установщика DQSInstaller.exe в каталог экземпляра SQL Server на данном компьютере. Его необходимо запустить после окончания работы программы установки SQL Server, чтобы *завершить* установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Кроме того, перед использованием [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо будет выполнить некоторые дополнительные действия по его настройке. Дополнительные сведения см. в разделе [Действия после установки](#PostInstallationTasks).<br /><br /> **Data Quality Client** , чтобы установить клиент [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> Такую **Средства управления — полностью** в разделе **средства управления — основные** для [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]установки. Она предоставляет графический пользовательский интерфейс для управления экземпляром SQL Server и позволяет выполнять дополнительные задачи после установки, перечисленные в следующем разделе.|  
+|Выбор компонентов|Выберите<br /><br /> **Службы Data Quality Services** на странице **Службы компонента Database Engine** , чтобы установить сервер служб [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]. <br />Если вы установите флажок **Службы Data Quality Services** , программа установки SQL Server скопирует файл установщика DQSInstaller.exe в каталог экземпляра SQL Server на данном компьютере. Его необходимо запустить после окончания работы программы установки SQL Server, чтобы *завершить* установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Кроме того, перед использованием [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] необходимо будет выполнить некоторые дополнительные действия по его настройке. Дополнительные сведения см. в разделе [Действия после установки](#PostInstallationTasks).<br /><br /> **Data Quality Client** , чтобы установить клиент [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)].<br /><br /> Такую **Средства управления — полностью** в разделе **средства управления — основные** для установки [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Она предоставляет графический пользовательский интерфейс для управления экземпляром SQL Server и позволяет выполнять дополнительные задачи после установки, перечисленные в следующем разделе.|  
 |Конфигурация компонента Database Engine|Нажмите кнопку **Добавить текущего пользователя** , чтобы добавить свою учетную запись пользователя в предопределенную роль сервера sysadmin. Это необходимо, чтобы можно было позже запустить файл DQSInstaller.exe и завершить установку [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] .|  
   
 ##  <a name="post-installation-tasks"></a><a name="PostInstallationTasks"></a>Задачи, выполняемые после установки  
@@ -89,7 +89,7 @@ ms.locfileid: "75252186"
   
      После этого установка [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] будет завершена.  
   
-     Дополнительные сведения см. [в статье запуск DQSInstaller. exe для завершения установки сервера Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
+     Дополнительные сведения см. [в статье запуск DQSInstaller.exe для завершения установки Data Quality Server](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md).  
   
 2.  Предоставление ролей DQS пользователям.  
   
@@ -113,10 +113,10 @@ ms.locfileid: "75252186"
      Дополнительные сведения см. в разделе  
                     [Доступ к данным для операций DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Видео: Установка и Настройка служб DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Обновление сборок SQLCLR после обновления .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
- [Экспорт и Импорт баз знаний DQS с помощью DQSInstaller. exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
+ [Экспорт и Импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Обновление служб Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   
  [Удаление объектов служб Data Quality Services](../../sql-server/install/remove-data-quality-server-objects.md)   
  [Установка SQL Server компонентов бизнес-аналитики](../../sql-server/install/install-sql-server-business-intelligence-features.md)   

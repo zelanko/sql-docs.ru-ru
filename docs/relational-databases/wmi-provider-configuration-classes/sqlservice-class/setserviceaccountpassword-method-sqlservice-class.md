@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6958d7ed8434826c61b703389ee7e1a8ca118cee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 915646d8f5f4dd5553bf30749b1ea084ba608807
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784705"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888359"
 ---
 # <a name="setserviceaccountpassword-method-sqlservice-class"></a>Метод SetServiceAccountPassword (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Изменяет пароль учетной записи, под именем которой выполняется указанная служба.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -49,5 +49,5 @@ object.SetServiceAccountPassword(AccountOldPassword , ServiceStartPassword)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   

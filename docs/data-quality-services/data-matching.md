@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f36dfca8c0323f3df894aa677a84e6e7dadb5fc1
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0bc33f9fd40a29ab2da19d682fcbdbbb6cd40206
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882557"
 ---
 # <a name="data-matching"></a>Сопоставление данных
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Процесс сопоставления данных [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) позволяет сократить дублирование данных и повысить их точность в источнике данных. Сопоставление анализирует степень дублирования во всех записях одного источника данных, возвращая взвешенные вероятности совпадения между всеми наборами сравниваемых записей. Затем вы можете принять решение, какие записи совпадают, и предпринять соответствующие действия в исходных данных.  
   

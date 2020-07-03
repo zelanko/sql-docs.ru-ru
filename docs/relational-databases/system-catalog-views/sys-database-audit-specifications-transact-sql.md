@@ -19,28 +19,28 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ef58ef70135368bd6a87c24a6157086e0e914d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4afe6fdb10e16bf3507b8d4a102e01f8095a3640
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882025"
 ---
 # <a name="sysdatabase_audit_specifications-transact-sql"></a>sys.database_audit_specification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на экземпляре сервера. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|name|**sysname**|Имя спецификации аудита.|  
+|Имя|**sysname**|Имя спецификации аудита.|  
 |database_specification_id|**int**|Идентификатор спецификации базы данных.|  
 |create_date|**datetime**|Дата создания спецификации аудита.|  
 |modified_date|**datetime**|Дата последнего изменения спецификации аудита.|  
 |is_state_enabled|**bit**|Состояние спецификации аудита:<br /><br /> 0 — ОТКЛЮЧЕНО<br /><br /> 1 — ВКЛЮЧЕНО|  
 |audit_GUID|**uniqueidentifer**|Идентификатор GUID аудита, содержащего эту спецификацию. Используется в процессе перечисления спецификаций аудита рядовой базы данных при присоединении или запуске базы данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если база данных находится в режиме «только для чтения», компонент аудита [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может добавить спецификацию аудита базы данных.  
   
 ## <a name="permissions"></a>Разрешения  

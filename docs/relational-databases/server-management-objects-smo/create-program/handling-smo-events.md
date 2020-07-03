@@ -16,15 +16,15 @@ ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 893fb08f2d32c7ae9d80321c1d849010660cc308
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 155bcf3e74e08d63aa714282aba42de3f6784e54
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148726"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883029"
 ---
 # <a name="handling-smo-events"></a>Обработка событий SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   На некоторые типы событий сервера можно подписаться с помощью обработчика событий и объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "70148726"
   
  Для обработки событий необходимо написать класс обработчика события. Класс обработчика события может содержать более одной функции обработки события, и его надо установить для обрабатываемых событий. Функции обработчика событий получают сведения о событии из параметра *серверевентнотификатификатионаргс* , который можно использовать для передачи сведений о событии.  
   
- Типы событий базы данных и сервера, которые могут быть обработаны, перечислены <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> в классе и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>классе.  
+ Типы событий базы данных и сервера, которые могут быть обработаны, перечислены в <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> классе и <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> классе.  
   
 ## <a name="example"></a>Пример  
 Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. [в статье Создание проекта Visual C&#35; SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

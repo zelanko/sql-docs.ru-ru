@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 737557dfff61cecdacf6bec0990145fcb4e4649f
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 893fdf2398788b318cd9f4f1e75ed833ea7bd4e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732702"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883857"
 ---
 # <a name="database-requirements-master-data-services"></a>Требования к базе данных (службы Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Все основные данные хранятся в базе данных [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . На компьютере, на котором размещена эта база данных, должен быть запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "83732702"
 ### <a name="database-backup"></a>Резервное копирование базы данных  
  Рекомендуется выполнять резервное копирование базы данных ежедневно в периоды низкой активности, а резервные копии журнала транзакций следует делать чаще в соответствии с требованиями среды. Дополнительные сведения о резервных копиях см. в статье [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)   
  [Создание базы данных Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [База данных Master Data Services](../../master-data-services/master-data-services-database.md)   

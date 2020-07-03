@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: df4842ec25a69805843506cb052f69f09b6e23ea
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4445c622027e4e639c7748010daf97d535a29624
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750577"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881845"
 ---
 # <a name="sp_dropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет статью из публикации слиянием. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -68,7 +68,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_dropmergearticle** используется в репликации слиянием. Дополнительные сведения об удалении статей см. в [статье Добавление и удаление статей в существующих публикациях](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  При запуске **sp_dropmergearticle** для удаления статьи из публикации объект не удаляется из базы данных публикации или соответствующего объекта из базы данных подписки. При необходимости эти объекты могут быть удалены вручную при помощи инструкции `DROP <object>`.  

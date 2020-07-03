@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bbd9c6fa86e3ef26f0779795ddeacda67976ec21
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: c05397dfbd1740293c4b154ace1ed5704cec11a9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84934225"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85886000"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Включение использования сертификатов для входящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)
   В этом разделе описаны этапы настройки экземпляров сервера для использования сертификатов проверки подлинности входящих соединений при зеркальном отображении базы данных. Перед настройкой входящих соединений необходимо настроить исходящие соединения на каждом экземпляре сервера. Дополнительные сведения см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "84934225"
   
      В следующем примере в базе данных **master** экземпляра сервера на узле HOST_А создается имя входа для системы HOST_B; созданное имя входа называется `HOST_B_login`. Подставьте в пример свой собственный пароль.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE LOGIN HOST_B_login   
        WITH PASSWORD = '1Sample_Strong_Password!@#';  
@@ -56,8 +56,8 @@ ms.locfileid: "84934225"
   
      Чтобы просмотреть имена входа для данного экземпляра сервера, необходимо выполнить следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
-    SELECT * FROM sys.server_principals  
+    ```sql  
+    SELECT * FROM sys.server_principals;  
     ```  
   
      Дополнительные сведения см. в разделе [sys.server_principals (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql).  
@@ -66,7 +66,7 @@ ms.locfileid: "84934225"
   
      В следующем примере для имени входа, созданного на предыдущем шаге, создается пользователь `HOST_B_user`.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE USER HOST_B_user FOR LOGIN HOST_B_login;  
     GO  
@@ -76,7 +76,7 @@ ms.locfileid: "84934225"
   
      Чтобы просмотреть пользователей данного экземпляра сервера, необходимо выполнить следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
+    ```sql  
     SELECT * FROM sys.sysusers;  
     ```  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84934225"
   
      В следующем примере сертификат узла HOST_B связывается с соответствующим пользователем на узле HOST_А.  
   
-    ```  
+    ```sql  
     USE master;  
     CREATE CERTIFICATE HOST_B_cert  
        AUTHORIZATION HOST_B_user  
@@ -104,8 +104,8 @@ ms.locfileid: "84934225"
   
      Чтобы просмотреть сертификаты данного экземпляра сервера, необходимо выполнить следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-    ```  
-    SELECT * FROM sys.certificates  
+    ```sql  
+    SELECT * FROM sys.certificates;  
     ```  
   
      Дополнительные сведения см. в разделе [sys.certificates (Transact-SQL)](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql).  
@@ -114,7 +114,7 @@ ms.locfileid: "84934225"
   
      Например, чтобы предоставить разрешение HOST_A удаленному экземпляру сервера на HOST_B для подключения к его локальной учетной записи, то есть подключиться к `HOST_B_login`, необходимо выполнить следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-    ```  
+    ```sql  
     USE master;  
     GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO [HOST_B_login];  
     GO  
@@ -132,13 +132,13 @@ ms.locfileid: "84934225"
 > [!NOTE]  
 >  В этом примере используется файл сертификата, содержащий сертификата HOST_A, который создан фрагментом кода из раздела [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](database-mirroring-use-certificates-for-outbound-connections.md).  
   
-```  
+```sql  
 USE master;  
 --On HOST_B, create a login for HOST_A.  
 CREATE LOGIN HOST_A_login WITH PASSWORD = 'AStrongPassword!@#';  
 GO  
 --Create a user, HOST_A_user, for that login.  
-CREATE USER HOST_A_user FOR LOGIN HOST_A_login  
+CREATE USER HOST_A_user FOR LOGIN HOST_A_login;  
 GO  
 --Obtain HOST_A certificate. (See the note   
 --   preceding this example.)  
@@ -148,7 +148,7 @@ CREATE CERTIFICATE HOST_A_cert
    FROM FILE = 'C:\HOST_A_cert.cer';  
 GO  
 --Grant CONNECT permission for the server instance on HOST_A.  
-GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login  
+GRANT CONNECT ON ENDPOINT::Endpoint_Mirroring TO HOST_A_login;  
 GO  
 ```  
   
@@ -161,7 +161,7 @@ GO
 ## <a name="net-framework-security"></a>Безопасность .NET Framework  
  При копировании сертификата на другую систему используйте безопасный метод копирования. Отнеситесь с особым вниманием к хранению сертификатов в безопасном месте.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Безопасность транспорта для зеркального отображения базы данных и группы доступности AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT, предоставление разрешений на конечную точку &#40;&#41;Transact-SQL](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Настройка зашифрованной зеркальной базы данных](set-up-an-encrypted-mirror-database.md)   

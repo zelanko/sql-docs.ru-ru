@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 2ff0439ff6b418006f3da5f0356169574509ebb7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: 0e6ca6b5ed0eb94b7293dfd5aab6623ea2a61454
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84932835"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885994"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Реализация LOB Columns в таблице, оптимизированной для памяти
   Оптимизированные для памяти таблицы не имеют хранилища "вне строки" или "хранилище больших объектов (LOB)" (это ограничение было удалено в SQL Server 2016 и более поздних версий. см. раздел [Поддерживаемые типы данных для выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), а ограничение размера строки — 8060 байт. Хранить большие двоичные значения (LOB) и символьные строки можно двумя способами.  
@@ -25,7 +25,7 @@ ms.locfileid: "84932835"
   
  В следующем примере двоичное LOB-значение разбивается на несколько строк и строки вставляются в таблицу, оптимизированную для памяти:  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -75,7 +75,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  Можно также задать дисковую таблицу для LOB-столбцов. Каждая строка в таблице, оптимизированной для памяти, будет иметь соответствующую строку в дисковой таблице со всеми LOB-значениями для этой строки. В следующем примере данные о сотрудниках хранятся в таблице, оптимизированной для памяти, а фотография каждого сотрудника хранится в таблице на диске.  
   
@@ -99,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Миграция в In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

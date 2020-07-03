@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: bf8ffe79-4f4c-4a2d-82e5-2ae8f5d466c5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5a370385dbf385afeb821b3cd66ce683a04c18b2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8036e4c21b7cc79744fc8c04411b0866ea1fce22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753711"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888417"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>Свойство AcceptStop (класс SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает логическое значение, определяющее, можно ли остановить службу.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -41,7 +41,7 @@ object.AcceptStop [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Логическое значение, указывающее, можно ли остановить службу: **true** , если службу можно остановить, или **значение false** , если служба не может быть остановлена.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

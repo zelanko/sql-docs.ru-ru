@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 257592ce6bd3c8080a6f4244a7528e79259e5cfa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 183e7ce052e4ec9b5eba625f5e5e21fb16f1a5e7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783791"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881784"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет отображение удаленного имени входа на локальное имя входа, используемое для выполнения хранимых процедур удаленно, а не на локальном сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -53,7 +53,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если указан только параметр *remoteserver* , то все удаленные имена входа для этого удаленного сервера удаляются с локального сервера. Если указано также *имя для входа* , то все удаленные имена *входа с удаленного* сервера, сопоставленные с этим конкретным локальным именем входа, удаляются из локальной службы. Если также указан параметр *remote_name* , то только удаленное имя входа удаленного пользователя из *remoteserver* удаляется с локального сервера.  
   
  Чтобы добавить пользователей локального сервера, используйте **sp_addlogin**. Чтобы удалить пользователей локального сервера, используйте **sp_droplogin**.  

@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 84da8c7a87901ddcb964773bea2f330ea86a742e
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: 1f7504244f658af94cccb42bead95de60b2c409e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83731695"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882111"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Создание веб-приложения диспетчера основных данных (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] предоставляет интерфейс пользователям для работы с основными данными, а администраторам — для настройки и администрирования MDS.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "83731695"
   
 6.  Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   Свяжите веб-приложение с базой данных служб [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Связывание базы данных служб Master Data Services и веб-приложения](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md).  
   
 -   При необходимости можно настроить веб-сайт, на котором размещено [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] веб-приложение, использовать привязку HTTPS, если требуется шифровать содержимое с помощью протокола TLS, ранее известного как SSL (SSL). Для настройки сертификата сервера для веб-сервера и настройки привязки HTTPS и параметров TLS для сайта необходимо использовать средство службы IIS (IIS), например диспетчер IIS. Дополнительные сведения см. в статье [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

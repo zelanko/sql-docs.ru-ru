@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ca89eb84abc1826a91b4ee8ef285246f6c3de719
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728019"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882321"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Наборы изменений и утверждение (надстройка MDS для Excel)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Надстройка [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] для Excel позволяет сохранять ожидающие изменения сущности в виде наборов изменений. Чтобы просмотреть и изменить ожидающие изменения, существующий набор изменений можно применить. Кроме того, вы можете зафиксировать существующий набор изменений.  
   
  Если для изменения сущности требуется утверждение, вы должны сохранить ожидающие изменения как набор изменений и отправить его на утверждение. Дополнительные сведения см. в разделе [Требуется утверждение (службы Master Data Services)](../../master-data-services/approval-required-master-data-services.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Наборы изменений (Master Data Services)](../../master-data-services/changesets-master-data-services.md)  
   
   
