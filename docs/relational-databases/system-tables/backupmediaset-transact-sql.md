@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 86f1b7fcc8e801f70bf070911feadb059108dff5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 43f54ff292e21e28ec32e8581633872ced2333d7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750367"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890662"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого резервного набора носителей. Эта таблица хранится в базе данных **msdb** .  
  
@@ -46,7 +46,7 @@ ms.locfileid: "85750367"
 |**is_compressed**|**bit**|Указывает, является ли резервная копия сжатой:<br /><br /> 0 = не сжатая<br /><br /> 1 = сжатая<br /><br /> При обновлении базы данных **msdb** этому параметру присваивается значение null. Это означает резервное копирование без сжатия.|  
 |**is_encrypted**|**Версий**|Указывает, шифруется ли резервная копия.<br /><br /> 0 = не зашифрована<br /><br /> 1 = зашифрована|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  

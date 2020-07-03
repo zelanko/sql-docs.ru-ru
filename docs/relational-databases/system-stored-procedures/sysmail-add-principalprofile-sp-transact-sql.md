@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387761d2275025f70a769cf3068693d08dbecc58
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dac2c362e2aac2b09969ba7193e44b06facebb51
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718629"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891027"
 ---
 # <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет разрешение на использование профиля Database Mail участнику базы данных msdb. Участник базы данных должен сопоставляться с пользователем проверки подлинности SQL Server, пользователем Windows или группой Windows.
   
@@ -54,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы сделать профиль общедоступным, укажите ** \@ principal_id** **0** или ** \@ principal_name** **Public**. Открытый профиль доступен для всех пользователей в базе данных **msdb** , хотя пользователи также должны быть членами **роли DatabaseMailUserRole** для выполнения **sp_send_dbmail**.  
   
  Пользователь базы данных может иметь только один профиль по умолчанию. Если ** \@ is_default** имеет значение**1**, а пользователь уже связан с одним или несколькими профилями, указанный профиль становится профилем по умолчанию для пользователя. Профиль, который ранее был профилем по умолчанию, остается ассоциированным с пользователем, но уже не является профилем по умолчанию.  

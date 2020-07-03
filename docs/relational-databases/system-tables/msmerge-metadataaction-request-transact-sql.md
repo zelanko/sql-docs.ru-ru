@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cd31a114-900a-4218-ab58-d959e547c647
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 747a8f7717ba9d0778c506166df583d98f99386d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aee900d9f34fb1e8f64db3687d6121a72a9e3b96
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736695"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889731"
 ---
 # <a name="msmerge_metadataaction_request-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В **MSmerge_metadataaction_request** таблице хранится по одной строке для каждого из необходимых компенсирующих действий. При использовании веб-синхронизации, если возникает ошибка и требуется повторная попытка синхронизации, выполняется запись в **MSmerge_metadataaction_request**. Во время фазы передачи последующего слияния из этой таблицы извлекаются и выгружаются запросы для всех статей, принадлежащих синхронизируемой публикации. После успешного завершения синхронизации соответствующая строка в **MSmerge_metadataaction_request** таблице удаляется. Эта таблица сохраняется на издателе в базе данных публикации и на подписчике в базе данных подписки.  
   

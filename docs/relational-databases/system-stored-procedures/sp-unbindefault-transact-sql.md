@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cc3e3af8e1b2333f68ea43fe9cacdfb4c3d39e40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d8ca77607b6b83f437792800060c368db91ae3bf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891413"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>Хранимая процедура sp_unbindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отменяет привязку или удаляет значение по умолчанию из столбца или псевдонима типа данных в текущей базе данных.  
   
@@ -55,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы отобразить текст значения по умолчанию, выполните **sp_helptext** с именем по умолчанию в качестве параметра.  
   
 ## <a name="permissions"></a>Разрешения  

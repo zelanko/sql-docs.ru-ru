@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 810a509248e57344dc095395e1a6766d74355681
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f8fae7b7f9ec0fbd5a8310bcbdacc6a436dd232c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890877"
 ---
 # <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Перечисляет учетные записи, связанные с одним или несколькими профилями компонента Database Mail.  
     
@@ -66,7 +66,7 @@ sysmail_help_profileaccount_sp
 |**account_name**|**sysname**|Имя учетной записи.|  
 |**sequence_number**|**int**|Порядковый номер учетной записи в профиле.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если *profile_id* или *profile_name* не указаны, эта хранимая процедура возвращает сведения для каждого профиля в экземпляре.  
   
  Хранимая процедура **sysmail_help_profileaccount_sp** находится в базе данных **msdb** и принадлежит схеме **dbo** . Процедура должна быть выполнена с именем, сопоставленным с тремя частями, если текущей базой данных не является **msdb**.  

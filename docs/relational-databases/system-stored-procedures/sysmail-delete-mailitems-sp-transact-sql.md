@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9619ee410e0df014961e9f46a7e536508e0616c1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 052e97d1d744656c223e000adca7028fd11b7e0d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639490"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890967"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Окончательно удаляет сообщения электронной почты из внутренних таблиц компонента Database Mail.  
   
@@ -47,7 +47,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Database Mail сообщения и их вложения хранятся в базе данных **msdb** . Сообщения следует периодически удалять, чтобы не допустить роста базы данных **msdb** , чем ожидалось, и в соответствии с программой хранения документов Организации. Используйте **sysmail_delete_mailitems_sp** хранимую процедуру, чтобы окончательно удалить сообщения электронной почты из Database Mail таблиц. Необязательный аргумент позволяет удалить только старые сообщения, указав дату и время. Сообщения, которые старше этого аргумента, будут удалены. Другой необязательный аргумент позволяет удалить только сообщения электронной почты определенного типа, указанные в качестве аргумента **sent_status** . Аргумент необходимо указать либо для ** \@ sent_before** , либо для ** \@ sent_status**. Чтобы удалить все сообщения, используйте ** \@ sent_before = GETDATE ()**.  
   
  Удаление сообщений электронной почты также удаляет вложения, связанные с этими сообщениями. Удаление электронной почты не приводит к удалению соответствующих записей в **sysmail_event_log**. Для удаления элементов из журнала используйте [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) .  

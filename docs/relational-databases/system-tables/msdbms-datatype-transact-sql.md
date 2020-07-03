@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 606168cc-79a8-442f-ab43-936f8f884d72
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ac552c5fe8efe897ea9066819215c82a115d1d5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 62efb2fa9bf434af4cb9b237b133d3f705eaa7eb
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725475"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890020"
 ---
 # <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица **MSdbms_datatype** содержит полный список собственных типов данных в каждой поддерживаемой системе управления базами данных (СУБД), используемой в качестве издателя или подписчика в гетерогенной репликации базы данных. Эта таблица хранится в базе данных **msdb** .  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85725475"
 |**type**|**sysname**|Имя типа данных (собственное).|  
 |**креатепарамс**|**int**|Битовая карта, описывающая сочетание длины, точности и масштаба, применимое к каждому типу данных:<br /><br /> **0x1** = точность.<br /><br /> **0x2** = масштаб.<br /><br /> **0x4** = length.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Эта таблица содержит записи для типов данных SQL Server, поскольку экземпляр SQL Server может как подписываться на базу данных, отличную от SQL Server, так и поддерживать публикации для подписчиков, отличных от SQL Server.  
   
 ## <a name="see-also"></a>См. также  

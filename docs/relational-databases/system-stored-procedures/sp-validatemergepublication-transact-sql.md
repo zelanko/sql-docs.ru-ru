@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd8e069c1029e2b715772b0dbcc9d0495ad0f0d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d2082ee586087458244ecd268b069804e4efc3ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723010"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891247"
 ---
 # <a name="sp_validatemergepublication-transact-sql"></a>sp_validatemergepublication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выполняет проверку всей публикации, проверяя все подписки (принудительные, по запросу и анонимные) по одному разу. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -52,7 +52,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_validatemergepublication** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

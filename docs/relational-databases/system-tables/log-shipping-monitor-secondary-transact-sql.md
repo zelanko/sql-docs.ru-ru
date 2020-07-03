@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: afbe1bb7-89a7-4020-9408-0af64a043c2e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd444e21de4cd1a2ac065e2d3b2fcc09d6c08170
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31ea0a1a0bd9c7895f1c705cfebd69cfa8ff4193
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755442"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890176"
 ---
 # <a name="log_shipping_monitor_secondary-transact-sql"></a>log_shipping_monitor_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной записи монитора для каждой базы данных-получателя в конфигурации доставки журналов. Эта таблица хранится в базе данных **msdb** .  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85755442"
 |**last_restored_latency**|**int**|Время (в минутах), прошедшее от создания резервной копии журналов в базе данных-источнике до ее восстановления в базу данных-получатель.<br /><br /> Исходное значение равно NULL.|  
 |**history_retention_period**|**int**|Время (в минутах) хранения истории доставки журналов для конкретной базы данных-получателя; по истечении этого времени записи удаляются.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Помимо сохранения на удаленном сервере мониторинга, сведения, связанные с сервером-получателем, также хранятся на сервере-получателе в своей **log_shipping_monitor_secondary** таблице.  
   
 ## <a name="see-also"></a>См. также:  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08b90446625fb2d2f8375c44d2854f3f679cea32
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625755"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890572"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Таблицы приложений уровня данных — sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит сведения о действиях, предпринятых для управления приложениями уровня данных (DAC). Эта таблица хранится в схеме **dbo** базы данных **msdb** .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "85625755"
 |**date_created**|**datetime**|Дата и время создания записи.|  
 |**date_modified**|**datetime**|Дата и время последнего изменения записи.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Управляющие действия DAC, такие как развертывание или удаление DAC, создают несколько этапов. Каждому из действий присваивается идентификатор действия. Каждому шагу присваивается порядковый номер и строка в **sysdac_history_internal**, где записывается состояние шага. Каждая строка создается при запуске этапа действия и обновляется по мере необходимости для отражения состояния операции. Например, действие Deploy DAC может быть назначено **action_id** 12 и получать четыре строки в **sysdac_history_internal**:  
   
 |||||  

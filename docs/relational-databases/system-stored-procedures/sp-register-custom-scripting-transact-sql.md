@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af2feda317d3cbcbf7391179c0797291644eca26
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 80736db0e2356d3592744393ff8964ac6f6073c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719214"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891503"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>Процедура sp_register_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   При репликации транзакций допустимо заменять одну или несколько хранимых процедур по умолчанию пользовательскими. После изменения схемы реплицируемой таблицы эти процедуры создаются снова. **sp_register_custom_scripting** регистрирует хранимую процедуру или [!INCLUDE[tsql](../../includes/tsql-md.md)] файл скрипта, который выполняется при изменении схемы для создания скрипта определения для новой пользовательской хранимой процедуры. Эта новая пользовательская хранимая процедура должна отражать новую схему таблицы. **sp_register_custom_scripting** выполняется на издателе в базе данных публикации, а зарегистрированный файл скрипта или хранимая процедура выполняются на подписчике при изменении схемы.  
   
@@ -42,7 +42,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Аргументы  
 `[ @type = ] 'type'`Тип регистрируемой пользовательской хранимой процедуры или скрипта. *тип* — **varchar (16)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Вставляет**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции INSERT.|  
 |**update**|Зарегистрированная пользовательская хранимая процедура, выполняющаяся при репликации инструкции UPDATE.|  
@@ -63,7 +63,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_register_custom_scripting** используется в моментальных снимках и репликации транзакций.  
   
  Эта хранимая процедура должна выполняться до внесения изменений в схему реплицируемой таблицы. Дополнительные сведения об использовании этой хранимой процедуры см. [в разделе повторное создание пользовательских процедур транзакций для отражения изменений схемы](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

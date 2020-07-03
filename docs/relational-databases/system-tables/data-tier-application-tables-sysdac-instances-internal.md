@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5f83ff6b805692867760cc1e692abd292f88aea1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 98b33a43eeb52ca99c50235e5c3865c79cd92125
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755493"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890560"
 ---
 # <a name="data-tier-application-tables---sysdac_instances_internal"></a>Таблицы приложений уровня данных — sysdac_instances_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает по одной строке для каждого экземпляра приложения уровня данных (DAC), развернутого на экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Эта таблица хранится в схеме dbo в базе данных msdb.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85755493"
 |date_created|**datetime**|Дата и время создания экземпляра DAC.|  
 |created_by|**sysname**|Имя входа, создавшее экземпляр DAC.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Доступ только для чтения к этому представлению доступен всем пользователям с разрешениями на подключение к базе данных master.  
   
 ## <a name="permissions"></a>Разрешения  

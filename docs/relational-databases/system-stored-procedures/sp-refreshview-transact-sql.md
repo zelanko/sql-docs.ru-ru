@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bd963a39dddaca5cd2558ea95853fdebf366e2ee
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: dbc12b5e9013e8cbb5fb223f473e68c2e1cab445
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719226"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891509"
 ---
 # <a name="sp_refreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет метаданные для заданного, не привязанного к схеме, представления. Постоянные метаданные представления могут устареть вследствие изменения базовых объектов, от которых зависит представление.  
   
@@ -44,7 +44,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если представление не создано с параметром SCHEMABINDING, то **sp_refreshview** должны выполняться при внесении изменений в объекты, лежащие в основе представления, влияющие на определение представления. В противном случае результат запроса представления может быть непредвиденным.  
   
 ## <a name="permissions"></a>Разрешения  

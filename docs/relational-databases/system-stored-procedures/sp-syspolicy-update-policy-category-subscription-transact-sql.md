@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: cec54635b7cf40a85adeae5188750c8c2cc79fb5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fde97529258f8f413a50db1933a95c1842f20c1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633917"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891438"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет подписку на категорию политики для указанной базы данных.  
   
@@ -55,7 +55,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_syspolicy_update_policy_category_subscription должна выполняться в контексте системной базы данных msdb.  
   
  Чтобы получить значения для *policy_category_subscription_id* и для *policy_category*, можно использовать следующий запрос:  

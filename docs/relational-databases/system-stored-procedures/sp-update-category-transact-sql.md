@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2e9d840b98ca8b479642e72961699151812f042f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3c738d918c43764048cd0c67ade2fccc9be961c7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762717"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891352"
 ---
 # <a name="sp_update_category-transact-sql"></a>sp_update_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет имя категории.  
   
@@ -44,7 +44,7 @@ sp_update_category
 ## <a name="arguments"></a>Аргументы  
 `[ @class = ] 'class'`Класс обновляемой категории. *класс*имеет тип **varchar (8)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**ПОЛУЧАЕТЕ**|Обновляет категорию предупреждений.|  
 |**ДОЛЖНО**|Обновляет категорию заданий.|  
@@ -57,7 +57,7 @@ sp_update_category
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_update_category** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

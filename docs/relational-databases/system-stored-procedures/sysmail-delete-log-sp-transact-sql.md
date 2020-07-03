@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7905ab0197c4286013f5a407570cdeaa39b3b009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: db6f15fe8ce2f515bf79211e6db49a135eb6fb3f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625989"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890972"
 ---
 # <a name="sysmail_delete_log_sp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет события из журнала компонента Database Mail. Удаляются либо все события, либо только события, удовлетворяющие критериям даты или типа.  
   
@@ -48,7 +48,7 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Для окончательного удаления записей из журнала Database Mail используйте хранимую процедуру **sysmail_delete_log_sp** . Необязательный аргумент позволяет удалять записи определенной давности. Из этого следует, что удаляются события, созданные ранее даты, заданной в аргументе. Необязательный аргумент позволяет удалять только события определенного типа, указанные в качестве аргумента **event_type** .  
   
  При удалении записей из журнала компонента Database Mail записи электронной почты не удаляются из таблиц Database Mail. Используйте [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) , чтобы удалить электронную почту из Database Mail таблиц.  

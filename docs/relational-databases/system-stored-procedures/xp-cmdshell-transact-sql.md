@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ffe3197f74e274792ee1a3f97d700492a018bef
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9faada50dc5e48f0b3835f65c69a2a1d130e7594
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85633753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890776"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Увеличивает число процессов командного ядра Windows в строке для выполнения. Любые выходные данные возвращаются в виде текстовых строк.  
   
@@ -62,7 +62,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процесс Windows, порожденный **xp_cmdshell** , имеет те же права безопасности, что и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] учетная запись службы.  
   
  **xp_cmdshell** работает синхронно. Управление не возвращается участнику до завершения команды ядра.  

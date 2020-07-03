@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fd52cabfd282c70a9c3cd2c1d1cc8bd52e02ff3f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a3004de66d8bf911056f62b0d4fbdfb55b969871
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890031"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **MSdbms_datatype_mapping** таблица содержит допустимые сопоставления типов данных из типа данных в системе управления базы данных-источника (СУБД) с одним или несколькими конкретными типами данных в целевой СУБД. Эта таблица хранится в базе данных **msdb** и используется для гетерогенной репликации базы данных.  
   

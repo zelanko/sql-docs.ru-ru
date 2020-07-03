@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7bb5e41265e3dd6b69ae1807837b2ac8bda9ba09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21d6e73f79c2cb8c1c0a749f4d8e849d644c8291
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727169"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891583"
 ---
 # <a name="sp_monitor-transact-sql"></a>Хранимая процедура sp_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает статистику о [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -59,7 +59,7 @@ sp_monitor
 |**total_errors**|Количество ошибок, с которыми столкнулся [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] во время чтения и записи.|  
 |**соединение**|Количество входов или попыток входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью набора функций отслеживает объем проделанной работы. При выполнении **sp_monitor** отображаются текущие значения, возвращаемые этими функциями, и показывается, насколько они изменились с момента последнего выполнения процедуры.  
   
  Для каждого столбца Статистика распечатывается в форме *номер*(*номер*) —*номер*% или *номер*(*число*). Первое *число* обозначает количество секунд (для **CPU_BUSY**, **io_busy**и **бездействие**) или общее число (для других переменных) с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] перезапуска. *Число* в круглых скобках обозначает количество секунд или общее число с момента последнего выполнения **sp_monitor** . Процентное значение — это процент времени, прошедших с момента последнего запуска **sp_monitor** . Например, если в отчете отображается **CPU_BUSY** как 4250 (215) — 68%, цп занят 4250 секунд с момента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] последнего запуска, 215 секунды с момента последнего запуска **sp_monitor** и 68 процента от общего времени с момента **sp_monitor** последнего запуска.  

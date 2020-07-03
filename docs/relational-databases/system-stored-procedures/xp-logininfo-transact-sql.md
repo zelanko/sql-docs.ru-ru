@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3f5a3e93ed2ae3b64828a3260743410b6d007560
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b5a1a7067e1ebda150d0236020288514eb90a8fc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755540"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890728"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращают сведения о пользователях и группах Windows.  
   
@@ -64,7 +64,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |**mapped login name**|**sysname**|Для учетных записей пользователей, имеющих привилегии пользователя, **сопоставленное имя входа** показывает сопоставленное имя входа, которое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается использовать при входе с помощью этой учетной записи, используя сопоставленные правила с именем домена, добавленным перед ним.|  
 |**путь разрешения**|**sysname**|Членство в группе, разрешающее доступ к учетной записи.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если указано *account_name* , **xp_logininfo** сообщает наивысший уровень прав доступа для указанного пользователя или группы Windows. Если пользователь Windows имеет права системного администратора и пользователя домена, он будет выступать в качестве системного администратора. Если пользователь является членом нескольких групп Windows одного уровня прав доступа, группа, которая первой предоставила доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], будет отражена.  
   
  Если *account_name* является допустимым пользователем или группой Windows, не связанными с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] именем входа, возвращается пустой результирующий набор. Если *account_name* не может быть идентифицирован как допустимый пользователь или группа Windows, возвращается сообщение об ошибке.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15fe17913bfb00d983772a84f625ff41e690f263
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce584b558be168a81e21da0762f6ea26ed798b05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750357"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890651"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица изменений, созданная при включении системы отслеживания измененных данных в исходной таблице. Эта таблица содержит по одной строке для каждой операции вставки и удаления в исходной таблице и по две строки для каждой операции обновления в исходной таблице. Если имя таблицы изменений не задано при включении исходной таблицы, создается производное имя. Имя имеет формат CDC. *capture_instance*_CT, где *capture_instance* — имя схемы исходной таблицы и имя исходной таблицы в формате *schema_table*. Например, если таблица **Person. адрес** в образце базы данных **AdventureWorks** включена для отслеживания измененных данных, то производное имя таблицы изменений будет храниться в **CDC. Person_Address_CT**.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85750357"
 |*\<captured source table columns>*|непостоянно|Остальные столбцы в таблице изменений — это столбцы из исходной таблицы, определенные, как отслеживаемые при создании экземпляра отслеживания. Если в списке отслеживаемых столбцов не указано ни одного столбца, в эту таблицу включаются все столбцы из исходной таблицы.|  
 |**__ $ command_id** |**int** |Отслеживает порядок операций в рамках транзакции. |  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 
 Столбец `__$command_id` был представлен в накопительном обновлении в версиях 2012 – 2016. Сведения о версии и загрузке см. в статье базы знаний 3030352 в [исправлении: таблица изменений неправильно упорядочивается для обновленных строк после включения системы отслеживания измененных данных для Microsoft SQL Server базы данных](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Дополнительные сведения см. в разделе [функция CDC может прерываться после обновления до последней версии Cu для SQL Server 2012, 2014 и 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

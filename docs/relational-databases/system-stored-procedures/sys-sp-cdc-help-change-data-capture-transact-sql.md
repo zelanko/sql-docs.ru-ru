@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 62d1fbfffeb23e823e89ecc1a22f44c54f8245a1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7935bc8e0472b90d22a93190f5af81c8e5910e67
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768897"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891097"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает конфигурацию системы отслеживания измененных данных для каждой таблицы, включенной для системы отслеживания измененных данных в текущей базе данных. Для каждой исходной таблицы может возвращаться до двух строк — по одной строке для каждого экземпляра отслеживания. Система отслеживания измененных данных доступна не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Сведения о функциях, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Возможности, поддерживаемые выпусками SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
@@ -82,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Список столбцов индекса, который использовался для уникальной идентификации строк в исходной таблице.|  
 |captured_column_list|**nvarchar(max)**|Список отслеживаемых исходных столбцов.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если оба *source_schema* и *source_name* по умолчанию имеют значение null или явно задают значение null, эта хранимая процедура возвращает сведения обо всех экземплярах отслеживания базы данных, к которым вызывающий объект имеет доступ. Если *source_schema* и *SOURCE_NAME* не равны NULL, возвращаются только сведения о конкретной именованной таблице с поддержкой.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73af981371ecbadf92936016316222c061a14b8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: feb13050f5b508298ec45d5fde4ffde9aa510c9d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640072"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891591"
 ---
 # <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет метаданные, такие как триггеры и записи, в **sysmergesubscriptions** и **sysmergearticles** после удаления указанной принудительной подписки слиянием на издателе. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -51,7 +51,7 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_mergesubscription_cleanup** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

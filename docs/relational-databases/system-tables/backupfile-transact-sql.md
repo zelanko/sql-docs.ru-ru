@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f122698756a6d2359112b535158dcb6ff89569b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c5c304cfafc04d9f7c0ec77dc5faedc75ada79df
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750441"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890694"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для всех данных или файла журнала базы данных. Столбцы описывают конфигурацию файла, существовавшую во время создания резервной копии. Указывает, включен ли файл в резервную копию, определяется столбцом **is_present** . Эта таблица хранится в базе данных **msdb** .  
   
@@ -59,7 +59,7 @@ ms.locfileid: "85750441"
 |**is_readonly**|**bit**|1 = файл только для чтения.|  
 |**is_present**|**bit**|1 = файл содержится в резервном наборе данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Инструкция RESTORE VERIFYONLY из *backup_device* with LOADHISTORY заполняет столбцы таблицы **backupmediaset** соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить количество строк в этой таблице и в других таблицах резервного копирования и журнала, выполните хранимую процедуру [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) .  

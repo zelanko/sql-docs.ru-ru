@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 36b04c00625792fc34b3fc833ea07a3ea2e71dab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762750"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891373"
 ---
 # <a name="sp_update_alert-transact-sql"></a>Хранимая процедура sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет параметры существующего предупреждения.  
   
@@ -78,9 +78,9 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Указывает, следует ли включать описание [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ошибки из журнала приложений Windows в сообщение уведомления. *include_event_description_in* имеет тип **tinyint**, значение по умолчанию NULL и может принимать одно или несколько из этих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**0**|Отсутствуют|  
+|**0**|None|  
 |**1**|электронная почта;|  
 |**2**|Пейджер|  
 |**4**|**команда net send.**|  
@@ -127,7 +127,7 @@ sp_update_alert
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Предупреждение может создаваться только в таблице **sysmessages** , записанной в [!INCLUDE[msCoName](../../includes/msconame-md.md)] журнал приложений Windows.  
   
  **sp_update_alert** изменяет только те параметры оповещений, для которых указаны значения параметров. Если параметр пропущен, сохраняется текущая настройка.  

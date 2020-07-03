@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4194de86ec5ba51455f37d75bccf574d4316762f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749290"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891297"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет установки для расписания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -65,11 +65,11 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`Значение, указывающее, когда должно выполняться задание. *freq_type*имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Однократно|  
 |**4**|Ежедневно|  
-|**8**|Weekly (Еженедельно);|  
+|**8**|Еженедельно|  
 |**16**|Ежемесячная|  
 |**32**|Ежемесячно относительно *интервала FREQ*|  
 |**64**|Запустить, когда запускается служба SQLServerAgent|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`Задает единицы измерения для *freq_subday_interval * *.* *freq_subday_type*имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Применение|Описание (единица измерения)|  
+|Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**0x1**|В указанное время|  
 |**0x2**|Секунды|  
@@ -100,7 +100,7 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`Вхождение *freq_interval* задания в каждый месяц, если *freq_interval* — **32** (ежемесячное относительное значение). *freq_relative_interval*имеет **тип int**, значение по умолчанию **0**и может принимать одно из следующих значений.  
   
-|Применение|Описание (единица измерения)|  
+|Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
 |**1**|Первый|  
 |**2**|Секунда|  
@@ -127,7 +127,7 @@ sp_update_schedule
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Все задания, которые используют расписание, немедленно используют новые установки. Однако изменение расписания не останавливает выполнение заданий.  
   
 ## <a name="permissions"></a>Разрешения  

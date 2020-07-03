@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c5f3950ac6597f0d46321d0790df3509fbb07a62
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1a4a6aa14106caf45aaac4e0432705d365022eec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725483"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890043"
 ---
 # <a name="mscached_peer_lsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица **MScached_peer_lsns** используется для трассировки значений LSN в журнале транзакций, которые используются для определения команд, возвращаемых данному подписчику в одноранговой репликации. Эта таблица хранится в базе данных распространителя.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "85725483"
 |**originator_db_version**|**int**|Показывает номер версии исходной базы данных.|  
 |**originator_lsn**|**varbinary (16)**|LSN-номер транзакции.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Значения LSN используются немедленно после вставки и не имеют последующего значения для системы.  
   
 ## <a name="see-also"></a>См. также  

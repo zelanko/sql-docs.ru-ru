@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8966e5d423a24be8c7d7329f270368ea20e9ef7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891306"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет данные об операторе (получателе уведомлений) для организации оповещений и заданий.  
   
@@ -89,7 +89,7 @@ sp_update_operator
  [ @pager_days =] *pager_days*  
  Указывает дни, в которые оператор доступен для приема сообщений на пейджер (с учетом времени начала и конца работы). *pager_days*имеет тип **tinyint**, значение по умолчанию NULL и должно быть значением от **0** до **127**. *pager_days* вычисляется путем добавления отдельных значений для требуемых дней. Например, с понедельника по пятницу будет **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Воскресенье|  
 |**2**|Понедельник|  
@@ -108,7 +108,7 @@ sp_update_operator
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Инструкцию sp_update_operator нужно выполнять из базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

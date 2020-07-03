@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c49356c35c963501450490dfaa6fc89c77e62f40
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 72e364d451a78726c1ac98c42659db9c8f6034b0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85625745"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890584"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>conflict_ &lt; Schema &gt; _ &lt; Table &gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Таблица conflict_ \<schema> _ \<table> содержит сведения о конфликтующих строках в одноранговой репликации. Для каждой реплицируемой таблицы в публикации существует таблица конфликтов, при этом к имени таблицы конфликтов добавляются имя схемы и имя статьи. Такие таблицы конфликтов существуют во всех базах данных публикаций для каждой из статей.  
   

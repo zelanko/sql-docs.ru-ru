@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 385bae0bd40fd392f038ef4dd85204c853a81773
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 995668cb4b36e7086c2777d9cb7cd663e7d33ef4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762634"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890755"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **xp_msver** также возвращает сведения о фактическом номере сборки сервера и сведения о среде сервера. Сведения, которые **xp_msver** возвращаемые данные, можно использовать в [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкциях, пакетах, хранимых процедурах и т. д., чтобы улучшить логику для кода, не зависящего от платформы.  
   

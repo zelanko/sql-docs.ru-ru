@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac6461e522973b43926b66b6e525526ae6952d85
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08db9ea2487f51267e7c1f1e4bac4fd807b59fcd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755518"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890709"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Вызывает служебную программу **sqlmaint** со строкой, содержащей параметры **sqlmaint**. Программа **sqlmaint** выполняет набор операций обслуживания для одной или нескольких баз данных.  
   
@@ -50,7 +50,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет. Возвращает ошибку, если программа **sqlmaint** завершается сбоем.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если эта процедура вызывается пользователем, вошедшим в систему с проверкой подлинности SQL Server, то перед выполнением параметры **-U "***login_ID***"** и **-P "***password***** " добавляются в начало *switch_string* . Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передается без изменений в **sqlmaint**.  
   
 ## <a name="permissions"></a>Разрешения  

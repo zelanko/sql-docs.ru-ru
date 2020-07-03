@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ac7a3e57c18f6ce4ea73415224aabc3843488cf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: afef091db5038a6ca302c07a6171557577d46797
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755550"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85890747"
 ---
 # <a name="xp_loginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о конфигурации безопасности входа в систему для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -45,7 +45,7 @@ xp_loginconfig ['config_name']
  **"** *config_name* **"**  
  Отображаемое значение конфигурации. Если *config_name* не указан, выводятся все значения конфигурации. Аргумент *config_name* имеет тип **sysname**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**login mode**|Режим безопасности имени входа в систему. Возможные значения: **Mixed** и **Windows Authentication**.<br /><br /> Заменяется на:<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**default login**|Имя идентификатора входа сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию для авторизованных пользователей доверенных подключений (для пользователей без соответствующего имени входа). Имя входа по умолчанию — **Guest**. Данное значение предоставляется для обеспечения обратной совместимости.|  
@@ -66,7 +66,7 @@ xp_loginconfig ['config_name']
 |**name**|**sysname**|Параметр конфигурации|  
 |**config value**|**sysname**|Значение параметра конфигурации|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **xp_loginconfig** нельзя использовать для установки значений конфигурации.  
   
  Определение режима входа и уровня аудита производится в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
