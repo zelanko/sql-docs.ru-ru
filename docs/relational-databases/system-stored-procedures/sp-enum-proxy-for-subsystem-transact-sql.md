@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 8b857472b72081c6368fa3c0a112c7d4729e2c72
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 21df62ff7ab60933281ca0dce0e7bc2bc2b3b7c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771117"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891925"
 ---
 # <a name="sp_enum_proxy_for_subsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает список разрешений для учетных записей-посредников агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на доступ к подсистемам.  
   
@@ -64,7 +64,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения обо всех учетных записях-посредниках в экземпляре для каждой подсистемы.  
   
  При указании идентификатора прокси-сервера или имени прокси-сервера **sp_enum_proxy_for_subsystem** перечисляет подсистемы, к которым прокси-сервер имеет доступ. Если указано имя подсистемы или подсистемы, **sp_enum_proxy_for_subsystem** выводит список учетных записей-посредников, имеющих доступ к этой подсистеме.  

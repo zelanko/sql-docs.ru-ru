@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 79a123faab9b587d56d957a3f9e1765e8619f97d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8ce38772655172a9c5e22d3dfdba9cb7fd8f4b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634308"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891727"
 ---
 # <a name="sp_help_operator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет сведения об определенных для сервера операторах.  
   
@@ -77,7 +77,7 @@ sp_help_operator
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_help_operator** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  
@@ -103,7 +103,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>Дополнительно  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

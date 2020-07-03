@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 051f41139627420e825feffb292a02905917705d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750534"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891706"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выводит сведения об одной и нескольких учетных записях-посредниках.  
   
@@ -51,7 +51,7 @@ sp_help_proxy
   
  В следующей таблице показаны значения для каждой подсистемы.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если параметры не указаны, **sp_help_proxy** выводит сведения для всех прокси-серверов в экземпляре.  
   
  Чтобы определить, какие прокси-серверы могут использоваться для входа в данную подсистему, укажите *имя* и *subsystem_name*. При указании этих аргументов **sp_help_proxy** перечисляет прокси-серверы, к которым может получить доступ указанное имя входа, которые могут использоваться для указанной подсистемы.  

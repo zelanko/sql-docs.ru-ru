@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: db19b7be6162c5b472f928d14a5a028efe4fc910
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 852566e9f337536717273c18b8034f3854fd7d48
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717430"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894563"
 ---
 # <a name="sysdm_cryptographic_provider_sessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об открытых сеансах для поставщика служб шифрования.  
  
@@ -54,7 +54,7 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
 |**identity**|**nvarchar(128)**|Идентификатор, используемый для проверки подлинности поставщика служб шифрования.|  
 |**интерфейс**|**short**|Идентификатор SPID сеанса для соединения. Дополнительные сведения см. в статье [@@SPID (Transact-SQL)](../../t-sql/functions/spid-transact-sql.md).|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Представление **sys. dm_cryptographic_provider_sessions** является видимым для общедоступного для текущего соединения. Для просмотра всех криптографических соединений необходимо иметь разрешение **Control** Server.  
   
 ## <a name="see-also"></a>См. также  

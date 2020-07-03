@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9385503d625c14932d520e4cf7390bf42612faff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8ed9fe58317d1dbe1cb3de59b11f556bc96b1d9f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639855"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892820"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Используется для изменения свойств или переименования определяемого пользователем набора элементов сбора.  
   
@@ -112,7 +112,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Функция sp_syscollector_update_collection_set должна выполняться в контексте системной базы данных msdb.  
   
  Либо *collection_set_id* , либо *имя* должны иметь значение, которое не может быть null. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  

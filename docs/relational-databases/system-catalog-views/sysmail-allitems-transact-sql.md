@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ba169522f0deac50dd840a5eeceff63c9eb178e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824907"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891959"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Содержит одну строку для каждого сообщения, обработанного компонентом Database Mail. Используйте это представление для просмотра состояния всех сообщений.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "82824907"
 |**send_request_date**|**datetime**|Дата и время помещения сообщения в очередь почты.|  
 |**send_request_user**|**sysname**|Пользователь, отправивший сообщение. Это пользовательский контекст процедуры компонента Database Mail, а не поле «От:» с именем отправителя сообщения.|  
 |**sent_account_id**|**int**|Идентификатор учетной записи компонента Database Mail, используемой для отсылки этого сообщения.|  
-|**sent_status**|**varchar (8)**|Состояние почты. Доступны следующие значения:<br /><br /> **Отправлено** — почта отправлена.<br /><br /> **неотправленные** — компонент Database Mail по-прежнему пытается отправить сообщение.<br /><br /> При повторной **попытке** Database Mail не удалось отправить сообщение, но предпринимается попытка его отправки.<br /><br /> **сбой** . компоненту Database Mail не удалось отправить сообщение.|  
+|**sent_status**|**varchar (8)**|Состояние почты. Возможны следующие значения:<br /><br /> **Отправлено** — почта отправлена.<br /><br /> **неотправленные** — компонент Database Mail по-прежнему пытается отправить сообщение.<br /><br /> При повторной **попытке** Database Mail не удалось отправить сообщение, но предпринимается попытка его отправки.<br /><br /> **сбой** . компоненту Database Mail не удалось отправить сообщение.|  
 |**sent_date**|**datetime**|Дата и время отсылки сообщения.|  
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Используйте представление **sysmail_allitems** , чтобы просмотреть состояние всех сообщений, обрабатываемых Database Mail. Это представление может быть полезным при выявлении неполадок в работе компонента Database Mail. Оно помогает выявлять сущность проблемы, отображая атрибуты отправленных сообщений в сравнении с атрибутами неотправленных сообщений.  
   
  Системные таблицы, представленные в этом представлении, содержат все сообщения и могут привести к увеличению размера базы данных **msdb** . Чтобы уменьшить размеры таблиц, регулярно удаляйте из этого представления старые сообщения. Дополнительные сведения см. в разделе [создание агент SQL Server задания для архивации Database Mail сообщений и журналов событий](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

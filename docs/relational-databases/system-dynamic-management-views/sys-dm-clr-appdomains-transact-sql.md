@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c6a542e44f33a64b5cdd4727aab891592338b880
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c3c0351bd541738e2540cc1a0624cf0ca9836c5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724617"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893986"
 ---
 # <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строку на каждый домен приложения на сервере. Домен приложения (**AppDomain**) — это конструкция в среде CLR [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , которая является единицей изоляции для приложения. Это представление можно использовать для анализа и устранения неполадок объектов интеграции со средой CLR, которые выполняются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -51,7 +51,7 @@ ms.locfileid: "85724617"
 |**total_allocated_memory_kb**|**bigint**|Общий размер (в килобайтах) всей выделенной памяти, которая была выделена в домене приложения с момента его создания (без вычета освобожденной и собранной памяти). Это эквивалентно **System. AppDomain. мониторингтоталаллокатедмеморисизе**.|  
 |**survived_memory_kb**|**bigint**|Количество килобайт, сохранившихся после последней полной, блокирующей сборки мусора, на которые заведомо существуют ссылки из текущего домена приложения. Это эквивалентно **System. AppDomain. мониторингсурвиведмеморисизе**.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Существует связь "один к одному" между **dm_clr_appdomains. appdomain_address** и **dm_clr_loaded_assemblies. appdomain_address**.  
   
  В следующих таблицах перечислены возможные значения **состояния** , их описания и время их возникновения в жизненном цикле **AppDomain** . Эти сведения можно использовать, чтобы отслеживать Lifecyle **AppDomain** и отслеживать подозрительные или повторяющиеся экземпляры **AppDomain** , не анализируя журнал событий Windows.  

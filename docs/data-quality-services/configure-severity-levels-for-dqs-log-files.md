@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: e8b2c1a1ec0bb6c1417fa68720f2d345c6bc4ccb
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 068ae31abe61fac86d740fe3e03787fd32dde465
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894218"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Настройка степеней серьезности для файлов журнала DQS
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   В данном разделе описывается, как настраивать степени серьезности для различных операций и модулей в службе [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) при помощи [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Степени серьезности определяют интенсивность событий, которые происходят в DQS. События DQS имеют следующие степени серьезности, в порядке убывания серьезности:  
   

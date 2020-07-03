@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b14900e32c32a5de50998580a8d0de9ed7eacfb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f0539e4281d58744b18a4f9ca522c52952032c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720309"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893595"
 ---
 # <a name="sp_help_schedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает информацию о расписаниях.  
   
@@ -77,7 +77,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|Описание расписания на английском языке (если запрошено).|  
 |**job_count**|**int**|Число заданий, ссылающихся на данное расписание.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если параметры не указаны, **sp_help_schedule** выводит сведения обо всех расписаниях в экземпляре.  
   
 ## <a name="permissions"></a>Разрешения  

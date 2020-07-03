@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b13792fb7a5d151987983a959751dd94f12e0a9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 105ce6682e17e30e010c4ab7c78aa078048609b8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731680"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891873"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Запускает на экземпляре сервера синтаксический анализ и загрузку данных из файла тезауруса, который соответствует языку с указанным кодом языка. Эту хранимую процедуру полезно использовать после обновления файла тезауруса. Выполнение **sp_fulltext_load_thesaurus_file** вызывает повторную компиляцию полнотекстовых запросов, использующих ТЕЗАУРУС указанного LCID.  
   
@@ -47,13 +47,13 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  ** \@ **  =  *действие* лоадонлифнотлоадед  
  Указывает, нужно ли загружать файл тезауруса во внутренние таблицы тезауруса в случае, если он уже загружен. *действие* является одним из следующих:  
   
-|Применение|Определение|  
+|Значение|Определение|  
 |-----------|----------------|  
 |**0**|Загружать файл тезауруса независимо от того, загружен ли он. Это поведение по умолчанию для **sp_fulltext_load_thesaurus_file**.|  
 |1|Загружать файл тезауруса только в случае, если он еще не загружен.|  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  

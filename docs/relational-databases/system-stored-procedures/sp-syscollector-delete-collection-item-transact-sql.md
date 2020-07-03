@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67cc7e66d775ba162ad5b6c6baea70b583a97670
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f0753ed820012d0bbae1fb263b7881aad663ee45
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892947"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет элемент сбора из набора сбора.  
   
@@ -50,7 +50,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Функция sp_syscollector_delete_collection_item должна выполняться в контексте системной базы данных msdb. Удалять элементы сбора из системных наборов сбора невозможно.  
   
  Во время этой операции набор сбора, содержащий элемент сбора, останавливается и перезапускается.  

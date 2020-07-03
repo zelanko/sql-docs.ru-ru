@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5af6b91c-724f-45ac-aff1-7555014914f4
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7086db16eab9935624546965652834313a467db
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: afc7da4e28ef7f32ca4a2b4ea762e5a5af442471
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84927890"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891969"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Использование кластеризованных индексов columnstore
   Задачи при использовании кластеризованных индексов columnstore в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
@@ -88,8 +88,8 @@ GO
 
  В следующем примере показаны результаты загрузки 1 048 577 строк в секцию. Результаты показывают наличие одной СЖАТОЙ rowgroup в columnstore (в виде сжатых сегментов столбцов) и 1 строки в deltastore.
 
-```
-SELECT * FROM sys.column_store_row_groups
+```sql
+SELECT * FROM sys.column_store_row_groups;
 ```
 
  ![Элементы rowgroup и deltastore для загрузки пакета](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Элементы rowgroup и deltastore для загрузки пакета")

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 43fef1a35d36446cdf402b145c0afec68c9eb47d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3988bd0d9197b675c41115ba2b384b10cb35e851
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85639535"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892581"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отменяет привязку правила к столбцу или псевдониму типа данных в текущей базе данных.  
   
@@ -53,7 +53,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Для отображения текста правила выполните процедуру **sp_helptext** с именем правила в качестве аргумента.  
   
  Если правило не привязано, сведения о привязке удаляются из таблицы **sys. Columns** , если правило привязано к столбцу, и из таблицы **sys. types** , если правило привязано к псевдониму типа данных.  

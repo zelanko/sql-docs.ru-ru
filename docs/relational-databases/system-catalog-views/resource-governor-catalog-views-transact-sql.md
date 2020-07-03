@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f5b44d91c1dda538963dedafd14c909afd72ceae
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f85568404dc9c62e5d7c7a7d034317b34bdb704f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787221"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894790"
 ---
 # <a name="resource-governor-catalog-views-transact-sql"></a>Представления каталога регулятора ресурсов (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе содержатся сведения о регуляторе ресурсов для следующих представлений каталога. Эти представления каталога оптимизированы для повышения производительности и удобства использования. По возможности, пользуйтесь этими представлениями каталога для доступа к метаданным регулятора ресурсов.  
   

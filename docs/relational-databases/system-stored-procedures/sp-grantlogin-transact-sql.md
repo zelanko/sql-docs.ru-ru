@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3f605d17348c651ef0fbc58ebd52b422bdba1896
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: de02d84d781c5db2d86902034b500c6b4a02ea2f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891808"
 ---
 # <a name="sp_grantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает имя входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -47,7 +47,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_grantlogin** вызывает создание имени входа, которое поддерживает дополнительные параметры. Сведения о создании SQL Serverных имен входа см. в разделе [Create login &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  **sp_grantlogin** не может быть выполнена в пользовательской транзакции.  

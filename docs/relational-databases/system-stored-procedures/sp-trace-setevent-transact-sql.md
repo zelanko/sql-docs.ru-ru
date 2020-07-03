@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 387e4a0a30f5681391bb5891dc772f7c9f04790c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7d1f047fed74a212358ef7c1af61034d021661ef
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723077"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892594"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Добавляет или удаляет событие или столбец событий в трассировке. **sp_trace_setevent** может выполняться только для существующих трассировок, которые остановлены (*Status* имеет значение **0**). Если эта хранимая процедура выполняется для трассировки, которая не существует или имеет *статус* , отличный от **0**, возвращается ошибка.  
   
@@ -338,7 +338,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_trace_setevent** выполняет многие действия, ранее выполненные расширенными хранимыми процедурами, доступными в более ранних версиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Используйте **sp_trace_setevent** вместо следующего:  
   
 -   **xp_trace_addnewqueue**  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e1aa82b9ced4593bbc1341c3ef305519fb1d1eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 215ad3a4a38abd962f43756ecb4c724c625f251d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634431"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893630"
 ---
 # <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Эта хранимая процедура получает настройки для одной или нескольких баз данных-получателей.  
   
@@ -84,7 +84,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|Время (в минутах) хранения истории доставки журналов для конкретной базы данных-получателя; по истечении этого времени записи удаляются.|  
 |**last_restored_latency**|Время (в минутах), прошедшее от создания резервной копии журналов в базе данных-источнике до ее восстановления в базу данных-получатель.<br /><br /> Исходное значение равно NULL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если включить параметр *secondary_database* , результирующий набор будет содержать сведения об этой базе данных-получателе. Если включить параметр *secondary_id* , результирующий набор будет содержать сведения обо всех базах данных-получателях, связанных с этим ВТОРИЧным идентификатором.  
   
  **sp_help_log_shipping_secondary_database** должны запускаться из базы данных **master** на сервере-получателе.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+ms.openlocfilehash: ebae9f75ac25698582b7f3e4c78c2fb773bd803e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84929095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891993"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Настройка управляемого резервного копирования SQL Server в Azure для групп доступности
   В этом разделе представлено руководство по настройке [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для баз данных, участвующих в группах доступности AlwaysOn.  
@@ -80,7 +80,7 @@ ms.locfileid: "84929095"
   
 6.  **Включите и настройте [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для AGTestDB на NODE1:** Start SQL Server Management Studio и подключитесь к экземпляру на NODE1, где установлена база данных доступности. В окне запроса выполните приведенную ниже инструкцию, предварительно задав значения имени базы данных, URL-адреса хранилища, учетных данных SQL и срока хранения.  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -92,14 +92,13 @@ ms.locfileid: "84929095"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      Дополнительные сведения о создании сертификата для шифрования см. в разделе Создание **резервной копии сертификата** статьи [Создание зашифрованного резервного копирования](../relational-databases/backup-restore/create-an-encrypted-backup.md).  
   
 7.  **Включите и настройте [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] для AGTestDB на NODE2:** Start SQL Server Management Studio и подключитесь к экземпляру на NODE2, где установлена база данных доступности. В окне запроса выполните приведенную ниже инструкцию, предварительно задав значения имени базы данных, URL-адреса хранилища, учетных данных SQL и срока хранения.  
   
-    ```  
+    ```sql  
     Use msdb;  
     GO  
     EXEC smart_admin.sp_set_db_backup   
@@ -111,15 +110,14 @@ ms.locfileid: "84929095"
                     ,@encryptor_name='MyBackupCert'  
                     ,@enable_backup=1;  
     GO  
-  
     ```  
   
      [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] включено на указанной базе данных. Может потребоваться до 15 минут, прежде чем начнут выполняться операции резервного копирования для базы данных. Резервные копии будут появляться на предпочтительной реплике резервного копирования.  
   
 8.  **Проверьте конфигурацию расширенных событий по умолчанию:**  Проверьте конфигурацию расширенных событий, выполнив следующую инструкцию Transact-SQL в реплике, которая [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] использует для планирования резервного копирования. Обычно это параметр предпочтительной реплики для группы доступности, к которой принадлежит база данных.  
   
-    ```  
-    SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
+    ```sql  
+    SELECT * FROM smart_admin.fn_get_current_xevent_settings(); 
     ```  
   
      Обратите внимание, что события каналов Admin, Operational и Analytical включены по умолчанию и их нельзя отключить. Этого должно быть достаточно для наблюдения за событиями, требующими ручного вмешательства.  Можно включить события отладки, но эти каналы содержат информационные и отладочные события, которые [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] использует для обнаружения и устранения проблем. Дополнительные сведения см. [в статье мониторинг SQL Server управляемого резервного копирования в Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -132,11 +130,10 @@ ms.locfileid: "84929095"
   
     3.  **Включите уведомления по электронной почте для получения ошибок и предупреждений, связанных с резервными копиями**. В окне запроса выполните следующие инструкции Transact-SQL:  
   
-        ```  
+        ```sql  
         EXEC msdb.smart_admin.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email>'  
-  
         ```  
   
          Дополнительные сведения и полный пример скрипта см. в статье [мониторинг SQL Server управляемого резервного копирования в Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
@@ -145,7 +142,7 @@ ms.locfileid: "84929095"
   
 11. **Мониторинг состояния работоспособности**.  Можно вести мониторинг с помощью настроенных ранее уведомлений по электронной почте либо активно просматривать события в журнале. Ниже приведены примеры инструкций Transact-SQL, которые используются для просмотра событий.  
   
-    ```  
+    ```sql  
     --  view all admin events  
     Use msdb;  
     Go  
@@ -166,18 +163,16 @@ ms.locfileid: "84929095"
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
-    ```  
+    ```sql  
     -- to enable debug events  
     Use msdb;  
     Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
-    ```  
+    ```sql  
     --  View all events in the current week  
     Use msdb;  
     Go  
@@ -187,7 +182,6 @@ ms.locfileid: "84929095"
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
     ```  
   
  Шаги, описанные в этом разделе, специально предназначены для первой настройки [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] в базе данных. Существующие конфигурации можно изменить с помощью той же системной хранимой процедуры **smart_admin. sp_set_db_backup** и укажите новые значения. Дополнительные сведения см. [в разделе SQL Server управляемое резервное копирование в Azure — параметры хранения и хранилища](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  

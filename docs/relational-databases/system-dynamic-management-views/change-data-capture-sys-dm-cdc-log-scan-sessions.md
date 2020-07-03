@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd6f2d08b44a8e3a3b99dcd3fdc8484e2d0f5b04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9d70c211c388fca8e0ab26ba69083378924e5bdc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720360"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894731"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Система отслеживания измененных данных — sys. dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку для каждого сеанса просмотра журнала в текущей базе данных. Последняя строка соответствует текущему сеансу. Данное представление можно использовать, чтобы получить сведения о состоянии текущего сеанса просмотра журнала либо статистические сведения обо всех сеансах с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
@@ -55,7 +55,7 @@ ms.locfileid: "85720360"
 |**empty_scan_count**|**int**|Количество последовательных сеансов, не содержащих транзакций системы отслеживания измененных данных.|  
 |**failed_sessions_count**|**int**|Число сеансов, завершившихся неудачно.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Значения в этом динамическом административном представлении сбрасываются при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Разрешения  

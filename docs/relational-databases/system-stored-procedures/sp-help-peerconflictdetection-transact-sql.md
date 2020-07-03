@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 63325c7b3ba43ae4b9f76224121010a3ebfb6a7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bf806900b25b69d98cc1abaab4bd49db444e5e9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634296"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891709"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о настройках обнаружения конфликта для публикации, участвующей в топологии одноранговой репликации транзакций.  
   
@@ -56,7 +56,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_help_peerconflictdetection применяется в одноранговой репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

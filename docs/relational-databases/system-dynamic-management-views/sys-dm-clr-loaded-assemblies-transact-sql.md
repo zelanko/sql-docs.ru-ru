@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d9c45fa084aa6e7231ebb62a01d0192dc1e2c200
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb2a7ffc194741e546e10261711af3f78b697a77
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738742"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894623"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает по строке для каждой из управляемых пользовательских сборок, загруженных в адресное пространство сервера. Используйте это представление для понимания и устранения неполадок в управляемых объектах базы данных интеграции со средой CLR, которые выполняются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -42,7 +42,7 @@ ms.locfileid: "85738742"
 ## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Представление **dm_clr_loaded_assemblies. appdomain_address** имеет связь "многие к одному" с **dm_clr_appdomains. appdomain_address**. Представление **dm_clr_loaded_assemblies. assembly_id** имеет связь «один ко многим» с **sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Примеры  

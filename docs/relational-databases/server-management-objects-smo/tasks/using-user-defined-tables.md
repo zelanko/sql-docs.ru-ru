@@ -13,15 +13,15 @@ ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 252741c7997909b4f48fe5be0180277738ad5919
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911219"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894074"
 ---
 # <a name="using-user-defined-tables"></a>Использование определяемых пользователем таблиц
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   В определяемых пользователем таблицах представлены табличные данные. Они используются в качестве параметров при передаче табличных данных в хранимые процедуры или определяемые пользователем функции. Определяемые пользователем таблицы нельзя использовать для представления столбцов в таблице базы данных.  
   

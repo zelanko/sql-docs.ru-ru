@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7313e3784c5af9922fb5301b339087510a98e91
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 560ab640738ef89d22917bf03e8d6553029eb646
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773828"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891794"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об этапах задания, используемых службой агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для автоматизации выполнения.  
   
@@ -86,7 +86,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**last_run_time**|**int**|Время начала последнего выполнения этапа.|  
 |**proxy_id**|**int**|Учетная запись-посредник для шага задания.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_help_jobstep** находится в базе данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 90bd083c621bb99677c70aaceaab4038b9c15d9e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5fa83e2f49d97c6318944251f68da18f10646c04
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724633"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893220"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит по одной строке для каждого Database Mail сообщения с состоянием **сбоя** . С помощью этого представления можно определить, какие сообщения не удалось успешно отправить.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "85724633"
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Используйте представление **sysmail_faileditems** , чтобы узнать, какие сообщения не были отправлены Database Mail. При диагностике проблем, связанных с компонентом Database Mail, это представление может помочь определить причину проблемы, поскольку содержит атрибуты сообщений, которые не удалось отправить. Чтобы просмотреть причину сбоя, ознакомьтесь с записью для сообщения Failed в [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) View.  
   
 ## <a name="permissions"></a>Разрешения  

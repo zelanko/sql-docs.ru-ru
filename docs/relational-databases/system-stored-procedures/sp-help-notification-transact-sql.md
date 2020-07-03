@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3fe885be9072f24c18e6115efcf511faea2d8908
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b9fad9d93a1c0d4781f792fedfe3fe7649e17c98
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85634371"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891735"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выводит список предупреждений для заданного оператора или список операторов для заданного предупреждения.  
   
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Возвращаемые сведения о *object_type*. в большинстве случаев *ENUM_TYPE* фактически. *enum_type*имеет **тип char (10)**, не имеет значения по умолчанию и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |ACTUAL|Выводит только *object_types* , связанные с *именем*.|  
 |ALL|Список всех*object_types* , включая те, которые не связаны с *именем*.|  
@@ -58,7 +58,7 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Числовое значение, определяющее возвращаемые столбцы метода уведомления. *notification_method* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|Электронная почта. возвращает только столбец **use_email** .|  
 |**2**|Пейджер: возвращает только столбец **use_pager** .|  
@@ -97,7 +97,7 @@ sp_help_notification
 |**has_pager**|**int**|У оператора есть адрес пейджера.<br /><br /> **1** = да<br /><br /> **0** = нет|  
 |**has_netsend**|**int**|Оператор имеет настроенное уведомление net send.<br /><br /> **1** = да<br /><br /> **0** = нет|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Эта хранимая процедура должна запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

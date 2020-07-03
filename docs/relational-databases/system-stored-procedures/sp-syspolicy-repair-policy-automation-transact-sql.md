@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0b92dbc4840db8f264606a020ea247a9b11d9cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31a3ee54a759b0794937a8102d61460ffa04857b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892676"
 ---
 # <a name="sp_syspolicy_repair_policy_automation-transact-sql"></a>sp_syspolicy_repair_policy_automation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Исправляет автоматизацию политик в управлении на основе политик. Например, с помощью этой хранимой процедуры можно исправлять триггеры и задания, сопоставленные с политиками, которые настраиваются для использования режимов оценки «По расписанию» и «При изменении».  
   
@@ -44,7 +44,7 @@ sp_syspolicy_repair_policy_automation
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_syspolicy_repair_policy_automation должна выполняться в контексте системной базы данных msdb.  
   
 ## <a name="permissions"></a>Разрешения  

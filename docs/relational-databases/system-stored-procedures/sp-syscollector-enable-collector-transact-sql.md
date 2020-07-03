@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 53ff2b0d-b7da-4e3d-8f3d-35e857bc3720
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b44e17d9e8625fbeb6ecd0e25b767e396c4c92d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 49ba4abf13978e16dc4a868843d23348dd38e64f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725530"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892897"
 ---
 # <a name="sp_syscollector_enable_collector-transact-sql"></a>sp_syscollector_enable_collector (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Включает сборщик данных. Поскольку имеется только один сборщик данных на сервер, параметры не требуются.  
   
@@ -40,12 +40,12 @@ dbo.sp_syscollector_enable_collector
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Отсутствуют  
+ None  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Значением по умолчанию является сборщик данных на сервере.  
   
 ## <a name="permissions"></a>Разрешения  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c83d70ad2bb534d9d17104316aecd40a4b21fe05
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635007"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894696"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Уведомления о запросах — sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об активных подписках на уведомления о запросах на сервере. Можно использовать данное представление для проверки активных подписок на сервере или в указанной базе данных, или проверки указанного участника [системы безопасности] на уровне сервера.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85635007"
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|«многие к одному»|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|«многие к одному»|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Код состояния 0 обозначает неопределенное состояние.  
   
  Следующие коды состояний обозначают, что подписка сработала из-за изменения.  

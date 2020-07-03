@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31b4811542fa291fd1ff61368e6c5ac3ce9e714a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b83ce376482210c99179ea501f2c1e4c07fb0bf6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728127"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891661"
 ---
 # <a name="sp_helplogreader_agent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает свойства задания агента чтения журнала для базы данных публикации. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -55,7 +55,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helplogreader_agent** используется в репликации транзакций.  
   
 ## <a name="permissions"></a>Разрешения  

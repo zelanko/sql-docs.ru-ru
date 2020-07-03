@@ -9,15 +9,15 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 370316f6f2c77a270117aca3f59d42c11914175c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75238652"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894971"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Условия лицензии для общих управляющих объектов (SMO) Microsoft SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
 ## <a name="microsoft-software-license-terms"></a>УСЛОВИЯ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ НА ИСПОЛЬЗОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ КОРПОРАЦИИ МАЙКРОСОФТ
 **ОБЩИЕ УПРАВЛЯЮЩИЕ ОБЪЕКТЫ MICROSOFT SQL SERVER 2017**
@@ -77,7 +77,7 @@ ms.locfileid: "75238652"
 
 **6.    ДОКУМЕНТАЦИЯ.** Любой пользователь, имеющий доступ к вашему компьютеру или внутренней сети, может копировать и использовать документацию в целях получения справки.
 
-**7.    ЭКСПОРТНЫЕ ОГРАНИЧЕНИЯ.** На это программное обеспечение распространяются действующие в США законы и постановления об экспорте. Вы обязаны соблюдать все национальные и международные законы и нормативные акты, касающиеся экспорта, которые распространяются на это программное обеспечение. Эти законы предусматривают ограничения, касающиеся мест назначения, конечных пользователей и конечного применения. Дополнительные сведения см. в [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)разделе.
+**7.    ЭКСПОРТНЫЕ ОГРАНИЧЕНИЯ.** На это программное обеспечение распространяются действующие в США законы и постановления об экспорте. Вы обязаны соблюдать все национальные и международные законы и нормативные акты, касающиеся экспорта, которые распространяются на это программное обеспечение. Эти законы предусматривают ограничения, касающиеся мест назначения, конечных пользователей и конечного применения. Дополнительные сведения см. в разделе [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting) .
 
 **8.    ТЕХНИЧЕСКАЯ ПОДДЕРЖКА.** Because this software is "as is," we may not provide support services for it.
 

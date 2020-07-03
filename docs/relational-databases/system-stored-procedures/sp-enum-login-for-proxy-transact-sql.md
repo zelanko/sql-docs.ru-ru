@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: a26f9ab251bbea3de121a26035d397d17cee5f24
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd65937894956ff008a08ea6f15222d6d020ba2e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771141"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85891954"
 ---
 # <a name="sp_enum_login_for_proxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает связи между учетными записями-посредниками и субъектами безопасности.  
   
@@ -61,7 +61,7 @@ sp_enum_login_for_proxy
 |**flags**|**int**|Тип субъекта безопасности.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа<br /><br /> **1** = предопределенная системная роль<br /><br /> **2** = роль базы данных в **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если параметры не указаны, **sp_enum_login_for_proxy** выводит сведения обо всех именах входа в экземпляре для каждого прокси-сервера.  
   
  При указании идентификатора прокси-сервера или имени прокси-сервера **sp_enum_login_for_proxy** список имен входа, имеющих доступ к учетной записи-посреднику. Если указано имя входа, **sp_enum_login_for_proxy** выводит список учетных записей-посредников, к которым у имени входа есть доступ.  

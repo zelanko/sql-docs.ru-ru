@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04a98460660903788d8208d5662e0b9a31518316
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7f52bf995a4d8f24d2b987ad08602cf9184cff8f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893542"
 ---
 # <a name="sp_helpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выводит сведения о группах Windows, имеющих учетные записи в текущей базе данных.  
   
@@ -53,7 +53,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**ТРАНСЛЯЦИЮ**|**varbinary(85)**|Идентификатор безопасности (SID) **нтграупнаме**.|  
 |**хасдбакцесс**|**int**|1 = группа Windows имеет разрешение на доступ к базе данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы просмотреть список [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ролей в текущей базе данных, используйте **sp_helprole**.  
   
 ## <a name="permissions"></a>Разрешения  
