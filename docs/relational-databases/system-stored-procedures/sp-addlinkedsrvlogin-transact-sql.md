@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ee38ac3c19c9f5d5b36f896c1018a16e98e37cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 69c362a1b68a1c1bdc9fc8a90f1d2db3950fae81
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758000"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877588"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает или обновляет сопоставления имен входа в локальном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с учетной записью на удаленном сервере.  
   
@@ -62,7 +62,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Когда пользователь входит на локальный сервер и выполняет распределенный запрос, который обращается к таблице на связанном сервере, то для открытия таблицы локальный сервер должен войти на связанный сервер под именем данного пользователя. Учетные данные входа, с помощью которых локальный сервер будет входить на связанный сервер, задаются с помощью хранимой процедуры sp_addlinkedsrvlogin.  
   
 > [!NOTE]  

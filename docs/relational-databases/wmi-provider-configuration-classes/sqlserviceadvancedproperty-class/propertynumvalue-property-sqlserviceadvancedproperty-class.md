@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bbae479dc9f3f7f4a105496fb4dfad728932e55e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ab13997991e9d33ad4b0cdca5338766cc83f9a85
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85749999"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880533"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Свойство PropertyNumValue (класс SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает числовое значение дополнительного свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -38,7 +38,7 @@ object.PropertyNumValue [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, определяющее числовое значение дополнительного свойства.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

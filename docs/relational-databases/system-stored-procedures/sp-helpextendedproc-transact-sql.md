@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7866b9d64a6064cac23382ea3bb33f4fc355cd80
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bf7e95f30eb4a6abdc61b47b5f64b20f0ed4b27a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733208"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881585"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Сообщает сведения о расширенных хранимых процедурах, определенных в настоящий момент, и имя динамически подключаемой библиотеки (DLL), которой принадлежит эта процедура (функция).  
   
@@ -54,7 +54,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |**name**|**sysname**|Имя расширенной хранимой процедуры.|  
 |**компоновки**|**nvarchar(255)**|Имя DLL.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если указана *процедура* , **sp_helpextendedproc** отчеты по указанной расширенной хранимой процедуре. Если этот параметр не указан, **sp_helpextendedproc** возвращает все имена расширенных хранимых процедур и имена библиотек DLL, к которым принадлежит каждая расширенная хранимая процедура.  
   
 ## <a name="permissions"></a>Разрешения  

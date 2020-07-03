@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9ffdbc39-93f5-48fb-859a-86a3ad545827
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 963a67031276def579d6a5b9c74d3e0239363ae0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0bdbdd4bde2436eb11962790e65bb65daa938500
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722771"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880765"
 ---
 # <a name="removecertificate-method-serversettings-class"></a>Метод RemoveCertificate (класс ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Удаляет текущий сертификат безопасности из экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.RemoveCertificate()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение u**Int32** , равное 0, если служба была успешно изменена, 1, если запрос не поддерживается, и любое другое число для указания ошибки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

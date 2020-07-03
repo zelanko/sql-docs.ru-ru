@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fcf55efd5b50f73d15e0fc488cfe4298b99d9eb7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7492c9cd086d63a00909fc64bde87c39aaf2c096
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646485"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879395"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Настраивает уведомление для предупреждения.  
   
@@ -46,7 +46,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 `[ @notification_method = ] notification_method`Метод, по которому оператор получает уведомления. *notification_method* имеет тип **tinyint**и не имеет значения по умолчанию. *notification_method* может быть одним или несколькими из этих значений в сочетании с логическим оператором **or** .  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**1**|электронная почта;|  
 |**2**|Пейджер|  
@@ -86,7 +86,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>Дополнительно  
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e507eede2ba7abb036eb33f74a0d1a1ab1ba2dce
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4c1f7670aa0e90f848c3f66e65df104181541dee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722783"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880734"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Метод SetDefaults (класс ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Задает все значения по умолчанию для экземпляра [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с параметром для перезаписи существующих данных.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,7 +48,7 @@ object.SetDefaults(OverwriteAll)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение u**Int32** , равное 0, если служба была успешно изменена, 1, если запрос не поддерживается, и любое другое число для указания ошибки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

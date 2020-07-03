@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d17675f8443db2a726ceb72237d184d665f9d7e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790362"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881536"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Используется во время устранения неполадок, чтобы указать последнюю доставленную транзакцию с помощью регистрационного номера транзакции в журнале (LSN), что позволяет агент распространения начать доставку в следующую транзакцию. После перезагрузки агент распространения возвращает транзакции, превышающие этот предел (LSN) из кэша базы данных распространителя (msrepl_commands). Эта хранимая процедура выполняется на подписчике в базе данных подписки. Не поддерживается для подписчиков, отличных от подписчика SQL Server.  
   
@@ -62,7 +62,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_setsubscriptionxactseqno** используется в репликации транзакций.  
   
  **sp_setsubscriptionxactseqno** нельзя использовать в одноранговой топологии репликации транзакций.  

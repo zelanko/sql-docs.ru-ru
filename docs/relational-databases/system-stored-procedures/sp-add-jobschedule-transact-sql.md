@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 7c7f644b94c405fa4072ecd7d7c448f6ea865404
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151953"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879969"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает расписание для задания агента SQL Server.  
   
@@ -73,7 +73,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**1**|Однократно|  
 |**4**|Ежедневно|  
 |**8**|Еженедельно|  
-|**глубин**|Ежемесячно|  
+|**16**|Ежемесячная|  
 |**32**|Ежемесячно относительно *frequency_interval.*|  
 |**64**|Выполняется при запуске службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Запускается при простое компьютера.|  
@@ -110,7 +110,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
-|**глубин**|Последний|  
+|**16**|Последний|  
   
  *frequency_relative_interval* указывает на вхождение интервала. Например, если *frequency_relative_interval* имеет значение **2**, *frequency_type* имеет значение **32**, а *frequency_interval* имеет значение **3**, запланированное задание будет выполняться во второй вторник каждого месяца.  
   

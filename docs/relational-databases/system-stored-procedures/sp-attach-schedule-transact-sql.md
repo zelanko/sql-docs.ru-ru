@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb3928693c3d7daa07db60d813a76999f620dd7e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6bc01db6ae019694cbff4082c394fd8c736b9a5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874363"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Назначает расписание выполнения задания.  
   
@@ -56,7 +56,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  Необходимо указать либо *schedule_id* , либо *schedule_name* , но нельзя указать оба значения.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Расписание и задание должны иметь одного и того же владельца.  
   
  Расписание может быть назначено более чем одному заданию. Задание может выполняться более чем в одном расписании.  

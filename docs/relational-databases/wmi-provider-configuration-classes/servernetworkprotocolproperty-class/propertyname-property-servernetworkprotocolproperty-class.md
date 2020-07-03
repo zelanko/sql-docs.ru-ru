@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0175ce3c-e07e-4710-a2f9-a26dface6eb3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2580f637f880af12cdc1dc3eae43d9b2f566de47
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 447858175d90d9e9f36129c0c9a40aa588b94748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757558"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880805"
 ---
 # <a name="propertyname-property-servernetworkprotocolproperty-class"></a>Свойство PropertyName (класс ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает имя текущего свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.PropertyName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, указывающее имя текущего свойства.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

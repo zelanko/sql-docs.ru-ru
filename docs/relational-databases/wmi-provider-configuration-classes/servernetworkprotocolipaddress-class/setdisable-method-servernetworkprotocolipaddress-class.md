@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a7cc8cc-9fb8-4bf5-b483-2150d633ee10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3014658abcfe20056353643e0ddd9e82afec4fb8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 34d8fdd62efe73117df61101cc70c587d44d9eec
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768195"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880861"
 ---
 # <a name="setdisable-method-servernetworkprotocolipaddress-class"></a>Метод SetDisable (класс ServerNetworkProtocolIPAddress)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Отключает IP-адрес.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.SetDisable()
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение uint32, равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c12d6650023fcb3473a834d8145437d8a013df5e
-ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
+ms.openlocfilehash: 88dafeff6621a181b3720917235705d4e0b12e2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84818137"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85878292"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Создает расписание, которое может использоваться любым количеством заданий.  
   
@@ -65,7 +65,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**1**|Однократно|  
 |**4**|Ежедневно|  
 |**8**|Еженедельно|  
-|**16**|Ежемесячно|  
+|**16**|Ежемесячная|  
 |**32**|Ежемесячно относительно *freq_interval*|  
 |**64**|Запускать при запуске службы агента SQL|  
 |**128**|Запуск при простое компьютера (не поддерживается в [управляемый экземпляр базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
@@ -97,8 +97,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |Значение|Описание (единица измерения)|  
 |-----------|--------------------------|  
-|**1**|First|  
-|**2**|Second|  
+|**1**|Первый|  
+|**2**|Секунда|  
 |**4**|Третья|  
 |**8**|Четвертая|  
 |**16**|Последний|  
@@ -190,7 +190,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и присоединение расписаний к заданиям](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [Планирование задания](../../ssms/agent/schedule-a-job.md)   
  [Создание расписания](../../ssms/agent/create-a-schedule.md)   

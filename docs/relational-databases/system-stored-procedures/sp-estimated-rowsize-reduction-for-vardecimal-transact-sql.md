@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4c25e061e8eb303f936cc129efc6e630e7be5933
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 584723414da47dbb0696ae991860d8bed50a3a26
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772151"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881716"
 ---
 # <a name="sp_estimated_rowsize_reduction_for_vardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Вычисляет уменьшение среднего размера строк, если в таблице включен формат хранения vardecimal. С помощью этого числа можно вычислить общее уменьшение размера таблицы. Поскольку для вычисления среднего уменьшения размера строки используется статистическая выборка, это значение следует рассматривать только как приблизительное. В редких случаях размер строки может увеличиваться после включения формата хранения vardecimal.  
   
@@ -60,7 +60,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**десятичное число (12, 2)**|Представляет средний размер строки при использовании формата хранения vardecimal.|  
 |**row_count**|**int**|Количество строк в таблице.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Используйте **sp_estimated_rowsize_reduction_for_vardecimal** , чтобы оценить экономию результата при включении таблицы для формата хранения vardecimal. Например, если средний размер строки можно уменьшить на 40%, то размер самой таблицы также можно потенциально уменьшить на 40%. Наличие экономии места зависит от коэффициента заполнения и размера строки. Например, если длина строки, составляющая 8 000 байт, уменьшается на 40%, то на странице данных все равно помещается только одна строка, что в результате не дает никакой экономии.  
   
  Если результаты **sp_estimated_rowsize_reduction_for_vardecimal** указывают, что таблица будет расти, это означает, что многие строки в таблице будут использовать почти всю точность десятичных типов данных, а добавление небольших издержек, необходимых для формата хранения vardecimal, больше, чем экономия из формата хранения vardecimal. В этом редком случае формат хранения vardecimal включать не следует.  

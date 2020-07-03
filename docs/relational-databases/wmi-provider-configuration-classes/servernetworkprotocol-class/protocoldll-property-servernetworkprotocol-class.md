@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae5beb9b73657d5f895d9361dfe19f22db47121
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a1bacdbc44963552bca0ded50290cbba3386c82e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775737"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880887"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>Свойство ProtocolDLL (класс ServerNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает имя DLL-файла, необходимого сетевому протоколу сервера.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.ProtocolDLL [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее DLL-файл протокола, необходимый для сетевого протокола сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

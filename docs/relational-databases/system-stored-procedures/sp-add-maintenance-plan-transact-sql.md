@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 40eaf88f2bd0824d133571e53fd4d9b9831454b9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a37600763a02b4ed2fa49cddac0b514c80618f22
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646526"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85879695"
 ---
 # <a name="sp_add_maintenance_plan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Добавляет план обслуживания и возвращает его идентификатор.  
   
@@ -53,7 +53,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_add_maintenance_plan** необходимо запустить из базы данных **msdb** и создать новый, но пустой план обслуживания. Чтобы добавить одну или несколько баз данных и связать их с заданием или заданиями, выполните **sp_add_maintenance_plan_db** и **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Разрешения  

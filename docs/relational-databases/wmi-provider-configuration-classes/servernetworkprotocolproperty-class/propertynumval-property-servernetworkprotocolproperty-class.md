@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7955583f556507c32a9ab460a312c63c31470b64
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6836060c0e928dc82662437c616d89801c2fd645
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85755375"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880811"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>Свойство PropertyNumVal (класс ServerNetworkProtocolProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает числовое значение указанного свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.PropertyNumVal [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Объект **uint32** , указывающий числовое значение упоминаемого свойства.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

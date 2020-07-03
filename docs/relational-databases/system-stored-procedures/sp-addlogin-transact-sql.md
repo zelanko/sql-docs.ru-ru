@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 06629b059afffe3baa0a34caec1337d7bc3f2517
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 477393f34743ba0643384762164697b845cadde4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757991"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85877380"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает новое имя входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], позволяющее пользователю подключаться к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с применением проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -72,7 +72,7 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt =] "*encryption_option*"  
  Этот аргумент определяет, передается ли пароль в виде открытого текста или в виде его хэша. Шифрование при этом не выполняется. Слово «шифрование» используется в этом контексте для обратной совместимости. Если в процедуру передан открытый пароль, он хэшируется. Хэш сохраняется. *encryption_option* имеет тип **varchar (20)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |NULL|Пароль передан как открытый текст. Это значение по умолчанию.|  
 |**skip_encryption**|Хэширование пароля уже выполнено. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен сохранить его значение без повторного хэширования.|  
@@ -81,7 +81,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать от 1 до 128 символов, включая буквы, символы и цифры. Имена входа не могут содержать обратную косую черту ( \\ ); быть зарезервированным именем для входа, например SA или public или уже существует; либо иметь значение null или быть пустой строкой ( `''` ).  
   
  Если предоставлено имя базы данных по умолчанию, к ней можно подключиться, не выполняя инструкцию USE. Однако нельзя использовать базу данных по умолчанию, пока владелец базы данных не получит доступ к этой базе данных (с помощью [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) или [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) или [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  

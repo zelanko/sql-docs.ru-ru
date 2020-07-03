@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3bc04bf5c5b5501b4ac0ebbe55872553197c666e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2db39366cba8aba94088a2d8e3590bd9e4324df7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757909"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881662"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает фильтры таблиц внешнего ключа при репликации указанной таблицы. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -42,7 +42,7 @@ sp_generatefilters [ @publication =] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_generatefilters** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

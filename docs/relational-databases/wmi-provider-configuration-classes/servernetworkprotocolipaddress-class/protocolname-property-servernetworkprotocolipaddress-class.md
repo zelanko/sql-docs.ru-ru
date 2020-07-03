@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 74a52449-e08d-40f9-9e79-7114137e43cf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d40cd1b29c2b2f1b8ad5ce08a4e229fec73d32d9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 993a955cd4ba30ceaf5c9b73d07eba343b534282
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85768224"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880849"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Свойство ProtocolName (класс ServerNetworkProtocolIPAddress)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает имя сетевого протокола сервера, ссылающееся на IP-адрес.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее имя сетевого протокола сервера.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

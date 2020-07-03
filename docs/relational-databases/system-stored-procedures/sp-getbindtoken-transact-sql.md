@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 14fb45e2d5b7acad7cd0925ec32a9f56f10ddf55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 31e95bf970f4050315ed1b74b7bb87d3ed3788fd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730065"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881641"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает уникальный идентификатор для транзакции. Этот уникальный идентификатор является строкой, используемой для привязки сеансов при помощи процедуры sp_bindsession.  
   
@@ -46,7 +46,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  Токен, используемый для связывания сеансов. *RETURN_VALUE* имеет тип **varchar (255)** и не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  

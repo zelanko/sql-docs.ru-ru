@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 70af60ce6ae633adf339f81216b461e052f6f8e8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5ece4c477961e4e3add98d85c8d62aea3f74ea2e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722757"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880741"
 ---
 # <a name="setcurrentcertificate-method-serversettings-class"></a>Метод SetCurrentCertificate (класс ServerSettings)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Задает текущий сертификат безопасности.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -48,7 +48,7 @@ object.SetCurrentCertificate(SHA)
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Значение **uint32** , равное 0, если служба изменена успешно, и 1, если запрос не поддерживается. Любое другое значение указывает на ошибку.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Конфигурирование сетевых протоколов сервера и сетевых библиотек](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

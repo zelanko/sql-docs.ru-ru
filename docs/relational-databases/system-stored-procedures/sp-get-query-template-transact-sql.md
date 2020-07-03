@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0da844225d9a87cbc0c7b6cf06d1bbea108f2d61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b277a07075f8584cdb6a52dd6c221931b1685b6a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757908"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881647"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает запрос в параметризованной форме. Возвращаемые результаты имитируют параметризованную форму запроса, получаемую в результате принудительной параметризации. sp_get_query_template используется в основном при создании руководств планов шаблонов.  
   
@@ -51,7 +51,7 @@ sp_get_query_template
  @parameters  
  Является выходным параметром типа **nvarchar (max)**, который указан как указанный, для получения строкового литерала имен параметров и типов данных, которые были параметризованы в @templatetext .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_get_query_template возвращает ошибку, если:  
   
 -   Он не выполняет параметризацию значений констант литерала в *query_text*.  

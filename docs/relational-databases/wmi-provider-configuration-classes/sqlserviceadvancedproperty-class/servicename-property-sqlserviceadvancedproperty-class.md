@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6d857b8d-77ed-4014-b1b0-e0e3d5e943c8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1de77feeab3934700f82d3bf458fa9a27fbd1c55
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 59a22566ab25d667652ae47b8e27dc170893a55e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758521"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880488"
 ---
 # <a name="servicename-property-sqlserviceadvancedproperty-class"></a>Свойство ServiceName (класс SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Возвращает имя управляемой службы, связанной с дополнительным свойством.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -42,7 +42,7 @@ object.ServiceName [= value]
 ## <a name="property-valuereturn-value"></a>Значение свойства/возвращаемое значение  
  Строковое значение, определяющее имя службы, связанной с дополнительным свойством.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="see-also"></a>См. также  
  [Запуск и остановка служб](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
