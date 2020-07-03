@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: e5270557-aca3-44ab-8715-daccd498b88d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 21aeb49750c0a451166da8147b424589b3902856
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f512f5e262393fa8cfec433c801a36838fd1ba88
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734438"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898507"
 ---
 # <a name="change-data-capture-functions-transact-sql"></a>Функции системы отслеживания измененных данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Система отслеживания измененных данных записывает действия по вставке, обновлению и удалению, применяемые к таблицам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сохраняя подробности операций изменения в легко обрабатываемом реляционном формате. Данные столбца, зеркально копирующего структуру столбцов отслеживаемой исходной таблицы, регистрируются для измененных строк вместе с метаданными, необходимыми для применения изменений к целевой среде. Чтобы получить данные об изменениях, используются следующие функции.  
   

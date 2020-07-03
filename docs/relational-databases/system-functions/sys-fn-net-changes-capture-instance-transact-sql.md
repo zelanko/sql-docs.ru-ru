@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: add3f81793b2dc21c08ca601bb1c48cc7d4588be
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f000c8d2dc4f0f2adc95814ba9ef687602403dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783079"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898322"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Оболочки для функций запросов **net changes** . Скрипты, необходимые для создания этих функций, создаются хранимой процедурой sys.sp_cdc_generate_wrapper_function.  
   
@@ -99,7 +99,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Операция будет зависеть от значения аргумента, *row_filter_option* , переданного в следующем вызове:<br /><br /> *row_filter_option* = "все", "все с маской"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> 'UN' — операция обновления<br /><br /> *row_filter_option* = "все с слиянием"<br /><br /> «D» — операция удаления<br /><br /> 'M' — операция вставки либо обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением _uflag к имени столбца. Флаг принимает значение, не равное NULL, только если *row_filter_option* **= "все с маской"** и \_ _CDC_OPERATION **= "UN"**. Если соответствующий столбец изменялся в окне запроса, флагу присваивается значение 1. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Функция fn_net_changes_<capture_instance> служит оболочкой для функции запроса CDC. fn_cdc_get_net_changes_<capture_instance>. Для формирования скрипта, создающего оболочку, используется хранимая процедура sys.sp_cdc_generate_wrapper.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  

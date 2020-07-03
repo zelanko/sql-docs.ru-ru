@@ -15,15 +15,15 @@ ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c7a9824d68f2d1b912f19b43330eae1d3bc2c0a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74094387"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897779"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Планирование автоматических административных задач в агенте SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   В SMO агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent представлен следующими объектами.  
   
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Экземпляр | Компарисионоп | компвалуе**  
   
- Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки **operator** , так как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] оператор является ключевым.  
+ Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевым.  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName | CounterName | Экземпляр | Компарисионоп | компвалуе**  
   
- Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки **operator** , так как [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] оператор является ключевым.  
+ Для предупреждающих уведомлений требуется оператор. Для <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> типа требуется квадратные скобки, так как **оператор** является [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] ключевым.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,7 +266,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [агент SQL Server](../../../ssms/agent/sql-server-agent.md)   
  [Реализация заданий](../../../ssms/agent/implement-jobs.md)  
   

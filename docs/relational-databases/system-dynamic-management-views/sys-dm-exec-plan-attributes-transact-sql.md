@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7ffabc2f8bb48b006ec1224a3ae81ac49d6c21f0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9b616e6186e9d5e19f353df1053d479e0d0afdd6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898894"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает по одной строке для каждого атрибута плана, ассоциированного с планом, заданным посредством дескриптора плана. Функция с табличным значением может использоваться для получения подробных сведений об определенном плане, например значения ключа кэша или количество одновременных текущих выполнений плана.  
   
@@ -83,7 +83,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="set-options"></a>Параметры SET  
  Копии одного и того же скомпилированного плана могут отличаться только значением столбца **set_options** . Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
@@ -91,7 +91,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-set-options"></a>Оценка параметров SET  
  Чтобы перевести значение, возвращаемое в **set_options** , в параметры, с помощью которых был скомпилирован план, вычтите значения из **set_options** значения, начиная с максимально возможного значения, пока не будет достигнуто значение 0. Каждое вычитаемое значение соответствует одному параметру, который использовался в плане запроса. Например, если значение в **set_options** равно 251, то параметры, с которыми был скомпилирован план, — это ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), параллельный план (2) и ANSI_PADDING (1).  
   
-|Параметр|Применение|  
+|Параметр|Значение|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Parallel Plan|2|  
@@ -119,7 +119,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="evaluating-cursor-options"></a>Оценка параметров курсора  
  Чтобы перевести значение, возвращаемое в **required_cursor_options** и **acceptable_cursor_options** в параметры, с помощью которых был скомпилирован план, вычтите значения из значения столбца, начиная с максимально возможного значения, пока не будет достигнуто значение 0. Каждое вычитаемое значение соответствует одному курсору, который использовался в плане запроса.  
   
-|Параметр|Применение|  
+|Параметр|Значение|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  

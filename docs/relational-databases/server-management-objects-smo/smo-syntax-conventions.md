@@ -16,19 +16,19 @@ ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5047719be180ff311f606f43c1f91fdb5fa6824e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148566"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897167"
 ---
 # <a name="smo-syntax-conventions"></a>Синтаксические обозначения в SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Условные обозначения управляющих объектов (SMO) основаны на тех, [!INCLUDE[msCoName](../../includes/msconame-md.md)] которые используются в справочных материалах по Visual Studio .NET.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Условные обозначения управляющих объектов (SMO) основаны на тех, которые используются в [!INCLUDE[msCoName](../../includes/msconame-md.md)] справочных материалах по Visual Studio .NET.  
   
-|Обозначение|Используется для|  
+|Обозначение|Назначение|  
 |----------------|--------------|  
 |Прописные буквы|Инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], имена макросов и термины, используемые на уровне операционной системы; имена файлов в тексте.|  
 |`monospace`|Образцы командных строк и программного кода.|  

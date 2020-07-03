@@ -15,17 +15,17 @@ ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fdf4d998eb87cc213f7ce6b3068c4bc142790e5a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148717"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899062"
 ---
 # <a name="setting-properties---smo"></a>Установка свойств в SMO
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Свойства — это значения, которые хранят описательные сведения об объекте. Например, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] параметры конфигурации представлены свойствами <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> объекта. К свойствам можно получать как прямой, так и косвенный доступ при помощи коллекции свойств. Для прямого доступа к свойствам используется следующий синтаксис:  
+  Свойства — это значения, которые хранят описательные сведения об объекте. Например, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Параметры конфигурации представлены <xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> свойствами объекта. К свойствам можно получать как прямой, так и косвенный доступ при помощи коллекции свойств. Для прямого доступа к свойствам используется следующий синтаксис:  
   
  `objInstance.PropertyName`  
   
@@ -62,7 +62,7 @@ ms.locfileid: "70148717"
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Возвращение и задание свойства на языке Visual Basic  
- В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта и как <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> задать свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> свойства равным элементу **ExecuteSQL** <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> перечисляемого типа.  
+ В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта и как задать <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> свойства равным элементу **ExecuteSQL** <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> перечисляемого типа.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Возвращение и задание свойства на языке Visual C#  
- В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта и как <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> задать свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> свойства равным элементу **ExecuteSQL** <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> перечисляемого типа.  
+ В этом примере кода показано, как получить <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Information> объекта и как задать <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> свойства равным элементу **ExecuteSQL** <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> перечисляемого типа.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Проход по всем свойствам объекта на языке Visual Basic  
- Этот пример кода просматривает коллекцию **свойств** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и отображает их на экране [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вывода.  
+ Этот пример кода просматривает коллекцию **свойств** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и отображает их на [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] экране вывода.  
   
  В этом примере объект <xref:Microsoft.SqlServer.Management.Smo.Property> заключен в квадратные скобки, поскольку он также является ключевым словом [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Проход по всем свойствам объекта на языке Visual C#  
- Этот пример кода просматривает коллекцию **свойств** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и отображает их на экране [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] вывода.  
+ Этот пример кода просматривает коллекцию **свойств** <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> объекта и отображает их на [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] экране вывода.  
   
 ```csharp  
 {   

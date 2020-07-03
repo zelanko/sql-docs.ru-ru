@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6f3c303697ec3233935ec5c7743dcce0f18bfa01
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 21166512c691f8d50d19816afc7a0247a6c09782
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73727986"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895271"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Задание свойств надстройки Master Data Services для Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Параметры надстройки Master Data Services для Excel определяют, каким образом данные загружаются в MDS из надстройки Excel, а также способ публикации данных из надстройки Excel в службы MDS.  
   

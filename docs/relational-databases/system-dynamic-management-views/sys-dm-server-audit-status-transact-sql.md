@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: acb5726d9309a93e389e22a57d4be54cf03dbe24
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 982ebf62124a392c98ea2357e112cdb8bb56d45b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830430"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898678"
 ---
 # <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Возвращает строку для каждого аудита сервера, отображая текущее состояние аудита. Дополнительные сведения см. в статье [Подсистема аудита SQL Server (ядро СУБД)](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82830430"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Идентификатор аудита. Сопоставляется с полем **audit_id** в представлении каталога **sys. audits** .|  
 |**name**|**sysname**|Имя аудита. То же, что и поле **Name** в представлении каталога **sys. server_audits** .|  
-|**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущено<br /><br /> 1 =<br />        Начато<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = сбой при создании целевого объекта<br /><br /> 4 = Завершение работы|  
+|**status**|**smallint**|Числовое обозначение состояния аудита сервера:<br /><br /> 0 = не запущено<br /><br /> 1 =<br />        Запуск<br /><br /> 2 =<br />      Сбой среды выполнения<br /><br /> 3 = сбой при создании целевого объекта<br /><br /> 4 = Завершение работы|  
 |**status_desc**|**nvarchar(256)**|Строка, которая показывает состояние аудита сервера:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Отметка времени в формате UTC последнего изменения состояния аудита.|  
 |**event_session_address**|**varbinary(8)**|Адрес сеанса расширенных событий, связанного с аудитом. Относится к представлению каталога **sys. dm_xe_sessions. Address** .|  

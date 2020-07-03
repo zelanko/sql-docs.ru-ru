@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bf1406488424febe0ea98a686b91068fe2d07eda
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 58e6166060c5e2099051403361b2eb2c51ad4c18
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725767"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898910"
 ---
 # <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает одну строку для каждого объекта какой-либо внутренней таблицы. Внутренние таблицы создаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически для поддержки различных функций. Например, при создании первичного XML-индекса [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает внутреннюю таблицу для сохранения разобранных данных XML-документа. Внутренние таблицы отображаются в схеме **sys** каждой базы данных и имеют уникальные, созданные системой имена, указывающие на их функции, например **xml_index_nodes_2021582240_32001** или **queue_messages_1977058079**  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85725767"
 ## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Внутренние таблицы размещаются в той же файловой группе, что и родительская сущность. С помощью запроса к каталогу, проиллюстрированного далее в примере Е, можно узнать количество страниц, занимаемых внутренними таблицами под хранение данных «в строке», «вне строки» и данных больших объектов (LOB).  
   
  Для возврата данных об использовании места для внутренних таблиц можно использовать системную процедуру [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . **sp_spaceused** сообщает внутреннее табличное пространство следующими способами:  

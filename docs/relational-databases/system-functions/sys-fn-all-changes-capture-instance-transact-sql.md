@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c40f335e4b40a1c15af6247439ac1f19e88d9d37
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4a412ac614037a79e033636b20c21e2464c427ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730094"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898471"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Оболочки для всех функций запроса **изменений** . Скрипты, необходимые для создания этих функций, создаются хранимой процедурой sys.sp_cdc_generate_wrapper_function.  
   
@@ -91,7 +91,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |__CDC_OPERATION|**nvarchar (2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет изменяться в зависимости от значения аргумента *row_filter_option* , переданного в вызове:<br /><br /> *row_filter_option* = ' ALL '<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = "все обновление Old"<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
 |\<columns from @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \_ _CDC_OPERATION равно "," I ", из" «UO» ". Если значение \_ _CDC_OPERATION "UN", оно устанавливается в значение 1, если обновление вызвало изменение в соответствующем столбце. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Функция fn_all_changes_<capture_instance> служит оболочкой для функции запроса CDC. fn_cdc_get_all_changes_<capture_instance>. Хранимая процедура sys.sp_cdc_generate_wrapper формирует скрипт для создания оболочки.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  
