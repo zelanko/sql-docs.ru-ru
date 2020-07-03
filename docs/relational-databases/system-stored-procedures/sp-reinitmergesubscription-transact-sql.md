@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e8ec5aaabde0fd98cea45ec601f237743f58b7eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fbdcd6435b9fab8e65c39b97a6aaa1ac69a1e9dc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725779"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901408"
 ---
 # <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Помечает подписку слиянием для повторной инициализации при следующем запуске агента слияния. Эта хранимая процедура запущена на издателе в базе данных публикации.  
   
@@ -51,7 +51,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_reinitmergesubscription** используется в репликации слиянием.  
   
  для повторной инициализации подписок на публикацию слиянием можно вызвать **sp_reinitmergesubscription** с издателя. Также рекомендуется перезапустить агент моментальных снимков.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d34f37256e36049b4766a4059068a2e7bd6cfd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e753d9296c873f6092d2ae15f001f8deeec4ad4
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724583"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901524"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает сведения об указанных классах заданий, предупреждений или операторов.  
    
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Аргументы  
 `[ @class = ] 'class'`Класс, для которого запрашиваются сведения. *класс* имеет тип **varchar (8)** и значение по умолчанию **Job**. *класс* может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**ДОЛЖНО**|Выдает сведения о категории заданий.|  
 |**ПОЛУЧАЕТЕ**|Выдает сведения о категории предупреждений.|  
@@ -52,7 +52,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Тип категории, для которой запрашиваются сведения. *Type имеет тип* **varchar (12)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Языковые**|Категория локальных заданий.|  
 |**MULTI -SERVER**|Категория многосерверных заданий.|  
@@ -82,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Тип категории. Один из нескольких **локальных**, **многосерверных**или **нет**|  
 |**name**|**sysname**|Имя категории|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_help_category** должны запускаться из базы данных **msdb** .  
   
  Если никакие аргументы не указаны, результирующий набор содержит сведения обо всех категориях заданий.  

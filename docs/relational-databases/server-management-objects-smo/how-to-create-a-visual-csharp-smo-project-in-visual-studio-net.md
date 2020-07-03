@@ -13,27 +13,27 @@ ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53ab22f96020080e28a92975c4d78d6ca3215d57
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60d0f5b55664312be1bdf6501cf54e78a826434b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74095968"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900632"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Создание проекта SMO на языке Visual C# в среде Visual Studio .NET
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   В данном разделе описывается, как построить простое консольное приложение командной строки SMO.  
   
- В этом примере импортируются пространства имен, что позволяет программе ссылаться на типы объектов SMO. Импорт пространства имен **агента** является необязательным. Его следует выполнить при написании программы, в которой используется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установления безопасного соединения с экземпляром требуется **Общее** пространство имен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пространство имен **SqlClient** используется для обработки ошибок исключений SQL.  
+ В этом примере импортируются пространства имен, что позволяет программе ссылаться на типы объектов SMO. Импорт пространства имен **агента** является необязательным. Его следует выполнить при написании программы, в которой используется агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для установления безопасного соединения с экземпляром требуется **Общее** пространство имен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пространство имен **SqlClient** используется для обработки ошибок исключений SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Создание проекта SMO на языке Visual C# в среде Visual Studio.NET  
   
 1. Запуск Visual Studio
   
-2. В меню **файл** выберите пункт **создать** , а затем **проект**.  Откроется диалоговое окно **Новый проект** .   
+2. В меню **файл** выберите пункт **создать** , а затем **проект**.  Откроется диалоговое окно **Создание проекта** .   
   
-3. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] На панели **установки** перейдите в раздел **шаблоны**\\**Visual C#**\\**окна** и выберите **консольное приложение**.  
+3. На панели [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **установки** перейдите в раздел **шаблоны** \\ **Visual C#** \\ **окна** и выберите **консольное приложение**.  
   
 4. Используемых В текстовом поле **имя** введите имя нового приложения.  
 

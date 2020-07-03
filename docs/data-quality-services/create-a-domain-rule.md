@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 2615b71c19011b42bb8497ef07096cc27084409b
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: e77d3966476bba662f864cb2f81dbbfa983d4740
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85810720"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900454"
 ---
 # <a name="create-a-domain-rule"></a>Создание правила домена
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описывается, как создать правило домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Правило домена — это условие, которое используется для проверки, исправления и стандартизации значений домена. Правило домена должно выполняться в домене, чтобы значения домена были точными и соответствовали требованиям бизнеса. Правила домена могут включать правила проверки, которые используются для проверки значений домена, а не для исправления данных в проектах служб DQS. Правила включают также правила стандартизации, которые применяются в отношении допустимых данных и служат для исправления данных.  
   

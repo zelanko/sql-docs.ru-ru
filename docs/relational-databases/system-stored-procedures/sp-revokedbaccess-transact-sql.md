@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 41d2c1aa64bc3d7913cadbb5e54e9895af55e554
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cec7eb26b749328d5bbf0f95f74a0de3b0f30a07
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750480"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901350"
 ---
 # <a name="sp_revokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет пользователя из текущей базы данных.  
   
@@ -47,7 +47,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  При удалении пользователя базы данных также удаляются разрешения и псевдонимы этого пользователя.  
   
  **sp_revokedbaccess** может удалять только пользователей базы данных из текущей базы данных. Перед удалением пользователя базы данных, которому принадлежат объекты в текущей базе данных, необходимо передать принадлежность этих объектов или удалить их из базы данных. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION (Transact-SQL)](../../t-sql/statements/alter-authorization-transact-sql.md).  

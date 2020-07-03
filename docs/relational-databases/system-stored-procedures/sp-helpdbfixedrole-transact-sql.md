@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 16a0c7ffa2c12e43404f17eaa36fa787c2ae11cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b029430388e1f58a725e5eb15795fa47380eda7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738511"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899543"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает список всех предопределенных ролей базы данных.  
   
@@ -51,7 +51,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Имя предопределенной роли базы данных.|  
 |**Описание**|**nvarchar (70)**|Описание **дбфикседроле.**|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Предопределенные роли базы данных, как показано в таблице, определены на уровне базы данных и обладают специальными разрешениями для выполнения определенных административных функций. Предопределенные роли базы данных не могут быть добавлены или удалены. Нельзя изменить разрешения, предоставленные предопределенной роли базы данных.  
   
 |Предопределенная роль базы данных|Описание|  

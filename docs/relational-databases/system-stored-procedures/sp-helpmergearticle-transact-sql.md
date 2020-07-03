@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 04d1397494aec0d35e0ecfa9debcb6f844e6ebc2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 814ed354c296d1f9860b3abf92a7208cdecdacf7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733128"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899800"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о статье. Эта хранимая процедура выполняется на издателе в базе данных публикации или на переиздаваемом подписчике для базы данных подписки.  
   
@@ -87,7 +87,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helpmergearticle** используется в репликации слиянием.  
   
 ## <a name="permissions"></a>Разрешения  

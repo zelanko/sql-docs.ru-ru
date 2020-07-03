@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78c3fb8530875120aac2936f36770d9de936332d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 45fea43b9d7d35fd674a566982d67b4043403d06
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783897"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900607"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отображает одну строку для каждого условия управления на основе политик в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_conditions принадлежит схеме dbo в базе данных msdb. В следующей таблице описываются столбцы представления syspolicy_conditions.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "85783897"
 |Expression|**nvarchar(max)**|Выражение для состояний аспекта.|  
 |obj_name|**sysname**|Имя объекта, присвоенного @Name, если выражение условия содержит переменную.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  При устранении неполадок управления на основе политик, выполнив запрос представления syspolicy_conditions, можно определить, кто создал или последним изменил условие.  
   
 ## <a name="permissions"></a>Разрешения  

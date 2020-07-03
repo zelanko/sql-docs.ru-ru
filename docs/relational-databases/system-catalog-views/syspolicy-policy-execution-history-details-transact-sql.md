@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8f7526cc2902829aef7e4e029428e21faa94d2a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b761d0e056037c134a3be837be04cba9395d9273
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663973"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900030"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Показывает выполненные условные выражения, целевые объекты выполнения выражений, результат каждого выполнения и сведения об ошибках, возникших при выполнении. В следующей таблице приведено описание столбцов представления syspolicy_execution_history_details.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "85663973"
 |exception_message|**nvarchar(max)**|Сообщение, выданное в результате возникшего исключения.|  
 |exception|**nvarchar(max)**|Описание возникшего исключения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  При устранении неполадок управления на основе политик с помощью запроса представления syspolicy_policy_execution_history_details можно определить, для каких сочетаний целевого объекта и условного выражения результат был неуспешным, когда это произошло, и просмотреть соответствующие ошибки.  
   
  Далее приводится запрос, сочетающий представления `syspolicy_policy_execution_history_details`, `syspolicy_policy_execution_history_details` и `syspolicy_policies` и выводящий имя политики, имя условия и подробные сведения об ошибках.  

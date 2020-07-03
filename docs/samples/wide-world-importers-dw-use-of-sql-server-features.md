@@ -4,19 +4,19 @@ description: Узнайте, как в базе данных WideWorldImportersD
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.date: 08/04/2018
+ms.date: 07/01/2020
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 431ca4762b15003f49a5145eb603b7508f2d6844
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 837947acfb36857414b53edc9f89054a4dd4bbd8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112422"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899981"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>WideWorldImportersDW использование функций и возможностей SQL Server
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,43 +30,53 @@ Polybase используется для объединения данных о 
 
 Чтобы включить использование Polybase в образце базы данных, убедитесь, что она установлена, и выполните следующую хранимую процедуру в базе данных:
 
-    EXEC [Application].[Configuration_ApplyPolyBase]
+```sql
+EXECUTE [Application].[Configuration_ApplyPolyBase]
+```
 
 При этом будет создана внешняя таблица `dbo.CityPopulationStatistics` , которая ссылается на общедоступный набор данных, содержащий данные о населении для городов в США, размещенном в хранилище BLOB-объектов Azure. Рекомендуется проверить код в хранимой процедуре, чтобы понять процесс настройки. Если вы хотите разместить собственные данные в хранилище BLOB-объектов Azure и защитить их от общего доступа, вам потребуется выполнить дополнительные действия по настройке. Следующий запрос возвращает данные из этого набора внешних данных:
 
-    SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
+```sql
+SELECT
+        CityID, StateProvinceCode, CityName,
+        YearNumber, LatestRecordedPopulation
+    FROM
+        dbo.CityPopulationStatistics;
+```
 
-Чтобы понять, какие города могут быть интересны для дальнейшего расширения, следующий запрос просматривает темп роста в городах и возвращает первые 100 самых крупных городов с значительным ростом, а также о том, где широкие средства импорта не имеют присутствия по продажам. Запрос включает соединение между удаленной таблицей `dbo.CityPopulationStatistics` и локальной таблицей `Dimension.City`, а также фильтр, включающий локальную таблицу. `Fact.Sales`
+Чтобы понять, какие города могут быть интересны для дальнейшего расширения, следующий запрос просматривает темп роста в городах и возвращает первые 100 самых крупных городов с значительным ростом, а также о том, где широкие средства импорта не имеют присутствия по продажам. Запрос включает соединение между удаленной таблицей `dbo.CityPopulationStatistics` и локальной таблицей `Dimension.City` , а также фильтр, включающий локальную таблицу `Fact.Sales` .
 
-    WITH PotentialCities
-    AS
-    (
-        SELECT cps.CityName,
-               cps.StateProvinceCode,
-               MAX(cps.LatestRecordedPopulation) AS PopulationIn2016,
-               (MAX(cps.LatestRecordedPopulation) - MIN(cps.LatestRecordedPopulation)) * 100.0
-                   / MIN(cps.LatestRecordedPopulation) AS GrowthRate
-        FROM dbo.CityPopulationStatistics AS cps
-        WHERE cps.LatestRecordedPopulation IS NOT NULL
-        AND cps.LatestRecordedPopulation <> 0
-        GROUP BY cps.CityName, cps.StateProvinceCode
-    ),
-    InterestingCities
-    AS
-    (
-        SELECT DISTINCT pc.CityName,
-                        pc.StateProvinceCode,
-                        pc.PopulationIn2016,
-                        FLOOR(pc.GrowthRate) AS GrowthRate
-        FROM PotentialCities AS pc
-        INNER JOIN Dimension.City AS c
-        ON pc.CityName = c.City
-        WHERE GrowthRate > 2.0
-        AND NOT EXISTS (SELECT 1 FROM Fact.Sale AS s WHERE s.[City Key] = c.[City Key])
-    )
-    SELECT TOP(100) CityName, StateProvinceCode, PopulationIn2016, GrowthRate
-    FROM InterestingCities
-    ORDER BY PopulationIn2016 DESC;
+```sql
+WITH PotentialCities
+AS
+(
+    SELECT cps.CityName,
+            cps.StateProvinceCode,
+            MAX(cps.LatestRecordedPopulation) AS PopulationIn2016,
+            (MAX(cps.LatestRecordedPopulation) - MIN(cps.LatestRecordedPopulation)) * 100.0
+                / MIN(cps.LatestRecordedPopulation) AS GrowthRate
+    FROM dbo.CityPopulationStatistics AS cps
+    WHERE cps.LatestRecordedPopulation IS NOT NULL
+    AND cps.LatestRecordedPopulation <> 0
+    GROUP BY cps.CityName, cps.StateProvinceCode
+),
+InterestingCities
+AS
+(
+    SELECT DISTINCT pc.CityName,
+                    pc.StateProvinceCode,
+                    pc.PopulationIn2016,
+                    FLOOR(pc.GrowthRate) AS GrowthRate
+    FROM PotentialCities AS pc
+    INNER JOIN Dimension.City AS c
+    ON pc.CityName = c.City
+    WHERE GrowthRate > 2.0
+    AND NOT EXISTS (SELECT 1 FROM Fact.Sale AS s WHERE s.[City Key] = c.[City Key])
+)
+SELECT TOP(100) CityName, StateProvinceCode, PopulationIn2016, GrowthRate
+FROM InterestingCities
+ORDER BY PopulationIn2016 DESC;
+```
 
 ## <a name="clustered-columnstore-indexes"></a>Кластеризованные индексы columnstore
 
@@ -82,7 +92,9 @@ Polybase используется для объединения данных о 
 
 Можно выполнить следующую инструкцию, чтобы увеличить размер `Fact.Sales` таблицы, вставив еще 12 000 000 строк образца данных. Эти строки вставлены в год 2012, что не связано с процессом ETL.
 
+```sql
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
+```
 
 Выполнение этой инструкции займет около 5 минут. Чтобы вставить более 12 000 000 строк, передайте нужное количество строк в качестве параметра в эту хранимую процедуру.
 
@@ -90,11 +102,15 @@ Polybase используется для объединения данных о 
 
 Чтобы удалить индекс, выполните следующие действия.
 
-    DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```sql
+ DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```
 
 Для повторного создания:
 
-    CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
+```
 
 ## <a name="partitioning"></a>Секционирование
 
@@ -102,14 +118,14 @@ Polybase используется для объединения данных о 
 
 Размер данных в хранилище данных может увеличиваться очень большим. Поэтому рекомендуется использовать секционирование для управления хранением больших таблиц в базе данных.
 
-Все большие таблицы фактов секционированы по годам. Единственным исключением является `Fact.Stock Holdings`, которое не основано на дате и имеет ограниченный размер данных по сравнению с другими таблицами фактов.
+Все большие таблицы фактов секционированы по годам. Единственным исключением является `Fact.Stock Holdings` , которое не основано на дате и имеет ограниченный размер данных по сравнению с другими таблицами фактов.
 
-Функция секционирования, используемая для всех секционированных `PF_Date`таблиц, —, а используемая схема `PS_Date`секционирования —.
+Функция секционирования, используемая для всех секционированных таблиц `PF_Date` , —, а используемая схема секционирования — `PS_Date` .
 
 ## <a name="in-memory-oltp"></a>Выполняющаяся в памяти OLTP
 
 (Полная версия примера)
 
-WideWorldImportersDW использует SCHEMA_ONLY оптимизированные для памяти таблицы для промежуточных таблиц. `Integration.` * Все `_Staging` таблицы SCHEMA_ONLY оптимизированные для памяти таблицы.
+WideWorldImportersDW использует SCHEMA_ONLY оптимизированные для памяти таблицы для промежуточных таблиц. Все `Integration.` * `_Staging` таблицы SCHEMA_ONLY оптимизированные для памяти таблицы.
 
 Преимуществом SCHEMA_ONLY таблиц является то, что они не записываются в журнал и не нуждаются в доступе к диску. Это повышает производительность процесса ETL. Поскольку эти таблицы не регистрируются, их содержимое теряется в случае сбоя. Однако источник данных по-прежнему доступен, поэтому процесс ETL можно просто перезапустить в случае сбоя.

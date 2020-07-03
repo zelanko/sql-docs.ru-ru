@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 525ebee42d097c4d4d171767a8b0a8fc844bc5f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cca6c1730343a038b24e17d6aaa0156cb99c13b1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783749"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901537"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Выдает сведения о предупреждениях, определенных для данного сервера.  
   
@@ -123,7 +123,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Всегда будет иметь "**[без категории]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
 |**type**|**int**|Тип предупреждения:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о событии 1<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_help_alert** должны запускаться из базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

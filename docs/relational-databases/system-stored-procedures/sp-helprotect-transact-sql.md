@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3806476ffec61c155121f3238fefa8e08f689ad2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8f170c15cdc75c8832adae7fae4147829b3b4bb9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899491"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает отчет со сведениями о разрешениях пользователя на объект или инструкцию в текущей базе данных.  
   
@@ -72,7 +72,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**Действие**|**nvarchar(60)**|Имя разрешения. Инструкции с допустимыми разрешениями зависят от типа объекта.|  
 |**Столбец**|**sysname**|Тип разрешения:<br /><br /> All = разрешение затрагивает все текущие столбцы объекта.<br /><br /> New = разрешение затрагивает все новые столбцы, которые могут быть изменены для объекта в будущем (с помощью инструкции ALTER).<br /><br /> All+New = сочетание All и New.<br /><br /> Возвращает точку, если тип разрешения не применяется к столбцам.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Все аргументы в следующей процедуре являются необязательными. При выполнении без аргументов процедура `sp_helprotect` отображает все разрешения, которые были предоставлены или запрещены в текущей базе данных.  
   
  При указании некоторых, но не всех аргументов используйте именованные аргументы либо указывайте `NULL` в качестве заполнителя опущенных аргументов. Например, для получения отчета обо всех разрешениях, которые может предоставить участник, владеющий базой данных (`dbo`), выполните следующее:  

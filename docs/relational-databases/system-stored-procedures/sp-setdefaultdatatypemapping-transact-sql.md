@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65728d55db4202fa979f4b7c8cbce5b1718d7660
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 96e4959ffa88e96d6236b460d515353d6817f656
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719197"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901313"
 ---
 # <a name="sp_setdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Помечает существующее сопоставление типа данных между [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системой управления БАЗАМИ данных (СУБД) по умолчанию. Эта хранимая процедура выполняется на распространителе в любой базе данных.  
   
@@ -58,7 +58,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @source_dbms = ] 'source_dbms'`Имя СУБД, с которой сопоставляются типы данных. Аргумент *source_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Источником является база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Источником является база данных Oracle.|  
@@ -86,7 +86,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_dbms = ] 'destination_dbms'`Имя целевой СУБД. Аргумент *destination_dbms* имеет тип **sysname**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Целевая база данных — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**СУБД**|Целевой является база данных Oracle.|  
@@ -109,7 +109,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_setdefaultdatatypemapping** используется во всех типах репликации между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] СУБД.  
   
  Сопоставления типов данных по умолчанию применяются ко всем топологиям репликации, включенным в указанную СУБД.  

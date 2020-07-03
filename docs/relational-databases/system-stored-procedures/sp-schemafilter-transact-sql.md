@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d6414be15bcd33e8ae2a0ab267baaa039761fc04
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 116dde1f0fd62f96e31a164ff06472de5b527938
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85750452"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901348"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет и отображает сведения о схеме, исключенной при построении списка таблиц Oracle, подходящих для публикации.  
   
@@ -45,7 +45,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 `[ @operation = ] 'operation'`Действие, выполняемое с этой схемой. *Операция* имеет тип **nvarchar (4)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**add**|Добавляет указанную схему в список схем, не подходящих для публикации.|  
 |**тени**|Удаляет указанную схему из списка схем, не подходящих для публикации.|  
@@ -60,7 +60,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_schemafilter** следует использовать только для разнородных издателей.  
   
 ## <a name="permissions"></a>Разрешения  

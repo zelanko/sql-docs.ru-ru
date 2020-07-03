@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 199eac229d752cb019ec027124e83c85ead0176c
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 23606df29d79f3fc6deee175dd5e7aad8de394aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813918"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900495"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Очистка данных с помощью (внешних) эталонные данные базы знаний — службы Data Quality Services (DQS)
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описывается очистка данных с использованием набора знаний из поставщиков ссылочных данных. Все этапы очистки данных с использованием набора знаний из поставщиков эталонных данных точно такие же, как описано в разделе [Очистка данных с использованием набора знаний служб DQS &#40;внутренних&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), а в этом разделе приведены сведения по очистке данных с использованием службы эталонных данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
 

@@ -14,15 +14,15 @@ ms.assetid: 702fd63d-8734-4a02-872e-aecfb037c787
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0229ca7a79db5f502b603df2194843eb8a5fac7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f961d0aba5bb42c924f5c6174670d6e8566f662
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74096041"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900066"
 ---
 # <a name="creating-altering-and-removing-database-objects"></a>Создание, изменение и удаление объектов баз данных
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
   Создание объектов SMO включает следующие этапы:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74096041"
   
  Инструкция **Drop** используется для удаления объекта и всех взаимозависимых дочерних объектов, которые требовались для первоначального создания объекта.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Объектная модель SMO](../../../relational-databases/server-management-objects-smo/smo-object-model.md)  
   
   

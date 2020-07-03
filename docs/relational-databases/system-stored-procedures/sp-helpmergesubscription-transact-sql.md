@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2c1c2ff23ecde51f13270fca3f674c58412858f6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85626985"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899560"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о подписке на публикацию слиянием (как принудительной, так и по запросу). Эта хранимая процедура выполняется на издателе в базе данных публикации или на переиздаваемом подписчике для базы данных подписки.  
   
@@ -55,7 +55,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 `[ @subscription_type = ] 'subscription_type'`Тип подписки. *subscription_type*имеет тип **nvarchar (15)** и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**Push** (по умолчанию)|Принудительная подписка|  
 |**собирает**|Подписка по запросу|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_helpmergesubscription** используется в репликации слиянием для возврата сведений о подписке, хранящихся на издателе, или при повторной публикации подписчика.  
   
  Для анонимных подписок значение *subscription_type*всегда равно **1** (Pull). Однако для получения сведений о анонимных подписках необходимо выполнить [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) на подписчике.  

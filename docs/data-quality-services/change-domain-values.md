@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0f9b77a5df341bbf57d103797d5808b8b7a5d511
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: b07dd7b8d121d1be70a6522e716fc304bbf3d9f1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901113"
 ---
 # <a name="change-domain-values"></a>Изменение значений домена
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описывается, как изменить и дополнить метаданные в базе знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). После создания набора знаний путем обнаружения набора знаний, импорта знаний в базу знаний или домены или подготовки базы знаний на основе другой базы знаний можно интерактивно изменять значения данных. Создание базы знаний не является строго автоматическим процессом. Можно использовать собственные знания для проверки и изменения значений данных следующими способами.  
   

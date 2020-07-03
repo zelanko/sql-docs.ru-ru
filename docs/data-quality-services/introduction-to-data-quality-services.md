@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a934bdcd73fc7b879da4e76525481103fd187a98
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: 0564da5fc907db5f684f96b716ad1cb39ef007ce
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85812110"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901614"
 ---
 # <a name="introduction-to-data-quality-services"></a>Общие сведения о службах Data Quality Services
 
-[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Решение по обеспечению качества данных, предоставляемое [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), позволяет диспетчеру данных или ИТ-специалисту поддерживать качество данных и обеспечивать их пригодность к бизнес-использованию. DQS — это решение на основе знаний, которое обеспечивает автоматизированные и интерактивные способы управления целостностью и качеством источников данных. DQS позволяет обнаруживать знания о данных, строить наборы знаний и управлять ими. Затем эти знания вы можете использовать для выполнения очистки, сопоставления и профилирования данных. Также вы можете использовать облачные службы поставщиков эталонных данных в проекте качества данных DQS.  
   

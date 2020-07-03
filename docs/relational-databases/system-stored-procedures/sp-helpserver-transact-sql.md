@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fa9117891f9d9350e58a2c8233dcffe05c8cfc8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fe5e3bd8d7d5ce0046a908f16ae860bc68386054
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772126"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899472"
 ---
 # <a name="sp_helpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об определенном удаленном сервере, сервере репликации либо обо всех серверах обоих типов. Выдает имя сервера, сетевое имя сервера, состояние репликации сервера, его идентификационный номер, а также имя параметров сортировки. Кроме того, возвращает значения интервалов ожидания для подключения к связанным серверам или выполнения запросов к ним.  
   
@@ -45,7 +45,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 `[ @optname = ] 'option'`Параметр, описывающий сервер. *параметр имеет тип* **varchar (** 35 **)** и значение по умолчанию NULL и должен иметь одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**совместимые параметры сортировки**|Влияет на выполнение распределенных запросов на связанных серверах. Если значение этого параметра равно true.|  
 |**доступ к данным**|Разрешает и запрещает доступ распределенных запросов к связанному серверу.|  
@@ -76,7 +76,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**connect_timeout**|**int**|Значение времени ожидания для подключения к связанному серверу.|  
 |**query_timeout**|**int**|Значение времени ожидания для запросов к связанному серверу.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  У сервера может быть несколько состояний.  
   
 ## <a name="permissions"></a>Разрешения  

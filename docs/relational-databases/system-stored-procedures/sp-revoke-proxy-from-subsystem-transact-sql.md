@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a6654fb7bd83f3c247c972c3c044af7b0a2d932
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5c8dc5e9a20c9a00b840ec51d3339299cc3756a3
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85645439"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901382"
 ---
 # <a name="sp_revoke_proxy_from_subsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отменяет доступ к подсистеме у учетной записи-посредника.  
   
@@ -49,7 +49,7 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_id = ] id`Идентификационный номер подсистемы, к которой нужно отозвать доступ. *Subsystem_id* имеет **тип int**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**2**|ActiveX-скрипт<br /><br /> ** \* \* Важно \* ! \* ** подсистема сценариев ActiveX будет удалена из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агента в следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется.|  
 |**3**|Операционная система (CmdExec)|  
@@ -65,7 +65,7 @@ sp_revoke_proxy_from_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`Имя подсистемы, к которой нужно отозвать доступ. Аргумент *subsystem_name* имеет тип **sysname**и значение по умолчанию NULL. Необходимо указать либо *subsystem_id* , либо *subsystem_name* , но нельзя указать оба значения. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
@@ -79,7 +79,7 @@ sp_revoke_proxy_from_subsystem
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
 |PowerShell|Скрипт PowerShell|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  При отмене доступа к подсистеме разрешения для участника, указанного в учетной записи-посреднике, не изменяются.  
   
 > [!NOTE]  

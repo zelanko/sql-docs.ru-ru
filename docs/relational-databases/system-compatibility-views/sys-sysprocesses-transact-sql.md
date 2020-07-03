@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e9e90b22dc5542d83533bff584af326abdcc4902
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0f195a452ffde16d7de821841367e259a686578f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787049"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899778"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Содержит сведения о процессах, которые выполняются в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти процессы могут быть клиентскими или системными. Для доступа к sysprocesses либо необходимо быть в контексте главной базы данных, либо следует использовать трехчастное имя master.dbo.sysprocesses.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "85787049"
 |request_id|**int**|Идентификатор запроса. Применяется для идентификаций запросов, выполняемых в текущем сеансе.|
 |page_resource |**Binary (8)** |**Область применения**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> 8-байтовое шестнадцатеричное представление ресурса страницы, если `waitresource` столбец содержит страницу. |  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если пользователь имеет разрешение VIEW SERVER STATE на сервере, он увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В противном случае пользователь увидит только текущий сеанс.  
   
 ## <a name="see-also"></a>См. также  

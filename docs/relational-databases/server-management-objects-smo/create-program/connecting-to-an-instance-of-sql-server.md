@@ -16,17 +16,17 @@ ms.assetid: ad3cf354-b2e3-468b-b986-1232e375fd84
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 14eff405fd4eb1b96f4f5e5b50624d2c1251d546
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c749f1d0a1cd5076d09de9fb38bba75c637fd130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70148757"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900642"
 ---
 # <a name="connecting-to-an-instance-of-sql-server"></a>Соединение с экземпляром SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
 
-  Первым шагом [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] программирования в приложении управляющих объектов является создание экземпляра <xref:Microsoft.SqlServer.Management.Smo.Server> объекта и установка его соединения с экземпляром. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+  Первым шагом программирования в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] приложении управляющих объектов является создание экземпляра <xref:Microsoft.SqlServer.Management.Smo.Server> объекта и установка его соединения с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Создать экземпляр <xref:Microsoft.SqlServer.Management.Smo.Server> и установить соединение с экземпляром [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно тремя способами. Первый способ — использовать переменную объекта <xref:Microsoft.SqlServer.Management.Common.ServerConnection> для задания информации о соединении. Второй способ — задать информацию о соединении в явном виде, присвоив соответствующие значения свойствам объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. Третий способ — передать имя экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в конструктор объекта <xref:Microsoft.SqlServer.Management.Smo.Server>. 
   
@@ -99,7 +99,7 @@ Console.WriteLine(srv.Information.Version);
 ## <a name="connecting-to-a-remote-instance-of-sql-server-by-using-windows-authentication-in-visual-basic"></a>Соединение с удаленным экземпляром SQL Server с использованием проверки подлинности Windows на языке Visual Basic  
  При подключении к экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием проверки подлинности Windows указывать тип проверки не нужно. По умолчанию используется проверка подлинности Windows.  
   
- В этом примере [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] используется код .NET, который подключается к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] удаленному экземпляру с помощью проверки подлинности Windows. Строковая переменная *стрсервер* содержит имя удаленного экземпляра.  
+ В этом примере используется [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] код .NET, который подключается к удаленному экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью проверки подлинности Windows. Строковая переменная *стрсервер* содержит имя удаленного экземпляра.  
   
 ```VBNET   
 'Connect to a remote instance of SQL Server.
@@ -225,7 +225,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.SqlServer.Management.Smo.Server>   
  <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
   

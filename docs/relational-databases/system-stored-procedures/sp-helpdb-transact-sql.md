@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3a31eb5fa85ab7634d6fc65ac446607117ec70ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3fda6aba2ce361e814a0196db6138b38f13ce359
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85738520"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899571"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Сообщает информацию об указанной базе данных или всех базах данных.  
   
@@ -69,7 +69,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**growth**|**nvarchar (18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
 |**Загрузка**|**varchar (9)**|Применение файла. Для файла данных значением является **"только данные"** , а для файла журнала — **"только журнал"**.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Столбец **Status** в результирующем наборе сообщает, какие параметры были установлены в значение ON в базе данных. Столбец **Status** не сообщает обо всех параметрах базы данных. Чтобы просмотреть полный список текущих настроек параметров базы данных, используйте представление каталога **sys. databases** .  
   
 ## <a name="permissions"></a>Разрешения  

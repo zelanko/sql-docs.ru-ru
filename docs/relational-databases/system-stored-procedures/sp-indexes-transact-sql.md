@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77cace048b83ff3d4d93b4cc536dbc2c68415d98
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5f7c88013f59e256c6b41aa392adb08f5fcdb495
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772947"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899454"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает индексную информацию для указанной удаленной таблицы.  
   
@@ -62,7 +62,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @is_unique =] "*is_unique*"  
  Тип индекса, для которого запрашиваются сведения. *is_unique* является **битным**, имеет значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |1|Возвращает сведения об уникальных индексах.|  
 |0|Возвращает сведения об неуникальных индексах.|  

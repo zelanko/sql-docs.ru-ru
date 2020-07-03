@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6fae0542a38a215d79228674fa6b2a9fbe4b9eb7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fb7cbf41a439c5221892142178d1341a9284f555
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728203"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901480"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает список всех компонентов (фильтров, разделителей слов и обработчиков протоколов), используемых для всех полнотекстовых каталогов в текущей базе данных.  
   
@@ -47,7 +47,7 @@ sp_help_fulltext_catalog_components
 |-----------------|---------------|-----------------|  
 |**имя полнотекстового каталога**|**int**|Имя полнотекстового каталога.|  
 |**Идентификатор полнотекстового каталога**|**sysname**|Идентификатор полнотекстового каталога.|  
-|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Filter<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
+|**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> Фильтр<br /><br /> Обработчик протокола<br /><br /> Средство разбиения по словам|  
 |**componentname**|**sysname**|Имя компонента.|  
 |**этому**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом предопределенной роли сервера **serveradmin** .|  

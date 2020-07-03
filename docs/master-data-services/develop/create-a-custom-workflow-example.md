@@ -10,16 +10,16 @@ ms.topic: reference
 ms.assetid: dfd1616c-a75c-4f32-bdb1-7569e367bf41
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 63d37d37b55c119e8b36629e2572d4a12371f451
-ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
+ms.openlocfilehash: 880cf38105bd70198a52c55feec151e163f21c28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900997"
 ---
 # <a name="create-a-custom-workflow---example"></a>Создание настраиваемого рабочего процесса — пример
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] при создании библиотеки классов настраиваемого рабочего процесса создается класс, реализующий интерфейс Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender. Этот интерфейс включает один метод [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) , который вызывается службой интеграции рабочего процесса MDS SQL Server при запуске рабочего процесса. Метод [Microsoft. MasterDataServices. воркфловтипикстендер. иворкфловтипикстендер. стартворкфлов *](/previous-versions/sql/sql-server-2016/hh759009(v=sql.130)) содержит два параметра: *воркфловтипе* содержит текст, введенный в текстовом поле **тип рабочего процесса** в [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , а *элемент* DataItem содержит метаданные и данные элементов для элемента, который активировал бизнес-правило рабочего процесса.  
   

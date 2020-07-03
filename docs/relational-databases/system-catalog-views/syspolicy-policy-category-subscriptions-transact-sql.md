@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f8bd5886c9cb0686b1bef9764f9f9fb12d1548cc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ac307cf73097214a0100365de5fc76097a890df6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786417"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900565"
 ---
 # <a name="syspolicy_policy_category_subscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Это представление выводит по одной строке для каждой подписки на управление на основе политик в данном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Каждая строка описывает пару, состоящую из целевого объекта и категории политики. В следующей таблице приведено описание столбцов представления syspolicy_policy_group_subscriptions.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "85786417"
 |target_object|**sysname**|Имя целевого объекта.|  
 |policy_category_id|**int**|Идентификатор категории политики, которая применяется к этому объекту.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В представлении отображаются целевые объекты, подписанные на категории политик.  
   
 ## <a name="permissions"></a>Разрешения  

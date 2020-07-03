@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05a1563188b5a8332c547901247ef43e07b1efa5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b9277918b8ed869e121e3cf1fe3389bf402b2a0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646132"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901461"
 ---
 # <a name="sp_primarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает столбцы первичных ключей для указанной удаленной таблицы по одной строке на ключевой столбец.  
   
@@ -51,7 +51,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'`Имя каталога, в котором находится заданный *table_name* . В среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] соответствует имени базы данных. Аргумент *table_catalog* имеет тип **sysname**и значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -64,7 +64,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|Порядковый номер столбца в первичном ключе, состоящем из нескольких столбцов.|  
 |**PK_NAME**|**sysname**|Идентификатор первичного ключа. Возвращает NULL, если не применим к источнику данных.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_primarykeys** выполняется путем запроса набора строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
  **sp_primarykeys** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк PRIMARY_KEYS интерфейса **IDBSchemaRowset** .  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: ed3bca383e5f6ad1960274145327f915c6e8ca5c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9e6f8200b1c49bfe5e4977dc1e8f093537fc950e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85663765"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900573"
 ---
 # <a name="syspolicy_policy_execution_history-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Указывает время выполнения политик, результат каждого выполнения и сведения об ошибках, возникших при выполнении. В следующей таблице приведено описание столбцов представления syspolicy_policy_execution_history.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "85663765"
 |exception_message|**nvarchar(max)**|Сообщение, выданное в результате возникшего исключения.|  
 |exception|**nvarchar(max)**|Описание возникшего исключения.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Представление [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) содержит связанные сведения о целевых объектах политики и тестируемых выражениях условий.  
   
 ## <a name="permissions"></a>Разрешения  

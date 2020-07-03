@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b905d3f362aa16e36caa0795357c1ec1619d5ec7
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 049b1183ad21e481ca47368b3dfe916d0ee41185
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715838"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899468"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения об основных участниках уровня базы данных.  
   
@@ -76,7 +76,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Член роли в текущей базе данных.|  
 |**UserID**|**smallint**|Идентификатор пользователя для члена роли.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Чтобы просмотреть сведения о членстве в ролях базы данных, используйте представление [sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Чтобы просмотреть сведения о членах роли сервера, используйте представление [sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md), а чтобы просмотреть сведения об участниках уровня сервера, используйте представление [sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
