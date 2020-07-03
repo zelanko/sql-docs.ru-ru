@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b09864e65bb0c46370ee0f8c3d09994f94027d6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eedb738c9bd1a940f2875d182077edd3b939870b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85733339"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868865"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Открывает курсор. sp_cursoropen определяет инструкцию SQL, связанную с курсором и параметрами курсора, а затем заполняет курсор. sp_cursoropen эквивалентен сочетанию [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкций, DECLARE_CURSOR и Open. Для вызова этой процедуры необходимо задать ID =2 в пакете потока табличных данных (TDS).  
   
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Параметр прокрутки. *scrollopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Параметр управления параллелизмом. *ccopt* — это необязательный параметр, для которого требуется одно из следующих входных значений **int** .  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (прежнее название — LOCKCC)|  
@@ -147,7 +147,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  Если процедура sp_cursoropen выполнена успешно, то отправляются возвращаемые параметры RPC и результирующий набор с данными формата TDS (0x82 & 0xA1 messages). В случае ошибки отправляется одно или несколько сообщений TDS об ошибках. В любом случае данные строки не будут возвращены, а количество *готовых* сообщений будет равно нулю. Если используется версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее 7.0, то возвращаются сообщения 0xa0 и 0xa1 (стандартные для инструкции SELECT) с потоками токенов 0xa5 и 0xa4. Если используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0, то возвращается сообщение 0x81 (стандартное для инструкций SELECT) с потоками токенов 0xa5 и 0xa4.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="stmt-parameter"></a>Параметр stmt  
  Если аргумент *stmt* задает выполнение хранимой процедуры, входные параметры могут быть либо определены как константы в составе строки *stmt* , либо указаны как аргументы *баундпарам* . Таким образом, объявленные переменные могут передаваться как связанные параметры.  

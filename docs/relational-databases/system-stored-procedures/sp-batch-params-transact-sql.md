@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2b5c067b42d61c2dae1dbe247a6212611d155348
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 135937bbdac930d3ee90259c7e5b0f4faaab098f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716140"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85874137"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает набор строк, содержащий сведения о параметрах, входящих в [!INCLUDE[tsql](../../includes/tsql-md.md)] пакет. **sp_batch_params** выполняет синтаксический анализ только указанного пакета и возвращает сведения о значениях внедренных параметров. Она не исполняет пакет и не меняет среду исполнения.  
   
@@ -42,7 +42,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'`Строка в Юникоде, содержащая [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию или пакет, для которых требуются сведения о параметрах. *тсклбатч* имеет тип **nvarchar (max)** или неявно преобразуется в **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   

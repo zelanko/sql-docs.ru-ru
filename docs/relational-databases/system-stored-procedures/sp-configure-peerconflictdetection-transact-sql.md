@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5bd9def04c3d80bdc57ac4e7fe9a9d67be49a3c2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6fb182115af1ff2c3190939d63c209a7d98bed44
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771217"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870881"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Настраивает обнаружение конфликта для публикации, которая участвует в топологии одноранговой репликации транзакций. Дополнительные сведения см. в разделе [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -50,7 +50,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action =] "*действие*"  
  Указывает, должно ли быть включено или отключено обнаружение конфликтов применительно к публикации. *Action* имеет тип **nvarchar (5)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**enable**|Включает обнаружение конфликтов применительно к публикации.|  
 |**disable**|Отключает обнаружение конфликтов применительно к публикации.|  
@@ -77,7 +77,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Хранимая процедура sp_configure_peerconflictdetection используется для одноранговой репликации транзакций. Чтобы использовать обнаружение конфликтов, на всех узлах должны выполняться [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или более поздние версии, а обнаружение должно быть включено для всех узлов.  
   
 ## <a name="permissions"></a>Разрешения  

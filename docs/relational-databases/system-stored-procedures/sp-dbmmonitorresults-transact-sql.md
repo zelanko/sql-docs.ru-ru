@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a26ca71a9db5d85f79787f19563e87ee7e49b78d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d90b4d76be9d75bbad28053a1e61ffb1c12212fa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760135"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865674"
 ---
 # <a name="sp_dbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает строки состояния для просматриваемой базы данных из таблицы состояний, в которой сохранен журнал мониторинга зеркального отображения базы данных, а также позволяет выбрать, будет ли процедура получать последнее состояние заранее.  
   
@@ -76,7 +76,7 @@ sp_dbmmonitorresults database_name
  1 = обновляет состояние базы данных путем вызова **sp_dbmmonitorupdate** перед вычислением результатов. Однако если таблица состояния была обновлена в течение последних 15 секунд или пользователь не является членом предопределенной роли сервера **sysadmin** , **sp_dbmmonitorresults** выполняется без обновления состояния.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает запрашиваемое количество строк журнала состояния для указанной базы данных. Каждая строка содержит следующие сведения:  
@@ -99,7 +99,7 @@ sp_dbmmonitorresults database_name
 |**time_behind**|**datetime**|Приблизительное системное время основного сервера, с которым синхронизирована зеркальная база данных. Это значение имеет смысл только на экземпляре основного сервера.|  
 |**local_time**|**datetime**|Значение системного времени на локальном экземпляре сервера, когда эта строка была обновлена.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_dbmmonitorresults** можно выполнять только в контексте базы данных **msdb** .  
   
 ## <a name="permissions"></a>Разрешения  

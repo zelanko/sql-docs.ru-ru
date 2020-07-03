@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 620a174f50d133c4a1dd34ed54c74abb7ee06a71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b30529fbb5d4b80b0835ddb502c9a2c964ca8776
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81012450"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870630"
 ---
 # <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Добавляет или удаляет учетные данные, содержащие пароль, необходимый для открытия главного ключа базы данных.  
   
@@ -47,18 +47,18 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  Указывает пароль для главного ключа. *Password* имеет тип **nvarchar**.  
   
  @action= Н'адд '  
- Указывает на то, что учетные данные для указанной базы данных будет добавлены в хранилище учетных данных. Учетные данные будут содержать пароль главного ключа базы данных. Значение, передаваемое @action в, имеет тип **nvarchar**.  
+ Указывает на то, что учетные данные для указанной базы данных будет добавлены в хранилище учетных данных. Учетные данные будут содержать пароль главного ключа базы данных. Значение, передаваемое в @action , имеет тип **nvarchar**.  
   
  @action= Н'дроп '  
- Указывает на то, что учетные данные для указанной базы данных будет удалены из хранилища учетных данных. Значение, передаваемое @action в, имеет тип **nvarchar**.  
+ Указывает на то, что учетные данные для указанной базы данных будет удалены из хранилища учетных данных. Значение, передаваемое в @action , имеет тип **nvarchar**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] нужен главный ключ базы данных для расшифровки или шифрования ключа, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью главного ключа службы экземпляра. Если расшифровка заканчивается неудачей, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет в хранилище учетных данных поиск учетных данных главного ключа, имеющих идентификатор GUID того же семейства, что и у базы данных, для которой нужен главный ключ. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается расшифровать главный ключ базы данных с помощью всех подходящих учетных данных, пока не удастся расшифровать ключ или пока не кончатся учетные данные.  
   
 > [!CAUTION]  
 >  Не создавайте учетные данные главного ключа для базы данных, которая должна быть недоступна sa и другим привилегированным участникам [системы безопасности] на уровне сервера. База данных может быть настроена таким образом, чтобы иерархия ее ключей не могла быть расшифрована главным ключом службы. Этот параметр поддерживается для максимальной защиты баз данных, содержащих зашифрованные сведения, которые не должны быть доступны sa или другим привилегированным участникам [системы безопасности] на уровне сервера. Создание учетных данных главного ключа для такой базы данных сводит на нет эту защиту, позволяя sa и другим привилегированным участникам [системы безопасности] на уровне сервера расшифровывать базу данных.  
   
- Учетные данные, созданные с помощью sp_control_dbmasterkey_password, отображаются в представлении каталога [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Имена учетных данных, создаваемых для главных ключей базы данных, имеют следующий формат `##DBMKEY_<database_family_guid>_<random_password_guid>##`:. Пароль хранится как секретные учетные данные. Для каждого пароля, добавленного в хранилище учетных данных, существует строка в представлении sys.credentials.  
+ Учетные данные, созданные с помощью sp_control_dbmasterkey_password, отображаются в представлении каталога [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) . Имена учетных данных, создаваемых для главных ключей базы данных, имеют следующий формат: `##DBMKEY_<database_family_guid>_<random_password_guid>##` . Пароль хранится как секретные учетные данные. Для каждого пароля, добавленного в хранилище учетных данных, существует строка в представлении sys.credentials.  
   
  Нельзя использовать sp_control_dbmasterkey_password для создания учетных данных для следующих системных баз данных: Master, Model, msdb или tempdb.  
   
@@ -82,7 +82,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Примеры  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Создание учетных данных для главного ключа AdventureWorks2012  
- В следующем примере создаются учетные данные для главного ключа базы данных `AdventureWorks2012`, пароль главного ключа сохраняется в виде секретного кода в учетных данных. Поскольку все параметры, передаваемые в `sp_control_dbmasterkey_password` , должны иметь тип данных **nvarchar**, текстовые строки преобразуются с помощью оператора `N`приведения.  
+ В следующем примере создаются учетные данные для главного ключа базы данных `AdventureWorks2012`, пароль главного ключа сохраняется в виде секретного кода в учетных данных. Поскольку все параметры, передаваемые в, `sp_control_dbmasterkey_password` должны иметь тип данных **nvarchar**, текстовые строки преобразуются с помощью оператора приведения `N` .  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -90,7 +90,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-### <a name="b-dropping-a-credential-for-a-database-master-key"></a>Б) Удаление учетных данных для главного ключа базы данных  
+### <a name="b-dropping-a-credential-for-a-database-master-key"></a>Б. Удаление учетных данных для главного ключа базы данных  
  В следующем примере удаляются учетные данные, созданные в примере A. Обратите внимание, что все параметры являются обязательными, включая пароль.  
   
 ```  
@@ -99,7 +99,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Настройка зашифрованной зеркальной базы данных](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [Хранимые процедуры безопасности &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Системные хранимые процедуры &#40;&#41;Transact-SQL](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5b9c53913cc6f399109da7a84cd8ec7f68957a8b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7e7247f5357ae02e0a81f3682d5d952d01584473
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760148"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85865605"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Обновляет таблицу состояний монитора зеркального отображения баз данных путем вставки новой строки для каждой зеркально отображенной базы данных, и усекает строки, срок хранения которых истек. По умолчанию срок хранения равен 7 дням (168 часам). При обновлении таблицы **sp_dbmmonitorupdate** оценивает метрики производительности.  
   
@@ -47,7 +47,7 @@ sp_dbmmonitorupdate [ database_name ]
  Имя базы данных, для которой обновляется состояние зеркального отображения. Если *database_name* не указан, процедура обновляет таблицу состояния для каждой зеркально отображаемой базы данных на экземпляре сервера.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  None  

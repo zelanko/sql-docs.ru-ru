@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2aa75e2f742cbafd64f5bb8d76d7cd8dbf4028ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 77608294b06025d5c265e67f71f9b0b228732729
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771261"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85871105"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Возвращает сведения о столбцах для указанных таблиц связанного сервера по одной строке на столбец. **sp_columns_ex** возвращает сведения о столбце только для определенного столбца, если указан *столбец* .  
   
@@ -57,7 +57,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'`Используемая версия ODBC. *Одбквер* имеет **тип int**и значение по умолчанию 2. Это значение соответствует ODBC версии 2. Допустимы значения 2 или 3. Сведения о различиях между версиями 2 и 3 см. в спецификации ODBC SQLColumns.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -85,7 +85,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Дополнительные сведения см. в документации по Microsoft ODBC.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_columns_ex** выполняется путем запроса набора строк COLUMNS интерфейса **IDBSchemaRowset** поставщика OLE DB, соответствующего *table_server*. Параметры *table_name*, *table_schema*, *table_catalog*и *столбцов* передаются этому интерфейсу для ограничения возвращаемых строк.  
   
  **sp_columns_ex** возвращает пустой результирующий набор, если поставщик OLE DB указанного связанного сервера не поддерживает набор строк COLUMNS интерфейса **IDBSchemaRowset** .  
@@ -93,7 +93,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для схемы.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_columns_ex** соответствует требованиям для идентификаторов с разделителями. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Примеры  

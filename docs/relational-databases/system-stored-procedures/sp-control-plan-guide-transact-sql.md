@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 25e3293a9f509667e6086144a43f8d8ccd9308eb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 08121eb48e637f2cb6bc404407f7a37d41dbeb2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771245"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85870139"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>Хранимая процедура sp_control_plan_guide (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет, включает или отключает структуру плана.  
   
@@ -71,7 +71,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  Включает все структуры планов в текущей базе данных. Невозможно указать **N "**_plan_guide_name_**"**, если задан параметр "включить все".  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Попытка удаления или изменения функции, хранимой процедуры или триггера DML, на которые имеется ссылка в структуре плана (как включенных, так и отключенных), приводит к ошибке.  
   
  Отключение уже отключенной структуры плана или включение включенной не имеет силы и не вызывает ошибки.  

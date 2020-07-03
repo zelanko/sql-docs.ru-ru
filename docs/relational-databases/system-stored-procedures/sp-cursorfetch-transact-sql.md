@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f3729587261ab090548ad93f5a1000f621239557
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646046"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85868958"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Извлекает из базы данных буфер из одной или нескольких строк. Группа строк в этом буфере называется *буфером выборки*курсора. sp_cursorfetch вызывается путем указания ID = 7 в пакете потока табличных данных (TDS).  
   
@@ -96,7 +96,7 @@ sp_cursorfetch cursor
 |Для курсоров KEYSET и STATIC|Обычно размер текущего набора ключей.<br /><br /> **-m** , если курсор находится в асинхронном создании с *m* строками, найденными до этого момента.|  
 |Для курсоров DYNAMIC|-1|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="cursor-parameter"></a>Параметр cursor  
  Перед началом операций выборки по умолчанию позиция курсора находится перед первой строкой результирующего набора.  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  Для параметра состояния RPC устанавливается одно из значений, приведенных в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Процедура успешно выполнена.|  
 |0x0001|Процедура завершилась ошибкой.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Строки возвращаются в виде типичного результирующего набора: формат столбцов (0x2a), строк (0xd1), за которым следует число обработанных (0xfd). Маркеры метаданных отправляются в том же формате, который указан для sp_cursoropen, то есть 0x81, 0xa5 и токенов 0xa4 для пользователей SQL Server 7,0 и т. д. Индикаторы состояния строк отправляются как скрытые столбцы, аналогично режиму BROWSE, в конце каждой строки с именем столбца rowstat и типом данных INT4. Столбец rowstat имеет одно из значений, приведенных в следующей таблице.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

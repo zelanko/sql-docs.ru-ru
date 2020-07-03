@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1f07445d119174ca441e7ed13be1851a6e2f058
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5b5ea4ccea0f314e17cfa5dca8a4f3db6d2c9c1a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872499"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет некоторые свойства фильтра слияния. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
-|Свойство.|Применение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Фильтр соединения.<br /><br /> Этот параметр необходим для поддержки подписчиков [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Связь логических записей.|  
@@ -81,7 +81,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changemergefilter** используется в репликации слиянием.  
   
  Изменения фильтра для статьи слияния требует создания моментального снимка; если таковой уже существует, необходимо его повторное создание. Это выполняется путем установки ** \@ force_invalidate_snapshot** в значение **1**. Кроме того, если на статью имеются подписки, то необходима их повторная инициализация. Это можно сделать, задав для ** \@ force_reinit_subscription** значение **1**.  

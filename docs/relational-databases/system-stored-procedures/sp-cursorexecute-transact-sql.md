@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3da197547fcc0b08cb1154c6f32b11a65247304e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 800e70591e4ebb508bd5edd6426d43bdc3a16987
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646266"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869741"
 ---
 # <a name="sp_cursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает и заполняет курсор на основе плана выполнения, который был создан процедурой sp_cursorprepare. Эта процедура в сочетании с sp_cursorprepare имеет ту же функцию, что и sp_cursoropen, но разбивается на две фазы. sp_cursorexecute вызывается путем указания ID = 4 в пакете потока табличных данных (TDS).  
   
@@ -79,12 +79,12 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Значение кодов возврата  
  *ROWCOUNT* может возвращать следующие значения.  
   
-|Применение|Описание:|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |-1|Число строк неизвестно.|  
 |-n|Действует асинхронное заполнение.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Параметры scrollopt и ccopt  
  *scrollopt* и *ccopt* полезны при прерывании кэшированных планов для кэша сервера, что означает, что подготовленный описатель, идентифицирующий инструкцию, должен быть перекомпилирован. Значения параметров *scrollopt* и *ccopt* должны совпадать со значениями, отправленными в исходном запросе, в sp_cursorprepare.  

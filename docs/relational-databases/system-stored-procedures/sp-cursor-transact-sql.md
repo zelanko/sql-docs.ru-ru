@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7550a640b723e77f3bfbc9b3473e762962ae2da3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a92b502368756fd86fc4facda7c0726260d88fea
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85646421"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85869688"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Запрашивает позиционированные обновления. Эта процедура выполняет операции с одной или несколькими строками в пределах буфера выборки курсора. sp_cursor вызывается путем указания ID = 1 в пакете потока табличных данных (TDS).  
   
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Значения кода возврата  
  При использовании RPC операция позиционированного удаления или обновления с буфером номер 0 будет возвращать ЗАВЕРШЕНное сообщение с количеством строк *0* (сбой) или 1 (успешно) для каждой строки в буфере выборки.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 ## <a name="optype-parameter"></a>Параметр optype  
  За исключением сочетаний SETPOSITION с UPDATE, DELETE, REFRESH или LOCK; или АБСОЛЮТная с помощью UPDATE или DELETE, значения *optype* являются взаимоисключающими.  

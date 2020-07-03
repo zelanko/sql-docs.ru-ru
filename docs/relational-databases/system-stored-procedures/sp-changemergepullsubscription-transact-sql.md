@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fdd889b1c28b037f4ab1d4f609cf93b19617e5b0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 349fecb1324d0af0e6d6d7b099064781e6f8aeb1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85771471"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85872543"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет свойства подписки слиянием по запросу. Эта хранимая процедура выполняется на подписчике в базе данных подписки.  
   
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`Новое значение для указанного свойства. *значение*равно **nvarchar (255)** и может быть одним из значений в таблице.  
   
-|Свойство.|Применение|Описание|  
+|Свойство|Значение|Описание|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Местоположение папки моментальных снимков, если оно отлично от местоположения по умолчанию или дополняет его.|  
 |**nописание**||Описание подписки слиянием по запросу.|  
@@ -94,7 +94,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changemergepullsubscription** используется в репликации слиянием.  
   
  Подразумевается, что текущий сервер и текущая база данных являются соответственно подписчиком и базой данных подписчика.  
