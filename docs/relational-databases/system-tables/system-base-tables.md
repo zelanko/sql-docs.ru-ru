@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cd89fffb6513306c8877ce6b02a3fadfceb6f1cf
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752642"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85889231"
 ---
 # <a name="system-base-tables"></a>Системные базовые таблицы
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Системные базовые таблицы — это основные таблицы, в которых хранятся метаданные определенной базы данных. В этом отношении база данных **master** является особой, так как она содержит некоторые дополнительные таблицы, не найденные в других базах данных. Эти таблицы содержат устойчивые метаданные, областью которых является весь сервер.  
   
