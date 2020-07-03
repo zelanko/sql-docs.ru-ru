@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2935ecccb9ce0421396d552787d38b0b80fb3c45
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 114240ad0916a664e95dbc980093b857ecd500a6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85772240"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85862849"
 ---
 # <a name="sp_delete_maintenance_plan_db-transact-sql"></a>Хранимая процедура sp_delete_maintenance_plan_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отсоединяет определенный план обслуживания от указанной базы данных.  
   
@@ -55,7 +55,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_delete_maintenance_plan_db** должны запускаться из базы данных **msdb** .  
   
  **Sp_delete_maintenance_plan_db** хранимая процедура удаляет связь между планом обслуживания и указанной базой данных. она не удаляет и не уничтожает базу данных.  
