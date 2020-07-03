@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a9e1f59e28912a41bc9425c3cae0a01a3be91669
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 60f15f6917297a10c6fb3d988d5b497056c93aee
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786918"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859873"
 ---
 # <a name="sp_dropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет существующие расширенные свойства.  
   
@@ -79,7 +79,7 @@ sp_dropextendedproperty
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В целях указания расширенных свойств объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базе данных классифицируются по трем уровням: 0, 1 и 2. Уровень 0 является высшим уровнем и определяется как «объекты в области базы данных». Объекты уровня 1 содержатся в схеме и в пользовательской области, а объекты уровня 2 содержатся в объектах уровня 1. Расширенные свойства могут быть определены для объектов на любом из этих уровней. Ссылки на объект определенного уровня должны снабжаться типами и именами всех объектов вышестоящих уровней.  
   
  При наличии допустимого *property_name*, если все типы и имена объектов имеют значение null, а свойство существует в текущей базе данных, это свойство удаляется. См. пример Б далее в этом разделе.  

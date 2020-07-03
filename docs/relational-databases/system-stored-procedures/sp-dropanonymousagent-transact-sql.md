@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 8c9a025beaf1d9701411668a13fa78273105d30c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: acf909be9ca1185ea441acf27a60409e1c868328
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85859981"
 ---
 # <a name="sp_dropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Удаляет анонимный агент монитора репликаций на распространителе от издателя. Эта хранимая процедура выполняется на подписчике в любой базе данных.  
   
@@ -44,7 +44,7 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_dropanonymousagent** используется во всех типах репликации.  
   
  Эта хранимая процедура используется только для удаления агентов анонимных подписок и не может быть использована для удаления известных подписок.  
