@@ -13,15 +13,14 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: d67e41f3dfaed9ef59e586368d8b80dda2936669
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010499"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом разделе описываются изменения OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], связанные с поддержкой больших определяемых пользователем типов данных среды CLR.  
   
@@ -32,7 +31,7 @@ ms.locfileid: "85787701"
   
  В следующей таблице показано сопоставление типов данных в параметрах и наборах строк.  
   
-|Тип данных SQL Server|Тип данных OLE DB|Организация памяти|Применение|  
+|Тип данных SQL Server|Тип данных OLE DB|Организация памяти|Значение|  
 |--------------------------|----------------------|-------------------|-----------|  
 |определяемый пользователем тип среды CLR|DBTYPE_UDT|BYTE[](массив байтов\)|132 (oledb.h)|  
   
@@ -75,7 +74,7 @@ ms.locfileid: "85787701"
   
 |Тип столбца|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|NULL|NULL|Clear|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|NULL|NULL|Очистить|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|NULL|NULL|Присвойте параметру|DB_ALL_EXCEPT_LIKE|0|  
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
@@ -92,7 +91,7 @@ ms.locfileid: "85787701"
   
 |Тип параметра|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~0|~0|Clear|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|~0|~0|Очистить|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|~0|~0|Присвойте параметру|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Набор строк COLUMNS (наборы строк схемы)  
@@ -100,7 +99,7 @@ ms.locfileid: "85787701"
   
 |Тип столбца|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|Clear|*n*|  
+|DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|Очистить|*n*|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|Присвойте параметру|0|  
   
  Для определяемых пользователем типов определяются также следующие дополнительные столбцы.  
@@ -121,13 +120,13 @@ ms.locfileid: "85787701"
 |Привязка типов данных|Определяемый пользователем тип к серверному типу|Тип, не определяемый пользователем, к серверному типу|Серверный тип к определяемому пользователем типу|Серверный тип к типу, не определяемому пользователем|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Поддерживается (5)|Ошибка (1)|Поддерживается (5)|Ошибка (4)|  
-|DBTYPE_BYTES|Поддерживается (5)|Н/Д|Поддерживается (5)|Н/Д|  
-|DBTYPE_WSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5), (6)|Н/Д|  
-|DBTYPE_BSTR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
-|DBTYPE_STR|Поддерживается (2), (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
-|DBTYPE_IUNKNOWN|Поддерживается (6)|Н/Д|Поддерживается (6)|Н/Д|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Н/Д|Поддерживается (3), (5)|Н/Д|  
-|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Н/Д|Недоступно|Недоступно|  
+|DBTYPE_BYTES|Поддерживается (5)|Недоступно|Поддерживается (5)|Недоступно|  
+|DBTYPE_WSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5), (6)|Недоступно|  
+|DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
+|DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
+|DBTYPE_IUNKNOWN|Поддерживается (6)|Недоступно|Поддерживается (6)|Недоступно|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживается (3), (5)|Недоступно|  
+|DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
   

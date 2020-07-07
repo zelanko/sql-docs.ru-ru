@@ -20,15 +20,14 @@ ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 634d0d69698503a4bc483c9803858e5cda4b515d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 8773d6a3a8b65520fad6342477300f8818e9ac4d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754475"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011962"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает по одной строке для каждого субъекта безопасности в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -50,7 +49,7 @@ ms.locfileid: "85754475"
 |**default_language_lcid**|**int**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> Обозначает код языка по умолчанию для участника.|  
 |**allow_encrypted_value_modifications**|**bit**|**Применимо к**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и выше, [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Отключает проверки шифрованных метаданных на сервере в операциях массового копирования. Это позволяет пользователю выполнять полное копирование данных, зашифрованных с помощью Always Encrypted, между таблицами или базами данных без расшифровки данных. Значение по умолчанию — OFF. |      
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Свойства *passwordlastsettime имеют* доступны во всех поддерживаемых конфигурациях SQL Server, но другие свойства доступны только в том случае, если SQL Server работает на Windows Server 2003 или более поздней версии и включены оба CHECK_POLICY и CHECK_EXPIRATION. Дополнительные сведения см. в разделе [Политика паролей](../../relational-databases/security/password-policy.md) .
 Значения principal_id могут быть повторно использованы в случае, если субъекты были удалены и, следовательно, не всегда растет.
   

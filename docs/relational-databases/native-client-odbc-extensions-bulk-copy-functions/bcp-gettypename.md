@@ -18,15 +18,14 @@ ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12c4be2e1145d488ed057df5b206042b31bdb5b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b443a3ecd3e96740939a1cbef3f2a732a129d9a8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774282"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010096"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает имя типа SQL для указанного токена типа BCP.  
   
@@ -49,12 +48,12 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Возвращаемое значение  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Токены типа BCP определены в файле заголовка sqlncli.h и библиотеке sqlncli11.lib.  
   
  В следующей таблице указаны возможные типы BCP, независимо от того, являются ли они типами max или нет, а также ожидаемые выходные данные.  
   
-|Имя типа BCP|MaxType|Вывод|  
+|Имя типа BCP|MaxType|Выходные данные|  
 |-------------------|-------------|------------|  
 |**SQLDECIMAL**|Можно использовать|**decimal**|  
 |**SQLNUMERIC**|Можно использовать|**numeric**|  

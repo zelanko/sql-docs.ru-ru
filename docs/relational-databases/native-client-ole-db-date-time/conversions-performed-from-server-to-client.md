@@ -13,15 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1143407da0e09d801e4ac75ae364c6c08d670040
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 9274597eef66091a048b9ff07943e8bc8a15936b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753070"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010589"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Преобразования, выполняемые при передаче от сервера к клиенту
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В данном разделе описываются преобразования даты и времени, выполняемые между [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией) и клиентским приложением, написанным с использованием OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -30,25 +29,25 @@ ms.locfileid: "85753070"
   
 |Полученное значение -><br /><br /> Исходный тип|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|Дата|1,7|OK|-|-|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Время|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Smalldatetime|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime|5, 7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|Н/Д|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
-|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|OK|3|7|-|7 (VT_DATE)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (date)|1,7|OK|2|2|1|1,3|1,7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|OK|3|5, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|OK|5, 7, 11|-|OK (VT_BSTR)|OK|OK|4|4|  
+|Дата|1,7|ОК|-|-|1|1,3|1,7|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Время|5, 6, 7|-|9|ОК|6|3, 6|5, 6|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Smalldatetime|7|8|9,10|10|ОК|3|7|-|7 (VT_DATE)|ОК|OK|4|4|  
+|Datetime|5, 7|8|9,10|10|ОК|3|7|-|7 (VT_DATE)|ОК|OK|4|4|  
+|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|ОК|5, 7, 11|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|Недоступно|  
+|Sql_variant<br /><br /> (datetime)|7|8|9,10|10|ОК|3|7|-|7 (VT_DATE)|ОК|OK|4|4|  
+|Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|ОК|3|7|-|7 (VT_DATE)|ОК|OK|4|4|  
+|Sql_variant<br /><br /> (date)|1,7|ОК|2|2|1|1,3|1,7|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|ОК|6|3, 6|5, 6|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|ОК|3|5, 7|-|OK (VT_BSTR)|ОК|OK|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|ОК|5, 7, 11|-|OK (VT_BSTR)|ОК|OK|4|4|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
-|OK|Никаких преобразований не требуется.|  
+|ОК|Никаких преобразований не требуется.|  
 |-|Преобразование не поддерживается. Если при вызове IAccessor::CreateAccessor осуществляется проверка связывания, то в параметре *rgStatus* возвращается значение DBBINDSTATUS_UPSUPPORTEDCONVERSION. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
 |1|Поля времени установлены в нуль.|  
 |2|Установлено значение DBSTATUS_E_CANTCONVERTVALUE.|  

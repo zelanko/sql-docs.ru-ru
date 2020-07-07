@@ -20,15 +20,14 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 38fcf821327fb0f7e95734f5d9a3ac47e41ac93c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85648594"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010950"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает строку для каждого исполнителя в системе. Дополнительные сведения о рабочих ролях см. в разделе " [архитектура потоков и задач](../../relational-databases/thread-and-task-architecture-guide.md)". 
   
@@ -76,7 +75,7 @@ ms.locfileid: "85648594"
 |processor_group|**smallint**|Сохраняет идентификатор группы процессоров, назначенный данному потоку.|  
 |pdw_node_id|**int**|**Применимо к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор узла, на котором находится данное распределение.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Если значением состояния исполнителя является RUNNING, и исполнитель выполняется в режиме без приоритетного прерывания, адрес исполнителя совпадает со значением active_worker_address в sys.dm_os_schedulers.  
   
  Когда исполнитель, ожидающий события, получает сигнал, он помещается в начало очереди готовых к работе исполнителей. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает делать это тысячу раз подряд, после чего исполнитель помещается в конец очереди. Перемещение исполнителя в конец очереди имеет некоторые последствия для производительности.  

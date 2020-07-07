@@ -14,15 +14,14 @@ ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55abc5e347639f50593a5efc4223713e79bd2207
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b001f5eb85da99e289e897df9a3022703e006811
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787566"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012083"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Системные требования для собственного клиента SQL Server
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Чтобы использовать функции доступа к данным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например режим MARS, необходимо установить следующее программное обеспечение:  
   
@@ -68,11 +67,11 @@ ms.locfileid: "85787566"
 |Тип данных|собственный клиент SQL Server<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Компоненты доступа к данным Windows, компоненты MDAC и<br /><br /> приложения OLE DB собственного клиента SQL Server со свойством DataTypeCompatibility=80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 КБ)|определяемый пользователем тип|Udt|Varbinary|  
-|varbinary(max)|varbinary|varbinary|Образ —|  
+|varbinary(max)|varbinary|varbinary|Изображение|  
 |varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|nvarchar|nvarchar|Ntext|  
 |Xml|Xml|Xml|Ntext|  
-|Определяемый пользователем тип CLR (> 8 КБ)|определяемый пользователем тип|varbinary|Образ —|  
+|Определяемый пользователем тип CLR (> 8 КБ)|определяемый пользователем тип|varbinary|Изображение|  
 |Дата|Дата|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

@@ -14,15 +14,14 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: a2aa21196deb2927fccfb9e623d68a583736947e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85725115"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009567"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Создание файла форматирования массового копирования (ODBC)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом образце показано использование функций массового копирования для создания как файла данных, так и файла форматирования. Этот образец разработан для ODBC версии 3.0 или более поздней.  
   

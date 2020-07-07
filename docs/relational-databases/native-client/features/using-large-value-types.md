@@ -18,15 +18,14 @@ ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf19a1995f29c6b0635d1a87657b11d70cd668d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b46af0e58d433f51fe4417bfe9245a35fbe1b629
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719686"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009871"
 ---
 # <a name="using-large-value-types"></a>Использование типов больших значений
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   До выхода [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] работа с типами данных больших значений требовала особой обработки. Типы данных больших значений — это типы, размер которых превышает максимальный размер строки в 8 КБ. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]введен описатель **Max** для типов данных **varchar**, **nvarchar** и **varbinary** , чтобы обеспечить хранение значений размером до 2 ^ 31-1 байт. Столбцы и [!INCLUDE[tsql](../../../includes/tsql-md.md)] переменные таблицы могут указывать типы данных **varchar (max)**, **nvarchar (max)** или **varbinary (max)** .  
   

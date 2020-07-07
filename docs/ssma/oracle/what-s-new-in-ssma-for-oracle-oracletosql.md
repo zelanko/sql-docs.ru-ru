@@ -4,22 +4,31 @@ description: Узнайте об изменениях в Помощник по �
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: alexiva
-ms.openlocfilehash: 5d1a12d41d7d25154998f39be136266631b6d421
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c0465466a00eb9e7c1eb3b75035d136687672fef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779561"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011296"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Новые возможности SSMA для Oracle (OracleToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений Oracle в каждом выпуске.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+Выпуск v 8.11 SSMA для Oracle содержит следующие изменения:
+
+* Поддержка вложенных запросов в `INSERT ... VALUES` операторе
+* Улучшенное преобразование `COMMIT` инструкции
+* Исправление ошибки в `CONNECT BY LEVEL` преобразовании предложения
+* Обновлена логика восстановления ошибок средства синтаксического анализа, которая должна быть менее жадной
+* Использование библиотеки MSAL.NET для интерактивной проверки подлинности Azure Active Directory
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

@@ -13,15 +13,14 @@ ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f9935a3faa08b8aa14b4f8c80182a2a005853666
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ee05749a46103e268b0bdc1aaf9c89a729753171
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783403"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010046"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   bcp_setbulkmode позволяет указать формат столбца в операции массового копирования, устанавливая все атрибуты столбца в одном вызове функции.  
   
@@ -61,14 +60,14 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Возвращаемое значение  
  SUCCEED или FAIL  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  bcp_setbulkmode можно использовать для выполнения полного копирования из запроса или таблицы. Если bcp_setbulkmode используется для выполнения операций с массовым копированием инструкции запроса, он должен быть вызван перед вызовом bcp_control с BCP_HINT.  
   
  bcp_setbulkmode является альтернативой использованию [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) и [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), который позволяет задавать только формат одного столбца для каждого вызова функции.  
   
  В следующей таблице перечислены константы для параметра *property* .  
   
-|Свойство.|Описание|  
+|Свойство|Описание|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Указывает символьный режим вывода.<br /><br /> Соответствует параметру-c в BCP.EXE и для bcp_setcolfmt со свойством **BCP_FMT_TYPE** , установленным в значение **SQLCHARACTER**.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Указывает режим вывода в Юникоде.<br /><br /> Соответствует параметру-w в BCP.EXE и bcp_setcolfmt со свойством **BCP_FMT_TYPE** , установленным в значение **SQLNCHAR**.|  

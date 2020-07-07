@@ -14,15 +14,14 @@ ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1bdf37018f75e1683fa0879ce4e25872efe20c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 690e853ceb908cb85d27831c0c9a4961591158f8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789418"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012091"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **SQLBrowseConnect** использует ключевые слова, которые можно классифицировать по трем уровням сведений о соединении. Для каждого ключевого слова в следующей таблице указано, возвращается ли список допустимых значений и является ли ключевое слово необязательным.  
   
@@ -38,10 +37,10 @@ ms.locfileid: "85789418"
 |Ключевое слово|Возвращает список?|Является необязательным?|Описание|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Да|нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
-|ИД пользователя|Нет|Да|Идентификатор входа пользователя.|  
-|PWD|Нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
-|APP|Нет|Да|Имя приложения, вызывающего **SQLBrowseConnect**.|  
-|WSID|Нет|Да|Идентификатор рабочей станции. Обычно это сетевое имя компьютера, на котором работает приложение.|  
+|ИД пользователя|нет|Да|Идентификатор входа пользователя.|  
+|PWD|нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
+|APP|нет|Да|Имя приложения, вызывающего **SQLBrowseConnect**.|  
+|WSID|нет|Да|Идентификатор рабочей станции. Обычно это сетевое имя компьютера, на котором работает приложение.|  
   
 ## <a name="level-3"></a>Level 3  
   
@@ -54,7 +53,7 @@ ms.locfileid: "85789418"
   
  Следующие атрибуты, которые устанавливаются путем вызова [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), определяют результирующий набор, возвращаемый **SQLBrowseConnect**.  
   
-|Атрибут|Описание|  
+|attribute|Описание|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Если задано значение SQL_MORE_INFO_YES, **SQLBrowseConnect** возвращает расширенную строку свойств сервера.<br /><br /> Ниже приведен пример расширенной строки, возвращаемой функцией **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> В этой строке различные порции данных о сервере разделяются точками с запятой. Для разделения различных экземпляров сервера используйте запятые.|  
 |SQL_COPT_SS_BROWSE_SERVER|Если указано имя сервера, **SQLBrowseConnect** возвратит сведения для указанного сервера. Если SQL_COPT_SS_BROWSE_SERVER имеет значение NULL, **SQLBrowseConnect** возвращает сведения обо всех серверах в домене.<br /><br /> <br /><br /> Обратите внимание, что из-за проблем с сетью **SQLBrowseConnect** может не получить своевременный ответ от всех серверов. Поэтому возвращаемый список серверов может отличаться от запроса к запросу.|  

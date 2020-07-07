@@ -11,15 +11,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08a88db90322a3618cc53e60113f5d17ce749ec9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 70cfdccd5ba5c51e0ecdbb1106397364daf70aa4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773414"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010588"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Новые функции даты и времени с предыдущими версиями SQL Server (OLE DB)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом разделе описывается ожидаемое поведение, когда клиентское приложение, использующее улучшенные функции даты и времени, взаимодействует с версией, предшествующей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , и когда клиент компилируется с версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] собственного клиента раньше, чем [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Отправка команд на сервер, поддерживающий улучшенные функции даты и времени.  
   
@@ -32,19 +31,19 @@ ms.locfileid: "85773414"
   
 |Тип клиента OLE DB|Тип SQL Server 2005|Тип SQL Server 2008 (или более поздних версий)|Преобразование результата (сервер-клиент)|Преобразование параметра (клиент-сервер)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Дата|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Дата|ОК|ОК|  
 |DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поле времени не равно нулю.|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|ОК|ОК|  
 |DBTYPE_DBTIMESTAMP|||Поля даты устанавливаются в текущую дату.|IRowsetChange завершится ошибкой из-за усечения строки, если доли секунды не равны нулю.<br /><br /> Дата не учитывается.|  
-|DBTYPE_DBTIME||Time(7)|Сбой-недопустимый литерал времени.|OK|  
-|DBTYPE_DBTIMESTAMP|||Сбой-недопустимый литерал времени.|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Дата|OK|OK|  
+|DBTYPE_DBTIME||Time(7)|Сбой-недопустимый литерал времени.|ОК|  
+|DBTYPE_DBTIMESTAMP|||Сбой-недопустимый литерал времени.|ОК|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|ОК|ОК|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (7)|ОК|ОК|  
+|DBTYPE_DBDATE|Smalldatetime|Дата|ОК|ОК|  
 |DBTYPE_DBTIMESTAMP|||Поля времени устанавливаются в нули.|IRowsetChange завершится ошибкой из-за усечения строки, если поле времени не равно нулю.|  
-|DBTYPE_DBTIME||Time(0)|OK|OK|  
+|DBTYPE_DBTIME||Time(0)|ОК|ОК|  
 |DBTYPE_DBTIMESTAMP|||Поля даты устанавливаются в текущую дату.|IRowsetChange завершится ошибкой из-за усечения строки, если доли секунды не равны нулю.<br /><br /> Дата не учитывается.|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|ОК|ОК|  
   
  Значение «ОК» означает, что если код работал в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], то он должен работать и в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (и более поздних версиях).  
   

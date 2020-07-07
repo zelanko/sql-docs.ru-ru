@@ -16,15 +16,14 @@ ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 593f0b17ead284940d6f22b5983d284ddd37d7d4
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 3ad6e41b5f290a0f76c369ab454f68f3779e7737
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760723"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009588"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>Массовое копирование данных text и image
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Значения типа Large **Text**, **ntext**и **Image** копируются с помощью функции [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) . Код [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) для столбца **Text**, **ntext**или **Image** с указателем *pData* , имеющим значение null, что означает, что данные будут предоставлены в **bcp_moretext**. Важно указать точную длину данных, предоставляемых для каждого столбца типа **Text**, **ntext**или **Image** в каждой строке с массовым копированием. Если длина данных столбца отличается от длины столбца, указанного в [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md), используйте [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) , чтобы задать для длины правильное значение. [Bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) отправляет все данные, не являющиеся**текстовыми**, не-**ntext**и не являющиеся**изображениями** ; Затем вызывается **bcp_moretext** для отправки данных типа **Text**, **ntext**или **Image** в отдельных единицах. Функции операций с массовым копированием определяют, что все данные были отправлены для текущего столбца **Text**, **ntext**или **Image** , если сумма длин данных, отправленных с помощью **bcp_moretext** , равна длине, указанной в последней **bcp_collen** или **bcp_bind**.  
   
