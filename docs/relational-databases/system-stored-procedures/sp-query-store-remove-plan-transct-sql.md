@@ -21,15 +21,14 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63a12763336d7637809faef3826518b00a3b39de
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: cbc49d5c3644a71149a07946d116b2e379fab500
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728137"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012642"
 ---
 # <a name="sp_query_store_remove_plan-transct-sql"></a>sp_query_store_remove_plan (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Удаляет один план из хранилища запросов.  
   
@@ -48,7 +47,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на базу данных.

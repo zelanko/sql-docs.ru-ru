@@ -18,15 +18,14 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
-ms.translationtype: MT
+ms.openlocfilehash: 334b4ee83df73284abe7d20cdff66675d42039d5
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834638"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032573"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[tsql-appliesto-SQL 19-SQL DB-SQL MI](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi.md)]
 
   Задает условие поиска для диаграммы, поиск которого выполняется рекурсивно или повторяется. SHORTEST_PATH можно использовать внутри в инструкции SELECT для СОПОСТАВЛЕНИЯ с узлами графа и граничными таблицами. 
   
@@ -85,7 +84,7 @@ ms.locfileid: "85834638"
 ### <a name="last_value"></a>LAST_VALUE
 Для атрибутов проекта, начиная с последнего узла пути, можно использовать агрегатную функцию LAST_VALUE. Указание псевдонима краевой таблицы в качестве входных данных для этой функции является ошибкой, можно использовать только имена таблиц узлов или псевдонимы.
 
-**Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например, `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
+**Последний узел**. последний узел ссылается на узел, который отображается последним в пути, независимо от направления стрелки в предикате Match. Например: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Здесь последний узел в пути будет последним посещенным узлом P. 
 
 В то время как последний узел — это последний n-й узел в пути выходного графа для этого шаблона:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -108,7 +107,7 @@ ms.locfileid: "85834638"
 ### <a name="max"></a>MAX
 Возвращает максимальное значение из указанных значений атрибута node/ребра или выражение, которое отображалось в пути обхода.
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
 Функция shortest_path может использоваться только внутри MATCH.     
 LAST_NODE поддерживается только в shortest_path.     
 Поиск взвешенного кратчайшего пути, все пути или все короткие пути не поддерживаются.         

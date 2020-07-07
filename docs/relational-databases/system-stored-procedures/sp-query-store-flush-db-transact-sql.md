@@ -21,15 +21,14 @@ ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb174a88cf8d4d32c7c20000f930140a55b5e01e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 229a954f4665550e30c017fed59d71ac1ff3a0b6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729999"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012655"
 ---
 # <a name="sp_query_store_flush_db-transact-sql"></a>sp_query_store_flush_db (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Очищает часть данных хранилища запросов в памяти на диск.  
   
@@ -45,7 +44,7 @@ sp_query_store_flush_db [;]
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** на базу данных.
