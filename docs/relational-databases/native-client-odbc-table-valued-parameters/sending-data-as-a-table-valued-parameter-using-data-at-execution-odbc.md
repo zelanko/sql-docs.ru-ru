@@ -13,15 +13,14 @@ ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2df587de4be458e520f8486b1e81e00916e6df8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 0ce5d61838ac40d350cda5a7d436fac6979f513f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760688"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998392"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Отправка данных в виде возвращающего табличное значение параметра с использованием данных времени выполнения (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Это похоже на процедуру « [все в памяти](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) », но использует для возвращающего табличное значение параметра данные при выполнении.  
   
@@ -33,7 +32,7 @@ ms.locfileid: "85760688"
   
  При вызове SQLPutData для табличного значения *датаптр* используется для количества доступных строк (в этом примере всегда 1). *StrLen_or_IndPtr* всегда должно быть равно 0. При передаче всех строк табличного значения SQLPutData вызывается со значением *датаптр* , равным 0.  
   
-## <a name="prerequisite"></a>Предварительные требования  
+## <a name="prerequisite"></a>Предварительное требование  
  Эта процедура предполагает, что на сервере выполнен следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ```sql

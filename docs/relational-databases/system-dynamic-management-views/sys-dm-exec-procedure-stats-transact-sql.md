@@ -20,15 +20,14 @@ ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9c180e31958c6d1a6c9cdd728de5ea9a2e6b32ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 60b42cfd1fe3e8c57849b4a8501667c7f6ee96d2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734777"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000259"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает суммарную статистику производительности для кэшированных хранимых процедур. Это представление содержит по одной строке для каждого кэшированного плана хранимой процедуры. Время существования строки равно времени пребывания хранимой процедуры в кэше. Когда хранимая процедура удаляется из кэша, соответствующая строка исключается из представления. В этот момент возникает событие трассировки SQL статистики производительности аналогично **sys.dm_exec_query_stats**.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "85734777"
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
    
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Статистика в представлении обновляется после завершения выполнения хранимой процедуры.  
   
 ## <a name="examples"></a>Примеры  

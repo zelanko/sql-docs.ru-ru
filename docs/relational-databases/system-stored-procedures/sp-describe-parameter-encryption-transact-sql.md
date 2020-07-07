@@ -18,15 +18,14 @@ ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 583536c1b69951b18e6d30910f4e4d9d44b8d99f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: ccba808ada0276933608b9297b6c416c11cdb194
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717367"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998954"
 ---
 # <a name="sp_describe_parameter_encryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Анализирует указанную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкцию и ее параметры, чтобы определить, какие параметры соответствуют столбцам базы данных, защищенным с помощью функции Always encrypted. Возвращает метаданные шифрования для параметров, соответствующих зашифрованным столбцам.  
   
@@ -83,7 +82,7 @@ sp_describe_parameter_encryption
 |**column_encryption_key_ordinal**|**int**|Код строки в первом результирующем наборе. Строка, на которую указывает ссылка, описывает ключ шифрования столбца, настроенный для столбца, параметр соответствует.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Номер версии алгоритма нормализации типа.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер клиента, поддерживающий Always encrypted, автоматически вызывает **sp_describe_parameter_encryption** для получения метаданных шифрования для параметризованных запросов, выданных приложением. Впоследствии драйвер использует метаданные шифрования для шифрования значений параметров, которые соответствуют столбцам базы данных, защищенным с помощью Always Encrypted, и заменяет значения параметров в виде открытого текста, переданные приложением, на значения зашифрованных параметров перед отправкой запроса ядру СУБД.  
   
 ## <a name="permissions"></a>Разрешения  

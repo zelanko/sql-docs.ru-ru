@@ -20,15 +20,14 @@ ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d6484d5f9762590f3bef941f7deff5092c720ba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 416e527ad37ae34fcd3484a80cf774b054649548
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718702"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000238"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает виртуальную таблицу для объектов, формирующих большинство версий в хранилище версий. **sys. dm_tran_top_version_generators** возвращает первые 256 суммарных значений длины записей, сгруппированных по **database_id** и **rowset_id**. **sys. dm_tran_top_version_generators** извлекает данные путем запроса к виртуальной таблице **dm_tran_version_store** . представление **sys. dm_tran_top_version_generators** является неэффективным для выполнения, так как это представление запрашивает хранилище версий, а хранилище версий может быть очень большим. Эту функцию рекомендуется использовать для поиска самых крупных потребителей в хранилище версий.  
   
@@ -56,7 +55,7 @@ sys.dm_tran_top_version_generators
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Premium требуется `VIEW DATABASE STATE` разрешение в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровнях Standard и Basic требуется **Администратор сервера** или учетная запись **администратора Azure Active Directory** .   
 
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Поскольку **sys. dm_tran_top_version_generators** может потребоваться чтение большого количества страниц при сканировании всего хранилища версий, выполнение **sys. dm_tran_top_version_generators** может повлиять на производительность системы.  
   
 ## <a name="examples"></a>Примеры  

@@ -13,15 +13,14 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efa000212b64f1fb98523cfad163762b70b9db33
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 5621df514df7ae00f28371336cac8a8727487eef
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724937"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998191"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Преобразования, выполняемые при передаче от клиента к серверу
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом разделе описываются преобразования даты и времени, которые выполняются между клиентским приложением, написанным с использованием поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (или более поздней версией).  
   
@@ -39,19 +38,19 @@ ms.locfileid: "85724937"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|Н/Д|Недоступно|Недоступно|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|Н/Д|Недоступно|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|Н/Д|Недоступно|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Н/Д|Недоступно|Недоступно|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Н/Д|Недоступно|Недоступно|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Н/Д|Недоступно|Недоступно|  
+|BYTES|-|-|-|-|-|-|-|Недоступно|Недоступно|Недоступно|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|Недоступно|Недоступно|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|Недоступно|Недоступно|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Недоступно|Недоступно|Недоступно|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Недоступно|Недоступно|Недоступно|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|Недоступно|Недоступно|Недоступно|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
 |-|Преобразование не поддерживается. Если при вызове IAccessor::CreateAccessor осуществляется проверка связывания, то в параметре *rgStatus* возвращается значение DBBINDSTATUS_UPSUPPORTEDCONVERSION. Если проверка метода доступа является отложенной, то устанавливается значение DBSTATUS_E_BADACCESSOR.|  
-|Н/Д|Неприменимо.|  
+|Недоступно|Неприменимо.|  
 |1|Если поддерживаемые данные недопустимы, возвращается значение DBSTATUS_E_CANTCONVERTVALUE. Входные данные проверяются до выполнения преобразований, поэтому, даже если компонент не будет обрабатываться последующим преобразованием, он должен иметь допустимое значение, чтобы это преобразование завершилось успешно.|  
 |2|Поля времени не учитываются.|  
 |3|Доли секунды должны иметь нулевое значение, иначе возвращается значение DBSTATUS_E_DATAOVERFLOW.|  
