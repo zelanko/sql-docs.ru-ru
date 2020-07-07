@@ -18,15 +18,14 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d5eded47338315fa69bcb7a9dd270108f69574c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: 2c280be43be2ef4f14e57321cb96420e6cf51eb6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757954"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012686"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает сведения о логическом внешнем ключе для текущей среды. Эта процедура показывает связь по внешнему ключу, включая отключенные внешние ключи.  
   
@@ -67,7 +66,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  Имя квалификатора таблицы (с внешним ключом). Аргумент *fktable_qualifier* имеет тип **sysname**и значение по умолчанию NULL. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] квалификатор представляет собой имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, где находится таблица.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствуют  
+ None  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -89,7 +88,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Возвращенные результаты сортируются по столбцам FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME и KEY_SEQ.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
  Кодирование приложения, в состав которого входят таблицы с отключенными внешними ключами, можно выполнять следующим образом.  
   
 -   Временно отключить проверку ограничений (ALTER TABLE NOCHECK или CREATE TABLE NOT FOR REPLICATION) при работе с таблицами, потом включить ее снова.  

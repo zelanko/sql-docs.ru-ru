@@ -13,15 +13,14 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1c474427c4c62b667e27f299e2e7b4d9a65e1b5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: b26fa52fcb817dc7505dffb47d15421841f9c8ea
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719655"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86013003"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Создание набора строк возвращающего табличное значение параметра
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Несмотря на то, что потребители могут предоставить для возвращающих табличные значения параметров любой объект набора строк, типичные объекты наборов строк реализуются для конечных хранилищ данных и таким образом предоставляют ограниченную производительность. По этой причине поставщик OLE DB собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разрешает пользователям создавать специализированный объект набора строк на основе данных в памяти. Этот специальный объект набора строк в памяти — это новый COM-объект, называемый набором строк возвращающего табличное значение параметра. Он предлагает функциональные возможности, аналогичные набору параметров.  
   
