@@ -17,15 +17,14 @@ ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 37018708e8f54b37041a5c25c8a8e0ec5a79ee68
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f74d247ef06762d4ca5a9533e04b784aac4c477a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724827"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007873"
 ---
 # <a name="fetching-rows"></a>Выборка строк
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Интерфейс **IRowset** — это базовый интерфейс набора строк. Интерфейс **IRowset** предоставляет методы для последовательной выборки строк, извлечения данных из этих строк и управления строками. Объекты-получатели используют методы интерфейса **IRowset** для всех базовых операций с набором строк. Сюда входят выборка и освобождение строк, а также получение значений столбцов.  
   
