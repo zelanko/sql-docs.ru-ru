@@ -20,15 +20,14 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: f6236e2744487742a3fec119b62a2a08e7594822
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775962"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002378"
 ---
 # <a name="diagnostic-records-and-fields"></a>Диагностические записи и поля
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Диагностические записи связаны со средой ODBC, соединением, инструкцией или указателями дескриптора. Когда любая функция ODBC возвращает код возврата, отличный от SQL_SUCCESS или SQL_INVALID_HANDLE, дескриптор, вызванный функцией, имеет связанные диагностические записи, содержащие информационные сообщения или сообщения об ошибке. Эти записи сохраняются до тех пор, пока с помощью данного дескриптора не будет вызвана другая функция, в этот момент записи отменяются. Не существует ограничения на количество диагностических записей, одновременно связанных с дескриптором.  
   

@@ -4,22 +4,30 @@ description: Узнайте об изменениях в Помощник по �
 author: nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 6/2/2020
+ms.date: 7/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: alexiva
-ms.openlocfilehash: 18e7ba16dcbcc44155172f239accbfe26fe86fc2
-ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
-ms.translationtype: MT
+ms.openlocfilehash: c35b67bebc63c47750b856d5a2ec2d45666c90b8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84779056"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003874"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Новые возможности SSMA для DB2 (DB2ToSQL)
 
 В этой статье перечислены Помощник по миграции SQL Server (SSMA) для изменений DB2 в каждом выпуске.
+
+## <a name="ssma-v811"></a>SSMA v 8.11
+
+Выпуск 8.11 версии SSMA для DB2 содержит следующие изменения:
+
+* Поддержка DB2 для i (v 7.1 и более поздние версии)
+* Перевод `SQLSTATE` и`SQLCODE`
+* Сообщение об ошибке преобразования для операторов с побочным действием в функции
+* Использование библиотеки MSAL.NET для интерактивной проверки подлинности Azure Active Directory
 
 ## <a name="ssma-v810"></a>SSMA v 8.10
 

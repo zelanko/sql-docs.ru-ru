@@ -19,15 +19,14 @@ ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87b905aa178aec6aa10d4d7585384183bdb5d6c9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e4d6914ce4b46a7fc787b496ebf6b23036b9c21c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85783006"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002132"
 ---
 # <a name="sp_refresh_parameter_encryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Обновляет метаданные Always Encrypted для параметров указанной хранимой процедуры, не привязанной к схеме, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера в текущей базе данных. 
 
@@ -48,14 +47,14 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 
 `[ @name = ] 'module_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет значение `nvarchar` и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.
 
-`[ @namespace = ] ' < class > '`Класс указанного модуля. Если *module_name* является триггером DDL, `<class>` требуется. Параметр `<class>` равен `nvarchar(20)`. Допустимые входные значения: `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER` .    
+`[ @namespace = ] ' < class > '`Класс указанного модуля. Если *module_name* является триггером DDL, `<class>` требуется. `<class>` — это `nvarchar(20)`. Допустимые входные значения: `DATABASE_DDL_TRIGGER` и `SERVER_DDL_TRIGGER` .    
 
 ## <a name="return-code-values"></a>Значения кода возврата  
 
 0 (успешное завершение) или ненулевое значение (неуспешное завершение)
 
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Метаданные шифрования для параметров модуля могут устареть, если:   
 * Свойства шифрования столбца в таблице, на которую ссылается модуль, были обновлены. Например, столбец был удален, и был добавлен новый столбец с тем же именем, но с другим типом шифрования, ключом шифрования или алгоритмом шифрования.  

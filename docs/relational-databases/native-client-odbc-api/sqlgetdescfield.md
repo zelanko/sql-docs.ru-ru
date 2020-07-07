@@ -14,15 +14,14 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a3a056a9e6b5f02cc7dc3eb76837731d5a312cba
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
-ms.translationtype: MT
+ms.openlocfilehash: e0871674e4c3af03f59ae0363480ce29879ece94
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789195"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003464"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Драйвер ODBC для собственного клиента предоставляет только зависящие от драйвера поля дескриптора для дескриптора строки реализации (IRD). В IRD [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поля дескриптора ссылаются с помощью атрибутов столбцов, специфичных для драйвера. Сведения о полном списке доступных полей дескрипторов для конкретных драйверов см. в разделе [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   
