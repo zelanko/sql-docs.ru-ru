@@ -18,15 +18,15 @@ ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 15b8116b0677ebfccece9c13a49480d6702c6c54
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 08e28c4ded842a27d69d23de530345cdbf4ffa79
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85686203"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Очищает кэш проверки подлинности базы данных, в котором содержатся сведения об именах для входа и правилах брандмауэра, для текущей пользовательской базы данных в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Эта инструкция не применяется к логической базе данных master, так как у базы данных master есть физическое хранилище для сведений об именах для входа и правилах брандмауэра. Пользователь, выполняющий инструкцию, и другие подключенные в настоящее время пользователи остаются подключенными. (Инструкция DBCC FLUSHAUTHCACHE сейчас не поддерживается для [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  

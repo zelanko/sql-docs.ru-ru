@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc9a06ed8df330e6129f28260e5ef21890e98976
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 74a785caa2f8511bf11caf757793244d3c06c052
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85670137"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Планирование и выполнение последовательностей восстановления (модель полного восстановления)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этой теме приведены рекомендации по планированию и выполнению последовательности восстановления баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] согласно модели полного восстановления. *Последовательность восстановления* — это последовательность из одной или нескольких инструкций [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) . Как правило, она инициализирует содержимое базы данных, файлы или страницы, производя последовательность восстановления (стадия копирования данных), выполняет накат записанных транзакций (стадия повтора) и откатывает нефиксированные транзакции (стадия отката).  
   
