@@ -12,15 +12,15 @@ ms.assetid: b9321143-3f29-4a19-8471-7085669282ef
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f37620479cd2960f6908430a12c6388dee4d8e64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8d3a11521b55663318db72663a58980ca07775b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85641949"
 ---
 # <a name="missing-column-statistics-event-class"></a>Missing Column Statistics, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса Missing Column Statistics указывают на то, что статистика столбцов, которой мог бы воспользоваться оптимизатор, недоступна.  
   
  Отслеживая события класса Missing Column Statistics, можно определить, отсутствует ли статистика для столбцов, участвующих в запросе. Ее отсутствие может привести к тому, что оптимизатор выберет менее эффективный план запроса, чем ожидалось.  

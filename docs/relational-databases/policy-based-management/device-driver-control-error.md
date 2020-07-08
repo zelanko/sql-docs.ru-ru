@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6ab246e886e4f439fbf1dca600372a6816bc198b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2dd7ec5d8c7c321887d2553690e80dda12156203
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940459"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654588"
 ---
 # <a name="device-driver-control-error"></a>Ошибка управления драйвером устройства
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Это правило проверяет журнал системных событий на наличие события с идентификатором EventId 11. Ошибка может быть вызвана повреждением драйвера устройства, проблемой оборудования, неисправностью кабельных подключений или соединения.  
   
 ## <a name="best-practices-recommendations"></a>Рекомендации  

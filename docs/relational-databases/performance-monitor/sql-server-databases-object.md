@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da5bdd3fe0ea6e53e3943054470011040e9fe0c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655961"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, объект Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект **SQLServer:Databases** в SQL Server содержит счетчики для контроля и отслеживания операций массового копирования, пропускной способности создания и восстановления резервных копий, а также действий, связанных с журналом транзакций. Контроль и отслеживание транзакций и журнала транзакций позволяют определить, насколько интенсивна деятельность пользователей в базе данных, и как быстро заполняется журнал транзакций. Уровень активности пользователей определяет производительность базы данных и влияет на размеры журналов, блокировку и репликацию. Отслеживание низкоуровневых операций в журнале для оценки активности пользователей и использования ресурсов помогает определить критические факторы производительности.  
   
  Одновременно можно отслеживать несколько экземпляров объекта **Databases** , каждый из которых представляет отдельную базу данных.  

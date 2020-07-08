@@ -14,15 +14,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 72b34355a11e87540bc8a298d0144988cdbeb17c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e638dfe871d2ba4582228c097291d7f118fa47d0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629460"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи.  
   
 -   Задачи управления системой, например управление службой средства запуска FDHOST (MSSQLFDLauncher), повторный запуск процесса узла управляющей программы фильтрации при изменении учетных данных учетной записи службы, настройка свойств полнотекстового поиска на уровне сервера и создание резервных копий полнотекстовых каталогов. На уровне сервера, к примеру, можно указать язык полнотекстового поиска по умолчанию, отличающийся от языка экземпляра сервера по умолчанию.  

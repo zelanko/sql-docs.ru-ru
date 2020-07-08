@@ -33,15 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 29a4bf2c728cc1b59e88ff0ce70ece6a19917e34
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643862"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Описывает и исправляет неточности в подсчете страниц и строк в представлениях каталога. Эти неточности могут стать причиной неверных отчетов об использовании пространства, возвращаемых системной хранимой процедурой sp_spaceused.
   

@@ -18,15 +18,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58e73100fce87fb6eda3827a41ae6c747eec4104
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629446"
 ---
 # <a name="limit-search-results-with-rank"></a>Ограничение количества результатов поиска с использованием функции RANK
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) и [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) возвращают столбец с именем RANK, содержащий порядковые номера от 0 до 1000 (ранжирующие значения). Эти значения используются для ранжирования возвращенных строк согласно их соответствию критерию выбора. Ранжирующие значения указывают только относительный порядок релевантности строк в результирующем наборе, при этом чем меньше значение, тем меньше релевантность. Фактические значения несущественны и, как правило, различны для каждого выполнения запроса.  
   
 > [!NOTE]  

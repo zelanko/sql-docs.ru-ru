@@ -12,15 +12,15 @@ ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 766d8066ab75ec95ccaa1ada0f3706219cfc95dd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 677f7f674b2363e2604d5968cfde131e7c905418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897628"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630186"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса **Audit Database Scope GDR** возникают всякий раз, когда инструкция GRANT, REVOKE или DENY выполняется применительно к разрешению инструкции любым пользователем в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для действий, связанных только с базой данных, таких как предоставление разрешений на доступ к базе данных.  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Столбцы данных класса событий Audit Database Scope GDR  

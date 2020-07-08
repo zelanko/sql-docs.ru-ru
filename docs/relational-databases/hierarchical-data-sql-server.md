@@ -18,16 +18,16 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 137557b633b80067205be1cdea9f0b7c6cfd82bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288368"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85640770"
 ---
 # <a name="hierarchical-data-sql-server"></a>Иерархические данные (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
   Встроенный тип данных **hierarchyid** упрощает хранение и запрос иерархических данных. **hierarchyid** оптимизирован для представления деревьев, которые являются наиболее распространенным типом иерархических данных.  
   

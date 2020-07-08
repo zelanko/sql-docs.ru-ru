@@ -20,15 +20,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 401be9b8f231704dc5fd44860d03208cc1fa7a5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68702835"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629185"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Выражение с *учетом расположения* **NEAR** может применяться в предикате [CONTAINS](../../t-sql/queries/contains-transact-sql.md) или функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) для поиска слов или фраз, расположенных рядом. 
   
 ##  <a name="overview-of-near"></a><a name="Custom_NEAR"></a>Общие сведения о NEAR  

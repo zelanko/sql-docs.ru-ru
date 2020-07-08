@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c27ba2a02a9c54f2dc1b57341750d6600843d69d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4dc33b9fa7b6f48f1012d3a4e6442aa0f3a8370
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85654552"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>Определение неполадок хост-адаптера SCSI
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Это правило проверяет журнал системных событий на наличие события с идентификатором EventId 1066. Эта ошибка возникает при проблемах настройки хост-адаптера SCSI или неправильной работой устройства.  
   
 ## <a name="best-practices-recommendations"></a>Рекомендации  

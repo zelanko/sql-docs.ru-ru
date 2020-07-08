@@ -17,15 +17,15 @@ ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91e4ceeba2e8ec18569c22a886623977402e478a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63d70982c38a84b4765331c4a978cc276fe749ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284115"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85653549"
 ---
 # <a name="distributor-information-publications"></a>Сведения о распространителе, публикации
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Вкладка **Публикации** содержит сводные данные по всем публикациям на распространителе, выбранном в левой панели.  
   
 Сведения о публикациях, поддерживаемых распространителем, включают столбец, содержащий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] издателя. В остальном сведения о публикации совпадают со сведениями о публикации при просмотре в представлении «Издатель» в мониторе репликации. Дополнительные сведения о столбцах на вкладке **Публикации** см. в разделе [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md).  

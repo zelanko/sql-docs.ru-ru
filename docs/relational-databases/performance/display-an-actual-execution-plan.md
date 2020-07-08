@@ -16,15 +16,15 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eaa3002837dd19335abcc8383612bcb31642265e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6279cdb7cf2d818852dde87b9755b845a07b3e86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78256881"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655384"
 ---
 # <a name="display-an-actual-execution-plan"></a>Отображение действительного плана выполнения
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В этой теме описывается, как создать фактические графические планы выполнения с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения времени выполнения, такие как фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Создаваемый план выполнения отображает фактический план выполнения запроса, который используется в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения запросов.  
   
  Для использования этой возможности необходимо иметь соответствующие разрешения на выполнение запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которых создается графический план выполнения, и разрешение SHOWPLAN для всех баз данных, на которые ссылается запрос.  

@@ -19,15 +19,15 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e838636d3d52fa05933601c2ad9fae1f6006f7b4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85629167"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных **varbinary**, **varbinary(max)** (включая **FILESTREAM**) или **image** . Такая форма поиска называется *поиск свойств*.  
   
  Связанный [фильтр](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) определяет возможность поиска свойств в заданном типе документа. Для некоторых типов документов связанный фильтр IFilter извлекает часть или все свойства, определенные для этого типа документа, а также содержимое текста документа. Можно настроить полнотекстовый индекс, чтобы разрешить поиск только в свойствах, которые извлекаются фильтром IFilter во время полнотекстового индексирования. К фильтрам IFilter, извлекающим ряд свойств документа, относятся фильтры IFilter для типов документов Microsoft Office 2007 (DOCX, XLSX, PPTX и др.). С другой стороны, фильтр IFilter XML не возвращает свойства.  

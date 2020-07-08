@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 81481c540d1d9beee820e30120dfffba8a9cfe0f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: a115a1135ab0b7ded6bdde57e50ce1be190953b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85655875"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>Рекомендации по индексам сolumnstore в помощнике по настройке ядра СУБД
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
  
   [Индексы columnstore](../../t-sql/statements/create-columnstore-index-transact-sql.md), как и традиционные индексы rowstore, существенно повышают производительность хранения данных и аналитических рабочих нагрузок. Выбор подходящего индекса (rowstore или columnstore) для базы данных зависит от рабочей нагрузки приложения. В SQL Server 2016 [помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md) может проанализировать рабочую нагрузку и порекомендовать создать индексы rowstore и columnstore в соответствующем сочетании для вашей базы данных. 
