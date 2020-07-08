@@ -12,15 +12,15 @@ ms.assetid: 6e0633dc-889e-49ef-bace-3c50958db2dd
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 202baede7eed746a581a11d165fe6d7b0fb5afdd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bad68dc1125b50d956b1580751d5911d031a37bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903604"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85693799"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **Audit Addlogin** возникает при добавлении или удалении имени входа [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Если при добавлении имени входа установлены такие дополнительные свойства, как база данных по умолчанию, то данные об этих свойствах появляются в столбце **TextData** этого события. Если эти свойства задаются в процессе добавления имени входа, то событие **Audit Login Change Property** не произойдет.  

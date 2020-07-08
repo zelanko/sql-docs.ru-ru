@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 95f55cff-4abb-4c08-97b3-e3ae5e8b24e2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 657dedcf4944a2540d1237b53fa8ea822c31ae3f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b54f60e71344bc04271378fbd84214b31bd9503c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031643"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85692491"
 ---
 # <a name="lesson-2-create-and-manage-data-in-a-hierarchical-table"></a>Занятие 2. Создание данных в иерархической таблице и управление ими
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 На занятии 1 существующая таблица была изменена так, чтобы в ней использовался тип данных **hierarchyid** . Кроме того, столбец **hierarchyid** был заполнен представлением существующих данных. На этом занятии будет создана новая таблица и вставлены данные с помощью иерархических методов. Затем с помощью иерархических методов будет выполнен запрос данных и показано управление данными. 
 
 ## <a name="prerequisites"></a>предварительные требования  
@@ -289,7 +289,7 @@ ms.locfileid: "68031643"
    
   
 ## <a name="reorder-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Переупорядочение данных в иерархической таблице с помощью иерархических методов
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Реорганизация иерархии — это распространенная задача обслуживания. В этой задаче в первую очередь переместим одну строку в новую позицию в иерархии с помощью инструкции UPDATE с методом [GetReparentedValue](../../t-sql/data-types/getreparentedvalue-database-engine.md) . Затем переместим все поддерево в новое место.  
   
 Метод `GetReparentedValue` имеет два аргумента. В первом аргументе описывается та часть иерархии, которая будет изменена. Например, если в иерархии **/1/4/2/3/** необходимо изменить сегмент **/1/4/** так, чтобы в результате получилась иерархия **/2/1/2/3/** , в которой последние два узла (**2/3/** ) остались бы без изменений, необходимо указать в качестве первого аргумента изменяемые узлы ( **/1/4/** ). Второй аргумент предоставляет новый уровень иерархии; для этого примера это **/2/1/** . Эти два аргумента не обязаны содержать одинаковое число уровней.  
