@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4e9f5e12a56fe825909dd991c4b3253d3d90608c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 82bcad58a97fa41938f127c0a814c312c4e22ec9
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827828"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052729"
 ---
 # <a name="sp_polybase_leave_group-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Удаляет SQL Server экземпляр из группы Polybase для масштабируемых вычислений. 
  
@@ -44,7 +43,7 @@ sp_polybase_leave_group;
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CONTROL SERVER.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Из группы можно удалить только один из вычислений.  
   
  После выполнения хранимой процедуры перезапустите ядро Polybase и службу Перемещение данных PolyBase на компьютере. Чтобы проверить, выполняется ли следующее динамическое административное представление на головном узле: **sys. dm_exec_compute_nodes**.  

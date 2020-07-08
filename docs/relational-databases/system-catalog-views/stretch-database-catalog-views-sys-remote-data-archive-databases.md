@@ -18,15 +18,14 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: a4d7717a6e89b156cd66ea96a44383d28cbecfb3
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018206"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053636"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database представлений каталога — sys. remote_data_archive_databases
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Содержит по одной строке для каждой удаленной базы данных, в которой хранятся данные из локальной базы данных с поддержкой Stretch.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "68018206"
 |**remote_database_name**|**sysname**|Имя удаленной базы данных.|  
 |**data_source_id**|**int**|Источник данных, используемый для подключения к удаленному серверу|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

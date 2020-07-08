@@ -20,11 +20,11 @@ ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee313bdcda6b005a3f3a80725908244d3a496b67
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: d4a381c891c7cab2f4c14baaf87e9c5108cea714
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86011608"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091548"
 ---
 # <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -87,7 +87,7 @@ GO
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
 
-|тип |Описание| 
+|тип |Описание:| 
 |-------------------------- |--------------------------| 
 |ABR |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| | 
 |AM_INDBUILD_ALLOCATION |Только для внутреннего применения. <br />**Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
@@ -166,8 +166,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] и более поздних версий.| 
 |каунтрековеримгр |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
 |CREATE_DATINISERVICE |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
-|кксконсумер |Происходит с параллельными планами запросов, когда поток-потребитель ожидает отправки строк потоком-производителю. Это обычная часть параллельного выполнения запроса. <br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ), CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
-|CXPACKET |Происходит с параллельными планами запросов при синхронизации итератора обмена обработчиком запросов, а также при создании и использовании строк. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание.** Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2), [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET — это только синхронизация итератора обмена обработчика запросов и создание строк для потребительских потоков. Потоки-потребители отправляются отдельно в типе ожидания ККСКОНСУМЕР.| 
+|кксконсумер<a name="cxconsumer"></a>|Имеет место при параллельных планах запросов, когда поток-потребитель (родительский объект) ожидает передачи строк потоком производителя. Ожидания ККСКОНСУМЕР вызываются итератором Exchange, который выходит за пределы строк из своего потока производителя. Это обычная часть параллельного выполнения запроса. <br /> **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ), CU3),[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET<a name="cxpacket"></a>|Происходит с параллельными планами запросов при синхронизации итератора обмена обработчиком запросов, а также при создании и использовании строк. Если ожидание чрезмерно и не может быть уменьшено путем настройки запроса (например, добавления индексов), рассмотрите возможность настройки порогового значения затрат для параллелизма или снижения максимальной степени параллелизма (MaxDOP).<br /> **Примечание.** Начиная с с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] пакетом обновления 2 (SP2), [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] CXPACKET относится только к синхронизации итератора обмена обработчика запросов и при создании строк. Если потоки-потребители слишком медленные, буфер итератора Exchange может стать переполненным и вызвать CXPACKET ожидания. Потоки-потребители отправляются отдельно в типе ожидания ККСКОНСУМЕР.| 
 |CXROWSET_SYNC |Имеет место при параллельном просмотре диапазона.| 
 |DAC_INIT |Имеет место при инициализации выделенного административного соединения.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |Только для внутреннего применения. <br /> **Область применения**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] и более поздних версий.| 
@@ -1024,7 +1024,7 @@ GO
   
  Сведения о матрице совместимости блокировок см. в разделе [sys. dm_tran_locks &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
     
  [SQL Server динамические административные представления, связанные с операционной системой &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

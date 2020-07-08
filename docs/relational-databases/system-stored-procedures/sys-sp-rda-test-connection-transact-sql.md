@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 4edd3cfc40225b4b040c73fb0d3ba929d16debc5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814566"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053590"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Проверяет подключение SQL Server к удаленному серверу Azure и сообщает о проблемах, которые могут препятствовать миграции данных.  
   
@@ -43,7 +42,7 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="arguments"></a>Аргументы  
  @database_name= N '*db_name*'  
- Имя базы данных SQL Server с поддержкой растяжения. Этот параметр необязателен.  
+ Имя базы данных SQL Server с поддержкой растяжения. Это необязательный параметр.  
   
  @server_address= N '*azure_server_fully_qualified_address*'  
  Полный адрес сервера Azure.  
@@ -71,7 +70,7 @@ EXECUTE sys.sp_rda_test_connection
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |link_state|INT|Одно из следующих значений, соответствующее значениям для **link_state_desc**.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
-|link_state_desc| varchar(32)|Одно из следующих значений, соответствующих приведенным выше значениям для **link_state**.<br /><br /> -ИСПРАВЕН<br />     Между SQL Server и удаленным сервером Azure используется работоспособность.<br />— ERROR_AZURE_FIREWALL<br />     Брандмауэр Azure препятствует связи между SQL Server и удаленным сервером Azure.<br />— ERROR_NO_CONNECTION<br />     SQL Server не удается установить подключение к удаленному серверу Azure.<br />— ERROR_AUTH_FAILURE<br />     Сбой проверки подлинности препятствует связи между SQL Server и удаленным сервером Azure.<br />-Ошибка<br />     Ошибка, не связанная с проверкой подлинности, проблемой подключения или проблемой брандмауэра, препятствует связи между SQL Server и удаленным сервером Azure.|  
+|link_state_desc|varchar(32)|Одно из следующих значений, соответствующих приведенным выше значениям для **link_state**.<br /><br /> -ИСПРАВЕН<br />     Между SQL Server и удаленным сервером Azure используется работоспособность.<br />— ERROR_AZURE_FIREWALL<br />     Брандмауэр Azure препятствует связи между SQL Server и удаленным сервером Azure.<br />— ERROR_NO_CONNECTION<br />     SQL Server не удается установить подключение к удаленному серверу Azure.<br />— ERROR_AUTH_FAILURE<br />     Сбой проверки подлинности препятствует связи между SQL Server и удаленным сервером Azure.<br />-Ошибка<br />     Ошибка, не связанная с проверкой подлинности, проблемой подключения или проблемой брандмауэра, препятствует связи между SQL Server и удаленным сервером Azure.|  
 |error_number|INT|Номер ошибки. Если ошибка отсутствует, это поле имеет значение NULL.|  
 |error_message|nvarchar(1024)|Сообщение об ошибке. Если ошибка отсутствует, это поле имеет значение NULL.|  
   
@@ -92,7 +91,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<номер ошибки, связанной с подключением>*|*\<сообщение об ошибке, связанное с подключением>*|  
+|2|ERROR_NO_CONNECTION|*\<connection-related error number>*|*\<connection-related error message>*|  
   
 ### <a name="check-the-azure-firewall"></a>Проверка брандмауэра Azure  
   
@@ -108,7 +107,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<номер ошибки, связанной с брандмауэром>*|*\<сообщение об ошибке, связанное с брандмауэром>*|  
+|1|ERROR_AZURE_FIREWALL|*\<firewall-related error number>*|*\<firewall-related error message>*|  
   
 ### <a name="check-authentication-credentials"></a>Проверка учетных данных проверки подлинности  
   
@@ -124,7 +123,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<номер ошибки, связанной с проверкой подлинности>*|*\<сообщение об ошибке, связанное с аутентификацией>*|  
+|3|ERROR_AUTH_FAILURE|*\<authentication-related error number>*|*\<authentication-related error message>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Проверка состояния удаленного сервера Azure  
   

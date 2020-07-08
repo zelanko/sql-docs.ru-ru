@@ -22,15 +22,14 @@ ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b1517198208c6282aabd29e39d425dc8ae5afb9e
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078564"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091588"
 ---
 # <a name="sysdm_fts_index_keywords_by_document-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Возвращает сведения о содержимом полнотекстового индекса на уровне документа, связанного с указанной таблицей.  
   
@@ -71,7 +70,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|Идентификатор документа или строки, содержащей текущий термин, индексированный полнотекстовым индексом. Данный идентификатор соответствует значению полнотекстового ключа этого документа или строки.|  
 |occurrence_count|**int**|Количество вхождений текущего ключевого слова в документе или строке, которое указывается **document_id**. Если указан параметр "*search_property_name*", occurrence_count отображает только число вхождений текущего ключевого слова в указанном свойстве поиска в документе или строке.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Данные, возвращаемые функцией sys.dm_fts_index_keywords_by_document, позволяют, в частности, выяснить следующее:  
   
 -   общее число ключевых слов, содержащихся в полнотекстовом индексе;  
@@ -80,7 +79,7 @@ sys.dm_fts_index_keywords_by_document
   
 -   сколько раз ключевое слово встречается во всем полнотекстовом индексе, а именно:  
   
-     ([Сумма](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) Where **ключевого слова**=*keyword_value* )  
+     ([Sum](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**) с **ключевым словом** = *keyword_value* )  
   
 -   сколько раз ключевое слово встречается в данном документе или строке;  
   
@@ -90,7 +89,7 @@ sys.dm_fts_index_keywords_by_document
   
  Если полнотекстовый ключевой столбец, как и рекомендовано, имеет тип данных integer, значение document_id прямо сопоставляется со значением полнотекстового ключа базовой таблицы.  
   
- Напротив, если полнотекстовый ключевой столбец имеет тип данных, отличный от integer, значение document_id не представляет значение полнотекстового ключа базовой таблицы. В этом случае для обнаружения строки в базовой таблице, возвращаемой dm_fts_index_keywords_by_document, необходимо присоединить это представление к результатам, возвращаемым [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Чтобы выполнить соединение, нужно сохранить выход хранимой процедуры во временной таблице. После этого можно соединить столбец document_id, возвращенный функцией dm_fts_index_keywords_by_document, со столбцом DocId, возвращенным хранимой процедурой sp_fulltext_keymappings. Обратите внимание, что столбец **отметок времени** не может принимать значения во время вставки, так как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]они создаются автоматически. Поэтому столбец **timestamp** должен быть преобразован в столбцы типа **varbinary (8)** . Следующий пример показывает эти шаги. В этом примере *table_id* — идентификатор таблицы, *database_name* — имя базы данных, а *table_name* — имя таблицы.  
+ Напротив, если полнотекстовый ключевой столбец имеет тип данных, отличный от integer, значение document_id не представляет значение полнотекстового ключа базовой таблицы. В этом случае для обнаружения строки в базовой таблице, возвращаемой dm_fts_index_keywords_by_document, необходимо присоединить это представление к результатам, возвращаемым [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Чтобы выполнить соединение, нужно сохранить выход хранимой процедуры во временной таблице. После этого можно соединить столбец document_id, возвращенный функцией dm_fts_index_keywords_by_document, со столбцом DocId, возвращенным хранимой процедурой sp_fulltext_keymappings. Обратите внимание, что столбец **отметок времени** не может принимать значения во время вставки, так как они создаются автоматически [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Поэтому столбец **timestamp** должен быть преобразован в столбцы типа **varbinary (8)** . Следующий пример показывает эти шаги. В этом примере *table_id* — идентификатор таблицы, *database_name* — имя базы данных, а *table_name* — имя таблицы.  
   
 ```  
 USE database_name;  
@@ -119,7 +118,7 @@ GO
  В следующем примере отображается содержимое полнотекстового индекса на уровне документа в таблице `HumanResources.JobCandidate` образца базы данных `AdventureWorks2012`.  
   
 > [!NOTE]  
->  Этот индекс можно создать, выполнив пример, приведенный для `HumanResources.JobCandidate` таблицы в [инструкции create FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  Этот индекс можно создать, выполнив пример, приведенный для `HumanResources.JobCandidate` таблицы в [инструкции CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.dm_fts_index_keywords_by_document(db_id('AdventureWorks'),   
@@ -127,7 +126,7 @@ object_id('HumanResources.JobCandidate'));
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции полнотекстового поиска и семантического поиска &#40;языке Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Компонент Full-text Search](../../relational-databases/search/full-text-search.md)   
  [sys. dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   

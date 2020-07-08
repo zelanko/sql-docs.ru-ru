@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8410cde58d5f6bcf6b2a48fcc7169210a41afe0a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a528609b8ab33f913a45e9bd61a1409bc3927930
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814688"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053127"
 ---
 # <a name="syssp_rda_reconcile_columns-transact-sql"></a>sys. sp_rda_reconcile_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Согласовывает столбцы в удаленной таблице Azure со столбцами в таблице SQL Server с поддержкой растяжения.  
     
@@ -53,7 +52,7 @@ sp_rda_reconcile_columns @objname = '@objname'
 ## <a name="permissions"></a>Разрешения  
  Требуются db_owner разрешения.  
    
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если в удаленной таблице Azure есть столбцы, которых больше нет в таблице SQL Server с поддержкой Stretch Database, эти лишние столбцы не препятствуют нормальной работе службы Stretch Database. При желании вы можете удалить такие столбцы вручную.  
   
 ## <a name="example"></a>Пример  

@@ -20,15 +20,14 @@ ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 822d0663d13e4ad03c852758e97277e6711af0bd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133090"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091895"
 ---
 # <a name="sysserver_principals-transact-sql"></a>sys.server_principals (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Содержит одну строку для каждого участника уровня сервера.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "68133090"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Имя участника. Уникален в пределах сервера.|  
 |**principal_id**|**int**|Идентификатор участника. Уникален в пределах сервера.|  
-|**трансляцию**|**varbinary(85)**|Идентификатор SID (Security-IDentifier, идентификатор защиты) участника. Для участника Windows соответствует идентификатору SID Windows.|  
+|**sid**|**varbinary(85)**|Идентификатор SID (Security-IDentifier, идентификатор защиты) участника. Для участника Windows соответствует идентификатору SID Windows.|  
 |**type**|**char (1)**|Тип участника:<br /><br /> S = имя входа SQL<br /><br /> U = имя входа Windows<br /><br /> G = группа Windows<br /><br /> R = роль сервера<br /><br /> C = имя входа, сопоставленное сертификату<br /><br /> K = имя входа, сопоставленное асимметричному ключу|  
 |**type_desc**|**nvarchar(60)**|Описание типа участника:<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
 |**is_disabled**|**int**|1 = имя входа отключено.|  
@@ -67,7 +66,7 @@ JOIN sys.server_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Участники (ядро СУБД)](../../relational-databases/security/authentication-access/principals-database-engine.md)   

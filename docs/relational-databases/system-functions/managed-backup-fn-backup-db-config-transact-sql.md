@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 4147d01936fbdd3a14e479a7b560d5368a5110ec
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067781"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053715"
 ---
 # <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Возвращает 0, 1 или более строк с параметрами конфигурации «[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]». Возвращает 1 строку для указанной базы данных или возвращает все базы данных из экземпляра, в которых настроено «[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]».  
   
@@ -44,7 +43,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  @db_name  
- Имя базы данных. @db_name Параметр имеет тип **sysname**. Если в этом параметре передается пустая строка или значение NULL, возвращаются сведения обо всех базах данных на экземпляре SQL Server.  
+ Имя базы данных. @db_nameПараметр имеет тип **sysname**. Если в этом параметре передается пустая строка или значение NULL, возвращаются сведения обо всех базах данных на экземпляре SQL Server.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -68,7 +67,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
  Требуется членство в роли базы данных **db_backupoperator** с разрешениями **ALTER ANY CREDENTIAL** . Пользователю не следует запрещать разрешение **View ANY DEFINITION** .  
   
 ## <a name="examples"></a>Примеры  
- В следующем примере возвращается [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] конфигурация для "TestDB".  
+ В следующем примере возвращается [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Конфигурация для "TestDB".  
   
  Для каждого фрагмента кода в поле атрибута языка выберите «tsql».  
   

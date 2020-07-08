@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b74f408bdb2be61076d5034478dc6743259fed6a
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937019"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053650"
 ---
 # <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Содержит по одной строке для каждой задачи обновления схемы для архива удаленных данных каждой таблицы с поддержкой растяжения в текущей базе данных. Задачи идентифицируются по идентификаторам задач.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "67937019"
 |**error_severity**|**int**|Если обновление схемы удаленного архива данных завершается неудачей, серьезность возникшей ошибки; в противном случае значение null.|  
 |**error_state**|**int**|Если происходит сбой обновления схемы удаленного архива данных, то состояние возникшей ошибки; в противном случае значение null. Error_state указывает условие или расположение, в котором произошла ошибка.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

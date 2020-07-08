@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: f5f155837f1e5dd9057c376152ceae56bce33d74
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155805"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053440"
 ---
 # <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup. fn_get_health_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Возвращает таблицу, состоящую из 0, одной или более строк объединенного числа ошибок, указанных расширенными событиями в течение заданного периода времени.  
   
- Функция используется для сообщения о состоянии работоспособности служб в разделе интеллектуального администрирования.  В [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] настоящее время поддерживается в области смарт-администрирования. Поэтому возвращаемые ошибки связаны с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ Функция используется для сообщения о состоянии работоспособности служб в разделе интеллектуального администрирования.  В настоящее время [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживается в области смарт-администрирования. Поэтому возвращаемые ошибки связаны с [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,10 +44,10 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
  [@begin_time]  
- Начало периода времени, для которого вычисляется общее количество ошибок.  @begin_time Параметр имеет тип DateTime. Значение по умолчанию — NULL. Если значение равно NULL, функция будет обрабатывать все события, возникшие за 30 минут до текущего времени.  
+ Начало периода времени, для которого вычисляется общее количество ошибок.  @begin_timeПараметр имеет тип DateTime. Значение по умолчанию — NULL. Если значение равно NULL, функция будет обрабатывать все события, возникшие за 30 минут до текущего времени.  
   
  [ @end_time]  
- Конец периода времени, для которого вычисляется общее количество ошибок. @end_time Параметр имеет тип DateTime и значение по умолчанию NULL. Если значение равно NULL, функция будет обрабатывать расширенные события до текущего времени.  
+ Конец периода времени, для которого вычисляется общее количество ошибок. @end_timeПараметр имеет тип DateTime и значение по умолчанию NULL. Если значение равно NULL, функция будет обрабатывать расширенные события до текущего времени.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -62,7 +61,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
 |number_of_backup_loops|INT|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |number_of_retention_loops|INT|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
   
-## <a name="best-practices"></a>Советы и рекомендации  
+## <a name="best-practices"></a>Рекомендации  
  Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, можно использовать хранимую процедуру **managed_backup. sp_get_backup_diagnostics** , чтобы получить список расширенных событий, чтобы найти подробные сведения об ошибке.  
   
 ## <a name="security"></a>Безопасность  

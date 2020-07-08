@@ -20,15 +20,14 @@ ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: decb7b7ce4d1c2937c5c787e92c7c35472f30133
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133028"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091728"
 ---
 # <a name="sysserver_role_members-transact-sql"></a>sys.server_role_members (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Возвращает одну строку для каждого члена каждой предопределенной и заданной пользователем роли сервера.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "68133028"
 ## <a name="permissions"></a>Разрешения  
  Имена входа могут просматривать свое членство в роли сервера и могут просматривать principal_id членов предопределенных ролей сервера. Для просмотра всех членов роли сервера требуется разрешение **View definition на роль сервера** или членство в предопределенной роли сервера **администратора** .  
   
-  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается имя и идентификатор ролей и их членов.  
@@ -57,7 +56,7 @@ JOIN sys.server_principals AS member
     ON sys.server_role_members.member_principal_id = member.principal_id;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталога безопасности &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md)   

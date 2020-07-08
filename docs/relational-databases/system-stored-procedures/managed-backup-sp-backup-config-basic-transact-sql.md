@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 684a538030aae91cd50125c82d4a5aee401764eb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: 67ed480e1d34e688413cd7242bd25501dcd3074a
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830390"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86052940"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Настраивает [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Основные параметры для конкретной базы данных или для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

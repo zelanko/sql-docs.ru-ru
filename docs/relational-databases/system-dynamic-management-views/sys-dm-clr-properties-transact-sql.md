@@ -20,15 +20,14 @@ ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
-ms.translationtype: MT
+ms.openlocfilehash: a61484691e4e5a2ea5ca4c08b6382b501f1cc851
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824734"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091883"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Возвращает строку для каждого свойства, связанного с интеграцией со средой CLR программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая версию и состояние внутрипроцессной среды CLR. Размещенная среда CLR инициализируется путем запуска инструкций [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md)или [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) или путем выполнения любой подпрограммы среды CLR, типа или триггера. Представление **sys. dm_clr_properties** не указывает, включено ли выполнение ПОЛЬЗОВАТЕЛЬСКОГО кода CLR на сервере. Выполнение пользовательского кода CLR включается с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) с параметром [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) , установленным в значение 1.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "82824734"
 |**name**|**nvarchar(128)**|Имя свойства.|  
 |**value**|**nvarchar(128)**|Значение свойства.|  
   
-## <a name="properties"></a>Свойства  
+## <a name="properties"></a>Элемент Property  
  Свойство **Directory** указывает каталог, на который была установлена .NET Framework на сервере. На серверном компьютере может быть несколько установок платформы .NET Framework, и значение этого свойства определяет установку, которую использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Свойство **Version** указывает версию .NET Framework и РАЗМЕЩЕННУЮ среду CLR на сервере.  
@@ -68,7 +67,7 @@ ms.locfileid: "82824734"
   
  **Состояние CLR остановлено** , только если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] находится в процессе завершения работы.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Свойства и значения этого представления могут измениться в будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из-за улучшений функций интеграции со средой CLR.  
   
 ## <a name="permissions"></a>Разрешения  

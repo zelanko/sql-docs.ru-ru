@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cf376712d51f542f6da5eaa8e89b53779eda0c07
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: 365ddae67f2357c11735f2d0966e56405edbde07
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941836"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053687"
 ---
 # <a name="sp_delete_backup_file_snapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Удаляет указанный моментальный снимок резервной копии из указанной базы данных. Используйте эту системную хранимую процедуру совместно с системной функцией **sys. fn_db_backup_file_snapshots** для обнаружения и удаления потерянных моментальных снимков резервных копий. Дополнительные сведения см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
 
@@ -46,7 +45,7 @@ sys.sp_delete_backup_file_snapshot
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение ALTER ANY DATABASE.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup (Transact-SQL)](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   

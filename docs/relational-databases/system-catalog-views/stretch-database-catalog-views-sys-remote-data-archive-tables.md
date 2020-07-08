@@ -18,15 +18,14 @@ ms.assetid: 765069b7-60fd-414c-875f-3455460b75cd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
-ms.translationtype: MT
+ms.openlocfilehash: b91a01714f7c7784f5ec227362c66c9468f44df5
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018194"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053624"
 ---
 # <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database представлений каталога — sys. remote_data_archive_tables
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Содержит по одной строке для каждой удаленной таблицы, в которой хранятся данные из локальной таблицы с поддержкой растяжения.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "68018194"
 |**is_migration_paused**|**bit**|Указывает, приостановлена ли миграция.|  
 |**is_reconciled**|**bit**| Указывает, синхронизирована ли удаленная таблица и SQL Serverная таблица.<br/><br/>Если значение **is_reconciled** равно 1 (true), то удаленная таблица и SQL Serverная таблица синхронизируются, и можно выполнять запросы, включающие удаленные данные.<br/><br/>Если значение **is_reconciled** равно 0 (false), то удаленная таблица и SQL Serverная таблица не синхронизируются. Недавно перенесенные строки необходимо перенести снова. Это происходит при восстановлении удаленной базы данных Azure или при удалении строк вручную из удаленной таблицы. До согласования таблиц нельзя выполнять запросы, содержащие удаленные данные. Чтобы согласовать таблицы, выполните [sys. sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md). |  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [База данных Stretch](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -20,15 +20,14 @@ ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
-ms.translationtype: MT
+ms.openlocfilehash: 497e27859a299fbee1a9ab91ac3d0f7625d04afe
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68046309"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091523"
 ---
 # <a name="sysfn_check_object_signatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Возвращает список всех подписываемых объектов и показывает, был ли объект подписан указанным сертификатом или асимметричным ключом. Если объект подписан указанным сертификатом или асимметричным ключом, возвращает также данные о том, является ли подпись объекта допустимой.  
   
@@ -45,7 +44,7 @@ fn_ check_object_signatures (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- {"\@*класс*"}  
+ { '\@ *класс*"}  
  Идентифицирует тип предоставляемого отпечатка:  
   
 -   'certificate'  
@@ -67,7 +66,7 @@ fn_ check_object_signatures (
 |is_signed|**int**|Возвращает значение 0, если объект не был подписан с помощью предоставленного отпечатка. Возвращает значение 1, если объект подписан с помощью предоставленного отпечатка.|  
 |is_signature_valid|**int**|Если значение is_signed равно 1, возвращает значение 0, если подпись не является допустимой. Возвращает значение 1, если подпись является допустимой.<br /><br /> Если значение is_signed равно 0, всегда возвращает 0.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Используйте **fn_check_object_signatures** , чтобы убедиться в том, что злоумышленники не подделки объектов.  
   
 ## <a name="permissions"></a>Разрешения  
