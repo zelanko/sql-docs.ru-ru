@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e57cd31d-140e-422f-8178-2761c27b9deb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c0982bb3ffaf6c21ee8bff0b7cffc0bc472fb1d9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61b076459edf728475f5f8a15fed8ade5f3b47ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634249"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85705963"
 ---
 # <a name="table-value-constructor-transact-sql"></a>Конструктор табличных значений (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Задает набор выражений значений строк, которые будут использоваться для создания таблицы. Конструктор табличных значений [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет указать в одной инструкции DML несколько строк данных. Конструктор табличных значений можно указать в виде предложения VALUES инструкции INSERT... VALUES либо производной таблицы в предложении USING инструкции MERGE или предложении FROM.
   

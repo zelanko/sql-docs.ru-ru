@@ -12,15 +12,15 @@ ms.assetid: 396aa22a-4723-47f5-ae72-7de99d92dd6f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7006843d30698fcdbc957222caa7be7a10cab11d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6bf632b1b124a9e09fc61d1662b215f6bd3f7f37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717749"
 ---
 # <a name="spcachehit-event-class"></a>Класс событий SP:CacheHit
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий SP:CacheHit указывает на то, что в кэше планов находится хранимая процедура.  
   
 ## <a name="spcachehit-event-class-data-columns"></a>Столбцы данных класса событий SP:CacheHit  

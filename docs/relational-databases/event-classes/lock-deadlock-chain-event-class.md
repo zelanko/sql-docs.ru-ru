@@ -12,15 +12,15 @@ ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6057c32842121f6d27649fe3f2b8e201d6c9695a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68062601"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717930"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Класс событий Lock:Deadlock Chain
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Класс событий Lock:Deadlock Chain создается для каждого элемента взаимоблокировки.  
   
  Используйте класс событий Lock:Deadlock Chain для регистрации условий возникновения взаимоблокировок. Эти сведения помогают определить, насколько сильно взаимоблокировки влияют на производительность приложения и какие объекты при этом задействованы. Чтобы определить, можно ли свести к минимуму вероятность взаимоблокировок, проанализируйте в своем приложении код, изменяющий эти объекты.  

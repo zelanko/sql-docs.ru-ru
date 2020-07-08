@@ -16,16 +16,16 @@ ms.assetid: 0426fa90-ef6d-4d19-8207-02ee59f74aec
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e842a6e22cfed1dba3cff7bf66a681b10ea618
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3ec10ba94f4dba5e8e2e73ceac864d7c3b8221d1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826768"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714594"
 ---
 # <a name="translate-transact-sql"></a>TRANSLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Возвращает строку, предоставленную в качестве первого аргумента, после преобразования символов, указанных во втором аргументе, в конечный набор символов, указанный в третьем аргументе.
 
@@ -133,13 +133,13 @@ SELECT TRANSLATE('abcdef','abc','bcd') AS Translated,
 
 ## <a name="see-also"></a>См. также:
 
- [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
- [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
- [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
- [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
- [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
- [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
- [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
- [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
- [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)
+- [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)  
+- [CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)  
+- [FORMATMESSAGE (Transact-SQL)](../../t-sql/functions/formatmessage-transact-sql.md)  
+- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+- [REPLACE (Transact-SQL)](../../t-sql/functions/replace-transact-sql.md)  
+- [REVERSE (Transact-SQL)](../../t-sql/functions/reverse-transact-sql.md)  
+- [STRING_AGG (Transact-SQL)](../../t-sql/functions/string-agg-transact-sql.md)  
+- [STRING_ESCAPE (Transact-SQL)](../../t-sql/functions/string-escape-transact-sql.md)  
+- [STUFF (Transact-SQL)](../../t-sql/functions/stuff-transact-sql.md)  
+- [Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)

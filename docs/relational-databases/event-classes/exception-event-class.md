@@ -12,15 +12,15 @@ ms.assetid: 5a45dfa7-51fc-420c-96f6-ce2a1f61b684
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60a3b92de300d18ead0eef921929cdc942e3efb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 620364c3ddaddf6b1f5131af4c45aca0527106cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089463"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716916"
 ---
 # <a name="exception-event-class"></a>Exception, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий Exception показывает, что в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]произошло исключение.  
   
 ## <a name="exception-event-class-data-columns"></a>Столбцы данных класса событий Exception  

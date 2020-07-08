@@ -12,15 +12,15 @@ ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98bf70f1bc26b4b3dd3182024aa62ed41dd3bbab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d139be67f2dceef498267376cf5cb74d8eabb164
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910975"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717760"
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий Sort Warnings указывает на то, что операции по сортировке не помещаются в памяти. Сюда не входят операции сортировки, предполагающие создание индексов, а входят только операции сортировки в запросе (например предложение ORDER BY, используемое в инструкции SELECT).  
   
  Если запрос, включающий операции по сортировке, формирует класс событий Sort Warnings со значением столбца данных EventSubClass, равным 2, производительность запроса может измениться из-за нескольких проходов по данным, необходимым для сортировки данных. Детальнее исследуйте запрос, чтобы определить, можно ли обойтись без операции по сортировке.  

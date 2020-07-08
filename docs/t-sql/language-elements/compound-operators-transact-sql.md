@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 274eabcf6db0902f18bc8d6348e9b5e5a2314d12
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706567"
 ---
 # <a name="compound-operators-transact-sql"></a>Составные операторы (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Составные операторы выполняют определенные операции и задают исходной величине значение результата операции. Например, если переменная @x равна 35, то @x += 2 принимает исходное значение @x, прибавляет 2 и присваивает переменной @x новое значение (37).  
   

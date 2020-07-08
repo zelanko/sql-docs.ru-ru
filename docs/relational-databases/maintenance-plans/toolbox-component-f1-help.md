@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c71cc0537f79330742282e7a0389187c8424d1f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67681c110015ae119c9f5a28812f9fba68f968a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115533"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715333"
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В окне **Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
   
  Значки окна**Область элементов** можно перетаскивать, копировать и вставлять в редакторы кода или размещать в областях конструирования в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

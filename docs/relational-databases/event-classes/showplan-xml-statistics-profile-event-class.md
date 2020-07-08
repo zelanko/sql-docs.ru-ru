@@ -12,15 +12,15 @@ ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee2fcc16c12992b4602dd46d3de2ec40475fce28
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d54c21b5eba94bab12292ca856a5b00fc60c8d74
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717761"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>Класс событий Showplan XML Statistics Profile
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий Showplan XML Statistics Profile возникает, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Включите класс событий Showplan XML Statistics Profile для идентификации операторов Showplan в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Класс событий Showplan XML Statistics Profile отображает полные данные этапа компиляции, поэтому трассировки, которые содержат этот класс событий, могут существенно увеличивать рабочую нагрузку. Чтобы минимизировать привносимые издержки, используйте этот класс событий только в трассировках, наблюдающих за определенными проблемами в течение непродолжительного периода времени.  
