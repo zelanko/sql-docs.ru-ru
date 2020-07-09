@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1bff30a7270be7b47e5bf718d07d5386951042f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a26b04b1acc7ac829bb8fe79db2d3eaeede502dc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760475"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 С помощью политик управления на основе политик можно администрировать один или несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], один или несколько объектов экземпляра, экземпляров сервера, баз данных, а также один или несколько объектов базы данных. Администратор базы данных должен убедиться, что определенные серверы компонента Database Mail отключены. На этом занятии создаются условие и политика, задающие этот параметр сервера. Выполняется проверка сервера на предмет соответствия политике. Затем используется политика для изменения настройки сервера с целью приведения его в соответствие.  
 
 ## <a name="prerequisites"></a>Предварительные требования

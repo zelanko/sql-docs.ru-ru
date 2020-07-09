@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14edbb22-df7b-4b8a-b16c-ac477a5d32c1
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 46ed6c4f4d01b6c4ce1851c24a678617967560a7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18c9c3f647bd2121ac7edf65011e0ac6a0038789
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67950054"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762422"
 ---
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Возвращает значение 1, если начальная и конечная точки заданного экземпляра **geometry** совпадают. Возвращает значение 1 для типов коллекции **geometrycollection**, если каждый содержащийся в ней экземпляр **geometry** является замкнутым. Возвращает значение 0, если экземпляр является незамкнутым.
   
