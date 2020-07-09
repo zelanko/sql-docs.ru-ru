@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e160a51471c33f24bf266d2a68d93def33aed04e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 265654db2e2523b5cd54e4a07b6889e5d312f748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832143"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882448"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Выполняет указанный передаваемый запрос к указанному связанному серверу. Этот сервер является источником данных OLE DB. Из предложения FROM запроса можно ссылаться на функцию OPENQUERY как на имя таблицы. На функцию OPENQUERY можно также ссылаться как на целевую таблицу инструкции INSERT, UPDATE или DELETE. Это зависит от возможностей поставщика OLE DB. Запрос может возвратить несколько результирующих наборов, но функция OPENQUERY возвращает только первый.  
   

@@ -8,16 +8,16 @@ ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ac7648287b4e4b609f4dd4f25b1b07a512065364
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0526dea857f7ed3cb354e74bf3580d4e6a06669
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68065160"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882628"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Планирование выполнения пакетов SQL Server Integration Services в Linux с помощью cron
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 При запуске SQL Server Integration Services (SSIS) и SQL Server в Windows можно автоматизировать выполнение пакетов SSIS с помощью агента SQL Server. Однако при запуске SQL Server и служб SSIS в Linux служебная программа агента SQL Server недоступна для планирования заданий в Linux. Вместо этого для автоматизации выполнения пакетов используется служба cron, которая получила широкое распространение на платформах Linux.
 

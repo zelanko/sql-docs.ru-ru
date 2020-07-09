@@ -2,7 +2,7 @@
 title: Поиск ошибок в репликации транзакций
 description: Здесь описывается, как найти и распознать ошибки репликации транзакций, а также методы устранения неполадок для решения проблем с репликацией.
 ms.custom: seo-lt-2019
-ms.date: 04/27/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -12,15 +12,15 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9a079838d343ba8de93e270d01d704eb32219ee9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7c818e48c916a8ad3da7dfda7eaad6230c16ebd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286995"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882284"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Средство устранения неполадок: поиск ошибок, связанных с репликацией транзакций SQL Server 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Без понимания того, как работает репликация транзакций, устранение ее ошибок может быть затруднительным. Первым шагом при создании публикации является создание моментального снимка агентом моментальных снимков и его сохранение в папке моментальных снимков. Затем агент распространения применяет моментальный снимок к подписчику. 
 
@@ -77,8 +77,10 @@ ms.locfileid: "76286995"
 
     ![Ошибка отказа в доступе к агенту моментальных снимков](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 Если в Windows неправильно настроены разрешения для папки моментальных снимков, для агента моментальных снимков будет отображаться ошибка "Доступ запрещен". Проверьте разрешения на доступ к папке, где хранится моментальный снимок, и убедитесь в том, что у учетной записи, с которой работает агент моментальных снимков, есть разрешения на доступ к общей папке.  
 
@@ -108,10 +110,12 @@ ms.locfileid: "76286995"
     
     ![Сведения об ошибке для агента чтения журнала](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. Эта ошибка обычно возникает при неправильной настройке владельца для базы данных издателя. Это может происходить при восстановлении базы данных. Чтобы проверить, так ли это, выполните указанные ниже действия.
 
@@ -127,7 +131,7 @@ ms.locfileid: "76286995"
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -158,9 +162,11 @@ ms.locfileid: "76286995"
 2. Откроется диалоговое окно журнала **От распространителя к подписчику**, в котором будут приведены подробные сведения о возникшей с агентом ошибке: 
 
      ![Сведения об ошибке для агента распространения](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. Эта ошибка указывает, что агент распространения выполняет повторную попытку. Дополнительные сведения см. в журнале заданий для агента распространения. 
 
@@ -175,9 +181,11 @@ ms.locfileid: "76286995"
 5. Выберите одну из записей ошибок и просмотрите текст ошибки в нижней части окна:  
 
     ![Текст ошибки, в котором сообщается о неправильном пароле для агента распространения](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. Эта ошибка указывает на то, что агент распространения использует неверный пароль. Чтобы устранить ошибку, выполните указанные ниже действия.
 
@@ -194,11 +202,13 @@ ms.locfileid: "76286995"
     Откройте журнал **От распространителя к подписчику**, для чего выберите **Монитор репликации** > **Просмотреть подробности** и щелкните подписку правой кнопкой мыши. В этом случае ошибка будет несколько иной: 
 
     ![Ошибка, которая указывает, что агенту распространения не удается подключиться](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. Эта ошибка указывает, что агенту распространения не удалось подключиться к подписчику из-за ошибки входа для пользователя **NODE2\repl_distribution**. Чтобы более детально проанализировать причины ошибки, подключитесь к подписчику и откройте *текущий* журнал ошибок SQL Server в узле **Управление** в обозревателе объектов. 
 
@@ -234,8 +244,10 @@ ms.locfileid: "76286995"
 
 1. В поле **Команда** начните новую строку, введите следующий текст и нажмите кнопку **ОК**: 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     Расположение и уровень детализации можно изменить в соответствии с конкретными предпочтениями.
 
     ![Подробные выходные данные в свойствах шага задания](media/troubleshooting-tran-repl-errors/verbose.png)

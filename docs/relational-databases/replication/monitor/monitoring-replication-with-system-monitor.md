@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 91db0303326c74b710e7755de5a9573539e61425
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdeda1e81df8914dee4bdb6303c2dec778bb2ab1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882248"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Наблюдение за репликацией с помощью системного монитора
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Системный монитор Windows[!INCLUDE[msCoName](../../../includes/msconame-md.md)] позволяет использовать графики, диаграммы и отчеты для измерения производительности компьютера, предоставляет возможность проведения диагностики и устранения причин возможных проблем (например, несбалансированное использование ресурсов, недостаток аппаратных средств или плохой алгоритм программы), а также поддерживает планирование дополнительных потребностей в аппаратных средствах. Дополнительные сведения см. в статье [Наблюдение за использованием ресурсов (системный монитор)](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  Системный монитор использует объекты и счетчики производительности, предоставляющие информацию о производительности различных процессов. Производительность репликации можно оценить с помощью счетчиков, связанных с агентами репликации:  

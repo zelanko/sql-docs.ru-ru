@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd78fd8f-56e3-4582-9abd-6bc25c91e075
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 712665d24946c2826e4ab6c5e53bb853b07642b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6c68c2b2b2af6f32bcec900211b9185004caaa8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033243"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882473"
 ---
 # <a name="join-filters"></a>фильтры соединения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Фильтр соединения позволяет фильтровать таблицу на основе фильтрации связанной таблицы в публикации. Родительская таблица, как правило, фильтруется параметризованным фильтром. Затем определяется один или несколько фильтров соединения практически таким же способом, что и соединение таблиц. Фильтры соединения расширяют параметризованные фильтры таким образом, чтобы данные в связанных таблицах реплицировались только в том случае, если они соответствуют предложению фильтра соединения.  
   
  Фильтры соединений, как правило, следуют связям «первичный-внешний ключ», определенным для таблиц, к которым они применяются, но не ограничиваются только этими связями. Фильтр соединения может быть основан на любой логике, которая сравнивает связанные данные в двух таблицах.  

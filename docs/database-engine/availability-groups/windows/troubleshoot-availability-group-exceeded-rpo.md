@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8ae9d5fee06ae9db1415b53c41a1d1d23633824
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882360"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rpo"></a>Устранение неполадок: превышение RPO в группе доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   После выполнения принудительного перехода на другой ресурс вручную для группы доступности на вторичной реплике с асинхронной фиксацией вы можете обнаружить, что потери данных превышают целевую точку восстановления (RPO). Или при вычислении возможной потери данных для вторичной реплики с асинхронной фиксацией с использованием метода, описанного в разделе [Мониторинг производительности для групп доступности AlwaysOn](monitor-performance-for-always-on-availability-groups.md), вы обнаруживаете, что она превышает RPO.  
   
  Вторичная реплика с синхронной фиксацией гарантирует нулевую потерю данных, однако возможная потеря данных для вторичной реплики с асинхронной фиксацией зависит от того, какой объем журнала все еще ожидает сохранения на вторичной реплике.  

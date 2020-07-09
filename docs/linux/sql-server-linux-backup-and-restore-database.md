@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f90d612eb9064025db8b9ac942dd7f664cedb67e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68823111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882342"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Вы можете создавать резервные копии баз данных из SQL Server 2017 в Linux различными способами. На сервере Linux можно использовать **sqlcmd** для подключения к SQL Server и создания резервных копий. Из Windows можно подключиться к SQL Server в Linux и создать резервные копии с помощью пользовательского интерфейса. Функция резервного копирования одинакова для разных платформ. Например, можно выполнять резервное копирование баз данных локально, на удаленные диски или в [службу хранилища BLOB-объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 
