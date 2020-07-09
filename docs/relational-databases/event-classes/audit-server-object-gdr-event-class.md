@@ -12,15 +12,15 @@ ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9169fc1f4d5eb4041c38117db8f9b1bd50f705a3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2bde177d88d2d1050e288bb991a5b670160f8cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913455"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726261"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Audit Server Object GDR, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **Audit Server Object GDR** возникает, когда какой-либо пользователь на Microsoft SQL Server задает команду GRANT, REVOKE или DENY для разрешения на объект сервера.  
   
 ## <a name="audit-server-object-gdr-event-class-data-columns"></a>Столбцы данных класса событий Audit Server Object GDR  

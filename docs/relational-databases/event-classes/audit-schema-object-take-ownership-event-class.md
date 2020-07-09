@@ -12,15 +12,15 @@ ms.assetid: 66f39d9b-9ec2-48a7-8a9e-1b42931299c9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 659d5fd6856c495288daa35d74e8a3b365026f10
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2c5c1c2b55fbfdcd314d83f5ee0eda500cae4bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67913512"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726283"
 ---
 # <a name="audit-schema-object-take-ownership-event-class"></a>Audit Schema Object Take Ownership, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **Audit Schema Object Take Ownership** возникает при проверке разрешений на изменение владельца объекта схемы (такого как таблица, процедура или функция). Это происходит, когда владелец назначается объекту при помощи инструкции ALTER AUTHORIZATION.  
   
 ## <a name="audit-schema-object-take-ownership-event-class-data-columns"></a>Столбцы данных класса событий Audit Schema Object Take Ownership  

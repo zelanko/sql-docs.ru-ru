@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 470045b0-ebe9-44a7-b456-480e7a516a2c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 72cab4cc129690b5e544a979f0b18892454dfcef
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 556105822ae0109ea5b05cd83c07834814c95e8f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637134"
 ---
 # <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|7908|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Текст сообщения|Ошибка в таблице. Файл "FILE" в секции с идентификатором PN_ID не является допустимым файлом FILESTREAM.|  
+|Текст сообщения|Ошибка таблицы: файл "имя_файла" в секции с идентификатором "ид_секции" не является допустимым файлом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
 Имя файла FILESTREAM в каталоге столбцов имеет тип ROWGUID. Если имя файла в каталоге столбцов не может быть преобразовано в тип ROWGUID, этот файл не является допустимым.  

@@ -13,15 +13,15 @@ ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1052379affba718d49879c85e395b0117671075a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cad5a65d4988dcc942f571e58abf576d8ba8e05a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286581"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720868"
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Страница **Параметры подписки** диалогового окна **Свойства публикации** позволяет просматривать и устанавливать свойства уровня публикации, связанные с подписками. Свойства сгруппированы по следующим категориям.  
   
 -   Свойства, которые применяются для всех публикаций.  

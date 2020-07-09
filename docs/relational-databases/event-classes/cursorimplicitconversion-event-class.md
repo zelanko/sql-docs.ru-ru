@@ -12,15 +12,15 @@ ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f64b5ae594f766b7182bdde427c5138245721a83
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f10d8be98d0eda99da5873f6b8e4799d64d01bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001831"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726288"
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **CursorImplicitConversion** описывает события неявного преобразования курсора, происходящие в программных интерфейсах (API) и курсорах [!INCLUDE[tsql](../../includes/tsql-md.md)] . События неявного преобразования курсора происходят, когда компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выполняет инструкцию Transact-SQL, не поддерживаемую запрошенным типом серверных курсоров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает ошибку, указывающую, что тип курсора изменился.  
   
  Класс событий **CursorImplicitConversion** включается в трассировки, которые регистрируют производительность курсоров.  

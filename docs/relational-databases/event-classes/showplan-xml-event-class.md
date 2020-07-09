@@ -12,15 +12,15 @@ ms.assetid: 8e22de84-8890-414a-93e4-aebfaa057d7f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67e40d00fa989d3e2a8779b1b25c14476da89215
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0744a0988ff3026d307e7606bb29b20b12460a2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911034"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726145"
 ---
 # <a name="showplan-xml-event-class"></a>Showplan XML, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса Showplan XML возникают, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Включите класс событий Showplan XML для идентификации операторов инструкции Showplan. Этот класс событий хранит каждое событие в виде правильно структурированного XML-документа.  
   
  Если класс событий Showplan XML включить в трассировку, это может повлечь за собой издержки в виде значительного снижения производительности. Showplan XML хранит план запроса, который создается при оптимизации запроса. Чтобы свести к минимуму подобные издержки, следует ограничить использование этого класса событий до трассировок, отслеживающих конкретные проблемы в течение короткого периода времени.  

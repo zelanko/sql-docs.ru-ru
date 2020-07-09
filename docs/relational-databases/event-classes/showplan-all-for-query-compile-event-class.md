@@ -12,15 +12,15 @@ ms.assetid: bb1dc446-5e6c-43d6-9db8-78c76cc2e01f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 480d2d238a82039fd04c1c960e74b0c9da57449e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 582efa7068b9e4ebadc4cdfd9f10ee93eb2774df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67911107"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726189"
 ---
 # <a name="showplan-all-for-query-compile-event-class"></a>Класс событий Showplan All for Query Compile
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса Showplan All for Query Compile происходят, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компилирует инструкцию SQL. Включите этот класс событий, чтобы идентифицировать операторы инструкции Showplan. Включаемые в эти события сведения представляют собой часть данных, доступных в классе событий Showplan XML For Query Compile.  
   
  Класс событий "Showplan All for Query Compile" отображает полные данные в момент компиляции, поэтому трассировки, включающие такие события, могут вызвать значительный дополнительный расход ресурсов. Чтобы свести их к минимуму, сделайте использование этого класса событий доступным только для трассировок, наблюдающих за отдельными проблемами в течение короткого промежутка времени.  

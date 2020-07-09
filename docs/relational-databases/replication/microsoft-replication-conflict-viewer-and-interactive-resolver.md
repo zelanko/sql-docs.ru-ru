@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 641bd224-fcde-4ad4-9518-369cbeb398e4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ca0a64c6e7c9859ccb3f6d8697fb123134c3f31f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1cdacdc6209af2f1763f27bfc28419279e1d5a58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321971"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722027"
 ---
 # <a name="microsoft-replication-conflict-viewer-and-interactive-resolver"></a>Программы Microsoft «Средство просмотра конфликтов репликации» и «Интерактивный сопоставитель»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе приведены сведения о средстве просмотра конфликтов репликации для репликации слиянием и репликации транзакций, а также об интерактивном сопоставителе для репликации слиянием.  
   
 -   [Средство просмотра конфликтов репликации (Майкрософт) (репликация слиянием)](../../relational-databases/replication/microsoft-replication-conflict-viewer-merge-replication.md)  

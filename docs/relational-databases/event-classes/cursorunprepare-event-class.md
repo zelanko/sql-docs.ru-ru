@@ -12,15 +12,15 @@ ms.assetid: 34055a2f-7d0f-4e13-a62e-7ee5b6c23b86
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 174cd2a4bc07d5de1cd664f715b9442846073502
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4748a1232f22f41f3ed079d90c980d7476f595e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68092940"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719845"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **CursorUnprepare** выдает сведения об аннулирующих курсор событиях, которые происходят с курсорами программных интерфейсов приложений (API). Аннулирующие курсор события происходят тогда, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] аннулирует план выполнения.  
   
  Включите класс событий **CursorUnprepare** в трассировки, записывающие производительность курсоров. Если класс событий **CursorUnprepare** включен в трассировку, то объем дополнительной нагрузки зависит от частоты применения курсора к базе данных в процессе трассировки. Если курсоры используются интенсивно, трассировка может привести к значительному снижению производительности.  

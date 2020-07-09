@@ -13,15 +13,15 @@ ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5614e25efc21f4c3b4f4f54249bc26397acbfa3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725902"
 ---
 # <a name="sequence-properties-general-page"></a>Свойства последовательности (страница «Общие»)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Создает объект последовательности и указывает его свойства. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с заданным интервалом; можно настроить перезапуск (зацикливание) последовательности, когда она исчерпана. В отличие от столбцов идентификаторов последовательности не связаны с конкретными таблицами. Приложение обращается к объекту последовательности, чтобы получить следующее значение. Приложения управляют связями между последовательностями и таблицами. Пользовательские приложения могут ссылаться на объект последовательности и распределять значения между несколькими строками и таблицами.  
   
  В отличие от значений столбцов идентификаторов, которые создаются во время вставки, приложение может получить следующий порядковый номер без вставки строки, вызвав функцию [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md). Получить несколько значений из последовательности за один раз можно с помощью функции [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) .  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: f318dcaf176212414ccd0a82c006fa545a8a846f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 710a9796ae2eb68da9d95c7d9a075bba8b7a7482
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67929794"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726127"
 ---
 # <a name="reading-pages"></a>Считывание страниц
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Процесс ввода-вывода экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)] в базе данных SQL Server включает физические и логические операции чтения. Логическое чтение выполняется каждый раз, когда компонент [!INCLUDE[ssDE](../includes/ssde-md.md)] запрашивает страницу из [буферного кэша](../relational-databases/memory-management-architecture-guide.md). Если в этот момент страница не находится в кэше, то сначала при помощи операции физического чтения она копируется в него с диска.
 
