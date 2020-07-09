@@ -9,16 +9,16 @@ ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: e026fd9dd9bd0aa9cf78f5cf6d15303b0063ade5
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: ba7827a637c1317500894fcfda85cd1d5122cce7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82750802"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888113"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Настройка группы доступности Always On для чтения и масштабирования
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Группу доступности AlwaysOn SQL Server для рабочих нагрузок чтения и масштабирования можно настроить в Windows. Существует два типа архитектур для групп доступности:
 * Архитектура для высокого уровня доступности, в которой используется диспетчер кластера для улучшенного обеспечения непрерывности бизнес-процессов и которая может содержать доступные для чтения вторичные реплики. Сведения о создании архитектуры высокого уровня доступности см. в статье [Создание и настройка групп доступности в Windows](creation-and-configuration-of-availability-groups-sql-server.md). 

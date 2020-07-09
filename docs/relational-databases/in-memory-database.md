@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
-manager: amitban
-ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c71bda5a459c7993de824cdb6665978ba57166f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892467"
 ---
 # <a name="in-memory-database-systems-and-technologies"></a>Системы и технологии баз данных в памяти
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Это справочная страница по функциям и технологиям систем баз данных в памяти в SQL Server. Понятие системы баз данных в памяти означает систему, предназначенную для использования преимуществ большего объема памяти, доступного для современных баз данных. База данных в памяти по своей природе может быть реляционной или нереляционной.
 
@@ -37,25 +36,25 @@ ms.locfileid: "76831595"
 
 ## <a name="hybrid-buffer-pool"></a>Гибридный буферный пул
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [Гибридный буферный пул](../database-engine/configure-windows/hybrid-buffer-pool.md) расширяет буферный пул для файлов базы данных, размещенных на устройствах хранения энергонезависимой памяти с байтовой адресацией для платформ Windows и Linux с [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ## <a name="memory-optimized-tempdb-metadata"></a>Оптимизированные для памяти метаданные `tempdb`
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 В [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] появилась новая функция — [оптимизированные для памяти метаданные tempdb](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), которая эффективно устраняет некоторые узкие места состязаний и открывает новый уровень масштабируемости для рабочих нагрузок, активно использующих tempdb.
 
 ## <a name="in-memory-oltp"></a>Выполняющаяся в памяти OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 [Выполняющаяся в памяти OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) — технология баз данных, доступная в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../includes/sssds-md.md)] и предназначенная для оптимизации производительности обработки транзакций, приема и загрузки данных, а также сценариев с временными данными.
 
 ## <a name="configuring-persistent-memory-support-for-linux"></a>Настройка поддержки энергонезависимой памяти для Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В статье [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] описано, как настроить энергонезависимую память (PMEM) с помощью служебной программы `ndctl` [энергонезависимая память](../linux/sql-server-linux-configure-pmem.md).
 

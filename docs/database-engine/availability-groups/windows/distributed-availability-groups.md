@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5499bb5106deddcd073c52453a477190e3150bb9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5d14e41c0650043febdddb904813d76be4d7c714
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76941118"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894504"
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/sql/sql-server/).
 
 > [!NOTE]

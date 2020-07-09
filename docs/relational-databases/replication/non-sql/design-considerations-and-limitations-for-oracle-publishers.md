@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9b45f787bf590eb3d4b29aa3d02f9ba8a2fd2934
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08fa9ac127d663636d77d8fd9b8483303d17b235
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321914"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892479"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Рассмотрение структуры и ограничений издателей Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Публикация из баз данных Oracle спроектирована таким образом, чтобы работать практически идентично публикации из базы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Однако необходимо знать о следующих ограничениях и проблемах:  
   
 -   Параметр Oracle Gateway обеспечивает большую производительность по сравнению с параметром Oracle Complete. Тем не менее этот параметр нельзя использовать для публикации одной и той же таблицы в нескольких публикациях транзакций. Таблица может присутствовать только в одной публикации транзакций и в любом количестве публикаций моментальных снимков. Если необходимо опубликовать одну таблицу в нескольких публикациях транзакций, выберите параметр Oracle Complete.  

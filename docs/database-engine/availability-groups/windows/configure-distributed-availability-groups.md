@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ebe6152ea59de28c9df7f3bb3abfa149900c826f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d5bd6d960b30d6c6b261de96ba93ae558e71e866
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77146297"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896129"
 ---
 # <a name="configure-an-always-on-distributed-availability-group"></a>Настройка распределенной группы доступности Always On  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Для создания распределенной группы доступности необходимо создать две группы доступности, каждая из которых имеет собственный прослушиватель. После этого можно объединить эти группы доступности в распределенную группу доступности. Ниже представлен простой пример c Transact-SQL. В этом примере представлены не все детали создания групп доступности и прослушивателей; основное внимание уделяется ключевым требованиям.
 

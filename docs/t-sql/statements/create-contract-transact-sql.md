@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2dfa25c21592affd2b348b14c32c12d7751aeb9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9dac7df96ce86dc83959a6dcbde2383a0db5907c
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626204"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895482"
 ---
 # <a name="create-contract-transact-sql"></a>Инструкция CREATE CONTRACT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создание нового контракта. Контракт определяет типы сообщений, используемые в диалогах компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], а также определяет, какой из участников диалога может посылать сообщения этого типа. Каждый диалог соответствует контракту. Инициирующая служба определяет контракт для диалога перед его началом. Целевая служба определяет контракты, диалоги для которых она принимает.  
   

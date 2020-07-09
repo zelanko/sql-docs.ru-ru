@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0ee533d9a0c3dace8f7fe8ec8e0c615b444ea91d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68810968"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892287"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Спецификация клиентского пакета SDK для VDI SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этом документе описываются интерфейсы, предоставляемые клиентским пакетом SDK для интерфейса виртуального устройства (VDI) SQL Server на Linux. Независимые поставщики программного обеспечения могут использовать API-интерфейс виртуального устройства резервного копирования для интеграции SQL Server в свои продукты. Как правило, VDI в Linux работает аналогично VDI в Windows, но со следующими отличиями:
 

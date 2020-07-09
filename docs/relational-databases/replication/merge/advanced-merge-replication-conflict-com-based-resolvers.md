@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a6637e4b-4e6b-40aa-bee6-39d98cc507c8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ec508dbaf274816ecf32f8eaa0a8047baa60e2a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5fee5fdcc962d1d310f36196b20f1936b85516c1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033395"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892020"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-resolvers"></a>Конфликт расширенной репликации слиянием: сопоставители на базе технологии COM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Все сопоставители, основанные на технологии COM и поставляемые с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , обрабатывают конфликты обновления, а там, где это оговорено специально, они также обрабатывают конфликты вставки и удаления. Все арбитры производят отслеживание столбцов; большинство из них также производят отслеживание строк. Эти и все другие основанные на технологии COM сопоставители объявляют типы конфликтов, которые они обрабатывают, а для всех остальных типов конфликтов агент слияния использует сопоставитель по умолчанию.  
   
  Сопоставители устанавливаются во время процесса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Выполните хранимую процедуру **sp_enumcustomresolvers** для просмотра всех сопоставителей, зарегистрированных на компьютере. При выполнении этой процедуры отображаются описание и глобальный уникальный идентификатор (GUID) для каждого сопоставителя в отдельном результирующем наборе.  

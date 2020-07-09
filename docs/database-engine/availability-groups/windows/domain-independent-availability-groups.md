@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b57d3443ab83ead35d92615ad6c718cde6977097
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b50f2cda111a38ffd6ba67dbbf0fb9fc74192168
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000220"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894492"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Создание группы доступности, независимой от домена
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Группы доступности AlwaysOn должны находиться в отказоустойчивом кластере Windows Server (WSFC). Развертывание WSFC с помощью Windows Server 2012 R2 всегда требует, чтобы серверы, участвующие в WSFC (также называются узлами), были присоединены к одному и тому же домену. Дополнительные сведения о доменных службах Active Directory (AD DS) см. [здесь](https://technet.microsoft.com/library/cc759073(v=ws.10).aspx).
 

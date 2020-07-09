@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 77f2af888488531d6ce472a2358c59b8ecf78e58
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8624eb00f1d3822b2e3e0f857c4d07eb36c2bcad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633333"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895490"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Задает уровень приоритета и набор критериев для определения диалогов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], которым нужно назначить уровень приоритета. Уровень приоритета назначается любой конечной точке диалога, использующей то же сочетание контрактов и служб, которое указано в приоритете диалога. Приоритеты должны находиться в диапазоне от 1 (низкий) до 10 (высокий). Значение по умолчанию — 5.  
   

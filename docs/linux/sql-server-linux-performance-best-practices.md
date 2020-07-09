@@ -8,16 +8,16 @@ ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 548ab73e97b9bccb6a64a95b7294d3d5ca63493d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4c3b0715547e8658f83d544578e91b554854a5ad
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286848"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85887829"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Рекомендации по производительности и конфигурации для SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье приводятся рекомендации по повышению производительности приложений баз данных, подключающихся к SQL Server на Linux. Эти рекомендации относятся именно к платформе Linux. При этом действуют все стандартные рекомендации в отношении SQL Server, например касающиеся проектирования индекса.
 
@@ -31,7 +31,7 @@ ms.locfileid: "79286848"
 
 - **Использование PROCESS AFFINITY для узла и ЦП**
 
-   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании **PROCESS AFFINITY** см. в документации по [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-server-configuration-transact-sql.md).
+   Рекомендуется использовать инструкцию `ALTER SERVER CONFIGURATION`, чтобы задать `PROCESS AFFINITY` для всех узлов **NUMANODE** или ЦП, используемых для SQL Server в операционной системе Linux (то есть обычно для всех узлов и ЦП). Соответствие процессоров помогает эффективно планировать работу Linux и SQL. Использование параметра **NUMANODE** — простейший метод. Имейте в виду, что **PROCESS AFFINITY** следует использовать, даже если на вашем компьютере всего один узел NUMA.  Дополнительные сведения о задании [PROCESS AFFINITY](../t-sql/statements/alter-server-configuration-transact-sql.md) см. в документации по **ALTER SERVER CONFIGURATION**.
 
 - **Настройка нескольких файлов данных tempdb**
 
@@ -162,7 +162,7 @@ vm.transparent_hugepages=madvice
 и активации профиля mssql после изменения параметра
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### <a name="swapfile"></a>Файл подкачки

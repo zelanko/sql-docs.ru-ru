@@ -9,16 +9,16 @@ ms.date: 01/09/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1ce63521989edfccc1fc9fc085b0a9c476cde2ee
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 332160202b3972339c2d9c668f31e373443d5217
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558415"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892289"
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения и масштабирования в Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Группу доступности Always On SQL Server для рабочих нагрузок для чтения и масштабирования можно настроить в Linux. Существует два типа архитектур для групп доступности. Архитектура для высокого уровня доступности использует диспетчер кластера для улучшенного обеспечения непрерывности бизнес-процессов. Она может также содержать реплики для чтения и масштабирования. Сведения о создании архитектуры с высоким уровнем доступности см. в статье [Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux](sql-server-linux-availability-group-configure-ha.md). Другая архитектура поддерживает только рабочие нагрузки для чтения и масштабирования. В этой статье описывается создание группы доступности для рабочих нагрузок чтения и масштабирования без диспетчера кластеров. Эта архитектура обеспечивает только чтение и масштабирование. Она не поддерживает высокий уровень доступности.
 

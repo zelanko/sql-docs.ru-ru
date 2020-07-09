@@ -22,15 +22,15 @@ ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6aef8ae36dc8cb571c4ae1993df1a7b3a81f130
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67927187"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895609"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Изменяет данные о существующем маршруте в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -39,7 +39,7 @@ ms.locfileid: "67927187"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 ALTER ROUTE route_name  
 WITH    
@@ -99,9 +99,9 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Если для маршрута в аргументе *next_hop_address* указывается значение **'LOCAL'** , сообщение доставляется службе текущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Если для маршрута в аргументе **next_hop_address** указывается значение *'LOCAL'* , сообщение доставляется службе текущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Если в аргументе *next_hop_address* указывается значение **'TRANSPORT'** , сетевой адрес определяется на основе сетевого адреса, указанного в имени службы. Маршрут со значением **'TRANSPORT'** может обозначать имя службы или экземпляр брокера.  
+ Если в аргументе **next_hop_address** указывается значение *'TRANSPORT'* , сетевой адрес определяется на основе сетевого адреса, указанного в имени службы. Маршрут со значением **'TRANSPORT'** может обозначать имя службы или экземпляр брокера.  
   
  Если аргумент *next_hop_address* является основным сервером для зеркала базы данных, для зеркального сервера также необходимо указать MIRROR_ADDRESS. Иначе данный маршрут не перейдет к зеркальному серверу при отработке отказа автоматически.  
   
@@ -123,7 +123,7 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Если указано предложение MIRROR_ADDRESS, маршрут должен указать предложения SERVICE_NAME и BROKER_INSTANCE. Для маршрутов с аргументом *next_hop_address*, имеющим значение **'LOCAL'** или **'TRANSPORT'** , нельзя указывать зеркальный адрес.  
+ Если указано предложение MIRROR_ADDRESS, маршрут должен указать предложения SERVICE_NAME и BROKER_INSTANCE. Для маршрутов с аргументом **next_hop_address**, имеющим значение **'LOCAL'** или *'TRANSPORT'* , нельзя указывать зеркальный адрес.  
   
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
@@ -133,7 +133,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Предложения, не указанные в команде ALTER ROUTE, остаются неизменными. Таким образом, инструкция ALTER не может быть использована для указания того, что маршрут не блокируется по времени, что он соответствует какому-либо имени службы или экземпляру брокера. Чтобы изменить эти параметры маршрута, необходимо удалить существующий маршрут и создать новый с обновленными сведениями.  
   
- Если в аргументе *next_hop_address* указывается значение **'TRANSPORT'** , сетевой адрес определяется на основе сетевого адреса, указанного в имени службы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может успешно обрабатывать имена служб, которые начинаются с сетевого адреса в формате, допустимом для *next_hop_address*. Службы с именами, содержащими действительные сетевые адреса, создадут маршрут к сетевому адресу в имени службы.  
+ Если в аргументе **next_hop_address** указывается значение *'TRANSPORT'* , сетевой адрес определяется на основе сетевого адреса, указанного в имени службы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может успешно обрабатывать имена служб, которые начинаются с сетевого адреса в формате, допустимом для *next_hop_address*. Службы с именами, содержащими действительные сетевые адреса, создадут маршрут к сетевому адресу в имени службы.  
   
  Таблица маршрутизации может содержать любое количество маршрутов, в которых указаны имя службы, сетевой адрес или идентификатор экземпляра брокера. В этих случаях компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] производит выбор маршрута при помощи процедуры поиска наиболее точного соответствия сведений, указанных в диалоге, данным, содержащимся в таблице маршрутизации.  
   

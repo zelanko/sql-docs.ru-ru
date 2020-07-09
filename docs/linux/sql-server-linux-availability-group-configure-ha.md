@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2e234e0057db852b6b741a0103412bbacd108287
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d15d295b36ae14e81a3e39272e1c3af71cb51d2d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558404"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892309"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Настройка группы доступности Always On SQL Server для обеспечения высокой доступности в Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье содержатся сведения о настройке группы доступности (AG) Always On SQL Server для обеспечения высокой доступности в Linux. Существует два типа конфигурации групп доступности. В конфигурации *высокой доступности* используется диспетчер кластеров, обеспечивающий непрерывность бизнес-процессов. В эту конфигурацию также могут входить реплики для чтения и масштабирования. В этом документе описывается создание группы доступности для обеспечения высокой доступности.
 

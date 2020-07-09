@@ -2,9 +2,8 @@
 title: Улучшенная отработка отказа для группы доступности
 description: Инструкции по включению улучшенной отработки отказа базы данных, которая инициируется, если база данных в группе доступности Always On больше не может записывать транзакции.
 ms.custom: seodec18
-ms.date: 09/25/2017
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: mikeray
 ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 ms.assetid: ''
 author: MashaMSFT
+ms.reviewer: mikeray
 ms.author: mathoma
-ms.openlocfilehash: 9acd444e1ded8ab0530f605280e7aaa5c5dec907
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d994548398bd47414f8564aeee48e2c3105aca5f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822244"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894431"
 ---
 # <a name="enable-enhanced-database-failover-to-a-database-in-an-always-on-availability-group"></a>Включение улучшенной отработки отказа для базы данных в группе доступности Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 В SQL Server 2012 и 2014 в случае, если база данных, участвующая в группе доступности в первичной реплике, теряет возможность записывать транзакции, она не сможет запустить отработку отказа, даже если реплики синхронизированы и настроены на автоматическую отработку отказа.
 
