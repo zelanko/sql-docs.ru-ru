@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d32a81ce-4ca7-4b33-b536-c7ea0ed6f226
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0bdd7db91d41e9169fb5c71b138355694e73ed42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62cda11cf6373c28943d858d0ed1d8b5bc0cb2b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68109127"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780167"
 ---
 # <a name="mssqlserver_7914"></a>MSSQLSERVER_7914
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|7914|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_ALLOCATION_PAGE_REBUILT|  
-|Текст сообщения|Исправление. Страница PAGE_TYPE с идентификатором P_ID была перестроена.|  
+|Текст сообщения|Исправление: страница PAGE_TYPE с идентификатором P_ID была перестроена.|  
   
 ## <a name="explanation"></a>Объяснение  
 Это информационное сообщение функции REPAIR, в котором указано, что GAM- или SGAM-страница перестроена с использованием данных PFS-страницы.  

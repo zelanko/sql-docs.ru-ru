@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5001efe04b24c987b37e269e3081abdd3a665bf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c1e30294f89beb5f456953e26a33ee0cef13ea52
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896827"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780611"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|2|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя||  
-|Текст сообщения|При соединении с сервером произошла ошибка.  Эта ошибка при соединении с SQL Server может быть вызвана тем, что в параметрах SQL Server по умолчанию запрещены удаленные соединения. (поставщик: поставщик именованных каналов, ошибка: 40: Не удалось открыть соединение с SQL Server) (поставщик данных .Net SqlClient)|  
+|Текст сообщения|При соединении с сервером произошла ошибка.  Эта ошибка при соединении с SQL Server может быть вызвана тем, что в параметрах SQL Server по умолчанию запрещены удаленные соединения. (поставщик: поставщик именованных каналов, ошибка: 40: не удалось открыть соединение с SQL Server (поставщик данных .Net SqlClient)|  
   
 ## <a name="explanation"></a>Объяснение  
 Вероятно, от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поступил ответ на запрос клиента, потому что этот сервер не был запущен.  

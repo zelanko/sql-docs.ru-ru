@@ -12,15 +12,15 @@ ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bde8e1552b13f165d928f1e9275512e22426f9f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91899bddfc872487d29866c3c854563f22353827
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68078856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780178"
 ---
 # <a name="lockacquired-event-class"></a>Класс событий Lock:Acquired
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Класс событий Lock:Acquired указывает, что была получена блокировка для ресурса, например страницы данных.  
   
  Классы событий Lock:Acquired и Lock:Released можно применять для отслеживания блокировок объектов, типов блокировок и длительности их действия. Следует исследовать причины длительных захватов, так как они могут приводить к конфликтным ситуациям. Например, приложение может получать блокировку строк в таблице и затем ожидать ввода пользователя. Поскольку ввод данных пользователем может занять много времени, блокировка может помешать работать другим пользователям. В данном случае приложение необходимо перестроить таким образом, чтобы запросы на блокировку выполнялись только при необходимости и оно не ожидало ввода данных пользователем после запроса на блокировку.  

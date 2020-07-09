@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 73aa376cc47b649b6c9cba336a61ab734a0ae3a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 40087b6b8925608f07921b8140cd305071917535
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780323"
 ---
 # <a name="mssqlserver_2534"></a>MSSQLSERVER_2534
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|2534|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|Текст сообщения|Ошибка в таблице. страница P_ID, заголовок которой указывает, что она выделена идентификатору объекта O_ID, идентификатору индекса I_ID, идентификатору секции PN_ID, идентификатору единицы размещения A_ID (тип TYPE), выделена другому объекту.|  
+|Текст сообщения|Ошибка таблицы: страница P_ID, заголовок которой указывает, что она выделена для идентификатора объекта O_ID, идентификатора индекса I_ID, идентификатора секции PN_ID, идентификатора единицы распределения A_ID (тип TYPE), выделена другим объектом.|  
   
 ## <a name="explanation"></a>Объяснение  
 Заголовок страницы содержит идентификатор единицы распределения *A_ID*, но ни одна из страниц карты распределения индексов для этой единицы распределения не выделяет эту страницу. Следовательно, заголовок содержит неверный идентификатор единицы распределения, и на странице появится совпадающая ошибка MSSQLServer_2533, которая соответствует идентификатору единицы распределения, которая на самом деле распределяет данную страницу.  

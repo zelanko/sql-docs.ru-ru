@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f0b8a226e1376aa705ec3644aacbbc761cc1014b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6e2556ed20f404e011ba0f41709be3504a68ea7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780428"
 ---
 # <a name="mssqlserver_2512"></a>MSSQLSERVER_2512
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|2512|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_DUPLICATE_KEYS|  
-|Текст сообщения|Ошибка в таблице: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE). Повторяющиеся ключи на странице P_ID1, область памяти SLOT1, и странице P_ID2, область памяти SLOT2.|  
+|Текст сообщения|Ошибка таблицы: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE). Повторяющиеся ключи на странице P_ID1, область памяти SLOT1, и странице P_ID2, область памяти SLOT2.|  
   
 ## <a name="explanation"></a>Объяснение  
 Две указанные области памяти обладают одинаковыми ключами, включая **уникальные идентификаторы**.  

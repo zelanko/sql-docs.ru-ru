@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0418352c-0ab2-4dc7-b8b9-5c3bad94560c
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e87c0983ac7e74b45251bb72c44265f2134aa3b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d8a3d87f96ffdedb5f9f5c0c8330e34cd7ec3722
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103728"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780344"
 ---
 # <a name="mssqlserver_2533"></a>MSSQLSERVER_2533
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|2533|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_PAGE_WAS_NOT_SEEN|  
-|Текст сообщения|Ошибка таблицы: страница P_ID, выделенная для идентификатора объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE), не найдена. Возможно, указана недопустимая страница, либо идентификатор единицы распределения в ее заголовке неверен.|  
+|Текст сообщения|Ошибка таблицы: страница P_ID, выделенная для идентификатора объекта O_ID, идентификатора индекса I_ID, идентификатора секции PN_ID, идентификатора единицы распределения A_ID (тип TYPE), не найдена. Возможно, указана недопустимая страница, либо идентификатор единицы распределения в ее заголовке неверен.|  
   
 ## <a name="explanation"></a>Объяснение  
 Страница размещена в единице распределения с идентификатором *A_ID*, однако этот идентификатор отсутствует в заголовке страницы. Заголовок содержит другой идентификатор единицы распределения. Если идентификатор единицы распределения в заголовке страницы ссылается на правильный объект, страница может содержать ошибку MSSQLEngine_2534.  

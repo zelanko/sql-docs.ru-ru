@@ -11,20 +11,20 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 957d9f1f79cc9d7f8a5d0bee39f9140f8e56d263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056711"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780526"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|21879|  
 |Источник события|MSSQLSERVER|  

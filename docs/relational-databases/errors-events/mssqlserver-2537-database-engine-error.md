@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 0af6ff69-d75a-4c39-8da2-9bd0695277c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1b6f07d54fbc04d3ddd9ff6d0a25c2f940f0ca54
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f31350a9e8cc3751d79de7b4eefc4416e9291ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68103622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85780339"
 ---
 # <a name="mssqlserver_2537"></a>MSSQLSERVER_2537
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|2537|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC_RECORD_CHECK_FAILED|  
-|Текст сообщения|Ошибка таблицы: Идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE), страница P_ID, строка ROW_ID. Проверка записи (CHECK_TEXT) завершилась неудачно. Значениями являются VALUE1 и VALUE2.|  
+|Текст сообщения|Ошибка таблицы: идентификатор объекта O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор единицы распределения A_ID (тип TYPE), страница P_ID, строка ROW_ID. Проверка записи (CHECK_TEXT) завершилась неудачно. Значениями являются VALUE1 и VALUE2.|  
   
 ## <a name="explanation"></a>Объяснение  
 В строке ROW_ID (или в одном из столбцов в строке) окончилась неудачей проверка или нарушено условие, описанное значением CHECK_TEXT.  
