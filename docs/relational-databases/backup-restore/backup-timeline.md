@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3a0ebd9b51a28acf77020dccadd5fd509f20c488
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 0918928c8180bffc67476bbbe8f475f9f51a06a3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220494"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728515"
 ---
 # <a name="backup-timeline"></a>Временная шкала резервного копирования
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Диалоговое окно **Временная шкала резервного копирования** служит для поиска и указания резервных копий для восстановления базы данных на момент времени. Чтобы открыть диалоговое окно **Временная шкала резервного копирования** , нажмите кнопку **Временная шкала** на панели **Восстановление базы данных (страница "Общие")** . В этом диалоговом окне можно просмотреть временную шкалу операций восстановления, применявшихся к базе данных.  
   
  Помощник по восстановлению базы данных гарантирует, что будут выбраны только резервные копии, которые необходимы для восстановления из копии до указанного момента времени. Эти выбранные резервные копии составляют рекомендованный план восстановления для операции восстановления. Следует использовать только выбранные резервные копии. Сведения о помощнике по восстановлению базы данных см. в статье [Обзор процессов восстановления (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  

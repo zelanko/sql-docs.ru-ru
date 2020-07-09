@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - CONNECTIONPROPERTY statement
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: a5cf9d02986587ed3e5234343306d6d73c7203a7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94eb8e6d45606da75c6661a78b5f296940248388
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832285"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732593"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Для запроса, поступающего на сервер, эта функция возвращает сведения о свойствах уникального подключения с поддержкой этого запроса.
   
@@ -41,7 +41,7 @@ CONNECTIONPROPERTY ( property )
 *property*  
 Свойство подключения. Аргумент *property* может иметь одно из следующих значений:
   
-|Значение|Тип данных|Description|  
+|Значение|Тип данных|Описание|  
 |---|---|---|
 |net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого этим соединением. Значение NULL не допускается. Возможные возвращаемые значения:<br /><br /> **HTTP**<br /> **Именованный канал**<br /> **Согласованность сеанса**<br /> **Общая память**<br /> **SSL**<br /> **TCP**<br /><br /> и<br /><br /> **VIA**<br /><br /> Примечание. Всегда возвращает значение **Session**, если при подключении используется множественный активный результирующий набор (функция MARS), а также включено использование пулов подключений.|  
 |protocol_type|**nvarchar(40)**|Возвращает тип протокола передачи полезных данных. В настоящее время различаются протоколы TDS (TSQL) и SOAP. Допускает значение NULL.|  
@@ -50,7 +50,7 @@ CONNECTIONPROPERTY ( property )
 |local_tcp_port|**int**|Возвращает TCP-порт сервера, с которым установлено подключение, которое использует протокол TCP. Допускает значение NULL.|  
 |client_net_address|**varchar(48)**|Запрашивает адрес клиента, который пытается подключиться к этому серверу. Допускает значение NULL.|  
 |physical_net_transport|**nvarchar(40)**|Возвращает описание физического транспортного протокола, используемого этим соединением. Возвращает точные данные, если для соединения включен режим MARS.|  
-|\<любая другая строка>||Возвращает значение NULL для недопустимых входных данных.|  
+|\<Any other string>||Возвращает значение NULL для недопустимых входных данных.|  
   
 ## <a name="remarks"></a>Remarks  
 **local_net_address** и **local_tcp_port** возвращают значение NULL в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].

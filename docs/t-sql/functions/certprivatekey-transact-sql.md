@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b6a042dd6fcdfc0ebdbda447697d095e9195b60b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "65948825"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732727"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Эта функция возвращает закрытый ключ сертификата в двоичном формате. Эта функция принимает три аргумента.
 -   Идентификатор сертификата.  
@@ -36,7 +36,7 @@ ms.locfileid: "65948825"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```syntaxsql
 CERTPRIVATEKEY   
     (  
           cert_ID   
@@ -79,7 +79,7 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Пример использования функций **CERTPRIVATEKEY** и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из статьи [CERTENCODED (Transact-SQL)](../../t-sql/functions/certencoded-transact-sql.md).
+Пример использования функций [CERTPRIVATEKEY](../../t-sql/functions/certencoded-transact-sql.md) и **CERTENCODED** для копирования сертификата в другую базу данных см. в примере Б из статьи **CERTENCODED (Transact-SQL)** .
   
 ## <a name="see-also"></a>См. также раздел
 [Функции безопасности &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

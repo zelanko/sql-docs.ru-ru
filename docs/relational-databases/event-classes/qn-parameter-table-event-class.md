@@ -12,15 +12,15 @@ ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb89f83f0a916a9d56443e7494ce5e8284350bb8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b364e3d4234cac7b7b3522822aaf2c12e31e6b3b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727417"
 ---
 # <a name="qnparameter-table-event-class"></a>Класс событий QN:Parameter Table
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Событие QN:Parameter Table возвращает сведения об операциях, необходимых для создания, поддержания счетчиков ссылок и удаления внутренних таблиц, в которых хранятся сведения о параметрах. Это событие также возвращает сведения о внутренней активности, позволяя сбросить счетчик использования таблицы параметров.  
   
 ## <a name="qnparameter-table-event-class-data-columns"></a>Столбцы данных класса событий QN:Parameter table  
