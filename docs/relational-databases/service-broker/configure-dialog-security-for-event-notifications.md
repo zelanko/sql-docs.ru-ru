@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 488b1efd533f038914f2d0186e29e28622531f02
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98df2bd789a9f5ca4c81aa83b152c4170546594b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68048902"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773860"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Настройка безопасности диалогов для уведомлений о событиях
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] на удаленном сервере, необходимо настроить безопасность диалога. Безопасность диалога должна настраиваться вручную согласно модели полной безопасности диалога компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Модель полной безопасности включает шифрование и дешифрование сообщений, посылаемых на удаленный сервер и принимаемых с этого сервера. Хотя уведомления о событиях посылаются в одном направлении, другие сообщения, например ошибки, возвращаются в противоположном направлении.  
   
 ## <a name="configuring-dialog-security-for-event-notifications"></a>Настройка безопасности диалога для уведомлений о событиях  

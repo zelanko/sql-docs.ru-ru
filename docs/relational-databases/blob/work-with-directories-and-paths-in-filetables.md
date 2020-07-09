@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ab8501b5b0753143ce5bfe2b289211729c35821
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82999564"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765462"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Работа с каталогами и путями в таблицах FileTable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
   
 ##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Как Работа с каталогами и путями в таблицах FileTable  
@@ -97,9 +97,9 @@ GO
 |-|-|-|  
 |*is_directory* **значение**|*file_stream* **значение**|**Поведение**|  
 |FALSE|NULL|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
-|FALSE|\<значение>|Этот элемент представляет файл.|  
+|FALSE|\<value>|Этот элемент представляет файл.|  
 |TRUE|NULL|Этот элемент представляет каталог.|  
-|TRUE|\<значение>|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
+|TRUE|\<value>|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
   
 ##  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="alwayson"></a> Использование имен виртуальной сети для групп доступности AlwaysOn  
  Если база данных, содержащая данные FILESTREAM или FileTable, принадлежит группе доступности:  

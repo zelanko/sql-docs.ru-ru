@@ -10,16 +10,16 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 651467463e0563c9da00e23115ffb7bc4f151d23
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2eec1f7f24f8465fb5d2bd4406de4c11aef8a518
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77479682"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773596"
 ---
 # <a name="configure-sql-server-always-on-availability-group-on-windows-and-linux-cross-platform"></a>Настройка группы доступности Always On SQL Server в Windows и Linux (кроссплатформенная конфигурация)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 В этой статье описаны действия по созданию группы доступности Always On с одной репликой на сервере Windows Server и другой репликой на сервере Linux. Такая конфигурация является кроссплатформенной, так как реплики находятся в разных операционных системах. Используйте эту конфигурацию для миграции с одной платформы на другую или аварийного восстановления. Такая конфигурация не поддерживает высокую доступность, так как отсутствуют решения кластера для управления кроссплатформенной конфигурацией. 
 

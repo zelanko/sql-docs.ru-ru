@@ -1,7 +1,7 @@
 ---
 title: Подключение к источнику данных MySQL (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/20/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdec318d9fdc895470c7dde94e254c2cc164f079
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285681"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768090"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных MySQL (мастер импорта и экспорта SQL Server)
 
@@ -40,6 +40,7 @@ ms.locfileid: "71285681"
 |Имя сервера|**Server**|
 |Имя базы данных|**База данных**|
 |Сведения для проверки подлинности (имя входа)|**Идентификатор пользователя** и **пароль**|
+|||
 
 Вам не нужно вводить строку подключения в поле **ConnectionString** списка. После ввода отдельных значений для имени сервера MySQL (**сервера**) и информации для входа мастер собирает строку подключения из отдельных свойств и их значений. 
 
@@ -79,18 +80,18 @@ ms.locfileid: "71285681"
 ### <a name="connection-string-format"></a>Формат строки подключения
 Ниже приведен формат типичной строки подключения.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### <a name="enter-the-connection-string"></a>Ввод строки подключения
 Введите строку подключения в поле **ConnectionString** либо введите имя DSN в поле **Dsn** на странице **Выбор источника данных** или **Выбор назначения**. После того как вы введете строку подключения, мастер проанализирует ее и отобразит отдельные свойства и их значения в списке.
 
 В приведенном ниже примере используется следующая строка подключения:
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 Ниже показан экран, который появляется после ввода строки подключения.
 

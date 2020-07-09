@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: ae64276c-4e1e-4ef3-9ee9-ebeb2f61e565
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 23772a43a6786f7570542ebd5d11bcfba5e53790
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44d2674361ce631448088fe923576429ca6d7fa4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007075"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773524"
 ---
 # <a name="mssqlserver_7986"></a>MSSQLSERVER_7986
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|7986|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_PRE_CHECKS_CROSS_OBJECT_LINKAGE|  
-|Текст сообщения|Предварительная проверка системных таблиц: объект с идентификатором O_ID содержит связи межобъектных цепочек. Страница P_ID1 указывает на P_ID2 в единице распределения с идентификатором A_ID1 (должно быть A_ID2). Инструкция проверки прервана из-за неустранимой ошибки.|  
+|Текст сообщения|Предварительная проверка системных таблиц: объект с идентификатором O_ID имеет связи межобъектных цепочек. Страница P_ID1 указывает на P_ID2 в единице распределения с идентификатором A_ID1 (должно быть A_ID2). Инструкция проверки прервана из-за неустранимой ошибки.|  
   
 ## <a name="explanation"></a>Объяснение  
 Первый этап работы DBCC CHECKDB заключается в осуществлении примитивных проверок страниц данных важных системных таблиц. Найденные на этом этапе ошибки не подлежат исправлению, поэтому при их обнаружении DBCC CHECKDB немедленно прекращает свою работу. Указатель следующей страницы для страницы *P_ID1* на уровне данных заданного объекта указывает на страницу другого объекта, *P_ID2*.  

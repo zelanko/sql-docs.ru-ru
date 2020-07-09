@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cd616d55c63cb2e1a4ce78fa587b3dc79d315ff1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68004726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765664"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   При установке этого параметра Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] и формирует подробные сведения о выполнении инструкций в форме четко определенного XML-документа.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68004726"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 SET STATISTICS XML { ON | OFF }  
 ```  
@@ -60,7 +60,7 @@ SET STATISTICS XML { ON | OFF }
  Инструкции SET STATISTICS PROFILE и SET STATISTICS XML являются дубликатами друг друга. Первая выводит данные в текстовом формате, а вторая выводит данные в формате XML. В будущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сведения о плане выполнения новых запросов будут доступны лишь посредством инструкции SET STATISTICS XML, но не посредством инструкции SET STATISTICS PROFILE.  
   
 > [!NOTE]  
->  Если в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] установлен параметр **Включить действительный план выполнения**, то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.  
+>  Если в среде **установлен параметр**Включить действительный план выполнения[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], то при указании этого параметра SET вывод инструкции SHOWPLAN в формате XML формироваться не будет. Снимите флажок **Включить действительный план выполнения** перед использованием параметра SET.  
   
 ## <a name="permissions"></a>Разрешения  
  Чтобы пользоваться инструкцией SET STATISTICS XML и просматривать ее вывод, пользователи должны иметь следующие разрешения.  
@@ -74,7 +74,7 @@ SET STATISTICS XML { ON | OFF }
 ## <a name="examples"></a>Примеры  
  Две следующие инструкции используют параметры инструкции SET STATISTICS XML, чтобы продемонстрировать анализ и оптимизацию использования индексов в запросах в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В первом запросе используется оператор сравнения (=) в предложении WHERE для индексируемого столбца. Во втором запросе в предложении WHERE используется оператор LIKE. При этом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принудительно использует просмотр кластеризованного индекса, чтобы найти данные, соответствующие условию в предложении WHERE. Значения атрибутов **EstimateRows** и **EstimatedTotalSubtreeCost** меньше у первого, индексируемого запроса, из чего следует, что первый запрос выполнился намного быстрее и потребовал меньше ресурсов, чем неиндексируемый запрос.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET STATISTICS XML ON;  

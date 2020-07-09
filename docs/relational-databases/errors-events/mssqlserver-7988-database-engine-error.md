@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 29b967b8-de30-4618-99a8-8b1155e69026
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6065b69fc9467ae4a798188f2de34a5a44ca2fdd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: be9326ff03ac3ec8550c71e03c4889bd4492652e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68007053"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767865"
 ---
 # <a name="mssqlserver_7988"></a>MSSQLSERVER_7988
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|7988|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|Текст сообщения|Предварительная проверка системных таблиц: объект с идентификатором O_ID. Обнаружена циклическая цепочка данных в P_ID. Инструкция проверки прервана из-за непоправимой ошибки.|  
+|Текст сообщения|Предварительная проверка системных таблиц: идентификатор объекта O_ID. Обнаружена циклическая цепочка данных в P_ID. Инструкция проверки прервана из-за непоправимой ошибки.|  
   
 ## <a name="explanation"></a>Объяснение  
 Первый этап работы DBCC CHECKDB заключается в осуществлении примитивных проверок страниц данных важных системных таблиц. Если найдены ошибки, они считаются неисправимыми, поэтому инструкция DBCC CHECKDB немедленно прерывается. На странице *P_ID* обнаружена циклическая связь страниц. Циклическая связь страниц происходит, если указатели следующих страниц с одной из страниц, в конце концов, возвращаются к этой же странице.  

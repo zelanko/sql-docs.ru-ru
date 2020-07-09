@@ -12,15 +12,15 @@ ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d81c5865b062e0817c41cef504994f1d6a5c437c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58d6b43d2ffc2ea3c41ebe9a17b5cb9dc5d01471
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68009519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765240"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Класс событий Degree of Parallelism (7.0 Insert)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса **Degree of Parallelism (7.0 Insert)** происходят каждый раз, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции SELECT, INSERT, UPDATE или DELETE.  
   
  Если этот класс событий включен в трассировку, то полученный объем затрат может значительно снизить производительность, если такие события будут происходить часто. Чтобы свести к минимуму затраты, ограничьте этот класс событий трассировками, которые лишь короткое время следят за конкретными неполадками.  

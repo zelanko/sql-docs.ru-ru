@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 45e47831-9cbc-406d-9e23-5f1f8569b304
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5c981a4a2bd74fe7cfa374310c4bbe240b4846a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d28442aa32fcccef08a7c9d145bd4c0e910abc7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68123184"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765331"
 ---
 # <a name="mssqlserver_41350"></a>MSSQLSERVER_41350
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Идентификатор события|41350|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|Текст сообщения|Предупреждение. Оптимизированная для памяти таблица с долговечностью SCHEMA_AND_DATA была создана в базе данных, для которой включено шифрование. Данные в оптимизированной для памяти таблице зашифрованы не будут.|  
+|Текст сообщения|Предупреждение. Оптимизированная для памяти таблица со стойкостью SCHEMA_AND_DATA, созданная в базе данных, в которой включено шифрование. Данные в оптимизированной для памяти таблице зашифрованы не будут.|  
   
 ## <a name="see-also"></a>См. также:  
 [Выполняющаяся в памяти OLTP (оптимизация в памяти)](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af335cdb4342572184a7a6ced846d1792be39d5b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 02ed9e434ad527fa9e9c6c6ec34b464a522be7ce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634383"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85765802"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Если параметр FORCEPLAN установлен в значение ON, оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает соединение в порядке появления таблиц в предложении FROM запроса. Кроме того, при установке параметра FORCEPLAN в значение ON принудительно используется вложенный цикл соединения, если для построения плана запроса не требуются другие типы соединений или же они запрашиваются с указаниями соединений или запросов.  
   

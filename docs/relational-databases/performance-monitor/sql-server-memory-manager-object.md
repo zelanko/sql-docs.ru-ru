@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bf2451fbebb26bd8b9f47bcfe25c34e741e98eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bab9dfb83a918fe072cc4a97f974f77b0243d06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775804"
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, объект Memory Manager
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает счетчики для контроля использования памяти всего сервера. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
   
 -   существуют ли нехватки в недостаточной физической памяти для хранения в кэше часто используемых данных. Если памяти недостаточно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен получить данные с диска;  

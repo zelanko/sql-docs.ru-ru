@@ -12,15 +12,15 @@ ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfcbafc4e178d01dd35ddeebfcc83ffab4cf1edf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db1b52180a644c4350b66833f559845ab0f9c181
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68001824"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762947"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **CursorExecute** описывает события выполнения курсоров, возникающие в курсорах API. События выполнения курсоров возникают при создании и заполнении курсора компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием плана выполнения, созданного событием подготовки курсоров.  
   
  Включите класс событий **CursorExecute** в трассировки, фиксирующие производительность курсоров. Если класс событий **CursorExecute** включен в трассировку, объем служебных данных зависит от того, как часто курсоры используются в базе данных при трассировке. Если курсоры используются активно, трассировка может существенно снизить производительность.  

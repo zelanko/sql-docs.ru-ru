@@ -17,15 +17,15 @@ ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 954701f03910556c2fe2c4e151ce4a4e3aac2af4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0393313d6c57de73be26f55f93814460dcfd2027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095306"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768333"
 ---
 # <a name="about-change-tracking-sql-server"></a>Об отслеживании изменений (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Отслеживание изменений — это простое решение, обеспечивающее эффективный механизм отслеживания изменений для приложений. Обычно, чтобы позволить приложениям направлять запросы об изменениях данных в базе данных и получить доступ к сведениям об изменениях, разработчикам приложений приходится реализовывать специальные механизмы отслеживания изменений. Создание таких механизмов, как правило, трудоемкая работа и часто связана с использованием сочетания триггеров, столбцов **timestamp** , новых таблиц для хранения сведений отслеживания и специальных процессов очистки.  
   

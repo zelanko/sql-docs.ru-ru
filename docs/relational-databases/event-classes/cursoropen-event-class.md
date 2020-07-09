@@ -12,15 +12,15 @@ ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c72a45776abb6a6f3215560d2b1aafd974d720
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e7851febee7a47c57a5e376cfe5b92ed2999927
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68093705"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773537"
 ---
 # <a name="cursoropen-event-class"></a>Класс событий CursorOpen
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **CursorOpen** описывает события открытия курсора, которые происходят в курсорах API-интерфейса. События открытия курсора происходят, когда [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] определяет инструкцию SQL, которая должна быть связана с курсором или параметрами курсора, и заполняет курсор.  
   
  Включите класс событий **CursorOpen** в трассировках, которые регистрируют производительность курсоров. Когда класс событий **CursorOpen** включается в трассировку, дополнительные расходы, связанные с регистрацией событий, зависят от частоты использования курсоров во время трассировки. Если курсоры используются активно, трассировка может существенно снизить производительность.  

@@ -15,15 +15,15 @@ ms.assetid: fb13712b-e7ad-4f1f-b605-4554bad0cb60
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: accdb4e38771f28ecda71cd1e4e84d70ac05de74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f52645bd3890f070c712165aa55aef595604ebba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767680"
 ---
 # <a name="reinitialize-subscriptions"></a>Повторная инициализация подписок
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Повторная инициализация подписки влечет за собой применение нового моментального снимка одной или нескольких статей к одному или нескольким подписчикам: репликация транзакций и репликация моментальных снимков позволяют повторно инициализировать отдельные статьи; репликация слиянием требует, чтобы повторно были инициализированы все статьи. Узлы в одноранговой топологии репликации транзакций не могут быть инициализированы повторно. Если нужно убедиться в том, что узел имеет новую копию данных, восстановите резервную копию на этом узле. Повторная инициализация выполняется по одной из двух причин.  
   
 -   Подписка явно помечена для повторной инициализации.  

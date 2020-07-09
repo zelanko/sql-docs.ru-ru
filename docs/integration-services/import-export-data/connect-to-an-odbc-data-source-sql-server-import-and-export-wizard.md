@@ -2,7 +2,7 @@
 title: Подключение к источнику данных ODBC (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 description: Настройка имени DSN ODBC или создание строки подключения ODBC для использования с мастером импорта и экспорта SQL Server
 ms.custom: ''
-ms.date: 12/31/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: integration-services
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e6318776-a188-48a7-995d-9eafd7148ff2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2b9979f7d82ef153ed3c447b5d47bf7424ca9443
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73259121c31fcfc74352bf47938fcf28b294b894
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75608033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773585"
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных ODBC (мастер импорта и экспорта SQL Server)
 
@@ -93,9 +93,9 @@ ms.locfileid: "75608033"
 
 В этом примере будет использоваться следующая строка подключения, которая подключается к Microsoft SQL Server. В качестве примера базы данных используется **WideWorldImporters**, и мы подключаемся к SQL Server на локальном компьютере.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Введите строку подключения в поле **ConnectionString** на странице **Выбор источника данных** или **Выбор назначения**. После того как вы введете строку подключения, мастер проанализирует ее и отобразит отдельные свойства и их значения в списке.
 
@@ -140,7 +140,7 @@ ms.locfileid: "75608033"
 
 10. Откройте этот файл в блокноте или другом текстовом редакторе. Ниже приведено содержимое нашего примера SQL Server.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -155,9 +155,9 @@ ms.locfileid: "75608033"
 
     Собрав все необходимые значения из образца файлового имени DSN, вы получите следующую строку подключения.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     Если вы используете приложение "Администратор источников данных ODBC", переносить все эти параметры в имени DSN для создания работающей строки подключения обычно не требуется.  
     -   Всегда нужно указывать драйвер ODBC.

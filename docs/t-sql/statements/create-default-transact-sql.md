@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5116e561889fdd33912650a5daa5a773731f15d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67902849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767154"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Создает объект «Значение по умолчанию». Если этот объект привязан к столбцу или псевдониму типа данных, он указывает значение, которое должно вставляться в столбец (или во все столбцы псевдонима типа данных), если при вставке значение не задано явно.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67902849"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 CREATE DEFAULT [ schema_name . ] default_name   
 AS constant_expression [ ; ]  
@@ -104,7 +104,7 @@ CREATE DEFAULT phonedflt AS 'unknown';
  > [!Note] 
  >  Пропуск записи отличается от явного указания значения NULL в инструкции INSERT.  
   
- Выполнение следующей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] заканчивается сбоем, так как не существует значения по умолчанию `phonedflt`. Данный пример служит только для демонстрационных целей.  
+ Выполнение следующей инструкции `phonedflt` заканчивается сбоем, так как не существует значения по умолчанию [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данный пример служит только для демонстрационных целей.  
   
 ```sql  
 USE AdventureWorks2012;  

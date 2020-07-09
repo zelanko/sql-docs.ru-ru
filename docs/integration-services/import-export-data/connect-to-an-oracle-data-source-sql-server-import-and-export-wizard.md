@@ -1,7 +1,7 @@
 ---
 title: Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: integration-services
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c114a5e17c95d21d999819e73dcfd53f84179802
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285437"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773556"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server)
 
@@ -36,6 +36,7 @@ ms.locfileid: "71285437"
 |---|---|
 |Имя сервера|**Источник данных**|
 |Сведения для проверки подлинности (имя входа)|**Идентификатор пользователя** и **Пароль**; или **Встроенная система безопасности**|
+|||
 
 Вам не нужно вводить строку подключения в поле **ConnectionString** списка. После ввода отдельных значений для имени сервера Oracle (**источника данных**) и информации для входа мастер собирает строку подключения из отдельных свойств и их значений. 
 
@@ -70,9 +71,9 @@ ms.locfileid: "71285437"
 ### <a name="connection-string-format"></a>Формат строки подключения
 Ниже приведен формат типичной строки подключения.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### <a name="enter-the-connection-string"></a>Ввод строки подключения
 Введите строку подключения в поле **ConnectionString** либо введите имя DSN в поле **Dsn** на странице **Выбор источника данных** или **Выбор назначения**. После того как вы введете строку подключения, мастер проанализирует ее и отобразит отдельные свойства и их значения в списке.
