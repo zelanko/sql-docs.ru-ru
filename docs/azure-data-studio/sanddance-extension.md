@@ -1,21 +1,20 @@
 ---
 title: SandDance для Azure Data Studio
-titleSuffix: Azure Data Studio
 description: Использование SandDance в Azure Data Studio
 ms.custom: seodec18
 ms.date: 07/03/2019
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e6576d383011a47eb963774f2834a854dec4416e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6574ab58edb7e4c874273ba2f5349be34ea3202b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70212331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758420"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance для Azure Data Studio (предварительная версия)
 В Azure Data Studio появилась возможность быстро создавать визуализации для данных. Это расширение полезно, если вам нужно просмотреть данные и понять, что происходит. Мы используем технологию под названием SandDance от Microsoft Research, которая позволяет создавать визуализации данных на месте.

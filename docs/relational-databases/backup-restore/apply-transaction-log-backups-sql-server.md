@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f70156f5f725b10af712d0d5e898367715e46394
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5ad220fdec5e770668c23dc7d21a1fc958ac4ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834548"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756328"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Применение резервных копий журналов транзакций (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Этот раздел относится только к модели полного восстановления и модели восстановления с неполным протоколированием.  
   
  В этом разделе описано применение резервных копий журнала транзакции в процессе восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

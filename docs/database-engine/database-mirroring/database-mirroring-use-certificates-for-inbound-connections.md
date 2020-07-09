@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 145c182323d3de702ce1e7d4bfcc4e966c5928c2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8193710d3bd5e1fc132e10766c0f3440f1b7a422
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822278"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754726"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Использование сертификатов для входящих соединений при зеркальном отображении базы данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описаны этапы настройки экземпляров сервера для использования сертификатов проверки подлинности входящих соединений при зеркальном отображении базы данных. Перед настройкой входящих соединений необходимо настроить исходящие соединения на каждом экземпляре сервера. Дополнительные сведения см. в разделе [Включение использования сертификатов для исходящих соединений в конечной точке зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
  Процесс настройки входящих соединений состоит из следующих основных шагов:  

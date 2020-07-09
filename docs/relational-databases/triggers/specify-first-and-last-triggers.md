@@ -16,15 +16,15 @@ ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1020bb9dff821471f33ba3af9285249a93980133
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cac5567670887a0e0a996b6aed690e17adbbf9a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755410"
 ---
 # <a name="specify-first-and-last-triggers"></a>Указание первого и последнего триггеров
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Возможно указать, что один из триггеров AFTER, связанных с таблицей, является либо первым триггером AFTER, либо последним триггером AFTER, срабатывающим для каждого запускающего действия INSERT, DELETE и UPDATE. Порядок запуска триггеров AFTER, срабатывающих в промежутке между первым и последним триггерами, не определен.  
   
  Задать порядок срабатывания для триггера AFTER можно с помощью хранимой процедуры **sp_settriggerorder** . Хранимая процедура**sp_settriggerorder** имеет следующие параметры.  

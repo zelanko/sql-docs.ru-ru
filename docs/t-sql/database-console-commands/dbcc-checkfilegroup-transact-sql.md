@@ -25,21 +25,21 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad67fa7e1cda5208fa5468e233c60a27edb10837
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68102033"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754833"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Проверяет распределение и структурную целостность всех таблиц и индексированных представлений в указанной файловой группе текущей базы данных.
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```syntaxsql
   
 DBCC CHECKFILEGROUP   
 [  
@@ -141,7 +141,7 @@ DBCC CHECKFILEGROUP
 |5|Возникла неизвестная ошибка, которая привела к прекращению выполнения команды DBCC.|  
   
 ## <a name="error-reporting"></a>Отчет об ошибках  
-При каждом обнаружении командой DBCC CHECKFILEGROUP ошибки повреждения данных в папке LOG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается мини-файл дампа (SQLDUMP*nnn*.txt). Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об использовании компонентов и отчетов об ошибках, этот файл автоматически отправляется в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+При каждом обнаружении командой DBCC CHECKFILEGROUP ошибки повреждения данных в папке LOG  *создается мини-файл дампа (SQLDUMP*nnn[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].txt). Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об использовании компонентов и отчетов об ошибках, этот файл автоматически отправляется в [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Файл дампа содержит результаты выполнения команды DBCC CHECKFILEGROUP и дополнительные диагностические сведения. Доступ к этому файлу ограничен списками управления доступом на уровне пользователей. Доступ ограничен учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и членами роли **sysadmin**. По умолчанию роль **sysadmin** содержит всех членов группы Windows BUILTIN\Administrators и группы локальных администраторов. В случае ошибки процесса сбора данных команда DBCC не завершается ошибкой.
   
 ## <a name="resolving-errors"></a>Разрешение ошибок  

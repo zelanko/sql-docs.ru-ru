@@ -1,8 +1,7 @@
 ---
 title: Использование выходных данных FOR JSON в SQL Server и клиентских приложениях
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +10,18 @@ helpviewer_keywords:
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7b284052b049515aedc1541ae1cab6bf5719afe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 882a5e5aaee3bacf6d27866d388f161a59c0086b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095929"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755740"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Использование выходных данных FOR JSON в SQL Server и клиентских приложениях (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 В следующих примерах показаны некоторые способы использования предложения **FOR JSON** или выходных данных JSON в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в клиентских приложениях.  
   
@@ -29,7 +29,10 @@ ms.locfileid: "74095929"
 Выходные данные предложения FOR JSON имеют тип NVARCHAR(MAX), поэтому их можно назначить любой переменной, как показано в следующем примере.  
   
 ```sql  
-DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
+DECLARE @x NVARCHAR(MAX) =
+  (SELECT TOP 10 *
+     FROM Sales.SalesOrderHeader
+     FOR JSON AUTO)  
 ```  
   
 ## <a name="use-for-json-output-in-sql-server-user-defined-functions"></a>Использование выходных данных FOR JSON в определяемых пользователем функциях SQL Server  

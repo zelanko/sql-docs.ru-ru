@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 17eccc8ce90743e49ced2db863bc85e9d297a1a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0cc1e69c0c3efddb5ac57a0041d2edb4e18fdf00
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758225"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Диагностика конфигурации зеркального отображения базы данных (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе приводятся сведения об устранении неполадок при установке сеанса зеркального отображения базы данных.  
   
 > [!NOTE]  

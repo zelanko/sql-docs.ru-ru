@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995659"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758940"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект **SQLServer: статистика SQL** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает работу счетчиков для наблюдения компиляции и типов запросов, отправляемых экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наблюдение за числом компиляций и повторных компиляций запросов и числа пакетов, полученных экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , дает представление о том, как быстро [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запросы пользователей и насколько эффективно их обрабатывает оптимизатор запросов.  
   
  Компиляция занимает в обработке запроса значительную часть времени. Чтобы сэкономить на стоимости компиляции, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] сохраняет компилированный план запроса в кэше запросов. Целью кэширования является снижение числа компиляций путем сохранения уже откомпилированных запросов для дальнейшего повторного использования, избавляя от необходимости повторной компиляции аналогичных запросов, которые могут поступить позже. Однако каждый уникальный запрос должен быть скомпилирован хотя бы однажды. Компиляция запросов может быть вызвана следующими факторами:  

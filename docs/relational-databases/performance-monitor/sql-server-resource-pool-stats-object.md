@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 98241060994cd97944db30a777bc23f475b8cb0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758928"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, объект Resource Pool Stats
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект SQLServer:Resource Pool Stats содержит счетчики производительности, сообщающие основные данные статистики пула ресурсов регулятора ресурсов.  
   
  Каждый активный пул ресурсов создает экземпляр объекта производительности SQLServer:Resource Pool Stats, при этом имя экземпляра совпадает с именем пула ресурсов в регуляторе ресурсов. В следующей таблице описываются счетчики, поддерживаемые этим экземпляром.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 172c55839655fb5a49f60449e4e5eb87fe2cd7b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98d18b704ff407064cd18083b79f80f901d21903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907044"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750931"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>создать фильтр трассировки (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается, как использовать хранимые процедуры для создания фильтра, который возвращает только данные, необходимые для трассируемого события.  
   
 ### <a name="to-set-a-trace-filter"></a>Установка фильтра трассировки  

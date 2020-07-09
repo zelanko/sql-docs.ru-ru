@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6d5677de166b1bfff58c64665901ce814a7448fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750998"
 ---
 # <a name="filter-a-trace"></a>Фильтрация трассировки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Фильтры ограничивают накопление событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Например, ограничение в трассировке по отслеживанию только имен определенных пользователей Windows сокращает объем выходных данных до объема данных только для этих пользователей.  
   
  Установка фильтра трассировки необязательна. Однако фильтр уменьшает дополнительную нагрузку, возникающую при трассировке. Фильтр возвращает конкретные данные, тем самым упрощая аудит и анализ производительности.  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a3dfe3480b6f2756ebff68f27574c8b72f6ae61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68051330"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751445"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Можно указать [методы типа данных xml](../../t-sql/xml/xml-data-type-methods.md) для переменной или столбца типа данных **xml**. Например, [метод query() (тип данных xml)](../../t-sql/xml/query-method-xml-data-type.md) выполняет заданный запрос XQuery к экземпляру XML. При построении XML таким способом может понадобиться ввести значение их столбца с типом данных, отличным от XML или переменной Transact-SQL. Данный процесс называется привязкой реляционных данных внутри XML.  
   

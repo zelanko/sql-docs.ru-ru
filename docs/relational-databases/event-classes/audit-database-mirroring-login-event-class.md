@@ -14,15 +14,15 @@ ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb9c8b9774be0daa74b30bfd51ee97bf1e2271c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 577f5522e2f393c5fe91aca45ab08452853057aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903461"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756112"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие класса **Audit Database Mirroring Login** для составления отчета о сообщениях аудита, связанных с безопасностью транспорта при зеркальном отображении базы данных.  
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Столбцы данных класса событий Audit Database Mirroring Login  

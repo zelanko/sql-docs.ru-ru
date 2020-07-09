@@ -1,10 +1,8 @@
 ---
 title: JSON_QUERY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 06/02/2016
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
@@ -17,13 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 2da9d0f00ad8e8b9336d01bf1d35e18cc16c7f7a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5acf669e6db68b5fceb3a83c7f036d5f8065bde3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635091"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752257"
 ---
 # <a name="json_query-transact-sql"></a>JSON_QUERY (Transact-SQL)
 
@@ -77,16 +76,16 @@ JSON_QUERY ( expression [ , path ] )
   
 ```json  
 {
-    "info": {
-        "type": 1,
-        "address": {
-            "town": "Bristol",
-            "county": "Avon",
-            "country": "England"
-        },
-        "tags": ["Sport", "Water polo"]
-    },
-    "type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -95,12 +94,12 @@ JSON_QUERY ( expression [ , path ] )
 |путь|Возвращаемое значение в нестрогом режиме|Возвращаемое значение в строгом режиме|Дополнительные сведения|  
 |----------|------------------------------|---------------------------------|---------------|  
 |$|Возвращает весь текст JSON.|Возвращает весь текст JSON.|Недоступно|  
-|$.info.type|NULL|Ошибка|Значение не является объектом или массивом.<br /><br /> Используйте **JSON_VALUE**.|  
-|$.info.address.town|NULL|Ошибка|Значение не является объектом или массивом.<br /><br /> Используйте **JSON_VALUE**.|  
+|$.info.type|NULL|Error|Значение не является объектом или массивом.<br /><br /> Используйте **JSON_VALUE**.|  
+|$.info.address.town|NULL|Error|Значение не является объектом или массивом.<br /><br /> Используйте **JSON_VALUE**.|  
 |$.info."address"|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|N'{ "town":"Bristol", "county":"Avon", "country":"England" }'|Недоступно|  
 |$.info.tags|N'[ "Sport", "Water polo"]'|N'[ "Sport", "Water polo"]'|Недоступно|  
-|$.info.type[0]|NULL|Ошибка|Не является массивом.|  
-|$.info.none|NULL|Ошибка|Свойство не существует.|  
+|$.info.type[0]|NULL|Error|Не является массивом.|  
+|$.info.none|NULL|Error|Свойство не существует.|  
 
 ### <a name="using-json_query-with-for-json"></a>Использование JSON_QUERY с FOR JSON
 
@@ -116,7 +115,7 @@ JSON_QUERY ( expression [ , path ] )
   
 ```sql  
 SELECT PersonID,FullName,
- JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
+  JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
 FROM Application.People
 ```  
   
@@ -134,5 +133,5 @@ FOR JSON PATH
   
 ## <a name="see-also"></a>См. также раздел
 
- [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
+- [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  

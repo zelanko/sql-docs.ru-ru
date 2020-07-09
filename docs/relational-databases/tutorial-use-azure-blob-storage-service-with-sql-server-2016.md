@@ -14,16 +14,16 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4143785a4789dd2f9dd2510b96bcc4de3a21c82e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753775"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Учебник. Использование службы хранилища больших двоичных объектов Azure с базами данных SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 Добро пожаловать в учебник по работе с SQL Server 2016 в службе хранилища BLOB-объектов Microsoft Azure. С помощью этого учебника вы научитесь использовать службу хранилища BLOB-объектов Microsoft Azure для сохранения файлов данных и резервных копий SQL Server.  
   
 Поддержка интеграции SQL Server со службой хранилища BLOB-объектов Microsoft Azure появилась в SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления  2 и в дальнейшем была улучшена в SQL Server 2014 и SQL Server 2016. Обзор возможностей и преимуществ использования этих функций см. в статье [Файлы данных SQL Server в Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Работа функции показана в [видеоролике, посвященном восстановлению до точки во времени](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  

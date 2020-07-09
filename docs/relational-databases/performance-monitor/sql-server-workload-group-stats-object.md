@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 68d4d824dc95fcbc9c56fe13493c16d0a8f6a0bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1413ab35860b20a80e1fcae07a0aa5534c1e3965
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947815"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758884"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, объект Workload Group Stats
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект статистики группы рабочей нагрузки SQLServer:Workload Group Stats содержит счетчики производительности, сообщающие основные данные статистики группы рабочей нагрузки регулятора ресурсов.  
   
  Каждая активная группа рабочей нагрузки создает экземпляр объекта статистики группы рабочей нагрузки SQLServer:Workload Group Stats, при этом имя экземпляра совпадает с именем группы рабочей нагрузки в регуляторе ресурсов. В следующей таблице описываются счетчики, поддерживаемые этим экземпляром.  

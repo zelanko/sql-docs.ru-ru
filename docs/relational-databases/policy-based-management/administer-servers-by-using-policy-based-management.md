@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 67a62cc33877644f9feb6384c5d454b2cf30695b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 97514b5bab233bbef63876dd8f0cd6b0afca2274
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76831806"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749536"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    Управление на основе политик — это система, основанная на политиках, для управления одним или несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте его для создания условий, содержащих выражения условия. Затем создайте политики, применяющие условия к целевым объектам базы данных.  
 
 Например, вы как администратор базы данных должны убедиться, что компонент Database Mail отключен на определенных серверах, и поэтому создаете условие и политику, задающую этот параметр сервера. 

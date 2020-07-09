@@ -14,15 +14,15 @@ ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1475b0b2145d40f22760edb5a23e040cb9fef58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056133"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757598"
 ---
 # <a name="dml-triggers"></a>Триггеры DML
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Триггеры DML — это хранимые процедуры особого типа, автоматически вступающие в силу, если происходит событие языка обработки данных DML, которое затрагивает таблицу или представление, определенное в триггере. События DML включают инструкции INSERT, UPDATE или DELETE. Триггеры DML могут использоваться для предписания бизнес-правил и правил целостности данных, выполнения запросов к другим таблицам и включения сложных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Триггер и инструкция, при выполнении которой он срабатывает, считаются одной транзакцией, которую можно откатить назад внутри триггера. При обнаружении серьезной ошибки (например, нехватки места на диске) вся транзакция автоматически откатывается назад.  
   
 ## <a name="dml-trigger-benefits"></a>Преимущества триггеров DML  

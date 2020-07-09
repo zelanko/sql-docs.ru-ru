@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a0301a6cdfd1381e3fdc6baa8189cc8fbf4739a1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9d83569a79980097a18ebff39b3628401a4387c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75253569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754671"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Во время переключения ролей интервал времени, в течение которого зеркальное отображение базы данных не будет обслуживаться, зависит от типа переключения ролей и его причины.  
   
 -   Во время автоматической отработки отказа два фактора влияют на время прерывания обслуживания: требуется время, чтобы зеркальный сервер смог определить, что основной экземпляр сервера потерпел неудачу (время обнаружения ошибки), а также требуется время для переключения базы данных (время отработки отказа).  

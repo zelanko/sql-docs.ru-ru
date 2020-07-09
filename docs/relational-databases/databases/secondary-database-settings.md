@@ -12,15 +12,15 @@ f1_keywords:
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 82a8df3e80a851de5fb09cda3e28620f163a3de7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce372206ab771679eb002e051dd78e1c6be60940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68127224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759017"
 ---
 # <a name="secondary-database-settings"></a>Настройки базы данных-получателя
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   При помощи этого диалогового окна можно настроить и изменить свойства базы данных-получателя в конфигурации доставки журналов.  
   
  Основные сведения о доставке журналов изложены в статье [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  

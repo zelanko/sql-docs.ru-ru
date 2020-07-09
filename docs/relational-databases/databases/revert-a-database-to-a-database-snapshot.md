@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c636db77ffdf8249cf03814abca031b0897fb4c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a9c34408dd1f7731579830802fd8ac62d1f0bae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909508"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759037"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   При повреждении данных в базе данных в сети в некоторых случаях вместо восстановления базы данных из резервной копии будет уместно восстановить базу данных из моментального снимка базы данных, соответствующего времени, предшествующему повреждению. Например, с помощью возврата базы данных можно устранить такую серьезную недавнюю ошибку пользователя, как удаление таблицы. Однако все изменения данных, внесенные после создания моментального снимка, будут утеряны.  
   
 -   **Перед началом работы**  

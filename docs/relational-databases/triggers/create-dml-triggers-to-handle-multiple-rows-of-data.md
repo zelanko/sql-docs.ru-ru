@@ -17,15 +17,15 @@ ms.assetid: d476c124-596b-4b27-a883-812b6b50a735
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5e3c8d9876545e1e68a9795b7c327ac1e47e2d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ce1e904ac0d3d5b329fce676218e3133bda60d81
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757692"
 ---
 # <a name="create-dml-triggers-to-handle-multiple-rows-of-data"></a>Создание триггеров DML для обработки нескольких строк данных
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   При написании кода для триггера DML следует учитывать, что инициирующая триггер отдельная инструкция может влиять на несколько строк, а не на одну строку данных. Такой режим работы является стандартным для триггеров UPDATE и DELETE, поскольку эти инструкции зачастую касаются нескольких строк, и в меньшей степени распространен для триггеров INSERT, поскольку базовая инструкция INSERT добавляет только одну строку. Тем не менее, так как допускается запуск триггера инструкцией INSERT INTO (*table_name*) SELECT, вставка множества строк может привести к вызову одного триггера.  
   
  Учет особенностей работы с несколькими строками особенно важен в случаях, когда функция триггера DML автоматически пересчитывает сводные значения из одной таблицы и помещает результаты в другую таблицу для временных итогов.  

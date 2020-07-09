@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9941f85f14d5b1f820ad7166a7bb106db4bf0fb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68133240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750919"
 ---
 # <a name="sql-trace"></a>Трассировка SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 При трассировке SQL собираются события, классы которых указаны в ее определении. Эти события можно выделить из трассировки или поставить в очередь по своему назначению. В качестве назначения могут выступать файлы и объекты управления (SMO) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , предоставляющие сведения трассировки приложениям, которые управляют сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]

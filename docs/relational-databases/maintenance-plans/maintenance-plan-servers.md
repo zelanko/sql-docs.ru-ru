@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: aaad5af180ff1275dc6e95bb1cc5687487a22fb4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b94b427f2523dce7057e835aeae48b2d40d24e83
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115670"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754520"
 ---
 # <a name="maintenance-plan-servers"></a>План обслуживания (серверы)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Диалоговое окно **Серверы** используется для выбора серверов, для которых нужно запустить план обслуживания.  
   
  Многосерверную среду, содержащую один главный сервер и один или несколько целевых серверов, необходимо настроить для создания многосерверного плана обслуживания. В многосерверных планах обслуживания локальный сервер настраивается, как и главный сервер. В многосерверной среде это диалоговое окно отображает главный **(локальный)** сервер и все соответствующие целевые серверы. Для локального сервера создается одно задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Оно включается или отключается в зависимости от текущего выбора **(локального)** сервера. Если выбраны целевые серверы, то создается многосерверное задание, которое загружается на выделенные целевые серверы. Если не выбран ни один целевой сервер, многосерверное задание удаляется.  

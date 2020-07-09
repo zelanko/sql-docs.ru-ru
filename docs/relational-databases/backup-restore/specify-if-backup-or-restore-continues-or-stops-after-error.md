@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0eb3b8554a0d24442d110032834006a0d8e0f7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 003fbc933de445b6540c797d57b02dbad834e0bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180583"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759050"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>Настройка резервного копирования или восстановления для продолжения или остановки после ошибки
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описывается, как определить, будут ли операции резервного копирования и восстановления продолжать работу или останавливаться при ошибке в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

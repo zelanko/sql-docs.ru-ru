@@ -1,21 +1,20 @@
 ---
 title: Расширение DACPAC-файлов SQL Server
-titleSuffix: Azure Data Studio
 description: Установка и использование расширения DACPAC SQL Server для Azure Data Studio
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: d33f43f4232e7a9a62365c5bb438c91339f4fd47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2062c32f5af698f635abba684eb1ea1bbe59250b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73532417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758338"
 ---
 # <a name="sql-server-dacpac-extension"></a>Расширение DACPAC-файлов SQL Server
 

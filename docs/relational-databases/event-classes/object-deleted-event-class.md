@@ -12,15 +12,15 @@ ms.assetid: d4db32bc-972d-4429-809a-a62047c33e79
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45b71ca895141a2dbef4dd68b13bb505a7ae7c91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa80485dc5efa2d03d24a1e119360281928d3c6d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68116270"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755996"
 ---
 # <a name="objectdeleted-event-class"></a>Object:Deleted, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий Object:Deleted указывает на удаление объекта (например, инструкцией DROP INDEX или DROP TABLE). Он предназначен для отслеживания факта удаления объекта, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
   
  По стандартным столбцам данных LoginName и NTUserName для соответствующих классов событий Objects можно определить, кто из пользователей создает, удаляет или производит доступ к объектам.  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d16e3159f3881df1a904e9d3a6c39bc04667ce9d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 7444bd163ad453a2aac3c598ab0cc8575c09eb0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826505"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754585"
 ---
 # <a name="backuprestoresystemdatabases-sql-server"></a>Резервное копирование и восстановление: системные базы данных (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает набор баз данных системного уровня, которые называются*системными базами данных*и жизненно важны для работы экземпляра сервера. После каждого значительного обновления необходимо обязательно создавать резервные копии ряда системных баз данных: **msdb**, **master**и **model**. Если какая-нибудь из баз данных на экземпляре сервера использует репликацию, то необходимо также создавать резервную копию системной базы данных **distribution** . Резервные копии системных баз данных позволят восстановить систему [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в случае сбоя, например отказа жесткого диска.  
   

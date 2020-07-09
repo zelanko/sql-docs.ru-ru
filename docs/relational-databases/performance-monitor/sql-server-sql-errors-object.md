@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5f4b6a6d12f8f4eee929dfca59906fc418bfcd8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8f99ab36545778981ed509ed0575c039916d42f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758938"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, объект SQL Errors
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект **SQLServer: ошибки SQL** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает счетчики для контроля работы **SQL Errors**.  
   
  В этой таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ошибки SQL**.  

@@ -12,15 +12,15 @@ ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8cdf780816d16450ce9487a80c282fa1a0820631
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9757556741c36f5644d3d58a44744270a02b9c82
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115933"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756009"
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий Object:Altered указывает на изменение объекта, например инструкциями ALTER INDEX, ALTER TABLE или ALTER DATABASE. Этот класс событий можно использовать для определения, был ли изменен объект, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
   
  Класс событий Object:Altered всегда происходит в виде двух событий. Первое событие указывает на фазу начала. Второе событие указывает на фазу отката или фиксирования.  

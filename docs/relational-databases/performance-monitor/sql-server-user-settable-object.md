@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 427f24bdce5c7af4d0bd9c6b5c0c030112f8a5a1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947926"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758904"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, объект User Settable
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В Microsoft **объект** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] позволяет создавать пользовательские экземпляры счетчиков, которые используются для контроля тех характеристик сервера, которые нельзя отследить при использовании существующих счетчиков, какими являются, например компоненты, уникальные для вашей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : число зарегистрированных заказов или опись продукции.  
   
  В объекте **User Settable** содержится 10 экземпляров счетчиков запросов: с **User counter 1** по **User counter 10**. Этим счетчикам соответствуют хранимые процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от **sp_user_counter1** до **sp_user_counter10**. Поскольку эти хранимые процедуры выполняются пользовательскими приложениями, значения, получаемые в результате выполнения хранимых процедур, отображаются в системном мониторе. Счетчик может контролировать любое целочисленное значение (например, хранимая процедура может подсчитывать, сколько заказов конкретного продукта было совершено за один день).  

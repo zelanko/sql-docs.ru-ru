@@ -18,15 +18,15 @@ ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 242ae654ede8a827b89e630369965faee4505840
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 7a6f374a7ee13da5dc2da181327045bd9856ac46
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751543"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Использование таблиц inserted и deleted
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Инструкции триггеров DML используют две особые таблицы: deleted и inserted. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически создает эти таблицы и управляет ими. Эти временные таблицы, находящиеся в оперативной памяти, используются для проверки результатов изменений данных и для установки условий срабатывания триггеров DML. Нельзя в этих таблицах изменять данные напрямую или выполнять над ними операции языка описания данных DDL, например инструкцию CREATE INDEX.  
   
  В триггерах DML таблицы inserted и deleted в основном используются для выполнения следующих операций.  

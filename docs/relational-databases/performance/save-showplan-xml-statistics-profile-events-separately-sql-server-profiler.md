@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: d15ca528efb0246d1d05c87420045fcc74918886
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b4200f709700a3836c47b89aa6c4cee03639c94
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165569"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753040"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Раздельное сохранение событий профиля статистики Showplan XML (приложение SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом подразделе описывается сохранение событий **профиля статистики Showplan XML** , фиксируемых трассировкой, в отдельные файлы с расширением SQLPlan при помощи приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Файлы событий **профиля статистики Showplan XML** можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], что позволит посмотреть графический план выполнения для каждого события.  
   
 ## <a name="save-showplan-xml-statistics-profile-events-separately"></a>Раздельное сохранение событий профиля статистики Showplan XML  

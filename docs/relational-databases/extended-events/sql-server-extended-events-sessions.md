@@ -1,7 +1,7 @@
 ---
 title: SQL Server Extended Events Sessions
 description: Сеанс расширенных событий SQL Server создается в процессе SQL Server, в котором выполняется подсистема расширенных событий. Сведения о состояниях сеанса и содержимом сеанса.
-ms.date: 03/14/2017
+ms.date: 05/26/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,16 +15,16 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cce8dfb0d96059f577adb4e86e6fc5556d9fd90c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fec4a507a8a40cb38bf9b5faf58545aa89a55167
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79487672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756848"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Сеанс расширенных событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается в процессе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в котором выполняется подсистема расширенных событий. Следующие аспекты сеанса расширенных событий предоставляют контекст, необходимый для понимания инфраструктуры и принципов работы расширенных событий.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "79487672"
   
 ## <a name="session-states"></a>Состояния сеанса  
  На следующем рисунке показаны различные состояния сеанса расширенных событий.  
-  
- ![Состояние сеанса расширенных событий](../../relational-databases/extended-events/media/xesessionstate.gif "Состояние сеанса расширенных событий")  
-  
+
+![Состояние сеанса расширенных событий](../../relational-databases/extended-events/media/xesessionstate.png "Состояние сеанса расширенных событий")
+
  Обратите внимание, что на предыдущем рисунке состояние сеанса меняется по мере того, как выполняются разные команды DDL. В следующей таблице описаны эти изменения состояния.  
   
 |Метка рисунка|Инструкция DDL|Описание|  

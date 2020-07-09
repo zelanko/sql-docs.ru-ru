@@ -12,15 +12,15 @@ ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7a69d13beae131a6635c51c305c8d87c1c35127
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753341"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса событий **OLEDB Call** происходят, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивает распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB.  
   
  Включайте класс событий **OLEDB Call** для контроля только за теми запросами, которые не посылают запросы и не запрашивают данные, выполненные методом, отличным от **QueryInterface** . При включении в трассировку класса событий **OLEDB Call** количество сигналов зависит от того, насколько часто во время трассировки происходят запросы к базе данных с помощью технологии OLE DB. Если такие вызовы происходят часто, трассировка может заметно снизить производительность.  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 635bb13a1d6e44f5fc8f694cb2618a19c08831f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67995647"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758951"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
   
  Если база данных допускает уровень изоляции моментальных снимков, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен поддерживать записи об изменениях всех строк в базе данных. Каждый раз при изменении строки копия строки в состоянии, предшествующем изменению, записывается в хранилище версий строк в базе данных **tempdb**. Многие счетчики в объекте **Transaction** также можно применять для мониторинга размера и скорости роста хранилища версий строк в базе данных **tempdb**.  

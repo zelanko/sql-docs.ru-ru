@@ -12,15 +12,15 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4647814765225a2c1deeedd05f77bed80d7e992
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 89845e119f40b0a339bdeb7d6809ad0c017afc0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68056156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757608"
 ---
 # <a name="ddl-triggers"></a>Триггеры DDL
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Триггеры DDL активируются в ответ на различные события языка DDL. Эти события в основном соответствуют инструкциям [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые начинаются с ключевых слов CREATE, ALTER, DROP, GRANT, DENY, REVOKE или UPDATE STATISTICS. Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также могут запускать триггеры DDL.  
   
  Используйте триггеры DDL, если хотите сделать следующее.  
