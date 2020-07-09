@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CURRENT_TIMESTAMP function [SQL Server]
 - time [SQL Server], system
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67deb9c3b2ee4c924b8d0cf173c7a8c9e9156ee6
+ms.sourcegitcommit: e6c260a139326f5a400a57ece812d39ef8b820bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026411"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86032582"
 ---
 # <a name="current_timestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Эта функция возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. `CURRENT_TIMESTAMP` наследует это значение от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -48,7 +48,7 @@ ms.locfileid: "68026411"
   
 Эта функция ANSI SQL эквивалентна функции [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Обзор всех типов данных и функций даты и времени в языке [ см. в статье ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Типы данных и функции даты и времени[!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -65,7 +65,7 @@ CURRENT_TIMESTAMP
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-Функция `CURRENT_TIMESTAMP` может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.
+Функция [!INCLUDE[tsql](../../includes/tsql-md.md)] может использоваться в инструкциях `CURRENT_TIMESTAMP` везде, где допустимо использование выражения **datetime**.
   
 `CURRENT_TIMESTAMP` является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на этот столбец.
   
@@ -94,12 +94,12 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### <a name="b-get-the-current-system-date"></a>Б. Получение текущей системной даты  
   
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
+SELECT CONVERT (DATE, SYSDATETIME())  
+    ,CONVERT (DATE, SYSDATETIMEOFFSET())  
+    ,CONVERT (DATE, SYSUTCDATETIME())  
+    ,CONVERT (DATE, CURRENT_TIMESTAMP)  
+    ,CONVERT (DATE, GETDATE())  
+    ,CONVERT (DATE, GETUTCDATE());  
   
 /* Returned   
 SYSDATETIME()      2007-05-03  
@@ -114,12 +114,12 @@ GETUTCDATE()       2007-05-04
 ### <a name="c-get-the-current-system-time"></a>В. Получение текущего системного времени  
   
 ```sql
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
+SELECT CONVERT (TIME, SYSDATETIME())  
+    ,CONVERT (TIME, SYSDATETIMEOFFSET())  
+    ,CONVERT (TIME, SYSUTCDATETIME())  
+    ,CONVERT (TIME, CURRENT_TIMESTAMP)  
+    ,CONVERT (TIME, GETDATE())  
+    ,CONVERT (TIME, GETUTCDATE());  
   
 /* Returned  
 SYSDATETIME()      13:18:45.3490361  

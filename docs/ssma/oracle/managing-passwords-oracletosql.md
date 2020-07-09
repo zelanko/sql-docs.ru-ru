@@ -2,7 +2,7 @@
 title: Управление паролями (OracleToSQL) | Документация Майкрософт
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/07/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -13,20 +13,16 @@ ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3fe98b4a0b552d8c26d64eed777d5bcadc42cd7
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262920"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160002"
 ---
 # <a name="managing-passwords-oracletosql"></a>Управление паролями (OracleToSQL)
-В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах:  
-  
-1.  Защита пароля  
-  
-2.  Экспорт или импорт зашифрованного пароля  
-  
+В этом разделе описывается защита паролей базы данных и процедура импорта или экспорта на серверах.
+
 ## <a name="securing-password"></a>Защита пароля  
 SSMA позволяет защитить пароль базы данных.  
   
@@ -36,13 +32,13 @@ SSMA позволяет защитить пароль базы данных.
   
 1.  **Открытый текст:** Введите пароль базы данных в атрибуте значение узла Password. Он находится в узле определение сервера в разделе сервер файла скрипта или файла соединения сервера.  
   
-    Пароли в открытом тексте не являются безопасными. Поэтому в выходных данных консоли появится следующее предупреждение: *" &lt;пароль сервера Server-ID&gt; указан в небезопасном текстовом формате, SSMA консольное приложение предоставляет возможность защиты пароля с помощью шифрования. Дополнительные сведения см. в описании параметра-секурепассворд в файле справки SSMA."*  
+    Пароли в открытом тексте не являются безопасными. Поэтому в выходных данных консоли появится следующее предупреждение: *"пароль сервера Server &lt; -ID указан &gt; в небезопасном ТЕКСТОВОМ формате, SSMA консольное приложение предоставляет возможность защиты пароля с помощью шифрования. Дополнительные сведения см. в описании параметра-секурепассворд в файле справки SSMA."*  
   
     **Зашифрованные пароли:** В этом случае указанный пароль хранится в зашифрованном виде на локальном компьютере в Протектедстораже. SSMA.  
   
     -   **Защита паролей**  
   
-        -   Выполните команду `SSMAforOracleConsole.exe` с параметром `-securepassword` и добавьте в командной строке, передав соединение с сервером или файл скрипта, содержащий узел Password, в разделе Определение сервера.  
+        -   Выполните `SSMAforOracleConsole.exe` команду с параметром `-securepassword` и добавьте в командной строке, передав соединение с сервером или файл скрипта, содержащий узел Password, в разделе Определение сервера.  
   
         -   В командной строке пользователю предлагается ввести пароль базы данных и подтвердить его.  
   
@@ -50,42 +46,46 @@ SSMA позволяет защитить пароль базы данных.
             
             Пример 1:  
             
-                Specify password
+            1. Укажите пароль
                 
-                C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml"
+            2. `C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml"`
                 
-                Enter password for server_id 'XXX_1': xxxxxxx
+            3. Введите пароль для server_id "XXX_1": xxxxxxx
                 
-                Re-enter password for server_id 'XXX_1': xxxxxxx
+            4. Повторно введите пароль для server_id "XXX_1": xxxxxxx
             
             Пример 2.
             
-                C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
-                
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            1. `C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o`
+
+            2. Введите пароль для server_id "source_1": xxxxxxx
+
+            3. Повторно введите пароль для server_id "source_1": xxxxxxx
+
+            4. Введите пароль для server_id "target_1": xxxxxxx
+
+            5. Повторно введите пароль для server_id "Target _1": xxxxxxx  
     
     -   **Удаление зашифрованных паролей**  
   
-        Выполните команду `SSMAforOracleConsole.exe` с`-securepassword` параметром `-remove` и в командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
+        Выполните `SSMAforOracleConsole.exe` команду с параметром `-securepassword` и в `-remove` командной строке, передав идентификаторы серверов, чтобы удалить зашифрованные пароли из защищенного файла хранилища, присутствующего на локальном компьютере.  
         
         Пример.  
-        
-            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
-            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
-  
+
+        ```console
+        C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
+        C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
+        ```
+
     -   **Вывод списка идентификаторов серверов, пароли которых шифруются**  
   
-        Выполните команду `SSMAforOracleConsole.exe` с `-securepassword` параметром `-list` и в командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
+        Выполните `SSMAforOracleConsole.exe` команду с параметром `-securepassword` и в `-list` командной строке, чтобы вывести список всех идентификаторов серверов, пароли которых были зашифрованы.  
   
         Пример.  
-        
-            C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
+
+        ```console
+        C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
+        ```
   
     > [!NOTE]  
     > 1.  Пароль в открытом тексте, упомянутом в сценарии или файле соединения с сервером, имеет приоритет над зашифрованным паролем в защищенном файле.  
@@ -94,38 +94,42 @@ SSMA позволяет защитить пароль базы данных.
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Экспорт или Импорт зашифрованных паролей  
 Консольное приложение SSMA позволяет экспортировать зашифрованные пароли баз данных, находящиеся в файле на локальном компьютере, в защищенный файл и наоборот. Это помогает сделать зашифрованные пароли независимыми от компьютера. Функция экспорта считывает идентификатор и пароль сервера из локального защищенного хранилища и сохраняет их в зашифрованном файле. Пользователю предлагается ввести пароль для защищенного файла. Убедитесь, что пароль имеет длину 8 символов или более. Этот защищенный файл переносим на разные компьютеры. Функция импорта считывает идентификатор сервера и сведения о пароле из защищенного файла. Пользователю предлагается ввести пароль для защищенного файла и добавить сведения в локально защищенное хранилище.  
   
-Пример.  
+### <a name="export-example"></a>Пример экспорта:  
 
-    Export password
-    
-    Enter password for protecting the exported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -export all "machine1passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforOracleConsole.EXE -p -e "OracleDB_1_1,Sql_1" "machine2passwords.file"
-    
-    Enter password for protecting the exported file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
-Пример.  
+1. Экспорт пароля
 
-    Import an encrypted password
-    
-    Enter password for protecting the imported file C:\SSMA\SSMAforOracleConsole.EXE -securepassword -import all "machine1passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx
-    
-    C:\SSMA\SSMAforOracleConsole.EXE -p -i "OracleDB_1,Sql_1" "machine2passwords.file"
-    
-    Enter password to import the servers from encrypted file: xxxxxxxx
-    
-    Please confirm password: xxxxxxxx  
-  
+2. Введите пароль для защиты экспортированного файла
+
+3. `C:\SSMA\SSMAforOracleConsole.EXE -securepassword -export all "machine1passwords.file"`
+
+4. Введите пароль для защиты экспортированного файла: XXXXXXXX
+
+5. Подтвердите пароль: XXXXXXXX.
+
+6. `C:\SSMA\SSMAforOracleConsole.EXE -p -e "OracleDB_1_1,Sql_1" "machine2passwords.file"`
+
+7. Введите пароль для защиты экспортированного файла: XXXXXXXX
+
+8. Подтвердите пароль: XXXXXXXX.  
+
+### <a name="import-example"></a>Пример импорта:  
+
+1. Импорт зашифрованного пароля
+
+2. Введите пароль для защиты импортированного файла
+
+3. `C:\SSMA\SSMAforOracleConsole.EXE -securepassword -import all "machine1passwords.file"`
+
+4. Введите пароль для импорта серверов из зашифрованного файла: XXXXXXXX
+
+5. Подтвердите пароль: XXXXXXXX.
+
+6. `C:\SSMA\SSMAforOracleConsole.EXE -p -i "OracleDB_1,Sql_1" "machine2passwords.file"`
+
+7. Введите пароль для импорта серверов из зашифрованного файла: XXXXXXXX
+
+8. Подтвердите пароль: XXXXXXXX.  
+
 ## <a name="see-also"></a>См. также:  
 [Запуск консоли SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

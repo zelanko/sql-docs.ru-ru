@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: c0d103dfe44e8c7fd8800da86a410f4e26aff033
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5d3f9e4d405435816378141ba9e4053e8ac77a99
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633296"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012805"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Создает объект метаданных ключа шифрования столбца для [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) или [Always Encrypted с безопасными анклавами](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Объект метаданных ключа шифрования столбца содержит одно или два зашифрованных значения ключа шифрования столбца, используемого для шифрования данных в столбце. Каждое значение шифруется с помощью главного ключа столбца. 
   

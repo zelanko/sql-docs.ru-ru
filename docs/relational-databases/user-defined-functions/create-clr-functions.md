@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a82df075-2243-4e19-bfe1-ae6d65dabd0f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0234987ec9bdb6e71348e98d3096505a36e31743
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd0860bc09c4b4ee1d1a67130f58a75c86dd0625
+ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138543"
+ms.lasthandoff: 07/07/2020
+ms.locfileid: "86053600"
 ---
 # <a name="create-clr-functions"></a>Создание функций CLR
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   В экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создать объект базы данных, который запрограммирован в сборке, созданной в среде CLR платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. К объектам базы данных, способным обогатить возможности применения многофункциональной модели программирования среды CLR, относятся агрегатные функции, функции, хранимые процедуры, триггеры и типы.  
   

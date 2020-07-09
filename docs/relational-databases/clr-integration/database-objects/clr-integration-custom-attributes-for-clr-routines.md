@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a32a606f73858ede15569d1ade891ad2ce1c69a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a754825eb1da09dcfb7fa37401024b89cf70c1d2
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487973"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86160182"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>Пользовательские атрибуты интеграции со средой CLR для процедур CLR
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  Перечисленные атрибуты можно применять к подсредам среды CLR, определяемым пользователем типам и определяемым пользователем статистическим функциям, зарегистрированным в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Если атрибут не применен, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предполагает значение по умолчанию. Перечисленные атрибуты определены в пространстве имен **Microsoft. SqlServer. Server** .  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+  Перечисленные атрибуты можно применять к подсредам среды CLR, определяемым пользователем типам и определяемым пользователем статистическим функциям, зарегистрированным в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Если атрибут не применен, то [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предполагает значение по умолчанию. Перечисленные атрибуты определены в пространстве имен **Microsoft. SqlServer. Server** .  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>Атрибут SqlUserDefinedAggregate  
  Атрибут **SqlUserDefinedAggregate** указывает, что метод должен быть зарегистрирован как определяемая пользователем статистическая функция. Каждое пользовательское статистическое выражение должно иметь этот атрибут.  

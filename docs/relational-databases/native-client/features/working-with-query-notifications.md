@@ -22,15 +22,15 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 908da6bd9c0b978c273acd7e42cde7c8ad7f954d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: b293baaf6a7ec6fe2e28ec8976c3e6c119bf023f
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84948884"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159352"
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Уведомления о запросах появились в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] и в собственном клиенте [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. С помощью уведомлений о запросах, построенных на основе инфраструктуры компонента Service Broker, представленной в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], приложения могут получать извещения об изменениях данных. Эта функция особенно полезна для приложений, которые предоставляют кэш данных из базы данных (например, для веб-приложений), и которым требуются уведомления об изменении исходных данных.  
   
@@ -76,7 +76,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Набор свойств DBPROPSET_SQLSERVERROWSET  
  Для поддержки уведомлений о запросах с помощью OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет следующие новые свойства в набор свойств DBPROPSET_SQLSERVERROWSET.  
   
-|Название|Тип|Описание|  
+|Имя|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|время в секундах, в течение которого уведомление запроса должно оставаться активным.<br /><br /> Значение по умолчанию — 432000 секунд (5 дней). Минимальное значение — 1 секунда, а максимальное значение — 2^31-1 секунд.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Текст сообщения уведомления. Определяется пользователем и не имеет стандартного формата.<br /><br /> По умолчанию эта строка пуста. В сообщении можно использовать от 1 до 2000 символов.|  
