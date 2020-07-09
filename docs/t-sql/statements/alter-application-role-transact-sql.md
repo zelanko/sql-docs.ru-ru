@@ -20,34 +20,36 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b365aac0e21261edb3620e1cd58a656747b274a1
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 291c076d78b227487c6c4267343de5cffc7a3d63
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636074"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813903"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Изменяет имя, пароль или схему по умолчанию для роли приложения.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Синтаксис
   
 ```syntaxsql
   
-ALTER APPLICATION ROLE application_role_name   
+ALTER APPLICATION ROLE application_role_name
     WITH <set_item> [ ,...n ]  
   
-<set_item> ::=   
-    NAME = new_application_role_name   
+<set_item> ::=
+    NAME = new_application_role_name
     | PASSWORD = 'password'  
     | DEFAULT_SCHEMA = schema_name  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+## <a name="arguments"></a>Аргументы
+
  *application_role_name*  
  Имя изменяемой роли приложения.  
   
@@ -60,8 +62,9 @@ ALTER APPLICATION ROLE application_role_name
  DEFAULT_SCHEMA =*schema_name*  
  Задает первую схему для поиска сервером, когда он разрешает имена объектов. Аргумент *schema_name* может быть схемой, которой нет в базе данных.  
   
-## <a name="remarks"></a>Remarks  
- Если новое имя роли приложения уже существует в базе данных, инструкция завершится неудачно. Если изменяется имя роли приложения, пароль или схема по умолчанию, то идентификатор, связанный с этой ролью, не изменяется.  
+## <a name="remarks"></a>Remarks
+
+Если новое имя роли приложения уже существует в базе данных, инструкция завершится неудачно. Если изменяется имя роли приложения, пароль или схема по умолчанию, то идентификатор, связанный с этой ролью, не изменяется.  
   
 > [!IMPORTANT]  
 >  Политика истечения срока действия пароля не применяется к паролям роли приложения. По этой причине позаботьтесь о выборе сильных паролей. Приложения, которые используют роли приложения, должны хранить свои пароли.  

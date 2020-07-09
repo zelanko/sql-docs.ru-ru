@@ -19,17 +19,17 @@ helpviewer_keywords:
 - number of connection attempts
 - attempted connections
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b614ba90bddad592bedbf67e82d250ea8ba51e25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 26da6bd0224941773c91dda8703015e4200f5552
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68132081"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882004"
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Эта функция возвращает число попыток подключения (успешных или неуспешных) с момента последнего запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
@@ -47,7 +47,7 @@ ms.locfileid: "68132081"
 ## <a name="remarks"></a>Remarks  
 Соединения пользователей бывают разными. Приложение, например, может открывать несколько подключений с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] незаметно для пользователя.
   
-Чтобы отобразить отчет, содержащий ряд статистических данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая попытки соединения, выполните процедуру **sp_monitor**.
+Чтобы отобразить отчет, содержащий ряд статистических данных **, включая попытки соединения, выполните процедуру** sp_monitor[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 @@MAX_CONNECTIONS — это максимальное допустимое число параллельных соединений с сервером. Значение @@CONNECTIONS увеличивается при каждой попытке входа в систему, поэтому значение @@CONNECTIONS может превышать значение @@MAX_CONNECTIONS.
   

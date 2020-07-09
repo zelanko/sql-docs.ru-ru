@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9d4da2ef-c17f-4a31-a1f6-5c3b7ca85f71
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3f1e7f07b95c71eeddc65fed6db3f10cc31ee32
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d3f3601aca4a8cf5325071a99a6c7605253ff0aa
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880078"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>Выполнение бизнес-логики при синхронизации слиянием
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Платформа обработчика бизнес-логики всегда доступна для добавления сборки управляемого кода, который выполняется во время процесса синхронизации слиянием. Сборка включает бизнес-логику, которая может учитывать ряд условий во время синхронизации: изменения данных, конфликты и ошибки. Платформа обработчика бизнес-логики предоставляет простую программируемую модель; данные, которые процесс слияния предоставляет для вашей сборки, находятся в форме набора данных ADO.NET, поэтому удобнее эффективно использовать знание ADO.NET, чем изучать патентованный интерфейс. Дополнительные сведения о программируемых обработчиках бизнес-логики см. в следующих источниках:  
   
 -   Справочник по программным интерфейсам (API): <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: 8e6157c2-7e84-49f2-965a-c7426c2b23fa
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de9fed7a752c07eccf55c25442ed30aecef8ca9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 356046b073073dea8ff27d99850cd04de3edae8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951341"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85793120"
 ---
 # <a name="mssqlserver_7912"></a>MSSQLSERVER_7912
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|7912|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|Текст сообщения|Исправление: выделен экстент P_ID объекту с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором единицы распределения A_ID (тип TYPE).|  
+|Текст сообщения|Исправление: экстент P_ID выделен для объекта с идентификатором O_ID, индекса с идентификатором I_ID, секции с идентификатором PN_ID, единицы распределения с идентификатором A_ID (тип TYPE).|  
   
 ## <a name="explanation"></a>Объяснение  
 Это информационное сообщение функции REPAIR, которое означает, что для указанного объекта был выделен экстент.  
