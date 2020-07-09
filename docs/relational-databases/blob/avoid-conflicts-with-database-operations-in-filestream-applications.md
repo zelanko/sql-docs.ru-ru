@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 8d98470daf000115061fde1d5b8a276f1bd76a4f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000244"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85743931"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Приложения, использующие функцию SqlOpenFilestream() для открытия дескрипторов файлов Win32 для считывания или записи данных FILESTREAM BLOB, могут столкнуться с конфликтами при работе с инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] , использованными в общей транзакции. Это также относится и к запросам [!INCLUDE[tsql](../../includes/tsql-md.md)] или MARS, выполнение которых занимает много времени. При разработке приложений надо уделить особое внимание предотвращению данных типов конфликтов.  
   
  Если компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или приложения пытаются открыть объекты FILESTREAM BLOB, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] выполнит проверку контекста ассоциированной транзакции. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешит или запретит запрос в зависимости от того, работает ли операция открытия с инструкциями DDL, инструкциями DML, получает данные или управляет транзакциями. В следующей таблице показывается, как компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, следует ли разрешить или запретить инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] , основываясь на типе файлов, открытых в транзакции.  

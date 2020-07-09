@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41cf0607ae8d308d4d1f243e8b987ca6c9d541fd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843633"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737963"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает битовую карту, указывающую разрешения на инструкции, объекты и столбцы для текущего пользователя.  
   
@@ -42,14 +42,14 @@ ms.locfileid: "73843633"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
 ## <a name="arguments"></a>Аргументы  
  *objectid*  
- Идентификатор защищаемого объекта. Если аргумент *objectid* не указан, то значение битовой карты содержит разрешения на выполнение инструкций для текущего пользователя; в противном случае битовая карта содержит разрешения в отношении защищаемого объекта для текущего пользователя. Указанный защищаемый объект должен находиться в текущей базе данных. Для определения значения аргумента *objectid* следует использовать функцию [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md).  
+ Идентификатор защищаемого объекта. Если аргумент *objectid* не указан, то значение битовой карты содержит разрешения на выполнение инструкций для текущего пользователя; в противном случае битовая карта содержит разрешения в отношении защищаемого объекта для текущего пользователя. Указанный защищаемый объект должен находиться в текущей базе данных. Для определения значения аргумента [objectid](../../t-sql/functions/object-id-transact-sql.md) следует использовать функцию *OBJECT_ID*.  
   
  **'** *column* **'**  
  Необязательное имя столбца, для которого возвращаются данные о разрешениях. Имя столбца должно быть допустимым в таблице, указанной в аргументе *objectid*.  

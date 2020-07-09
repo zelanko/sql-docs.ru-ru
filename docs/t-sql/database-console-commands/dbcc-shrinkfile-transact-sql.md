@@ -29,15 +29,15 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 35ca1ac90704b05bc714327f839ff1487e5cd66f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a9498c5d2705abece345533573a768e71e0b7030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748907"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Эта инструкция позволяет сжать указанный файл данных или журнала в текущей базе данных. С помощью инструкции можно переместить данные из одного файла в другие файлы в той же файловой группе, одновременно очищая файл и разрешая его удаление из базы данных. Вы можете сжать файл до меньшего размера, чем при создании, указав новое значение для минимального размера файла.
   

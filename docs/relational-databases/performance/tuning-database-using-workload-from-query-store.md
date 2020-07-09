@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a308c4d7236c7822398cd9c8bf9aee94e0ffc61e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68113176"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737127"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Настройка базы данных с помощью рабочей нагрузки из хранилища запросов
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 Компонент [Хранилище запросов](../../relational-databases/performance/how-query-store-collects-data.md) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически записывает журнал запросов, планы и статистику выполнения и сохраняет их в базе данных. [Помощник по настройке ядра СУБД (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) теперь позволяет использовать хранилище запросов, чтобы автоматически выбирать соответствующую рабочую нагрузку для настройки. Для многих пользователей это может устранить необходимость явно собирать рабочую нагрузку для настройки. Эта функция доступна только в том случае, если в базе данных включен компонент хранилища запросов. 

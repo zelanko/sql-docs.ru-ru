@@ -1,7 +1,7 @@
 ---
 title: Диспетчер подключений Hadoop | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5149f7e470720a2efc99c522bd905a4a1a13f2c6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4cf042d2ab9c2d3e7c492fa008282cbcbe730f8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903791"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735107"
 ---
 # <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
 
@@ -83,7 +83,7 @@ ms.locfileid: "77903791"
 
     Компьютер нужно настроить в качестве члена рабочей группы, так как область Kerberos отличается от домена Windows. Задайте область Kerberos и добавьте сервер KDC, как показано в примере ниже. При необходимости замените `REALM.COM` значением своей соответствующей области.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -92,7 +92,7 @@ ms.locfileid: "77903791"
 
 2.  Проверьте конфигурацию с помощью команды **Ksetup**. Выходные данные должны выглядеть так, как в следующем примере:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -114,7 +114,7 @@ ms.locfileid: "77903791"
 
 1.  Измените конфигурацию KDC в файле **krb5.conf**. Разрешите KDC доверять домену Windows, ссылаясь на следующий шаблон конфигурации. По умолчанию файл конфигурации содержится в папке **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -162,7 +162,7 @@ ms.locfileid: "77903791"
 
 1.  Выполните следующие команды **Ksetup**, чтобы добавить запись области.
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -201,10 +201,10 @@ ms.locfileid: "77903791"
 
 Выполните следующие команды **Ksetup**, чтобы добавить запись области.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## <a name="see-also"></a>См. также раздел  
  [Задача Hadoop Hive](../../integration-services/control-flow/hadoop-hive-task.md)   

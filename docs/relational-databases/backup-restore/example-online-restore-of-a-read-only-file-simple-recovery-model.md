@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b032e7737a837ee6b453340fbd52bcbee072e65f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf837bc23f1462acc2c875a97c167b82ef600190
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85747428"
 ---
 # <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>Пример Оперативное восстановление файла только для чтения (простая модель восстановления)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Данный раздел относится только к базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые содержат доступные только для чтения файловые группы в простой модели восстановления. При простой модели восстановления файл, доступный только для чтения, можно восстановить в режиме «в сети», если существует резервная копия файла, сделанная после того, как файл в последний раз стал доступен только для чтения.  
   

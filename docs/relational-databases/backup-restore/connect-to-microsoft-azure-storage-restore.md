@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7c6564d9dc63a4d2e35ac306db91cead15f024c6
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d3a46b4af5ef064c675f16f20278c7f91afc73c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220462"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748440"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Подключение к службе хранилища Microsoft Azure (восстановление)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Это диалоговое окно позволяет указать сведения для подключения к учетной записи хранения Azure с целью получения хранилища файлов в учетной записи хранения. После ввода необходимой информации нажмите кнопку **Подключить**, чтобы подключиться к хранилищу Azure.  
   
 ## <a name="azure-storage-account"></a>Учетная запись хранения Azure  

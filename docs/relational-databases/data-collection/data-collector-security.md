@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: e75d6975-641e-440a-a642-cb39a583359a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f81ec185224818060faed79ecf18e08a1743ea7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1b2e6e607a49ea4888e6f5f5ec9ad5148e9f790b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68140743"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733849"
 ---
 # <a name="data-collector-security"></a>Безопасность сборщика данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Сборщик данных использует безопасность на основе ролей, реализованную агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта модель позволяет администратору базы данных запускать различные задачи сборщика данных в контексте безопасности, имеющем только те разрешения, которые необходимы для выполнения задачи. Этот подход также используется для операций, затрагивающих внутренние таблицы, доступ к которым можно осуществить только с помощью хранимой процедуры или представления. Внутренним таблицам разрешения не предоставляются. Вместо этого разрешения проверяются у пользователя хранимой процедуры или представления, используемых для доступа к таблице.  
   
 > [!IMPORTANT]  

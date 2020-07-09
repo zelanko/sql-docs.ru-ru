@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a9e988529cc5a59786504be8566e55a4449a5ee6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72689837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85732858"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>Синонимы типов данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Синонимы типов данных включены в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ради совместимости со спецификацией ISO. Эти синонимы и соответствующие им системные типы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] приведены в следующей таблице.
   

@@ -19,15 +19,15 @@ ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a053f49a6ab3b42e31c5b71c2d2d558ea3170440
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8a589358edabaf25e3dfcadf9395e7771a965c5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79112335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733913"
 ---
 # <a name="cursors"></a>Курсоры
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
   Операции в реляционной базе данных выполняются над множеством строк. Например, набор строк, возвращаемый инструкцией `SELECT`, содержит все строки, которые удовлетворяют условиям, указанным в предложении `WHERE` инструкции. Такой полный набор строк, возвращаемых инструкцией, называется результирующим набором. Приложения, особенно интерактивные, не всегда эффективно работают с результирующим набором как с единым целым. Им нужен механизм, позволяющий обрабатывать одну строку или небольшое их число за один раз. Курсоры являются расширением результирующих наборов, которые предоставляют такой механизм.  
   
  Курсоры позволяют усовершенствовать обработку результатов:  

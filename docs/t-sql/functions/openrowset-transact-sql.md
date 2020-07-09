@@ -25,16 +25,16 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 28519681f18d13fb11a93df9ffd852243c503a0b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151195"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738077"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Содержит все необходимые сведения о соединении, которые требуются для доступа к удаленным данным источника данных OLE DB. Это альтернативный метод для доступа к таблицам на связанном сервере и является однократным нерегламентированным методом соединения и удаленного доступа к данным с помощью OLE DB. Вместо этого для более частых ссылок на источники данных OLE DB используйте связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md). Из предложения FROM запроса можно ссылаться на функцию `OPENROWSET` как на имя таблицы. Функция `OPENROWSET` также может использоваться как целевая таблица в инструкции `INSERT`, `UPDATE` или `DELETE`. Это зависит от возможностей поставщика OLE DB. Несмотря на то, что запрос может возвратить несколько результирующих наборов, функция `OPENROWSET` возвращает только первый из них.
 
@@ -46,9 +46,9 @@ ms.locfileid: "83151195"
 
 ```syntaxsql
 OPENROWSET
-( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'
-   | 'provider_string' }
-   , {   <table_or_view> | 'query' }
+( { 'provider_name' 
+    , { 'datasource' ; 'user_id' ; 'password' | 'provider_string' }
+    , {   <table_or_view> | 'query' }
    | BULK 'data_file' ,
        { FORMATFILE = 'format_file_path' [ <bulk_options> ]
        | SINGLE_BLOB | SINGLE_CLOB | SINGLE_NCLOB }

@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f256060c923198e2ecb1d3741ebd7276d98b923
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 1501b60e9c858bac62b48dfa7b3875d0d93d5115
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922274"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737683"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Управляемое резервное копирование SQL Server в Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] управляет резервным копированием SQL Server в хранилище BLOB-объектов Microsoft Azure и автоматизирует его. Серверу SQL Server можно разрешить определять расписание резервного копирования на основе рабочей нагрузки транзакций в базе данных. Кроме того, для настройки расписания можно воспользоваться дополнительными параметрами. Параметры хранения определяют продолжительность хранения резервных копий в хранилище BLOB-объектов Azure. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] поддерживает восстановление на момент времени для указанного периода хранения.  
   

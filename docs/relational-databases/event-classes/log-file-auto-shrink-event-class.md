@@ -12,15 +12,15 @@ ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a65f8ab02309f11438dcbe5af0984ac930a060b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af32d9a61ef21e6bc09e114c4b8d55e56b7f0d2d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68118153"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737195"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **Log File Auto Shrink** указывает на то, что файл журнала сжимается автоматически. Данное событие не запускается, если файл журнала сжимается из-за явной инструкции ALTER DATABASE.  
   
  Включите класс событий **Log File Auto Shrink** в процессы трассировки, которые отслеживают сжатие файла журнала. Когда данный класс событий включается в трассировку, количество понесенных издержек будет низким, если файл сжимается нечасто.  

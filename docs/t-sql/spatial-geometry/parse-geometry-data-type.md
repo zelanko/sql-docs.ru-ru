@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c3a365a2bd2d6b244ca2394c8a871aee4ce87ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68101052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748852"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Возвращает экземпляр **geometry** из WKT-представления открытого геопространственного консорциума (OGC). Метод `Parse()` эквивалентен методу [STGeomFromText()](../../t-sql/spatial-geometry/parse-geometry-data-type.md) за исключением того, что ожидает в качестве параметра идентификатор пространственной ссылки (SRID) со значением 0. Входные данные могут дополнительно содержать значения Z (высота) и M (мера).
   

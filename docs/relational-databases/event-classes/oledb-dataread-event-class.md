@@ -12,15 +12,15 @@ ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8987894318819ffd6a91f52462366b8175ce3cf7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 03ed5dd006df07c218f6891308dbf979883bb9e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115849"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737168"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий OLEDB DataRead происходит, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает поставщик OLE DB для распределенных запросов и удаленных хранимых процедур. Этот класс событий следует включать в трассировки, которые наблюдают за выполнением запросов данных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] к поставщику OLE DB.  
   
  Если класс событий OLEDB DataRead включен в трассировку, то объем дополнительной нагрузки повышается. Рекомендуется ограничить использование этого класса событий трассировками, отслеживающими конкретные неполадки в течение короткого периода времени.  

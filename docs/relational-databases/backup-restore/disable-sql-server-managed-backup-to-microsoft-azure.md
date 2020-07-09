@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 3e02187f-363f-4e69-a82f-583953592544
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 891a760dd1935d43219f3603a27a284be3c99b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c14d2ab4c8ab3f24272b30df0de5ca9727ffb4bd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737802"
 ---
 # <a name="disable-sql-server-managed-backup-to-microsoft-azure"></a>Отключение управляемого резервного копирования SQL Server в Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описано, как отключить или приостановить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] на уровне базы данных и экземпляра.  
   
 ##  <a name="disable-ss_smartbackup-for-a-database"></a><a name="DatabaseDisable"></a> Отключение [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для базы данных  

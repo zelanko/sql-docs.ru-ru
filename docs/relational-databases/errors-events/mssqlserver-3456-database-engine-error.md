@@ -11,26 +11,26 @@ helpviewer_keywords:
 ms.assetid: d11b2b2c-3ae4-4023-b82f-05b561bfacce
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f60c9b7f02748e4dcd99e214fcbcd12505f203d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c51f604d4a0d875a0ef4c51ec47106a28b6ca674
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68043602"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723469"
 ---
 # <a name="mssqlserver_3456"></a>MSSQLSERVER_3456
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## <a name="details"></a>Сведения  
   
-|||  
-|-|-|  
+| attribute | Значение |  
+| :-------- | :---- |  
 |Название продукта|SQL Server|  
 |Идентификатор события|3456|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|REC_REDOLSNMISMATCH|  
-|Текст сообщения|Не удалось повторить запись журнала %S_LSN для идентификатора транзакции %S_XID на странице %S_PGID базы данных "%.*ls" (идентификатор базы данных %d). Page: LSN = %S_LSN, type = %ld. Log: OpCode = %ld, context %ld, PrevPageLSN: %S_LSN. Восстановите базу данных из резервной копии или исправьте ее.|  
+|Текст сообщения|Не удалось повторить запись журнала %S_LSN для идентификатора транзакции %S_XID на странице %S_PGID базы данных "%.*ls" (идентификатор базы данных %d). Страница: номер LSN = %S_LSN, тип = %ld. Журнал: OpCode = %ld, контекст %ld, PrevPageLSN: %S_LSN. Восстановите базу данных из резервной копии или исправьте ее.|  
   
 ## <a name="explanation"></a>Объяснение  
 Операции восстановления не удалось выполнить повтор журнала транзакций. В результате этой ошибки состояние базы данных изменилось на SUSPECT. Первичная файловая группа и, возможно, другие файловые группы могут быть повреждены. Эта база данных не может быть восстановлена во время загрузки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и поэтому недоступна. Для разрешения этой проблемы требуется вмешательство пользователя.  

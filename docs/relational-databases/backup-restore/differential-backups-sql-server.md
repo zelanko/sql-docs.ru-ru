@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf10fdcdee4d3fcca3cf3e119bf18bb341352edb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9452fc4f3ca4a0ccfa4983b8e47f97f47108eb75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179201"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737813"
 ---
 # <a name="differential-backups-sql-server"></a>Разностные резервные копии (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В данной теме рассматривается резервное копирование и восстановление любых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Разностная резервная копия основывается на последней предшествующей полной резервной копии. В разностной резервной копии сохраняются только те изменения, которые были произведены с момента создания последней полной резервной копии. Полная резервная копия, на которой основано разностное резервное копирование, известна также как *основа* разностной резервной копии. Полные резервные копии, за исключением резервных копий только для копирования, могут служить базой для последовательности разностных резервных копий, включая резервные копии баз данных, частичные резервные копии и резервные копии файлов. Базовая разностная резервная копия для файла может содержаться в полной резервной копии, в резервной копии файлов или частичной резервной копии.  

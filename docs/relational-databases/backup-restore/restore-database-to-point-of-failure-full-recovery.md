@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1980c9911e9b8af8fc305c712be479af15926201
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e63d8c84b455fbcf991485486bb7bb197032827a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82180739"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737709"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>Восстановление базы данных до точки сбоя — полное восстановление
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом подразделе описывается восстановление до точки сбоя. Сведения в этом разделе относятся только к тем базам данных, которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
   

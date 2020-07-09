@@ -12,15 +12,15 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1e49a379ed12123c684497d84804c9ebd1ebf9ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220484"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748477"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом руководстве описана настройка дополнительных параметров для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Эти процедуры необходимы, только если вам нужны соответствующие функции. В противном случае вы можете включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и использовать параметры по умолчанию.  
   
  В каждом сценарии резервное копирование настраивается с использованием параметра `database_name` . Если параметр `database_name` имеет значение NULL или *, изменения затронут параметры по умолчанию на уровне экземпляра. Параметры на уровне экземпляра будут применены и к новым базам данных, созданным после такого изменения.  

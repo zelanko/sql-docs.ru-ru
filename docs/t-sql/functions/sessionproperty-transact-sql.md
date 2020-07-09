@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1083504e4b3075a3e3ec8429c1ab0b5a664f2998
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68022191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85714938"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает параметры SET для сеанса.  
   
@@ -44,7 +44,7 @@ SESSIONPROPERTY (option)
  *Параметр*  
  Текущий параметр для данного сеанса. Аргумент *option* может принимать любое из указанных ниже значений.  
   
-|Параметр|Description|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |ANSI_NULLS|Позволяет задать поведение по стандарту ISO оператора сравнения "равно" (=) и "не равно" (<>) при использовании со значениями NULL.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |ANSI_PADDING|Определяет, как в столбце сохраняются более короткие значения, чем заданный размер столбца, а также символьные и двоичные значения с завершающими пробелами.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
@@ -53,7 +53,7 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Управляет представлением результатов объединения в виде значений NULL или пустых строковых значений.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |NUMERIC_ROUNDABORT|Определяет, создаются ли сообщения об ошибках и предупреждения в случаях, когда округление в выражении приводит к потере точности.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
 |QUOTED_IDENTIFIER|Указывает, нужно ли придерживаться совместимых со стандартом ISO правил использования кавычек для разделения идентификаторов и строковых литералов.<br /><br /> 1 = включен;<br /><br /> 0 = выключен.|  
-|\<любая другая строка>|NULL = Введенные значения недопустимы.|  
+|\<Any other string>|NULL = Введенные значения недопустимы.|  
   
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **sql_variant**  
