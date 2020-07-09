@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 307a4ad0-675a-4f97-9a3c-cedd61bdfae5
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 929262bc559730b99407415a9b907091a479289f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 06828fc48cffdaba01befd0eb46051e3810883d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68087035"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787295"
 ---
 # <a name="outdated-backup"></a>Устаревшая резервная копия
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Это правило обеспечивает наличие последних резервных копий. Регулярное создание резервных копий предохраняет базу данных от потери данных и различных сбоев. Частоту создания резервных копий разумно выбирать в зависимости от модели восстановления базы данных, частоты ее обновления и потребностей организации в отношении возможной потери данных. В часто обновляемой базе данных относительно быстро растет объем рабочих данных, которые не защищены между моментами создания резервных копий.  
   
 ## <a name="best-practices-recommendations"></a>Рекомендации  

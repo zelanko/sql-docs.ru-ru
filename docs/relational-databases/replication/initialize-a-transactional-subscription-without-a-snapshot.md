@@ -16,15 +16,15 @@ ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: df4463bf1ebfcc981c2828966c58e7fd0193f19f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 992a95f793611094971e894c6a974b959bce8ca7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287974"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790798"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialize a Transactional Subscription Without a Snapshot
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   По умолчанию инициализация подписки на публикацию транзакций осуществляется с помощью моментального снимка, созданного агентом моментальных снимков и применяемого агентом распространителя. Например, в некоторых сценариях, использующих большие исходные наборы данных, лучше инициализировать подписку другим методом. Другие методы инициализации подписчика:  
   
 -   Указание резервной копии. Восстановите резервную копию на подписчике, а затем агент распространителя скопирует все необходимые метаданные репликации и системные процедуры. Инициализация с помощью резервной копии — самый быстрый и удобный способ доставки данных на подписчик, поскольку можно использовать любую резервную копию, если она была сделана после включения для базы данных возможности инициализации с помощью резервной копии.  

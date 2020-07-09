@@ -12,15 +12,15 @@ ms.assetid: 8c830d11-7e88-4c3e-98e9-ba72c8c99b02
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b74cbe8ec74d0ea097693b38b05c87006baf07d7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c520f268443d568e22a9e459b5dd1a14040d322
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908334"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85791020"
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса RPC Output Parameter отслеживают значения выходных параметров вызовов удаленных процедур после выполнения этих вызовов.  
   
  Используйте этот класс для проверки выходных значений, возвращаемых хранимыми процедурами. Например, если приложение не создает выходных значений после выполнения вызова удаленной процедуры, события этого класса можно использовать для облегчения поиска проблемы между кодом клиента и кодом сервера.  

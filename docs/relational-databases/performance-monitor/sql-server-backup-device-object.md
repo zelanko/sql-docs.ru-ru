@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87cda19087f0e1ed742399032888a77f2a013dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787344"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server, объект Backup Device
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **Устройство резервного копирования** предоставляет счетчики для контроля над устройствами резервного копирования и операциями восстановления Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Контролировать устройства резервного копирования нужно, если необходимо определить пропускную способность, состояние или производительность операций резервного копирования и восстановления для каждого из устройств. Чтобы контролировать пропускную способность операции резервного копирования или восстановить всю **базу данных**, используйте счетчик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Пропускная способность резервного копирования/восстановления в байтах/с**объекта**. Дополнительные сведения см. в статье [SQL Server, Databases Object](../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   

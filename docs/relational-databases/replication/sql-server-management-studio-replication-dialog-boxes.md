@@ -12,15 +12,15 @@ ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 0770615fa308085ca19996cffe0b32e709fb022e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 537040f98aeb99b580b0109e0e472571b05907ad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287112"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783113"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Диалоговые окна репликации в среде SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Этот раздел содержит сведения о ряде диалоговых окон репликации, доступных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 -   [Безопасность агента моментальных снимков](../../relational-databases/replication/snapshot-agent-security.md)  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 45d2e41fa88d0ea586832ab91a927832b82ab0fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907490"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787500"
 ---
 # <a name="activity-monitor"></a>Монитор активности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Монитор активности отображает сведения о процессах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и о том, как функционирование этих процессов влияет на текущий экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 Монитор активности — это окно документов с вкладками со следующими развертываемыми и свертываемыми панелями: **Обзор**, **Процессы**, **Ожидающие ресурсы**, **Ввод-вывод в файл данных**, **Последние ресурсоемкие запросы** и **Активные ресурсоемкие запросы**. После развертывания любой панели монитор активности выполняет запрос к экземпляру для получения необходимых сведений. При свертывании панели выполнение всех операций запроса для этой панели приостанавливается. Можно одновременно развернуть одну или более панелей для просмотра различных типов активности в экземпляре.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907780"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781661"
 ---
 # <a name="monitor-data-tier-applications"></a>Наблюдение за приложениями уровня данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Наблюдение за приложениями уровня данных (DAC) может осуществляться из **обозревателя программ** или **обозревателя объектов** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) наряду с системными представлениями и таблицами. Кроме того, для наблюдения за всеми объектами базы данных, содержащейся в DAC, могут применяться стандартные методы наблюдения за базой данных и компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="before-you-begin"></a>Перед началом  

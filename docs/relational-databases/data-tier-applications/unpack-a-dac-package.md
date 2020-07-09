@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5e2be902c241403ec044b3d348f90dc85327b8ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3cecfc696bda97e046acd80eb3e285e8da2a04de
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781640"
 ---
 # <a name="unpack-a-dac-package"></a>Распаковка пакета DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Чтобы распаковать скрипты и файлы из пакета приложения уровня данных (DAC), используйте диалоговое окно «Распаковка приложения уровня данных». Скрипты и файлы помещаются в папку, где их можно просмотреть перед тем, как использовать пакет для развертывания приложения уровня данных в рабочей системе. Кроме того, содержимое одного приложения уровня данных можно сравнить с содержимым другого пакета, распакованного в другую папку.  
   
 1.  **Перед началом работы**  [Безопасность](#Security)  

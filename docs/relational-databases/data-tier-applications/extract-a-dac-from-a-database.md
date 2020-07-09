@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 86482b666c2ecfc5e9fcc09c1d06df14640386d0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4c45a6b720fde31618f384bcc2df2cceacc4102
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781686"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Извлечение приложения уровня данных из базы данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Извлечение пакета приложения уровня данных из существующей базы данных SQL Server можно с помощью **мастера извлечения приложения уровня данных** или скрипта Windows PowerShell. В результате извлечения будет создан файл пакета DAC, содержащий определения объектов базы данных и связанные элементы уровня экземпляра. Например, файл пакета DAC содержит все таблицы базы данных, хранимые процедуры, представления, пользователей и имена входа, сопоставленные с пользователями базы данных.  
   
  

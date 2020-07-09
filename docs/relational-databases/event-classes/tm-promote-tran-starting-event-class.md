@@ -12,15 +12,15 @@ ms.assetid: 32da85bb-d980-4044-8572-31372867649b
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4770898f39e7aff4cb424eafaae52b1678a2857a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2fd62597676c6b74778b5c6f917dfd05d6978f0d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790905"
 ---
 # <a name="tm-promote-tran-starting-event-class"></a>Класс событий TM: Promote Tran Starting
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий "TM: Promote Tran Starting" указывает на начало выполнения запроса PROMOTE TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями.  
   
 ## <a name="tm-promote-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Promote Tran Starting  

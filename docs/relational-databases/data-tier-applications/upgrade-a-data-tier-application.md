@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: c117df94-f02b-403f-9383-ec5b3ac3763c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7030f40419850454e90978168e72846331b5e865
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed1b1698fb945d92fce7cb2a0d1a9d0e2713afb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288048"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781628"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Обновление приложения уровня данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Используйте мастер обновления приложений уровня данных или скрипт Windows PowerShell, чтобы изменить схему и свойства приложения уровня данных (DAC), развернутого на данный момент, для соответствия схеме и свойствам, заданным в новой версии приложений уровня данных.  
   
 -   **Перед началом работы**  [Выбор параметров обновления DAC](#ChoseDACUpgOptions), [Ограничения](#LimitationsRestrictions), [Предварительные требования](#Prerequisites), [Безопасность](#Security), [Разрешения](#Permissions)  

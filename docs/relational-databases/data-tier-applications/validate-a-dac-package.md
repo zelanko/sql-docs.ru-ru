@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7df5bb3b2ef677e597d12dad8b8d92ddbb22fcba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62ea7a75bc9ed691f282aa0d886f64d006deb94b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781635"
 ---
 # <a name="validate-a-dac-package"></a>Проверка пакета приложения уровня данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Перед развертыванием пакета приложения уровня данных рекомендуется просмотреть его содержимое и проверить действия по обновлению перед обновлением существующего пакета приложения уровня данных. Тем более это истина для развертывания пакетов, которые ранее в организации не развертывались.  
   
 1.  **Перед началом работы**  [Предварительные требования](#Prerequisites)  

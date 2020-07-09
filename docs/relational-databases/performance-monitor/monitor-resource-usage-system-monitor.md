@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f451dcfbe7f3463a1b99445efe52a3b31d02a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68091002"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787446"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Наблюдение за использованием ресурсов (системный монитор)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В состав серверной операционной системы Microsoft Windows входит графическое средство для измерения производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— системный монитор. Он позволяет просматривать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , счетчики производительности, а также поведения других объектов, таких как процессоры, память, кэш, потоки и процессы. С каждым из этих объектов связан набор счетчиков, измеряющих степень использования устройства, длину очередей, задержки и другие показатели производительности и внутренней перегрузки.  
   
 > [!NOTE]  

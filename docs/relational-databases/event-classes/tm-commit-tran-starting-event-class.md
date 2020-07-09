@@ -12,15 +12,15 @@ ms.assetid: 3e1ac37e-6093-4dc9-9e5d-4270db18b547
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715eb611d1228eb5ab08ead6fc84da076bd8bb30
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c77a9dd688178a858167b8810da328a53d7188b9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68125143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790925"
 ---
 # <a name="tm-commit-tran-starting-event-class"></a>Класс событий TM: Commit Tran Starting
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса TM: класс события Commit Tran Starting указывает на начало выполнения запроса COMMIT TRANSACTION. Запрос отправляется клиентом через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после фиксации текущей транзакции.  
   
 ## <a name="tm-commit-tran-starting-event-class-data-columns"></a>Столбцы данных класса событий TM: Commit Tran Starting  

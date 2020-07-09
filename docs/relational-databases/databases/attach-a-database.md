@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 893de2f02f6f10d5c4132864903f6b55495fbfdf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138182"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789581"
 ---
 # <a name="attach-a-database"></a>Присоединение базы данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе описывается присоединение базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эту функцию можно использовать для копирования, перемещения или обновления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82138182"
      **Базы данных для присоединения**  
      Отобразятся сведения о выбранных базах данных.  
   
-     \<нет заголовка столбца>  
+     \<no column header>  
      Отображается значок, указывающий на состояние операции присоединения. Возможные значки описываются в приводимом ниже описании **Состояние** .  
   
      **Расположение файла MDF**  

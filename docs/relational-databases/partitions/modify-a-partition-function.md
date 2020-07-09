@@ -10,15 +10,15 @@ ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d3177a3fc8b0b88e3cd65e8675041be3250a3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0124f027ce4b3293afe754acfd5ad19354372cb9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907345"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787535"
 ---
 # <a name="modify-a-partition-function"></a>Изменение функции секционирования
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Вы можете изменить способ секционирования таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем увеличения или уменьшения указанного числа секций с шагом 1 в функции секционирования секционированной таблицы или индекса при помощи [!INCLUDE[tsql](../../includes/tsql-md.md)]. Добавление секции осуществляется путем разбиения существующей секции на две и переопределением границ новых секций. Удаление секции происходит путем слияния двух секций в одну на границе. Это действие повторно заполняет одну секцию и оставляет другую незаполненной.  
   
 > [!CAUTION]  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6dfb020026ba431669a0e551d5cb3aa85fbea637
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b837a98edb0d074824a3f55c5a4dfac739e715f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68095325"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787359"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, реплика доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект производительности **SQLServer:Availability Replica** содержит счетчики производительности, которые сообщают сведения о репликах доступности в группах доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Все счетчики производительности реплик доступности применяются и к первичной реплике, и к вторичным репликам, при этом счетчики отправленных и принятых данных относятся к локальной реплике. В большинстве случаев первичная реплика отправляет большую часть данных, а вторичные реплики данные получают. Однако вторичные реплики отправляют подтверждения и другой фоновый трафик в первичную реплику. Учтите, что для определенной реплики доступности некоторые счетчики будут показывать нулевое значение, что зависит от текущей роли (первичной или вторичной) локальной реплики.  
   
 |Имя счетчика|Description|  

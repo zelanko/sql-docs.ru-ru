@@ -12,15 +12,15 @@ ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a3c813221b586a6378b9590704908cd8f7531b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a97c0e6527d7a598a0d0a026d2f058a6b7773d48
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68089394"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789548"
 ---
 # <a name="execution-warnings-event-class"></a>Класс событий Execution Warnings
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   События класса событий Execution Warnings сообщают о предупреждениях, связанных с выделением памяти при выполнении инструкции или хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . События этого класса можно отслеживать, чтобы определить, сколько времени запрос ожидал выделения памяти и завершилась ли неудачей попытка выделения памяти. Сведения о задержках могут помочь в обнаружении конфликтов, связанных с попытками одновременной передачи данных, которые могут повлиять на производительность.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Столбцы данных класса событий Execution Warnings  

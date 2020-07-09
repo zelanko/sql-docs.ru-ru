@@ -20,15 +20,15 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94e1353d8fb3d49a71b98e53f6ec92a6db469e2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74095428"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786073"
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет две функции отслеживания изменений в базе данных: [система отслеживания измененных данных](#Capture) и [отслеживание изменений](#Tracking). Эти функции позволяют приложениям обнаруживать изменения DML (операции вставки, обновления и удаления), произведенные в пользовательских таблицах базы данных. Отслеживание измененных данных и отслеживание изменений можно включить для одной и той же базы данных без каких-либо дополнительных действий. Список выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих отслеживание измененных данных и отслеживание изменений, см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Отслеживание изменений поддерживается [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. Отслеживание измененных данных поддерживается только в SQL Server и Управляемом экземпляре Базы данных SQL Azure.
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Преимущества использования отслеживания измененных данных или отслеживания изменений  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ab394b7eed0a284b8ed74e5333b01f27283469ca
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67987362"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787407"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект **Access Methods** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, помогающие следить за доступом к логическим данным в рамках базы данных. Физический доступ к страницам базы данных на диске контролируется при помощи счетчиков **диспетчера буферов** . Наблюдение за методами доступа к данным в базе данных помогает определить, можно ли увеличить производительность запросов путем добавления или изменения индексов, добавления или перемещения секций, добавления файлов или групп файлов, дефрагментации индексов или изменения текста запросов. Кроме того, при помощи счетчиков объекта **Access Methods** можно следить за размером данных, индексов и свободного пространства в базе данных, контролируя объем и фрагментацию для каждого экземпляра сервера. Чрезмерная фрагментация индексов может значительно снизить производительность.  
   
  Дополнительные сведения об объеме, фрагментации и использовании данных можно узнать при помощи следующих динамических административных представлений:  

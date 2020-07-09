@@ -14,15 +14,15 @@ ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 254309ae930abea33d8b2ebdc285719fe614fab4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 39fb4a3b5e993d7cb640216ace0cc06600da3ae9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287481"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783149"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>Сведения об издателе, список просмотра подписок (моментальный снимок)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Вкладка **Список наблюдения за подписками** доступна для распространителей под управлением [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий. Она предназначается для отображения сведений о подписках на все публикации, доступные на выбранном издателе. Список подписок можно фильтровать для просмотра ошибок, предупреждений и подписок с низкой производительностью. Эта вкладка предоставляет администратору единое расположение для контроля за активностью всех репликаций на издателе. Монитор репликации отображает все подписки, требующие внимания администратора, на основе выбранного типа репликации и в соответствии с параметром, выбранным в раскрывающемся списке **Показать** . Элементы отображаются на этой вкладке в соответствии с текущим состоянием и производительностью, поэтому подписки отображаются на этой странице только в случае, если они в настоящее время соответствуют параметру в списке **Показать** .  
   
 ## <a name="options"></a>Параметры  

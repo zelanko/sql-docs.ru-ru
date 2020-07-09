@@ -17,15 +17,15 @@ ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 445453f6be42c6015fc3b6728eb12ee9a78f0ef6
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 3240f9cd3e94418572482a5e73950e2b522ec663
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786887"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Детерминированные и недетерминированные функции
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Детерминированные функции каждый раз возвращают один и тот же результат, если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Недетерминированные функции могут возвращать каждый раз разные результаты, даже если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Например, функция AVG всегда возвращает один результат при указанных выше условиях, а функция GETDATE, возвращающая текущие дату и время, всегда возвращает разный результат.  
   
  Определяемые пользователями функции имеют несколько свойств, определяющих способность ядра [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] индексировать результаты функции как с помощью индексов вычисляемых столбцов, вызывающих функцию, так и с помощью индексированных представлений, которые на нее ссылаются. Детерминизм функции — одно из таких свойств. Например, в представлении нельзя создать кластеризованный индекс, если оно ссылается на какие-либо недетерминированные функции. Дополнительные сведения о свойствах функций, включая детерминизм, см. в разделе [Определяемые пользователем функции](../../relational-databases/user-defined-functions/user-defined-functions.md).  

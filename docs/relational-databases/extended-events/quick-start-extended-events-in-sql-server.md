@@ -11,16 +11,16 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4065dd97c2109a30c90f8de01c50c11894a91f68
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.openlocfilehash: 7b32ac9e1d88953cd8c8fccf3e010d01d5a6bcc5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81728425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783497"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Краткое руководство. Расширенные события в SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Расширенные события — это упрощенная система мониторинга производительности, позволяющая пользователям получать данные, необходимые для отслеживания и устранения неполадок в SQL Server. Дополнительные сведения об архитектуре расширенных событий см. в разделе [Общие сведения о расширенных событиях](extended-events.md).  Эта статья призвана помочь разработчикам SQL, которые незнакомы с расширенными событиями, создать сеанс событий за считанные минуты. С помощью расширенных событий можно получать подробные сведения о внутренних процессах, происходящих в системе SQL и приложении. При создании сеанса расширенных событий вы сообщаете системе:
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 54fdfe36da0d590fa2225ab7cc99af640727b000
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8560ed40c5a50ca16c6bad6b78d4a2eddcb0f0e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557703"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785093"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Наблюдение с помощью управления на основе политик и принудительное применение рекомендаций с помощью управления на основе политик
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Управление на основе политик позволяет отслеживать рекомендации для [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет набор файлов политик, которые можно импортировать в качестве политик рекомендаций, а затем оценивать эти политики для набора целей, включающего экземпляры, объекты экземпляров, базы данных или объекты базы данных. Политики можно оценивать вручную или устанавливать их для оценки набора целей согласно расписанию либо тому или иному событию. Дополнительные сведения об управлении на основе политик см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="policy-and-rules-for-database-engine"></a>Политика и правила для компонента Database Engine  

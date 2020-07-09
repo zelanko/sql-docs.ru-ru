@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5d5783646a4ba6e5cad78b0cdcada16a8d27501c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 971f9519208f9af67d8d1d1af63737ed876bfff1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787491"
 ---
 # <a name="create-a-sql-server-database-alert"></a>Создание предупреждения для базы данных SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Можно использовать системный монитор для создания предупреждения, которое будет выводиться, когда счетчик компонента System Monitor достигает порогового значения. В ответ на предупреждение системный монитор запускает приложение, такое как пользовательское приложение, созданное для обработки условий предупреждения. Например можно создать предупреждение, которое будет выводиться, когда число взаимоблокировок превысит заданное значение.  
   
  Предупреждения также могут задаваться при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в статье [Оповещения](../../ssms/agent/alerts.md).  
