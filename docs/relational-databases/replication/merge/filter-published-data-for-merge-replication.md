@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 46c5023d-7a3b-4455-becc-e159fcb5d6c4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1e0d157b6a4f7f08d068dc8da75c42f4ad924044
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdfd7525ade2500ee144bb57c030350a532ded64
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68033258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85901253"
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Фильтрация опубликованных данных для репликации слиянием
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Кроме статических фильтров строк и фильтров столбцов, которые можно определять с другими типами репликации, репликация слиянием позволяет определять параметризованные фильтры строк и фильтры соединения. Дополнительные сведения о статических фильтрах строк и фильтрах столбцов см. в разделе [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  Репликация слиянием используется во многих приложениях, поддерживающих мобильных пользователей; эти приложения обычно имеют большое количество подписок, при этом каждая подписка получает уникальный набор данных. Параметризованные фильтры в сочетании с фильтрами соединения позволяют администратору настраивать одну публикацию (или в крайнем случае небольшое количество публикаций) и тем не менее предоставлять пользователям различные наборы данных, сокращая затраты на управление, связанные с созданием многочисленных публикаций.  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 5797dc0f216d0956619e2874676b917314162dd5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529258"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900004"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Архитектура безопасности для веб-синхронизации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает детализированную настройку безопасности веб-синхронизации. В этом разделе представлен подробный список всех компонентов, которые можно включать в настройку веб-синхронизации, и сведения о соединениях между компонентами. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  На следующем рисунке показаны все возможные соединения, однако некоторые из них могут быть не обязательны в определенной топологии. Например, соединение с сервером FTP требуется, только если моментальный снимок доставляется по протоколу FTP.  

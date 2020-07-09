@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 47bb7a1a-c0a5-473c-a7db-d9f4bf3ee650
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c52e0bcb34c93bb3c973caae53d3983db3660e24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed2db8f5d02174b41d6084d3d7593c7c8775ad16
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897497"
 ---
 # <a name="use-ring-buffers-to-obtain-health-information-about-always-on-availability-groups"></a>Использование кольцевых буферов для получения сведений о работоспособности в группах доступности Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Некоторую диагностическую информацию о группах доступности AlwaysOn можно получить из кольцевых буферов SQL Server или динамического административного представления sys.dm_os_ring_buffers. Кольцевые буферы создаются при установке SQL Server и регистрируют предупреждения в системе SQL Server для внутренней диагностики. Они не поддерживаются, однако из них можно извлечь ценную информацию при устранении неполадок. Эти кольцевые буферы предоставляют еще один источник диагностических сведений при зависании или сбое SQL Server.  
   
  Приведенный ниже запрос Transact-SQL (T-SQL) возвращает все записи событий из кольцевых буферов групп доступности.  

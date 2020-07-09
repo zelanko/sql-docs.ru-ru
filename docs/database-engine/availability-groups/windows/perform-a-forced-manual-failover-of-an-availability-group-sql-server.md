@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 901059ea6aa203dfcf21878c35eb1bc0214408b9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ebe94614467e4b4c3d3ef2b9eb52287cdcc3feb7
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301655"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897040"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности Always On (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается выполнение принудительной отработки отказа (с возможной потерей данных) в группе доступности AlwaysOn с использованием [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Принудительная отработка отказа — это форма перехода на другой ресурс вручную, предназначенная исключительно для аварийного восстановления в случаях, когда невозможно выполнить [запланированную отработку отказа вручную](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Поэтому мы настоятельно рекомендуем выполнять принудительную отработку отказа только в том случае, если необходимо немедленно возобновить работу группы доступности и вы готовы пойти на риск потери данных.  
   
  После принудительной отработки отказа цель перехода, на которую перешла группа доступности, становится новой первичной репликой. Базы данных-получатели на оставшихся вторичных репликах приостанавливаются и должны быть восстановлены вручную. Если прежняя первичная реплика станет доступной, то она переключится в роль вторичной, в связи с чем бывшие базы данных-источники станут базами данных-получателями и перейдут в состояние SUSPENDED. Перед возобновлением работы данной базы данных-получателя можно попробовать восстановить ее потерянные данные. Однако обратите внимание, что, если хотя бы одна из баз данных-получателей приостановлена, усечение журнала транзакций в данной базе данных-источнике откладывается.  

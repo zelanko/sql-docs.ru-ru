@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 639322e277bddc8a7d71c994600c32cfbcd78449
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f641836a7e465f4276f0970ee15a1bea4ee45283
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251247"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898051"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Запуск перемещения данных для базы данных-получателя AlwaysOn (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе приведены сведения о запуске синхронизации данных после добавления базы данных в группу доступности AlwaysOn. Для каждой новой первичной реплики необходимо подготовить базы данных-получатели на экземплярах сервера, размещающих вторичные реплики. Затем каждую из этих баз данных-получателей необходимо вручную присоединить к группе доступности.  
   

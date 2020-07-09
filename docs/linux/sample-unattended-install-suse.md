@@ -8,16 +8,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 392d8d477a2e136d54e6f0f06608eb0ebeda12a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9944a6065d89a49e5bf1a0ccec2d4d681fbae748
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593518"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900152"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Образец. Скрипт автоматической установки SQL Server для SUSE Linux Enterprise Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этом примере скрипта Bash выполняется установка SQL Server 2017 на SUSE Linux Enterprise Server (SLES) версии 12 с пакетом обновления 2 (SP2) без интерактивного ввода. В нем демонстрируются примеры установки ядра СУБД, программ командной строки SQL Server и агента SQL Server, а также действий, которые необходимо выполнить после установки. При необходимости вы можете установить компонент полнотекстового поиска и создать пользователя с правами администратора.
 

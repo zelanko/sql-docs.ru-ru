@@ -9,16 +9,16 @@ ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 729aacf69f8aa36964f33c0bcb282351a67ab444
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3db39ed328ca37cbc0eb03b2ce4f8cdbcda268dd
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635433"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902308"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Развертывание контейнера SQL Server в Kubernetes с помощью служб Azure Kubernetes (AKS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Узнайте, как настроить экземпляр SQL Server в Kubernetes в службе Azure Kubernetes (AKS) с постоянным хранилищем для обеспечения высокой доступности (HA). Такое решение обеспечивает устойчивость. Если экземпляр SQL Server терпит сбой, Kubernetes автоматически повторно создает его в новом модуле Pod. Kubernetes также обеспечивает устойчивость к сбою узла.
 
@@ -160,12 +160,15 @@ ms.locfileid: "81635433"
 1. Создайте манифест (YAML-файл) для описания развертывания. В следующем примере описывается развертывание, включая контейнер, основанный на образе контейнера SQL Server.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:

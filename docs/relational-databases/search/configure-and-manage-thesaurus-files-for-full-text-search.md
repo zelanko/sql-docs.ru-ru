@@ -1,6 +1,6 @@
 ---
 title: Настройка и управление файлами тезауруса для полнотекстового поиска
-ms.date: 12/04/2017
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -14,15 +14,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.custom: seo-lt-2019
-ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d97b66622254ad911cb7bf557c1a7368b4f3d40
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056205"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897990"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Настройка и управление файлами тезауруса для полнотекстового поиска
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстовые запросы могут выполнять поиск синонимов для заданных пользователем терминов с помощью *тезауруса* полнотекстового поиска. Каждый тезаурус определяет набор синонимов для указанного языка. Подготовив тезаурус, ориентированный на пользовательские полнотекстовые данные, можно эффективно расширить область полнотекстовых запросов к этим данным.
 
 Сопоставление с тезаурусом выполняется для всех запросов [FREETEXT](../../t-sql/queries/freetext-transact-sql.md) и [FREETEXTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md) и для любых запросов [CONTAINS](../../t-sql/queries/contains-transact-sql.md) и [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md), которые указывают предложение `FORMSOF THESAURUS`.
@@ -52,30 +52,30 @@ ms.locfileid: "74056205"
 ##  <a name="location-of-thesaurus-files"></a><a name="location"></a> Местоположение файлов тезауруса  
  Местоположение файлов тезауруса по умолчанию:  
   
-     <SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\  
+`<SQL_Server_data_files_path>\MSSQL13.MSSQLSERVER\MSSQL\FTDATA\`
   
- В местоположении по умолчанию содержатся следующие файлы.  
+В местоположении по умолчанию содержатся следующие файлы.  
   
 -   **Зависящие от языка** файлы тезауруса.  
 
     При установке в указанном выше месте устанавливаются пустые файлы тезауруса. Для каждого поддерживаемого языка предоставляется отдельный файл. Системный администратор может настроить эти файлы.  
   
-     Имена файлов по умолчанию для файлов тезауруса имеют следующий формат:  
+    Имена файлов по умолчанию для файлов тезауруса имеют следующий формат:  
   
-         'ts' + <three-letter language-abbreviation> + '.xml'  
+    `'ts' + <three-letter language-abbreviation> + '.xml'`
   
-     Для данного языка имя файла тезауруса указывается в следующем параметре реестра:
+    Для данного языка имя файла тезауруса указывается в следующем параметре реестра:
      
-        HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>  
+    `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<instance-name>\MSSearch\<language-abbrev>`
   
 -   Файл **глобального** тезауруса.  
   
-     Пустой файл глобального тезауруса, tsGlobal.xml.  
+    Пустой файл глобального тезауруса, tsGlobal.xml.  
 
 ### <a name="change-the-location-of-a-thesaurus-file"></a>Изменение расположения файла тезауруса 
 Можно менять местонахождение и имена файлов тезауруса, изменяя соответствующий раздел реестра. Для каждого языка местонахождение файла тезауруса указывается в следующем параметре реестра:  
   
-    HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile  
+`HKLM\SOFTWARE\Microsoft\Microsoft SQL Server\<instance name>\MSSearch\Language\<language-abbreviation>\TsaurusFile`
   
  Файл глобального тезауруса соответствует языку «Нейтральный» с кодом языка (LCID) 0. Это значение может быть изменено только администратором.  
 

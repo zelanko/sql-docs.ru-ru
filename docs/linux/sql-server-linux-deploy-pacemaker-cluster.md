@@ -8,16 +8,16 @@ ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da852f20d9109c5c4e2988cbdfc3915fe226718f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68077480"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896526"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Развертывание кластера Pacemaker для SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этом руководстве описываются задачи, необходимые для развертывания кластера Pacemaker Linux для группы доступности Always On [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] или экземпляра отказоустойчивого кластера. В отличие от тесно связанного стека Windows Server и [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], создавать кластер Pacemaker, а также настраивать группу доступности в Linux можно как до, так и после установки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Интеграция и настройка ресурсов для той части группы доступности или экземпляра отказоустойчивого кластера, которая связана с Pacemaker, выполняется после настройки кластера.
 > [!IMPORTANT]

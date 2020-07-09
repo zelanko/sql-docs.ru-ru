@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a6ca6bf2fd3f17ecc9d252f4ed992c6a609866a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288548"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900906"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Инициализация вторичной реплики группы доступности Always On с помощью автоматического заполнения
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 В SQL Server 2012 и 2014 единственным способом инициализации вторичной реплики в группе доступности SQL Server Always On является использование операций резервного копирования, копирования и восстановления. В SQL Server 2016 появилась новая функция для инициализации вторичной реплики — *автоматическое заполнение*. Автоматическое заполнение использует транспортный поток журнала для потокового резервного копирования с помощью VDI на вторичную реплику для каждой базы данных группы доступности, применяющую настроенные конечные точки. Эту новую функцию можно использовать во время первоначального создания группы доступности или при добавлении базы данных в группу доступности. Автоматическое заполнение доступно во всех выпусках SQL Server, поддерживающих группы доступности AlwaysOn, и может использоваться как с традиционными группами доступности, так и с [распределенными группами доступности](distributed-availability-groups.md).
 

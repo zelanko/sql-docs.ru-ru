@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 52db0986bb6af34e1dc034d95146a96d3fdcf246
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 29d655fc1a63513db073520981398d2b5a66c529
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68000129"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900145"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье рассматривается модуль [SQL Server PowerShell](../powershell/sql-server-powershell.md) и приводится несколько примеров того, как можно использовать его для работы с SQL Server на Linux. На данный момент поддержка PowerShell для SQL Server реализована в Windows, MacOS и Linux. В этой статье описывается использование компьютера под управлением Windows для подключения к удаленному экземпляру SQL Server на Linux.
 

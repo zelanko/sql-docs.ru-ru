@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d39284d132610e1ab68312823ca1d06d540bc492
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75235646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897000"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>Определение возможных причин сбоев подключения между репликами доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 Физические неисправности, неполадки операционной системы или проблемы с [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] могут привести к сбою сеанса между двумя репликами доступности. Реплика доступности не выполняет регулярных проверок компонентов, которые использует процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли бы быть не замечены, в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] реализован собственный механизм времени ожидания сеанса. Указывает интервал времени ожидания сеанса в секундах. Данный интервал времени ожидания — это максимальное время, в течение которого экземпляр сервера ожидает получение сообщения PING от другого экземпляра перед тем, как сделать вывод о том, что другой экземпляр отключен. По истечении времени ожидания сеанса между двумя репликами доступности эти реплики доступности предполагают наличие сбоя и объявляют о *программной ошибке*.  
   
 > [!IMPORTANT]  
