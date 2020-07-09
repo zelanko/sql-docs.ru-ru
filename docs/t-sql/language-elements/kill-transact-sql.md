@@ -34,15 +34,15 @@ ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23c27d4d8eafac26b33af45f95377ced5dd0f7ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eca253ab85302555b84e35a3118b1e8a0873402
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981923"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007348"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Завершает пользовательский процесс, определяемый идентификатором сеанса или единицей работы (UOW). Если для завершения процесса, указанного с помощью идентификатора сеанса или UOW, необходимо отменить большое количество операций, для выполнения инструкции KILL может понадобиться значительное время. Процесс особенно затягивается при откате длительной транзакции.  
   
@@ -78,7 +78,7 @@ JOIN sys.dm_exec_connections AS conn
 ```  
   
 _UOW_  
-**Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше
+**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
 Задает идентификатор единицы работы (UOW) распределенных транзакций. _UOW_ представляет собой идентификатор GUID, который можно получить из столбца request_owner_guid динамического административного представления sys.dm_tran_locks. _UOW_ также может быть получен из журнала ошибок или из монитора транзакций MS DTC. Дополнительные сведения о наблюдении за распределенными транзакциями см. в руководстве пользователя MS DTC.  
   
@@ -123,7 +123,7 @@ WITH STATUSONLY
 Аналогичный отчет о состоянии может быть получен при повторном выполнении инструкции KILL _ИД сеанса_|_UOW_ без использования параметра WITH STATUSONLY. Однако не рекомендуется повторно выполнять эту инструкцию таким образом. Повторный вызов инструкции KILL _ИД сеанса_ может прервать новый процесс в случае, если процесс отката был завершен, а значение идентификатора сеанса было присвоено другой задаче до запуска новой инструкции KILL. Указание параметра WITH STATUSONLY предотвращает указанные последствия.  
   
 ## <a name="permissions"></a>Разрешения  
-**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
+**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** Необходимо разрешение ALTER ANY CONNECTION. Разрешение ALTER ANY CONNECTION включено с членством в предопределенных ролях сервера sysadmin или processadmin.  
   
 **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]:** необходимо разрешение KILL DATABASE CONNECTION. Имя входа субъекта серверного уровня имеет разрешение KILL DATABASE CONNECTION.  
   

@@ -15,16 +15,16 @@ ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b11a263953e0b58c4b3dc7072662b291f3d215ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e297be837d954217aa9197494d6734f53d5a6aa0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79375511"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005604"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Пользователи автономной базы данных — создание переносимой базы данных
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Используйте пользователей автономной базы данных для проверки подлинности подключений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] на уровне базы данных. Автономная база данных — это база данных, изолированная от других баз данных и от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (и базы данных master), на котором размещена эта база данных. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пользователей автономной базы данных для проверки подлинности Windows и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При использовании [!INCLUDE[ssSDS](../../includes/sssds-md.md)]объединяйте пользователей автономной базы данных с правилами брандмауэра уровня базы данных. В этом разделе рассматриваются различия и преимущества использования модели автономной базы данных по сравнению с традиционной моделью имя для входа/ пользователь и правилами брандмауэра в Windows или на уровне сервера. Конкретные сценарии, управляемость или приложение бизнес-логики могут по-прежнему требовать использования традиционной модели имя для входа/ пользователь и правила брандмауэра на уровне сервера.  
   

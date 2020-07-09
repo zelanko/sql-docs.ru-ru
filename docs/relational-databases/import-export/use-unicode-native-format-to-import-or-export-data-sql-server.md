@@ -15,15 +15,15 @@ ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4b9aefe7e8350eef1990a6a37dbf0266cd11464
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7641e8f5468a6e915772edf10e97cd735c934f0d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980360"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010121"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата Юникода для импорта или экспорта данных (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Собственный формат Юникода может быть полезен при копировании данных из одной установки [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другую. Использование собственного формата для несимвольных данных позволяет сэкономить время благодаря исключению ненужных преобразований типов данных в символьный формат и обратно. Использование символьного формата Юникода для всех символьных данных предотвращает потерю дополнительных символов в ходе массовой передачи данных между серверами, использующими различные кодовые страницы. Файл данных в собственном формате Юникода может быть считан с помощью любого метода массового импорта.  
   
  Собственный формат Юникода рекомендуется использовать для массовой передачи данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью файла данных, который содержит дополнительный набор символов или символы в кодировке DBCS. В отношении несимвольных данных собственный формат Юникода использует собственные (для базы данных) типы данных. Для символьных данных, таких как [char](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [текст](../../t-sql/data-types/ntext-text-and-image-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md), [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)и [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md), собственный формат Юникод использует символьный формат Юникод.  

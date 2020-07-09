@@ -31,15 +31,15 @@ ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f13bbee1fdde92c55c98a0c2478d0dec4db5e96a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fca606be32cc3b9e73defd52a30257ad09c0e099
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75884008"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007312"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Определяет, совпадает ли указанная символьная строка с заданным шаблоном. Шаблон может включать обычные символы и символы-шаблоны. Во время сравнения с шаблоном необходимо, чтобы его обычные символы в точности совпадали с символами, указанными в строке. Символы-шаблоны могут совпадать с произвольными элементами символьной строки. Использование символов-шаблонов в отличие от использования операторов сравнения строки (= и !=) делает оператор LIKE более гибким. Если тип данных одного из аргументов не является символьной строкой, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], если это возможно, преобразует его в тип данных символьной строки.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "75884008"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 match_expression [ NOT ] LIKE pattern [ ESCAPE escape_character ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 match_expression [ NOT ] LIKE pattern  
@@ -343,7 +343,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="g-using-like-with-the-_-wildcard-character"></a>Ж. Применение оператора LIKE с символом-шаблоном _  
- В следующем примере в таблице `DimEmployee` выполняется поиск всех телефонных номеров, начинающихся с `2` и заканчивающихся на `6`. Подстановочный знак "%" добавлен в конце шаблона поиска, что соответствует любым следующим символам в значениях столбца с телефонными номерами.  
+ В следующем примере в таблице `6` выполняется поиск всех телефонных номеров, начинающихся с `2` и заканчивающихся на `DimEmployee`. Подстановочный знак "%" добавлен в конце шаблона поиска, что соответствует любым следующим символам в значениях столбца с телефонными номерами.  
   
 ```sql  
 -- Uses AdventureWorks  

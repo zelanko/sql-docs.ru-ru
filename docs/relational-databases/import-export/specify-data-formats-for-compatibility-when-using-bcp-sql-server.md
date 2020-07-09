@@ -18,15 +18,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a50db4c804e16c8d7ef93ab1bb9b2d201218d993
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bae99e460ea8a9e5e2877917bd8a82b25f8cc8a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980357"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001138"
 ---
 # <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>Указание форматов данных для совместимости с помощью программы bcp (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   В этой статье описываются атрибуты формата данных, запросы командной строки для конкретных полей и хранение данных по полям в неформатированном файле формата, отличного от XML, в команде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** . Понимать эти возможности может быть полезно, если производится массовый экспорт данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для массового импорта например, в другую программу базы данных. Стандартные форматы данных в исходной таблице (native, character или Unicode) могут быть несовместимы с форматом данных, ожидаемым другой программой. Если несовместимость существует, когда вы экспортируете данные, необходимо описать формат данных.  
   
 > [!NOTE]  

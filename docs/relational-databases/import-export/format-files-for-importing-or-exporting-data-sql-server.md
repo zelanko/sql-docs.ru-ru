@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 683ed7310ac90e37c4bcce24080f879082c6c410
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: f441380805e443cc13617a5477d3083ee1dc62d5
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980452"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006258"
 ---
 # <a name="format-files-to-import-or-export-data-sql-server"></a>Форматирование файлов для импорта и экспорта данных (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Если выполняется массовый импорт данных в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовый экспорт данных из таблицы, можно использовать *файл форматирования* для сохранения всех сведений о формате, необходимых для массового экспорта или массового импорта данных. Это включает сведения о формате каждого поля в файле данных для этой таблицы.
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает два типа файлов форматирования: XML-файлы и файлы форматирования в формате, отличном от XML. Файлы форматирования как в XML, так и в другом формате, содержат описания каждого поля в файле данных, а XML-файлы форматирования содержат еще описания соответствующих столбцов таблицы. Как правило, XML-файлы и файлы форматирования в формате, отличном от XML взаимозаменяемы. Однако рекомендуется пользоваться XML-синтаксисом новых файлов форматирования, так как он обеспечивает ряд преимуществ перед файлами форматирования в формате, отличном от XML. Дополнительные сведения см. в разделе [XML-файлы форматирования (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md).

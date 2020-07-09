@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 5e01a35302991de18eb28b8cf458fe1990544eec
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4cada27e8e73013667c69c82c9306426eef685f3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980367"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010148"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Символьный формат Юникода рекомендуется для массового переноса данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, содержащий символы расширенной или двухбайтовой кодировки (DBCS). Формат символьных данных Юникода позволяет экспортировать данные из сервера в кодовой странице, отличающейся от кодовой страницы, используемой выполняющим операцию клиентом. В этих случаях использование символьного формата Юникода имеет следующие преимущества.  
   
 * Если данные источника и назначения имеют тип данных Юникода, при использовании символьного формата Юникода все символьные данные сохраняются.  

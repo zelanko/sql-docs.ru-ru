@@ -20,18 +20,18 @@ helpviewer_keywords:
 - number of group items
 - COUNT function [Transact-SQL]
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0c4ebccf102051d3144ca8a9955bfa0f1aef1ee
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68026489"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011494"
 ---
 # <a name="count-transact-sql"></a>Функция COUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Эта функция возвращает количество элементов, найденных в группе. Функция `COUNT` работает подобно функции [COUNT_BIG](../../t-sql/functions/count-big-transact-sql.md). Эти функции различаются только типами данных в возвращаемых значениях. Функция `COUNT` всегда возвращает значение типа данных **int**. Функция `COUNT_BIG` всегда возвращает значение типа данных **bigint**.
   
@@ -39,7 +39,7 @@ ms.locfileid: "68026489"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql
+```syntaxsql
 
 -- Aggregation Function Syntax  
 COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )  
@@ -136,7 +136,7 @@ GO
 ```
   
 ### <a name="d-using-the-over-clause"></a>Г. Использование предложения OVER  
-В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице `HumanResources.Department` базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+В этом примере функции `MIN`, `MAX`, `AVG` и `COUNT` используются с предложением `OVER`, чтобы получить статистические значения для каждого из отделов в таблице [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] базы данных `HumanResources.Department`.
   
 ```sql
 SELECT DISTINCT Name  

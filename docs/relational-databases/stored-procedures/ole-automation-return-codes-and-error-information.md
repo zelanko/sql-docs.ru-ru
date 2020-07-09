@@ -14,15 +14,15 @@ ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 12bfbfa82768efe361f9b067764c7b5a4c408931
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 544d38f39e8ff27eeba474c6c9d54cb48576f049
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68136761"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000947"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Коды возврата и сведения об ошибках OLE-автоматизации
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Системные хранимые процедуры OLE-автоматизации возвращают код возврата типа **int** , который представляет собой значение HRESULT, возвращенное базовой операцией OLE-автоматизации. Значение HRESULT, равное 0, свидетельствует об успешном завершении операции. Ненулевое значение HRESULT является кодом ошибки OLE, представленным в шестнадцатеричной форме 0x800*nnnnn*, однако при возврате из хранимой процедуры в качестве кода возврата значения с типом **int** значение HRESULT представляется в форме 214*nnnnnnn*.  
   
  Например, если в хранимую процедуру sp_OACreate передать недопустимое имя объекта (SQLDMO.Xyzzy), она возвратит значение HRESULT типа **int** , равное 2 147 221 005, что эквивалентно шестнадцатеричному 0x800401f3.  

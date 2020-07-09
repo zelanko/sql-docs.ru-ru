@@ -22,22 +22,22 @@ helpviewer_keywords:
 - comparing dates times [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b6d048217cb27a0215485334e54ed9ed93defa1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255821"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011379"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Эта функция возвращает строку символов, представляющую указанную часть *datepart* заданного типа *date*.
 
-Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени (Transact-SQL)](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Обзор всех типов данных и функций даты и времени в языке [ см. в статье ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)Типы данных и функции даты и времени (Transact-SQL)[!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -92,7 +92,7 @@ DATENAME ( datepart , date )
   
 -   Каждое выражение *datepart* и его краткие формы возвращают одно и то же значение.  
   
-Возвращаемое значение зависит от языка среды, задаваемого инструкцией [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md), и от [параметра конфигурации сервера "язык по умолчанию"](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) для имени входа. Если значение *date* является строковым литералом некоторого формата, то возвращаемое значение зависит от функции [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md). Инструкция SET DATEFORMAT не изменяет возвращаемое значение, если дата представляется выражением столбца типа данных даты или времени.
+Возвращаемое значение зависит от языка среды, задаваемого инструкцией [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md), и от [параметра конфигурации сервера "язык по умолчанию"](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) для имени входа. Если значение [date](../../t-sql/statements/set-dateformat-transact-sql.md) является строковым литералом некоторого формата, то возвращаемое значение зависит от функции *SET DATEFORMAT*. Инструкция SET DATEFORMAT не изменяет возвращаемое значение, если дата представляется выражением столбца типа данных даты или времени.
   
 Если параметр *date* имеет аргумент типа **date**, то возвращаемое значение зависит от настроек, заданных с помощью функции [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   

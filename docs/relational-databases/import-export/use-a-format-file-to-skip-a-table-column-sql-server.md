@@ -2,7 +2,7 @@
 title: Использование файла форматирования для пропуска столбца таблицы (SQL Server) | Документация Майкрософт
 description: Из этой статьи вы узнаете, как при импорте пропустить столбец таблицы с помощью файла форматирования, если в исходном файле для этого столбца нет данных.
 ms.custom: ''
-ms.date: 02/15/2018
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,15 +15,15 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a568d1bfbfb461a8749699e0f7e175ed2c002f9e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 5a83155dd566812248e37d509e34600a1beeb677
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980421"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007197"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Пропуск столбца таблицы с помощью файла форматирования (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Из этой статьи вы узнаете, как при импорте пропустить столбец таблицы с помощью файла форматирования, если в исходном файле для этого столбца нет данных. Количество полей в файле данных может быть меньше количества столбцов в целевой таблице. То есть столбец пропускается, если верно хотя бы одно из следующих двух условий для целевой таблицы:
 -   пропускаемый столбец допускает значение NULL;
@@ -46,7 +46,7 @@ GO
   
 В примерах в этой статье также используется образец файла данных `myTestSkipCol2.dat`. Этот файл содержит только два поля, хотя целевая таблица содержит три столбца.
 
-```  
+```
 1,DataForColumn3  
 1,DataForColumn3  
 1,DataForColumn3  
@@ -221,9 +221,9 @@ GO
 
 Чтобы использовать XML-файл форматирования для пропуска столбца таблицы с помощью `OPENROWSET(BULK...)`, предоставьте в явном виде следующий список столбцов в списке выбора и в целевой таблице, как показано ниже:  
   
-    ```sql
-    INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
-    ```
+```sql
+INSERT ...<column_list> SELECT <column_list> FROM OPENROWSET(BULK...) 
+```
 
 В следующем примере используется поставщик массового набора строк `OPENROWSET` и файл форматирования `myTestSkipCol2.xml` . В примере выполняется массовый импорт файла данных `myTestSkipCol2.dat` в таблицу `myTestSkipCol` . Инструкция, в соответствии с требованиями, содержит явный список столбцов в списке выбора, а также в целевой таблице.  
   

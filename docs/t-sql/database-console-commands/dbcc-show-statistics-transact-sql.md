@@ -33,15 +33,15 @@ ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 350ece68d98f8333eb6281a5cbb6fdacf792e51a
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d3c9b007bd8714814cedeb33c78684f82bd6dd1e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632356"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003436"
 ---
 # <a name="dbcc-show_statistics-transact-sql"></a>Инструкция DBCC SHOW_STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Инструкция DBCC SHOW_STATISTICS отображает статистику оптимизации текущего запроса для таблицы или индексированного представления. Оптимизатор запросов использует статистику для оценки количества элементов или количества строк в результате запроса, что позволяет оптимизатору запросов создавать высококачественные планы запросов. Например, на основе оценки количества элементов оптимизатор запросов может выбрать в плане запроса оператор поиска по индексу, а не оператор просмотра индекса, повышая производительность запроса за счет использования менее ресурсоемкого поиска по индексу.
   
@@ -167,8 +167,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 -   Если какие-либо столбцы в объекте статистики замаскированы с помощью правил динамического маскирования данных, то помимо разрешения SELECT у пользователя должно быть разрешение UNMASK.
 
 В версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), пользователь должен быть владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.
-[!NOTE]
-Чтобы восстановить поведение, доступное в версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), используйте флаг трассировки 9485.
+
+ > [!NOTE]
+ > Чтобы восстановить поведение, доступное в версиях, предшествующих [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 1 (SP1), используйте флаг трассировки 9485.
   
 ## <a name="permissions-for-sssdw-and-sspdw"></a>Разрешения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 Для DBCC SHOW_STATISTICS необходимо разрешение SELECT на таблицу или членство в одной из следующих ролей:

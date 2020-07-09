@@ -14,15 +14,15 @@ ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95ac8a8a42523d513a6025d85308c4e130c044c8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4b3cffe95dcdd41cc904aed95de0d91c97314670
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980486"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009920"
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   При массовом импорте в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовом экспорте данных из таблицы вы можете воспользоваться файлом форматирования, который обеспечивает гибкую структуру записи файлов данных и практически не требует изменения для поддержки соответствия с другими форматами данных или для считывания данных из других программ.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает два типа файлов форматирования: файлы форматирования в формате, отличном от XML, и XML-файлы форматирования. Файл форматирования не в формате XML поддерживается более ранними версиями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

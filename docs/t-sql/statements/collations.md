@@ -19,16 +19,16 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 883256cfaad3c23133b5db520f5d9ef92f4546d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7a706193058256747ba1ec2fa71c7641cdecc4e8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71271915"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011324"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Определяет параметры сортировки базы данных или столбца таблицы либо операцию приведения параметров сортировки при использовании с выражением строки символов. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Если не указывать этот параметр при создании базы данных, ей будут назначены параметры сортировки по умолчанию для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если не указывать его при создании столбца таблицы, столбцу назначаются параметры сортировки по умолчанию для базы данных.
 
@@ -36,7 +36,7 @@ ms.locfileid: "71271915"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 COLLATE { <collation_name> | database_default }
 <collation_name> :: =
     { Windows_collation_name } | { SQL_collation_name }
@@ -150,7 +150,7 @@ Chiapas
 
 ### <a name="b-additional-examples"></a>Б. Дополнительные примеры
 
-Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе **Ж. Создание базы данных и назначение имени и параметров сортировки** статьи [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) и в разделе **Ф. Изменение параметров сортировки столбца** статьи [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).
+Дополнительные примеры, в которых используется **COLLATE**, приведены в разделе [Ж. Создание базы данных и назначение имени и параметров сортировки](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017#examples) статьи **CREATE DATABASE** и в разделе [Ф. Изменение параметров сортировки столбца](../../t-sql/statements/alter-table-transact-sql.md#alter_column) статьи **ALTER TABLE**.
 
 ## <a name="see-also"></a>См. также:
 

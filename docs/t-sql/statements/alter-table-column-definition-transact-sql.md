@@ -21,15 +21,15 @@ ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2d635f43e607109cd1dc361f8d7252af57daaafe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982069"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000684"
 ---
 # <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Определяет свойства столбца, которые добавляются в таблицу с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73982069"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 column_name <data_type>  
 [ FILESTREAM ]  
 [ COLLATE collation_name ]   

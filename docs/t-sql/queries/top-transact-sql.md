@@ -21,15 +21,15 @@ ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: faab44501aa1cae4245d745598e32fab8d66a9f6
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948240"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012583"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Ограничивает число строк, возвращаемых в результирующем наборе запроса до заданного числа или процентного значения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Если вы используете TOP с предложением ORDER BY, в результирующий набор включаются только первые *N* строк отсортированного результата. В противном случае TOP возвращает *N* строк в неопределенном порядке. Это предложение позволяет ограничить число строк, возвращаемых инструкцией SELECT. Также TOP можно использовать для указания числа строк, затрагиваемых инструкциями INSERT, UPDATE, MERGE или DELETE.  
   

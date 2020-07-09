@@ -29,15 +29,15 @@ ms.assetid: b426474d-8954-4df0-b78b-887becfbe8d6
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06f36ff1e8891ad3753f3899fd5696d5e6ea365a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a58f92ebb7e6c59d80277cc17457927cff01ff8
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934445"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002954"
 ---
 # <a name="file-states"></a>Состояния файла
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]состояние файла базы данных поддерживается независимо от состояния базы данных. Файл всегда находится в одном определенном состоянии, таком как ONLINE или OFFLINE. Чтобы просмотреть текущее состояние файла, используйте представление каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) или [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) . Если база данных находится в состоянии вне сети, то состояние файлов можно просмотреть в представлении каталога [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) .  
   
  Состояние файлов в файловой группе определяет доступность всей файловой группы. Чтобы файловая группа была доступна, необходимо, чтобы все файлы в файловой группе находились в режиме в сети. Чтобы просмотреть текущее состояние файловой группы, используйте представление каталога [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) . Попытка получить доступ к файловой группе, которая находится в режиме вне  сети, с помощью инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] приводит к ошибке. При построении планов запросов для инструкций SELECT оптимизатор запросов избегает некластеризованных индексов и индексированных представлений, принадлежащих файловым группам вне сети, чтобы разрешить успешное выполнение инструкций. Однако если файловая группа, находящаяся в режиме вне сети, содержит кучу или кластеризованный индекс целевой таблицы, инструкция SELECT не будет выполнена. Кроме того, любая инструкция INSERT, UPDATE или DELETE, изменяющая таблицу с любым индексом в файловой группе, находящихся в режиме вне сети, также не будет выполнена.  
