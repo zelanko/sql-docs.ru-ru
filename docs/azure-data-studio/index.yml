@@ -1,0 +1,77 @@
+### YamlMime:Landing
+title: Azure Data Studio
+summary: Узнайте, как использовать Azure Data Studio для запуска SQL Server, базы данных SQL Azure, PostgreSQL, Jupyter Notebooks и т. д.
+metadata:
+  title: Azure Data Studio
+  summary: Узнайте, как использовать Azure Data Studio для запуска SQL Server, базы данных SQL Azure, PostgreSQL, Jupyter Notebooks и т. д.
+  ms.prod: sql
+  ms.technology: azure-data-studio
+  ms.topic: landing-page
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 05/09/2020
+  ms.openlocfilehash: b5020185efafd9e166c8d3dd627ee61a955a0d27
+  ms.sourcegitcommit: 812f572d13616c1bd085b0648603736ba1bc20d1
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84112339"
+landingContent:
+- title: Сведения об Azure Data Studio
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Что такое Azure Data Studio?
+      url: what-is.md
+  - linkListType: download
+    links:
+    - text: Скачать Azure Data Studio
+      url: download-azure-data-studio.md
+    - text: Заметки о выпуске Azure Data Studio
+      url: release-notes-azure-data-studio.md
+- title: Краткие руководства
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Подключение и отправка запроса к SQL Server
+      url: quickstart-sql-server.md
+    - text: Подключение и отправка запроса к базе данных SQL Azure
+      url: quickstart-sql-database.md
+    - text: Подключение к Хранилищу данных SQL Azure и запрос данных
+      url: quickstart-sql-dw.md
+    - text: Подключение к PostgreSQL и запрос данных
+      url: quickstart-postgres.md
+- title: Функции Azure Data Studio
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Включение Kerberos
+      url: enable-kerberos.md
+    - text: Управление серверами и базами данных с помощью аналитических мини-приложений в Azure Data Studio
+      url: insight-widgets.md
+    - text: Изменение параметров пользователя и рабочей области
+      url: settings.md
+- title: Записные книжки
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Записные книжки в Azure Data Studio
+      url: notebooks-guidance.md
+    - text: Как использовать ядро SQL
+      url: notebooks-tutorial-sql-kernel.md
+    - text: Управление записными книжками в Azure Data Studio
+      url: notebooks-manage-sql-server.md
+    - text: Расширение Kqlmagic в Azure Data Studio
+      url: notebooks-kqlmagic.md
+- title: Модули
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: Расширение функциональных возможностей Azure Data Studio
+      url: extensions.md
+    - text: Расширение функциональных возможностей путем создания расширений Azure Data Studio
+      url: extension-authoring.md
+    - text: Расширение PostgreSQL
+      url: postgres-extension.md
+    - text: Поддержка редактора PowerShell
+      url: powershell-extension.md
