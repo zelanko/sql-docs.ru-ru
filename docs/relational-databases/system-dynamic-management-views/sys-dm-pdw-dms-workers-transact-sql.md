@@ -12,15 +12,15 @@ ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e5f295637db0e138caf324e3126707b9e0ea774
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43b471634efc60a2beb4abd982b04437bdebb2af
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899511"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197123"
 ---
 # <a name="sysdm_pdw_dms_workers-transact-sql"></a>sys. dm_pdw_dms_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех рабочих ролях, завершающих шаги DMS.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67899511"
 |dms_step_index|**int**|Шаг в плане DMS, в котором выполняется этот рабочий процесс.<br /><br /> request_id, step_index и dms_step_index образуют ключ для этого представления.||  
 |pdw_node_id|**int**|Узел, на котором запущена Рабочая роль.|См. раздел node_id в [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Распределение, на котором работает Рабочая роль, если таковая имеется.|См. раздел distribution_id в [sys. pdw_distributions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|type|**nvarchar(32)**|Тип рабочего потока DMS, представляемый этой записью.|"DIRECT_CONVERTER", "DIRECT_READER", "FILE_READER", "HASH_CONVERTER", "HASH_READER", "ROUNDROBIN_CONVERTER", "EXPORT_READER", "EXTERNAL_READER", "EXTERNAL_WRITER", "PARALLEL_COPY_READER", "REJECT_WRITER", "WRITER"|  
+|тип|**nvarchar(32)**|Тип рабочего потока DMS, представляемый этой записью.|"DIRECT_CONVERTER", "DIRECT_READER", "FILE_READER", "HASH_CONVERTER", "HASH_READER", "ROUNDROBIN_CONVERTER", "EXPORT_READER", "EXTERNAL_READER", "EXTERNAL_WRITER", "PARALLEL_COPY_READER", "REJECT_WRITER", "WRITER"|  
 |status|**nvarchar(32)**|Состояние рабочей роли DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Пропускная способность чтения или записи за последнюю секунду.|Больше или равно 0. Значение NULL, если запрос был отменен или завершился неудачей до выполнения рабочего процесса.|  
 |bytes_processed|**bigint**|Общее число байтов, обработанных этим исполнителем.|Больше или равно 0. Значение NULL, если запрос был отменен или завершился неудачей до выполнения рабочего процесса.|  

@@ -13,15 +13,15 @@ ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 848893f9e6c7aeb36299037404a88e9b069c012c
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054842"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197026"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Возвращает оптимальный набор столбцов, уникально идентифицирующих строку таблицы. Также возвращает столбцы, автоматически обновляемые, когда любое значение в строке обновляется транзакцией.  
   
@@ -43,31 +43,31 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @table_name=] "*table_name*"  
+ [ @table_name =] "*table_name*"  
  Название таблицы, используемой для возврата сведений о каталоге. Аргумент *Name* имеет тип **sysname**и не имеет значения по умолчанию. Сопоставление по шаблону не поддерживается.  
   
- [ @table_owner=] "*table_owner*"  
+ [ @table_owner =] "*table_owner*"  
  Владелец таблицы, используемой для возврата сведений о каталоге. Аргумент *owner* имеет тип **sysname**и значение по умолчанию NULL. Сопоставление по шаблону не поддерживается. Если параметр *owner* не указан, применяются правила видимости таблиц по умолчанию базовой СУБД.  
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если текущий пользователь является владельцем таблицы с указанным именем, возвращаются ее столбцы. Если *владелец* не указан и текущий пользователь не владеет таблицей с указанным *именем*, эта процедура ищет таблицу с указанным *именем* , принадлежащую владельцу базы данных. Если таблица существует, возвращаются ее столбцы.  
   
- [ @qualifier=] "*квалификатор*"  
+ [ @qualifier =] "*квалификатор*"  
  Имя квалификатора таблицы. *квалификатор* имеет тип **sysname**и значение по умолчанию NULL. Различные продукты СУБД поддерживают имена таблиц, состоящие из трех частей (*Qualifier.Owner.Name*). В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] этот столбец представляет имя базы данных. В некоторых СУБД он представляет имя сервера в среде базы данных, в которой находится таблица.  
   
- [ @col_type=] "*col_type*"  
+ [ @col_type =] "*col_type*"  
  Тип — Column. *col_type* имеет **тип char (** 1 **)** и значение по умолчанию r. Type r Возвращает оптимальный столбец или набор столбцов, которые, получая значения из столбца или столбцов, позволяют однозначно идентифицировать любую строку в указанной таблице. Столбец может быть либо псевдостолбцом, специально созданным для этой цели, либо столбцом или столбцами любого уникального индекса таблицы. Тип V возвращает столбец или столбцы в указанной таблице, которые источник данных обновляет автоматически, когда любое значение в строке обновляется транзакцией.  
   
- [ @scope=] "*Scope*"  
+ [ @scope =] "*область*"  
  Минимально требуемая область ROWID. *Scope* имеет **тип char (** 1 **)** и значение по умолчанию T. Scope C указывает, что ROWID действителен только при размещении в этой строке. Область T указывает, что ROWID действителен для транзакции.  
   
- [ @nullable=] "*Nullable*"  
+ [ @nullable =] "*Nullable*"  
  Определяет, допускают ли специальные столбцы значение NULL. *Nullable* имеет **тип char (** 1 **)** и значение по умолчанию U. O указывает специальные столбцы, которые не допускают значения NULL. U указывает столбцы, частично допускающие значения NULL.  
   
- [ @ODBCVer=] "*Одбквер*"  
+ [ @ODBCVer =] '*Одбквер*'  
  Используемая версия ODBC. *Одбквер* имеет **тип int (** 4 **)** и значение по умолчанию 2. Это значение соответствует версии ODBC 2.0. Дополнительные сведения о различиях между ODBC 2.0 и ODBC 3.0 см. в спецификации ODBC SQLSpecialColumns для ODBC 3.0.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -97,7 +97,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 EXEC sp_special_columns_100 @table_name = 'FactFinance';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры хранилища данных SQL](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)  
   
   

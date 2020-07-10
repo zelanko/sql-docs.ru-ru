@@ -11,15 +11,15 @@ ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d19a2ef405fef8b62de96f621ddc13a816b4fc5
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108325"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196929"
 ---
 # <a name="sp_datatype_info_90-sql-data-warehouse"></a>sp_datatype_info_90 (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Возвращает сведения о типах данных, поддерживаемых текущей средой.  
   
@@ -40,7 +40,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version`Используемая версия ODBC. *odbc_version* имеет тип **tinyint**и значение по умолчанию 2.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- None  
+ Нет  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
@@ -54,7 +54,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |CREATE_PARAMS|**varchar (** 32 **)**|Описание параметров создания типа данных. Например, **десятичный** тип "точность, масштаб", **float** имеет значение null, а **varchar** — "max_length".|  
 |NULLABLE|**smallint**|Указывает возможность содержать значение NULL.<br /><br /> 1 = значения NULL допускаются.<br /><br /> 0 = значения NULL не допускаются.|  
 |CASE_SENSITIVE|**smallint**|Чувствительность к регистру.<br /><br /> 1 = все столбцы этого типа чувствительны к регистру (для параметров сортировки).<br /><br /> 0 = все столбцы этого типа не чувствительны к регистру.|  
-|SEARCHABLE|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
+|ДОСТУПНЫЙ ДЛЯ ПОИСКА|**smallint**|Задает возможность поиска для типа столбца:<br /><br /> 1 = поиск невозможен;<br /><br /> 2 = возможен поиск с оператором LIKE;<br /><br /> 3 = возможен поиск с предложением WHERE;<br /><br /> 4 = возможен поиск с предложением WHERE или оператором LIKE.|  
 |UNSIGNED_ATTRIBUTE|**smallint**|Знак типа данных.<br /><br /> 1 = тип данных без знака.<br /><br /> 0 = тип данных со знаком.|  
 |MONEY|**smallint**|Указывает тип данных **money** .<br /><br /> 1 = тип данных **money** .<br /><br /> 0 = не тип данных **money** .|  
 |AUTO_INCREMENT|**smallint**|Автоматическое приращение.<br /><br /> 1 = автоматическое приращение выполняется.<br /><br /> 0 = автоматическое приращение не выполняется.<br /><br /> NULL = атрибут неприменим.<br /><br /> Приложение может вставлять значение в столбец с этим атрибутом, но не может обновлять значения такого столбца. За исключением типа данных **bit** , AUTO_INCREMENT допустимы только для типов данных, относящихся к категориям точных числовых и приблизительных числовых типов данных.|  
@@ -74,7 +74,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  Требуется членство в роли public.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В следующем примере извлекаются сведения для типов данных **sysname** и **nvarchar** путем указания *data_type* значения `-9`.  
+ В следующем примере извлекаются сведения для типов данных **sysname** и **nvarchar** путем указания *data_type* значения `-9` .  
   
 ```  
 USE master;  
@@ -83,7 +83,7 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранимые процедуры хранилища данных SQL](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
   

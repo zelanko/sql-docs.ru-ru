@@ -12,15 +12,15 @@ ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5e3982f0e8a2470878e06cded3f814871cc0aa
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899410"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197090"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех сеансах, которые в настоящее время или недавно открыты на устройстве. В нем отображается по одной строке за сеанс.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "67899410"
 |is_transactional|**bit**|Захватывает, находится ли в данный момент сеанс в пределах транзакции.|0 для автоматической фиксации, 1 — для транзакций.|  
 |client_id|**nvarchar(255)**|Захватывает сведения о клиенте для сеанса.|Любая допустимая строка.|  
 |app_name|**nvarchar(255)**|Захватывает сведения об имени приложения, которые дополнительно задаются в рамках процесса подключения.|Любая допустимая строка.|  
-|sql_spid|**int**|Идентификационный номер SPID. Используйте `session_id` этот сеанс. Используйте `sql_spid` столбец, чтобы присоединиться к **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> **Предупреждение об ошибке \* \* \* ** Этот столбец содержит закрытые SPID.||  
+|sql_spid|**int**|Идентификационный номер SPID. Используйте `session_id` этот сеанс. Используйте `sql_spid` столбец, чтобы присоединиться к **sys. dm_pdw_nodes_exec_sessions**.<br /><br /> Предупреждение. Этот столбец содержит закрытые SPID. ** \* \* \* \* **||  
   
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   

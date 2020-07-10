@@ -11,22 +11,22 @@ ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5541d065b24e349e4a784b7db1b8245df0a8aaf4
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056448"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196980"
 ---
 # <a name="sp_pdw_log_user_data_masking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Используйте **sp_pdw_log_user_data_masking** , чтобы включить Маскирование данных пользователя [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] в журналах действий. Маскирование данных пользователя влияет на инструкции во всех базах данных на устройстве.  
+  Используйте **sp_pdw_log_user_data_masking** , чтобы включить Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий. Маскирование данных пользователя влияет на инструкции во всех базах данных на устройстве.  
   
 > [!IMPORTANT]  
->  Журналы [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] действий, затрагиваемые **sp_pdw_log_user_data_masking** , являются [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] определенными журналами действий. **sp_pdw_log_user_data_masking** не влияет на журналы транзакций базы данных или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журналы ошибок.  
+>  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Журналы действий, затрагиваемые **sp_pdw_log_user_data_masking** , являются определенными [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналами действий. **sp_pdw_log_user_data_masking** не влияет на журналы транзакций базы данных или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] журналы ошибок.  
   
- **Фон:** В журналах действий [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] конфигурации по умолчанию [!INCLUDE[tsql](../../includes/tsql-md.md)] содержит полные инструкции и в некоторых случаях может содержать данные пользователей, содержащиеся в таких операциях, как **INSERT**, **Update**и **SELECT** . В случае возникновения проблемы на устройстве это позволяет анализировать условия, вызвавшие проблему, без необходимости воспроизведения проблемы. Чтобы предотвратить запись данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, клиенты могут включить маскировку данных пользователя с помощью этой хранимой процедуры. Инструкции по-прежнему будут записываться [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] в журналы действий, но все литералы в инструкциях, которые могут содержать пользовательские данные, будут замаскированы. заменено некоторыми предопределенными константными значениями.  
+ **Фон:** В журналах действий конфигурации по умолчанию [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] содержит полные [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции и в некоторых случаях может содержать данные пользователей, содержащиеся в таких операциях, как **INSERT**, **Update**и **SELECT** . В случае возникновения проблемы на устройстве это позволяет анализировать условия, вызвавшие проблему, без необходимости воспроизведения проблемы. Чтобы предотвратить запись данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, клиенты могут включить маскировку данных пользователя с помощью этой хранимой процедуры. Инструкции по-прежнему будут записываться в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий, но все литералы в инструкциях, которые могут содержать пользовательские данные, будут замаскированы; заменяются некоторыми предопределенными константными значениями.  
   
  Если на устройстве включено прозрачное шифрование данных, Маскирование данных пользователя в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий включается автоматически.  
   
@@ -43,9 +43,9 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
 -   0 = отключено, данные пользователя отображаются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналах действий.  
   
--   1 = включено, в журналах [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] действий отображаются операторы данных пользователя, но данные пользователя маскируются.  
+-   1 = включено, в журналах действий отображаются операторы данных пользователя, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] но данные пользователя маскируются.  
   
--   2 = инструкции, содержащие пользовательские данные, не записываются в журналы [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] действий.  
+-   2 = инструкции, содержащие пользовательские данные, не записываются в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] журналы действий.  
   
  При **sp_pdw_ log_user_data_masking** без параметров возвращается текущее состояние маскировки данных пользователя журнала TDE на устройстве в качестве скалярного результирующего набора.  
   
@@ -72,7 +72,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_pdw_database_encryption хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)   
  [sp_pdw_database_encryption_regenerate_system_keys хранилища данных SQL &#40;&#41;](../../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
   

@@ -12,17 +12,17 @@ ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b1cbdc63907933f173c7d32a2dde3151dd4db7af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1e65d2212dea9f8d2bbe9aad1854a2b8cd904dd3
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74399876"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197351"
 ---
 # <a name="syspdw_nodes_column_store_row_groups-transact-sql"></a>sys. pdw_nodes_column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys. pdw_nodes_column_store_row_groups** содержит столбец для общего числа физически хранимых строк (включая те, которые помечены как удаленные) и столбец для числа строк, помеченных как удаленные. Используйте представление **sys. pdw_nodes_column_store_row_groups** , чтобы определить, какие группы строк имеют высокий процент удаленных строк и должны быть перестроены.  
+  Предоставляет сведения о кластеризованном индексе columnstore для каждого сегмента, чтобы помочь администратору принять решения по управлению системой в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . **sys. pdw_nodes_column_store_row_groups** содержит столбец для общего числа физически хранимых строк (включая те, которые помечены как удаленные) и столбец для числа строк, помеченных как удаленные. Используйте представление **sys. pdw_nodes_column_store_row_groups** , чтобы определить, какие группы строк имеют высокий процент удаленных строк и должны быть перестроены.  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
@@ -104,7 +104,7 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
  [Создание индекса COLUMNSTORE &#40;&#41;Transact-SQL](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys. pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   

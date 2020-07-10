@@ -12,15 +12,15 @@ ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 48ef27fe4726836e13af57be31b7358967b8d79e
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: d1e9dd970cebd1f25b953e7a5fe21c8ea8c60bde
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689759"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196221"
 ---
 # <a name="sysdm_pdw_request_steps-transact-sql"></a>sys. dm_pdw_request_steps (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех шагах, составляющих данный запрос или запрос в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . В нем отображается одна строка для каждого шага запроса.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "83689759"
   
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе Максимальное значение системного представления раздела "минимальное и максимальное значения" в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

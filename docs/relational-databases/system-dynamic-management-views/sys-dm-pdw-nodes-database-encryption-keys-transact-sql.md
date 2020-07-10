@@ -12,15 +12,15 @@ ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d30ceadf292387900469fe99018ed7e2fdb361d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401640"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196642"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Возвращает сведения о состоянии шифрования базы данных и о связанных ключах шифрования базы данных. **sys. dm_pdw_nodes_database_encryption_keys** предоставляет эти сведения для каждого узла. Дополнительные сведения о шифровании базы данных см. в разделе [прозрачное шифрование данных (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md).  
   
@@ -59,7 +59,7 @@ JOIN sys.databases AS D
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [Создание ключа шифрования базы данных &#40;&#41;Transact-SQL](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [&#40;&#41;Transact-SQL в инструкции ALTER DATABASE ENCRYPTION KEY](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   

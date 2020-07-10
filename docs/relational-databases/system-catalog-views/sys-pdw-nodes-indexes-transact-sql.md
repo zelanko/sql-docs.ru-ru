@@ -12,24 +12,24 @@ ms.assetid: 261bcb7f-a906-4979-b274-bc5f1aa66426
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bb20ecd4fe212f4004061a6c39ad33c3ffc8ac8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3d749eb32c8e7369c10e904f9e13991aa85be20
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809937"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197371"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Возвращает индексы [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]для.  
+  Возвращает индексы для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|Идентификатор объекта, которому принадлежит этот индекс.||  
 |name|**sysname**|Имя индекса. Имя уникально только в пределах объекта. NULL = куча.||  
 |index_id|**int**|Идентификатор индекса. Значение index_id уникально только в пределах объекта.<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный индекс;<br /><br /> > 1 = некластеризованный индекс||  
-|type|**tinyint**|Тип индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный<br /><br /> 2 = некластеризованный.<br /><br /> 5 = кластеризованный индекс columnstore, оптимизированный для памяти xVelocity|  
+|тип|**tinyint**|Тип индекса:<br /><br /> 0 = куча;<br /><br /> 1 = кластеризованный<br /><br /> 2 = некластеризованный.<br /><br /> 5 = кластеризованный индекс columnstore, оптимизированный для памяти xVelocity|  
 |type_desc|**nvarchar(60)**|Описание типа индекса.<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> КЛАСТЕРИЗОВАННЫЙ ИНДЕКС COLUMNSTORE||  
 |is_unique|**bit**|0 = индекс не уникален.|Всегда равно 0.|  
 |data_space_id|**int**|Идентификатор пространства данных для этого индекса. Пространством данных может быть или файловая группа, или схема секционирования.<br /><br /> 0 = функция с табличным значением object_id.||  
@@ -49,7 +49,7 @@ ms.locfileid: "68809937"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md) (Представления каталога в службе "Хранилище данных SQL" и Parallel Data Warehouse)  
   
   

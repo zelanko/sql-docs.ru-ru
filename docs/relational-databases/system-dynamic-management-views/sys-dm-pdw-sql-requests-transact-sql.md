@@ -12,15 +12,15 @@ ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 455ccc47d4150211001b0cf715d67827c04376bc
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68089149"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196827"
 ---
 # <a name="sysdm_pdw_sql_requests-transact-sql"></a>sys. dm_pdw_sql_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех SQL Server распределениях запросов в рамках шага SQL в запросе.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "68089149"
 |total_elapsed_time|**int**|Представляет время выполнения распределения запросов в миллисекундах.|Больше или равно 0. Равно Дельта start_time и end_time для завершенных, неудачных или отмененных распределений запросов.<br /><br /> Если total_elapsed_time превышает максимальное значение для целого числа, total_elapsed_time будет продолжать быть максимальным значением. Это условие выдаст предупреждение "превышено максимальное значение".<br /><br /> Максимальное значение в миллисекундах эквивалентно 24,8 дням.|  
 |row_count|**bigint**|Число строк, измененных или считанных этим распределением запросов.|-1 для операций, которые не изменяют или возвращают данные, такие как CREATE TABLE и DROP TABLE.|  
 |spid|**int**|Идентификатор сеанса на SQL Serverном экземпляре, выполняющем распределение запросов.||  
-|command|**nvarchar(4000)**|Полный текст команды для этого распределения запросов.|Любой допустимый запрос или строка запроса.|  
+|.|**nvarchar(4000)**|Полный текст команды для этого распределения запросов.|Любой допустимый запрос или строка запроса.|  
   
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

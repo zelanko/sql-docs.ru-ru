@@ -12,15 +12,15 @@ ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f87d950f4fe876e6b04e1df1f529d22126058113
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899507"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197133"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Системное представление, содержащее сведения обо всех шагах службы перемещения данных (DMS) для внешних операций.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "67899507"
 |step_index|**int**|Шаг запроса, вызывающий эту рабочую роль DMS.<br /><br /> request_id, step_index и dms_step_index образуют ключ для этого представления.|То же, что и step_index в [sys. dm_pdw_request_steps &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Текущий шаг в плане DMS.<br /><br /> request_id, step_index и dms_step_index образуют ключ для этого представления.|То же, что и dms___step_index в [sys. dm_pdw_dms_workers &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Узел, на котором работает Рабочая роль DMS.|То же, что и node_id в [sys. dm_pdw_nodes &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|type|**nvarchar(60)**|Тип внешней операции, выполняемой на этом узле.<br /><br /> РАЗБИЕНИе файлов — это операция над внешним файлом Hadoop, который разбит на несколько меньших.|"РАЗДЕЛЕНИЕ ФАЙЛОВ"|  
+|тип|**nvarchar(60)**|Тип внешней операции, выполняемой на этом узле.<br /><br /> РАЗБИЕНИе файлов — это операция над внешним файлом Hadoop, который разбит на несколько меньших.|"РАЗДЕЛЕНИЕ ФАЙЛОВ"|  
 |work_id|**int**|Идентификатор разбиения файла.|Больше или равно 0.<br /><br /> Уникальный для каждого расчетного узла.|  
 |input_name|**nvarchar(60)**|Строковое имя для считываемых входных данных.|Для файла Hadoop это имя файла Hadoop.|  
 |read_location|**bigint**|Смещение места чтения.||  

@@ -12,23 +12,23 @@ ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 46b1155878aae6cc7f667965cfae065ed1a9cacc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 83d4fda9c4e2a4d7f9eabd29a101e51a8d5cd8ab
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74564745"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197160"
 ---
 # <a name="sysdm_pdw_resource_waits-transact-sql"></a>sys. dm_pdw_resource_waits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Отображает сведения о ожидании для всех типов [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ресурсов в.  
+  Отображает сведения о ожидании для всех типов ресурсов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
 |Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Расположение запроса в списке ожидания.|порядковый номер, основанный на 0. Оно не является уникальным для всех записей ожидания.|  
 |session_id|**nvarchar(32)**|Идентификатор сеанса, в котором произошло состояние ожидания.|См. раздел session_id в [sys. dm_pdw_exec_sessions &#40;&#41;Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|type|**nvarchar(255)**|Тип ожидания, который представляет эта запись.|Возможные значения:<br /><br /> Соединение<br /><br /> Параллельные локальные запросы<br /><br /> Параллелизм распределенных запросов<br /><br /> Параллелизм DMS<br /><br /> Параллелизм резервного копирования|  
+|тип|**nvarchar(255)**|Тип ожидания, который представляет эта запись.|Возможные значения:<br /><br /> Подключение<br /><br /> Параллельные локальные запросы<br /><br /> Параллелизм распределенных запросов<br /><br /> Параллелизм DMS<br /><br /> Параллелизм резервного копирования|  
 |object_type|**nvarchar(255)**|Тип объекта, на который влияет ожидание.|Возможные значения:<br /><br /> **ОБЪЕКТАМИ**<br /><br /> **СУБД**<br /><br /> **СИСТЕМОЙ**<br /><br /> **СХЕМЫ**<br /><br /> **ПРИКЛАД**|  
 |object_name|**nvarchar (386)**|Имя или идентификатор GUID указанного объекта, на который влияет ожидание.|Таблицы и представления отображаются с именами из трех частей.<br /><br /> Индексы и статистика отображаются с именами из четырех частей.<br /><br /> Имена, участники и базы данных являются строковыми именами.|  
 |request_id|**nvarchar(32)**|Идентификатор запроса, для которого произошло состояние ожидания.|Идентификатор Кид запроса.<br /><br /> Идентификатор GUID для запросов загрузки.|  
@@ -59,7 +59,7 @@ select rw.wait_id
   join sys.dm_pdw_resource_waits rw on rw.request_id = r.request_id
 ```
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

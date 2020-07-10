@@ -14,15 +14,15 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 12adbc7c7f10b16591b2fc8c6b0473e86036957b
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: be447109a1432fdf8c3f3ae4a44f34a2eed1fd46
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627573"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196787"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   При этом удаляются сетевые учетные данные, хранящиеся в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , для доступа к общей сетевой папке. Например, эта хранимая процедура используется для удаления разрешения на [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] выполнение операций резервного копирования и восстановления на сервере, который находится в вашей сети.  
   
@@ -61,7 +61,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-remove-credentials-for-performing-a-database-backup"></a>А) Удаление учетных данных для выполнения резервного копирования базы данных  
+### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. Удаление учетных данных для выполнения резервного копирования базы данных  
  В следующем примере удаляются учетные данные имени пользователя и пароля для доступа к целевому серверу с IP-адресом 10.192.147.63.  
   
 ```  

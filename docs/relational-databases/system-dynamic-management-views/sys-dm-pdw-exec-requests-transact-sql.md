@@ -12,16 +12,16 @@ ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 62dfd50adf25d3e203c2bbf50c58579c65332606
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a377c33424ae589fa796b6f382e936426ead006d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85440811"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197066"
 ---
 # <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Содержит сведения обо всех текущих или недавно активных запросах в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . В нем отображается одна строка для каждого запроса или запроса.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "85440811"
 |result_cache_hit|**decimal**|Сведения о том, использовался ли завершенный запрос к кэшу результирующего набора.  </br>Область применения этой статьи: Хранилище данных SQL Azure| 1 = попадание в кэш результирующего набора </br> 0 = промах кэша результирующего набора </br> Отрицательные значения = причины, по которым кэширование результирующего набора не использовалось.  Дополнительные сведения см. в разделе "Примечания".|
 ||||
   
-## <a name="remarks"></a>Примечания 
+## <a name="remarks"></a>Remarks 
  Сведения о максимальном объеме строк, хранящихся в этом представлении, см. в разделе метаданные статьи [ограничения емкости](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
  Result_cache_hit представляет собой битовую маску использования кэша результирующего набора в запросе.  Этот столбец может быть [| (Побитовое или)](../../t-sql/language-elements/bitwise-or-transact-sql.md) произведение одного или нескольких из следующих значений:  
