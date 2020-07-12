@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 086daab53f1863c019e0214b77096a5a00e8b25c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8b53d4da153087e222c70711c847e010ca702f31
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764783"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279190"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,12 +46,17 @@ ms.locfileid: "85764783"
 |**basic_features**|**bit**|Указывает, является ли эта группа доступности базовой. Дополнительные сведения см. в разделе [Базовые группы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Указывает, включена ли поддержка DTC для этой группы доступности. Этот параметр управляет параметром **DTC_SUPPORT** **создания группы доступности** .|  
 |**db_failover**|**bit**|Указывает, поддерживает ли группа доступности отработку отказа для условий работоспособности базы данных. Этот параметр управляет параметром **DB_FAILOVER** **создания группы доступности** .|  
-|**is_distributed**|**bit**|Указывает, является ли это распределенной группой доступности. Дополнительные сведения см. в разделе [Распределенные группы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**is_distributed**|**bit**|Указывает, является ли это распределенной группой доступности. Дополнительные сведения см. в разделе [Распределенные группы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**cluster_type**|**tinyint**|0: отказоустойчивый кластер Windows Server <br/><br/>1: внешний кластер (например, Linux Pacemaker);<br/><br/>2: нет|
+|**cluster_type_desc**|**nvarchar(60)**|Текстовое описание типа кластера|
+|**required_synchronized_secondaries_to_commit**|**int**| Число вторичных реплик, которые должны находиться в состоянии SYNCHRONIZED для завершения фиксации|
+|**sequence_number**|**bigint**|Определяет последовательность конфигурации группы доступности. Постепенно возрастает каждый раз, когда первичная реплика группы доступности обновляет конфигурацию группы.|
+|**is_contained**|**bit**|1: экземпляр главного кластера больших данных, настроенный для обеспечения высокой доступности. <br/><br/> 0 — все остальные.|
   
 ## <a name="failure-condition-level--values"></a>Значения уровня условий сбоя  
  В следующей таблице описаны возможные уровни условий сбоя для **FAILURE_CONDITION_LEVEL** столбца.  
   
-|Применение|Условие сбоя|  
+|Значение|Условие сбоя|  
 |-----------|-----------------------|  
 |1|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> <br /><br /> — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Служба не работает.<br /><br /> — Аренда группы доступности для подключения к отказоустойчивому кластеру WSFC истекает, так как от экземпляра сервера не получено подтверждение. Дополнительные сведения см. в разделе [Как это работает: время ожидания аренды Always On в SQL Server](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-sql-server-alwayson-lease-timeout/ba-p/317268).|  
 |2|Указывает, что следует запустить автоматический переход на другой ресурс при возникновении любой из следующих ситуаций.<br /><br /> <br /><br /> — Экземпляр не [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подключается к кластеру, и превышено заданное пользователем пороговое значение **HEALTH_CHECK_TIMEOUT** группы доступности.<br /><br /> -Реплика доступности находится в состоянии сбоя.|  

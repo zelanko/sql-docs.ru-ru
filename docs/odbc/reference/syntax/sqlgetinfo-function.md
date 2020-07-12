@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 418102c7573f27278282a67e3119d07a2c6d1342
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215614"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279578"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo, функция
 
@@ -71,7 +71,7 @@ SQLRETURN SQLGetInfo(
   
  Для всех других типов данных значение *BufferLength* игнорируется, и драйвер предполагает, что размер \* *ИНФОВАЛУЕПТР* равен склусмаллинт или SQLUINTEGER, в зависимости от *инфотипе*.  
   
-## <a name="return-value"></a>Возвращаемое значение  
+## <a name="returns"></a>Результаты  
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR или SQL_INVALID_HANDLE.  
   
@@ -97,7 +97,7 @@ SQLRETURN SQLGetInfo(
 |HYT01|Время ожидания подключения истекло|Время ожидания соединения истекло до ответа источника данных на запрос. Время ожидания соединения задается через **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Драйвер не поддерживает эту функцию|(DM) драйвер, соответствующий *коннектионхандле* , не поддерживает функцию.|  
   
-## <a name="comments"></a>Комментарии  
+## <a name="comments"></a>Примечания  
 
  Типы сведений, определенные в настоящее время, показаны Далее в этом разделе Ожидается, что для использования преимуществ различных источников данных будет определено больше. Диапазон типов данных зарезервирован ODBC. Разработчики драйверов должны зарезервировать значения для собственного использования драйвера из Open Group. **SQLGetInfo** не выполняет преобразование в Юникод или *преобразователь* (см. [приложение A. коды ошибок ODBC](../appendixes/appendix-a-odbc-error-codes.md) *справочника по программированию ODBC*) для определяемого драйвером *инфотипес*. Дополнительные сведения см. в разделе [зависящие от драйвера типы данных, Типы дескрипторов, типы сведений, типы диагностики и атрибуты](../develop-app/driver-specific-data-types-descriptor-information-diagnostic.md). Формат сведений, возвращаемых в \* *инфовалуептр* , зависит от запрашиваемого *инфотипе* . **SQLGetInfo** будет возвращать информацию в одном из пяти различных форматов:  
   
@@ -534,7 +534,7 @@ else
  Возврат сведений о типах данных источника данных  
  [Функция SQLGetTypeInfo](sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 
  [Справочник по API ODBC](odbc-api-reference.md)  
  [Файлы заголовков ODBC](../install/odbc-header-files.md)

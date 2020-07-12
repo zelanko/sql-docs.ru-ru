@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 4e09d61ef516e846798dd3af2d07dafa78af4605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f56def542b71906d1e9432d724fdab8143ccb346
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299659"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279592"
 ---
 # <a name="sqlcompleteasync-function"></a>Функция SQLCompleteAsync
 **Соответствия**  
- Введенная версия: ODBC 3,8  
-  
- Соответствие стандартам: нет  
+ Введенная версия: соответствие стандартам ODBC 3,8: нет  
   
  **Сводка**  
  **Склкомплетеасинк** можно использовать для определения завершения асинхронной функции с помощью обработки на основе уведомлений или опроса. Дополнительные сведения об асинхронных операциях см. в разделе [асинхронное выполнение](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -72,8 +70,8 @@ SQLRETURN SQLCompleteAsync(
   
 -   SQL_NO_DATA: в режиме уведомления асинхронная операция не выполняется или диспетчер драйверов не уведомил приложение. В режиме опроса асинхронная операция не выполняется.  
   
-## <a name="comments"></a>Комментарии  
+## <a name="comments"></a>Примечания  
  В режиме асинхронной обработки на основе опроса *асинкреткодептр* может быть SQL_STILL_EXECUTING, когда **склкомплетеасинк** возвращает SQL_SUCCESS. Приложение должно выполнять опрос до тех пор, пока *асинкреткодептр* не SQL_STILL_EXECUTING. В режиме асинхронной обработки на основе уведомлений *асинкреткодептр* никогда не будет SQL_STILL_EXECUTING.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca6e7485e85665f06c2410438b902fa0647418ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 57a7af110956bdf557ad751723f2497b6aa3ede0
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73593751"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279568"
 ---
 # <a name="sp_enclave_send_keys-transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Отправляет ключи шифрования столбцов, определенные в базе данных, в защищенную анклава на стороне сервера, используемую с [Always encrypted с защищенным енклавес](../security/encryption/always-encrypted-enclaves.md).
 
@@ -38,7 +38,7 @@ ms.locfileid: "73593751"
 - [!INCLUDE [ssnoversion-md](../../includes/ssnoversion-md.md)]для завершения восстановления индексов в зашифрованных столбцах. См. раздел [Восстановление базы данных](../security/encryption/always-encrypted-enclaves.md#database-recovery).
 - Приложение, использующее .NET Framework поставщик данных для SQL Server для выполнения групповой загрузки данных в зашифрованные столбцы.
 
-Для успешного вызова `sp_enclave_send_keys`необходимо подключиться к базе данных, используя Always encrypted и вычисления анклава, включенные для подключения к базе данных. Кроме того, необходимо иметь доступ к главным ключам столбцов, защищать ключи шифрования столбцов, отправку, а также разрешения на доступ к метаданным ключа Always Encrypted в базе данных. 
+Для успешного вызова необходимо `sp_enclave_send_keys` подключиться к базе данных, используя Always encrypted и вычисления анклава, включенные для подключения к базе данных. Кроме того, необходимо иметь доступ к главным ключам столбцов, защищать ключи шифрования столбцов, отправку, а также разрешения на доступ к метаданным ключа Always Encrypted в базе данных. 
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,7 +61,7 @@ sp_enclave_send_keys
   
 ## <a name="permissions"></a>Разрешения
 
- Требуются разрешения `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` и `VIEW ANY COLUMN MASTER KEY DEFINITION` в базе данных.  
+ Требуются `VIEW ANY COLUMN ENCRYPTION KEY DEFINITION` разрешения и `VIEW ANY COLUMN MASTER KEY DEFINITION` в базе данных.  
   
 ## <a name="examples"></a>Примеры  
   

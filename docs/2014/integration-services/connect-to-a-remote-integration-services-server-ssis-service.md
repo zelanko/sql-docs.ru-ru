@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 48369c2691386bc41675571c892302e3e4b7ece1
-ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
+ms.openlocfilehash: a106a07f985dcc8d263304f574a911b84222903c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85434661"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279480"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Подключение к удаленному серверу служб Integration Services (службы SSIS Service)
     
@@ -46,7 +46,7 @@ ms.locfileid: "85434661"
     > [!NOTE]  
     >  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не привязаны к экземпляру. Чтобы подключиться к службам, используется имя компьютера, на котором работают службы Integration Services.  
   
-5.  Нажмите кнопку **Соединить**.  
+5.  Щелкните **Подключить**.  
   
 > [!NOTE]  
 >  В диалоговом окне **Выбор серверов** не отображаются удаленные экземпляры служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Кроме того, параметры, доступные на вкладке **Параметры подключения** диалогового окна **Подключение к серверу** , которое выводится при нажатии кнопки **Параметры** , неприменимо для подключения к службам [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -96,13 +96,6 @@ ms.locfileid: "85434661"
   
 ## <a name="connecting-by-using-a-local-account"></a>Подключение с использованием локальной учетной записи  
  При работе с локальной учетной записью Windows на клиентском компьютере можно подключиться к службе [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] на удаленном компьютере, только если локальная учетная запись имеет то же самое имя пользователя и пароль, а на удаленном компьютере имеются соответствующие права.  
-  
-## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>По умолчанию службы SSIS не поддерживают делегирование  
-По умолчанию [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] служба не поддерживает делегирование учетных данных или иногда называется двойным прыжком. В этом сценарии вы работаете на клиентском компьютере, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] выполняются на втором компьютере, а [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущен на третьем. Сначала среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] успешно отправляет учетные записи с клиентского компьютера на второй компьютер, где запущены службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Однако затем службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не могут передать учетные данные со второго компьютера на третий, где работает [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .
-
-Можно включить делегирование учетных данных, предоставив право **Доверять этому пользователю делегирование служб (только Kerberos)** учетной записи службы SQL Server, которая запускает службы Integration Services (ISServerExec.exe) в качестве дочернего процесса. Прежде чем предоставить это право, определите, соответствует ли это требованиям безопасности организации.
-
-Дополнительные сведения см. в разделе [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Обеспечение междоменной работы Kerberos и делегирования с помощью пакета SSIS).
   
 ## <a name="see-also"></a>См. также  
  [Настройка параметров брандмауэра Windows для доступа к службам SSIS](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  

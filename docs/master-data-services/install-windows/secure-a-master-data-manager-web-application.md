@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 542828e26b82d0df0174886f706117feb8ad2322
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6740c3491ff9a10f611f3b1fe26cd5b3acc1788c
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883834"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279380"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Обеспечение безопасности веб-приложения диспетчера основных данных
 
@@ -26,13 +26,17 @@ ms.locfileid: "85883834"
 > [!NOTE]  
 >  Веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] может использовать протокол HTTP или HTTPS, но не оба.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Обязательные условия  
  Выполнение процедуры  
   
 -   На веб-сервере, где установлен экземпляр служб [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] , нужно обладать правами администратора.  
   
 -   Службы MDS должны быть установлены на веб-сервере, а веб-приложение должно существовать. Дополнительные сведения см. в статьях [Установка служб Master Data Services](../../master-data-services/install-windows/install-master-data-services.md) и [Создание веб-приложения мастера основных данных (службы Master Data Services)](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
-  
+
+- Не следует включать [расширенную защиту IIS для проверки подлинности Windows](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/) . 
+
+- Настройте веб-сервер для прослушивания всех доступных IP-адресов. Не настраивайте веб-сервер на прослушивание определенного IP-адреса. 
+
 ### <a name="to-secure-the-master-data-manager-web-application-with-https"></a>Обеспечение безопасности веб-приложения диспетчера основных данных с помощью протокола HTTPS  
   
 1.  После подтверждения того, что веб-приложение [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] имеет верные настройки протокола HTTP, создайте сертификат на сервере служб IIS. Дополнительные сведения см. в разделе [Настройка сертификатов сервера IIS 7](https://technet.microsoft.com/library/cc732230\(WS.10\).aspx).  
@@ -41,13 +45,13 @@ ms.locfileid: "85883834"
   
 3.  В области **Действия** щелкните элемент **Привязки**.  
   
-4.  Нажмите кнопку **Добавить**.  
+4.  Щелкните **Добавить**.  
   
 5.  Выберите **https**из списка.  
   
 6.  Выберите сертификат TLS/SSL.  
   
-7.  Нажмите кнопку **ОК**.  
+7.  Нажмите кнопку **OK**.  
   
 8.  Необязательный элемент. Чтобы удалить из списка протокол HTTP, разрешив доступ к сайту только по протоколу HTTPS, щелкните строку **http**. Нажмите кнопку **Удалить** и в диалоговом окне подтверждения выберите **Да**.  
   
@@ -62,7 +66,7 @@ ms.locfileid: "85883834"
 
 12. Измените `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` на `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`, чтобы предотвратить проблемы, которые могут появиться в клиенте Silverlight.
 
-13. Сохраните файл и закройте его. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
+13. Сохраните и закройте файл. Если возникает ошибка, это происходит из-за включенного контроля учетных записей. Теперь пользователи могут использовать для доступа к сайту протокол HTTPS.  
 
   
 ## <a name="see-also"></a>См. также  
