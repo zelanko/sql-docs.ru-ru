@@ -1,5 +1,6 @@
 ---
-title: Пример. Указание директивы HIDE | Документация Майкрософт
+title: Пример Указание директивы HIDE | Документация Майкрософт
+description: Просмотрите пример использования директивы HIDE в SQL-запросе.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d656dd0022a3c3234baf1e032e26ef77c80b9421
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f8f8f5a8eeeff444832d5cd6142f1bb0099c5913
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665378"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632496"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Примеры. Указание директивы HIDE
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-the-hide-directive"></a>Пример Определение директивы HIDE
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Этот пример демонстрирует использование директивы **HIDE** . Эта директива полезна, если требуется, чтобы запрос возвращал атрибут сортировки строк в универсальной таблице, возвращаемой запросом, но этот атрибут не должен появиться в конечном XML-документе.  
   
  Этот запрос создает соответствующий XML:  

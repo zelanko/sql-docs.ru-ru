@@ -1,5 +1,6 @@
 ---
 title: Задача "Очистка после обслуживания" (план обслуживания) | Документация Майкрософт
+description: Узнайте, как с помощью задачи очистки после обслуживания удалить старые файлы, связанные с планами обслуживания, включая текстовые отчеты для планов обслуживания и файлы резервных копий базы данных.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b7e01cbee4a518b7b2f6b9ef9dea783f1a6ce24d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115753"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85666964"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Задача «Очистка после обслуживания» (план обслуживания)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   С помощью диалогового окна **Задача «Очистка после обслуживания»** можно удалить старые файлы, связанные с планами обслуживания, включая текстовые отчеты, созданные планами обслуживания, и файлы резервных копий базы данных.  
   
 > [!NOTE]  

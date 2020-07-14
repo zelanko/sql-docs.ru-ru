@@ -1,5 +1,6 @@
 ---
 title: Удаленные серверы | Документы Майкрософт
+description: Сведения об удаленных серверах, которые были заменены связанными серверами в SQL Server. Просмотр сведений о функциональных возможностях, конфигурации и безопасности.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - servers [SQL Server], remote
 - remote access option
 ms.assetid: abf0fa24-f199-4273-9a1a-e8787ac9bee1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2b3c4937d87d166d87711389be7acd0c4ae0f8ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 393688d3ecb5d0e29a1b05aa6f00d7eec7ca7e22
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67938185"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651576"
 ---
 # <a name="remote-servers"></a>Удаленные серверы
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Удаленные серверы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживаются лишь для обратной совместимости. Новые приложения должны использовать вместо них связанные серверы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).  
   
  Настройка удаленного сервера позволяет клиенту, подключившемуся к одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполнить хранимую процедуру на другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не устанавливая отдельное соединение. Вместо этого сервер, к которому подключен клиент, принимает запрос клиента и отправляет запрос удаленному серверу от имени клиента. Удаленный сервер обрабатывает запрос и возвращает результаты исходному серверу. Этот сервер, в свою очередь, передает результаты клиенту. При настройке удаленных серверов необходимо учитывать требования обеспечения безопасности.  

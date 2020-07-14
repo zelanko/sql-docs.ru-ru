@@ -1,5 +1,6 @@
 ---
 title: Изменение скомпилированных в собственном коде модулей T-SQL | Документация Майкрософт
+description: Узнайте, как выполнять инструкции ALTER для скомпилированных в собственном коде хранимых процедур и скомпилированных в собственном коде модулей Transact-SQL в SQL Server и базе данных SQL Azure.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a91880504a74a7fae9d98018b31994ded63199c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85668533"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Изменение скомпилированных в собственном коде модулей T-SQL
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно выполнять операции [!INCLUDE[tsql](../../includes/tsql-md.md)] применительно к скомпилированным в собственном коде хранимым процедурам и другим скомпилированным в собственном коде модулям `ALTER`, например определяемым пользователем скалярным функциям и триггерам, с помощью инструкции `ALTER`.  
   

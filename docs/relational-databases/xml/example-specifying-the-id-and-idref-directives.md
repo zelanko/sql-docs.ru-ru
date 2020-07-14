@@ -1,5 +1,6 @@
 ---
-title: Пример. Указание директив ID и IDREF | Документация Майкрософт
+title: Пример Указание директив ID и IDREF | Документация Майкрософт
+description: Обзор примера указания директив ID и IDREF в SQL-запросе
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a98637671787e70dff614779c9e49393cae8a6e8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a3afe4f049cf74353a790f6a9e3fdcdc42902d72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632463"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Пример. Указание директив ID и IDREF
+# <a name="example-specifying-the-id-and-idref-directives"></a>Пример Указание директив ID и IDREF
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Данный пример почти совпадает с примером [Указание директивы ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Единственная разница заключается в указании в данном запросе директив **ID** и **IDREF** . Эти директивы перезаписывают типы атрибута **SalesPersonID** в элементах <`OrderHeader`> и <`OrderDetail`>. Образуются связи внутри документа. Для просмотра перезаписанных типов необходима схема. Поэтому в запросе указывается параметр **XMLDATA** в предложении FOR XML для получения схемы.  
   
