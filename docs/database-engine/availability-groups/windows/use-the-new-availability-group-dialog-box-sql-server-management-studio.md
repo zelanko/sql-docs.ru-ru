@@ -1,6 +1,6 @@
 ---
 title: Диалоговое окно "Создание группы доступности" в SSMS
-description: Этот раздел содержит сведения об использовании диалогового окна "Создание группы доступности" в среде SQL Server Management Studio для настройки группы доступности Always On.
+description: Узнайте, как использовать диалоговое окно "Создание группы доступности" в среде SQL Server Management Studio для настройки группы доступности Always On.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2c53998ea56c02e43a62573b31767c1beea78a8d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a576ea3ed8aa89f8a0ff8bc77fcacaa895660892
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882382"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Используйте диалоговое окно «Создание группы доступности» (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Данный раздел содержит сведения об использовании диалогового окна **Новая группа доступности** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] для создания группы доступности AlwaysOn в экземплярах [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , которые включены для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. *Группа доступности* определяет набор пользовательских баз данных, которые будут действовать при сбое как единое целое, и набор партнеров по обеспечению отработки отказа, называемых *репликами доступности*и поддерживающих отработку отказа.  
   
 > [!NOTE]  
@@ -45,7 +45,7 @@ ms.locfileid: "74821951"
 -   Присоединение дополнительных реплик к группе доступности.    
 -   Выполнение синхронизации начальных данных.  
   
- Дополнительные сведения об этих задачах конфигурации см. в разделе [Дальнейшие действия. После создания группы доступности](#FollowUp)ниже в этой статье.  
+ Дополнительные сведения об этих задачах конфигурации см. в разделе [Дальнейшие действия. После создания группы доступности](#FollowUp) далее в этом разделе.  
   
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.  
@@ -70,13 +70,13 @@ ms.locfileid: "74821951"
     > [!TIP]  
     >  Если реплика была добавлена, и не удается подключиться к экземпляру сервера, можно удалить эту реплику и добавить новую. Дополнительные сведения см. в разделах [Удаление вторичной реплики из группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md) и [Добавление вторичной реплики к группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
-8.  На панели **Выбор страницы** диалогового окна щелкните **Настройки резервного копирования**. Затем на странице **Настройки резервного копирования** укажите местоположение для резервного копирования в роли реплики и задайте приоритеты резервного копирования для всех экземпляров серверов, на которых будет размещаться реплика доступности для этой группы доступности. Дополнительные сведения см. в статье [Свойства группы доступности: создание группы доступности (страница настроек резервного копирования)](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
+8.  На панели **Выбор страницы** диалогового окна щелкните **Настройки резервного копирования**. Затем на странице **Настройки резервного копирования** укажите местоположение для резервного копирования в роли реплики и задайте приоритеты резервного копирования для всех экземпляров серверов, на которых будет размещаться реплика доступности для этой группы доступности. Дополнительные сведения см. в разделе [Свойства группы доступности. Создание группы доступности (страница настроек резервного копирования)](../../../database-engine/availability-groups/windows/availability-group-properties-new-availability-group-backup-preferences-page.md).  
   
 9. Чтобы создать группу доступности, нажмите кнопку **ОК**. После этого в диалоговом окне будет выполнена проверка соответствия указанных баз данных предварительным требованиям.  
   
      Чтобы выйти из диалогового окна без создания группы доступности, нажмите кнопку **Отмена**.  
   
-##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия. После использования диалогового окна «Создание группы доступности» для создания группы доступности  
+##  <a name="follow-up-after-using-the-new-availability-group-dialog-box-to-create-an-availability-group"></a><a name="FollowUp"></a> Дальнейшие действия. После использования диалогового окна "Создание группы доступности" для создания группы доступности  
   
 -   Потребуется поочередное подключение ко всем экземплярам сервера, на которых размещается вторичная реплика для группы доступности, и выполнение следующих действий:  
   

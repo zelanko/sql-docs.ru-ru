@@ -1,6 +1,6 @@
 ---
 title: Связанные серверы (ядро СУБД) | Документация Майкрософт
-ms.date: 10/14/2019
+ms.date: 06/16/2020
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -19,21 +19,21 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 ms.custom: seo-dt-2019
-ms.openlocfilehash: f63e94b8a9ca93d6a1403e17d4a8fa7205938066
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 070dbf1c8f79a0f89364e9d0705051d9ee076627
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165343"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734953"
 ---
 # <a name="linked-servers-database-engine"></a>Связанные серверы (компонент Database Engine)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-  Связанные серверы позволяют [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [управляемым экземплярам Базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) вести чтение данных из удаленных источников данных и выполнять команды на удаленных серверах баз данных (например, источниках данных OLE DB) за пределами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно связанные серверы настроены на включение компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , включающей таблицы в другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или другом продукте для работы с базами данных, например Oracle. В качестве связанных серверов можно настроить источники данных OLE DB многих типов, в том числе [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel и Azure CosmosDB.
+  Связанные серверы позволяют [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)] вести чтение данных из удаленных источников данных и выполнять команды на удаленных серверах баз данных (например, источниках данных OLE DB) за пределами экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно связанные серверы настроены на включение компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , включающей таблицы в другом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или другом продукте для работы с базами данных, например Oracle. В качестве связанных серверов можно настроить источники данных OLE DB многих типов, в том числе [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel и Azure CosmosDB.
 
 > [!NOTE]
-> Связанные серверы доступны в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и управляемых экземплярах Базы данных SQL Azure. Они не включены в отдельную базу данных SQL Azure и эластичные пулы. Существуют некоторые ограничения для управляемых экземпляров, описание которых можно найти [здесь](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
+> Связанные серверы доступны в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] и [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)]. Они не включены в отдельные базы данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичные пулы. Существуют некоторые ограничения для управляемых экземпляров, описание которых можно найти [здесь](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#linked-servers). 
 
 ## <a name="when-to-use-linked-servers"></a>Когда использовать связанные серверы?
 
@@ -56,10 +56,10 @@ ms.locfileid: "74165343"
   
 *Поставщиком OLE DB* является динамическая библиотека, осуществляющая управление и взаимодействие с определенными источниками данных. *Источник данных OLE DB* определяет конкретную базу данных, доступ к которой выполняется через интерфейс OLE DB. Хотя источники данных, запросы к которым выполняются с помощью определений связанных серверов, являются обычными базами данных, существуют поставщики OLE DB для разнообразных файлов и форматов файлов. Сюда входят текстовые файлы, данные электронных таблиц и результаты поиска полнотекстового содержимого.  
   
-Поставщик OLE DB для собственного клиента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (PROGID: SQLNCLI11) является официальным поставщиком OLE DB для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], [драйвер Microsoft OLE DB для SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) (PROGID: MSOLEDBSQL) является поставщиком OLE DB по умолчанию. В более ранних версиях [поставщик OLE DB SQL Server Native Client (SQLNCLI)](../../relational-databases/native-client/sql-server-native-client.md) (PROGID: SQLNCLI11) являлся поставщиком OLE DB по умолчанию.
   
 > [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначены для работы с поставщиком OLE DB, реализующим необходимые интерфейсы OLE DB. Однако работа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверялась только с поставщиком Native Client OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и некоторыми другими поставщиками.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предназначены для работы с поставщиком OLE DB, реализующим необходимые интерфейсы OLE DB. Однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была протестирована с поставщиком OLE DB по умолчанию.  
   
 ## <a name="linked-server-details"></a>Подробности настройки связанных серверов  
  На следующей иллюстрации показаны основы настройки связанных серверов.  
@@ -75,7 +75,7 @@ ms.locfileid: "74165343"
 > При использовании поставщика OLE DB учетная запись, под которой выполняется служба сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должна иметь разрешения на чтение и выполнение для каталога и всех его подкаталогов, в котором установлен поставщик. Сюда входят поставщики, выпущенные корпорацией Майкрософт, и любые сторонние поставщики.
 
 > [!NOTE]
-> Связанные серверы поддерживают сквозную проверку подлинности Active Directory при использовании полного делегирования. Начиная с SQL Server 2017 CU17, также поддерживается сквозная проверка подлинности с ограниченным делегированием. Однако [ограниченное делегирование на основе ресурсов](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) не поддерживается.
+> Связанные серверы поддерживают сквозную проверку подлинности Active Directory при использовании полного делегирования. Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU17, также поддерживается сквозная проверка подлинности с ограниченным делегированием. Однако [ограниченное делегирование на основе ресурсов](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) не поддерживается.
 
 ## <a name="managing-providers"></a>Управление поставщиками  
 Имеется набор параметров, определяющих, как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] загружает и использует поставщики OLE DB, заданные в реестре.  
@@ -99,17 +99,12 @@ ms.locfileid: "74165343"
 > Связанные серверы могут быть определены таким образом, чтобы указывать на сервер, на котором они определены (обратная связь). Серверы с обратной связью наиболее полезны для тестирования приложения, в котором используются распределенные запросы в односерверной сети. Серверы, связанные с помощью петлевого адреса, предназначены для тестирования и не поддерживаются во многих операциях, таких как распределенные транзакции.  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Создание связанных серверов (компонент SQL Server Database Engine)](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)  
-  
- [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)  
-  
- [sp_addlinkedsrvlogin (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)  
-  
- [sp_dropserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)  
+ [Создание связанных серверов &#40;компонент SQL Server Database Engine&#41;](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)    
+ [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)    
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)    
+ [sp_dropserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)    
   
 ## <a name="related-content"></a>См. также  
- [sys.servers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)  
-  
+ [sys.servers (Transact-SQL)](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)    
  [sp_linkedservers (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)  
-  
-  
+

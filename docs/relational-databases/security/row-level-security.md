@@ -1,5 +1,6 @@
 ---
 title: Безопасность на уровне строк | Документация Майкрософт
+description: Узнайте, как безопасность на уровне строк позволяет использовать членство в группе или контекст выполнения для управления доступом к строкам в таблице базы данных в SQL Server.
 ms.custom: ''
 ms.date: 05/14/2019
 ms.prod: sql
@@ -17,16 +18,16 @@ ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9e604ba803b1116c9867071f547a1d1958437b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5573bcc6762e8a03651ba1573bc6254aaa2c80a0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78288973"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000537"
 ---
 # <a name="row-level-security"></a>Безопасность на уровне строк
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Предупреждение о безопасности на уровне строк](../../relational-databases/security/media/row-level-security-graphic.png "Предупреждение о безопасности на уровне строк")  
   
@@ -41,7 +42,7 @@ ms.locfileid: "78288973"
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [текущую версию](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([получить](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
-> Хранилище данных SQL Azure поддерживает только предикаты фильтров. Предикаты блокирования сейчас не поддерживаются в Хранилище данных SQL Azure.
+> Azure Synapse поддерживает только предикаты фильтров. Предикаты блокирования сейчас не поддерживаются в Azure Synapse.
 
 ## <a name="description"></a><a name="Description"></a> Описание
 
@@ -159,7 +160,7 @@ ms.locfileid: "78288973"
   
 - **Filestream.** Безопасность на уровне строк не совместима с компонентом Filestream.  
   
-- **PolyBase.** Безопасность на уровне строк поддерживается для внешних таблиц Polybase только при использовании Хранилища данных SQL Azure.
+- **PolyBase.** Безопасность на уровне строк поддерживается для внешних таблиц Polybase только при использовании Azure Synapse.
 
 - **Таблицы, оптимизированные для памяти.** Встроенная функция с табличным значением, которая используется в качестве предиката безопасности для таблицы, оптимизированной для памяти, должна быть определена с помощью параметра `WITH NATIVE_COMPILATION`. Этот параметр позволяет блокировать функции языка, не поддерживаемые в оптимизированных для памяти таблицах, и выдавать соответствующую ошибку во время создания. Дополнительные сведения см. в разделе **Безопасность на уровне строк в таблицах, оптимизированных для памяти** статьи [Вводные сведения о таблицах, оптимизированных для памяти](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
@@ -185,8 +186,6 @@ ms.locfileid: "78288973"
   
  Создайте три учетные записи пользователей, демонстрирующие разные возможности доступа.  
 
-> [!NOTE]
-> Хранилище данных SQL Azure не поддерживает инструкцию EXECUTE AS USER, поэтому нужно создать учетные данные (CREATE LOGIN) для каждого пользователя заранее. Затем следует войти в систему в качестве соответствующего пользователя, чтобы проверить это поведение.
 
 ```sql  
 CREATE USER Manager WITHOUT LOGIN;  
@@ -273,10 +272,6 @@ EXECUTE AS USER = 'Manager';
 SELECT * FROM Sales;
 REVERT;  
 ```
-
-> [!NOTE]
-> Хранилище данных SQL Azure не поддерживает инструкцию EXECUTE AS USER, поэтому войдите в систему как соответствующий пользователь, чтобы проверить указанное выше поведение.
-
 Пользователь Manager должен видеть все шесть строк. Пользователи Sales1 и Sales2 должны видеть только свои продажи.
 
 Измените политику безопасности, чтобы отключить политику.
@@ -301,7 +296,7 @@ DROP FUNCTION Security.fn_securitypredicate;
 DROP SCHEMA Security;
 ```
 
-### <a name="b-scenarios-for-using-row-level-security-on-an-azure-sql-data-warehouse-external-table"></a><a name="external"></a> Б. Сценарии использования безопасности на уровне строк во внешней таблице Хранилища данных SQL Azure
+### <a name="b-scenarios-for-using-row-level-security-on-an-azure-synapse-external-table"></a><a name="external"></a> Б. Сценарии использования безопасности на уровне строк во внешней таблице Azure Synapse
 
 В этом кратком примере создаются три пользователя и внешняя таблица с шестью строками, а затем создается встроенная функция с табличным значением и политика безопасности для внешней таблицы. Пример показывает как фильтруются отдельные инструкции для разных пользователей.
 
@@ -345,7 +340,7 @@ INSERT INTO Sales VALUES (6, 'Sales2', 'Seat', 5);
 SELECT * FROM Sales;
 ```
 
-Создайте внешнюю таблицу Хранилища данных SQL Azure на основе созданной таблицы Sales.
+Создайте внешнюю таблицу Azure Synapse на основе созданной таблицы Sales.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'somepassword';
@@ -394,7 +389,7 @@ WITH (STATE = OFF);
 
 Теперь пользователи Sales1 и Sales2 могут видеть все шесть строк.
 
-Подключение к базе данных Хранилища данных SQL для очистки ресурсов
+Подключение к базе данных Azure Synapse для очистки ресурсов
 
 ```sql
 DROP USER Sales1;
@@ -421,7 +416,7 @@ DROP LOGIN Manager;
 ### <a name="c-scenario-for-users-who-connect-to-the-database-through-a-middle-tier-application"></a><a name="MidTier"></a> В. Сценарий для пользователей, подключающихся к базе данных через приложение среднего уровня
 
 > [!NOTE]
-> Функции предикатов блокировки из этого примера сейчас не поддерживаются для Хранилища данных SQL Azure, поэтому вставка строк с неправильным идентификатором пользователя не блокируется для Хранилища данных SQL Azure.
+> Функции предикатов блокировки из этого примера сейчас не поддерживаются для Azure Synapse, поэтому вставка строк с неправильным идентификатором пользователя не блокируется.
 
 В этом примере показано, как приложение среднего уровня может реализовать фильтрацию подключений, когда пользователи приложения (или клиенты) совместно используют того же пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (приложение). Приложение задает идентификатор пользователя текущего приложения в [SESSION_CONTEXT (Transact-SQL)](../../t-sql/functions/session-context-transact-sql.md) после подключения к базе данных, а затем политики безопасности прозрачно фильтруют строки, которые не должны быть видимыми для данного идентификатора, а также запрещают пользователю вставлять строки для другого ИД пользователя. Другие изменения приложения не требуются.  
   

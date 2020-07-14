@@ -1,5 +1,6 @@
 ---
 title: Сопоставление типов данных для издателей Oracle | Документация Майкрософт
+description: Узнайте о сопоставлениях типов данных по умолчанию между Oracle и SQL Server при перемещении данных из издателя Oracle в распространитель SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d7063beae88d6bbf0de9af735e6e5d87c94a15a
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901123"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896800"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Сопоставление типов данных для издателей Oracle
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Типы данных Oracle и типы данных [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не всегда полностью совпадают. Там, где это возможно, выбор подходящего типа данных при публикации таблицы Oracle осуществляется автоматически. В случаях, когда выбор однозначного соответствия типов данных не очевиден, предлагаются альтернативные сопоставления типов данных. Сведения о выборе альтернативных соответствий типов данных см. ниже в разделе «Указание альтернативных сопоставлений типов данных».  
   
  Следующая таблица показывает, как по умолчанию осуществляется преобразование типов данных между Oracle и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , когда данные передаются издателем Oracle распространителю [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . В столбце «Альтернатива» показано, допустимы ли альтернативные соответствия.  
@@ -34,30 +35,30 @@ ms.locfileid: "67901123"
 |CHAR([1-2000])|CHAR([1-2000])|Да|  
 |CLOB|VARCHAR(MAX)|Да|  
 |DATE|DATETIME|Да|  
-|FLOAT|FLOAT|нет|  
-|FLOAT([1-53])|FLOAT([1-53])|нет|  
-|FLOAT([54-126])|FLOAT|нет|  
+|FLOAT|FLOAT|Нет|  
+|FLOAT([1-53])|FLOAT([1-53])|Нет|  
+|FLOAT([54-126])|FLOAT|Нет|  
 |INT|NUMERIC(38)|Да|  
 |INTERVAL|DATETIME|Да|  
 |LONG|VARCHAR(MAX)|Да|  
 |LONG RAW|IMAGE|Да|  
-|NCHAR([1-1000])|NCHAR([1-1000])|нет|  
+|NCHAR([1-1000])|NCHAR([1-1000])|Нет|  
 |NCLOB|NVARCHAR(MAX)|Да|  
 |NUMBER|FLOAT|Да|  
-|NUMBER([1-38])|NUMERIC([1-38])|нет|  
+|NUMBER([1-38])|NUMERIC([1-38])|Нет|  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Да|  
-|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|нет|  
-|RAW([1-2000])|VARBINARY([1-2000])|нет|  
-|real|FLOAT|нет|  
-|ROWID|CHAR(18)|нет|  
+|NVARCHAR2([1-2000])|NVARCHAR([1-2000])|Нет|  
+|RAW([1-2000])|VARBINARY([1-2000])|Нет|  
+|real|FLOAT|Нет|  
+|ROWID|CHAR(18)|Нет|  
 |timestamp|DATETIME|Да|  
 |TIMESTAMP(0-7)|DATETIME|Да|  
 |TIMESTAMP(8-9)|DATETIME|Да|  
 |TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|Да|  
-|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|нет|  
+|TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|Нет|  
 |TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|Да|  
-|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|нет|  
-|UROWID|CHAR(18)|нет|  
+|TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|Нет|  
+|UROWID|CHAR(18)|Нет|  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Да|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Вопросы сопоставления типов данных  
@@ -82,7 +83,7 @@ ms.locfileid: "67901123"
 ### <a name="float-and-number-types"></a>Типы FLOAT и NUMBER  
  Масштаб и точность, задаваемые при сопоставлении типов данных FLOAT и NUMBER, зависят от масштаба и точности, указанных для столбца, использующего этот тип данных в базе данных Oracle. Точность представляет собой количество цифр в числе. Масштаб представляет собой количество цифр справа от десятичной запятой в числе. Например, у числа 123,45 точность равна 5, а масштаб равен 2.  
   
- Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы исключить усечение данных, когда в данных издателя Oracle масштаб больше, чем точность, при преобразовании данных точность приравнивается к масштабу: тип данных NUMBER(4,5) был бы преобразован в NUMERIC(5,5).  
+ Oracle позволяет определять числа, имеющие масштаб больший, чем точность, например NUMBER(4,5), в то время как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] требует, чтобы точность была не меньше масштаба. Чтобы исключить усечение данных, когда в данных издателя Oracle масштаб больше, чем точность, при преобразовании данных точность приравнивается к масштабу: тип данных NUMBER(4,5) преобразуется в NUMERIC(5,5).  
   
 > [!NOTE]  
 >  Если для типа NUMBER не указать масштаб и точность, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] будет использовать по умолчанию максимальные масштаб (8) и точность (38). Для оптимизации хранения данных и производительности при репликации данных рекомендуется установить специальные значения масштаба и точности в Oracle.  

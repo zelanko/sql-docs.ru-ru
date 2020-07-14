@@ -32,15 +32,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d20f0cd4a08e22787caecfb663ef0d2dcd47003
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 63084232460e60aedb0b0a1abe267caa7687e9dd
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75831814"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091925"
 ---
 # <a name="collation-and-unicode-support"></a>Поддержка параметров сортировки и Юникода
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Параметры сортировки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляют свойства, управляющие правилами сортировки, учета регистра и диакритических знаков в данных. Параметры сортировки, используемые с символьными типами данных, такими как **char** или **varchar**, указывают кодовую страницу и соответствующие символы, которые могут быть представлены для этого типа данных. 
 
 Независимо от того, устанавливается ли новый экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], восстанавливается ли база данных из резервной копии или сервер соединяется с клиентскими базами данных, важно понимать требования к языковому стандарту, знать порядок сортировки и необходимость учета регистра или диакритических знаков в данных, с которыми вы работаете. Описание того, как получить список доступных параметров сортировки в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -235,7 +235,7 @@ ms.locfileid: "75831814"
 |Французский (Монако)|0x180c|0x040c|French_CI_AS|
 |Французский (Швейцария)|0x100c|0x040c|French_CI_AS|
 |Фризский (Нидерланды)|0x0462|0x0462|Latin1_General_CI_AI|
-|Галисийский (Испания)|0x0456|0x0409|Latin1_General_CI_AS|
+|Галисийский|0x0456|0x0409|Latin1_General_CI_AS|
 |Грузинский (Грузия)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Грузинский (Грузия)|0x0437|0x0419|Latin1_General_CI_AS|
 |Немецкий (сортировка телефонной книги)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -275,7 +275,7 @@ ms.locfileid: "75831814"
 |Литовский (Литва)|0x0427|0x0427|Lithuanian_CI_AS|
 |Нижний Сорбский (Германия)|0x082e|0x0409|Latin1_General_CI_AS|
 |Люксембургский (Люксембург)|0x046e|0x0409|Latin1_General_CI_AS|
-|Македонский (Северная Македония)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Македонский (Северная Македония, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Малайский (Бруней-Даруссалам)|0x083e|0x0409|Latin1_General_CI_AS|
 |Малайский (Малайзия)|0x043e|0x0409|Latin1_General_CI_AS|
 |Малайялам (Индия)|0x044c|0x0439|Недоступен на уровне сервера|
@@ -303,6 +303,7 @@ ms.locfileid: "75831814"
 |Румынский (Румыния)|0x0418|0x0418|Romanian_CI_AS|
 |Романш (Швейцария)|0x0417|0x0417|Latin1_General_CI_AI|
 |Русский (Россия)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Саха (Россия)|0x0485|0x0485|Latin1_General_CI_AI|
 |Саамский (Инари, Финляндия)|0x243b|0x083b|Latin1_General_CI_AI|
 |Саамский (Луле, Норвегия)|0x103b|0x043b|Latin1_General_CI_AI|
 |Саамский (Луле, Швеция)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -366,7 +367,6 @@ ms.locfileid: "75831814"
 |Валлийский (Великобритания)|0x0452|0x0452|Latin1_General_CI_AI|
 |Волоф (Сенегал)|0x0488|0x040c|French_CI_AS|
 |Коса/исиКоса (Южная Африка)|0x0434|0x0409|Latin1_General_CI_AS|
-|Якутский (Россия)|0x0485|0x0485|Latin1_General_CI_AI|
 |Носу (КНР)|0x0478|0x0409|Latin1_General_CI_AS|
 |Йоруба (Нигерия)|0x046a|0x0409|Latin1_General_CI_AS|
 |Зулу/исиЗулу (Южная Африка)|0x0435|0x0409|Latin1_General_CI_AS|
@@ -656,4 +656,3 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 [Выбор языка при создании полнотекстового индекса](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Однобайтовые и многобайтовые кодировки](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

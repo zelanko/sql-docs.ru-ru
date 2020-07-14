@@ -24,12 +24,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 ||=azure-sqldw-latest|| = sqlallproducts-allversions
-ms.openlocfilehash: 5c43d6da25aa93b146346ff45057edba9445ebab
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a37a0b4c0f474323680213d3719ae85cff7a5ecc
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81629179"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895680"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -37,7 +37,7 @@ ms.locfileid: "81629179"
 
 Эта команда включает несколько параметров конфигурации базы данных на уровне **отдельной базы данных**. 
 
-Следующие параметры поддерживаются в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]: 
+Следующие параметры поддерживаются в [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] и в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], как указано в строке **APPLIES TO** для каждого параметра в разделе [Аргументы](#arguments). 
 
 - очистить кэш процедур;
 - задать для параметра MAXDOP произвольное значение (1, 2,...) для базы данных-источника в зависимости от того, что лучше всего подходит для конкретной базы данных, и указать другое значение (например, 0) для всех используемых баз данных-получателей (например, для запросов отчетов);
@@ -56,6 +56,7 @@ ms.locfileid: "81629179"
 - включить или отключить новое сообщение об ошибке `String or binary data would be truncated`.
 - Включает или отключает запись последнего действительного плана выполнения в [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md).
 - Укажите время в минутах, в течение которого операция возобновляемого индекса остается приостановленной, прежде чем она будет автоматически прервана подсистемой SQL Server.
+- Включение или отключение ожидание блокировок с низким приоритетом для асинхронного обновления статистики
 
 Этот параметр доступен только в Azure Synapse Analytics (прежнее название — Хранилище данных SQL).
 - Задание уровня совместимости для пользовательской базы данных
@@ -101,6 +102,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | LAST_QUERY_PLAN_STATS = { ON | OFF }
     | PAUSED_RESUMABLE_INDEX_ABORT_DURATION_MINUTES = <time>
     | ISOLATE_SECURITY_POLICY_CARDINALITY  = { ON | OFF }
+    | ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY = { ON | OFF }
 }
 ```
 
@@ -110,8 +112,8 @@ ALTER DATABASE SCOPED CONFIGURATION
 > -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` изменено на `BATCH_MODE_MEMORY_GRANT_FEEDBACK`
 > -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` изменено на `BATCH_MODE_ADAPTIVE_JOINS`
 
-```syntaxsql
--- Synatx for Azure Synapse Analytics (Formerly SQL DW)
+```SQL
+-- Syntax for Azure Synapse Analytics (Formerly SQL DW)
 
 ALTER DATABASE SCOPED CONFIGURATION
 {
@@ -121,7 +123,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 
 < set_options > ::=
 {
-    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } -- Preview 
+    DW_COMPATIBILITY_LEVEL = { AUTO | 10 | 20 } 
 }
 ```
 
@@ -397,7 +399,7 @@ ISOLATE_SECURITY_POLICY_CARDINALITY **=** { ON | **OFF**}
 
 Позволяет контролировать, влияет ли предикат [безопасности на уровне строк (RLS)](../../relational-databases/security/row-level-security.md) на кратность плана выполнения пользовательского запроса в целом. Если ISOLATE_SECURITY_POLICY_CARDINALITY имеет значение ON, то предикат RLS не влияет на кратность плана выполнения. Например, рассмотрим таблицу, содержащую 1 000 000 строк и предикат RLS, который ограничивает результат 10 строками для конкретного пользователя, выполняющего запрос. Если этот параметр в области базы данных имеет значение OFF, то оценка количества элементов этого предиката будет равна 10. Если этот параметр базы данных имеет значение ON, оптимизация запросов будет оценивать 1 000 000 строк. Рекомендуется использовать значение по умолчанию для большинства рабочих нагрузок.
 
-DW_COMPATIBILITY_LEVEL (предварительная версия) **=** {**AUTO** | 10 | 20 }
+DW_COMPATIBILITY_LEVEL **=** {**AUTO** | 10 | 20 }
 
 **Область применения**: Только Azure Synapse Analytics (ранее — Хранилище данных SQL)
 
@@ -405,13 +407,19 @@ DW_COMPATIBILITY_LEVEL (предварительная версия) **=** {**AU
 
 |Уровень совместимости    |   Комментарии|  
 |-----------------------|--------------|
-|**AUTO**| По умолчанию.  Его значение равно последнему поддерживаемому уровню совместимости.|
+|**AUTO**| По умолчанию.  Его значение автоматически обновляется модулем Synapse Analytics.  Текущее значение равно 20.|
 |**10**| Применяет для Transact-SQL и обработки запросов поведение, действовавшее до появления поддержки уровня совместимости.|
 |**20**| Первый уровень совместимости, включающий условное поведение Transact-SQL и обработки запросов. |
 
+ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY **=** { ON | **OFF**}
+
+**Область применения**: Только база данных SQL Azure (функция доступна в общедоступной предварительной версии)
+
+Если включено асинхронное обновление статистики, включение этой конфигурации приведет к тому, что обновление статистики запросов в фоновом режиме будет ждать блокировки Sch-M в очереди с низким приоритетом, чтобы предотвратить блокировку других сеансов в сценариях с высоким уровнем параллелизма. Дополнительные сведения см. в разделе [AUTO_UPDATE_STATISTICS_ASYNC](../../relational-databases/statistics/statistics.md#auto_update_statistics_async).
+
 ## <a name="permissions"></a><a name="Permissions"></a> Permissions
 
-Необходимо разрешение `ALTER ANY DATABASE SCOPE CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
+Необходимо разрешение `ALTER ANY DATABASE SCOPED CONFIGURATION` для базы данных. Это разрешение может быть предоставлено пользователем, имеющим разрешение CONTROL для базы данных.
 
 ## <a name="general-remarks"></a>Общие замечания
 
@@ -419,7 +427,7 @@ DW_COMPATIBILITY_LEVEL (предварительная версия) **=** {**AU
 
 При выполнении этой инструкции очищается кэш процедур в текущей базе данных; это означает, что нужно перекомпилировать все запросы.
 
-Что касается трехчастных запросов имен, для запроса соблюдаются параметры текущего подключения базы данных. Это не относится к модулям SQL (процедуры, функции и триггеры), которые компилируются в контексте текущей базы данных и применяют параметры базы данных, в которой они находятся.
+Что касается трехчастных запросов имен, для запроса соблюдаются параметры текущего подключения базы данных. Это не относится к модулям SQL (процедуры, функции и триггеры), которые компилируются в контексте другой базы данных и применяют параметры базы данных, в которой они находятся. Аналогичным образом, при асинхронном обновлении статистики учитывается параметр ASYNC_STATS_UPDATE_WAIT_AT_LOW_PRIORITY для базы данных, где находится статистика.
 
 Событие `ALTER_DATABASE_SCOPED_CONFIGURATION` добавляется дочерним элементом в группу триггеров `ALTER_DATABASE_EVENTS` в качестве события DDL, с помощью которого можно инициировать триггер DDL.
 

@@ -1,5 +1,6 @@
 ---
-title: 'Устранение неполадок: превышение RTO в группе доступности (SQL Server) | Документы Майкрософт'
+title: 'Устранение неполадок: превышение RTO (SQL Server) в группе доступности | Документация Майкрософт'
+description: Сведения о том, как устранить неполадки с отработкой отказа в группе доступности AlwaysOn, когда отработка отказа занимает дольше целевого времени восстановления в SQL Server.
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 959361d64316618ce6b7ccc997f7ef958b1259f5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013751"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85888023"
 ---
 # <a name="troubleshoot-availability-group-exceeded-rto"></a>Устранение неполадок: превышение RTO в группе доступности
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   После автоматического перехода на другой ресурс или планового перехода на другой ресурс вручную без потери данных в группе доступности можно обнаружить, что время перехода на другой ресурс превышает цель времени восстановления (RTO). Или при оценке времени перехода на другой ресурс для вторичной реплики с синхронной фиксацией (например, партнера по обеспечению автоматической отработки отказа) с использованием метода, описанного в разделе [Мониторинг производительности для групп доступности AlwaysOn](monitor-performance-for-always-on-availability-groups.md), вы обнаруживаете, что оно превышает RTO.  
   
  Если автоматический переход на другой ресурс все еще не завершен, см. раздел [Устранение неполадок автоматического перехода на другой ресурс в средах AlwaysOn SQL Server 2012](https://support.microsoft.com/kb/2833707).  

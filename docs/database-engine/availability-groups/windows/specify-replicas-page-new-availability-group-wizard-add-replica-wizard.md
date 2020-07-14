@@ -1,6 +1,6 @@
 ---
 title: Мастер группы доступности. Страница "Указание реплик"
-description: Описание параметров на странице "Указание реплик" мастера создания группы доступности в графическом интерфейсе SQL Server Management Studio (SSMS).
+description: Описание параметров на странице "Указание реплик" мастера создания группы доступности в SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3bf32d532c2bf10adb1348352c472cd87f0b8413
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9a278ecf99626aef66dde768c18e8577dbb39c94
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85898098"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Страница "Указание реплик" (мастер создания группы доступности: мастер добавления реплики)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описываются параметры страницы **Выбор реплик** . Эта страница применяется к **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** и **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Страницу **Выбор реплик** можно использовать для настройки одной или нескольких реплик доступности и добавления ее в группу доступности. Эта страница содержит четыре вкладки, представленные в следующей таблице. Щелкните имя вкладки в таблице, чтобы перейти в соответствующий подраздел, далее в этом разделе.  
   
 |Вкладка|Краткое описание|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 77c45273b5381a158d8a5cf317f292fd46dec55d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9c707c97df5b6c639a2c9df5847ff4f14fc400db
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79190556"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729438"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]  
 
 В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
@@ -146,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Табличные указания|INSERT_HINTS||INSERT_HINTS|34|  
 |Текстовые указатели|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|None|UPDATETEXT или WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Текстовые указатели|TEXTPTR()<br /><br /> TEXTVALID()|None|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: последовательность вызова функций|Заменено на SELECT *column_list* FROM sys.\<*имя_функции*>().<br /><br /> Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|синтаксис вызова функции «::»|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: последовательность вызова функций|Заменено на SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|синтаксис вызова функции «::»|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Ссылки на столбцы с трех- и четырехкомпонентными именами.|Использование двухкомпонентных имен совместимо со стандартом.|Имя столбца, состоящее более чем из двух компонентов|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Строка, заключенная в кавычки, использовалась как псевдоним столбца для выражения в списке SELECT:<br /><br /> '*string_alias*' = *выражение*|*expression* [AS] *псевдоним_столбца*<br /><br /> *expression* [AS] [*псевдоним_столбца*]<br /><br /> *expression* [AS] "*псевдоним_столбца*"<br /><br /> *expression* [AS] '*псевдоним_столбца*'<br /><br /> *column_alias* = *выражение*|Строковые литералы в качестве псевдонимов столбцов|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Нумерованные процедуры|Нет. Не используйте.|ProcNums|160|  

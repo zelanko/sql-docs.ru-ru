@@ -31,12 +31,12 @@ ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51b327832b5ad5cae52791efdbf1df756aade3a5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 74ab018b017b675e08abb53036f88c3eaf2e5618
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636319"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748589"
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,9 +49,77 @@ ms.locfileid: "81636319"
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Синтаксис  
-  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+В следующем блоке кода показан синтаксис в SQL Server 2019. Также можно посмотреть раздел [Синтаксис в SQL Server 2017 и более ранних](execute-transact-sql.md?view=sql-server-2017). 
+
 ```syntaxsql
--- Syntax for SQL Server  
+-- Syntax for SQL Server 2019
+  
+Execute a stored procedure or function  
+[ { EXEC | EXECUTE } ]  
+    {   
+      [ @return_status = ]  
+      { module_name [ ;number ] | @module_name_var }   
+        [ [ @parameter = ] { value   
+                           | @variable [ OUTPUT ]   
+                           | [ DEFAULT ]   
+                           }  
+        ]  
+      [ ,...n ]  
+      [ WITH <execute_option> [ ,...n ] ]  
+    }  
+[;]  
+  
+Execute a character string  
+{ EXEC | EXECUTE }   
+    ( { @string_variable | [ N ]'tsql_string' } [ + ...n ] )  
+    [ AS { LOGIN | USER } = ' name ' ]  
+[;]  
+  
+Execute a pass-through command against a linked server  
+{ EXEC | EXECUTE }  
+    ( { @string_variable | [ N ] 'command_string [ ? ]' } [ + ...n ]  
+        [ { , { value | @variable [ OUTPUT ] } } [ ...n ] ]  
+    )   
+    [ AS { LOGIN | USER } = ' name ' ]  
+    [ AT linked_server_name ]  
+    [ AT DATA_SOURCE data_source_name ]  
+[;]  
+  
+<execute_option>::=  
+{  
+        RECOMPILE   
+    | { RESULT SETS UNDEFINED }   
+    | { RESULT SETS NONE }   
+    | { RESULT SETS ( <result_sets_definition> [,...n ] ) }  
+}   
+  
+<result_sets_definition> ::=   
+{  
+    (  
+         { column_name   
+           data_type   
+         [ COLLATE collation_name ]   
+         [ NULL | NOT NULL ] }  
+         [,...n ]  
+    )  
+    | AS OBJECT   
+        [ db_name . [ schema_name ] . | schema_name . ]   
+        {table_name | view_name | table_valued_function_name }  
+    | AS TYPE [ schema_name.]table_type_name  
+    | AS FOR XML   
+}  
+```  
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 ||=sqlallproducts-allversions"
+
+В следующем блоке кода показан синтаксис в SQL Server 2017 и более ранних версиях. Также можно посмотреть раздел [Синтаксис в SQL Server 2019](execute-transact-sql.md?view=sql-server-ver15).
+
+
+```syntaxsql
+-- Syntax for SQL Server 2017 and earleir  
   
 Execute a stored procedure or function  
 [ { EXEC | EXECUTE } ]  
@@ -107,6 +175,8 @@ Execute a pass-through command against a linked server
     | AS FOR XML   
 }  
 ```  
+::: moniker-end
+
   
 ```syntaxsql
 -- In-Memory OLTP   
@@ -179,7 +249,8 @@ Execute a character string
     | AS TYPE [ schema_name.]table_type_name  
     | AS FOR XML  
   
-```  
+```
+
   
 ```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -195,6 +266,8 @@ Execute a character string
     ( { @string_variable | [ N ] 'tsql_string' } [ +...n ] )  
 [;]  
 ```  
+
+
   
 ## <a name="arguments"></a>Аргументы  
  @*return_status*  
@@ -297,15 +370,23 @@ Execute a character string
   
  WITH \<execute_option>  
  Возможные параметры выполнения. Параметры RESULT SETS нельзя указывать в инструкции INSERT...EXEC.  
+ 
+AT DATA_SOURCE data_source_name **Применимо к**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий.
+  
+ Указывает, что *command_string* выполняется для *data_source_name*, а результаты, при их наличии, возвращаются клиенту. *data_source_name* должно ссылаться на существующее определение EXTERNAL DATA SOURCE (внешнего источника данных) в базе данных. Поддерживаются только источники данных, указывающие на SQL Server. Кроме того, для SQL Server поддерживаются источники данных кластера больших данных, которые указывают на пул вычислений, пул данных или пул носителей. Источники данных определяются с помощью [CREATE EXTERNAL DATA SOURCE](../statements/create-external-data-source-transact-sql.md) (создание внешнего источника данных).  
+  
+ WITH \<execute_option>  
+ Возможные параметры выполнения. Параметры RESULT SETS нельзя указывать в инструкции INSERT...EXEC.  
   
 |Термин|Определение|  
 |----------|----------------|  
 |RECOMPILE|Инициирует перекомпиляцию нового плана, его использование и удаление после выполнения модуля. Если для модуля имеется существующий план запроса, то он остается в кэше.<br /><br /> Следует указывать этот параметр в тех случаях, когда передаются нетипичные аргументы или если данные существенно изменились. Он не предназначен для расширенных хранимых процедур. Рекомендуется реже пользоваться этим параметром, поскольку он очень ресурсоемок.<br /><br /> **Примечание.** Использовать параметр WITH RECOMPILE при вызове хранимой процедуры, для которой применяется синтаксис OPENDATASOURCE, невозможно. Параметр WITH RECOMPILE не учитывается при указании четырехкомпонентного имени объекта.<br /><br /> **Примечание.** Скомпилированные в собственном коде скалярные определяемые пользователем функции не поддерживают RECOMPILE. Если потребуется выполнить повторную компиляцию, используйте процедуру [sp_recompile (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**RESULT SETS UNDEFINED**|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Этот параметр не дает гарантии, какие результаты, если они есть, будут возвращены. Определение также не предоставляется. Инструкция выполняется без ошибок, независимо от того, возвращаются ли какие-либо результаты. RESULT SETS UNDEFINED — действие по умолчанию, если не указан result_sets_option.<br /><br /> Для интерпретируемых скалярных определяемых пользователем функций и скомпилированных в собственном коде скалярных определяемых пользователем функций этот параметр не работает, так как функции никогда не возвращают результирующий набор.|  
 |RESULT SETS NONE|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Гарантирует, что выполняемая инструкция не вернет никаких результатов. Если возвращены какие-либо результаты, то пакет отменяется.<br /><br /> Для интерпретируемых скалярных определяемых пользователем функций и скомпилированных в собственном коде скалярных определяемых пользователем функций этот параметр не работает, так как функции никогда не возвращают результирующий набор.|  
-|*\<result_sets_definition>*|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Обеспечивает гарантию, что результат будет возвращен в виде, определенном в result_sets_definition. Для выражений, которые возвращают множество результирующих наборов, обеспечьте множество разделов *result_sets_definition*. Заключите каждый раздел *result_sets_definition* в скобки, разделяя их запятыми. Дополнительные сведения см. далее в подразделе \<result_sets_definition>.<br /><br /> Этот параметр всегда приводит к ошибке для скомпилированных в собственном коде скалярных определяемых пользователем функций, поскольку функции никогда не возвращают результирующий набор.|
+|*\<result_sets_definition>*|**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Обеспечивает гарантию, что результат будет возвращен в виде, определенном в result_sets_definition. Для выражений, которые возвращают множество результирующих наборов, обеспечьте множество разделов *result_sets_definition*. Заключите каждый раздел *result_sets_definition* в скобки, разделяя их запятыми. Дополнительные сведения см. ниже в разделе \<result_sets_definition>.<br /><br /> Этот параметр всегда приводит к ошибке для скомпилированных в собственном коде скалярных определяемых пользователем функций, поскольку функции никогда не возвращают результирующий набор.|
   
-\<result_sets_definition> **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+\<result_sets_definition>
+**Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Описывает результирующие наборы, возвращенные выполненными инструкциями. Предложения result_sets_definition имеют следующий смысл  
   
@@ -389,26 +470,26 @@ USE master; EXEC ('USE AdventureWorks2012; SELECT BusinessEntityID, JobTitle FRO
 ### <a name="context-switching-permissions"></a>Разрешения для переключения контекста  
  Чтобы указать в предложении EXECUTE AS имя входа, вызывающая сторона должна иметь разрешения IMPERSONATE на указанное имя входа. Чтобы указать в предложении EXECUTE AS пользователя базы данных, вызывающая сторона должна иметь разрешения IMPERSONATE на указанное имя входа. Если контекст выполнения не указан или указано EXECUTE AS CALLER, никакие разрешения IMPERSONATE не требуются.  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples-sql-server"></a>Примеры: SQL Server
   
 ### <a name="a-using-execute-to-pass-a-single-parameter"></a>A. Вызов EXECUTE с передачей единственного аргумента  
  Хранимая процедура `uspGetEmployeeManagers` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ожидает один параметр (`@EmployeeID`). В следующем примере производится выполнение хранимой процедуры `uspGetEmployeeManagers` с `Employee ID 6` в качестве значения параметра.  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers 6;  
 GO  
 ```  
   
  При выполнении переменная может быть явно поименована.  
   
-```  
+```sql    
 EXEC dbo.uspGetEmployeeManagers @EmployeeID = 6;  
 GO  
 ```  
   
  Если приведенная инструкция является первой в пакете или скрипте **osql** или **sqlcmd**, то указывать EXEC не требуется.  
   
-```  
+```sql    
 dbo.uspGetEmployeeManagers 6;  
 GO  
 --Or  
@@ -419,7 +500,7 @@ GO
 ### <a name="b-using-multiple-parameters"></a>Б. Передача нескольких аргументов  
  В следующем примере выполняется хранимая процедура `spGetWhereUsedProductID` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Передаются два параметра: код продукта `819` и дата проверки `@CheckDate,` со значением типа `datetime`.  
   
-```  
+```sql    
 DECLARE @CheckDate datetime;  
 SET @CheckDate = GETDATE();  
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;  
@@ -429,7 +510,7 @@ GO
 ### <a name="c-using-execute-tsql_string-with-a-variable"></a>В. Использование EXECUTE tsql_string с переменной  
  Следующий пример показывает, как инструкция `EXECUTE` обрабатывает динамически построенные строки, содержащие переменные. В примере производится создание курсора `tables_cursor`, в который помещается список всех пользовательских таблиц в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], а затем на основе этого списка перестраиваются индексы всех таблиц.  
   
-```  
+```sql    
 DECLARE tables_cursor CURSOR  
    FOR  
    SELECT s.name, t.name   
@@ -457,7 +538,7 @@ GO
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql    
 DECLARE @retstat int;  
 EXECUTE @retstat = SQLSERVER1.AdventureWorks2012.dbo.uspGetEmployeeManagers @BusinessEntityID = 6;  
 ```  
@@ -475,7 +556,7 @@ EXEC @proc_name;
 ### <a name="f-using-execute-with-default"></a>Е. Указание в инструкции EXECUTE ключевого слова DEFAULT  
  В следующем примере производится создание хранимой процедуры со значениями по умолчанию для первого и третьего аргументов. При запуске эти значения вставляются в первый и третий аргументы, если они не переданы при вызове процедуры. Обратите внимание, что ключевое слово `DEFAULT` может использоваться по-разному.  
   
-```  
+```sql    
 IF OBJECT_ID(N'dbo.ProcTestDefaults', N'P')IS NOT NULL  
    DROP PROCEDURE dbo.ProcTestDefaults;  
 GO  
@@ -494,7 +575,7 @@ GO
   
  Хранимая процедура `Proc_Test_Defaults`может быть выполнена во множестве разных сочетаний.  
   
-```  
+```sql    
 -- Specifying a value only for one parameter (@p2).  
 EXECUTE dbo.ProcTestDefaults @p2 = 'A';  
 -- Specifying a value for the first two parameters.  
@@ -516,7 +597,7 @@ EXECUTE dbo.ProcTestDefaults DEFAULT, 'I', @p3 = DEFAULT;
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql    
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
 EXECUTE ( 'CREATE TABLE AdventureWorks2012.dbo.SalesTbl   
@@ -527,7 +608,7 @@ GO
 ### <a name="h-using-execute-with-recompile"></a>З. Использование инструкции EXECUTE с аргументом WITH RECOMPILE  
  В следующем примере производится выполнение хранимой процедуры `Proc_Test_Defaults` с компиляцией нового плана запроса, который после выполнения модуля удаляется.  
   
-```  
+```sql    
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  
 GO  
 ```  
@@ -535,7 +616,7 @@ GO
 ### <a name="i-using-execute-with-a-user-defined-function"></a>И. Выполнение определяемой пользователем функции с помощью инструкции EXECUTE  
  В следующем примере выполняется скалярная, определяемая пользователем функция `ufnGetSalesOrderStatusText` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Возвращенное значение сохраняется в переменной `@returnstatus`. Функции передается один входной аргумент `@Status`, который имеет тип данных **tinyint**.  
   
-```  
+```sql    
 DECLARE @returnstatus nvarchar(15);  
 SET @returnstatus = NULL;  
 EXEC @returnstatus = dbo.ufnGetSalesOrderStatusText @Status = 2;  
@@ -548,7 +629,7 @@ GO
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver    
         @server='ORACLE',  
@@ -580,7 +661,7 @@ GO
 ### <a name="k-using-execute-as-user-to-switch-context-to-another-user"></a>Л. Переключение контекста на другого пользователя с помощью инструкции EXECUTE AS USER  
  В следующем примере выполняется командная строка [!INCLUDE[tsql](../../includes/tsql-md.md)], которая создает таблицу и указывает предложение `AS USER` для переключения контекста выполнения инструкции с вызывающего на пользователя `User1`. При запуске инструкции компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] проверит разрешения пользователя `User1`. Пользователь `User1` должен присутствовать в базе данных как пользователь и должен иметь разрешения на создание таблиц в схеме `Sales`; в противном случае инструкция завершается ошибкой.  
   
-```  
+```sql    
 EXECUTE ('CREATE TABLE Sales.SalesTable (SalesID int, SalesName varchar(10));')  
 AS USER = 'User1';  
 GO  
@@ -591,7 +672,7 @@ GO
   
 **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий
   
-```  
+```sql    
 -- Setup the linked server.  
 EXEC sp_addlinkedserver 'SeattleSales', 'SQL Server'  
 GO  
@@ -607,7 +688,7 @@ GO
   
 **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 EXEC uspGetEmployeeManagers 16  
 WITH RESULT SETS  
 (   
@@ -627,7 +708,7 @@ WITH RESULT SETS
   
 **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
-```  
+```sql    
 --Create the procedure  
 CREATE PROC Production.ProductList @ProdName nvarchar(50)  
 AS  
@@ -657,53 +738,103 @@ WITH RESULT SETS
 );  
   
 ```  
+  ### <a name="o-using-execute-with-at-data_source-data_source_name-to-query-a-remote-sql-server"></a>П. Использование инструкции EXECUTE с data_source_name AT DATA_SOURCE для запроса удаленного SQL Server 
   
-## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ В следующем примере командная строка передается во внешний источник данных, указывающий на экземпляр SQL Server. 
   
-### <a name="example-o-basic-procedure-execution"></a>Пример П. Выполнение основной процедуры  
+**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+  
+```sql    
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE my_sql_server;  
+GO  
+```  
+  
+### <a name="p-using-execute-with-at-data_source-data_source_name-to-query-compute-pool-in-sql-server-big-data-cluster"></a>Т. Использование инструкции EXECUTE с data_source_name AT DATA_SOURCE для запроса вычислительного пула в кластере больших данных SQL Server 
+
+ В следующем примере командная строка передается во внешний источник данных, указывающий на вычислительный пул в кластере больших данных SQL Server. В примере создается источник данных `SqlComputePool` для вычислительного пула в кластере больших данных SQL Server и выполняется инструкция `SELECT` к источнику данных. 
+  
+**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlComputePool 
+WITH (LOCATION = 'sqlcomputepool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlComputePool;  
+GO  
+```  
+
+### <a name="q-using-execute-with-at-data_source-data_source_name-to-query-data-pool-in-sql-server-big-data-cluster"></a>У. Использование инструкции EXECUTE с data_source_name AT DATA_SOURCE для запроса пула данных в кластере больших данных SQL Server 
+ В следующем примере командная строка передается во внешний источник данных, указывающий на вычислительный пул в кластере больших данных SQL Server. В примере создается источник данных `SqlDataPool` для пула данных в кластере больших данных SQL Server и выполняется инструкция `SELECT` к источнику данных. 
+  
+**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlDataPool 
+WITH (LOCATION = 'sqldatapool://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlDataPool;  
+GO  
+```
+
+### <a name="r-using-execute-with-at-data_source-data_source_name-to-query-storage-pool-in-sql-server-big-data-cluster"></a>Ф. Использование инструкции EXECUTE с data_source_name AT DATA_SOURCE для запроса пула носителей в кластере больших данных SQL Server 
+
+ В следующем примере командная строка передается во внешний источник данных, указывающий на вычислительный пул в кластере больших данных SQL Server. В примере создается источник данных `SqlStoragePool` для пула данных в кластере больших данных SQL Server и выполняется инструкция `SELECT` к источнику данных. 
+  
+**Область применения**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] и более поздних версий
+  
+```sql  
+CREATE EXTERNAL DATA SOURCE SqlStoragePool
+WITH (LOCATION = 'sqlhdfs://controller-svc/default');
+EXECUTE ( 'SELECT @@SERVERNAME' ) AT DATA_SOURCE SqlStoragePool;  
+GO  
+```
+
+  
+## <a name="examples-azure-synapse-analytics"></a>Примеры: Azure Synapse Analytics 
+  
+### <a name="a-basic-procedure-execution"></a>A. Выполнение основной процедуры  
  Выполнение хранимой процедуры:  
   
-```  
+```sql  
 EXEC proc1;  
 ```  
   
  Вызов хранимой процедуры с именем, определенным во время выполнения:  
   
-```  
+```sql    
 EXEC ('EXEC ' + @var);  
 ```  
   
  Вызов хранимой процедуры из хранимой процедуры:  
   
-```  
+```sql   
 CREATE sp_first AS EXEC sp_second; EXEC sp_third;  
 ```  
   
-### <a name="example-p-executing-strings"></a>Пример Р. Выполнение строк  
+### <a name="b-executing-strings"></a>Б. Выполнение строк  
  Выполнение строки SQL:  
   
-```  
+```sql   
 EXEC ('SELECT * FROM sys.types');  
 ```  
   
  Выполнение вложенной строки:  
   
-```  
+```sql  
 EXEC ('EXEC (''SELECT * FROM sys.types'')');  
 ```  
   
  Выполнение строковой переменной:  
   
-```  
+```sql  
 DECLARE @stringVar nvarchar(100);  
 SET @stringVar = N'SELECT name FROM' + ' sys.sql_logins';  
 EXEC (@stringVar);  
 ```  
   
-### <a name="example-q-procedures-with-parameters"></a>Пример С. Процедуры с параметрами  
+### <a name="c-procedures-with-parameters"></a>В. Процедуры с параметрами  
+
  В следующем примере создается процедура с параметрами и демонстрируется три способа выполнения процедуры.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE PROC ProcWithParameters  

@@ -5,20 +5,20 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 08/28/2017
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e10f354a8f0af2467a9519a794995043864a4cd6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abe2613d421e07107c6ce81b18f5f9f83c8fe66d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558594"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897301"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Настройка экземпляра отказоустойчивого кластера (iSCSI) — SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье описывается, как настроить хранилище iSCSI для экземпляра отказоустойчивого кластера в Linux. 
 
@@ -66,7 +66,7 @@ iSCSI использует сетевые подключения для пред
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName> — это уникальное/понятное имя для сети, \<TargetIPAddress> — это IP-адрес цели iSCSI, а \<TargetPort> — это порт цели iSCSI. 
+     \<iSCSINetName> — это уникальное/понятное имя для сети, \<TargetIPAddress> — это IP-адрес цели iSCSI, а \<TargetPort> — порт цели iSCSI. 
 
     ![iSCSITargetResults][3]
 
@@ -77,7 +77,7 @@ iSCSI использует сетевые подключения для пред
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSIIfaceName> — это уникальное/понятное имя для сети, а \<TargetIPAddress> — это IP-адрес цели iSCSI.
+    \<iSCSIIfaceName> — это уникальное/понятное имя для сети, а \<TargetIPAddress> — это IP-адрес цели iSCSI.
 
     ![iSCSITargetLogin][4]
 
@@ -103,7 +103,7 @@ iSCSI использует сетевые подключения для пред
     sudo pvcreate /dev/<devicename>
     ```
 
-    \<devicename> — это имя устройства из предыдущего шага. 
+    \<devicename> — это имя устройства из предыдущего шага. 
 
  
 8.  Создайте группу томов на диске iSCSI. Диски, назначенные одной группе томов, отображаются в виде пула или коллекции. 
@@ -112,7 +112,7 @@ iSCSI использует сетевые подключения для пред
     sudo vgcreate <VolumeGroupName> /dev/devicename
     ```
 
-    \<VolumeGroupName> — это имя группы томов, а \<devicename> — это имя устройства из шага 6. 
+    \<VolumeGroupName> — это имя группы томов, а \<devicename> — это имя устройства из шага 6. 
  
 9.  Создайте и проверьте логический том для диска.
 
@@ -120,7 +120,7 @@ iSCSI использует сетевые подключения для пред
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<size> — это размер создаваемого тома, для которого можно указать G (гигабайты), T (терабайты) и т. п., \<LogicalVolumeName> — это имя логического тома, а \<VolumeGroupName> — это имя группы томов из предыдущего шага. 
+    \<size> — это размер создаваемого тома, для которого можно указать G (гигабайты), T (терабайты) и т. п., \<LogicalVolumeName> — это имя логического тома, а \<VolumeGroupName> — имя группы томов из предыдущего шага. 
 
     В приведенном ниже примере создается том размером 25 ГБ.
  
@@ -134,212 +134,213 @@ iSCSI использует сетевые подключения для пред
     sudo mkfs.ext4 /dev/<VolumeGroupName>/<LogicalVolumeName>
     ```
 
-    \<VolumeGroupName> — это имя группы томов из предыдущего шага. \<LogicalVolumeName> — это имя логического тома из предыдущего шага.  
+    \<VolumeGroupName> — это имя группы томов из предыдущего шага. \<LogicalVolumeName> — это имя логического тома из предыдущего шага.  
 
 12. Для системных баз данных или других объектов, хранящихся в расположении данных по умолчанию, выполните указанные ниже действия. В противном случае перейдите к шагу 13.
 
-   *    Убедитесь в том, что SQL Server остановлен на сервере, на котором вы работаете.
+   * Убедитесь в том, что SQL Server остановлен на сервере, на котором вы работаете.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ```
-
-   *    Перейдите в режим суперпользователя. В случае успешного действия подтверждение не выводится.
-
-    ```bash
-    sudo -i
-    ```
-
-   *    Переключитесь на пользователя mssql. В случае успешного действия подтверждение не выводится.
-
-    ```bash
-    su mssql
-    ```
-
-   *    Создайте временный каталог для хранения данных и файлов журналов SQL Server. В случае успешного действия подтверждение не выводится.
-
-    ```bash
-    mkdir <TempDir>
-    ```
-
-    \<TempDir> — это имя папки. В приведенном ниже примере создается папка /var/opt/mssql/TempDir.
-
-    ```bash
-    mkdir /var/opt/mssql/TempDir
-    ```
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ```
     
-   *    Скопируйте данные и файлы журналов SQL Server во временный каталог. В случае успешного действия подтверждение не выводится.
+   * Перейдите в режим суперпользователя. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    cp /var/opt/mssql/data/* <TempDir>
-    ```
-
-    \<TempDir> — это имя папки из предыдущего шага.
+        ```bash
+        sudo -i
+        ```
     
-   *    Проверьте наличие файлов в папке.
+   * Переключитесь на пользователя mssql. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    ls \<TempDir>
-    ```
-    \<TempDir> — это имя папки из шага d.
+        ```bash
+        su mssql
+        ```
+    
+   * Создайте временный каталог для хранения данных и файлов журналов SQL Server. В случае успешного действия подтверждение не выводится.
 
-   *    Удалите файлы из существующего каталога данных SQL Server. В случае успешного действия подтверждение не выводится.
+        ```bash
+        mkdir <TempDir>
+        ```
+    
+        \<TempDir> — это имя папки. В приведенном ниже примере создается папка /var/opt/mssql/TempDir.
 
-    ```bash
-    rm - f /var/opt/mssql/data/*
-    ```
+        ```bash
+        mkdir /var/opt/mssql/TempDir
+        ```
+        
+   * Скопируйте данные и файлы журналов SQL Server во временный каталог. В случае успешного действия подтверждение не выводится.
 
-   *    Проверьте, были ли файлы удалены. На рисунке ниже показан пример всей последовательности с c по h.
+        ```bash
+        cp /var/opt/mssql/data/* <TempDir>
+        ```
+    
+        \<TempDir> — это имя папки из предыдущего шага.
+    
+   * Проверьте наличие файлов в папке.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ```
-
-    ![45-CopyMove][8]
+        ```bash
+        ls \<TempDir>
+        ```
  
-   *    Введите `exit`, чтобы переключиться на привилегированного пользователя.
+        \<TempDir> — это имя папки из шага d.
 
-   *    Подключите логический том iSCSI в папке данных SQL Server. В случае успешного действия подтверждение не выводится.
+   * Удалите файлы из существующего каталога данных SQL Server. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
-    ``` 
+        ```bash
+        rm - f /var/opt/mssql/data/*
+        ```
+    
+   * Проверьте, были ли файлы удалены. На рисунке ниже показан пример всей последовательности с c по h.
 
-    \<VolumeGroupName> — это имя группы томов, а \<LogicalVolumeName> — это имя созданного логического тома. Приведенный ниже пример синтаксиса соответствует группе томов и логическому тому из предыдущей команды.
+        ```bash
+        ls /var/opt/mssql/data
+        ```
+    
+        ![45-CopyMove][8]
 
-    ```bash
-    mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
-    ``` 
+   * Введите `exit`, чтобы переключиться на привилегированного пользователя.
 
-   *    Измените владельца подключения на mssql. В случае успешного действия подтверждение не выводится.
+   * Подключите логический том iSCSI в папке данных SQL Server. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    chown mssql /var/opt/mssql/data
-    ```
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
+        ```
 
-   *    Измените владельца группы подключения на mssql. В случае успешного действия подтверждение не выводится.
+        \<VolumeGroupName> — это имя группы томов, а \<LogicalVolumeName> — это имя созданного логического тома. Приведенный ниже пример синтаксиса соответствует группе томов и логическому тому из предыдущей команды.
 
-    ```bash
-    chgrp mssql /var/opt/mssql/data
-    ``` 
+        ```bash
+        mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
+        ```
 
-   *    Переключитесь на пользователя mssql. В случае успешного действия подтверждение не выводится.
+   * Измените владельца подключения на mssql. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    su mssql
-    ``` 
+        ```bash
+        chown mssql /var/opt/mssql/data
+        ```
 
-   *    Скопируйте файлы из временного каталога /var/opt/mssql/data. В случае успешного действия подтверждение не выводится.
+   * Измените владельца группы подключения на mssql. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
-    ``` 
+        ```bash
+        chgrp mssql /var/opt/mssql/data
+        ```
 
-   *    Проверьте наличие файлов.
+   * Переключитесь на пользователя mssql. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    ls /var/opt/mssql/data
-    ``` 
- 
+        ```bash
+        su mssql
+        ``` 
+
+   * Скопируйте файлы из временного каталога /var/opt/mssql/data. В случае успешного действия подтверждение не выводится.
+
+        ```bash
+        cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
+        ``` 
+    
+   * Проверьте наличие файлов.
+
+        ```bash
+        ls /var/opt/mssql/data
+        ``` 
+
    *    Введите `exit`, чтобы выйти из учетной записи mssql.
-    
+
    *    Введите `exit`, чтобы выйти из учетной записи привилегированного пользователя.
 
    *    Запустите SQL Server. Если все данные были скопированы и параметры безопасности применены правильно, сервер SQL Server должен отобразиться как запущенный.
 
-    ```bash
-    sudo systemctl start mssql-server
-    sudo systemctl status mssql-server
-    ``` 
- 
+        ```bash
+        sudo systemctl start mssql-server
+        sudo systemctl status mssql-server
+        ``` 
+
    *    Остановите сервер SQL Server и убедитесь в том, что его работа прекращена.
 
-    ```bash
-    sudo systemctl stop mssql-server
-    sudo systemctl status mssql-server
-    ``` 
+        ```bash
+        sudo systemctl stop mssql-server
+        sudo systemctl status mssql-server
+        ``` 
 
 13. Для объектов, отличных от системных баз данных, например пользовательских баз данных или резервных копий, выполните указанные ниже действия. Если используется только расположение по умолчанию, перейдите к шагу 14.
 
    *    Перейдите в режим суперпользователя. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    sudo -i
-    ```
+        ```bash
+        sudo -i
+        ```
 
    *    Создайте папку, которая будет использоваться сервером SQL Server. 
 
-    ```bash
-    mkdir <FolderName>
-    ```
+        ```bash
+        mkdir <FolderName>
+        ```
 
-    \<FolderName> — это имя папки. Если папка находится в другом месте, необходимо указать полный путь к ней. В приведенном ниже примере создается папка /var/opt/mssql/userdata.
+        \<FolderName> — это имя папки. Если папка находится в другом месте, необходимо указать полный путь к ней. В приведенном ниже примере создается папка /var/opt/mssql/userdata.
 
-    ```bash
-    mkdir /var/opt/mssql/userdata
-    ```
+        ```bash
+        mkdir /var/opt/mssql/userdata
+        ```
 
    *    Подключите логический том iSCSI в папке, созданной в предыдущем шаге. В случае успешного действия подтверждение не выводится.
-    
-    ```bash
-    mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
 
-    \<VolumeGroupName> — это имя группы томов, \<LogicalVolumeName> — это имя созданного логического тома, а \<FolderName> — это имя папки. Пример синтаксиса показан ниже.
+        ```bash
+        mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    ```bash
-    mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        \<VolumeGroupName> — это имя группы томов, \<LogicalVolumeName> — это имя созданного логического тома, а \<FolderName> — имя папки. Пример синтаксиса показан ниже.
+
+        ```bash
+        mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
    *    Измените владельца созданной папки на mssql. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> — это имя созданной папки. Ниже приведен пример такого файла.
+        \<FolderName> — это имя созданной папки. Ниже приведен пример такого файла.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
-  
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
+
    *    Измените владельца группы папки на mssql. В случае успешного действия подтверждение не выводится.
 
-    ```bash
-    chown mssql <FolderName>
-    ```
+        ```bash
+        chown mssql <FolderName>
+        ```
 
-    \<FolderName> — это имя созданной папки. Ниже приведен пример такого файла.
+        \<FolderName> — это имя созданной папки. Ниже приведен пример такого файла.
 
-    ```bash
-    chown mssql /var/opt/mssql/userdata
-    ```
+        ```bash
+        chown mssql /var/opt/mssql/userdata
+        ```
 
    *    Введите `exit`, чтобы выйти из режима суперпользователя.
 
    *    Создайте в этой папке базу данных для тестирования. В примере ниже создается база данных с помощью sqlcmd, переключается контекст, проверяется наличие файлов на уровне ОС, а затем временная папка удаляется. Можно также использовать SSMS.
   
-    ![50-ExampleCreateSSMS][9]
+        ![50-ExampleCreateSSMS][9]
 
    *    Отключение общей папки 
 
-    ```bash
-    sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
-    ```
+        ```bash
+        sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
+        ```
 
-    \<VolumeGroupName> — это имя группы томов, \<LogicalVolumeName> — это имя созданного логического тома, а \<FolderName> — это имя папки. Пример синтаксиса показан ниже.
+        \<VolumeGroupName> — это имя группы томов, \<LogicalVolumeName> — это имя созданного логического тома, а \<FolderName> — имя папки. Пример синтаксиса показан ниже.
 
-    ```bash
-    sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
-    ```
+        ```bash
+        sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
+        ```
 
 14. Настройте сервер таким образом, чтобы группу томов мог активировать только Pacemaker.
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
- 
+
 15. Создайте список групп томов на сервере. Все указанное, не являющееся диском iSCSI, используется системой, например для диска ОС.
 
     ```bash
@@ -352,11 +353,10 @@ iSCSI использует сетевые подключения для пред
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker> — это список групп томов из выходных данных шага 20, которые не будут использоваться экземпляром отказоустойчивого кластера. Заключите каждый из них в кавычки и разделите запятыми. Ниже приведен пример такого файла.
+    \<ListOfVGsNotUsedByPacemaker> — это список групп томов из выходных данных шага 20, которые не будут использоваться экземпляром отказоустойчивого кластера. Заключите каждый из них в кавычки и разделите запятыми. Ниже приведен пример такого файла.
 
     ![55-ListOfVGs][11]
- 
- 
+
 17. При запуске Linux подключит файловую систему. Чтобы убедиться, что только Pacemaker может подключить диск iSCSI, перестройте корневой образ файловой системы. 
 
     Выполните приведенную ниже команду, что может занять несколько секунд. При успешном выполнении команда не возвращает никакие сообщение.
@@ -374,6 +374,7 @@ iSCSI использует сетевые подключения для пред
     ```bash
     sudo vgs
     ``` 
+
 23. Запустите SQL Server и убедитесь, что он может быть запущен на этом сервере.
 
     ```bash
@@ -387,14 +388,15 @@ iSCSI использует сетевые подключения для пред
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
+
 25. Повторите шаги 1–6 на всех других серверах, которые будут участвовать в экземпляре отказоустойчивого кластера.
 
 Теперь вы готовы к настройке экземпляра отказоустойчивого кластера.
 
-|Distribution |Раздел 
-|----- |-----
-|**Red Hat Enterprise Linux с надстройкой высокой доступности (HA)** |[Настройка](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Эксплуатация](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**SUSE Linux Enterprise Server с надстройкой высокой доступности (HA)** |[Настройка](sql-server-linux-shared-disk-cluster-sles-configure.md)
+| Distribution | Раздел |
+| :----------- | :---- |
+| Red Hat Enterprise Linux с надстройкой высокой доступности (HA) | [Настройка](sql-server-linux-shared-disk-cluster-configure.md)<br/>[Эксплуатация](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md) |
+| SUSE Linux Enterprise Server с надстройкой высокой доступности (HA) | [Настройка](sql-server-linux-shared-disk-cluster-sles-configure.md) |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 

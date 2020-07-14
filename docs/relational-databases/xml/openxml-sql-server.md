@@ -1,5 +1,6 @@
 ---
 title: OPENXML (SQL Server) | Документация Майкрософт
+description: Сведения об инструкции OPENXML в SQL Server, обеспечивающей внутреннее представление XML-документа в виде набора строк.
 ms.custom: ''
 ms.date: 05/11/2020
 ms.prod: sql
@@ -23,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770b00c8aa14a09be36dc81ac8f661ec822b243a
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 6acc03c2412ac33337236efba130344cc9f91c9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269449"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753702"
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  
   
  OPENXML может использоваться в инструкциях SELECT и SELECT INTO в любых позициях, где в качестве источника могут присутствовать поставщики наборов строк, представления или функция OPENROWSET. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md).  
@@ -139,7 +140,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  В следующей таблице описывается структура краевой таблицы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**bigint**|Уникальный идентификатор узла документов.<br /><br /> Корневой элемент имеет значение идентификатора, равное 0. Отрицательные значения идентификаторов зарезервированы.|  
 |**parentid**|**bigint**|Идентифицирует родителя узла. Родительский узел, определенный этим идентификатором, необязательно является родительским элементом. Однако это зависит от типа узла, родительский узел которого определен этим идентификатором. Например, если узел является текстовым, его родительский узел может быть узлом атрибута.<br /><br /> Если узел находится на верхнем уровне XML-документа, то его столбец **ParentID** принимает значение NULL.|  

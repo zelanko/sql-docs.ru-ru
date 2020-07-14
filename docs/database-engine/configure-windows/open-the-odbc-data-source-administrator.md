@@ -1,5 +1,6 @@
 ---
 title: Открытие администратора источников данных ODBC | Документы Майкрософт
+description: Узнайте, как открывать администратор источников данных ODBC в различных операционных системах. Этот компонент Windows можно использовать для создания источников данных ODBC и управления ими.
 ms.custom: ''
 ms.date: 11/07/2016
 ms.prod: sql
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - ODBC Data Source Administrator
 - opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: ebb0be56f5d4401ba296733d6430bb82d602d3da
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a7cc5f6a52b0492ceb45a65a4a68c6a0109c3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67997937"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696721"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Открытие администратора источника данных ODBC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описывается открытие администратора источников данных ODBC. Администратор источника данных ODBC представляет собой компонент Windows. Используйте администратор источника данных ODBC для создания источников данных ODBC и управления ими.  
   

@@ -1,5 +1,6 @@
 ---
 title: Экземпляры компонента Database Engine (SQL Server) | Документы Майкрософт
+description: Ознакомьтесь с экземплярами ядра СУБД. Просмотрите сведения о задачах, таких как настройка свойств и включение протоколов, которые можно выполнять в экземплярах.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f5364e0120c6bb4cbd9d6f7bbf5dfa021a5591f2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012052"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772596"
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] представляет собой копию исполняемого файла **sqlservr.exe** , который работает как служба операционной системы. Каждый экземпляр управляет несколькими системными базами данных, а также одной или несколькими пользовательскими базами данных. На каждом компьютере могут работать несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Приложения подключаются к экземпляру для выполнения работы в базе данных, которой управляет экземпляр.  
   
 ## <a name="instances"></a>Экземпляры  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9963f137470c7e252bc00be189c37ac98e6374e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4149e9a9a956aaf5a212d8a6ba2a7b65b1523ee3
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284361"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84817793"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Функции служб Integration Services, поддерживаемые различными выпусками SQL Server
 
@@ -44,6 +44,7 @@ ms.locfileid: "71284361"
 |Мастер горизонтального увеличения масштаба|Да|||||
 |Рабочая роль горизонтального увеличения масштаба|Да|Да <sup>1</sup>|TBD|TBD|TBD|
 |Поддержка Microsoft Dynamics CRM и Microsoft Dynamics AX в компонентах OData <sup>2</sup>|Да|Да||||
+|Поддержка Linux|Да|Да|||Да|
 
 <sup>1</sup> Если вы запускаете пакеты, которым в развертывании с горизонтальным увеличением масштаба требуются функции из выпуска Enterprise, рабочие роли горизонтального увеличения масштаба также должны выполняться на экземплярах SQL Server Enterprise.
 
@@ -53,7 +54,10 @@ ms.locfileid: "71284361"
 
 |Компонент|Enterprise|Standard|Интернет|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|мастер импорта и экспорта SQL Server|Да|Да|Да|Да|Да|  
+|мастер импорта и экспорта SQL Server|Да|Да|Да|Да<sup>1</sup>|Да<sup>1</sup>|
+
+<sup>1</sup> DTSWizard.exe не предоставляется с SQL в Linux. Но dtexec в Linux можно использовать для выполнения пакета, созданного с помощью DTSWizard в Windows.
+
 
 ## <a name="integration-services"></a><a name="IS"></a> Службы Integration Services  
   

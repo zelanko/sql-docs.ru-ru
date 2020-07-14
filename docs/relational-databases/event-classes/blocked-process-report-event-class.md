@@ -1,5 +1,6 @@
 ---
 title: Класс событий Blocked Process Report | Документация Майкрософт
+description: Класс событий Blocked Process Report показывает, что задача была заблокирована на период времени больше указанного в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce090a9018327d1808cf891b5ba6c068d37ccb73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 677e19c19ce569af91af282ef2a280c69161c9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763051"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
   
  Пороговое значение и частота создания отчетов в параметре **blocked process threshold** настраиваются с помощью хранимой процедуры **sp_configure** ; значение параметра может задаваться в секундах. По умолчанию отчеты о заблокированных процессах не создаются. Дополнительные сведения о настройке параметра **blocked process threshold** см. в разделе [Параметр конфигурации сервера "blocked process threshold"](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
@@ -29,13 +30,13 @@ ms.locfileid: "76516465"
   
 ## <a name="blocked-process-report-event-class-data-columns"></a>Столбцы класса событий Blocked Process Report  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|Идентификатор базы данных, в которой запрашивается блокировка. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] отображает имя базы данных, если столбец данных **ServerName** захвачен при трассировке и сервер доступен. Определите значение для базы данных, используя функцию DB_ID.|3|Да|  
 |**Длительность**|**bigint**|Время (в микросекундах), в течение которого процесс был заблокирован.|13|Да|  
 |**EndTime**|**datetime**|Время окончания события. Этот столбец не заполняется для классов событий запуска, таких как **SQL:BatchStarting** или **SP:Starting**.|15|Да|  
-|**EventClass**|**int**|Тип события = 137.|27|нет|  
-|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|нет|  
+|**EventClass**|**int**|Тип события = 137.|27|Нет|  
+|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|Нет|  
 |**IndexID**|**int**|Идентификатор индекса объекта, связанного с событием. Чтобы определить идентификатор индекса для объекта, используйте столбец **indid** в системной таблице **sysindexes** .|24|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  
 |**LoginSid**|**image**|Идентификатор безопасности вошедшего в систему пользователя. Системный поток всегда передает отчет об этом событии. IsSystem = 1; SID = sa.|41|Да|  

@@ -1,5 +1,6 @@
 ---
 title: Параметр конфигурации сервера "Database Mail XPs" | Документы Майкрософт
+description: Описание параметра DatabaseMail XPs. Знакомство с различными способами включения этого параметра для использования Database Mail в SQL Server.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -11,24 +12,24 @@ helpviewer_keywords:
 - Database Mail XPs option
 - Database Mail [SQL Server], enabling
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d495017b9bf2a5f58a5a880f1ce9696976ebd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68011958"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772567"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Параметр конфигурации сервера «Database Mail XPs»
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Используйте параметр **Расширенные хранимые процедуры компонента Database Mail** для включения компонента Database Mail на сервере. Вы можете выбрать  
   
-- `0`: компонент Database Mail не доступен (по умолчанию).  
+- `0`: Компонент Database Mail недоступен (по умолчанию).  
   
-- `1`: компонент Database Mail доступен.  
+- `1`: Компонент Database Mail доступен.  
   
  Новые настройки вступают в силу сразу же, без остановки или перезапуска сервера.  
   

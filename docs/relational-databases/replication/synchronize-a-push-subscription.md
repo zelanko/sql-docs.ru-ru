@@ -1,5 +1,6 @@
 ---
 title: Синхронизация принудительной подписки | Документация Майкрософт
+description: Узнайте, как синхронизировать принудительную подписку в SQL Server с помощью SQL Server Management Studio, агентов репликации или объектов Replication Management Objects.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4a6e56932ab54bc489000c98a29150df984f5991
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60901383eeab8202c47f897674140d2e808f5c99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716700"
 ---
 # <a name="synchronize-a-push-subscription"></a>Синхронизация принудительной подписки
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   В данном разделе описывается синхронизация принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)или объектов RMO.  
   
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -43,7 +44,7 @@ ms.locfileid: "72907871"
   
 4.  Щелкните подписку правой кнопкой мыши и выберите **Просмотреть состояние синхронизации**.  
   
-5.  В диалоговом окне **Просмотр состояния синхронизации — \<подписчик>:\<база_данных_подписки>** нажмите кнопку **Запустить**. Когда синхронизация будет завершена, появится сообщение **Синхронизация завершена** .  
+5.  В диалоговом окне **Просмотр состояния синхронизации — \<Subscriber>:\<SubscriptionDatabase>** нажмите кнопку **Пуск**. Когда синхронизация будет завершена, появится сообщение **Синхронизация завершена** .  
   
 6.  Щелкните **Закрыть**.  
 
@@ -57,7 +58,7 @@ ms.locfileid: "72907871"
   
 4.  Появится сообщение об установке соединения с распространителем. Нажмите кнопку **ОК**.  
   
-5.  В диалоговом окне **Просмотр состояния синхронизации — \<подписчик>:\<база_данных_подписки>** нажмите кнопку **Запустить**. Когда синхронизация будет завершена, появится сообщение **Синхронизация завершена** .  
+5.  В диалоговом окне **Просмотр состояния синхронизации — \<Subscriber>:\<SubscriptionDatabase>** нажмите кнопку **Пуск**. Когда синхронизация будет завершена, появится сообщение **Синхронизация завершена** .  
   
 6.  Щелкните **Закрыть**.  
   

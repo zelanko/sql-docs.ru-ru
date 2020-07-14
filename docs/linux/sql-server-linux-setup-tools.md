@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: В этой статье описывается установка средств SQL Server в Linux.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/12/2020
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: a6ee495dc984273b8a1c20784542d6611edbbbba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e427e429ea4fe65f1f4f0af707c1a11c16c0834b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288788"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897337"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установка программ командной строки SQL Server sqlcmd и bcp в Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Ниже приведены инструкции по установке программ командной строки, драйверов ODBC Майкрософт и их зависимостей. Пакет **mssql-tools** содержит следующие компоненты:
 
@@ -36,7 +36,7 @@ ms.locfileid: "79288788"
 
 В этой статье описывается установка программ командной строки. Примеры использования **sqlcmd** или **bcp** можно найти по [ссылкам](#next-steps) в конце этой статьи.
 
-## <a name="a-idrhelinstall-tools-on-rhel-7"></a><a id="RHEL"><a/>Установка средств в RHEL 7
+## <a name="a-idrhelinstall-tools-on-rhel-8"></a><a id="RHEL"><a/>Установка средств в RHEL 8
 
 Чтобы установить **mssql-tools** в Red Hat Enterprise Linux, выполните указанные ниже действия. 
 
@@ -49,7 +49,7 @@ ms.locfileid: "79288788"
 1. Скачайте файл конфигурации репозитория Microsoft Red Hat.
 
    ```bash
-   curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/msprod.repo
+   curl https://packages.microsoft.com/config/rhel/8/prod.repo > /etc/yum.repos.d/msprod.repo
    ```
 
 1. Выйдите из режима суперпользователя.
@@ -185,11 +185,11 @@ ms.locfileid: "79288788"
 
 *Установите программу [Homebrew](https://brew.sh), если ее еще нет:*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 Чтобы установить средства для Mac El Capitan и Sierra, используйте следующие команды:
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
@@ -218,7 +218,7 @@ brew install mssql-tools
 
    | Дистрибутив Linux | Расположение пакетов ODBC |
    |---|---|
-   | Red Hat | [https://packages.microsoft.com/rhel/7.3/prod](https://packages.microsoft.com/rhel/7.3/prod) |
+   | Red Hat | [https://packages.microsoft.com/rhel/8/prod](https://packages.microsoft.com/rhel/8/prod) |
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 

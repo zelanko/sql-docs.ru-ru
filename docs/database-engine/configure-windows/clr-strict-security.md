@@ -1,6 +1,6 @@
 ---
 title: Строгая безопасность среды CLR | Документы Майкрософт
-description: Настройка строгой безопасности среды CLR в SQL Server
+description: Сведения о настройке строгой безопасности общеязыковой среды выполнения (CLR) в SQL Server. Управление интерпретацией разрешений SAFE, EXTERNAL ACCESS и UNSAFE.
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - assemblies [CLR integration], strick security
 - clr strict security option
 ms.assetid: ''
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84c049f451572cb1119e695182a6c896f013e04b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd8f7f59c44187de4e639d12a9ab497a155f14f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087344"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85698008"
 ---
 # <a name="clr-strict-security"></a>Строгая безопасность среды CLR   
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Управляет интерпретацией разрешения `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].   
 

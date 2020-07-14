@@ -1,5 +1,6 @@
 ---
 title: Моментальные снимки базы данных (SQL Server) | Документация Майкрософт
+description: Узнайте, как использовать моментальные снимки базы данных для создания статических представлений базы данных, предназначенных только для чтения, в SQL Server. Поддерживаемые функции, предварительные требования и ограничения.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -18,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fdf81fde342a3c7f0e250d467e7b486d753a8588
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68300435"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630822"
 ---
 # <a name="database-snapshots-sql-server"></a>Моментальные снимки базы данных (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Моментальный снимок базы данных является статичным, доступным только для чтения представлением базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( *базы данных-источника*). Моментальный снимок базы данных согласуется на уровне транзакций с базой данных-источником в момент создания моментального снимка. Моментальный снимок базы данных всегда находится на том же экземпляре сервера, что и база данных-источник. Моментальный снимок базы данных предоставляет представление данных только для чтения в состоянии на момент создания моментального снимка. Размер файла моментального снимка увеличивается по мере внесения изменений в базу данных-источник. Подробные сведения см. в разделе [Общие сведения о функциях](#FeatureOverview) ниже.
   

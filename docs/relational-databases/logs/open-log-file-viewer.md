@@ -1,5 +1,6 @@
 ---
 title: Открытие средства просмотра журналов | Документация Майкрософт
+description: Узнайте, как использовать средство просмотра журнала в среде SQL Server Management Studio для доступа к сведениям об ошибках и событиях, занесенным в несколько журналов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6124fa7c8b4a0ab4637c52d7ceb38d4abc698fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667953"
 ---
 # <a name="open-log-file-viewer"></a>Открытие средства просмотра файла журнала
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Средство просмотра журнала используется в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для доступа к сведениям об ошибках и событиях, записываемых в следующие журналы.  
   
 -   Коллекция аудита  
@@ -46,7 +47,7 @@ ms.locfileid: "68083983"
   
  Чтобы получить доступ к файлам журнала для экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети, необходим доступ на чтение к пространству WMI **Root\Microsoft\SqlServer\ComputerManagement10** , а также к папке, в которой хранятся файлы журнала. Дополнительные сведения см. в подразделе "Безопасность" раздела [Просмотр автономных файлов журнала](../../relational-databases/logs/view-offline-log-files.md).  
   
-### <a name="security"></a>безопасность  
+### <a name="security"></a>Безопасность  
  Требуется членство в предопределенной роли сервера securityadmin.  
   
 ### <a name="view-log-files"></a>Просмотр файлов журнала  

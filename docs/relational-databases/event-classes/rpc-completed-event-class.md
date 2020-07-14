@@ -1,5 +1,6 @@
 ---
 title: Класс событий RPC:Completed | Документация Майкрософт
+description: Класс событий RPC:Completed указывает, что удаленный вызов процедуры в SQL Server завершен.
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 771305c30bb4008ee3e4b937296864276cf74b73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d92083a5869e41e325c1c395ef23ab6cfac628f0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67908324"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727388"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий RPC:Completed указывает, что удаленный вызов процедуры завершен.  
   
 ## <a name="rpccompleted-event-class-data-columns"></a>Столбцы данных класса событий RPC:Completed  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Значение типа Binary, зависящее от класса событий, фиксируемых при трассировке.|2|Да|  
@@ -35,9 +36,9 @@ ms.locfileid: "67908324"
 |имя_базы_данных|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |Duration|**bigint**|Количество занятого событием времени. В микросекундах, начиная с [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. В миллисекундах в более ранних версиях.|13|Да|  
 |EndTime|**datetime**|Время окончания удаленного вызова процедуры (RPC).|15|Да|  
-|Ошибка|**int**|Номер ошибки для данного события.<br /><br /> 0 = ОК<br /><br /> 1 = ошибка<br /><br /> 2 = прервано<br /><br /> 3 = пропущено|31|Да|  
-|EventClass|**int**|Тип события = 10.|27|нет|  
-|EventSequence|**int**|Последовательность данного события в запросе.|51|нет|  
+|Error|**int**|Номер ошибки для данного события.<br /><br /> 0 = ОК<br /><br /> 1 = ошибка<br /><br /> 2 = прервано<br /><br /> 3 = пропущено|31|Да|  
+|EventClass|**int**|Тип события = 10.|27|Нет|  
+|EventSequence|**int**|Последовательность данного события в запросе.|51|Нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IsSystem|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

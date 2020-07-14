@@ -1,6 +1,6 @@
 ---
 title: Просмотр отчета о доставке журналов (SSMS)
-description: Узнайте, как просмотреть отчет о доставке журналов с помощью графического интерфейса SQL Server Management Studio (SSMS).
+description: Просмотрите отчет о состоянии доставки журналов транзакций в SQL Server Management Studio. Запустите отчет о состоянии на сервере-источнике, сервере-получателе или сервере мониторинга.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba4a8e1d48587046ecceb9007ca57f580b0338c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258565"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748538"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>просмотреть отчет доставки журналов (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом подразделе описывается, как в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]просмотреть отчет «Состояние доставки журналов транзакций», Отчет состояния может быть запущен на сервере-источнике, сервере-получателе или сервере мониторинга. Для получения наиболее полных сведений о конфигурации доставки журналов просматривайте отчет на экземпляре сервера мониторинга.  
   
  Он отражает состояние всех действий по доставке журналов, доступных на сервере, к которому выполнено подключение. Если этот экземпляр сервера участвует в нескольких конфигурациях с разными ролями (например в роли монитора для одной базы данных и в роли сервера-получателя для другой), отображаемые результаты будут содержать сведения о каждой из конфигураций в соответствии с выполняемыми ролями. Если хранимая процедура в состоянии подключиться к экземпляру сервера мониторинга, определенного для данной конфигурации доставки журналов, в отчет выводятся дополнительные сведения, относящиеся к этой конфигурации.  

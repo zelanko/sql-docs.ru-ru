@@ -27,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44fc9e7e1c15ae2bd5eb4471d1ee5e396274faa0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68100465"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763223"
 ---
 # <a name="move-system-databases"></a>Перемещение системных баз данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описано, как в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]перемещают системные базы данных. Эта операция может пригодиться в следующих ситуациях:  
   
@@ -189,9 +189,9 @@ ms.locfileid: "68100465"
 
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a> Перемещение базы данных Resource  
- База данных Resource находится в каталоге \<*диск*>:\Program Files\Microsoft SQL Server\MSSQL\<версия.\<*имя_экземпляра*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
+ База данных находится в каталоге \<*drive*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*instance_name*>\MSSQL\Binn\\. Эту базу данных нельзя переместить.  
   
-##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Продолжение: после перемещения всех системных баз данных  
+##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Дальнейшие действия. После перемещения всех системных баз данных  
  Если все системные базы данных перемещаются на новый диск или том либо на другой сервер с другой буквой диска, выполните следующие обновления.  
   
 -   Измените путь к журналу агента SQL Server. Если этого не сделать, то агент SQL Server не сможет запуститься.  
@@ -204,7 +204,7 @@ ms.locfileid: "68100465"
   
 2.  Щелкните правой кнопкой мыши **Журналы ошибок** и выберите пункт **Настроить**.  
   
-3.  В диалоговом окне **Настройка журналов ошибок агента SQL Server** задайте новое расположение для файла SQLAGENT.OUT. Расположение по умолчанию — C:\Program Files\Microsoft SQL Server\MSSQL\<версия>.<имя_экземпляра>\MSSQL\Log\\.  
+3.  В диалоговом окне **Настройка журналов ошибок агента SQL Server** задайте новое расположение для файла SQLAGENT.OUT. Расположение по умолчанию: C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\.  
   
 #### <a name="change-the-database-default-location"></a>Измените расположение по умолчанию для базы данных  
   

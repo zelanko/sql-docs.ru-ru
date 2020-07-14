@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d7629abf8e458ccbc2cb1b24624d0cbb91918830
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 50f114b01f72f48dd0ebd28123dfabdeef3a4b91
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625731"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896578"
 ---
 # <a name="restore-statements---rewindonly-transact-sql"></a>Инструкции RESTORE — REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Перематывает на начало и закрывает указанное ленточное устройство, если оно осталось открытым после выполнения инструкции BACKUP или RESTORE без аргумента NOREWIND. Эта команда поддерживается только для ленточных устройств.  
   
@@ -64,7 +64,7 @@ FROM <backup_device> [ ,...n ]
  Логическое имя устройства резервного копирования, из которого восстанавливается база данных. Это имя создается с помощью процедуры **sp_addumpdevice** и должно соответствовать правилам наименования идентификаторов. Если аргумент задается в виде переменной ( **@** _logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
- Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Типы дисковых и ленточных устройств должны быть заданы с реальным именем устройства (например, полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' или TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной ( **@** _physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') или как другую переменную строкового типа данных, за исключением типов данных **ntext** или **text**.  
+ Разрешает сохранение резервных копий с названного диска или ленточного устройства хранения данных. Для дисковых и ленточных устройств нужно указать фактическое имя устройства (например, полный путь и имя файла): DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL\BACKUP\Mybackup.bak' or TAPE = '\\\\.\TAPE0'. Если аргумент задается в виде переменной ( **@** _physical\_backup\_device\_name\_var_), имя устройства можно указать как строковую константу ( **@** _physical\_backup\_device\_name\_var_ = '*physical_backup_device_name*') или как другую переменную строкового типа данных, за исключением типов данных **ntext** или **text**.  
   
  Укажите тип дискового устройства с помощью сетевого сервера с именем UNC (которое должно содержать имя компьютера). Дополнительные сведения об именах UNC см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -89,9 +89,9 @@ FROM <backup_device> [ ,...n ]
  Указывает, что по выполнении инструкции RESTORE лента из ленточного устройства автоматически не выгружается. NOUNLOAD остается установленным до тех пор, пока указано UNLOAD.  
   
 ## <a name="general-remarks"></a>Общие замечания  
- Инструкция RESTORE REWINDONLY является альтернативой инструкции RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. Список открытых ленточных устройств можно получить из динамического административного представления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
+ RESTORE REWINDONLY является альтернативой инструкции RESTORE LABELONLY FROM TAPE = \<name> WITH REWIND. Список открытых ленточных устройств можно получить из динамического административного представления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Инструкцию RESTORE REWINDONLY может выполнять любой пользователь.  

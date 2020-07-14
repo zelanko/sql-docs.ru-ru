@@ -1,5 +1,6 @@
 ---
 title: Определение корневого элемента для использования с FOR XML | Документация Майкрософт
+description: Просмотрите пример запроса, указывающего параметр ROOT предложения FOR XML для запроса одного элемента верхнего уровня из итогового XML.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: b4d82dd0518db3a6b126c725d61f8d94e2f80d5b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cf32be608e844036893b7c7dbf42ba76db0c203f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80662993"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632651"
 ---
-# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример. Задание корневого элемента для XML-документа, сформированного предложением FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Пример Определение корневого элемента для XML-документа, созданного предложением FOR XML
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Путем определения параметра `ROOT` в запросе `FOR XML` можно выполнить запрос одного элемента высшего уровня для итогового XML-документа, как показано в этом запросе. Данный аргумент, определенный для директивы `ROOT` , задает имя корневого элемента.  
   
 ## <a name="example"></a>Пример  

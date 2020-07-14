@@ -1,5 +1,6 @@
 ---
 title: Параметр конфигурации сервера "blocked process threshold" | Документы Майкрософт
+description: Сведения о том, как с помощью параметра blocked process threshold настроить интервал, с которым SQL Server создает отчеты о заблокированных процессах и выдает предупреждения.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -11,19 +12,21 @@ helpviewer_keywords:
 - thresholds [SQL Server]
 - blocked process threshold option
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bdd5f7d01e7271609562fb7d42126746d6163de4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725243"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>Параметр конфигурации сервера «blocked process threshold»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Параметр **blocked process threshold** определяет пороговое значение (в секундах), в течение которого блокированный процесс порождает сообщения. Пороговое значение может быть задано в диапазоне от 0 до 86 400. По умолчанию отчеты о заблокированных процессах не создаются. Это событие не формируется для системных задач и для задач, которые ожидают ресурсы, не производящие отслеживаемых взаимоблокировок.  
+ Параметр **blocked process threshold** определяет пороговое значение (в секундах), в течение которого блокированный процесс порождает сообщения. Пороговое значение может быть задано в диапазоне от 5 до 86400.  Монитор блокировки переходит в активное состояние каждые 5 секунд для обнаружения условий блокировки, а также других условий, таких как взаимоблокировка. Соответственно, если параметр blocked process threshold имеет значение 1, процессы, заблокированные в течение 1 секунды, обнаруживаться не будут. Минимальная продолжительность блокировки процесса, которую можно будет обнаружить, составляет 5 секунд.
+ 
+ По умолчанию отчеты о заблокированных процессах не создаются. Это событие не формируется для системных задач и для задач, которые ожидают ресурсы, не производящие отслеживаемых взаимоблокировок.  
   
  При формировании данного события можно выдать [предупреждение](../../ssms/agent/alerts.md) . Например, можно выдать администратору на пейджер сообщение о необходимости разобраться с блокировкой.  
   

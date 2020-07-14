@@ -1,5 +1,6 @@
 ---
 title: Соединение с компонентом Database Engine с использованием расширенной защиты | Документы Майкрософт
+description: Узнайте, каким образом Расширенная защита использует привязку служб и каналов для предотвращения релейных атак при проверке подлинности. Поймите, как включать или отключать эту функцию.
 ms.custom: ''
 ms.date: 05/21/2019
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9f54a62d7110f86087f796b6dc1f9a6c688d89d6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012102"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772640"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Соединение с компонентом Database Engine с использованием расширенной защиты
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает **расширенную защиту** , начиная с версии [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Расширенная защита для проверки подлинности** представляет собой функцию сетевых компонентов, реализуемую операционной системой. **Расширенная защита** поддерживается в Windows 7 и Windows Server 2008 R2. **Расширенная защита** входит в пакет обновления для более старых операционных систем [!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи **расширенную защиту**.  
   
 > [!IMPORTANT]  
@@ -86,7 +87,7 @@ ms.locfileid: "68012102"
   
 1.  В меню **Пуск** выберите последовательно **Все программы**, **Microsoft SQL Server** и **Диспетчер конфигурации SQL Server**.  
   
-2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** _\<_Имя_экземпляра *>* , а затем выберите пункт **Свойства**.  
+2.  Разверните узел **Конфигурация сети SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** _\<_InstanceName*>*, а затем выберите пункт **Свойства**.  
   
 3.  Для привязки каналов и служб на вкладке **Дополнительно** установите значение **Расширенная защита** для соответствующих параметров.  
   

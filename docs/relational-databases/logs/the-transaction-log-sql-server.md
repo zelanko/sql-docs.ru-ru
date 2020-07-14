@@ -1,5 +1,6 @@
 ---
 title: Журнал транзакций (SQL Server) | Документация Майкрософт
+description: Познакомьтесь с журналом транзакций. Каждая база данных SQL Server записывает все транзакции и изменения базы данных, необходимые в случае сбоя системы.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cd975ed830f9a0b705e516707d550697fbf34325
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74220a441301bdb44c00a6e6a998861df2c6ce02
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287808"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834765"
 ---
 # <a name="the-transaction-log-sql-server"></a>Журнал транзакций (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Каждая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет журнал транзакций, в котором фиксируются все транзакции и производимые ими в базе изменения.
   
 Журнал транзакций — это важная составляющая базы данных. Если система даст сбой, этот журнал поможет вам вернуть базу данных в согласованное состояние. 
@@ -103,7 +104,7 @@ ms.locfileid: "79287808"
   
  На самом деле усечение журнала может быть задержано из-за множества причин. Чтобы узнать причину, препятствующую усечению журнала транзакций в конкретном случае, выполните запрос по столбцам **log_reuse_wait** и **log_reuse_wait_desc** представления каталога [sys.database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). В следующей таблице описаны значения этих столбцов.  
   
-|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Description|  
+|Значение столбца log_reuse_wait|Значение столбца log_reuse_wait_desc|Описание|  
 |----------------------------|----------------------------------|-----------------|  
 |0|NOTHING;|Сейчас есть как минимум один [виртуальный файл журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), доступный для повторного использования.|  
 |1|CHECKPOINT|С момента последнего усечения журнала новых контрольных точек не было, либо заголовок журнала пока не вышел за пределы [виртуального файла журнала (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). (Все модели восстановления)<br /><br /> Это широко распространенная причина задержки усечения журнала. Дополнительные сведения см. в разделе [Контрольные точки базы данных (SQL Server)](../../relational-databases/logs/database-checkpoints-sql-server.md).|  
@@ -133,7 +134,7 @@ ms.locfileid: "79287808"
   
  Следующие операции, выполняемые с полным протоколированием в модели полного восстановления, осуществляются с минимальным протоколированием в простой модели восстановления и модели восстановления с неполным протоколированием:  
   
--   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Операции массового импорта ([bcp](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) и [INSERT... SELECT](../../t-sql/statements/insert-transact-sql.md)). Дополнительные сведения о том, когда массовый импорт в таблицу подлежит минимальному протоколированию, см. в разделе [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 Если включена репликация транзакций, операции `BULK INSERT` протоколируются полностью даже в модели восстановления с неполным протоколированием.  
   
@@ -157,8 +158,11 @@ ms.locfileid: "79287808"
         > [!WARNING]
         > Инструкция `DBCC DBREINDEX` является **устаревшей**. Не используйте ее в новых приложениях.  
   
+        > [!NOTE]
+        > Операции построения индекса используют минимальное ведение журнала, но могут быть отложены при одновременном выполнении резервного копирования. Эта задержка вызвана требованиями к синхронизации страниц буферного пула с минимальным протоколированием при использовании простой модели восстановления или модели восстановления с неполным протоколированием. 
+      
     -   Перестроение новой кучи [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) (если применимо). Освобождение страниц индексов при выполнении операции `DROP INDEX`**всегда** протоколируется полностью.
-  
+
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
 **Управление журналом транзакций**  
   

@@ -1,5 +1,6 @@
 ---
 title: Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio | Документация Майкрософт
+description: Узнайте, как запрашивать столбцы в Always Encrypted с использованием SQL Server Management Studio. Извлечение зашифрованных данных или текстовых значений, хранящихся в зашифрованных столбцах.
 ms.custom: ''
 ms.date: 10/31/2019
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 29816a41-f105-4414-8be1-070675d62e84
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 221c5c0fa216b8d5fba7f133b717a3d102aea963
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f33d58a0fe9b61519c8946708dcd22c84dff90ba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627411"
 ---
 # <a name="query-columns-using-always-encrypted-with-sql-server-management-studio"></a>Выполнение запросов к столбцам с помощью Always Encrypted с использованием SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 В этой статье описывается выполнение запросов к столбцам, зашифрованным с помощью [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md), с использованием [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). С помощью SSMS вы можете выполнять следующие задачи:
 - извлечение значений зашифрованных данных, хранящихся в зашифрованных столбцах; 
@@ -172,7 +173,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 Параметризация происходит успешно в следующих случаях:   
 - тип литерала, используемый для инициализации переменной, параметризация которой выполняется, должен совпадать с типом в объявлении переменной;   
-- если в качестве объявленного типа переменной используется тип даты или тип времени, переменную нужно инициализировать, используя строку в одном из совместимых с ISO 8601 форматов.   
+- если в качестве объявленного типа переменной используется тип даты или времени, переменную нужно инициализировать, используя строку в одном из следующих [совместимых с ISO 8601 форматов](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles).    
 
 Ниже приведены примеры объявлений переменных Transact-SQL, которые приводят к ошибкам параметризации переменных.   
 ```sql

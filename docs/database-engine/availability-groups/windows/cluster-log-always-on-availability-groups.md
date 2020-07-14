@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 4b0cd86318c4ff884ba31fed56e31202c70990ff
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925295"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896127"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Создание и анализ журнала CLUSTER.LOG для группы доступности Always On
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В качестве ресурса отказоустойчивого кластера существуют внешние взаимодействия между SQL Server, службой отказоустойчивого кластера Windows Server (WSFC) и библиотекой SQL Server (hadrres.dll), которые невозможно отслеживать внутри SQL Server. Журнал WSFC — CLUSTER.LOG — позволяет диагностировать проблемы в кластере WSFC или в библиотеке ресурсов SQL Server. 
   
 ## <a name="generate-cluster-log"></a>Создание журнала кластера  
@@ -69,7 +69,7 @@ Get-ClusterLog -TimeSpan 15 -Destination .
   
  Чтобы изолировать группу доступности от других библиотек ресурсов кластера, включая другие группы доступности, сделайте следующее для запуска hadrres.dll внутри отдельного процесса rhs.exe:  
   
-1.  Откройте **редактора реестра** и перейдите к следующему разделу: HKEY_LOCAL_MACHINE\Cluster\Resources. Этот раздел содержит ключи для всех ресурсов, каждый из которых имеет собственный GUID.  
+1.  Откройте **редактор реестра** и перейдите к следующему разделу: HKEY_LOCAL_MACHINE\Cluster\Resources. Этот раздел содержит ключи для всех ресурсов, каждый из которых имеет собственный GUID.  
   
 2.  Найдите ключ ресурса, содержащий значение **Name**, совпадающее с именем группы доступности.  
   

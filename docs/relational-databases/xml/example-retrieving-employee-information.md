@@ -1,5 +1,6 @@
 ---
-title: Пример. Получение сведений о сотрудниках | Документация Майкрософт
+title: Пример Получение сведений о сотрудниках | Документация Майкрософт
+description: Просмотрите пример получения сведений о сотрудниках из базы данных в виде файла XML с помощью запроса FOR XML EXPLICIT.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 692ceb3d2c25bab437d92c5634a0b9c89d3b3221
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 827334e3e132128ed78f612788c96e8ad15f5443
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632778"
 ---
-# <a name="example-retrieving-employee-information"></a>Пример. Получение сведений о сотрудниках
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-retrieving-employee-information"></a>Пример Получение сведений о сотрудниках
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В этом примере извлекаются идентификаторы и имена всех работников. В базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] значение employeeID может быть получено из столбца BusinessEntityID таблицы Employee. Имена работников могут быть получены из таблицы Person. Столбец BusinessEntityID можно использовать для соединения этих таблиц.  
   
  Предположим, что требуется произвести преобразование FOR XML EXPLICIT, чтобы сформировать XML так, как показано далее:  

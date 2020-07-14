@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 1f510151-41d5-45c2-9cd0-b1ca0246fffe
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c63162f11794299e0708c71219a639de9566456e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 902cebc510572b8900acf6f12666398ef9d147b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766907"
 ---
 # <a name="create-xml-index-selective-xml-indexes"></a>CREATE XML INDEX (селективные XML-индексы)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Создает новый вторичный селективный XML-индекс по одному пути, который уже проиндексирован существующим селективным XML-индексом. Кроме того, вы можете создавать первичные селективные XML-индексы. Дополнительные сведения см. в разделе [Создание, изменение и удаление селективных XML-индексов](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md).  
   
@@ -69,7 +69,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
  *index_name*  
  Имя создаваемого нового индекса. Имена индексов должны быть уникальными в пределах таблицы, но не обязательно должны быть уникальными в пределах базы данных. Имена индексов должны удовлетворять правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- ON *\<table_object>* Таблица, которая содержит индексируемый XML-столбец. Вы можете использовать следующие форматы.  
+ ON *\<table_object>* . Таблица, которая содержит индексируемый XML-столбец. Вы можете использовать следующие форматы.  
   
 -   `database_name.schema_name.table_name`  
   
@@ -83,9 +83,9 @@ xmlnamespace_uri AS xmlnamespace_prefix
  USING XML INDEX *sxi_index_name*  
  Имя существующего селективного XML-индекса.  
   
- FOR **(** \<xquery_or_sql_values_path> **)** Имя индексируемого пути, по которому создается вторичный селективный XML-индекс. Путь для индексирования является присвоенным именем из инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
+ FOR **(** \<xquery_or_sql_values_path> **)** . Имя индексируемого пути, по которому создается вторичный селективный XML-индекс. Путь для индексирования является присвоенным именем из инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
- WITH \<index_options> Сведения о параметрах индекса см. в статье [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ WITH \<index_options>. Сведения о параметрах индекса см. в статье [CREATE XML INDEX](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
 ## <a name="remarks"></a>Remarks  
  Может быть несколько вторичных селективных XML-индексов в каждом XML-столбце базовой таблицы.  
@@ -93,7 +93,7 @@ xmlnamespace_uri AS xmlnamespace_prefix
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Для создания селективных XML-индексов для столбца необходимо, чтобы селективный XML-индекс для XML-столбца был уже создан.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  

@@ -1,5 +1,6 @@
 ---
 title: Обновление или исправление реплицируемых баз данных | Документация Майкрософт
+description: SQL Server поддерживает обновление реплицируемых баз данных предыдущих версий SQL Server без прекращения работы на других узлах.
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,16 +17,16 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c2d6d5fc367e66b7a5ca84e2d1c290203f61b8d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72008464"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900227"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>Обновление или исправление реплицируемых баз данных
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   [!INCLUDE[ssNoversion](../../includes/ssnoversion-md.md)] поддерживает обновление реплицируемых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущих версий, при этом на время обновления узла прекращать работу с другими узлами не требуется. Соблюдайте следующие правила, определяющие допустимые версии объектов репликации.  
   
@@ -37,7 +38,7 @@ ms.locfileid: "72008464"
  
 Путь обновления SQL Server зависит от схемы развертывания. Для SQL Server, как правило, предлагается два пути обновления:
 - Параллельное использование. Развертывание параллельной среды и перемещение баз данных вместе со связанными объектами уровня экземпляров, такими как учетные данные и задания, в новую среду. 
-- Обновление на месте. Установочный носитель SQL Server может обновить существующую установку SQL Server, заменив элементы SQL Server и обновив объекты баз данных. В средах с группами доступности Always On или экземплярами отказоустойчивых кластеров обновление на месте сочетается с [последовательным обновлением](choose-a-database-engine-upgrade-method.md#rolling-upgrade) для минимизации простоя. 
+- Обновление на месте. Установочный носитель SQL Server может обновить существующую установку SQL Server, заменив элементы SQL Server и обновив объекты баз данных. В средах с группами доступности Always On или экземплярами отказоустойчивых кластеров обновление на месте сочетается с [последовательным обновлением](choose-a-database-engine-upgrade-method.md#rolling-upgrade) для минимизации простоя. 
 
 Общий подход, который используется для обновления топологий репликации в параллельном режиме, подразумевает перемещение пар "издатель-подписчик" в новую параллельную среду по частям вместо перемещения всей топологии. Этот поэтапный подход помогает контролировать время простоя и до определенной степени минимизировать вмешательство в зависимую от репликации бизнес-деятельность.  
 

@@ -1,5 +1,6 @@
 ---
 title: Свойства базы данных (страница "Хранилище запросов") | Документация Майкрософт
+description: Узнайте, как использовать вкладку "Хранилище запросов" в диалоговом окне "Свойства базы данных" для настройки режимов хранилища запросов, интервалов, порогов и других свойств.
 ms.custom: ''
 ms.date: 11/09/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: da47d75e-291a-4305-acef-4b0aaf5215da
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 592fa533d6c6d6c518f1dcaaa3e70da2808b93b9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 57e3494bbb60128d24d047f904acb6990cde477c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947027"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631013"
 ---
 # <a name="database-properties-query-store-page"></a>Свойства базы данных (страница хранилища запросов)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Откройте эту страницу из основной базы данных и используйте ее для настройки и изменения свойств хранилища запросов базы данных. Эти параметры можно также настроить с помощью [параметров ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md). Дополнительные сведения о хранилище запросов см. в разделе [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).  
   
 ||  

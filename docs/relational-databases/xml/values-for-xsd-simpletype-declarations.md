@@ -1,5 +1,6 @@
 ---
 title: Значения для объявлений &lt;xsd:simpleType&gt; | Документация Майкрософт
+description: Просмотрите таблицу ограничений, которые применяются ко всем распознаваемым значениям объявления <xsd:simpleType>.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2bd50eb728047b911f25ea644d36adbd88f5097a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 2738ba3387ac167eeadc83071dcce1f4a59304bb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775520"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Значения для объявлений &lt;xsd:simpleType>&gt;
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Следующая таблица выделяет ограничения, которые применяются, основываясь на всех распознанных простых перечислениях типа XSD.  
   
- Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает использование значения NaN в объявлениях **\<xsd:simpleType>** . Схемы, включающие значения NaN, будут отклонены сервером.  
+ Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает использование значения «NaN» в объявлениях **\<xsd:simpleType>** . Схемы, включающие значения NaN, будут отклонены сервером.  
   
 |Простой тип|Ограничение|  
 |-----------------|----------------|  

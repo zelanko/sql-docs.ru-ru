@@ -1,5 +1,6 @@
 ---
 title: Задача "Проверка целостности базы данных" (план обслуживания) | Документация Майкрософт
+description: Диалоговое окно задачи «Проверка целостности базы данных» используется для проверки распределения и структурной целостности пользовательских и системных таблиц, а также индексов в базе данных SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68bdea5d7c63f8d4781dadd8250a14f258c0866f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a833b67471ad05e45f54776d49ec529c7fbb6fb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68083921"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667871"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Задача «Проверка целостности базы данных» (план обслуживания)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Диалоговое окно **Задача "Проверка целостности базы данных"** используется для проверки распределения и структурной целостности пользовательских и системных таблиц, а также индексов в базе данных путем запуска инструкции `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . Запуск `DBCC` гарантирует, что будет сообщено обо всех проблемах с целостностью в базе данных, таким образом позволяя системному администратору или владельцу базы данных устранить их позже.  
   

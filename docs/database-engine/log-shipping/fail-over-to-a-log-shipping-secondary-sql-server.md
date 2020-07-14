@@ -1,6 +1,6 @@
 ---
 title: Переход на вторичный сервер доставки журналов
-description: Инструкции по переходу на вторичный сервер доставки журналов SQL Server.
+description: Узнайте, как выполнить переход на вторичный сервер доставки журналов SQL Server с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 29b2fcad38e2971f39f63b400d307a2f64459eea
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba01642d09e9352b976978df1cfc78756ad79029
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696183"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Переход на вторичный сервер доставки журналов (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Переход на вторичный сервер доставки журналов может быть полезен в случаях, когда происходит сбой экземпляра сервера-источника или требуется его обслуживание.  
   
 ## <a name="preparing-for-a-controlled-failover"></a>Подготовка к управляемой отработке отказа  

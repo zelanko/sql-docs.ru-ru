@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f468697c165eefca98e5d5d7492b9a3d5eab25e8
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558329"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897270"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Экземпляр отказоустойчивого кластера SQL Server с двумя узлами и общим диском обеспечивает избыточность на уровне сервера для поддержки высокой доступности. В этом руководстве приводятся инструкции по созданию экземпляра отказоустойчивого кластера SQL Server с двумя узлами в Linux. Ниже перечислены конкретные действия, которые нужно выполнить.
 
@@ -35,7 +35,7 @@ ms.locfileid: "75558329"
 
 Концептуальные сведения см. в статье [Экземпляр отказоустойчивого кластера (FCI) SQL Server в Linux](sql-server-linux-shared-disk-cluster-concepts.md).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для выполнения следующего законченного сценария нужны два компьютера для развертывания двухузлового кластера и сервера для хранения. Ниже описаны действия по настройке этих серверов.
 
@@ -133,8 +133,8 @@ ms.locfileid: "75558329"
 
    > Если вы используете другой брандмауэр, который не имеет встроенной конфигурации высокого уровня доступности, откройте следующие порты, чтобы Pacemaker мог связываться с другими узлами в кластере.
    >
-   > * Порты TCP: 2224, 3121, 21064.
-   > * Порт UDP: 5405.
+   > * TCP: порты 2224, 3121, 21064
+   > * UDP: порт 5405
 
 1. Установите пакеты Pacemaker на каждом узле.
 
@@ -215,23 +215,23 @@ ms.locfileid: "75558329"
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName> — это имя сервера с общим ресурсом SMB.
+    \<ServerName> — это имя сервера с общей папкой SMB.
 
     \<ShareName> — это имя общей папки.
 
-    \<FolderName> — имя папки, созданной на последнем шаге.
+    \<FolderName> — это имя папки, созданной на предыдущем шаге.
     
     \<UserName> — это имя пользователя для доступа к общей папке.
 
     \<Password> — это пароль пользователя.
 
-    \<ADDomain> — домен AD DS (если это применимо при использовании общей папки SMB на основе Windows Server).
+    \<ADDomain> — это домен AD DS (если это применимо при использовании общей папки SMB на основе Windows Server).
 
     \<mssqlUID> — это идентификатор UID пользователя mssql.
 
     \<mssqlGID> — это идентификатор GID пользователя mssql.
 
-    \<RGName> — имя группы ресурсов.
+    \<RGName> — это имя группы ресурсов.
  
 2.  Создайте IP-адрес, который будет использоваться экземпляром FCI. При отсутствии проблем ответ не возвращается.
 
@@ -239,15 +239,15 @@ ms.locfileid: "75558329"
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
     ```
 
-    \<IPResourceName> — имя ресурса, связанного с IP-адресом.
+    \<IPResourceName> — это имя ресурса, связанного с IP-адресом.
 
-    \<IPAddress> — IP-адрес экземпляра FCI.
+    \<IPAddress> — это IP-адрес экземпляра FCI.
 
-    \<NetworkCard> — сетевая карта, связанная с подсетью (т. е., eth0).
+    \<NetworkCard> — это сетевая карта, связанная с подсетью (т. е. eth0).
 
-    \<NetMask> — маска подсети (т. е., 24).
+    \<NetMask> — это маска подсети (т. е. 24).
 
-    \<RGName> — имя группы ресурсов.
+    \<RGName> — это имя группы ресурсов.
  
 3.  Создание ресурса экземпляра FCI При отсутствии проблем ответ не возвращается.
 
@@ -255,9 +255,9 @@ ms.locfileid: "75558329"
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName> — не только имя ресурса, но и понятное имя, связанное с экземпляром FCI. Пользователи и приложения будут использовать его для подключения. 
+    \<FCIResourceName> — это не только имя ресурса, но и понятное имя, связанное с экземпляром FCI. Пользователи и приложения будут использовать его для подключения. 
 
-    \<RGName> — имя группы ресурсов.
+    \<RGName> — это имя группы ресурсов.
  
 4.  Выполните команду `sudo pcs resource`. Экземпляр FCI должен быть в сети.
  

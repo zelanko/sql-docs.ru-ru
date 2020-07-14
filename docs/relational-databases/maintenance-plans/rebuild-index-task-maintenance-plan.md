@@ -1,5 +1,6 @@
 ---
 title: Задача "Перестроение индекса" (план обслуживания) | Документация Майкрософт
+description: Узнайте, как выполнить повторное создание индексов для таблиц в базе данных с новым коэффициентом заполнения, используя задачу «Перестроение индекса».
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b5eba7d655d0c6ee047d59f3cd14ea39a6ad4ec3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1199b30249c5948381e40fe3c248b44a1f9c5930
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115582"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755728"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Диалоговое окно **Задача "Перестроение индекса"** используется для пересоздания индексов на таблицах в базе данных с новым коэффициентом заполнения. Коэффициент заполнения определяет количество пустого пространства на каждой странице индекса для обеспечения роста в будущем. По мере того как к таблице добавляются данные, свободное пространство заполняется, поскольку коэффициент заполнения не сохраняется. Восстановить свободное пространство можно путем реорганизации данных и страниц индекса.  
   
  **Задача "Перестроение индекса"** использует инструкцию ALTER INDEX. Дополнительные сведения о параметрах, описанных на этой странице, см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  

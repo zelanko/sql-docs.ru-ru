@@ -1,5 +1,6 @@
 ---
 title: Поддержка Management Studio для выполняющейся в памяти OLTP
+description: Используйте SQL Server Management Studio для управления оптимизированными для памяти таблицами, индексами таблиц, скомпилированными в собственном режиме хранимыми процедурами и определяемыми пользователем табличными типами.
 ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9bd4cb0c2fff4259814f6e33a65777023a801fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b909ab9d5290ae0c34c9c65a1bd47010a20952e4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412528"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85734982"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Поддержка среды SQL Server Management Studio для In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — интегрированная среда для управления инфраструктурой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет средства для настройки, наблюдения и администрирования экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [SQL Server Management Studio](https://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b).  
   
  Задачи в этом разделе показывают, как использовать среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления оптимизированными для памяти таблицами, индексами в оптимизированных для памяти таблицах, изначально скомпилированными хранимыми процедурами и оптимизированными пользовательскими табличными типами.  
@@ -91,7 +92,7 @@ ms.locfileid: "74412528"
   
  Для объектов баз данных, таблиц, хранимых процедур, пользовательского табличного типа и объектов индекса были обновлены и расширены следующие функции [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для поддержки OLTP в памяти.  
   
--   обозревателе объектов  
+-   Обозреватель объектов  
   
     -   Контекстные меню  
   

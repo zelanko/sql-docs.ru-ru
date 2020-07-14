@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eaac8c264caf9009006853e0f02e258ad5d7408f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e6a000df12b44b2da1913f45febfaa93e39f7af1
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165739"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85881218"
 ---
 # <a name="temporal-table-usage-scenarios"></a>Сценарии использования темпоральных таблиц
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Темпоральные таблицы обычно используются в сценариях, в которых требуется отслеживание журнала изменений данных. Мы рекомендуем использовать темпоральные таблицы в следующих случаях, поскольку они дают существенный выигрыш в производительности:
 
@@ -141,8 +141,8 @@ FROM Employee
 
 > [!TIP]
 > Условия фильтрации, указанные в темпоральных предложениях с FOR SYSTEM_TIME, поддерживают SARG (т. е. SQL Server может использовать соответствующий базовый кластеризованный индекс для выполнения поиска вместо операции сканирования.
-> При выполнении прямого запроса к таблице журнала важно, чтобы используемое условие фильтра поддерживало SARG. Для этого указывайте фильтры в формате \<столбец периода> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
-> Если применить AT TIME ZONE к столбцам периода, то SQL Server будет выполнять сканирование таблицы или индекса, что может обходиться очень дорого. Избегайте подобного типа условий в своих запросах: \<столбец периода> AT TIME ZONE ‘\<ваш часовой пояс>’ > {< | > | =, ...} date_condition.
+> При выполнении прямого запроса к таблице журнала важно, чтобы используемое условие фильтра поддерживало SARG. Для этого указывайте фильтры в формате \<period column> {< | > | =, ...} date_condition AT TIME ZONE 'UTC'.
+> Если применить AT TIME ZONE к столбцам периода, то SQL Server будет выполнять сканирование таблицы или индекса, что может обходиться очень дорого. Избегайте подобных условий в запросах: \<period column> AT TIME ZONE '\<your time zone>' > {< | > | =, ...} date_condition.
 
 См. также [Запрос данных в темпоральной таблице с системным управлением версиями](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md).
 

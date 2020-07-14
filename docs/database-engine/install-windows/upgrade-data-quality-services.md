@@ -1,7 +1,8 @@
 ---
 title: Обновление служб Data Quality Services | Документы Майкрософт
+description: Эта статья содержит сведения о том, как обновить существующую установку служб SQL Server Data Quality Services (DQS).
 ms.custom: ''
-ms.date: 07/24/2017
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,16 +11,16 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: fab545b34f257563466ec2f64911cdfaceca9456
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ebd08b11c99f8b5de54be9fc882c1fd2751afab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67934859"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900258"
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Эта статья содержит сведения о том, как обновить существующую установку служб [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). В процессе обновления сервера служб DQS в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] необходимо обновить схему базы данных служб DQS.  
   
@@ -58,18 +59,18 @@ ms.locfileid: "67934859"
   
     2.  В командной строке перейдите в папку, где находится файл DQSInstaller.exe. Для экземпляра SQL Server по умолчанию файл DQSInstaller.exe будет находиться в папке C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn:  
 
-      >[!NOTE]
-      >В пути к папке замените [nn] на номер версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
-      >- Для SQL Server 2016: 13
-      >- Для SQL Server 2017: 14
-
-        ```  
+        >[!NOTE]
+        >В пути к папке замените [nn] на номер версии [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)].
+        >- Для SQL Server 2016: 13
+        >- Для SQL Server 2017: 14
+    
+        ```console
         cd C:\Program Files\Microsoft SQL Server\MSSQL[nn].MSSQLSERVER\MSSQL\Binn  
         ```  
   
     3.  В командной строке введите следующую команду и нажмите клавишу ВВОД:  
   
-        ```  
+        ```console
         dqsinstaller.exe -upgrade  
         ```  
   
@@ -84,7 +85,7 @@ ms.locfileid: "67934859"
   
 2.  Выполните следующий запрос:  
   
-    ```  
+    ```sql
     SELECT * FROM DQS_MAIN.dbo.A_DB_VERSION WHERE STATUS=2;  
     SELECT * FROM DQS_PROJECTS.dbo.A_DB_VERSION WHERE STATUS=2;  
     ```  
@@ -93,8 +94,8 @@ ms.locfileid: "67934859"
   
     |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|Состояние|ошибка|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен\имя_пользователя>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен\имя_пользователя>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
 ## <a name="see-also"></a>См. также:  
  [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

@@ -30,19 +30,19 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: fc69b2a0615745966971ad83da2b0acadf3b2488
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262146"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773156"
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет объекты и счетчики, которые могут использоваться системным монитором для мониторинга активности на компьютере, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объект представляет собой любой ресурс [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например блокировку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или процесс Windows. В каждом объекте содержатся один или более счетчиков, определяющих различные аспекты объектов для мониторинга. Например, объект **Блокировки SQL Server** содержит счетчики с названием **Количество взаимоблокировок/с** и **Превышений времени ожидания блокировки в секунду**.  
   
- В некоторых объектах содержится несколько экземпляров разных ресурсов данного типа, существующих на компьютере. Например, у типа объектов **Процессор** будет несколько экземпляров, если в системе установлено несколько процессоров. У типа объектов **Базы данных** будет по одному экземпляру для каждой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. У некоторых типов объектов (например, у объекта **Диспетчер памяти** ) может быть только один экземпляр. Если у типа объектов несколько экземпляров, можно добавлять счетчики для отслеживания статистики каждого экземпляра или, во многих случаях, для всех экземпляров сразу. Счетчики для экземпляра по умолчанию отображаются в формате **SQLServer:** _\<имя_объекта>_ . Счетчики для именованных экземпляров отображаются в формате **MSSQL$** _\<имя_экземпляра>_ **:** _\<имя_счетчика>_ или **SQLAgent$** _\<имя_экземпляра>_ **:** _\<имя_счетчика>_ .  
+ В некоторых объектах содержится несколько экземпляров разных ресурсов данного типа, существующих на компьютере. Например, у типа объектов **Процессор** будет несколько экземпляров, если в системе установлено несколько процессоров. У типа объектов **Базы данных** будет по одному экземпляру для каждой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. У некоторых типов объектов (например, у объекта **Диспетчер памяти** ) может быть только один экземпляр. Если у типа объектов несколько экземпляров, можно добавлять счетчики для отслеживания статистики каждого экземпляра или, во многих случаях, для всех экземпляров сразу. Счетчики для экземпляра по умолчанию отображаются в формате **SQLServer:** _\<object name>_ . Счетчики для именованных экземпляров отображаются в формате **MSSQL$** _\<instance name>_ **:** _\<counter name>_ или **SQLAgent$** _\<instance name>_ **:** _\<counter name>_ .  
   
 Значения счетчиков производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создаются с помощью счетчика производительности Windows (WPC). Некоторые значения счетчика не вычисляются напрямую с помощью [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет базовые значения для подсистемы WPC, которая выполняет необходимые вычисления (например, проценты). Динамическое административное представление [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) предоставляет все счетчики с исходным значением, созданным [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Столбец `cntr_type` указывает тип счетчика. Способ обработки значений счетчика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] подсистемой WPC зависит от типа. Дополнительные сведения о типах счетчиков производительности см. в [документации по WMI](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
   

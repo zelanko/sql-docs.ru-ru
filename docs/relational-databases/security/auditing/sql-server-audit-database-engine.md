@@ -1,5 +1,6 @@
 ---
 title: Подсистема аудита SQL Server (ядро СУБД) | Документация Майкрософт
+description: Сведения об аудитах сервера для ядра СУБД SQL Server или отдельной базы данных. Аудиты сервера содержат спецификации аудита для сервера и базы данных.
 ms.custom: ''
 ms.date: 01/01/2020
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: davidtrigano
 ms.author: datrigan
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: f13076ab831dbf3321a60aef8752d88c6193265a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1d9d459729a05078043b5365a54d16ade45df31d
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80243414"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85294630"
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +128,7 @@ ms.locfileid: "80243414"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Зеркальное отображение баз данных и подсистема аудита SQL Server  
  Если для базы данных определена спецификация аудита базы данных и используется зеркальное отображение базы данных, то в нее будет включена спецификация аудита базы данных. Для правильной работы на зеркальном экземпляре SQL необходимо выполнить настройку следующих элементов.  
   
--   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID **=** _\<GUID из подсистемы аудита исходного сервера>_ .  
+-   Чтобы спецификация аудита базы данных могла создавать записи аудита, на зеркальном сервере должен присутствовать аудит с тем же идентификатором GUID. Это можно настроить с помощью команды CREATE AUDIT WITH GUID **=** _\<GUID from source Server Audit_>.  
   
 -   При использовании в качестве цели двоичного файла учетная запись службы зеркального сервера должна обладать необходимыми разрешениями на место назначения, куда производится запись аудиторского следа.  
   
@@ -142,7 +143,7 @@ ms.locfileid: "80243414"
 ### <a name="data-definition-language-statements"></a>Инструкции языка определения данных DDL  
  Чтобы создать, изменить или удалить спецификацию аудита, можно использовать следующие инструкции DDL.  
   
-|Инструкции DDL|Description| 
+|Инструкции DDL|Описание| 
 |-|-|  
 |[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|Изменяет владельца защищаемой сущности.|  
 |[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|Изменяет объект спецификации аудита базы данных с помощью компонента аудита SQL Server.|  
@@ -158,7 +159,7 @@ ms.locfileid: "80243414"
 ### <a name="dynamic-views-and-functions"></a>Динамические представления и функции  
  В следующей таблице перечисляются динамические представления и функции, которые можно использовать в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Динамические представления и функции|Description|  
+|Динамические представления и функции|Описание|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Возвращает строку для каждого действия аудита, которое может быть зарегистрировано в журнале аудита, и каждой группы действий аудита, которая может быть настроена в составе аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Предоставляет сведения о текущем состоянии аудита.|  
@@ -168,7 +169,7 @@ ms.locfileid: "80243414"
 ### <a name="catalog-views"></a>Представления каталога  
  В следующей таблице перечисляются представления каталога, которые можно использовать в подсистеме аудита [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Представления каталога|Description|  
+|Представления каталога|Описание|  
 |-------------------|-----------------|  
 |[sys.database_audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Содержит сведения о спецификациях аудита базы данных в аудите [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на экземпляре сервера для всех баз данных.|  
@@ -214,7 +215,7 @@ ms.locfileid: "80243414"
  [Триггеры DDL](../../../relational-databases/triggers/ddl-triggers.md)  
  Объясняется, как можно использовать триггеры языка DDL для отслеживания изменения в базах данных.  
   
- [Microsoft TechNet, технический центр SQL Server: "SQL Server 2005 — безопасность и защита"](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: технический центр SQL Server: безопасность и защита SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Содержит актуальные сведения о безопасности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>См. также:  

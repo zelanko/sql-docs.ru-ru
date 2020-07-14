@@ -1,5 +1,6 @@
 ---
 title: Создание принудительной подписки | Документация Майкрософт
+description: Сведения о том, как создать принудительную подписку в SQL Server с помощью SQL Server Management Studio, Transact-SQL или объектов Replication Management Objects.
 ms.custom: ''
 ms.date: 08/25/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 6eca1e80614772a1aa65faa60351fb73f83ba433
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d02267b12a80abb7784b552eb8d71fcca89aa8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70059291"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773948"
 ---
 # <a name="create-a-push-subscription"></a>Создание принудительной подписки
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
   В данном разделе описывается процесс создания принудительной подписки в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO. Сведения о создании принудительной подписки для подписчиков, отличных от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
 
 [!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "70059291"
   
 3. Щелкните правой кнопкой мыши папку **Локальные подписки** и выберите пункт **Создать подписку**.  
   
-4. На странице **Публикация** мастера создания подписки выберите **\<Найти издатель SQL Server>** или **\<Найти издатель Oracle>** из раскрывающегося списка **Издатель**.  
+4. На странице **Публикация** мастера создания подписки выберите **\<Find SQL Server Publisher>** или **\<Find Oracle Publisher>** из раскрывающегося списка **Издатель**.  
   
 5. Соединитесь с издателем в диалоговом окне **Соединение с сервером** .  
   

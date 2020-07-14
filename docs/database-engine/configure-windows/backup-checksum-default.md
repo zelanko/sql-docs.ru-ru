@@ -1,5 +1,6 @@
 ---
 title: 'Контрольная сумма резервной копии: значение по умолчанию | Документы Майкрософт'
+description: Описание параметра backup checksum default. Сведения о том, как использовать его для включения и отключения проверки контрольной суммы резервной копии в ходе операций резервного копирования и восстановления SQL Server.
 ms.custom: ''
 ms.date: 03/02/2017
 ms.prod: sql
@@ -8,17 +9,17 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: eef42653-85d0-4eaf-94bd-2ea1b024cd23
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: eb631212791a80fbcf32bd461a2ef476eebe8703
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3e92c294b2afd1374af45c51b349443b76828
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725255"
 ---
 # <a name="backup-checksum-default"></a>Контрольная сумма резервной копии: значение по умолчанию
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Во время резервного копирования и восстановления можно проверять контрольную сумму резервной копии. Для этого нужно выбрать соответствующее значение параметра контрольной суммы резервной копии.  
   
@@ -26,7 +27,7 @@ ms.locfileid: "68013130"
   
 |||  
 |-|-|  
-|**Value**|**Значение**|  
+|**Значение**|**Значение**|  
 |0|Отключено. Это параметр по умолчанию.|  
 |1|Активировано|  
   

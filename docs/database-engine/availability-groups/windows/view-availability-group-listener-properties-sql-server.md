@@ -1,6 +1,6 @@
 ---
 title: Просмотр свойств прослушивателя группы доступности
-description: 'Инструкции по просмотру свойств прослушивателя группы доступности Always On с помощью SQL Server Management Studio (SSMS), Transact-SQL (T-SQL) или SQL PowerShell. '
+description: Инструкции по просмотру свойств прослушивателя группы доступности Always On с помощью SQL Server Management Studio, Transact-SQL или PowerShell в SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 07/11/2016
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 74f8a0823f281a9260ba2d8ba322ac97c0e7056b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2f148deff16e26b8eec4d3c34b0e602e5e7f06e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74821769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893821"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Просмотр свойств прослушивателя группы доступности (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается просмотр свойств *прослушивателя группы доступности* AlwaysOn при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -42,7 +42,7 @@ ms.locfileid: "74821769"
  **DNS-имя прослушивателя**  
  Сетевое имя прослушивателя группы доступности.  
   
- **Порт**  
+ **порт**.  
  TPC-порт, используемый этим прослушивателем.  
   
 > [!NOTE]  

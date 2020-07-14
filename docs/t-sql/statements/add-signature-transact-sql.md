@@ -1,14 +1,11 @@
 ---
-title: ADD SIGNATURE (Transact-SQL) | Документы Майкрософт
-ms.date: 05/15/2017
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
 - ADD_SIGNATURE_TSQL
-dev_langs:
-- TSQL
 helpviewer_keywords:
 - ADD SIGNATURE statement
 - adding digital signatures
@@ -17,39 +14,45 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 284f5fb33d8842747805a27c68522929ddfbc59d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/10/2020
+ms.openlocfilehash: 4b5781ba73a340c72befdcde81559ac22d45a6a7
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634922"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813172"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Добавляет цифровую подпись для хранимой процедуры, функции, сборки или триггера. Добавляет также скрепляющую подпись для хранимой процедуры, функции, сборки или триггера.  
-  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Синтаксис  
-  
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+Добавляет цифровую подпись для хранимой процедуры, функции, сборки или триггера. Добавляет также скрепляющую подпись для хранимой процедуры, функции, сборки или триггера.
+
+![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## <a name="syntax"></a>Синтаксис
+
 ```syntaxsql
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## <a name="arguments"></a>Аргументы  
- *module_class*  
- Класс модуля, к которому добавляется подпись. По умолчанию для модулей области схемы это класс OBJECT.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
+
+*module_class*  
+Класс модуля, к которому добавляется подпись. По умолчанию для модулей области схемы это класс OBJECT.  
   
  *module_name*  
  Имя хранимой процедуры, функции, сборки или триггера, для которых будет добавлена подпись или скрепляющая подпись.  
@@ -66,8 +69,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Имя ассиметричного ключа, который будет использован для добавления подписи или скрепляющей подписи для хранимой процедуры, функции, сборки или триггера.  
   
-## <a name="remarks"></a>Remarks  
- Подписываемый модуль или модуль, на который ставится скрепляющая подпись, а также сертификат или асимметричный ключ, используемые для подписания, должны существовать. Каждый символ в модуле включен в вычисление подписи. Сюда включены начальные символы возврата каретки и перевода строки.  
+## <a name="remarks"></a>Remarks
+
+Подписываемый модуль или модуль, на который ставится скрепляющая подпись, а также сертификат или асимметричный ключ, используемые для подписания, должны существовать. Каждый символ в модуле включен в вычисление подписи. Сюда включены начальные символы возврата каретки и перевода строки.  
   
  Подписи и скрепляющие подписи для модуля могут добавляться любым числом сертификатов и асимметричных ключей.  
   
@@ -75,14 +79,14 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  Если модуль содержит предложение EXECUTE AS, это значит, что идентификатор безопасности (SID) участника также является частью процесса подписи.  
   
-> [!CAUTION]  
->  Подписывание модуля следует использовать только для предоставления разрешений, но не для их запрещения или отмены.  
+> [!CAUTION]
+> Подписывание модуля следует использовать только для предоставления разрешений, но не для их запрещения или отмены.  
   
  Встроенные функции с табличным значением нельзя подписывать.  
   
  Сведения о подписях содержатся в представлении каталога sys.crypt_properties.  
   
-> [!WARNING]  
+> [!WARNING]
 >  При воссоздании процедуры для подписи все инструкции в исходном пакете должны соответствовать повторно созданному пакету. Если какая-либо часть пакета будет отличаться, даже количеством пробелов или комментариями, будет получена другая подпись.  
   
 ## <a name="countersignatures"></a>Скрепляющая подпись  
@@ -92,18 +96,20 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Если подписать процедуру procSelectT1 так, чтобы процедура procSelectT1 имела доступ к таблице T1, Алиса сможет прямо вызывать процедуру procSelectT1 и ей не нужно будет вызывать процедуру ProcSelectT1ForAlice.  
   
--   Можно не давать Алисе разрешения EXECUTE на процедуру procSelectT1, но в этом случае Алиса не сможет вызывать процедуру procSelectT1 даже через процедуру ProcSelectT1ForAlice.  
+-   Можно не давать Алисе разрешения EXECUTE на процедуру procSelectT1, но в этом случае Алиса не сможет вызывать процедуру procSelectT1 через процедуру ProcSelectT1ForAlice.
   
 -   Подписание процедуры ProcSelectT1ForAlice также не будет работать само по себе, так как подпись будет потеряна при вызове процедуры procSelectT1.  
   
 Однако скрепляющая подпись на procSelectT1, сделанная тем же сертификатом, который поставил подпись на процедуре ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сохранит подпись по всей цепочке вызова и обеспечит доступ к T1. Если Алиса захочет прямо обратиться к процедуре procSelectT1, она не сможет это сделать, так как скрепляющая подпись не предоставляет никаких прав. В приведенном ниже примере В показан код [!INCLUDE[tsql](../../includes/tsql-md.md)] для этого примера.  
   
 ## <a name="permissions"></a>Разрешения  
- Требует разрешения ALTER на объект и разрешение CONTROL на сертификат или асимметричный ключ. Если соответствующий закрытый ключ защищен паролем, то у пользователя также должен быть этот пароль.  
+
+Требует разрешения ALTER на объект и разрешение CONTROL на сертификат или асимметричный ключ. Если соответствующий закрытый ключ защищен паролем, то у пользователя также должен быть этот пароль.  
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Подписание хранимой процедуры с помощью сертификата  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>A. Подписание хранимой процедуры с помощью сертификата
+
  В следующем примере хранимая процедура `HumanResources.uspUpdateEmployeeLogin` подписывается сертификатом `HumanResourcesDP`.  
   
 ```  
@@ -113,8 +119,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>Б. Подписание хранимой процедуры с помощью подписанного большого двоичного объекта  
- В следующем примере создается новая база данных и сертификат для использования в примере. В этом примере будет создана и подписана простая хранимая процедура и выполнена выборка большого двоичного объекта сигнатуры из `sys.crypt_properties`. Подпись удаляется, затем добавляется еще раз. Процедура подписывается с помощью конструкции WITH SIGNATURE.  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>Б. Подписание хранимой процедуры с помощью подписанного большого двоичного объекта
+
+В следующем примере создается новая база данных и сертификат для использования в примере. В этом примере будет создана и подписана простая хранимая процедура и выполнена выборка большого двоичного объекта сигнатуры из `sys.crypt_properties`. Подпись удаляется, затем добавляется еще раз. Процедура подписывается с помощью конструкции WITH SIGNATURE.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -159,8 +166,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>В. Обращение к процедуре с помощью скрепляющей подписи  
- В следующем примере показано, как скрепляющая подпись помогает контролировать доступ к объекту.  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>В. Обращение к процедуре с помощью скрепляющей подписи
+
+В следующем примере показано, как скрепляющая подпись помогает контролировать доступ к объекту.  
   
 ```  
 -- Create tesT1 database  
@@ -245,8 +253,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.crypt_properties (Transact-SQL)](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE (Transact-SQL)](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## <a name="see-also"></a>См. также:
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE (Transact-SQL)](../../t-sql/statements/drop-signature-transact-sql.md)

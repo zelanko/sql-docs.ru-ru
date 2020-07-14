@@ -1,5 +1,6 @@
 ---
 title: Оценка размера кучи | Документация Майкрософт
+description: Используйте эту процедуру для оценки размера пространства, требуемого для хранения данных в куче в SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 58d708811825fe42ca64c7e30f7e9ed0d92e62f3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a754dd4904cb106fc847beab843abca3837545a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909048"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002960"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Оценка размера кучи
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Для оценки размера пространства, требуемого для хранения данных в куче, можно использовать следующую процедуру.  
   
 1.  Укажите количество строк в новой таблице:  
@@ -46,7 +47,7 @@ ms.locfileid: "72909048"
   
 3.  Часть строки, называемая битовой картой NULL, зарезервирована для управления свойством столбца принимать значение NULL. Вычислите ее размер.  
   
-     **_Null_Bitmap_** = 2 + (( **_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_** = 2 + ((**_Num_Cols_** + 7) / 8)  
   
      Следует использовать только целую часть этого выражения и Остаток должен быть отброшен.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "72909048"
   
      Если таблица содержит столбцы с переменной длиной, определите, сколько пространства потребуется для хранения столбцов в строке:  
   
-     **_Variable_Data_Size_** = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_** = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Добавленные к значению **_Max_Var_Size_** байты необходимы для отслеживания каждого столбца переменной длины. Эта формула исходит из предположения, что все столбцы переменной длины заполнены на 100 %. Если предполагается, что будет использовано меньше места для хранения столбца изменяемой длины, можно изменить значение **_Max_Var_Size_** в процентах от общей изменяемой длины для более точного подсчета общего размера таблицы.  
   
@@ -65,19 +66,19 @@ ms.locfileid: "72909048"
   
 5.  Вычислите общий размер строк:  
   
-     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
+     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
   
      Значение 4 в формуле — это служебные данные заголовка строки данных.  
   
 6.  Расчет количества строк на странице (8 096 свободных байт на страницу):  
   
-     **_Rows_Per_Page_** = 8096 / ( **_Row_Size_** + 2)  
+     **_Rows_Per_Page_** = 8096 / (**_Row_Size_** + 2)  
   
      Так как строки не могут разрываться на разные страницы, общее количество строк на страницу необходимо округлить до меньшего целого значения целой строки. Значение 2 в формуле соответствует записи строки в массиве областей памяти страницы.  
   
 7.  Вычислите количество страниц, необходимое для хранения всех строк:  
   
-     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
+     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
   
      Вычисленное количество страниц должно быть округлено в большую сторону до ближайшей целой страницы.  
   

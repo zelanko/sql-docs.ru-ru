@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6bbe3a4d13aeafe7afeed9263d3a6c2d187a4b32
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 83b5031ac62e79005b4c6fb2d6d3aaf76607444b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634623"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766931"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Создает в текущей базе данных псевдоним типа данных или определяемый пользователем тип в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Реализация псевдонима типа данных основывается на собственном системном типе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемый пользователем тип реализуется с помощью класса сборки в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR. Чтобы привязать определяемый пользователем тип данных к его реализации, сборка среды CLR, содержащая реализацию данного типа, должна быть сначала зарегистрирована в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью инструкции [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e46b1225c63bc0c84b9474abed55a89896571
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c2ad1a4191a1ea3bbba6bcb34ee33dcdc89c94ed
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634181"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897630"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT, предоставление разрешения на коллекцию XML-схем (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет разрешения на коллекции схем XML.   
   
@@ -62,12 +62,12 @@ GRANT permission  [ ,...n ] ON
  ON XML SCHEMA COLLECTION :: [ *имя_схемы*. ] *имя_коллекции_схемы_XML*  
  Указывает коллекцию XML-схем, на которую предоставляется разрешение. Квалификатор области (::) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы (.).  
   
- TO \<субъект_получателя> указывает субъект, которому предоставляется разрешение.  
+ \<database_principal> Указывает участника, которому предоставляется разрешение.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
+ AS \<database_principal>. Указывает субъект, от которого субъект, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
  *Database_user*  
  Указывает пользователя базы данных.  

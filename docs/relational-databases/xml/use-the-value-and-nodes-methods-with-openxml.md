@@ -1,5 +1,6 @@
 ---
 title: Использование методов value() и nodes() совместно с OPENXML | Документация Майкрософт
+description: Узнайте, как извлечь набор строк значений XML в SQL-запросе с помощью методов value() и nodes() или метода OpenXML().
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 685ce50021a9bd06dc075198f008336b2c150a6b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a719b990c78af4429958fffb6027daf5d578a682
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738370"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Использование методов value() и nodes() совместно с OPENXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Методы **value()** можно выполнять в инструкции **SELECT** в типе данных **xml** для создания набора строк извлеченных значений. Метод **nodes()** позволяет получить внутреннюю ссылку на каждый выбранный узел, которую можно использовать в дополнительных запросах. При создании набора строк из нескольких столбцов и, возможно, при высокой сложности используемых для этого выражений пути более эффективным подходом может оказаться сочетание методов **nodes()** и **value()** .  
   
  Метод **nodes()** позволяет получать экземпляры специального типа данных **xml** , для каждого из которых контекст сопоставлен с другим выбранным узлом. Этот вид экземпляра XML поддерживает методы **query()** , **value()** , **nodes()** и **exist()** и может быть использован в статистических функциях **count(\*)** . Все другие способы его использования приводят к ошибке.  
   
-## <a name="example-using-nodes"></a>Пример. Использование nodes()  
+## <a name="example-using-nodes"></a>Пример Использование метода nodes()  
  Предположим, что требуется извлечь имена и фамилии авторов, которых зовут не «David». Кроме того, требуется извлечь эту информацию как набор строк, содержащий два столбца: FirstName и LastName. Используя методы **nodes()** и **value()** , можно сделать это следующим образом:  
   
 ```  
@@ -41,7 +42,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 позволяет создать набор строк на основе экземпляра XML при помощи метода **OpenXml()** . При этом можно указать реляционную схему набора строк и способ сопоставления значений экземпляра XML со столбцами набора строк.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Пример. Использование OpenXml() с типом данных xml  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Пример Использование метода OpenXml() с типом данных xml  
  Запрос из предыдущего примера можно переписать с методом **OpenXml()** так, как показано ниже. С этой целью создается курсор, считывающий каждый экземпляр XML в переменную XML и вызывающий для нее метод OpenXml():  
   
 ```  

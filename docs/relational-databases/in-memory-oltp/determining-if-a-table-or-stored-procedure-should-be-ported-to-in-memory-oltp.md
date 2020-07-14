@@ -1,5 +1,6 @@
 ---
 title: Должна ли таблица или хранимая процедура быть перенесена в выполняющуюся в памяти OLTP
+description: Используйте отчет об анализе производительности транзакций в SQL Server Management Studio для оценки, можно ли улучшить производительность приложения базы данных с помощью выполняющейся в памяти OLTP.
 ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1a445b423375a9ca577435424c0bd89016cd53f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412699"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723269"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Отчет об анализе производительности транзакции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет оценить, улучшится ли производительность приложения базы данных с помощью выполняющейся в памяти OLTP. В отчете также показано, сколько работы необходимо выполнить, чтобы включить выполняющуюся в памяти OLTP в приложении. После определения дисковой таблицы, которая переносится в In-Memory OLTP, можно для упрощения миграции таблицы использовать [советник по оптимизации для выполнения в памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md). Аналогичным образом [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) позволяет перенести хранимую процедуру в изначально скомпилированную хранимую процедуру. Дополнительные сведения о методологиях миграции см. в разделе [Выполняемая в памяти OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](https://msdn.microsoft.com/library/dn673538.aspx).  
   

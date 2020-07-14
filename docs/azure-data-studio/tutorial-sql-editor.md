@@ -1,23 +1,22 @@
 ---
 title: Создание объектов базы данных с помощью редактора Transact-SQL
-titleSuffix: Azure Data Studio
 description: В этом руководстве демонстрируются основные функции Azure Data Studio, упрощающие работу с T-SQL.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b8e5bd6cb986601baf97a02a3f167432e0c29b95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957038"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726740"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---name-sos"></a>Руководство по Создание объектов базы данных с помощью редактора Transact-SQL — [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---azure-data-studio"></a>Руководство по Использование редактора Transact-SQL для создания объектов базы данных — Azure Data Studio
 
 Создание и выполнение запросов, хранимых процедур, скриптов и т. д. — основные задачи специалистов по базам данных. В этом руководстве демонстрируются основные функции редактора T-SQL для создания объектов базы данных.
 
@@ -60,7 +59,7 @@ ms.locfileid: "74957038"
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Создание хранимых процедур с помощью фрагментов кода T-SQL
 
-В [!INCLUDE[name-sos](../includes/name-sos-short.md)] есть множество встроенных фрагментов кода T-SQL для быстрого создания инструкций.
+В Azure Data Studio есть множество встроенных фрагментов кода T-SQL для быстрого создания инструкций.
 
 
 1. Откройте новое окно редактора запросов, нажав клавиши **CTRL+N**.
@@ -114,7 +113,7 @@ ms.locfileid: "74957038"
 
 ## <a name="use-peek-definition"></a>Использование функции "Показать определение" 
 
-В [!INCLUDE[name-sos](../includes/name-sos-short.md)] есть возможность просмотреть определение объекта с помощью функции "Показать определение". В этом разделе создается еще одна хранимая процедура, а затем с помощью функции "Показать определение" определяются имеющиеся в таблице столбцы для быстрого создания тела этой процедуры.
+Azure Data Studio предоставляет возможность просмотра определения объекта с помощью функции "Показать определение". В этом разделе создается еще одна хранимая процедура, а затем с помощью функции "Показать определение" определяются имеющиеся в таблице столбцы для быстрого создания тела этой процедуры.
 
 1. Откройте новое окно редактора, нажав клавиши **CTRL+N**. 
 

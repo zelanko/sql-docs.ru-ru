@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 8a7c149fbc59691519c1a85afe1ff64cc6da579a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bde2baadb2a7cf5c6a11330443ab8e3c883455a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759123"
 ---
 # <a name="restore-pages-sql-server"></a>Восстановление страниц (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   В этом разделе описано, как восстанавливать страницы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Задачей восстановления страниц является восстановление одной или нескольких поврежденных страниц без восстановления всей базы данных. Обычно страницы, являющиеся кандидатами на восстановление, в результате ошибок доступа помечаются как «подозрительные». Информация об указанных подозрительных страницах хранится в таблице [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) базы данных **msdb** .  
   
@@ -136,7 +136,7 @@ ms.locfileid: "82823686"
     |Заголовок|Значения|  
     |------------|------------|  
     |**имя**;|Имя резервного набора данных.|  
-    |**Компонент**|Компонент, сохраненный в резервной копии: **База данных**, **Файл** или **\<blank>** (для журналов транзакций).|  
+    |**Компонент**|Компонент, сохраненный в резервной копии: **база данных**, **файл** или **\<blank>** (для журналов транзакций).|  
     |**Тип**|Тип выполняемого резервного копирования: **Полное**, **Разностное**или **Журнал транзакций**.|  
     |**Server**|Имя экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , выполнившего операцию резервного копирования.|  
     |**База данных**|Имя базы данных, участвовавшей в операции резервного копирования.|  

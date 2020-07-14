@@ -1,5 +1,6 @@
 ---
 title: Поддержка FOR XML для строковых типов данных | Документация Майкрософт
+description: Узнайте, как обрабатываются строковые данные при создании XML с помощью предложения FOR XML в SQL-запросе.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 15f876fde9403d65ba6af81b7038519d4318100f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: cdaa7560b5dad561d981acee2d2d48ccca44146c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729911"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Поддержка FOR XML для строковых типов данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Пробельные символы XML-кода, формируемого инструкцией FOR XML, преобразуются в сущности.  
   
  В следующем примере создается образец таблицы **T** , в который вставляются данные, содержащие символы перевода строки, возврата каретки и табуляции. Инструкция SELECT получает данные из таблицы.  

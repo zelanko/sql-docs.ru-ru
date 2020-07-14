@@ -1,5 +1,6 @@
 ---
 title: Просмотр файлов журнала в режиме "вне сети" | Документация Майкрософт
+description: Узнайте, как просматривать файлы журнала SQL Server из локальных и удаленных экземпляров SQL Server, когда целевого экземпляра нет в сети или он не может запуститься.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: aa13f33366eebe2501a135a6f8de1abbe810fa19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908557"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667854"
 ---
 # <a name="view-offline-log-files"></a>просматривать файлы журнала в режиме «вне сети»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], появилась возможность просматривать файлы журнала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на локальных и удаленных экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые находятся вне сети или не могут запуститься.  
   
  Получить доступ к файлам журналов вне сети можно в списке «Зарегистрированные серверы» или программным способом с помощью запросов WMI и WQL.  
@@ -51,9 +52,9 @@ ms.locfileid: "72908557"
   
 -   Доступ для чтения к пространству имен WMI **Root\Microsoft\SqlServer\ComputerManagement12** . По умолчанию доступ для чтения задается для всех с помощью разрешения «Включить учетную запись». Дополнительные сведения см. в описании процедуры «Проверка разрешений WMI» этого раздела.  
   
--   Разрешение на чтение для папки, содержащей файлы журналов ошибок. По умолчанию файлы журналов ошибок находятся по следующему пути (где \<*Диск>* определяет диск, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а \<*Имя_экземпляра*> задает имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Разрешение на чтение для папки, содержащей файлы журналов ошибок. По умолчанию файлы журналов ошибок находятся по следующему пути (где \<*Drive>* представляет диск, на котором установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а \<*InstanceName*> является именем экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Диск>:\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Log**  
   
  Для проверки параметров безопасности пространства имен WMI можно использовать оснастку «Элемент управления WMI».  
   

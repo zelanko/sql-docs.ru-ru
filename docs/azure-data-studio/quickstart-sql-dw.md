@@ -1,30 +1,29 @@
 ---
-title: Подключение и отправка запроса к Хранилищу данных SQL Azure
-titleSuffix: Azure Data Studio
+title: Подключение и отправка запроса к хранилищу данных SQL Azure
 description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к Хранилищу данных SQL Azure и выполнения запроса.
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/24/2018
-ms.openlocfilehash: f07d13bc9110b5b9ec96aa17169687f471aeb197
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f9a8213dacb3a7f221d3a3c3e51f0ed94bb6990a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957111"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728014"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к Хранилищу данных SQL Azure и запрос данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Краткое руководство. Подключение к хранилищу данных SQL Azure и запрос данных с помощью Azure Data Studio
 
-В этом кратком руководстве показано, как использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к Хранилищу данных SQL Azure, а затем с помощью инструкций Transact-SQL создать, вставить и выбрать данные. 
+В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к хранилищу данных SQL Azure, а затем с помощью инструкций Transact-SQL создавать, вставлять и выбирать данные. 
 
 ## <a name="prerequisites"></a>Предварительные требования
-Для работы с этим кратким руководством потребуется [!INCLUDE[name-sos](../includes/name-sos-short.md)] и Хранилище данных SQL Azure.
+Для работы с этим кратким руководством потребуется Azure Data Studio и хранилище данных SQL Azure.
 
-- [Установите [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Установите Azure Data Studio](download.md).
 
 Если у вас еще нет хранилища данных SQL, см. статью [Создание Хранилища данных SQL](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-get-started-provision).
 
@@ -33,9 +32,9 @@ ms.locfileid: "74957111"
 
 ## <a name="connect-to-your-data-warehouse"></a>Подключение к хранилищу данных
 
-С помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)] установите подключение к серверу Хранилища данных SQL Azure.
+С помощью Azure Data Studio установите подключение к серверу хранилища данных SQL Azure.
 
-1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] должна открыться страница **Подключение**. Если страница **Подключение** не появилась, щелкните **Добавить подключение** или значок **Новое подключение** на боковой панели **Серверы**.
+1. При первом запуске Azure Data Studio должна открыться страница **подключения**. Если страница **Подключение** не появилась, щелкните **Добавить подключение** или значок **Новое подключение** на боковой панели **Серверы**.
    
    ![Значок нового подключения](media/quickstart-sql-dw/new-connection-icon.png)
 

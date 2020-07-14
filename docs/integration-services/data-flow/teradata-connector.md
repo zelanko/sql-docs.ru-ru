@@ -9,14 +9,15 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca25b7425ce74cea820e295a6a99bc3a3c1e2817
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 521cc4edfb5033b545822b6ac145549fa802e707
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75755855"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001161"
 ---
-# <a name="microsoft-connector-for-teradata-preview"></a>Соединитель с Teradata (Microsoft) (предварительная версия)
+# <a name="microsoft-connector-for-teradata"></a>Соединитель с Teradata (Microsoft)
+
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 Соединитель с Teradata (Microsoft) позволяет экспортировать данные из баз данных Teradata в пакет служб SSIS и загружать данные в них.
@@ -28,7 +29,8 @@ ms.locfileid: "75755855"
 Соединитель с Teradata (Microsoft) поддерживает следующие продукты Microsoft SQL Server:
 
 - Microsoft SQL Server 2019
-- Microsoft SQL Server Data Tools (SSDT)
+- Microsoft SQL Server Data Tools (SSDT) 15.8.1 или более поздней версии для Visual Studio 2017
+- Microsoft SQL Server Data Tools (SSDT) для Visual Studio 2019
 
 Соединитель с Teradata (Microsoft) использует программный интерфейс Teradata Parallel Transporter для загрузки данных в базу данных Teradata и экспорта данных из нее. Поддерживаются следующие версии:
 
@@ -46,8 +48,6 @@ ms.locfileid: "75755855"
 
 ## <a name="installation"></a>Установка
 
-### <a name="prerequisite"></a>Предварительные требования
-
 На 32-разрядных компьютерах установите следующие драйверы из [пакета установки средств и служебных программ Teradata для Windows](https://downloads.teradata.com/download/tools/teradata-tools-and-utilities-windows-installation-package):
 
 - драйвер ODBC Teradata (32-разрядный);
@@ -62,12 +62,38 @@ ms.locfileid: "75755855"
 
 После установки соединителя необходимо перезапустить службу интеграции SQL Server, чтобы убедиться в том, что источник и назначение Teradata работают правильно.
 
-Для выполнения пакета служб SSIS, предназначенного для SQL Server 2017 и более ранних версий, необходимо установить **соединитель Майкрософт с Teradata от Attunity** требуемой версии по следующей ссылке:
+## <a name="design-and-execute-ssis-packages"></a>Проектирование и выполнение пакетов служб SSIS
+
+Соединитель с Teradata (Microsoft) имеет интерфейс, аналогичный соединителю Attunity Teradata. Пользователь может создавать новые пакеты на основе предыдущего интерфейса, используя SSDT для VS 2017 или VS 2019 с *SQL Server 2019 в качестве целевой платформы*.
+
+Целевой и конечный объекты Teradata находятся в категории "Общие".
+
+![Компонент Teradata](media/teradata-component.png)
+
+Диспетчер подключений Teradata указан как TERADATA.
+
+![Тип диспетчера подключений Teradata](media/teradata-connection-manager-type.png)
+
+Существующие пакеты служб SSIS, разработанные с помощью соединителя Attunity Teradata, будут автоматически обновлены для использования соединителя с Teradata (Microsoft). Также будут изменены значки.
+
+Для выполнения пакета служб SSIS, *предназначенного для SQL Server 2017 и более ранних версий*, необходимо установить **соединитель Майкрософт с Teradata от Attunity** требуемой версии по следующей ссылке.
 
 - [SQL Server 2017: соединитель с Teradata (Microsoft) от Attunity версии 5.0](https://www.microsoft.com/download/details.aspx?id=55179)
 - [SQL Server 2016: соединитель с Teradata (Microsoft) от Attunity версии 4.0](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: соединитель с Teradata (Microsoft) от Attunity версии 3.0](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: соединитель с Teradata (Microsoft) от Attunity версии 2.0](https://www.microsoft.com/download/details.aspx?id=29283)
+
+Для проектирования пакета служб SSIS в SSDT, *предназначенного для SQL Server 2017 и более ранних версий*, вам потребуется **соединитель с Teradata (Microsoft)** и **соединитель с Teradata (Microsoft) от Attunity** требуемой версии.
+
+## <a name="limitationsandknownissues"></a>Ограничения и известные проблемы
+
+- В редакторе источника и целевого объекта Teradata свойство  **База данных по умолчанию**  не действует. В качестве обходного решения введите имя базы данных в раскрывающемся списке, чтобы отфильтровать таблицу или представление.
+
+- В редакторе источника и целевого объекта Teradata шаг сопоставления не работает при вводе  \<database>.<table/view>. В качестве обходного решения введите  \<database>.<table/view>, а затем щелкните раскрывающийся список.
+
+- В редакторе источника Teradata представление не отображается, если выбран режим доступа к данным "Имя таблицы — экспорт одной таблицы на тип". В качестве обходного решения используйте расширенный редактор источника Teradata.
+
+- В редакторе целевого объекта Teradata атрибуту PackMaximum невозможно присвоить значение True. В противном случае возникает ошибка.
 
 ## <a name="uninstallation"></a>Удаление
 

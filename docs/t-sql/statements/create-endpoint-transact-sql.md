@@ -31,15 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4352a1b050bc27be18d490c8790f793f57e1839
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902293"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает конечные точки и определяет их параметры, включая методы, доступные клиентским приложениям. Дополнительные сведения о разрешениях см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "81632189"
   
      В этой части определяется, какие полезные данные будут поддерживаться конечной точкой. Полезные данные могут иметь один из нескольких поддерживаемых типов: [!INCLUDE[tsql](../../includes/tsql-md.md)], компонент Service Broker, зеркальное отображение базы данных. В эту часть также включаются сведения, зависящие от выбранного типа.  
   
-> **Примечание.** Собственные XML-веб-службы (конечные точки SOAP/HTTP) удалены, начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **ПРИМЕЧАНИЕ.** Собственные веб-службы XML (конечные точки SOAP/HTTP) удалены, начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -159,7 +159,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Для получения сведений об аргументах, относящихся только к SERVICE_BROKER, см. подраздел «Параметры SERVICE_BROKER» ниже в данном разделе. Для получения сведений о параметрах, относящихся только к DATABASE_MIRRORING, см. статью «Параметры DATABASE_MIRRORING» ниже в данном разделе.  
   
- AUTHENTICATION **=** \<authentication_options> указывает требования к проверке подлинности TCP/IP для соединений данной конечной точки. По умолчанию значение установлено в WINDOWS.  
+ AUTHENTICATION **=** \<authentication_options> Указывает требования к проверке подлинности TCP/IP для соединений данной конечной точки. По умолчанию значение установлено в WINDOWS.  
   
  Поддерживаемые методы проверки подлинности включают в себя NTLM, Kerberos или оба этих метода.  
   

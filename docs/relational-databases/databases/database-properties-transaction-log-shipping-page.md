@@ -1,5 +1,6 @@
 ---
 title: Свойства базы данных (страница "Доставка журналов транзакций") | Документация Майкрософт
+description: Используйте вкладку "Доставка журналов транзакций" в диалоговом окне "Свойства базы данных", чтобы включить базу данных в качестве базы данных — источника для доставки журналов и задать ее параметры.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 75c87efd24b1e345cb99413d1a524e872f0eb022
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099570"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630969"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Свойства базы данных (страница «Доставка журналов транзакций»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Используйте эту страницу, чтобы настроить и изменить свойства доставки журналов базы данных.  
   
  Основные сведения о доставке журналов изложены в статье [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  

@@ -1,5 +1,6 @@
 ---
 title: Уровни серьезности ошибок ядра СУБД | Документация Майкрософт
+description: Используйте этот список уровней серьезности, чтобы понять, какой тип проблемы SQL Server возникает, когда SQL Server ядро СУБД выдает ошибку.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d0984d0003f6a20c410b91f99dc6fd1b4ae3f545
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 16bf5154c5ab08b790739e287ccb2934b942e591
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73844331"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727524"
 ---
 # <a name="database-engine-error-severities"></a>Степени серьезности ошибок компонента Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Если ошибка возникла в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], серьезность ошибки указывает на тип проблемы, с которой столкнулся сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Уровни серьезности  
  В следующей таблице описаны уровни серьезности ошибок, формируемых компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-|Степень серьезности|Description|  
+|Степень серьезности|Описание|  
 |--------------------|-----------------|  
 |0-9|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не формирует системные ошибки с уровнем серьезности от 0 до 9.|  
 |10|Информационные сообщения, возвращающие сведения о состоянии или оповещающие о несерьезных ошибках. Для обеспечения совместимости компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] перед возвратом сведений об ошибке в вызвавшее приложение преобразует уровень серьезности 10 в уровень 0.|  

@@ -1,6 +1,6 @@
 ---
 title: Ускоренное восстановление баз данных | Документация Майкрософт
-ms.date: 08/12/2019
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 58c31d9b5e0e8858cc1953a2961107caea08d381
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc137d1f94ad1919c41e3f25eb38829941d99023
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342526"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010161"
 ---
 # <a name="accelerated-database-recovery"></a>Ускоренное восстановление базы данных
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Ускорение восстановления баз данных (ADR) повышает доступность баз данных, особенно при наличии продолжительных транзакций, за счет перепроектирования процесса восстановления ядра СУБД SQL. ADR — это новая функция в SQL Server 2019. Она также доступна для отдельных баз данных и баз данных в пуле в службе "База данных SQL Azure", а также для баз данных в Хранилище данных SQL Azure (в настоящее время в стадии общедоступной предварительной версии). Основные преимущества ADR
 
@@ -135,7 +135,9 @@ ADR решает описанные выше проблемы благодаря
 - клиенты, которые сталкивались с ситуацией, когда активные транзакции вызывают значительное увеличение размера журнала транзакций;  
 - клиенты, у которых базы данных были долго недоступны из-за длительного восстановления SQL Server (например, вследствие непредвиденного перезапуска SQL Server или отката транзакций вручную).
 
+>[!IMPORTANT]
+>ADR не поддерживается для баз данных, развертываемых в зеркальном отображении базы данных.
 
 ## <a name="see-also"></a>См. также:  
 
-  
+[Управление ускоренным восстановлением баз данных](accelerated-database-recovery-management.md)

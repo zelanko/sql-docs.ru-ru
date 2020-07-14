@@ -13,12 +13,12 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf492b24e1473ce189f39a84096242773b78cc4a
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 287b86bd9cc368d2a04ea7f7be5e1397e2d6aab9
+ms.sourcegitcommit: 2e6c4104dca8680064eb64a7a79a3e15e1b4365f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82086821"
+ms.lasthandoff: 07/03/2020
+ms.locfileid: "85942909"
 ---
 # <a name="transact-sql-statements"></a>Инструкции Transact-SQL
 
@@ -34,7 +34,7 @@ ms.locfileid: "82086821"
 
 ## <a name="data-definition-language"></a>Язык описания данных DDL
 
-Инструкции языка описания данных DDL определяют структуры данных. Эти инструкции используются для создания, изменения и удаления структур данных в базе данных.
+Инструкции языка описания данных DDL определяют структуры данных. Эти инструкции используются для создания, изменения и удаления структур данных в базе данных. Эти инструкции включают в себя:
 
 - ALTER
 - Параметры сортировки
@@ -52,6 +52,7 @@ ms.locfileid: "82086821"
 - BULK INSERT
 - DELETE
 - INSERT
+- SELECT
 - UPDATE
 - MERGE
 - TRUNCATE TABLE

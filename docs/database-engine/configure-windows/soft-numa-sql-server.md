@@ -1,5 +1,6 @@
 ---
 title: Архитектура Soft-NUMA (SQL Server) | Документы Майкрософт
+description: Узнайте о программной архитектуре NUMA в SQL Server 2014 SP2 и более новых версиях. Узнайте, как использовать автоматический программный NUMA и как вручную настроить SQL Server для использования программной архитектуры NUMA.
 ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: sql
@@ -17,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ee31095ad1650ce17af6ddaa19237cd3ae73486d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7e65fb9a246013c756e5c2642836e57efcb1dd58
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288098"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789760"
 ---
 # <a name="soft-numa-sql-server"></a>Архитектура Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Современные процессоры имеют несколько ядер на одном сокете. Каждый сокет обычно представлен одним узлом NUMA. Ядро базы данных SQL Server секционирует разные внутренние структуры и потоки служб в узлы NUMA.  Если используются процессоры с 10 и более ядрами на сокет, распределение нагрузки между аппаратными узлами NUMA с помощью программной архитектуры NUMA зачастую позволяет повысить масштабируемость и производительность системы. До [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) для использования программной архитектуры NUMA (Soft-NUMA) нужно было редактировать реестр, чтобы добавить маску сходства для настройки узла. Такая настройка выполнялась на уровне узла, а не для экземпляра. Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] архитектура Soft-NUMA настраивается автоматически на уровне экземпляра базы данных при запуске службы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

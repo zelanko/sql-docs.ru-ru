@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 918821dfcdbddcd694b751d328332178f9f5770c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 668a7355cd1a2530b9f60a624391c2199724a62b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633707"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85880395"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT, предоставление разрешений на сервер (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Предоставляет разрешения на сервер. 
   
@@ -58,9 +58,9 @@ GRANT permission [ ,...n ]
  *permission*  
  Определяет разрешение, которое может быть предоставлено на сервер. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- TO \<grantee_principal> указывает участника, которому предоставляется разрешение.  
+ TO \<grantee_principal>. Указывает субъект, которому предоставляется разрешение.  
   
- AS \<grantor_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
+ AS \<grantor_principal>. Указывает субъект, от которого администратор доступа, выполняющий запрос, наследует право предоставления разрешений.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  

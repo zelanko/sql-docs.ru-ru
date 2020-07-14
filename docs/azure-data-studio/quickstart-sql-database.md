@@ -1,31 +1,30 @@
 ---
 title: Подключение и отправка запроса к базе данных SQL Azure
-titleSuffix: Azure Data Studio
 description: В этом кратком руководстве показано, как использовать Azure Data Studio для подключения к базе данных SQL и выполнения запроса.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.reviewer: alayu; maghan; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 ms.custom: seodec18; sqlfreshmay19; seo-lt-2019
 ms.date: 05/14/2019
-ms.openlocfilehash: 2ed7841c3e6205ad0a6df4f232f021aeb24983cd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 73e910b6d199a4918eafca067a95136e31ac079c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771955"
 ---
-# <a name="quickstart-use-name-sos-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения и отправки запроса к базе данных SQL Azure
+# <a name="quickstart-use-azure-data-studio-to-connect-and-query-azure-sql-database"></a>Краткое руководство. Использование Azure Data Studio для подключения и обращения к базе данных SQL Azure
 
-В этом кратком руководстве вы будете использовать [!INCLUDE[name-sos](../includes/name-sos-short.md)] для подключения к серверу базы данных SQL Azure. Затем вы с помощью инструкций Transact-SQL (T-SQL) создадите базу данных TutorialDB, применяемую в других руководствах [!INCLUDE[name-sos](../includes/name-sos-short.md)], и отправите к ней запрос.
+В этом кратком руководстве вы будете использовать Azure Data Studio для подключения к серверу базы данных SQL Azure. Затем вы с помощью инструкций Transact-SQL (T-SQL) создадите базу данных TutorialDB, применяемую в других руководствах по Azure Data Studio, и отправите к ней запрос.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Для работы с этим кратким руководством потребуются [!INCLUDE[name-sos](../includes/name-sos-short.md)] и сервер базы данных SQL Azure.
+Для работы с этим кратким руководством потребуется Azure Data Studio и сервер Базы данных SQL Azure.
 
-- [Установка [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Установите Azure Data Studio](download.md).
 
 Если у вас нет сервера SQL Azure, выполните одно из следующих кратких руководств по базе данных SQL Azure. Запомните полное имя сервера и учетные данные для входа для последующих шагов.
 
@@ -36,9 +35,9 @@ ms.locfileid: "74957078"
 
 ## <a name="connect-to-your-azure-sql-database-server"></a>Подключение к серверу базы данных SQL Azure
 
-С помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)] установите подключение к серверу базы данных SQL Azure.
+С помощью Azure Data Studio установите подключение к серверу Базы данных SQL Azure.
 
-1. При первом запуске [!INCLUDE[name-sos](../includes/name-sos-short.md)] должна открыться страница **приветствия**. Если вы не видите **страницу приветствия** , выберите **Справка** > **Добро** пожаловать. Выберите **Создать подключение**, чтобы открыть панель **Подключение**.
+1. При первом запуске Azure Data Studio должна открыться страница **приветствия**. Если вы не видите **страницу приветствия** , выберите **Справка** > **Добро** пожаловать. Выберите **Создать подключение**, чтобы открыть панель **Подключение**.
    
    ![Значок нового подключения](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -66,7 +65,7 @@ ms.locfileid: "74957078"
 
 ## <a name="create-the-tutorial-database"></a>Создание учебной базы данных
 
-В следующих разделах создается база данных TutorialDB, используемая в других руководствах [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+В следующих разделах создается база данных TutorialDB, используемая в других руководствах по Azure Data Studio.
 
 1. Щелкните сервер SQL Azure в боковой панели **Серверы** правой кнопкой мыши и выберите **Создать запрос**.
 

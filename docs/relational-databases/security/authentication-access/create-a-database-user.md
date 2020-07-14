@@ -1,5 +1,6 @@
 ---
 title: Создание пользователя базы данных | Microsoft Docs
+description: Узнайте, как создавать распространенные типы пользователей базы данных с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 04/24/2017
 ms.prod: sql
@@ -24,15 +25,15 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3aa8e127c382d8f7915edbcb81e1272fe522251
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f74a4cb83db387bf0251a3dc6be7c07c06d8dce2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981929"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005697"
 ---
 # <a name="create-a-database-user"></a>Создание пользователя базы данных
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этой статье описывается создание наиболее распространенных типов пользователей базы данных. Существует одиннадцать типов пользователей. Полный список приведен в статье [CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md). Все варианты [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживают пользователей базы данных, но не всегда все типы пользователей.  
   
@@ -115,7 +116,7 @@ ms.locfileid: "73981929"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Дополнительные параметры  
- Диалоговое окно **Пользователь базы данных — создание** также предлагает параметры на четырех дополнительных страницах: **Собственные схемы**, **Членство**, **Защищаемые объекты** и **Расширенные свойства**.  
+ Диалоговое окно **Пользователь базы данных — создание** также содержит параметры на четырех дополнительных страницах: **Собственные схемы**, **Членство**, **Защищаемые объекты** и **Расширенные свойства**.  
   
 -   На странице **Собственные схемы** перечислены все возможные схемы, которые принадлежат новому пользователю базы данных. Чтобы добавить схему для пользователя базы данных или удалить ее, на вкладке **Схемы, принадлежащие этому пользователю**установите или снимите флажки для соответствующей схемы.  
   

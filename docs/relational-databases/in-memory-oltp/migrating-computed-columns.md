@@ -1,5 +1,6 @@
 ---
 title: Перенос вычисляемых столбцов | Документация Майкрософт
+description: Узнайте, как моделировать вычисляемые столбцы в таблицах, оптимизированных для памяти. Оцените, нужны ли функциональные возможности вычисляемых столбцов после миграции.
 ms.custom: ''
 ms.date: 12/17/2016
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 36a0a6f82499a617a37b7cc9b848a33ec29c2ce3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2b378b5921397ec90d44a4d63de3aeaf944d8ab2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050130"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730886"
 ---
 # <a name="migrating-computed-columns"></a>Перенос вычисляемых столбцов
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Вычисляемые столбцы не поддерживаются в оптимизированных для памяти таблицах. Однако вычисляемый столбец можно смоделировать.
 

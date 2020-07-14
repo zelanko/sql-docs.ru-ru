@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 0fc954228aff75940e66f976f19d1414118e1a8e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8ed0403c1713ed3e7267f06d0bf765c7c449aac1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725947"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Типичные операции шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием асимметричного ключа, защищенного хранилищем ключей Azure, включают в себя три следующих области.  
   
 -   Прозрачное шифрование данных с помощью асимметричного ключа из хранилища ключей Azure  
@@ -53,12 +53,14 @@ ms.locfileid: "75558519"
         - Если вы используете **глобальную службу Azure**, замените аргумент `IDENTITY` на имя вашего хранилища Azure Key Vault из части II.
         - Если вы используете **частное облако Azure** (например, Azure для государственных организаций, китайскую версию Azure 21Vianet или немецкую версию), замените аргумент `IDENTITY` на URI хранилища, возвращенный в шаге 3 в части II. Не включайте https:// в URI хранилища.   
   
-    -   Замените первую часть аргумента `SECRET` на **идентификатор клиента** Azure Active Directory из части I. В этом примере **идентификатор клиента** имеет значение `EF5C8E094D2A4A769998D93440D8115D`.  
+    -   Замените первую часть аргумента `SECRET` на **идентификатор клиента** Azure Active Directory из части I. В этом примере **идентификатор клиента** имеет значение `EF5C8E094D2A4A769998D93440D8115D`.
   
         > [!IMPORTANT]  
         >  Необходимо удалить дефисы из **идентификатора клиента**.  
   
-    -   Дополните вторую часть аргумента `SECRET`**секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
+    -   Дополните вторую часть аргумента `SECRET`**секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `ReplaceWithAADClientSecret`. 
+  
+    -   Окончательная строка аргумента SECRET будет представлять собой длинную последовательность букв и цифр без дефисов.
   
     ```sql  
     USE master;  
@@ -67,7 +69,7 @@ ms.locfileid: "75558519"
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
-        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
+        SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplaceWithAADClientSecret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
     ```  
   
@@ -215,7 +217,7 @@ ms.locfileid: "75558519"
     
     Чтобы восстановить резервную копию базы данных, зашифрованную методом TDE, целевой экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] должен иметь копию асимметричного ключа Key Vault, используемого для шифрования. Это можно сделать так:  
     
-    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Важно!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
+    - Если исходный асимметричный ключ, используемый для TDE, больше не находится в Key Vault, восстановите резервную копию ключа Key Vault или повторно импортируйте ключ из локального модуля HSM. **Внимание!** Чтобы отпечаток ключа совпал с записанным в резервной копии базы данных, ключ должен иметь **исходное имя ключа Key Vault**.
     
     - Выполните шаги 1 и 2 на целевом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
     

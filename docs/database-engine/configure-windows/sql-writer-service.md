@@ -1,5 +1,6 @@
 ---
 title: Служба "Модуль записи SQL" | Документы Майкрософт
+description: Сведения о службе "Модуль записи SQL". Узнайте, как эта служба предоставляет дополнительные возможности резервного копирования и восстановления в SQL Server с помощью механизма службы теневого копирования томов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,17 +20,17 @@ helpviewer_keywords:
 - MSDE Writer
 - VSS
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 79b0ba2bad207b92e0227ed5c8d3999dab335df6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 940bdce1d104627850aed3532754429c5ceef050
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71816677"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764016"
 ---
 # <a name="sql-writer-service"></a>cлужба «Модуль записи SQL»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Служба «Модуль записи SQL» предоставляет дополнительные возможности резервного копирования и восстановления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью механизма службы теневого копирования тома.  
   
  Служба «Модуль записи SQL» устанавливается автоматически. Она должна запускаться при запросе службы теневого копирования томов (VSS) резервного копирования или восстановления. Служба настраивается с помощью оснастки «Службы» [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Служба модуля записи SQL устанавливается на всех операционных системах.  

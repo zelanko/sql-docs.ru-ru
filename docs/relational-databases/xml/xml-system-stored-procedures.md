@@ -1,5 +1,6 @@
 ---
 title: Системные хранимые процедуры XML | Документация Майкрософт
+description: Сведения о системных хранимых процедурах XML, предоставляемых SQL Server, которые используются для записи запросов с помощью OPENXML.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b39e3fef3b3729f9f2d4e58fe29e303d3070cb64
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4e3b6a8e61befce3dd68bd692976b25d0d9d7259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729757"
 ---
 # <a name="xml-system-stored-procedures"></a>Системные хранимые процедуры XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   СУБД SQL Server предоставляет следующие системные хранимые процедуры, которые используются вместе с инструкцией OPENXML:  
   
 -   [sp_xml_preparedocument (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  

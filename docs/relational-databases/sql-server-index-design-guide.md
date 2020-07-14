@@ -1,5 +1,6 @@
 ---
 title: Руководство по архитектуре и разработке индексов SQL Server | Документы Майкрософт
+description: Познакомьтесь с проектированием эффективных индексов в SQL Server для достижения высокой производительности баз данных и приложений. Узнайте об архитектуре индексов и рекомендациях.
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 4b53758eaf1115b85a6c93600ead960f6f44a050
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151992"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000455"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Руководство по архитектуре и разработке индексов SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Плохо спроектированные индексы и их недостаточное количество — основной источник узких мест в приложениях баз данных. Проектирование эффективных индексов имеет первостепенную важность для достижения высокой производительности баз данных и приложений. Это руководство по проектированию индексов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит сведения об архитектуре индексов и рекомендации, руководствуясь которыми, вы сможете создавать эффективные индексы, удовлетворяющие потребностям ваших приложений.  
     

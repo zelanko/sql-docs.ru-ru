@@ -1,5 +1,6 @@
 ---
 title: Определение действующих разрешений для ядра СУБД | Документация Майкрософт
+description: Узнайте, как определить, кто имеет разрешения на различные объекты в ядре СУБД SQL Server, включая текущую и предыдущую систему разрешений.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7c27c18cb862a753bc1a71c38d732c72a040a48
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f4e26da02da69955a3bc3f589753efa1007ae3a1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488034"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005622"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Определение действующих разрешений для ядра СУБД
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 В этой статье описывается, как определить, кто имеет разрешения на различные объекты в ядре СУБД SQL Server. SQL Server реализует две системы разрешений для ядра СУБД. Более старая система предопределенных ролей имеет предварительно настроенные разрешения. Начиная с версии SQL Server 2005, доступна более гибкая и точная система. (Сведения в этой статье также относятся к SQL Server начиная с версии 2005. Отдельные типы разрешений недоступны в некоторых версиях SQL Server.)
 

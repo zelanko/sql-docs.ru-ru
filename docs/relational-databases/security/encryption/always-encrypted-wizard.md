@@ -1,5 +1,6 @@
 ---
 title: Настройка шифрования столбцов с помощью мастера Always Encrypted | Документация Майкрософт
+description: Узнайте, как настроить конфигурацию Always Encrypted для столбцов базы данных с помощью мастера Always Encrypted в SQL Server.
 ms.custom: ''
 ms.date: 10/30/2019
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71df93e5e7d628fadf5839e980f42a92138a5e0c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f592004e96a9b469a56bc9ff85b8f4080af38406
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73594506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627444"
 ---
 # <a name="configure-column-encryption-using-always-encrypted-wizard"></a>Настройка шифрования столбцов с помощью мастера Always Encrypted
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 Мастер Always Encrypted представляет собой эффективное средство, позволяющее задать нужную конфигурацию [Always Encrypted](always-encrypted-database-engine.md) для выбранных столбцов базы данных. В зависимости от текущей конфигурации и необходимой целевой конфигурации мастер может зашифровать столбец, расшифровать его (снять шифрование) или зашифровать его повторно (например, с помощью нового ключа шифрования столбца или типа шифрования, который отличается от текущего типа, настроенного для столбца). В рамках одного запуска мастера можно настроить несколько столбцов.
 

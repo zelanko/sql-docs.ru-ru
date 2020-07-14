@@ -1,25 +1,24 @@
 ---
 title: API расширяемости
-titleSuffix: Azure Data Studio
 description: Сведения об интерфейсах API расширяемости для Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c94935e7d8b1a72b6a99f83618fb0e8855379ed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75001899"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774641"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>Интерфейсы API расширяемости Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] предоставляет интерфейсы API, с помощью которых расширения могут взаимодействовать с другими компонентами Azure Data Studio, такими как обозреватель объектов. Эти интерфейсы API доступны в файле [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) и описываются ниже.
+Azure Data Studio предоставляет интерфейсы API, с помощью которых расширения могут взаимодействовать с другими компонентами Azure Data Studio, такими как обозреватель объектов. Эти интерфейсы API доступны в файле [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts) и описываются ниже.
 
 ## <a name="connection-management"></a>Управление подключениями
 `azdata.connection`
@@ -159,6 +158,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## <a name="proposed-apis"></a>Предлагаемые интерфейсы API
 
-Мы добавили предлагаемые интерфейсы API, которые, помимо прочего, позволяют расширениям отображать настраиваемый пользовательский интерфейс в диалоговых окнах, мастерах и на вкладках документов. Дополнительные сведения см. в [файле с типами предлагаемых интерфейсов API](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts), однако имейте в виду, что эти API могут быть изменены в любое время. Примеры использования некоторых из этих API можно найти в [примере расширения sqlservices](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+Мы добавили предлагаемые интерфейсы API, которые, помимо прочего, позволяют расширениям отображать настраиваемый пользовательский интерфейс в диалоговых окнах, мастерах и на вкладках документов. Дополнительные сведения см. в [файле с типами предлагаемых интерфейсов API](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts), однако имейте в виду, что эти API могут быть изменены в любое время. Примеры использования некоторых из этих API можно найти в [примере расширения sqlservices](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices).
 
 

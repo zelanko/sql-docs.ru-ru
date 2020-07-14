@@ -1,5 +1,6 @@
 ---
 title: Удаление моментального снимка базы данных (Transact-SQL) | Документация Майкрософт
+description: Узнайте, как удалить моментальный снимок базы данных с помощью Transact-SQL, что приводит к удалению моментального снимка из SQL Server и удалению разреженных файлов, используемых моментальным снимком.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ae40c8d9b4a93ff1f035953207caae5addb56b2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68086024"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756168"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>удалить моментальный снимок базы данных (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   При удалении моментального снимка базы данных он удаляется из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удаляются разреженные файлы, используемые моментальным снимком. При удалении моментального снимка базы данных все соединения пользователя с ним должны быть завершены.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ###  <a name="permissions"></a><a name="Permissions"></a> Permissions  
  Любой пользователь с разрешениями DROP DATABASE может удалить моментальный снимок базы данных.  

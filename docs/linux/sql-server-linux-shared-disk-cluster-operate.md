@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: d63ef5b6535c34e9b5d2087d96dbe615c7f1d8b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58c30fc1e88ec3b7e90549f28b13f91e3330675d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558551"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897251"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>Работа экземпляра отказоустойчивого кластера — SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье описывается работа экземпляра отказоустойчивого кластера (FCI) SQL Server на Linux. Если вы еще не создали экземпляр FCI SQL Server на Linux, см. статью [Настройка экземпляра отказоустойчивого кластера — SQL Server на Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
@@ -43,9 +43,9 @@ ms.locfileid: "75558551"
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI SQL Server.
+   \<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI SQL Server.
 
-   \<NewHostNode> — имя узла кластера, на котором будет размещен экземпляр FCI. 
+   \<NewHostNode> — имя узла кластера, на котором вы хотите разместить экземпляр FCI. 
 
    Подтверждения выводиться не будут.
 
@@ -53,7 +53,7 @@ ms.locfileid: "75558551"
 
 3.  После завершения отработки отказа удалите ограничение, выполнив команду `sudo pcs resource clear <FCIResourceName>`. 
 
-\<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI. 
+\<FCIResourceName> — имя ресурса Pacemaker для экземпляра FCI. 
 
 ## <a name="manual-failover-sles"></a>Отработка отказа вручную (SLES)
 
@@ -66,7 +66,7 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 \<FCIResourceName> — имя ресурса для экземпляра отказоустойчивого кластера. 
 
-\<NewHostNode> — имя нового узла назначения. 
+\<NewHostNode> — имя нового узла назначения. 
 
 
 <!---

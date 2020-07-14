@@ -1,23 +1,22 @@
 ---
 title: Запуск примера аналитического мини-приложения для отслеживания использования табличного пространства
-titleSuffix: Azure Data Studio
 description: В этом руководстве показано, как запустить пример аналитического мини-приложения для отслеживания использования табличного пространства на панели мониторинга базы данных Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18; seo-lt-2019
 ms.date: 09/10/2019
-ms.openlocfilehash: f22aba3fd2f2d006355fdd30aef6f196f2795f6c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8d2be24a72c098c5a6a0b5e3ecefbde9bbe39cd5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957018"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726705"
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-name-sos"></a>Руководство по Запуск примера аналитического мини-приложения для отслеживания использования табличного пространства с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-azure-data-studio"></a>Руководство по Запуск примера аналитического мини-приложения для отслеживания использования табличного пространства с помощью Azure Data Studio
 
 В этом руководстве показано, как запустить аналитическое мини-приложение на панели мониторинга базы данных для получения наглядного представления об использовании табличного пространства в базе данных. В этом руководстве вы узнаете, как выполнять следующие задачи:
 
@@ -33,9 +32,9 @@ ms.locfileid: "74957018"
 * [Подключение и отправка запроса к SQL Server с помощью [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 * [Подключение и отправка запроса к базе данных SQL Azure с помощью[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
-## <a name="turn-on-a-management-insight-on-name-soss-database-dashboard"></a>Включение аналитики управления на панели мониторинга базы данных [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="turn-on-a-management-insight-on-azure-data-studios-database-dashboard"></a>Включение аналитики управления на панели мониторинга базы данных Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] содержит встроенный пример мини-приложения для отслеживания пространства, используемого таблицами в базе данных.
+Azure Data Studio содержит встроенный пример мини-приложения для отслеживания пространства, используемого таблицами в базе данных.
 
 1. Откройте *параметры пользователя* — нажмите сочетание клавиш **CTRL+SHIFT+P**, после чего появится *палитра команд*.
 
@@ -78,11 +77,11 @@ ms.locfileid: "74957018"
 
 ## <a name="working-with-the-insight-chart"></a>Работа с аналитической диаграммой
 
-Аналитическая диаграмма [!INCLUDE[name-sos](../includes/name-sos-short.md)]содержит сведения, отображаемые при фильтрации и наведении указателя мыши. Выполните следующие действия.
+Аналитическая диаграмма Azure Data Studio содержит сведения, отображаемые при фильтрации и наведении указателя мыши. Выполните следующие действия.
 
-1. Щелкните и переключите условные обозначения *row_count* на диаграмме. [!INCLUDE[name-sos](../includes/name-sos-short.md)] отображает и скрывает ряды данных при включении или отключении условных обозначений.
+1. Щелкните и переключите условные обозначения *row_count* на диаграмме. Azure Data Studio отображает и скрывает ряды данных при включении или отключении условных обозначений.
 
-2. Наведите указатель мыши на диаграмму. [!INCLUDE[name-sos](../includes/name-sos-short.md)] отображает дополнительные сведения о метке рядов данных и ее значении, как показано на следующем снимке экрана.
+2. Наведите указатель мыши на диаграмму. Azure Data Studio отображает дополнительные сведения о метке рядов данных и ее значении, как показано на следующем снимке экрана.
 
    ![Переключатель и условные обозначения на диаграмме](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 

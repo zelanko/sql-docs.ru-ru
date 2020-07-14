@@ -1,5 +1,6 @@
 ---
 title: Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA | Документация Майкрософт
+description: Узнайте, как использовать параметры XMLDATA и XMLSCHEMA в режиме RAW с предложением FOR XML для получения схемы XML-DATA или схемы XSD в результатах запроса.
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,15 +14,15 @@ ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
-ms.openlocfilehash: ed72f442fa85a505ace0a1826028ee43f1ea6e97
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e7dfada43a7f899339f9f6ab59ef94dda9853c36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85632930"
 ---
 # <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В следующем запросе возвращается схема XML-DATA, описывающая структуру документа.  
   
 ## <a name="example"></a>Пример  
@@ -53,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен определяется как **Schema** _**n**_ , где _**n**_ является целым числом.  
+>  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен определяется как **Schema**_**n**_, где _**n**_ является целым числом.  
   
  Задавая параметр `XMLSCHEMA` , можно произвести запрос XSD-схемы документа.  
   

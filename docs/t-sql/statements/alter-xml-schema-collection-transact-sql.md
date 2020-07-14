@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 832b8a0c0d66a1e9754366e7735ebbac84b3ac7b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68055959"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895553"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Добавляет новые компоненты схемы в существующую коллекцию XML-схем.  
   
@@ -62,7 +62,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
 ## <a name="remarks"></a>Remarks  
  Чтобы добавить новые XML-схемы с пространствами имен, которые еще не присутствуют в коллекции XML-схем, или добавить новые компоненты к существующим пространствам имен в коллекции, используйте инструкцию ALTER XML SCHEMA COLLECTION.  
   
- В следующем примере добавляется новый \<элемент> к существующему пространству имен `https://MySchema/test_xml_schema` в коллекции `MyColl`.  
+ В следующем примере добавляется новый \<element> к существующему пространству имен `https://MySchema/test_xml_schema` в коллекции `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  

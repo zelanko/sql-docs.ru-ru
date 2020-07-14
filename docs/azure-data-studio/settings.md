@@ -1,29 +1,28 @@
 ---
 title: Параметры пользователя и рабочей области
-titleSuffix: Azure Data Studio
 description: Настройка Azure Data Studio путем изменения параметров пользователя и рабочей области.
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 00c7248050d3bf7e0d5d31df6a1e628dbcc03605
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758385"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Изменение параметров пользователя и рабочей области
 
-Для настройки [!INCLUDE[name-sos](../includes/name-sos-short.md)] можно легко изменить параметры. Практически все части редактора, пользовательского интерфейса и функционального поведения [!INCLUDE[name-sos](../includes/name-sos-short.md)] имеют параметры, которые можно изменить.
+Azure Data Studio можно легко настроить с помощью параметров. Практически все части редактора, пользовательского интерфейса и функционального поведения Azure Data Studio имеют параметры, которые можно изменить.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] предоставляет две различные области для параметров:
+Azure Data Studio предоставляет две различные области для параметров.
 
-* **Пользователь**. Эти параметры применяются глобально к любому открытому вами экземпляру [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+* **Пользователь**. Эти параметры применяются глобально к любому открытому вами экземпляру Azure Data Studio.
 * **Рабочая область**. Параметры рабочей области — это параметры, относящиеся к папке на компьютере; они доступны только в том случае, если папка открыта на боковой панели обозревателя. Параметры, определенные в этой области, имеют приоритет над параметрами пользователя.
 
 ## <a name="creating-user-and-workspace-settings"></a>Создание параметров пользователя и рабочей области
@@ -36,9 +35,10 @@ ms.locfileid: "79287068"
 
 ![Примеры параметров](media/settings/sample-settings.png)
 
-Изменения параметров перезагружаются в [!INCLUDE[name-sos](../includes/name-sos-short.md)] после сохранения измененного файла `settings.json`.
+Изменения параметров перезагружаются в Azure Data Studio после сохранения измененного файла `settings.json`.
 
->**Примечание.** Параметры рабочей области полезны для совместного использования параметров конкретного проекта в группе.
+> [!NOTE] 
+> Параметры рабочей области полезны для совместного использования параметров конкретного проекта в группе.
 
 ## <a name="settings-file-locations"></a>Расположение файлов параметров
 
@@ -48,7 +48,7 @@ ms.locfileid: "79287068"
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-Файл параметров рабочей области находится в папке `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` проекта.
+Файл параметров рабочей области находится в папке `.Azure Data Studio` проекта.
 
 ## <a name="hot-exit"></a>Горячий выход
 
@@ -63,4 +63,4 @@ ms.locfileid: "79287068"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-Поскольку [!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует функциональные возможности параметров пользователя и рабочей области из Visual Studio Code, подробные сведения о параметрах см. в статье [Параметры Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
+Так как Azure Data Studio наследует функциональные возможности параметров пользователя и рабочей области из Visual Studio Code, подробные сведения о параметрах см. в статье [Параметры Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 67a36e80059c58fe1666ba147b0b8a5df94e2044
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 16cd0a4dd5d32d47a471c98392b62989201650d6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922211"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896009"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Аргументы инструкций RESTORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе документированы аргументы, описанные в разделах "Синтаксис" инструкции RESTORE {DATABASE|LOG} и связанного с ней набора вспомогательных инструкций: RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY и RESTORE VERIFYONLY. Большинство аргументов поддерживается только вложенными наборами этих шести инструкций. Поддержка каждого аргумента указана в его описании.  
   
@@ -116,15 +116,15 @@ PAGE
  [ **,** ...*n* ]  
  Заполнитель, который указывает, что можно задать в списке несколько файлов, файловых групп и страниц с разделителями-запятыми. Их число не ограничено.  
   
-FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } Обычно определяет устройства резервного копирования, с которых восстанавливаются резервные копии. В другом случае в предложении FROM инструкции RESTORE DATABASE можно указать имя моментального снимка базы данных, к которому возвращается база данных; в этом случае не разрешается применять предложение WITH.  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> }. Как правило, определяет устройства резервного копирования, с которых восстанавливаются резервные копии. В другом случае в предложении FROM инструкции RESTORE DATABASE можно указать имя моментального снимка базы данных, к которому возвращается база данных; в этом случае не разрешается применять предложение WITH.  
   
  Если предложение FROM опущено, то операция восстановления из резервной копии не производится. Вместо этого восстанавливается база данных. Это позволяет восстановить базу данных, которая была восстановлена с параметром NORECOVERY, или переключиться на резервный сервер. Если предложение FROM опущено, то с предложением WITH должен быть указан параметр NORECOVERY, RECOVERY или STANDBY.  
   
- \<backup_device> [ **,** ...*n* ] Логическое или физическое устройство резервного копирования, которое используется для операции восстановления.  
+ \<backup_device> [ **,** ...*n* ]. Указывает логическое или физическое устройство резервного копирования, используемое для операции восстановления.  
   
  **Поддерживается:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) и [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
- \<устройство_резервного_копирования>::= указывает логическое или физическое устройство резервного копирования, используемое для создания резервной копии, следующим образом:  
+ \<backup_device>::=. Указывает логическое или физическое устройство резервного копирования, используемое для операции резервного копирования, следующим образом:  
   
  { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
  Логическое имя устройства или устройств резервного копирования, созданных процедурой **sp_addumpdevice**, из которых восстанавливается база данных, должно соответствовать правилам для идентификаторов. Если аргумент задается в виде переменной ( **@** _logical\_backup\_device\_name\_var_), имя устройства резервного копирования можно указать как строковую константу ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) или как переменную любого строкового типа данных, за исключением типов данных **ntext** или **text**.  
@@ -218,7 +218,7 @@ LOADHISTORY
   
  Указывает, что операция восстановления загружает данные в таблицы журнала **msdb**. Параметр LOADHISTORY загружает сведения о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]резервных копиях, которые хранятся на наборе носителей, в таблицы журналов резервного копирования и восстановления в базе данных **msdb** для единственного проверяемого резервного набора данных. Дополнительные сведения о таблицах журналов см. в разделе [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md).  
   
-#### <a name="general_with_options--n-"></a>\<общие_параметры_WITH> [ ,...n ]  
+#### <a name="general_with_options--n-"></a>\<general_WITH_options> [ ,...n ]  
  Общие параметры WITH поддерживаются в инструкциях RESTORE DATABASE и RESTORE LOG. Некоторые из этих параметров также поддерживаются одной или более вспомогательными инструкциями, как отмечено ниже.  
   
 ##### <a name="restore-operation-options"></a>Параметры операции восстановления  
@@ -469,7 +469,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
   
  Дополнительные сведения об использовании системы отслеживания измененных данных с зеркальным отображением базы данных см. в разделе [Система отслеживания измененных данных и другие функции SQL Server](../../relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md).  
   
-#### <a name="service_broker_with_options"></a>\<параметры_WITH_для_брокера>  
+#### \<service_broker_WITH_options>  
  Включает или выключает доставку сообщений компонентом [!INCLUDE[ssSB](../../includes/sssb-md.md)] либо задает новый идентификатор компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Этот параметр имеет значение, только если при создании резервной копии в базе данных был включен компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
  { ENABLE_BROKER  | ERROR_BROKER_CONVERSATIONS  | NEW_BROKER }  
@@ -484,7 +484,7 @@ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }
  NEW_BROKER  
  Указывает, что базе данных назначен новый идентификатор компонента Service Broker. Поскольку база данных предполагает наличие нового компонента Service Broker, все существующие сеансы связи в базе данных будут немедленно удалены, не выдавая диалоговых сообщений о завершении. Все маршруты, ссылающиеся на прежний идентификатор компонента Service Broker, должны быть повторно созданы с использованием нового идентификатора.  
   
-#### <a name="point_in_time_with_options"></a>\<point_in_time_WITH_options>  
+#### \<point_in_time_WITH_options>  
  **Поддерживается:**  [RESTORE {DATABASE|LOG}](../../t-sql/statements/restore-statements-transact-sql.md) только для модели полного восстановления и модели восстановления с неполным протоколированием.  
   
  Можно восстановить базу данных на определенный момент времени или к определенной транзакции, указав целевую точку восстановления в предложении STOPAT, STOPATMARK или STOPBEFOREMARK. Восстановление на определенный момент времени или к определенной транзакции всегда выполняется из резервной копии журнала. В каждой инструкции RESTORE LOG из последовательности восстановления необходимо указывать целевое время или целевую транзакцию в одинаковых предложениях STOPAT, STOPATMARK или STOPBEFOREMARK.  

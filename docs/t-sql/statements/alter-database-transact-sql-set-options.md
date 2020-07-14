@@ -2,7 +2,7 @@
 title: Параметры ALTER DATABASE SET (Transact-SQL) | Документы Майкрософт
 description: Сведения о том, как задать параметры базы данных, например автоматическую настройку, шифрование, хранилище запросов в SQL Server и базе данных SQL Azure.
 ms.custom: ''
-ms.date: 01/10/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 482451fbe9a94696f434bd005b95b49e5dd5dd5e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
+ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138285"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85215247"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -297,7 +297,7 @@ SET
 Имя изменяемой базы данных.
 
 CURRENT     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Выполняет действие в текущей базе данных. `CURRENT` работает не со всеми параметрами и не во всех контекстах. Если `CURRENT` не работает, укажите имя базы данных.
 
@@ -328,7 +328,7 @@ OFF
 >
 > Зеркальное отображение базы данных требует, чтобы параметр AUTO_CLOSE был установлен в состояние OFF.
 
-Если параметр базы данных AUTOCLOSE установлен в значение ON, то действия, инициирующие автоматическое закрытие базы данных, очищают кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) и выше для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
+Если параметр базы данных AUTOCLOSE установлен в значение ON, то действия, инициирующие автоматическое закрытие базы данных, очищают кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Очистка кэша планов становится причиной перекомпиляции всех последующих планов выполнения и приводит к непредвиденному временному снижению производительности обработки запросов. Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 2 (SP2) для каждого удаленного хранилища кэша в кэше планов журнал ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] содержит следующее информационное сообщение: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. Это сообщение добавляется в журнал каждые пять минут при сбросе кэша в течение этого интервала времени.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
@@ -344,7 +344,7 @@ OFF
 Дополнительные сведения см. в подразделе "Использование параметров статистики на уровне базы данных" раздела [Статистика](../../relational-databases/statistics/statistics.md).
 
 INCREMENTAL = ON | **OFF**     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Присваивает AUTO_CREATE_STATISTICS значение ON, а INCREMENTAL — значение ON. Он создает автоматически создаваемые статистики как добавочные везде, где поддерживаются добавочные статистики. Значение по умолчанию — OFF. Дополнительные сведения см. в описании [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
@@ -446,7 +446,7 @@ OFF
 Отключает отслеживание изменений для базы данных. Перед отключением отслеживания изменений для базы данных предварительно отключите отслеживание изменений для всех таблиц.
 
 **\<containment_option> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Управляет параметрами автономной работы базы данных.
 
@@ -489,7 +489,7 @@ GLOBAL
 
 Вы можете определить состояние этого параметра, проверив столбец `is_local_cursor_default` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `IsLocalCursorsDefault` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<database_mirroring>**      
+**\<database_mirroring>**     
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Описания аргументов см. в статье [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
@@ -572,7 +572,7 @@ READ_WRITE
 Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.
 
 > [!NOTE]
-> Применительно к федеративным базам данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], инструкция SET { READ_ONLY | READ_WRITE } отключена.
+> В федеративных базах данных [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] `SET { READ_ONLY | READ_WRITE }` отключен.
 
 **\<db_user_access_option> ::=**      
 Управляет пользовательским доступом к базе данных.
@@ -601,18 +601,18 @@ MULTI_USER
 Вы можете определить состояние этого параметра, проверив столбец `user_access` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md). Состояние можно также определить, проверив свойство `UserAccess` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<delayed_durability_option> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 Управляет тем, является ли фиксация транзакций полностью устойчивой или отложенной устойчивой.
 
 DISABLED     
-Все транзакции, следующие за SET DISABLED, являются полностью устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
+Все транзакции, следующие за `SET DISABLED`, являются полностью устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
 ALLOWED     
-Все транзакции, следующие за SET ALLOWED, являются полностью устойчивыми или отложенными устойчивыми, в зависимости от параметра устойчивости, заданного в блоке ATOMIC или инструкции COMMIT.
+Все транзакции, следующие за `SET ALLOWED`, являются полностью устойчивыми или отложенными устойчивыми в зависимости от параметра устойчивости, заданного в блоке ATOMIC или инструкции COMMIT.
 
 FORCED     
-Все транзакции, следующие за SET FORCED, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
+Все транзакции, следующие за `SET FORCED`, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
 **\<external_access_option> ::=**      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
@@ -651,7 +651,7 @@ OFF
 Вы можете определить состояние этого параметра, проверив столбец `is_trustworthy_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 DEFAULT_FULLTEXT_LANGUAGE     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Задает язык, используемый по умолчанию для полнотекстовых индексированных столбцов.
 
@@ -659,27 +659,27 @@ DEFAULT_FULLTEXT_LANGUAGE
 > Этот параметр допустим только в случае, если параметр CONTAINMENT равен PARTIAL. Если параметр CONTAINMENT установлен в состояние NONE, возникнут ошибки.
 
 DEFAULT_LANGUAGE     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Указывает язык, используемый по умолчанию для всех созданных имен входа. Чтобы задать язык, можно указать локальный идентификатор (lcid), название языка или псевдоним языка. Список допустимых имен и псевдонимов языков см. в описании [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Этот параметр допустим только в случае, если параметр CONTAINMENT равен PARTIAL. Если параметр CONTAINMENT установлен в состояние NONE, возникнут ошибки.
 
 NESTED_TRIGGERS     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Указывает, допустимо ли каскадирование триггеров AFTER, то есть выполнение действия, вызывающего срабатывание другого триггера, который может инициировать другой триггер и т. д. Этот параметр допустим только в случае, если параметр CONTAINMENT равен PARTIAL. Если параметр CONTAINMENT установлен в состояние NONE, возникнут ошибки.
 
 TRANSFORM_NOISE_WORDS     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Используется для подавления сообщения об ошибке, если логическая операция по полнотекстовому запросу не срабатывает из-за пропускаемых слов или стоп-слов. Этот параметр допустим только в случае, если параметр CONTAINMENT равен PARTIAL. Если параметр CONTAINMENT установлен в состояние NONE, возникнут ошибки.
 
 TWO_DIGIT_YEAR_CUTOFF     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Указывает целое число в промежутке от 1753 до 9999, представляющее пороговое значение года для преобразования двухзначной записи лет в четырехзначную. Этот параметр допустим только в случае, если параметр CONTAINMENT равен PARTIAL. Если параметр CONTAINMENT установлен в состояние NONE, возникнут ошибки.
 
 **\<FILESTREAM_option> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Управляет параметрами таблиц FileTables.
 
@@ -702,7 +702,7 @@ DIRECTORY_NAME = *\<directory_name>*
 Дополнительные сведения см. в описании [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
 **\<mixed_page_allocation_option> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Управляет возможностью базы данных создавать начальные страницы с использованием смешанного экстента для первых восьми страниц таблицы или индекса.
 
@@ -728,16 +728,19 @@ FORCED
 Текущее состояние этого параметра можно определить по столбцу `is_parameterization_forced column` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
 <a name="query-store"></a> **\<query_store_options> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов. Дополнительные сведения: [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Включает хранилище запросов.
 
-OFF     
-Отключает хранилище запросов. OFF — значение по умолчанию.
+OFF [ FORCED ]     
+Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Заставляет хранилище запросов выполнять отключение как можно быстрее. По сути отключает хранилище запросов немедленно. FORCED появился в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5.
+
+> [!NOTE]  
+> Хранилище запросов нельзя отключить в отдельной базе данных Azure SQL Database и эластичном пуле. При выполнении инструкции ALTER DATABASE [база данных] SET QUERY_STORE = OFF будет возвращено предупреждение «'QUERY_STORE = OFF' не поддерживается в данной версии SQL Server». 
 
 CLEAR     
 Удаляет содержимое хранилища запросов.
@@ -752,21 +755,25 @@ READ_ONLY
 Можно считывать данные из хранилища запросов, но новые сведения не добавляются. Если выделенное свободное место в хранилище запросов будет исчерпано, хранилище переключится в режим работы READ_ONLY.
 
 CLEANUP_POLICY     
-Описывает политику хранения данных хранилища запросов. STALE_QUERY_THRESHOLD_DAYS определяет количество дней хранения сведений о запросе в хранилище. STALE_QUERY_THRESHOLD_DAYS имеет тип **bigint**.
+Описывает политику хранения данных хранилища запросов. STALE_QUERY_THRESHOLD_DAYS определяет количество дней хранения сведений о запросе в хранилище. STALE_QUERY_THRESHOLD_DAYS имеет тип **bigint**. Значение по умолчанию — 30.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**.
+Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**. Значение по умолчанию ― **900** (15 минут).
 
 MAX_STORAGE_SIZE_MB     
-Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**.
+Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**. Значение по умолчанию — **100 МБ** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], значение по умолчанию равно **1 ГБ**.
 
 > [!NOTE]
-> Ограничение MAX_STORAGE_SIZE_MB не применяется строго. Размер хранилища проверяется только в том случае, если хранилище запросов записывает данные на диск. Этот интервал задается параметром DATA_FLUSH_INTERVAL_SECONDS или параметром диалогового окна [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] хранилища запросов **Интервал записи данных на диск**. Значение по умолчанию — 900 секунд (или 15 минут).
-> Если хранилище запросов нарушило ограничение MAX_STORAGE_SIZE_MB между проверками размера хранилища, оно будет переведено в режим только для чтения. Если параметр SIZE_BASED_CLEANUP_MODE включен, также активируется механизм очистки для принудительного применения ограничения MAX_STORAGE_SIZE_MB.
+> Ограничение `MAX_STORAGE_SIZE_MB` не применяется строго. Размер хранилища проверяется только в том случае, если хранилище запросов записывает данные на диск. Этот интервал задается параметром `DATA_FLUSH_INTERVAL_SECONDS` или параметром диалогового окна хранилища запросов [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Интервал записи данных на диск**. Значение по умолчанию — 900 секунд (или 15 минут).
+> Если хранилище запросов нарушило ограничение `MAX_STORAGE_SIZE_MB` между проверками размера хранилища, оно будет переведено в режим только для чтения. Если параметр `SIZE_BASED_CLEANUP_MODE` включен, также активируется механизм очистки для принудительного применения ограничения `MAX_STORAGE_SIZE_MB`.
 > После освобождения достаточного пространства режим хранилища запросов автоматически переключится обратно на чтение и запись.
 
+> [!IMPORTANT]
+> Если представляется, что для отслеживания рабочей нагрузки потребуется более 10 ГБ дискового пространства, то, вероятно, придется пересмотреть и оптимизировать рабочую нагрузку для повторного использования планов запросов (например, с использованием [принудительной параметризации](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) или изменить конфигурации хранилища запросов.    
+> С [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно установить `QUERY_CAPTURE_MODE` на CUSTOM для дополнительного контроля над политикой отслеживания запросов.
+
 INTERVAL_LENGTH_MINUTES     
-Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные о среде выполнения в хранилище вычисляются для фиксированного временного интервала. Этот интервал настраивается с помощью аргумента INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES имеет тип **bigint**.
+Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные о среде выполнения в хранилище вычисляются для фиксированного временного интервала. Этот интервал настраивается с помощью аргумента INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES имеет тип **bigint**. Значение по умолчанию — **60**.
 
 SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }     
 Определяет, активируется ли очистка автоматически, когда общий объем данных приблизится к верхней границе ограничения.
@@ -779,7 +786,7 @@ OFF
 
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Определяет режим записи текущего активного запроса. В каждом режиме определяются собственные политики записи.
 
 > [!NOTE]
@@ -795,17 +802,28 @@ None
 Запись новых запросов останавливается. Хранилище запросов будет продолжать сбор статистики компиляции и времени выполнения для запросов, которые уже были записаны. Эту конфигурацию следует использовать с осторожностью, поскольку можно пропустить запись важных запросов.
 
 CUSTOM     
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Позволяет управлять параметрами QUERY_CAPTURE_POLICY.
 
-QUERY_CAPTURE_MODE имеет тип **nvarchar**.
+QUERY_CAPTURE_MODE имеет тип **nvarchar**. 
 
 MAX_PLANS_PER_QUERY     
-Определяет максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию равно 200. MAX_PLANS_PER_QUERY имеет тип **int**.
+Определяет максимальное количество поддерживаемых планов для каждого запроса. MAX_PLANS_PER_QUERY имеет тип **int**. Значение по умолчанию — **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])
+
+Контролирует, будет ли отслеживаться статистика времени ожидания по запросам.
+
+ON    
+Информация о статистике ожидания по запросам отслеживается. Это значение является значением конфигурации по умолчанию.
+
+OFF    
+Информация о статистике ожидания по запросам не отслеживается.
 
 **\<query_capture_policy_option_list> :: =**      
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Управляет параметрами политики записи для хранилища запросов. За исключением STALE_CAPTURE_POLICY_THRESHOLD, эти параметры определяют условия OR, которые должны выполняться для запросов, записываемых в определенное пороговое значение устаревшей политики записи.
 
@@ -872,7 +890,7 @@ None
 - При обновлении пользовательской или системной базы данных до версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней значение PAGE_VERIFY (NONE или TORN_PAGE_DETECTION) не изменяется. Рекомендуется изменить его на CHECKSUM.
 
     > [!NOTE]
-    > В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметру базы данных PAGE_VERIFY присваивается значение NONE применительно к базе данных TempDB, которая не может быть изменена. В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях значением по умолчанию для базы данных TempDB является CHECKSUM для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значением по умолчанию остается NONE. Этот параметр можно изменять. Для работы с базой данных tempdb рекомендуется использовать CHECKSUM.
+    > В более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]параметру базы данных PAGE_VERIFY присваивается значение NONE применительно к базе данных TempDB, которая не может быть изменена. Начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], значением по умолчанию для базы данных TempDB является CHECKSUM для новых установок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] значением по умолчанию остается NONE. Этот параметр можно изменять. Для работы с базой данных tempdb рекомендуется использовать CHECKSUM.
 
 - Значение TORN_PAGE_DETECTION использует меньше ресурсов, но обеспечивает минимальный вариант защиты CHECKSUM.
 - Аргумент PAGE_VERIFY можно установить, не производя перевод базы данных в режим "вне сети", блокировку или прочие действия, нарушающие ее параллелизм.
@@ -891,7 +909,7 @@ None
 Текущее состояние этого параметра можно определить, проверив значение столбца `page_verify_option` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойство `IsTornPageDetectionEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<remote_data_archive_option> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 Включает или отключает Stretch Database для базы данных. Дополнительные сведения см. в разделе [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
@@ -996,7 +1014,7 @@ OFF
 > Если таблица создается с аргументом **DURABILITY = SCHEMA_ONLY**, а затем **READ_COMMITTED_SNAPSHOT** меняется с помощью **ALTER DATABASE**, данные в таблице будут утеряны.
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | **OFF** }     
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])
 
 ON     
 Если уровень изоляции транзакции установлен в любое значение ниже SNAPSHOT, все интерпретированные операции [!INCLUDE[tsql](../../includes/tsql-md.md)] в таблицах, оптимизированных для памяти, выполняются с уровнем изоляции SNAPSHOT. Примеры уровней изоляции ниже, чем моментальный снимок — READ COMMITTED или READ UNCOMMITTED. Эти операции выполняются независимо от того, установлен ли уровень изоляции транзакции явно на уровне сеанса или неявно используется значение по умолчанию.
@@ -1150,7 +1168,7 @@ OFF
 Состояние этого параметра можно определить, проверив значение столбца `is_recursive_triggers_on` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) или свойства `IsRecursiveTriggersEnabled` функции [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
 **\<target_recovery_time_option> ::=**      
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])
 
 Указывает частоту косвенных контрольных точек для каждой базы данных. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], значение по умолчанию для новых баз данных равно **1 минуте**. Оно означает, что база данных будет использовать косвенные контрольные точки. Для более старых версий по умолчанию установлено значение 0, при котором базой данных используются автоматические контрольные точки, а их частота зависит от параметра интервала для восстановления экземпляра сервера. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует 1 минуту для большинства систем.
 
@@ -1187,27 +1205,27 @@ NO_WAIT
 
 Не все параметры базы данных используют предложение WITH \<termination> или могут быть указаны в сочетании с другими параметрами. В следующей таблице перечислены эти параметры.
 
-|Категория параметров|Может быть указан с другими параметрами|Может использовать предложение WITH \<termination>|
+|Категория параметров|Может быть указан с другими параметрами|Можно использовать предложение WITH \<termination>.|
 |----------------------|-----------------------------------------|---------------------------------------------|
 |\<db_state_option>|Да|Да|
 |\<db_user_access_option>|Да|Да|
 |\<db_update_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
-|\<external_access_option>|Да|нет|
-|\<cursor_option>|Да|нет|
-|\<auto_option>|Да|нет|
-|\<sql_option>|Да|нет|
-|\<recovery_option>|Да|нет|
-|\<target_recovery_time_option>|нет|Да|
-|\<database_mirroring_option>|нет|нет|
-|ALLOW_SNAPSHOT_ISOLATION|нет|нет|
-|READ_COMMITTED_SNAPSHOT|нет|Да|
+|\<external_access_option>|Да|Нет|
+|\<cursor_option>|Да|Нет|
+|\<auto_option>|Да|Нет|
+|\<sql_option>|Да|Нет|
+|\<recovery_option>|Да|Нет|
+|\<target_recovery_time_option>|Нет|Да|
+|\<database_mirroring_option>|Нет|Нет|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|Нет|
+|READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
-|\<service_broker_option>|Да|нет|
+|\<service_broker_option>|Да|Нет|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
 |\<parameterization_option>|Да|Да|
 |\<change_tracking_option>|Да|Да|
-|\<db_encryption_option>|Да|нет|
+|\<db_encryption_option>|Да|Нет|
 
 Кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищается при установке одного из следующих параметров.
 
@@ -1320,7 +1338,7 @@ SET CHANGE_TRACKING = OFF;
 
 ### <a name="e-enabling-the-query-store"></a>Д. Включение хранилища запросов
 
-**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше)
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
 В приведенном ниже примере включается хранилище запросов и настраиваются его параметры.
 
@@ -1517,9 +1535,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -1749,7 +1777,7 @@ READ_WRITE
 Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.
 
 > [!NOTE]
-> Применительно к федеративным базам данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], инструкция SET { READ_ONLY | READ_WRITE } отключена.
+> В федеративных базах данных [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] `SET { READ_ONLY | READ_WRITE }` отключен.
 
 **\<db_user_access_option> ::=**      
 Управляет пользовательским доступом к базе данных.
@@ -1766,13 +1794,13 @@ MULTI_USER
 Управляет тем, является ли фиксация транзакций полностью устойчивой или отложенной устойчивой.
 
 DISABLED     
-Все транзакции, следующие за SET DISABLED, являются полностью устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
+Все транзакции, следующие за `SET DISABLED`, являются полностью устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
 ALLOWED     
-Все транзакции, следующие за SET ALLOWED, являются полностью устойчивыми или отложенными устойчивыми, в зависимости от параметра устойчивости, заданного в блоке ATOMIC или инструкции COMMIT.
+Все транзакции, следующие за `SET ALLOWED`, являются полностью устойчивыми или отложенными устойчивыми в зависимости от параметра устойчивости, заданного в блоке ATOMIC или инструкции COMMIT.
 
 FORCED     
-Все транзакции, следующие за SET FORCED, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
+Все транзакции, следующие за `SET FORCED`, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
 **\<PARAMETERIZATION_option> ::=**      
 Управляет параметром параметризации.
@@ -1786,7 +1814,7 @@ FORCED
 
 Текущее состояние этого параметра можно определить по столбцу `is_parameterization_forced` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов.
@@ -1804,21 +1832,28 @@ OPERATION_MODE
 Описывает режим работы хранилища запросов. Допустимые значения: READ_ONLY и READ_WRITE. В режиме READ_WRITE хранилище запросов собирает и сохраняет план запросов и статистические данные о выполнении. В режиме READ_ONLY можно считывать данные из хранилища запросов, но новые сведения не добавляются. Если выделенное свободное место в хранилище запросов будет исчерпано, хранилище переключится в режим работы READ_ONLY.
 
 CLEANUP_POLICY     
-Описывает политику хранения данных хранилища запросов. STALE_QUERY_THRESHOLD_DAYS определяет количество дней хранения сведений о запросе в хранилище. STALE_QUERY_THRESHOLD_DAYS имеет тип **bigint**.
+Описывает политику хранения данных хранилища запросов. STALE_QUERY_THRESHOLD_DAYS определяет количество дней хранения сведений о запросе в хранилище. STALE_QUERY_THRESHOLD_DAYS имеет тип **bigint**. Значение по умолчанию — 30. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — **7** дней.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**.
+Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**. Значение по умолчанию ― **900** (15 минут).
 
 MAX_STORAGE_SIZE_MB     
-Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**.
+Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition значение по умолчанию — **1 ГБ**, а для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition — **10 МБ**.
 
 > [!NOTE]
-> Ограничение MAX_STORAGE_SIZE_MB не применяется строго. Размер хранилища проверяется только в том случае, если хранилище запросов записывает данные на диск. Этот интервал задается параметром DATA_FLUSH_INTERVAL_SECONDS или параметром диалогового окна [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] хранилища запросов **Интервал записи данных на диск**. Значение по умолчанию — 900 секунд (или 15 минут).
-> Если хранилище запросов нарушило ограничение MAX_STORAGE_SIZE_MB между проверками размера хранилища, оно будет переведено в режим только для чтения. Если параметр SIZE_BASED_CLEANUP_MODE включен, также активируется механизм очистки для принудительного применения ограничения MAX_STORAGE_SIZE_MB.
+> Ограничением параметра `MAX_STORAGE_SIZE_MB` является 10 240 МБ на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+
+> [!NOTE]
+> Ограничение `MAX_STORAGE_SIZE_MB` не применяется строго. Размер хранилища проверяется только в том случае, если хранилище запросов записывает данные на диск. Этот интервал задается параметром `DATA_FLUSH_INTERVAL_SECONDS` или параметром диалогового окна хранилища запросов [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Интервал записи данных на диск**. Значение по умолчанию — 900 секунд (или 15 минут).
+> Если хранилище запросов нарушило ограничение `MAX_STORAGE_SIZE_MB` между проверками размера хранилища, оно будет переведено в режим только для чтения. Если параметр `SIZE_BASED_CLEANUP_MODE` включен, также активируется механизм очистки для принудительного применения ограничения `MAX_STORAGE_SIZE_MB`.
 > После освобождения достаточного пространства режим хранилища запросов автоматически переключится обратно на чтение и запись.
 
+> [!IMPORTANT]
+> Если представляется, что для отслеживания рабочей нагрузки потребуется более 10 ГБ дискового пространства, то, вероятно, придется пересмотреть и оптимизировать рабочую нагрузку для повторного использования планов запросов (например, с использованием [принудительной параметризации](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) или изменить конфигурации хранилища запросов.    
+> С [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно установить `QUERY_CAPTURE_MODE` на CUSTOM для дополнительного контроля над политикой отслеживания запросов.
+
 INTERVAL_LENGTH_MINUTES     
-Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные о среде выполнения в хранилище вычисляются для фиксированного временного интервала. Этот интервал настраивается с помощью аргумента INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES имеет тип **bigint**.
+Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные о среде выполнения в хранилище вычисляются для фиксированного временного интервала. Этот интервал настраивается с помощью аргумента INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES имеет тип **bigint**. Значение по умолчанию — **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Определяет, будет ли автоматически активирована очистка, когда общий объем данных приблизится к верхней границе ограничения.
@@ -1831,11 +1866,14 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
-QUERY_CAPTURE_MODE     
-Определяет режим записи текущего активного запроса:
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+Определяет режим записи текущего активного запроса. В каждом режиме определяются собственные политики записи.   
+
+> [!NOTE]
+> Курсоры, запросы в хранимых процедурах и скомпилированные в собственном коде запросы всегда записываются, если задан режим записи запроса ALL, AUTO или CUSTOM.
 
 ALL     
-Записываются все запросы.
+Записывает все запросы.
 
 AUTO     
 Записываются соответствующие запросы на основе показателя выполнения и объема потребления ресурсов. Это значение конфигурации по умолчанию для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -1843,10 +1881,37 @@ AUTO
 None     
 Запись новых запросов останавливается. Хранилище запросов будет продолжать сбор статистики компиляции и времени выполнения для запросов, которые уже были записаны. Эту конфигурацию следует использовать с осторожностью, поскольку можно пропустить запись важных запросов.
 
+CUSTOM     
+Позволяет управлять параметрами QUERY_CAPTURE_POLICY.
+
 QUERY_CAPTURE_MODE имеет тип **nvarchar**.
 
 MAX_PLANS_PER_QUERY     
-Целое число, представляющее максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию — 200.
+Определяет максимальное количество поддерживаемых планов для каждого запроса. MAX_PLANS_PER_QUERY имеет тип **int**. Значение по умолчанию — **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Контролирует, будет ли отслеживаться статистика времени ожидания по запросам.
+
+ON    
+Информация о статистике ожидания по запросам отслеживается. Это значение является значением конфигурации по умолчанию.
+
+OFF    
+Информация о статистике ожидания по запросам не отслеживается.
+
+**\<query_capture_policy_option_list> :: =**      
+Управляет параметрами политики записи для хранилища запросов. За исключением STALE_CAPTURE_POLICY_THRESHOLD, эти параметры определяют условия OR, которые должны выполняться для запросов, записываемых в определенное пороговое значение устаревшей политики записи.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Определяет период интервала ознакомления для определения того, нужно ли записать запрос. Значение по умолчанию — 1 день, можно указать от 1 часа до 7 дней. *number* имеет тип **int**.
+
+EXECUTION_COUNT     
+Определяет количество выполнений запроса в течение ознакомительного периода. Значение по умолчанию — 30, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен быть выполнен по меньшей мере 30 раз за один день, чтобы быть сохраненным в хранилище запросов. EXECUTION_COUNT имеет тип **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Определяет общее время ЦП, затраченное на компиляцию, которое запрос использовал за ознакомительный период. Значение по умолчанию — 1000, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен иметь общее время ЦП, затраченное на компиляцию, не менее одной секунды за один день, чтобы быть сохраненным в хранилище запросов. TOTAL_COMPILE_CPU_TIME_MS имеет тип **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Определяет общее время ЦП, затраченное на выполнение, которое запрос использовал за ознакомительный период. Значение по умолчанию — 100, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен иметь общее время ЦП, затраченное на выполнение, не менее 100 мс за один день, чтобы быть сохраненным в хранилище запросов. TOTAL_EXECUTION_CPU_TIME_MS имеет тип **int**.
 
 **\<snapshot_option> ::=**      
 Определяет уровень изоляции транзакции.
@@ -2077,27 +2142,26 @@ NO_WAIT
 
 Не все параметры базы данных используют предложение WITH \<termination> или могут быть указаны в сочетании с другими параметрами. В следующей таблице перечислены эти параметры.
 
-|Категория параметров|Может быть указан с другими параметрами|Может использовать предложение WITH \<termination>|
+|Категория параметров|Может быть указан с другими параметрами|Можно использовать предложение WITH \<termination>.|
 |----------------------|-----------------------------------------|---------------------------------------------|
-|\<auto_option>|Да|нет|
+|\<auto_option>|Да|Нет|
 |\<change_tracking_option>|Да|Да|
-|\<cursor_option>|Да|нет|
-|\<db_encryption_option>|Да|нет|
+|\<cursor_option>|Да|Нет|
+|\<db_encryption_option>|Да|Нет|
 |\<db_update_option>|Да|Да|
 |\<db_user_access_option>|Да|Да|
 |\<delayed_durability_option>|Да|Да|
 |\<parameterization_option>|Да|Да|
-|ALLOW_SNAPSHOT_ISOLATION|нет|нет|
-|READ_COMMITTED_SNAPSHOT|нет|Да|
+|ALLOW_SNAPSHOT_ISOLATION|Нет|Нет|
+|READ_COMMITTED_SNAPSHOT|Нет|Да|
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|
-|\<sql_option>|Да|нет|
-|\<target_recovery_time_option>|нет|Да|
+|\<sql_option>|Да|Нет|
+|\<target_recovery_time_option>|Нет|Да|
 
 ## <a name="examples"></a>Примеры
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. Перевод базы данных в состояние READ_ONLY
-
 Для изменения состояния базы данных или файловой группы в READ_ONLY или READ_WRITE требуется монопольный доступ к базе данных. В следующем примере для базы данных устанавливается режим `RESTRICTED_USER`, ограничивающий доступ к ней. Затем состояние базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] устанавливается в `READ_ONLY`, а также возвращается доступ к базе данных всем пользователям.
 
 ```sql
@@ -2116,7 +2180,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>Б. Включение изоляции моментального снимка для базы данных
-
 Следующий пример включает параметр платформы изоляции моментального снимка для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
 
 ```sql
@@ -2142,7 +2205,6 @@ GO
 |[database_name] |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>В. Включение, изменение и отключение отслеживания изменений
-
 В следующем примере демонстрируется включение отслеживания изменений для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и установка `2`-дневного срока хранения.
 
 ```sql
@@ -2166,18 +2228,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>Г. Включение хранилища запросов
-
 В следующем примере включается хранилище запросов и настраиваются его параметры.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-(
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>Д. Включение хранилища запросов с использованием статистики ожидания
+В приведенном ниже примере включается хранилище запросов и настраиваются его параметры.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>Е. Включение хранилища запросов с использованием параметров пользовательской политики записи
+В приведенном ниже примере включается хранилище запросов и настраиваются его параметры.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 
@@ -2298,9 +2403,19 @@ SET
   | DATA_FLUSH_INTERVAL_SECONDS = number
   | MAX_STORAGE_SIZE_MB = number
   | INTERVAL_LENGTH_MINUTES = number
-  | SIZE_BASED_CLEANUP_MODE = [ AUTO | OFF ]
-  | QUERY_CAPTURE_MODE = [ ALL | AUTO | NONE ]
+  | SIZE_BASED_CLEANUP_MODE = { AUTO | OFF }
+  | QUERY_CAPTURE_MODE = { ALL | AUTO | CUSTOM | NONE }
   | MAX_PLANS_PER_QUERY = number
+  | WAIT_STATS_CAPTURE_MODE = { ON | OFF }
+  | QUERY_CAPTURE_POLICY = ( <query_capture_policy_option_list> [,...n] )
+}
+
+<query_capture_policy_option_list> :: =
+{
+    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+    | EXECUTION_COUNT = number
+    | TOTAL_COMPILE_CPU_TIME_MS = number
+    | TOTAL_EXECUTION_CPU_TIME_MS = number
 }
 
 <snapshot_option> ::=
@@ -2497,13 +2612,13 @@ MULTI_USER
 Управляет тем, является ли фиксация транзакций полностью устойчивой или отложенной устойчивой.
 
 DISABLED     
-Все транзакции, следующие за SET DISABLED, являются полностью устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
+Все транзакции, следующие за `SET DISABLED`, являются полностью устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
 ALLOWED     
-Все транзакции, следующие за SET ALLOWED, являются полностью устойчивыми или отложенными устойчивыми, в зависимости от параметра устойчивости, заданного в блоке ATOMIC или инструкции COMMIT.
+Все транзакции, следующие за `SET ALLOWED`, являются полностью устойчивыми или отложенными устойчивыми в зависимости от параметра устойчивости, заданного в блоке ATOMIC или инструкции COMMIT.
 
 FORCED     
-Все транзакции, следующие за SET FORCED, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
+Все транзакции, следующие за `SET FORCED`, являются отложенными устойчивыми. Все параметры устойчивости, заданные в блоке ATOMIC или инструкции COMMIT, не учитываются.
 
 **\<PARAMETERIZATION_option> ::=**      
 Управляет параметром параметризации.
@@ -2517,7 +2632,7 @@ FORCED
 
 Текущее состояние этого параметра можно определить по столбцу `is_parameterization_forced` в представлении каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).
 
-**\<query_store_options> ::=**
+<a name="query-store"></a> **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]     
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов.
@@ -2535,16 +2650,25 @@ OPERATION_MODE
 Описывает режим работы хранилища запросов. Допустимые значения: READ_ONLY и READ_WRITE. В режиме READ_WRITE хранилище запросов собирает и сохраняет план запросов и статистические данные о выполнении. В режиме READ_ONLY можно считывать данные из хранилища запросов, но новые сведения не добавляются. Если выделенное свободное место в хранилище запросов будет исчерпано, хранилище переключится в режим работы READ_ONLY.
 
 CLEANUP_POLICY     
-Описывает политику хранения данных хранилища запросов. STALE_QUERY_THRESHOLD_DAYS определяет количество дней хранения сведений о запросе в хранилище. STALE_QUERY_THRESHOLD_DAYS имеет тип **bigint**.
+Описывает политику хранения данных хранилища запросов. STALE_QUERY_THRESHOLD_DAYS определяет количество дней хранения сведений о запросе в хранилище. STALE_QUERY_THRESHOLD_DAYS имеет тип **bigint**. Значение по умолчанию — 30. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — **7** дней.
 
 DATA_FLUSH_INTERVAL_SECONDS     
-Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**.
+Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Для настройки частоты этой асинхронной передачи используется аргумент DATA_FLUSH_INTERVAL_SECONDS. DATA_FLUSH_INTERVAL_SECONDS имеет тип **bigint**. Значение по умолчанию ― **900** (15 минут).
 
 MAX_STORAGE_SIZE_MB     
-Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**.
+Определяет свободное место, выделенное для хранилища запросов. MAX_STORAGE_SIZE_MB имеет тип **bigint**. Значение по умолчанию — **100 МБ**.
+
+> [!NOTE]
+> Ограничение `MAX_STORAGE_SIZE_MB` не применяется строго. Размер хранилища проверяется только в том случае, если хранилище запросов записывает данные на диск. Этот интервал задается параметром `DATA_FLUSH_INTERVAL_SECONDS` или параметром диалогового окна хранилища запросов [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] **Интервал записи данных на диск**. Значение по умолчанию — 900 секунд (или 15 минут).
+> Если хранилище запросов нарушило ограничение `MAX_STORAGE_SIZE_MB` между проверками размера хранилища, оно будет переведено в режим только для чтения. Если параметр `SIZE_BASED_CLEANUP_MODE` включен, также активируется механизм очистки для принудительного применения ограничения `MAX_STORAGE_SIZE_MB`.
+> После освобождения достаточного пространства режим хранилища запросов автоматически переключится обратно на чтение и запись.
+
+> [!IMPORTANT]
+> Если представляется, что для отслеживания рабочей нагрузки потребуется более 10 ГБ дискового пространства, то, вероятно, придется пересмотреть и оптимизировать рабочую нагрузку для повторного использования планов запросов (например, с использованием [принудительной параметризации](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)) или изменить конфигурации хранилища запросов.    
+> С [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно установить `QUERY_CAPTURE_MODE` на CUSTOM для дополнительного контроля над политикой отслеживания запросов.
 
 INTERVAL_LENGTH_MINUTES     
-Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные о среде выполнения в хранилище вычисляются для фиксированного временного интервала. Этот интервал настраивается с помощью аргумента INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES имеет тип **bigint**.
+Определяет временной интервал вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные о среде выполнения в хранилище вычисляются для фиксированного временного интервала. Этот интервал настраивается с помощью аргумента INTERVAL_LENGTH_MINUTES. INTERVAL_LENGTH_MINUTES имеет тип **bigint**. Значение по умолчанию — **60**.
 
 SIZE_BASED_CLEANUP_MODE     
 Определяет, будет ли автоматически активирована очистка, когда общий объем данных приблизится к верхней границе ограничения.
@@ -2557,7 +2681,7 @@ AUTO
 
 SIZE_BASED_CLEANUP_MODE имеет тип **nvarchar**.
 
-QUERY_CAPTURE_MODE     
+QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
 Определяет режим записи текущего активного запроса.
 
 ALL     
@@ -2572,7 +2696,31 @@ None
 QUERY_CAPTURE_MODE имеет тип **nvarchar**.
 
 MAX_PLANS_PER_QUERY     
-Целое число, представляющее максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию — 200.
+Целое число, представляющее максимальное количество поддерживаемых планов для каждого запроса. MAX_PLANS_PER_QUERY имеет тип **int**. Значение по умолчанию — **200**.
+
+WAIT_STATS_CAPTURE_MODE { **ON** | OFF }     
+Контролирует, будет ли отслеживаться статистика времени ожидания по запросам.
+
+ON    
+Информация о статистике ожидания по запросам отслеживается. Это значение является значением конфигурации по умолчанию.
+
+OFF    
+Информация о статистике ожидания по запросам не отслеживается.
+
+**\<query_capture_policy_option_list> :: =**      
+Управляет параметрами политики записи для хранилища запросов. За исключением STALE_CAPTURE_POLICY_THRESHOLD, эти параметры определяют условия OR, которые должны выполняться для запросов, записываемых в определенное пороговое значение устаревшей политики записи.
+
+STALE_CAPTURE_POLICY_THRESHOLD = *number* { DAYS | HOURS }     
+Определяет период интервала ознакомления для определения того, нужно ли записать запрос. Значение по умолчанию — 1 день, можно указать от 1 часа до 7 дней. *number* имеет тип **int**.
+
+EXECUTION_COUNT     
+Определяет количество выполнений запроса в течение ознакомительного периода. Значение по умолчанию — 30, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен быть выполнен по меньшей мере 30 раз за один день, чтобы быть сохраненным в хранилище запросов. EXECUTION_COUNT имеет тип **int**.
+
+TOTAL_COMPILE_CPU_TIME_MS     
+Определяет общее время ЦП, затраченное на компиляцию, которое запрос использовал за ознакомительный период. Значение по умолчанию — 1000, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен иметь общее время ЦП, затраченное на компиляцию, не менее одной секунды за один день, чтобы быть сохраненным в хранилище запросов. TOTAL_COMPILE_CPU_TIME_MS имеет тип **int**.
+
+TOTAL_EXECUTION_CPU_TIME_MS     
+Определяет общее время ЦП, затраченное на выполнение, которое запрос использовал за ознакомительный период. Значение по умолчанию — 100, то есть для порогового значения устаревшей политики записи по умолчанию запрос должен иметь общее время ЦП, затраченное на выполнение, не менее 100 мс за один день, чтобы быть сохраненным в хранилище запросов. TOTAL_EXECUTION_CPU_TIME_MS имеет тип **int**.
 
 **\<snapshot_option> ::=**
 
@@ -2798,7 +2946,6 @@ NO_WAIT
 ## <a name="examples"></a>Примеры
 
 ### <a name="a-setting-the-database-to-read_only"></a>A. Перевод базы данных в состояние READ_ONLY
-
 Для изменения состояния базы данных или файловой группы в READ_ONLY или READ_WRITE требуется монопольный доступ к базе данных. В следующем примере для базы данных устанавливается режим `RESTRICTED_USER` для ограничения доступа. Затем состояние базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] устанавливается в `READ_ONLY`, а также возвращается доступ к базе данных всем пользователям.
 
 ```sql
@@ -2816,7 +2963,6 @@ GO
 ```
 
 ### <a name="b-enabling-snapshot-isolation-on-a-database"></a>Б. Включение изоляции моментального снимка для базы данных
-
 Следующий пример включает параметр платформы изоляции моментального снимка для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
 
 ```sql
@@ -2842,7 +2988,6 @@ GO
 |[database_name] |1| ON |
 
 ### <a name="c-enabling-modifying-and-disabling-change-tracking"></a>В. Включение, изменение и отключение отслеживания изменений
-
 В следующем примере демонстрируется включение отслеживания изменений для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и установка `2`-дневного срока хранения.
 
 ```sql
@@ -2866,18 +3011,61 @@ SET CHANGE_TRACKING = OFF;
 ```
 
 ### <a name="d-enabling-the-query-store"></a>Г. Включение хранилища запросов
-
 В следующем примере включается хранилище запросов и настраиваются его параметры.
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON
-  (  
-      OPERATION_MODE = READ_WRITE
-    , CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 )
-    , DATA_FLUSH_INTERVAL_SECONDS = 900
-    , MAX_STORAGE_SIZE_MB = 1024
-    , INTERVAL_LENGTH_MINUTES = 60
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="e-enabling-the-query-store-with-wait-statistics"></a>Д. Включение хранилища запросов с использованием статистики ожидания
+В приведенном ниже примере включается хранилище запросов и настраиваются его параметры.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="f-enabling-the-query-store-with-custom-capture-policy-options"></a>Е. Включение хранилища запросов с использованием параметров пользовательской политики записи
+В приведенном ниже примере включается хранилище запросов и настраиваются его параметры.
+
+```sql
+ALTER DATABASE [database_name]
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO,
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100
+      )
     );
 ```
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: jaszymas
 ms.author: jaszymas
-ms.openlocfilehash: 050b6ba215d9dc4db433ad81dd8fa48bed212803
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff383fface773da790fd52c498e861ee402dc862
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75557939"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882065"
 ---
 # <a name="sql-server-connector-maintenance--troubleshooting"></a>Соединитель SQL Server, приложение
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Эта статья содержит вспомогательные сведения о Соединителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения о Соединителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] см. в статьях [Расширенное управление ключами с помощью хранилища ключей Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md) и [Использование Соединителя SQL Server с компонентами шифрования SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -37,14 +37,14 @@ ms.locfileid: "75557939"
   
  При прозрачном шифровании данных это можно сделать следующим образом.  
   
--   **В PowerShell:** создайте в хранилище ключей асимметричный ключ (его имя должно отличаться от текущего асимметричного ключа прозрачного шифрования данных).  
+-   **С помощью PowerShell**. Создайте в Key Vault асимметричный ключ (его имя должно отличаться от текущего асимметричного ключа прозрачного шифрования данных).  
   
     ```powershell  
     Add-AzKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'Key2' -Destination 'Software'  
     ```  
   
--   **С помощью [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] или sqlcmd.exe:** используйте следующие инструкции, как показано в этапе 3 раздела 3.  
+-   **С помощью [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] или sqlcmd.exe**. Используйте следующие инструкции, как показано на шаге 3 в разделе 3.  
   
      Импортируйте новый асимметричный ключ.  
   
@@ -147,13 +147,13 @@ ms.locfileid: "75557939"
 
 В целом необходимо выполнить следующие действия.  
   
-* Создать резервную копию ключа хранилища (с помощью командлета Powershell Backup-AzureKeyVaultKey).  
+* Создать резервную копию ключа хранилища (с помощью командлета PowerShell Backup-AzureKeyVaultKey).  
 * В случае сбоя хранилища создать новое хранилище в той же географической области*. Пользователь, создающий это хранилище, должен быть в том же каталоге по умолчанию, который был настроен субъектом-службой для SQL Server.  
-* Восстановить ключ к новому хранилищу с помощью командлета Powershell Restore-AzureKeyVaultKey (ключ будет восстановлен с прежним именем). Если ключ с таким именем уже существует, восстановление завершается со сбоем.  
+* Восстановить ключ к новому хранилищу с помощью командлета PowerShell Restore-AzureKeyVaultKey (ключ будет восстановлен с прежним именем). Если ключ с таким именем уже существует, восстановление завершается со сбоем.  
 * Предоставить разрешения субъекту-службе SQL Server на использование этого нового хранилища.  
 * Изменить учетные данные SQL Server, используемые ядром СУБД, чтобы отразить новое имя хранилища (при необходимости).  
   
-Резервные копии ключей можно восстанавливать в разных регионах Azure при условии, что они остаются в одной географической области или одном национальном облаке: в США, Канаде, Японии, Австралии, Индии, Азиатско-Тихоокеанском регионе, Европе, Бразилии, Китае, правительстве США или Германии.  
+Резервные копии ключей можно восстанавливать в разных регионах Azure при условии, что они остаются в одной географической области или одном национальном облаке: в США, Канаде, Японии, Австралии, Индии, Азиатско-Тихоокеанском регионе, Европе, Бразилии, Китае, Германии или регионе US Gov.  
   
   
 ##  <a name="b-frequently-asked-questions"></a><a name="AppendixB"></a> Б. Часто задаваемые вопросы  
@@ -206,7 +206,7 @@ ms.locfileid: "75557939"
 ##  <a name="c-error-code-explanations-for-ssnoversion-connector"></a><a name="AppendixC"></a> В. Описания кодов ошибок для Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Коды ошибок поставщика:**  
   
-Код ошибки  |Символ  |Description    
+Код ошибки  |Символ  |Описание    
 ---------|---------|---------  
 0 | scp_err_Success | Операция завершилась успешно.    
 1 | scp_err_Failure | Операция завершилась ошибкой.    

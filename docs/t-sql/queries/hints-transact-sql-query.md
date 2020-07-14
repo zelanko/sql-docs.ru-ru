@@ -55,15 +55,15 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82746388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731302"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Подсказки в запросе указывают, что для запроса должна использоваться заданная подсказка. Они влияют на все операторы в инструкции. Если в основном запросе используется операция UNION, только последний запрос, использующий ее, может содержать предложение OPTION. Подсказки в запросе указываются как часть предложения [OPTION](../../t-sql/queries/option-clause-transact-sql.md). Если оптимизатор запросов не сформирует допустимый план из-за одного или нескольких указаний запроса, возникает ошибка 8622.  
   
@@ -238,7 +238,7 @@ _literal\_constant_
 Указание OPTIMIZE FOR может изменить поведение оптимизатора по обнаружению параметра по умолчанию. При создании структур плана также используйте OPTIMIZE FOR. Дополнительные сведения см. в разделе [Перекомпиляция хранимой процедуры](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Предписывает оптимизатору запросов использовать статистические данные вместо начальных значений для всех локальных переменных при компиляции и оптимизации запроса. Эта оптимизация включает параметры, созданные с принудительной параметризацией.  
+Указывает, что во время компиляции и оптимизации запроса оптимизатор запросов должен использовать среднюю избирательность предиката по всем значениям столбцов вместо значения параметра времени выполнения.  
   
 Если вы используете OPTIMIZE FOR @variable_name = _literal\_constant_ и OPTIMIZE FOR UNKNOWN в одном указании запроса, оптимизатор запросов будет использовать указанный аргумент _literal\_constant_ для конкретного значения. Для всех остальных значений переменной оптимизатор запросов будет использовать вариант UNKNOWN. Значения используются только в процессе оптимизации запроса, но не в процессе выполнения.  
 
@@ -349,7 +349,7 @@ ROBUST PLAN
 <a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  Указывает оптимизатору запросов использовать существующий план запроса для запроса, определенного параметром **'** _xml\_plan_ **'** . Подсказку USE PLAN нельзя указывать в инструкциях INSERT, UPDATE MERGE и DELETE.  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Применяет заданное табличное указание к таблице или представлению, которые соответствуют имени _exposed\_object\_name_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _имя\_предоставляемого\_объекта_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** . Применяет заданное табличное указание к таблице или представлению, которые соответствуют _имени\_предоставляемого\_объекта_. Табличные указания рекомендуется использовать в качестве подсказок в запросах только в контексте [структуры плана](../../relational-databases/performance/plan-guides.md).  
   
  Аргумент _exposed\_object\_name_ может представлять одну из следующих ссылок:  
   
@@ -359,7 +359,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  Если вы укажете _exposed\_object\_name_ без табличного указания, любые индексы, которые указаны в составе табличного указания для этого объекта в запросе, будут игнорироваться. Затем оптимизатор запросов определяет использование индексов. Эта методика позволяет устранить влияние табличного указания INDEX, если нет возможности изменить первоначальный запрос. См. пример К.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют значению *exposed_object_name*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _индекс\_значение_ [ ,..._n_ ] ) | INDEX = ( _индекс\_значение_ ) | FORCESEEK [ **(** _индекс\_значение_ **(** _имя\_индексного\_столбца_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }. Это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют *имени_предоставляемого_объекта*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. Дополнительные сведения см. в подразделе "Примечания".  
   
@@ -404,17 +404,17 @@ GO
 ```  
   
 ### <a name="b-using-optimize-for"></a>Б. Использование OPTIMIZE FOR  
- В следующем примере оптимизатору запросов предписывается использовать значение `'Seattle'` для локальной переменной `@city_name` и использовать статистические данные для определения локальной переменной `@postal_code` при оптимизации запроса. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ В следующем примере оптимизатору запросов дается указание, что при оптимизации запроса следует использовать значение `'Seattle'` для `@city_name` и среднюю избирательность предиката по всем значениям столбцов для `@postal_code`. В этом примере используется база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### <a name="c-using-maxrecursion"></a>В. Использование MAXRECURSION  

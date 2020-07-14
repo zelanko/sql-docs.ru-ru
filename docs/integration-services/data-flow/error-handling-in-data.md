@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 994018ab8b574bc313072f7a353ff999d645e0d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 848c53ce4ca004cec84609b12869a98fa45fa78d
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292766"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469329"
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
 
@@ -144,7 +144,7 @@ ms.locfileid: "71292766"
   
     -   Чтобы включить описание ошибки в дополнительный столбец, используйте одну строку скрипта для вызова метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
   
-    -   Чтобы включить имя столбца в дополнительный столбец, используйте одну строку скрипта для вызова метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> .  
+    -   Включите имя столбца в дополнительный столбец, используя одну строку скрипта для вызова метода [Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetIdentificationStringByID*] (/previous-versions/sql/sql-server-2016/mt657629(v=sql.130)) интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>.  
   
      Компонент сценария можно добавить в сегмент ошибок потока данных после компонентов потока данных, чьи ошибки необходимо записать. Как правило, этот компонент помещается непосредственно перед записью строк с ошибками в целевой объект. В этом случае сценарий просматривает только описание записанных строк с ошибками. Сегмент ошибок потока данных может исправить некоторые ошибки и не писать эти строки в целевой объект ошибки.  
 

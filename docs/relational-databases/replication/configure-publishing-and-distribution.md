@@ -1,5 +1,6 @@
 ---
 title: Настройка публикации и распространения | Документация Майкрософт
+description: Узнайте, как настроить публикацию и распространение в SQL Server с помощью SQL Server Management Studio, Transact-SQL или объектов Replication Management Objects.
 ms.custom: ''
 ms.date: 09/23/2018
 ms.prod: sql
@@ -15,15 +16,15 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f4f51850fe288f2bbbd6d0e70a123a03f84344ac
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0e39946071c85dff0c1e29f6f36e6bafe910f77d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285141"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774007"
 ---
 # <a name="configure-publishing-and-distribution"></a>Настройка публикации и распространения
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  В данном разделе описывается процесс настройки публикации и распространения в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.
 
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом 
@@ -32,7 +33,7 @@ ms.locfileid: "76285141"
 Дополнительные сведения см. в статье [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio 
-Настройте распространение с помощью мастера создания публикаций или мастера настройки распространителя. После настройки распространителя просмотрите и измените его свойства в диалоговом окне **Свойства распространителя — \<распространитель>** . Используйте мастер настройки распространителя, если необходимо настроить распространитель так, чтобы члены предопределенных ролей базы данных `db_owner` могли создавать публикации, или если необходимо настроить удаленный распространитель, который не является издателем.
+Настройте распространение с помощью мастера создания публикаций или мастера настройки распространителя. После настройки распространителя просмотрите и измените его свойства в диалоговом окне **Свойства распространителя — \<Distributor>** . Используйте мастер настройки распространителя, если необходимо настроить распространитель так, чтобы члены предопределенных ролей базы данных `db_owner` могли создавать публикации, или если необходимо настроить удаленный распространитель, который не является издателем.
 
 #### <a name="to-configure-distribution"></a>Настройка распространения 
 

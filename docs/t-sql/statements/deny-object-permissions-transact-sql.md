@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 48f78d1f064051148a4b7e7a31296b0fe04b8ee7
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2416295cd79ae7b4e4da53ef71bcf7dfbf0702f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633138"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766684"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY, запрет разрешений на объект (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Запрещает разрешения на член класса OBJECT защищаемых объектов. Элементы класса OBJECT: таблицы, представления, функции с табличным значением, хранимые процедуры, расширенные хранимые процедуры, скалярные функции, агрегатные функции, очереди обслуживания и синонимы.  
 
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
  Запрет разрешения ALL не запрещает все возможные разрешения. Запрет ALL эквивалентен запрету всех разрешений ANSI-92, применимых к данному объекту. Значение ALL различается для разных типов объектов  
   
  - Разрешения на скалярные функции: EXECUTE, REFERENCES.  
- - Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+ - Разрешения на функции с табличным значением: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Разрешения на хранимые процедуры: EXECUTE.  
  - Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
  - Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  

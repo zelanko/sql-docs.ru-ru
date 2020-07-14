@@ -17,15 +17,15 @@ ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e577144d9c259d097e28b435b0d0eedc4252e82a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18b5f2e898638823e20aa237d9bbbc43bb025967
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720598"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Просмотр и изменение свойств издателя и распространителя
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   В данном разделе описывается просмотр и изменение свойств распространителя и издателя в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]или объектов RMO.  
   
  **В этом разделе**  
@@ -61,7 +61,7 @@ ms.locfileid: "76286941"
   
 2.  Щелкните правой кнопкой папку **Репликация** , затем щелкните **Свойства распространителя**.  
   
-3.  Просматривайте и изменяйте свойства в диалоговом окне **Свойства распространителя — <\<Распространитель>** .  
+3.  Просмотрите и измените свойства в диалоговом окне **Свойства распространителя — \<Distributor>** .  
   
     -   Для просмотра и изменения свойств базы данных распространителя нажмите кнопку с многоточием ( **...** ) базы данных на вкладке **Общие** диалогового окна.  
   

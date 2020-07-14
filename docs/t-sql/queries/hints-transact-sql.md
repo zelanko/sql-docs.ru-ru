@@ -20,20 +20,20 @@ helpviewer_keywords:
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3f7bc162244e30b2ac48f9b49a6c596268b595c8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ee01e23c544ac01ee9fb85e5b59d31b73088987
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67901978"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731293"
 ---
 # <a name="hints-transact-sql"></a>Указания (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Подсказки являются параметрами или стратегиями, указанными для обеспечения выполнения инструкций SELECT, INSERT, UPDATE или DELETE обработчиком запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Указания имеют преимущество над любым планом выполнения, который может быть выбран оптимизатором запросов для запроса.  
   
 > [!CAUTION]  
->  Так как оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно выбирает наилучший план выполнения для запроса, рекомендуется использовать указания \<join_hint>, \<query_hint> и \<table_hint> в последнюю очередь и только опытным разработчикам и администраторам баз данных.
+>  Оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно выбирает наилучший план выполнения. Поэтому \<join_hint>, \<query_hint> и \<table_hint> рекомендуется использовать только опытным разработчикам и администраторам баз данных в качестве последнего средства.
   
  В этом разделе описаны следующие указания:  
   

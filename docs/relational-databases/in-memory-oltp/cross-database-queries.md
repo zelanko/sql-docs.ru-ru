@@ -1,5 +1,6 @@
 ---
 title: Межбазовые запросы | Документация Майкрософт
+description: Узнайте, как использовать табличные переменные, оптимизированные для памяти, в запросах между базами данных, чтобы перемещать данные из таблицы в одной базе данных в оптимизированные для памяти таблицы в другой базе данных в SQL Server.
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 93eae89743c2a4563317614a18e4bf5f46248071
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ff96199ed01fe06524ec38f8df2a0cce6380b8d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68031982"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723302"
 ---
 # <a name="cross-database-queries"></a>Межбазовые запросы
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], оптимизированные для памяти таблицы не поддерживают межбазовые транзакции. Нельзя получить доступ к другой базе данных из той же транзакции или того же запроса, которые также получают доступ к оптимизированной для памяти таблицы. Нельзя скопировать данные из одной таблицы в базе данных в оптимизированную для памяти таблицу в другой базе данных.  
   

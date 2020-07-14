@@ -1,5 +1,6 @@
 ---
 title: Сжатие файла | Документация Майкрософт
+description: Узнайте, как на SQL Server уменьшить данные или файл журнала с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14fe5218577618cea4957fc819879374233210a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71961932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715497"
 ---
 # <a name="shrink-a-file"></a>Сжатие файла
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом подразделе описывается сжатие данных или файла журнала в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Сжатие файлов данных позволяет освободить неиспользуемое пространство путем перемещения страниц данных с конца файла в незанятое пространство ближе к началу файла. Когда в конце файла образуется достаточно свободного места, страницы данных в конце файла могут быть освобождены и возвращены в файловую систему.  
@@ -85,7 +86,7 @@ ms.locfileid: "71961932"
      **Имя файла**  
      Выберите файл из списка имеющихся файлов выбранной файловой группы и типа.  
   
-     **Местоположение**  
+     **Расположение**  
      Отображает полный путь к текущему выбранному файлу. Путь нельзя редактировать, но можно скопировать в буфер обмена.  
   
      **Выделенное в данный момент место**  

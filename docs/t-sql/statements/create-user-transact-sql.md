@@ -29,15 +29,15 @@ ms.assetid: 01de7476-4b25-4d58-85b7-1118fe64aa80
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 20b7649fe184382fe7a5b1a5f38b28e6b0982284
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b2790ce463d7ff6114bf96726d899cbe5d65f01f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635988"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004738"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Добавляет нового пользователя в текущую базу данных. Ниже перечислены 12 типов пользователей с примером базового синтаксиса.  
   
@@ -184,7 +184,7 @@ CREATE USER user_name
  Указывает первую схему, которую найдет сервер, после того, как он получит имена объектов для пользователя данной базы данных.  
   
  '*windows_principal*'  
- Указывает участника Windows, для которого создается пользователь базы данных. *windows_principal* может быть пользователем Windows или группой Windows. Пользователь будет создаваться даже в случае, если для *windows_principal* отсутствует имя входа. Если при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для *windows_principal* отсутствует имя входа,то субъект Windows должен пройти проверку подлинности в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, имеющей имя входа, либо в строке подключения в качестве исходного каталога должна указываться автономная база данных. При создании пользователя из субъекта Windows используйте формат **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary). Имена пользователей, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину.
+ Указывает участника Windows, для которого создается пользователь базы данных. *windows_principal* может быть пользователем Windows или группой Windows. Пользователь будет создаваться даже в случае, если для *windows_principal* отсутствует имя входа. Если при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для *windows_principal* отсутствует имя входа,то субъект Windows должен пройти проверку подлинности в компоненте [!INCLUDE[ssDE](../../includes/ssde-md.md)] за счет членства в группе Windows, имеющей имя входа, либо в строке подключения в качестве исходного каталога должна указываться автономная база данных. При создании пользователя, сопоставленного с субъектом Windows, используйте формат **[** _\<domainName\>_ **\\** _\<loginName\>_ **]** . Примеры см. в разделе [Сводка синтаксиса](#SyntaxSummary). Имена пользователей, основанные на пользователях Active Directory, могут иметь не более 21 символа в длину.
   
  '*Azure_Active_Directory_principal*'  
  **Применимо к**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  

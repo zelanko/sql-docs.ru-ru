@@ -1,6 +1,6 @@
 ---
 title: Руководство по установке SQL Server
-ms.description: 'An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. '
+description: Указатель содержимого, которое поможет установить SQL Server и связанные компоненты с помощью мастера установки, командной строки или sysprep.
 ms.custom: ''
 ms.date: 11/14/2019
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 58773f430fc61a7817d7d3ee7c9e7b597716c438
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e11f2aa1a553933882e844dbf7c9452183c63c28
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79434181"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900352"
 ---
 # <a name="sql-server-installation-guide"></a>Руководство по установке SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 В этой статье приводится индекс содержимого с рекомендациями по установке SQL Server в Windows.
 

@@ -25,15 +25,15 @@ ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 078a6b8ebdef8604c4023f6e652f5f431ee59d5b
-ms.sourcegitcommit: ed5f063d02a019becf866c4cb4900e5f39b8db18
+ms.openlocfilehash: 8bed7fa9d84cc3100d5da0f784c9e2551071156e
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82643368"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012845"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Удаляет все строки в таблице или указанные секции таблицы, не записывая в журнал удаление отдельных строк. Инструкция TRUNCATE TABLE похожа на инструкцию DELETE без предложения WHERE, однако TRUNCATE TABLE выполняется быстрее и требует меньших ресурсов системы и журналов транзакций.  
   
@@ -76,7 +76,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Указывает секции для усечения или секции, из которых удаляются все строки. Если таблица не секционирована, аргумент `WITH PARTITIONS` приведет к возникновению ошибки. Если предложение `WITH PARTITIONS` не указано, будет усечена вся таблица.  
   
- *\<partition_number_expression>* можно указать одним из следующих способов: 
+ *\<partition_number_expression>* можно указать одним из следующих способов. 
   
 -   Указав номер секции, например `WITH (PARTITIONS (2))`  
   
@@ -84,7 +84,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
 -   Указав диапазоны секций и отдельные секции, например `WITH (PARTITIONS (2, 4, 6 TO 8))`  
   
--   *\<range>* можно указать номерами секций, разделенными ключевым словом **TO**, например `WITH (PARTITIONS (6 TO 8))`  
+-   *\<range>* можно указать в виде номеров секций, разделенных словом **TO**, например `WITH (PARTITIONS (6 TO 8))`.  
   
  Для усечения секционированной таблицы таблицы и индексы должны быть выровнены (секционированы одной функцией секционирования).  
   

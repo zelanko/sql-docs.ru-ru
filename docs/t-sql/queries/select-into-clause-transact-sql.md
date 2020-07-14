@@ -29,15 +29,15 @@ ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c4e7add7cdc8d4dd804c91730db3bb7c121b9df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981719"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007592"
 ---
 # <a name="select---into-clause-transact-sql"></a>Предложение SELECT ...INTO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Инструкция SELECT…INTO создает новую таблицу в файловой группе по умолчанию и вставляет в нее результирующие строки из запроса. Полный синтаксис SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,9 @@ ms.locfileid: "73981719"
  Если в список выбора входит вычисляемый столбец, соответствующий столбец новой таблицы не будет вычисляемым. Значениями нового столбца становятся значения, вычисленные при выполнении инструкции `SELECT...INTO`.  
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
- Объем информации, записываемой в журнал для операции `SELECT...INTO`, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. При минимальном ведении журнала использование инструкции `SELECT...INTO` может оказаться более эффективным, чем создание таблицы и заполнение ее инструкцией INSERT. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Объем информации, записываемой в журнал для операции `SELECT...INTO`, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. При минимальном ведении журнала использование инструкции `SELECT...INTO` может оказаться более эффективным, чем создание таблицы и заполнение ее инструкцией INSERT. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).
+ 
+Инструкции `SELECT...INTO`, содержащие определяемые пользователем функции (UDF), являются полностью протоколируемыми операциями. Если определяемые пользователем функции, используемые в инструкции `SELECT...INTO`, не выполняют никакие операции доступа к данным, для таких функций можно указать предложение SCHEMABINDING, которое будет устанавливать для производного свойства UserDataAccess значение 0. После этого изменения инструкции `SELECT...INTO` будут протоколироваться на минимальном уровне. Если инструкция `SELECT...INTO` ссылается хотя бы на одну определяемую пользователем функцию, для которой это свойство имеет значение 1, операция полностью протоколируется.
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE TABLE в целевой базе данных.  

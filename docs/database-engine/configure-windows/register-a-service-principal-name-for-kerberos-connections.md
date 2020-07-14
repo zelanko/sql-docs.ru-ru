@@ -1,5 +1,6 @@
 ---
 title: Регистрация имени участника-службы для соединений Kerberos | Документы Майкрософт
+description: Узнайте, как регистрировать имя участника-службы (SPN) с помощью Active Directory. Эта регистрация необходима для использования проверки подлинности Kerberos с SQL Server.
 ms.custom: ''
 ms.date: 08/06/2019
 ms.prod: sql
@@ -14,17 +15,17 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b56afed2447f21f6595bec39873d4298b4762027
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087516"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85651745"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Чтобы использовать проверку подлинности Kerberos с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо наличие следующих условий.  
   
 -   Компьютеры клиента и сервера должны быть частью одного домена Windows или доверенных доменов.  
@@ -70,7 +71,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Именованный экземпляр**  
   
--   **MSSQLSvc/\<FQDN>:[\<port> | \<instancename>]** , где:  
+-   **MSSQLSvc/\<FQDN>: [\<port> | \<instancename>]** , где:  
   
     -   **MSSQLSvc** — регистрируемая служба;  
   
@@ -95,7 +96,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
    
 |||  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP. \<port> — номер TCP-порта.|  
+|MSSQLSvc/\<FQDN>:<port>|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол TCP. \<port> — номер порта TCP.|  
 |MSSQLSvc/\<FQDN>|Сформированное поставщиком имя участника-службы для экземпляра по умолчанию, когда используется протокол, отличный от TCP. \<FQDN> — полное имя домена.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|Сформированное поставщиком имя участника-службы (по умолчанию) для именованного экземпляра, когда используется протокол, отличный от TCP. \<instancename> — имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 
@@ -103,9 +104,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > В случае соединения по TCP/IP, когда TCP-порт является частью имени участника-службы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен включить протокол TCP, чтобы пользователь мог подключиться с проверкой подлинности протокола Kerberos. 
 
 ##  <a name="automatic-spn-registration"></a><a name="Auto"></a> Автоматическая регистрация имени участника-службы  
- Когда запускается экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается зарегистрировать имя участника-службы (SPN) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда экземпляр остановлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается отменить регистрацию имени участника-службы (SPN). Для соединений TCP/IP имя участника-службы регистрируется в формате *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Оба именованных экземпляра и экземпляр по умолчанию регистрируются как служба *MSSQLSvc*, используя значение *\<tcpport>* , чтобы различить экземпляры.  
+ Когда запускается экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается зарегистрировать имя участника-службы (SPN) для службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Когда экземпляр остановлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается отменить регистрацию имени участника-службы (SPN). Для соединений TCP/IP имя участника-службы регистрируется в формате *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Оба именованных экземпляра и экземпляр по умолчанию регистрируются как служба *MSSQLSvc*, чтобы различить экземпляры по значению *\<tcpport>* .  
   
- Для других соединений, поддерживающих протокол Kerberos, имя субъекта-службы для именованного экземпляра регистрируется в формате *MSSQLSvc/\<FQDN>* / *\<instancename>* . Форматом регистрации экземпляра по умолчанию является *MSSQLSvc/\<FQDN>* .  
+ Для других соединений, поддерживающих протокол Kerberos, имя участника-службы для именованного экземпляра регистрируется в формате *MSSQLSvc/\<FQDN>* / *\<instancename>* . Форматом регистрации экземпляра по умолчанию является *MSSQLSvc/\<FQDN>* .  
   
  Если учетная запись службы не обладает разрешениями на регистрацию и отмену регистрации имени участника-службы, возможно, эти действия придется выполнить вручную.  
   
@@ -136,7 +137,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename redmond\accountname
 ##  <a name="client-connections"></a><a name="Client"></a> Клиентские соединения  
  Указанные пользователями имена участников-служб поддерживаются клиентскими драйверами. Однако имя участника-службы не предоставляется, оно будет автоматически сформировано, основываясь на типе клиентского соединения. Для соединений TCP, именованных экземпляров и экземпляров по умолчанию используется имя участника-службы в формате *MSSQLSvc*/*FQDN*:[*port*].  
   
-Для именованных каналов и соединений общей памяти используются имена участников-служб в формате *MSSQLSvc/\<FQDN>:\<instancename>* для именованных экземпляров и в формате *MSSQLSvc/\<FQDN>* для экземпляров по умолчанию.  
+Для именованных каналов и соединений общей памяти используются имена участников-служб в формате *MSSQLSvc/\<FQDN>:\<instancename>* для именованных экземпляров и в формате *MSSQLSvc/\<FQDN>FQDN>* для экземпляров по умолчанию.  
   
  **Использование учетной записи службы в качестве имени участника-службы**  
   

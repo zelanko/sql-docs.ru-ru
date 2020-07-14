@@ -1,5 +1,6 @@
 ---
 title: Зеркальное отображение баз данных и доставка журналов (SQL Server) | Документы Майкрософт
+description: Изучите вопросы, связанные с комбинированием доставки журналов и зеркального отображения базы данных в SQL Server, включая определение необходимого количества целевых серверов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0aecc0f5bb867699bef16ff9f2947fe99a2cf1ec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fd18ca39f11525f3fd91f759ff34f4ce6ebd0dbb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68006470"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789697"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Зеркальное отображение баз данных и доставка журналов (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Для каждой базы данных может быть создано зеркальное отображение и доставка журналов; они также могут существовать одновременно. При выборе подхода примите во внимание следующее.  
   
 -   Сколько требуется целевых серверов?  

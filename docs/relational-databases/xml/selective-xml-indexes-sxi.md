@@ -1,5 +1,6 @@
 ---
 title: Селективные XML-индексы | Документация Майкрософт
+description: Узнайте, как использовать селективные XML-индексы (SXI) для повышения производительности запросов, поддержки более быстрого индексирования и снижения затрат на хранение XML-индексов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 548bb347bb71c9819f8a36213ce896aec92e3b50
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1330b409b40bfeea9b265d93e6f6b55cc1b674da
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665058"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757492"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Выборочный XML-индекс (SXI)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Селективные XML-индексы — это еще один тип XML-индексов, доступный наряду с обычными XML-индексами. Селективный XML-индекс используется в следующих целях.  
   
 -   Для повышения производительности запросов к XML-данным, хранящимся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -120,7 +121,7 @@ FOR
   
 -   Индексирование узлов с двоичными типами XS: например, base64Binary и hexBinary.  
   
--   Указание узлов для индексирования с помощью выражений XPath, которые содержат подстановочный знак `*` в конце: например,  `/a/b/c/*`, `/a//b/*`или `/a/b/*:c`.  
+-   Указание узлов для индексирования с выражениями XPath, которые содержат подстановочный знак `*` в конце. Например, `/a/b/c/*`, `/a//b/*` или `/a/b/*:c`.  
   
 -   Индексирование любых осей, отличных от осей дочерних элементов, атрибутов или объектов-потомков. Вариант `//<step>` допускается как исключение.  
   

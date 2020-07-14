@@ -1,7 +1,7 @@
 ---
 title: PARSENAME (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/02/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,17 +22,17 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71c741c677c83d9d0ba64e8d250442bb059c711d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832961"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737985"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Возвращает указанную часть имени объекта. Части объекта, к которым можно получить доступ: имя объекта, имя владельца, имя базы данных и имя сервера.  
+  Возвращает указанную часть имени объекта. Части объекта, к которым можно получить доступ: имя объекта, имя схемы, имя базы данных и имя сервера. 
   
 > [!NOTE]  
 >  Функция PARSENAME не показывает, существует ли на самом деле объект с данным именем. PARSENAME возвращает всего лишь указанную часть имени объекта.  
@@ -41,29 +41,27 @@ ms.locfileid: "82832961"
   
 ## <a name="syntax"></a>Синтаксис  
   
+```syntaxsql 
+PARSENAME ('object_name' , object_piece )
 ```  
-PARSENAME ( 'object_name' , object_piece )   
-```  
   
-## <a name="arguments"></a>Аргументы  
- '*object_name*'  
- Имя объекта, из которого будет извлекаться указанная часть. Аргумент *object_name* имеет тип **sysname**. Данный параметр представляет имя объекта, которое необязательно задано полностью. Если указываются все части имени объекта, то это имя может состоять из четырех частей: имени сервера, имени базы данных, имени владельца и имени объекта.  
+## <a name="arguments"></a>Аргументы
+
+*«object_name»* — параметр, содержащий имя объекта, из которого будет извлекаться указанный элемент объекта. Данный параметр представляет имя объекта, которое необязательно задано полностью. Если указываются все части имени объекта, то это имя может состоять из четырех частей: имени сервера, имени базы данных, имени схемы и имени объекта.  Каждая часть строки «object_name» имеет тип *sysname* что эквивалентно типу nvarchar (128) или 256 байтам. Если какая-либо часть строки превышает 256 байт, PARSENAME вернет значение NULL для этой части, так как оно не является допустимым значением sysname.
   
- *object_piece*  
- Часть объекта, которую необходимо вернуть. Аргумент *object_piece* имеет тип **int** и может принимать следующие значения:  
+*object_piece*  
+Часть объекта, которую необходимо вернуть. Аргумент *object_piece* имеет тип **int** и может принимать следующие значения:  
+    1 = имя объекта  
+    2 = имя схемы  
+    3 = имя базы данных  
+    4 = имя сервера  
   
- 1 = имя объекта  
+## <a name="return-type"></a>Тип возвращаемых данных
+
+ **sysname**
   
- 2 = имя схемы  
-  
- 3 = имя базы данных  
-  
- 4 = имя сервера  
-  
-## <a name="return-types"></a>Типы возвращаемых данных  
- **sysname**  
-  
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
+
  Функция PARSENAME возвращает значение NULL, если выполняется одно из условий:  
   
 -   Либо аргумент *object_name*, либо аргумент *object_piece* имеет значение NULL.  
@@ -72,10 +70,11 @@ PARSENAME ( 'object_name' , object_piece )
   
  Длина запрошенной части имени равна 0 и не является допустимым идентификатором [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Нулевая длина имени объекта делает недействительным полное имя объекта.  
   
-## <a name="examples"></a>Примеры  
+## <a name="examples"></a>Примеры
+
  Следующий пример демонстрирует использование `PARSENAME` для получения информации о таблице `Person` в базе данных `AdventureWorks2012`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT PARSENAME('AdventureWorksPDW2012.dbo.DimCustomer', 1) AS 'Object Name';  
@@ -112,11 +111,12 @@ Server Name
 (1 row(s) affected)
 ```
   
-## <a name="see-also"></a>См. также:  
- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
+## <a name="see-also"></a>См. также:
+
+- [QUOTENAME (Transact-SQL)](../../t-sql/functions/quotename-transact-sql.md)  
+- [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)   
+- [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
+- [Системные функции (Transact-SQL)](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

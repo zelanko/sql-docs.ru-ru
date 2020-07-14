@@ -2,7 +2,7 @@
 title: Руководство по Always Encrypted с безопасными анклавами в SSMS
 description: В этом руководстве вы узнаете, как создать базовую среду Always Encrypted с безопасными анклавами, шифровать данные на месте и выдавать полнофункциональные запросы к зашифрованным столбцам с помощью SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: vanto
@@ -13,12 +13,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a01b55cb67332617ea2e326756fb8ad6fc7bcf42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a6e27fb84267c1de09a3812747b063050b944e9
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288698"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83807731"
 ---
 # <a name="tutorial-always-encrypted-with-secure-enclaves-using-ssms"></a>Руководство по Always Encrypted с безопасными анклавами в SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -115,14 +115,14 @@ ms.locfileid: "79288698"
 
 3. При появлении запроса на завершение установки Hyper-V перезагрузите компьютер SQL Server.
 
-4. Если SQL Server работает в виртуальной машине или на устаревшем физическом компьютере, который не поддерживает UEFI Secure Boot или не имеет блока IOMMU, вам потребуется удалить требование VBS для функций безопасности платформы.
-    1. Удалите требование в реестре Windows.
+4. Если SQL Server работает на виртуальной машине или на физическом компьютере, который не поддерживает безопасную загрузку UEFI или не имеет блок IOMMU, вам нужно удалить требование VBS для функций безопасности платформы.
+    1. Удалите требование безопасной загрузки и IOMMU, выполнив следующую команду на своем компьютере SQL Server в консоли PowerShell, запущенной с повышенными правами.
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Перезагрузите компьютер снова, чтобы технология VBS работала со сниженными требованиями.
+    1. Снова перезагрузите компьютер SQL Server, чтобы технология VBS начала работать со сниженными требованиями.
 
         ```powershell
        Restart-Computer

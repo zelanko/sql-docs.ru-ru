@@ -1,25 +1,24 @@
 ---
 title: Резервное копирование и восстановление базы данных
-titleSuffix: Azure Data Studio
 description: Узнайте, как выполнить резервное копирование и восстановление базы данных с помощью Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 11/04/2019
-ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7ddb8cf9f3c0f73fde9f2fbbc30a7c6f6464d6cc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287218"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758293"
 ---
-# <a name="backup-and-restore-databases-using-name-sos"></a>Резервное копирование и восстановление баз данных с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-azure-data-studio"></a>Резервное копирование и восстановление баз данных с помощью Azure Data Studio
 
-В этом руководстве вы узнаете, как с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)] выполнять следующие задачи:
+В этом руководстве вы узнаете, как с помощью Azure Data Studio выполнять следующие задачи.
 > [!div class="checklist"]
 > * Резервное копирование базы данных 
 > * просмотр состояния резервного копирования;
@@ -27,7 +26,7 @@ ms.locfileid: "79287218"
 > * Восстановление базы данных
 > * просмотр состояния задачи восстановления.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для работы с этим руководством требуется база данных SQL Server *TutorialDB*. Чтобы создать базу данных *TutorialDB*, выполните инструкции, приведенные в одном из следующих кратких руководств:
 

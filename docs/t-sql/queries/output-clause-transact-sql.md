@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 7b53928fb2f90b4e97227f933a36648acd7b60cd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4b4eb7bcfc5711d041a354f4187e506ee130a0ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636151"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85706035"
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Возвращает данные из строк, изменившихся в результате выполнения инструкций INSERT, UPDATE, DELETE или MERGE, или выражения на основе этих данных. Эти результаты могут быть возвращены приложению, например для вывода подтверждающих сообщений, архивирования и т. п. Результаты также могут быть вставлены в таблицу или табличную переменную. Кроме того, можно записать результаты предложения OUTPUT во вложенных инструкциях INSERT, UPDATE, DELETE или MERGE и вставить эти результаты в целевую таблицу или представление.  
   
@@ -133,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Явное указание столбца. Любое указание столбцов в изменяемой таблице должно предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED **.** _column\_name_.  
+ Явное указание столбца. Любая ссылка на изменяемую таблицу должна предваряться соответствующим префиксом INSERTED или DELETED, например: INSERTED **.** _столбец\_имя_.  
   
  $action  
- Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки — INSERT, UPDATE или DELETE — в зависимости от действия, выполненного с этой строкой.  
+ Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки: INSERT, UPDATE или DELETE — согласно действию, которое было выполнено с этой строкой.  
   
 ## <a name="remarks"></a>Remarks  
- Предложения OUTPUT \<dml_select_list> clause and the OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
+ Предложение OUTPUT \<dml_select_list> и предложение OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } можно определить в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
   
 > [!NOTE]  
 >  Если не указано иное, ссылки на предложение OUTPUT относятся как к предложению OUTPUT, так и к предложению OUTPUT INTO.  

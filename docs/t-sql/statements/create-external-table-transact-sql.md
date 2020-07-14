@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee3ae71f906b56fa91698d5238e2391d928d8be2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 8b208b63dd096f35faa151f6f739d5e20cc3917b
+ms.sourcegitcommit: 38639b67a135ca1a50a8e38fa61a089efe90e3f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633375"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84454507"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -93,7 +93,7 @@ column_name <data_type>
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-\<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
 Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.
 
@@ -107,7 +107,7 @@ LOCATION = '*путь к файлу или папке*'. Указывает пу
 
 ![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Рекурсивные данные для внешних таблиц")
 
-Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение false в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *имя внешнего источника данных*. Задает имя внешнего источника данных, содержащего расположение внешних данных. Этим расположением является файловая система Hadoop (HDFS), контейнер больших двоичных объектов службы хранилища Azure или Azure Data Lake Store. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -610,7 +610,7 @@ column_name <data_type>
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в SQL хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается база данных SQL Azure. Никакие данные не перемещаются и не хранятся в базе данных SQL Azure.
 
-\<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
 > [!NOTE]
 > Типы данных `Text`, `nText` и `XML` не поддерживаются для столбцов во внешних таблицах базы данных SQL Microsoft Azure.
@@ -756,7 +756,7 @@ column_name <data_type>
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Azure Data Lake, Hadoop и хранилище больших двоичных объектов Azure. При создании внешних таблиц фактические данные не перемещаются и не сохраняются.
 
-\<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
 > [!NOTE]
 > Типы данных `Text`, `nText` и `XML` не поддерживаются для столбцов во внешних таблицах хранилища данных SQL Microsoft Azure.
@@ -771,7 +771,7 @@ LOCATION = '*путь к файлу или папке*'. Указывает пу
 
 ![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Рекурсивные данные для внешних таблиц")
 
-Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение false в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *имя внешнего источника данных*. Задает имя внешнего источника данных, содержащего расположение внешних данных. Это расположение находится в Azure Data Lake. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 
@@ -829,7 +829,9 @@ REJECTED_ROW_LOCATION = *расположение каталога*
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> Разрешения CONTROL DATABASE необходимы для создания только MASTER KEY, DATABASE SCOPED CREDENTIAL и EXTERNAL DATA SOURCE.
 
 Имя входа, которое создает внешний источник данных, должно иметь разрешение на чтение и запись во внешний источник данных, находящийся в хранилище больших двоичных объектов Azure или Hadoop.
 
@@ -982,7 +984,7 @@ column_name <data_type>
 
 *{им_базы.имя_схемы.имя_таблицы | имя_схемы.имя_таблицы | имя_таблицы}*  Одно-, двух- или трехсоставное имя для создаваемой таблицы. Если речь идет о внешней таблице, в Системе платформы аналитики хранятся только метаданные таблицы, а также базовая статистика о файле или папке, на которые ссылается Hadoop и хранилище больших двоичных объектов Azure. Никакие данные не перемещаются и не хранятся в Системе платформы аналитики.
 
-\<column_definition > [,... *n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
+\<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE поддерживает возможность настроить имя столбца, тип данных, допустимость значений NULL и параметры сортировки. Параметр DEFAULT CONSTRAINT нельзя использовать с внешними таблицами.
 
 Определения столбцов, включая типы данных и количество столбцов, должны соответствовать данным во внешних файлах. В случае несоответствия при запросе данных строки файла будут отклонены.
 
@@ -996,7 +998,7 @@ LOCATION = '*путь к файлу или папке*'. Указывает пу
 
 ![Рекурсивные данные для внешних таблиц](../../t-sql/statements/media/aps-polybase-folder-traversal.png "Рекурсивные данные для внешних таблиц")
 
-Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение 'false' в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
+Чтобы изменить значение по умолчанию и только для чтения в корневой папке, установите для атрибута \<polybase.recursive.traversal> значение false в файле конфигурации core-site.xml. Этот файл находится в папке `<SqlBinRoot>\PolyBase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.
 
 DATA_SOURCE = *имя внешнего источника данных*. Задает имя внешнего источника данных, содержащего расположение внешних данных. Это расположение находится не в хранилище больших двоичных объектов Azure или Hadoop. Для создания внешнего источника данных используйте инструкцию [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).
 

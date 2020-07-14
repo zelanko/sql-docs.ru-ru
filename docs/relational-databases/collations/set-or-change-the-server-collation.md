@@ -1,7 +1,7 @@
 ---
 title: Установка и изменение параметров сортировки для сервера| Документация Майкрософт
 ms.custom: ''
-ms.date: 12/05/2019
+ms.date: 05/10/2020
 ms.prod: sql
 ms.technology: ''
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
-ms.openlocfilehash: 578735009c72da997159484d308a25784ac64be0
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 6517111f63f2e28bf27e88003fa0c7b2e9b25fad
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762945"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733951"
 ---
 # <a name="set-or-change-the-server-collation"></a>Задание или изменение параметров сортировки сервера
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Параметры сортировки сервера применяются по умолчанию для всех установленных системных баз данных с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также для новых пользовательских баз данных. Необходимо тщательно выбрать параметры сортировки уровня сервера, так как они влияют на следующее.
  - Правила сортировки и сравнения в `=`, `JOIN`, `ORDER BY` и другие операторы сравнения текстовых данных.
  - Параметры сортировки столбцов `CHAR`, `VARCHAR`, `NCHAR` и `NVARCHAR` системных представлений, системных функций и объектов в базе данных TempDB (например, темпоральных таблиц).
@@ -29,8 +29,11 @@ ms.locfileid: "82762945"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Настройка параметров сортировки сервера в SQL Server
 
-  Параметры сортировки сервера задаются во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода не могут быть заданы как параметры сортировки уровня сервера. Дополнительные сведения см. в статье [Collation and Unicode Support](collation-and-unicode-support.md).
-  
+  Параметры сортировки сервера задаются во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Параметры сортировки на уровне сервера по умолчанию основываются на языковом стандарте операционной системы. Например, параметры сортировки по умолчанию для систем, использующих английский язык (EN-US): **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода не могут быть заданы как параметры сортировки уровня сервера. Дополнительные сведения, включая список языковых стандартов ОС в сопоставлениях параметров сортировки по умолчанию, см. в подразделе "Параметры сортировки уровня сервера" раздела [параметры сортировки и поддержка Юникода](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> Параметры сортировки уровня сервера для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB **SQL_Latin1_General_CP1_CI_AS** и не могут быть изменены во время установки или после нее.  
+
 ## <a name="changing-the-server-collation-in-sql-server"></a>Изменение параметров сортировки сервера в SQL Server
 
  Чтобы изменить параметры сортировки по умолчанию для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (эта операция может оказаться сложной), выполните следующие шаги:  
@@ -56,7 +59,7 @@ ms.locfileid: "82762945"
 - Импортируйте все данные.  
   
 > [!NOTE]  
-> Вместо изменения параметров сортировки по умолчанию для всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно указывать параметры сортировки по умолчанию для каждой новой базы данных.  
+> Вместо изменения параметров сортировки по умолчанию для всего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно указывать параметры сортировки по умолчанию для каждой новой базы данных, создаваемой с помощью условия `COLLATE` выражений `CREATE DATABASE` и `ALTER DATABASE`. Дополнительные сведения см. в разделе [Set or Change the Database Collation](set-or-change-the-database-collation.md).  
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Задание параметров сортировки сервера в управляемом экземпляре
 Параметры сортировки на уровне сервера в Управляемом экземпляре SQL Azure можно указать при создании экземпляра и нельзя изменить позднее. Параметры сортировки на уровне сервера можно настроить на [портале Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) или с помощью [PowerShell и шаблона Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) во время создания экземпляра. Параметры сортировки по умолчанию — **SQL_Latin1_General_CP1_CI_AS**. Параметры сортировки только для Юникода и новые параметры сортировки UTF-8 не могут быть заданы как параметры сортировки уровня сервера.

@@ -15,15 +15,15 @@ ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b3d02391f8a0423b46e18298b997e0de3623651b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 74ea5f383422ae75fb5bdd6f449c2498ce6c7ea1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516515"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726062"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Настройка стандартных предупреждений репликации (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[applies-to-version/_ssnoversion.md](../../../includes/applies-to-version/sqlserver.md)]
   Репликация предоставляет следующие предварительно установленные предупреждения, которые могут быть настроены для реакции на события репликации:  
   
 -   **Репликация: успех агента**  
@@ -54,7 +54,7 @@ ms.locfileid: "76516515"
   
 3.  Щелкните правой кнопкой мыши предупреждение репликации, затем щелкните **Свойства**.  
   
-4.  Задайте параметры в диалоговом окне **свойства предупреждения \<имя_предупреждения>** .  
+4.  Задайте следующие параметры в диалоговом окне **\<AlertName> свойств предупреждения**.  
   
     -   На странице **Общие** щелкните **Включить**, укажите базу данных, к которой нужно применить данное предупреждение.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "76516515"
   
 2.  В диалоговом окне **Настройка предупреждений репликации** выберите необходимое предупреждение, а затем щелкните **Настроить**.  
   
-3.  Задайте параметры в диалоговом окне **свойства предупреждения \<имя_предупреждения>** .  
+3.  Задайте следующие параметры в диалоговом окне **\<AlertName> свойств предупреждения**.  
   
     -   На странице **Общие** щелкните **Включить**, укажите базу данных, к которой нужно применить данное предупреждение.  
   

@@ -1,5 +1,6 @@
 ---
 title: Выполняющаяся в памяти OLTP для повышения производительности службы Transact-SQL
+description: Сведения об основах повышения производительности выполняющейся в памяти OLTP в базах данных SQL Server и Azure SQL с краткими объяснениями и примерами основного кода для разработчиков.
 ms.custom: seo-dt-2019
 ms.date: 09/27/2019
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca32d98270a6eea4bd918c12c6b45279a05628e5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e90d523b4dc17d640ebaae825abef59d80582389
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412500"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85650871"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Обзор начальных областей в выполняющейся в памяти OLTP
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   
 Эта статья предназначена для разработчиков, которым нужно быстро изучить основы повышения производительности In-Memory OLTP в базе данных Microsoft SQL Server и Azure SQL.  
@@ -59,7 +60,7 @@ SQL Server позволяет использовать функции выпол
   
 Увеличение производительности в результате применения In-Memory OLTP демонстрируется в следующих статьях:  
   
-- [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) . Маленькая демонстрация больших возможностей получения выигрыша в производительности.  
+- [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md). Маленькая демонстрация больших возможностей получения выигрыша в производительности.  
 - [Пример базы данных для выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md). Демонстрация большего масштаба.  
   
   
@@ -108,7 +109,7 @@ SQL Server позволяет использовать функции выпол
 #### <a name="bulk-importation-of-data"></a>Массовый импорт данных
 
 1. [Кластеризованный индекс columnstore. Массовая загрузка](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2014/07/27/clustered-column-store-index-bulk-loading-the-data/)
-2. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — минимальное ведение журналов](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
+2. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — минимальное ведение журналов](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/01/10/clustered-columnstore-index-data-load-optimizations-minimal-logging/)
 3. [Кластеризованный индекс columnstore. Оптимизация загрузки данных — параллельный массовый импорт](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/02/28/clustered-columnstore-index-parallel-bulk-import/)
 
 
@@ -214,7 +215,7 @@ ALTER DATABASE CURRENT
 
 Следующий пример скрипта T-SQL включает базу данных для выполняющейся в памяти OLTP и настраивает все рекомендуемые параметры. Он подходит и для SQL Server, и для Базы данных SQL Azure: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql).
 
-Обратите внимание, что для баз данных с файловой группой MEMORY_OPTIMIZED_DATA поддерживаются не все функции SQL Server. Дополнительные сведения об ограничениях см. в разделе [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](unsupported-sql-server-features-for-in-memory-oltp.md).
+Обратите внимание, что для баз данных с файловой группой MEMORY_OPTIMIZED_DATA поддерживаются не все функции SQL Server. Дополнительные сведения об ограничениях см. в следующей статье: [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](unsupported-sql-server-features-for-in-memory-oltp.md)
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
@@ -396,14 +397,14 @@ PRINT @mesg;
 ### <a name="trade-offs-of-memory-optimized-tables"></a>Преимущества и недостатки таблиц с оптимизацией для памяти  
   
   
-**Оценка памяти.** Необходимо оценить объем активной памяти, который оптимизированная для памяти таблица будет занимать. Ваш компьютер должен обладать памятью достаточной емкости для размещения таблицы, оптимизированной для памяти. Дополнительные сведения см. в разделе:  
+**Оценка памяти.** Нужно оценить объем активной памяти, который оптимизированная для памяти таблица будет занимать. Ваш компьютер должен обладать памятью достаточной емкости для размещения таблицы, оптимизированной для памяти. Дополнительные сведения см. в разделе:  
   
 - [Мониторинг и устранение неполадок с использованием памяти](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)  
 - [Оценка требований к объему памяти для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
 - [Размер строк и таблицы для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
-**Секционирование больших таблиц.** Одним из способов обеспечить потребность в большом объеме активной памяти является разбиение большой таблицы на части. Одна часть, которая в памяти, будет хранить *новые* строки данных, а другая часть, которая на диске, будет хранить *старые* строки (например, заказы на продажу, полностью отгруженные и завершенные). Разработка секционирования и его реализация выполняются вручную. См.  
+**Секционирование больших таблиц.** Одним из способов обеспечить потребность в большом объеме активной памяти является разбиение большой таблицы на части. Одна часть, находящаяся в памяти, будет хранить *новые* строки данных, а другая часть, находящаяся на диске, будет хранить *старые* строки (например, заказы на продажу, полностью отгруженные и завершенные). Разработка секционирования и его реализация выполняются вручную. См.  
   
 - [Секционирование уровня приложения](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Модель приложения для секционирования таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
@@ -493,9 +494,9 @@ PRINT @mesg;
   
 ## <a name="related-links"></a>Связанные ссылки  
   
-- Первая статья: [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+- Исходная статья: [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
     
 Следующие статьи содержат примеры кода и демонстрируют повышение производительности за счет применения In-Memory OLTP:  
   
-- [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) . Маленькая демонстрация больших возможностей получения выигрыша в производительности.  
+- [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md). Маленькая демонстрация больших возможностей получения выигрыша в производительности.  
 - [Пример базы данных для выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md). Демонстрация большего масштаба.  

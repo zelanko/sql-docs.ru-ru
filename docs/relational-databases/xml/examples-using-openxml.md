@@ -1,5 +1,6 @@
 ---
-title: 'Примеры: использование инструкции OPENXML | Документация Майкрософт'
+title: 'Примеры: Использование инструкции OPENXML | Документация Майкрософт'
+description: Ознакомьтесь с примерами использования инструкции OPENXML для создания представления набора строк XML-документа.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -26,15 +27,15 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 560e3b6ff5b9beeed4dcf93f831a51b941b9d74e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729972"
 ---
-# <a name="examples-using-openxml"></a>Примеры. Использование OPENXML
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="examples-using-openxml"></a>Примеры: Использование OPENXML
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Примеры в этом подразделе иллюстрируют использование инструкции OPENXML для создания представления наборов строк XML-документа. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md). Примеры показывают все аспекты инструкции OPENXML, но не определяют метасвойства в ней. Дополнительные сведения о том, как использовать метасвойства в OPENXML, см. в статье [Определение метасвойств в инструкции OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -477,7 +478,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   шаблон XPath ( **.** ), указанный в виде параметра *ColPattern* для столбца **ProdID** в наборе строк, определяет контекстный узел — текущий узел. Согласно заданному шаблону *rowpattern*, он является атрибутом **ProductID** элемента <`OrderDetail`>;  
   
--   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского элемента, <`OrderDetail`>, узла контекстного узла \<ProductID>.  
+-   шаблон *ColPattern*, **../\@Quantity**, заданный для столбца **Qty** в наборе строк, определяет атрибут **Quantity** родительского узла <`OrderDetail`> контекстного узла \<ProductID>;  
   
 -   аналогично шаблон *ColPattern*, **../../\@OrderID**, заданный для столбца **OID** в наборе строк, определяет атрибут **OrderID** родительского элемента, <`Order`>, родительского узла контекстного узла. Узлом родителя является <`OrderDetail`>, а контекстным узлом является <`ProductID`>.  
   
@@ -617,7 +618,7 @@ id  lname   xmlname                   OverFlow
   
      Атрибуты **id** (идентификатор класса), **name**и **attendedBy** . Атрибут **attendedBy** является многозначным атрибутом.  
   
- Атрибут **attends** элемента \<Student> и атрибут **attendedBy** элемента \<Class> представляют связь **m:n** между таблицами Student и Class. Студент может посещать множество классов, а класс может иметь множество студентов.  
+ Атрибут **attends** элемента \<Student> и атрибут **attendedBy** элемента \<Class> представляют отношение **m : n** между таблицами Student и Class. Студент может посещать множество классов, а класс может иметь множество студентов.  
   
  Предположим, что нужно взять часть этого документа и сохранить ее в базе данных, как показано ниже.  
   
@@ -633,7 +634,7 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         Извлекает идентификаторы отдельного студента из каждого элемента \<Course>. Краевая таблица используется для получения этих значений.  
+         Извлекает идентификаторы отдельных студентов из каждого элемента \<Course>. Краевая таблица используется для получения этих значений.  
   
  Ниже приводятся шаги:  
   

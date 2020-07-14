@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 342b7c627d974a2de127a7178a7257de067f9714
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 39617f16278c74f978d604cfee02d01e408c5854
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634122"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85894549"
 ---
 # <a name="revoke-server-permissions-transact-sql"></a>REVOKE, отмена разрешений сервера (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Отменяет разрешения GRANT и DENY на уровне сервера.  
   
@@ -58,9 +58,9 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Определяет разрешение, которое может быть предоставлено на сервер. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- { TO | FROM } \<grantee_principal> Задает субъекта, у которого отменяется разрешение.  
+ { TO | FROM } \<grantee_principal>. Задает субъект, разрешение которого отменяется.  
   
- AS \<grantor_principal> Указывает субъекта, от которого субъект, выполняющий данный запрос, наследует право на отмену разрешения.  
+ AS \<grantor_principal>. Указывает субъект, от которого субъект, выполняющий данный запрос, наследует право отмены разрешения.  
   
  GRANT OPTION FOR  
  Показывает, что отменяется право на предоставление указанного разрешения другим участникам. Само разрешение отменено не будет.  

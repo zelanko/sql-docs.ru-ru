@@ -1,6 +1,6 @@
 ---
 title: Настройка зеркального отображения базы данных с проверкой подлинности Windows (T-SQL)
-description: В этом примере показаны все этапы создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности Windows с Transact-SQL (T-SQL)
+description: В этой статье содержится пример создания сеанса зеркального отображения базы данных со следящим сервером с использованием проверки подлинности Windows с Transact-SQL в SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2a263cd161370a4d3f87c673209e82296ec2a28c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 343b04fe9f548c8f3c1274384c731cf6b74c1f95
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822263"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754653"
 ---
 # <a name="example-configure-database-mirroring-using-windows-authentication-transact-sql"></a>Пример Настройка зеркального отображения с использованием проверки подлинности Windows (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом примере показаны все этапы создания сеанса зеркального отображения базы данных со следящим сервером, использующим проверку подлинности Windows. Примеры в этом подразделе используют язык [!INCLUDE[tsql](../../includes/tsql-md.md)]. Обратите внимание, что в качестве альтернативы использованию этапов [!INCLUDE[tsql](../../includes/tsql-md.md)] для установки зеркального отображения баз данных можно воспользоваться мастером конфигурации безопасности зеркального отображения баз данных. Дополнительные сведения см. в подразделе [Создание сеанса зеркального отображения базы данных с использованием проверки подлинности Windows (среда SQL Server Management Studio)](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
 ## <a name="prerequisite"></a>Предварительные требования  
@@ -50,9 +50,9 @@ GO
   
 |Начальная роль зеркального отображения|Система размещения|Учетная запись пользователя домена|  
 |----------------------------|-----------------|-------------------------|  
-|Основной|PARTNERHOST1|*\<мой_домен>\\<имя_пользователя_бд\>*|  
-|Зеркальное отображение|PARTNERHOST5|*\<мой_домен>\\<имя_пользователя_бд\>*|  
-|Свидетель|WITNESSHOST4|*\<домен>\\<пользователь_следящего_сервера\>*|  
+|Основной|PARTNERHOST1|*\<Mydomain>\\<dbousername\>*|  
+|Зеркальное отображение|PARTNERHOST5|*\<Mydomain>\\<dbousername\>*|  
+|Свидетель|WITNESSHOST4|*\<Somedomain>\\<witnessuser\>*|  
   
 1.  Создайте конечную точку на экземпляре основного сервера (экземпляр по умолчанию для PARTNERHOST1).  
   

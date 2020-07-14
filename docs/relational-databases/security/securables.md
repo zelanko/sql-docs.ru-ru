@@ -1,5 +1,6 @@
 ---
 title: Защищаемые объекты | Документация Майкрософт
+description: Сведения об областях защищаемых объектов, которые система авторизации ядра СУБД SQL Server использует для регулирования доступа к защищаемым объектам.
 ms.custom: ''
 ms.date: 10/18/2016
 ms.prod: sql
@@ -19,19 +20,19 @@ ms.assetid: bfa748f0-70b0-453c-870a-04b7b205b9ff
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 30688490a06c784a2149e53f7e175b6350d3d891
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e0d87132c7a0d0d6b9f44e28ca3d797d20fb4b32
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67986564"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999604"
 ---
 # <a name="securables"></a>Защищаемые объекты
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   К защищаемым объектами относятся ресурсы, доступ к которым регулируется системой авторизации компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Например, защищаемым объектом является таблица. Некоторые защищаемые объекты могут храниться внутри других, создавая иерархии «областей», которые сами могут защищаться. К областям защищаемых объектов относятся **сервер**, **база данных**и **схема**.  
   
-## <a name="securable-scope-server"></a>Область защищаемых объектов: сервер  
+## <a name="securable-scope-server"></a>Область защищаемых объектов: Сервер  
  Область защищаемых объектов **сервера** содержит следующие защищаемые объекты:  
   
 -   группа доступности  
@@ -44,7 +45,7 @@ ms.locfileid: "67986564"
   
 -   База данных  
   
-## <a name="securable-scope-database"></a>Область защищаемых объектов: база данных  
+## <a name="securable-scope-database"></a>Область защищаемых объектов: База данных  
  Область защищаемых объектов **базы данных** содержит следующие защищаемые объекты:  
   
 -   Роль приложения  

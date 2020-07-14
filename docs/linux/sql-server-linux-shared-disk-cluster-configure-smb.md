@@ -8,16 +8,16 @@ ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 498518fbc119629d2e7da7717b1f6e41c68984ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e386bb61142faca2ce81d2e95a46b3399bce15c0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558587"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85902350"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Настройка экземпляра отказоустойчивого кластера (SMB) — SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье описывается, как настроить хранилище SMB для экземпляра отказоустойчивого кластера в Linux. 
  
@@ -46,9 +46,9 @@ ms.locfileid: "75558587"
    
 1. Выполните процедуру `sudo smbclient -L //NameOrIP/ShareName -U User`.
    
-   \<NameOrIP> — это DNS-имя или IP-адрес сервера, на котором размещается общий ресурс SMB.
+   \<NameOrIP> — это DNS-имя или IP-адрес сервера, на котором размещается общая папка SMB.
    
-   \<ShareName> — это имя общего ресурса SMB. 
+   \<ShareName> — это имя общей папки SMB. 
    
 1. Для системных баз данных или других объектов, хранящихся в расположении данных по умолчанию, выполните указанные ниже действия. В противном случае перейдите к шагу 5. 
    
@@ -76,7 +76,7 @@ ms.locfileid: "75558587"
       mkdir <TempDir>
       ```
       
-      \<TempDir> — это имя папки. В приведенном ниже примере создается папка /var/opt/mssql/tmp.
+      \<TempDir>— это имя папки. В приведенном ниже примере создается папка /var/opt/mssql/tmp.
       
       ```bash
       mkdir /var/opt/mssql/tmp
@@ -118,7 +118,7 @@ ms.locfileid: "75558587"
       Mount -t cifs //<ServerName>/<ShareName> /var/opt/mssql/data -o vers=3.0,username=<UserName>,password=<Password>,domain=<domain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName> — это имя сервера с общим ресурсом SMB.
+      \<ServerName> — это имя сервера с общей папкой SMB.
       
       \<ShareName> — это имя общей папки.
       
@@ -204,7 +204,7 @@ ms.locfileid: "75558587"
       mkdir <FolderName>
       ```
       
-      \<FolderName> — это имя папки. Если папка находится в другом месте, необходимо указать полный путь к ней. В приведенном ниже примере создается папка /var/opt/mssql/userdata.
+      \<FolderName>— это имя папки. Если папка находится в другом месте, необходимо указать полный путь к ней. В приведенном ниже примере создается папка /var/opt/mssql/userdata.
       
       ```bash
       mkdir /var/opt/mssql/userdata
@@ -216,11 +216,11 @@ ms.locfileid: "75558587"
       Mount -t cifs //<ServerName>/<ShareName> <FolderName> -o vers=3.0,username=<UserName>,password=<Password>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777
       ```
       
-      \<ServerName> — это имя сервера с общим ресурсом SMB.
+      \<ServerName> — это имя сервера с общей папкой SMB.
       
       \<ShareName> — это имя общей папки.
       
-      \<FolderName> — имя папки, созданной на последнем шаге.  
+      \<FolderName> — это имя папки, созданной на предыдущем шаге.  
       
       \<UserName> — это имя пользователя для доступа к общей папке.
       
@@ -228,7 +228,7 @@ ms.locfileid: "75558587"
       
       \<mssqlUID> — это идентификатор UID пользователя mssql.
       
-      \<mssqlGID> — это идентификатор GID пользователя user.
+      \<mssqlGID> — это идентификатор GID пользователя mssql.
       
    1. Проверьте, было ли подключение выполнено успешно, с помощью команды mount без параметров.
    

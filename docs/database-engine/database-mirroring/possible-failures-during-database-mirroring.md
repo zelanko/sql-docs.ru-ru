@@ -1,5 +1,6 @@
 ---
 title: Возможные неполадки при зеркальном отображении базы данных | Документы Майкрософт
+description: Узнайте о сбоях в ходе сеансов зеркального отображения базы данных, вызываемых физическими неисправностями, ошибками операционной системы или ошибками SQL Server, а также о реагировании на них.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6b1e2a216a38ed3a9009d446ebf8d5abd79048df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70874282"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735232"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   К сбою во время сеанса зеркального отображения базы данных могут привести различные физические неисправности, ошибки операционной системы или ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сеанс зеркального отображения базы данных не выполняет активных проверок компонентов, на которые опирается процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли быть не замечены, для зеркального отображения базы данных реализован собственный механизм ожидания. По истечении времени ожидания для зеркального отображения базы данных предполагается, что произошел сбой и объявляется *кратковременная ошибка*. Однако некоторые ошибки, которые возникают на уровне экземпляра SQL Server, не превышают времени ожидания зеркального отображения и поэтому не обнаруживаются.  
   
 > [!IMPORTANT]  
@@ -99,7 +100,7 @@ ms.locfileid: "70874282"
   
  **Изменение величины тайм-аута (только в режиме высокой безопасности)**  
   
--   Используйте инструкцию [ALTER DATABASE \<база данных> SET PARTNER TIMEOUT \<целое число>](../../t-sql/statements/alter-database-transact-sql.md).  
+-   Используйте инструкцию [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md).  
   
  **Просмотр текущего значения времени ожидания**  
   

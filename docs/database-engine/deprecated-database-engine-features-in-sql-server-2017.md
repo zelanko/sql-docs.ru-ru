@@ -17,16 +17,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9fcc5f3ebca860e35365bd640a3473b478e06b49
-ms.sourcegitcommit: 79d8912941d66abdac4e8402a5a742fa1cb74e6d
+ms.openlocfilehash: 33b12c2b68c067db1a47159c201f5cd04a9b1c45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80550166"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759131"
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 
   В этом разделе описаны устаревшие функции компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] , которые по-прежнему доступны в [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
   
@@ -325,7 +325,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 | Устаревшая функция | Замена | Имя функции |
 |--------------------|-------------|--------------|
-| :: последовательность вызова функций | Заменено на SELECT *column_list* FROM sys.\<*имя_функции*>().<br /><br />Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | синтаксис вызова функции «::» |
+| :: последовательность вызова функций | Заменено на SELECT *column_list* FROM sys.\<*function_name*>().<br /><br />Например, замените `SELECT * FROM ::fn_virtualfilestats(2,1)` на `SELECT * FROM sys.fn_virtualfilestats(2,1)`. | синтаксис вызова функции «::» |
 | Ссылки на столбцы с трех- и четырехкомпонентными именами. | Использование двухкомпонентных имен совместимо со стандартом.|Имя столбца, состоящее более чем из двух компонентов |
 | Строка, заключенная в кавычки, использовалась как псевдоним столбца для выражения в списке SELECT:<br /><br />'*string_alias*' = *выражение* | *expression* [AS] *псевдоним_столбца*<br /><br />*expression* [AS] [*псевдоним_столбца*]<br /><br />*expression* [AS] "*псевдоним_столбца*"<br /><br />*expression* [AS] '*псевдоним_столбца*'<br /><br />*column_alias* = *выражение* | Строковые литералы в качестве псевдонимов столбцов |
 | Нумерованные процедуры | Нет. Не используйте. | ProcNums |

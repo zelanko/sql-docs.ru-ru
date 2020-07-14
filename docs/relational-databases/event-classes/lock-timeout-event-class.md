@@ -1,5 +1,6 @@
 ---
 title: Класс событий Lock:Timeout | Документация Майкрософт
+description: Класс событий Lock:Timeout указывает на то, что запрос на захват некоторого ресурса, превысил время ожидания, так как данный ресурс уже был захвачен в блокирующем режиме в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc89f8df5d34a2a2c1f20756c743c74a5a5851f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d0f1a43ab06c931fd9fda6498790ccc7dce3476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67910333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737202"
 ---
 # <a name="locktimeout-event-class"></a>Класс событий Lock:Timeout
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Класс событий Lock:Timeout указывает на то, что запрос на захват некоторого ресурса, например страницы, превысил время ожидания, поскольку данный ресурс был захвачен в блокирующем режиме другой транзакцией. Время ожидания определяется системной функцией @@LOCK_TIMEOUT и может быть задано инструкцией SET LOCK_TIMEOUT.  
   
  Класс событий Lock:Timeout используется для мониторинга выполнения условия истечения времени ожидания. Эти сведения полезны для определения влияния времени ожидания на производительность приложения, а также состава задействованных объектов. Можно просмотреть код приложения, изменяющий эти объекты, и определить возможные изменения для минимизации времени ожидания.  
@@ -29,7 +30,7 @@ ms.locfileid: "67910333"
   
 ## <a name="locktimeout-event-class-data-columns"></a>Столбцы данных класса событий Lock:Timeout  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |BinaryData|**image**|Идентификатор ресурса блокировки.|2|Да|  
@@ -38,8 +39,8 @@ ms.locfileid: "67910333"
 |имя_базы_данных|**nvarchar**|Имя базы данных, в которой истекло время ожидания.|35|Да|  
 |Duration|**bigint**|Промежуток времени в микросекундах между моментом запроса на блокировку и истечением времени блокировки.|13|Да|  
 |EndTime|**datetime**|Время окончания события.|15|Да|  
-|EventClass|**int**|Тип события = 27.|27|нет|  
-|EventSequence|**int**|Порядковый номер данного события в запросе.|51|нет|  
+|EventClass|**int**|Тип события = 27.|27|Нет|  
+|EventSequence|**int**|Порядковый номер данного события в запросе.|51|Нет|  
 |GroupID|**int**|Идентификатор группы рабочей нагрузки, в которой запускается событие трассировки SQL.|66|Да|  
 |HostName|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Этот столбец данных заполняется, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |IntegerData2|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Да|  
@@ -53,7 +54,7 @@ ms.locfileid: "67910333"
 |ObjectID2|**bigint**|Идентификатор связанного объекта или сущности, если он доступен и применим.|56|Да|  
 |OwnerID|**int**|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|Да|  
 |RequestID|**int**|Идентификатор запроса, содержащего инструкцию.|49|Да|  
-|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|нет|  
+|ServerName|**nvarchar**|Имя экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , для которого производится трассировка.|26|Нет|  
 |SessionLoginName|**nvarchar**|Имя входа пользователя, создавшего этот сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по имени Login1 и при выполнении инструкции под именем Login2, SessionLoginName будет содержать значение Login1, а LoginName — значение Login2. В этом столбце отображаются как имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , так и имена входа Windows.|64|Да|  
 |SPID|**int**|Идентификатор сеанса, в котором произошло событие.|12|Да|  
 |StartTime|**datetime**|Время начала события, если оно известно.|14|Да|  

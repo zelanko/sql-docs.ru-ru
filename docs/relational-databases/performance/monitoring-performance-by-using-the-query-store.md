@@ -14,16 +14,16 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 8142cb9868a1daa8f7c73c6b30da1b29c12bf3bc
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816488"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006213"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Хранилище запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет подробные сведения о выборе и производительности плана запроса. Оно упрощает устранение неполадок с производительностью, помогая быстро находить разницу в производительности, вызванную изменением плана запроса. Хранилище запросов автоматически собирает журнал запросов, планов и статистики выполнения, сохраняя эти данные для просмотра. Данные разделяются по временным диапазонам, благодаря чему вы можете просматривать закономерности использования и узнавать об изменениях плана запроса на сервере. Хранилище запросов можно настроить с помощью инструкции [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) .
 
@@ -153,29 +153,11 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 ## <a name="configuration-options"></a><a name="Options"></a> Параметры конфигурации
 
-Для настройки хранилища запросов доступны указанные ниже параметры.
-
-*OPERATION_MODE* Может быть равен **READ_WRITE** (по умолчанию) или READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)* Настройте аргумент `STALE_QUERY_THRESHOLD_DAYS`, чтобы указать длительность хранения данных в хранилище запросов в днях. Значение по умолчанию — 30. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition значение по умолчанию — **7** дней.
-
-*DATA_FLUSH_INTERVAL_SECONDS* Определяет частоту, с которой данные, записанные в хранилище запросов, сохраняются на диск. Для оптимизации производительности данные, собранные хранилищем запросов, асинхронно записываются на диск. Частота, с которой происходит эта асинхронная передача, настраивается с помощью `DATA_FLUSH_INTERVAL_SECONDS`. Значение по умолчанию ― **900** (15 минут).
-
-*MAX_STORAGE_SIZE_MB* Настраивает максимальный размер хранилища запросов. Если данные в хранилище запросов достигают размера `MAX_STORAGE_SIZE_MB`, хранилище запросов автоматически изменяет состояние с "Чтение и запись" на "Только чтение" и останавливает сбор новых данных. Значение по умолчанию — **100 МБ** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], значение по умолчанию равно **1 ГБ**. Для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition значение по умолчанию — **1 ГБ**, а для выпуска [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition — **10 МБ**.
-
-*INTERVAL_LENGTH_MINUTES* Определяет интервал времени вычисления статистических данных о среде выполнения в хранилище запросов. Для оптимизации использования свободного места статистические данные времени выполнения в хранилище вычисляются для фиксированного интервала времени. Этот интервал настраивается с помощью параметра `INTERVAL_LENGTH_MINUTES`. Значение по умолчанию — **60**.
-
-*SIZE_BASED_CLEANUP_MODE* Определяет, будет ли автоматически активирован процесс очистки, когда общий объем данных приблизится к верхней границе ограничения. Может иметь значение **AUTO** (по умолчанию) или OFF.
-
-*QUERY_CAPTURE_MODE* Определяет запросы, собираемые в хранилище запросов (все запросы или только важные запросы), основываясь на показателях выполнения и потребления ресурсов; определяет отслеживание текущих запросов без добавления новых. Может иметь значение **ALL** (регистрировать все запросы), AUTO (игнорировать редкие запросы и запросы с малой продолжительностью компиляции и выполнения), CUSTOM (пользовательская политика записи) или NONE (остановить регистрацию новых запросов). Значение по умолчанию — **ALL** для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Начиная с версии [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], значение по умолчанию — **AUTO**. Значение по умолчанию для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] — **AUTO**.
-
-*MAX_PLANS_PER_QUERY* Целое число, представляющее максимальное количество поддерживаемых планов для каждого запроса. Значение по умолчанию — **200**.
-
-*WAIT_STATS_CAPTURE_MODE* Определяет, будет ли хранилище запросов перехватывать данные статистики ожидания. Может иметь значение OFF или **ON** (по умолчанию).
+Сведения о доступных параметрах для настройки параметров хранилища запросов см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Запросите представление **sys.database_query_store_options**, чтобы определить текущие параметры хранилища запросов. В представлении [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) можно посмотреть о значениях дополнительные сведения.
 
-Дополнительные сведения о настройке параметров с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).
+Примеры настройки параметров конфигурации с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Управление параметрами](#OptionMgmt).
 
 ## <a name="related-views-functions-and-procedures"></a><a name="Related"></a> Связанные представления, функции и процедуры
 

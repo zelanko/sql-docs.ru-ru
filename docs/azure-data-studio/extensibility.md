@@ -1,25 +1,24 @@
 ---
 title: Добавление функциональных возможностей с помощью расширяемости
-titleSuffix: Azure Data Studio
 description: Сведения о модели расширяемости и основных областях расширяемости для добавления функциональных возможностей в Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, maghan, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8ca24836766307584c43e1636bb33f5bd198f585
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 6409dd44381b1d927b07f8ecee043465eacdd14e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107895"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774656"
 ---
-# <a name="getting-started-with-name-sos-extensibility"></a>Начало работы с расширяемостью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="azure-data-studio-extensibility"></a>Расширяемость Azure Data Studio
 
-В [!INCLUDE[name-sos](../includes/name-sos.md)] есть несколько механизмов расширяемости для настройки пользовательского интерфейса и предоставления доступа к этим настройкам всему сообществу пользователей. Так как базовая платформа [!INCLUDE[name-sos](../includes/name-sos.md)] построена на основе Visual Studio Code, доступны большинство интерфейсов API расширяемости Visual Studio Code. Кроме того, мы предоставляем дополнительные точки расширяемости для действий, связанных с управлением данными.
+В Azure Data Studio есть несколько механизмов расширяемости для настройки пользовательского интерфейса и предоставления доступа к этим настройкам всему сообществу пользователей. Так как базовая платформа Azure Data Studio построена на основе Visual Studio Code, доступны большинство интерфейсов API расширяемости Visual Studio Code. Кроме того, мы предоставляем дополнительные точки расширяемости для действий, связанных с управлением данными.
 
 Вот некоторые из основных точек расширяемости:
 
@@ -32,7 +31,7 @@ ms.locfileid: "82107895"
 
 ## <a name="visual-studio-code-extensibility-apis"></a>Интерфейсы API расширяемости Visual Studio Code
 
-Так как базовая платформа [!INCLUDE[name-sos](../includes/name-sos.md)] построена на основе Visual Studio Code, сведения об интерфейсах API расширяемости Visual Studio Code можно найти в документации по [разработке расширений](https://code.visualstudio.com/docs/extensions/overview) и [API расширений](https://code.visualstudio.com/docs/extensionAPI/overview) на веб-сайте Visual Studio Code.
+Так как базовая платформа Azure Data Studio построена на основе Visual Studio Code, сведения об интерфейсах API расширяемости Visual Studio Code можно найти в документации по [разработке расширений](https://code.visualstudio.com/docs/extensions/overview) и [API расширений](https://code.visualstudio.com/docs/extensionAPI/overview) на веб-сайте Visual Studio Code.
 
 ## <a name="manage-dashboard-tab-panel-contributions"></a>Управление вкладом на панели вкладок панели мониторинга
 

@@ -1,5 +1,6 @@
 ---
 title: Задача "Очистка журнала" (план обслуживания) | Документация Майкрософт
+description: Узнайте, как удалить журнал резервного копирования и восстановления, журнал заданий агента SQL Server и журнал плана обслуживания из базы данных msdb с помощью задачи "Очистка журнала".
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8fecc3eb56a015ac420ca2cd5167098bbce84ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115786"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85667053"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Задача «Очистка журнала» (план обслуживания)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Используйте диалоговое окно **Задача «Очистка журнала»** , чтобы исключить устаревшие данные предыстории из таблиц в базе данных msdb. Эта задача поддерживает удаление и восстановление журнала резервного копирования, журнала заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а также журнала плана обслуживания.  
   
  Эта инструкция применяет инструкции **sp_purge_jobhistory** и **sp_delete_backuphistory** .  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
  **Соединение**  
  Выберите соединение с сервером, которое будет использоваться для выполнения этой задачи.  
   

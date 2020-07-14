@@ -1,5 +1,6 @@
 ---
 title: Синхронизация данных | Документация Майкрософт
+description: Синхронизация данных в репликации относится к изменениям данных и схемы, распространяемым между издателем и подписчиками в SQL Server.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: b458b4555276f4e9f6af1ce72e5981e06c984407
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a6c7ba7deddb6b2728a846cb454917ee6b065bf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287016"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716689"
 ---
 # <a name="synchronize-data"></a>Синхронизация данных
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Под синхронизацией данных подразумевается процесс распространения изменений данных и схем между издателем и подписчиками, после того как был применен исходный моментальный снимок на подписчике. Синхронизация может происходить:  
   
 -   Непрерывно, что типично для репликации транзакций.  

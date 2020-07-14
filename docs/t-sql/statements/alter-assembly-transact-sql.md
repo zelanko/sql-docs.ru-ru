@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d389b0de6e00095729fdf3636ed7a0db872c7055
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2424982eebaed7a4d9b3d73ea7d4475b7ec758c2
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634823"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892570"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Изменяет сборку, изменяя при этом свойства каталога [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сборки. Инструкция ALTER ASSEMBLY обновляет ее до последней копии модулей [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], содержащих ее реализацию, и добавляет или удаляет связанные с ней файлы. Сборки создаются при помощи инструкции [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
 
@@ -74,12 +74,12 @@ ALTER ASSEMBLY assembly_name
  FROM \<client_assembly_specifier> | \<assembly_bits>  
  Обновляет сборку до последней копии модулей платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], содержащих ее реализацию. Этот параметр может использоваться при условии, что файлы, связанные с указанной сборкой, отсутствуют.  
   
- Аргумент \<client_assembly_specifier> указывает сетевое или локальное расположение, в котором находится обновляемая сборка. Сетевое расположение содержит имя компьютера, имя общей папки и путь внутри этой папки. Аргумент *manifest_file_name* указывает имя файла, содержащего манифест сборки.  
+ \<client_assembly_specifier> указывает сетевое или локальное расположение, в котором находится обновляемая сборка. Сетевое расположение содержит имя компьютера, имя общей папки и путь внутри этой папки. Аргумент *manifest_file_name* указывает имя файла, содержащего манифест сборки.  
 
 > [!IMPORTANT]
 > База данных SQL Azure не поддерживает добавление ссылок на файлы.
   
- Аргумент \<assembly_bits> является двоичным значением для сборки.  
+ \<assembly_bits> является двоичным значением для сборки.  
   
  Для зависимых сборок, также нуждающихся в обновлении, должны выполняться отдельные инструкции ALTER ASSEMBLY.  
   

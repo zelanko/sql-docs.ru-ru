@@ -1,5 +1,6 @@
 ---
 title: Добавление файлов данных или журналов в базу данных | Документация Майкрософт
+description: Узнайте, как в SQL Server 2019 добавить данные или файлы журнала в базу данных с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 563a075ec3cba0cc25980e59a228a5c319075caa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68137398"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727579"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом подразделе содержатся инструкции по добавлению файлов данных или журналов в базу данных на сервере [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -72,7 +73,7 @@ ms.locfileid: "68137398"
   
 6.  Выберите тип файла, данные или журнал.  
   
-7.  Выберите файловую группу, в которую следует добавить файл данных, или вариант **\<новая файловая группа>** . Журналы транзакций не могут быть помещены в файловые группы.  
+7.  Выберите файловую группу, в которую следует добавить файл данных, или выберите **\<new filegroup>** , чтобы создать новую. Журналы транзакций не могут быть помещены в файловые группы.  
   
 8.  Укажите исходный размер файла. Файл данных следует делать как можно большего размера, в соответствии с максимальным предполагаемым объемом данных в базе данных.  
   

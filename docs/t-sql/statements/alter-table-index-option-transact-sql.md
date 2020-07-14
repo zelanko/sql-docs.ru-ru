@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ba0e9f1edc59b6f1b51bff6afa040fa489cd9858
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 054782a6b6dd4ee381c0a70b857a945c72a66372
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760958"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Определяет набор параметров, которые могут применяться к индексу, являющемуся частью определения ограничения, созданному с помощью инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -213,17 +213,17 @@ ms.locfileid: "81631751"
   
  Дополнительные сведения о сжатии см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Применимо к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и выше.  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.  
   
  Указывает секции, к которым применяется параметр DATA_COMPRESSION. Если таблица не секционирована, аргумент ON PARTITIONS проводит к формированию ошибки. Если не указано предложение ON PARTITIONS, то параметр DATA_COMPRESSION применяется ко всем секциям секционированной таблицы.  
   
 \<partition_number_expression> можно указать одним из следующих способов.  
   
--   Указать номер секции, например ON PARTITIONS (2).  
--   Указать номера нескольких секций через запятые, например ON PARTITIONS (1, 5).  
--   Указать диапазоны и отдельные секции, например: ON PARTITIONS (2, 4, 6 TO 8).  
+-   Указав номер секции, например: ON PARTITIONS (2).  
+-   Указав номера нескольких секций, разделив их запятыми, например ON PARTITIONS (1, 5).  
+-   Указав диапазоны секций и отдельные секции, например ON PARTITIONS (2, 4, 6 TO 8).  
   
-\<range> можно указать как номера секций, разделенные ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
+\<range> можно указать номерами секций, разделенными ключевым словом TO, например: ON PARTITIONS (6 TO 8).  
   
  Чтобы для разных секций задать разные типы сжатия данных, укажите параметр DATA_COMPRESSION несколько раз, например следующим образом.  
   

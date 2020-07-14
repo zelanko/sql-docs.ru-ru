@@ -1,5 +1,6 @@
 ---
 title: Свойства сервера (страница "Память") | Документы Майкрософт
+description: Ознакомьтесь с параметрами памяти сервера в SQL Server. Узнайте о минимальном и максимальном объеме памяти сервера, памяти для создания индекса и других параметрах.
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -10,17 +11,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.serverproperties.memory.f1
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 83f8be52af8507203764cab7197359c1c99663a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726618"
 ---
 # <a name="server-properties---memory-page"></a>Свойства сервера (страница "Память")
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Используйте данную страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  
   
 ## <a name="options"></a>Параметры  

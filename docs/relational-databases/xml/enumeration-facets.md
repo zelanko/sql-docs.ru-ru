@@ -1,5 +1,6 @@
 ---
 title: Аспекты перечисления | Документация Майкрософт
+description: Узнайте, как SQL Server использует аспекты перечисления для проверки XML-схем.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5430f9549a2c0af3677d3ad374e9fb5513d6bd1f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e8939b3c8654452f50b280ad66fe221f94220754
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664575"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633136"
 ---
 # <a name="enumeration-facets"></a>аспекты перечисления
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отклоняет XML-схемы с типами, которые имеют шаблоны аспектов или перечислений, нарушающих эти аспекты.  
   
 ## <a name="example"></a>Пример  

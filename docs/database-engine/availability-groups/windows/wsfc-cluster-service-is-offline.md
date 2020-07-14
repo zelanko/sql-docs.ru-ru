@@ -1,5 +1,6 @@
 ---
 title: WSFC служба кластеров работает в режиме вне сети | Документы Майкрософт
+description: Политика "Состояние кластера WSFC" проверяет состояние отказоустойчивого кластера Windows Server. Эта политика переходит в неисправное состояние, когда кластер отключается от сети или находится в состоянии "принудительный кворум".
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d502548d-ece6-4a42-9ded-2157d33e3d21
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c0d069601c36ba46be3c1950300c16b8808c264f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8a5b8b3d7c512ca57cf2bd154f1db6a5d3cc4979
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68013356"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439951"
 ---
 # <a name="wsfc-cluster-service-is-offline"></a>WSFC служба кластеров работает в режиме вне сети
 
@@ -34,7 +35,7 @@ ms.locfileid: "68013356"
 |**Категория**|**Критическая**|  
 |**Аспект**|Экземпляр SQL Server|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Эта политика проверяет состояние отказоустойчивого кластера Windows Server (WSFC). Политика находится в неисправном состоянии и выдает предупреждение, если кластер WSFC находится вне сети или в состоянии «принудительный кворум». Все группы доступности, размещенные на этом кластере, находятся в режиме «вне сети», либо требуется процедура аварийного восстановления.  
   
  Эта политика находится в исправном состоянии, если состояние кластера — «нормальный кворум».  

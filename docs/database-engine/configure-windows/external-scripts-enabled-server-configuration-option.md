@@ -1,8 +1,9 @@
 ---
-title: Параметр конфигурации сервера "external scripts enabled" | Документы Майкрософт
-ms.date: 11/13/2017
+title: Параметр конфигурации сервера external scripts enabled
+description: Сведения о параметре external scripts enable в SQL Server. После его включения вы сможете выполнять внешние скрипты на поддерживаемых языках, таких как R или Python.
+ms.date: 06/30/2020
 ms.prod: sql
-ms.technology: configuration
+ms.technology: machine-learning-services
 ms.reviewer: ''
 ms.topic: language-reference
 f1_keywords:
@@ -11,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 14e3d788034fad9e26f8283e5155d29286ad7360
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3915ca28aa6512c52e2cb465528bb4c04ea8dd21
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85772488"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Параметр конфигурации сервера external scripts enabled
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-**Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Параметр **external scripts enabled** позволяет включить выполнение скриптов с некоторыми удаленными расширениями языка. По умолчанию это свойство отключено. Программа установки может при необходимости задать этому свойству значение true, если установлены **расширенные службы аналитики**.
+Параметр **external scripts enabled** позволяет включить выполнение скриптов с некоторыми удаленными расширениями языка. По умолчанию это свойство отключено. Программа установки может при необходимости присвоить этому свойству значение true при установке **служб машинного обучения**.
 
 ## <a name="remarks"></a>Remarks
 
@@ -34,13 +35,13 @@ ms.locfileid: "80664303"
 
     [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включает поддержку языка R в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], а также набор инструментов рабочей станции R и библиотек подключений.
 
-    Установите компонент **Расширения углубленной аналитики** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы включить выполнение скриптов R. Язык R устанавливается по умолчанию.
+    Установите компонент **службы R** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить выполнение скриптов R.
 
-+ При анализе служб [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
++ Для [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] и более поздних версий
 
-    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] использует ту же архитектуру, что и SQL Server 2016, но поддерживает язык Python.
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] поддерживает одновременно языки R и Python.
 
-    Установите компонент **Расширения углубленной аналитики** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить выполнение внешних скриптов R. Во время начальной настройки нужно выбрать хотя бы один язык: R, Python или оба. 
+    Установите компонент **Службы машинного обучения** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить выполнение внешних скриптов R. Во время начальной настройки нужно выбрать хотя бы один язык: R, Python или оба.
 
 ## <a name="additional-requirements"></a>Дополнительные требования
 
@@ -51,16 +52,11 @@ sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
 ```
 
-Чтобы это изменение вступило в силу, необходимо перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-
-Дополнительные сведения см. в разделе [Установка машинного обучения SQL Server](../../machine-learning/install/sql-machine-learning-services-windows-install.md).
+Дополнительные сведения см. в статье [Установка служб машинного обучения SQL Server (Python и R) в Windows](../../machine-learning/install/sql-machine-learning-services-windows-install.md) или [Linux](../../linux/sql-server-linux-setup-machine-learning-docker.md?toc=/sql/machine-learning/toc.json).
 
 ## <a name="see-also"></a>См. также раздел
 
-[sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
-
-[RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
-
-[sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
-
-[Службы машинного обучения SQL Server](../../machine-learning/index.yml)
++ [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
++ [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
++ [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
++ [Документация по машинному обучению на SQL](../../machine-learning/index.yml)

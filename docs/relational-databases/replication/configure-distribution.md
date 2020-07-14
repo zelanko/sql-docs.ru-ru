@@ -1,5 +1,6 @@
 ---
 title: Настройка распространения | Документация Майкрософт
+description: Распространитель SQL Server хранит в своей базе данных метаданные и данные журнала для репликации, а также транзакции для репликации транзакций.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,15 +22,15 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 66e6135ee2144de5936c041c34450d7fd0ce3d62
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 21364f104674ec081da5c49d229a5c04a09af016
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76284810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774030"
 ---
 # <a name="configure-distribution"></a>Настройка распространителя
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Распространитель — это сервер, на котором находится база данных распространителя, хранящая метаданные и данные предыстории для всех типов репликации, а также транзакции репликации транзакций. Для настройки репликации, необходимо настроить распространитель. Каждый издатель может быть назначен только одному экземпляру распространителя, однако один распространитель может совместно использоваться несколькими издателями. Распространитель использует следующие дополнительные ресурсы на сервере, где он расположен.  
   
 -   Дополнительное дисковое пространство, если файлы моментальных снимков для публикации хранятся на распространителе (где они обычно и хранятся).  

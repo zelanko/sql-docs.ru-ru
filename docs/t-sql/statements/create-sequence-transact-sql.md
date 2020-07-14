@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 444f107f69863b71b02792e9fe606284973fef67
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 909bd52e325726f9874b29ebc791eb049e4c0daa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632594"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767045"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Создает объект последовательности и указывает его свойства. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с заданным интервалом; можно настроить перезапуск (зацикливание) последовательности, когда она исчерпана. В отличие от столбцов идентификаторов последовательности не связаны с конкретными таблицами. Приложение обращается к объекту последовательности, чтобы получить следующее значение. Приложения управляют связями между последовательностями и таблицами. Пользовательские приложения могут ссылаться на объект последовательности и распределять значения между несколькими строками и таблицами.  
   
@@ -151,7 +151,7 @@ INCREMENT BY \<constant>
 ## <a name="metadata"></a>Метаданные  
  Чтобы получить сведения о последовательностях, запросите представление [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Необходимо разрешение **CREATE SEQUENCE**, **ALTER**или **CONTROL** для схемы SCHEMA.  

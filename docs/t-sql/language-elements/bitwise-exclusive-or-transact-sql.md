@@ -25,15 +25,15 @@ ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 664e3cd0fc687509c630258a681c155d94863d39
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 579c73661c3893fdd1346ccc60b64103a4326c2d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67943069"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003995"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (побитовое исключающее ИЛИ) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Выполняет побитовую операцию исключающего ИЛИ между двумя целочисленными значениями.  
   
@@ -62,17 +62,15 @@ expression ^ expression
 ## <a name="remarks"></a>Remarks  
  Побитовый оператор **^** выполняет операцию побитового логического исключающего ИЛИ между двумя выражениями, последовательно обрабатывая соответствующие биты для двух выражений. Значение результирующих битов устанавливается равным 1, если для текущего разрешаемого бита один из битов (но не оба) во входных выражениях имеет значение 1. Если оба бита имеют равные значения, результирующий бит принимает значение 0.  
   
- Если левое и правое выражения принадлежат к различным целочисленным типам данных (например, левое выражение *expression* — к типу **smallint**, а правое выражение *expression* — к типу **int**), аргумент более короткого типа данных преобразовывается в более длинный тип данных. В этом случае **smallint**_expression_ преобразовывается в тип **int**.  
+ Если левое и правое выражения принадлежат к различным целочисленным типам данных (например, левое выражение *expression* — к типу **smallint**, а правое выражение *expression* — к типу **int**), аргумент более короткого типа данных преобразовывается в более длинный тип данных. В этом случае **smallint** _expression_ преобразуется в тип **int**.  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере создается таблица, использующая тип данных **int** для хранения оригинальных значений и вставки двух значений в одну строку.  
   
 ```  
-CREATE TABLE bitwise  
-(   
-a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (   
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

@@ -1,5 +1,6 @@
 ---
 title: Изменение оптимизированных для памяти таблиц | Документация Майкрософт
+description: Узнайте, как инструкция ALTER TABLE меняет схемы и индекса в таблицах, оптимизированных для памяти. Объединение операций добавления, удаления и изменения в одной инструкции.
 ms.custom: ''
 ms.date: 10/22/2018
 ms.prod: sql
@@ -11,16 +12,16 @@ ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d65b6931053c7eccbb96093fb2cd840f8277cb7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db339d9063378b29f6902f7e52e3006ac57295b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776073"
 ---
 # <a name="altering-memory-optimized-tables"></a>Изменение таблиц с оптимизацией для памяти
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Изменения схемы и индекса в таблицах, оптимизированных для памяти, можно выполнить с помощью инструкции ALTER TABLE. В SQL Server 2016 и базе данных SQL Azure операции ALTER TABLE с таблицами, оптимизированными для памяти, являются автономными, то есть во время выполнения такой операции таблица недоступна для запросов. Приложение базы данных может продолжать работу, и любая операция, которая обращается к таблице, будет блокироваться до завершения процесса изменения. В одной инструкции ALTER TABLE можно сочетать несколько операций ADD, DROP или ALTER.
 

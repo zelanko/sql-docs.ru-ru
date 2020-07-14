@@ -11,16 +11,16 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9b17969e54f620ee22c237526f59e2f49700b5
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68892584"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900248"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Обновление Power Pivot для SharePoint
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   В этой статье описаны шаги, необходимые для обновления развертывания [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] до [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Конкретные действия зависят от версии SharePoint, в которой в настоящее время выполняется среда, и включают [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для надстройки SharePoint (**spPowerPivot.msi**).  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68892584"
 Get-PowerPivotSystemService  
 ```  
   
- Проверьте **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] представляет собой версию 13.0.\<основная сборка>.\<вспомогательная сборка>  
+ Проверьте **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] имеет версию 13.0.\<major build>.\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Проверьте версию службы Windows Analysis Services  
  Если обновлены лишь некоторые серверы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] в ферме SharePoint 2010, экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на необновленных серверах будет более старым, чем версия, ожидаемая в ферме. Чтобы использовать все серверы, потребуется обновить их до одной и той же версии. Используйте один из следующих методов для проверки службы Windows служб SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) на каждом компьютере.  
@@ -260,7 +260,7 @@ Get-PowerPivotSystemService
   
 3.  Щелкните **Сведения**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] версия файла должна иметь вид 13.00.\<основная сборка>.\<вспомогательная сборка>.  
+4.  Версия файла [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] должна быть 13.00.\<major build>.\<minor build>.  
   
 5.  Проверьте, что этот номер такой же, как у версий решения и системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -310,7 +310,7 @@ Get-PowerPivotSystemService
   
 2.  Отсортируйте результаты по имени сборки и найдите **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Убедитесь, что используется версия 13.0.\<номер сборки>.  
+3.  Убедитесь, что используется версия 13.0.\<build number>.  
   
 ##  <a name="upgrading-multiple-power-pivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a> Обновление нескольких серверов Power Pivot для SharePoint в ферме SharePoint  
  В многосерверной топологии, включающей более одного сервера [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , все экземпляры серверов и компонентов должны иметь одинаковую версию. Сервер, на котором работает более высокая версия ПО, задает уровень поддержки для всех серверов фермы. Если обновить лишь некоторые из серверов, то все оставшиеся, на которых работают предыдущие версии ПО, станут недоступными до тех пор, пока тоже не будут обновлены.  

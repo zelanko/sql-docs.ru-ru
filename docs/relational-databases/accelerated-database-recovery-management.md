@@ -12,16 +12,16 @@ author: mashamsft
 ms.author: mathoma
 ms.reviewer: kfarlee
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fea43ea41bc3e65fa0a6b36c7557322431e95fd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99229b68f99cf96af3916ac6946ba5d931f50bce
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75245261"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85727919"
 ---
 # <a name="manage-accelerated-database-recovery"></a>Управление ускоренным восстановлением баз данных
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 ## <a name="enabling-and-controlling-adr"></a>Включение и управление ADR
 
@@ -103,6 +103,9 @@ PVS может потребоваться переместить в другую
    ```
 
 ## <a name="troubleshooting"></a>Устранение неполадок
+
+> [!NOTE]
+> Этот раздел относится также к базе данных Azure SQL.
 
 Выполните запрос к `sys.dm_tran_persistent_version_store_stats`, чтобы проверить размер PVS.
 

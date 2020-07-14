@@ -1,5 +1,6 @@
 ---
 title: Предварительная обработка схемы для слияния включаемых схем | Документация Майкрософт
+description: Узнайте, как можно предварительно обработать XML-схемы, содержащие директиву xsd:include, чтобы скопировать и объединить содержимое всех включенных схем в единую схему для передачи на сервер.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 28dbb25bb3952c586b2dfc4e2b05556c41ee7602
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 48afad6a8cb4c5e3dcc65118a73fa7b3079d02f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664914"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757516"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Предпроцессор схемы для слияния включаемых схем
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Элемент W3C XSD **include** обеспечивает поддержку модульного принципа, при котором схема XML может быть разделена на несколько физических файлов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает этот элемент. XML-схемы, содержащие данный элемент, будут отклонены сервером.  
   
- Чтобы решить эту проблему, XML-схемы, включающие директиву \<xsd:include>, могут быть предварительно обработаны для копирования и слияния содержимого всех включенных схем в единую схему для передачи на сервер. Для такой предварительной обработки можно использовать следующий код С#. Примечания в начале этого кода содержат сведения по его использованию.  
+ Чтобы решить эту проблему, можно предварительно обработать XML-схемы, включающие директиву \<xsd:include>, произведя копирование и слияние содержимого любых включенных схем в единую схему для ее последующей загрузки на сервер. Для такой предварительной обработки можно использовать следующий код С#. Примечания в начале этого кода содержат сведения по его использованию.  
   
 ```  
 // XSD Schema Include Normalizer  

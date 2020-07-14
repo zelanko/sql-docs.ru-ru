@@ -4,22 +4,22 @@ titleSuffix: SQL Server
 description: Установка, обновление и удаление SQL Server на Linux. В этой статье рассматриваются сценарии сетевой, автономной и автоматической установки.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/13/2020
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: ea308fca55cd5cc19a6d8cd74427a87e8fbe9ee2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 915aaabeedeb7c240495e635ebb679c252112385
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79319844"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897314"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье приводятся инструкции по установке, обновлению и удалению SQL Server 2017 и SQL Server 2019 на Linux.
 
@@ -47,7 +47,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 
 | Платформа | Поддерживаемые версии | Получить
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Получить RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8  | [Получить RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 с пакетом обновления 2 (SP2) | [Получить SLES v12 с пакетом обновления 2 (SP2)](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Подсистема Docker** | 1.8 и выше | [Получить Docker](https://www.docker.com/get-started)
@@ -57,12 +57,7 @@ SQL Server поддерживается на платформах Red Hat Enterp
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Платформа | Поддерживаемые версии | Получить
-|-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6, 8.0 | [Получить RHEL 8.0](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | версии 12 SP2, SP3, SP4, SP5 | [Получить SLES v12](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04, 18.04 | [Получить Ubuntu 18.04](http://releases.ubuntu.com/bionic/)
-| **Подсистема Docker** | 1.8 и выше | [Получить Docker](https://www.docker.com/get-started)
+[!INCLUDE [linux-supported-platfoms-2019](../includes/linux-supported-platfoms-2019.md)]
 
 ::: moniker-end
 

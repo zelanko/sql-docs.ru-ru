@@ -19,17 +19,17 @@ helpviewer_keywords:
 - messages [SQL Server], formats
 - errors [SQL Server], formats
 ms.assetid: 83f18102-2035-4a87-acd0-8d96d03efad5
-author: julieMSFT
-ms.author: jrasnick
-ms.openlocfilehash: 8910f8cd38d1336a5da5c91e386d7458164b3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5909e4812ca554ffdd7b7586af652382358170fb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826938"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752395"
 ---
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Форматирует сообщение на основе текста, имеющегося в sys.messages, или предоставленной строки. Функция FORMATMESSAGE работает аналогично инструкции RAISERROR, но в отличие от нее не выводит сообщение немедленно, а возвращает сформированный текст для дальнейшей обработки.  
   
@@ -59,7 +59,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="remarks"></a>Remarks  
  Как и инструкция RAISERROR, функция FORMATMESSAGE производит формирование сообщения, подставляя указанные значения параметров вместо заполнителей. Дополнительные сведения о заполнителях, которые допускаются в сообщениях об ошибках, а также о процессе их изменения см. в статье [RAISERROR (Transact-SQL)](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
- Она находит сообщение для текущего языка, установленного для пользователя. Если локализованная версия сообщения отсутствует, то берется версия сообщения для языка "Английский (США)".  
+ Она находит сообщение для текущего языка, установленного для пользователя. В случае системных сообщений (*msg_number* <= 50 000) при отсутствии локализованной версии сообщения используется языковая версия ОС. В случае пользовательских сообщений (*msg_number* > 50 000) при отсутствии локализованной версии сообщения используется английская версия.
   
  Для локализованных сообщений указанные параметры должны соответствовать заполнителям в версиях для языка "Английский (США)". Таким образом, параметр 1 в локализованной версии должен соответствовать параметру 1 в версии для языка "Английский (США)", параметр 2 — параметру 2 и т. д.  
   
@@ -68,7 +68,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ### <a name="a-example-with-a-message-number"></a>A. Пример с номером сообщения  
  В приведенном ниже примере используется сообщение репликации `20009`, которое хранится в sys.messages в виде "Статью "%s" не удалось добавить в публикацию "%s"". Функция FORMATMESSAGE подставляет вместо заполнителей параметров значения `First Variable` и `Second Variable`. Результирующая строка "Статью "Первая переменная" не удалось добавить в публикацию "Вторая переменная"." сохраняется в локальной переменной `@var1`.  
   
-```  
+```sql
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
 DECLARE @var1 VARCHAR(200);   
 SELECT @var1 = FORMATMESSAGE(20009, 'First Variable', 'Second Variable');   
@@ -81,7 +81,7 @@ SELECT @var1;
   
  В приведенном ниже примере в качестве входных данных принимается строка.  
   
-```  
+```sql
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
@@ -90,7 +90,7 @@ SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'se
 ### <a name="c-additional-message-string-formatting-examples"></a>В. Дополнительные примеры форматирования строки сообщения  
  В приведенных ниже примерах показаны различные параметры форматирования.  
   
-```  
+```sql
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);
 SELECT FORMATMESSAGE('Signed int with up to 3 leading zeros %03i', 5);  
 SELECT FORMATMESSAGE('Signed int with up to 20 leading zeros %020i', 5);  

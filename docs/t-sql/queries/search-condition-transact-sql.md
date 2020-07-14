@@ -37,15 +37,15 @@ ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b35445b9b04eafb6d8d302c8627c08ca90bd745e
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 84a7961292625aa3d818dbbab62aa7b455dabea7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635533"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999812"
 ---
 # <a name="search-condition-transact-sql"></a>Условие поиска (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Сочетание одного или нескольких предикатов, в котором используются логические операторы AND, OR и NOT.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "81635533"
  Задает поиск выражения, основанного на выражении, включенного или исключенного из списка. Выражение поиска может быть константой или именем столбца, а списком может быть набор констант или, что чаще, вложенный запрос. Список значений необходимо заключать в скобки. Дополнительные сведения см. в статье [IN (Transact-SQL)](../../t-sql/language-elements/in-transact-sql.md).  
   
  *subquery*  
- Может рассматриваться как ограниченная инструкция SELECT и являющаяся подобной \<query_expresssion> в инструкции SELECT. Использование предложения ORDER BY и ключевого слова INTO не допускается. Дополнительные сведения см. в статье [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
+ Может рассматриваться как ограниченная инструкция SELECT, так и являющаяся подобной \<query_expression> в инструкции SELECT. Использование предложения ORDER BY и ключевого слова INTO не допускается. Дополнительные сведения см. в статье [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
  ALL  
  Используется с оператором сравнения и вложенным запросом. Возвращает для \<predicate> значение TRUE, если все получаемые для вложенного запроса значения удовлетворяют условию, и значение FALSE, если не все значения удовлетворяют условию или в случае, когда в результате выполнения вложенного запроса внешней инструкции не выдается ни одной строки. Дополнительные сведения см. в статье [ALL (Transact-SQL)](../../t-sql/language-elements/all-transact-sql.md).  

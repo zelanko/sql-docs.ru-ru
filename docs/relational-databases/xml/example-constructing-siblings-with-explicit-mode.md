@@ -1,5 +1,6 @@
 ---
-title: Пример. Конструирование одноуровневых элементов в режиме EXPLICIT | Документация Майкрософт
+title: Пример Конструирование одноуровневых элементов в режиме EXPLICIT | Документация Майкрософт
+description: Просмотрите пример SQL-запроса, который использует режим EXPLICIT с предложением FOR XML для построения одноуровневых элементов XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4acea026f7541466a1bb38819d50f1b529e6f500
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: e969fd0d003d44b3aaf97efad6e029d52e146dfa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664544"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633106"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>Пример: конструирование одноуровневых элементов в режиме EXPLICIT
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Пример Конструирование одноуровневых элементов в режиме EXPLICIT
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Предположим, что требуется создать XML, который предоставляет сведения о заказах на продажу. Обратите внимание на то, что элементы <`SalesPerson`> и <`OrderDetail`> имеют одного и того же родителя. Каждый заказ имеет один элемент <`OrderHeader`>, один элемент <`SalesPerson`> или один или несколько элементов <`OrderDetail`>.  
   
 ```  

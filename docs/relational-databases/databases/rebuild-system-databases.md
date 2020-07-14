@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: e31a24a949968e3d17b50c32b42e92cdd0997483
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 681396511bbcee9b68800ccd86e62837a95efd77
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76516555"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728399"
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Системные базы данных необходимо перестроить, чтобы устранить повреждения данных в системных базах данных [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md)и [resource](../../relational-databases/databases/resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **В этом разделе**  
@@ -100,7 +100,7 @@ ms.locfileid: "76516555"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=ИмяЭкземпляра /SQLSYSADMINACCOUNTS=учетные записи [ /SAPWD= НадежныйПароль ] [ /SQLCOLLATION=ИмяПараметровСортировки]**  
   
-    |Имя параметра|Description|  
+    |Имя параметра|Описание|  
     |--------------------|-----------------|  
     |/QUIET или /Q|Указывает, что программа установки будет работать без пользовательского интерфейса.|  
     |/ACTION=REBUILDDATABASE|Указывает, что программа установки создает системные базы данных заново.|  
@@ -110,11 +110,11 @@ ms.locfileid: "76516555"
     |[/SQLCOLLATION=*имя_параметров_сортировки* ]|Указывает новые параметры сортировки на уровне сервера. Это необязательный параметр. При его отсутствии используются текущие параметры сортировки сервера.<br /><br /> **\*\* Важно! \*\*** Изменение параметров сортировки на уровне сервера не меняет параметры сортировки существующих баз данных. Вновь созданный пользователь по умолчанию будет использовать новые параметры сортировки.<br /><br /> Дополнительные сведения см. в разделе [Задание или изменение параметров сортировки сервера](../../relational-databases/collations/set-or-change-the-server-collation.md).|  
     |[ /SQLTEMPDBFILECOUNT=NumberOfFiles ]|Указывает количество файлов данных в базе данных tempdb. Можно указать максимум 8 или количество ядер (большее из этих значений).<br /><br /> Значение по умолчанию: 8 или количество ядер (меньшее из этих значений) для всех остальных выпусков.|  
     |[ /SQLTEMPDBFILESIZE=FileSizeInMB ]|Задает первоначальный размер файла данных для каждой базы данных tempdb. Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 8|  
-    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Определяет шаг увеличения размера для файла данных tempdb (в МБ). Значение 0 указывает, что автоматическое приращение отключено и добавление пространства запрещено. Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 64.|  
-    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Задает первоначальный размер файла журнала tempdb (в МБ). Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 8.<br /><br /> Допустимый диапазон: минимум 8, максимум 1024.|  
-    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Определяет шаг увеличения размера для файла журнала tempdb (в МБ). Значение 0 указывает, что автоматическое приращение отключено и добавление пространства запрещено. Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 64.<br /><br /> Допустимый диапазон: минимум 8, максимум 1024.|  
-    |[ /SQLTEMPDBDIR=Directories ]|Указывает каталог для файлов данных tempdb. При указании нескольких каталогов их нужно разделять пробелами. Если указано несколько каталогов, файлы данных tempdb будут распределяться по каталогам по методу циклического перебора.<br /><br /> Значение по умолчанию: каталог системных данных.|  
-    |[ /SQLTEMPDBLOGDIR=Directory ]|Указывает каталог для файла журнала tempdb.<br /><br /> Значение по умолчанию: каталог системных данных.|  
+    |[ /SQLTEMPDBFILEGROWTH=FileSizeInMB ]|Определяет шаг увеличения размера для файла данных tempdb (в МБ). Значение 0 указывает, что автоматическое приращение отключено и добавление пространства запрещено. Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 64|  
+    |[ /SQLTEMPDBLOGFILESIZE=FileSizeInMB ]|Задает первоначальный размер файла журнала tempdb (в МБ). Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 8.<br /><br /> Допустимый диапазон: минимум 8, максимум 1024.|  
+    |[ /SQLTEMPDBLOGFILEGROWTH=FileSizeInMB ]|Определяет шаг увеличения размера для файла журнала tempdb (в МБ). Значение 0 указывает, что автоматическое приращение отключено и добавление пространства запрещено. Программа установки поддерживает размер до 1024 МБ.<br /><br /> Значение по умолчанию: 64<br /><br /> Допустимый диапазон: минимум 8, максимум 1024.|  
+    |[ /SQLTEMPDBDIR=Directories ]|Указывает каталог для файлов данных tempdb. При указании нескольких каталогов их нужно разделять пробелами. Если указано несколько каталогов, файлы данных tempdb будут распределяться по каталогам по методу циклического перебора.<br /><br /> Значение по умолчанию: системный каталог данных|  
+    |[ /SQLTEMPDBLOGDIR=Directory ]|Указывает каталог для файла журнала tempdb.<br /><br /> Значение по умолчанию: системный каталог данных|  
   
 3.  Когда программа установки завершает перестроение системных баз данных, она возвращается в командную строку без сообщений. Просмотрите файл журнала Summary.txt, чтобы убедиться, что процесс завершился успешно. Этот файл расположен в папке C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "76516555"
   
      Дополнительные сведения см. в статье [Iniciar, parar, pausar, retomar e reiniciar os serviços SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  В другом окне командной строки отключите базу данных **msdb**, выполнив следующую команду, которая заменяет *\<имя_сервера>* экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  В другом окне командной строки отключите базу данных **msdb**, выполнив следующую команду, которая заменяет *\<servername>* экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
 4.  С помощью проводника Windows переименуйте файлы базы данных **msdb** . По умолчанию они находятся в папке DATA соответствующего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -176,7 +176,7 @@ ms.locfileid: "76516555"
   
 6.  В окне командной строки подключитесь к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполните следующую команду: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Замените *\<имя_сервера>* экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Укажите путь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в файловой системе.  
+     Замените *\<servername>* на экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Укажите путь к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в файловой системе.  
   
 7.  Откройте в Блокноте файл **instmsdb.out** и проверьте выходные данные на наличие ошибок.  
   

@@ -1,22 +1,21 @@
 ---
 title: JSON_MODIFY (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/02/2020
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: genemi
 ms.technology: t-sql
 ms.topic: language-reference
 ms.assetid: 96bc8255-a037-4907-aec4-1a9c30814651
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: jroth
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 3aed59e8c90b301cd3fbf7caca9a0e466746dd2d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5e981958444fcb760d0baff036852d58aee0b1a2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635106"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752280"
 ---
 # <a name="json_modify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
 
@@ -28,7 +27,7 @@ ms.locfileid: "81635106"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```sql  
+```syntaxsql
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
@@ -47,15 +46,15 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    Необязательный модификатор, который указывает, что новое значение следует добавить в массив, на который ссылается *\<путь_json>* .  
+    Необязательный модификатор, который указывает, что новое значение следует добавить в массив, на который ссылается *\<json path>* .  
   
 - *lax*  
-    Указывает, что свойство, на которое ссылается *\<путь_json>* , должно существовать. Если свойство не существует, JSON_MODIFY пытается вставить новое значение по указанному пути. Если свойство не может быть вставлено в путь, вставка может завершиться ошибкой. Если *строгий* или *нестрогий* режим не указан, по умолчанию используется *нестрогий* режим (lax).  
+    Указывает, что свойство, на которое ссылается *\<json path>* , может не существовать. Если свойство не существует, JSON_MODIFY пытается вставить новое значение по указанному пути. Если свойство не может быть вставлено в путь, вставка может завершиться ошибкой. Если *строгий* или *нестрогий* режим не указан, по умолчанию используется *нестрогий* режим (lax).  
   
 - *строгий_режим*  
-    Указывает, что свойство, на которое ссылается *\<путь_json>* , должно быть в выражении JSON. Если свойство не существует, JSON_MODIFY возвращает ошибку.  
+    Указывает, что свойство, на которое ссылается *\<json path>* , должно быть в выражении JSON. Если свойство не существует, JSON_MODIFY возвращает ошибку.  
   
-- *\<путь_json>*  
+- *\<json path>*  
     Указывает путь до обновляемого свойства. Дополнительные сведения см. в статье [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md).  
   
 В [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)] можно указать переменную в качестве значения *пути*.
@@ -83,9 +82,9 @@ JSON_MODIFY экранирует все специальные символы в
 |Существующее значение|Путь существует|Нестрогий режим|Строгий режим|  
 |--------------------|-----------------|--------------|-----------------|  
 |Не NULL|Да|Обновить существующее значение.|Обновить существующее значение.|  
-|Не NULL|нет|Попробуйте создать новую пару ключ-значение по указанному пути.<br /><br /> Эта операция может завершиться неудачно. Например, если указать путь `$.user.setting.theme`, JSON_MODIFY не вставляет ключ `theme` в тех случаях, если объекты `$.user` или `$.user.settings` не существуют или если параметр является массивом или скалярным значением.|Ошибка — INVALID_PROPERTY|  
+|Не NULL|Нет|Попробуйте создать новую пару ключ-значение по указанному пути.<br /><br /> Эта операция может завершиться неудачно. Например, если указать путь `$.user.setting.theme`, JSON_MODIFY не вставляет ключ `theme` в тех случаях, если объекты `$.user` или `$.user.settings` не существуют или если параметр является массивом или скалярным значением.|Ошибка — INVALID_PROPERTY|  
 |NULL|Да|Удалить существующее свойство.|Установить существующее значение в NULL.|  
-|NULL|нет|Никаких действий не выполняется. В качестве результата возвращается первый аргумент.|Ошибка — INVALID_PROPERTY|  
+|NULL|Нет|Никаких действий не выполняется. В качестве результата возвращается первый аргумент.|Ошибка — INVALID_PROPERTY|  
   
  В нестрогом режиме JSON_MODIFY пытается создать новую пару ключ-значение, но в некоторых случаях может произойти сбой.  
   
@@ -97,7 +96,7 @@ JSON_MODIFY экранирует все специальные символы в
   
  **Запрос**
   
-```syntaxsql
+```sql
 
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
@@ -156,7 +155,7 @@ PRINT @info
   
  **Запрос**
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -250,7 +249,7 @@ PRINT @stats
   
  **Запрос**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -278,7 +277,7 @@ PRINT @info
   
  **Запрос**  
   
-```syntaxsql
+```sql
 DECLARE @info NVARCHAR(100)='{"name":"John","skills":["C#","SQL"]}'
 
 PRINT @info
@@ -308,13 +307,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
- 
 ```  
   
 ## <a name="see-also"></a>См. также:
 
- [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
+- [Выражения пути JSON (SQL Server)](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Данные JSON (SQL Server)](../../relational-databases/json/json-data-sql-server.md)  
   

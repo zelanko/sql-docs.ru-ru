@@ -1,8 +1,8 @@
 ---
-title: Присоединение и отсоединение базы данных (SQL Server) | Документация Майкрософт
+title: Присоединение и отсоединение базы данных (SQL Server)
 description: Можно отсоединить и повторно присоединить файлы данных и журналов транзакций базы данных SQL Server, чтобы переместить базу данных в другой экземпляр или место.
 ms.custom: ''
-ms.date: 11/26/2018
+ms.date: 06/30/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a43fcc0dade0c030546e76bf36f242973f918d2e
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: e9922e70d8ee4327bfb01c9c8657e8fabfe6a28c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138175"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756287"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Файлы данных и журналов транзакций базы данных можно отсоединить, а затем снова присоединить к тому же или другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отсоединение и присоединение базы данных полезно, если необходимо переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере либо перенести базу данных.  
   
   
@@ -63,7 +63,13 @@ ms.locfileid: "82138175"
   
     > [!NOTE]  
     > Невозможно отсоединить или присоединить моментальный снимок базы данных.  
+
+-   Эта база данных является частью группы доступности AlwaysOn.  
   
+    База данных не может быть отсоединена, пока она не будет удалена из группы доступности. Дополнительные сведения см. в разделе [Удаление базы данных — источника из группы доступности Always On](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   База данных находится в сеансе зеркального копирования.  
   
     Отключить базу данных невозможно, пока этот сеанс не завершится. Дополнительные сведения см. в разделе [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  

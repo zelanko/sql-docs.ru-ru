@@ -1,5 +1,6 @@
 ---
 title: 'Планирование внедрения выполняющейся в памяти OLTP '
+description: Узнайте, как внедрение функций выполняющейся в памяти OLTP в SQL Server влияет на другие аспекты бизнес-системы.
 ms.custom: seo-dt-2019
 ms.date: 01/28/2019
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f899a8fc1ad5a316784a83cb13f29acb84a01b2b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12288ac1ab4923e776b968a6f990e95a17f96060
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722411"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 В этой статье описывается, как освоение возможностей технологии обработки в памяти влияет на другие аспекты вашей бизнес-системы.
@@ -204,7 +205,7 @@ ms.locfileid: "74412546"
 
 Зачастую целесообразно и удобно использовать при первоначальной реализации оптимизированной для обработки в памяти таблицы традиционный некластеризованный индекс сбалансированного дерева. Впоследствии, проанализировав работу приложения, можно перейти на индекс другого типа.
 
-Два специальных типа индексов требуют дополнительного обсуждения в контексте оптимизированных для обработки в памяти таблиц: хэш-индексы и индексы Columnstore.
+Два специальных типа индексов требуют дополнительного обсуждения в контексте оптимизированных для памяти таблиц: хэш-индексы и индексы columnstore.
 
 Обзорную информацию об индексах в оптимизированных для обработки в памяти таблицах см. в следующих источниках:
 

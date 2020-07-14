@@ -1,5 +1,6 @@
 ---
 title: Установка SQL Server с помощью SysPrep | Microsoft Docs
+description: В этой статье описываются подготовка и завершение образов с помощью SysPrep в установке SQL Server.
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8e8b9a36fac2e90719d3f8a8dbeee5d4c4a0e662
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2984f165c686226337af7edfb94e4c4216eb5eab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67990951"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899668"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Установка SQL Server с помощью SysPrep
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, доступны в центре установки. На странице **Дополнительно** **центра установки** имеется два параметра: **Подготовка образа изолированного экземпляра[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** и **Завершение образа подготовленного изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . В разделах [Подготовка](#prepare) и [Завершение](#complete) подробно описывается процесс установки. Дополнительные сведения см. в разделе [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
@@ -29,7 +30,7 @@ ms.locfileid: "67990951"
   
 - [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] изучите статьи, указанные в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и требованиях к аппаратному и программному обеспечению см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
@@ -153,7 +154,7 @@ ms.locfileid: "67990951"
   
 7. На странице **Выбор подготовленного** экземпляра выберите в раскрывающемся списке подготовленный экземпляр, создание которого необходимо завершить. Выберите ненастроенный экземпляр в списке **Идентификатор экземпляра** . 
   
-     **Установленные экземпляры:** в этой сетке отображаются все экземпляры на этом компьютере, включая подготовленные. 
+     **Установленные экземпляры:** в этой сетке отображаются все экземпляры, включая подготовленные на этом компьютере. 
   
 8. На странице **Обзор компонента** будут отображены выбранные средства и компоненты, включенные в установку на шаге подготовки. Если необходимо добавить дополнительные компоненты к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не включенному в подготовленный экземпляр, то сначала завершите данный шаг, чтобы закончить создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а затем добавьте компоненты на странице **Добавить компоненты** в **Центре установки**. 
   

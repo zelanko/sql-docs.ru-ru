@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f1530d8e225d449ce84df450ec28b9db36a78b3b
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: d111ba13b1b281f6ed6c18fd9a131a1c97e662ea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634179"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735479"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT, предоставление разрешений на тип (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Предоставляет разрешения на тип.  
   
@@ -58,12 +58,12 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
  Указывает тип, на который выдается разрешение. Квалификатор области ( **::** ) является обязательным. Если не указан аргумент *schema_name*, подразумевается схема по умолчанию. Если указан аргумент *schema_name*, обязательно указание квалификатора области схемы ( **.** ).  
   
- TO \<database_principal> указывает субъект, которому предоставляется разрешение.  
+ TO \<database_principal> Указывает субъект, которому предоставляется разрешение.  
   
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
+ AS \<database_principal> Указывает субъект, от которого субъект, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
  *Database_user*  
  Указывает пользователя базы данных.  

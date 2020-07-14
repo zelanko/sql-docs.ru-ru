@@ -1,5 +1,6 @@
 ---
 title: Сборка мусора для выполняемой в памяти OLTP | Документация Майкрософт
+description: Сведения о сборке мусора в выполняющейся в памяти OLTP в SQL Server. Если транзакция, которая больше не активна, удаляет строку, она подпадает под сбор мусора.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 13263d1f35d930b3bab81fc9cec099f1a96a6510
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ed9bc2a1d7791c593ab33335aea2967411117bac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050248"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723139"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Сборка мусора модулем In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Строка данных считается устаревшей, если она была удалена транзакцией, которая больше не активна. Для устаревших строк применяется сборка мусора. Далее следуют характеристики сборки мусора в [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
 -   Без блокировки. Сборка мусора распространяется равномерно со временем с минимальным влиянием на рабочую нагрузку.  

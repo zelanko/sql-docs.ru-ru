@@ -46,15 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
-ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
+ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82588240"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000716"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Изменяет существующий индекс таблицы или представления (rowstore, columnstore или XML) посредством его отключения, перестройки или реорганизации либо посредством настройки параметров индекса.  
   
@@ -547,13 +547,13 @@ COMPRESSION_DELAY **=** { **0** |*duration [Minutes]* }
   
  Указывает секции, к которым применяется параметр DATA_COMPRESSION. Если индекс не секционирован, аргумент ON PARTITIONS создаст ошибку. Если не указано предложение ON PARTITIONS, то параметр DATA_COMPRESSION применяется ко всем секциям секционированного индекса.  
   
- \<partition_number_expression> можно указать одним из следующих способов.  
+ \<partition_number_expression> можно указать одним из следующих способов:  
   
 -   указав номер секции, например `ON PARTITIONS (2)`;  
 -   указав номера нескольких секций, разделив их запятыми, например `ON PARTITIONS (1, 5)`;  
 -   указав как диапазоны секций, так и отдельные секции, например `ON PARTITIONS (2, 4, 6 TO 8)`.  
   
- \<range> можно указать номерами секций, разделенными ключевым словом TO, например: `ON PARTITIONS (6 TO 8)`.  
+ \<range> можно указать в виде номеров секций, разделенных ключевым словом TO, например: `ON PARTITIONS (6 TO 8)`.  
   
  Чтобы для разных секций задать разные типы сжатия данных, укажите параметр DATA_COMPRESSION несколько раз, например следующим образом.  
   
@@ -566,7 +566,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- ONLINE **=** { ON  | **OFF** } \<применительно к single_partition_rebuild_index_option>  
+ ONLINE **=** { ON  | **OFF** } \<as applies to single_partition_rebuild_index_option>  
  Указывает, может ли быть перестроен индекс или секция индекса базовой таблицы в режиме "в сети" или "вне сети". Если **REBUILD** выполняется в режиме "в сети" (**ON**), то данные таблицы доступны для запросов и изменения данных во время операций с индексами.  Значение по умолчанию — **OFF**.  
   
  ON  

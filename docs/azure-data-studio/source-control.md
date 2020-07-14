@@ -1,38 +1,33 @@
 ---
 title: Система управления версиями
-titleSuffix: Azure Data Studio
 description: Сведения о настройке системы управления версиями в Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.reviewer: alayu; sstein
+ms.reviewer: alayu, sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: c278bcf6cff451396b3d677b203f207b68fd6dc5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4f586e355ad31422c75a5abb10a4c7e42f5eda6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67959281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758373"
 ---
-#  <a name="using-source-control-in-name-sos"></a>Использование системы управления версиями в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="source-control-in-azure-data-studio"></a>Система управления версиями в Azure Data Studio
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] поддерживает Git для управления версиями/исходным кодом.
+Azure Data Studio поддерживает Git для управления версиями/исходным кодом.
 
+## <a name="git-support-in-azure-data-studio"></a>Поддержка Git в Azure Data Studio
 
-## <a name="git-support-in-name-sos"></a>Поддержка Git в [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] поставляется вместе с диспетчером системы управления версиями (SCM) Git, но вам все равно нужно [установить Git (версии 2.0.0 или более поздней)](https://git-scm.com/download), чтобы получить доступ к этим функциям. 
-
-
+Azure Data Studio поставляется вместе с диспетчером системы управления версиями (SCM) Git, но вам все равно нужно [установить Git (версии 2.0.0 или более поздней)](https://git-scm.com/download), чтобы получить доступ к этим функциям. 
 
 ## <a name="open-an-existing-git-repository"></a>Открытие существующего репозитория Git
 
 1. В меню **Файл** выберите **Открыть папку...**
 2. Перейдите в папку с файлами, отслеживаемыми Git, и щелкните элемент **Выбрать папку**. Здесь можно выбрать вложенные папки в локальном репозитории.
-
 
 ## <a name="initialize-a-new-git-repository"></a>Инициализация нового репозитория Git
 
@@ -46,8 +41,8 @@ ms.locfileid: "67959281"
 
 ## <a name="working-with-git-repositories"></a>Работа с репозиториями Git
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] наследует свою реализацию Git от VS Code, но сейчас не поддерживает дополнительные поставщики SCM. Дополнительные сведения о работе с Git после открытия или инициализации репозитория см. в разделе [Поддержка Git в VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
-
+Azure Data Studio наследует свою реализацию Git от VS Code, но сейчас не поддерживает дополнительные поставщики SCM. Дополнительные сведения о работе с Git после открытия или инициализации репозитория см. в разделе [Поддержка Git в VS Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
+
 - [Документация по Git](https://git-scm.com/documentation)

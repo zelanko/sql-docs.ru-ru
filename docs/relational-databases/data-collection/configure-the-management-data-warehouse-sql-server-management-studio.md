@@ -1,5 +1,6 @@
 ---
 title: Настройка хранилища данных управления (SSMS)
+description: Узнайте, как хранилище данных управления можно настроить на поддержку хранения данных одного или нескольких экземпляров SQL Server, которые используют сборщик данных.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c82c79bcf0b1494890055c098e6c7efdbc733ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74056472"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85733875"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описано, как настроить склад данных управления для поддержки хранилища данных управления на одном интерфейсе или на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих сборщик данных. Эти экземпляры могут быть на одном или на разных серверах. Здесь также приведены описания пользовательского интерфейса диалогового окна [мастера настройки хранилища данных управления](#Wizard) . Сведения о настройке сборщика данных см. в разделе [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
   
 > [!NOTE]  
@@ -93,7 +94,7 @@ ms.locfileid: "74056472"
   
  Укажите имя входа, выбрав флажок **Сопоставление** для имени входа.  
   
- **Членство в роли базы данных для:**  *\<имя_хранилища_данных>*  
+ **Членство в роли базы данных для:**  *\<data warehouse name>*  
  Выберите роль хранилища управляющих данных, с которой сопоставлено имя входа, щелкнув флажок одного или нескольких из следующих параметров:  
   
 -   **mdw_admin**  

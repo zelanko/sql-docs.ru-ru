@@ -1,5 +1,6 @@
 ---
 title: Разрешения (ядро СУБД) | Документация Майкрософт
+description: Просмотрите полный список разрешений SQL Server, чтобы узнать, какие разрешения применяются к используемым платформам.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3f6155dd29c2d4afd5f422ad3499521451ccfc82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68995851"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009391"
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 С каждым защищаемым объектом в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] связаны разрешения, которые могут быть предоставлены участнику. Управление разрешениями в [!INCLUDE[ssDE](../../includes/ssde-md.md)] осуществляется на уровне сервера (назначение разрешений именам входа и ролям сервера) и на уровне базы данных (назначение разрешений пользователям и ролям базы данных). Модель для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] использует ту же систему для разрешений базы данных, однако разрешения на уровне сервера недоступны. Здесь содержится полный список разрешений. Советы по проектированию системы разрешений см. в статье [Начало работы с разрешениями ядра СУБД](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
@@ -51,11 +52,11 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      Предоставляет возможность изменения свойств определенной защищаемой сущности, кроме ее владельца. При предоставлении разрешения ALTER на ту или иную область также предоставляется возможность изменения, создания или удаления любой защищаемой сущности, содержащейся в пределах данной области. Например, разрешение ALTER на схему включает возможность создания, изменения и удаления объектов этой схемы.  
   
--   ALTER ANY \<*Защищаемый объект сервера*>, где *Защищаемый объект сервера* может быть любым защищаемым объектом на уровне сервера.  
+-   ALTER ANY \<*Server Securable*>, где *Защищаемый объект сервера* может быть любым защищаемым объектом на уровне сервера.  
   
      Предоставляет возможность создавать, изменять и удалять отдельные экземпляры *Защищаемой сущности сервера*. Например, разрешение ALTER ANY LOGIN предоставляет возможность создания, изменения и удаления любого имени входа в экземпляре.  
   
--   ALTER ANY \<*Защищаемый объект базы данных*>, где *Защищаемый объект базы данных* может быть любым защищаемым объектом на уровне базы данных.  
+-   ALTER ANY \<*Database Securable*> где *Защищаемый объект базы данных* может быть любым защищаемым объектом на уровне базы данных.  
   
      Предоставляет возможность СОЗДАВАТЬ, ИЗМЕНЯТЬ и УДАЛЯТЬ отдельные экземпляры *Защищаемой сущности базы данных*. Например, разрешение ALTER ANY SCHEMA предоставляет возможность создания, изменения и удаления любой схемы в базе данных.  
   
@@ -63,23 +64,23 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
   
      Позволяет получать во владение защищаемую сущность, на которую предоставлено разрешение.  
   
--   IMPERSONATE \<*Имя_для_входа*>  
+-   IMPERSONATE \<*Login*>  
   
      Позволяет олицетворять имя входа.  
   
--   IMPERSONATE \<*Пользователь*>  
+-   IMPERSONATE \<*User*>  
   
      Позволяет олицетворять пользователя.  
   
--   CREATE \<*Защищаемый объект сервера*>  
+-   CREATE \<*Server Securable*>  
   
      Предоставляет возможность создавать *Защищаемую сущность сервера*.  
   
--   CREATE \<*Защищаемый объект базы данных*>  
+-   CREATE \<*Database Securable*>  
   
      Предоставляет возможность создавать *Защищаемую сущность базы данных*.  
   
--   CREATE \<*Защищаемый объект, содержащийся в схеме*>  
+-   CREATE \<*Schema-contained Securable*>  
   
      Предоставляет возможность создавать защищаемую сущность, содержащуюся в схеме. Однако для создания защищаемой сущности в той или иной схеме на эту схему требуется разрешение ALTER.  
   
@@ -102,8 +103,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |Разрешение|Применяется к|  
 |----------------|----------------|  
 |ALTER|Все классы объектов, кроме TYPE.|  
-|CONTROL|Все классы объектов: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW и<br />XML SCHEMA COLLECTION|  
-|DELETE|Все классы объектов, кроме DATABASE SCOPED CONFIGURATION и SERVER.|  
+|CONTROL|Все классы объектов: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br /> USER,<br />VIEW и<br />XML SCHEMA COLLECTION|  
+|DELETE|Все классы объектов, кроме DATABASE SCOPED CONFIGURATION, SERVER и TYPE.|  
 |EXECUTE|Типы CLR, внешние сценарии, процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), а также синонимы|  
 |IMPERSONATE|Имена входа и пользователи|  
 |INSERT|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
@@ -417,7 +418,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Особые замечания относительно разрешений на уровне столбца
 
-Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<имя_столбца>)* . Пример:
+Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<column _name>)* . Пример:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

@@ -3,21 +3,21 @@ title: Заметки о выпуске для SQL Server 2017 на Linux
 description: Эта статья содержит заметки о выпуске и поддерживаемые функции для SQL Server 2017 на Linux. Приведены заметки о выпуске для последнего и нескольких предыдущих выпусков.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/01/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: be72cfb4fd0645af7ca07ae8c1042ec41bf75052
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81298264"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882699"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для SQL Server 2017 на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Следующие заметки о выпуске применимы к [!INCLUDE[ssSQL17](../includes/sssql17-md.md)], работающему в Linux. Эта статья разбита на разделы для каждого выпуска. В общедоступном (GA) выпуске содержатся подробные сведения о поддержке и известных проблемах. Каждый накопительный пакет обновления (CU) или выпуск для общего распространения (GDR) содержит ссылку на статью поддержки, где описаны изменения накопительного пакета обновления, а также ссылки на скачиваемые файлы пакета Linux.
 
@@ -46,6 +46,7 @@ ms.locfileid: "81298264"
 
 | Release               | Версия       | Дата выпуска |
 |-----------------------|---------------|--------------|
+| [CU21](#CU21)         | 14.0.3335.7   | 01.07.2020   |
 | [CU20](#CU20)         | 14.0.3294.2   | 10.04.2020   |
 | [CU19](#CU19)         | 14.0.3281.6   | 2020-02-05   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
@@ -81,6 +82,27 @@ ms.locfileid: "81298264"
 - [Установка пакета полнотекстового поиска](sql-server-linux-setup-full-text-search.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Включение агента SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu21-july-2020"></a><a id="CU21"></a> CU21 (Июль 2020)
+
+Это выпуск накопительного пакета обновления 21 (CU21) для [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Версия [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для этого выпуска — 14.0.3335.7. Сведения об исправлениях и улучшениях в этом выпуске см. по адресу <https://support.microsoft.com/help/4557397>.
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для ручной или автономной установки пакета можно скачать пакеты RPM и Debian, используя сведения из следующей таблицы.
+
+> [!NOTE]
+> Начиная с SQL Server 2017 с накопительным пакетом обновления 20 (CU20), поддерживается **Ubuntu 18.04** и **RHEL 8**.
+>
+> Ссылки для установки автономного пакета для Ubuntu указывают на пакеты Ubuntu 18.04, за исключением пакета служб SSIS (который недоступен для Ubuntu 18.04). Если вы ищете пакеты Ubuntu 16.04, см. путь скачивания <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
+>
+> Ссылки для установки автономного пакета для Red Hat указывают на пакеты RHEL 8, за исключением пакета служб SSIS (который недоступен для RHEL 8). Если вы ищете пакеты RHEL 7, см. путь скачивания <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
+
+| Пакет | Версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3335.7-17 | [Пакет RPM подсистемы](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm)</br>[Пакет SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3335.7-17 | [Пакет RPM подсистемы mssql-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3335.7-17.x86_64.rpm)</br>[Пакет RPM высокой доступности](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3335.7-17.x86_64.rpm)</br>[Пакет RPM полнотекстового поиска](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3335.7-17.x86_64.rpm) | 
+| Пакет Debian Ubuntu 18.04 | 14.0.3335.7-17 | [Пакет подсистемы Debian](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3335.7-17_amd64.deb)</br>[Пакет Debian высокой доступности](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3335.7-17_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3335.7-17_amd64.deb)<br/>[Пакет SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20 (апрель 2020)
 
@@ -583,7 +605,7 @@ sudo systemctl start mssql-server
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
    ```
 
-- При выполнении программы установки mssql-conf и выполнении установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на языке, отличном от английского, после локализованного текста "Настройка SQL Server..." отображаются неверные символы национального алфавита. А для установок на языках, отличных от романских, это предложение может отсутствовать полностью. В отсутствующем предложении должна отображаться следующая локализованная строка: "Идентификатор процесса лицензирования обработан. Новый выпуск: [выпуск \<имя\>]". Эта строка выводится только для информационных целей, а в следующем накопительном пакете обновления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] эта проблема будет устранена для всех языков. Это никак не влияет на успешное выполнение установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+- При выполнении программы установки mssql-conf и выполнении установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на языке, отличном от английского, после локализованного текста "Настройка SQL Server..." отображаются неверные символы национального алфавита. А для установок на языках, отличных от романских, это предложение может отсутствовать полностью. В отсутствующем предложении должна отображаться следующая локализованная строка: "Идентификатор процесса лицензирования обработан. Новый выпуск: [выпуск \<Name\>]". Эта строка выводится только для информационных целей, а в следующем накопительном пакете обновления [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] эта проблема будет устранена для всех языков. Это никак не влияет на успешное выполнение установки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 #### <a name="full-text-search"></a>Компонент Full-text Search
 

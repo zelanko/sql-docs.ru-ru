@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bb0dd2a0196fbc832b0d0afeb0f02889ac1369a4
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c0df880a36a0822c3c397be4f2ed9aa14d47c2bc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000221"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85768018"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Создание, изменение и удаление таблиц FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Описывает способы создания новых таблиц FileTable и изменения или удаления существующих таблиц FileTable.  
   
 ##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Создание таблицы FileTable  
@@ -176,11 +176,11 @@ GO
 |Проверочные ограничения|Системные проверочные ограничения обеспечивают следующие требования.<br /><br /> Допустимые имена файлов.<br /><br /> Допустимые атрибуты файлов.<br /><br /> Родительский объект должен быть каталогом.<br /><br /> При обработке файла иерархия пространств имен заблокирована.|  
   
  **Соглашение об именах для системных ограничений**  
- Системные ограничения, описанные выше, должны именоваться в формате **\<тип_ограничения>_\<имя_таблицы>[\_<имя_столбца\<]\_\<уникальный_идентификатор>** , где:  
+ Системные ограничения, описанные выше, должны именоваться в формате **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , где:  
   
 -   *<тип_ограничения>* может быть равен CK (проверочное ограничение), DF (ограничение по умолчанию), FK (внешний ключ), PK (первичный ключ) или UQ (ограничение уникальности).  
   
--   *<уникальный_идентификатор>\<* — это формируемая системой строка, уникальным образом идентифицирующая ограничение. Эта строка может содержать имя таблицы FileTable и уникальный идентификатор.  
+-   *\<uniquifier>*  — это формируемая системой строка, уникальным образом идентифицирующая ограничение. Эта строка может содержать имя таблицы FileTable и уникальный идентификатор.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление таблицами FileTable](../../relational-databases/blob/manage-filetables.md)  

@@ -1,5 +1,6 @@
 ---
 title: Страница "Разрешения" или "Защищаемые объекты" | Документация Майкрософт
+description: Страница "Разрешения" или "Защищаемые объекты" используется для просмотра или установки разрешений для защищаемых объектов в SQL Server.
 ms.custom: ''
 ms.date: 01/07/2016
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a8109779b1afe4badd7c44bd30b264a07503c5fa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076620"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000556"
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Страница **Разрешения** или **Защищаемые объекты** используется для просмотра или установки разрешений для защищаемых объектов. Эта страница может быть открыта из нескольких мест. Содержимое страницы может немного измениться в зависимости от того, как открыта страница и ее содержимого. Верхняя сетка страницы может быть заполнена при открытии страницы или может быть пустой. Нажмите кнопку **Поиск**для добавления элементов в верхнюю сетку. Выберите элемент в верхней сетке, затем установите нужные разрешения на вкладке **Явное** . Чтобы увидеть суммарные разрешения, используйте вкладку **Действующие** .  
   
  Для понимания возможных сочетаний защищаемых объектов и участников см. специальные синтаксические ссылки для защищаемых объектов в разделе [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md). Дополнительные сведения см. в статье [Securables](../../relational-databases/security/securables.md).  

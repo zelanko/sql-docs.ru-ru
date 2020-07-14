@@ -1,5 +1,6 @@
 ---
 title: Оптимизированная для памяти файловая группа | Документация Майкрософт
+description: Узнайте, как создать оптимизированную для памяти файловую группу, которая содержит контейнеры для файлов данных и разностных файлов, прежде чем создавать оптимизированные для памяти таблицы в SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 265419b25df79ce491567cf563188ac70cdccc42
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 636bc0ebcfbd85f9da38ecff6cd1ff4a966164c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68024968"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715349"
 ---
 # <a name="the-memory-optimized-filegroup"></a>Оптимизированная для памяти файловая группа
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Для создания оптимизированных для памяти таблиц необходимо сначала создать оптимизированную для памяти файловую группу. Оптимизированная для памяти файловая группа содержит один или несколько контейнеров. В каждом контейнере содержатся файлы данных или разностных файлы (или и те и другие).  
   
  Даже если строки данных из таблиц `SCHEMA_ONLY` не сохраняются, а метаданные оптимизированных для памяти таблиц и компилированных в собственном коде хранимых процедур хранятся в традиционных каталогах, модулю [!INCLUDE[hek_2](../../includes/hek-2-md.md)] все равно требуется оптимизированная для памяти файловая группа для оптимизированных для памяти таблиц `SCHEMA_ONLY`, чтобы обеспечить согласованную работу баз данных, в которых есть оптимизированные для памяти таблицы.  

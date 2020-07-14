@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6cae13ac9137a7c7f47e9574367115d6133338be
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: d13429793a2dcab0247042fcac49ee03174527ac
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220499"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834805"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе представлены сведения о компоненте резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Резервное копирование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет важное значение для защиты данных. Здесь представлено описание типов резервных копий и ограничений резервного копирования. В рамках данной темы также рассмотрены устройства резервного копирования и носители данных резервных копий в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
@@ -101,7 +101,7 @@ ms.locfileid: "82220499"
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] и более поздние версии поддерживают сжатие резервных копий, а [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздние версии позволяют восстановить сжатые резервные копии. Дополнительные сведения см. в разделе [Сжатие резервных копий (SQL Server)](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
   
 ##  <a name="backup-operations-restrictions"></a><a name="Restrictions"></a>  Ограничения на операции резервного копирования 
- Резервное копирование может выполняться, если база данных находится в режиме «в сети» и используется. Однако действуют следующие ограничения.  
+ Резервное копирование может выполняться, если база данных находится в режиме «в сети» и используется. Однако действуют следующие ограничения:  
   
 ### <a name="cannot-back-up-offline-data"></a>Нельзя создать резервную копию данных, находящихся в режиме "вне сети"  
  Любая операция резервного копирования, которая явно или неявно ссылается на данные, находящиеся в режиме «вне сети», завершается неудачей. Ниже следуют некоторые наиболее распространенные примеры этого.  

@@ -25,15 +25,15 @@ ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ffdfd5662cd8bbfd4b9cd580a4df141a4c5a4bd
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: cfe397ae8b508e7821af6b3b9d837434129a3e56
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634194"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999761"
 ---
 # <a name="select---over-clause-transact-sql"></a>SELECT — предложение OVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Определяет секционирование и упорядочение набора строк до применения соответствующей оконной функции. То есть предложение OVER определяет окно или определяемый пользователем набор строк внутри результирующего набора запроса. Затем оконная функция вычисляет значение для каждой строки в окне. Вы можете использовать предложение OVER вместе с функциями для вычисления статистических значений, например для вычисления скользящих средних, суммарных статистических выражений, промежуточных итогов или первых N результатов в группе.  
   
@@ -114,7 +114,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  *value_expression*  
  Определяет столбец, по которому секционируется набор строк. Аргумент *value_expression* может ссылаться только на столбцы, сделанные доступными с помощью предложения FROM. Аргумент *value_expression* не может ссылаться на выражения или псевдонимы в списке выбора. Выражение *value_expression* может быть выражением столбца, скалярным вложенным запросом, скалярной функцией или пользовательской переменной.  
   
- \<Предложение ORDER BY>  
+ \<ORDER BY clause>  
  Определяет логический порядок строк в каждой секции результирующего набора. То есть он указывает логический порядок, в котором выполняется вычисление оконной функции.  
   
  *order_by_expression*  
@@ -141,26 +141,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Указывает, что окно начинается с первой строки секции. UNBOUNDED PRECEDING может быть указано только как начальная точка окна.  
   
- \<спецификация неподписанного значения> PRECEDING  
- Указывается со \<спецификацией неподписанного значения> для обозначения числа строк или значений перед текущей строкой. Эта спецификация не допускается в предложении RANGE.  
+ \<unsigned value specification> PRECEDING  
+ Указывается с \<unsigned value specification> для обозначения числа строк или значений перед текущей строкой. Эта спецификация не допускается в предложении RANGE.  
   
  CURRENT ROW  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает, что окно начинается или заканчивается на текущей строке при использовании совместно с предложением ROWS или что окно заканчивается на текущем значении при использовании с предложением RANGE. CURRENT ROW может быть задана и как начальная, и как конечная точка.  
   
- BETWEEN \<граница рамки окна > AND \<граница рамки окна >  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
- Используется совместно с предложением ROWS или RANGE для указания нижней (начальной) или верхней (конечной) граничной точки окна. \<граница рамки окна> определяет граничную начальную точку, а \<граница рамки окна> определяет граничную конечную точку. Верхняя граница не может быть меньше нижней границы.  
+ Используется совместно с предложением ROWS или RANGE для указания нижней (начальной) или верхней (конечной) граничной точки окна. \<window frame bound> определяет граничную начальную точку, а \<window frame bound> определяет граничную конечную точку. Верхняя граница не может быть меньше нижней границы.  
   
  UNBOUNDED FOLLOWING  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий. 
   
  Указывает, что окно заканчивается на последней строке секции. UNBOUNDED FOLLOWING может быть указано только как конечная точка окна. Например, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING определяет, что окно начинается на текущей строке и заканчивается на последней строке секции.  
   
- \<спецификация неподписанного значения> FOLLOWING  
- Указывается со \<спецификацией неподписанного значения> для обозначения числа строк или значений после текущей строки. При указании \<спецификации неподписанного значения> FOLLOWING как начальной точки окна конечная точка должна быть \<спецификацией неподписанного значения>FOLLOWING. Например, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING определяет, что окно начинается на второй строке после текущей и заканчивается на десятой строке после текущей строки. Эта спецификация не допускается в предложении RANGE.  
+ \<unsigned value specification> FOLLOWING  
+ Указывается с \<unsigned value specification> для обозначения числа строк или значений после текущей строки. Если в качестве начальной точки окна указан FOLLOWING \<unsigned value specification>, конечная точка должна быть \<unsigned value specification>FOLLOWING. Например, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING определяет, что окно начинается на второй строке после текущей и заканчивается на десятой строке после текущей строки. Эта спецификация не допускается в предложении RANGE.  
   
  неподписанный целочисленный литерал  
 **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.  
@@ -174,7 +174,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>Важно!
 
-Если указано предложение ROWS или RANGE и используется \<предшествующая рамка окна> для \<экстента рамки окна> (короткий синтаксис), то данная спецификация используется в качестве начальной точки границы рамки окна, а CURRENT ROW — в качестве конечной точки границы окна. Например "ROWS 5 PRECEDING" равно "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
+Если указано предложение ROWS или RANGE и используется \<window frame preceding> для \<window frame extent> (короткий синтаксис), то данная спецификация используется в качестве начальной точки границы рамки окна, а CURRENT ROW — в качестве конечной точки границы окна. Например "ROWS 5 PRECEDING" равно "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
 > [!NOTE]
 > Если предложение ORDER BY не указано, то для рамки окна используется весь раздел. Это относится только к тем функциям, которым не требуется предложение ORDER BY. Если предложение ROWS или RANGE не указаны, а указано предложение ORDER BY, то в качестве значения по умолчанию для рамки окна используется RANGE UNBOUNDED PRECEDING AND CURRENT ROW. Это относится только к тем функциям, которые могут принимать дополнительную спецификацию ROWS или RANGE. Например, ранжирующая функция не может принимать предложение ROWS или RANGE, поэтому данная рамка окна не может использоваться, даже несмотря на наличие предложения ORDER BY, а предложение ROWS или RANGE отсутствует.  
@@ -182,9 +182,9 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Предложение OVER не может использоваться с агрегатной функцией CHECKSUM.  
   
- Предложение RANGE не может использоваться со \<спецификацией неподписанного значения> PRECEDING или со \<спецификацией неподписанного значения> FOLLOWING.  
+ RANGE нельзя использовать с PRECEDING \<unsigned value specification> или FOLLOWING \<unsigned value specification>.  
   
- В зависимости от используемой функции (ранжирующая, агрегатная или аналитическая) с предложением OVER, \<предложение ORDER BY> и (или) \<предложения ROWS и RANGE> могут не поддерживаться.  
+ В зависимости от функции (ранжирующая, агрегатная или аналитическая), используемой с предложением OVER, \<ORDER BY clause> и/или \<ROWS and RANGE clause> могут не поддерживаться.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -323,11 +323,11 @@ USE AdventureWorks2012;
 GO  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS  SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                            ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                             ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -360,10 +360,10 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
    ,DATEPART(yy,ModifiedDate) AS SalesYear  
-   ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
-   ,CONVERT(varchar(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
+   ,CONVERT(VARCHAR(20),AVG(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS MovingAvg  
-   ,CONVERT(varchar(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
+   ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (ORDER BY DATEPART(yy,ModifiedDate)   
                                             ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
 WHERE TerritoryID IS NULL OR TerritoryID < 5  
@@ -396,9 +396,9 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS BETWEEN CURRENT ROW AND 1 FOLLOWING ),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -426,9 +426,9 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
-    ,CONVERT(varchar(20),SalesYTD,1) AS  SalesYTD  
+    ,CONVERT(VARCHAR(20),SalesYTD,1) AS SalesYTD  
     ,DATEPART(yy,ModifiedDate) AS SalesYear  
-    ,CONVERT(varchar(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
+    ,CONVERT(VARCHAR(20),SUM(SalesYTD) OVER (PARTITION BY TerritoryID   
                                              ORDER BY DATEPART(yy,ModifiedDate)   
                                              ROWS UNBOUNDED PRECEDING),1) AS CumulativeTotal  
 FROM Sales.SalesPerson  
@@ -463,7 +463,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 SELECT ROW_NUMBER() OVER(ORDER BY SUM(SalesAmountQuota) DESC) AS RowNumber,  
     FirstName, LastName,   
-CONVERT(varchar(13), SUM(SalesAmountQuota),1) AS SalesQuota   
+CONVERT(VARCHAR(13), SUM(SalesAmountQuota),1) AS SalesQuota   
 FROM dbo.DimEmployee AS e  
 INNER JOIN dbo.FactSalesQuota AS sq  
     ON e.EmployeeKey = sq.EmployeeKey  

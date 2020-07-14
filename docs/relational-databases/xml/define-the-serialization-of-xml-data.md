@@ -1,5 +1,6 @@
 ---
 title: Определение сериализации данных XML | Документация Майкрософт
+description: Сведения о правилах, используемых при сериализации XML-данных в SQL Server.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -18,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37357c2d745dd741a872e151d72b5c453e91c1ec
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0ddeb0b98f163feb49eb258db29a58bfa5dd1f57
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738437"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Определение сериализации XML-данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   При явном или неявном приведении данных типа XML к строковому или двоичному типу данных SQL они сериализуются в соответствии с правилами, изложенными в этом разделе.  
   
 ## <a name="serialization-encoding"></a>Кодировка сериализации  
@@ -76,7 +77,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Преобразование XML-символов в сущности при сериализации  
  Для каждой сериализованной XML-структуры должна быть возможность повторного синтаксического анализа. Поэтому некоторые символы сериализуются в виде сущностей, что позволяет избежать их искажения на стадии нормализации средства анализа XML. Тем не менее чтобы документ стал корректным и мог быть произведен его синтаксический анализ, некоторые символы должны быть преобразованы в сущности. Ниже приведены правила преобразования в сущности, применяемые в процессе сериализации.  
   
--   Символы &, \< и > всегда преобразуются в сущности &amp;, &lt; и &gt; соответственно, если они встречаются внутри значения атрибута или содержимого элемента.  
+-   Символы & и \<, and > всегда преобразуются в сущности &amp;, &lt; и &gt; соответственно, если они встречаются внутри значения атрибута или содержимого элемента.  
   
 -   Так как значения атрибутов в SQL Server заключаются в кавычки (U+0022), знак кавычки в значениях атрибутов преобразуется в сущность &quot;.  
   

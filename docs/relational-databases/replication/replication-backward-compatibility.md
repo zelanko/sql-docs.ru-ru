@@ -1,5 +1,6 @@
 ---
 title: Обратная совместимость репликации | Документация Майкрософт
+description: Изучите эти ресурсы для обеспечения обратной совместимости в репликации перед обновлением или при наличии нескольких версий SQL Server в топологии репликации.
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: sql
@@ -19,15 +20,15 @@ ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 265f7fa72b6cdcd59ff7c74ec456e533471ddd0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4ef157ef3c8a95bd08cc8dd2d8567dbc6e8ec6ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76287413"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85767721"
 ---
 # <a name="replication-backward-compatibility"></a>Обратная совместимость репликации
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 При обновлении или наличии нескольких версий SQL Server в топологии репликации важно понимать принцип обратной совместимости. 
 

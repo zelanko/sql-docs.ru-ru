@@ -1,5 +1,6 @@
 ---
 title: Помощник по оптимизации памяти | Документация Майкрософт
+description: Используйте помощник по оптимизации памяти в SQL Server Management Studio, чтобы упростить миграцию таблиц на диске в оптимизированные для памяти таблицы.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a148e1725d1ce74d206e85cd9a8fd2b88f18eb0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9579587e39b4becd16be9bcae1e206703eb4720c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68050192"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730862"
 ---
 # <a name="memory-optimization-advisor"></a>Помощник по оптимизации памяти
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Отчеты об анализе производительности транзакции (см. статью [Определение, должна ли таблица или хранимая процедура быть перенесена в In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) информируют о том, какие таблицы в базе данных смогут воспользоваться преимуществами перехода на выполняющуюся в памяти OLTP. После определения таблицы, которую планируется перенести для использования In-Memory OLTP, можно воспользоваться помощником по оптимизации памяти в SQL Server Management Studio для миграции таблицы базы данных в таблицу, оптимизированную для памяти.  
   

@@ -25,17 +25,17 @@ ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4c8f956bc846c645fb8efe9ecb9ade7e2366d73
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4618de753675ef1b3d7ccd2f7a187f22aab9c683
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634150"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010731"
 ---
 # <a name="grant-transact-sql"></a>Инструкция GRANT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  Предоставляет разрешения на защищаемый объект участнику.  Общий подход заключается в том, чтобы предоставить \<некоторые разрешения> на \<некоторый объект> \<некоторому пользователю, имени входа или группе> (GRANT…ON…TO). Общее описание разрешений см. в разделе [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md).  
+  Предоставляет разрешения на защищаемый объект участнику.  Общая концепция заключается в GRANT \<some permission> ON \<some object> TO \<some user, login, or group>. Общее описание разрешений см. в разделе [Разрешения (ядро СУБД)](../../relational-databases/security/permissions-database-engine.md).  
   
  ![Значок ссылки на статью](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на статью") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

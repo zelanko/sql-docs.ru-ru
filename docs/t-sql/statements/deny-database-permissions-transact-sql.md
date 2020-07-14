@@ -18,16 +18,16 @@ ms.assetid: 36cc4e2c-5a24-4975-9920-9305f12c6e7c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b78ebdd157afe35a78900e8ceb3c2bad40bb04d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5b33c0e855e093e82a121e689850bfd80e1e6aa7
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983228"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010745"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY, запрет разрешений на базу данных (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Запрещает разрешения на базу данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -35,7 +35,7 @@ ms.locfileid: "73983228"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```syntaxsql
 DENY <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ CASCADE ]
     [ AS <database_principal> ]
@@ -58,13 +58,13 @@ DENY <permission> [ ,...n ]
 
 *permission* — указывает отзываемое разрешение для базы данных. Список разрешений см. в подразделе "Примечания" далее в этом разделе.
 
-ALL — этот параметр запрещает не все возможные разрешения. Аргумент ALL эквивалентен запрету следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.
+ALL — этот параметр запрещает не все возможные разрешения. Указание аргумента ALL эквивалентно запрету следующих разрешений: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE и CREATE VIEW.
 
 PRIVILEGES — включено для обеспечения совместимости с требованиями ISO. Не изменяет работу ALL.
 
 CASCADE — показывает, что разрешение будет запрещено еще и для тех участников, которым его предоставил указанный участник.
 
-AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на отзыв разрешения.
+AS \<database_principal> Задает участника, от которого участник, выполняющий данный запрос, получает право на запрет разрешения.
 
 *Database_user* — указывает пользователя базы данных.
 

@@ -1,5 +1,6 @@
 ---
 title: Сравнение типизированного и нетипизированного XML | Документация Майкрософт
+description: Узнайте о различиях между типизированным и нетипизированным XML.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6df31e36aabbf6df0a964c45873ef9bf2ad624a6
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a31b8e27147f0c9b06c79bf56c1b8ae34f4e8e14
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775555"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Можно создать переменные, параметры и столбцы типа **xml** . При необходимости можно связать коллекцию схем XML с переменной, параметром или столбцом типа **xml** . В данном случае экземпляр типа данных **xml** называется *типизированным*. В противном случае экземпляр XML называется *нетипизированным*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML-документы правильного формата и тип данных XML  
@@ -68,14 +69,14 @@ ms.locfileid: "80664686"
   
  В следующих примерах для указания имени коллекции XML-схем используется обозначение, состоящее из двух частей. Первая часть — это имя схемы, вторая часть — имя коллекции XML-схем.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример. Связывание коллекции схем с переменными типа xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример Связывание коллекции схем с переменными типа xml  
  В приведенном ниже примере создается переменная типа **xml**, с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Пример. Указание схемы для столбца типа xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Пример Указание схемы для столбца типа xml  
  В приведенном ниже примере создается таблица со столбцом типа **xml** и указывается схема для этого столбца.  
   
 ```  
@@ -84,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Пример. Передача параметра типа xml в хранимую процедуру  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Пример Передача параметра типа xml в хранимую процедуру  
  В приведенном ниже примере параметр типа **xml** передается хранимой процедуре и указывается схема для переменной.  
   
 ```  
@@ -106,7 +107,7 @@ AS
   
  В иерархии типов данных данные **xml** отображаются ниже **sql_variant** и определенных пользователем типов, но выше всех встроенных типов.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Пример. Указание аспектов для ограничения типизированного XML-столбца  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Пример Указание аспектов для ограничения типизированного XML-столбца  
  На типизированные столбцы **xml** можно наложить ограничение, допускающее в них только отдельные элементы высшего уровня для каждого сохраненного в них экземпляра. , для указания дополнительного аспекта `DOCUMENT` при создании таблицы, как показано в следующем примере:  
   
 ```  

@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 05039c9634d62366cc8730a90a80bc4c2d3ab76f
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85786555"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Проверяет целостность указанного ограничения или всех ограничений заданной таблицы в текущей базе данных.
   
@@ -90,7 +90,7 @@ DBCC CHECKCONSTRAINTS проверяет целостность ограниче
   
 **Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версий
   
-Если указан аргумент *table_name* или *table_id* и для соответствующей таблицы включено системное управление версиями, DBCC CHECKCONSTRAINTS также проводит для нее проверки согласованности темпоральных данных. Если параметр *NO_INFOMSGS* не указан, эта команда возвращает сведения о всех нарушениях согласованности в отдельной строке выходных данных. Выходные данные имеют следующий формат: ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) AND \<проблема с записью темпоральной таблицы>.
+Если указан аргумент *table_name* или *table_id* и для соответствующей таблицы включено системное управление версиями, DBCC CHECKCONSTRAINTS также проводит для нее проверки согласованности темпоральных данных. Если параметр *NO_INFOMSGS* не указан, эта команда возвращает сведения о всех нарушениях согласованности в отдельной строке выходных данных. Формат выходных данных будет иметь вид ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...) AND \<what is wrong with temporal table record>.
   
 |Проверить|Дополнительные сведения в выходных данных в случае неудачного завершения проверки|  
 |-----------|-----------------------------------------------|  

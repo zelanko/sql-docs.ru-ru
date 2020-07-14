@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 23aaaef5f85b814bda8f576fc6a0cfe671fea8e8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80215859"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203561"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -89,6 +89,8 @@ ms.locfileid: "80215859"
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> Значение свойства `polybase.kerberos.realm` должно быть задано в верхнем регистре.
 
 Если планируется использовать операции передачи, впоследствии нужно будет изменить и другие XML-файлы. Но изменения одного этого файла уже будет достаточно как минимум для доступа к файловой системе HDFS.
 

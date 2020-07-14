@@ -20,12 +20,12 @@ ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b4b1a9d98e289590b35e463add7125f6421cc5
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: b9afe006b96d7b447b508d59a55163f8838caa1e
+ms.sourcegitcommit: d498110ec0c7c62782fb694d14436f06681f2c30
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81628454"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85195830"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -295,7 +295,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  Аргумент SCHEMABINDING требуется для скомпилированных в собственном коде скалярных определяемых пользователем функций.  
   
- **\<function_option>::= and \<clr_function_option>::=**  
+ **\<function_option>::= и \<clr_function_option>::=**  
   
  Указывает, что функция будет иметь один или несколько следующих аргументов:  
   
@@ -305,7 +305,7 @@ RETURNS return_data_type
  Указывает на то, что компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] шифрует столбцы представления каталога, содержащие текст инструкции ALTER FUNCTION. Использование параметра ENCRYPTION препятствует публикации данной функции при помощи репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Параметр ENCRYPTION для функций CLR указывать нельзя.  
   
  SCHEMABINDING  
- Указывает, что функция привязана к объектам базы данных, которые содержат ссылки на нее. Это препятствует внесению изменений в функцию в случае, если другие привязанные к схеме объекты ссылаются на нее.  
+ Указывает, что функция привязана к объектам базы данных, которые содержат ссылки на нее. Если аргумент SCHEMABINDING указан, нельзя изменить базовые объекты таким способом, который может повлиять на определение функции. Сначала нужно изменить или удалить само определение функции, чтобы удалить зависимости от объекта, который требуется изменить.  
   
  Привязка функции к ссылающимся на нее объектам удаляется в следующих случаях:  
   
@@ -364,7 +364,7 @@ RETURNS return_data_type
  *increment*  
  Целочисленное значение, добавляемое к значению *seed* для каждой последующей строки таблицы.  
   
-**\< column_constraint >::= and \< table_constraint>::=**
+**\< column_constraint >::= и \< table_constraint>::=**
   
  Определяет ограничение для указанного столбца или таблицы. Для функций CLR единственное допустимое ограничение — NULL. Именованные ограничения недопустимы.  
   

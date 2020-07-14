@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d17c59e38b30ef8492d20348e06cbc9ac75c0c5e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68070335"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85735965"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Изменяет аргументы существующего объекта последовательности. Если последовательность создана с параметром **CACHE**, то в результате ее изменения кэш будет пересоздан.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68070335"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
   
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
@@ -85,7 +85,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 ## <a name="metadata"></a>Метаданные  
  Чтобы получить сведения о последовательностях, запросите представление [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Требуется разрешение **ALTER** для последовательности или разрешение **ALTER** для схемы. Предоставить разрешение **ALTER** для последовательности можно с помощью инструкции **ALTER ON OBJECT** в следующем формате:  

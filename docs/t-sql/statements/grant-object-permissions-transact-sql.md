@@ -16,15 +16,15 @@ ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75542c488b9033cb791b731535eaab6a14c72c72
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 1f110124a562ccf6f1cc7ee1d570d29b67c49785
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633684"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004709"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT, предоставление разрешений на объект (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Предоставляет разрешения на таблицу, представление, функцию с табличным значением, хранимую процедуру, расширенную хранимую процедуру, скалярную функцию, агрегатную функцию, очередь обслуживания или синоним.  
   
@@ -63,7 +63,7 @@ GRANT <permission> [ ,...n ] ON
  Предоставление ALL не включает все возможные разрешения, оно эквивалентно предоставлению всех разрешений [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92, применимых к указанному объекту. Значение ALL различается для разных типов объектов  
   
 - Разрешения на скалярные функции: EXECUTE, REFERENCES.  
-- Разрешения на возвращающую табличное значение функцию: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
+- Разрешения на функции с табличным значением: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Разрешения на хранимые процедуры: EXECUTE.  
 - Разрешения на таблицы: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
 - Разрешения на представления: DELETE, INSERT, REFERENCES, SELECT, UPDATE.  
@@ -86,7 +86,7 @@ PRIVILEGES
  WITH GRANT OPTION  
  Показывает, что участнику будет дана возможность предоставлять указанное разрешение другим участникам.  
   
- AS \<database_principal> указывает участника, от которого участник, выполняющий данный запрос, наследует право на предоставление разрешения.  
+ AS \<database_principal>. Указывает субъект, от которого субъект, выполняющий данный запрос, наследует право на предоставление разрешения.  
   
  *Database_user*  
  Указывает пользователя базы данных.  
@@ -115,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример. Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
+>  Сочетание разрешений ALTER и REFERENCE в некоторых случаях может позволить просматривать данные или выполнять несанкционированные функции. Пример: Пользователь с разрешением ALTER на таблицу и разрешением REFERENCE на функцию может создавать вычисляемый столбец на основе функции и в результате — выполнять ее. В этом случае пользователю также требуется разрешение SELECT на вычисляемый столбец.  
   
  Сведения об объектах доступны через различные представления каталога. Дополнительные сведения см. в разделе [Представления каталога объектов (Transact-SQL)](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   

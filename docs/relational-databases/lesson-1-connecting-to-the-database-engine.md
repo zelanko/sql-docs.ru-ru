@@ -1,5 +1,5 @@
 ---
-title: Занятие 1. Подключение к ядру СУБД | Документация Майкрософт
+title: Урок 1. Подключение к ядру СУБД | Документация Майкрософт
 ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1bc950a7d0a576338bea9a614193ab3edaee7c96
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87bdd407e59a1c019e2878971d3044deb777755b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73032994"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725208"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Соединение с компонентом Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Урок 1. Подключение к ядру СУБД
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
 Набор средств, устанавливаемых с компонентом [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], зависит от выпуска и от параметров, заданных при установке. На этом уроке рассматриваются важнейшие средства, а также показываются способы подключения и выполнения одной из базовых функций (разрешение входа дополнительным пользователям).  
 
@@ -76,7 +76,7 @@ ms.locfileid: "73032994"
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера имеет вид _\<имя_компьютера\>_ **\\** _\<имя_экземпляра\>_ , например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя. 
+3.  В поле **Имя сервера** введите имя экземпляра компонента [!INCLUDE[ssDE](../includes/ssde-md.md)]. В экземпляре SQL Server по умолчанию имя сервера совпадает с именем компьютера. Для именованного экземпляра SQL Server имя сервера — это _\<computer_name\>_ **\\** _\<instance_name\>_ , например **ACCTG_SRVR\SQLEXPRESS**. На снимке экрана ниже показано подключение к экземпляру [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] по умолчанию (неименованному) на компьютере с именем PracticeComputer. В Windows вошел пользователь Mary из домена Contoso. При использовании проверки подлинности Windows нельзя изменить имя пользователя. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -109,5 +109,5 @@ ms.locfileid: "73032994"
 > Это базовые сведения, позволяющие начать работу. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] предоставляет безопасную среду; безопасность безусловно важна при выполнении операций с базой данных.  
 
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2. Соединение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Занятие 2. Подключение с другого компьютера](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

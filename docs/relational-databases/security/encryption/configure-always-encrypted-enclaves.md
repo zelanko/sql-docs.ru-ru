@@ -1,5 +1,6 @@
 ---
 title: Настройка и использование Always Encrypted с безопасными анклавами | Документация Майкрософт
+description: Сведения о настройке и использовании Always Encrypted с безопасными анклавами SQL Server, что делает возможным использование расширенных функций с конфиденциальными данными.
 ms.custom: ''
 ms.date: 10/18/2019
 ms.prod: sql
@@ -10,16 +11,16 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 568944db62ca94048c45450500d3060daa957680
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d73d337e750e287066531017710b733c92a312ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74317934"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85627040"
 ---
 # <a name="configure-and-use-always-encrypted-with-secure-enclaves"></a>Настройка и использование Always Encrypted с безопасными анклавами 
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md) расширяет существующую функцию [Always Encrypted](always-encrypted-database-engine.md), чтобы обеспечить расширенные функции защиты конфиденциальных данных. В этой статье перечислены распространенные задачи по настройке и использованию этой функции.
 

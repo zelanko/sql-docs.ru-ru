@@ -1,6 +1,7 @@
 ---
 title: Настройка параметра конфигурации сервера max worker threads | Документы Майкрософт
-ms.custom: ''
+description: Узнайте, как использовать параметр max worker threads для настройки количества рабочих потоков, доступных SQL Server для обработки определенных запросов.
+ms.custom: contperfq4
 ms.date: 04/14/2020
 ms.prod: sql
 ms.prod_service: high-availability
@@ -11,51 +12,62 @@ helpviewer_keywords:
 - worker threads [SQL Server]
 - max worker threads option
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: d573bc4c8fc628bf4f1cc1fa36e50bc0e69c3202
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 04a0a9401b765b86e83a6641bf8742d6b326cc13
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488333"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85696972"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Настройка параметра конфигурации сервера max worker threads
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  В этом разделе описываются способы настройки параметра конфигурации сервера **max worker threads** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max worker threads** используется для установки количества рабочих потоков, доступных процессам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используются собственные службы для потоков операционных систем, поэтому один или несколько потоков одновременно поддерживают все сети, которые поддерживает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , еще один поток обрабатывает контрольные точки базы данных, а пул потоков обрабатывает запросы от всех пользователей. Значение по умолчанию для параметра **max worker threads** — 0. Это позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически настраивать количество рабочих потоков при запуске. Настройка по умолчанию является оптимальной для большинства систем. Но иногда, в зависимости от конфигурации системы, установка параметра **max worker threads** в другое определенное значение может улучшить производительность.  
-  
- **В этом разделе**  
-  
--   **Перед началом работы**  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Рекомендации](#Recommendations)  
-  
-     [Безопасность](#Security)  
-  
--   **Настройка параметра max worker threads с помощью различных средств.**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
--   **Дальнейшие действия.**  [После настройки параметра max worker threads](#FollowUp)  
+В этом разделе описываются способы настройки параметра конфигурации сервера **max worker threads** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **max worker threads** задает количество рабочих потоков, доступных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для обработки запросов входа, выхода и аналогичных запросов приложений.
+
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует собственные службы потоков операционных систем, чтобы обеспечить соблюдение следующих условий.
+
+- Один или несколько потоков одновременно поддерживают все сети, поддерживаемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
+- Один поток обрабатывает контрольные точки базы данных.
+
+- Пул потоков обрабатывает запросы от всех пользователей.
+
+Значение по умолчанию для параметра **max worker threads** — 0. Это позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически настраивать количество рабочих потоков при запуске. Настройка по умолчанию является оптимальной для большинства систем. Но иногда, в зависимости от конфигурации системы, установка параметра **max worker threads** в другое определенное значение может улучшить производительность.  
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Ограничения  
   
--   Если реальное количество запросов меньше значения, заданного параметром **max worker threads**, каждый запрос обрабатывается одним потоком. Однако если реальное количество потоков превышает число, заданное параметром **max worker threads**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует пул рабочих потоков, так что следующий доступный рабочий поток сможет обработать запрос.  
+-   Если реальное количество потоков превышает число, заданное параметром **max worker threads**, то [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует пул рабочих потоков, так что следующий доступный рабочий поток сможет обработать запрос. Рабочий поток назначается только активным запросам и освобождается после обслуживания запроса. Это происходит в случае, даже если сеанс пользователя или подключение, в которых был создан запрос, остаются открытыми. 
+
+-   Параметр конфигурации сервера **max worker threads** не ограничивает все потоки, которые могут быть порождены в ядре. Системные потоки, требуемые для LazyWriter, контрольной точки, модуля записи журнала, Service Broker, диспетчера блокировок или других задач, порождаются независимо от этого ограничения. Группы доступности используют некоторые рабочие потоки в рамках ограничения **max worker thread limit**, но также используют системные потоки (см. раздел [Использование потока группами доступности](../availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md#ThreadUsage)). Если число настроенных потоков превышается, то следующий запрос будет содержать сведения о системных задачах, породивших дополнительные потоки.  
+  
+ ```sql  
+ SELECT  s.session_id, r.command, r.status,  
+    r.wait_type, r.scheduler_id, w.worker_address,  
+    w.is_preemptive, w.state, t.task_state,  
+    t.session_id, t.exec_context_id, t.request_id  
+ FROM sys.dm_exec_sessions AS s  
+ INNER JOIN sys.dm_exec_requests AS r  
+    ON s.session_id = r.session_id  
+ INNER JOIN sys.dm_os_tasks AS t  
+    ON r.task_address = t.task_address  
+ INNER JOIN sys.dm_os_workers AS w  
+    ON t.worker_address = w.worker_address  
+ WHERE s.is_user_process = 0;  
+ ```  
+  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Рекомендации  
   
--   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам. Если вы считаете, что есть проблема с производительностью, вероятно, причина не в доступности рабочих потоков. Скорее всего, их ожидание вызвано чем-то наподобие операций ввода-вывода. Рекомендуется найти причину проблемы производительности, прежде чем изменять параметр max worker threads.  
+-   Это расширенный параметр, и изменять его следует только опытным администраторам баз данных или сертифицированным по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] специалистам. Если вы считаете, что есть проблема с производительностью, вероятно, причина не в доступности рабочих потоков. Скорее всего, причина связана с действиями, которые занимают рабочие потоки и не освобождают их. В число примеров входят длительные запросы или узкие места в системе (операции ввода-вывода, блокировка, ожидания кратковременной блокировки, ожидания сетевых операций). Рекомендуется найти причину проблемы производительности, прежде чем изменять параметр max worker threads. Дополнительные сведения об оценке производительности см. в статье [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md).
   
--   Пул потоков помогает оптимизировать производительность при подключении к серверу большого числа пользователей. Обычно для каждого запроса в операционной системе создается отдельный поток. Однако в случае сотен соединений с сервером, использование одного потока на каждый запрос приводит к потреблению большого числа системных ресурсов. Параметр **max worker threads** позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать пул рабочих потоков, чтобы обслужить большое число запросов, что улучшает производительность.  
+-   Пул потоков помогает оптимизировать производительность при подключении к серверу большого числа клиентов. Обычно для каждого запроса в операционной системе создается отдельный поток. Однако в случае сотен соединений с сервером, использование одного потока на каждый запрос приводит к потреблению большого числа системных ресурсов. Параметр **max worker threads** позволяет [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создавать пул рабочих потоков, чтобы обслужить большое число запросов, что улучшает производительность.  
   
--   В следующей таблице показано автоматически настроенное число рабочих потоков для различных сочетаний ЦП, архитектуры компьютера и версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием формулы: * **Максимальное число рабочих потоков по умолчанию* + ((* логические ЦП*– 4) * *рабочих потоков на ЦП*)**.  
+-   В следующей таблице показано автоматически настроенное число рабочих потоков (если задано значение, равное 0) для различных сочетаний ЦП, архитектуры компьютера и версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием формулы: ***Максимальное число рабочих потоков по умолчанию* + ((* логические ЦП* – 4) * *рабочие потоки на ЦП*)**.  
   
     |Число процессоров|32-разрядный компьютер (до [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])|64-разрядный компьютер (до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1)|64-разрядный компьютер (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 и [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)])|   
     |------------|------------|------------|------------|  
@@ -90,23 +102,6 @@ ms.locfileid: "81488333"
     > Рекомендации по использованию процессоров в количестве, превышающем 64, см. в разделе [Рекомендации по использованию SQL Server на компьютерах, которые имеют более 64 процессоров](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus).  
   
 -   Если все рабочие потоки заняты выполнением длительных запросов, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не отвечать на другие запросы, пока один из потоков не завершит работу и не станет доступным. Хотя это и не ошибка, такое поведение иногда нежелательно. Если процесс не отвечает и новые запросы не могут быть обработаны, подключитесь к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через выделенное административное соединение (DAC) и уничтожьте процесс. Во избежание этого увеличьте максимальное число потоков управления.  
-  
- Параметр конфигурации сервера **Максимальное число рабочих потоков** не ограничивает все потоки, которые могут быть порождены в системе. Потоки, требуемые для групп доступности, Service Broker, диспетчера блокировок или других задач порождаются независимо от этого ограничения. Если число настроенных потоков превышается, то следующий запрос будет содержать сведения о системных задачах, породивших дополнительные потоки.  
-  
- ```sql  
- SELECT  s.session_id, r.command, r.status,  
-    r.wait_type, r.scheduler_id, w.worker_address,  
-    w.is_preemptive, w.state, t.task_state,  
-    t.session_id, t.exec_context_id, t.request_id  
- FROM sys.dm_exec_sessions AS s  
- INNER JOIN sys.dm_exec_requests AS r  
-    ON s.session_id = r.session_id  
- INNER JOIN sys.dm_os_tasks AS t  
-    ON r.task_address = t.task_address  
- INNER JOIN sys.dm_os_workers AS w  
-    ON t.worker_address = w.worker_address  
- WHERE s.is_user_process = 0;  
- ```  
   
 ###  <a name="security"></a><a name="Security"></a> безопасность  
   
@@ -157,6 +152,4 @@ GO
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)  
-  
-  
+ [Диагностическое соединение для администраторов баз данных](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)

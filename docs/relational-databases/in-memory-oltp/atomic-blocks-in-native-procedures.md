@@ -1,5 +1,6 @@
 ---
 title: Атомарные блоки | Документация Майкрософт
+description: Узнайте о BEGIN ATOMIC, части стандарта ANSI SQL. SQL Server поддерживает атомарные блоки в собственных процедурах.
 ms.custom: ''
 ms.date: 10/26/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 329fb8644219d750595ff8a9cb2ddb5a6b804e4d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 662d5c2fe285e92f8e8fdf74836eb1dddca77206
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951225"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723419"
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Атомарные блоки в собственных процедурах
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   **BEGIN ATOMIC** — часть стандарта ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает атомарные блоки на верхнем уровне хранимых процедур, скомпилированных в собственном коде, а также для скомпилированных в собственном коде скалярных пользовательских функций. Дополнительные сведения об этих функциях см. в разделе [Скалярные определяемые пользователем функции для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
@@ -133,14 +134,14 @@ GO
   
  Требуются следующие параметры с **BEGIN ATOMIC**.  
   
-|Обязательный параметр|Description|  
+|Обязательный параметр|Описание|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|Поддерживаются значения **SNAPSHOT**, **REPEATABLEREAD**и **SERIALIZABLE**.|  
 |**LANGUAGE**|Определяет форматы даты и времени и системных сообщений. Все языки и псевдонимы в [sys.syslanguages & #40; Transact-SQL & #41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)поддерживаются.|  
   
  Следующие параметры являются необязательными.  
   
-|Необязательный параметр|Description|  
+|Необязательный параметр|Описание|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Поддерживаются все форматы даты, отличные от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если он указан, параметр **DATEFORMAT** переопределяет формат даты по умолчанию, связанный с объектом **LANGUAGE**.|  
 |**DATEFIRST**|Если он указан, параметр **DATEFIRST** переопределяет значение по умолчанию, связанное с **LANGUAGE**.|  

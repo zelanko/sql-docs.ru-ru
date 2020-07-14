@@ -1,5 +1,6 @@
 ---
 title: Сравнение запросов FOR XML и вложенных запросов FOR XML | Документация Майкрософт
+description: Узнайте о преимуществах вложенных запросов FOR XML путем просмотра примера, который сравнивает одноуровневый запрос FOR XML с вложенным запросом FOR XML.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 94e88af049ca5db3bb975c787cda18176d655346
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bae8d986b497e1d641dcc972ece88e2b579847fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665163"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729961"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Сравнение запросов FOR XML и вложенных запросов FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В этом разделе сравнивается одноуровневый запрос FOR XML с вложенным запросом FOR XML. Одним из преимуществ вложенных запросов FOR XML является то, что в них для результатов запроса можно задать сочетание XML-данных по атрибутивной или элементной модели. Это демонстрируется в примере.  
   
 ## <a name="example"></a>Пример  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 10ef5b2c2e873d3f17085137134aabd8db57b059
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75321641"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893795"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>Просмотр и изменение параметров командной строки агента репликации
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются в рамках шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому эти параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<задание>** . Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+  Агенты репликации — это исполняемые файлы, принимающие параметры командной строки. По умолчанию агенты выполняются при выполнении шагов заданий агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], поэтому данные параметры можно просматривать и изменять с помощью диалогового окна **Свойства задания — \<Job>** . Доступ к этому диалоговому окну можно получить из папки **Задания** в среде [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и на вкладке **Агенты** монитора репликации. Сведения о запуске монитора репликации см. в [этой статье](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Изменения параметров агента вступают в действие при следующем запуске агента. Если агент выполняется в непрерывном режиме, следует остановить и перезапустить агент.  
@@ -33,19 +33,19 @@ ms.locfileid: "75321641"
   
 |Агент|Имя задания|Для просмотра списка параметров см...|  
 |-----------|--------------|------------------------------------|  
-|агент моментальных снимков|**\<Издатель>-\<база данных публикации>-\<публикация>-\<целое число>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Агент моментальных снимков для секции публикации слиянием|**Dyn_\<Издатель>-\<база данных публикации>-\<публикация>-\<идентификатор GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
-|Агент чтения журнала.|**\<Издатель>-\<база данных публикации>-\<целое число>**|[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
-|Агент слияния для подписок по запросу|**\<Издатель>-\<база данных публикации>-\<публикация>-\<подписчик>-\<база данных подписки>-\<целое число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Агент слияния для принудительных подписок|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|Агент распространителя для принудительных подписок|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Агент распространителя для подписок по запросу|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<база_данных_подписки>-\<идентификатор_GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Издатель>-\<база_данных_публикации>-\<публикация>-\<подписчик>-\<целое_число>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
-|Агент чтения очереди.|**[\<Распространитель>].\<целое_число>**|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
+|агент моментальных снимков|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Агент моментальных снимков для секции публикации слиянием|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
+|Агент чтения журнала.|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
+|Агент слияния для подписок по запросу|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Агент слияния для принудительных подписок|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|Агент распространителя для принудительных подписок|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Агент распространителя для подписок по запросу|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Агент распространителя для принудительных подписок подписчиков серверов, отличных от подписчиков SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
+|Агент чтения очереди.|**[\<Distributor>].\<integer>**|[Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Для принудительных подписок на публикации Oracle это значение должно иметь вид **\<Издатель>-\<Издатель**>, а не **\<Издатель>-\<БД_публикации>** .  
+ \*Для принудительных подписок на публикации Oracle это **\<Publisher>-\<Publisher**>, а не **\<Publisher>-\<PublicationDatabase>**  
   
- \*\*Для подписок по запросу на публикации Oracle это значение должно иметь вид **\<Издатель>-\<БД_распространения**>, а не **\<Издатель>-\<БД_публикации>** .  
+ \*\*Для подписок по запросу на публикации Oracle это **\<Publisher>-\<DistributionDatabase**>, а не **\<Publisher>-\<PublicationDatabase>**  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Просмотр и изменение параметров командной строки агента репликации из среды Management Studio  
   
@@ -59,7 +59,7 @@ ms.locfileid: "75321641"
   
 3.  Правой кнопкой мыши щелкните задание и выберите **Свойства**.  
   
-4.  На странице **Шаги** диалогового окна **Свойства задания — \<задание>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
+4.  На странице **Шаги** диалогового окна **Свойства задания — \<Job>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
   
 5.  В диалоговом окне **Свойства шага задания — запустить агент** отредактировать поле **Команда** .  
   
@@ -73,9 +73,9 @@ ms.locfileid: "75321641"
   
 3.  Щелкните правой кнопкой мыши подписку, а затем выберите **Просмотреть сведения**.  
   
-4.  В окне **Подписка <имя_подписки>** нажмите кнопку **Действие**, а затем щелкните **\<Свойства задания <имя_агента**.  
+4.  В окне **Подписка <имя_подписки>** нажмите кнопку **Действие**, а затем щелкните **Свойства задания \<AgentName>** .  
   
-5.  На странице **Шаги** диалогового окна **Свойства задания — \<задание>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
+5.  На странице **Шаги** диалогового окна **Свойства задания — \<Job>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
   
 6.  В диалоговом окне **Свойства шага задания — запустить агент** отредактировать поле **Команда** .  
   
@@ -89,7 +89,7 @@ ms.locfileid: "75321641"
   
 3.  Щелкните правой кнопкой мыши агент в сетке, а затем щелкните **Свойства**.  
   
-4.  На странице **Шаги** диалогового окна **Свойства задания — \<задание>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
+4.  На странице **Шаги** диалогового окна **Свойства задания — \<Job>** выберите действие **Запустить агент**, а затем нажмите кнопку **Изменить**.  
   
 5.  В диалоговом окне **Свойства шага задания — запустить агент** отредактировать поле **Команда** .  
   

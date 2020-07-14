@@ -21,15 +21,15 @@ ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99323a0124e5e5507a22fdf36c6622738aea3ce2
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 11fadfd71bfc78128e83eb2157d32c5684d6ea35
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517662"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999000"
 ---
 # <a name="declare-local_variable-transact-sql"></a>DECLARE @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Переменные объявляются в теле пакета или процедуры при помощи инструкции DECLARE, а значения им присваиваются при помощи инструкций SET или SELECT. При помощи этой инструкции можно объявлять переменные курсоров для использования в других инструкциях. После декларации все переменные инициализируются значением NULL, если иное значение не предоставляется как часть декларации.  
   
@@ -106,7 +106,7 @@ CURSOR
 <table_type_definition>  
 Определяет тип данных **table**. Декларация таблицы включает определения столбцов, имен, типов данных и ограничений. Допустимы только ограничения PRIMARY KEY, UNIQUE, NULL и CHECK. Псевдоним типа данных не может использоваться как скалярный тип данных столбца, если к этому столбцу привязано правило или значение по умолчанию.
   
-Аргумент \<table_type_definition> представляет собой подмножество данных, используемых для определения таблицы в инструкции CREATE TABLE. Сюда включены элементы и наиболее существенные определения. Дополнительные сведения см. в разделе [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).  
+Аргумент \<table_type_definiton> представляет собой подмножество данных, используемых для определения таблицы в инструкции CREATE TABLE. Сюда включены элементы и наиболее существенные определения. Дополнительные сведения см. в разделе [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md).  
   
  *n*  
  Заполнитель, указывающий на то, что могут быть заданы несколько переменных и им могут быть присвоены значения. При объявлении переменных типа **table** в инструкции DECLARE единственной объявляемой переменной должна быть переменная типа **table**.  

@@ -1,5 +1,6 @@
 ---
 title: Свойства базы данных (страница "Общие") | Документация Майкрософт
+description: Узнайте, как использовать вкладку "Общие" в диалоговом окне "Свойства базы данных" для просмотра или изменения свойств базы данных.
 ms.custom: ''
 ms.date: 10/27/2015
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 35ab83fe9c30cd51143f7267a9156d4f95a56236
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099606"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756193"
 ---
 # <a name="database-properties-general-page"></a>Свойства базы данных (страница «Общие»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   На этой странице можно просмотреть или изменить свойства выбранной базы данных.  
   
 ## <a name="options"></a>Параметры  
@@ -30,7 +31,7 @@ ms.locfileid: "68099606"
  **Последнее резервное копирование журнала базы данных**  
  Дата последнего резервного копирования журнала транзакций базы данных.  
   
- **Название**  
+ **имя**;  
  Отображается имя базы данных.  
   
  **Состояние**  

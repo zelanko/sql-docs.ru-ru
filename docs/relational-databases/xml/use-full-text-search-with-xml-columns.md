@@ -1,5 +1,6 @@
 ---
 title: Полнотекстовый поиск в столбцах XML | Документация Майкрософт
+description: Узнайте, как создать полнотекстовый индекс XML-столбцов и выполнить полнотекстовый поиск значений XML с помощью SQL.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 108a54614bb6d77be53b28b42a128f9db7a46aae
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0c3cc821a8630bc7afcd919c4a45140bb9a2621d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665015"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752556"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Полнотекстовый поиск в XML-столбцах
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Для XML-столбцов можно создавать полнотекстовые индексы, индексирующие XML-значения, но игнорирующие XML-разметку. Теги элементов используются в качестве границ токенов. Индексируются следующие элементы:  
   
@@ -36,7 +37,7 @@ ms.locfileid: "80665015"
   
 2.  Затем запросите XML-значения, которые используют XML-индекс, связанный с XML-столбцом.  
 
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример. Комбинирование полнотекстового поиска с XML-запросами  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Пример Комбинирование полнотекстового поиска с запросами XML-данных  
  После создания полнотекстового индекса для XML-столбца следующий запрос проверяет, что название книги содержит слово «custom»:  
   
 ```sql
@@ -52,7 +53,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  Кроме того, при полнотекстовом поиске выполняется лемматизация, а метод **contains()** языка XQuery осуществляет буквальное сопоставление. Это различие поясняет следующий пример.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример. Полнотекстовый поиск XML-значений с использованием выделения корней  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Пример Полнотекстовый поиск XML-значений с использованием парадигматического модуля  
  Проверку **contains()** языка XQuery, выполненную в предыдущем примере, обычно устранить нельзя. Рассмотрим следующий запрос:  
   
 ```sql

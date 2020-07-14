@@ -1,9 +1,10 @@
 ---
 title: Роли уровня базы данных | Документация Майкрософт
+description: Для управления разрешениями в базах данных SQL Server предоставляет несколько ролей, которые являются субъектами безопасности, группирующими других субъектов.
 ms.custom: ''
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database, azure-synapse, pdw
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -38,20 +39,20 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edc3b7277646122dfec73f7b79445a8ca066e24c
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f49b1139faade46df4d1b853c4bc0e9f25c4e111
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664466"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005672"
 ---
 # <a name="database-level-roles"></a>Роли уровня базы данных
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Для удобства управления разрешениями в базах данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет несколько *ролей* , которые являются субъектами безопасности, группирующими других участников. Они подобны ***группам*** в операционной системе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Разрешения ролей уровня базы данных распространяются на всю базу данных.  
 
-Чтобы добавлять и удалять пользователей в роли базы данных, используйте параметры `ADD MEMBER` и `DROP MEMBER` инструкции [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] не поддерживает такое использование `ALTER ROLE`. Используйте вместо этого более старые процедуры [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) и [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
+Чтобы добавлять и удалять пользователей в роли базы данных, используйте параметры `ADD MEMBER` и `DROP MEMBER` инструкции [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) . [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] и Azure Synapse не поддерживают такое использование `ALTER ROLE`. Используйте вместо этого более старые процедуры [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) и [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) .
   
  Существует два типа ролей уровня базы данных: *предопределенные роли базы данных* , являющиеся стандартными для базы данных, и *пользовательские роли базы данных* , которые можно создавать.  
   
@@ -64,7 +65,7 @@ ms.locfileid: "80664466"
 
 Разрешения пользовательских ролей базы данных можно настроить с помощью инструкций GRANT, DENY и REVOKE. Дополнительные сведения см. в разделе [Разрешения (компонент Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-Список всех разрешений см. в афише с [разрешениями для ядра СУБД](https://aka.ms/sql-permissions-poster) . (Разрешения уровня сервера нельзя предоставлять роли базы данных. Имена входа и другие субъекты уровня сервера (например, роли сервера) нельзя добавлять в роли базы данных. Для обеспечения безопасности на уровне сервера в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]используйте вместо этого [роли сервера](../../../relational-databases/security/authentication-access/server-level-roles.md) . Разрешения уровня сервера нельзя предоставлять посредством ролей в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+Список всех разрешений см. в афише с [разрешениями для ядра СУБД](https://aka.ms/sql-permissions-poster) . Разрешения уровня сервера невозможно предоставить ролям базы данных. Имена входа и другие субъекты уровня сервера (например, роли сервера) нельзя добавлять в роли базы данных. Для обеспечения безопасности на уровне сервера в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]используйте вместо этого [роли сервера](../../../relational-databases/security/authentication-access/server-level-roles.md) . Разрешения уровня сервера невозможно предоставить посредством ролей в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и Azure Synapse.
 
 ## <a name="fixed-database-roles"></a>предопределенные роли базы данных
   
@@ -72,7 +73,7 @@ ms.locfileid: "80664466"
   
 |Имя предопределенной роли базы данных|Описание|  
 |-------------------------------|-----------------|  
-|**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (В [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]некоторые операции по обслуживанию требуют наличие разрешений на уровне сервера и не может быть выполнены членами **db_owner**.)|  
+|**db_owner**|Члены предопределенной роли базы данных **db_owner** могут выполнять все действия по настройке и обслуживанию базы данных, а также удалять базу данных в [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (В [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и Azure Synapse некоторые операции по обслуживанию требуют наличия разрешений на уровне сервера и не могут быть выполнены членами **db_owner**.)|  
 |**db_securityadmin**|Элементы предопределенной роли базы данных **db_securityadmin** могут изменять членство в роли (только для настраиваемых ролей) и управлять разрешениями. Элементы этой роли потенциально могут повышать свои права доступа, поэтому необходимо отслеживать их действия.|  
 |**db_accessadmin**|Члены предопределенной роли базы данных **db_accessadmin** могут добавлять или удалять права удаленного доступа к базе данных для имен входа и групп Windows, а также имен входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Члены предопределенной роли базы данных **db_backupoperator** могут создавать резервные копии базы данных.|  
@@ -86,7 +87,7 @@ ms.locfileid: "80664466"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-sssds_md-and-sssdw_md"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-sssds_md-and-azure-synapse"></a>Специальные роли для [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и Azure Synapse
 
 Эти роли базы данных существуют только в виртуальной базе данных master. Их разрешения ограничены действиями, выполняемыми в базе данных master. В эти роли можно добавить только пользователей из базы данных master. Для этих ролей нельзя добавить имена входа, однако можно создать пользователей на основе имен входа, а затем добавить этих пользователей в роли. Кроме того, в эти роли можно добавить пользователей автономной базы данных из базы данных master. При этом пользователи автономной базы данных, добавленные в роль **dbmanager** в базе данных master, не могут использоваться для создания новых баз данных.
 
@@ -96,7 +97,7 @@ ms.locfileid: "80664466"
 |**loginmanager** | Может создать и удалять имена входа в виртуальной базе данных master.|
 
 > [!NOTE]
-> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] без необходимости участия в каких-либо ролях. См. дополнительные сведения об [аутентификации и авторизация базы данных SQL, включая предоставление доступа](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> Субъект на уровне сервера и администратор Azure Active Directory (если настроено) имеют все разрешения в [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] и Azure Synapse без необходимости участия в каких-либо ролях. См. дополнительные сведения об [аутентификации и авторизация базы данных SQL, включая предоставление доступа](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## <a name="msdb-roles"></a>Роли базы данных msdb  
  База данных msdb содержит специальные роли, показанные в следующей таблице.  
@@ -128,8 +129,8 @@ ms.locfileid: "80664466"
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Get-Help|Удаляет роль из базы данных.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Get-Help|Создает новую роль базы данных в текущей базе данных.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Get-Help|Удаляет роль базы данных из текущей базы данных.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Get-Help|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , должны использовать вместо этого `ALTER ROLE` .|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Get-Help|Удаляет учетную запись безопасности из роли SQL Server в текущей базе данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] , должны использовать вместо этого `ALTER ROLE` .|
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Get-Help|Добавляет пользователя базы данных, роль базы данных, имя входа Windows или группу Windows к роли текущей базы данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] и Azure Synapse, должны использовать вместо этого `ALTER ROLE`.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Get-Help|Удаляет учетную запись безопасности из роли SQL Server в текущей базе данных. Все платформы, за исключением [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] и Azure Synapse, должны использовать вместо этого `ALTER ROLE`.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Разрешения | Добавляет разрешение для роли.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Разрешения | Запрещает разрешение для роли.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Разрешения | Удаляет разрешения, выданные или запрещенные ранее.

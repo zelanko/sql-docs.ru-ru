@@ -1,5 +1,6 @@
 ---
 title: Эвристические методы режима AUTO, используемые при формировании возвращаемого XML-кода | Документация Майкрософт
+description: Узнайте, как использовать эвристику режима AUTO с предложением FOR XML для сравнения значений столбцов в смежных строках и определения формы XML, возвращаемой запросом.
 ms.custom: fresh2019may
 ms.date: 04/03/2020
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: RothJa
 ms.author: jroth
-ms.openlocfilehash: 68fec5b01fc88fba356c0091066850908804a88d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 99a1858ce4784c9a320258689827110e0df3dd8e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664746"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529390"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>Эвристические методы режима AUTO, используемые при формировании возвращаемого XML-кода
 

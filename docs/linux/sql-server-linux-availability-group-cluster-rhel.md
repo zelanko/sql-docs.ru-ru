@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d1a4dd8b5139498e558f718cdb5d0d22824f9655
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76706295"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85896956"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Настройка кластера RHEL для группы доступности SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Этот документ описывает, как создать кластер группы доступности с тремя узлами для SQL Server на Red Hat Enterprise Linux. Для обеспечения высокого уровня доступности группе доступности в Linux требуется три узла — см. статью [Высокий уровень доступности и защита данных для конфигураций групп доступности](sql-server-linux-availability-group-ha.md). Уровень кластеризации основан на [надстройке высокого уровня доступности](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) Red Hat Enterprise Linux (RHEL), созданной на базе [Pacemaker](https://clusterlabs.org/). 
 
@@ -167,7 +167,7 @@ pcs resource update ag_cluster meta failure-timeout=60s
 
 ## <a name="create-availability-group-resource"></a>Создание ресурса группы доступности
 
-Чтобы создать ресурс группы доступности, используйте команду `pcs resource create` и задайте свойства ресурса. Приведенная ниже команда `ocf:mssql:ag` создает ресурс типа "основной/подчиненный" для группы доступности `ag1`.
+Чтобы создать ресурс группы доступности, используйте команду `pcs resource create` и задайте свойства ресурса. Приведенная ниже команда `ocf:mssql:ag` создает ресурс типа «основной/подчиненный» для группы доступности `ag1`.
 
 **RHEL 7**
 

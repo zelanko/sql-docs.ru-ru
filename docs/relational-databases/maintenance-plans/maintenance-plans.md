@@ -1,5 +1,6 @@
 ---
 title: Планы обслуживания | Документация Майкрософт
+description: Узнайте больше о планах обслуживания, которые позволяют создать рабочий процесс, обеспечивающий оптимизацию базы данных SQL Server, ее регулярное резервное копирование и отсутствие несогласованностей.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -16,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115882"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789465"
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Планы обслуживания используются для создания рабочего процесса из задач, необходимых для гарантии оптимальной производительности базы данных, ее регулярного резервного копирования и отсутствия в ней несогласованностей. Для создания основных планов обслуживания также можно использовать мастер планов обслуживания, однако создание планов вручную более эффективно.  
   
 ## <a name="benefits-of-maintenance-plans"></a>Преимущества планов обслуживания  

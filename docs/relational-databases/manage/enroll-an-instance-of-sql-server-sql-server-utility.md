@@ -1,5 +1,6 @@
 ---
 title: Регистрация экземпляра SQL Server (служебная программа SQL Server) | Документация Майкрософт
+description: Запустите мониторинг производительности и конфигурации экземпляра SQL Server путем регистрации в существующей служебной программе SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: dda51dd5449719aedd7697310c1f7befe3ee1390
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1e3f26672d208d848a2cf76707fb92d7b72d5e11
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115420"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776004"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией как управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
   
  В этом выпуске точка управления служебной программой и все управляемые экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны удовлетворять следующим требованиям.  
@@ -170,7 +171,7 @@ ms.locfileid: "68115420"
 >   
 >  Возникло исключение при выполнении пакета или инструкции Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Дополнительные сведения:  Не удалось получить сведения о пользователе или группе Windows NT "\<ДоменноеИмя\ИмяУчетнойЗаписи>", код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
+>  Дополнительные сведения:  Не удалось получить сведения о пользователе/группе Windows NT «\<DomainName\AccountName>», код ошибки 0x5. (Microsoft SQL Server, ошибка: 15404)  
 >   
 >  Дополнительные сведения об устранении этой неполадки см. в статье [Устранение неполадок служебной программы SQL Server](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).  
   

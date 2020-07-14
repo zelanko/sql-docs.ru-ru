@@ -1,6 +1,6 @@
 ---
 title: Перенаправление подключений с правами на чтение и запись в первичную реплику
-description: Узнайте, как обеспечить постоянное перенаправление подключений с правами на чтение и запись в первичную реплику группы доступности Always On независимо от целевого сервера, указанного в строке подключения.
+description: Узнайте, как обеспечить перенаправление подключений с правами на чтение и запись в первичную реплику группы доступности Always On независимо от сервера, указанного в строке подключения.
 ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
@@ -18,16 +18,16 @@ ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb7ac494a8a87b0ac5f2f6692763d526b7f26af6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 794d2f682c5a32ee348d229cfd2413687a57843e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256667"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637814"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику (группы доступности AlwaysOn)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 реализует *перенаправление подключения с правами на чтение и запись с вторичной на первичную реплику* для групп доступности AlwaysOn. Перенаправление подключения с правами на чтение и запись можно использовать на любой платформе операционной системы. Это позволяет направлять подключения клиентских приложений к первичной реплике независимо от целевого сервера, указанного в строке подключения. 
 

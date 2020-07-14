@@ -14,15 +14,15 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 912db4ce3841791e2bddde6f53be9869093bbcd2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6fb75992f2bcd229217c40582cd8087c6099d34f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636041"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85766314"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (селективные XML-индексы)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Удаляет существующий селективный XML-индекс или вторичный селективный XML-индекс в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -48,7 +48,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Имя существующего индекса, который требуется удалить.  
   
- *\< object>* Таблица, которая содержит индексированный XML-столбец. Используйте один из следующих форматов:  
+ *\< object>* является таблицей, которая содержит индексированный XML-столбец. Используйте один из следующих форматов:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -58,9 +58,9 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option>* Сведения о параметрах удаления индекса см. в разделе [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>*  — сведения о параметрах удаления индекса см. в разделе [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  Для использования DROP INDEX требуется разрешение ALTER для таблицы или представления. По умолчанию это разрешение предоставляется предопределенной роли сервера sysadmin и предопределенным ролям базы данных db_ddladmin и db_owner.  

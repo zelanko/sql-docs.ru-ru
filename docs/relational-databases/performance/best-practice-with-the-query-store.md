@@ -13,16 +13,16 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c07131e3991fd7cceb77e1874b7150184345b546
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f304dea7c49965bbb511034c09fb6ef781f2311f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287578"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86006002"
 ---
 # <a name="best-practices-with-query-store"></a>Рекомендации по хранилищу запросов
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 В этой статье приведены рекомендации по использованию хранилища запросов SQL Server с вашей рабочей нагрузкой.
 
@@ -34,9 +34,9 @@ ms.locfileid: "79287578"
 
 ## <a name="use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Используйте анализ производительности процессов в Базе данных SQL Azure
 
-При запуске хранилища запросов в Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)] можно использовать [анализ производительности запросов](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) для анализа потребления ресурсов в динамике. С помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) можно получить подробные сведения о потреблении ресурсов (ЦП, памяти и подсистемы ввода-вывода) всеми вашими запросами, а анализ производительности запросов обеспечивает быстрый и эффективный способ определения их влияния на общее использование DTU для базы данных. Дополнительные сведения см. в разделе [Анализ производительности запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
+При запуске хранилища запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] можно использовать [анализ производительности запросов](https://docs.microsoft.com/azure/sql-database/sql-database-query-performance) для анализа потребления ресурсов в динамике. С помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] и [Azure Data Studio](../../azure-data-studio/what-is.md) можно получить подробные сведения о потреблении ресурсов (ЦП, памяти и подсистемы ввода-вывода) всеми вашими запросами, а анализ производительности запросов обеспечивает быстрый и эффективный способ определения их влияния на общее использование DTU для базы данных. Дополнительные сведения см. в разделе [Анализ производительности запросов в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/).
 
-В этом разделе описываются оптимальные настройки по умолчанию, призванные обеспечить надежную работу хранилища запросов и зависимых компонентов. По умолчанию конфигурация оптимизирована для постоянного сбора данных, т. е. для минимальной продолжительности состояний "Отключено" и "Только для чтения".
+В этом разделе описываются оптимальные настройки по умолчанию, призванные обеспечить надежную работу хранилища запросов и зависимых компонентов. По умолчанию конфигурация оптимизирована для постоянного сбора данных, т. е. для минимальной продолжительности состояний "Отключено" и "Только для чтения". Дополнительные сведения обо всех доступных параметрах хранилища запросов см. в разделе [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 | Конфигурация | Описание | По умолчанию | Комментарий |
 | --- | --- | --- | --- |
@@ -49,9 +49,12 @@ ms.locfileid: "79287578"
 | | | | |
 
 > [!IMPORTANT]
-> Эти значения по умолчанию будут автоматически применяться на последнем этапе активации хранилища запросов для всех баз данных Azure SQL (см. важное примечание выше). После этого база данных SQL Azure не будет изменять значения настроек, заданные пользователями, за исключением случаев негативного влияния на основную рабочую нагрузку или на надежность работы хранилища запросов.
+> Эти значения по умолчанию будут автоматически применяться на последнем этапе активации хранилища запросов в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. После включения [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] не будет изменять значения настроек, заданные пользователями, за исключением случаев негативного влияния на основную рабочую нагрузку или на надежность работы хранилища запросов.
 
-Если вы хотите сохранить свои пользовательские настройки, используйте [параметры ALTER DATABASE для хранилища запросов](https://msdn.microsoft.com/library/bb522682.aspx) , чтобы восстановить предыдущее состояние конфигурации. Изучите [рекомендации по использованию хранилища запросов](https://msdn.microsoft.com/library/mt604821.aspx) , чтобы научиться правильно выбирать оптимальные параметры конфигурации.
+> [!NOTE]  
+> Хранилище запросов нельзя отключить в отдельной базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичном пуле. При исполнении `ALTER DATABASE [database] SET QUERY_STORE = OFF` будет возвращено предупреждение `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
+
+Если вы хотите сохранить свои пользовательские настройки, используйте [параметры ALTER DATABASE для хранилища запросов](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store) , чтобы восстановить предыдущее состояние конфигурации. Изучите [рекомендации по использованию хранилища запросов](../../relational-databases/performance/best-practice-with-the-query-store.md), чтобы научиться правильно выбирать оптимальные параметры конфигурации.
 
 ## <a name="use-query-store-with-elastic-pool-databases"></a>Использование хранилища запросов с пулом эластичных баз данных
 
@@ -345,7 +348,7 @@ GO
 SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
     max_storage_size_mb, readonly_reason, interval_length_minutes,
     stale_query_threshold_days, size_based_cleanup_mode_desc,
-    query_capture_mode_de
+    query_capture_mode_desc
 FROM sys.database_query_store_options;
 ```
 

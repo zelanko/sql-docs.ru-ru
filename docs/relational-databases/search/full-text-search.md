@@ -12,15 +12,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 81a3e6268b74c6aeb4a3fc7ea7c492133abf372d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 87924fccd112be6090d24e64826c72b79381e062
+ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72930271"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86091758"
 ---
 # <a name="full-text-search"></a>Компонент Full-text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Полнотекстовый поиск в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] позволяет пользователям и приложениям выполнять полнотекстовые запросы к символьным данным в таблицах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -239,7 +239,7 @@ ms.locfileid: "72930271"
 |Группируются в той же базе данных в один или несколько полнотекстовых каталогов.|Не группируются.|  
 
 ##  <a name="full-text-search-linguistic-components-and-language-support"></a><a name="components"></a> Лингвистические компоненты и поддержка языков в полнотекстовом поиске
- Полнотекстовый поиск поддерживает почти 50 разных языков, в том числе английский, испанский, китайский, японский, арабский, бенгальский и хинди. Полный список поддерживаемых языков полнотекстового поиска см. в разделе [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Каждый из столбцов в полнотекстовом индексе связан с идентификатором локали Microsoft Windows, который соответствует языку, поддерживаемому полнотекстовым поиском. Например, код языка 1033 соответствует языку «Английский (США)», а код 2057 соответствует языку «Английский (Великобритания)». Для каждого поддерживаемого языка полнотекстового поиска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены лингвистические компоненты, которые поддерживают индексирование полнотекстовых данных и выполнение запросов к полнотекстовым данным на этом языке.  
+ Полнотекстовый поиск поддерживает почти 50 языков, в том числе английский, испанский, китайский, японский, арабский, бенгальский и хинди. Полный список поддерживаемых языков полнотекстового поиска см. в разделе [sys.fulltext_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md). Каждый из столбцов в полнотекстовом индексе связан с идентификатором локали Microsoft Windows, который соответствует языку, поддерживаемому полнотекстовым поиском. Например, код языка 1033 соответствует языку «Английский (США)», а код 2057 соответствует языку «Английский (Великобритания)». Для каждого поддерживаемого языка полнотекстового поиска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предусмотрены лингвистические компоненты, которые поддерживают индексирование полнотекстовых данных и выполнение запросов к полнотекстовым данным на этом языке.  
   
  Компоненты, связанные с конкретным языком, включают следующие компоненты.  
   
@@ -254,4 +254,3 @@ ms.locfileid: "72930271"
  Средства разбиения по словам (и парадигматические модули), а также фильтры выполняются в процессе управляющей программы фильтрации (fdhost.exe).  
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-

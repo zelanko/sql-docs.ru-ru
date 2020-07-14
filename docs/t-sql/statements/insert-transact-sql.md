@@ -32,15 +32,15 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: daf046f217c37da8868cce538b4c136f8b782d82
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181105"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009260"
 ---
 # <a name="insert-transact-sql"></a>Инструкция INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 Добавляет одну или несколько строк в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Примеры см. в разделе [Примеры](#InsertExamples).  
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Предложение OUTPUT  
  Возвращает вставленные строки во время операции вставки. Результаты могут возвращаться в обрабатывающее приложение или вставляться в таблицу или табличную переменную для дальнейшей обработки.  
   
- Предложение OUTPUT не поддерживается инструкциями DML, которые ссылаются на локальные секционированные представления, распределенные секционированные представления или удаленные таблицы, или инструкциями INSERT, содержащими аргумент *execute_statement*. Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
+ Предложение OUTPUT не поддерживается инструкциями DML, которые ссылаются на локальные секционированные представления, распределенные секционированные представления или удаленные таблицы, или инструкциями INSERT, содержащими аргумент *execute_statement*. Предложение OUTPUT INTO не поддерживается в инструкциях INSERT, содержащих предложение \<dml_table_source>. Дополнительные сведения об аргументах и поведении этого предложения см. в статье [Предложение OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Позволяет использовать один или несколько списков вставляемых значений данных. Для каждого столбца в *column_list*, если этот параметр указан, или в таблице должно быть одно значение. Список значений должен быть заключен в скобки.  
@@ -257,7 +257,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  Допустимая инструкция INSERT, UPDATE, DELETE или MERGE, возвращающая изменяемые строки в предложении OUTPUT. Инструкция не может содержать предложение WITH и использовать удаленные таблицы или секционированные представления в качестве целевых. Если указаны UPDATE или DELETE, это не могут быть использующие курсор инструкции UPDATE или DELETE. На исходные строки нельзя ссылаться как на вложенные инструкции DML.  
   
  WHERE \<search_condition>  
- Любое предложение WHERE, содержащее допустимый критерий поиска \<search_condition>, фильтрующее строки, которые возвращены аргументом \<dml_statement_with_output_clause>. Дополнительные сведения см. в разделе [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md). При использовании в этом контексте критерий \<search_condition> не должен содержать вложенных запросов, определяемых пользователем скалярных функций, выполняющих доступ к данным, агрегатных функций, TEXTPTR или предикатов полнотекстового поиска. 
+ Любое предложение WHERE, содержащее допустимый критерий поиска \<search_condition>, фильтрующий строки, которые возвращены аргументом \<dml_statement_with_output_clause>. Дополнительные сведения см. в разделе [Условие поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md). При использовании в этом контексте критерий \<search_condition> не должен содержать вложенных запросов, определяемых пользователем скалярных функций, выполняющих доступ к данным, агрегатных функций, TEXTPTR или предикатов полнотекстового поиска. 
   
  DEFAULT VALUES  
  **Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.  

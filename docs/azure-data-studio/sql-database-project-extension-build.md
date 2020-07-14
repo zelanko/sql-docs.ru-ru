@@ -1,0 +1,47 @@
+---
+title: Сборка и публикация проекта
+description: Сборка и публикация с помощью расширения проектов баз данных SQL Server
+ms.custom: seodec18
+ms.date: 06/25/2020
+ms.reviewer: drskwier, maghan, sstein
+ms.prod: sql
+ms.technology: azure-data-studio
+ms.topic: conceptual
+author: dzsquared
+ms.author: drskwier
+ms.openlocfilehash: 4348f117b57c9b13a70f4a6db39ab6710eafd0ef
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85519193"
+---
+# <a name="build-and-publish-a-project"></a>Сборка и публикация проекта
+
+Процесс сборки в расширении проектов баз данных SQL для Azure Data Studio позволяет создавать *DACPAC* в средах Windows, macOS и Linux. Проект затем можно развернуть в локальной или облачной среде с помощью процесса публикации.
+
+## <a name="prerequisites"></a>Предварительные требования
+- Установите и настройте [расширение проектов баз данных SQL для Azure Data Studio](sql-database-project-extension.md).
+
+
+## <a name="build-a-database-project"></a>Создание проекта базы данных
+
+ В мини-приложении **Проекты** **Обозревателя** щелкните правой кнопкой мыши корневой узел *.sqlproj* и выберите **Сборка**.
+
+ Автоматически отобразится область вывода с выходными данными процесса сборки.  Успешная сборка будет завершаться следующим сообщением: 
+
+ ``` ... exited with code: 0 ```
+
+
+## <a name="publish-a-database-project"></a>Публикация проекта базы данных
+
+После успешной компиляции проекта с помощью процесса сборки базу данных можно опубликовать в экземпляре SQL Server. Чтобы опубликовать проект базы данных, в мини-приложении **Проекты** **Обозревателя** щелкните правой кнопкой мыши корневой узел *.sqlproj* и выберите **Опубликовать**.
+
+В появившемся диалоговом окне **публикации базы данных** укажите соединение сервера и имя создаваемой базы данных.
+
+## <a name="next-steps"></a>Дальнейшие действия
+
+- [Расширение проектов баз данных SQL для Azure Data Studio](sql-database-project-extension.md)
+- [Приложения уровня данных](../relational-databases/data-tier-applications/data-tier-applications.md)
+
+

@@ -1,6 +1,6 @@
 ---
 title: Принудительный запуск службы в зеркальном отображении базы данных
-description: Если основной сервер выйдет из строя, когда зеркальный сервер доступен, сделайте базу данных доступной, принудительно вызвав отработку отказа службы на зеркальную базу данных (с возможной потерей данных)
+description: Если основной сервер выходит из строя, когда зеркальный сервер доступен, сделайте базу данных доступной, принудительно вызвав отработку отказа службы на зеркальную базу данных.
 ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9ac9ebf9538ad7800deb5807ac5bb1980b2f472b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85754625"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Если в режимах с высокой производительностью и высокой безопасностью без автоматической отработки отказа на основном сервере происходит сбой, в то время как доступен зеркальный сервер, владелец базы данных может сделать базу данных доступной, принудительно переведя ее на другой ресурс (с возможной потерей данных). Этот параметр доступен только при выполнении следующих условий:  
   
 -   основной сервер недоступен;  

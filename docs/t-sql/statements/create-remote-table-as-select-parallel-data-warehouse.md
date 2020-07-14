@@ -4,18 +4,18 @@ ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
-ms.reviewer: jrasnick
 ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
+ms.reviewer: jrasnick
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5f8b817d2de14c41c32fc815dc068a7776b54e3
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ab42dfbed020840aeb90042b81266fc58cc74688
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633974"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627408"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +67,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  Имя удаленного сервера или IPv4-адрес удаленного сервера. IPv6-адреса не поддерживаются. Можно указать именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в формате **Computer_Name\Instance_Name** или **IP_address\Instance_Name**. Сервер должен быть удаленным и не может быть указан как (локальный).  
   
  Номер TCP-*порта*  
- Номер TCP-порта, используемого для соединения. Для экземпляра SQL Server, который не ожидает передачи данных через порт по умолчанию 1433, можно указать номер TCP-порта от 0 до 65535. Например: **ServerA,1450** или **10.192.14.27,1435**  
+ Номер TCP-порта, используемого для соединения. Для экземпляра SQL Server, который не ожидает передачи данных через порт по умолчанию 1433, можно указать номер TCP-порта от 0 до 65535. Пример: **ServerA,1450** или **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  Рекомендуем подключаться к удаленному серверу через IP-адрес. В зависимости от конфигурации сети подключение по имени компьютера может потребовать дополнительных шагов, чтобы использовать не являющийся устройством DNS-сервер для разрешения имени для правильного сервера. Этот шаг необязателен при соединении через IP-адрес. Дополнительные сведения см. в разделе "Использование DNS-сервера пересылки для разрешения имен DNS, не являющегося устройством (Analytics Platform System)" в статье [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -84,7 +84,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
  WITH *common_table_expression*  
  Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Дополнительные сведения см. в разделе [WITH common_table_expression (Transact-SQL)](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- SELECT \<select_criteria> Предикат запроса, который указывает, какие данные будут заполнять новую удаленную таблицу. Сведения об инструкции SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
+ SELECT \<select_criteria>. Предикат запроса, который указывает, какие данные будут заполнять новую удаленную таблицу. Сведения об инструкции SELECT см. в разделе [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требования:  
@@ -123,7 +123,7 @@ CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_n
 ## <a name="metadata"></a>Метаданные  
  Используйте [sys.dm_pdw_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md), чтобы просмотреть ход выполнения копирования выбранных данных на удаленный сервер SMP. Эти сведения содержатся в строках типа PARALLEL_COPY_READER.  
   
-## <a name="security"></a>безопасность  
+## <a name="security"></a>Безопасность  
  Инструкция CREATE REMOTE TABLE использует проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для подключения к удаленному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и не использует проверку подлинности Windows.  
   
  Для сети с внешним доступом [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] необходимо включить брандмауэр с исключением портов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], административных портов и портов управления.  

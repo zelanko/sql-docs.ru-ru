@@ -1,5 +1,6 @@
 ---
 title: T-SQL, не поддерживаемые в выполняющейся в памяти OLTP
+description: Узнайте, какие функции Transact-SQL не поддерживаются для оптимизированных для памяти таблиц, скомпилированных в собственном коде хранимых процедур и определяемых пользователем функций.
 ms.custom: seo-dt-2019
 ms.date: 11/21/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1052544d1243dea4e6c3da377de2dbbe36d5af
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ad82e31acbe105810b00b1f6bfc59ec433ca273b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753201"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Оптимизированные для памяти таблицы, скомпилированные хранимые процедуры и определяемые пользователем функции не поддерживают полную контактную зону [!INCLUDE[tsql](../../includes/tsql-md.md)], которая поддерживается дисковыми таблицами и интерпретируемыми хранимыми процедурами [!INCLUDE[tsql](../../includes/tsql-md.md)], а также определяемыми пользователем функциями. При попытке использовать одну из неподдерживаемых функций сервер возвращает ошибку.  
   

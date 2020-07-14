@@ -1,5 +1,6 @@
 ---
 title: SQL Server Express LocalDB | Документация Майкрософт
+description: Знакомство с LocalDB в SQL Server Express. Разработчики могут использовать это упрощенное ядро СУБД для написания и тестирования кода Transact-SQL.
 ms.custom: ''
 ms.date: 04/17/2019
 ms.prod: sql
@@ -14,18 +15,18 @@ helpviewer_keywords:
 - file database
 - LocalDB
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 51bc81253c63834e2fa9b4238ef9bf62f19f1ce9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771789"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 LocalDB в Microsoft SQL Server Express — это компонент [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md), ориентированный на разработчиков. Он доступен в SQL Server Express с дополнительными службами.
 
@@ -118,12 +119,12 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |Имя|`LocalDBApp1`|
-|Версия|\<текущая версия>|
+|Версия|\<Current Version>|
 |Общее имя|""|
-|Владелец|"\<пользователь Windows>"|
-|Автоматическое создание|нет|
+|Владелец|"\<Your Windows User>"|
+|Автоматическое создание|Нет|
 |Состояние|запуск|
-|Время последнего запуска|\<дата и время>|
+|Время последнего запуска|\<Date and Time>|
 |Имя канала экземпляра|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]

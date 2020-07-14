@@ -1,5 +1,6 @@
 ---
 title: Обновление. Мастер установки (настройка)
+description: Мастер установки SQL Server обеспечивает обновление на месте всех компонентов SQL Server до последней версии SQL Server с помощью единого дерева компонентов.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,16 +14,16 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb468aff505b4b12d2eabd64f9512c5d0a18267e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9535f71c496cdb59120ea95d62f5fa903d57dbde
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900202"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление на месте всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]с помощью единого дерева компонентов.  
   
@@ -97,7 +98,7 @@ ms.locfileid: "75258798"
      Требования для выбранных компонентов показаны на правой панели. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установит обязательный компонент, который еще не был установлен, в шаге установки, описанном ниже в данной процедуре.  
   
     > [!NOTE]  
-    >  Если было решено обновить общие компоненты путем выбора пункта **\<Обновить только общие компоненты>** на странице **Выбор экземпляра**, все общие компоненты будут выбраны заранее на странице выбора компонентов. Все общие компоненты обновляются одновременно.  
+    >  Если было решено обновить общие компоненты путем выбора **\<Upgrade shared features only>** на странице **Выбор экземпляра**, все общие компоненты будут выбраны заранее на странице выбора компонентов. Все общие компоненты обновляются одновременно.  
   
 12. На странице «Конфигурация экземпляра» укажите идентификатор экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

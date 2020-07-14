@@ -1,5 +1,6 @@
 ---
 title: Использование контрольной точки для таблиц, оптимизированных для памяти | Документация Майкрософт
+description: Узнайте о контрольных точках в таблицах, оптимизированных для памяти, в SQL Server. Операция контрольной точки оптимизированной для памяти таблицы отличается от дисковых таблиц.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +12,15 @@ ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f3e07e6762a288fe646477ad0218e5f54eb3b2e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 26d4874a583ed1d20bff352456493c87cbc52fc0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67951066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723363"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Работа контрольной точки для оптимизированных для памяти таблиц
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Контрольную точку нужно периодически обрабатывать для данных, оптимизированных для памяти, в файлах данных и разностных файлах, чтобы дополнять активную часть журнала транзакций. Контрольная точка позволяет восстанавливать таблицы, оптимизированные для памяти, до последней успешной контрольной точки, после чего применяется активная часть журнала транзакций для обновления таблиц, оптимизированных для памяти, и завершения восстановления. Процессы работы контрольной точки для таблиц на диске и оптимизированных для памяти таблиц отличаются. Ниже описываются различные сценарии и режим работы контрольной точки для таблиц на диске и таблиц, оптимизированных для памяти.  
   
 ## <a name="manual-checkpoint"></a>Контрольная точка, установленная вручную  

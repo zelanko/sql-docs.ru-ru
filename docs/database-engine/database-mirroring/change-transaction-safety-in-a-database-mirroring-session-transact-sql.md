@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8b03bb82-8589-4558-8545-9942fe008391
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3ba0b574fea1974ab93c5cecf4346942df6c4a2c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91b7c60138db717f287af5416c7a310debc7e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75247493"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763854"
 ---
 # <a name="change-transaction-safety-in-a-database-mirroring-session-transact-sql"></a>Изменение безопасности транзакций в сеансах зеркального отображения базы данных (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Безопасность транзакций является атрибутом, который контролирует режим работы сеанса. Однако в любой момент времени владелец базы данных может изменить безопасность транзакций. По умолчанию уровень безопасности транзакций установлен в FULL (синхронный режим работы).  
   
  Выключение безопасности транзакций переключает сеанс в асинхронный режим работы, что максимизирует производительность. Если участник становится недоступен, зеркало останавливается, но остается доступным в качестве «горячего» резервирования (переход на ресурс отработки отказа требует принудительного запуска службы с возможностью потери данных).  
@@ -36,7 +36,7 @@ ms.locfileid: "75247493"
     ALTER DATABASE <database> SET PARTNER SAFETY FULL  
     ```  
   
-     где *\<база_данных>*  — имя зеркально отображаемой базы данных.  
+     где *\<database>*  — имя зеркально отображаемой базы данных.  
   
 ### <a name="to-turn-off-transaction-safety"></a>Выключение безопасности транзакций  
   
@@ -48,7 +48,7 @@ ms.locfileid: "75247493"
     ALTER DATABASE <database> SET PARTNER SAFETY OFF  
     ```  
   
-     где *\<база_данных>*  — зеркально отображаемая база данных.  
+     где *\<database>*  — зеркально отображаемая база данных.  
   
 ## <a name="see-also"></a>См. также:  
  [Зеркальное отображение базы данных ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

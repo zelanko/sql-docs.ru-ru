@@ -1,5 +1,6 @@
 ---
 title: Приступая к работе с разрешениями ядра СУБД | Документация Майкрософт
+description: Обзор некоторых основных концепций безопасности в SQL Server и сведения о типичной реализации разрешений ядра СУБД.
 ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c5d6f2daf6b37c260b84683e3f85395a88b1f218
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903022"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86005651"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Управление разрешениями в [!INCLUDE[ssDE](../../../includes/ssde-md.md)] осуществляется на уровне сервера с помощью имен входа и ролей сервера и на уровне базы данных с помощью пользователей и ролей базы данных. Модель для [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] предоставляет ту же систему в каждой базе данных, однако разрешения на уровне сервера недоступны. В этом разделе рассматриваются некоторые основные понятия безопасности, а затем описывается типичная реализация разрешений.  
   
@@ -228,13 +229,13 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  Другие разделы, посвященные началу работы:  
   
--   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+-   [Руководство. Начало работы с ядром СУБД](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
 
 -   [Создание базы данных (учебник)](../../../t-sql/lesson-1-creating-database-objects.md)  
   
--   [Руководство: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
+-   [Руководство. SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
--   [Учебник. Составление инструкций Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
+-   [Руководство. Составление инструкций Transact-SQL](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

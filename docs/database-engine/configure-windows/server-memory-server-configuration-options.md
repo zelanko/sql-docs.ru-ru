@@ -1,12 +1,13 @@
 ---
 title: Параметры конфигурации памяти сервера | Документация Майкрософт
-ms.custom: ''
+ms.custom: contperfq4
 ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
+description: Узнайте, как настроить объем памяти, выделяемой диспетчером SQL Server Memory Manager процессам SQL Server. Просматривайте подходы и примеры управления памятью.
 helpviewer_keywords:
 - Virtual Memory Manager
 - max server memory option
@@ -20,29 +21,34 @@ helpviewer_keywords:
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
-ms.author: mikeray
-ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.author: pelopes
+ms.openlocfilehash: 27e39532a3b6198fd6d54c7b58407e76c487325a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751900"
 ---
 # <a name="server-memory-configuration-options"></a>Параметры конфигурации памяти сервера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-Два параметра памяти сервера, **min server memory** и **max server memory**, используются для изменения в конфигурации объема памяти (в мегабайтах), управляемой диспетчером памяти SQL Server для процесса SQL Server, применяемого экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Измените объем памяти (в мегабайтах) для процесса SQL Server, используемого экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Существует два параметра использовании серверной памяти: **Мин. память сервера** и **Макс. память сервера**. Эти параметры меняют объем памяти, выделяемой диспетчером SQL Server Memory Manager процессам SQL Server.
   
-По умолчанию параметр **Мин. памяти сервера** имеет значение 0, а параметр **Макс. памяти сервера** — 2 147 483 647 MБ. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов. Дополнительные сведения см. в разделе [Управление динамической памятью](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management). 
+Параметры по умолчанию и минимальное допустимое значение для этих параметров
 
-Минимальный объем памяти для **max server memory** составляет 128 МБ.
-  
+|Параметр  |  По умолчанию | Минимально допустимое  |
+|---------|---------|---------|
+|**min server memory**     |    0     |    0     |
+|**max server memory**     |     2 147 483 647 мегабайт (МБ)     |  128 МБ       |
+
+По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов. Дополнительные сведения см. в разделе [Управление динамической памятью](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management).
+
 > [!IMPORTANT]  
-> Если вы зададите слишком высокое значение **Макс. памяти сервера**, одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возможно, придется конкурировать с другими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенными на том же узле, за память. Если же задать слишком низкое значение, может возникнуть значительный дефицит памяти или проблемы с производительностью. Если присвоить параметру **Макс. памяти сервера** минимальное значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не запуститься. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска **_-f_** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
+> Если вы зададите слишком высокое значение **макс. памяти сервера** одному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], возможно, придется конкурировать с другими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенными на том же узле, за память. Если же задать слишком низкое значение, может возникнуть значительный дефицит памяти или проблемы с производительностью. Если присвоить параметру **Макс. памяти сервера** минимальное значение, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может не запуститься. Если не удается запустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] после изменения этого параметра, запустите его с использованием параметра запуска **_-f_** и верните параметр **max server memory** к предыдущему значению. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может использовать память динамически; но можно установить параметры памяти вручную и ограничить объем памяти, доступный для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Перед настройкой объема памяти для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] определите подходящее значение путем вычитания из общего объема физической памяти того объема, который требуется операционной системе, выделениям памяти, не управляемым параметром max_server_memory, и другим экземплярам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (и для других нужд, если компьютер не выделен полностью под сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Разница — максимальный объем памяти, который можно выделить текущему экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
-## <a name="setting-the-memory-options-manually"></a>Настройка параметров памяти вручную  
+## <a name="set-options-manually"></a><a name="manually"></a> Задать параметры вручную  
 Можно установить для параметров сервера **Мин. памяти сервера** и **Макс. памяти сервера** значения, покрывающие весь доступный объем памяти. Этот метод полезен для системных администраторов или администраторов баз данных, когда требуется настроить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] так, чтобы его параметры не противоречили требованиям к памяти других приложений или других экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], запущенных на этом узле.
 
 > [!NOTE]
@@ -61,7 +67,7 @@ ms.locfileid: "79288358"
 
 <sup>2</sup> Сведения о вычислении рабочих потоков по умолчанию для заданного числа сходных ЦП на текущем узле см. в разделе [Настройка параметра конфигурации сервера "Максимальное число рабочих потоков"](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md).
 
-## <a name="how-to-configure-memory-options-using-ssmanstudiofull"></a>Настройка параметров памяти с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="use-ssmanstudiofull"></a>Используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 Используйте два параметра памяти сервера, **Мин. памяти сервера** и **Макс. памяти сервера**, для настройки объема памяти (в мегабайтах), находящейся в управлении диспетчера памяти [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может динамически изменять требования к памяти в зависимости от доступных системных ресурсов.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory-not-recommended"></a>Настройка фиксированного объема памяти (не рекомендуется)  
@@ -105,7 +111,7 @@ ms.locfileid: "79288358"
   
 6.  В диалоговом окне **Параметр политики локальной защиты** добавьте учетную запись с правами запуска sqlservr.exe (стартовая учетная запись [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]).  
   
-## <a name="running-multiple-instances-of-ssnoversion"></a>Запуск нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="multiple-instances-of-ssnoversion"></a>Несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  При выполнении нескольких экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]существует три подхода к управлению памятью.  
   
 -   Используйте параметр **Макс. памяти сервера**, чтобы управлять использованием памяти, как [указано выше](#max_server_memory). Установите максимальные значения для каждого экземпляра, учитывая, что их сумма не должна превышать общий объем физической памяти, установленной на компьютере. Рекомендуется выделять каждому экземпляру объем памяти, пропорциональный его ожидаемой рабочей нагрузке или размеру базы данных. Данный подход имеет то преимущество, что свободная память доступна новым процессам или экземплярам сразу же после их запуска. Недостаток состоит в том, что, когда выполняются не все экземпляры, ни один из выполняющихся экземпляров не сможет использовать память, оставшуюся свободной.  
@@ -116,7 +122,8 @@ ms.locfileid: "79288358"
   
  Эти настройки можно изменять без перезапуска экземпляров, поэтому можно легко экспериментировать с целью нахождения наиболее подходящих настроек для данной модели использования.  
   
-## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Выделение максимального объема памяти для SQL Server  
+## <a name="provide-the-maximum-amount-of-memory"></a>Выделение максимального объема памяти
+
 Для всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] память можно выделять вплоть до предела виртуального адресного пространства процесса. Дополнительные сведения см. в разделе [Предельный объем памяти для выпусков Windows и Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016).
 
 ## <a name="examples"></a>Примеры
@@ -144,15 +151,15 @@ GO
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
-    large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
-    locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
-    virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
-    virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
-    virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
-    page_fault_count AS sql_page_fault_count,
-    memory_utilization_percentage AS sql_memory_utilization_percentage, 
-    process_physical_memory_low AS sql_process_physical_memory_low, 
-    process_virtual_memory_low AS sql_process_virtual_memory_low
+   large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 
+   locked_page_allocations_kb/1024 AS sql_locked_page_allocations_MB,
+   virtual_address_space_reserved_kb/1024 AS sql_VAS_reserved_MB, 
+   virtual_address_space_committed_kb/1024 AS sql_VAS_committed_MB, 
+   virtual_address_space_available_kb/1024 AS sql_VAS_available_MB,
+   page_fault_count AS sql_page_fault_count,
+   memory_utilization_percentage AS sql_memory_utilization_percentage, 
+   process_physical_memory_low AS sql_process_physical_memory_low, 
+   process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
 
@@ -164,7 +171,7 @@ SELECT c.value, c.value_in_use
 FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="next-steps"></a>Дальнейшие действия
  [Руководство по архитектуре управления памятью](../../relational-databases/memory-management-architecture-guide.md)   
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   

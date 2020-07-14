@@ -1,24 +1,24 @@
 ---
 title: Управление отработкой отказа для группы доступности — SQL Server на Linux
 description: 'В этой статье описываются типы отработки отказа: автоматический, запланированный и принудительный переход на другой ресурс вручную. При автоматическом и запланированном переходе на другой ресурс вручную все данные сохраняются.'
-author: MikeRayMSFT
-ms.author: mikeray
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 635c567722fd5744aa56a16a6f48e8c4284f8ba8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 60dbfed32581a7646da590004c839fc7cf3d316f
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216853"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892301"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Отработка отказа для группы доступности Always On на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В контексте группы доступности роли первичной и вторичной реплик доступности обычно являются взаимозаменяемыми в ходе процесса, известного как переход на другой ресурс или отработка отказа. Существуют три формы перехода на другой ресурс: автоматический переход на другой ресурс (без потери данных), запланированный переход на другой ресурс вручную (без потери данных) и принудительный переход на другой ресурс вручную (с возможной потерей данных), обычно именуемый *принудительным переходом на другой ресурс*. При автоматической и запланированной ручной отработке отказа все данные сохраняются. Группа доступности выполняет отработку отказа на уровне реплики доступности. Это значит, что при отработке отказа группа доступности переходит на одну из ее вторичных реплик (на текущую цель отработки отказа). 
 
@@ -81,14 +81,29 @@ ms.locfileid: "80216853"
 Пример ограничения, созданного в результате отработки отказа вручную. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > Имя ресурса группы доступности в кластерах Pacemaker на Red Hat Enterprise Linux 8.x и Ubuntu 18.04 может выглядеть следующим образом: *ag_cluster-clone*. Это связано с тем, что наименования ресурсов теперь создаются с учетом *клона с возможностью продвижения*. 
+
 - **Пример для RHEL/Ubuntu**
 
    где `cli-prefer-ag_cluster-master` — это код ограничения, которое необходимо удалить. `sudo pcs constraint list --full` возвращает этот код. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   либо
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Кроме того, вы можете выполнять перемещение и очистку автоматически созданных ограничений в одной строке, как показано ниже. В следующем примере термин *клон* используется в значении, употребляемом в Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **Пример для SLES**
 
    В следующей команде `cli-prefer-ms-ag_cluster` — это идентификатор ограничения. `crm config show` возвращает этот код. 

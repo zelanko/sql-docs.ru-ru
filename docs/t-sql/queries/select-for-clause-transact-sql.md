@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 57d18e823d76e039f93eff8e5c685239686fe505
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c734833e71bcfc0ffb04deb227404b089b78d3cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634304"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736287"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR, предложение (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Предложение FOR используется для указания одного из следующих параметров для результатов запроса.
   
@@ -92,7 +92,7 @@ JSON
  Активирует возможность обновления данных во время их просмотра с помощью курсора в режиме обзора DB-Library. Таблицу можно просмотреть внутри приложения, если в таблице содержится столбец **timestamp**, таблице присвоен уникальный индекс или в конце инструкции SELECT, отсылаемой экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], имеется параметр FOR BROWSE.  
   
 > [!NOTE]
-> Нельзя использовать синтаксис \<lock_hint> HOLDLOCK для инструкции SELECT, включающей в себя параметр FOR BROWSE.
+> Нельзя использовать синтаксис \<lock_hint> HOLDLOCK для инструкции SELECT, включающей в себя параметр FOR BROWSE.
   
  Параметр FOR BROWSE не может быть использован в инструкциях SELECT, соединенных оператором UNION.  
   

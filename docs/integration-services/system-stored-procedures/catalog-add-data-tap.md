@@ -10,19 +10,19 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6df265a27d050dd554af2f57be15d398f635aa3e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295577"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749770"
 ---
 # <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Добавляет отвод данных на выходе компонента в потоке данных пакета для экземпляра выполнения.  
   
@@ -56,7 +56,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  [ @data_filename = ] *data_filename*  
  Имя файла, в котором хранятся полученные данные. Если задача потока данных выполняется внутри контейнера «цикл по каждому элементу» или «цикл по элементам», то полученные данные для каждого прохода цикла хранятся в отдельных файлах. Каждому файлу добавляется префикс с номером, соответствующим итерации.  
   
- По умолчанию файл хранится в папке \<*диск*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
+ По умолчанию файл хранится в папке \<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
   
  Параметр *data_filename* имеет тип **nvarchar(4000)** .  
   
@@ -67,7 +67,7 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  Возвращает идентификатор отвода данных. Параметр *data_tap_id* имеет тип **bigint**.  
   
 ## <a name="example"></a>Пример  
- В следующем примере отвод данных создается в пути потока данных `'Paths[OLE DB Source.OLE DB Source Output]`, в задаче потока данных `\Package\Data Flow Task`. Полученные данные сохраняются в файл `output0.txt` в папке DataDumps (\<*диск*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
+ В следующем примере отвод данных создается в пути потока данных `'Paths[OLE DB Source.OLE DB Source Output]`, в задаче потока данных `\Package\Data Flow Task`. Полученные данные сохраняются в файл `output0.txt` в папке DataDumps (\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -126,7 +126,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Требования  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись [Службы SSIS 2012. Взгляд на отвод данных](https://go.microsoft.com/fwlink/?LinkId=239983) в блоге rafael-salas.com.  
+ Запись в блоге [SSIS 2012: A Peek to Data Taps](https://go.microsoft.com/fwlink/?LinkId=239983) (Службы SSIS 2012. Взгляд на отвод данных) в блоге rafael-salas.com.  
   
 ## <a name="see-also"></a>См. также:  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  

@@ -9,18 +9,18 @@ manager: cgronlun
 ms.date: 05/11/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c5bb573a3d8d5e93b51bb0536b5fc2171987a0ee
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: c07c92b65fe8ebed54ac75f3b9180bbd39534109
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269423"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882506"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-docker"></a>Установка Служб машинного обучения SQL Server (Python, R) в Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 В этой статье объясняется, как установить Службы машинного обучения SQL Server в Docker. Службы машинного обучения можно использовать для запуска сценариев R или Python в базе данных. Мы не предоставляем готовые контейнеры со Службами машинного обучения. Вы можете создать их из контейнеров SQL Server, используя [пример шаблона, доступный на сайте GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -36,7 +36,7 @@ ms.locfileid: "83269423"
 
 Следующая команда позволяет клонировать репозиторий `mssql-docker` Git в локальный каталог.
 
-1. Откройте терминал bash в ОС Linux или Mac либо откройте терминал подсистемы Windows для Linux (WSL) в ОС Windows.
+1. Откройте терминал Bash в Linux или Mac.
 
 2. Создайте каталог для хранения локальной копии репозитория mssql-docker.
 
@@ -65,10 +65,12 @@ ms.locfileid: "83269423"
 3. Выполните приведенную ниже команду.
 
     ```bash
-    docker runs -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e SA_PASSWORD=<your_sa_password> -v OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
+    docker run -d -e MSSQL_PID=Developer -e ACCEPT_EULA=Y -e ACCEPT_EULA_ML=Y -e MSSQL_SA_PASSWORD=<password> -v <directory on the host OS>:/var/opt/mssql -p 1433:1433 mssql-server-mlservices
     ```
-
-    Измените `<your_sa_password>` в `SA_PASSWORD=<your_sa_password>` и измените путь `-v`. 
+  
+    > [!NOTE]
+    > Для MSSQL_PID можно использовать следующие значения: Developer (бесплатный), Express (бесплатный), Enteprise (платный), Standard (платный). Если вы используете платный выпуск, убедитесь, что вы приобрели лицензию. Замените значение (пароль) фактическим паролем. Монтирование томов с помощью -v необязательно. Замените (каталог в ОС узла) фактическим каталогом, в который необходимо подключить файлы данных и журналов базы данных.
+    
 
 4. Подтвердите, выполнив следующую команду:
 
@@ -89,30 +91,19 @@ ms.locfileid: "83269423"
    export ACCEPT_EULA_ML='Y'
    export PATH_TO_MSSQL='/home/mssql/'
    ```
-
-2. Выполните скрипт run.sh:
-
-   ```bash
-   ./run.sh
-   ```
-
-   Эта команда позволяет создать контейнер SQL Server со Службами машинного обучения, используя выпуск Developer Edition (по умолчанию). Порт SQL Server **1433** доступен на узле как порт **1401**.
-
+  
    > [!NOTE]
    > Процесс запуска контейнера с рабочими выпусками SQL Server немного отличается. Дополнительные сведения см. в статье [Настройка образов контейнеров SQL Server в Docker](sql-server-linux-configure-docker.md). Если вы используете те же имена и порты контейнеров, действия в оставшейся части этого руководства будут актуальны и для рабочих контейнеров.
 
-3. Чтобы просмотреть контейнеры Docker, выполните команду `docker ps`:
+2. Чтобы просмотреть контейнеры Docker, выполните команду `docker ps`:
 
    ```bash
    sudo docker ps -a
    ```
 
-4. Если в столбце **STATUS** (Состояние) отображается значение **Up** (Работает), SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (Порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](sql-server-linux-configure-docker.md#troubleshooting).
+3. Если в столбце **STATUS** (Состояние) отображается значение **Up** (Работает), SQL Server выполняется в контейнере и прослушивает порт, указанный в столбце **PORTS** (Порты). Если в столбце **STATUS** контейнера с SQL Server отображается **Exited** (завершен), см.руководство [Устранение неполадок конфигурации](sql-server-linux-configure-docker.md#troubleshooting).
 
-   ```bash
-   $ sudo docker ps -a
-   ```
-
+ 
     Выходные данные:
 
     ```

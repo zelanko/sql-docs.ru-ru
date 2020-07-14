@@ -1,5 +1,6 @@
 ---
 title: Прозрачное шифрование данных (TDE) | Документация Майкрософт
+description: Сведения о прозрачном шифровании данных (TDE), которое шифрует данные SQL Server, Базы данных SQL Azure и Azure Synapse Analytics. Это называется шифрованием неактивных данных.
 ms.custom: ''
 ms.date: 05/09/2019
 ms.prod: sql
@@ -18,16 +19,16 @@ author: jaszymas
 ms.author: jaszymas
 ms.reviewer: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e64ad8fb58258006fedbf527b26b59f8120f3ec8
-ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
+ms.openlocfilehash: b37932efe96f0892e5e2e3ce6c30c4adf1de557d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82987428"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002797"
 ---
 # <a name="transparent-data-encryption-tde"></a>Прозрачное шифрование данных (TDE)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 *Прозрачное шифрование данных* (TDE) позволяет шифровать файлы данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] и [!INCLUDE[ssSDWfull](../../../includes/sssdwfull-md.md)]. Это так называемое шифрование неактивных данных.
 

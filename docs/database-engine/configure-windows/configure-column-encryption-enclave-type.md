@@ -1,5 +1,6 @@
 ---
 title: Настройка типа анклава для параметра конфигурации сервера Always Encrypted | Документация Майкрософт
+description: Узнайте, как включить или отключить безопасный анклав для Always Encrypted. Узнайте, как проверить правильность инициализации анклава.
 ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4786c512850d161d9b7ab33f2a12cd0bd077b2bd
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6e16bbd33d9353c02cf72e3c931a5d8749197f5d
+ms.sourcegitcommit: 9a0824aa9bf54b24039c6a533d11474cfb5423ef
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73593824"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84818362"
 ---
 # <a name="configure-the-enclave-type-for-always-encrypted-server-configuration-option"></a>Настройка типа анклава для параметра конфигурации сервера Always Encrypted
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "73593824"
 
 Параметр конфигурации сервера **тип анклава для шифрования столбцов** определяет тип безопасного анклава, используемого для Always Encrypted. Параметр может принимать одно из следующих значений:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-------------------|-----------------| 
 |0|**Без безопасного анклава**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] не удается инициализировать безопасный анклав для Always Encrypted. Таким образом, функция Always Encrypted с безопасными анклавами недоступна.|  
 |1|**Безопасность на базе виртуализации (VBS)** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] попытается инициализировать анклав с безопасностью на базе виртуализации.

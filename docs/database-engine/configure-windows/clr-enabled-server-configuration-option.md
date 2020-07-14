@@ -1,5 +1,6 @@
 ---
 title: Параметр конфигурации сервера "clr enabled" | Документы Майкрософт
+description: Сведения о том, как с помощью параметра clr enabled указать, может ли SQL Server выполнять пользовательские сборки. Информация о том, в каких случаях общеязыковая среда выполнения не поддерживается.
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
@@ -11,21 +12,21 @@ helpviewer_keywords:
 - assemblies [CLR integration], verifying can run
 - clr enabled option
 ms.assetid: 0722d382-8fd3-4fac-b4a8-cd2b7a7e0293
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 71392e537cb034976b3c47d819897356e3bb58cb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 56ddc21a660ba8316a9c311546e4ced48067f270
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71682084"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759166"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Параметр конфигурации сервера «clr enabled»
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Используйте параметр «clr enabled», чтобы указать, может ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполнять пользовательские сборки. Параметр clr enabled принимает перечисленные ниже значения. 
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Выполнение сборок не разрешается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |1|Выполнение сборок разрешается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

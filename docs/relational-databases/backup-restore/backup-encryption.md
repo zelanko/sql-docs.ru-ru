@@ -11,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6efb6c939f0881e1fd5a90e0d7df96303d40bea4
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 502feae1c94b905069b567bcf62d82fc128299a4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220527"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728493"
 ---
 # <a name="backup-encryption"></a>Шифрование резервной копии
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе приводится общее описание параметров шифрования для резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он содержит сведения об использовании, преимуществах и рекомендациях для шифрования при резервном копировании.  
 
 ## <a name="overview"></a><a name="Overview"></a> Обзор  
@@ -73,8 +73,20 @@ ms.locfileid: "82220527"
 
 ##  <a name="permissions"></a><a name="Permissions"></a> Permissions  
 
-Для шифрования резервной копии или восстановления зашифрованной копии используется разрешение**VIEW DEFINITION** на сертификат или асимметричный ключ, используемый для шифрования резервной копии базы данных.  
-  
+Для учетной записи, которая выполняет операции резервного копирования в зашифрованной базе данных, требуются определенные разрешения. 
+
+- Роль уровня базы данных **db_backupoperator** для базы данных, для которой выполняется резервное копирование. Это необходимо, независимо от шифрования. 
+- Требует разрешения **VIEW DEFINITION** на сертификат в базе данных `master`.
+
+   В следующем примере предоставляются соответствующие разрешения для сертификата. 
+   
+   ```tsql
+   USE [master]
+   GO
+   GRANT VIEW DEFINITION ON CERTIFICATE::[<SERVER_CERT>] TO [<db_account>]
+   GO
+   ```
+
 > [!NOTE]  
 > Доступ к сертификату TDE для резервного копирования или восстановления базы данных, защищенной прозрачным шифрованием, не требуется.  
   

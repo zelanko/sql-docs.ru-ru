@@ -1,5 +1,6 @@
 ---
 title: База данных-получатель не присоединена | Документы Майкрософт
+description: Политика "Состояние присоединения базы данных доступности" проверяет состояние присоединения для базы данных-получателя в рамках основанной на политиках системы управления группами доступности Always On.
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a0b7ee3ee59a1ebf21854555c8ab75b6a2fc01b6
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68014230"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85899848"
 ---
 # <a name="secondary-database-is-not-joined"></a>База данных-получатель не подключена
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="introduction"></a>Введение  
   
@@ -32,7 +33,7 @@ ms.locfileid: "68014230"
 |**Категория**|**Предупреждение**|  
 |**Аспект**|База данных доступности|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  Эта политика проверяет состояние соединения данных базы данных-получателя (которая также называется «реплика базы данных-получателя»). Эта политика находится в нерабочем состоянии, если реплика набора данных не присоединена. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  

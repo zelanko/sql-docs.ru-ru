@@ -1,5 +1,6 @@
 ---
 title: Загрузка XML-данных | Документация Майкрософт
+description: Узнайте о нескольких методах передачи XML-данных в базы данных SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c30b896ca36d84866244553d6420db8c66287f59
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 01790e4eacf793926725770f980c8194013a155a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665135"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85738409"
 ---
 # <a name="load-xml-data"></a>Загрузка XML-данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Есть несколько способов передачи XML-данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Пример:  
   
 -   Если в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] данные хранятся в столбце типа [n]text или image, то эту таблицу можно импортировать с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Изменить тип столбца на XML можно с использованием инструкции ALTER TABLE.  
@@ -33,7 +34,7 @@ ms.locfileid: "80665135"
 ## <a name="bulk-loading-xml-data"></a>Массовая загрузка XML-данных  
  Массовую загрузку XML-данных на сервер можно осуществить при помощи реализованных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]средств массовой загрузки, таких как bcp. Инструкция OPENROWSET позволяет загрузить данные в XML-столбец из файлов. Это показано в следующем примере.  
   
-##### <a name="example-loading-xml-from-files"></a>Пример. Загрузка XML-данных из файлов  
+##### <a name="example-loading-xml-from-files"></a>Пример Загрузка XML-данных из файлов  
  Следующий пример показывает, как вставить строку в таблицу T. Значение XML-столбца загружается из файла «C:\MyFile\xmlfile.xml» как объект CLOB, а целочисленному столбцу назначается значение 10.  
   
 ```  
@@ -53,7 +54,7 @@ FROM    (SELECT *
   
 -   Чтобы явно задать кодировку, воспользуйтесь типом **varbinary()** , который не зависит от кодовых страниц, либо символьным типом для соответствующей кодовой страницы. После этого назначьте данные XML-столбцу, переменной или параметру.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Пример. Явное указание кодировки  
+### <a name="example-explicitly-specifying-an-encoding"></a>Пример явное указание кодировки  
  Предположим, что есть XML-документ vcdoc, хранящийся как **varchar(max)** , который не объявлен явно как XML. Приведенная ниже инструкция добавляет объявление XML с кодировкой "iso8859-1", присоединяет к нему XML-документ, приводит результат к типу **varbinary(max)** (чтобы сохранить двоичное представление) и, наконец, приводит его к типу XML. Это позволяет процессору XML выполнять синтаксический анализ данных в соответствии с указанной кодировкой «iso8859-1» и создавать для строковых значений соответствующее представление UTF-16.  
   
 ```  

@@ -1,5 +1,6 @@
 ---
 title: Использование проводника служебной программы для управления служебной программой SQL Server | Документация Майкрософт
+description: Ознакомьтесь с различными способами использования обозревателя программ для управления экземплярами SQL Server, например для настройки определений политик и просмотра использования ЦП и объема хранилища.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c34b8239b93d1b8fb9c814ab5b5ac17482f968f1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68115323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785625"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>Использование проводника служебных программ для управления служебной программой SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Проводник служебной программы, компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключается к экземплярам компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для отображения всех объектов в служебной программе представления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде дерева. Панель содержимого обозревателя программ предоставляет несколько способов просмотра сводных и подробных данных о состоянии исправности ресурсов управляемых экземпляров SQL Server. Обозреватель программ также реализует пользовательский интерфейс для просмотра определений политик и управления ими. Возможности обозревателя программ немного различаются в зависимости от объектов, представленных в служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако в целом они охватывают объекты, данные и политики, управляемые служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
 ## <a name="create-utility-control-point"></a>Создание пункта управления программой  
@@ -38,7 +39,7 @@ ms.locfileid: "68115323"
 ### <a name="sql-server-utility-navigation-pane"></a>Панель навигации служебной программы SQL Server  
  Панель навигации обозревателя программ предоставляет дерево объектов служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , сгруппированных по пункту управления программой. Чтобы раскрыть папку, щелкните знак «плюс» (+) или дважды щелкните имя пункта управления программой панели навигации обозревателя программ. Для выполнения стандартных задач щелкните правой кнопкой мыши папку или объект. Дерево включает следующие узлы.  
   
--   Верхним узлом в дереве является пункт управления программой. Имя узла состоит из следующих частей: "Имя_программы" (Имя_компьютера\имя_экземпляра_пункта_управления_программой). Если пункт управления программой отсутствует, его необходимо создать. Если отсутствует соединение с программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо установить его. Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Чтобы отобразить данные на панели содержимого обозревателя служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните имя пункта управления программой в дереве. Дополнительные сведения см. в статье [Панель мониторинга программ (служебная программа SQL Server)](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
+-   Верхним узлом в дереве является пункт управления программой. Имя узла составляется следующим образом: "Имя_программы" (Имя_компьютера\имя_экземпляра_пункта_управления_программой). Если пункт управления программой отсутствует, его необходимо создать. Если отсутствует соединение с программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо установить его. Дополнительные сведения см. в разделе [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md). Чтобы отобразить данные на панели содержимого обозревателя служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], щелкните имя пункта управления программой в дереве. Дополнительные сведения см. в статье [Панель мониторинга программ (служебная программа SQL Server)](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1).  
   
      Щелкните правой кнопкой мыши узел пункта управления программой (UCP), чтобы обновить данные на панели управления.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68115323"
 ### <a name="starting-powershell"></a>Запуск PowerShell  
  Сеанс PowerShell можно запустить, щелкнув любую папку или объект в дереве обозревателя объектов правой кнопкой мыши и выбрав пункт **Запустить Powershell**. В результате этого запускается сеанс PowerShell с поддержкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, в котором установлен путь к объекту, выбранному щелчком правой кнопкой мыши в обозревателе объектов. После этого можно вводить команды PowerShell в интерактивной среде PowerShell. Подробные сведения см. в статье [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md).  
   
- В PowerShell отсутствует справка F1, но содержится командлет **Get-Help** , позволяющий получить сведения об использовании PowerShell. Дополнительные сведения об использовании Get-Help см. в статье [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+В PowerShell отсутствует справка F1, но содержится командлет **Get-Help**, позволяющий получить сведения об использовании PowerShell. Дополнительные сведения об использовании Get-Help см. в статье [Get Help SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Функции и задачи служебной программы SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   

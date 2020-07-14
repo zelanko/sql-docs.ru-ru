@@ -34,15 +34,15 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 743c3c6d24be39ae9c2b56da26017bd4b15852a6
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 4003b08205f1c7db98d2656e17fe653a3616638d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635911"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748948"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Проверяет логическую и физическую целостность всех объектов в указанной базе данных путем выполнения следующих операций.    
     
@@ -221,7 +221,13 @@ DATA_PURITY
 |3|Указывает на повреждение в метаданных, приведшее к завершению команды DBCC.|    
 |4|Обнаружено нарушение доступа или утверждения.|    
 |5|Возникла неизвестная ошибка, которая привела к прекращению выполнения команды DBCC.|    
+
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] записывает дату и время выполнения не обнаружившей ошибок проверки согласованности для базы данных (она же «чистая» проверка согласованности). Это называется `last known clean check`. При первом запуске базы данных эта дата записывается в журнал событий (EventID-17573) и ERRORLOG в следующем формате: 
+>
+>`CHECKDB for database '<database>' finished without errors on 2019-05-05 18:08:22.803 (local time). This is an informational message only; no user action is required.`
     
+
 ## <a name="error-reporting"></a>Отчет об ошибках    
 Файл дампа (`SQLDUMP*nnnn*.txt`) создается в каталоге [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] LOG каждый раз, когда инструкция DBCC CHECKDB обнаруживает ошибку повреждения данных. Если для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включены функции сбора данных об *использовании компонентов* и *отчетов об ошибках*, этот файл автоматически отправляется в корпорацию [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Собранные данные используются для улучшения функциональности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 Файл дампа содержит результаты выполнения команды DBCC CHECKDB и дополнительные диагностические сведения. Доступ ограничен учетной записью службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и членами роли sysadmin. По умолчанию роль sysadmin содержит всех членов группы Windows `BUILTIN\Administrators` и группы локальных администраторов. В случае ошибки процесса сбора данных команда DBCC не завершается ошибкой.

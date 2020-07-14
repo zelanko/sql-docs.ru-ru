@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0ee4eb18589bc0ebdf214c2c21be25b1410b5db0
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6cfbecf5689432a0e9053abf043225b9f9ff596b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633008"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85631567"
 ---
 # <a name="grouping_id-transact-sql"></a>GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Представляет собой функцию, которая вычисляет уровень группирования. Если задано предложение GROUP BY, функция GROUPING_ID может использоваться только в предложениях SELECT \<select>, HAVING или ORDER BY.  
   
@@ -47,10 +47,10 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- Аргумент \<column_expression> функции GROUPING_ID должен точно соответствовать выражению в списке GROUP BY. Например, если группирование осуществляется с помощью функции DATEPART (yyyy, \<*имя столбца*>), то следует использовать функцию GROUPING_ID (DATEPART (yyyy, \<*имя столбца*>)), а если для группирования служит аргумент \<*имя столбца*>, следует использовать функцию GROUPING_ID (\<*имя столбца*>).  
+ Аргумент \<column_expression> функции GROUPING_ID должен точно соответствовать выражению в списке GROUP BY. Например, если группирование осуществляется с помощью функции DATEPART (yyyy, \<*column name*>), то следует использовать функцию GROUPING_ID (DATEPART (yyyy, \<*column name*>)), а если для группирования служит аргумент \<*column name*>, следует использовать функцию GROUPING_ID (\<*column name*>).  
   
 ## <a name="comparing-grouping_id--to-grouping-"></a>Сравнение функций GROUPING_ID () и GROUPING ()  
- GROUPING_ID (\<column_expression> [ **,** ...*n* ]) вводит эквивалент возвращаемого значения GROUPING (\<column_expression>) для каждого столбца в списке столбцов в каждой строке вывода как строку единиц и нулей. Функция GROUPING_ID интерпретирует эту строку как двоичное число и выполняет возврат эквивалентного целого числа. Рассмотрим, например, следующую инструкцию: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. В следующей таблице показаны входные и выходные значения функции GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) вводит возврат эквивалента GROUPING (\<column_expression>) для каждого столбца в своем списке столбцов в каждой строке вывода как строку единиц и нулей. Функция GROUPING_ID интерпретирует эту строку как двоичное число и выполняет возврат эквивалентного целого числа. Рассмотрим, например, следующую инструкцию: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. В следующей таблице показаны входные и выходные значения функции GROUPING_ID ().  
   
 |Статистически обработанные столбцы|Входные данные GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Выходные данные GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

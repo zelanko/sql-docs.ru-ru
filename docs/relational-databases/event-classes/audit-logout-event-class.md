@@ -1,5 +1,6 @@
 ---
 title: Класс событий Audit Logout | Документация Майкрософт
+description: Класс событий Audit Logout показывает, что пользователь отсоединился от SQL Server. Статья описывает столбцы данных класса событий Audit Logout.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,20 +13,20 @@ ms.assetid: 16a0178c-ca03-4078-bbdd-f481385fa2f1
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72a37ac98e6b4c557b06294c1d0ddeb1a3072356
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5848a29de18615da895572bede48014f9aecff2f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67897466"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726338"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout, класс событий
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   Класс событий **Audit Logout** показывает, что пользователь выполнил выход из (отсоединился от) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. События этого класса запускаются новыми соединениями или соединениями, которые многократно используются в пуле соединений.  
   
 ## <a name="audit-logout-event-class-data-columns"></a>Столбцы данных класса событий Audit Logout  
   
-|Имя столбца данных|Тип данных|Description|Идентификатор столбца|Фильтруемый|  
+|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|Фильтруемый|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|10|Да|  
 |**ClientProcessID**|**int**|Идентификатор, присвоенный главным компьютером сервера процессу, в котором работает клиентское приложение. Этот столбец данных заполняется в том случае, если клиент вводит идентификатор клиентского процесса.|9|Да|  
@@ -34,8 +35,8 @@ ms.locfileid: "67897466"
 |**DatabaseName**|**nvarchar**|Имя базы данных, в которой выполняется пользовательская инструкция.|35|Да|  
 |**Длительность**|**bigint**|Объем времени, прошедшего с момента входа пользователя в систему (приблизительно).|13|Да|  
 |**EndTime**|**datetime**|Конечное время выхода из системы.|15|Да|  
-|**EventClass**|**int**|Тип события = 15.|27|нет|  
-|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|нет|  
+|**EventClass**|**int**|Тип события = 15.|27|Нет|  
+|**EventSequence**|**int**|Порядковый номер данного события в запросе.|51|Нет|  
 |**EventSubClass**|**int**|Тип соединения, используемого для входа. 1 = без пула, 2 = в пуле.|21|Да|  
 |**HostName**|**nvarchar**|Имя компьютера, на котором выполняется клиентская программа. Заполнение этого столбца данных производится в том случае, если клиент предоставляет имя узла. Чтобы определить имя узла, используйте функцию HOST_NAME.|8|Да|  
 |**IsSystem**|**int**|Указывает, произошло событие в системном или в пользовательском процессе. 1 = системный, 0 = пользовательский.|60|Да|  

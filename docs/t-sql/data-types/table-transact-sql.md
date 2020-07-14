@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f3cd285b7a90f5addd01b479eb37898827605b87
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ad3a4659009ceb6d36aba9e3e97dc4e6f170788c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633642"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736508"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Специальный тип данных для хранения результирующего набора для обработки в будущем. Тип **table** используется в основном для временного хранения набора строк, возвращаемых как результирующий набор функции с табличным значением. Функции и переменные могут быть объявлены как имеющие тип **table**. Переменные **table** могут использоваться в функциях, хранимых процедурах и пакетах. Для объявления переменных типа **table** используйте инструкцию [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -82,7 +82,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 Переменные **table** предоставляют указанные ниже преимущества для запросов малого масштаба, которые содержат неизменяющиеся планы запросов. Их также рекомендуется использовать при частой перекомпиляции.
--   Переменная **table** ведет себя как локальная переменная. Она имеет точно определенную область применения. Эта переменная представлена функцией, хранимой процедурой или пакетом, в котором она объявлена.  
+-   Переменная **table** ведет себя как локальная переменная. Она имеет точно определенную область применения. Эту переменную можно использовать в функции, хранимой процедуре или пакете, где она объявлена.  
      Внутри этой области переменная **table** может использоваться как обычная таблица. Она может быть применена в любом месте, где используется таблица или табличное выражение в инструкциях SELECT, INSERT, UPDATE и DELETE. Но переменную **table** нельзя использовать в следующей инструкции:  
   
 ```sql

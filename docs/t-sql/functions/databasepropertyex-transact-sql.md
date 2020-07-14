@@ -17,18 +17,18 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f0bae370acd535f331d287cea38de04375891db0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d9d655cdbec3b353455f2da13ea0cb17e9d4cee0
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823919"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011474"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Для указанной в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных возвращает текущее значение заданного параметра или свойства базы данных.
   
@@ -87,7 +87,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsXTPSupported|Указывает, поддерживает ли база данных выполняющуюся в памяти OLTP, то есть создание и использование таблиц, оптимизированных для памяти, и модулей, скомпилированных в собственном коде.<br /><br /> Относится к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> IsXTPSupported не зависит от наличия файловой группы MEMORY_OPTIMIZED_DATA, которая требуется для создания объектов выполняющейся в памяти OLTP.|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: недопустимые входные данные, ошибка или неприменимо<br /><br /> Базовый тип данных: **int**|  
 |LastGoodCheckDbTime|Дата и время последней успешной команды DBCC CHECKDB, выполненной в указанной базе данных. <sup>1</sup> Если команда DBCC CHECKDB не была выполнена в базе данных, возвращается 1900-01-01 00:00:00.000.|**Область применения**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] начиная с SP2.</br>[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] начиная с накопительного пакета обновления 9 (CU9).</br>[!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)] или более поздняя версия.</br>База данных SQL Azure.<br/><br/>Значение datetime<br /><br /> NULL: недопустимые входные данные<br /><br /> Базовый тип данных: **datetime**| 
 |LCID|Код языка Windows для параметров сортировки.|Значение кода языка (в десятичном формате).<br /><br /> Базовый тип данных: **int**|  
-|MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> 1073741824<br /><br /> 5368709120<br /><br /> 10737418240<br /><br /> 21474836480<br /><br /> 32212254720<br /><br /> 42949672960<br /><br /> 53687091200<br /><br /> NULL: база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
+|MaxSizeInBytes|Максимальный размер базы данных в байтах.|**Применимо к**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br />[База данных SQL Azure и Azure Synapse Analytics (SQL DW)](/azure/sql-database/sql-database-single-database-scale#dtu-based-purchasing-model) — значение зависит от целевого показателя обслуживания, если не куплено дополнительное хранилище.<br /><br />[Виртуальное ядро](/azure/sql-database/sql-database-single-database-scale#vcore-based-purchasing-model) — значение увеличивается на 1 ГБ до максимального размера.<br /><br />NULL: база данных не запущена<br /><br /> Базовый тип данных: **bigint**|  
 |Восстановление|Модель восстановления базы данных|FULL: Модель полного восстановления<br /><br /> BULK_LOGGED: модель с неполным протоколированием<br /><br /> SIMPLE: Простая модель восстановления<br /><br /> Базовый тип данных: **nvarchar(128)**|  
 |ServiceObjective|Описывает уровень производительности базы данных в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] или [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|Это может быть:<br /><br /> NULL = база данных не запущена<br /><br /> Общий (для выпусков Web или Business)<br /><br /> Basic<br /><br /> S0<br /><br /> S1<br /><br /> S2<br /><br /> S3<br /><br /> P1<br /><br /> P2<br /><br /> P3<br /><br /> ElasticPool<br /><br /> Системный (для базы данных master)<br /><br /> Базовый тип данных: **nvarchar(32)**|  
 |ServiceObjectiveId|Идентификатор цели службы в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|**uniqueidentifier**, определяющий цель службы.|  

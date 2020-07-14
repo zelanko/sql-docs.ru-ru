@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 5cb9ad962967680dd438e4842e8785e2bb33ed53
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: fb5a918c33a0c2017008079cc90693fb9c50309d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633884"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006271"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -110,7 +109,7 @@ ms.locfileid: "81633884"
 Набор контекстов выполнения может быть создан при помощи нескольких вызовов инструкции EXECUTE AS на нескольких участниках. При вызове инструкция REVERT производит переключение контекста на имя входа или на пользователя на более высоком уровне стека контекстов. Это показано в разделе [Пример А](#_exampleA).  
   
 ##  <a name="specifying-a-user-or-login-name"></a><a name="_user"></a> Указание имени пользователя или имени входа  
- Имя пользователя или имя входа, указанное в инструкции EXECUTE AS \<context_specification>, должно быть субъектом в базе данных **sys.database_principals** или **sys.server_principals** соответственно, в противном случае инструкция EXECUTE AS будет завершена с ошибками. Кроме того, этому участнику должны быть предоставлены разрешения IMPERSONATE. Если вызывающая сторона не является владельцем базы данных или членом предопределенной роли сервера **sysadmin**, то субъект должен существовать даже тогда, когда пользователь обращается к базе данных или к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы Windows. Для примера рассмотрим следующие условия. 
+ Имя пользователя или имя для входа, указанное в инструкции EXECUTE AS \<context_specification>, должно существовать как субъект в базе данных **sys.database_principals** или **sys.server_principals** соответственно, в противном случае инструкция EXECUTE AS завершится неудачно. Кроме того, этому участнику должны быть предоставлены разрешения IMPERSONATE. Если вызывающая сторона не является владельцем базы данных или членом предопределенной роли сервера **sysadmin**, то субъект должен существовать даже тогда, когда пользователь обращается к базе данных или к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве члена группы Windows. Для примера рассмотрим следующие условия. 
   
 -   Группа **CompanyDomain\SQLUsers** имеет доступ к базе данных **Sales**.  
   

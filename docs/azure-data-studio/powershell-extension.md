@@ -1,22 +1,21 @@
 ---
 title: Расширение PowerShell
-titleSuffix: Azure Data Studio
 description: Установка и использование PowerShell для Azure Data Studio
 ms.custom: seodec18
 ms.date: 04/19/2019
-ms.reviewer: alayu; sstein
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.reviewer: alayu, maghan, sstein
+ms.prod: azure-data-studio
+ms.technology: ''
 ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 manager: matthend
-ms.openlocfilehash: fd5fabd1627968287c60fc8636964f4ac4831004
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5f30d6078b28026dec2c6a4eef22eb1f3279755d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81484593"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85637737"
 ---
 # <a name="powershell-editor-support-for-azure-data-studio"></a>Поддержка редактора PowerShell для Azure Data Studio
 
@@ -24,7 +23,6 @@ ms.locfileid: "81484593"
 С его помощью вы получаете возможность создания и отладки скриптов PowerShell в интерфейсе Azure Data Studio, схожем с интегрированной средой разработки.
 
 ![Расширение PowerShell](media/powershell-extension/powershell-extension.png)
-
 
 ## <a name="features"></a>Компоненты
 
@@ -38,7 +36,6 @@ ms.locfileid: "81484593"
 - Запуск выбранного фрагмента кода PowerShell с помощью клавиши <kbd>F8</kbd>
 - Запуск интерактивной справки для символа под курсором с помощью сочетания клавиш <kbd>CTRL</kbd>+<kbd>F1</kbd>
 - Базовая поддержка интерактивной консоли
-
 
 ## <a name="installing-the-extension"></a>Установка расширения
 
@@ -259,7 +256,7 @@ WideWorldImporters   Normal         3.2 GB     2.6 GB Simple       130 sa
 
 Это расширение [лицензируется на условиях лицензии MIT](https://github.com/PowerShell/vscode-powershell/blob/master/LICENSE.txt). Дополнительные сведения о двоичных файлах сторонних производителей, включаемых в выпуски этого проекта, см. в файле [заметок стороннего производителя](https://github.com/PowerShell/vscode-powershell/blob/master/Third%20Party%20Notices.txt).
 
-## <a name="code-of-conductconduct-md"></a>[Правила поведения][conduct-md]
+## <a name="code-of-conduct"></a>Правила поведения
 
 В рамках этого проекта действуют [правила поведения в отношении продуктов с открытым исходным кодом Майкрософт][conduct-code].
 Дополнительные сведения см. в статье [Вопросы и ответы, связанные с правилами поведения][conduct-FAQ]. Чтобы задать вопрос или получить комментарии, обратитесь по адресу [opencode@microsoft.com][conduct-email].

@@ -11,16 +11,16 @@ ms.assetid: 23274522-e5cf-4095-bed8-bf986d6342e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba6894a7e30c9b5112ced867766598cd62a0552f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 99d4cd492ffd35f36a1f44754128ce54f028aaed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74165462"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85984703"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>темпоральные таблицы с системным управлением версиями и таблицы с оптимизацией памяти
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Темпоральные таблицы с системным управлением версиями для [таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) — это экономичное решение для сценариев, в которых требуется [аудит и анализ на момент времени данных](https://msdn.microsoft.com/library/mt631669.aspx) для данных, собранных из рабочих нагрузок In-Memory OLTP. Они обеспечивают высокую скорость обработки транзакций, параллелизм без блокировки и в то же время возможность хранения большого объема данных журнала, которые легко можно запросить.
 
@@ -54,7 +54,7 @@ ms.locfileid: "74165462"
 
 - Имя таблицы создается в следующем формате: **Memory_Optimized_History_Table_<ИД_объекта>** , где *<ИД_объекта>*  — это идентификатор текущей темпоральной таблицы.
 - Таблица реплицирует схему текущей темпоральной таблицы, а также один столбец типа BIGINT. Этот дополнительный столбец гарантирует уникальность строк, перемещаемых во внутренний буфер.
-- Для имени дополнительного столбца используется следующий формат: **Change_ID[_<суффикс>]** , где *_\<суффикс>* добавляется в том случае, если в таблице уже есть столбец *Change_ID*.
+- Для имени дополнительного столбца используется следующий формат: **Change_ID[_<суффикс>]** , где *_\<suffix>* добавляется в том случае, если в таблице уже есть столбец *Change_ID*.
 - Максимальный размер строки таблицы с системным управлением версиями, оптимизированной для памяти, уменьшается на восемь байт из-за дополнительного столбца BIGINT в промежуточной таблице. Новое максимальное значение — 8052 байт.
 - Внутренняя промежуточная таблица, оптимизированная для памяти, не представлена в обозревателе объектов SQL Server Management Studio.
 - Метаданные этой таблицы, а также ее связь с текущей темпоральной таблицей можно найти в [sys.internal_tables (Transact-SQL)](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md).

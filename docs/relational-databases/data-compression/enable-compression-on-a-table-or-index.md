@@ -23,16 +23,16 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ea7316580a1c9d3ce2f68e0d701cd5885c52bc80
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 5d8ad2b1ccc0951276dccaf085c554fa7385b6e1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488013"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003914"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Включение сжатия таблицы или индекса
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом разделе описано включение таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -146,7 +146,7 @@ ms.locfileid: "81488013"
   
                 -   При выборе **День**введите дату месяца, в которую должно выполняться расписание задания, и укажите частоту повторного выполнения расписания задания в месяцах. Например, если требуется, чтобы расписание задания выполнялось 15 числа каждого второго месяца, выберите **День** и введите в первом поле 15 и 2 — во втором поле. Обратите внимание, что число, введенное во втором поле, не должно превышать 99.  
   
-                -   При выборе **Определенный**выберите определенный день недели в месяце, в котором должно выполняться расписание задания, и укажите частоту повторного выполнения расписания задания в месяцах. Например, если требуется, чтобы расписание задания выполнялось в последний день недели каждого второго месяца, выберите **День**, затем **последний** в первом списке и **рабочий день** во втором списке, а потом введите "2" во втором поле. Еще можно выбрать **первый**, **второй**, **третий**или **четвертый**, а также конкретные дни недели (например, воскресенье или среду) в первых двух списках. Обратите внимание, что число, введенное в последнем поле, не должно превышать 99.  
+                -   При выборе **Определенный**выберите определенный день недели в месяце, в котором должно выполняться расписание задания, и укажите частоту повторного выполнения расписания задания в месяцах. Например, если требуется, чтобы расписание задания выполнялось в последний день недели каждого второго месяца, выберите **День**, затем **последний** в первом списке и **рабочий день** во втором списке, а потом введите "2" во втором поле. Также можно выбрать **первый**, **второй**, **третий** или **четвертый**, а также конкретные дни недели (например: воскресенье или среду) в первых двух списках. Обратите внимание, что число, введенное в последнем поле, не должно превышать 99.  
   
         2.  В поле **Сколько раз в день**укажите частоту повторного выполнения расписания задания в день запуска расписания задания:  
   
@@ -202,7 +202,11 @@ ms.locfileid: "81488013"
      Завершив выбор параметров, нажмите кнопку **Закрыть**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Использование Transact-SQL  
-  
+
+### <a name="sql-server"></a>SQL Server
+
+В SQL Server запустите `sp_estimate_data_compression_savings`, а затем включите сжатие для таблицы или индекса. См. следующие разделы. 
+
 #### <a name="to-enable-compression-on-a-table"></a>Чтобы включить сжатие таблицы  
   
 1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -245,7 +249,47 @@ ms.locfileid: "81488013"
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### <a name="on-azure-sql-database"></a>В базе данных SQL Azure
+
+База данных SQL Azure не поддерживает `sp_estimate_data_compression`. Следующие скрипты обеспечивают сжатие без оценки объема сжатия. 
+
+#### <a name="to-enable-compression-on-a-table"></a>Чтобы включить сжатие таблицы  
+  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  На стандартной панели выберите пункт **Создать запрос**.  
+  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В примере включается сжатие ROW во всех секциях указанной таблицы.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### <a name="to-enable-compression-on-an-index"></a>Чтобы включить сжатие индекса  
+  
+1.  В **обозревателе объектов**подключитесь к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  На стандартной панели выберите пункт **Создать запрос**.  
+  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В примере сначала формируется запрос к представлению каталога `sys.indexes` для получения имени и `index_id` для каждого индекса таблицы `Production.TransactionHistory` . В конце в примере перестраивается индекс ID 2 (`IX_TransactionHistory_ProductID`), с указанием типа сжатия PAGE.  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  Дополнительные сведения см. в разделах [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md) и [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   

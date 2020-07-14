@@ -1,29 +1,28 @@
 ---
-title: Использование проверки подлинности Active Directory (Kerberos)
-titleSuffix: Azure Data Studio
+title: Подключение к SQL Server с использованием проверки подлинности Windows (Kerberos)
 description: Сведения о том, как разрешить Kerberos использовать проверку подлинности Active Directory для Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
+ms.prod: azure-data-studio
+ms.technology: ''
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: meet-bhagdev
-ms.author: meetb
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 8aa4502fca51ef8dc15fceb119297915a64bc682
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c2e6b303217d420d439d510fc3fc24886657684b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957068"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85774661"
 ---
-# <a name="connect-name-sos-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение [!INCLUDE[name-sos](../includes/name-sos-short.md)] к своему SQL Server с использованием проверки подлинности Windows — Kerberos 
+# <a name="connect-azure-data-studio-to-your-sql-server-using-windows-authentication---kerberos"></a>Подключение Azure Data Studio к своему SQL Server с использованием проверки подлинности Windows — Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] поддерживает подключение к SQL Server с помощью Kerberos.
+Azure Data Studio поддерживает подключение к SQL Server с помощью Kerberos.
 
-Чтобы использовать встроенную проверку подлинности (проверку подлинности Windows) в macOS или Linux, нужно настроить **билет Kerberos**, связывающий вашего текущего пользователя с учетной записью домена Windows. 
+Чтобы использовать встроенную проверку подлинности (проверку подлинности Windows) в macOS или Linux, нужно настроить **билет Kerberos**, связывающий вашего текущего пользователя с учетной записью домена Windows.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Доступ к компьютеру, присоединенному к домену Windows, для запроса контроллера домена Kerberos.
 - SQL Server должен быть настроен для разрешения проверки подлинности Kerberos. Для драйвера клиента, работающего в Unix, встроенная проверка подлинности поддерживается только с помощью Kerberos. Дополнительные сведения см. в статье [Использовании встроенной проверки подлинности Kerberos для подключения к SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). Для каждого экземпляра SQL Server, к которому вы пытаетесь подключиться, должны быть зарегистрированы имена субъектов-служб. Дополнительные сведения см. в разделе [Регистрация имени участника-службы](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
@@ -167,7 +166,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-name-sos"></a>Подключение с помощью [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-azure-data-studio"></a>Подключение с помощью Azure Data Studio
 
 * Создайте профиль подключения.
 

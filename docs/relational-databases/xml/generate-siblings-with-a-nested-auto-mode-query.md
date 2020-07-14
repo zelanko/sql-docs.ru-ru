@@ -1,5 +1,6 @@
 ---
 title: Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO | Документация Майкрософт
+description: Сведения о создании элементов XML того же уровня с помощью вложенного запроса в режиме AUTO в качестве альтернативы использованию режима EXPLICIT.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -13,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2e39eb810ec59b6947ff088234cf874cf4cef13b
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f65bb2dab5e00a52943a58686d6f5d448391903
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665292"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691326"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Формирование одноуровневых элементов с помощью вложенного запроса в режиме AUTO
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В следующем примере показано, как создавать элементы с общим родителем при помощи вложенного запроса в режиме AUTO. Единственный способ создать такой XML — использовать режим EXPLICIT. Однако пользоваться этим способом не всегда удобно.  
   
 ## <a name="example"></a>Пример  

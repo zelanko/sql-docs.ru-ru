@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48dabb9e01a3b5dbddaa07cbe7534321207f1d0f
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82181102"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834675"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Выполняет операции вставки, обновления или удаления для целевой таблицы на основе результатов соединения с исходной таблицей. Например, можно синхронизировать две таблицы путем вставки, обновления или удаления строк в одной таблице на основании отличий, найденных в другой таблице.  
   
@@ -78,41 +78,12 @@ MERGE
     { [ <table_hint_limited> [ ,...n ] ]  
     [ [ , ] INDEX ( index_val [ ,...n ] ) ] }  
 }  
-  
-<table_source> ::=
-{  
-    table_or_view_name [ [ AS ] table_alias ] [ <tablesample_clause> ]
-        [ WITH ( table_hint [ [ , ]...n ] ) ]
-  | rowset_function [ [ AS ] table_alias ]
-        [ ( bulk_column_alias [ ,...n ] ) ]
-  | user_defined_function [ [ AS ] table_alias ]  
-  | OPENXML <openxml_clause>
-  | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]
-  | <joined_table>
-  | <pivoted_table>
-  | <unpivoted_table>
-}  
-  
+
 <merge_search_condition> ::=  
     <search_condition>  
   
 <merge_matched>::=  
     { UPDATE SET <set_clause> | DELETE }  
-  
-<set_clause>::=  
-SET  
-  { column_name = { expression | DEFAULT | NULL }  
-  | { udt_column_name.{ { property_name = expression  
-                        | field_name = expression }  
-                        | method_name ( argument [ ,...n ] ) }  
-    }  
-  | column_name { .WRITE ( expression , @Offset , @Length ) }  
-  | @variable = expression  
-  | @variable = column = expression  
-  | column_name { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  | @variable = column { += | -= | *= | /= | %= | &= | ^= | |= } expression  
-  } [ ,...n ]
   
 <merge_not_matched>::=  
 {  
@@ -122,58 +93,7 @@ SET
 }  
   
 <clause_search_condition> ::=  
-    <search_condition>  
-  
-<search condition> ::=  
-    MATCH(<graph_search_pattern>) | <search_condition_without_match> | <search_condition> AND <search_condition>
-
-<search_condition_without_match> ::=
-    { [ NOT ] <predicate> | ( <search_condition_without_match> )
-    [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]
-[ ,...n ]  
-
-<predicate> ::=
-    { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression
-    | string_expression [ NOT ] LIKE string_expression
-  [ ESCAPE 'escape_character' ]
-    | expression [ NOT ] BETWEEN expression AND expression
-    | expression IS [ NOT ] NULL
-    | CONTAINS
-  ( { column | * } , '< contains_search_condition >' )
-    | FREETEXT ( { column | * } , 'freetext_string' )
-    | expression [ NOT ] IN ( subquery | expression [ ,...n ] )
-    | expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
-  { ALL | SOME | ANY} ( subquery )
-    | EXISTS ( subquery ) }
-
-<graph_search_pattern> ::=
-    { <node_alias> {
-                      { <-( <edge_alias> )- }
-                    | { -( <edge_alias> )-> }
-                    <node_alias>
-                   }
-    }
-  
-<node_alias> ::=
-    node_table_name | node_table_alias
-
-<edge_alias> ::=
-    edge_table_name | edge_table_alias
-
-<output_clause>::=  
-{  
-    [ OUTPUT <dml_select_list> INTO { @table_variable | output_table }  
-        [ (column_list) ] ]  
-    [ OUTPUT <dml_select_list> ]  
-}  
-  
-<dml_select_list>::=  
-    { <column_name> | scalar_expression }
-        [ [AS] column_alias_identifier ] [ ,...n ]  
-  
-<column_name> ::=  
-    { DELETED | INSERTED | from_table_name } . { * | column_name }  
-    | $action  
+    <search_condition> 
 ```  
   
 ## <a name="arguments"></a>Аргументы
@@ -207,7 +127,7 @@ TOP ( *expression* ) [ PERCENT ]
 USING \<table_source>  
 Указывает источник данных, который сопоставляется со строками данных в таблице *target_table* на основе условия \<merge_search condition>. Результат этого совпадения обуславливает действия, которые выполняются предложениями WHEN инструкции MERGE. Аргумент \<table_source> может быть удаленной таблицей или производной таблицей, которая обращается к удаленным таблицам.
   
-Аргументом \<table_source> может быть производная таблица, использующая [конструктор табличных значений](../../t-sql/queries/table-value-constructor-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] для построения таблицы путем указания нескольких строк.  
+Аргумент \<table_source> может быть производной таблицей, использующей [конструктор табличных значений](../../t-sql/queries/table-value-constructor-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] для построения таблицы путем указания нескольких строк.  
   
 Дополнительные сведения о синтаксисе и аргументах этого предложения см. в разделе [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
@@ -226,9 +146,9 @@ WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>
 Указывает, что в таблицу *target_table* вставляется строка для каждой строки, возвращенной выражением \<table_source> ON \<merge_search_condition>, которая не соответствует строке в таблице *target_table*, но удовлетворяет дополнительному условию поиска (если оно есть). Значения для вставки указываются с помощью предложения \<merge_not_matched>. Инструкция MERGE может иметь только одно предложение WHEN NOT MATCHED [ BY TARGET ].
 
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
-Указывает, что все строки таблицы *target_table, которые не соответствуют строкам, возвращенным выражением \<table_source> ON \<merge_search_condition> и удовлетворяют дополнительным условиям поиска, обновляются или удаляются в соответствии с предложением \<merge_matched>.  
+Указывает, что все строки *target_table, которые не соответствуют строкам, возвращенным выражением \<table_source> ON \<merge_search_condition>, и удовлетворяют дополнительным условиям поиска, обновляются или удаляются в соответствии с предложением \<merge_matched>.  
   
-Инструкция MERGE может иметь не более двух предложений WHEN NOT MATCHED BY SOURCE. Если указаны два предложения, то первое предложение должно сопровождаться предложением AND \<clause_search_condition>. Для любой строки второе предложение WHEN NOT MATCHED BY SOURCE применяется только в том случае, если не применяется первое. Если имеется два предложения WHEN NOT MATCHED BY SOURCE, то одно должно указывать действие UPDATE, а другое — действие DELETE. В условии \<clause_search_condition> можно ссылаться только на столбцы целевой таблицы.  
+Инструкция MERGE может иметь не более двух предложений WHEN NOT MATCHED BY SOURCE. Если указаны два предложения, первое предложение должно сопровождаться предложением AND \<clause_search_condition>. Для любой строки второе предложение WHEN NOT MATCHED BY SOURCE применяется только в том случае, если не применяется первое. Если имеется два предложения WHEN NOT MATCHED BY SOURCE, то одно должно указывать действие UPDATE, а другое — действие DELETE. В условии \<clause_search_condition> можно ссылаться только на столбцы целевой таблицы.  
   
 Если таблица \<table_source> не возвращает ни одной строки, доступ к столбцам в исходной таблице не предоставляется. Если операция обновления или удаления, указанная в предложении \<merge_matched>, ссылается на столбцы исходной таблицы, то возвращается ошибка 207 (недопустимое имя столбца). Например, предложение `WHEN NOT MATCHED BY SOURCE THEN UPDATE SET TargetTable.Col1 = SourceTable.Col1` может стать причиной ошибки инструкции из-за недоступности столбца `Col1` в исходной таблице.  
   
@@ -255,7 +175,7 @@ OPTION ( \<query_hint> [ ,...n ] )
 Указывает, что для настройки способа, которым компонент Database Engine обрабатывает инструкцию, используются подсказки оптимизатора. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 \<merge_matched>  
-Указывает действие обновления или удаления, которое применяется ко всем строкам таблицы *target_table*, которые не соответствуют строкам, возвращенным выражением \<table_source> ON \<merge_search_condition>, и удовлетворяют дополнительным условиям поиска.  
+Указывает действие обновления или удаления, применяемое ко всем строкам таблицы *target_table*, которые не соответствуют строкам, возвращенным выражением \<table_source> ON \<merge_search_condition>, и удовлетворяют дополнительным условиям поиска.  
   
 UPDATE SET \<set_clause>  
 Указывает список имен столбцов или переменных, которые необходимо обновить в целевой таблице, и значений для их обновления.  
@@ -279,8 +199,8 @@ DEFAULT VALUES
   
 Дополнительные сведения об этом предложении см. в разделе [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).  
   
-\<search condition>  
-Указывает условия поиска для \<merge_search_condition> или \<clause_search_condition>. Дополнительные сведения об аргументах этого предложения см. в разделе [Условия поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+Задает условия поиска для указания \<merge_search_condition> или \<clause_search_condition>. Дополнительные сведения об аргументах этого предложения см. в разделе [Условия поиска (Transact-SQL)](../../t-sql/queries/search-condition-transact-sql.md).  
 
 \<graph search pattern>  
 Определяет шаблон сопоставления графов. Дополнительные сведения об аргументах этого предложения см. в статье [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).

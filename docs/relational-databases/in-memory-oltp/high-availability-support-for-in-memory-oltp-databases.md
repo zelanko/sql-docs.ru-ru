@@ -1,5 +1,6 @@
 ---
 title: Высокий уровень доступности — базы данных выполняющейся в памяти OLTP
+description: Базы данных SQL с оптимизированными для памяти таблицами, со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.
 ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
@@ -10,15 +11,15 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dd467c8f6d942f53dade5ec6bb7d46ae9f39bdd9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d411bff221ed82f1d31252aa2530efcef68a614a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74412669"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723209"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Поддержка высокого уровня доступности в базах данных OLTP в памяти
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Базы данных, содержащие оптимизированные для памяти таблицы со скомпилированными в собственном коде хранимыми процедурами или без них, полностью поддерживаются с группами доступности AlwaysOn.  Нет никаких различий в конфигурации и поддержке для баз данных, которые содержат объекты [!INCLUDE[hek_2](../../includes/hek-2-md.md)] , и тех, в которых их нет.  
   
  При развертывании выполняющейся в памяти OLTP базы данных в конфигурации группы доступности AlwaysOn изменения, внесенные в оптимизированные для памяти таблицы в первичной реплике, применяются в памяти к таблицам во вторичных репликах при применении операции REDO. Это означает, что отработка отказа на вторичную реплику может выполняться очень быстро, так как данные уже находятся в памяти. Кроме того, для запросов доступны таблицы во вторичных репликах, для которых был настроен доступ на чтение.  
@@ -50,7 +51,7 @@ ms.locfileid: "74412669"
 ## <a name="see-also"></a>См. также:  
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Обзор групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [Активные вторичные реплики: Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Репликация в подписчики таблиц, оптимизированных для памяти](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

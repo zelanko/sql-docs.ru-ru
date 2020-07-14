@@ -1,5 +1,6 @@
 ---
 title: Создание пользовательского псевдонима для типа данных | Документация Майкрософт
+description: Узнайте, как на SQL Server 2019 создать пользовательский псевдоним типа данных с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +17,15 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bea30f3fac2eaacf612839903ab65f668f412ed4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72909119"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756290"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   В этом разделе описывается создание нового определяемого пользователем псевдонима типа данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
@@ -72,7 +73,7 @@ ms.locfileid: "72909119"
   
      Длина не отображается для типов данных **nvarchar(max)** , **varchar(max)** и **varbinary(max)** .  
   
-     **Название**  
+     **имя**;  
      При создании нового псевдонима определяемого пользователем типа данных введите уникальное имя, которое будет использоваться в базе данных для представления этого псевдонима определяемого пользователем типа данных. Максимальное количество символов должно соответствовать системному типу данных **SYSNAME** . Имя существующего псевдонима определяемого пользователем типа данных не может быть изменено.  
   
      **Правило**  

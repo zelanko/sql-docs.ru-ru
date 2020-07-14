@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13f5c8c892729abe0ba0e0a79185b360f0098d07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: d1c21bafa36dc929ef5dbc5f6e57bce27cc791b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150595"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762016"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Изменяет существующую группу доступности AlwaysOn в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Большинство аргументов ALTER AVAILABILITY GROUP поддерживаются только в текущей первичной реплике. Однако аргументы JOIN, FAILOVER и FORCE_FAILOVER_ALLOW_DATA_LOSS поддерживаются только во вторичных репликах.  
   
@@ -388,7 +388,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  ALL  
  Разрешаются все соединения с базами данных в первичной реплике. Это поведение по умолчанию.  
   
- READ_ONLY_ROUTING_LIST **=** { **('** \<экземпляр_сервера> **'** [ **,** ...*n* ] **)** | NONE }  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE }  
  Задает список экземпляров сервера (с разделителями-запятыми), на которых будут размещаться реплики доступности для этой группы доступности, удовлетворяющие следующим требованиям при работе во вторичной роли.  
   
 -   Настроены для разрешения всех соединений или соединений только для чтения (см. выше аргумент ALLOW_CONNECTIONS параметра SECONDARY_ROLE).  
@@ -407,7 +407,7 @@ DTC_SUPPORT  **=** { PER_DB | NONE }
  None  
  Указывает, что, когда эта реплика доступности является первичной, маршрутизация только для чтения не поддерживается. Это поведение по умолчанию. При использовании с параметром MODIFY REPLICA ON это значение отключает существующий список (если он есть).  
 
- READ_WRITE_ROUTING_URL **=** { **('** \<экемпляр_сервера> **')** }  
+ READ_WRITE_ROUTING_URL **=** { **('** \<server_instance> **')** }  
  Область применения: SQL Server (начиная с версии SQL Server 2019 (15.x)) 
 
  Определяет экземпляры сервера, на которых размещаются реплики доступности для этой группы доступности в соответствии со следующими требованиями при выполнении в первичной роли.

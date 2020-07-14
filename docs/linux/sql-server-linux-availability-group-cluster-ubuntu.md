@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: a42d031ee66ee455af91dbcce233140a7ab0a171
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: c929e689f68def3b267dced2001468814d8747d0
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001104"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85892319"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Настройка кластера Ubuntu для ресурса группы доступности
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Этот документ описывает, как создать кластер с тремя узлами в Ubuntu и добавить в него ранее созданную группу доступности в качестве ресурса. Для обеспечения высокого уровня доступности группе доступности в Linux требуется три узла — см. статью [Высокий уровень доступности и защита данных для конфигураций групп доступности](sql-server-linux-availability-group-ha.md).
 
@@ -187,7 +187,7 @@ sudo apt-get install mssql-server-ha
 
 ## <a name="create-availability-group-resource"></a>Создание ресурса группы доступности
 
-Чтобы создать ресурс группы доступности, используйте команду `pcs resource create` и задайте свойства ресурса. Приведенная ниже команда `ocf:mssql:ag` создает ресурс типа "основной/подчиненный" для группы доступности `ag1`. 
+Чтобы создать ресурс группы доступности, используйте команду `pcs resource create` и задайте свойства ресурса. Приведенная ниже команда `ocf:mssql:ag` создает ресурс типа «основной/подчиненный» для группы доступности `ag1`. 
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=30s master meta notify=true

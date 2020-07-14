@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 03/31/2020
+ms.date: 06/23/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,16 +59,16 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abe671baec987e5fa98528b59671b48f7b0d8180
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 55f3b740365fc3fa20e93538eb3abdd2ca9b0526
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925388"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000661"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Изменяет определение таблицы путем изменения, добавления или удаления столбцов и ограничений. Также ALTER TABLE переназначает и перестраивает секции или отключает и включает ограничения и триггеры.
 
@@ -349,6 +349,8 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
+## <a name="syntax-for-azure-synapse-analytics"></a>Синтаксис для Azure Synapse Analytics
+
 ```syntaxsql
 -- Syntax for Azure Synapse Analytics and Analytics Platform System
 
@@ -385,7 +387,7 @@ ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_t
     [ CONSTRAINT constraint_name ] 
     {
         DEFAULT DEFAULT constant_expression
-        | PRIMARY KEY (column_name) NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | PRIMARY KEY NONCLUSTERED (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
         | UNIQUE (column_name) NOT ENFORCED -- Applies to Azure Synapse Analytics only
     }
 <rebuild_option > ::=
@@ -499,7 +501,7 @@ WHERE s.object_id = OBJECT_ID('<table_name>');
 
 Применяется только к данным типа **xml** для связывания схемы XML с этим типом. Прежде чем включать столбец **xml** в коллекцию схемы, необходимо создать коллекцию схемы в базе данных с помощью инструкции [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).
 
-COLLATE \< *параметры_сортировки* >  
+COLLATE \< *collation_name* >  
 Задает новые параметры сортировки для изменяемого столбца. Если не указано, столбцу назначаются параметры сортировки, принятые в базе данных по умолчанию. Именем параметров сортировки может быть либо имя параметров сортировки Windows, либо имя параметров сортировки SQL. Список и дополнительные сведения см. в статьях [Имя параметра сортировки Windows (Transact-SQL)](../../t-sql/statements/windows-collation-name-transact-sql.md) и [Имя параметра сортировки SQL Server (Transact-SQL)](../../t-sql/statements/sql-server-collation-name-transact-sql.md).
 
 Предложение COLLATE изменяет параметры сортировки только для столбцов с типами данных **char**, **varchar**, **nchar** и **nvarchar**. Чтобы изменить параметры сортировки для столбца с пользовательским псевдонимом типа данных, с помощью отдельных инструкций ALTER TABLE преобразуйте этот столбец в системный тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Затем измените параметры сортировки и снова преобразуйте столбец в прежний тип данных.
@@ -563,7 +565,7 @@ ADD MASKED WITH ( FUNCTION = ' *mask_function* ')
 
 Чтобы удалить маску, используйте `DROP MASKED`. Параметры функции см. в разделе [Динамическое маскирование данных](../../relational-databases/security/dynamic-data-masking.md).
 
-WITH ( ONLINE = ON | OFF) \<применительно к изменению столбца>  
+WITH ( ONLINE = ON | OFF) \<as applies to altering a column>  
 **Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и выше) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Позволяет выполнять разные действия по изменению столбцов с сохранением доступности таблицы. По умолчанию — OFF. Изменение столбцов можно выполнять в оперативном режиме, если эти изменения связаны с типом данных, длиной или точностью столбцов, допустимостью значений NULL, разреженностью и параметрами сортировки.
@@ -621,7 +623,7 @@ PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_n
 
 Используйте этот аргумент вместе с аргументом SYSTEM_VERSIONING, чтобы включить системное управление версиями для существующей таблицы. Дополнительные сведения см. в разделах [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md) и [Приступая к работе с темпоральными таблицами в базе данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).
 
-В версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] пользователи могут пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были неявно скрыты, и инструкция **SELECT \* FROM \<table_name>** не возвращала значения этих столбцов. По умолчанию столбцы периода не скрываются. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице.
+В версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] пользователи могут пометить один или оба столбца периода флагом **HIDDEN**, чтобы эти столбцы были неявно скрыты и инструкция **SELECT \* FROM \<table_name>** не возвращала значения этих столбцов. По умолчанию столбцы периода не скрываются. Чтобы использовать скрытые столбцы, их необходимо явно указывать во всех запросах, обращающихся к темпоральной таблице.
 
 DROP  
 Указывает, что удаляется одно или несколько определений столбца, определений вычисляемого столбца или ограничений таблиц либо удаляется спецификация столбцов, которые будут использоваться для системного управления версиями.
@@ -685,7 +687,7 @@ MAXDOP = *max_degree_of_parallelism*
 > [!NOTE]
 > Параллельные операции с индексами доступны не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделах [Выпуски и поддерживаемые функции SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) и [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-ONLINE **=** { ON | **OFF** } \<применительно к drop_clustered_constraint_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to drop_clustered_constraint_option>  
 Определяет, будут ли базовые таблицы и связанные индексы доступны для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF. Операцию REBUILD можно выполнять в оперативном режиме (ONLINE).
 
 ON  
@@ -845,7 +847,7 @@ COLUMNSTORE_ARCHIVE
 
 Чтобы перестроить несколько секций одновременно, воспользуйтесь [описанием index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md). Если в таблице отсутствует кластеризованный индекс, при изменении сжатия данных перестраиваются некластеризованные индексы и куча. Дополнительные сведения о сжатии см. в разделе [Сжатие данных](../../relational-databases/data-compression/data-compression.md).
 
-ONLINE **=** { ON  | **OFF** } \<применительно к single_partition_rebuild_option>  
+ONLINE **=** { ON | **OFF** } \<as applies to single_partition_rebuild_option>  
 Определяет, доступна ли отдельная секция базовой таблицы и связанные индексы для запросов и изменения данных во время операций с индексами. Значение по умолчанию — OFF. Операцию REBUILD можно выполнять в оперативном режиме (ONLINE).
 
 ON  
@@ -1031,7 +1033,7 @@ IF EXISTS
 Для удаления кластеризованного индекса временно требуется место на диске, равное размеру существующего кластеризованного индекса. Это дополнительное пространство освобождается сразу после завершения операции.
 
 > [!NOTE]
-> Параметры, перечисленные в *\<drop_clustered_constraint_option>* , применяются к кластеризованным индексам по таблицам, но не по представлениям. Также они не применяются к некластеризованным индексам.
+> Параметры, перечисленные в *\<drop_clustered_constraint_option>* , применяются к кластеризованным индексам в таблицах и не могут применяться к кластеризованным индексам в представлениях или к некластеризованным индексам.
 
 ## <a name="replicating-schema-changes"></a>Репликация изменений схемы
 
@@ -1046,8 +1048,8 @@ IF EXISTS
 На секционированные таблицы налагаются следующие ограничения.
 
 - Если в таблице есть невыровненные индексы, настройку сжатия для отдельной секции изменить нельзя.
-- Синтаксис ALTER TABLE \<table> REBUILD PARTITION ... производит перестроение указанной секции.
-- Синтаксис ALTER TABLE \<table> REBUILD WITH ... производит перестроение всех секций.
+- Использование синтаксиса ALTER TABLE \<table> REBUILD PARTITION ... приводит к перестроению указанной секции.
+- Использование синтаксиса ALTER TABLE \<table> REBUILD WITH ... приводит к перестроению всех секций.
 
 ## <a name="dropping-ntext-columns"></a>Удаление столбцов NTEXT
 

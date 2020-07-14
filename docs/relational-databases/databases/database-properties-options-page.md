@@ -1,5 +1,6 @@
 ---
 title: Свойства базы данных (страница "Параметры") | Документация Майкрософт
+description: Узнайте, как использовать вкладку "Параметры" в диалоговом окне "Свойства базы данных" для просмотра или изменения параметров сортировки базы данных, модели восстановления и других параметров.
 ms.custom: ''
 ms.date: 08/28/2017
 ms.prod: sql
@@ -12,15 +13,15 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 98fcdb49facbc1bae6e7a0b76388c385a0fc05e8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286748"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85630951"
 ---
 # <a name="database-properties-options-page"></a>Свойства базы данных (страница «Параметры»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Эта страница используется для изменения параметров выделенной базы данных. Дополнительные сведения о параметрах, доступных на этой странице, см. в разделах [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md) и [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   
@@ -29,7 +30,7 @@ ms.locfileid: "79286748"
  Задайте параметры сортировки для базы данных, выбрав из списка. Дополнительные сведения см. в разделе [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Модель восстановления**  
- Укажите одну из следующих моделей для восстановления базы данных: **Полная**, **С неполным протоколированием**или **Простая**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Укажите одну из следующих моделей для восстановления базы данных: **Полная**, **С неполным протоколированием** или **Простая**. Дополнительные сведения о моделях восстановления см. в разделе [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Уровень совместимости**  
  Укажите последнюю версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которую поддерживает база данных. Возможные значения см. в статье [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). При обновлении базы данных SQL Server уровень совместимости этой базы данных по возможности сохраняется или меняется на минимальный уровень, поддерживаемый новой версией [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -121,17 +122,17 @@ ms.locfileid: "79286748"
  Включает или отключает сканирование параметров баз данных-получателей (при наличии). Это эквивалентно [флагу трассировки 4136](https://support.microsoft.com/kb/980653).  
   
  **Исправления оптимизатора запросов**  
- Включает или отключает исправления оптимизации запросов для базы данных-источника независимо от уровня совместимости базы данных. Это эквивалентно [флагу трассировки 4199](https://support.microsoft.com/kb/974006).  
+ Включает или отключает исправления оптимизации запросов для базы данных-источника независимо от уровня совместимости базы данных. Это эквивалентно [флагу трассировки 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Подробности см. в параметре [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
  **Исправления оптимизатора запросов для баз данных-получателей**  
- Включает или отключает исправления оптимизации запросов для баз данных-получателей (при наличии) независимо от уровня совместимости базы данных. Это эквивалентно [флагу трассировки 4199](https://support.microsoft.com/kb/974006).  
+ Включает или отключает исправления оптимизации запросов для баз данных-получателей (при наличии) независимо от уровня совместимости базы данных. Это эквивалентно [флагу трассировки 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Подробности см. в параметре [QUERY_OPTIMIZER_HOTFIXES](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#qo_hotfixes).  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Имя каталога FILESTREAM**  
  Укажите имя каталога для данных FILESTREAM, связанных с выбранной базой данных.  
   
  **Нетранзакционный доступ к файловому потоку**  
- Укажите один из следующих параметров для нетранзакционного доступа через файловую систему к данным FILESTREAM, хранящимся в таблицах FileTable: **OFF**, **READ_ONLY**или **FULL**. Если на сервере не включена поддержка FILESTREAM, это значение устанавливается в OFF и отключается. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
+ Укажите один из следующих параметров для нетранзакционного доступа через файловую систему к данным FILESTREAM, хранящимся в FileTables: **OFF**, **READ_ONLY** или **FULL**. Если на сервере не включена поддержка FILESTREAM, это значение устанавливается в OFF и отключается. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Разное  
 **Разрешить изоляцию моментального снимка**  
@@ -216,7 +217,7 @@ ms.locfileid: "79286748"
 **Идентификатор компонента Service Broker**  
 Идентификатор, доступный только для чтения.  
 
-## <a name="state"></a>Штат  
+## <a name="state"></a>Состояние  
  **База данных только для чтения**  
  Укажите, будет ли база данных доступна только для чтения. Допустимые значения — **True** и **False**. Если значение равно **True**, пользователи могут только считывать данные в базе данных. Им не разрешается изменять данные или объекты базы данных. Тем не менее саму базу данных можно удалить, используя инструкцию `DROP DATABASE`. Базу данных нельзя использовать, когда задается новое значение параметра **База данных только для чтения** . Исключением является база данных master, и только системный администратор может использовать базу данных master во время задания параметра.  
   

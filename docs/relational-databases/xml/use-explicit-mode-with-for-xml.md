@@ -1,5 +1,6 @@
 ---
 title: Использование режима EXPLICIT для FOR XML | Документация Майкрософт
+description: Сведения о том, как использование режима EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -14,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cd64762cced69019e1d58414b43af061933c4437
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 193eae657a73f6801546c7234b141dae8f422e67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665026"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85736554"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Как описано в подразделе [Конструирование XML используя FOR XML](../../relational-databases/xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
   
  Запрос в режиме EXPLICIT должен быть написан особым способом, при котором в запросе явно задаются дополнительные сведения о требуемом XML, такие как ожидаемый уровень вложенности в XML. В зависимости от запрашиваемого XML написание запросов режима EXPLICIT может оказаться весьма трудоемким. Может оказаться, что [использование режима PATH](../../relational-databases/xml/use-path-mode-with-for-xml.md) с вложениями является более простой альтернативой написанию запросов в режиме EXPLICIT.  
@@ -154,13 +155,13 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Пример. Задание директивы ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Пример: конструирование одноуровневых элементов в режиме EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Пример. Конструирование одноуровневых элементов в режиме EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
 -   [Пример. Указание директив ID и IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
 -   [Пример. Указание директив ID и IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Примеры. Указание директивы HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Пример. Указание директивы HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
 -   [Пример. Указание директивы ELEMENT и кодировка сущности](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   

@@ -4,30 +4,33 @@ titleSuffix: SQL Server on Linux
 description: Узнайте, как настроить общие папки моментальных снимков с портами, отличными от портов по умолчанию, для репликации SQL Server на Linux.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
-ms.author: mikerayW
+ms.author: mikeray
 ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb715e2a0a056c18352361b58ce8ffd67e3da78e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdb90854984c195258891178be8a3fd07345929b
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558599"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85882684"
 ---
 # <a name="configure-replication-with-non-default-ports-sql-server-linux"></a>Настройка репликации с использованием портов, отличных от портов по умолчанию (SQL Server на Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 При репликации экземпляры SQL Server на Linux могут ожидать передачи данных через любой порт, настроенный с параметром mssql-conf network.tcpport. Во время настройки номер порта необходимо добавить к имени сервера, если выполняются указанные ниже условия.
 
 1. В конфигурации репликации имеется экземпляр SQL Server на Linux.
 2. Любой экземпляр (Windows или Linux) ожидает передачи данных через порт, отличный от порта по умолчанию. 
 
-Имя сервера экземпляра можно узнать, выполнив команду @@servername в экземпляре.
+Имя сервера экземпляра можно узнать, выполнив команду @@servername в экземпляре. Не используйте IP-адрес вместо имени сервера. Использование IP-адреса для издателя, распространителя или подписчика может привести к ошибке.
+
+> [!NOTE]
+> Создание репликации SQL Server в Linux с использованием порта, не являющегося портом по умолчанию, работает только с SQL Server 2019 и более поздних версий.
 
 ## <a name="examples"></a>Примеры
 

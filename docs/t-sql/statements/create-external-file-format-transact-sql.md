@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Документы Майкрософт
 ms.custom: ''
-ms.date: 02/20/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -20,19 +20,19 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0402da002440e26697aeaa52245e78873033818
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
+ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633464"
+ms.lasthandoff: 06/29/2020
+ms.locfileid: "85518644"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Создает объект формата внешнего файла, определяя внешние данные, которые сохранены в Hadoop, хранилище BLOB-объектов Azure или хранилище озера данных Azure. Создание формата внешнего файла — обязательное условие для создания внешней таблицы. Создавая формат внешнего файла, вы указываете фактическую структуру данных, на которые ссылается внешняя таблица.  
+  Создает объект формата внешнего файла, определяя внешние данные, которые сохранены в Hadoop, Хранилище BLOB-объектов Azure или Azure Data Lake Store, либо данные для входных и выходных потоков, связанных с внешними потоками. Создание формата внешнего файла — обязательное условие для создания внешней таблицы. Создавая формат внешнего файла, вы указываете фактическую структуру данных, на которые ссылается внешняя таблица.  
   
- PolyBase поддерживает следующие форматы файлов:
+Поддерживаются следующие форматы файлов.
   
 -   Текст с разделителями  
   
@@ -40,8 +40,11 @@ ms.locfileid: "81633464"
   
 -   Hive ORC
   
--   Parquet  
-  
+-   Parquet
+
+-   JSON — применяется только к SQL Azure для пограничных вычислений.
+
+
 Инструкции по созданию внешней таблицы см. в разделе [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -87,7 +90,17 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-  
+
+-- Create an external file format for JSON files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+    FORMAT_TYPE = JSON  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      
+      | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+ 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
@@ -119,6 +132,8 @@ WITH (
     -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
    -   DELIMITEDTEXT Задает формат текста с разделителями столбцов (которые также называются признаками конца поля).
+   
+   -  JSON — определяет формат JSON. Применяется только к SQL Azure для пограничных вычислений. 
   
  FIELD_TERMINATOR = *field_terminator*  
 Применяется только для текстовых файлов с разделителями. Признак конца поля задает один или несколько символов, отмечающих окончание каждого поля (столбца) в файле с разделителями текста. По умолчанию используется вертикальная черта (|). Для гарантированной поддержки рекомендуется использовать один или несколько символов ascii.
@@ -182,7 +197,7 @@ PolyBase использует пользовательский формат да
   
 -   Указание времени суток (tt) не является обязательным. По умолчанию используется время AM (до полудня).
   
-|Тип данных|Пример|Description|  
+|Тип данных|Пример|Описание|  
 |---------------|-------------|-----------------|  
 |Дата и время|DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'|Кроме года, месяца и дня этот формат данных включает 00-24 часа, 00-59 минут, 00-59 секунд и трехзначное обозначение миллисекунд.|  
 |Дата и время|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffftt'|Кроме года, месяца и дня этот формат данных включает 00-12 часов, 00-59 минут, 00-59 секунд и трехзначное обозначение миллисекунд и указание времени суток: AM, am, PM или pm. |  
@@ -270,6 +285,14 @@ PolyBase использует пользовательский формат да
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+ Тип формата файлов JSON поддерживает следующие методы сжатия.
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение ALTER ANY EXTERNAL FILE FORMAT.
@@ -365,6 +388,16 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+### <a name="f-create-a-json-external-file-format"></a>Е. Создание формата внешнего файла JSON  
+ В этом примере создается формат внешнего файла для файла JSON, который сжимает данные с помощью метода сжатия данных org.apache.io.compress.SnappyCodec. Если параметр DATA_COMPRESSION не задан, по умолчанию сжатие не выполняется. Этот пример применяется к SQL Azure для пограничных вычислений и в настоящее время не поддерживается для других продуктов SQL. 
+  
+```  
+CREATE EXTERNAL FILE FORMAT jsonFileFormat  
+WITH (  
+    FORMAT_TYPE = JSON,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);  
+```  
 
 ## <a name="see-also"></a>См. также:
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   

@@ -1,5 +1,6 @@
 ---
 title: Использование мастера планов обслуживания | Документация Майкрософт
+description: Сведения о создании плана обслуживания одного или нескольких серверов с помощью мастера планов обслуживания в SQL Server.
 ms.date: 06/20/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,15 +35,15 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7d2ec2dd6935d535bcef0ebb566bf0d0f8f09d6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287568"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758987"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Использование мастера планов обслуживания
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью мастера планов обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Мастер планов обслуживания создает план обслуживания, который может регулярно выполняться агентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Это позволяет выполнять различные задачи администрирования базы данных, включая резервное копирование, проверки целостности базы данных или обновление статистики базы данных через указанные интервалы времени.  
     
  
@@ -374,7 +375,7 @@ ms.locfileid: "79287568"
      Укажите имя контейнера службы хранилища Azure.  
   
      **Префикс URL-адреса:**  
-     Этот элемент создается автоматически на основе данных учетной записи хранения в учетных данных SQL и заданного имени контейнера Azure. Мы рекомендуем не изменять данные в этом поле, если только не используется домен в формате, отличном от **\<учетная запись хранения>.blob.core.windows.net**.  
+     Этот элемент создается автоматически на основе данных учетной записи хранения в учетных данных SQL и заданного имени контейнера Azure. Мы рекомендуем не изменять данные в этом поле, если только не используется домен в формате, отличном от **\<storage account>.blob.core.windows.net**.  
   
      Поле**Расширение файла резервной копии**  
      Укажите расширение, которое должно использоваться для файлов резервных копий. Значение по умолчанию — BAK.  

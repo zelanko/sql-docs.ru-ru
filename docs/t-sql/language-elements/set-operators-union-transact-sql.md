@@ -20,16 +20,16 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52f66f1922814f77f93dfdec8725c024c0a129ff
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68495472"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007629"
 ---
 # <a name="set-operators---union-transact-sql"></a>Операторы работы с наборами — UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Сцепляет результаты двух запросов в один результирующий набор. Вы указываете, будет ли результирующий набор включать повторяющиеся строки:
 
@@ -51,7 +51,7 @@ ms.locfileid: "68495472"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { UNION [ ALL ]   
   { <query_specification> | ( <query_expression> ) } 
@@ -59,7 +59,7 @@ ms.locfileid: "68495472"
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-\<query_specification> | ( \<query_expression> ) Спецификация запроса или выражение запроса, возвращающее данные для объединения с данными из другой спецификации запроса или выражения запроса. Определения столбцов, которые являются частью операции UNION, не должны совпадать, однако должны быть совместимыми посредством неявного преобразования. Если типы данных различаются, то получившийся тип данных определяется на основе правил [очередности типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md). Если типы одинаковы, но различаются по точности, масштабу или длине, результат определяется на основе тех же самых правил, которые действуют при объединении выражений. Дополнительные сведения см. в разделе [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+\<query_specification> | ( \<query_expression> ) Это спецификация запроса или выражение запроса, возвращающее данные для объединения с данными из другой спецификации запроса или выражения запроса. Определения столбцов, которые являются частью операции UNION, не должны совпадать, однако должны быть совместимыми посредством неявного преобразования. Если типы данных различаются, то получившийся тип данных определяется на основе правил [очередности типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md). Если типы одинаковы, но различаются по точности, масштабу или длине, результат определяется на основе тех же самых правил, которые действуют при объединении выражений. Дополнительные сведения см. в разделе [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Столбцы типа данных **xml** должны быть эквивалентны друг другу. Все столбцы должны либо иметь тип, определенный в XML-схеме, либо быть нетипизированными. Типизированные столбцы должны относиться к одной и той же коллекции XML-схем.  
   

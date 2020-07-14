@@ -1,5 +1,6 @@
 ---
 title: Иерархия средств шифрования | Документация Майкрософт
+description: Узнайте о шифровании данных с использованием иерархической инфраструктуры шифрования и управления ключами в SQL Server. Хранение ключей в расширяемом модуле управление ключами.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +18,15 @@ ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
 author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 672631b7ef5e6453e49b269d035586949f03ece6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 805a468d462a28c3e43bddc32cfd2673546a26e5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74957429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764999"
 ---
 # <a name="encryption-hierarchy"></a>Иерархия средств шифрования
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] шифрует данные, используя иерархическую структуру средств шифрования и управления ключами. На каждом уровне данные низшего уровня шифруются на основе комбинации сертификатов, асимметричных ключей и симметричных ключей. Асимметричные и симметричные ключи можно хранить вне модуля расширенного управления ключами [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  На следующем рисунке показано, что на каждом уровне иерархии средств шифрования шифруются данные более нижнего уровня и отображаются наиболее распространенные конфигурации шифрования. Доступ к началу иерархии, как правило, защищается паролем.  

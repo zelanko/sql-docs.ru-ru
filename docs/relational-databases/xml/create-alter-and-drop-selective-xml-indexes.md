@@ -1,5 +1,6 @@
 ---
 title: Создание, изменение и удаление селективных XML-индексов | Документация Майкрософт
+description: Сведения о создании нового селективного XML-индекса, а также об изменении или удалении существующего селективного XML-индекса.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -10,22 +11,22 @@ ms.topic: conceptual
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 87cdcddb9e797e640dd172067bab2e0632aef656
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4a06f8c8a57fe68ed50f4c49f8d9028b86fc7a34
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664658"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85691698"
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Создание, изменение и удаление селективных XML-индексов
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Описывает способы создания нового селективного XML-индекса, изменения или удаления существующего селективного XML-индекса.  
   
  Дополнительные сведения о селективных XML-индексах см. в разделе [Выборочный XML-индекс (SXI)](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="creating-a-selective-xml-index"></a><a name="create"></a> Создание селективного XML-индекса  
   
-### <a name="how-to-create-a-selective-xml-index"></a>Инструкции. Создание селективного XML-индекса  
+### <a name="how-to-create-a-selective-xml-index"></a>Руководство. Создание селективного XML-индекса  
  **Создание нового селективного XML-индекса с помощью Transact-SQL**  
  Создание селективного XML-индекса путем вызова инструкции CREATE SELECTIVE XML INDEX. Дополнительные сведения см. в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md).  
   
@@ -48,7 +49,7 @@ FOR(
   
 ##  <a name="altering-a-selective-xml-index"></a><a name="alter"></a> Изменение селективного XML-индекса  
   
-### <a name="how-to-alter-a-selective-xml-index"></a>Инструкции. Изменение селективного XML-индекса  
+### <a name="how-to-alter-a-selective-xml-index"></a>Руководство. Изменение селективного XML-индекса  
  **изменить селективный XML-индекс с помощью Transact-SQL**  
  Измените существующий селективный XML-индекс с помощью инструкции ALTER INDEX. Дополнительные сведения см. в разделе [ALTER INDEX (селективные XML-индексы)](../../t-sql/statements/alter-index-selective-xml-indexes.md).  
   
@@ -69,7 +70,7 @@ FOR
   
 ##  <a name="dropping-a-selective-xml-index"></a><a name="drop"></a> Удаление селективного XML-индекса  
   
-### <a name="how-to-drop-a-selective-xml-index"></a>Инструкции. Удаление селективного XML-индекса  
+### <a name="how-to-drop-a-selective-xml-index"></a>Руководство. Удаление селективного XML-индекса  
  **Удаление селективного XML-индекса с помощью Transact-SQL**  
  Удалите селективный XML-индекс с помощью инструкции DROP INDEX. Дополнительные сведения см. в разделе [DROP INDEX (селективные XML-индексы)](../../t-sql/statements/drop-index-selective-xml-indexes.md).  
   

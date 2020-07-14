@@ -8,16 +8,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d26cdde25f3431c72e1f5327db591db60b31938e
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68019500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85883015"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Пошаговое руководство по функциям обеспечения безопасности в SQL Server на Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Если вы работаете с Linux и еще не знакомы с SQL Server, ознакомьтесь со следующими задачами, которые демонстрируют некоторые функции обеспечения безопасности. Они не являются уникальными для Linux и лишь задают общие направления для дальнейшего изучения. В каждом примере приводится ссылка на подробную документацию по соответствующей теме.
 
@@ -88,18 +88,18 @@ GRANT SELECT ON Object::Sales TO Orders;  
 GRANT UPDATE ON Object::Sales TO Orders;   
 GRANT DELETE ON Object::Sales TO Orders;   
 ALTER ROLE Sales ADD MEMBER Jerry;   
-```   
+```
 
-For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
+Дополнительные сведения о системе разрешений см. в статье [Приступая к работе с разрешениями ядра СУБД](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
 
-## Configure row-level security  
+## <a name="configure-row-level-security"></a>Настройка безопасности на уровне строк  
 
-[Row-Level Security](../relational-databases/security/row-level-security.md) enables you to restrict access to rows in a database based on the user executing a query. This feature is useful for scenarios like ensuring that customers can only access their own data or that workers can only access data that is pertinent to their department.   
+[Безопасность на уровне строк](../relational-databases/security/row-level-security.md) позволяет ограничить доступ к строкам в таблице базы данных в зависимости от характеристик пользователя, выполняющего запрос. Эта функция полезна в таких сценариях, как обеспечение доступа клиентов только к их собственным данным, а также предоставление работникам доступа только к тем данным, которые относятся к их отделу.   
 
-The following steps walk through setting up two Users with different row-level access to the `Sales.SalesOrderHeader` table. 
+Ниже описано, как настроить двух пользователей с разным доступом на уровне строк к таблице `Sales.SalesOrderHeader`. 
 
-Create two user accounts to test the row level security:    
+Создайте две учетные записи пользователей для тестирования безопасности на уровне строк.    
    
 ```   
 USE AdventureWorks2014;   
@@ -108,16 +108,16 @@ GO  
 CREATE USER Manager WITHOUT LOGIN;     
    
 CREATE USER SalesPerson280 WITHOUT LOGIN;    
-```   
+```
 
-Grant read access on the `Sales.SalesOrderHeader` table to both users:    
+Предоставьте обоим пользователям доступ на чтение к таблице `Sales.SalesOrderHeader`.    
    
 ```   
 GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
-```   
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
+```
    
-Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
+Создайте новую схему и встроенную функцию с табличным значением. Функция возвращает 1, если строка в столбце `SalesPersonID` соответствует идентификатору имени входа `SalesPerson` или если пользователь, выполняющий запрос, является пользователем Manager.   
    
 ```     
 CREATE SCHEMA Security;   
@@ -130,9 +130,9 @@ AS
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
     OR (USER_NAME() = 'Manager');    
-```   
+```
 
-Create a security policy adding the function as both a filter and a block predicate on the table:  
+Создайте политику безопасности, добавив функцию в качестве фильтра и предиката блокировки для таблицы.  
 
 ```
 CREATE SECURITY POLICY SalesFilter   
@@ -143,7 +143,7 @@ ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)
 WITH (STATE = ON);   
 ```
 
-Execute the following to query the `SalesOrderHeader` table as each user. Verify that `SalesPerson280` only sees the 95 rows from their own sales and that the `Manager` can see all the rows in the table.  
+Выполните следующую процедуру, чтобы запросить таблицу `SalesOrderHeader` от имени каждого пользователя. Убедитесь, что `SalesPerson280` видит только 95 строк из своих продаж, а `Manager` может видеть все строки в таблице.  
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
@@ -155,7 +155,7 @@ SELECT * FROM Sales.SalesOrderHeader;
 REVERT;   
 ```
  
-Alter the security policy to disable the policy.  Now both users can access all rows. 
+Измените политику безопасности, чтобы отключить политику.  Теперь оба пользователя могут получить доступ ко всем строкам. 
 
 ```
 ALTER SECURITY POLICY SalesFilter   
@@ -163,18 +163,21 @@ WITH (STATE = OFF);
 ``` 
 
 
-## Enable dynamic data masking
+## <a name="enable-dynamic-data-masking"></a>Включение динамического маскирования данных
 
-[Dynamic Data Masking](../relational-databases/security/dynamic-data-masking.md) enables you to limit the exposure of sensitive data to users of an application by fully or partially masking certain columns. 
+[Динамическое маскирование данных](../relational-databases/security/dynamic-data-masking.md) позволяет ограничить раскрытие конфиденциальных данных для пользователей приложения путем полной или частичной маскировки определенных столбцов. 
 
-Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
+Используйте инструкцию `ALTER TABLE`, чтобы добавить функцию маскирования в столбец `EmailAddress` таблицы `Person.EmailAddress`. 
  
 ```
-USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+USE AdventureWorks2014;
+GO
+ALTER TABLE Person.EmailAddress    
+ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
-Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
+Создайте нового пользователя `TestUser` с разрешением `SELECT` для таблицы, а затем выполните запрос от имени `TestUser` для просмотра маскированных данных.   
 
 ```  
 CREATE USER TestUser WITHOUT LOGIN;   
@@ -185,7 +188,7 @@ SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;
 REVERT;    
 ```
  
-Verify that the masking function changes the email address in the first record from:
+Убедитесь, что функция маскирования меняет адрес электронной почты первой записи с:
   
 |EmailAddressID |EmailAddress |  
 |----|---- |   
@@ -198,24 +201,24 @@ into
 |1 |kXXX@XXXX.com |   
 
 
-## Enable Transparent Data Encryption
+## <a name="enable-transparent-data-encryption"></a>Включение прозрачного шифрования данных
 
-One threat to your database is the risk that someone will steal the database files off of your hard-drive. This could happen with an intrusion that gets elevated access to your system, through the actions of a problem employee, or by theft of the computer containing the files (such as a laptop).
+Одной из угроз для базы данных является риск того, что кто-то украдет файлы базы данных с вашего жесткого диска. Это может произойти при атаке, предоставляющей повышенные права доступа к вашей системе, в результате действий сотрудника или кражи компьютера, содержащего файлы (например, ноутбука).
 
-Transparent Data Encryption (TDE) encrypts the data files as they are stored on the hard drive. The master database of the SQL Server database engine has the encryption key, so that the database engine can manipulate the data. The database files cannot be read without access to the key. High-level administrators can manage, backup, and recreate the key, so the database can be moved, but only by selected people. When TDE is configured, the `tempdb` database is also automatically encrypted. 
+Прозрачное шифрование данных (TDE) шифрует файлы данных по мере их сохранения на жестком диске. База данных master ядра СУБД SQL Server содержит ключ шифрования, чтобы ядро СУБД могло манипулировать данными. Файлы базы данных невозможно прочитать без доступа к этому ключу. Администраторы высокого уровня могут управлять этим ключом, выполнять его резервное копирование и повторно создавать его, чтобы базу данных можно было перемещать, но только отдельным пользователям. При настройке TDE база данных `tempdb` также автоматически шифруется. 
 
-Since the Database Engine can read the data, Transparent Data Encryption does not protect against unauthorized access by administrators of the computer who can directly read memory, or access SQL Server through an administrator account.
+Так как ядро СУБД может считывать данные, прозрачное шифрование данных не защищает от несанкционированного доступа администраторов компьютера, которые могут напрямую считывать память или получить доступ к SQL Server через учетную запись администратора.
 
-### Configure TDE
+### <a name="configure-tde"></a>Настройка TDE
 
-- Create a master key
-- Create or obtain a certificate protected by the master key
-- Create a database encryption key and protect it by the certificate
-- Set the database to use encryption
+- Создайте главный ключ
+- Создайте или получите сертификат, защищенный главным ключом
+- Создайте ключ шифрования базы данных и защитите его с помощью сертификата
+- Задайте ведение шифрования базы данных
 
-Configuring TDE requires `CONTROL` permission on the master database and `CONTROL` permission on the user database. Typically an administrator configures TDE. 
+Для настройки TDE требуется разрешение `CONTROL` в базе данных master и разрешение `CONTROL` в пользовательской базе данных. Обычно TDE настраивает администратор. 
 
-The following example illustrates encrypting and decrypting the `AdventureWorks2014` database using a certificate installed on the server named `MyServerCert`.
+В следующем примере демонстрируется шифрование и дешифрование базы данных `AdventureWorks2014` с помощью сертификата с именем `MyServerCert`, установленного на сервере.
 
 
 ```
@@ -228,7 +231,8 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;   GO
+USE AdventureWorks2014;  
+GO
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  
@@ -239,26 +243,33 @@ ALTER DATABASE AdventureWorks2014
 SET ENCRYPTION ON;   
 ```
 
-To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
+Чтобы удалить TDE, выполните `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`.   
 
-The encryption and decryption operations are scheduled on background threads by SQL Server. You can view the status of these operations using the catalog views and dynamic management views in the list that appears later in this topic.   
+Операции шифрования и расшифровки планируются SQL Server в фоновых потоках. Состояние этих операций можно просмотреть в представлениях каталога и динамических административных представлениях в списке, представленном далее в этом разделе.   
 
 > [!WARNING]
->  Backup files of databases that have TDE enabled are also encrypted by using the database encryption key. As a result, when you restore these backups, the certificate protecting the database encryption key must be available. This means that in addition to backing up the database, you have to make sure that you maintain backups of the server certificates to prevent data loss. Data loss will result if the certificate is no longer available. For more information, see [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+>  Файлы резервных копий баз данных, в которых включено TDE, также шифруются с помощью ключа шифрования базы данных. Поэтому для восстановления таких резервных копий необходимо иметь сертификат, защищающий ключ шифрования базы данных. Это значит, что помимо резервного копирования базы данных обязательно необходимо сохранять резервные копии сертификатов серверов, чтобы не допустить потери данных. Если сертификат станет недоступным, это приведет к потере данных. Дополнительные сведения см. в статье [SQL Server Certificates and Asymmetric Keys](../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
 
-For more information about TDE, see [Transparent Data Encryption (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
+Дополнительные сведения о TDE см. в статье [Прозрачное шифрование данных (TDE)](../relational-databases/security/encryption/transparent-data-encryption-tde.md).   
 
 
-## Configure backup encryption
-SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
+## <a name="configure-backup-encryption"></a>Настройка шифрования резервных копий
+SQL Server может шифровать данные при создании резервной копии. Указав алгоритм шифрования и шифратор (сертификат или асимметричный ключ) при создании резервной копии, можно создать зашифрованный файл резервной копии.    
   
-> [!WARNING]  
->  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
+> [!WARNING]
+> Очень важно создать резервную копию сертификата или асимметричного ключа и предпочтительно в ином местоположении, чем зашифрованный ими файл резервной копии. Без сертификата или асимметричного ключа резервную копию нельзя будет восстановить, т. е. файл резервной копии будет непригоден для использования. 
  
  
-The following example creates a certificate, and then creates a backup protected by the certificate.
+Следующий пример создает сертификат, а затем создает резервную копию, защищенную этим сертификатом.
+
 ```
-USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
+USE master;  
+GO  
+CREATE CERTIFICATE BackupEncryptCert   
+   WITH SUBJECT = 'Database backups';  
+GO 
+BACKUP DATABASE [AdventureWorks2014]  
+TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
   COMPRESSION,  
   ENCRYPTION   
@@ -270,9 +281,9 @@ WITH
 GO  
 ```
 
-For more information, see [Backup Encryption](../relational-databases/backup-restore/backup-encryption.md).
+Дополнительные сведения см. в статье [Шифрование резервной копии](../relational-databases/backup-restore/backup-encryption.md).
 
 
-## Next steps
+## <a name="next-steps"></a>Дальнейшие действия
 
-For more information about the security features of SQL Server, see [Security Center for SQL Server Database Engine and Azure SQL Database](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
+Дополнительные сведения о функциях безопасности в SQL Server см. в статье [Центр обеспечения безопасности для ядра СУБД SQL Server и Базы данных SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).

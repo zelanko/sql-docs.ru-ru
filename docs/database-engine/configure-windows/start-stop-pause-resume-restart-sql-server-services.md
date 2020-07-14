@@ -1,5 +1,6 @@
 ---
 title: Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
+description: Узнайте, как запускать, останавливать, приостанавливать, возобновлять или перезапускать различные службы SQL Server. Узнайте, как использовать Transact-SQL, PowerShell и другие средства для этих действий.
 ms.custom: ''
 ms.date: 03/05/2020
 ms.prod: sql
@@ -37,19 +38,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ms.reviewer: ''
-ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: ca8891058091bca9862fbdbf81bfa51cc17d250a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81287964"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85763988"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе описываются запуск, остановка, приостановка, возобновление или перезапуск ядра СУБД SQL Server, агента SQL Server или службы обозревателя SQL Server с помощью диспетчера конфигурации SQL Server, SQL Server Management Studio (SSMS), команд NET из командной строки, Transact-SQL или PowerShell.
 
@@ -187,7 +188,7 @@ ms.locfileid: "81287964"
 
 ### <a name="to-start-a-named-instance-of-the-database-engine"></a><a name="dbNamed"></a> Запуск именованного экземпляра ядра СУБД
 
-- В командной строке введите одну из следующих команд: Замените *\<имя_экземпляра>* именем экземпляра, которым необходимо управлять.  
+- В командной строке введите одну из следующих команд: Замените *\<instancename>* именем экземпляра, которым необходимо управлять.  
   
     **net start "SQL Server (** *имя_экземпляра* **)"**
   

@@ -13,15 +13,15 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c9819b7853121c006180d0a988dbc83e905505f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0c79fa26bb75373811b179ff73462d15f9791b87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82179194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85748048"
 ---
 # <a name="device-contents-sql-server"></a>Содержимое устройства (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   При помощи этого диалогового окна можно посмотреть сведения о резервном копировании. Сюда входят сведения об устройстве, носителе, наборе носителей, а также резервном наборе (наборах) данных.  
   
  **Использование среды SQL Server Management Studio для просмотра содержимого устройства резервного копирования**  
