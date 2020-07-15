@@ -13,15 +13,15 @@ ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: juliemsft
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f3a549c8a56c14e7c372d0b882d9fd2209298346
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ae8c2994e43ff6a90105dd39c203a455da2c9468
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633389"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196777"
 ---
 # <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Создает определяемую пользователем функцию в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Определяемая пользователем функция представляет собой подпрограмму [!INCLUDE[tsql](../../includes/tsql-md.md)], которая принимает параметры, выполняет действие, например сложное вычисление, а затем возвращает результат этого действия в виде значения. Возвращаемое значение должно быть скалярным (единичным). При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
   
@@ -165,9 +165,9 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): выводит сведения о параметрах, определенных в определяемых пользователем функциях.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): Выводит сведения о параметрах, определенных в определяемых пользователем функциях.  
   
- [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): отображает базовые объекты, на которые ссылается функция.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): Отображает базовые объекты, на которые ссылается функция.  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE FUNCTION на базу данных и разрешение ALTER на схему, в которой создается функция.  

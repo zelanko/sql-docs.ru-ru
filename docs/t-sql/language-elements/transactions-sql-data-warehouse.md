@@ -12,15 +12,15 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b731a07ea0443ff925555e5b91e68368bf69392
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ac7b9a500bb87dca74082c9d16874131eb82402d
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631939"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197410"
 ---
 # <a name="transactions-sql-data-warehouse"></a>Транзакции (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Транзакция — это группа инструкций одной или нескольких баз данных, которые либо полностью фиксируются, либо полностью откатываются. Транзакции атомарны, согласованы, изолированы и устойчивы (atomic, consistent, isolated, durable — ACID). Если транзакция выполнена успешно, все инструкции в ней фиксируются. Если транзакция завершается ошибкой, то если хотя бы одна инструкция в группе завершается ошибкой, выполняется откат всей группы.  
   
