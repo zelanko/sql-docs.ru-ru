@@ -59,7 +59,7 @@ ms.locfileid: "85352421"
 
 Параметры расширения выглядят следующим образом.
 
-:::image type="content" source="media/machine-learning-extension/ml-extension-settings.png" alt-text="Параметры расширения "Машинное обучение"":::
+:::image type="content" source="media/machine-learning-extension/ml-extension-settings.png" alt-text="Параметры расширения Машинное обучение":::
 
 ### <a name="enable-python"></a>Включение Python
 
