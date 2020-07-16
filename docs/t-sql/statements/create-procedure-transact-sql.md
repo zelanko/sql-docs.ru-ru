@@ -1,5 +1,5 @@
 ---
-title: CREATE PROCEDURE (Transact-SQL) | Документы Майкрософт
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ee4bfb4884fe649993eeefde51ea9c329ad696
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f0897e58e9d60ef8d53ce4d9be07fb5f1f3228c4
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86010788"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392892"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 
@@ -140,6 +140,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## <a name="arguments"></a>Аргументы
 
@@ -401,13 +403,16 @@ SELECT DB_NAME(@ID) AS ThatDB;
 
 Следующие инструкции нельзя использовать нигде в тексте хранимой процедуры.
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE или ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE или ALTER FUNCTION|CREATE или ALTER VIEW|USE *database_name*|
-|CREATE или ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE или ALTER TRIGGER |
+| CREATE или ALTER FUNCTION |
+| CREATE или ALTER PROCEDURE |
+| CREATE или ALTER VIEW |
 
  Процедура может ссылаться на таблицы, которые еще не существуют. Во время создания хранимой процедуры выполняется только проверка синтаксиса. Процедура не компилируется до первого выполнения. Ссылки на все упоминаемые в процедуре объекты разрешаются только во время компиляции. Таким образом, ничто не мешает создать синтаксически правильную процедуру, ссылающуюся на несуществующие таблицы, однако если эти таблицы отсутствуют во время выполнения хранимой процедуры, она завершится с ошибкой.
 

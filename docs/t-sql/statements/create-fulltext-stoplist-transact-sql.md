@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 966bf472bddc213ee639d200818eb1c95181135e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ec2dac854349ad7e05fcbf9738b4cafb78228cc6
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767114"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392922"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -53,8 +53,10 @@ CREATE FULLTEXT STOPLIST stoplist_name
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## <a name="arguments"></a>Аргументы  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *stoplist_name*  
  Имя списка стоп-слов. Длина *stoplist_name* не может превышать 128 символов. Аргумент *stoplist_name* должен быть уникальным среди всех списков стоп-слов текущей базы данных и соответствовать правилам для идентификаторов.  
   

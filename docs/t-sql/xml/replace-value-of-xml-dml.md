@@ -1,5 +1,5 @@
 ---
-title: replace value of (XML DML) | Документы Майкрософт
+title: replace value of (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1269b119a6f8bdcfe14890a911a4dd6b0e618328
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70ef0ec9f3cec26b7e0a55df770a3983d0d8594e
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731045"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393052"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 *Expression1*  
 Определяет узел, значение которого должно быть обновлено. Оно должно определять только один узел. Таким образом, *Expression1* должно быть статическим одноэлементным выражением. Если XML типизирован, тип узла должен быть простым типом. Выбор нескольких узлов вызовет ошибку. Если *Expression1* возвращает пустую последовательность, то замены значения не произойдет и не будет возвращено сообщение об ошибке. *Expression1* должно возвращать одиночный элемент с простым типизированным содержимым (списком или атомарными типами), текстовым узлом или узлом атрибута. *Expression1* не может быть типом объединения, сложным типом, инструкцией по обработке, узлом документа или узлом комментария, иначе возникнет ошибка.  
   

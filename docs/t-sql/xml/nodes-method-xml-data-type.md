@@ -1,5 +1,5 @@
 ---
-title: Метод nodes() (тип данных xml) | Документы Майкрософт
+title: Метод nodes() (тип данных xml)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 65cff00f57d98746c77b51c38ed426a14d1dd066
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ee5721f2fef1117f1f4d6da5664a644f32dadb92
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731047"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393062"
 ---
 # <a name="nodes-method-xml-data-type"></a>Метод nodes() (тип данных xml)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "85731047"
 nodes (XQuery) as Table(Column)  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 *XQuery*  
 Строковый литерал, выражение XQuery. Если выражение запроса конструирует узлы, эти сконструированные узлы представлены в результирующем наборе строк. Если результатом выражения запроса является пустая последовательность, набор строк также будет пустым. Если статическим результатом выражения запроса является последовательность, которая вместо узлов содержит атомарные значения, возникает статическая ошибка.  
   

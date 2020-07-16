@@ -1,5 +1,5 @@
 ---
-title: Методы типа данных XML | Документы Майкрософт
+title: Методы типа данных XML
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7ac83db43e546af3641622d709e1d1a746d3b892
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6f1cb562110c113b5d56f680dd1fa86ef41a4c23
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730991"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393252"
 ---
 # <a name="xml-data-type-methods"></a>Методы типа данных XML
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "85730991"
   
 ## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[query (метод) (тип данных xml)](../../t-sql/xml/query-method-xml-data-type.md)|Описывает, как использовать метод query() для запроса к экземпляру XML.|  
 |[value (метод) (тип данных xml)](../../t-sql/xml/value-method-xml-data-type.md)|Описывает, как использовать метод value() для получения значения типа SQL из экземпляра XML.|  

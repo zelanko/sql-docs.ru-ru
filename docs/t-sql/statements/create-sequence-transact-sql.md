@@ -1,5 +1,5 @@
 ---
-title: CREATE SEQUENCE (Transact-SQL) | Документы Майкрософт
+title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
@@ -22,14 +22,15 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 909bd52e325726f9874b29ebc791eb049e4c0daa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f350f2d2a9b1f4b90030f928792570cc80653916
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767045"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392962"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
+
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Создает объект последовательности и указывает его свойства. Последовательность представляет собой определяемый пользователем объект, привязанный к схеме, который формирует последовательность числовых значений в соответствии со спецификацией, с которой эта последовательность создавалась. Последовательность числовых значений формируется в возрастающем или убывающем порядке с заданным интервалом; можно настроить перезапуск (зацикливание) последовательности, когда она исчерпана. В отличие от столбцов идентификаторов последовательности не связаны с конкретными таблицами. Приложение обращается к объекту последовательности, чтобы получить следующее значение. Приложения управляют связями между последовательностями и таблицами. Пользовательские приложения могут ссылаться на объект последовательности и распределять значения между несколькими строками и таблицами.  
@@ -54,7 +55,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 *sequence_name*  
 Указывает уникальное имя, под которым последовательность известна в базе данных. Тип **sysname**.  
   
@@ -240,7 +243,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  Частичный перечень выходных данных демонстрирует значения по умолчанию.  
   
-|||  
+| Выходные данные | Значение по умолчанию|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  

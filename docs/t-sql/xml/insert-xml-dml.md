@@ -1,5 +1,5 @@
 ---
-title: insert (XML DML) | Документы Майкрософт
+title: insert (XML DML)
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fc19088f8ee34202b5157015ac9ef71a8d24922c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 895fda87dd1c78744f7f95b334927940c76fdcd7
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731075"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393072"
 ---
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -39,7 +39,9 @@ insert
                 )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *Expression1*  
  Идентифицирует один или несколько вставляемых узлов. Это может быть постоянный экземпляр XML; ссылка на типизированный тип данных XML той же коллекции XML-схем, к которой применяется метод изменения; нетипизированный тип данных XML, использующий изолированную функцию **sql:column()** /**sql:variable()** ; или выражение XQuery. Результатом выражения может быть узел, в том числе текстовый, или упорядоченная последовательность узлов. Корневой узел (/) не может быть результатом выражения. Если результатом выражения является значение или последовательность значений, то такие значения вставляются в качестве одиночного текстового узла, в котором все значения разделены пробелами. Если несколько узлов указаны как постоянные, они заключаются в скобки и разделяются запятыми. Разнородные последовательности, например, последовательность элементов, атрибутов или значений, вставлять нельзя. Если результатом выражения *Expression1* является пустая последовательность, вставка не выполняется, и никакие ошибки не возвращаются.  
   

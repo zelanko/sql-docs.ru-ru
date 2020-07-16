@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f996ed5d086d263499214321c3f73bff39b805cd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 7e5b1db8f48e6d4f336d47e8ce6dc09a1659be7f
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902282"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392752"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,7 +49,9 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *event_notification_name*  
  Имя уведомления о событии. Имя уведомления о событии должно соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md), и оно должно быть уникальным в той области, где они были созданы: SERVER, DATABASE или *object_name*.  
   
