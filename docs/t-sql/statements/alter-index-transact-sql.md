@@ -46,14 +46,15 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8c9b9fb9b58cee42c11e821e940966f2acce498
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6c16150f2023a863bbdcbecb138cc7ff6053b26a
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86000716"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381218"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Изменяет существующий индекс таблицы или представления (rowstore, columnstore или XML) посредством его отключения, перестройки или реорганизации либо посредством настройки параметров индекса.  
@@ -173,6 +174,9 @@ ALTER INDEX { index_name | ALL }
 }  
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Аргументы
 
  *index_name*  
@@ -677,8 +681,8 @@ ABORT
   
 Если при установке параметров блокировки строки или страницы указывается ключевое слово ALL, то установки применяются ко всем индексам. Если базовая таблица представляет собой кучу, установки применяются следующими способами:  
   
-|||  
-|-|-|  
+|Параметр|Сведения|
+|------|-------|
 |ALLOW_ROW_LOCKS = ON или OFF|Для кучи и любых соответствующих некластеризованных индексов.|  
 |ALLOW_PAGE_LOCKS = ON|Для кучи и любых соответствующих некластеризованных индексов.|  
 |ALLOW_PAGE_LOCKS = OFF|Полностью для некластеризованных индексов. Это означает, что все блокировки страниц запрещаются для некластеризованных индексов. В куче запрещены только общая блокировка (S), блокировка обновления (U) и монопольная блокировка (X) для страниц. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может запросить намеренную блокировку страницы (IS, IU или IX) для внутренних целей.|  
