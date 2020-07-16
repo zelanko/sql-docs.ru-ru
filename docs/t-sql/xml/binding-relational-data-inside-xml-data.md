@@ -1,5 +1,5 @@
 ---
-title: Привязка реляционных данных внутри XML-данных | Документы Майкрософт
+title: Привязка реляционных данных внутри XML-данных
 ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a3dfe3480b6f2756ebff68f27574c8b72f6ae61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fce46e032fa908bde53262c9f6dddea3c8d46d90
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85751445"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392842"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "85751445"
   
  Однако данная привязка доступна только для чтения, то есть нельзя записывать данные в столбцы, использующие эти функции. Например, запись sql:переменная("\@x")="*некоторое выражение*" недопустима.  
   
-## <a name="example-cross-domain-query-using-sqlvariable"></a>Пример: запрос между доменами с использованием функции sql:variable()  
+## <a name="example-cross-domain-query-using-sqlvariable"></a>Пример запрос между доменами с использованием функции sql:variable()  
  В этом примере показано, как **sql:variable()** позволяет приложению подготовить параметризованный запрос. ISBN-номер передается с помощью переменной SQL @isbn. Заменив константу функцией **sql:variable()** , можно использовать этот запрос для поиска любого ISBN-номера, а не только 0-7356-1588-2.  
   
 ```  

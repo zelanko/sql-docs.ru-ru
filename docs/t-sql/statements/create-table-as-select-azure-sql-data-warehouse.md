@@ -11,15 +11,15 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e71924aa85d4761448c340f1f0554c383df288d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6da86a89421fcee2c60bd0a46392dc1acc4cdd46
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632925"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279520"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (хранилище данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 CREATE TABLE AS SELECT (CTAS) — одна из наиболее важных доступных функций T-SQL. Эта операция выполняется полностью параллельно и создает новую таблицу на основе выходных данных инструкции SELECT. CTAS позволяет быстро и легко создать копию таблицы.   
  
@@ -136,7 +136,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="limitations-bk"></a>
 
 ## <a name="limitations-and-restrictions"></a>Ограничения  
-Хранилище данных SQL Azure еще не поддерживает автоматическое создание или автоматическое обновление статистики.  Чтобы добиться наилучшей производительности запросов, важно создавать статистику для всех столбцов во всех таблицах после запуска инструкции CTAS и после любых значительных изменений данных. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).
 
 Упорядоченный кластеризованный индекс columnstore можно создавать для столбцов любых типов данных, поддерживаемых в хранилище данных SQL Azure, за исключением строковых столбцов.  
 
@@ -167,7 +166,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. Использование инструкции CTAS для копирования таблицы 
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 Одно из наиболее частых применений `CTAS` — создание копии таблицы для изменения DDL. Например, если вы изначально создали таблицу как `ROUND_ROBIN` и теперь хотите изменить ее на таблицу с распределением по столбцу, вы можете изменить столбец распределения с помощью `CTAS`. `CTAS` также может использоваться для изменения секционирования, индексирования и типов столбцов.
 
@@ -239,7 +238,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>Б. Использование инструкции CTAS для изменения атрибутов столбца 
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 В этом примере инструкция CTAS используется для изменения типов данных, допустимости значений NULL и параметров сортировки для нескольких столбцов в таблице DimCustomer2.  
   
@@ -300,7 +299,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>В. Использование инструкции CTAS для изменения метода распределения таблицы
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 В этом простом примере показано, как изменить метод распределения таблицы. Для иллюстрации механизма изменения в этом примере таблица с распределенным хэшем изменяется на таблицу с циклическим распределением и затем обратно на таблицу с распределенным хэшем. Окончательная таблица совпадает с исходной таблицей. 
 
@@ -351,7 +350,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>Г. Использование инструкции CTAS для преобразования таблицы в реплицированную таблицу  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse 
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse 
 
 Этот пример относится к преобразованию таблицы с циклическим распределением или таблицы с распределенным хэшем в реплицированную таблицу. В этом примере предыдущий способ изменения типа распределения продвигается на один шаг дальше.  Поскольку DimSalesTerritory является измерением и скорее всего таблицей меньшего размера, вы можете создать таблицу повторно в виде реплицированной таблицы, чтобы избежать перемещения данных при соединении с другими таблицами. 
 
@@ -375,7 +374,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>Д. Использование инструкции CTAS для создания таблицы с меньшим количеством столбцов
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse 
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse 
 
 В следующем примере создается таблица `myTable (c, ln)` с циклическим распределением. Новая таблица содержит только два столбца. В этом примере в инструкции SELECT в качестве имен столбцов используются псевдонимы столбцов.  
   
@@ -398,7 +397,7 @@ AS SELECT CustomerKey AS c, LastName AS ln
 <a name="ctas-query-hint-bk"></a>
 
 ### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>Е. Использование указания запроса с инструкцией CREATE TABLE AS SELECT (CTAS)  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
   
 В этом запросе показан базовый синтаксис для указания запроса на соединение с инструкцией CTAS. После отправки запроса [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] применяет стратегию хэш-соединения при создании плана запроса для каждого отдельного распределения. Дополнительные сведения об указании запроса на хэш-соединение см. в разделе [Предложение OPTION (Transact-SQL)](../../t-sql/queries/option-clause-transact-sql.md).  
   
@@ -421,7 +420,7 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>Ж. Использование инструкции CTAS для импорта данных из хранилища BLOB-объектов Azure  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Чтобы импортировать данные из внешней таблицы, используйте инструкцию CREATE TABLE AS SELECT для выбора данных из внешней таблицы. Синтаксис для выбора данных из внешней таблицы в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] является таким же, как синтаксис для выбора данных из обычной таблицы.  
   
@@ -503,7 +502,7 @@ AS SELECT * FROM ClickStreamExt
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>И. Использование инструкции CTAS вместо SELECT..INTO  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse
 
 В коде SQL Server для заполнения таблицы результатами выполнения инструкции SELECT обычно используется SELECT..INTO. Ниже приведен пример использования инструкции SQL Server SELECT..INTO.
 
@@ -530,7 +529,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>К. Использование инструкции CTAS и неявного соединения для замены соединения ANSI в предложении `FROM` инструкции `UPDATE`  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Может оказаться, что у вас есть сложная операция обновления, которая соединяет вместе несколько таблиц с использованием синтаксиса соединения ANSI для выполнения операции UPDATE или DELETE.
 
@@ -613,7 +612,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>Л. Использование инструкции CTAS, чтобы указать, какие данные следует сохранить вместо использования соединений ANSI в предложении FROM инструкции DELETE  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Иногда для удаления данных лучше всего использовать `CTAS`. Вместо удаления данных просто выберите данные, которые требуется сохранить. Это особенно справедливо для инструкций `DELETE`, в которых используется синтаксис соединения ANSI, так как хранилище данных SQL не поддерживает соединения ANSI в предложении `FROM` инструкции `DELETE`.
 
@@ -641,7 +640,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>М. Использование инструкции CTAS для упрощения инструкций слияния  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 Операторы слияния, по крайней мере, частично могут быть заменены на `CTAS`. Вы можете объединить `INSERT` и `UPDATE` в одну инструкцию. Любые удаленные записи потребуется включить во вторую инструкцию.
 
@@ -680,7 +679,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>Н. явно указывайте тип данных и допустимость нулевого результата.  
-Применимо к: хранилище данных SQL Azure и Parallel Data Warehouse  
+Область применения: Хранилище данных SQL Azure и Parallel Data Warehouse  
 
 При переносе кода SQL Server в хранилище данных SQL вы можете столкнуться со следующим шаблоном написания кода:
 
