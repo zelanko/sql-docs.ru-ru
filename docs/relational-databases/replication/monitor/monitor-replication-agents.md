@@ -21,15 +21,15 @@ ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 7984491281088f345e3e263356c6dad323d2cf5a
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: fe45b96570d9090aff4de1858c7d3bb455896cd5
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807603"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159812"
 ---
 # <a name="monitor-replication-agents"></a>Наблюдение за агентами репликации
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Монитор репликации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляет систематический обзор действий репликации, а также облегчает поиск сведений о конкретном агенте. В приведенном ниже списке перечислены все агенты, для которых существуют вкладки в мониторе репликации, а также дается ссылка на раздел, где описывается порядок доступа к этим вкладкам.  
   
 -   С публикациями в мониторе репликации связаны следующие агенты.  

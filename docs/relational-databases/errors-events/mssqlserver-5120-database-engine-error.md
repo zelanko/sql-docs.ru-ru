@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5228 | Документация Майкрософт
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 7faa39c696c6dd7dfc7e1055935ab96b3cb468f6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 42741b99b89a25b50cd19d647d9f17f2ffe085d3
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85679479"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279109"
 ---
 # <a name="mssqlserver_5120"></a>MSSQLSERVER_5120
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "85679479"
   Определите причину, исправьте ошибку операционной системы, затем еще раз попытайтесь выполнить операцию. Есть несколько состояний, сведения о которых могут помочь корпорации Майкрософт уменьшить область изучения для определения ошибки. 
   
 ### <a name="access-is-denied"></a>Доступ запрещен 
-В случае возникновения ошибки операционной системы 5 (```Access is Denied```), рассмотрите следующие методы устранения:
+В случае возникновения ошибки операционной системы 5 (`Access is Denied`), рассмотрите следующие методы устранения:
    -  Проверьте разрешения, заданные в файле, просмотрев свойства файла в проводнике Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует группы Windows, чтобы подготовить службу контроля доступа для различных ресурсов файла. Убедитесь, что соответствующая группа (с именем SQLServerMSSQLUser$ComputerName$MSSQLSERVER или SQLServerMSSQLUser$ComputerName$InstanceName) имеет необходимые разрешения для файла базы данных, указанного в сообщении об ошибке. Дополнительные сведения см. в статье [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md). Убедитесь, что группа Windows содержит учетную запись запуска службы или идентификатор безопасности службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
    -  Проверьте учетную запись пользователя, от имени которой сейчас запущена служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для получения этих сведений можно использовать диспетчер задач Windows. Найдите значение "Имя пользователя" для исполняемого файла "sqlservr.exe". Если вы недавно изменили учетную запись службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживаемым способом выполнения этой операции является использование служебной программы [Диспетчер конфигурации SQL Server](../sql-server-configuration-manager.md). 
    -  В зависимости от типа операции — открытие баз данных во время запуска сервера, присоединение базы данных, восстановление базы данных и т. д. — учетная запись, используемая для олицетворения и получения доступа к файлу базы данных, может варьироваться. Сведения о том, какая операция позволяет задавать разрешения к каким учетным записям, см. в статье [Защита данных и файлов журналов](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN). Используйте такие средства, как [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon), чтобы узнать, каким образом предоставляется доступ к файлу: в контексте безопасности учетной записи запуска службы экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (или идентификатора безопасности службы) либо олицетворенной учетной записи.
@@ -68,7 +68,7 @@ ms.locfileid: "85679479"
 ### <a name="attaching-files-that-reside-on-a-network-attached-storage"></a>Подключение файлов, размещенных в запоминающем устройстве, подключаемом к сети  
 Если не удается повторно подключить базу данных, которая находится в запоминающем устройстве, подключаемом к сети, это сообщение может быть зарегистрировано в журнале приложений.
 
-```Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).```
+`Msg 5120, Level 16, State 101, Line 1 Unable to open the physical file "\\servername\sharename\filename.mdf". Operating system error 5: (Access is denied.).`
 
 Эта проблема возникает из-за того, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сбрасывает разрешения файлов при отключении базы данных. При попытке повторно подключить базу данных происходит сбой из-за ограниченных разрешений общего доступа.
 
@@ -76,13 +76,13 @@ ms.locfileid: "85679479"
 1. Используйте параметр запуска -T для запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте этот параметр запуска, чтобы включить флаг трассировки 1802 в [диспетчере конфигурации SQL Server](../sql-server-configuration-manager.md) (сведения о 1802 см. в разделе [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)). Дополнительные сведения об изменении параметров запуска см. в разделе [Параметры запуска службы ядра СУБД](../../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 2. Отключить базу данных можно с помощью приведенной ниже команды.
-   ```tsql
+   ```sql
     exec sp_detach_db DatabaseName
     go 
    ```
 
 3. Восстановить подключение базы данных можно с помощью приведенной ниже команды.
-   ```tsql
+   ```sql
    exec sp_attach_db DatabaseName, '\\Network-attached storage_Path\DatabaseMDFFile.mdf', '\\Network-attached storage_Path\DatabaseLDFFile.ldf'
    go
    ```

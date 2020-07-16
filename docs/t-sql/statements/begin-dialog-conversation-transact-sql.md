@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3250a36b01cf633b9fc915cbef5d904f66b56874
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 6ae198ad14426a71c8c86838c15e60ce0464cebf
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895505"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86380847"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -61,7 +61,9 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 [ ; ]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  **@** _dialog_handle_  
  Переменная, используемая для хранения дескриптора диалога, сформированного системой для нового диалога, который был возвращен инструкцией BEGIN DIALOG CONVERSATION. Переменная должна иметь тип **uniqueidentifier**.  
   

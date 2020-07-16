@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_17204 | Документация Майкрософт
 ms.custom: ''
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: PijoCoder
 ms.author: mathoma
-ms.openlocfilehash: 362f907187d7fe738216ea2000f2a5c48eca7b5f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1c0c799af360e10780c35ba6848031fb5a4d6737
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85780789"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279630"
 ---
 # <a name="mssqlserver_17207"></a>MSSQLSERVER_17207
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -103,7 +103,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
         Impersonating: DomainName\UserName
         ```
   
-1. Если вы получаете ошибку ОС ```The system cannot find the file specified``` = 3
+1. Если вы получаете ошибку ОС `The system cannot find the file specified` = 3
    - Проверьте полный путь из сообщения об ошибке.
    - Убедитесь, что диск и путь к папке видимы и доступны в проводнике Windows.
    - Проверьте журнал событий Windows, чтобы узнать, существуют ли проблемы с этим диском.
@@ -113,7 +113,7 @@ STREAMFCB::Startup: Operating system error 2(The system cannot find the file spe
      - Если файл, вызвавший ошибку, является файлом журнала транзакций, ознакомьтесь со сведениями в разделах FOR ATTACH и FOR ATTACH_REBUILD_LOG в статье [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md), чтобы понять, как можно повторно создать отсутствующие файлы журнала транзакций.
    - Прежде чем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] попытается получить доступ к файлам базы данных в этих расположениях, убедитесь, что доступно дисковое или сетевое расположение (например, iSCSI-диск). При необходимости создайте нужные зависимости в администраторе кластера или диспетчере служб.
 
-1. Если возникает ошибка операционной системы ```The process cannot access the file because it is being used by another process``` = 32
+1. Если возникает ошибка операционной системы `The process cannot access the file because it is being used by another process` = 32
    - Используйте такие средства, как [Обозреватель процессов](https://docs.microsoft.com/sysinternals/downloads/process-explorer) или [Дескриптор](https://docs.microsoft.com/sysinternals/downloads/handle) из Windows Sysinternals, чтобы определить, нет ли у другого процесса или службы эксклюзивной блокировки для этого файла базы данных.
    - Запретите этому процессу доступ к файлам базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Распространенными примерами являются антивирусные программы (см. руководство по исключению файлов в следующей [статье базы знаний](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - В кластерной среде убедитесь, что процесс sqlservr.exe предыдущего узла-владельца освободил дескрипторы для файлов базы данных. Обычно этого не происходит, но неправильная настройка кластера или путей ввода-вывода может привести к таким проблемам.

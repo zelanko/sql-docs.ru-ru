@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: cfaf0b5cdb8ddddc3a27ed5fb80b6fcfb7b8afbd
-ms.sourcegitcommit: d973b520f387b568edf1d637ae37d117e1d4ce32
+ms.openlocfilehash: 822cd1efc21dbdeae7a5194bc659f73c00eddb7d
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85215247"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159742"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL)
 
@@ -730,17 +730,17 @@ FORCED
 <a name="query-store"></a> **\<query_store_options> ::=**      
 **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
+ON | **OFF** | CLEAR [ ALL ]     
 Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов. Дополнительные сведения: [Сценарии использования хранилища запросов](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Включает хранилище запросов.
 
-OFF [ FORCED ]     
-Отключает хранилище запросов. OFF — значение по умолчанию. FORCED является необязательным. FORCED прерывает все выполняющиеся фоновые задачи хранилища запросов и пропускает синхронный сброс, когда хранилище запросов отключается. Заставляет хранилище запросов выполнять отключение как можно быстрее. По сути отключает хранилище запросов немедленно. FORCED появился в [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5.
+OFF      
+Отключает хранилище запросов. OFF — значение по умолчанию. 
 
 > [!NOTE]  
-> Хранилище запросов нельзя отключить в отдельной базе данных Azure SQL Database и эластичном пуле. При выполнении инструкции ALTER DATABASE [база данных] SET QUERY_STORE = OFF будет возвращено предупреждение «'QUERY_STORE = OFF' не поддерживается в данной версии SQL Server». 
+> Хранилище запросов нельзя отключить в отдельной базе данных [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] и эластичном пуле. При исполнении `ALTER DATABASE [database] SET QUERY_STORE = OFF` будет возвращено предупреждение `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Удаляет содержимое хранилища запросов.
