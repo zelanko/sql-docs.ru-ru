@@ -8,17 +8,33 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
-ms.openlocfilehash: 09b894fb6604c912bafaa0fc2856134fe970a721
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/15/2020
+ms.openlocfilehash: 3f6766e32369c2002b6da7df62646572a4cf8507
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758413"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406257"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Заметки о выпуске для Azure Data Studio
 
 **[Скачайте и установите последний выпуск.](download.md)**
+
+## <a name="july-2020"></a>Июль 2020 г.
+
+15 июля 2020 г.&nbsp; / &nbsp;версия: 1.20.0
+
+&nbsp;
+
+| Изменение | Сведения |
+| :----- | :------ |
+| Добавлен новый обзор возможностей | Страница приветствия и палитра команд теперь позволяют пользователям запустить обзор самых популярных возможностей, включая мини-представления "Подключения" и "Записные книжки", а также магазин расширений. |
+| Новые функции записной книжки | &bull; &nbsp; Поддержка заголовков на панели инструментов Markdown<br/> &bull; &nbsp; Параллельный предпросмотр Markdown в текстовых ячейках
+| Перетаскивание столбцов и таблиц в редакторе запросов | Теперь пользователи могут перетаскивать столбцы и таблицы напрямую из мини-представления подключений в редактор запросов. |
+| В панель действий добавлен значок учетной записи Azure | Более наглядный вход в Azure |
+| Устраненные ошибки и проблемы | Полный список исправлений см. на странице [ошибок и проблем в GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 
 ## <a name="june-2020"></a>Июнь 2020 г.
 

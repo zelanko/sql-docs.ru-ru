@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee30e1ce318276d9cf5bd7af3d13e291bfa2ea06
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a07244e6f34dc8b6ec645bb31517e739b32265d
+ms.sourcegitcommit: d1535944bff3f2580070cc036ece30f1d43ee2ce
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85781661"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86406127"
 ---
 # <a name="monitor-data-tier-applications"></a>Наблюдение за приложениями уровня данных
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
