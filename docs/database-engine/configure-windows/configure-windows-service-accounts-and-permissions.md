@@ -51,12 +51,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d4ef0d67bdb86d08754ed23805b4c04e56cf37a9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a70a3794a75ffb253e3e52917a075c11e22f865
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728680"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196956"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 
@@ -83,6 +83,9 @@ ms.locfileid: "85728680"
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]**  — предоставляет средства оперативной аналитической обработки (OLAP) и средства интеллектуального анализа данных для приложений бизнес-аналитики. Путь к исполняемому файлу: \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**  — предназначены для выполнения, создания, планирования, доставки отчетов и управления ими. Путь к исполняемому файлу: \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]**  — обеспечивают поддержку управления хранением и выполнением пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Путь к исполняемому файлу: \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe.
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может включать дополнительные службы для развертываний с горизонтальным увеличением масштаба. См. дополнительные сведения в руководствах по [ Настройка развертывания служб Integration Services (SSIS) с горизонтальным увеличением масштаба](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md).
+
 - **Браузер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — служба разрешения имен, которая предоставляет сведения о соединении с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] клиентским компьютерам. Путь к исполняемому файлу: c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **Полнотекстовый поиск** — быстро создает полнотекстовые индексы содержимого и свойства структурированных и полуструктурированных данных, чтобы обеспечить фильтрацию документа и разбиение по словам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - **Модуль записи SQL** — служит для резервного копирования и восстановления приложений для работы в составе платформы служб теневого копирования томов (VSS).
