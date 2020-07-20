@@ -9,12 +9,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c7b22e569f17ca7297483d0b5286ecc77a9a14e5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 67a5219e955ccd9d4b0303276823d8cafbce4963
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895309"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196857"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Основные сведения о доступности SQL Server для развертываний Linux
 
@@ -146,7 +146,7 @@ sudo firewall-cmd --permanent --add-service=high-availability
 
 Это решение в некоторой степени аналогично развертыванию кластеризованных конфигураций с помощью Windows, однако оно во многом от него отличается. В Windows форма доступности кластеризации, называемая отказоустойчивым кластером Windows Server (WSFC), встроена в операционную систему, а функция, позволяющая создавать кластер WSFC (отказоустойчивая кластеризация), по умолчанию отключена. В Windows группы доступности и экземпляры FCI основаны на WSFC и поддерживают тесную интеграцию благодаря особой DLL-библиотеке ресурсов, предоставляемой [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Такое решение в целом возможно, так как все компоненты в нем от одного поставщика.
 
-![](./media/sql-server-linux-ha-basics/image1.png)
+![Основные сведения о высоком уровне доступности](./media/sql-server-linux-ha-basics/image1.png)
 
 Хотя Pacemaker доступен во всех поддерживаемых дистрибутивах Linux, каждое из них может настраиваться и иметь незначительно отличающиеся реализации и версии. Некоторые отличия будут показаны в инструкциях, приведенных в этой статье. Уровень кластеризации основан на открытом исходном коде, поэтому, несмотря на то, что он поставляется вместе с дистрибутивами, глубокая интеграция, такая как у WSFC в Windows, отсутствует. Именно поэтому корпорация Майкрософт предоставляет *mssql-server-ha*, чтобы [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] и стек Pacemaker могли обеспечивать для групп доступности и экземпляров FCI степень взаимодействия, практически аналогичную Windows.
 

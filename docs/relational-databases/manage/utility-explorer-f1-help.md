@@ -1,5 +1,5 @@
 ---
-title: Справка F1 проводника служебной программы | Документация Майкрософт
+title: Справка F1 проводника служебной программы
 description: Познакомьтесь с возможностями, предлагаемыми в различных областях служебной программы SQL Server. Сведения о представлениях, панели мониторинга и вкладках администрирования служебной программы.
 ms.custom: ''
 ms.date: 08/19/2016
@@ -20,14 +20,15 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 264c809ce03cca9a6bb9b84300d3780a1ddc33f1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e97a0e8ddae735865b4314e33f3a5ce6d365de0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85640406"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197257"
 ---
 # <a name="utility-explorer-f1-help"></a>Справка F1 проводника служебной программы
+
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   В следующих разделах описываются функциональные возможности служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и связанные с ней операции.  
   
@@ -124,11 +125,11 @@ ms.locfileid: "85640406"
  Режим списка  
  В представлении списка в верхней панели отображаются данные об отдельных приложениях уровня данных. Значки состояния исправности показывают общее состояние каждого приложения уровня данных по категории использования.  
   
--   Зеленый флажок — ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") — число приложений уровня данных, которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
+-   Зеленый флажок — :::image type="icon" source="media/well-utilized.png" border="false"::: — число приложений уровня данных, которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
   
--   Зеленая стрелка вниз — ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") — ресурсы используются недостаточно интенсивно.  
+-   Зеленая стрелка вниз — ![стрелка вниз](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") — ресурсы используются недостаточно интенсивно.  
   
--   Красная стрелка вверх — ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") — ресурсы используются слишком интенсивно.  
+-   Красная стрелка вверх — ![стрелка вверх](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") — ресурсы используются слишком интенсивно.  
   
  Последовательность столбцов в режиме списка можно менять, перетаскивая столбцы вправо или влево. Столбцы в режиме списка можно добавить или удалить, щелкнув правой кнопкой мыши заголовки столбцов и выделив или сняв выделение. В контекстном меню также доступны параметры сортировки. Сортировку можно активировать и щелчком по имени столбца.  
   
@@ -266,11 +267,11 @@ ms.locfileid: "85640406"
   
  Значки состояния исправности показывают общее состояние каждого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по категории использования.  
   
--   Зеленый флажок — ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") — число управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
+-   Зеленый флажок — ![зеленый флажок](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") — число управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые не нарушают политики использования ресурсов. Ресурсы используются оптимально.  
   
--   Зеленая стрелка вниз — ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") — ресурсы используются недостаточно интенсивно.  
+-   Зеленая стрелка вниз — ![стрелка вниз](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") — ресурсы используются недостаточно интенсивно.  
   
--   Красная стрелка вверх — ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") — ресурсы используются слишком интенсивно.  
+-   Красная стрелка вверх — ![стрелка вверх](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") — ресурсы используются слишком интенсивно.  
   
  Последовательность столбцов в режиме списка можно менять, перетаскивая столбцы вправо или влево. Столбцы в режиме списка можно добавить или удалить, щелкнув правой кнопкой мыши заголовки столбцов и выделив или сняв выделение. В контекстном меню также доступны параметры сортировки. Сортировку можно активировать и щелчком по имени столбца.  
   

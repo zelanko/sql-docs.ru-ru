@@ -1,5 +1,5 @@
 ---
-title: CREATE ENDPOINT (Transact-SQL) | Документы Майкрософт
+title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql
@@ -31,14 +31,15 @@ helpviewer_keywords:
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7a8290a80438b41a201f268c7388c06d2d7df930
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c095857b42255551d8686d3809b5e13e4b1d7889
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85902293"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86392742"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Создает конечные точки и определяет их параметры, включая методы, доступные клиентским приложениям. Дополнительные сведения о разрешениях см. в разделе [GRANT, предоставление разрешений на конечную точку (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
@@ -107,7 +108,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *endPointName*  
  Назначенное имя создаваемой конечной точки. Используется при обновлении или удалении конечной точки.  
   
@@ -168,7 +171,7 @@ FOR DATABASE_MIRRORING (
   
  **\<authentication_options> ::=**  
   
- **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ **WINDOWS** [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Указывает, что конечная точка будет подключена с использованием протокола проверки подлинности Windows. Это значение по умолчанию.  
   
  Если указать режим авторизации (NTLM или KERBEROS), этот метод всегда будет использоваться в качестве протокола проверки подлинности. Значение по умолчанию NEGOTIATE соответствует тому, что конечная точка будет использовать протокол переговоров Windows для выбора NTLM или Kerberos.  
@@ -176,13 +179,13 @@ FOR DATABASE_MIRRORING (
  CERTIFICATE *certificate_name*  
  Указывает на то, что конечная точка будет проводить проверку подлинности подключений при помощи сертификата, указанного в аргументе *certificate_name*, для определения идентификатора для авторизации. Противоположная конечная точка должна иметь сертификат с открытым ключом, совпадающим с закрытым ключом указанного сертификата.  
   
- WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
+ WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ] CERTIFICATE *certificate_name*  
  Указывает на то, что конечная точка будет производить попытки подключения при помощи проверки подлинности Windows и, в случае неудачи, будет пытаться использовать указанный сертификат.  
   
- CERTIFICATE *certificate_name* WINDOWS [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
+ CERTIFICATE *certificate_name* WINDOWS [ { NTLM \| KERBEROS \| **NEGOTIATE** } ]  
  Указывает на то, что конечная точка будет производить попытки подключения при помощи указанного сертификата и, в случае неуспеха, будет пытаться использовать проверку подлинности Windows.  
   
- ENCRYPTION = { DISABLED | SUPPORTED | **REQUIRED** } [ALGORITHM { **AES** | RC4 | AES RC4 | RC4 AES } ]  
+ ENCRYPTION = { DISABLED \| SUPPORTED \| **REQUIRED** } [ALGORITHM { **AES** \| RC4 \| AES RC4 \| RC4 AES } ]  
  Указывает, будет ли использоваться шифрование в процессе. По умолчанию значение установлено в REQUIRED.  
   
  DISABLED  

@@ -2,7 +2,7 @@
 title: Действия и группы действий подсистемы аудита SQL Server | Документация Майкрософт
 description: Сведения о группах действий и отдельных действиях уровня сервера, уровня базы данных и уровня аудита в подсистеме аудита SQL Server.
 ms.custom: ''
-ms.date: 10/19/2016
+ms.date: 07/13/2020
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: vanto
@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: DavidTrigano
 ms.author: datrigan
-ms.openlocfilehash: cd25caf80cffef2810139ce1a2ab63269e5ec6ad
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 68943b7b57794d779656ca8537a7c59d4f486db8
+ms.sourcegitcommit: e08d28530e0ee93c78a4eaaee8800fd687babfcc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85885596"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86301903"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Действия и группы действий подсистемы аудита SQL Server
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -78,8 +78,8 @@ ms.locfileid: "85885596"
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Это событие появляется при изменении пароля для роли приложения. Эквивалентно [Audit App Role Change Password Event Class](../../../relational-databases/event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Это событие возникает при создании, изменении или удалении любого аудита. Это событие возникает при создании, изменении или удалении спецификации любого аудита. Аудит любых изменений в аудите производится в этом аудите. Эквивалентно [Audit Change Audit Event Class](../../../relational-databases/event-classes/audit-change-audit-event-class.md).|  
 |BACKUP_RESTORE_GROUP|Это событие вызывается командой резервного копирования или восстановления. Эквивалент [класса событий Audit Backup и Restore](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md).|  
-|BATCH_COMPLETED_GROUP;|Это событие возникает каждый раз, когда завершается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает после выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом, включая результат.|  
-|BATCH_STARTED_GROUP|Это событие возникает каждый раз, когда начинается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает до выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом.|  
+|BATCH_COMPLETED_GROUP;|Это событие возникает каждый раз, когда завершается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает после выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом, включая результат. **Добавлено в SQL Server 2019.**|  
+|BATCH_STARTED_GROUP|Это событие возникает каждый раз, когда начинается выполнение любой операции текстового пакета, хранимой процедуры или управления транзакциями. Оно возникает до выполнения пакета и проводит аудит всего пакета или текста хранимой процедуры, отправленной клиентом. **Добавлено в SQL Server 2019.**|  
 |BROKER_LOGIN_GROUP|Это событие вызывается для составления отчета о сообщениях аудита, связанных с механизмом обеспечения безопасности транспорта компонента Service Broker. Эквивалентно [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md).|  
 |DATABASE_CHANGE_GROUP|Это событие вызывается при создании, изменении или удалении базы данных. Это событие возникает при создании, изменении или удалении любой базы данных. Эквивалентно [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Это событие возникает при выходе пользователя автономной базы данных из базы данных.|  

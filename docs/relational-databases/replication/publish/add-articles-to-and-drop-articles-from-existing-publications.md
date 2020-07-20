@@ -21,15 +21,15 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 1bd5e9d25a2f45718e7ac03de1edced942702198
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4bfaa32b87c5e7cffa60f3eef9d5b20ae85a747e
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76286539"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159922"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Добавление и удаление статей в существующих публикациях
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
   Возможно добавлять и удалять статьи после создания публикации. Можно добавить статьи в любое время, но действия, необходимые для удаления статей, зависят от типа репликации и времени удаления статьи.  
   
 ## <a name="adding-articles"></a>добавление статей  
@@ -59,7 +59,7 @@ ms.locfileid: "76286539"
 ## <a name="dropping-articles"></a>удаление статей  
  Статьи могут быть удалены из публикации в любое время, но следует принять во внимание следующие аспекты:  
   
--   Удаление статьи из публикации не удаляет объект из базы данных публикации или соответствующий объект из базы данных подписки. Используйте DROP \<объект> для удаления этих объектов при необходимости. При удалении статьи, связанной с другими опубликованными статьями с помощью ограничений внешних ключей, мы рекомендуем удалить таблицу на подписчике вручную или выполнить скрипт по требованию: укажите скрипт, который содержит соответствующие инструкции DROP \<объект>. Дополнительные сведения см. в статье [Выполнение скриптов во время синхронизации (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
+-   Удаление статьи из публикации не удаляет объект из базы данных публикации или соответствующий объект из базы данных подписки. Используйте DROP \<Object> для удаления этих объектов при необходимости. При удалении статьи, связанной с другими опубликованными статьями с помощью ограничений внешних ключей, мы рекомендуем удалить таблицу на подписчике вручную или выполнить скрипт по требованию: укажите скрипт, который содержит соответствующие инструкции DROP \<Object>. Дополнительные сведения см. в статье [Выполнение скриптов во время синхронизации (программирование репликации на языке Transact-SQL)](../../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
 -   Для публикации слиянием с уровнем совместимости 90RTM и выше возможно удаление статей в любое время, но требуется новый моментальный снимок. Дополнительно:  
   

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a54784e777f85fea73036df3f0c6ec0b23be878e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a6e943dd07c7687d6ab56cc74ebde1cc2ed77214
+ms.sourcegitcommit: b2ab989264dd9d23c184f43fff2ec8966793a727
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760981"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86381238"
 ---
 # <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -56,7 +56,9 @@ ms.locfileid: "85760981"
 }  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  CONSTRAINT  
  Указывает начало определения для ограничения PRIMARY KEY, UNIQUE, FOREIGN KEY или CHECK.  
   
@@ -109,7 +111,7 @@ ms.locfileid: "85760981"
  *ref_column*  
  Столбец в скобках, на который ссылается новое ограничение FOREIGN KEY.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Указывает, какое действие производится над строками изменяемой таблицы, если эти строки имеют ссылочную связь, и строка, на которую имеется ссылка, удаляется из родительской таблицы. Параметр по умолчанию — NO ACTION.  
   
  NO ACTION  
@@ -134,7 +136,7 @@ ms.locfileid: "85760981"
   
  В противном случае, если задано значение NO ACTION, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] вызывает ошибку и откатывает действие по удалению строки в таблице **Vendor**, если хотя бы одна строка в таблице **ProductVendor** ссылается на нее.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Указывает, какое действие совершается над строками в изменяемой таблице, когда эти строки имеют ссылочную связь и строка родительской таблицы, на которую указывает ссылка, обновляется. Параметр по умолчанию — NO ACTION.  
   
  NO ACTION  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 39d990e334c790840eab7c47634dde6c6f9ff065
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ad1dbfa9c39167d6bef9ae14afc4245225cfb4cb
+ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774053"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86159832"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Настройка базы данных распространителя репликации в группе доступности AlwaysOn
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "85774053"
    >[!NOTE]
    >Прежде чем выполнять какие-либо хранимые процедуры репликации (например, `sp_dropdistpublisher`, `sp_dropdistributiondb`, `sp_dropdistributor`, `sp_adddistributiondb` или `sp_adddistpublisher`) для вторичной реплики, убедитесь, что эта реплика полностью синхронизирована.
 
-- Все вторичные реплики в группе доступности базы данных распространителя должны быть доступны для чтения.
+- Все вторичные реплики в группе доступности базы данных распространителя должны быть доступны для чтения. Если вторичная реплика недоступна для чтения, свойства распространителя в SQL Server Management Studio определенной вторичной реплики будут недоступны, однако репликация будет работать правильно. 
 - Все узлы в группе доступности базы данных распространителя должны использовать одну и ту же учетную запись домена для выполнения агента SQL Server. Этой учетной записи домена должны быть назначены одинаковые разрешения на каждом узле.
 - Если какой-либо из агентов репликации выполняется с использованием учетной записи-посредника, такая учетная запись-посредник должна существовать на каждом узле в группе доступности базы данных распространителя и иметь одинаковые разрешения на каждом узле.
 - Вносить изменения в свойства распространителя или базы данных распространителя необходимо для всех реплик, участвующих в группе доступности базы данных распространителя.
@@ -117,12 +117,18 @@ ms.locfileid: "85774053"
 
    Значение `@working_directory` не должно зависеть от сетевого пути к серверам DIST1, DIST2 и DIST3.
 
-1. На серверах DIST2 и DIST3 выполните команду:  
+1. В DIST2 и DIST3, если реплика доступна для чтения в качестве вторичной, выполните команду:  
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Если реплика недоступна для чтения в качестве вторичной, выполните отработку отказа таким образом, чтобы реплика стала первичной, и выполните команду 
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    Значение `@working_directory` должно быть таким же, как и на предыдущем шаге.
 
 ### <a name="publisher-workflow"></a>Рабочий процесс издателя
@@ -196,12 +202,18 @@ ms.locfileid: "85774053"
    sp_adddistributiondb 'distribution'
    ```
 
-4. На сервере DIST3 выполните команду: 
+4. В DIST3, если реплика доступна для чтения в качестве вторичной, выполните команду: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
+   Если реплика недоступна для чтения в качестве вторичной, выполните отработку отказа таким образом, чтобы реплика стала первичной, и выполните команду:
+
+   ```sql
+   sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
+   ```
+   
    Значение `@working_directory` должно совпадать с указанным для серверов DIST1 и DIST2.
 
 4. На сервере DIST3 необходимо повторно создать связанные серверы для подписчиков.

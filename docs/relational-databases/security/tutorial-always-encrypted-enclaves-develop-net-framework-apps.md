@@ -12,15 +12,15 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b73d24edb139e36f11e05c854c9d10d885994e18
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 62c4954663f7553fd6df7461f5b5c967f7386721
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595489"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279360"
 ---
 # <a name="tutorial-develop-a-net-framework-application-using-always-encrypted-with-secure-enclaves"></a>Руководство по Разработка приложения .NET Framework с помощью Always Encrypted с безопасными анклавами
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 В этом руководстве содержатся сведения о разработке простого приложения, которое выполняет запросы к базе данных, использующие безопасный анклав на стороне сервера для [Always Encrypted с защищенными анклавами](encryption/always-encrypted-enclaves.md). 
 
@@ -54,22 +54,22 @@ ms.locfileid: "73595489"
 
 7. Откройте файл App.config для проекта.
 
-8. В разделе \<configuration\> добавьте или обновите разделы \<configSections\>.
+8. Откройте раздел \<configuration\> и добавьте или обновите разделы \<configSections\>.
 
-   а. Если в разделе \<configuration\>**нет** раздела \<configSections\>, добавьте приведенное ниже содержимое сразу после раздела \<configuration\>.
+   а. Если в разделе \<configuration\> **нет** раздела \<configSections\>, добавьте приведенное ниже содержимое сразу после раздела \<configuration\>.
    
       ```xml
       <configSections>
          <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
       </configSections>
       ```
-   b. Если в разделе \<configuration\> уже есть раздел \<configSections\>, добавьте следующую строку в раздел \<configSections\>:
+   b. Если раздел \<configruation\> уже содержит раздел \<configSections\>, добавьте следующую строку в раздел \<configSections\>:
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. В разделе конфигурации под \<configSections\> добавьте следующий раздел, где указан поставщик анклава, который будет использоваться для подтверждения и взаимодействия с анклавами VBS:
+9. В разделе конфигурации под \<configSections\> добавьте следующий раздел, в котором указан поставщик анклава, который будет использоваться для подтверждения анклавов VBS и взаимодействия с ними:
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>

@@ -14,15 +14,15 @@ ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 2aa15e60680419fc2f6c74034ce7063ecabdbf77
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c8d19d21b7bcd1e9ab72732dab439355da1794e0
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81626075"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86197427"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Разрешения: Разрешения: GRANT, DENY, REVOKE (хранилище данных SQL Azure, Parallel Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Используйте инструкции [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**GRANT** и **DENY**, чтобы предоставить или отклонить разрешение (например, **UPDATE**) для защищаемого объекта (базы данных, таблицы, представления и т. д.) субъекту безопасности (имя входа, пользователь базы данных или роль базы данных). Используйте **REVOKE**, чтобы удалить или отклонить разрешение.  
   
@@ -81,9 +81,9 @@ REVOKE
  \<permission>[ **,** ...*n* ]  
  Одно или несколько разрешений для предоставления, запрета или отмены.  
   
- ON [ \<тип_класса> :: ]  *защищаемый _объект*  Предложение **ON** указывает защищаемый объект для предоставления, запрета или отмены разрешений.  
+ ON [ \<class_type> :: ] *защищаемый _объект* Предложение **ON** указывает защищаемый параметр для предоставления, запрета или отзыва разрешений.  
   
- \<тип_класса> Тип класса защищаемого объекта. Это может быть один из следующих типов: **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** и **USER**. Разрешения также могут предоставляться для типа класса **SERVER**_class\_type_, но тип класса **SERVER** для этих разрешений не указывается. **DATABASE** не указывается, если разрешение включает слово **DATABASE** (например, **ALTER ANY DATABASE**). Если аргумент *тип_класса* указан и тип разрешения не ограничен классом сервера или базы данных, считается, что используется класс **OBJECT**.  
+ \<class_type> Тип класса защищаемого объекта. Это может быть один из следующих типов: **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** и **USER**. Разрешения также могут предоставляться для типа класса **SERVER**_class\_type_, но тип класса **SERVER** для этих разрешений не указывается. **DATABASE** не указывается, если разрешение включает слово **DATABASE** (например, **ALTER ANY DATABASE**). Если аргумент *тип_класса* указан и тип разрешения не ограничен классом сервера или базы данных, считается, что используется класс **OBJECT**.  
   
  *securable*  
  Имя входа, база данных, таблица, представление, схема, процедура, роль или пользователь, которым необходимо предоставить или запретить или для которых необходимо отменить разрешения. Имя объекта можно указать с использованием правил именования из трех частей, которые описаны в разделе [Синтаксические обозначения Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  

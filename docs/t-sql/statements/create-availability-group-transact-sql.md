@@ -24,17 +24,18 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6d4cae8c42f8a29842e62f94cfcd7a87e187b4e0
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 1f287a864113bdd5cc1d8829ad080277c1a1d91d
+ms.sourcegitcommit: cb620c77fe6bdefb975968837706750c31048d46
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091650"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86393182"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Создание новой группы доступности при условии, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включен для функции [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+Создание новой группы доступности при условии, что экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включен для функции [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 > [!IMPORTANT]  
 >  Выполните CREATE AVAILABILITY GROUP в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который предполагается использовать в качестве начальной первичной реплики создаваемой группы доступности. Этот экземпляр сервера должен располагаться на узле отказоустойчивого кластера Windows Server (WSFC).  
@@ -113,11 +114,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## <a name="arguments"></a>Аргументы  
- *group_name*  
- Указывает имя новой группы доступности. Аргумент *group_name* должен быть допустимым [идентификатором](../../relational-databases/databases/database-identifiers.md)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и являться уникальным во всех группах доступности в кластере WSFC. Максимальная длина имени группы доступности составляет 128 символов.  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
+
+*group_name*  
+Указывает имя новой группы доступности. Аргумент *group_name* должен быть допустимым [идентификатором](../../relational-databases/databases/database-identifiers.md)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и являться уникальным во всех группах доступности в кластере WSFC. Максимальная длина имени группы доступности составляет 128 символов.  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Указывает приоритет, согласно которому задание резервного копирования вычисляет первичную реплику при выборе места для создания резервных копий. Вы можете написать скрипт для того, чтобы задание резервного копирования учитывало приоритет автоматического резервного копирования. Важно понимать, что приоритет не определяется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поэтому он не влияет на выполнение нерегламентированного резервного копирования.  
   
  Поддерживаются следующие значения:  
@@ -143,7 +147,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  Для просмотра приоритета автоматического резервного копирования существующей группы доступности необходимо выбрать столбец **automated_backup_preference** или **automated_backup_preference_desc** представления каталога [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md). Кроме того, приоритет реплики резервного копирования можно просмотреть в представлении [sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md).  Эта функция возвращает значение 1 при наличии хотя бы одной реплики, даже если `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Указывает, какие условия сбоя могут запустить автоматический переход на другой ресурс в этой группе доступности. Параметр FAILURE_CONDITION_LEVEL задается на уровне группы, однако он действует только в отношении реплик доступности, настроенных в режиме доступности синхронной фиксации (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Более того, условия сбоя могут запустить автоматический переход на другой ресурс только в том случае, если и первичная, и вторичная реплики настроены на режим автоматического перехода на другой ресурс (FAILOVER_MODE **=** AUTOMATIC), при этом вторичная реплика должна в данный момент быть синхронизирована с первичной.  
   
  Уровни условий сбоя (1–5) варьируются от наименее ограничительного уровня 1 до наиболее ограничительного уровня 5. Заданный уровень условий включает в себя ограничения всех предыдущих уровней. Таким образом, наиболее строгий уровень 5 включает в себя ограничения уровней с 1 по 4, уровень 4 содержит ограничения уровней с 1 по 3 и т. д. Уровни условий сбоя описаны в следующей таблице.  

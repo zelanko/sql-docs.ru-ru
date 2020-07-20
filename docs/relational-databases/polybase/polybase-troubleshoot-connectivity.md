@@ -11,12 +11,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 5e732d55daa55a8a3abc171ead7b7b1e87e92992
-ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
+ms.openlocfilehash: 9e50701d0486ee7bc00bf765d2a71cb4de0c0b25
+ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84203561"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86196199"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Устранение неполадок с подключением PolyBase к Kerberos
 
@@ -52,7 +52,7 @@ ms.locfileid: "84203561"
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает центру распространения ключей билет на получение билетов, а затем запрашивает у него билет службы для доступа к нужному защищенному ресурсу. Билет службы шифруется закрытым ключом защищенной службы.
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переадресовывает билет службы в Hadoop и проходит аутентификацию, необходимую для создания сеанса с этой службой.
 
-![](./media/polybase-sqlserver.png)
+![SQL Server в PolyBase](./media/polybase-sqlserver.png)
 
 Проблемы с аутентификацией могут возникать на любых из этих четырех этапов. Для упрощения отладки в PolyBase был встроен диагностический инструмент, который помогает определять точку отказа.
 

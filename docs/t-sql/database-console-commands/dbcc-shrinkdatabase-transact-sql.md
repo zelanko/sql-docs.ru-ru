@@ -28,15 +28,15 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: e36315d58721fc6c50393b0bff10c7e8a2e3dee0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 38d542d84121b41311cd8aa64d4ec9747bfc2bf8
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85757199"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279539"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE [sql-asdb-asa.md](../../includes/applies-to-version/sql-asdb-asa.md)]
 
 Сокращает размер файлов данных и файлов журнала в указанной базе данных.
   
@@ -52,7 +52,18 @@ DBCC SHRINKDATABASE
 )  
 [ WITH NO_INFOMSGS ]  
 ```  
-  
+
+```syntaxsql
+-- Azure Synapse Analytics (formerly SQL DW)
+
+DBCC SHRINKDATABASE   
+( database_name   
+     [ , target_percent ]   
+)  
+[ WITH NO_INFOMSGS ]
+
+```  
+
 ## <a name="arguments"></a>Аргументы  
 _имя\_бд_ | _ид\_бд_ | 0  
 Имя или идентификатор базы данных, которая должна быть сжата. Если указано значение 0, используется текущая база данных.  
@@ -93,7 +104,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 
 >[!NOTE]
-> Хранилище данных SQL Azure сейчас не поддерживает команду DBCC SHRINKDATABASE. Выполнение этой команды не рекомендуется, так как она интенсивно использует ввод-вывод и может привести к недоступности вашего хранилища данных. Кроме того, она может потребовать дополнительных затрат на моментальные снимки хранилища данных. 
+> Выполнение этой команды не рекомендуется, так как она интенсивно использует ввод-вывод и может привести к недоступности вашего хранилища данных. Кроме того, она может потребовать дополнительных затрат на моментальные снимки хранилища данных. 
 
 Чтобы сжать все файлы данных и журналов указанной базы данных, выполните команду DBCC SHRINKDATABASE. Чтобы сжать один файл данных или файл журнала в указанной базе данных, выполните команду [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
@@ -170,7 +181,14 @@ GO
 ```sql  
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
-  
+### <a name="c-shrinking-an-azure-synapse-analytics-database"></a>В. Сжатие базы данных Azure Synapse Analytics
+
+```
+DBCC SHRINKDATABASE (database_A);
+DBCC SHRINKDATABASE (database_B, 10); 
+
+```
+
 ## <a name="see-also"></a>См. также раздел  
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

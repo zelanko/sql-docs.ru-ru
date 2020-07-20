@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2facc71bae52bf1e8706abdc6ac874ae16f11575
-ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
+ms.openlocfilehash: d44a81dbe1b010ff4f42363062aafeb7e5571021
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82262103"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279513"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>Инструкции RESTORE — HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|Дата истечения срока хранения резервного набора данных.|  
 |**Compressed**|**BIT(1)**|Сжат ли резервный набор данных с помощью программных методов сжатия:<br /><br /> **0** = Нет<br /><br /> **1** = Да|  
 |**Положение**|**smallint**|Позиция резервного набора данных в томе (для использования с параметром FILE =).|  
-|**DeviceType**|**tinyint**|Число, соответствующее устройству, используемому для операции резервного копирования.<br /><br /> Диск:<br /><br /> **2** = логическое<br /><br /> **102** = физическое<br /><br /> Лента:<br /><br /> **5** = логическое<br /><br /> **105** = физическое<br /><br /> Виртуальное устройство:<br /><br /> **7** = логическое<br /><br /> **107** = физическое<br /><br /> Имена логических устройств и их номера находятся в таблице **sys.backup_devices**. Дополнительные сведения см. в разделе [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
+|**DeviceType**|**tinyint**|Число, соответствующее устройству, используемому для операции резервного копирования.<br /><br /> Диск:<br /><br /> **2** = логическое<br /><br /> **102** = физическое<br /><br /> Лента:<br /><br /> **5** = логическое<br /><br /> **105** = физическое<br /><br /> Виртуальное устройство:<br /><br /> **7** = логическое<br /><br /> **107** = физическое<br /><br /> URL-адрес<br /><br /> **9** = логическое<br /><br /> **109** = физическое<br /><br />  Имена логических устройств и их номера находятся в таблице **sys.backup_devices**. Дополнительные сведения см. в разделе [sys.backup_devices (Transact-SQL)](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md).|  
 |**UserName**|**nvarchar(128)**|Имя пользователя, выполнившего операцию резервного копирования.|  
 |**ServerName**|**nvarchar(128)**|Имя сервера, записавшего резервный набор данных.|  
 |**DatabaseName**|**nvarchar(128)**|Имя базы данных, для которой была создана резервная копия.|  
@@ -151,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**Применимо к**: с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (накопительное обновление 1) до текущей версии.<br /><br /> Тип используемого шифратора: сертификат или асимметричный ключ. Если резервная копия не зашифрована, это значение равно NULL.|  
   
 > [!NOTE]  
->  Если для резервных наборов данных назначены пароли, то инструкция RESTORE HEADERONLY показывает полные сведения только о резервном наборе данных, пароль которого совпадает с указанным в команде для аргумента PASSWORD. Инструкция RESTORE HEADERONLY также показывает полные сведения для незащищенных резервных наборов данных. В столбце **BackupName** для других защищенных паролем резервных наборов данных на носителе будет указано значение " **_Password Protected_** , а все остальные столбцы будут иметь значение NULL.  
+>  Если для резервных наборов данных назначены пароли, то инструкция RESTORE HEADERONLY показывает полные сведения только о резервном наборе данных, пароль которого совпадает с указанным в команде для аргумента PASSWORD. Инструкция RESTORE HEADERONLY также показывает полные сведения для незащищенных резервных наборов данных. В столбце **BackupName** для других защищенных паролем резервных наборов данных на носителе будет указано значение "**_Password Protected_**, а все остальные столбцы будут иметь значение NULL.  
   
 ## <a name="general-remarks"></a>Общие замечания  
  С помощью инструкции RESTORE HEADERONLY клиент может получить все данные из заголовка резервной копии на конкретном устройстве резервного копирования. Для каждой резервной копии на устройстве резервного копирования сервер передает данные заголовка в виде строки.  

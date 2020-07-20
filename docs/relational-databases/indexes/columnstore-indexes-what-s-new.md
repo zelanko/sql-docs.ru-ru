@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d2e90088d844bbd897f2a0efae9379e9a1a585
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 9c0a353c91b952571932ae6d2abe318f70decc4a
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007481"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279270"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -49,6 +49,9 @@ ms.locfileid: "86007481"
 |Индекс columnstore может содержать нематериализованный вычисляемый столбец||||да|||   
   
  <sup>1</sup> Чтобы создать некластеризованный индекс columnstore, доступный только для чтения, сохраните индекс в файловой группе только для чтения.  
+ 
+> [!NOTE]
+> Степень параллелизма (DOP) для операций [пакетного режима](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) ограничена 2 для выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard и 1 для выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Web и Express. Это относится к индексам columnstore, созданным на основе таблиц на диске и оптимизированных для памяти таблиц.
 
 ## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] добавляет указанные новые возможности.
@@ -87,20 +90,24 @@ ms.locfileid: "86007481"
   
 -   Вторичная реплика для чтения AlwaysOn может получать доступ к индексам columnstore. За счет переноса запросов аналитики во вторичную реплику AlwaysOn можно повысить производительность оперативной аналитики.  
   
--   Для повышения производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вычисляет агрегатные функции `MIN`, `MAX`, `SUM`, `COUNT` и `AVG` во время сканирования таблицы, если тип данных использует не более 8 байт и не относится к типу string. Включение агрегата поддерживается с предложением Group By и без него для кластеризованных и некластеризованных индексов columnstore.  
+-   Передача агрегата (Aggregate Pushdown) вычисляет агрегатные функции `MIN`, `MAX`, `SUM`, `COUNT` и `AVG` во время сканирования таблицы, если тип данных использует не более 8 байт и не относится к типу string. Передача агрегата поддерживается с предложением `GROUP BY` и без него для кластеризованных и некластеризованных индексов columnstore. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это улучшение зарезервировано для выпуска Enterprise.
   
--   Включение предиката ускоряет выполнение запросов, которые сравнивают строки типа [v]archar или n[v]archar. Это относится к общим операторам сравнения, включая такие операторы, как LIKE, которые используют фильтры битовой карты. Этот способ работает для всех параметров сортировки, поддерживаемых SQL Server.  
+-   Передача предиката для строк ускоряет выполнение запросов, которые сравнивают строки типа VARCHAR/CHAR или NVARCHAR/NCHAR. Это относится к общим операторам сравнения, включая такие операторы, как `LIKE`, которые используют фильтры битовой карты. Это работает со всеми поддерживаемыми параметрами сортировки. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это улучшение зарезервировано для выпуска Enterprise. 
+
+-   Улучшения для операций пакетного режима за счет использования аппаратных возможностей на основе векторов. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] определяет уровень поддержки ЦП для аппаратных расширений AVX 2 (Advanced Vector Extensions) и SSE 4 (Streaming SIMD Extensions 4) и использует их, если они поддерживаются. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] это улучшение зарезервировано для выпуска Enterprise.
   
 ### <a name="performance-for-database-compatibility-level-130"></a>Производительность для уровня совместимости базы данных 130  
   
 -   Поддержка нового пакетного режима для запросов с помощью любой из следующих операций:  
-    -   SORT  
-    -   агрегаты с несколькими четко различимыми функциями (некоторые примеры: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`);  
+    -   `SORT`  
+    -   агрегаты с несколькими четко различимыми функциями некоторые примеры: `COUNT/COUNT`, `AVG/SUM`, `CHECKSUM_AGG`, `STDEV/STDEVP`;  
     -   агрегатные оконные функции: `COUNT`, `COUNT_BIG`, `SUM`, `AVG`, `MIN`, `MAX` и `CLR`;  
     -   определяемые пользователем оконные агрегаты: `CHECKSUM_AGG`, `STDEV`, `STDEVP`, `VAR`, `VARP` и `GROUPING`;  
     -   аналитические агрегатные оконные функции: `LAG`, `LEAD`, `FIRST_VALUE`, `LAST_VALUE`, `PERCENTILE_CONT`, `PERCENTILE_DISC`, `CUME_DIST` и `PERCENT_RANK`.  
+
 -   Однопоточные запросы, выполняемые с `MAXDOP 1` или последовательным планом запроса, выполняются в пакетном режиме. Ранее в пакетном режиме могли выполняться только многопоточные запросы.  
--   Запросы к таблицам, оптимизированным для памяти, могут иметь параллельные планы в режиме взаимодействия SQL при доступе к данным как в индексе rowstore, так и в индексе columnstore.  
+
+-   Запросы к таблицам, оптимизированным для памяти, могут иметь параллельные планы в режиме взаимодействия SQL при доступе к данным как в индексе rowstore, так и в индексе columnstore.
   
 ### <a name="supportability"></a>Возможности поддержки  
 Следующие системные представления являются новыми для columnstore:  

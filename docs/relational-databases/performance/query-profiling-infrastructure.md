@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: add476168eabf5255bb4cbdce59bd763d05faf4e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a82afb6ef63963c414997e43fdd1d4ed6a42765
+ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85719552"
+ms.lasthandoff: 07/11/2020
+ms.locfileid: "86279640"
 ---
 # <a name="query-profiling-infrastructure"></a>Инфраструктура профилирования запросов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -195,6 +195,9 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
 
 > [!NOTE]
 > Расширенные события на основе упрощенного профилирования используют данные стандартного профилирования, если инфраструктура стандартного профилирования уже включена. Допустим, имеется запущенный сеанс расширенных событий `query_post_execution_showplan`, и запускается еще один сеанс для событий `query_post_execution_plan_profile`. Во втором сеансе будут использоваться данные стандартного профилирования.
+
+> [!NOTE]
+> В [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] упрощенное профилирование по умолчанию отключено, но оно включается при запуске трассировки XEvent на основе `query_post_execution_plan_profile` и снова отключается при остановке трассировки. Поэтому если трассировка XEvent на основе `query_post_execution_plan_profile` часто запускается и останавливается на экземпляре [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], настоятельно рекомендуется включить упрощенное профилирование на глобальном уровне, установив флаг трассировки 7412, чтобы избежать повторяющихся издержек на включение и отключение профилирования. 
 
 ## <a name="see-also"></a>См. также:  
  [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
