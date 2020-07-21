@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6d6f3b67c202f9ecb579d12cf3d77d169cbf48c2
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 73b0e75738bcdf80f88f3b74eaad12154afc59c3
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053877"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551317"
 ---
 # <a name="mssqlserver_4846"></a>MSSQLSERVER_4846
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|4846|  
@@ -39,7 +39,7 @@ ms.locfileid: "85053877"
   
 1.  Проверьте, не используют ли память данного сервера другие приложения или службы. Измените настройки таким образом, чтобы менее важные приложения или службы использовали меньший объем памяти.  
   
-2.  Начните сбор счетчиков системного монитора для **SQL Server: диспетчер буферов**, **SQL Server: диспетчер памяти**.  
+2.  Начните сбор счетчиков системного монитора для **диспетчера буферов SQL Server, Buffer Manager**, **SQL Server: Memory Manager**.  
   
 3.  Проверьте следующие параметры конфигурации памяти SQL Server.  
   

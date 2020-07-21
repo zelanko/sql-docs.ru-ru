@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 991a86df-42cd-435e-85b3-f42e4cb13039
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd78df21c50951991b048d767faacb01d8677b3a
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c8a071caf6eb989758564731fd68f424821b6681
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032521"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551079"
 ---
 # <a name="mssqlserver_7903"></a>MSSQLSERVER_7903
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7903|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ORPHANED_FILE|  
-|Текст сообщения|Ошибка в таблице. Потерянный файл "FILE" обнаружен в каталоге Filestream для объекта с идентификатором O_ID, идентификатор индекса I_ID, идентификатор секции PN_ID, идентификатор столбца C_ID.|  
+|Текст сообщения|Ошибка таблицы: потерянный файл "FILE" обнаружен в каталоге Filestream для объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, идентификатором столбца C_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
  Файл FILESTREAM найден в каталоге столбцов FILESTREAM, но соответствующее значение столбца в этой секции отсутствует.  

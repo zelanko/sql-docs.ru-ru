@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 917b3703cdffc966b961a9ad8bfa6741dc674f2e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 7e0188ce856ae2fc219f6e9a5d7463daa8295209
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053792"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551122"
 ---
 # <a name="mssqlserver_701"></a>MSSQLSERVER_701
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|701|  
@@ -45,7 +45,7 @@ ms.locfileid: "85053792"
   
 1.  Проверьте, не используют ли память данного сервера другие приложения или службы. Измените настройки таким образом, чтобы менее важные приложения или службы использовали меньший объем памяти.  
   
-2.  Начните сбор счетчиков системного монитора для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: диспетчер буферов**, **SQL Server: диспетчер памяти**.  
+2.  Начните сбор счетчиков системного монитора для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Buffer Manager**, **SQL Server: Memory Manager**.  
   
 3.  Проверьте следующие параметры конфигурации памяти SQL Server.  
   

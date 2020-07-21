@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c27b8d1d-668a-4ba8-8b61-25a5ebbc5485
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cdb5fbdc59baadcbc315dc0fe19aaae9dbe40bb9
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: d422e448a4f67daca7a5214f344cb1797c2b6758
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033756"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551669"
 ---
 # <a name="mssqlserver_33085"></a>MSSQLSERVER_33085
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|33085|  
@@ -34,7 +34,7 @@ ms.locfileid: "85033756"
 ## <a name="explanation"></a>Объяснение  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог использовать поставщик служб шифрования, указанный в сообщении об ошибке. Поставщик служб шифрования не поддерживает необходимый метод. Состояние ошибки указывает, какой метод не обнаружен.  
   
-|Штат|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |1|SqlCryptInitializeProvider|  
 |2|SqlCryptFreeProvider|  

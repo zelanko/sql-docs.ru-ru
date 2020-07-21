@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e2ad218a-3249-4f18-8b32-09f0030765a5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8f1540fd8cd5f483b6c841f209a6f37dea536c91
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: c2c04b1d4e29489406465c9dfd11c49305ccbbe2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053713"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551012"
 ---
 # <a name="mssqlserver_7932"></a>MSSQLSERVER_7932
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7932|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Текст сообщения|Ошибка в таблице. Каталог FILESTREAM с идентификатором F_ID для объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID находится в файловой группе FG_ID1, хотя должен быть расположен в файловой группе FG_ID2.|  
+|Текст сообщения|Ошибка таблицы: каталог файловых потоков с идентификатором F_ID для объекта с идентификатором O_ID, индекса с идентификатором I_ID и секции с идентификатором PN_ID находится в файловой группе FG_ID1, но должен находиться в файловой группе FG_ID2.|  
   
 ## <a name="explanation"></a>Объяснение  
  При выполнении команды DBCC CHECKDB хранилище FILESTREAM для указанного объекта было обнаружено в неверной файловой группе. Причиной может быть повреждение метаданных объекта.  

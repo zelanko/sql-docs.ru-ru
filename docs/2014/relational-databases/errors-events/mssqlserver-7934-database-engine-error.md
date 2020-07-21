@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: f656bf46-e5be-4c7b-9ea4-0f2eee7441fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4879d1e8a459994704849cead8ea873e479f5869
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 35b375cb93c11dea1284446dbce22ea5ee22f5a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032308"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551001"
 ---
 # <a name="mssqlserver_7934"></a>MSSQLSERVER_7934
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7934|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Текст сообщения|Ошибка в таблице: не найден каталог Filestream C_ID для объекта с идентификатором O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID.|  
+|Текст сообщения|Ошибка таблицы: не найден каталог файловых потоков для объекта с идентификатором O_ID, индекса с идентификатором I_ID и секции с идентификатором PN_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
  При выполнении команды DBCC CHECKDB секция была найдена, но соответствующий каталог набора строк FILESTREAM в пространстве данных FILESTREAM не найден.  

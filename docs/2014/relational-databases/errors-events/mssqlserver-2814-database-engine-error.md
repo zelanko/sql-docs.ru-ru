@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 53b138b33ce0375d16b908622f6fb3af2b6608c1
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3aaa3745d060cecad6bc22f4d7915f314a362a49
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85054025"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551849"
 ---
 # <a name="mssqlserver_2814"></a>MSSQLSERVER_2814
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|2814|  
@@ -36,7 +36,7 @@ ms.locfileid: "85054025"
   
  В следующей таблице приводятся причины перекомпиляции.  
   
-|Код причины|Description|  
+|Код причины|Описание|  
 |-----------------|-----------------|  
 |1|Изменение схемы|  
 |2|Изменение статистики|  
@@ -75,6 +75,6 @@ ms.locfileid: "85054025"
 3.  Если ошибка повторится, обратитесь в службу поддержки пользователей Майкрософт.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL:StmtRecompile, класс событий](../event-classes/sql-stmtrecompile-event-class.md)  
+ [Класс событий SQL:StmtRecompile](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

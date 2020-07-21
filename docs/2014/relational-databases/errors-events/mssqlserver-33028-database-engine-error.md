@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8da0c0aabbda01ea73d28002d84a1769ae02cd1e
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 453a34eb45010daecf635e941b61181f0f627c55
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033797"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551687"
 ---
 # <a name="mssqlserver_33028"></a>MSSQLSERVER_33028
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|33028|  
@@ -34,7 +34,7 @@ ms.locfileid: "85033797"
 ## <a name="explanation"></a>Объяснение  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не смог открыть поставщик служб шифрования, указанный в сообщении об ошибке. Поставщик служб шифрования предоставляет указанный код ошибки. Возможно, придется обратиться к поставщику служб шифрования за дополнительными сведениями об ошибке.  
   
-|Код ошибки|Description|  
+|Код ошибки|Описание|  
 |----------------|-----------------|  
 |0|Успешно. Нет ошибки.|  
 |1|Ошибка. Произошла неуказанная или непредвиденная ошибка. Дополнительные сведения об ошибке недоступны.|  

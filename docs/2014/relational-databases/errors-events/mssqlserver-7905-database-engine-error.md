@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ee17df699cb73513a23ef7d899e2289c065ad7c9
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 3004bbb67e8bb3e89bec4acfe9674f0b99f27169
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032534"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551049"
 ---
 # <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7905|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Текст сообщения|Ошибка базы данных: каталог DIRECTORY не является допустимым каталогом FILESTREAM.|  
+|Текст сообщения|Ошибка базы данных: каталог "имя-каталога" не является допустимым каталогом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
  Имя каталога набора строк является идентификатором секции, за исключением особых каталогов набора строк (например, «ghost»). Если имя каталога набора строк не может быть преобразовано в идентификатор секции, данный каталог не является допустимым каталогом набора строк.  

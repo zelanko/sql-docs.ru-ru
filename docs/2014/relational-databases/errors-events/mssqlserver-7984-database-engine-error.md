@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: e3192f56-e4e2-41da-b132-65f1e7540b1a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6808103ef8da1d04d16e4cabc66c0e7af8666c65
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 77e3d8c99c0e2a72723b37f079831e15cdbe85b6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032028"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86550949"
 ---
 # <a name="mssqlserver_7984"></a>MSSQLSERVER_7984
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7984|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_PRE_CHECKS_BAD_PAGE_TYPE|  
-|Текст сообщения|Предварительная проверка системных таблиц: объект с идентификатором O_ID. Страница P_ID имеет непредвиденный тип PAGETYPE. Инструкция проверки прервана из-за непоправимой ошибки.|  
+|Текст сообщения|Предварительная проверка системных таблиц: идентификатор объекта O_ID. Страница P_ID имеет непредвиденный тип PAGETYPE. Инструкция проверки прервана из-за непоправимой ошибки.|  
   
 ## <a name="explanation"></a>Объяснение  
  Обнаружена страница типа, отличного от DATA_PAGE, на уровне данных заданного объекта. Эта ошибка возникает на первой стадии проверки команды DBCC CHECKDB. На этой стадии команда DBCC CHECKDB выполняет простые проверки страниц данных важных системных базовых таблиц.  

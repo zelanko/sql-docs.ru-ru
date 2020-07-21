@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 18e7a3dc-7d8a-41b9-8724-d2a8587b6903
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a6ae45133cd8e41479a243b0c1181851f262ca6
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 8d147f5373c1284f25ee9ffbe6b71f2c7b237ec6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85053697"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551037"
 ---
 # <a name="mssqlserver_7931"></a>MSSQLSERVER_7931
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7931|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Текст сообщения|Ошибка базы данных. Каталог FILESTREAM с идентификатором F_ID для секции был обнаружен дважды.|  
+|Текст сообщения|Ошибка базы данных: каталог файловых потоков с идентификатором "идентификатор" для секции был обнаружен дважды.|  
   
 ## <a name="explanation"></a>Объяснение  
  В метаданных обнаружен такой же идентификатор секции для каталога файловых потоков.  

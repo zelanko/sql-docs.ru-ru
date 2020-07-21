@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 45ab21a3-024a-4523-9bd9-1175d01f9c8a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1183b787e38821592e9fb3da81e07ba3c6ecd551
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: dca357f63065940963bad899086f9ac88dfdbaf6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032197"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551007"
 ---
 # <a name="mssqlserver_7935"></a>MSSQLSERVER_7935
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7935|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_COLUMN|  
-|Текст сообщения|Ошибка в таблице. Существует каталог FILESTREAM с идентификатором F_ID для столбца объекта с идентификатором O_ID, идентификатором индекса I_ID, идентификатором секции PN_ID, однако данный столбец отсутствует в этой секции.|  
+|Текст сообщения|Ошибка таблицы: каталог файловых потоков существует для столбца объекта с идентификатором O_ID, индекса с идентификатором I_ID, секции с идентификатором PN_ID, однако данный столбец отсутствует в секции.|  
   
 ## <a name="explanation"></a>Объяснение  
  Во время проверки DBCC CHECKDB был обнаружен каталог FILESTREAM для столбца указанного объекта, но сам столбец не был найден в соответствующих метаданных секции.  

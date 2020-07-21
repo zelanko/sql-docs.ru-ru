@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: a8657a91-ec75-4649-a09a-21920e0030ff
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c34414754ea9d25ad89f6aba767197eb1dfc10d0
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: b427188ddf7b65511971c44ea0bf718f546484a6
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85033921"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86551800"
 ---
 # <a name="mssqlserver_3151"></a>MSSQLSERVER_3151
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|3151|  
@@ -35,6 +35,6 @@ ms.locfileid: "85033921"
  Это общее сообщение об ошибке, которое может означать разные проблемы с базой данных **master**.  
   
 ## <a name="user-action"></a>Действие пользователя  
- Проверьте журналы ошибок для получения дополнительных сведений. Чтобы создать работоспособную базу данных **master**, запустите файл Setup.exe с параметром REBUILDDATABASE. Дополнительные сведения см. в статье электронной документации по SQL Server, посвященной установке SQL Server из командной строки.  
+ Проверьте журналы ошибок для получения дополнительных сведений. Чтобы создать работоспособную базу данных **master**, запустите файл Setup.exe с параметром REBUILDDATABASE. Дополнительные сведения см. в разделе "Как установить SQL Server из командной строки" в электронной документации по SQL Server.  
   
   
