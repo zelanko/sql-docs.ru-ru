@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 7dcc61a3-975d-4662-8a4e-c153e26b36c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0e399dfc44534a384d1babd8125aa10fb7be44e8
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: bec894ea9d28601c962d2f3d93885344d101b293
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032040"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553305"
 ---
 # <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7937|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка в таблице: не найден каталог Filestream для идентификатора столбца C_ID идентификатора объекта O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID.|  
+|Текст сообщения|Ошибка таблицы: не найден каталог Filestream для идентификатора столбца C_ID идентификатора объекта O_ID с идентификатором индекса I_ID и идентификатором секции PN_ID.|  
   
 ## <a name="explanation"></a>Объяснение  
  Указанный столбец имеется в секции, однако соответствующий каталог FILESTREAM не найден в пространстве данных FILESTREAM.  

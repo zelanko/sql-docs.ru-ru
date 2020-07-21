@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: af93aa29-70c9-4923-90af-aafadb20c1c6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 33aebb89b831d414d06954bf15f245e851f1abdf
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 052606d99f825d50c073f68c078a414df4d69d9e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034523"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552129"
 ---
 # <a name="mssqlserver_2515"></a>MSSQLSERVER_2515
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|2515|  

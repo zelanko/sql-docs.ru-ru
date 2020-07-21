@@ -13,25 +13,25 @@ helpviewer_keywords:
 ms.assetid: 567fb571-7cda-4ce8-a702-cdff2df5d419
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8fdf89a03e13c40e1b72d621c120db82356db1a7
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: f9bfdca119a99dd07512753beeb3e0399e4c53a2
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85034783"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552229"
 ---
 # <a name="mssqlserver_2"></a>MSSQLSERVER_2
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|2|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя||  
-|Текст сообщения|При соединении с сервером произошла ошибка.  Эта ошибка при соединении с SQL Server может быть вызвана тем, что в параметрах SQL Server по умолчанию запрещены удаленные соединения. (поставщик: поставщик именованных каналов, ошибка: 40: Не удалось открыть соединение с SQL Server) (поставщик данных .Net SqlClient)|  
+|Текст сообщения|При соединении с сервером произошла ошибка.  Эта ошибка при соединении с SQL Server может быть вызвана тем, что в параметрах SQL Server по умолчанию запрещены удаленные соединения. (поставщик: поставщик именованных каналов, ошибка: 40: не удалось открыть соединение с SQL Server (поставщик данных .Net SqlClient)|  
   
 ## <a name="explanation"></a>Объяснение  
  Вероятно, от [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поступил ответ на запрос клиента, потому что этот сервер не был запущен.  
@@ -40,7 +40,7 @@ ms.locfileid: "85034783"
  Убедитесь, что сервер запущен.  
   
 ## <a name="see-also"></a>См. также:  
- [Управление службами ядро СУБД](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
+ [Управление службами компонента Database Engine](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Настройка клиентских протоколов](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Сетевые протоколы и сетевые библиотеки](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Конфигурация клиентской сети](../../database-engine/configure-windows/client-network-configuration.md)   

@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: 9638a764-4ac1-40ae-a614-2726ebcc6ba4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c7e691567bcc2a17d04e827caf3850f1d50c5d15
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: 9557678be5fb53482fcb6eff8faf1183e27a4178
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032474"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553379"
 ---
 # <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7906|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Текст сообщения|Ошибка в базе данных: файл "FILE" не является допустимым файлом Filestream.|  
+|Текст сообщения|Ошибка базы данных: файл "имя_файла" не является допустимым файлом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
  Кроме ряда специальных файлов (например, «filestream.hdr»), никакие другие файлы входить непосредственно в пространство данных FILESTREAM не должны.  

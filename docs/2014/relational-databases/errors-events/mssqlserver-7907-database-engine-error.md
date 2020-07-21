@@ -11,25 +11,25 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c3717030dff33b2e67ceae427b7fd42178a0597d
-ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
+ms.openlocfilehash: baaaaf3966841fb1ff97e9b8b29bb115ff0b4be4
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85032453"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86553377"
 ---
 # <a name="mssqlserver_7907"></a>MSSQLSERVER_7907
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|7907|  
 |Источник события|MSSQLSERVER|  
 |Компонент|SQLEngine|  
 |Символическое имя|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Текст сообщения|Ошибка в таблице: каталог "DIRECTORY" в секции с идентификатором PN_ID не является допустимым каталогом FILESTREAM.|  
+|Текст сообщения|Ошибка таблицы: каталог "DIRECTORY" в секции с идентификатором PN_ID не является допустимым каталогом Filestream.|  
   
 ## <a name="explanation"></a>Объяснение  
  Имя каталога столбцов является идентификатором столбцов реляционного механизма секции. Если имя каталога столбцов не может быть преобразовано в идентификатор столбца, то данный каталог не является допустимым каталогом столбцов.  

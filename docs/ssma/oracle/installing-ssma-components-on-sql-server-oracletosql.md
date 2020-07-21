@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords:
-- Installing the Extension Pack
+- Installing the extension pack
 - SQL Server Database Objects
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: nahk-ivanov
 ms.author: alexiva
-ms.openlocfilehash: 736807d427b08a1b3a32df1d295b84f4ea3d23d2
-ms.sourcegitcommit: fd7b268a34562d70d46441f689543ecce7df2e4d
+ms.openlocfilehash: 2495d1b61b0251deee1b86ce66c03b6474f36cd8
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86411671"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554829"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Установка компонентов SSMA на SQL Server (OracleToSQL)
 
@@ -60,9 +60,7 @@ ms.locfileid: "86411671"
 6. На странице **Все готово для установки** нажмите кнопку **Установить**.
 7. На странице **завершено первое действие установки** нажмите кнопку **Далее**.
   
-   Появится новое диалоговое окно, в котором можно выбрать тип установки пакета расширений.
-
-   экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для установки пакета расширений.
+   Откроется новое диалоговое окно. Выберите тип пакета расширений.
   
 8. Выберите нужный тип установки и нажмите кнопку **Далее**.
 

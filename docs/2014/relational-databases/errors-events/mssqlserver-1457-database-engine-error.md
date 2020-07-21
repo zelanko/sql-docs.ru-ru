@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 28434ba1-b033-4866-ab41-111fccef45a2
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c30ee6149c95d93bdaf1d2877f5fe1871a575ec1
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+ms.openlocfilehash: 9811239df295b584d26f69150aa307a5613fe9e9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969557"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552259"
 ---
 # <a name="mssqlserver_1457"></a>MSSQLSERVER_1457
     
 ## <a name="details"></a>Сведения  
   
-|||  
+|attribute|Значение|  
 |-|-|  
 |Название продукта|SQL Server|  
 |Идентификатор события|1457|  
@@ -47,10 +47,10 @@ ms.locfileid: "84969557"
     >  Удалить зеркальную базу данных при включенном зеркальном отображении можно только после того, как инструкция SET PARTNER OFF завершается ошибкой.  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
+ [Зеркальное отображение базы данных (SQL Server)](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [ALTER DATABASE (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql)   
- [Настройка SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [Удаление SQL Server &#40;зеркального отображения базы данных&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
+ [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
+ [Удаление зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md)   
  [Подготовка зеркальной базы данных к зеркальному отображению (SQL Server)](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
   
