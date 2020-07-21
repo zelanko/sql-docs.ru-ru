@@ -10,11 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 316c3c95e0928fc4b1ed0c0d4235220c527e68f6
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 9c60bea64ad528a953101da7625347ca659b1c6d
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86052768"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485103"
 ---
 # <a name="adventureworks-sample-databases"></a>Образцы баз данных AdventureWorks
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "86052768"
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) или [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## <a name="download-bak-files"></a>Скачать BAK файлы 
+## <a name="download-backup-files"></a>Скачать файлы резервных копий 
 
 Используйте эти ссылки, чтобы скачать соответствующий образец базы данных для вашего сценария. 
 
@@ -37,15 +38,17 @@ ms.locfileid: "86052768"
 - Данные **хранилища данных (DW)** представляют собой рабочие нагрузки хранилищ данных. 
 - **Облегченные (lt)** данные — это упрощенная и урезанныеная версия примера **OLTP** . 
 
+Если вы не уверены, что вам нужно, начните с версии OLTP, соответствующей версии SQL Server. 
+
 |**OLTP** |**Хранилище данных** |**упрощенный интерфейс,**|
 |---------|---------|---------|
 |[AdventureWorks2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2019.bak)|[AdventureWorksDW2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2019.bak)|[AdventureWorksLT2019. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2019.bak)|
 |[AdventureWorks2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2017.bak)|[AdventureWorksDW2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2017.bak)|[AdventureWorksLT2017. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2017.bak)|
 |[AdventureWorks2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016.bak)|[AdventureWorksDW2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016.bak)|[AdventureWorksLT2016. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2016.bak)|
-|[AdventureWorks2016_EXT bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| Н/Д |
+|[AdventureWorks2016_EXT bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2016_EXT.bak)|[AdventureWorksDW2016_EXT bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2016_EXT.bak)| Недоступно |
 |[AdventureWorks2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2014.bak)|[AdventureWorksDW2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2014.bak)|[AdventureWorksLT2014. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2014.bak)|
 |[AdventureWorks2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks2012.bak)|[AdventureWorksDW2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW2012.bak)|[AdventureWorksLT2012. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksLT2012.bak)|
-|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | Н/Д |
+|[AdventureWorks2008R2. bak](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-oltp.bak)| [AdventureWorksDW2008R2. bak](https://github.com/microsoft/sql-server-samples/releases/download/adventureworks2008r2/adventure-works-2008r2-dw.bak) | Недоступно |
 
 Дополнительные файлы можно найти непосредственно на сайте GitHub: 
 
@@ -64,7 +67,7 @@ ms.locfileid: "86052768"
 
 Чтобы восстановить базу данных в SQL Server Management Studio, выполните следующие действия.
 
-1. Скачайте соответствующий `.bak` файл из одной из ссылок, указанных в разделе [download. bak Files](#download-bak-files) .
+1. Скачайте соответствующий `.bak` файл из одной из ссылок, указанных в разделе [Загрузка файлов резервных копий](#download-backup-files) .
 2. Переместите `.bak` файл в расположение резервной копии SQL Server. Это зависит от расположения установки, имени экземпляра и версии SQL Server. Например, расположением по умолчанию для экземпляра по умолчанию SQL Server 2019 является:
 
    `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`. 
@@ -106,7 +109,7 @@ GO
 
 Чтобы восстановить базу данных в Azure Data Studio, выполните следующие действия.
 
-1. Скачайте соответствующий `.bak` файл из одной из ссылок, указанных в разделе [download. bak Files](#download-bak-files) .
+1. Скачайте соответствующий `.bak` файл из одной из ссылок, указанных в разделе [Загрузка файлов резервных копий](#download-backup-files) .
 1. Переместите `.bak` файл в расположение резервной копии SQL Server. Это зависит от расположения установки, имени экземпляра и версии SQL Server. Например, расположением по умолчанию для экземпляра по умолчанию SQL Server 2019 является:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\Backup`.
@@ -150,7 +153,7 @@ GO
 
 1. Подключитесь к портал Azure.
 1. Выберите **создать ресурс** в верхнем левом углу панели навигации. 
-1. Выберите **Базы данных** и **База данных SQL**. 
+1. Выберите **базы данных** , а затем выберите **база данных SQL**. 
 1. Заполните запрошенные данные, чтобы создать базу данных. 
 1. На вкладке **Дополнительные параметры** выберите **образец** в качестве существующих данных в разделе **источник данных**: 
 
