@@ -1,5 +1,5 @@
 ---
-title: Типы данных float и real (Transact-SQL) | Документы Майкрософт
+title: Типы данных float и real (Transact-SQL)
 ms.custom: ''
 ms.date: 09/10/2019
 ms.prod: sql
@@ -23,14 +23,15 @@ ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75b888832f9694907af1fbab7031294f32fdda0e
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 921f6e0b26f9187f8dcf241996b601e46ba1cb2e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999236"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554522"
 ---
 # <a name="float-and-real-transact-sql"></a>Типы данных float и real (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Типы приблизительных числовых данных, используемые для числовых данных с плавающей запятой. Данные с плавающей запятой являются приблизительными, поэтому не все значения из диапазона могут быть отображены точно. Синонимом по стандарту ISO для типа **real** является **float(24)** .
@@ -49,7 +50,9 @@ ms.locfileid: "85999236"
 >  В приложении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] параметр *n* может принимать одно из двух возможных значений. Если **1**<=n<=**24**, *n* принимает значение **24**. Если **25**<=n<=**53**, *n* принимает значение **53**.  
   
 Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **float**[ **(n)** ] соответствует стандарту ISO для всех значений *n* в диапазоне от **1** до **53**. Синонимом типа **double precision** является тип **float(53)** .
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="remarks"></a>Remarks  
   
 |Тип данных|Диапазон|Память|  

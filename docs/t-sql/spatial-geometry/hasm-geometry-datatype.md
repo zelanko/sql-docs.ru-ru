@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1e1d51f7e809145fe16b669a1311dec319366444
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0a9b2b7cfd94dbca4b2bfeb5d4abee8719b4cd4d
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759576"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552865"
 ---
 # <a name="hasm-geometry-datatype"></a>HasМ (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "85759576"
 .HasM  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Типы возвращаемых данных
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Тип возвращаемых данных CLR: **Boolean**  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: cdba04f0-4e17-48f6-bafb-b1f918c5a501
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 2a9890c63b47b39fa898accb8af7c4098bb83ec9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 580feb4d6727e84f982a09ca8a96337d5b1a31df
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731098"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552566"
 ---
 # <a name="m-geography-data-type"></a>M (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -35,8 +35,10 @@ ms.locfileid: "85731098"
   
 .M  
 ```  
-  
-## <a name="return-types"></a>Типы возвращаемых данных  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Типы возвращаемых данных
  Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  

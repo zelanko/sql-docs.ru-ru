@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1a681baef72aaab151c3c65f2694778882bb56d6
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7dfd48621e2d587d985a695d00f4f091877c4814
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85704204"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552879"
 ---
 # <a name="stdimension-geography-data-type"></a>Метод STDimension (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85704204"
 .STDimension ( )  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Типы возвращаемых данных
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Тип возвращаемых данных CLR: **SqlInt32**  
