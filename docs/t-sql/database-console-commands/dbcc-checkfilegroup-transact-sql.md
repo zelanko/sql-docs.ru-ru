@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: ad67fa7e1cda5208fa5468e233c60a27edb10837
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b194f23779914961899cdf8b07c82a4d0986aa79
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85754833"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485291"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -58,7 +58,9 @@ DBCC CHECKFILEGROUP
 ]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *filegroup_name*  
  Имя файловой группы текущей базы данных, для которой производится проверка распределения и структурной целостности таблиц. Если не указано или равно 0, по умолчанию используется первичная файловая группа. Имена файловых групп должны соответствовать правилам для [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
  Аргумент *filegroup_name* не может указывать на файловую группу FILESTREAM.  

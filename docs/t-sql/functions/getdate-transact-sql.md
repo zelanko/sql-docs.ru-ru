@@ -30,64 +30,63 @@ ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df4bf5287a87cd152d5c2e59542f839aacc46961
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f4458702bc53bdec44bd5f690568bcbd06db6b12
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999244"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484585"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-Возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Возвращает текущую системную метку времени базы данных в виде значения **datetime** без смещения часового пояса базы данных. Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-> [!NOTE]  
->  SYSDATETIME и SYSUTCDATETIME имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. SYSDATETIME, SYSUTCDATETIME и SYSDATETIMEOFFSET можно присваивать переменным любого типа даты и времени.  
-  
- Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
-  
- ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-GETDATE ( )  
-```  
-  
-## <a name="return-type"></a>Тип возвращаемых данных  
- **datetime**  
-  
-## <a name="remarks"></a>Remarks  
- Функция GETDATE может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.  
-  
- GETDATE является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.  
-  
- Использование SWITCHOFFSET с функцией GETDATE() может вызвать замедление выполнения запроса, поскольку оптимизатор запросов не может получить точные оценки количества элементов для значения GETDATE. Рекомендуется заранее вычислить значение GETDATE, а затем указать это значение в запросе, как показано в следующем примере. Кроме того, с помощью указания запроса OPTION (RECOMPILE) можно вынудить оптимизатор запросов повторно компилировать план запроса при каждом выполнении одного и того же запроса. В этом случае оптимизатор будет иметь точные оценки количества элементов для GETDATE(), что позволит ему сформировать более эффективный план запроса.  
-  
-```  
-DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
-SELECT * FROM t    
-WHERE c1 > @dt OPTION (RECOMPILE);  
-  
-```  
-  
-## <a name="examples"></a>Примеры  
- В следующих примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит возврат даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
-  
-### <a name="a-getting-the-current-system-date-and-time"></a>A. Получение текущей системной даты и времени  
-  
-```  
-SELECT SYSDATETIME()  
-    ,SYSDATETIMEOFFSET()  
-    ,SYSUTCDATETIME()  
-    ,CURRENT_TIMESTAMP  
-    ,GETDATE()  
-    ,GETUTCDATE();  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
+> [!NOTE]
+>  SYSDATETIME и SYSUTCDATETIME имеют большую точность в долях секунды, чем GETDATE и GETUTCDATE. SYSDATETIMEOFFSET включает смещение часового пояса, заданное в системе. SYSDATETIME, SYSUTCDATETIME и SYSDATETIMEOFFSET можно присваивать переменным любого типа даты и времени.
+
+ Обзор всех типов данных и функций даты и времени в языке [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в статье [Типы данных и функции даты и времени &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+
+ ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
+## <a name="syntax"></a>Синтаксис
+
+```syntaxsql
+GETDATE()
+```
+
+## <a name="return-type"></a>Тип возвращаемых данных
+ **datetime**
+
+## <a name="remarks"></a>Remarks
+ Функция GETDATE может использоваться в инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] везде, где допустимо использование выражения **datetime**.
+
+ GETDATE является недетерминированной функцией. Невозможно проиндексировать представления и выражения, ссылающиеся на эту функцию в столбце.
+
+ Использование SWITCHOFFSET с функцией GETDATE() может вызвать замедление выполнения запроса, поскольку оптимизатор запросов не может получить точные оценки количества элементов для значения GETDATE. Рекомендуется заранее вычислить значение GETDATE, а затем указать это значение в запросе, как показано в следующем примере. Кроме того, с помощью указания запроса OPTION (RECOMPILE) можно вынудить оптимизатор запросов повторно компилировать план запроса при каждом выполнении одного и того же запроса. В этом случае оптимизатор будет иметь точные оценки количества элементов для GETDATE(), что позволит ему сформировать более эффективный план запроса.
+
+```sql
+DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');
+SELECT * FROM t
+WHERE c1 > @dt OPTION (RECOMPILE);
+```
+
+## <a name="examples"></a>Примеры
+ В следующих примерах с помощью шести системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит возврат даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.
+
+### <a name="a-getting-the-current-system-date-and-time"></a>A. Получение текущей системной даты и времени
+
+```sql
+SELECT SYSDATETIME()
+    ,SYSDATETIMEOFFSET()
+    ,SYSUTCDATETIME()
+    ,CURRENT_TIMESTAMP
+    ,GETDATE()
+    ,GETUTCDATE();
+```
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
  ```
 SYSDATETIME()      2007-04-30 13:10:02.0474381
 SYSDATETIMEOFFSET()2007-04-30 13:10:02.0474381 -07:00
@@ -95,85 +94,78 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047
 GETDATE()          2007-04-30 13:10:02.047
 GETUTCDATE()       2007-04-30 20:10:02.047
-```  
-  
-### <a name="b-getting-the-current-system-date"></a>Б. Получение текущей системной даты  
-  
-```  
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
-  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
 ```
-SYSDATETIME()          2007-05-03  
-SYSDATETIMEOFFSET()    2007-05-03  
-SYSUTCDATETIME()       2007-05-04  
-CURRENT_TIMESTAMP      2007-05-03  
-GETDATE()              2007-05-03  
-GETUTCDATE()           2007-05-04
-``` 
-  
-### <a name="c-getting-the-current-system-time"></a>В. Получение текущего системного времени  
-  
-```  
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
-  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```
-SYSDATETIME()      13:18:45.3490361  
-SYSDATETIMEOFFSET()13:18:45.3490361  
-SYSUTCDATETIME()   20:18:45.3490361  
-CURRENT_TIMESTAMP  13:18:45.3470000  
-GETDATE()          13:18:45.3470000  
-GETUTCDATE()       20:18:45.3470000  
-```
-  
-## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- В приведенных ниже примерах с помощью трех системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит получение даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.  
-  
-### <a name="d-getting-the-current-system-date-and-time"></a>Г. Получение текущей системной даты и времени  
-  
-```  
-SELECT SYSDATETIME()  
-    ,CURRENT_TIMESTAMP  
-    ,GETDATE();  
-```  
-  
-### <a name="e-getting-the-current-system-date"></a>Д. Получение текущей системной даты  
-  
-```  
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE());  
-  
-```  
-  
-### <a name="f-getting-the-current-system-time"></a>Е. Получение текущего системного времени  
-  
-```  
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE());  
-  
-```  
-  
-## <a name="see-also"></a>См. также:  
- [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
 
+### <a name="b-getting-the-current-system-date"></a>Б. Получение текущей системной даты
+
+```sql
+SELECT CONVERT (date, SYSDATETIME())
+    ,CONVERT (date, SYSDATETIMEOFFSET())
+    ,CONVERT (date, SYSUTCDATETIME())
+    ,CONVERT (date, CURRENT_TIMESTAMP)
+    ,CONVERT (date, GETDATE())
+    ,CONVERT (date, GETUTCDATE());
+```
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+SYSDATETIME()          2007-05-03
+SYSDATETIMEOFFSET()    2007-05-03
+SYSUTCDATETIME()       2007-05-04
+CURRENT_TIMESTAMP      2007-05-03
+GETDATE()              2007-05-03
+GETUTCDATE()           2007-05-04
+```
+
+### <a name="c-getting-the-current-system-time"></a>В. Получение текущего системного времени
+
+```sql
+SELECT CONVERT (time, SYSDATETIME())
+    ,CONVERT (time, SYSDATETIMEOFFSET())
+    ,CONVERT (time, SYSUTCDATETIME())
+    ,CONVERT (time, CURRENT_TIMESTAMP)
+    ,CONVERT (time, GETDATE())
+    ,CONVERT (time, GETUTCDATE());
+```
+
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+
+```
+SYSDATETIME()       13:18:45.3490361
+SYSDATETIMEOFFSET() 13:18:45.3490361
+SYSUTCDATETIME()    20:18:45.3490361
+CURRENT_TIMESTAMP   13:18:45.3470000
+GETDATE()           13:18:45.3470000
+GETUTCDATE()        20:18:45.3470000
+```
+
+## <a name="examples-sssdwfull-and-sspdw"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+ В приведенных ниже примерах с помощью трех системных функций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые возвращают текущую дату и время, происходит получение даты, времени или и того и другого. Значения возвращаются последовательно и поэтому могут различаться на доли секунды.
+
+### <a name="d-getting-the-current-system-date-and-time"></a>Г. Получение текущей системной даты и времени
+
+```sql
+SELECT SYSDATETIME()
+    ,CURRENT_TIMESTAMP
+    ,GETDATE();
+```
+
+### <a name="e-getting-the-current-system-date"></a>Д. Получение текущей системной даты
+
+```sql
+SELECT CONVERT (date, SYSDATETIME())
+    ,CONVERT (date, CURRENT_TIMESTAMP)
+    ,CONVERT (date, GETDATE());
+```
+
+### <a name="f-getting-the-current-system-time"></a>Е. Получение текущего системного времени
+
+```sql
+SELECT CONVERT (time, SYSDATETIME())
+    ,CONVERT (time, CURRENT_TIMESTAMP)
+    ,CONVERT (time, GETDATE());
+```
+
+## <a name="see-also"></a>См. также:
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3cd5a1b5404728dde5f72928111391e13842fe35
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5a160a4ddbcf80f77f2631a67170c47afd9ab14e
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735338"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484875"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE, отмена разрешения на тип (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -51,7 +51,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | Database_user_with_no_login    
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *permission*  
  Разрешение на работу с типом, которое можно отменить. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b327105398388615aa507ceaf30734347fbf2683
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: d72a643f1bc9774ebfa412ff50db21b8800e934e
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882589"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484860"
 ---
 # <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85882589"
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  ON | OFF  
  Если указан аргумент ON, то распределенная транзакция [!INCLUDE[tsql](../../includes/tsql-md.md)] запускается при выполнении удаленной хранимой процедуры из локальной транзакции. Если указан аргумент OFF, вызов удаленных хранимых процедур из локальной транзакции не приводит к запуску распределенной транзакции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

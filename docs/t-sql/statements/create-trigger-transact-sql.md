@@ -1,5 +1,5 @@
 ---
-title: CREATE TRIGGER (Transact-SQL) | Документы Майкрософт
+title: CREATE TRIGGER (Transact-SQL)
 description: Справочник по Transact-SQL для инструкции CREATE TRIGGER, которая используется для создания триггера DML, DDL или входа.
 ms.date: 10/30/2019
 ms.prod: sql
@@ -28,16 +28,16 @@ ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
 ms.reviewer: mathoma
-ms.openlocfilehash: 70a32b0f5c3a80d4d3c5af0cad7adcd1e15f5088
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2434250e8ea3fe4abd7c17ed5fc4041c63880321
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766944"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86481965"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Создает триггер языка обработки данных, DDL или входа. Триггер — это особая разновидность хранимой процедуры, которая автоматически выполняется при возникновении события на сервере базы данных. Триггеры DML выполняются, когда пользователь пытается изменить данные с помощью событий языка обработки данных (DML). Событиями DML являются процедуры INSERT, UPDATE или DELETE, применяемые к таблице или представлению. Эти триггеры срабатывают при запуске любого допустимого события независимо от наличия и числа затронутых строк таблицы. Дополнительные сведения см. в разделе [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
@@ -160,6 +160,8 @@ AS { sql_statement  [ ; ] [ ,...n ]  [ ; ] }
     [ EXECUTE AS Clause ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Аргументы
 OR ALTER  
 **Область применения**: Azure [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1)). 
@@ -310,20 +312,27 @@ SELECT * FROM deleted;
 Инструкция WRITETEXT (с ведением журнала и без него) не запускает триггеры.  
   
 Следующие инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] не разрешены в триггерах DML:  
-  
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP DATABASE|  
-|RESTORE DATABASE|RESTORE LOG|RECONFIGURE|  
-  
+
+- ALTER DATABASE
+- CREATE DATABASE
+- DROP DATABASE
+- RESTORE DATABASE
+- RESTORE LOG
+- RECONFIGURE
+
 Кроме того, не допускается использование перечисленных ниже инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] в тексте триггера DML, если он применяется к таблице или представлению, которые являются целью действий триггера.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (в т.ч CREATE SPATIAL INDEX и CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE, если используется в следующих целях:<br /><br /> Добавление, изменение или удаление столбцов.<br /><br /> Переключение секций.<br /><br /> Добавление или удаление ограничений PRIMARY KEY и UNIQUE.|||  
-  
+- CREATE INDEX (в т.ч CREATE SPATIAL INDEX и CREATE XML INDEX)
+- ALTER INDEX
+- DROP INDEX
+- DROP TABLE
+- DBCC DBREINDEX
+- ALTER PARTITION FUNCTION
+- ALTER TABLE, если используется в следующих целях:
+    - Добавление, изменение или удаление столбцов.
+    - Переключение секций.
+    - Добавление или удаление ограничений PRIMARY KEY и UNIQUE.
+
 > [!NOTE]  
 >  Поскольку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает пользовательских триггеров в системных таблицах, рекомендуется не создавать пользовательские триггеры для системных таблиц. 
 

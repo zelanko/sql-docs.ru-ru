@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ff0b9740cbdd8eb25bdfa6d8c55e7551fe946a8
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 45ad55bdf67be6dae67a69994320f9cf282a7beb
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897851"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485425"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -59,7 +59,9 @@ ms.locfileid: "85897851"
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  WAITFOR  
  Указывает, что инструкция RECEIVE ожидает прибытия сообщения в очередь, если в данный момент сообщений нет.  
   

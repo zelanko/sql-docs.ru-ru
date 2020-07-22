@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6e294c0bca1a871cc7b0ccb6c45a92072d7b0fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 37e46ba0453f9606a5ddc5310e15d4263de57fcf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85766996"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483372"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -68,7 +68,9 @@ CREATE SYMMETRIC KEY key_name
     | ASYMMETRIC KEY asym_key_name  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *Key_name*  
  Уникальное имя, под которым симметричный ключ известен в базе данных. Временные ключи назначаются, если _key_name_ начинается с одного символа номера (#). Например, **#temporaryKey900007**. Нельзя создать симметричный ключ, в начале имени которого указано более одного символа #. Временный симметричный ключ невозможно создать с помощью поставщика расширенного управления ключами.  
   
