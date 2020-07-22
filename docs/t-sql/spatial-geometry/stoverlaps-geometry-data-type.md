@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 5de112961599421eb7ce2d85d8152f1aa1339e0c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1dc18a4aaabb04cb0fc200b1158ff865203caf72
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762247"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554956"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762247"
 .STOverlaps ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *other_geometry*  
  Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STOverlaps()`.  
   

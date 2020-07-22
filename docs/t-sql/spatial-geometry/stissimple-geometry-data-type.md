@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1d0118528aa926b5750f8e2f1f587cc6e9c14844
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 24f50da4302c152588ddf573368054cc58b995c9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762387"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555570"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762387"
 .STIsSimple ( )  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Типы возвращаемых данных
  Тип возвращаемых данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
  Тип возвращаемых данных CLR: **SqlBoolean**  

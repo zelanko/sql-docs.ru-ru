@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ac2b772-6673-4ba1-a7ab-3b4b5841560b
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 1920a71912fee4e9508769e3edb92370018c3991
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a11b2e6c50e452d56001591d297922f6e2a65ca0
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736057"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556094"
 ---
 # <a name="stlinefromwkb-geography-data-type"></a>STLineFromWKB (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85736057"
 STLineFromWKB ( 'WKB_linestring' , SRID )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *WKB_linestring*  
  Представление в формате WKB возвращаемого экземпляра **LineString geography**. *WKB_linestring* — это выражение типа **varbinary(max)** .  
   

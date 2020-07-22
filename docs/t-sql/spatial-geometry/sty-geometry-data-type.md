@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: bf8def807299a766ab66506c4c0769705f2d0462
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd5f297b3fb2ea2700a6de0600896a6742fed8fc
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762099"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554927"
 ---
 # <a name="sty-geometry-data-type"></a>STY (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762099"
 .STY  
 ```  
   
-## <a name="return-types"></a>Типы возвращаемых данных  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="return-types"></a>Типы возвращаемых данных
  Тип [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Тип CLR: **SqlDouble**  

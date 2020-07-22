@@ -16,19 +16,19 @@ ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e5661008bcb550461466deddea947f205639ae98
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 63673258e2fa368544c6cc43158025770861a8f9
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86008004"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555609"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar и nvarchar (Transact-SQL)
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Символьные типы данных имеют фиксированный (**nchar**) или переменный (**nvarchar**) размер. Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] при использовании параметров сортировки с поддержкой [дополнительных символов](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) эти типы данных хранят весь диапазон символьных данных [Юникод](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) и используют кодировку [UTF-16](https://www.wikipedia.org/wiki/UTF-16). Если указаны параметры сортировки без поддержки дополнительных символов, эти типы данных хранят только подмножество символьных данных, поддерживаемых кодировкой [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms).
-  
-## <a name="arguments"></a>Аргументы  
+
+## <a name="arguments"></a>Аргументы
 **nchar** [ ( n ) ]  
 Строковые данные фиксированного размера. *n* определяет размер строки в парах байтов и должно иметь значение от 1 до 4000. Размер хранилища — дважды *n* байт. В случае с кодировкой [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) размер при хранении определяется как дважды *n* байт, а количество хранимых символов равно *n*. Для кодировки UTF-16 размер при хранении также равен дважды *n* байт, но количество хранимых символов может быть меньше *n*, так как дополнительные символы используют две пары байтов (также называются [суррогатными парами](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)). Синонимами типа **nchar** по стандарту ISO являются типы **national char** и **national character**.
   

@@ -11,16 +11,16 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ed4bcd1fb72c25520e935879305ff1c7d894707
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 878db75acb871faa3f76ef6b3d3264c1bd78766e
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86002332"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554809"
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Запрос данных в темпоральной таблице с системным управлением версиями
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Если требуется получить новейшее (актуальное) состояние данных в темпоральной таблице, можно отправить запрос точно так же, как и в нетемпоральной таблице. Если столбцы PERIOD не скрыты, их значения отобразятся в запросе SELECT \* . Если столбцы **PERIOD** указаны как скрытые, их значения не отобразятся в запросе SELECT \*. Если столбцы **PERIOD** скрыты, следует специально указать столбцы **PERIOD** в предложении SELECT, чтобы вернуть значения этих столбцов.
 

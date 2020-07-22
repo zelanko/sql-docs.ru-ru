@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 37059074-5ee8-4f55-9414-1e958fd3adaf
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: fd39a71c08d95abfe5de5e753a487826c232e01f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 79e5bd417c46aa3cd2bbf15809928952e31cc9f7
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85762317"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555008"
 ---
 # <a name="stmpointfromtext-geometry-data-type"></a>STMPointFromText (тип данных geometry)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85762317"
 STMPointFromText ( 'multipoint_tagged_text', SRID )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *multipoint_tagged_text*  
  WKT-представление возвращаемого экземпляра **geometryMultiPoint**. *multipoint_tagged_text* является выражением типа **nvarchar(max)** .  
   

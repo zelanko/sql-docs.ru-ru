@@ -22,14 +22,15 @@ ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2eaec4d3e43f0a24b0b7ed297589a2699e41bc2
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ac0442c2dfe609d112c12ada4f2dedb3be20b8ee
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007991"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556189"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Определяет дату, сочетающуюся с временем дня. Время представлено в 24-часовом формате с секундами, всегда равными нулю (:00), без долей секунд.
@@ -39,8 +40,8 @@ ms.locfileid: "86007991"
   
 ## <a name="smalldatetime-description"></a>Описание типа данных smalldatetime
   
-|||  
-|-|-|  
+|Свойство|Значение|
+|--------|-----|
 |Синтаксис|**smalldatetime**|  
 |Использование|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Таблица1 ( Столбец1 **smalldatetime** )|  
 |Форматы строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|Неприменимо|  
@@ -54,7 +55,7 @@ ms.locfileid: "86007991"
 |Календарь|Григорианский<br /><br /> (Не включает полный диапазон лет.)|  
 |Определяемая пользователем точность в долях секунды|нет|  
 |Учет и сохранение смещения часового пояса|нет|  
-|Учет перехода на летнее время|нет|  
+|Учет перехода на летнее время|Нет|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Соответствие стандартам ANSI и ISO 8601  
 **smalldatetime** не удовлетворяет стандартам ANSI и ISO 8601.
@@ -157,7 +158,7 @@ SELECT
     ,CAST('2007-05-08 12:59:59.998' AS smalldatetime);  
 ```  
   
-|Входные данные|Выходные данные|  
+|Входные данные|Вывод|  
 |---|---|
 |2007-05-08 12:35:29|2007-05-08 12:35:00|  
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  

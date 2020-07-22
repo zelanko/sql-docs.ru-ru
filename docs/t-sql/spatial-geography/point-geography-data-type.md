@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 36b39355ad9d2983945fcc7710d23b5e18e792d3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 04db3c6617669010f63e173415de0ebf6b7a3dca
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85705806"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86556170"
 ---
 # <a name="point-geography-data-type"></a>Point (тип данных geography)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "85705806"
 Point ( Lat, Long, SRID )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *Lat*  
  Выражение типа **float**, представляющее координату по оси Y создаваемого экземпляра **Point**.  
   

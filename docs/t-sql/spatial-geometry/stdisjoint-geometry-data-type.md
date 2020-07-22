@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90acdb21-e826-4d81-afe8-45a71f33282a
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 918445176065566676268978280929dc5bba3456
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 78d120ce4e43427fc54809bf91b54788fd482a36
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85748663"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86555021"
 ---
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (тип данных geometry)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
@@ -36,7 +36,9 @@ ms.locfileid: "85748663"
 .STDisjoint ( other_geometry )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *other_geometry*  
  Другой экземпляр **geometry** для сравнения с экземпляром, для которого вызван метод `STDisjoint()`.  
   
