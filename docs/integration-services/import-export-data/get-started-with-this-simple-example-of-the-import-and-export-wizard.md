@@ -9,16 +9,16 @@ ms.topic: quickstart
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 40b71d77727435316c2595abba6db70119d4b152
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 58225c6728915c5b9dcd73937b2bd645bd08950f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285218"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910230"
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Приступая к работе с простым примером мастера импорта и экспорта
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Сведения о том, что следует ожидать от мастера экспорта и импорта SQL Server, на примере типичного сценария — импорта данных из электронной таблицы Excel в базу данных SQL Server. Даже если вы планируете использовать другой источник и другое назначение, в этом разделе вы найдете основную часть сведений о работе с мастером.

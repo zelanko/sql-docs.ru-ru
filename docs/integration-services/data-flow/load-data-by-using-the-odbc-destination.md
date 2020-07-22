@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 733e6c8000f3a14127b0f3a8704b43af81fa0f85
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abbe91428fdf30d5b598063831f400b69c18f859
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292331"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86904884"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Загрузка данных с помощью назначения ODBС
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Эта процедура показывает, как загрузить данные с использованием назначения ODBC. Чтобы можно было добавить и настроить назначение ODBC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и источник.  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e1e643fdbf50bee27763395430c24cabd9e47816
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291759"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912328"
 ---
 # <a name="aggregate-transformation"></a>Преобразование «Статистическая обработка»
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Преобразование "Агрегатная обработка" применяет агрегатные функции, такие как Average, к значениям столбцов и копирует результат на выход преобразования. Кроме агрегатных функций преобразование предоставляет возможность использования предложения GROUP BY, которое можно применять для указания обрабатываемых групп.  
