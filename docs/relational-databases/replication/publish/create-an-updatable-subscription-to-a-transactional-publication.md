@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 68f87213d310c909d266a20c235f1686f66e6902
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 0d28fec80479a8eec877452763e78d4fadfa3d2c
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85896813"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942844"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Создание обновляемых подписок для публикаций транзакций
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -101,7 +101,7 @@ ms.locfileid: "85896813"
     * `sync tran` — включает подписку для немедленного обновления;
     * `failover` — включает для подписки немедленное обновление, с обновлением посредством очередей в случае отработки отказа;
     > [!NOTE]  
->  `failover` — требует, чтобы для публикации были включены обновляемые посредством очередей подписки. 
+    >  `failover` — требует, чтобы для публикации были включены обновляемые посредством очередей подписки. 
  
 4. Выполните процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Укажите следующее.
 
@@ -150,7 +150,7 @@ ms.locfileid: "85896813"
     * Учетные данные Windows, с которыми будет запускаться агент распространителя на распространителе, в параметрах `@job_login` и `@job_password`. 
 
     > [!NOTE]  
->  Соединения, производимые с использованием встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в параметрах `@job_login` и `@job_password`. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows; 
+    >  Соединения, производимые с использованием встроенной проверки подлинности Windows, всегда используют учетные данные Windows, указанные в параметрах `@job_login` и `@job_password`. Агент распространителя всегда создает локальные соединения с распространителем через встроенную систему проверки подлинности Windows. По умолчанию агент подключается к подписчику через встроенную систему проверки подлинности Windows; 
 
     * (Необязательно) Значение `0` для параметра `@subscriber_security_mode` и данные входа SQL Server для параметров `@subscriber_login` и `@subscriber_password`, если для соединения с подписчиком нужно использовать проверку подлинности SQL Server. 
     * Расписание задания агента распространителя для этой подписки.
@@ -180,7 +180,7 @@ ms.locfileid: "85896813"
     * `queued failover` — включает поддержку обновления посредством очередей с немедленным обновлением в качестве варианта для отработки отказа;
 
     > [!NOTE]  
->  `queued failover` — требует, чтобы для публикации также были включены немедленно обновляемые подписки. Чтобы переключиться на немедленное обновление, необходимо использовать процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) для определения учетных данных, с которыми изменения на подписчике реплицируются на издатель.
+    >  `queued failover` — требует, чтобы для публикации также были включены немедленно обновляемые подписки. Чтобы переключиться на немедленное обновление, необходимо использовать процедуру [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) для определения учетных данных, с которыми изменения на подписчике реплицируются на издатель.
  
 4. Выполните процедуру [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)на подписчике. Укажите значения следующих параметров.
 

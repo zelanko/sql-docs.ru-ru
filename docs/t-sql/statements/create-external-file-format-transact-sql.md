@@ -20,29 +20,29 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c32db4bdc26e90faa74800076dade200c1348f6
-ms.sourcegitcommit: b860fe41b873977649dca8c1fd5619f294c37a58
+ms.openlocfilehash: 129ac690a0615062bb620c8b81dfbdb16a41659e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2020
-ms.locfileid: "85518644"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942676"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Создает объект формата внешнего файла, определяя внешние данные, которые сохранены в Hadoop, Хранилище BLOB-объектов Azure или Azure Data Lake Store, либо данные для входных и выходных потоков, связанных с внешними потоками. Создание формата внешнего файла — обязательное условие для создания внешней таблицы. Создавая формат внешнего файла, вы указываете фактическую структуру данных, на которые ссылается внешняя таблица.  
+Создает объект формата внешнего файла, определяя внешние данные, которые сохранены в Hadoop, Хранилище BLOB-объектов Azure или Azure Data Lake Store, либо данные для входных и выходных потоков, связанных с внешними потоками. Создание формата внешнего файла — обязательное условие для создания внешней таблицы. Создавая формат внешнего файла, вы указываете фактическую структуру данных, на которые ссылается внешняя таблица.  
   
 Поддерживаются следующие форматы файлов.
   
--   Текст с разделителями  
+- Текст с разделителями  
   
--   Hive RCFile  
+- Hive RCFile  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON — применяется только к SQL Azure для пограничных вычислений.
+- JSON — применяется только к SQL Azure для пограничных вычислений.
 
 
 Инструкции по созданию внешней таблицы см. в разделе [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -113,33 +113,33 @@ WITH (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *file_format_name*  
- Задает имя формата внешнего файла.
+*file_format_name*  
+Задает имя формата внешнего файла.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Задает формат внешних данных.
+FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Задает формат внешних данных.
   
-   -   PARQUET Задает формат Parquet.
+- PARQUET Задает формат Parquet.
   
-   -   ORC  
-   Задает формат ORC. Для использования этого параметра во внешнем кластере Hadoop требуется Hive версии 0.11 или выше. В Hadoop формат файла ORC обеспечивает более качественное сжатие и более высокую производительность, чем формат файла RCFILE.
+- ORC  
+  Задает формат ORC. Для использования этого параметра во внешнем кластере Hadoop требуется Hive версии 0.11 или выше. В Hadoop формат файла ORC обеспечивает более качественное сжатие и более высокую производительность, чем формат файла RCFILE.
 
-   -   RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) Задает формат файла RcFile. Этот параметр требует задания метода сериализации и десериализации куч (SerDe). То же требование действует при использовании Hive/HiveQL в Hadoop для отправки запросов файлам RC. Обратите внимание, что метод SerDe учитывает регистр.
+- RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) Задает формат файла RcFile. Этот параметр требует задания метода сериализации и десериализации куч (SerDe). То же требование действует при использовании Hive/HiveQL в Hadoop для отправки запросов файлам RC. Обратите внимание, что метод SerDe учитывает регистр.
 
-   Примеры задания RCFile с двумя методами SerDe, которые поддерживаются PolyBase.
+  Примеры задания RCFile с двумя методами SerDe, которые поддерживаются PolyBase.
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT Задает формат текста с разделителями столбцов (которые также называются признаками конца поля).
+- DELIMITEDTEXT Задает формат текста с разделителями столбцов (которые также называются признаками конца поля).
    
-   -  JSON — определяет формат JSON. Применяется только к SQL Azure для пограничных вычислений. 
+- JSON — определяет формат JSON. Применяется только к SQL Azure для пограничных вычислений. 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 Применяется только для текстовых файлов с разделителями. Признак конца поля задает один или несколько символов, отмечающих окончание каждого поля (столбца) в файле с разделителями текста. По умолчанию используется вертикальная черта (|). Для гарантированной поддержки рекомендуется использовать один или несколько символов ascii.
   
   
- Примеры:  
+Примеры:  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -149,7 +149,7 @@ WITH (
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 Задает признак конца поля для данных типа "строка" в файле с разделителями текста. Разделитель строк имеет длину один или несколько символов и заключен в одинарные кавычки. По умолчанию используется пустая строка "". Для гарантированной поддержки рекомендуется использовать один или несколько символов ascii.
  
   

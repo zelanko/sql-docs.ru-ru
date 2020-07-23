@@ -15,15 +15,15 @@ ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8f7970284d3960b9c9ea91067a9adef553655b09
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 91dfeb8d8086b9d19ab56a419c8ffa556c0708a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716652"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923751"
 ---
 # <a name="transactional-replication"></a>репликация транзакций
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
   Репликация транзакций обычно начинается с создания моментального снимка объектов и данных базы данных публикации. Как только создан исходный моментальный снимок, последующие изменения данных и схемы на издателе обычно доставляются подписчику без задержек (практически в реальном времени). Изменения данных применяются на подписчике в том же порядке и в тех же рамках транзакций, в которых они выполнялись у издателя. Поэтому в пределах публикации гарантируется согласованность транзакций.  
   
  Репликация транзакций обычно используется в серверных средах и пригодна в следующих случаях:  

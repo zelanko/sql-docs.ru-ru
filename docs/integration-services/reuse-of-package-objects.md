@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 18252987543528f41b4c0f64c2954138b7a5d13c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0068126b439ff99ec88c76a0329454cc5931b683
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282497"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923771"
 ---
 # <a name="reuse-of-package-objects"></a>Повторное использование объектов пакета
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Функциональные возможности пакетов, которые требуется использовать повторно. Например, создан набор задач, и необходимо повторно совместно использовать элементы как группу, или необходимо повторно использовать отдельный элемент, такой как диспетчер соединений, созданный в другом проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

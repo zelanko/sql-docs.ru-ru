@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14839cec-6dbf-49c2-aa27-56847b09b4db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: bc784bc678dd5ebf52b06edc2af99e7efac08aaf
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: f4bedac84834f0b8cf4dda7ad22a097e82508983
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882243"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942631"
 ---
 # <a name="specify-merge-replication-properties"></a>Указание свойств репликации слиянием
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -169,8 +169,8 @@ ms.locfileid: "85882243"
   
 В базе данных публикации на издателе выполните процедуру [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите значение **false** в параметре `@delete_tracking`. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).
   
-    > [!NOTE]  
-    >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
+> [!NOTE]  
+>  Если исходная таблица для статьи уже опубликована в другой публикации, значение **delete_tracking** должно быть одинаковым для обеих статей.  
   
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Отключение обработки команд удаления для существующей статьи слияния  
   
