@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5a616db3e2fd0927faf9273bfaf55bb31e94391c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c8247440f0e9d074e24eab3e9836fdb46bd0855e
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669901"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970247"
 ---
 # <a name="topsum-dmx"></a>TopSum (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает, в порядке уменьшения ранга, верхние строки таблицы, сумма которых, как минимум, равна указанному значению.  
   
@@ -27,14 +27,14 @@ ms.locfileid: "83669901"
 TopSum(<table expression>, <rank expression>, <sum>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
- Выражение, возвращающее таблицу, например ссылку на \< столбец таблицы> или функцию, возвращающую таблицу.  
+## <a name="applies-to"></a>Применение  
+ Выражение, возвращающее таблицу, например \<table column reference> , или функцию, возвращающую таблицу.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<табличное выражение>  
+ \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
- Функция **TopSum** Возвращает самые верхние строки в порядке убывания ранга на основе вычисленного значения \< ранжирующего выражения> аргумент для каждой строки, то есть сумма \< ранжирующего выражения> значений является по крайней мере заданной суммой, заданной \< аргументом Sum>. **TopSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
+## <a name="remarks"></a>Примечания  
+ Функция **TopSum** Возвращает самые верхние строки в порядке убывания ранга на основе вычисленного значения \<rank expression> аргумента для каждой строки, то есть сумма \<rank expression> значений является по крайней мере заданной суммой, заданной \<sum> аргументом. **TopSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [учебника по базовому интеллектуальному анализу данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: db7e660b5b92d49f5a5151d5d71e9ac31f9e9013
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669849"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969982"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает заданное количество нижних строк, в порядке увеличения ранга, как указано в выражении.  
   
@@ -27,14 +27,14 @@ ms.locfileid: "83669849"
 BottomCount(<table expression>, <rank expression>, <count>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
- Выражение, возвращающее таблицу, например ссылку на \< столбец таблицы> или функцию, возвращающую таблицу.  
+## <a name="applies-to"></a>Применение  
+ Выражение, возвращающее таблицу, например \<table column reference> , или функцию, возвращающую таблицу.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<табличное выражение>  
+ \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
- Значение, предоставляемое \< выражением rank> аргумент, определяет порядок возрастания ранга для строк, представленных в \< табличном выражении> аргументе, и число нижних строк, указанных в \< аргументе Count>.  
+## <a name="remarks"></a>Примечания  
+ Значение, предоставляемое \<rank expression> аргументом, определяет порядок возрастания ранга для строк, представленных в \<table expression> аргументе, и число нижних строк, указанных в \<count> аргументе.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [учебника по базовому интеллектуальному анализу данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

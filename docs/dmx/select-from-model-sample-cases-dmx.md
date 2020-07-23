@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9e88ec6673a00e3776032f33390451207c2f399f
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7eda9b0e13ee5cbf918d80f41b9a517906a56a57
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670108"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970518"
 ---
 # <a name="select-from-ltmodelgtsample_cases-dmx"></a>Выберите из &lt; модели &gt; . SAMPLE_CASES (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает образцы объектов, используемых для обучения модели интеллектуального анализа данных.  
   
@@ -46,10 +46,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Образцы вариантов могут формироваться, но не существовать фактически в обучающих данных. Возвращаемый вариант отображает заданный узел содержимого.  
   
- Хотя [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм кластеризации последовательностей является единственным [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмом, поддерживающим использование SELECT из \< модели>. SAMPLE_CASES, сторонние алгоритмы также могут их поддерживать.  
+ Хотя [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм кластеризации последовательностей является единственным [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмом, поддерживающим использование SELECT из \<model> . SAMPLE_CASES, сторонние алгоритмы также могут их поддерживать.  
   
 ## <a name="examples"></a>Примеры  
  В приведенном ниже примере выдаются столбцы для всех вариантов, которые использовались для обучения модели интеллектуального анализа данных Target Mail. Использование функции [IsInNode &#40;расширений интеллектуального анализа данных&#41;](../dmx/isinnode-dmx.md) в предложении **WHERE** возвращает только варианты, связанные с узлом "000000003". Строка узла хранится в столбце NODE_UNIQUE_NAME набора строк схемы.  

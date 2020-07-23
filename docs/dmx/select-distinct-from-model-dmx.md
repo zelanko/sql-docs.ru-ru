@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 3413ec29cb2f1f3e710a1d52037161094ab713ce
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669621"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970639"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>Выбор DISTINCT из &lt; модели &gt; (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает все возможные состояния выбранного столбца модели. Возвращаемые значения зависят от того, какие значения содержит указанный столбец — дискретные, дискретизированные числовые или непрерывные числовые значения.  
   
@@ -44,7 +44,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Инструкция **SELECT DISTINCT FROM** работает только с одним столбцом или с набором связанных столбцов. С набором несвязанных столбцов это предложение не работает.  
   
  Инструкция **SELECT DISTINCT FROM** позволяет напрямую ссылаться на столбец внутри вложенной таблицы. Пример:  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Результаты инструкции **SELECT DISTINCT FROM \< model>** различаются в зависимости от типа столбца. В следующей таблице описаны поддерживаемые типы столбцов и выводимые инструкцией данные.  
+ Результаты инструкции **SELECT DISTINCT FROM \<model> ** могут различаться в зависимости от типа столбца. В следующей таблице описаны поддерживаемые типы столбцов и выводимые инструкцией данные.  
   
 |Тип столбца|Выходные данные|  
 |-----------------|------------|  

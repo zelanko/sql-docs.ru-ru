@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 564f09564349fa5709cefa87eca8fe847638b9b6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ea3cacd8fe2d80e6037cf83df9eea1fd112a4b05
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669862"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971837"
 ---
 # <a name="and-dmx"></a>AND (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Выполняет логическое умножение двух числовых выражений.  
   
@@ -37,7 +37,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение принимает значение TRUE, если оба аргумента имеют значение TRUE, в противном случае возвращает значение FALSE.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Оба аргумента приводятся к значениям логического типа (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое умножение. В приведенной ниже таблице показаны результаты, соответствующие различным сочетаниям значений аргументов:  
   
 |Если Expression1 равно|Если Expression2 равно|Возвращается значение|  

@@ -8,27 +8,27 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e45433b1a7e031c0aa5e549f9b2d48c036ef91c6
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4da4243aaf7592e7c5a8a9df63ed1aea352448f4
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669780"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969885"
 ---
 # <a name="data-types-dmx"></a>Типы данных (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   При использовании расширений интеллектуального анализа данных (DMX) для определения новой модели интеллектуального анализа в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] необходимо указать тип данных для каждого столбца в модели. Тип данных служит для описания данных, используемых алгоритмом интеллектуального анализа данных при построении модели.  
   
  Типы данных зависят от конкретного алгоритма. Каждый алгоритм определяет поддерживаемые им типы данных и способ их использования. Алгоритмы Microsoft поддерживают следующие типы данных:  
   
--   text  
+-   Text  
   
 -   Long  
   
--   Логическое значение  
+-   Логический  
   
--   Double  
+-   Тип Double  
   
 -   Дата  
   

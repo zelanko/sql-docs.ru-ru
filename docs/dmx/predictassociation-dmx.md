@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a834c87c3febf0554ad07334000d62f1f9a93fee
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668758"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968260"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Прогнозирует ассоциированное членство.  
   
@@ -29,13 +29,13 @@ ms.locfileid: "83668758"
 PredictAssociation(<table column reference>, option1, option2, n ...)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  Алгоритмы, содержащие прогнозируемые вложенные таблицы, включая ассоциации и некоторые алгоритмы классификации. Алгоритмы классификации, поддерживающие вложенные таблицы, включают в себя [!INCLUDE[msCoName](../includes/msconame-md.md)] деревья принятия решений, [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм Байеса (упрощенное и многоалгоритмное) [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<табличное выражение>  
+ \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  К параметрам функции **PredictAssociation** относятся EXCLUDE_NULL, INCLUDE_NULL, инклюзивные, монопольные (по умолчанию), INPUT_ONLY, INCLUDE_STATISTICS и INCLUDE_NODE_ID.  
   
 > [!NOTE]  

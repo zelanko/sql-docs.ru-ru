@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: efe160fc3bb50f80b70c0d510eedd880f985f9b9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669449"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971822"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Создает в базе данных новую структуру интеллектуального анализа данных и при необходимости определяет обучающую и проверочную секции. После создания структуры интеллектуального анализа данных для добавления моделей в структуру интеллектуального анализа данных можно использовать инструкцию [ALTER MINING structure &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) .  
   
@@ -61,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  По умолчанию: REPEATABLE (0)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Пользователь определяет структуру интеллектуального анализа данных, указывая список столбцов, при необходимости задавая иерархические связи между столбцами, а также при необходимости выполняя секционирование структуры интеллектуального анализа данных на обучающий и проверочный наборы данных.  
   
  Необязательное ключевое слово SESSION показывает, что структура является временной и ее можно использовать только в течение текущего сеанса. После завершения сеанса структура и любые модели на ее основе удаляются. Чтобы создать временные структуры и модели интеллектуального анализа данных, необходимо сначала задать свойство базы данных AllowSessionMiningModels. Дополнительные сведения см. в статье [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
@@ -73,7 +73,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
 -   Тип данных (обязательно)  
   
--   Распределение  
+-   Дистрибутив  
   
 -   Список флагов моделирования  
   
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Для столбца можно определить несколько значений флагов модели. Однако каждому столбцу может соответствовать только один тип содержимого и тип данных.  
   
 ### <a name="column-relationships"></a>Связи столбцов  
- К любому определению столбца можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \< предложения Column relationship>.  
+ К любому определению столбца можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<column relationship> предложения.  
   
  **СВЯЗАНО**  
  Показывает иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  

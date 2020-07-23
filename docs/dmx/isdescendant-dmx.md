@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 2ef32a9e133c199aae0779c819736d77e0d15c45
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: bab465fe98c9509eaa99999a321317ee8013a74d
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670058"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969765"
 ---
 # <a name="isdescendant-dmx"></a>IsDescendant (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Указывает, является ли текущий узел потомком заданного узла.  
   
@@ -30,7 +30,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Тип Boolean.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  **Descending** используется только в [&#62; модели SELECT &#60;. CONTENT &#40;&#41;расширений интеллектуального анализа данных](../dmx/select-from-model-content-dmx.md) и [выберите из &#60;&#62; модели. DIMENSION_CONTENT &#40;запросы DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md) .  
   
 ## <a name="examples"></a>Примеры  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 43a7157c5ec7889b2f8cb7018423d909f3db3cb7
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666660"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970563"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>ВЫБОР из &lt; модели &gt; (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Выполняет пустое прогнозируемое соединение и возвращает наиболее вероятные значения для указанных столбцов. Для создания прогноза используется только содержимое модели интеллектуального анализа данных.  
   
@@ -45,7 +45,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Столбцы в *списке выражений* должны быть определены только как прогнозируемые или прогнозируемые либо связаны с прогнозируемым столбцом.  
   
 ## <a name="naive-bayes-example"></a>Пример упрощенного алгоритма Байеса  

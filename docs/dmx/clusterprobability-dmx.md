@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 60c95521ba42dc5877c0e10a3f34453a497ad438
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669349"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969968"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает вероятность того, что входной вариант принадлежит определенному кластеру.  
   
@@ -27,22 +27,22 @@ ms.locfileid: "83669349"
 ClusterProbability([<Node_Caption>])  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  Эту функцию можно использовать только в случае, если базовая модель интеллектуального анализа данных поддерживает кластеризацию.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Следующий синтаксис использует набор строк схемы содержимого модели интеллектуального анализа данных для возврата заголовков узла, существующего в модели интеллектуального анализа.  
   
 ```  
 SELECT NODE_CAPTION FROM <model>.CONTENT  
 ```  
   
- Дополнительные сведения об использовании этого синтаксиса см [. в разделе Выбор из &#60;модели&#62;. CONTENT &#40;&#41;расширений интеллектуального анализа данных ](../dmx/select-from-model-content-dmx.md). Дополнительные сведения о наборе строк схемы содержимого модели интеллектуального анализа данных см. в разделе [DMSCHEMA_MINING_MODEL_CONTENT набор строк](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ Дополнительные сведения об использовании этого синтаксиса см [. в разделе Выбор из &#60;модели&#62;. CONTENT &#40;&#41;расширений интеллектуального анализа данных ](../dmx/select-from-model-content-dmx.md). Дополнительные сведения о наборе строк схемы содержимого модели интеллектуального анализа данных см. в разделе [DMSCHEMA_MINING_MODEL_CONTENT набор строк](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
- Если \< заголовок узла> не указан, функция возвращает вероятность того, что входные варианты принадлежат к наиболее вероятному кластеру. Используйте функцию **cluster** для возврата наиболее вероятного кластера.  
+ Если \<node caption> аргумент не указан, функция возвращает вероятность того, что входные варианты принадлежат к наиболее вероятному кластеру. Используйте функцию **cluster** для возврата наиболее вероятного кластера.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере возвращается вероятность того, что определенный вариант существует в кластере, обозначенном как Cluster 2.  

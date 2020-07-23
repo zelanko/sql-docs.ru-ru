@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 15767abbbffd7ede7d7ae252c7e84589abad1a98
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7117409372fcbcbc6ef3662a2355f063b2a99d98
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670015"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970296"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;запрос источника данных&gt;
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
-  Чтобы обучить модель интеллектуального анализа данных и создать прогнозы на основе модели интеллектуального анализа данных, необходимо получить доступ к данным, которые являются внешними по отношению к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. \<Для определения этих внешних данных используется предложение> запроса источника данных в расширениях интеллектуального анализа данных. [Вставка в &#40;&#41;расширений интеллектуального анализа данных ](../dmx/insert-into-dmx.md), [Выбор из &#60;модель&#62; прогнозирование соединений &#40;расширений интеллектуального анализа ](../dmx/select-from-model-prediction-join-dmx.md)данных&#41;DMX и [Выбор из выражений естественного прогнозирующего подключения](../dmx/select-from-model-prediction-join-dmx.md) все используют ** \<>запросов к исходным данным **.  
+  Чтобы обучить модель интеллектуального анализа данных и создать прогнозы на основе модели интеллектуального анализа данных, необходимо получить доступ к данным, которые являются внешними по отношению к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базе данных. \<source data query>Для определения этих внешних данных используется предложение в расширениях интеллектуального анализа данных (DMX). [Вставка в &#40;&#41;расширений интеллектуального анализа данных ](../dmx/insert-into-dmx.md) [выберите из &#60;модель&#62; прогнозирование соединений &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)и выберите из всех используемых операторов [прогнозирующего прогнозируемого объединения](../dmx/select-from-model-prediction-join-dmx.md) **\<source data query>** .  
   
 ## <a name="query-types"></a>Типы запросов  
  Тремя наиболее распространенными способами указания данных источника являются:   

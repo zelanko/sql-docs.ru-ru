@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 31402792c4e2a203c7894753612485409d5eaf1d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 5e7ae12dd658b6b5affde321666d84b010771699
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759473"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916130"
 ---
 # <a name="sequence-expressions-xquery"></a>Выражения последовательности (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] поддерживает операторы XQuery, предназначенные для конструирования, фильтрации и комбинирования последовательностей элементов. Элемент может быть атомарным значением или узлом.  
   
@@ -243,7 +243,7 @@ SELECT @x.query('
   
 -   Не поддерживается комбинирование последовательностей узлов операторами union, intersect и except.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

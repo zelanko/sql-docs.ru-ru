@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15294c85fc119aff6b8c3cc43b1a99a6b79dc141
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669588"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970604"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>Выберите из &lt; модели &gt; . СОДЕРЖИМОЕ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает набор строк схемы модели интеллектуального анализа данных для определенной модели интеллектуального анализа данных.  
   
@@ -45,8 +45,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
- >**Выбор из** _ \< модели _ **. Инструкция CONTENT** возвращает содержимое, относящееся к каждому алгоритму. Например, можно использовать описания всех правил модели правил взаимосвязей в пользовательском приложении. Можно использовать **Выбор из \< модели>. Инструкция CONTENT** возвращает значения в столбце NODE_RULE модели.  
+## <a name="remarks"></a>Примечания  
+ **Выбор из** _\<model>_ **. Инструкция CONTENT** возвращает содержимое, относящееся к каждому алгоритму. Например, можно использовать описания всех правил модели правил взаимосвязей в пользовательском приложении. Можно использовать **Выбор из \<model> . Инструкция CONTENT** возвращает значения в столбце NODE_RULE модели.  
   
  В следующей таблице перечислены столбцы, включенные в содержимое модели интеллектуального анализа данных.  
   

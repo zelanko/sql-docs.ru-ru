@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: db27f240030115ea24d8d32e2ffa1d5e4bf8921e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: c0b96fbd075ed2b2f79ca8b92d09e2d2782d77dc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85729511"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922328"
 ---
 # <a name="comparison-expressions-xquery"></a>Выражения сравнения (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Язык XQuery предоставляет следующие типы операторов сравнения:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "85729511"
 |=|Равно|  
 |!=|Не равно|  
 |\<|Меньше чем|  
-|>|Больше|  
+|>|Больше чем|  
 |\<=|Меньше или равно|  
 |>=|Больше или равно|  
   
@@ -145,7 +145,7 @@ WHERE ContactID=1
 |eq|Равно|  
 |ne|Не равно|  
 |lt|Меньше чем|  
-|gt|Больше|  
+|gt|Больше чем|  
 |le|Меньше или равно|  
 |ge|Больше или равно|  
   
@@ -247,7 +247,7 @@ where ProductModelID=19
   
 -   Запрос возвращает значение True.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Введите System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   

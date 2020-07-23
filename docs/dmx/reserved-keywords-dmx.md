@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6359b17825e1f62c38492acb6747ca52a264c7bc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669650"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970642"
 ---
 # <a name="reserved-keywords-dmx"></a>Зарезервированные ключевые слова (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]резервирует определенные ключевые слова для монопольного использования. Эти ключевые слова не могут использоваться где-либо в инструкциях расширений интеллектуального анализа данных (DMX), кроме как в позициях, которые определены в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в справочнике по языку расширений интеллектуального анализа данных. Эти регламентируемые ключевые слова расширений интеллектуального анализа данных включают следующие элементы.  
   

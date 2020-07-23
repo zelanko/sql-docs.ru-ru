@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c296948a41096c5c63b0e7019649d48bac8a23ca
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 7b25146ce36a0b58bb46bcacb4348f8e34221068
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669432"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971826"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Справочник по функциям расширений интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживается несколько функций языка расширений интеллектуального анализа данных. С помощью функций результаты прогнозирующих запросов дополняются данными, более подробно описывающими прогноз. Функции также предоставляют дополнительные возможности управления процессом отображения результатов прогноза. В следующей таблице приводятся ссылки на ресурсы, содержащие основные сведения об использовании функций в расширениях интеллектуального анализа данных.  
   

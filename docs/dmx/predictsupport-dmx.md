@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7a6509980065c2293a0b2697beacae1ba2d4b0d1
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: da8673d58a6d1889017b0f79ea7cb4bf41c64466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83667197"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970702"
 ---
 # <a name="predictsupport-dmx"></a>PredictSupport (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает опорное значение для указанного состояния.  
   
@@ -27,16 +27,16 @@ ms.locfileid: "83667197"
 PredictSupport(<scalar column reference>, [<predicted state>])  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, определяемое *\<* скалярной ссылкой на столбец *>* .  
+ Скалярное значение типа, заданного параметром *\<*scalar column reference*>* .  
   
-## <a name="remarks"></a>Комментарии  
- Если прогнозируемое состояние не указано, используется состояние с наибольшей прогнозируемой вероятностью, за исключением сегмента отсутствующих состояний. Чтобы включить контейнер отсутствующих состояний, задайте \< для прогнозируемого состояния> значение **INCLUDE_NULL**.  
+## <a name="remarks"></a>Примечания  
+ Если прогнозируемое состояние не указано, используется состояние с наибольшей прогнозируемой вероятностью, за исключением сегмента отсутствующих состояний. Чтобы включить контейнер отсутствующих состояний, задайте для параметра значение \<predicted state> **INCLUDE_NULL**.  
   
- Чтобы получить поддержку для отсутствующих состояний, задайте \< для прогнозируемого состояния> значение null.  
+ Чтобы получить поддержку для отсутствующих состояний, присвойте свойству \<predicted state> значение null.  
   
 > [!NOTE]  
 >  Значения несущего множества могут рассчитываться или интерпретироваться по-разному в зависимости от типа модели, к которой обращен запрос. Дополнительные сведения о вычислении поддержки для любого конкретного типа модели см. в разделе Тип отдельного алгоритма в [содержимом модели интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа ](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

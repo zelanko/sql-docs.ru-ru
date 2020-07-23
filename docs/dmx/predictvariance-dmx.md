@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 6217df2efb63b691ad565ea4d6466cdbd5831830
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666859"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970682"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает дисперсию указанного столбца.  
   
@@ -27,13 +27,13 @@ ms.locfileid: "83666859"
 PredictVariance(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, заданное * \< скалярным справочником по столбцам>*.  
+ Скалярное значение типа, заданного параметром *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если ссылка на столбец является дискретной, **PredictVariance** возвращает 0, так как дисперсию нельзя вычислить из дискретных значений.  
   
 ## <a name="examples"></a>Примеры  

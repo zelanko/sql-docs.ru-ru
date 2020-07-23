@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: def9b352b97921b080e379d235972bb9dfc84510
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 25dde754c2e71c6aa40d763d7e3a81c3edca6938
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666756"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970726"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает прогнозируемое среднеквадратичное отклонение для заданного столбца.  
   
@@ -27,13 +27,13 @@ ms.locfileid: "83666756"
 PredictStdev(<scalar column reference>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  Скалярный столбец.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- Скалярное значение типа, заданное * \< скалярным справочником по столбцам>*.  
+ Скалярное значение типа, заданного параметром *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если ссылка на столбец является дискретной, **PredictStdev** возвращает 0, так как стандартное отклонение нельзя вычислить из дискретных значений.  
   
 ## <a name="examples"></a>Примеры  

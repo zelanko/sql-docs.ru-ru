@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 262d8f9f62718bcb91ef034177375035a37dfc84
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 4fcf803bb76bfb894faa75e6e51180cc25434abe
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668959"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969824"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Учебники по расширениям интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   В следующих учебниках разъясняется, как использовать инструкции DMX при работе со структурами и моделями интеллектуального анализа данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Учебник по расширениям интеллектуального анализа данных «Покупатель велосипеда»](https://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
   
  Этот учебник поможет научиться создавать, обучать и исследовать модели интеллектуального анализа данных при помощи языка DMX-запросов. В дальнейшем эти модели интеллектуального анализа данных будут использоваться для создания прогнозов относительно того, будет ли клиент приобретать тот или иной продукт.  
@@ -29,7 +29,7 @@ ms.locfileid: "83668959"
   
  Этот учебник поможет научиться создавать модель интеллектуального анализа данных для прогнозирования того, какие продукты обычно приобретаются вместе с другими. Кроме того, учебник демонстрирует использование вложенных таблиц в интеллектуальном анализе данных.  
   
-## <a name="reference"></a>Ссылка  
+## <a name="reference"></a>Ссылки  
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)  

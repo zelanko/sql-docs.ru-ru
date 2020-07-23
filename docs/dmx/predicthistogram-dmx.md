@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 94ec67fe103901f19af36b8be01ea21ceaa9ac85
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666791"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86967926"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает таблицу, представляющую гистограмму прогноза данного столбца.  
   
@@ -27,17 +27,17 @@ ms.locfileid: "83666791"
 PredictHistogram(<scalar column reference> | <cluster column reference>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
   Скалярный или кластерный столбец.  Может использоваться со всеми типами алгоритмов, за исключением алгоритма взаимосвязей ([!INCLUDE[msCoName](../includes/msconame-md.md)]).  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Таблица.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Гистограмма формирует статистические столбцы. Структура столбца возвращаемой гистограммы зависит от типа ссылки на столбец, который используется с функцией **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Скалярные столбцы  
- Для \<> ссылки на скалярный столбец гистограмма, возвращаемая функцией **PredictHistogram** , состоит из следующих столбцов:  
+ Для \<scalar column reference> , гистограмма, возвращаемая функцией **PredictHistogram** , состоит из следующих столбцов:  
   
 -   Прогнозируемое значение  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      Столбец **$AdjustedProbability** является [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширением [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для спецификации интеллектуального анализа данных.  
   
 ## <a name="cluster-columns"></a>Кластерные столбцы  
- Гистограмма, возвращаемая функцией **PredictHistogram** для \< ссылки на столбец кластера> состоит из следующих столбцов:  
+ Гистограмма, возвращаемая функцией **PredictHistogram** для, \<cluster column reference> состоит из следующих столбцов:  
   
 -   **$Cluster** (представляет имя кластера)  
   

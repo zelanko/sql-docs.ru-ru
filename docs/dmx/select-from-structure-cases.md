@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: baa7ed6209daf3de76c20d8ff67a9b76a36be4e8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2e0fc30945396f22184e1d18c6b132d8e2e2d781
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670105"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970440"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Выберите из &lt; структуры &gt; . СЛУЧАЯХ
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает варианты, использованные для создания структуры интеллектуального анализа данных.  
   
@@ -55,7 +55,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *expression*  
  Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если детализация включена как для модели, так и для структуры, то любой член роли, обладающей разрешениями на структуру или модель интеллектуального анализа данных, может возвращать столбцы структуры, которые не были включены в модель. Это делается с помощью следующего синтаксиса:  
   
 ```  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 440256a7349d7c77581c4369e901ce0da9c3212f
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669471"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971832"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Позволяет создать в базе данных новую модель и структуру интеллектуального анализа данных. Модель можно создать либо путем определения новой модели в инструкции, либо с помощью языка разметки моделей прогнозов (Predictive Model Markup Language, PMML). Второй параметр рекомендуется использовать только опытным пользователям.  
   
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Имя алгоритма интеллектуального анализа данных, определенное текущим поставщиком.  
   
 > [!NOTE]  
->  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
  Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
@@ -68,7 +68,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Тип данных (обязательно)  
   
--   Распределение  
+-   Дистрибутив  
   
 -   Список флагов моделирования  
   
@@ -102,16 +102,16 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Флаги моделирования (интеллектуальный анализ данных)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \< предложения Column relationship>.  
+ К инструкции можно добавить предложение, описывающее связь между двумя столбцами. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]поддерживает использование следующего \<Column relationship> предложения.  
   
  **СВЯЗАНО**  
  Эта форма указывает на иерархию значений. Назначением столбца RELATED TO может быть ключевой столбец вложенной таблицы, столбец с дискретными значениями из строки вариантов или какой-либо другой столбец с предложением RELATED TO, указывающим на более глубокий уровень иерархии.  
   
  Для описания использования прогнозируемого столбца используйте прогнозирующее предложение. В следующей таблице приводится описание двух возможных предложений.  
   
-|\<предложение PREDICTION>|Описание|  
+|Предложение \<prediction>|Описание|  
 |---------------------------|-----------------|  
-|**PREDICT**|Этот столбец может быть спрогнозирован моделью и может включаться во входные варианты для прогноза значений других прогнозируемых столбцов.|  
+|**СФОРМИРОВАТЬ**|Этот столбец может быть спрогнозирован моделью и может включаться во входные варианты для прогноза значений других прогнозируемых столбцов.|  
 |**PREDICT_ONLY**|Данный столбец может быть спрогнозирован с помощью модели, однако его нельзя использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
   
 ### <a name="parameter-definition-list"></a>Список определений параметров  
@@ -123,7 +123,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список параметров, связанных с каждым алгоритмом, см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
   
  Пошаговое руководство по созданию модели интеллектуального анализа данных с помощью инструкции КРЕАТЕМОДЕЛ см. в разделе Учебник по DMX-анализу [временных рядов](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  В следующем примере [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритм временных рядов используется для создания новой модели интеллектуального анализа данных с помощью алгоритма ARTxp. ReportingDate – это ключевой столбец для временного ряда, а ModelRegion – ключевой столбец для ряда данных. В этом примере предполагается, что периодичность данных составляет 12 месяцев. Таким образом, параметру *PERIODICITY_HINT* присваивается значение 12.  
   
 > [!NOTE]  
->  Параметр *PERIODICITY_HINT* необходимо указать с помощью фигурных скобок. Более того, поскольку значение является строкой, оно должно быть заключено в одинарные кавычки: "{ \< числовое значение>}".  
+>  Параметр *PERIODICITY_HINT* необходимо указать с помощью фигурных скобок. Более того, поскольку значение является строкой, оно должно быть заключено в одинарные кавычки: "{ \<numeric value> }".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

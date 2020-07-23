@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1fdb72a4067a9b48e648cffe1d12b29b23f1652a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: cceeac44646b904a7d7e1b45bd3c92d4ad07a0d5
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669844"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969942"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает в порядке возрастания ранга нижние строки таблицы, сумма которых является, как минимум, указанным значением.  
   
@@ -27,14 +27,14 @@ ms.locfileid: "83669844"
 BottomSum(<table expression>, <rank expression>, <sum>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
- Выражение, возвращающее таблицу, например ссылку на \< столбец таблицы> или функцию, возвращающую таблицу.  
+## <a name="applies-to"></a>Применение  
+ Выражение, возвращающее таблицу, например \<table column reference> , или функцию, возвращающую таблицу.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<табличное выражение>  
+ \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
- Функция **BottomSum** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \< ранжирующего выражения> аргументе для каждой строки, так что сумма \< ранжирующего выражения> значения по крайней мере по заданному итогу, заданному \< аргументом Sum>. **BottomSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
+## <a name="remarks"></a>Примечания  
+ Функция **BottomSum** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \<rank expression> аргумента для каждой строки, так что сумма \<rank expression> значений является по крайней мере заданной суммой, заданной \<sum> аргументом. **BottomSum** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное значение Sum.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [учебника по базовому интеллектуальному анализу данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6fdb1563f644b544fd9c0bd2ee0857bf4b403329
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 647f0cdaaef28f1da7ca51157388288cfdd729dc
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669837"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86969966"
 ---
 # <a name="bottompercent-dmx"></a>BottomPercent (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает, в порядке возрастания ранга, нижние строки таблицы, сумма которых, как минимум, равна указанному процентному соотношению.  
   
@@ -28,20 +28,20 @@ BottomPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *\<Табличное выражение>*  
+ *\<Table expression>*  
  Имя столбца вложенной таблицы или возвращающего табличное значение выражения.  
   
- *\<выражение ранжирования>*  
+ *\<rank expression>*  
  Столбец во вложенной таблице или выражение, результатом которого является столбец.  
   
- *\<процент>*  
+ *\<percent>*  
  Значение типа double, означающее совокупный целевой процент.  
   
 ## <a name="result-type"></a>Тип результата  
  Таблица.  
   
-## <a name="remarks"></a>Комментарии  
- Функция **BottomPercent** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \< ранжирующего выражения> аргументе для каждой строки, так что сумма \< ранжирующего выражения> значения по крайней мере в заданном процентном выражении, заданном \< аргументом percent>. **BottomPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
+## <a name="remarks"></a>Примечания  
+ Функция **BottomPercent** возвращает нижние строки в порядке возрастания ранга. Ранг основан на вычисленном значении \<rank expression> аргумента для каждой строки, так что сумма \<rank expression> значений является по крайней мере заданным процентом, заданным \<percent> аргументом. **BottomPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, созданной в [учебнике по основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

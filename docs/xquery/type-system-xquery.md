@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f093a8105c21ab6c96d0d1b84c7a48e3a48c9fe0
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: cb0b853b83fc65d8faddc341f9f0249debc2d2c1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643399"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915280"
 ---
 # <a name="type-system-xquery"></a>Система типов (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery является строго типизированным языком для типов схемы и слабо типизированным языком для нетипизированных данных. Ниже приведены стандартные типы данных языка XQuery:  
   
@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 > [!NOTE]  
 >  В этом примере явное использование функции **Data ()** используется только для иллюстрации. Если он не указан, функция **Sum ()** неявно применяет функцию **Data ()** для извлечения типизированных значений узлов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   

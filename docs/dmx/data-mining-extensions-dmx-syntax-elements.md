@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7cfd0e6846fc377cda6fe9655fa3770748748e2c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 16d77e459cc472430081e52b485763b4e0c62f50
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669799"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971747"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Элементы синтаксиса расширений интеллектуального анализа данных
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   В [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно использовать различные элементы синтаксиса для определения инструкций расширений интеллектуального анализа данных, которые можно использовать для построения моделей интеллектуального анализа данных, управления ими и работы с ними. Эти элементы синтаксиса описаны в следующих разделах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Идентификаторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/identifiers-dmx.md)  
  Позволяет задавать имена для объектов, таких как модели и структуры интеллектуального анализа данных, а также столбцы.  
   

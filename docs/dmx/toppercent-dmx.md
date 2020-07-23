@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: a91941241b61f74190b9ab1ef0c29dffded5dc79
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669924"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970249"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Функция **TopPercent** возвращает, в порядке убывания ранга, самые верхние строки таблицы, совокупное значение которых не меньше заданного процентного значения.  
   
@@ -27,14 +27,14 @@ ms.locfileid: "83669924"
 TopPercent(<table expression>, <rank expression>, <percent>)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
- Выражение, возвращающее таблицу, например ссылку на \< столбец таблицы> или функцию, возвращающую таблицу.  
+## <a name="applies-to"></a>Применение  
+ Выражение, возвращающее таблицу, например \<table column reference> , или функцию, возвращающую таблицу.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<табличное выражение>  
+ \<table expression>  
   
-## <a name="remarks"></a>Комментарии  
- Функция **TopPercent** Возвращает самые верхние строки в порядке убывания ранга на основе вычисленного значения \< ранжирующего выражения> аргумент для каждой строки, то есть сумма \< ранжирующего выражения> значения по крайней мере в заданном процентном выражении, заданном \< аргументом percent>. **TopPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
+## <a name="remarks"></a>Примечания  
+ Функция **TopPercent** Возвращает самые верхние строки в порядке убывания ранга на основе вычисленного значения \<rank expression> аргумента для каждой строки, то есть сумма \<rank expression> значений является по меньшей мере заданной процентной долей, заданной \<percent> аргументом. **TopPercent** возвращает наименьшее количество возможных элементов, при этом соблюдая указанное процентное значение.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере создается прогнозирующий запрос к модели взаимосвязей, построенной с помощью [учебника по базовому интеллектуальному анализу данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

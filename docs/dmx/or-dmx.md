@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9ce963b2322e19e4e3a98982a88f99d3546cabc2
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 21ac78f6ee0ed77bb9549f1749d73d29344a49d1
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83668736"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968458"
 ---
 # <a name="or-dmx"></a>OR (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Логический оператор, выполняющий логическое сложение (дизъюнкцию) двух числовых выражений.  
   
@@ -37,7 +37,7 @@ Expression1 OR Expression2
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, возвращающее TRUE, если хотя бы один из аргументов возвращает TRUE, и FALSE в противном случае.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Оба аргумента считаются логическими значениями (0 — FALSE; любое ненулевое значение — TRUE), прежде чем оператор выполнит логическое сложение. Если хотя бы один аргумент возвращает TRUE, оператор возвращает TRUE. Если значение *expression1* равно true, а *EXPRESSION2* принимает значение false, то оператор возвращает значение true.  
   
  В следующей таблице иллюстрируется выполнение логического сложения (дизъюнкции).  

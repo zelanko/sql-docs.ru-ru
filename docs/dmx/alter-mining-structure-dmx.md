@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ace89ae45aff0e740691025d2039213cfacebff9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669877"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971842"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Создает новую модель интеллектуального анализа данных, основанную на уже существующей структуре интеллектуального анализа данных.  При использовании инструкции **ALTER MINING STRUCTURE** для создания новой модели интеллектуального анализа данных эта структура уже должна существовать. В отличие от этого, при использовании инструкции [CREATE интеллектуального анализа данных &#40;&#41;DMX ](../dmx/create-mining-model-dmx.md), создается модель и автоматически создается ее базовая структура интеллектуального анализа данных.  
   
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  Имя алгоритма интеллектуального анализа данных, определенное поставщиком.  
   
 > [!NOTE]  
->  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
  Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
@@ -63,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *критерии фильтра*  
  Критерий фильтра, применяющийся к столбцам таблицы вариантов.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  Если структура интеллектуального анализа данных содержит составные ключи, то модель интеллектуального анализа данных должна включать в себя все ключевые столбцы, определенные в структуре.  
   
  Если для модели не требуется прогнозируемый столбец, например модели, построенные с помощью [!INCLUDE[msCoName](../includes/msconame-md.md)] алгоритмов кластеризации и [!INCLUDE[msCoName](../includes/msconame-md.md)] кластеризации последовательностей, не обязательно включать определение столбца в инструкцию. Все атрибуты в создаваемой модели будут рассматриваться как входы.  
@@ -121,7 +121,7 @@ USING <algorithm> [(<parameter list>)]
   
 |||  
 |-|-|  
-|**PREDICT**|Данный столбец может быть спрогнозирован с помощью модели, и его значения можно использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
+|**СФОРМИРОВАТЬ**|Данный столбец может быть спрогнозирован с помощью модели, и его значения можно использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
 |**PREDICT_ONLY**|Данный столбец может быть спрогнозирован с помощью модели, однако его нельзя использовать во входных вариантах для вычисления значений других прогнозируемых столбцов.|  
   
 ## <a name="filter-criteria-expressions"></a>Выражения условия фильтра  
