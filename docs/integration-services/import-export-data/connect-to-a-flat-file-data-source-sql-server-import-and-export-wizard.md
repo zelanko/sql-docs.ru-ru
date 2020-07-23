@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bef4e8032ad605382b3312cac11840ed959a7571
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 661f4a95e7904fbec1147d0fd6a372b64a09d76e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296359"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920400"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных "Неструктурированный файл" (мастер импорта и экспорта SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 В этом разделе показано, как подключаться к источникам данных **"Неструктурированный файл"** (текстовый файл) со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. Для неструктурированных файлов эти две страницы мастера содержат разные наборы параметров, поэтому в этом разделе источник "Неструктурированный файл" и назначение "Неструктурированный файл" рассматриваются отдельно.
