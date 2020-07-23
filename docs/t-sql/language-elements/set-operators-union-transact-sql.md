@@ -20,12 +20,12 @@ ms.assetid: 607c296f-8a6a-49bc-975a-b8d0c0914df7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec953dc8bbb6f0baf51f996306f7a960ebc2fdd
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: b3bbb0c09f819e686185f65dab28123b95f6e2f6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86007629"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915460"
 ---
 # <a name="set-operators---union-transact-sql"></a>Операторы работы с наборами — UNION (Transact-SQL)
 
@@ -58,7 +58,9 @@ ms.locfileid: "86007629"
   [ ...n ] }
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 \<query_specification> | ( \<query_expression> ) Это спецификация запроса или выражение запроса, возвращающее данные для объединения с данными из другой спецификации запроса или выражения запроса. Определения столбцов, которые являются частью операции UNION, не должны совпадать, однако должны быть совместимыми посредством неявного преобразования. Если типы данных различаются, то получившийся тип данных определяется на основе правил [очередности типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md). Если типы одинаковы, но различаются по точности, масштабу или длине, результат определяется на основе тех же самых правил, которые действуют при объединении выражений. Дополнительные сведения см. в разделе [Точность, масштаб и длина (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 Столбцы типа данных **xml** должны быть эквивалентны друг другу. Все столбцы должны либо иметь тип, определенный в XML-схеме, либо быть нетипизированными. Типизированные столбцы должны относиться к одной и той же коллекции XML-схем.  

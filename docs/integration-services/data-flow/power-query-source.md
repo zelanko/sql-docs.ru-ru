@@ -16,16 +16,16 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.openlocfilehash: 1adc541d08e5ce74e6130d6994bd583ae58030d1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087424"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916088"
 ---
 # <a name="power-query-source-preview"></a>Источник Power Query (предварительная версия)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 В этой статье описывается настройка свойств источника Power Query в потоке данных SQL Server Integration Services (SSIS). Power Query — это технология, которая позволяет подключаться к различным источникам данных и преобразовывать данные с помощью Excel или Power BI Desktop. Дополнительные сведения см. в статье [Power Query — обзор и обучение](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d). Чтобы настроить скрипт, сформированный Power Query, его можно скопировать и вставить в источник Power Query в потоке данных SSIS.
   

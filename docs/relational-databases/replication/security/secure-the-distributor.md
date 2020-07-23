@@ -14,15 +14,15 @@ ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 9616a73d22671fc4a9e582417bafb7e10fd2608f
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: d8d0563741e4b1c00e7caf00639e80a1a0d98118
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159492"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915157"
 ---
 # <a name="secure-the-distributor"></a>Организация безопасности распространителя
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   К распространителю подключаются следующие агенты репликации: агент чтения журнала, агент моментальных снимков, агент чтения очереди, агент распространителя и агент слияния. Важно обеспечить для каждого из этих агентов соответствующее имя входа, соблюдая при этом принцип предоставления минимальных необходимых прав, а также защищая хранилище всех паролей:  
   
 -   Сведения об управлении именами для входа и паролями см. в статье [Управление именами для входа и паролями при репликации](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  

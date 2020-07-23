@@ -26,16 +26,16 @@ helpviewer_keywords:
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 45e7828421f6a8d4bca6084c6b9e0d215b432cc9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b36f709ecde7aa2fb4d47b2b1f092bc92bde682c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294080"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915450"
 ---
 # <a name="integration-services-tasks"></a>Задачи служб Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задачами называются элементы потока управления, которые определяют рабочие модули, выполняющиеся в потоке управления пакета. Пакет служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] состоит из одной задачи или нескольких. Если в пакете несколько задач, они связаны и упорядочены в потоке управления с помощью управления очередностью.  

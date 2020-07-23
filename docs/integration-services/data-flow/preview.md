@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cddf7bd9714a42cefa55d9af1e9a5ce5a59aeac6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fa7874b999ac36ba4aef18f8d5f12738eaa4872f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292122"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916081"
 ---
 # <a name="preview"></a>Preview (Предварительный просмотр) 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В диалоговом окне **Предварительный просмотр** можно просмотреть данные, извлекаемые источником SAP BW.  

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a4d89c6302b55e0182e5f14f8cfab463d5aafeed
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 452ad0e1fec7ac1f4773a1d6a2491ba903f83884
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284720"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915871"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>обновить пакеты служб Integration Services с помощью мастера обновления пакетов служб SSIS
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Пакеты, созданные в более ранних версиях служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно обновить до формата служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используемых [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет мастер обновления пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Мастер можно настроить так, что исходные пакеты останутся без изменений. Поэтому в случае каких-либо трудностей обновления можно продолжать использовать исходные пакеты.  

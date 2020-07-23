@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 207037818c81f91be0e48b51f00ba30f7f169adc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1f8a82b02a7743362f3769725074501b584140a2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297200"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916228"
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Ведение журнала и определение элементов журнала в компоненте потока данных
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Пользовательские компоненты потока данных могут помещать сообщения в существующую запись журнала с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Они могут также предоставлять информацию для пользователя с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> или подобных методов интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Однако этот подход создает нагрузку по вызову и обработке дополнительных событий и заставляет пользователя фильтровать многочисленные информационные сообщения в поисках сообщений, которые могут представлять интерес. Можно использовать собственный формат записи журнала, как показано далее, для предоставления пользователям разработанного компонента точно обозначенной информации.  

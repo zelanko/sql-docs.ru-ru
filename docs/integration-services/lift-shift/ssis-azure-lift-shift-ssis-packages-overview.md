@@ -10,16 +10,16 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1276720eb7dcdb83421732164490eeb58ba89c30
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896182"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915348"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Проекты, пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure. Для управления, развертывания и выполнения проектов и пакетов SSI и в каталоге SSI (SSISDB), размещенном в службе "База данных SQL Azure" или Управляемом экземпляре базы данных SQL, вы можете использовать привычные вам инструменты, например SQL Server Management Studio (SSMS).

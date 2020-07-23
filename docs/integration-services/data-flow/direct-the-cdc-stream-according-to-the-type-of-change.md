@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7af6ce4ebf3e412c2283e16e008cfd97cd34df0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0a8a8f712f25f452bbe5bcdd24470998e995ad0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292834"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915930"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Выбор направления потока CDC в соответствии с типом изменения
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Чтобы можно было добавить и настроить преобразование «Разделитель CDC», пакет должен содержать по крайней мере одну задачу «Поток данных» и источник CDC.  

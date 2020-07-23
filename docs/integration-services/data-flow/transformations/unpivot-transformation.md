@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 0c89af926fdb8476ec53b27fde17503c4a34f124
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d0a0d34a154b9b92258424718bb7cd62e4ed295e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291003"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914880"
 ---
 # <a name="unpivot-transformation"></a>Преобразование отмены свертывания
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Преобразование «Отмена свертывания» превращает набор ненормализованных данных в более нормализованную версию за счет развертывания значений из нескольких столбцов одной записи в несколько записей с теми же значениями в одном столбце. Например, набор данных с перечнем имен клиентов имеет одну строку для каждого клиента, при этом купленные товары и их количество отображаются в столбцах строки. После нормализации с помощью преобразования отмены свертывания набор данных содержит отдельную строку по каждому продукту, приобретенному клиентом.  

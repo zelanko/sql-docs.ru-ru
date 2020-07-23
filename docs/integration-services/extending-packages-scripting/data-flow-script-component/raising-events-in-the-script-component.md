@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: bb389073-e1d0-4794-8d29-c8b293b6a5e3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 27eade7d5b0095d18b2c0dcbfa4dac06408649f1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 489806f32a35ed4ca72bd2628951e8c6d7e623b4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296936"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915981"
 ---
 # <a name="raising-events-in-the-script-component"></a>Вызов событий в компоненте скрипта
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   События позволяют сообщать об ошибках и предупреждениях, а также передавать другие сведения, например о ходе выполнения задачи или ее состоянии, в пакет, содержащий задачу. Пакет предоставляет обработчики событий для управления уведомлениями о событиях. Компонент скрипта может формировать события путем вызова методов свойства <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> класса **ScriptMain**. Дополнительные сведения о том, как пакеты службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] обрабатывают события, см. в разделе [Обработчики событий в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-event-handlers.md).  

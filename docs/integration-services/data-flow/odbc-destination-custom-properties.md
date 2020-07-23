@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: efeed5fe9390a9e498e225138522bdc1769a22d6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: efd46a4579553a1662713112a0fb6659a11b85da
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292223"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915904"
 ---
 # <a name="odbc-destination-custom-properties"></a>Пользовательские свойства назначений ODBC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В следующей таблице описаны пользовательские свойства назначения ODBC. Все свойства могут быть заданы на основе выражений свойств служб SSIS.  

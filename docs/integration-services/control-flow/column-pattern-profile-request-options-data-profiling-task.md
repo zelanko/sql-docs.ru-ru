@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0119d52241741d318f4fd6aba17467144d3e9fb0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294249"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915801"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Параметры запроса профиля шаблона столбцов (задача «Профилирование данных»)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Для установки параметров режима **Запрос профиля шаблона столбца** , выделенного в панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль шаблона столбцов описывает набор регулярных выражений, которые покрывают указанный процент значений в строковом столбце. Этот профиль может помочь выявить проблемы в данных, например недопустимые строки, а также предложить регулярные выражения, которые можно использовать в будущем для проверки новых данных. Так, профиль шаблона столбца почтовых индексов США может дать регулярные выражения \d{5}-\d{4}, \d{5} и \d{9}. Если имеются другие регулярные выражения, то вероятно, что данные содержат недопустимые или представленные в неверном формате значения.  

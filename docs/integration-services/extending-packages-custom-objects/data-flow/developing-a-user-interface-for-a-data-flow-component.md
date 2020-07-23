@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da478b08a23550735c5a93d192a39fe741c91a5e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287779"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916215"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Разработка пользовательского интерфейса для компонента потока данных
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Разработчики компонентов могут включить для компонента настраиваемый пользовательский интерфейс, отображающийся в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] во время изменения компонента. Реализация пользовательского интерфейса обеспечивает возможность получать уведомления, когда компонент добавляется или удаляется из задачи потока данных или при вызове справки по компоненту.  

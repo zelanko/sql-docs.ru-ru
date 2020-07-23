@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 789a0f51697c1a605a2c5e0b08f98ccc87d78b1d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298390"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915798"
 ---
 # <a name="control-flow"></a>Поток управления
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Пакет состоит из потока управления, а также, одного или нескольких потоков данных (необязательно). Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют три различных типа элементов потока управления: контейнеры, которые обеспечивают структуры в пакетах; задачи, которые обеспечивают функциональность; элементы управления очередностью, соединяющие выполняемые компоненты, контейнеры и задачи в упорядоченный поток управления.  

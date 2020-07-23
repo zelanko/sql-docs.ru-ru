@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8c1b434486cb27d5a001e0b185ed6c637e1ca45d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296493"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916329"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Создание назначения ODBC с помощью компонента скрипта
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], как правило, сохранение данных в назначение ODBC осуществляется с использованием назначения [!INCLUDE[vstecado](../../includes/vstecado-md.md)] и поставщика данных платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для ODBC. Однако можно также создать нерегламентированное назначение ODBC для использования в отдельном пакете. Для создания такого нерегламентированного назначения ODBC используется компонент скрипта, показанный в следующем примере.  

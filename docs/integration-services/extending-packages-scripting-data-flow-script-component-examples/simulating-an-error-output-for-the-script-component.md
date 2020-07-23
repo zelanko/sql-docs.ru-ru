@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 318a7302d87e029f45d6e9202f587473210e0976
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: db88defad5962fb6a71b6705d7055abfb93c52c5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296458"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914930"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Имитация вывода ошибок для компонента скрипта
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Хотя невозможно напрямую настроить вывод ошибок в компоненте скрипта для автоматической обработки строк ошибок, можно воспроизвести функциональность встроенного вывода ошибок, создав дополнительный выход и используя условную логику в скрипте для направления строк на этот выход, когда это целесообразно. Возможно, потребуется имитация поведения встроенного вывода ошибок с помощью добавления двух дополнительных выходных столбцов для номера ошибки и идентификатора столбца, в котором эта ошибка возникла.  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e87e29349cdef9db94e917f6fe543b327c5abf9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0d8e8bce65061ac4cb9b0d4ea9829ab24a92da40
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298857"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916265"
 ---
 # <a name="connection-to-sql-server"></a>Соединение с SQL Server
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Если имя входа, не имеющее роли с правами записи в базе данных MSXDBCDC (например, **db_owner** ), пытается создать экземпляр Oracle CDC, появляется диалоговое окно "Подключение к SQL Server".  

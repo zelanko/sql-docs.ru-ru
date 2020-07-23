@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e18b3ea191e51dabe010dc66ad0cff0fce8c8f50
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: cd61425f63f4124951c8c0c90c6c599292602c23
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488563"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916047"
 ---
 # <a name="raw-file-source"></a>источник «Необработанный файл»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Источник «Необработанный файл» считывает необработанные данные из файла. Поскольку данные представлены в собственном формате источника, их преобразование не требуется. Также практически не требуется синтаксический анализ. Это означает, что источник необработанных файлов в состоянии считывать данные быстрее, чем другие источники, такие как источник «Неструктурированный файл» и источник «OLE DB».  

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: bb3ee33c-79c4-4c76-a82f-71581b4a60f1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4340dfcaa7807616ccd8c3cdf4e504d0e33423c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 28ff4c49c2b1dadcde15171a2a5102f29e3ff438
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298120"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915360"
 ---
 # <a name="resolve-column-reference-editor"></a>Редактор разрешения ссылок на столбцы
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Если входной путь отсоединен или если в нем присутствуют несопоставленные столбцы, напротив соответствующего пути данных будет отображен значок ошибки. Чтобы упростить разрешение ошибок ссылок на столбцы, редактор разрешения ссылок позволяет связывать несопоставленные входные и выходные столбцы для всех путей в дереве выполнения. Редактор разрешения ссылок также выделяет пути, чтобы указать, какие из них разрешаются в данный момент.  

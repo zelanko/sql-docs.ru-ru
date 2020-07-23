@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 5af33c29f1c013937cff99f8d357b0b538b9ffdb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f6eea48434554705c49e8291f01a8e32aabfd1b0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292484"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915020"
 ---
 # <a name="flat-file-source"></a>источник «Неструктурированный файл»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Источник «Неструктурированный файл» считывает данные из текстового файла. Текстовый файл может иметь разделители, фиксированную ширину полей или смешанный формат.  

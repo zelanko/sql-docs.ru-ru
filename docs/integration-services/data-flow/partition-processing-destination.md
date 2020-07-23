@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 23292c0ac898ca035bca4b499de4bfc3fe2a7ebc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50513545bf2737a8b331153c686acad7ebaf4bd2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292154"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916098"
 ---
 # <a name="partition-processing-destination"></a>Назначение обработки секции
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Назначение обработки секции производит загрузку и обработку секции служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Дополнительные сведения о секциях см. в разделе [Секции (службы Analysis Services — многомерные данные)](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data).  
