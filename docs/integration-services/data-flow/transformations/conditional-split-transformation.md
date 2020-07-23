@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d1e4cddbdad631a5602096f92915a4fe78b23d67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bb286721fac9e90a5e1d34bfb8a30ac9ac52032f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298003"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923222"
 ---
 # <a name="conditional-split-transformation"></a>преобразование «Условное разбиение»
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Преобразование «Условное разбиение» может направлять строки данных в различные выходы в зависимости от содержимого данных. Реализация преобразования "Условное разбиение" аналогична применению структур решения CASE в языке программирования. Преобразование производит оценку выражений и на основе результатов направляет строку данных на указанный выход. Это преобразование также обеспечивает выход по умолчанию, таким образом, если строка не совпадает с выражением, она направляется на выход по умолчанию.  

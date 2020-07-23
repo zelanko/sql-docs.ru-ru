@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1ef859193b0a2410b7057365c64506976d7ee8ab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5097ad2987dfbcc3301b35666ba6245a7559b63
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294259"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923109"
 ---
 # <a name="cdc-control-task"></a>Задача управления CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Управление CDC» используется для управления жизненным циклом пакетов системы отслеживания изменений данных (CDC). Эта задача обеспечивает синхронизацию пакета CDC с пакетом начальной загрузки и управление диапазонами регистрационных номеров транзакций в журнале (номеров LSN), которые обрабатываются в прогоне пакета CDC. Дополнительно задача «Управление CDC» связана со сценариями обработки ошибок и с восстановлением.  

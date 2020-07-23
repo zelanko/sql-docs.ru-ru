@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: afa9d06c9f9d2bdf0281fadfc93ec2a550b9f4af
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85767739"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922878"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
   
 Это занятие содержит следующие задачи.  
