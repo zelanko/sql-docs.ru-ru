@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e95b86d2d29bb3883f6fd76db29f17e5936d1b53
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 44750102897653d8ec1329e66ecf3fc78165db79
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283686"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917372"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Занятие 1-5. Добавление и настройка источника "Неструктурированный файл"
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 В этой задаче рассматривается добавление к пакету и настройка источника неструктурированных файлов. Источник неструктурированных файлов представляет собой компонент потока данных, использующий метаданные, определенные диспетчером подключений с неструктурированным файлом. Эти метаданные описывают формат и структуру данных, извлекаемых из неструктурированного файла в процессе преобразования. Источник неструктурированных файлов извлекает данные из единичного неструктурированного файла, используя определения формата в диспетчере подключений с неструктурированным файлом.  

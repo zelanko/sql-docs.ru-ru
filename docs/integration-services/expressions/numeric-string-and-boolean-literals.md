@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: de9df087cd068ad27029cb17ae553390b054a2f8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f8405bd4cb76470eb415dc058caff3931a6b4624
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297456"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918633"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Числовые, строковые и логические литералы
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Выражения могут содержать числовые, строковые и логические литералы. Средство оценки выражений поддерживает различные числовые литералы, такие как целые числа, десятичные дроби и константы с плавающей точкой. Средство оценки выражений также поддерживает суффиксы для длинных чисел и чисел с плавающей точкой, указывающие, как механизм вычисления выражений обрабатывает значения, а также экспоненциальное представление чисел в числовых литералах.  

@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 492f5e288faaedda21dc529fdfeeda6006d78b12
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c57c208eb0e8c359d25b85766a738d72e591696
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286458"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917857"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>Сравнение решений со сценариями и пользовательских объектов
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Скрипт» или компонент скрипта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может реализовать значительную часть функций, которые обеспечиваются пользовательской управляемой задачей или компонентом потока данных. Ниже приведены некоторые рекомендации, которые помогут выбрать тип задачи, отвечающий потребностям пользователя.  

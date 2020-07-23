@@ -17,15 +17,15 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 137a7d29806baf4eee6a4380338f1bb383119f40
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 4166c7320d12eda71b0c7594532075f0f33d2c6b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159892"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918488"
 ---
 # <a name="manage-identity-columns"></a>Управление столбцами идентификаторов
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   В этом разделе описывается управление столбцами идентификаторов в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Если операции вставки с подписчика реплицируются обратно на издатель, необходимо управлять столбцами идентификаторов, чтобы избежать присваивания одинаковых значений идентификаторов на подписчике и издателе. Репликация может управлять диапазонами идентификаторов автоматически, или можно управлять диапазонами идентификаторов вручную.  Сведения о параметрах управления диапазонами идентификаторов, предоставляемых репликацией, см. в статье [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов).  
   
  **В этом разделе**  

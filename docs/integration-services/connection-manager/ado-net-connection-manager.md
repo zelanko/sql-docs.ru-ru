@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d3cf4e302df6e28d898a2790d928cf40085f7915
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 13248409cca973de00f0ee04f6fcb22e020f64fd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687278"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918606"
 ---
 # <a name="adonet-connection-manager"></a>Диспетчер соединений ADO.NET
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] позволяет пакету обращаться к источникам данных с помощью поставщика .NET. Как правило, этот диспетчер подключений используется для получения доступа к таким источникам данных, как [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Кроме того, он обеспечивает доступ к источникам данных, предоставляемым посредством OLE DB и XML в пользовательских задачах, которые реализованы с помощью управляемого кода с использованием таких языков, как C#.  

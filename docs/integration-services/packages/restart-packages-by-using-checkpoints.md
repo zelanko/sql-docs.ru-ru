@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 88893b16dcb6e0529f166ab3c6e3f255110b6f71
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: de6329a45f43d27dfcabb05252a17eb0ed3c6a2e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295777"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919185"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Перезапуск пакетов с помощью контрольных точек
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут перезапустить пакеты, при выполнении которых произошел сбой, начиная с момента этого сбоя вместо перезапуска всего пакета. Если настройка пакета предполагает использование контрольных точек, сведения о выполнении пакета записываются в файл контрольных точек. Файл контрольных точек используется при перезапуске давшего сбой пакета для осуществления повторного запуска пакета с момента сбоя. В случае успешного выполнения пакета файл контрольных точек удаляется, а затем при следующем выполнении пакета создается повторно.  

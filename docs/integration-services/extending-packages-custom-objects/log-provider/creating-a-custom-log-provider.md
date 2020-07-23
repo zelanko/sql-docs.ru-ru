@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: fc20af96-9eb8-4195-8d3f-8a4d7c753f24
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d946868dad2aa9facc9b08a8ab32a1a4218406e9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5a4eaaf0e4c441fd4f08589d98c58cbac65b9e7f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297210"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916437"
 ---
 # <a name="creating-a-custom-log-provider"></a>Создание пользовательского регистратора
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Среда времени выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] располагает обширными возможностями по ведению журналов. С помощью журнала можно отслеживать события, происходящие во время выполнения пакета. Службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] включают целый ряд регистраторов, используя которые можно создавать и сохранять журналы в различных форматах, например в XML, текстовом файле, базе данных или в журнале событий Windows. Если ни один из этих регистраторов или предлагаемых ими выходных форматов не соответствует потребностям пользователя, можно создать пользовательский регистратор.  

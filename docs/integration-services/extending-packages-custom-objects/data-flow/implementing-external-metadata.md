@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 530a0e9a472638d5c401488cc408adc3957007f4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 65757d974c6deb690248343140a157e81e083a70
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297225"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919680"
 ---
 # <a name="implementing-external-metadata"></a>Реализация внешних метаданных
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Если компонент отключен от источника данных, можно выполнить проверку столбцов во входных и выходных коллекциях столбцов относительно внешнего источника данных с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Он позволяет сохранять моментальный снимок столбцов внешнего источника данных и сопоставлять эти столбцы со столбцами входных и выходных коллекций столбцов компонента.  

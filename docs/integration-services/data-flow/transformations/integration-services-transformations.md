@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ff200828c1204d15f648ec783fe720d86ac22dd1
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297904"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919250"
 ---
 # <a name="integration-services-transformations"></a>Преобразования служб Integration Services
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Преобразования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] являются компонентами потока данных пакета, которые выполняют статистическую обработку данных, а также соединяют, распространяют и изменяют данные. Преобразования могут также выполнять операции поиска и формировать образцы наборов данных. В этом разделе описываются преобразования, которые содержат службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , и поясняется работа этих преобразований.  

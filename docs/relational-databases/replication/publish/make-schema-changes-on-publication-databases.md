@@ -19,15 +19,15 @@ ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: f7bc2b9d94b53ab1d0418d05ae9e9c8ee93ee301
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 1dfa866c6c03234a28fbccb14a2c45cea2571090
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160132"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918502"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. При внесении любого из следующих изменений схемы в соответствующий опубликованный объект на издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] это изменение распространяется по умолчанию на все подписчики [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   ALTER TABLE  

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4df8e04fc2ef1c68dd1759db2915a13e0bbaf67
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282477"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919190"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Если нужно загрузить много пакетов, удобно использовать другие доступные серверы. Балансировка нагрузки — это метод использования других серверов для загрузки пакетов, когда пакеты находятся под контролем родительского пакета. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] балансировка нагрузки — это ручная процедура, которая должна быть разработана владельцами пакетов. Балансировка нагрузки не выполняется серверами автоматически. Кроме того, пакеты, выполняемые на удаленных серверах, должны быть полными, а не отдельными задачами из других пакетов.  

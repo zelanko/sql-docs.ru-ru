@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f064ad734e90d2748b959e7fdc9d5868b22c25cf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5332b93b6f51204700473d2faadbde39458db4fe
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293111"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916793"
 ---
 # <a name="data-mining-model-training-destination"></a>целевой объект «Обучение модели интеллектуального анализа данных»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Целевой объект «Обучение модели интеллектуального анализа данных» обучает модели анализа данных, пропуская данные, которые получает целевой объект, через алгоритмы модели интеллектуального анализа данных. Несколько моделей интеллектуального анализа данных могут быть обучены одним целевым объектом, если модели построены на одной и той же структуре интеллектуального анализа данных. Дополнительные сведения см. в разделах [Mining Structure Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) и [Mining Model Columns](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  

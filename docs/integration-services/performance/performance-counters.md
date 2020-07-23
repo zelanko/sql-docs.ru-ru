@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 890bd202912cea88491acd79906c873c44e53658
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 431c88eb4f341b55060c23a06b06cf5e599c38e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282613"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918317"
 ---
 # <a name="performance-counters"></a>Счетчики производительности
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают набор счетчиков производительности, предназначенных для наблюдения за производительностью подсистемы обработки потока данных. Например, наблюдая за счетчиком «Выгружено буферов», можно определить, записываются ли временно на диск буфера данных при выполнении пакета. Такая выгрузка снижает производительность и указывает на недостаточный объем памяти компьютера.  
@@ -34,7 +34,7 @@ ms.locfileid: "71282613"
   
  В следующей таблице приводятся описания счетчиков производительности.  
   
-|Счетчик производительности|Description|  
+|Счетчик производительности|Описание|  
 |-------------------------|-----------------|  
 |Считано байтов BLOB|Число байт данных BLOB, которое подсистема обработки потока данных считала из всех источников.|  
 |Записано байтов BLOB|Число байтов данных BLOB, которые подсистема обработки потока данных записала во все назначения.|  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: f6303ea4-fbbf-4cba-bc60-828df62be8c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 048ead08bf4a0f3f275eb265434581c8be4405bc
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 14b8d6250ede770df8dae9d565e4144e389968d8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292325"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916490"
 ---
 # <a name="look-up-process-chain"></a>Поиск цепочки процессов
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Используйте диалоговое окно **Поиск цепочки процессов** для поиска цепочки процессов, определенной в системе SAP Netweaver BW. После отображения списка доступных цепочек процесса выберите необходимую цепочку, и источник заполнит связанные параметры необходимыми значениями.  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 70e8c3cbc08837bce7c3b8aa9afeb3222165996c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 925b7155af44d77dc33506c0ff4d574be9970eb4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298917"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916570"
 ---
 # <a name="advanced-connection-properties"></a>Дополнительные свойства соединения
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В диалоговом окне **Дополнительные свойства соединения** можно добавить дополнительные параметры в строку подключения.  

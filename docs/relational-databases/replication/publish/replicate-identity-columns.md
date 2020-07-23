@@ -19,15 +19,15 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: a750eb05a8f4cb024e1837d46f028c72c76f4a29
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 1473f9f603f85e0e03fb4d7c23f4367daf63bf7b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160102"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919446"
 ---
 # <a name="replicate-identity-columns"></a>Репликация столбцов идентификаторов
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Когда столбцу назначается свойство IDENTITY, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически создает последовательные номера для новых строк, вставляемых в таблицу, которая содержит столбец идентификаторов. Дополнительные сведения см. в статье о [свойстве IDENTITY (Transact-SQL)](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Так как столбцы идентификаторов могут быть включены как часть первичного ключа, важно исключить появление повторяющихся значений в столбцах идентификаторов. Для использования столбцов идентификаторов в топологии репликации, имеющей обновления на нескольких узлах, все узлы топологии репликации должны использовать разные диапазоны значений идентификаторов, чтобы исключить появление повторяющихся идентификаторов.  
   
  Например, для издателя может быть задано значение в диапазоне от 1 до 100, для подписчика А в диапазоне от 101 от 200, а для подписчика Б в диапазоне от 201 до 300. Если строка вставляется в издателе и идентификатор имеет значение, равное, например, 65, это значение реплицируется на все подписчики. Когда репликация вставляет данные на каждый подписчик, она не увеличивает значение столбца идентификаторов в таблице подписчика; вместо этого вставляется буквенное значение 65. Увеличение значения столбца идентификаторов вызывается только пользовательскими вставками, а не вставками агента репликации.  

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 605cdbdc7b813fbbecb819bd31bde42f8f5afdc7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71290987"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916673"
 ---
 # <a name="use-a-recordset-destination"></a>использовать назначение «Набор записей»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Назначение «Набор записей» не сохраняет данные во внешнем источнике данных. Наоборот, назначение "Набор записей" сохраняет данные в памяти в наборе записей, который хранится в переменной пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , относящейся к типу данных **Object** . После сохранения данных назначением «Набор записей», как правило, используется контейнер «цикл по каждому элементу» с перечислителем ADO по каждой строке для обработки одной строки набора записей за раз. Перечислитель ADO по каждой строке сохраняет значение из каждого столбца текущей строки в отдельной переменной пакета. Затем настроенные в контейнере «цикл по каждому элементу» задания считывают эти значения из переменных и выполняют с ними ряд действий.  

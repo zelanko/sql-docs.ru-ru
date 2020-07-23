@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4ee6dda0fbd91649a085cfda429ea3e554a83d4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296152"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917490"
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Переменные хранят значения, которые пакет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и его контейнеры, задачи и обработчики событий могут использовать во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  

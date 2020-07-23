@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2015303f77a3ae7ba4f77758432f51bd84f0b811
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293234"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917156"
 ---
 # <a name="cdc-splitter"></a>Разделитель CDC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Разделитель CDC разбивает один поток строк изменений из потока исходных данных CDC на различные потоки данных, относящиеся к операциям Insert, Update и Delete. Разбиение потока данных осуществляется на основе обязательного столбца `__$operation` и его стандартных значений в таблицах изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  

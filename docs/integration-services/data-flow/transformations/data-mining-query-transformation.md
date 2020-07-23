@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7960133b-a3e1-48af-ba43-55ed78c38e71
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e3b6783969376b20921d960e79c8909b5fda4aa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e44443974472593a45d35ec54a4cb69d0dd580f2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291469"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919410"
 ---
 # <a name="data-mining-query-transformation"></a>преобразование «Запрос интеллектуального анализа данных»
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Преобразование «Запрос интеллектуального анализа данных» выполняет прогнозирующие запросы на основе моделей интеллектуального анализа данных. Это преобразование содержит построитель запросов для создания запросов расширений интеллектуального анализа данных (DMX). С помощью построителя запросов можно создавать пользовательские инструкции на языке расширения интеллектуального анализа данных (DMX) для оценки входа преобразования в соответствии с текущей моделью интеллектуального анализа данных. Дополнительные сведения см. в разделе [Справочник по расширениям интеллектуального анализа данных](../../../dmx/data-mining-extensions-dmx-reference.md).  

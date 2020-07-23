@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7c9749d32a0e08a6b755db739bb226540b519b85
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71285369"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917656"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 После того как вы проверите значения, выбранные в мастере, и нажмете кнопку **Готова** на странице **Завершение работы мастера** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выполнение операции**. На этой странице отображается ход выполнения и результат операции, настроенной на предыдущих страницах. На этой странице никакие действия не требуются.
