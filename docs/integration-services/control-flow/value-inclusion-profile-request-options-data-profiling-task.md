@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: aa6215e3fafbbf962c687daf329f6781f466342d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bebe29e50ad4adaa6152eaef17de64a926433c8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293813"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913843"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Параметры запроса профиля включения значений (задача «Профилирование данных»)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   На панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос профиля включения значений** , выбранного на панели запросов. Профиль «Включение значений» находит перекрывающиеся значения в двух столбцах или наборах столбцов. Таким образом, он также определяет, подойдет ли столбец или набор столбцов в качестве внешнего ключа для выбранных таблиц. Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Так, профиль «Включение значений» можно использовать для создания профиля столбца ProductID таблицы Sales. Профиль определяет, что в столбце содержатся значения, отсутствующие в столбце ProductID таблицы Products.  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: faa1eedd-db14-41e5-8e58-8f0f6f561e42
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 204fe65afa6684a3090c226d2fc5a028aa5f4079
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a6bec5c9eb1227276da8cab130c287dafd0150a9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294442"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913628"
 ---
 # <a name="dqs-cleansing-connection-manager"></a>Диспетчер соединений «Очистка DQS»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Диспетчер соединений «Очистка DQS» позволяет пакету подключаться к серверу служб [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] . Преобразование «Очистка DQS» использует диспетчер соединений «Очистка DQS».  

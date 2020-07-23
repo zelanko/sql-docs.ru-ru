@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: c75cf73d-0268-4c57-973d-b8a84ff801fa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 049a3db0f57b4c2c0e8a3fba809241b352991a61
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8470f4d370e3879f1bdaadee3b08b80f758ccadc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85706521"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914080"
 ---
 # <a name="deallocate-transact-sql"></a>DEALLOCATE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85706521"
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *cursor_name*  
  Имя объявленного курсора. Когда имеется как глобальный, так и локальный курсор с именем *cursor_name*, то *cursor_name* ссылается на глобальный курсор, если задано `GLOBAL`, и на локальный, если `GLOBAL` не задано.  
   

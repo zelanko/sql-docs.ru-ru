@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c28efd8106056ea900fef0cd57791837cf79e21a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: abbcea42546421fb7c0d3fef9824ef8ef56d2a0c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "69553225"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913790"
 ---
 # <a name="microsoft-connector-for-oracle-data-type-support"></a>Типы данных, поддерживаемые соединителем для Oracle (Майкрософт)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Компоненты SSIS для Oracle поддерживают не все типы данных Oracle. При разработке пакетов в SSDT для столбцов с неподдерживаемыми типами данных будет отображаться предупреждение. Такие столбцы также будут удалены из сопоставления столбцов. Нельзя загрузить данные в столбец с неподдерживаемым типом данных.
 

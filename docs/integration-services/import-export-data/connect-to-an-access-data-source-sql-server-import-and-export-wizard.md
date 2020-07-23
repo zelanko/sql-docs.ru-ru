@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 79c994357b7d57f138bc022b6f4b3cdf3963111b
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296296"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913190"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Access (мастер импорта и экспорта SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 В этом разделе показано, как подключаться к источникам данных **Microsoft Access** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server.

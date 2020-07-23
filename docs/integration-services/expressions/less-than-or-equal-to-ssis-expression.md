@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: ca7ea792717e7a8069ee54724543b0d5d78f2322
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dbc5ff8aeceff48d203e15242cf8dfc305694c33
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289548"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914515"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (меньше или равно) (выражение служб SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Выполняет сравнение с целью определения, является ли первое выражение меньше второго или равно ему. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  

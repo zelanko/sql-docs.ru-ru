@@ -9,16 +9,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9ee026ab80e7afcd801b96411575f5ef4a61afd9
-ms.sourcegitcommit: 01297f2487fe017760adcc6db5d1df2c1234abb4
+ms.openlocfilehash: 1ef8ccdfc30c772548cff4caa816ef1a582c8823
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86196112"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913800"
 ---
 # <a name="microsoft-connector-for-oracle"></a>Соединитель с Oracle (Microsoft)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Соединитель с Oracle (Microsoft) позволяет экспортировать данные из источника данных Oracle в пакет служб SSIS и загружать их в него.
 

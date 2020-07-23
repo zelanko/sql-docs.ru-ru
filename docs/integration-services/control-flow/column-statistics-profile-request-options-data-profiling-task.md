@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4c533cb10f1d51c2e1e74e51978e720f764bf4e6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a4704a619f6c8230ff811dc4d7e25d1bdf031297
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298366"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913253"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Параметры запроса профиля статистики столбцов (задача «Профилирование данных»)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Для установки параметров режима **Запрос профиля статистики столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль статистики столбцов описывает статистические показатели, такие как минимальное, максимальное, среднее и стандартное отклонение для числовых столбцов, а также минимальное и максимальное отклонение для столбцов типа **datetime** . Этот профиль поможет выявить проблемы в данных, например наличие недопустимых дат. Например, во время профилирования столбца исторических дат обнаружена самая поздняя дата, расположенная в будущем.  

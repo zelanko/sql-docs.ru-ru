@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ae5e95da6599c4af10513ec72194671ba71561b2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297551"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914586"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  

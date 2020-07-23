@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95dc655d8c1ac23df7cbb058cba2c5c7f4e41419
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298610"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913999"
 ---
 # <a name="the-oracle-cdc-service"></a>Служба CDC Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Служба CDC Oracle — это служба Windows, благодаря которой запускается программа xdbcdcsvc.exe. Служба Oracle CDC может настраиваться для запуска нескольких служб Windows на одном компьютере, каждая из которых должна иметь другое имя службы Windows. Создание нескольких служб Windows для Oracle CDC на одном компьютере обычно выполняется для достижения лучшего их разделения или в случае, если каждой из них требуется работать с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

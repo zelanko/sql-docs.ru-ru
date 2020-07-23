@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: d83fb763-c7c6-4e20-bd10-0f995598b198
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d9b053d9a7e891ce872c9f038571f1b601a7c359
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: e0eb4147d63c18b910405d3f9b7db3939d44c28f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053580"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86912900"
 ---
 # <a name="catalogset_customized_logging_level_value"></a>catalog.set_customized_logging_level_value 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   Изменяет статистику или события, которые регистрируются на существующем настроенном уровне ведения журнала. Дополнительные сведения о настроенных уровнях ведения журналов см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
   

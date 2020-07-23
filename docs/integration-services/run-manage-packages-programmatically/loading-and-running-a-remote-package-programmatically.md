@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6382de8778e5f11e76f4481519284d50b7b52e0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 64a9702fd642f40e96f0ac0d017b3ddc132502c0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282166"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913347"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Программная загрузка и запуск удаленного пакета
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Чтобы выполнить удаленные пакеты с локального компьютера, на котором не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запустите пакеты таким образом, чтобы они выполнялись на удаленном компьютере, на котором установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Чтобы запустить пакеты на удаленном компьютере с локального компьютера, понадобится агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], веб-служба или удаленный компонент. Если попытаться запустить удаленные пакеты непосредственно с локального компьютера, пакеты будут загружены на локальный компьютер и будут запущены оттуда. Если на локальном компьютере не установлены службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], запуск пакетов окажется невозможен.  

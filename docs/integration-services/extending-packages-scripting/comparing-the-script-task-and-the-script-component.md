@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e253e6a4e19982e5350161cde00bc7609ed7380d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 808e2fa48eee5deb6d9e612a1c2dd57e5d5b7813
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297008"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913476"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Сравнение задачи «Скрипт» и компонента скрипта
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача "Скрипт", доступная в окне "Поток управления" конструктора служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], и компонент скрипта, доступный в окне "Поток данных", предназначены в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для разных целей. Задача представляет собой универсальное средство потока управления, а компонент служит источником, преобразованием или назначением в потоке данных. Несмотря на то что они предназначены для разных целей, между задачей «Скрипт» и компонентом скрипта имеются некоторые подобия в используемых средствах разработки кода и объектах в пакете, которые доступны разработчику с их помощью. Понимание их подобия и различия может помочь использовать задачи и компоненты более эффективно.  

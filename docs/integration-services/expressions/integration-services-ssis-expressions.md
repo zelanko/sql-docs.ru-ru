@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f2e884e7a34af6cae14b4b057038e54b20255200
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a5f9955f32db6b9d803541229a700671ec666b55
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71289689"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914562"
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  

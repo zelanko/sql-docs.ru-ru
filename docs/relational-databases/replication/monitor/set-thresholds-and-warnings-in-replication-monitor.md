@@ -19,15 +19,15 @@ ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 824e5c768ab36b7af5d228e5879eae4f05916051
-ms.sourcegitcommit: 21c14308b1531e19b95c811ed11b37b9cf696d19
+ms.openlocfilehash: 23803485a7734bf9f077aa70d136e8730055ccd0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86159762"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913245"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Настройка пороговых значений и предупреждений в мониторе репликации
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Монитор репликации отображает сведения о состоянии публикаций и подписок. По умолчанию монитор репликации отображает предупреждения только об неинициализированных подписках, но можно включить другие предупреждения. Рекомендуется включить предупреждения для используемой топологии, чтобы своевременно получать сведения о состоянии и производительности репликации.  
   
  При включении предупреждения требуется задать пороговое значение. Когда это значение достигается или превышается, отображается предупреждение (если отсутствует необходимость в отображении сообщения с более высоким приоритетом). Достижение порогового значения помимо отображения предупреждения в мониторе репликации может также вызывать системное предупреждение. Предупреждения могут быть включены для следующих условий.  

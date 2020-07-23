@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 610ee7d9-4fea-4aba-9395-57add826923b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9280f92233909077afd0507c5c2de7b93467ccb1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c30d054c5a0c0e9a51d1799e919ba235c6a928fa
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71282059"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913280"
 ---
 # <a name="understanding-the-differences-between-local-and-remote-execution"></a>Основные сведения об отличиях между локальным и удаленным выполнением
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Разработчики пакетов и администраторы должны знать, в чем состоят ограничения, связанные с местом выполнения пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
