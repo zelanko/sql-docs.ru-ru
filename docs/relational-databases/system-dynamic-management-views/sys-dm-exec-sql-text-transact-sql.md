@@ -20,12 +20,12 @@ ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b2a7a5e9f8410ab8ca66f0621d6a2c955258c28c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 7ee50d943daf4f5970c162788659092ad31ef8c6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85734658"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943108"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -85,7 +85,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
 Для нерегламентированных запросов дескрипторы SQL являются хэш-значениями на основе текста SQL, отправляемого на сервер, и могут исходить из любой базы данных. 
 
 Для таких объектов баз данных, как хранимые процедуры, триггеры или функции, дескрипторы SQL создаются на основе идентификатора базы данных, идентификатора объекта, а также номера объекта. 
@@ -110,7 +110,7 @@ Handle Plan — это хэш-значение, полученное из ско
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Использование **CROSS APPLY**.  
+  2.  Использование **CROSS APPLY**.  
     Sql_handle из **sys. dm_exec_requests** будут переданы в представление **sys. Dm_exec_sql_text** с помощью **CROSS APPLY**. Откройте новое окно запроса и передайте SPID, определенный на шаге 1. В этом примере SPID имеет значение `59` .
 
         ```sql
@@ -120,7 +120,7 @@ Handle Plan — это хэш-значение, полученное из ско
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  Передача **sql_handle** напрямую.  
+  2.  Передача **sql_handle** напрямую.  
 Получение **sql_handle** из **sys. dm_exec_requests**. Затем передайте **sql_handle** непосредственно в **sys. dm_exec_sql_text**. Откройте новое окно запроса и передайте SPID, определенный в шаге 1, в **sys. dm_exec_requests**. В этом примере SPID имеет значение `59` . Затем передайте возвращенный **sql_handle** в качестве аргумента в **sys. dm_exec_sql_text**.
 
         ```sql
@@ -178,11 +178,11 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+## <a name="see-also"></a>Дополнительно  
+ [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с выполнением &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
- [sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys.dm_exec_requests (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_exec_cursors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys. dm_exec_xml_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   

@@ -26,12 +26,12 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825992"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977694"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,17 +58,16 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Аргументы  
 `[ @name = ] 'module\_name'`Имя хранимой процедуры, определяемой пользователем функции, представления, триггера DML, триггера DDL уровня базы данных или триггера DDL уровня сервера. *module_name* не может быть хранимой процедурой среды CLR или функцией CLR. *module_name* не могут быть привязаны к схеме. *module_name* имеет тип **nvarchar**и не имеет значения по умолчанию. *module_name* может быть составным идентификатором, но может ссылаться только на объекты в текущей базе данных.  
   
-`[ , @namespace = ] ' \<class> '`Класс указанного модуля. Если *module_name* является триггером DDL, \< требуется класс>. * \< класс>* имеет тип **nvarchar**(20). Допустимые входные значения:  
-  
-|||  
-|-|-|  
-|DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Область применения**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версий.|  
-  
+`[ , @namespace = ] ' \<class> '`Класс указанного модуля. Если *module_name* является триггером DDL, \<class> требуется. *\<class>* имеет тип **nvarchar**(20). Допустимые входные значения:  
+
+* DATABASE_DDL_TRIGGER
+
+* SERVER_DDL_TRIGGER — **применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздним версиям.
+
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_refreshsqlmodule** должны выполняться при внесении изменений в объекты, лежащие в основе модуля, который влияет на его определение. В противном случае при обращении к модулю или при его вызове могут быть получены непредвиденные результаты. Чтобы обновить представление, можно использовать либо **sp_refreshsqlmodule** , либо **sp_refreshview** с теми же результатами.  
   
  **sp_refreshsqlmodule** не влияет на разрешения, расширенные свойства или параметры SET, связанные с объектом.  
@@ -168,8 +167,8 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также  
- [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+## <a name="see-also"></a>См. также:  
+ [sp_refreshview (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [Ядро СУБД хранимых процедур &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

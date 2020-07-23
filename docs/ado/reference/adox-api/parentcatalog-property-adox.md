@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 6c3557af934ab7029822b5f9d3657828ee5d2a75
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c4d3874ea1289dd086d70f06434adc666691f521
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763765"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943186"
 ---
 # <a name="parentcatalog-property-adox"></a>Свойство ParentCatalog (ADOX)
 Указывает родительский каталог объекта таблицы, пользователя или столбца, который предоставляет доступ к свойствам, зависящим от поставщика.  
@@ -53,17 +53,24 @@ ms.locfileid: "82763765"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает объект [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) . Установка **ParentCatalog** в открытый **Каталог** предоставляет доступ к свойствам, зависящим от поставщика, до добавления таблицы или столбца в коллекцию **каталогов** .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Некоторые поставщики данных позволяют записывать значения свойств, определяемые поставщиком, только при их создании: то есть когда таблица или столбец добавляются в коллекцию **каталогов** . Чтобы получить доступ к этим свойствам перед добавлением этих объектов в **Каталог**, сначала укажите **Каталог** в свойстве **ParentCatalog** .  
   
  Ошибка возникает при добавлении таблицы или столбца к **каталогу** , отличному от каталога **ParentCatalog**.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
-  
-## <a name="see-also"></a>См. также  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>См. также:  
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
