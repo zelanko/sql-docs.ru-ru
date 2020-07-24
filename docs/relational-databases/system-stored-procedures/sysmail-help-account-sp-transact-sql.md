@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8374beba2eda97df3817dc27c337e46f9ba57780
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 11242eae3f17e24c428aac3a6f344d937f15dd33
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890923"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122709"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,12 +49,11 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор, содержащий столбцы перечисленные ниже.  
   
-||||  
-|-|-|-|  
-|Имя столбца|Тип данных|Описание|  
+| Имя столбца | Тип данных | Описание |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|Идентификатор учетной записи.|  
 |**name**|**sysname**|Имя учетной записи.|  
-|**nописание**|**nvarchar(256)**|Описание учетной записи.|  
+|**Описание**|**nvarchar(256)**|Описание учетной записи.|  
 |**email_address**|**nvarchar(128)**|Адрес электронной почты для отправки сообщений.|  
 |**display_name**|**nvarchar(128)**|Отображаемое имя учетной записи.|  
 |**replyto_address**|**nvarchar(128)**|Адрес, на который посылаются ответы на сообщения данной учетной записи.|  

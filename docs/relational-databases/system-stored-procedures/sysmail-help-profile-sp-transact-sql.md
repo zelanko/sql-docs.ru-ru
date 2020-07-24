@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 061016b3a9f1283f82263a4f89fdb81acfc86889
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 947038e26a4367425576261594befff032f6eeea
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85890909"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87122748"
 ---
 # <a name="sysmail_help_profile_sp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -49,12 +49,11 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор со следующими столбцами.  
   
-||||  
-|-|-|-|  
-|Имя столбца|Тип данных|Описание|  
+| Имя столбца | Тип данных | Описание |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|Идентификатор профиля.|  
 |**name**|**sysname**|Имя профиля.|  
-|**nописание**|**nvarchar(256)**|Описание профиля.|  
+|**Описание**|**nvarchar(256)**|Описание профиля.|  
   
 ## <a name="remarks"></a>Комментарии  
  Если указано имя профиля или профиля, **sysmail_help_profile_sp** возвращает сведения об этом профиле. В противном случае **sysmail_help_profile_sp** возвращает сведения о каждом профиле в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляре.  
