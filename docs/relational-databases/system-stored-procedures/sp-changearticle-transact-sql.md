@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e0f9b47d2a8d5732aa42ed92f2b5af00524052e6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717393"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977557"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -53,11 +53,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Эта таблица описывает свойства статей и значения этих свойств.  
   
-|Свойство.|Значения|Описание|  
+|Свойство|Значения|Описание|  
 |--------------|------------|-----------------|  
 |**creation_script**||Путь и имя скрипта схемы статьи, используемого для создания целевых таблиц. Значение по умолчанию — NULL.|  
 |**del_cmd**||Инструкция DELETE к выполнению; иначе формируется из журнала.|  
-|**nописание**||Новая запись описания статьи.|  
+|**Описание**||Новая запись описания статьи.|  
 |**dest_object**||Предоставляется для обратной совместимости. Используйте **dest_table**.|  
 |**dest_table**||Новая целевая таблица.|  
 |**destination_owner**||Имя владельца целевого объекта.|  
@@ -165,7 +165,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (сбой)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **sp_changearticle** используется в репликации моментальных снимков и репликации транзакций.  
   
  Если статья принадлежит публикации, поддерживающей одноранговую репликацию транзакций, можно изменить только **Описание**, **ins_cmd**, **upd_cmd**и **del_cmd** свойства.  
@@ -210,9 +210,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="valid-schema-options"></a>Допустимые параметры схемы  
  В следующей таблице описаны допустимые значения *schema_option* в зависимости от типа репликации (отображается в верхней части) и типа статьи (отображается в первом столбце).  
   
-|Тип статьи|Тип репликации||  
-|------------------|----------------------|------|  
-||Транзакционную|Снимок|  
+| Тип статьи | Тип репликации — транзакционная | Тип репликации — моментальный снимок |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|Все параметры|Все параметры, кроме **0x02**|  
 |**logbased manualfilter**|Все параметры|Все параметры, кроме **0x02**|  
 |**logbased manualview**|Все параметры|Все параметры, кроме **0x02**|  
@@ -242,7 +241,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
+ [sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
  [sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)  
   
   

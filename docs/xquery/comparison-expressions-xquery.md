@@ -247,7 +247,7 @@ where ProductModelID=19
   
 -   Запрос возвращает значение True.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Введите System &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   

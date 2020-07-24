@@ -10,23 +10,23 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6d37575864666c5aa2b8c47484b5bcac798b3e9a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d49a56c7d545a69729f222daad1e9504802e7bcc
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718663"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942387"
 ---
 # <a name="installation-and-configuration"></a>Установка и настройка
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Инструкции по установке и настройке базы данных OLTP для широкого мира.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 - [SQL Server 2016](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) (или более поздней версии) или [базы данных SQL Azure](https://azure.microsoft.com/services/sql-database/). Для полной версии примера используйте SQL Server Evaluation, Developer или Enterprise Edition.
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md). Для получения наилучших результатов используйте выпуск Июнь 2016 или более поздней версии.
 
-## <a name="download"></a>Скачивание
+## <a name="download"></a>Скачать
 
 Последний выпуск примера:
 
@@ -64,7 +64,7 @@ ms.locfileid: "85718663"
 5. В разделе **Параметры базы данных** измените имя базы данных на *WideWorldImporters* и выберите целевой выпуск и цель службы для использования.
 6. Нажмите кнопку **Далее** и **Готово** , чтобы запустить развертывание. Выполнение через P1 займет несколько минут. Если требуется более низкая Ценовая категория, рекомендуется импортировать в новую базу данных P1, а затем изменить ценовую категорию на нужный уровень.
 
-## <a name="configuration"></a>Параметр Configuration
+## <a name="configuration"></a>Конфигурация
 
 ### <a name="full-text-indexing"></a>Полнотекстовое индексирование
 
@@ -80,7 +80,9 @@ ms.locfileid: "85718663"
 
 Включение аудита в SQL Server требует настройки сервера. Чтобы включить аудит SQL Server для образца WideWorldImporters, выполните следующую инструкцию в базе данных:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 В базе данных SQL Azure аудит настраивается с помощью [портал Azure](https://portal.azure.com/).
 
@@ -90,5 +92,7 @@ ms.locfileid: "85718663"
 
 Безопасность на уровне строк не включена по умолчанию в скачивании BACPAC WideWorldImporters. Чтобы включить безопасность на уровне строк в базе данных, выполните следующую хранимую процедуру:
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

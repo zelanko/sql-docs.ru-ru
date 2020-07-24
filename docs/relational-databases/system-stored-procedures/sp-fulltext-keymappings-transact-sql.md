@@ -20,11 +20,12 @@ ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2281586bfe77b7cadaa2b3a8f7ae7a9b18c655ab
-ms.sourcegitcommit: 8515bb2021cfbc7791318527b8554654203db4ad
+ms.openlocfilehash: 000c71e284f77b5024cd45727803af55fa8d8b06
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86091798"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977746"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
@@ -54,14 +55,14 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 >  Дополнительные сведения об использовании одного, двух или трех параметров см. в подразделе «Примечания» далее в этом разделе.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
- Отсутствует.  
+ Нет.  
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|Столбец внутреннего идентификатора документа (DocId), который соответствует значению ключа.|  
-|Key|*|Значение полнотекстового ключа из указанной таблицы.<br /><br /> Если в таблице сопоставлений отсутствуют полнотекстовые ключи, то возвращается пустой набор строк.|  
+|Ключ|*|Значение полнотекстового ключа из указанной таблицы.<br /><br /> Если в таблице сопоставлений отсутствуют полнотекстовые ключи, то возвращается пустой набор строк.|  
   
  <sup>*</sup>Тип данных для ключа совпадает с типом данных полнотекстового ключевого столбца в базовой таблице.  
   
@@ -107,9 +108,8 @@ GO
   
  Этот пример возвращает из таблицы идентификаторы DocId и полнотекстовые ключи:  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | DocId | ключ |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -132,9 +132,8 @@ GO
   
  В результате выполнения данного примера возвращаются следующие результаты:  
   
-||||  
-|-|-|-|  
-||`docid`|`key`|  
+| TABLE | DocId | ключ |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## <a name="see-also"></a>См. также  

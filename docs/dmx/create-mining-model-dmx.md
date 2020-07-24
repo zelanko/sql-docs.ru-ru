@@ -50,7 +50,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Список алгоритмов, поддерживаемых текущим поставщиком, можно получить с помощью [DMSCHEMA_MINING_SERVICES набора строк](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). Сведения о алгоритмах, поддерживаемых в текущем экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , см. в разделе [Свойства интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *список параметров*  
- Необязательный параметр. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
+ Необязательный элемент. Список параметров, определенных поставщиком для алгоритма и разделенный запятыми.  
   
  *строка XML*  
  (Только для расширенного использования.) Модель в формате XML (PMML). Строка должна быть заключена в одиночные кавычки (').  
@@ -123,7 +123,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Список параметров, связанных с каждым алгоритмом, см. в разделе [алгоритмы интеллектуального анализа данных &#40;Analysis Services-&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если необходимо создать модель со встроенным набором проверочных данных, следует после ALTER MINING STRUCTURE использовать инструкцию CREATE MINING STRUCTURE. При этом не все типы моделей поддерживают набор контрольных данных. Дополнительные сведения см. в статье [CREATE MINING STRUCTURE (DMX)](../dmx/create-mining-structure-dmx.md).  
   
  Пошаговое руководство по созданию модели интеллектуального анализа данных с помощью инструкции КРЕАТЕМОДЕЛ см. в разделе Учебник по DMX-анализу [временных рядов](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -186,7 +186,7 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  

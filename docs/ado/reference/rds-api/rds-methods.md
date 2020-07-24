@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 97af6e8394ac8371f2ddd1baff2363079c898f84
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: c178bae1f3da5ccc6ca4cfdd6b5645335141908f
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758550"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942306"
 ---
 # <a name="rds-methods"></a>Методы службы удаленных рабочих столов
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Метод|Описание|  
 |-|-|  
 |[Отмена (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Отменяет выполнение ожидающего асинхронного вызова метода.|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Отменяет все изменения, внесенные в текущую или новую строку объекта **набора записей** .|  

@@ -1,5 +1,5 @@
 ---
-title: Мониторинг с помощью SCOM
+title: Настройка System Center Operations Manager для наблюдения за ТД
 description: Выполните следующие действия, чтобы настроить пакеты управления System Center Operations Manager (SCOM) для платформы аналитики. Пакеты управления необходимы для мониторинга системы платформы аналитики из SCOM.
 author: mzaman1
 ms.prod: sql
@@ -9,18 +9,18 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0786cbc8230ecf29dd377a35fefc6969072512b3
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74401302"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942216"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Настройка System Center Operations Manager (SCOM) для мониторинга системы аналитики платформы
 Выполните следующие действия, чтобы настроить пакеты управления System Center Operations Manager (SCOM) для платформы аналитики. Пакеты управления необходимы для мониторинга системы платформы аналитики из SCOM.  
   
 ## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Перед началом  
-**Предварительные условия**  
+**Предварительные требования**  
   
 Необходимо установить и запустить System Center Operations Manager 2007 R2.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "74401302"
   
 1.  Создайте учетную запись запуска от имени **наблюдателя ТД** с типом учетной записи **Windows** для пользователя домена **наблюдателя APS** .  
   
-    1.  Перейдите в область " **Администрирование** ", щелкните правой кнопкой мыши**учетные записи** **конфигурации** -> запуска от имени и выберите **создать учетную запись запуска от имени...**  
+    1.  Перейдите в область " **Администрирование** ", щелкните правой кнопкой мыши учетные записи **конфигурации запуска от имени**  ->  **Accounts** и выберите **создать учетную запись запуска от имени...**  
   
         ![конфигурескомкреатерунасаккаунт](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "конфигурескомкреатерунасаккаунт")  
   
@@ -61,7 +61,7 @@ ms.locfileid: "74401302"
   
 2.  Задайте профиль **учетной записи наблюдателя Microsoft APS** , чтобы использовать учетную запись запуска от имени **наблюдателя APS** .  
   
-    1.  Перейдите в раздел **Администрирование** -> **Запуск от имени** -> **Профили**конфигурации.  
+    1.  Перейдите в раздел **Администрирование**  ->  **Запуск от имени**  ->  **Профили**конфигурации.  
   
         ![администратионрунасконфигуратионпрофилес](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "администратионрунасконфигуратионпрофилес")  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74401302"
   
 3.  Дождитесь завершения обнаружения управляющих устройств APS.  
   
-    1.  Перейдите на панель " **мониторинг** " и откройте представление состояния устройства **SQL Server устройство** -> **Microsoft Analytics Platform System** -> **устройства** .  
+    1.  Перейдите на панель " **мониторинг** " и откройте представление состояния устройства **SQL Server устройство**  ->  **Microsoft Analytics Platform System**  ->  **устройства** .  
   
         ![склсерверапплианцемикрософтапсапплианцес](./media/configure-scom-to-monitor-analytics-platform-system/SqlServerApplianceMicrosoftApsAppliances.png "склсерверапплианцемикрософтапсапплианцес")  
   

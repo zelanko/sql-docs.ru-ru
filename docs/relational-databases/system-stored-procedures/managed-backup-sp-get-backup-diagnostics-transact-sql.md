@@ -20,11 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 572cc4eb126114697d4fc4ecfeb9589458c46baa
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: 7ce40edcea8e734aae84b5f24ec5f0e71890c7d6
+ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053500"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86977518"
 ---
 # <a name="managed_backupsp_get_backup_diagnostics-transact-sql"></a>managed_backup. sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
@@ -41,7 +42,7 @@ ms.locfileid: "86053500"
 managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@begin_time = ] 'time1' ] [, [@end_time = ] 'time2'VARCHAR(255) = 'Xevent',@begin_time DATETIME = NULL,@end_time DATETIME = NULL  
 ```  
   
-##  <a name="arguments"></a><a name="Arguments"></a>Даваемых  
+##  <a name="arguments"></a><a name="Arguments"></a> Аргументы  
  @xevent_channel  
  Тип расширенного события. Значение по умолчанию предполагает возврат всех событий, занесенных в журнал за предшествующие 30 минут. Занесенные в журнал события зависят от типа включенных расширенных событий. Этот параметр можно использовать для фильтрации хранимой процедуры, чтобы показывать только события определенного типа. Можно либо указать полное имя события, либо указать подстроку, такую как: **"admin** **", "Analytics"**, "Operation **"** и **"Debug"**. @event_channelИмеет тип **VARCHAR (255)**.  
   
@@ -56,12 +57,11 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## <a name="table-returned"></a>Возвращаемая таблица  
  Эта хранимая процедура возвращает таблицу со следующей информацией:  
   
-||||  
-|-|-|-|  
-|Имя столбца|Тип данных|Описание|  
+| Имя столбца | Тип данных | Описание |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR (512)|Тип расширенного события.|  
 |Событие|NVARCHAR (512)|Сводка журналов событий.|  
-|Отметка времени|timestamp|Отметка времени события, показывающая, когда оно возникло.|  
+|Timestamp|timestamp|Отметка времени события, показывающая, когда оно возникло.|  
   
 ## <a name="security"></a>Безопасность  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: fd33b2c0496289e3a94e2a1b9ab9644dd178762e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85720063"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87106995"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Функции со строковыми значениями — lower-case
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
@@ -37,12 +37,11 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 ## <a name="arguments"></a>Аргументы  
   
-|||  
-|-|-|  
 |Термин|Определение|  
+|-|-|
 |*$arg*|Строковое значение для преобразования в нижний регистр.|  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  

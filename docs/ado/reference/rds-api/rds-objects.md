@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 45f4851acf2d3c92807a571f6c8c6b436b86936b
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 7ba592cd0bb0dc10c094784fbb7d41585d5b6dd6
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82764835"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942296"
 ---
 # <a name="rds-objects"></a>Объекты службы удаленных рабочих столов
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Объект|Описание|  
 |-|-|  
 |[Элемент управления (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Привязывает **набор записей** запроса данных к одному или нескольким элементам управления (например, текстовому полю, элементу управления сетки или полю со списком) для вывода данных **набора записей** на веб-странице.<br /><br /> Объект " **элемент управления** " является надежным для сценариев.|  
 |[Факт (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Реализует методы, предоставляющие доступ к данным для чтения и записи к указанным источникам данных для клиентских приложений.<br /><br /> Объект **фактов** не является надежным для сценариев.|  

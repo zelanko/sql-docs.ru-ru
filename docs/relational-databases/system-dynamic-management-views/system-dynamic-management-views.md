@@ -121,7 +121,7 @@ FROM sys.dm_os_wait_stats;
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [GRANT, предоставление разрешений на сервер &#40;&#41;Transact-SQL](../../t-sql/statements/grant-server-permissions-transact-sql.md)   
  [GRANT, предоставление разрешений на базу данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md)   
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

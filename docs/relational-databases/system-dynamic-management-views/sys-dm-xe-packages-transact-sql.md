@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a70105791ed9c6dea0371bd941dcae185ab05b2d
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3ae80e8db245c5a70db238a17b5d09bb682b09b1
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85898593"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942358"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -52,12 +52,11 @@ ms.locfileid: "85898593"
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
-||||  
-|-|-|-|  
-|Исходный тип|Кому|Связь|  
+| От | Кому | Связь |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Многие к одному|  
   
-## <a name="see-also"></a>Дополнительно  
+## <a name="see-also"></a>См. также статью  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

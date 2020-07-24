@@ -21,12 +21,12 @@ ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8dcde5de27764979cf2258d3d1895574a4ca4e54
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2e1ebbe98efecd97cb7ddda6284d4a28176e8ec1
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85677911"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112768"
 ---
 # <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -110,11 +110,17 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Средний размер записи в байтах.<br /><br /> Для индекса средний размер записи применяется к текущему уровню сбалансированного дерева в единице распределения IN_ROW_DATA.<br /><br /> Для кучи — средний размер записи в единице распределения IN_ROW_DATA.<br /><br /> Для единиц распределения LOB_DATA или ROW_OVERFLOW_DATA — средний размер записи во всей единице распределения.<br /><br /> NULL, если *mode* = Limited.|  
 |forwarded_record_count|**bigint**|Количество записей в куче, содержащих указатели на данные в других местах. (Такое состояние возникает во время обновления, когда не хватает места для сохранения новой строки в исходном расположении.)<br /><br /> NULL для любой единицы распределения, отличающейся от единиц распределения IN_ROW_DATA для кучи.<br /><br /> Значение NULL для куч, если *mode* = Limited.|  
 |compressed_page_count|**bigint**|Количество сжатых страниц.<br /><br /> Вновь выделенные для куч страницы не сжаты с использованием сжатия PAGE. Куча — это СТРАНИЦА, сжимаемая при наступлении двух особых условий: при массовом импорте данных или при перестройке кучи. Типичные операции DML, которые вызывают выделение страниц, не связаны со сжатием PAGE. Перестройте кучу, если значение compressed_page_count увеличивается сверх желательного порога.<br /><br /> Для таблиц с кластеризованным индексом значение compressed_page_count указывает эффективность сжатия страниц.|  
-|hobt_id|BIGINT|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Только для индексов columnstore это идентификатор набора строк, который отслеживает внутренние данные columnstore для секции. Наборы строк хранятся в виде куч данных или двоичных деревьев. Они имеют тот же идентификатор индекса, что и родительский индекс columnstore. Дополнительные сведения см. в разделе [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, если|  
-|column_store_delete_buffer_state|tinyint|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ОЧИСТКА<br /><br /> 4 = СНЯТИЕ С УЧЕТА<br /><br /> 5 = ГОТОВО|  
-|column_store_delete_buff_state_desc||**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Недопустимый — родительский индекс не является индексом columnstore.<br /><br /> Это используется с помощью открытых и удаляемых сканеров.<br /><br /> Сток — удаляются, но сканеры все еще используют его.<br /><br /> Очистка буфера закрывается, а строки в буфере записываются в точечный рисунок удаления.<br /><br /> Снятие с учета-строки в закрытом буфере удаления записываются в битовую карту удаления, но буфер не был усечен, так как сканеры все еще используют его. Новым сканерам не нужно использовать буфер снятия с учета, поскольку достаточно свободного места в открытом буфере.<br /><br /> Готово — этот буфер удаления готов к использованию.|  
-  
-## <a name="remarks"></a>Примечания  
+|hobt_id|BIGINT|Только для индексов columnstore это идентификатор набора строк, который отслеживает внутренние данные columnstore для секции. Наборы строк хранятся в виде куч данных или двоичных деревьев. Они имеют тот же идентификатор индекса, что и родительский индекс columnstore. Дополнительные сведения см. в разделе [sys. internal_partitions &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULL, если <br /><br /> Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
+|column_store_delete_buffer_state|tinyint| 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ОЧИСТКА<br /><br /> 4 = СНЯТИЕ С УЧЕТА<br /><br /> 5 = ГОТОВО<br /><br />Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
+|column_store_delete_buff_state_desc|| Недопустимый — родительский индекс не является индексом columnstore.<br /><br /> Это используется с помощью открытых и удаляемых сканеров.<br /><br /> Сток — удаляются, но сканеры все еще используют его.<br /><br /> Очистка буфера закрывается, а строки в буфере записываются в точечный рисунок удаления.<br /><br /> Снятие с учета-строки в закрытом буфере удаления записываются в битовую карту удаления, но буфер не был усечен, так как сканеры все еще используют его. Новым сканерам не нужно использовать буфер снятия с учета, поскольку достаточно свободного места в открытом буфере.<br /><br /> Готово — этот буфер удаления готов к использованию. <br /><br /> Область **применения**: SQL Server 2016 и более поздней версии, база данных SQL azure, управляемый экземпляр SQL Azure|  
+|version_record_count|**bigint**|Это число записей версий строк, сохраняемых в этом индексе.  Эти версии строк поддерживаются функцией [ускоренного восстановления базы данных](../../relational-databases/accelerated-database-recovery-concepts.md) . <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+|inrow_version_record_count|**bigint**|Число записей версий ADR, сохраненных в строке данных для быстрого извлечения. <br /><br />  [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e|  
+|inrow_diff_version_record_count|**bigint**| Число записей версий ADR, сохраненных в виде отличий от базовой версии. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|total_inrow_version_payload_size_in_bytes|**bigint**|Общий размер в байтах записей версии экземпляров управлении для этого индекса. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_regular_version_record_count|**bigint**|Число записей версий, которые хранятся за пределами исходной строки данных. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|offrow_long_term_version_record_count|**bigint**|Число записей версий, которые считаются долгосрочными. <br /><br /> [!INCLUDE[SQL2019](../../includes/applies-to-version/sqlserver2019.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] |  
+
+## <a name="remarks"></a>Комментарии  
  Функция динамического управления sys.dm_db_index_physical_stats заменяет инструкцию DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Режимы просмотра  
@@ -424,12 +430,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Динамические административные представления и функции &#40;&#41;Transact-SQL](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с индексами &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
  [sys. dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys. dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Системные представления &#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
