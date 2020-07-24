@@ -1,1 +1,0 @@
-Windows Server 2003, Datacenter Edition; Windows Server 2003, выпуск Enterprise; Windows Server 2003, выпуск Standard; Windows Vista; Windows XP Professional с пакетом обновления \(2\) (SP2) или \(с\)пакетом обновления 1 (SP1); или Windows 2000 \(все версии\)

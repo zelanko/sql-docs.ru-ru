@@ -1,1 +1,0 @@
-Компонент Service Broker

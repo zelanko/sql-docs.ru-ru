@@ -1,1 +1,0 @@
-Хранилище SQL Server PDW

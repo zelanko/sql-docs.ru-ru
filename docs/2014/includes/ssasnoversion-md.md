@@ -1,1 +1,0 @@
-Службы Analysis Services

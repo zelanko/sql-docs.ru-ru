@@ -1,1 +1,0 @@
-Среда Management Studio

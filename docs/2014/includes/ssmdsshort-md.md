@@ -1,1 +1,0 @@
-Службы Master Data Services

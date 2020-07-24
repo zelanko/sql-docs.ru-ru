@@ -1,1 +1,0 @@
-<Token>**Область применения этой статьи:**![да](media/yes-icon.png)SQL Server (начиная с 2008)![нет](media/no-icon.png)база данных![SQL Azure](media/no-icon.png)нет хранилище ![данных SQL Azure](media/no-icon.png)нет параллельного хранилища данных</Token>

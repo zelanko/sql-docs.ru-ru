@@ -1,1 +1,0 @@
-Компонент DQS Cleansing служб Integration Services

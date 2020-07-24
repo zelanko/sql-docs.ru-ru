@@ -1,1 +1,0 @@
-Компания Adventure Works Cycles
