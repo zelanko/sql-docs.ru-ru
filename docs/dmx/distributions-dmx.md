@@ -35,7 +35,7 @@ ms.locfileid: "86969867"
   
  Дополнительные сведения о типах распространения см. в разделе [распределения столбцов &#40;&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы содержимого &#40;&#41;интеллектуального анализа данных](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)   
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   

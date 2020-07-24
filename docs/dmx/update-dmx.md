@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9c4f8c1b48ccc6b3f2c2363671f5e3c072f77042
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: f77d71eab284b695171e923cfe53b53575d45d94
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669171"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971542"
 ---
 # <a name="update-dmx"></a>UPDATE (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Изменяет столбец **NODE_CAPTION** в модели интеллектуального анализа данных.  
   
@@ -37,7 +37,7 @@ SET NODE_CAPTION='new caption'
  Строка, содержащая новое имя для **NODE_CAPTION** столбца.  
   
  *выражение условия*  
- Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
+ Необязательный элемент. Условие ограничения значений, возвращаемых из списка столбцов.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере инструкция **Update** изменяет имя по умолчанию, `Cluster 1` для кластера — `001` более описательное имя `Likely Customers` .  
@@ -48,7 +48,7 @@ SET NODE_CAPTION= 'Likely Customers'
 WHERE NODE_UNIQUE_NAME = '001'  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41; DDL](../dmx/dmx-statements-data-definition.md)   
  [Расширения интеллектуального анализа данных &#40;инструкции расширений интеллектуального анализа данных&#41;](../dmx/dmx-statements-data-manipulation.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  

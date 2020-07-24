@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bc2d295f43dfab4327ac1b0ea47382324a22db41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aaad5923695e6cb8e98e2c7f40fa2bb9a044a7ce
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786521"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915550"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Выражения пути — указание проверки узла
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Шаг оси в выражении пути содержит следующие компоненты:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "85786521"
 >  Имена узлов, заданные в выражениях пути XQuery, всегда обрабатываются с учетом регистра и не подчиняются тем же правилам зависимости от параметров сортировки, что и запросы на Transact-SQL.  
   
 ## <a name="node-name-as-node-test"></a>Имя узла в качестве проверки узла  
- При указании имени узла в качестве проверки узла в шаге выражения пути необходимо понимать принцип основного узла. У каждой оси, потомка, родителя и атрибута есть основной узел. Пример:  
+ При указании имени узла в качестве проверки узла в шаге выражения пути необходимо понимать принцип основного узла. У каждой оси, потомка, родителя и атрибута есть основной узел. Например.  
   
 -   Ось атрибутов может содержать только атрибуты. Поэтому узел атрибутов является основным по отношению к оси атрибутов.  
   

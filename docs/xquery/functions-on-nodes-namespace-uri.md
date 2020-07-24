@@ -39,7 +39,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  Имя узла, для которого будет получена часть URI-кода пространства имен.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
   
 -   Если аргумент опускается, значением по умолчанию является узел контекста.  
   
@@ -106,7 +106,7 @@ WHERE ProductModelID=19
   
 -   Функция **Namespace-URI ()** возвращает экземпляры типа xs: String вместо xs: anyURI.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции на узлах](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [Функция локального имени &#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   

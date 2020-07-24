@@ -29,7 +29,7 @@ ms.locfileid: "86969824"
   
  Этот учебник поможет научиться создавать модель интеллектуального анализа данных для прогнозирования того, какие продукты обычно приобретаются вместе с другими. Кроме того, учебник демонстрирует использование вложенных таблиц в интеллектуальном анализе данных.  
   
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Справочник  
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
  [Инструкции определения расширений интеллектуального анализа данных](../dmx/dmx-statements-data-definition.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "86969824"
 ## <a name="related-sections"></a>Связанные разделы  
  [Доступ к данным многомерной модели &#40;Analysis Services многомерных данных&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Структура и использование прогнозирующих запросов расширений интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Учебник по основам интеллектуального анализа данных](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   

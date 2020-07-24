@@ -35,7 +35,7 @@ Cluster()
   
  Функция **cluster** возвращает скалярное значение имени кластера. Однако при использовании этой функции в качестве аргумента другой функции ее необходимо рассматривать как \<cluster column reference> .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **Кластер** также можно использовать в качестве `<` ссылки на столбец кластера `>` для функции **PredictHistogram** .  
   
 ## <a name="examples"></a>Примеры  
@@ -54,7 +54,7 @@ FROM
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ClusterProbability &#40;расширений интеллектуального анализа данных&#41;](../dmx/clusterprobability-dmx.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   

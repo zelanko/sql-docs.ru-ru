@@ -117,7 +117,7 @@ ms.locfileid: "86921885"
 ### <a name="safe"></a>SAFE  
  Проверяются все условия **EXTERNAL_ACCESS** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Поддерживаемые библиотеки .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)   
  [Безопасность доступа к коду при интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Атрибуты защиты узла и программирование интеграции со средой CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

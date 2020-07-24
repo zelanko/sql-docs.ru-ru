@@ -40,7 +40,7 @@ else
   <expression3>  
 ```  
   
- В зависимости от действительного логического значения вычисляется выражение `expression1`, `expression2` или `expression3`. Пример:  
+ В зависимости от действительного логического значения вычисляется выражение `expression1`, `expression2` или `expression3`. Например.  
   
 -   Если выражение условия `expression1` соответствует пустой последовательности, результат имеет значение False.  
   
@@ -165,7 +165,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

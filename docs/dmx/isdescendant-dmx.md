@@ -30,7 +30,7 @@ IsDescendant(<NodeID>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Тип Boolean.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **Descending** используется только в [&#62; модели SELECT &#60;. CONTENT &#40;&#41;расширений интеллектуального анализа данных](../dmx/select-from-model-content-dmx.md) и [выберите из &#60;&#62; модели. DIMENSION_CONTENT &#40;запросы DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md) .  
   
 ## <a name="examples"></a>Примеры  
@@ -41,7 +41,7 @@ SELECT * FROM [TM Decision Tree].CONTENT
 WHERE IsDescendant('00000000100')  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  

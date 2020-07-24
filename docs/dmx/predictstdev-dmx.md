@@ -33,7 +33,7 @@ PredictStdev(<scalar column reference>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Скалярное значение типа, заданного параметром *\<scalar column reference>* .  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если ссылка на столбец является дискретной, **PredictStdev** возвращает 0, так как стандартное отклонение нельзя вычислить из дискретных значений.  
   
 ## <a name="examples"></a>Примеры  
@@ -53,7 +53,7 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  

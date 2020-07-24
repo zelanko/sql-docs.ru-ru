@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f0af6adc37c178b4a218fb98f8c846f1e265a523
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 15ad0b4e96eed91830f1d27c324671bc74bf25ed
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669221"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971616"
 ---
 # <a name="-positive-dmx"></a>+ (положительное значение) (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Выполняет унарную операцию, возвращающую положительное значение числового выражения.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "83669221"
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение с типом данных заданного аргумента.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-dmx.md)   
  [Унарные операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-unary.md)  

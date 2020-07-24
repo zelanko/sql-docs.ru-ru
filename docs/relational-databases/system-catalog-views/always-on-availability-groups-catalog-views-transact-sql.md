@@ -51,7 +51,7 @@ ms.locfileid: "86918060"
 > [!NOTE]  
 > Сведения о присоединенных базах данных доступности см. в столбцах **replica_id** и **group_database_id** в [представлении sys. databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys. databases (Transact-SQL)](sys-databases-transact-sql.md)   
  [sys. database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

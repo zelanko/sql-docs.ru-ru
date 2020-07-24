@@ -243,7 +243,7 @@ SELECT @x.query('
   
 -   Не поддерживается комбинирование последовательностей узлов операторами union, intersect и except.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения языка XQuery](../xquery/xquery-expressions.md)  
   
   

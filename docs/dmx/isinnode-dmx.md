@@ -30,7 +30,7 @@ IsInNode(<NodeID>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Тип Boolean.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  **IsInNode** используется только в [&#62; модели SELECT &#60;. СЛУЧАИ &#40;&#41;расширений интеллектуального анализа данных](../dmx/select-from-model-cases-dmx.md) и [выбора &#60;&#62; модели. SAMPLE_CASES &#40;запросы DMX&#41;](../dmx/select-from-model-sample-cases-dmx.md) .  
   
 ## <a name="examples"></a>Примеры  
@@ -41,7 +41,7 @@ Select * from [TM Decision Tree].Cases
 WHERE IsInNode('0')  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  

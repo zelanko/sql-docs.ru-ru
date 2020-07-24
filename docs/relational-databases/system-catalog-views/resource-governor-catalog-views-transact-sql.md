@@ -40,7 +40,7 @@ ms.locfileid: "86918030"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Resource Governor связанные динамические административные представления &#40;&#41;Transact-SQL](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)   
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   

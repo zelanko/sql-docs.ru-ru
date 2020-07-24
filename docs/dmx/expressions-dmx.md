@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8a5c057197e0603c800f2ca5538652ab06609db8
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 2fd193a35325b90bddf63d950ce8472b81325b05
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670282"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971696"
 ---
 # <a name="expressions-dmx"></a>Выражения (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   В расширениях интеллектуального анализа данных выражение представляет собой сочетание идентификаторов, значений и операторов, которые [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут вычислять результат.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "83670282"
   
  Чтобы построить составные выражения, можно комбинировать простые выражения с помощью операторов. Дополнительные сведения об операторах см. в разделе [расширения интеллектуального анализа данных &#40;Справочник по операторам DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по инструкции DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)   

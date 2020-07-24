@@ -20,12 +20,12 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a467a445dda5f4d950c5bf4813f5ec69606df487
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717447"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943071"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -60,17 +60,15 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *schema_name. ссылки на*_*entity_name*  
- Имя упоминаемой сущности.  
+ `schema_name.referenced_entity_name`Имя упоминаемой сущности.  
   
- *schema_name* является обязательным, кроме случаев, когда упоминаемый класс PARTITION_FUNCTION.  
+ `schema_name`Аргумент  необходим, кроме тех случаев, когда упоминаемый класс относится к классу PARTITION_FUNCTION.  
   
- *schema_name. referenced_entity_name* имеет тип **nvarchar (517)**.  
+ `schema_name.referenced_entity_name`имеет тип **nvarchar (517)**.  
   
- *<referenced_class>* :: = {Object | ВВЕДИТЕ | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
- Класс упоминаемой сущности. В одной инструкции может быть указан только один класс.  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`Класс сущности, на которую указывает ссылка. В одной инструкции может быть указан только один класс.  
   
- *<referenced_class>* имеет тип **nvarchar**(60).  
+ `<referenced_class>`имеет тип **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
@@ -96,13 +94,13 @@ sys.dm_sql_referencing_entities (
   
  Возвращает ошибку, если заданная упоминаемая сущность является пронумерованной хранимой процедурой.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Просмотр|Да|Да|  
+|Представление|Да|Да|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
 |Хранимая процедура CLR|Нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  

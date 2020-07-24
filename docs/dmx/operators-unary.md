@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9055cc483cc306e039f893bcb80554718092a2a7
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 5dd4df26faad2c52a803db90122e6bb78a3f1a75
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669643"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971609"
 ---
 # <a name="operators---unary"></a>Операторы — унарные
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Унарные операторы выполняют какую-либо операцию над одним операндом, например возвращают отрицательное или положительное значение числового выражения.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "83669643"
 |[-&#40;отрицательное&#41; &#40;многомерных выражений&#41;](../mdx/negative-mdx.md)|Возвращает отрицательное значение числового выражения.|  
 |[+ &#40;положительное&#41; &#40;&#41;многомерных выражений](../mdx/positive-mdx.md)|Возвращает положительное значение числового выражения.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   

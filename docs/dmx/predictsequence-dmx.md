@@ -32,7 +32,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<table expression>.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Если указан параметр *n* , он возвращает следующие значения:  
   
 -   Если *n* больше нуля, наиболее вероятные значения последовательностей приведены в следующих *n* шагах.  
@@ -49,7 +49,7 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  

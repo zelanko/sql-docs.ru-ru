@@ -40,14 +40,14 @@ ms.locfileid: "86913170"
 ## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Это представление имеет следующее количество элементов связей.  
   
 | От | Кому | Связь |
 | ---- | -- | ------------ |
 |sys. database_event_session_events. event_session_id|sys. database_event_sessions. event_session_id|Многие к одному|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   

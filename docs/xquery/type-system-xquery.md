@@ -149,7 +149,7 @@ WHERE ProductModelID=7
 > [!NOTE]  
 >  В этом примере явное использование функции **Data ()** используется только для иллюстрации. Если он не указан, функция **Sum ()** неявно применяет функцию **Data ()** для извлечения типизированных значений узлов.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Шаблоны и разрешения приложения SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Основы языка XQuery](../xquery/xquery-basics.md)  
   

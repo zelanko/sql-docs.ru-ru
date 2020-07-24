@@ -34,7 +34,7 @@ ms.locfileid: "86969885"
   
  Дополнительные сведения о типах данных, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживаемых, см. в разделе [типы данных &#40;&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   

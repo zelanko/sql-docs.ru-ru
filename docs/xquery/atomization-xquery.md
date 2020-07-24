@@ -77,7 +77,7 @@ where ProductModelID=7
   
  Атомарность также возникает в параметрах выражений сравнения, передаваемых функциям, значения, возвращаемые функциями, выражениями **Cast ()** и выражениями сортировки, передаваемыми в предложении ORDER BY.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основы XQuery](../xquery/xquery-basics.md)   
  [Выражения сравнения &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  

@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ae24b0195beab2b34804a14e5e105e6e277f3529
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 67ba5385ab11091ca45b50556fe63983fee01aac
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669298"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971702"
 ---
 # <a name="gt-greater-than-dmx"></a>&gt;(Больше) DMX
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Выполняет операцию сравнения, определяющую, является ли одно значение меньшим или равным другому значению расширений интеллектуального анализа данных.  
   
@@ -34,7 +34,7 @@ DMX_Expression > DMX_Expression
 ## <a name="return-value"></a>Возвращаемое значение  
  Логические значение, равное TRUE в случае, если оба аргумента не равны NULL, и значение первого аргумента больше значения второго аргумента. Логическое значение равно FALSE в случае, если оба аргумента не равны NULL, и значение первого аргумента равняется или меньше значения второго аргумента. Логическое значение равно NULL, если один или оба аргумента имеют значение NULL.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Операторы сравнения &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-comparison.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-dmx.md)  

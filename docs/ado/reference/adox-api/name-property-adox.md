@@ -41,12 +41,12 @@ helpviewer_keywords:
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 68e9625b1e5acb7ef0d7b8d1389895d8a96dcbef
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 24d86b384a1eb2916e488c17c99e4b9b5962dd1a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763825"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942726"
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -54,7 +54,7 @@ ms.locfileid: "82763825"
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает или возвращает **строковое** значение.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Комментарии  
  Имена не обязательно должны быть уникальными в пределах коллекции.  
   
  Свойство **Name** доступно для чтения и записи в объектах [столбца](../../../ado/reference/adox-api/column-object-adox.md), [группы](../../../ado/reference/adox-api/group-object-adox.md), [ключа](../../../ado/reference/adox-api/key-object-adox.md), [индекса](../../../ado/reference/adox-api/index-object-adox.md), [таблицы](../../../ado/reference/adox-api/table-object-adox.md)и [пользователя](../../../ado/reference/adox-api/user-object-adox.md) . Свойство **Name** доступно только для чтения в объектах [каталога](../../../ado/reference/adox-api/catalog-object-adox.md), [процедуры](../../../ado/reference/adox-api/procedure-object-adox.md)и [представления](../../../ado/reference/adox-api/view-object-adox.md) .  
@@ -64,14 +64,26 @@ ms.locfileid: "82763825"
 > [!NOTE]
 >  Для ключей это свойство доступно только для чтения в объектах **ключей** , уже добавленных в коллекцию. Для таблиц это свойство доступно только для чтения для объектов **таблицы** , уже добавленных в коллекцию.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-||||  
-|-|-|-|  
-|[Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+        [Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="see-also"></a>См. также  
  [Методы добавления столбцов и таблиц, пример свойства Name (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Пример свойств для добавления ключей, типа ключа, RelatedColumn, RelatedTable и UpdateRule (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 343d5ec73a9720085f450cde3f35a187cf4b7302
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: b49fbddab49266ee5a5d530867c281e72878b6d7
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82762815"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943026"
 ---
 # <a name="rightsenum"></a>RightsEnum
 Задает права или разрешения для группы или пользователя на объекте.  
@@ -46,8 +46,13 @@ ms.locfileid: "82762815"
 |**адригхтвритеовнер**|524288 (&H80000)|Пользователь или группа имеет разрешение на изменение владельца объекта.|  
 |**адригхтвритепермиссионс**|262144 (&H40000)|Пользователь или группа может изменять определенные разрешения для объекта в каталоге.|  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Метод GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[Метод SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Метод GetPermissions (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Метод SetPermissions (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

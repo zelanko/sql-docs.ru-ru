@@ -113,7 +113,7 @@ ms.locfileid: "86913580"
     :::column-end:::
 :::row-end:::
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  Системные представления системных представлений системного [каталога](catalog-views-transact-sql.md) [&#40;&#41;Transact-SQL](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

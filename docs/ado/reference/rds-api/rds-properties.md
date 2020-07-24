@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: cb0250875bfaa9d23d483b4e95e0d8949e2a907a
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 8d868aaeb917c446e9f345924ab37c0b887dad3a
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82758540"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942996"
 ---
 # <a name="rds-properties"></a>Свойства службы удаленных рабочих столов
 > [!IMPORTANT]
 >  Начиная с Windows 8 и Windows Server 2012, компоненты RDS больше не включены в операционную систему Windows (Дополнительные сведения см. в статье о совместимости Windows 8 и [Windows server 2012 Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). Клиентские компоненты RDS будут удалены в следующей версии Windows. Избегайте использования этого компонента в новых разработках и запланируйте изменение существующих приложений, в которых он применяется. Приложения, использующие RDS, должны переноситься в [службу данных WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Свойство|Описание|  
 |-|-|  
 |[Connect (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)|Указывает имя базы данных, из которой выполняются операции запроса и обновления.|  
 |[Ексекутеоптионс (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)|Указывает, включено ли асинхронное выполнение.|  

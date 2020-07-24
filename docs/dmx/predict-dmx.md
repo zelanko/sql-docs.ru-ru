@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9a21336db54ab6fadaa219a3ef3d743dcf860087
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: d323794af598cb621b7fb8f9939cd2ae1c0f2746
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669277"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86968454"
 ---
 # <a name="predict-dmx"></a>Predict (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Функция **Predict** Возвращает прогнозируемое значение или набор значений для указанного столбца.  
   
@@ -28,15 +28,15 @@ Predict(<scalar column reference>, [option1], [option2], [option n], [INCLUDE_NO
 Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NODE_ID], n)  
 ```  
   
-## <a name="applies-to"></a>Применяется к  
+## <a name="applies-to"></a>Применение  
  Ссылка на скалярный столбец или столбец таблицы.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<Ссылка на скалярный столбец>  
+ \<scalar column reference>  
   
  or  
   
- \<Ссылка на столбец таблицы>  
+ \<table column reference>  
   
  Тип возвращаемых данных зависит от типа столбца, к которому применяется функция.  
   
@@ -86,7 +86,7 @@ FROM     [Association]
 |Ремонтный комплект|2113|0.142012232004839|0.132389356196586|  
 |Камера шины для велосипеда Mountain|1992|0.133879965051415|0.125304947722259|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  

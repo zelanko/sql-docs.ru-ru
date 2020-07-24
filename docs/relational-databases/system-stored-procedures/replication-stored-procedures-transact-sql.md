@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64f75e38aea006fffc0b464bcaeabb4ff6d9fec4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85752800"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920090"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>Хранимые процедуры репликации (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Системные хранимые процедуры репликации документированы и доступны для выполнения единовременных задач, таких как реализация репликации и применение пакетных файлов и скриптов.  
   
@@ -149,8 +149,8 @@ ms.locfileid: "85752800"
 |[sp_helparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)|[sp_vupgrade_replication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)|  
 |[sp_helparticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
-## <a name="see-also"></a>См. также  
- [Основные понятия объекты Replication Management Objects](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>См. также:  
+ [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Основные понятия программирования репликации](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   
   

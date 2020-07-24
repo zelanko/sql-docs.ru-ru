@@ -35,7 +35,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<table expression>  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  К параметрам функции **PredictAssociation** относятся EXCLUDE_NULL, INCLUDE_NULL, инклюзивные, монопольные (по умолчанию), INPUT_ONLY, INCLUDE_STATISTICS и INCLUDE_NODE_ID.  
   
 > [!NOTE]  
@@ -76,7 +76,7 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/functions-dmx.md)   
  [Общие прогнозирующие функции &#40;&#41;расширений интеллектуального анализа данных](../dmx/general-prediction-functions-dmx.md)  

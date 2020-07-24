@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 23aaa06f7da6c29cf1f082c27071d68fa0c6958a
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 98c40dba282c82f124d4e4ac009a046a44a283cb
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669192"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971639"
 ---
 # <a name="not-dmx"></a>NOT (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Логический оператор, выполняющий логическое отрицание числового выражения.  
   
@@ -42,7 +42,7 @@ NOT Expression1
 |TRUE|FALSE|  
 |FALSE|TRUE|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Логические операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-logical.md)   
  [Операторы &#40;&#41;расширений интеллектуального анализа данных](../dmx/operators-dmx.md)  

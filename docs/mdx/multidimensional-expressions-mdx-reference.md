@@ -26,7 +26,7 @@ ms.locfileid: "86970035"
 |[Синтаксические элементы в многомерных выражениях (многомерные выражения)](../mdx/mdx-syntax-elements-mdx.md)|Содержит описание различных элементов синтаксиса языка многомерных выражений, применяемых в выражениях, инструкциях и скриптах.|  
 |[Справочник по языку многомерных выражений (многомерные выражения)](../mdx/mdx-language-reference-mdx.md)|Описывает инструкции, операторы и функции языка многомерных выражений.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение запросов к многомерным данным с помощью MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
  [Analysis Services язык скриптов &#40;ASSL для XMLA&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
  [Получение данных из источника аналитических данных](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   

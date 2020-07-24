@@ -116,7 +116,7 @@ ms.locfileid: "86914311"
     :::column-end:::
 :::row-end:::
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Представления информационной схемы &#40;&#41;Transact-SQL](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
 - [Системные таблицы (Transact-SQL)](../../relational-databases/system-tables/system-tables-transact-sql.md)

@@ -95,7 +95,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
 ### <a name="delimiting-identifiers-with-multiple-parts"></a>Выделенные идентификаторы с несколькими частями  
  При использовании уточненных имен объектов может понадобиться выделить несколько идентификаторов, составляющих имя объекта. Необходимо выделить каждый идентификатор по отдельности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   

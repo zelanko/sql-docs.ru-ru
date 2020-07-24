@@ -24,7 +24,7 @@ ms.locfileid: "86969899"
   
  Полное описание типов содержимого, которые [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает, см. в разделе [типы содержимого &#40;&#41;интеллектуального анализа данных ](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Алгоритмы интеллектуального анализа данных &#40;Analysis Services — интеллектуальный анализ данных&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;синтаксические&#41; DMX-элементы](../dmx/data-mining-extensions-dmx-syntax-elements.md)   

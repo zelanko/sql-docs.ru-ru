@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: 891bad9f62174ec00451e533fe94063a21dc62af
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670179"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971693"
 ---
 # <a name="functions-dmx"></a>Функции (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   При использовании расширений интеллектуального анализа данных для запроса объектов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно использовать функции, чтобы получить больше информации, чем просто значения столбцов в модели интеллектуального анализа данных или входного набора данных. Например, с помощью запросов расширений интеллектуального анализа данных можно получить не только прогнозируемое значение столбца, но также и вероятность точности прогноза. Кроме функций расширений интеллектуального анализа данных можно использовать также функции языка Microsoft Visual Basic for Applications (VBA), Microsoft Excel, а также хранимые процедуры.  
   
@@ -50,7 +50,7 @@ FROM [TM_Decision_Tree].CONTENT
   
  **Дополнительные сведения:** [Управление сборками многомерной модели](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-assemblies-management)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Ссылки на операторы расширений интеллектуального анализа данных &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-operator-reference.md)   

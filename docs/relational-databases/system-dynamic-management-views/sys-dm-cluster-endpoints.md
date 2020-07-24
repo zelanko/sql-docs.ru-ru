@@ -40,6 +40,6 @@ ms.locfileid: "86913247"
 
 В [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] необходимо `VIEW SERVER STATE` разрешение.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Что [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] ](../../big-data-cluster/big-data-cluster-overview.md)?

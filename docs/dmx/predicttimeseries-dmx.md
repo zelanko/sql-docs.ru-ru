@@ -8,15 +8,15 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83666694"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86970692"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (расширения интеллектуального анализа данных)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Возвращает прогнозируемые будущие значения для временного ряда данных. Данные временных рядов являются непрерывными и могут храниться во вложенной таблице или в таблице вариантов. Функция **PredictTimeSeries** всегда возвращает вложенную таблицу.  
   
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- * \< ссылка на столбец таблицы>, ссылки на * * \< скалярный столбец>*  
+ *\<table column reference>*, *\<scalar column referenc>*  
  Указывает имя прогнозируемого столбца. Столбец может содержать скалярные или табличные данные.  
   
  *n*  
@@ -52,7 +52,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n-End* должно быть целым числом, превышающим *n-start*.  
   
- *\<>исходного запроса*  
+ *\<source query>*  
  Определяет внешние данные, используемые при формировании прогнозов.  
   
  REPLACE_MODEL_CASES | EXTEND_MODEL_CASES  
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Эти аргументы можно использовать, только если новые данные добавляются с помощью инструкции PREDICTION JOIN. Если в запросе PREDICTION JOIN аргумент не указан, значение по умолчанию — EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \< *Табличное выражение*>.  
+ \<*table expression*>.  
   
 ## <a name="remarks"></a>Комментарии  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]Алгоритм временных рядов не поддерживает прогнозирование с предысторией при использовании инструкции PREDICTION JOIN для добавления новых данных.  
@@ -251,7 +251,7 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  Ключевое слово FLATTENED использовалось в этом примере, чтобы представить результаты в виде таблицы, но, если поставщик поддерживает иерархические наборы строк, ключевое слово FLATTENED можно опустить. Если опустить ключевое слово FLATTENED, запрос вернет два столбца. Первый столбец будет содержать значение, идентифицирующее ряды данных `[Model Region]`, а второй столбец — вложенную таблицу со статистикой.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Примеры запросов модели временных рядов](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict (расширения интеллектуального анализа данных)](../dmx/predict-dmx.md)  

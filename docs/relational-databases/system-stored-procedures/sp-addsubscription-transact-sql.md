@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4ff31939ce763f91ca706dfe9e7966b2a7b42f7d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d3550dad3292c7ff2a226d6bfc21b1f55e148d58
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716356"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918948"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Добавляет подписку на публикацию и устанавливает состояние подписчика. Эта хранимая процедура выполняется на издателе в базе данных публикации.  
   
@@ -94,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] "*sync_type*"  
  Тип синхронизации подписки. *sync_type* имеет тип **nvarchar (255)** и может принимать одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |нет|Подписчик уже имеет схему и начальные данные для опубликованных таблиц.<br /><br /> Примечание. Этот параметр является устаревшим. Вместо этого используйте значение «replication support only».|  
 |automatic (по умолчанию)|Схема и начальные данные для опубликованных таблиц вначале передаются подписчику.|  
@@ -108,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] "*состояние*"  
  Состояние подписки. Аргумент *Status* имеет тип **sysname**и значение по умолчанию NULL. Если этот параметр не задан явно, при репликации ему устанавливается одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |active|Подписка инициализирована и готова к принятию изменений. Этот параметр задается в том случае, если значение *sync_type* равно None, инициализация с помощью резервного копирования или только поддержка репликации.|  
 |subscribed|Требуется инициализация подписки. Этот параметр задается, если значение *sync_type* является автоматическим.|  
@@ -122,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] "*update_mode*"  
  Тип обновления. *update_mode* имеет тип **nvarchar (30)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |read only (по умолчанию)|Подписка только для чтения. Изменения у подписчика не отправляются издателю.|  
 |sync tran|Включает поддержку немедленно обновляемых подписок. Не поддерживается для издателей Oracle.|  
@@ -135,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] "*loopback_detection*"  
  Определяет, отправляет ли агент распространителя транзакции, изначально созданные на подписчике, обратно подписчику. *loopback_detection* имеет тип **nvarchar (5)** и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |true|Агент распространителя не отправляет транзакции, изначально созданные у подписчика, обратно. Используется с двунаправленной репликацией транзакций. Дополнительные сведения см. в разделе [Двунаправленная репликация транзакций](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|Агент распространителя отправляет транзакции, изначально созданные у подписчика, обратно.|  
@@ -144,13 +144,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  Частота запуска задачи распространения по расписанию. *frequency_type* имеет тип int и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |1|Один раз.|  
 |2|По запросу|  
 |4|Ежедневно|  
-|8|Weekly (Еженедельно);|  
-|16|Ежемесячная|  
+|8|Еженедельно|  
+|16|Ежемесячно|  
 |32|Ежемесячно с относительной датой|  
 |64 (по умолчанию)|Автозапуск|  
 |128|Повторяющееся задание|  
@@ -161,11 +161,11 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  Дата агента распространителя. Этот параметр используется, если *frequency_type* установлен в значение 32 (ежемесячное относительное расписание). *frequency_relative_interval* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|1|Первый|  
-|2|Секунда|  
-|4|Третья|  
+|1|Первое|  
+|2|Second|  
+|4|Третье|  
 |8|Четвертая|  
 |16|Последний|  
 |NULL (по умолчанию)||  
@@ -176,10 +176,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  Частота повторного планирования в течение определенного периода, в минутах. *frequency_subday* имеет **тип int**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |1|Однократно|  
-|2|Секунда|  
+|2|Second|  
 |4|Минута|  
 |8|Час|  
 |NULL||  
@@ -241,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] '*backupdevicetype*'  
  Задает тип устройства резервного копирования, используемого при инициализации подписчика из резервной копии. *backupdevicetype* имеет тип **nvarchar (20)** и может принимать одно из следующих значений:  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |logical (по умолчанию)|Устройство резервного копирования является логическим устройством.|  
 |disk|Устройство резервного копирования является жестким диском.|  
@@ -279,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  Тип подписчика. *subscriber_type* имеет тип **tinyint**и может принимать одно из следующих значений.  
   
-|Применение|Описание|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0 (по умолчанию)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Абонент|  
 |1|Сервер источника данных ODBC|  
@@ -292,10 +292,10 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Комментарии  
  Процедура sp_addsubscription используется в репликации моментальных снимков и репликации транзакций.  
   
- При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнить [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для @job_login и @job_password . Дополнительные сведения см. в разделе [модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ При выполнении процедуры sp_addsubscription членом предопределенной роли сервера sysadmin для создания принудительной подписки задание агента распространителя явно создается и запускается под учетной записью службы агента SQL Server. Рекомендуется выполнить [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) и указать учетные данные другой учетной записи Windows, зависящей от агента, для @job_login и @job_password . Дополнительные сведения см. в статье [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
  Процедура sp_addsubscription закрывает доступ для подписчиков ODBC и OLE DB к следующим публикациям.  
   
@@ -320,7 +320,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
 ## <a name="see-also"></a>См. также:  
- [Создание принудительной подписки](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
  [Создание подписки для подписчика, не являющегося SQL Server](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   

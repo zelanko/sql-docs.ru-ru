@@ -55,7 +55,7 @@ ms.locfileid: "86920840"
 
 Требуется разрешение `VIEW SERVER STATE`.
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

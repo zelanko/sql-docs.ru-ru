@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c7cc3a7ba79b15b0eee36ac6907013673a5b7bf9
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038006"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971492"
 ---
 # <a name="using-stored-procedures-mdx"></a>Использование хранимых процедур (многомерные выражения)
 
 
-  Возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и многомерных выражений можно расширить путем записи хранимых процедур платформы .NET или определяемых пользователем функций. Дополнительные сведения см. в разделе [ADOMD.NET Server Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming) .  
+  Возможности служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и многомерных выражений можно расширить путем записи хранимых процедур платформы .NET или определяемых пользователем функций. Дополнительные сведения см. в разделе [ADOMD.NET Server Programming](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming) .  
   
  При обращении или вызове хранимой процедуры необходимо указать имя функции и круглые скобки. Внутри скобок можно указать выражения (или аргументы), представляющие собой данные, передаваемые в виде параметров. Вызывая функцию, необходимо указать значения аргументов для всех параметров, причем в той последовательности, в которой параметры перечислены в определении пользовательской функции.  
   
@@ -32,7 +32,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ```  
   
 > [!NOTE]  
->  *Хранимая процедура* — это терминология [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , используемая в для этих типов функций. Более ранние [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] версии вызывали эти типы функций в качестве *определяемых пользователем функций*.  
+>  *Хранимая процедура* — это терминология, используемая в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для этих типов функций. Более ранние версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] вызывали эти типы функций в качестве *определяемых пользователем функций*.  
   
 ## <a name="types-of-stored-procedures"></a>Типы хранимых процедур  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает сборки COM и CLR. Рекомендуется использовать сборки CLR, поскольку для них имеются расширенные механизмы защиты. Если на сервере установлена электронная таблица Microsoft Office Excel, можно также использовать функции Excel.  
@@ -40,7 +40,7 @@ WHERE [Measures].[Reseller Freight Cost]
 > [!NOTE]  
 >  COM-сборки Microsoft Visual Basic for Applications (VBA) регистрируются автоматически.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции &#40;синтаксиса многомерных выражений&#41;](../mdx/functions-mdx-syntax.md)  
   
   
