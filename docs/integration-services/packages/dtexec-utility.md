@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7f2e417ddefc0094fc6320deafea40251ba77372
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 53a05fea022a2ea0232bc44646509ee3a84028af
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76761858"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919231"
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Программа командной строки **dtexec** используется для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Служебная программа **dtexec** обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. Служебная программа **dtexec** позволяет загружать пакеты из следующих источников: сервер [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ISPAC-файл проекта, база данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловая система.  
@@ -68,22 +68,22 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="installation-considerations-on-64-bit-computers"></a><a name="bit"></a> Вопросы установки на 64-разрядные компьютеры  
  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают 64-разрядную версию программы **dtexec** (dtexec.exe). Если какие-либо пакеты нужно запустить в 32-разрядном режиме, следует установить 32-разрядную версию программы **dtexec** . Чтобы установить 32-разрядную версию программы **dtexec** , во время установки необходимо выбрать клиентские средства или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-разрядной версии выглядит следующим образом: *\<диск>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, а путь к каталогу 64-разрядной версии — *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-разрядной версии имеет вид *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, а путь к каталогу 64-разрядной версии — *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **ПРИМЕЧАНИЕ.** Если для запуска программы используется агент SQL Server, то он автоматически использует 64-разрядную версию программы. Чтобы определить точное расположение исполняемого файла программы, агент SQL Server использует реестр, а не переменную среды PATH.  
   
  Чтобы убедиться, что в командной строке запущена 64-разрядная версия программы, выполните одно из следующих действий.  
   
--   Откройте окно командной строки, задайте путь к каталогу, содержащему 64-разрядную версию программы ( *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn), а затем запустите программу из указанного расположения.  
+-   Откройте окно командной строки, измените путь к каталогу, содержащему 64-разрядную версию программы ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn), а затем запустите программу из указанного расположения.  
   
--   В командной строке запустите программу, введя полный путь ( *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) к 64-разрядной версии программы.  
+-   В командной строке запустите программу, введя полный путь ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) к ее 64-разрядной версии.  
   
--   Окончательно измените порядок путей в переменной среды PATH, поместив в ней путь к 64-разрядной версии ( *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) перед путем к 32-разрядной версии ( *\<диск>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn).  
+-   Окончательно измените порядок путей в переменной среды PATH, поместив в переменной путь к 64-разрядной версии ( *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn) перед путем к 32-разрядной версии ( *\<drive>* :\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn).  
   
 ##  <a name="considerations-on-computers-with-side-by-side-installations"></a><a name="side"></a> Рекомендации для компьютеров, где проведены параллельные установки  
  Если [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] установлено на компьютере, где установлено [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] , устанавливаются несколько версий программы **dtexec** .  
   
- Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь ( *\<диск>* :\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
+ Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь ( *\<drive>* :\Program Files\Microsoft SQL Server\\<версия\>\DTS\Binn).  
   
 ##  <a name="phases-of-execution"></a><a name="phases"></a> Этапы выполнения  
  Программа во время выполнения проходит четыре стадии. Они перечислены далее.  
@@ -243,7 +243,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** _error code_: По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** _error code_: По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют файлы дампа отладки в папке *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **ПРИМЕЧАНИЕ.** Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
@@ -255,7 +255,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (Необязательно.) Создаются отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит ошибка.  
   
-     По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют файлы дампа отладки в папке *\<drive>* :\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **ПРИМЕЧАНИЕ.** Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
