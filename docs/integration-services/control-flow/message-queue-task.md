@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 94be603d8982e4c05baed997b1072afbe66c2eec
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294103"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915260"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
@@ -120,7 +120,7 @@ ms.locfileid: "71294103"
  Укажите, нужно ли использовать формат 2000 службы очередей сообщений (MSMQ). По умолчанию **False**.  
   
  **MSMQConnection**  
- Выберите существующий диспетчер подключений MSMQ или щелкните \<**Создать соединение...** >, чтобы создать диспетчер.  
+ Выберите существующий диспетчер подключений MSMQ или создайте новый, щелкнув пункт \<**New connection...**>.  
   
  **См. также**: [Диспетчер FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager.md), [Редактор диспетчера FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager-editor.md).  
   
@@ -230,7 +230,7 @@ ms.locfileid: "71294103"
 |**Из пакета**|Сообщение получает только сообщения из указанного пакета. Выбор этого значения отображает динамический параметр **Идентификатор**.|  
   
  **Переменная**  
- Введите имя переменной либо выберите \<**Создать переменную…** > и затем настройте новую переменную.  
+ Введите имя переменной либо выберите пункт \<**New variable...**> и затем настройте новую переменную.  
   
  **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "71294103"
  Если в качестве значения параметра **Сравнить** установлено **Нет**, укажите строку, с которой должно сравниваться сообщение.  
   
  **Переменная**  
- Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите \<**Создать переменную…** > и затем настройте новую переменную.  
+ Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите пункт \<**New variable...**> и затем настройте новую переменную.  
   
  **См. также:** [Добавить переменную](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

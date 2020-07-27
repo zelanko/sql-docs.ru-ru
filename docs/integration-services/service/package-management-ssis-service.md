@@ -27,16 +27,16 @@ helpviewer_keywords:
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d7121efa290a8cea45804467243e11dbfd98f275
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296880"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922000"
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Управление пакетами включает в себя операции мониторинга, управления, импорта и экспорта пакетов.  
@@ -130,7 +130,7 @@ ms.locfileid: "71296880"
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В поле **Имя сервера** введите имя сервера или щелкните **\<<Искать дальше...>** и найдите нужный сервер.  
+    -   В поле **Имя сервера** введите имя сервера или щелкните **\<Browse for more...>** и найдите нужный сервер.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "71296880"
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В поле **Имя сервера** введите имя сервера или щелкните **\<<Искать дальше...>** и найдите нужный сервер.  
+    -   В поле **Имя сервера** введите имя сервера или щелкните **\<Browse for more...>** и найдите нужный сервер.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   

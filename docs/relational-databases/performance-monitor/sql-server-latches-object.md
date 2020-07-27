@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект Latches | Документация Майкрософт
+description: Сведения об объекте SQLServer:Latches, который предоставляет счетчики для отслеживания внутренних SQL Server блокировки ресурсов, называемые кратковременными блокировками SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2393ea1c-2bf3-41c3-9f37-b9761144eeca
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e2bcb6b6eb5558a3fed212bc281ccf74a42516cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d57998b2bbc83a231cd82ceef8846ef21902eccb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775851"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458818"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, объект Latches
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85775851"
   
  В данной таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Latches**.  
   
-|Счетчики кратковременных блокировок в SQL Server|Description|  
+|Счетчики кратковременных блокировок в SQL Server|Описание|  
 |---------------------------------|-----------------|  
 |**Среднее время ожидания кратковременной блокировки (мс)**|Средняя длительность ожидания кратковременной блокировки запроса (в миллисекундах)|  
 |**Базовое время ожидания кратковременной блокировки**|Только для внутреннего использования.| 

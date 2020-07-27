@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 1e331b974bee3017e17e75dbf8c3ecb8506349b2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f334633fa164a22f8e23175fd3ba6b25c4f6423
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298307"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917934"
 ---
 # <a name="execute-sql-task"></a>Задача "Выполнение SQL"
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Выполнение SQL» выполняет инструкции SQL или хранимые процедуры из пакета. Задача может содержать одну инструкцию SQL или несколько инструкций, запускаемых последовательно. Задача «Выполнение SQL» может быть использована для следующих целей:  
@@ -148,7 +148,7 @@ ms.locfileid: "71298307"
  **См. также:** подробные сведения о [диспетчере подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [диспетчере подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [диспетчере подключений ADO](../../integration-services/connection-manager/ado-connection-manager.md), [диспетчере подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [диспетчере подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md).  
   
  **Соединение**  
- Выберите соединение из списка определенных диспетчеров соединений. Для создания соединения выберите \<**Создать соединение...** >.  
+ Выберите соединение из списка определенных диспетчеров соединений. Для создания подключения выберите \<**New connection...**>.  
   
  **SQLSourceType**  
  Выберите тип источника для инструкции SQL, выполняемой этой задачей.  
@@ -190,13 +190,13 @@ ms.locfileid: "71298307"
   
 #### <a name="sqlsourcetype--file-connection"></a>WQLQuerySource = Подключение файла  
  **FileConnection**  
- Выберите существующий диспетчер подключений файлов или нажмите кнопку \<**Создать подключение...** >, чтобы создать новый диспетчер подключений.  
+ Выберите существующий диспетчер подключений файлов или создайте его, щелкнув пункт \<**New connection...**>.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Переменная  
  **SourceVariable**  
- Выберите существующую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать новую.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
  
@@ -205,7 +205,7 @@ ms.locfileid: "71298307"
   
 ### <a name="options"></a>Параметры  
  **Имя переменной**  
- После добавления сопоставления параметров нажатием кнопки **Добавить** выберите системную или пользовательскую переменную в списке или щелкните \<**Создать переменную...** > для добавления новой переменной с помощью диалогового окна **Добавление переменной**.  
+ Добавив сопоставление параметров нажатием кнопки **Добавить**, выберите системную или определяемую пользователем переменную в списке или щелкните \<**New variable...**> для добавления новой переменной с помощью диалогового окна **Добавление переменной**.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)  
   
@@ -244,7 +244,7 @@ ms.locfileid: "71298307"
  
   
  **Имя переменной**  
- Для сопоставления результирующего набора с переменной выберите ее или щелкните \<**Создать переменную...** >, чтобы добавить новую переменную с помощью диалогового окна **Добавление переменной**.  
+ Для сопоставления результирующего набора с переменной выберите ее или щелкните \<**New variable...**>, чтобы добавить новую переменную с помощью диалогового окна **Добавление переменной**.  
   
  **Добавление**  
  Нажмите кнопку, чтобы добавить сопоставление результирующего набора.  
@@ -282,7 +282,7 @@ ms.locfileid: "71298307"
 |Тип соединений|Маркер параметра|Имя параметра|Пример команды SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<имя параметра>|\@\<имя параметра>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL и OLE DB|?|0, 1, 2, 3, ...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -421,7 +421,7 @@ ms.locfileid: "71298307"
     |Тип соединений|Маркер параметра|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET и SQLMOBILE|\@\<имя параметра>|  
+    |ADO.NET и SQLMOBILE|\@\<parameter name>|  
     |ODBC|?|  
     |EXCEL и OLE DB|?|  
   
@@ -444,7 +444,7 @@ ms.locfileid: "71298307"
     |Тип соединений|Имя параметра|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET и SQLMOBILE|\@\<имя параметра>|  
+    |ADO.NET и SQLMOBILE|\@\<parameter name>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL и OLE DB|0, 1, 2, 3, ...|  
   
@@ -511,7 +511,7 @@ ms.locfileid: "71298307"
   
  Если результирующего набора имеет тип **Одна строка**, столбец из возвращаемого результата можно связать с переменной с помощью имени столбца в качестве имени результирующего набора либо в качестве имени результирующего набора можно использовать порядковый номер столбца в списке столбцов. Например, именем результирующего набора в запросе `SELECT Color FROM Production.Product WHERE ProductID = ?` может быть **Color** или **0**. Если запрос возвращает несколько столбцов и необходимо получить доступ к значениям во всех столбцах, необходимо каждый столбец связать с отдельной переменной. Если столбцы сопоставляются с переменными с помощью чисел в качестве имени результирующего набора, эти числа отражают порядок, в котором столбцы расположены в списке столбцов запроса. Например, в запросе `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`0 используется для столбца **Color** и 1 — для столбца **ListPrice** . Возможность использовать имя столбца в качестве имени результирующего набора зависит от поставщика, для работы с которым настроена задача. Не все поставщики разрешают использовать имена столбцов.  
   
- Некоторые запросы, которые возвращают одно значение, могут не включать имена столбцов. Например, инструкция `SELECT COUNT (*) FROM Production.Product` не возвращает имя столбца. Можно получить доступ к возвращаемому результату, используя порядковый номер позиции 0 в качестве имени результата. Чтобы получить доступ к результату по имени столбца, запрос должен включать предложение AS \<имя псевдонима> для предоставления имени столбцу. Инструкция `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`предоставляет столбец **CountOfProduct** . Затем можно получить доступ к столбцу возвращенного результата, используя имя столбца **CountOfProduct** или порядковый номер позиции 0.  
+ Некоторые запросы, которые возвращают одно значение, могут не включать имена столбцов. Например, инструкция `SELECT COUNT (*) FROM Production.Product` не возвращает имя столбца. Можно получить доступ к возвращаемому результату, используя порядковый номер позиции 0 в качестве имени результата. Чтобы получить доступ к результату по имени столбца, запрос должен включать предложение AS \<alias name> для предоставления имени столбца. Инструкция `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`предоставляет столбец **CountOfProduct** . Затем можно получить доступ к столбцу возвращенного результата, используя имя столбца **CountOfProduct** или порядковый номер позиции 0.  
   
  Если результирующий набор имеет тип **Полный результирующий набор** или **XML**, то в качестве имени результирующего набора необходимо использовать 0.  
   

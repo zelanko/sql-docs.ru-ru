@@ -1,5 +1,5 @@
 ---
-title: SELECT @local_variable (Transact-SQL) | Документы Майкрософт
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ''
 ms.date: 09/06/2017
 ms.prod: sql
@@ -25,14 +25,15 @@ ms.assetid: 8e1a9387-2c5d-4e51-a1fd-a2a95f026d6f
 author: rothja
 ms.author: jroth
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 415c2ff263a4a501de441cc04c0f845a1e3592bb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2f1d8bad77c52fcabb3190e28767c945718e1d72
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81630328"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86910610"
 ---
 # <a name="select-local_variable-transact-sql"></a>SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Присваивает локальную переменную значению выражения.  
@@ -48,38 +49,43 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
     [ ,...n ] [ ; ]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
+
 @*local_variable*  
  Это объявленная переменная, которой должно быть присвоено значение.  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 Присвоить значение справа переменной слева.  
   
 Составной оператор присваивания:  
-  |оператор |action |   
-  |-----|-----|  
-  | = | Присваивает следующее за ним выражение переменной. |  
-  | += | Сложение и присваивание |   
-  | -= | Вычитание и присваивание |  
-  | \*= | Умножение и присваивание |  
-  | /= | Деление и присваивание |  
-  | %= | Остаток от деления и присваивание |  
-  | &= | Выполнение побитовой операции AND и присваивание |  
-  | ^= | Выполнение побитовой операции XOR и присваивание |  
-  | \|= | Выполнение побитовой операции OR и присваивание |  
-  
- *expression*  
- Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). В их число также входит скалярный вложенный запрос.  
-  
-## <a name="remarks"></a>Remarks  
- SELECT @*local_variable* обычно используется для возвращения одиночного значения в переменную. Однако, если аргумент *expression* является именем столбца, может вернуться несколько значений. Если инструкция SELECT возвращает более одного значения, переменной присваивается последнее возвращенное значение.  
-  
- Если инструкция SELECT не возвращает ни одной строки, переменная сохраняет свое текущее значение. Если аргумент *expression* является скалярным вложенным запросом, который не возвращает значений, переменная принимает значение NULL.  
-  
- Одна инструкция SELECT может инициализировать несколько локальных переменных.  
-  
-> [!NOTE]  
->  Инструкция SELECT, содержащая назначение переменной, не может быть использована для выполнения операций по получению типичного результирующего набора.  
+
+| оператор | action |  
+| -------- | ------ |  
+| = | Присваивает следующее за ним выражение переменной. |  
+| += | Сложение и присваивание |  
+| -= | Вычитание и присваивание |  
+| \*= | Умножение и присваивание |  
+| /= | Деление и присваивание |  
+| %= | Остаток от деления и присваивание |  
+| &= | Выполнение побитовой операции AND и присваивание |  
+| ^= | Выполнение побитовой операции XOR и присваивание |  
+| \|= | Выполнение побитовой операции OR и присваивание |  
+
+*expression*  
+Любое допустимое выражение [expression](../../t-sql/language-elements/expressions-transact-sql.md). В их число также входит скалярный вложенный запрос.  
+
+## <a name="remarks"></a>Remarks
+
+SELECT @*local_variable* обычно используется для возвращения одиночного значения в переменную. Однако, если аргумент *expression* является именем столбца, может вернуться несколько значений. Если инструкция SELECT возвращает более одного значения, переменной присваивается последнее возвращенное значение.  
+
+Если инструкция SELECT не возвращает ни одной строки, переменная сохраняет свое текущее значение. Если аргумент *expression* является скалярным вложенным запросом, который не возвращает значений, переменная принимает значение NULL.  
+
+Одна инструкция SELECT может инициализировать несколько локальных переменных.  
+
+> [!NOTE]
+> Инструкция SELECT, содержащая назначение переменной, не может быть использована для выполнения операций по получению типичного результирующего набора.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -99,7 +105,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +127,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +138,3 @@ NULL
  [Выражения (Transact-SQL)](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Составные операторы (Transact-SQL)](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-  
-  

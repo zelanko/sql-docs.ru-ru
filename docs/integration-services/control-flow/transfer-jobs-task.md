@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: eb4812b48c9465659ca8c0739f0411a9e65660bf
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e5747cc9fbac122e9bca7fa6a127fd74a4ec47ff
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293870"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916124"
 ---
 # <a name="transfer-jobs-task"></a>Задача «Передача заданий»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Передача заданий» служит для передачи одного или нескольких заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -103,10 +103,10 @@ ms.locfileid: "71293870"
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к целевому серверу.  
   
  **TransferAllJobs**  
  Укажите, должна задача копировать с исходного сервера на целевой все задания или только те, которые указаны агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

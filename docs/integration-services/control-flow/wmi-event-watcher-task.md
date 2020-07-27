@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d31b2d7515eaebc7d0c2e5fb5861d8b6b51ad6f7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 205c755ce2a719031c0b07a2884134d81bd55d55
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293715"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914628"
 ---
 # <a name="wmi-event-watcher-task"></a>Задача «Отслеживание событий WMI»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Отслеживание событий WMI» осуществляет наблюдение за событием инструментария управления Windows (WMI) при помощи запроса на языке запросов к инструментарию управления (WQL), определяющего нужные события. Задачу «Отслеживание событий WMI» можно использовать в следующих целях:  
@@ -130,7 +130,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 ### <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  
- Выберите диспетчер подключений WMI в списке или щелкните \<**Создать WMI-соединение…** >, чтобы создать диспетчер подключений.  
+ Выберите в списке диспетчер WMI-соединений или щелкните \<**New WMI Connection...**> для создания диспетчера подключений.  
   
  **См. также:** подробные сведения о [диспетчере WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager.md) и о [редакторе диспетчера WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager-editor.md).  
   
@@ -169,13 +169,13 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 #### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Соединение с файлом  
  **WQLQuerySource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="wqlquerysource--variable"></a>WQLQuerySource = Переменная  
  **WQLQuerySource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**New variable...**> для создания переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   

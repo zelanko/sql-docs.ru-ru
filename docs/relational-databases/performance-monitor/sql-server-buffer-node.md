@@ -1,5 +1,6 @@
 ---
 title: SQL Server:Buffer Node | Документация Майкрософт
+description: Сведения об объекте узла буфера, который предоставляет счетчики, позволяющие отслеживать распределение страниц буферного пула SQL Server для каждого узла NUMA.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1e16fa2868c0d9896f56b87988d5af3047c810fb
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ce9d30b4d7f8716dc256d1ea640924af7945d8fd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85656407"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457446"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server:Buffer Node
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -27,7 +28,7 @@ ms.locfileid: "85656407"
 ## <a name="buffer-node-performance-objects"></a>Объекты производительности узла буфера  
  Объекты производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **узла буфера** описаны в следующей таблице.  
   
-|Счетчики узла буфера SQL Server|Description|  
+|Счетчики узла буфера SQL Server|Описание|  
 |-------------------------------------|-----------------|  
 |**Страниц базы данных**|Указывает число страниц с содержимым базы данных в буферном пуле этого узла.|  
 |**Ожидаемый срок жизни страницы**|Указывает минимальное количество секунд, в течение которых страница остается в буферном пуле этого узла без ссылок на нее.|  

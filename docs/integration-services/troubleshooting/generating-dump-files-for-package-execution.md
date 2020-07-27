@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60ec7105d0942383ad1ebcd963665a8a47eab60c
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: edff307773f51fab064c47e7d4ff45e1161d18f3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83669909"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913770"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Создание файлов дампа для выполнения пакетов
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Данные, содержащиеся в этих файлах, могут помочь с устранением неполадок при выполнении пакетов.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "83669909"
   
 -   Отладочный файл дампа с расширением TMP. Этот файл имеет текстовый формат.  
   
- По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранят эти файлы в папке *\<диск>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+ По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] хранят эти файлы в папке *\<drive>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
  В следующей таблице приведено описание лишь некоторых разделов TMP-файла. Этот файл также содержит дополнительные данные, не описанные в этой таблице.  
   

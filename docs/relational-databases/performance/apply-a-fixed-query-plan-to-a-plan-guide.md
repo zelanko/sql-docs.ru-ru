@@ -1,5 +1,6 @@
 ---
 title: Применение фиксированного плана запроса к структуре плана | Документация Майкрософт
+description: Сведения о том, как применить фиксированный план запроса к структуре плана типа OBJECT или SQL в SQL Server. В этом примере создается структура плана для простой нерегламентированной инструкции SQL.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 49ca6572768c0f52688fdacecdc8a0fcf2ee01fe
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b39441ba86d8337fd4a59d9ffbc1f27a68c569ca
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85773129"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458631"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>Применение фиксированного плана запроса к структуре плана
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 18ae2128e0f0bcbec5f3fb78a63778f44f260bf5
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291252"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915247"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Выполнение слияния данных с помощью преобразования «Объединить все»
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Чтобы добавить и настроить преобразование «Объединить все», в пакет уже должны быть включены хотя бы одна задача потока данных и два источника данных.  
@@ -42,7 +42,7 @@ ms.locfileid: "71291252"
   
 4.  Дважды щелкните преобразование «Объединить все».  
   
-5.  В **Редакторе преобразования «Объединить все»** сопоставьте столбец входа со столбцом в списке **Имя выходного столбца** , щелкнув строку и выбрав столбец в списке входов. Выберите **\<игнорировать>** в списке ввода, чтобы не сопоставлять столбец.  
+5.  В **Редакторе преобразования «Объединить все»** сопоставьте столбец входа со столбцом в списке **Имя выходного столбца** , щелкнув строку и выбрав столбец в списке входов. Выберите **\<ignore>** в списке входов, чтобы не сопоставлять столбец.  
   
     > [!NOTE]  
     >  Сопоставление двух столбцов требует, чтобы метаданные этих столбцов совпадали.  

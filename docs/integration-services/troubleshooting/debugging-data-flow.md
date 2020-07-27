@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 663ecd4dba689f394af61c4a26ff8edc1c241703
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295116"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86900182"
 ---
 # <a name="debugging-data-flow"></a>Отладка потока данных
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержат функции и средства, используемые для исправления ошибок в потоках данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -172,7 +172,7 @@ order by source_component_name desc
   
 4.  Щелкните правой кнопкой мыши компонент, столбцы вывода ошибок которого необходимо настроить, и выберите пункт **Показать расширенный редактор**.  
   
-5.  Откройте вкладку **Свойства входов и выходов** и разверните узлы **Вывод ошибок \<имя компонента>** и **Выходные столбцы**.  
+5.  Откройте вкладку **Свойства входов и выходов** и разверните узлы **Вывод ошибок \<component name>** и **Выходные столбцы**.  
   
 6.  Щелкните столбец и обновите его свойства.  
   

@@ -25,12 +25,12 @@ ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6db50af7454526c910b3c2688e0a81fe261c2167
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: a486cc868c445e664977e67fd108aaca2873a595
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632204"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552749"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER (Transact-SQL)
 
@@ -38,9 +38,7 @@ ms.locfileid: "81632204"
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## <a name="click-a-product"></a>Выберите продукт!
-
-В следующей строке щелкните имя продукта, который вас интересует. На этой веб-странице отобразится другой контент, относящийся к выбранному продукту.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -95,7 +93,7 @@ NAME = newUserName
 > [!NOTE]
 > Данный параметр доступен только для содержащихся пользователей.
 
- DEFAULT_LANGUAGE **=** _{ NONE | \<код языка> | \<имя языка> | \<псевдоним языка> }_ **Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_ **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздним версиям.
 
  Указывает язык по умолчанию, присвоенный пользователю. Если этот параметр установлен в значение NONE, то в качестве языка по умолчанию выбирается текущий язык по умолчанию для базы данных. При последующей смене языка по умолчанию для базы данных язык по умолчанию для пользователя не меняется. Аргумент *DEFAULT_LANGUAGE* может быть идентификатором локали (lcid), названием языка или псевдонимом языка.
 

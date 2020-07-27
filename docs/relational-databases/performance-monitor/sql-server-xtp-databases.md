@@ -1,5 +1,6 @@
 ---
 title: Базы данных XTP SQL Server | Документация Майкрософт
+description: Сведения об объекте производительности баз данных XTP в SQL Server, который содержит счетчики, относящиеся к базе данных для выполняющейся в памяти OLTP.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f40d6d4afd6195e65ded4e010268251a5bda8b0b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 3dea94fe092f4481386a9fd8a5649d0ea4dd18c2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774241"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457403"
 ---
 # <a name="sql-server-xtp-databases"></a>Базы данных XTP SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "85774241"
 
 Эта таблица описывает счетчики объекта **SQL Server XTP Databases** .
 
-|Счетчик|Description| 
+|Счетчик|Описание| 
 |-------------|-----------------|  
 |**Avg Transaction Segment Large Data Size (Средний размер большого объема данных для сегмента транзакции)**|Средний размер полезных данных большого объема для сегмента транзакции. Это счетчик очень низкого уровня, не предназначенный для пользователей.|
 |**Avg Transaction Segment Size (Средний размер сегмента транзакции)**|Средний размер полезных данных для сегмента транзакции. Если это значение становится равным нулю, серверный распределитель выделяет дополнительные страницы. Это счетчик очень низкого уровня, не предназначенный для пользователей.|

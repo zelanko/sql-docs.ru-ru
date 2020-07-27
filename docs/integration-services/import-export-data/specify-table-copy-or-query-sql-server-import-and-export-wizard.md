@@ -11,16 +11,16 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da112bf3a58d33fd7fae154d5a437c309ab7d2a6
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296244"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914356"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Выбор копирования таблицы или запроса (мастер импорта и экспорта SQL Server)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   После того как вы укажете сведения о назначении и о том, как к нему подключиться, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выбор копирования таблицы или запроса**. На этой странице можно выбрать один из следующих вариантов действий.
@@ -56,7 +56,7 @@ ms.locfileid: "71296244"
 Даже если вы обычно не занимаетесь написанием SQL-запросов, вы можете использовать параметр **Написать запрос** при условии, что знаете имя таблицы, которую нужно экспортировать. В диалоговом окне **Определение исходного запроса**, которое появится после нажатия кнопки **Далее**, введите запрос в следующей форме: `SELECT * FROM <name of table>`. Если в имени таблицы есть пробелы или другие специальные символы, заключите его в квадратные скобки: `SELECT * FROM [<name of table>]`.
 
 ### <a name="more-info"></a>Дополнительные сведения
- Параметр **Скопировать данные из одной или нескольких таблиц или представлений** доступен только для поставщиков, у которых имеется раздел ProviderDescription в файле ProviderDescriptors.xml. (По умолчанию этот файл расположен в папке \<*диск*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Каждый раздел ProviderDescription в этом файле содержит сведения, необходимые для получения метаданных от соответствующего поставщика.    
+ Параметр **Скопировать данные из одной или нескольких таблиц или представлений** доступен только для поставщиков, у которых имеется раздел ProviderDescription в файле ProviderDescriptors.xml. (По умолчанию этот файл расположен в папке\<*drive*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors.) Каждый раздел ProviderDescription в этом файле содержит сведения, необходимые для получения метаданных от соответствующего поставщика.    
     
  По умолчанию файл ProviderDescriptors.xml содержит раздел ProviderDescription только для поставщиков из списка ниже.    
     

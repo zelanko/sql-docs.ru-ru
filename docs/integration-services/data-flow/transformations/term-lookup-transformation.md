@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da1331e4586fff4f239c9dc3cb80552dc0ea4692
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71291203"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914267"
 ---
 # <a name="term-lookup-transformation"></a>преобразование «Уточняющий запрос термина»
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Преобразование «Уточняющий запрос термина» сопоставляет термины, извлеченные из текста во входном столбце преобразования, с терминами, содержащимися в ссылочной таблице. Затем оно подсчитывает количество найденных терминов в таблице уточняющих запросов входного набора данных и записывает количество повторений вместе с термином из ссылочной таблицы в столбец на выходе преобразования. Это преобразование полезно для создания пользовательского списка слов на основе входного текста, дополненного статистикой повторяемости слова.  

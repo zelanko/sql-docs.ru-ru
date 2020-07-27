@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 183c95bf39c504c7444f1604206f5acef517a53d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a01b75cc3d3e804d9329b57676eecc28d17c121c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71284170"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917466"
 ---
 # <a name="integration-services-user-interface"></a>Пользовательский интерфейс служб Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Дополнительно к областям конструктора на вкладках конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] пользовательский интерфейс предоставляет доступ к следующим окнам и диалоговым окнам для добавления возможностей в пакеты и задания настроек объектов пакета.  
@@ -51,7 +51,7 @@ ms.locfileid: "71284170"
 |**Цифровая подпись**|Подпишите пакет или удалите подпись из пакета.|В меню **Службы SSIS** щелкните **Цифровая подпись**.<br /><br /> -или-<br /><br /> Щелкните правой кнопкой мыши рабочую область конструирования на вкладке **Поток управления** , а затем выберите **Цифровая подпись**.|  
 |**Задание точек останова для отладки**|Включите точки останова в задачах и задайте свойства точек останова.|В рабочей области конструирования на вкладке **Поток управления** щелкните правой кнопкой мыши задачу или контейнер, а затем выберите **Изменить точки останова**. Чтобы установить точку останова в пакете, щелкните правой кнопкой мыши в любом месте рабочей области конструирования вкладки **Поток управления** , а затем выберите **Изменить точки останова**.|  
   
- В окне **Приступая к работе** представлены ссылки на образцы кода, учебники и видеоматериалы. Для добавления ссылок на дополнительные материалы измените файл SamplesSites.xml, который входит в состав текущего выпуска служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Рекомендуется не изменять значение элемента \<GettingStartedSamples>, указывающее URL-адрес RSS-канала. Этот файл расположен в папке *\<диск>* :\Program Files\Microsoft SQL Server\110\DTS\Binn. В 64-разрядной системе он расположен в папке *\<диск>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn.  
+ В окне **Приступая к работе** представлены ссылки на образцы кода, учебники и видеоматериалы. Для добавления ссылок на дополнительные материалы измените файл SamplesSites.xml, который входит в состав текущего выпуска служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Рекомендуется не изменять значение элемента \<GettingStartedSamples>, указывающее URL-адрес RSS-канала. Этот файл расположен в папке *\<drive>* :\Program Files\Microsoft SQL Server\110\DTS\Binn. В 64-разрядной системе этот файл расположен в папке *\<drive>* :\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn.  
   
  Если файл SamplesSites.xml поврежден, замените текст в нем следующим XML-кодом по умолчанию.  
   

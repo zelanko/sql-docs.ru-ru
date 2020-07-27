@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8f9f27f5964f92e876822af83a091926d727f921
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298584"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916700"
 ---
 # <a name="user-roles"></a>Роли пользователя
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В этом разделе описываются роли пользователей для службы системы отслеживания измененных данных для Oracle компании Attunity. Описываемые роли — это роли базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , роли Windows или роли базы данных Oracle.  
@@ -143,7 +143,7 @@ ms.locfileid: "71298584"
   
  В следующем списке описаны необходимые привилегии пользователя функции интеллектуального анализа журнала:  
   
--   SELECT на \<любая-отслеживаемая-таблица>  
+-   SELECT на \<any-captured-table>  
   
 -   SELECT ANY TRANSACTION  
   

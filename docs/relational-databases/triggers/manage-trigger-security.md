@@ -12,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: de347e9f950c16ccbbe014a9b2c07a76aaf168a5
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: bdbc04c4a1294605b59c04fb9df9a3c44b1f077f
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85881182"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483695"
 ---
 # <a name="manage-trigger-security"></a>Управление безопасностью триггеров
 
@@ -60,7 +60,7 @@ GO
     ```  
 
    > [!NOTE]
-   > Для Базы данных SQL Azure доступно только представление **sys.triggers**, если только вы не используете Управляемый экземпляр.
+   > Для [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] доступен только **sys.triggers**, если не используется [!INCLUDE[ssSDSMIfull](../../includes/sssdsmifull-md.md)].
 
 ::: moniker-end
 
@@ -124,5 +124,4 @@ GO
  [Триггеры DML](../../relational-databases/triggers/dml-triggers.md)   
  [Триггеры DDL](../../relational-databases/triggers/ddl-triggers.md)  
  [Триггеры входа](../../relational-databases/triggers/logon-triggers.md)  
-  
   

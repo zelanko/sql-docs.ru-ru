@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6829260583ebc3c1b0dec3fec5d3158ddbbea297
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5ab34cf592628a92f2dcf536e2eda400aecf80ad
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293529"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920891"
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
@@ -131,7 +131,7 @@ ms.locfileid: "71293529"
  Просмотрите список доступных целевых столбцов. Чтобы сопоставить доступные целевые столбцы с входными столбцами, воспользуйтесь операцией перетаскивания.  
   
  **Входной столбец**  
- Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<игнорировать>** , чтобы исключить столбцы из выходных данных.  
+ Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<ignore>** , чтобы исключить столбцы из выходных данных.  
   
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  

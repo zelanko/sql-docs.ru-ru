@@ -1,5 +1,6 @@
 ---
 title: Объект статистики SQL (SQL Server) | Документация Майкрософт
+description: 'Сведения об объекте "SQLServer: статистика SQL", который предоставляет счетчики для наблюдения за компиляцией и типами запросов, отправляемых экземпляру SQL Server.'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 42dd497f32dc322a7b7808beca0779292198e5e2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ddb47208f37344a1c7a7985f877486d3254a68f4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758940"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458136"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "85758940"
   
  Это счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Статистика SQL**.  
   
-|Счетчики SQL Server статистика SQL|Description|  
+|Счетчики SQL Server статистика SQL|Описание|  
 |----------------------------------------|-----------------|  
 |**Попыток автопараметризации/с**|Число попыток автоматической параметризации, выполненных за секунду. Общий итог должен быть равен сумме ошибочных, надежных и ненадежных автоматических параметризаций. Автоматическая параметризация возникает в том случае, когда экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается параметризовать запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , замещая некоторые из литералов параметрами, чтобы повторно использовать из кэша как можно больше похожих планов выполнения. Автоматическая параметризация в более поздних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]называется «простой параметризацией». Этот счетчик не учитывает принудительные параметризации.|  
 |**Запросов пакетов/с**|Число пакетов команд [!INCLUDE[tsql](../../includes/tsql-md.md)] , полученных за секунду. На эту статистику влияют любые ограничения (ввод-вывод, число пользователей, размер кэша, сложность запросов и т. д.). Высокое число запросов пакетов свидетельствует о высокой пропускной способности.|  

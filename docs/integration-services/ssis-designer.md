@@ -24,16 +24,16 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c4941e8bfbb47a5d4d4e7139a6c761483dec7ad8
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295669"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921971"
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб — это графическое средство, с помощью которого можно создавать и обслуживать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб доступен из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в составе проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -158,7 +158,7 @@ ms.locfileid: "71295669"
  **Удаление**  
  Выберите обработчик события и удалите его из пакета, нажав кнопку **Удалить**.  
   
- **Щелкните здесь, чтобы создать \<имя_обработчика_событий\> для исполняемого файла \<имя_исполняемого_файла\>**  
+ **Щелкните здесь, чтобы создать \<event handler name\> для исполняемого файла \<executable name\>**  
  Нажмите, чтобы создать обработчик события.  
   
  Создайте поток управления, перетащив графические объекты, которые представляют задачи и контейнеры служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , из **Области элементов** в область конструктора вкладки **Обработчики событий** , соединяя затем объекты при помощи объектов управления очередностью, чтобы определить последовательность их запуска.  

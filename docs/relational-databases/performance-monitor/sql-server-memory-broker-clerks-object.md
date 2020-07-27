@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект клерков брокера памяти | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:Memory Broker Clerks, который предоставляет счетчики для сбора статистики по клеркам брокера памяти.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47b9c236-66a3-4c42-97ee-da5555bdc046
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 5a14877c98b4abb2487712cfed2bd744c20933d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 728a660b3737410e9f235cb8632cbf948f7bcf82
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775817"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458808"
 ---
 # <a name="sql-server-memory-broker-clerks-object"></a>SQL Server, объект клерков брокера памяти
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85775817"
 
 В следующей таблице представлены объекты производительности **Memory Broker Clerks** SQL Server.
 
-|**SQL Server, счетчики клерков брокера памяти**|Description|  
+|**SQL Server, счетчики клерков брокера памяти**|Описание|  
 |-------------|-----------------|  
 |**Внутреннее преимущество**|Внутреннее значение нехватки памяти в миллисекундах на страницу, умноженное на 10 миллиардов и округленное до целого числа.|
 |**Размер клерка брокера памяти**|Размер клерка памяти в страницах.|

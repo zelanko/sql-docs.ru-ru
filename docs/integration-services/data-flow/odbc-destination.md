@@ -15,16 +15,16 @@ f1_keywords:
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 153cbd447fa84087b50501005d0ea457f47d1eda
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2ca597190bb5ace7a2f81532ae6482b3e423c81f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298216"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914783"
 ---
 # <a name="odbc-destination"></a>Назначение ODBC
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Назначение ODBC выполняет массовую загрузку данных в таблицы базы данных с поддержкой ODBC. Назначение ODBC использует диспетчер соединений ODBC для подключения к источнику данных.  
@@ -132,7 +132,7 @@ ms.locfileid: "71298216"
  Список доступных целевых столбцов. Перетащите целевой столбец в доступный входной столбец, чтобы сопоставить эти столбцы.  
   
 #### <a name="input-column"></a>Входной столбец  
- Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<игнорировать>** , чтобы исключить столбцы из выходных данных.  
+ Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<ignore>** , чтобы исключить столбцы из выходных данных.  
   
 #### <a name="destination-column"></a>Целевой столбец  
  Просмотрите все доступные целевые столбцы, сопоставленные и несопоставленные.  

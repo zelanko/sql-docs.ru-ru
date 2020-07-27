@@ -1,5 +1,6 @@
 ---
 title: Запуск системного монитора | Документация Майкрософт
+description: Системный монитор использует удаленные вызовы процедур для сбора данных из SQL Server. Любой пользователь, обладающий разрешениями для запуска системного монитора, может отслеживать работу SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: de2b4facacb6066763ff6673fd9dcb48ee81299d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6487ad070ee5c1be02f904f1f8e05c98530a2c3f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787418"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457756"
 ---
 # <a name="run-system-monitor"></a>Запуск системного монитора
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

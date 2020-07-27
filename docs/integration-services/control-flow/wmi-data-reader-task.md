@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e0c1b30985bf93ff1b04af85e45bf64e53c75853
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 08239a5cdb5991d38278569a8f49bb6bdb99190e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293721"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923905"
 ---
 # <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Модуль чтения данных WMI» использует для выполнения запросов язык WQL, который возвращает от инструментария WMI сведения о системе компьютера. Задача «Модуль чтения данных WMI» может быть использована в следующих целях.  
@@ -123,7 +123,7 @@ Select * FROM Win32_QuickFixEngineering
   
 ### <a name="static-options"></a>Статические параметры  
  **WMIConnectionName**  
- Выберите диспетчер подключений WMI в списке или щелкните \<**Создать WMI-соединение…** >, чтобы создать диспетчер подключений.  
+ Выберите в списке диспетчер WMI-соединений или щелкните \<**New WMI Connection...**> для создания диспетчера подключений.  
   
  **См. также:** подробные сведения о [диспетчере WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager.md) и о [редакторе диспетчера WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager-editor.md).  
   
@@ -158,13 +158,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Соединение с файлом  
  **WQLQuerySource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Переменная  
  **WQLQuerySource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**New variable...**> для создания переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
@@ -172,13 +172,13 @@ Select * FROM Win32_QuickFixEngineering
   
 #### <a name="destinationtype--file-connection"></a>DestinationType = Соединение с файлом  
  **Назначение**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="destinationtype--variable"></a>DestinationType = Переменная  
  **Назначение**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**New variable...**> для создания переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   

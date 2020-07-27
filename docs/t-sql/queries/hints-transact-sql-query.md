@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 4718bcb629f1aabbc458ac505eab3ae92bab52cd
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 260babc5be248cc07b90001c2bb63fa7a6439a05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85731302"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552962"
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) — запросы
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -138,7 +138,9 @@ ms.locfileid: "85731302"
 }  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 { HASH |ORDER } GROUP  
 Указывает, что агрегаты, описываемые в предложениях GROUP BY или DISTINCT в запросе, должны использовать хэширование или упорядочивание.  
   
@@ -359,11 +361,11 @@ TABLE HINT **(** _имя\_предоставляемого\_объекта_ [ **
   
  Если вы укажете _exposed\_object\_name_ без табличного указания, любые индексы, которые указаны в составе табличного указания для этого объекта в запросе, будут игнорироваться. Затем оптимизатор запросов определяет использование индексов. Эта методика позволяет устранить влияние табличного указания INDEX, если нет возможности изменить первоначальный запрос. См. пример К.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _индекс\_значение_ [ ,..._n_ ] ) | INDEX = ( _индекс\_значение_ ) | FORCESEEK [ **(** _индекс\_значение_ **(** _имя\_индексного\_столбца_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }. Это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют *имени_предоставляемого_объекта*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _индекс\_значение_ [ ,..._n_ ] ) \| INDEX = ( _индекс\_значение_ ) \| FORCESEEK [ **(** _индекс\_значение_ **(** _индекс\_столбец\_имя_ [ **,** ... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK } — это табличное указание применяется в качестве указания запроса к таблице или представлению, которые соответствуют *имени_предоставляемого_объекта*. Описание этих указаний см. в разделе [Табличные указания (Transact-SQL)](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. Дополнительные сведения см. в подразделе "Примечания".  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Указание FORCESEEK с параметрами ограничивает число планов, которые могут быть использованы оптимизатором, в отличие от указания FORCESEEK без параметров. Из-за этого может чаще возникать ошибка "Невозможно сформировать план". В будущих выпусках внутренние изменения оптимизатора могут привести к увеличению числа этих планов.  
   
 ## <a name="remarks"></a>Remarks  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4e8e6b9a30146aff61464f4aeda46cc49f07abe7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294191"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920708"
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -191,7 +191,7 @@ ms.locfileid: "71294191"
   
 ##### <a name="location--sql-server"></a>Местонахождение = SQL Server  
  **Соединение**  
- Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений OLE DB или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -200,7 +200,7 @@ ms.locfileid: "71294191"
   
 ##### <a name="location--file-system"></a>Местоположение = файловая система  
  **Соединение**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   

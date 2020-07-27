@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект SQL Errors | Документация Майкрософт
+description: Сведения об объекте SQLServer:SQL Errors, который предоставляет счетчики для отслеживания ошибок SQL в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e5273ca-29cb-4618-88a2-70b9b8d6cf76
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8f99ab36545778981ed509ed0575c039916d42f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8d2b511f76fd659f1fcb3bd37d4041d57603b3cd
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758938"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457976"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, объект SQL Errors
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,13 +27,13 @@ ms.locfileid: "85758938"
   
  В этой таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Ошибки SQL**.  
   
-|Счетчики SQL Server SQL Errors|Description|  
+|Счетчики SQL Server SQL Errors|Описание|  
 |------------------------------------|-----------------|  
 |**Ошибок/с**|Количество ошибок в секунду.|  
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Элемент|Определение|  
+|Item|Определение|  
 |----------|----------------|  
 |**_Total**|Сведения обо всех ошибках.|  
 |**Ошибки DB в режиме «вне сети»**|Отслеживает серьезные ошибки, которые заставляют [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] переключать текущую базу данных в режим «вне сети».|  

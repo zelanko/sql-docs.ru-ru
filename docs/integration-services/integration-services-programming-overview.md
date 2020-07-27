@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f540278d8f27eb091d4818f838d069c82a61159c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bfef4a0f2bf65166193e28610d5869e65c1023cb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296216"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917577"
 ---
 # <a name="integration-services-programming-overview"></a>Общие сведения о программировании служб Integration Services
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Архитектура служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] отделяет перемещение и преобразование данных от потока управления пакета. Существует два отдельных ядра, определяющих эту архитектуру. При создании программ для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] их функции можно автоматизировать и расширить. Подсистема выполнения реализует поток управления и инфраструктуру управления пакетами, которые позволяют разработчикам контролировать поток выполнения и задавать параметры журналов, обработчиков событий и переменных. Подсистема обработки потока данных представляет собой специализированное высокопроизводительное ядро, предназначенное для извлечения, преобразования и загрузки данных. При создании программ для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] необходимо использовать возможности этих двух подсистем.  
@@ -62,9 +62,9 @@ ms.locfileid: "71296216"
 >  Прикладные программные интерфейсы служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] несовместимы с языками скриптов на основе COM, такими как VBScript.  
   
 ## <a name="locating-assemblies"></a>Поиск сборок  
- В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, который находится в следующем расположении: *\<диск>* :\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
+ В [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]сборки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] были обновлены до .NET 4.0. Существует отдельный глобальный кэш сборок для .NET 4, расположенный в папке *\<drive>* :\Windows\Microsoft.NET\assembly. Там вы можете найти все сборки [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , обычно в папке GAC_MSIL.  
   
- Как и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], путь к основным DLL-файлам расширения [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] имеет вид: *\<диск>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
+ Как и в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], основные DLL-файлы расширения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] также находятся в каталоге *\<drive>* :\Program Files\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="commonly-used-assemblies"></a>Сборки общего назначения  
  В следующей таблице перечислены сборки, часто используемые при программировании для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] с использованием [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  

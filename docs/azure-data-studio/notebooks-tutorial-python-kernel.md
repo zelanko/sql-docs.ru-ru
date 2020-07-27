@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 04/27/2020
-ms.openlocfilehash: e4c431cba395b8e0c732fa7ac4ab96942cac7144
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 7eb7af0577cb74f180991bf455c36c9122972643
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85728865"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920474"
 ---
 # <a name="create-and-run-a-python-notebook"></a>Создание и запуск записной книжки Python
 
@@ -26,7 +26,7 @@ ms.locfileid: "85728865"
 
 - [Установленное решение Azure Data Studio](download-azure-data-studio.md)
 
-## <a name="new-notebook"></a>Создание записной книжки
+## <a name="create-a-notebook"></a>Создание записной книжки
 
 Выполните следующие действия, чтобы создать файл записной книжки в Azure Data Studio:
 
@@ -34,57 +34,64 @@ ms.locfileid: "85728865"
 
 1. Выберите **Создать записную книжку** в меню **Файл**.
 
-1. Выберите **Python 3** в качестве значения для параметра **Ядро**.
+1. Выберите **Python 3** в качестве значения для параметра **Ядро**. Для параметра **Присоединить к** задано значение localhost.
 
    :::image type="content" source="media/notebook-tutorial-python/set-kernel-and-attach-to-python.png" alt-text="Задать ядро":::
 
-1. Если появится запрос на настройку Python, в пункте **Настроить Python для записных книжек** выберите один из следующих параметров:
+Вы можете сохранить записную книжку с помощью команды **Сохранить** или **Сохранить как...** в меню **Файл**. 
 
-   - **Новая установка Python** — установка новой копии Python для Azure Data Studio.
-   - **Использование существующей установки Python** — указание пути к существующей установке Python.
+Чтобы открыть записную книжку, можно использовать команду **Открыть файл...** в меню **Файл**, выбрать **Открыть файл** на странице **приветствия** или использовать команду **Файл: открыть** в палитре команд.
 
-## <a name="run-a-notebook-cell"></a>Запуск ячейки записной книжки
+## <a name="change-the-python-kernel"></a>Изменение ядра Python
 
-Можно создавать ячейки, содержащие код или текст. Можно выполнить ячейку кода на месте, результаты отобразятся в записной книжке после выполнения ячейки. Текстовые ячейки позволяют вставлять код в отформатированную документацию.
+При первом подключении к ядру Python в записной книжке отображается страница **Настройка Python для записных книжек**. Можно выбрать любой из вариантов:
 
-### <a name="code"></a>Код
+- **Новая установка Python** — установка новой копии Python для Azure Data Studio.
+- **Использование существующей установки Python** — указание пути к существующей установке Python для использования в Azure Data Studio.
 
-Добавьте новую ячейку кода Python, выбрав команду **+Код** на панели инструментов.
-
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Панель инструментов записной книжки":::
-
-Этот пример выполняет простые математические вычисления.
+Чтобы просмотреть расположение и версию активного ядра Python, создайте ячейку кода и выполните следующие команды Python:
 
 ```python
-a = 1
-b = 2
-c = a/b
-print(c)
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
 ```
-Запустите ячейку, нажав кнопку воспроизведения слева от ячейки. Результаты отображаются ниже.
 
-:::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Запуск ячейки записной книжки":::
+Чтобы подключиться к другой установке Python, выполните следующие действия.
 
-### <a name="text"></a>текст
+1. В меню **Файл** последовательно выберите команды **Настройки** и **Параметры**.
+1. Прокрутите страницу до пункта **Конфигурация записной книжки** в разделе **Расширения**.
+1. В разделе **Использовать существующую установку Python** снимите флажок "Локальный путь к уже существующей установке Python, используемой записными книжками".
+1. Перезапустите Azure Data Studio.
 
-Добавьте новую текстовую ячейку, выбрав команду **+Текст** на панели инструментов.
+Когда Azure Data Studio запускается и вы подключаетесь к ядру Python, открывается страница **Настройка Python для записных книжек** и можно выбрать создание новой установки Python или указать путь к существующей установке.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python-text.png" alt-text="Панель инструментов записной книжки":::
+## <a name="run-a-code-cell"></a>Выполнение ячейки кода
 
-Ячейка перейдет в режим правки, и по мере ввода текста с разметкой Markdown вам будет доступна возможность предпросмотра.
+Можно создать ячейки, содержащие код SQL, который можно запустить на месте, нажав кнопку **Выполнить ячейку** (скругленная черная стрелка) слева от ячейки. После того как выполнение ячейки будет завершено, в записной книжке будут показаны результаты.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-cell-python.png" alt-text="Ячейка с разметкой Markdown":::
+Пример:
 
-Щелкните вне текстовой ячейки, чтобы отобразить только текст с разметкой Markdown.
+1. Добавьте новую ячейку кода Python, выбрав команду **+Код** на панели инструментов.
 
-:::image type="content" source="media/notebook-tutorial-python/notebook-markdown-preview-python.png" alt-text="Текст с разметкой Markdown":::
+   :::image type="content" source="media/notebook-tutorial-python/notebook-toolbar-python.png" alt-text="Панель инструментов записной книжки":::
+
+1. Скопируйте приведенный ниже пример, вставьте его в ячейку и щелкните **Выполнить ячейку**. Этот пример выполняет простые математические вычисления, а результат отображается ниже.
+
+   ```python
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   ```
+
+   :::image type="content" source="media/notebook-tutorial-python/run-notebook-cell-python.png" alt-text="Запуск ячейки записной книжки":::
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о записных книжках:
 
-- [Использование записных книжек в SQL Server](notebooks-guidance.md)
-
+- [Расширение Python с помощью Kqlmagic](notebooks-kqlmagic.md)
+- [Использование записных книжек в Azure Data Studio](notebooks-guidance.md)
 - [Создание и запуск записной книжки SQL Server](notebooks-tutorial-sql-kernel.md)
-
-- [Как управлять записными книжками в Azure Data Studio](notebooks-manage-sql-server.md)

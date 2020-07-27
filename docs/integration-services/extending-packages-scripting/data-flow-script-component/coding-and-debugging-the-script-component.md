@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c7273296d1c316cb16ae40b5e7194d6b6d8846e0
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286545"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913455"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Кодирование и отладка компонента скрипта
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)] у компонента Script есть два режима: режим конструирования метаданных и режим конструирования кода. Когда открывается **редактор преобразования "Скрипт"** , компонент переключается в режим конструктора метаданных, в котором настраиваются метаданные и задаются свойства компонентов. После того как будут заданы свойства компонента скрипта и настроены входы и выходы в режиме конструктора метаданных, можно переключиться в режим редактирования кода для составления пользовательского скрипта. Дополнительные сведения о режимах конструктора метаданных и кода см. в разделе [Настройка компонента скрипта в редакторе компонента скрипта](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md).  

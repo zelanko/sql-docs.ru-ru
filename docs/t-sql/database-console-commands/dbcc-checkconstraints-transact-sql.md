@@ -1,5 +1,5 @@
 ---
-title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Документы Майкрософт
+title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 1ca0b3f46cba5fc2e64babbba4dd591b8fb0b095
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f704b064998c584461e4708b52d9c2aa68f20fe7
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85786555"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86485077"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Проверяет целостность указанного ограничения или всех ограничений заданной таблицы в текущей базе данных.
@@ -52,8 +53,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## <a name="arguments"></a>Аргументы  
- *table_name* | *table_id* | *constraint_name* | *constraint_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
+ *table_name* \| *table_id* \| *constraint_name* \| *constraint_id*  
  Проверяемая таблица или ограничение. Если указан аргумент *table_name* или *table_id*, проверяются все включенные ограничения в данной таблице. Если указан аргумент *constraint_name* или *constraint_id*, проверяется только это ограничение. Если не указаны ни идентификатор таблицы, ни идентификатор ограничения, проверяются все включенные ограничения всех таблиц в текущей базе данных.  
  Имя ограничения однозначно определяет таблицу, к которой оно принадлежит. Дополнительные сведения см. в разделе [Идентификаторы баз данных](../../relational-databases/databases/database-identifiers.md).  
   

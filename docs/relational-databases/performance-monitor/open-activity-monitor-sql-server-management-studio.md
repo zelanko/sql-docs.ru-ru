@@ -1,6 +1,6 @@
 ---
 title: Открытие монитора активности (SSMS)
-description: Как открыть монитор активности в среде SQL Server Management Studio (SSMS).
+description: Сведения о том, как открыть монитор активности в среде SQL Server Management Studio. Монитор активности выполняет запросы к отслеживаемому экземпляру, чтобы получить сведения для отображения.
 ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 16d08bbc2b651ef21ee80be1e8af74a00b45a253
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d570faf51200708bcbd56371d68f53a12776d12e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787439"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457476"
 ---
 # <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>Открытие монитора активности в среде SQL Server Management Studio (SSMS)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a2878b4691515c835165f764e09735bafb617b0f
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71298094"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917874"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Редактор назначений SAP BW (страница «Сопоставления»)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Страница **Сопоставления** диалогового окна **Редактор назначений SAP BW** используется для сопоставления входных столбцов с целевыми столбцами.  
@@ -77,7 +77,7 @@ ms.locfileid: "71298094"
  **Входной столбец**  
  Позволяет просматривать выбранные входные столбцы.  
   
- Для сопоставления другого входного столбца с тем же целевым столбцом выберите другой входной столбец в списке. Для удаления сопоставления выберите **\<игнорировать>** , чтобы исключить входной столбец из выходных данных.  
+ Для сопоставления другого входного столбца с тем же целевым столбцом выберите другой входной столбец в списке. Для удаления сопоставления выберите команду **\<ignore>** , чтобы исключить входной столбец из выходных данных.  
   
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  

@@ -21,12 +21,12 @@ ms.assetid: 8429134f-c821-4033-a07c-f782a48d501c
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83f9b8cf8fd74f980c6ea85a335058779cd5736b
-ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
+ms.openlocfilehash: 48b8dbac5a4ad484103dcceedb243a52cc7e621d
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85834735"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86943098"
 ---
 # <a name="create-table-transact-sql-identity-property"></a>CREATE TABLE (Transact-SQL) IDENTITY (Свойство)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -49,7 +49,10 @@ IDENTITY [ (seed , increment) ]
  Значение, присваиваемое самой первой строке, загружаемой в таблицу.  
   
  *increment*  
- Значение приращения, которое прибавляется к значению идентификатора предыдущей загруженной строки.  
+ Значение приращения, которое прибавляется к значению идентификатора предыдущей загруженной строки.
+
+ > [!NOTE]
+ > В Azure Synapse Analytics значения для удостоверения не являются добавочными из-за распределенной архитектуры хранилища данных. Дополнительные сведения см. в разделе [Использование свойства IDENTITY для создания суррогатных ключей в пуле Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#allocation-of-values).
   
  Необходимо указывать либо оба аргумента (и seed, и increment), либо не указывать ни одного из них. Если ничего не указано, применяется значение по умолчанию (1,1).  
   
@@ -62,8 +65,11 @@ IDENTITY [ (seed , increment) ]
   
  Свойство идентификаторов столбца не гарантирует следующее.  
   
--   **Уникальность значения** — уникальность значения следует обеспечить с помощью ограничения **PRIMARY KEY** или **UNIQUE** либо индекса **UNIQUE**.  
-  
+-   **Уникальность значения** — уникальность значения следует обеспечить с помощью ограничения **PRIMARY KEY** или **UNIQUE** либо индекса **UNIQUE**. - 
+ 
+> [!NOTE]
+> Azure Synapse Analytics не поддерживает ограничения **PRIMARY KEY** или **UNIQUE** либо индекс **UNIQUE**. Дополнительные сведения см. в разделе [Использование свойства IDENTITY для создания суррогатных ключей в пуле Synapse SQL](/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-tables-identity#what-is-a-surrogate-key).
+
 -   **Последовательные значения в пределах транзакции** ― при вставке транзакцией нескольких строк не гарантируется, что для них будут назначены последовательные значения. Это связано с тем, что в таблице могут выполняться другие параллельные операции вставки. Если значения должны быть последовательными, то транзакция должна использовать монопольную блокировку для таблицы или уровень изоляции **SERIALIZABLE**.  
   
 -   **Последовательные значения после перезапуска сервера или других ошибок** -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может сохранять значения идентификаторов в кэше для обеспечения высокой производительности, и некоторые из присвоенных значений могут быть потеряны при сбое базы данных или перезагрузке сервера. Это может вызвать пропуски в значениях идентификатора при вставке. Если пропуски недопустимы, приложение должно использовать собственный механизм для создания значений ключей. Использование генератора последовательностей с параметром **NOCACHE** может привести к ограничению пропусков в незафиксированных транзакциях.  

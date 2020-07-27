@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e2b43837de8617af559e2a810c89115e5a3963d3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 348ec6768d7a1eb47c77759c039d0a465aabed65
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71283263"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922230"
 ---
 # <a name="lesson-3-2-add-and-configure-logging"></a>Занятие 3-2. Добавление и настройка ведения журнала
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -39,7 +39,7 @@ ms.locfileid: "71283263"
   
 5.  При желании измените столбец **Описание**.  
   
-6.  В столбце **Конфигурация** выберите **\<Создать соединение**, чтобы указать, куда [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будут записывать сведения журнала.  
+6.  В столбце **Конфигурация** выберите **\<New Connection>** , чтобы указать, куда [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] будут записывать сведения журнала.  
   
     В диалоговом окне **Редактор диспетчера подключения файлов** в поле **Тип применения** выберите **Создать файл**, после чего нажмите кнопку **Обзор**. По умолчанию в диалоговом окне **Выбрать файл** открывается папка проекта, но можно сохранить сведения журнала в любом расположении.  
   

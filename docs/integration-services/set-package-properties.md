@@ -25,16 +25,16 @@ helpviewer_keywords:
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd679e14920099a6383a414772bc162cdf470645
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71281940"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86921990"
 ---
 # <a name="set-package-properties"></a>Установка свойств пакета
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   При создании пакета в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] с помощью графического интерфейса, который предоставляется службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , свойства объекта пакета задаются в окне «Свойства».  
@@ -112,7 +112,7 @@ ms.locfileid: "71281940"
 |**CreatorComputerName**|Имя компьютера, на котором был создан пакет.|  
 |**CreatorName**|Имя пользователя, создавшего пакет.|  
 |**Описание**|Описание функциональных возможностей пакета.|  
-|**Идентификатор**|Идентификатор GUID пакета, назначаемый ему при создании. Это свойство доступно только для чтения. Чтобы создать новое случайное значение свойства **ID**, выберите в раскрывающемся списке команду **\<Сформировать новый идентификатор\>** .|  
+|**Идентификатор**|Идентификатор GUID пакета, назначаемый ему при создании. Это свойство доступно только для чтения. Чтобы создать новое случайное значение для свойства **ID**, выберите **\<Generate New ID\>** в раскрывающемся списке.|  
 |**Название**|Имя пакета.|  
 |**PackageType**|Тип пакета. Допустимые значения — **Default**, **DTSDesigner**, **DTSDesigner100**, **DTSWizard**, **SQLDBMaint**и **SQLReplication**. Значение по умолчанию этого свойства равно **Default**. Дополнительные сведения см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   

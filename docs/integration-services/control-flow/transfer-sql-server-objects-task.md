@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 4f1a2e2122c4d141d8d702d027bf30d65db93f9c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3665ff6dd1b49eaafdf9ba91fd112c881cf4d339
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293842"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86905210"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Задача «Передача объектов SQL Server»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача передачи объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] производит перемещение одного или нескольких типов объектов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, с помощью этой задачи можно выполнить копирование таблиц и хранимых процедур. В зависимости от версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , являющейся источником копирования, можно копировать различные типы объектов. Например, схемы и пользовательские статистические функции содержатся только в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -148,13 +148,13 @@ ms.locfileid: "71293842"
   
 ### <a name="static-options"></a>Статические параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к исходному серверу.  
   
  **SourceDatabase**  
  Выберите базу данных на исходном сервере, из которой будут копироваться объекты.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к целевому серверу.  
   
  **DestinationDatabase**  
  Выберите базу данных на целевом сервере, в которую будут копироваться объекты.  

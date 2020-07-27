@@ -1,5 +1,6 @@
 ---
 title: Объект статистики ожидания (SQL Server) | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:Wait Statistics, который содержит счетчики производительности, сообщающие сведения о состоянии ожидания.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b5b9a2ccdd73150eeaa1dda8403c4b73aed03009
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 64a21ac3072869f74c71997be5160b55758fc917
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758918"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457410"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server, объект Wait Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85758918"
   
  В таблице ниже перечислены счетчики, содержащиеся в объекте статистики ожидания.  
   
-|SQL Server, счетчики статистики ожидания|Description|  
+|SQL Server, счетчики статистики ожидания|Описание|  
 |-----------------------------------------|-----------------|  
 |**Ожиданий блокировок**|Статистика процессов, ожидающих в состоянии блокировки.|  
 |**Ожиданий буфера журнала**|Статистика процессов, ожидающих освобождения буфера журнала.|  
@@ -43,7 +44,7 @@ ms.locfileid: "85758918"
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |**Среднее время ожидания блокировки (мс)**|Среднее время для выбранного типа ожидания.|  
 |**Совокупное время ожидания (мс) в секунду**|Общее время ожидания в секунду для выбранного типа ожидания.|  

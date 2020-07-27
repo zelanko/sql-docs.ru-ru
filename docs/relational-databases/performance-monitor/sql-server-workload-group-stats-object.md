@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект Workload Group Stats | Документация Майкрософт
+description: Сведения об объекте SQLServer:Workload Group Stats, который содержит счетчики производительности, сообщающие данные статистики для группы рабочей нагрузки Resource Governor.
 ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1413ab35860b20a80e1fcae07a0aa5534c1e3965
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6a189c02caaef100b2531b20a986befc5a069ba6
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758884"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458126"
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, объект Workload Group Stats
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85758884"
   
  Каждая активная группа рабочей нагрузки создает экземпляр объекта статистики группы рабочей нагрузки SQLServer:Workload Group Stats, при этом имя экземпляра совпадает с именем группы рабочей нагрузки в регуляторе ресурсов. В следующей таблице описываются счетчики, поддерживаемые этим экземпляром.  
   
-|Имя счетчика|Description|  
+|Имя счетчика|Описание|  
 |------------------|-----------------|  
 |**Активные параллельные потоки**|Текущее число используемых параллельных потоков.|  
 |**Активные запросы**|Число запросов, выполняющихся в настоящее время в этой группе рабочей нагрузки. Это значение должно быть равно количеству строк в представлении sys.dm_exec_requests, отфильтрованных по идентификатору группы.|  

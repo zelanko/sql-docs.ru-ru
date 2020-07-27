@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4db56206a629a4bf392ef56641564208ff1a9d3c
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293801"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913820"
 ---
 # <a name="web-service-task"></a>Задача «Веб-служба»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Веб-служба» выполняет метод веб-службы. Возможно использование задачи «Веб-служба» в следующих целях:  
@@ -87,7 +87,7 @@ ms.locfileid: "71293801"
   
 ### <a name="options"></a>Параметры  
  **HTTPConnection**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите из списка диспетчер подключений или нажмите кнопку \<**New connection...**> для создания нового диспетчера подключений.  
   
 > [!IMPORTANT]  
 >  Диспетчер HTTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
@@ -173,13 +173,13 @@ ms.locfileid: "71293801"
   
 #### <a name="outputtype--file-connection"></a>OutputType = Соединение с файлом  
  **Файл**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New Connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="outputtype--variable"></a>OutputType = Переменная  
  **Переменная**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**New Variable...**> для создания переменной.  
   
  **См. также:**  подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   

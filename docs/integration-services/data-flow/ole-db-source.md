@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a19cee0b650c82c513bd6f4d9d0b7afd11184b3
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71292237"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913815"
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -157,7 +157,7 @@ ms.locfileid: "71292237"
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне**Предварительный просмотр** может отображаться до 200 строк.  
   
 > [!NOTE]  
->  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображается текст \<значение слишком велико для отображения> или System.Byte[]. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображаются значения \<value too big to display> или System.Byte[]. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   

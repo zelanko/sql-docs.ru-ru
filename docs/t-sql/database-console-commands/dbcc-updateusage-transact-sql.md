@@ -1,5 +1,5 @@
 ---
-title: DBCC UPDATEUSAGE (Transact-SQL) | Документы Майкрософт
+title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ''
 ms.date: 11/14/2017
 ms.prod: sql
@@ -33,14 +33,15 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: fa1bd6767a81142e115e02d242a54b9715bf78f8
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2528ac49fb62a41bebe55cb50392cb306ec93edf
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85643862"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484209"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Описывает и исправляет неточности в подсчете страниц и строк в представлениях каталога. Эти неточности могут стать причиной неверных отчетов об использовании пространства, возвращаемых системной хранимой процедурой sp_spaceused.
@@ -57,14 +58,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## <a name="arguments"></a>Аргументы  
-*database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
+*database_name* \| *database_id* \| 0  
 Имя или идентификатор базы данных, для которой нужно составить отчет и исправить статистику использования дискового пространства. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+*table_name* \| *table_id* \| *view_name* \| *view_id*  
 Имя или идентификатор таблицы или индексированного представления, для которой нужно составить отчет и исправить статистику использования дискового пространства. Имена таблиц и представлений должны соответствовать требованиям, предъявляемым к идентификаторам.  
   
-*index_id* | *index_name*  
+*index_id* \| *index_name*  
 Имя или идентификатор используемого индекса. Если этот аргумент не указан, инструкция обрабатывает все индексы для указанной таблицы или представления.  
   
 WITH  

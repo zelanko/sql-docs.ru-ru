@@ -1,5 +1,6 @@
 ---
 title: Joins (SQL Server) | Документы Майкрософт
+description: Сведения о типах операций соединения, используемых SQL Server. SQL Server поддерживает вертикальное секционирование таблиц или хранилище столбцов за счет операций соединения.
 ms.custom: ''
 ms.date: 07/19/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c7f2ff4782923eef9ee4d91fa0a7c69239e298c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: c4c93c73aa3f20304a5e58fda096565d0db0456a
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009681"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86915850"
 ---
 # <a name="joins-sql-server"></a>Joins (SQL Server)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -229,7 +230,7 @@ WHERE [fo].[Quantity] = 361;
 ### <a name="tracking-adaptive-join-activity"></a>Отслеживание операций адаптивного соединения
 Оператор адаптивного соединения имеет следующие атрибуты оператора плана:
 
-|Атрибут плана|Description|
+|Атрибут плана|Описание|
 |---|---|
 |AdaptiveThresholdRows|Показывает пороговое значение, используемое для переключения с хэш-соединения на соединение вложенными циклами.|
 |EstimatedJoinType|К какому типу, вероятнее всего, относится соединение.|
@@ -245,7 +246,7 @@ WHERE [fo].[Quantity] = 361;
 - Уровень совместимости базы данных имеет значение 140 или больше.
 - Запрос является инструкцией `SELECT` (инструкции для изменения данных сейчас недопустимы).
 - Соединение может выполняться посредством как индексированного соединения вложенными циклами, так и физического алгоритма хэш-соединения.
-- Хэш-соединение использует [пакетный режим](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) — либо из-за наличия индекса columnstore во всем запросе, либо по той причине, что на таблицу индекса columnstore ссылается само соединение.
+- Хэш-соединение использует пакетный режим, реализуемый за счет того, что во всем запросе присутствует индекс columnstore, на таблицу индекса columnstore ссылается само соединение либо [для функции rowstore используется пакетный режим](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
 - Созданные альтернативные решения соединения вложенными циклами и хэш-соединения должны иметь одинаковый первый дочерний элемент (внешняя ссылка).
 
 ### <a name="adaptive-threshold-rows"></a>Строки адаптивного порогового значения

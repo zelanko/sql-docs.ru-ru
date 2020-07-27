@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fb26be1034632ce747c21239636f9b0a4ec08114
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295739"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913270"
 ---
 # <a name="save-packages"></a>Сохранение пакетов
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] пакеты создаются с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и сохраняются в файловой системе как XML-файлы (DTSX-файлы). Копии XML-файла пакета можно также сохранять в базе данных msdb в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в хранилище пакетов. Хранилище пакетов представляет собой папки в определенном месте файловой системы, управляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -60,7 +60,7 @@ ms.locfileid: "71295739"
   
 1.  В обозревателе решений дважды щелкните пакет, копию которого необходимо сохранить.  
   
-2.  В меню **Файл** выберите пункт **Сохранить копию \<файл пакета> как**.  
+2.  В меню **Файл** выберите команду **Сохранить копию \<package file> как**.  
   
 3.  В диалоговом окне **Сохранение копии пакета** выберите размещение пакета в списке **Размещение пакета** . Доступны следующие варианты:  
     -   SQL Server
@@ -110,7 +110,7 @@ ms.locfileid: "71295739"
   
 2.  В обозревателе решений щелкните проект правой кнопкой мыши, укажите **Добавить** и выберите **Новый элемент**.  
   
-3.  В диалоговом окне **Добавление нового элемента — \<имя проекта>** щелкните пакет, который нужно использовать в качестве шаблона.  
+3.  В диалоговом окне **Добавить новый элемент — \<project name>** выберите проект, который нужно использовать в качестве шаблона.  
   
      Список шаблонов включает шаблон пакетов по умолчанию с именем «Новый пакет служб SSIS». Значок пакета определяет шаблоны, которые можно использовать в качестве шаблонов пакетов.  
   

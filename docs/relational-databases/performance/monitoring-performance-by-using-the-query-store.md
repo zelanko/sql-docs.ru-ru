@@ -1,5 +1,6 @@
 ---
 title: Мониторинг производительности с использованием хранилища запросов | Документация Майкрософт
+description: Хранилище запросов SQL Server предоставляет аналитические сведения о выборе и производительности плана запроса. Хранилище запросов собирает данные журнала запросов, планов и статистики времени выполнения.
 ms.custom: ''
 ms.date: 04/09/2020
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: 010d18fff933ee1bd362d1ebd59ef86905d493ed
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: f56ea55b90613ea657994af6acff7eef271843b4
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86006213"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458434"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 

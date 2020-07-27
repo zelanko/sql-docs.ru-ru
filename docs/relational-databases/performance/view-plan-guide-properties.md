@@ -1,5 +1,6 @@
 ---
 title: Просмотр свойств структуры плана | Документация Майкрософт
+description: Узнайте, как на SQL Server просматривать свойства структуры плана с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 814538af8afd11a1962d2c4efa225a29dba4fc27
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 18c1d7f663d5006cae078753e028caf133ec2c5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655317"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458893"
 ---
 # <a name="view-plan-guide-properties"></a>Просмотр свойств структуры плана
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -62,7 +63,7 @@ ms.locfileid: "85655317"
      **Отключен**  
      Отображает состояние структуры плана. Допустимые значения — **True** и **False**.  
   
-     **Название**  
+     **имя**;  
      Отображает имя структуры плана.  
   
      **Параметры**  

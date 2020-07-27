@@ -34,16 +34,16 @@ helpviewer_keywords:
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1f0bf0dd95bbb209c0e6320c4ba91eb1bc84ff41
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 30942bd7f9c5ff8180eb9adfddedff72d1d97f05
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736317"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86552579"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Производит поиск точных или нечетких (менее точных) совпадений с отдельными словами и фразами, слов на определенном расстоянии друг от друга или взвешенных совпадений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS — предикат, используемый в предложении [WHERE](../../t-sql/queries/where-transact-sql.md) инструкции SELECT языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для выполнения полнотекстового поиска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по столбцам полнотекстового индекса, содержащим символьные типы данных.  
   
@@ -140,7 +140,9 @@ CONTAINS (
   
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *column_name*  
  Имя столбца с полнотекстовым индексом в таблице, указанной в предложении FROM. Столбцы должны иметь тип **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** или **varbinary(max)** .  
   
@@ -318,18 +320,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Указывает взвешенное значение, которое может принимать значение от 0,0 до 1,0. Каждый компонент в *\<weighted_term>* может включать *weight_value*. *weight_value* — это способ изменения того, как различные части запроса влияют на ранжирующее значение, назначенное каждой строке, удовлетворяющей условию запроса. Параметр WEIGHT не влияет на результаты запросов CONTAINS, но влияет на ранг в запросах [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
   
 > [!NOTE]  
->  В качестве десятичного разделителя всегда используется точка, независимо от кода локали операционной системы.  
+> В качестве десятичного разделителя всегда используется точка, независимо от кода локали операционной системы.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  Задает логическую операцию между двумя условиями поиска на вхождение.  
   
- { AND | & }  
+ { AND \| & }  
  Указывает на то, что для совпадения оба условия поиска на вхождение должны быть удовлетворены. Символ амперсанда (&) может быть использован вместо ключевого слова AND для представления оператора AND.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  Указывает на то, что для совпадения второе условие поиска на вхождение не должно быть удовлетворено. Символ амперсанда с последующим восклицательным знаком (&!) может быть использован вместо ключевого слова AND NOT для представления оператора AND NOT.  
   
- { OR | | }  
+ { OR \| \| }  
  Указывает на то, что для совпадения любое из условий поиска на вхождение должно быть удовлетворено. Символ черты (|) может быть использован вместо ключевого слова OR для представления оператора OR.  
   
  Если *\<contains_search_condition>* содержит группы, заключенные в круглые скобки, эти группы вычисляются в первую очередь. После вычисления групп, заключенных в скобки, эти правила применяются при использовании следующих логических операторов с условиями поиска на вхождение.  

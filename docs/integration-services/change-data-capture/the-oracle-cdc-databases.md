@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c58323e0684b7b3e0397854cf6abec148f616248
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287708"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914020"
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -49,7 +49,7 @@ ms.locfileid: "79287708"
  При создании базы данных CDC и настройке исходных таблиц CDC в Oracle владелец базы данных CDC может предоставить разрешение SELECT для зеркальных таблиц и определить шлюзовые роли CDC SQL Server, что позволяет управлять доступом к информации об изменениях.  
   
 ## <a name="mirror-tables"></a>Зеркальные таблицы  
- Для каждой отслеживаемой таблицы в базе данных-источнике Oracle создается аналогичная пустая таблица в базе данных CDC, имеющая ту же схему и имя таблицы: \<имя-схемы>.\<<имя-таблицы>. Исходные таблицы Oracle с именем схемы `cdc` (регистр не учитывается) отслеживаться не могут, поскольку в `cdc` схема [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарезервирована для CDC SQL Server.  
+ Для каждой отслеживаемой таблицы \<schema-name>.\<table-name> в базе данных-источнике Oracle создается аналогичная пустая таблица в базе данных CDC, имеющая ту же схему и имя таблицы. Исходные таблицы Oracle с именем схемы `cdc` (регистр не учитывается) отслеживаться не могут, поскольку в `cdc` схема [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] зарезервирована для CDC SQL Server.  
   
  Зеркальные таблицы пусты, в них нет никаких данных. Они служат для поддержки стандартной инфраструктуры CDC SQL Server, которая используется экземпляром CDC Oracle. Чтобы данные не вставлялись в зеркальные таблицы и не обновлялись в них, все операции UPDATE, DELETE и INSERT запрещены для PUBLIC. Это гарантирует, что они не будут изменены.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "79287708"
 ###  <a name="change-tables-_ct"></a><a name="BKMK_Change_Tables_CT"></a> Таблицы изменений (_CT)  
  Таблицы изменений создаются на основе зеркальных таблиц. Они содержат информацию об изменениях, которые отслеживаются в базе данных Oracle. Имена этих таблиц формируются в соответствии со следующим соглашением:  
   
- **[cdc].[\<экземпляр_отслеживания>_CT]**  
+ **[cdc].[\<capture-instance>_CT]**  
   
  При включении отслеживания для таблицы `<schema-name>.<table-name>`экземпляр отслеживания по умолчанию получит имя `<schema-name>_<table-name>`. Например, имя экземпляра отслеживания по умолчанию для таблицы Oracle HR.EMPLOYEES будет HR_EMPLOYEES, а имя связанной таблицы изменений ― [cdc]. [HR_EMPLOYEES_CT].  
   

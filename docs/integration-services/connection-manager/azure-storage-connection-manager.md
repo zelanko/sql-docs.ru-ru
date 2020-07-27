@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d3912e2b5cbf8051348191cf3efb6ed2d20d551
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 76257fd464a7107297d609bfb6a4ef150d6f58bc
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74687194"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913665"
 ---
 # <a name="azure-storage-connection-manager"></a>Диспетчер подключений службы хранилища Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Диспетчер подключений службы хранилища Azure позволяет пакету служб SQL Server Integration Services (SSIS) подключаться к учетной записи хранения Azure. Диспетчер подключений службы хранилища Azure входит в состав [пакета дополнительных компонентов SQL Server Integration Services (SSIS) для Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
@@ -33,11 +33,15 @@ ms.locfileid: "74687194"
 
 - **Служба**. Указывает службу хранилища для подключения.
 - **Имя учетной записи**. Указывает имя учетной записи хранения.
-- **Проверка подлинности**. Указывает используемый метод проверки подлинности. Поддерживаются методы проверки подлинности AccessKey и ServicePrincipal.
+- **Проверка подлинности**. Указывает используемый метод проверки подлинности. Поддерживаются методы проверки подлинности AccessKey, ServicePrincipal и SharedAccessSignature
     - **AccessKey**. Для этого метода проверки подлинности укажите **ключ учетной записи**.
     - **ServicePrincipal**. Для этого метода проверки подлинности укажите **идентификатор приложения**, **ключ приложения** и **идентификатор клиента** субъекта-службы.
       Для работы **тестового подключения** субъекту-службе следует назначить по крайней мере роль **Модуль чтения данных BLOB-объектов хранилища** в учетной записи хранения.
       Дополнительные сведения см. в статье о [предоставлении доступа к данным больших двоичных объектов и очереди с помощью ролей RBAC на портале Azure](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal).
+    - **SharedAccessSignature**. Для этого метода проверки подлинности укажите по меньшей мере **Token** подписанного URL-адреса.
+      Чтобы проверить подключение, дополнительно укажите область ресурсов, используемую для проверки. Это может быть **служба**, **контейнер** или **BLOB-объект**.
+      Для **контейнера** и **BLOB-объекта** укажите имя контейнера и путь к BLOB-объекту соответственно.
+      Дополнительные сведения см. в статье [Общие сведения о подписанном URL-адресе службы хранилища Azure](https://docs.microsoft.com/azure/storage/common/storage-sas-overview).
 - **Среда**. Указывает облачную среду, где размещается учетная запись хранения.
 
 ## <a name="managed-identities-for-azure-resources-authentication"></a>Управляемые удостоверения для проверки подлинности ресурсов Azure

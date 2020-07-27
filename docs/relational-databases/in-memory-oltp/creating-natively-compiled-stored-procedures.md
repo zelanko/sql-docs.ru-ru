@@ -12,29 +12,29 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ef2ee1bbc863de8f3be94733beac3f04fa90b3c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2ce0672c59a10e22131effacededf87db25bdb92
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723294"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484615"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Создание хранимых процедур, скомпилированных в собственном коде
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Скомпилированные в собственном коде хранимые процедуры не реализуют полные возможности программирования [!INCLUDE[tsql](../../includes/tsql-md.md)] и контактную зону запросов. Некоторые конструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не могут быть использованы внутри хранимых процедур, скомпилированных в собственном коде. Дополнительные сведения см. в разделе [Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md).  
   
-Однако некоторые функции [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживаются только для хранимых процедур, скомпилированных в собственном коде:  
+Следующие функции [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживаются только для хранимых процедур, скомпилированных в собственном коде.  
   
 -   Блоки ATOMIC. Дополнительные сведения см. в статье [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md).  
   
--   Ограничения **NOT NULL** для параметров и переменных. Нельзя присвоить значения **NULL** параметрам или переменным, объявленным как **NOT NULL**. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
+-   Ограничения `NOT NULL` для параметров и переменных. Нельзя присвоить значения **NULL** параметрам или переменным, объявленным как **NOT NULL**. Дополнительные сведения см. в статье [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md).  
   
-    -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) …  
+    -   `CREATE PROCEDURE dbo.myproc (@myVarchar VARCHAR(32) NOT NULL) AS (...)`  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(Необходимо инициализировать значение.)*  
+    -   `DECLARE @myVarchar VARCHAR(32) NOT NULL = "Hello"; -- Must initialize to a value.`  
   
-    -   SET @myVarchar **= null**; -- *(Успешно компилируется, но вызывает ошибку во время выполнения.)*  
+    -   `SET @myVarchar = NULL; -- Compiles, but fails during run time.`  
   
 -   Привязка к схеме хранимых процедур, скомпилированных в собственном коде.  
   

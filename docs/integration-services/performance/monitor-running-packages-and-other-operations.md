@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f899ec9c1e006212483a49133ad343e93f20173
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287848"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918339"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Наблюдение за выполнением пакетов и других операций
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Вы можете отслеживать выполнения пакета [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , проверки проекта и другие операции с помощью одного или нескольких из следующих средств. Такие средства, как отводы данных, доступны только для проектов, которые развертываются на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -179,7 +179,7 @@ ms.locfileid: "79287848"
  Отчет **Все проверки** отображает сводку по всем проверкам служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , выполненным на сервере. В сводке показываются данные о каждой проверке: состояние, время начала и время окончания. Каждая запись сводки содержит ссылку на сообщения, полученные в ходе проверки. Как и в отчете «Панель мониторинга служб Integration Services», здесь вы можете применить фильтр к таблице, чтобы сократить объем информации.  
   
 ### <a name="custom-reports"></a>Пользовательские отчеты  
- Вы можете добавить пользовательский отчет (файл языка определения отчетов) к узлу каталога **SSISDB** в узле **Каталоги служб Integration Services** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем добавить отчет, убедитесь, что используется контекст трехкомпонентного именования для полного уточнения ссылок на объекты, таких как исходная таблица. В противном случае функция [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отобразит ошибку. Контекст именования — \<database>.\<owner>.\<object>. В качестве примера можно указать SSISDB.internal.executions.  
+ Вы можете добавить пользовательский отчет (файл языка определения отчетов) к узлу каталога **SSISDB** в узле **Каталоги служб Integration Services** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Прежде чем добавить отчет, убедитесь, что используется контекст трехкомпонентного именования для полного уточнения ссылок на объекты, таких как исходная таблица. В противном случае функция [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отобразит ошибку. Соглашение об именовании — \<database>.\<owner>.\<object>. В качестве примера можно указать SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  При добавлении пользовательских отчетов к узлу **SSISDB** в узле **Базы данных** префикс SSISDB не требуется.  

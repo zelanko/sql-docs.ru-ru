@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c33ec0b3d8b597e46403337a11b4f3d99bc3393
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294143"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86918245"
 ---
 # <a name="ftp-task"></a>Задача «FTP»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
@@ -85,7 +85,7 @@ ms.locfileid: "71294143"
   
 ### <a name="options"></a>Параметры  
  **FtpConnection**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите существующий диспетчер подключений FTP или создайте его, щелкнув пункт \<**New connection...**>.  
   
 > [!IMPORTANT]  
 >  Диспетчер FTP-соединений поддерживает только анонимную проверку подлинности и обычную проверку подлинности. Проверка подлинности Windows не поддерживается.  
@@ -148,13 +148,13 @@ ms.locfileid: "71294143"
   
 #### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите существующую переменную, определяемую пользователем, или выберите пункт \<**New variable...**> для ее создания.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), "Добавление переменной"  
   
 #### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Выберите существующий диспетчер подключений FTP или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите существующий диспетчер подключений FTP или создайте его, щелкнув пункт \<**New connection...**>.  
   
  **См. также:** [Диспетчер FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager.md), [Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -162,13 +162,13 @@ ms.locfileid: "71294143"
   
 #### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Выберите существующую пользовательскую переменную или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите существующую переменную, определяемую пользователем, или выберите пункт \<**New variable...**> для создания переменной.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md), "Добавление переменной"  
   
 #### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Выберите существующий диспетчер подключений файлов или щелкните \<**Создать подключение...** >, чтобы создать его.  
+ Выберите существующий диспетчер подключений файлов или создайте его, щелкнув пункт \<**New connection...**>.  
   
  **См. также**: [Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект LogPool FreePool | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:LogPool FreePool, который предоставляет счетчики для сбора статистики по свободному пулу внутри пула журналов.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ffd569b-045f-4c3f-a473-4a491d6a1d80
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: c51fb2a86cb33facfa7b54fe35deb6efe9cdef71
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b3ffe8512adc1fd21bcf33741d0a10db058d5752
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775829"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457728"
 ---
 # <a name="sql-server-logpool-freepool-object"></a>SQL Server, объект LogPool FreePool
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85775829"
 
 В следующей таблице представлены объекты производительности **LogPool FreePool** SQL Server.
 
-|**Счетчики LogPool FreePool SQL Server**|Description|  
+|**Счетчики LogPool FreePool SQL Server**|Описание|  
 |-------------|-----------------|  
 |**Заполнения свободного буфера/с**|Количество буферов, выделяемых для заполнения в секунду.|
 |**Длина свободного списка**|Длина свободного списка.|

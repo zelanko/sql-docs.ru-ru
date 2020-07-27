@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f170a279f591b496b4c69cbb80b4c719954c30ba
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 77a347078f86299118f80c9cae55d9dd04795a9d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294127"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86917900"
 ---
 # <a name="file-system-task"></a>Задача "Файловая система"
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Файловая система» выполняет операции над файлами и каталогами файловой системы. Например, при помощи задачи «Файловая система» пакет может создавать, перемещать или удалять каталоги и файлы. Можно также использовать данную задачу для установки атрибутов файлов и каталогов. Например, задача «Файловая система« может пометить файлы как скрытые или предназначенные только для чтения.  
@@ -144,13 +144,13 @@ ms.locfileid: "71294127"
   
 #### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Выберите имя переменной в списке или щелкните \<**Создать переменную...** > для создания переменной.  
+ Выберите имя переменной из списка или нажмите кнопку \<**New variable...**> для создания новой переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
@@ -158,13 +158,13 @@ ms.locfileid: "71294127"
   
 #### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Выберите имя переменной в списке или щелкните \<**Создать переменную...** > для создания переменной.  
+ Выберите имя переменной из списка или нажмите кнопку \<**New variable...**> для создания новой переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   
 #### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   

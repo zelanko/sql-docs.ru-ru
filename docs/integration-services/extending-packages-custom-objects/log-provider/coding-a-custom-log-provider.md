@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d4f1eec14ca75ed6f878a7bdb077b899ea05993d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71287146"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920800"
 ---
 # <a name="coding-a-custom-log-provider"></a>Создание кода пользовательского регистратора
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
@@ -136,7 +136,7 @@ End Sub
 ```  
   
 ### <a name="writing-log-entries"></a>Создание записей журнала  
- Метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> вызывается каждый раз, когда объект в пакете инициирует событие путем вызова метода Fire\<событие> для одного из интерфейсов события. Каждое событие инициируется со сведениями о его контексте и обычно дополняется поясняющим сообщением. Однако не каждый вызов метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> включает сведения о каждом параметре метода. Например, некоторые стандартные события, имена которых очевидны без пояснений, не предоставляют параметров MessageText, а параметры DataCode и DataBytes предназначены для необязательных вспомогательных сведений.  
+ Метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> вызывается каждый раз, когда объект в пакете инициирует событие путем вызова метода Fire\<event> для одного из интерфейсов события. Каждое событие инициируется со сведениями о его контексте и обычно дополняется поясняющим сообщением. Однако не каждый вызов метода <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> включает сведения о каждом параметре метода. Например, некоторые стандартные события, имена которых очевидны без пояснений, не предоставляют параметров MessageText, а параметры DataCode и DataBytes предназначены для необязательных вспомогательных сведений.  
   
  В следующем примере кода реализуется метод <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase.Log%2A> и события записываются в поток, открытый в предыдущем разделе.  
   

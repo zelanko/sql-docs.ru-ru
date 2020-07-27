@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект FileTable | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:FileTable, который предоставляет счетчики для сбора статистики, связанной с FileTable и доступом без использования транзакций.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: f0411ae3768195fd1fb3f5e7f8776a7b71362817
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: f6abfd3c7bdb7ba03a7ab91a7e242d645590796e
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775887"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458832"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, объект FileTable
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "85775887"
 
 В следующей таблице представлены объекты производительности **FileTable** SQL Server.
 
-|**Счетчики FileTable SQL Server**|Description|  
+|**Счетчики FileTable SQL Server**|Описание|  
 |-------------|-----------------|  
 |**Среднее время удаления элемента файловой таблицы**|Среднее время в миллисекундах, затраченное для удаления элемента FileTable.|
 |**Среднее время перечислений файловой таблицы**|Среднее время в миллисекундах, затраченное для перечисления элементов FileTable.|

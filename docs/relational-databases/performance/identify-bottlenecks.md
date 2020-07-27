@@ -1,5 +1,6 @@
 ---
 title: Определение узких мест | Документация Майкрософт
+description: Сведения о причинах узких мест, таких как нехватка ресурсов и неправильно настроенные ресурсы в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1c55d70a4c3ca15a204b216493395e22b2e59642
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 271a005709dc4087ca8d22c7b54f21eebbbfc525
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85718914"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457676"
 ---
 # <a name="identify-bottlenecks"></a>Выявление узких мест
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

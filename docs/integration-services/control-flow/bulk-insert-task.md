@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 00c117a2282216f5f326cbf524f3326af5cc93e1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 81ac32f8fff04a1a81d4397cc196c506eab164d2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294329"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923317"
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Массовая вставка» обеспечивает наиболее эффективный способ копирования больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Предположим, что компания хранит список продуктов объемом в миллион строк в головном компьютере, но система электронной коммерции компании использует для заполнения веб-страниц сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо обновлять таблицу продуктов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ночам в соответствии с главным списком продуктов, хранящимся в головном компьютере. Для обновления таблицы список продуктов сохраняется в формате с символами табуляции в качестве разделителей и используется задача «Массовая вставка» для копирования данных напрямую в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -125,7 +125,7 @@ ms.locfileid: "71294329"
   
 ### <a name="options"></a>Параметры  
  **Соединение**  
- Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать подключение...** >, чтобы создать соединение.  
+ Выберите в списке диспетчер подключений OLE DB или щелкните \<**New connection...**>, чтобы создать подключение.  
   
  **См. также:** [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -141,7 +141,7 @@ ms.locfileid: "71294329"
 |**Указать**|Укажите формат. При выборе этого параметра отображаются динамические параметры **RowDelimiter** и **ColumnDelimiter**.|  
   
  **Файл**  
- Выберите диспетчер подключений файлов или неструктурированных файлов в списке или щелкните \<**Создать подключение...** >, чтобы создать соединение.  
+ Выберите в списке диспетчер подключений обычных или неструктурированных файлов либо щелкните \<**New connection...**>, чтобы создать подключение.  
   
  Расположение файла задается относительно компонента SQL Server Database Engine, указанного в диспетчере соединений для выполнения этой задачи. Доступ к тестовому файлу можно получить с помощью компонента SQL Server Database Engine на локальном жестком диске на сервере или через общий диск или сопоставленный диск относительно SQL Server. Этот файл не имеет доступа к среде выполнения служб SSIS.  
   

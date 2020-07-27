@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 6d81c961600eca7dddd1ecd5995dbb488094aafb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 42d7d3dd3c4e8ee86da1a9fd8de8b725ba1579e7
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294929"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919420"
 ---
 # <a name="creating-a-package-programmatically"></a>Создание пакета программным способом
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Объект <xref:Microsoft.SqlServer.Dts.Runtime.Package> представляет собой контейнер верхнего уровня для всех остальных объектов в решении служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Пакет, являющийся контейнером верхнего уровня, создается в качестве первого объекта, а последующие объекты добавляются в него и затем выполняются в контексте пакета. Сам пакет перемещения или преобразования данных не осуществляет. Для выполнения этих функций используются задачи, содержащиеся в пакете. Задачи выполняют основную работу пакета. Они определяют функциональность пакета. Пакет создается и выполняется всего тремя строками кода, однако к нему могут быть добавлены различные задачи и объекты <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>, что обеспечивает дополнительную функциональность пакета. В этом разделе описывается программное создание пакета. В нем не содержатся сведения о создании задач или диспетчера соединений <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Эти темы рассматриваются в последующих разделах.  
@@ -67,13 +67,13 @@ Module Module1
 End Module  
 ```  
   
- Чтобы скомпилировать и выполнить образец, нажмите клавишу F5 в среде Visual Studio. Чтобы построить код с использованием компилятора C# **csc.exe** в командной строке, используйте следующие команды и ссылки на файлы, заменив заполнитель *\<имя_файла>* именем файла CS или VB и задав *\<имя_выходного_файла>* по своему усмотрению.  
+ Чтобы скомпилировать и выполнить образец, нажмите клавишу F5 в среде Visual Studio. Чтобы выполнить сборку кода с использованием компилятора C# **csc.exe** в командной строке, используйте следующие команды и ссылки на файлы, заменив заполнитель *\<filename>* именем файла CS или VB и задав имя выходного файла *\<outputfilename>* по своему усмотрению.  
   
- **csc /target:library /out: \<имя_выходного_файла>.dll \<имя_файла>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **csc /target:library /out: \<outputfilename>.dll \<filename>.cs /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
  Чтобы выполнить сборку кода с помощью компилятора среды Visual Basic .NET **vbc.exe**, в командной строке используйте следующие команды и ссылки на файлы.  
   
- **vbc /target:library /out: \<имя_выходного_файла>.dll \<имя_файла>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
+ **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
  Можно также создать пакет, загрузив существующий пакет, сохраненный на диске, в файловой системе или в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отличие состоит в том, что сначала создается объект <xref:Microsoft.SqlServer.Dts.Runtime.Application>, а затем объект пакета заполняется одним из перегруженных методов приложения: методом **LoadPackage** для неструктурированных файлов, методом **LoadFromSQLServer** для пакетов, сохраненных в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], или методом <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> для пакетов, сохраненных в файловой системе. В следующем примере с диска загружается существующий пакет, а затем просматриваются некоторые свойства этого пакета.  
   

@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект Locks | Документация Майкрософт
+description: Сведения об объекте SQLServer:Locks, который предоставляет сведения о блокировках SQL Server, полученных для отдельных типов ресурсов.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 853a19af5644e9c29659c5595a8ce9ee6357f499
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1553985a2c85eb183841491854ef010eb12d941a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775820"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458133"
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, объект Locks
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85775820"
   
  В этой таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks**.  
   
-|Счетчики SQL Server Locks|Description|  
+|Счетчики SQL Server Locks|Описание|  
 |-------------------------------|-----------------|  
 |**Среднее время ожидания блокировки (мс)**|Средняя длительность ожидания (в миллисекундах) для всех запросов блокировки, при которых потребовалось ожидание.|  
 |**Базовое время ожидания**|Только для внутреннего использования.|
@@ -39,7 +40,7 @@ ms.locfileid: "85775820"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнить блокировку следующих ресурсов.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |**_Total**|Данные по всем блокировкам.|  
 |**AllocUnit**|Блокировка на единицу распределения.|  

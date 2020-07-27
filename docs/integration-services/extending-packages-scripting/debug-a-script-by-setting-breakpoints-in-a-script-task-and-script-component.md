@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 6c03464f-3f7d-4882-b7f8-8e396f8e2944
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7b9fddccdf8f6f89c7b03074d052c49c94692bc6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0c9380a9e8699b2c0f38436228b0a2fdf820096e
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71286284"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913394"
 ---
 # <a name="debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component"></a>Отладка скрипта с помощью точек останова в задаче и компоненте «Скрипт»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Эта процедура описывает способ создания точки останова в скриптах, используемых задачей «Скрипт» и компонентом «Скрипт».  
   
- После задания точек останова в скрипте в диалоговом окне **Установка точек останова — \<имя объекта>** будет приведен список этих точек останова вместе со встроенными точками останова.  
+ После задания точек останова в скрипте в диалоговом окне **Установка точек останова — \<object name>** будет приведен список этих точек останова вместе со встроенными точками останова.  
   
 > [!IMPORTANT]  
 >  В некоторых случаях точки останова из задачи «Скрипт» и компонента скрипта пропускаются. Дополнительные сведения об отладке задачи и компонента "Скрипт" см. в пунктах **Отладка задачи "Скрипт"** раздела [Кодирование и отладка задачи "Скрипт"](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md), а также **Отладка компонента скрипта** раздела [Кодирование и отладка компонента скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  

@@ -1,5 +1,6 @@
 ---
 title: Узел памяти (SQL Server) | Документация Майкрософт
+description: Сведения об объекте "Память узла", который предоставляет счетчики для контроля использования памяти на сервере на узлах NUMA в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: cfa8eb11b89919a3a1f151a0deddd24528631fe1
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9afe187c8a9a732145862040ab09f0377aa59a60
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775789"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458786"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, память узла
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85775789"
 ## <a name="memory-node-counters"></a>Счетчики памяти узла  
  В этой таблице описываются счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Память узла**.  
   
-|SQL Server, счетчики диспетчера памяти|Description|  
+|SQL Server, счетчики диспетчера памяти|Описание|  
 |----------------------------------------|-----------------|  
 |**Память узла базы данных (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером на данном узле для страниц базы данных.|  
 |**Свободная память узла (КБ)**|Указывает объем памяти, который не используется сервером на данном узле.|  

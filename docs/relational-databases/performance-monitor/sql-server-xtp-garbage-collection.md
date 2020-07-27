@@ -1,5 +1,6 @@
 ---
 title: Сборка мусора XTP в SQL Server | Документация Майкрософт
+description: Сведения об объекте производительности XTP Garbage Collection в SQL Server, который содержит счетчики, относящиеся к механизму сборщика мусора XTP в In-Memory OLTP.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 64ae91e5-b420-44b4-af1a-f8bca83d7f41
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 0edeb2fef45d23faec92846b65626bdc3c00d049
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8575295948b5560f25dc0e967fa419699587af7b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774221"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457969"
 ---
 # <a name="sql-server-xtp-garbage-collection"></a>SQL Server XTP Garbage Collection
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85774221"
   
  Эта таблица описывает счетчики **XTP garbage Collection SQL Server** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Число попыток сканирования «пыльных углов»/с (от сборщика мусора)**|Число повторных попыток сканирования из-за конфликтов записи при обработке «пыльных углов», выданное сборщиком мусора (в среднем), в секунду Это счетчик очень низкого уровня, не предназначенный для пользователей.|  
 |**Рабочие элементы основной сборки мусора/с**|Число рабочих элементов в секунду, обрабатываемых основным потоком сборки мусора.|  

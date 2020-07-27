@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект статистики пула ресурсов | Документация Майкрософт
+description: Сведения об объекте SQLServer:Resource Pool Stats, который содержит счетчики производительности, сообщающие статистические данные по пулу ресурсов Resource Governor.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 35053d98db9b87b06512064e75adf06b4bcd6c51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4629cc0e109946c6dcd2f146e7e18568eca082f0
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758928"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458776"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, объект Resource Pool Stats
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85758928"
   
  Каждый активный пул ресурсов создает экземпляр объекта производительности SQLServer:Resource Pool Stats, при этом имя экземпляра совпадает с именем пула ресурсов в регуляторе ресурсов. В следующей таблице описываются счетчики, поддерживаемые этим экземпляром.  
   
-|Имя счетчика|Description|  
+|Имя счетчика|Описание|  
 |------------------|-----------------|  
 |**Active memory grant amount (KB)**|Текущий суммарный объем предоставленной памяти, в килобайтах (КБ). Эта информация также доступна в представлении [sys.dm_exec_query_resource_semaphores](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md).| 
 |**Active memory grants count**|Текущее общее количество операций по предоставлению памяти. Эта информация также доступна в представлении [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md).|  

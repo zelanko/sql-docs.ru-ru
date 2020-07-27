@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f35ec3ad66199e6c13c648c9a2208f5bf88f439a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 581cdcddc2138b2d5cd78790be412e0ad0a9fdda
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293929"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920480"
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Отправка почты» производит отправку сообщения электронной почты. Эта задача позволяет пакету отправлять сообщения при успешном или неуспешном завершении задач в рабочем процессе пакета либо в ответ на события, инициируемые при выполнении пакета. Например, задача может уведомить администратора базы данных об успешном или неуспешном завершении задачи резервного копирования базы данных.  
@@ -105,7 +105,7 @@ ms.locfileid: "71293929"
   
 ### <a name="options"></a>Параметры  
  **SMTPConnection**  
- Выберите диспетчер подключений SMTP из списка или щелкните **\<Создать соединение…>** , чтобы создать его.  
+ Выберите из списка диспетчер подключений SMTP или нажмите **\<New connection...>** для создания нового диспетчера подключений.  
   
 > [!IMPORTANT]  
 >  Диспетчер SMTP-соединений поддерживает только анонимную проверку подлинности и проверку подлинности Windows. Обычная проверка подлинности не поддерживается.  
@@ -153,13 +153,13 @@ ms.locfileid: "71293929"
   
 #### <a name="messagesourcetype--file-connection"></a>MessageSourceType = Соединение с файлом  
  **MessageSource**  
- Выберите диспетчер подключений файлов в списке или щелкните \<**Создать соединение...** >, чтобы создать его.  
+ Выберите в списке диспетчер подключений файлов или щелкните \<**New connection...**>, чтобы создать диспетчер подключений.  
   
  **См. также:** подробные сведения о [диспетчере файловых подключений](../../integration-services/connection-manager/file-connection-manager.md) и о [редакторе диспетчера файловых подключений](../../integration-services/connection-manager/file-connection-manager-editor.md).  
   
 #### <a name="messagesourcetype--variable"></a>MessageSourceType = Переменная  
  **MessageSource**  
- Выберите переменную в списке или щелкните \<**Создать переменную...** >, чтобы создать ее.  
+ Выберите переменную в списке или щелкните \<**New variable...**> для создания переменной.  
   
  **См. также:** подробные сведения о [переменных в службах Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) и о [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).  
   

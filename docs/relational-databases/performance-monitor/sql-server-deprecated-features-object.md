@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект Deprecated Features | Документация Майкрософт
+description: Сведения об объекте SQLServer:Deprecated Features, который предоставляет счетчик для наблюдения за функциями, обозначенными как устаревшие.
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 69c415d66ca3f490f0a3b293090ccac36bf9cc51
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c52fb67b4536da8d164784301f17237fdd0b24a
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85724779"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458836"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

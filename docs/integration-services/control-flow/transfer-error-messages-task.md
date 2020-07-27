@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e922e51949d8dd7e0e6e8220e2c74a72f0d7ab77
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293882"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913955"
 ---
 # <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача "Передача сообщений об ошибках" передает одно или несколько пользовательских сообщений об ошибках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пользовательские сообщения имеют идентификатор, больший или равный 50000. Сообщения с идентификаторами, меньшими 50000, являются системными и не могут передаваться с помощью задачи «Передача сообщений об ошибках».  
@@ -100,10 +100,10 @@ ms.locfileid: "71293882"
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к целевому серверу.  
   
  **IfObjectExists**  
  Выберите, следует ли при выполнении задачи перезаписать существующие пользовательские сообщения об ошибках, оставить их без изменения или зарегистрировать сбой в случае, если сообщения об ошибках с тем же именем уже существуют на целевом сервере.  

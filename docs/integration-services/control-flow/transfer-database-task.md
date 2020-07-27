@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8badd727143d80db08eed45ddbf5102c635ddeeb
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9aafd57717c2ac90757393ae8d0d75e569b88942
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293898"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914002"
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  
@@ -108,10 +108,10 @@ ms.locfileid: "71293898"
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к целевому серверу.  
   
  **DestinationDatabaseName**  
  Укажите имя базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на целевом сервере.  

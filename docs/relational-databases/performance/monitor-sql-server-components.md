@@ -1,5 +1,6 @@
 ---
 title: Наблюдение за компонентами SQL Server | Документация Майкрософт
+description: Сведения о том, как мониторинг позволяет выявлять тенденции производительности. SQL Server предоставляет службу в динамической среде, поэтому с течением времени может потребоваться внесение изменений.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4635d22ed3349302344bfb6ea7e94c63790c324b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 70fe75b97181815246d03de588bdd6d45af3ce9f
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85790795"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458393"
 ---
 # <a name="monitor-sql-server-components"></a>Наблюдение за компонентами SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -74,7 +75,7 @@ Windows предоставляет следующие средства мони�
 > [!IMPORTANT]
 > Трассировка SQL и [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] являются устаревшими. Пространство имен *Microsoft.SqlServer.Management.Trace*, которое содержит объекты трассировки Microsoft SQL Server и Replay, также устаревшее. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> Вместо этого используйте расширенные события. Дополнительные сведения о [расширенных событиях](../../relational-databases/extended-events/extended-events.md) см. в статьях [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) и [Использование профилировщика XEvent для SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Вместо этого используйте расширенные события. Дополнительные сведения о [расширенных событиях](../../relational-databases/extended-events/extended-events.md) см. в разделе [Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) и [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для рабочей нагрузки служб Analysis Services не устарел и будет по-прежнему поддерживаться.
@@ -99,7 +100,7 @@ Windows предоставляет следующие средства мони�
   
     Фильтры позволяют системе собирать данные только о тех событиях, которые имеют отношение к поставленной задаче мониторинга. Например, если требуется проконтролировать медленные запросы, с помощью фильтра можно собрать данные только о тех запросах к конкретной базе данных, которые выполняются более 30 секунд. 
     
-    Дополнительные сведения о фильтрации трассировки расширенных событий см. в статье [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration). 
+    Дополнительные сведения о фильтрации расширенных событий см. в разделе [Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md#demo-of-ssms-integration). 
     
     Дополнительные сведения о фильтрации трассировки SQL см. в статьях [Создание фильтра трассировки (Transact-SQL)](../../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md) и [Фильтрация событий в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md).  
   

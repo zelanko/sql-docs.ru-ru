@@ -1,5 +1,6 @@
 ---
 title: Журнал XTP-транзакций (SQL Server) | Документация Майкрософт
+description: Сведения об объекте производительности транзакций XTP SQL Server, который содержит счетчики, связанные с журналом транзакций In-Memory OLTP в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6a04e6cb09f40af918532613c32bddcaff11a57c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d167ee7ac85e206d79fdce0f13aba7c5d6f86827
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85715197"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458092"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>Журнал XTP-транзакций SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85715197"
   
  В этой таблице перечислены счетчики **журналов транзакций XTP SQL Server** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Записанные байты журнала/с**|Число байтов, записанное в журнал транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] механизмом In-Memory OLTP (в среднем), в секунду.|  
 |**Записанные записи журнала/с**|Число записей в журнале транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , создаваемых механизмом In-Memory OLTP (в среднем), в секунду.|  

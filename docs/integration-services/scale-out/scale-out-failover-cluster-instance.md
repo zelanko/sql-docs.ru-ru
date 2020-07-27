@@ -10,16 +10,16 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6e46ebc13ddd9368a2234c99979c9036a702e11e
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 00a31303aac5f562462cf6950e233fa84be31215
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924891"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86922112"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Поддержка горизонтального увеличения масштаба для обеспечения высокой доступности с помощью экземпляра отказоустойчивого кластера SQL Server
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -47,7 +47,7 @@ ms.locfileid: "82924891"
 Выполните шаг [3. Установка мастера горизонтального увеличения масштаба во вторичном узле](scale-out-support-for-high-availability.md#3-install-scale-out-master-on-the-secondary-node)
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Обновление файла конфигурации для службы мастера горизонтального увеличения масштаба
-Обновите файл конфигурации для службы мастера горизонтального увеличения масштаба (\<диск\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config) на основном и вторичном узлах. Обновите **SqlServerName** на [сетевое имя SQL Server]//[имя экземпляра] или [сетевое имя SQL Server] для экземпляра по умолчанию.
+Обновите файл конфигурации для службы мастера горизонтального увеличения масштаба (\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config) на основном и дополнительном узлах. Обновите **SqlServerName** на [сетевое имя SQL Server]//[имя экземпляра] или [сетевое имя SQL Server] для экземпляра по умолчанию.
 
 ## <a name="6-add-scale-out-master-service-to-sql-server-role-in-windows-failover-cluster"></a>6. Добавление службы мастера горизонтального увеличения масштаба в роль SQL Server в кластере Windows
 В диспетчере отказоустойчивости кластеров установите подключение к кластеру для горизонтального увеличения масштаба. Выберите роли в обозревателе, щелкните правой кнопкой мыши роль SQL Server и выберите "Добавить ресурс универсальной службы". 

@@ -1,5 +1,6 @@
 ---
 title: Производительность сервера и мониторинг активности | Документация Майкрософт
+description: Эти ресурсы помогают узнать, как использовать SQL Server и средства мониторинга производительности и активности Windows для оценки работы сервера.
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 1690e0022ae45444f8f25f9a7704622e55c0a06c
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a8da66c6aeaa1466e570839e4721e1545a46124b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85716897"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457885"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>Производительность сервера и мониторинг активности
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "85716897"
  
  -   [Расширенные события](../../relational-databases/extended-events/extended-events.md)
  
- -   [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+ -   [Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
  
  -   [Управление сеансами событий в обозревателе объектов](../../relational-databases/extended-events/manage-event-sessions-in-the-object-explorer.md)
  
@@ -70,7 +71,7 @@ ms.locfileid: "85716897"
 > В следующих разделах описываются методы использования трассировки SQL и [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
 > Трассировка SQL и [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] являются устаревшими. Пространство имен *Microsoft.SqlServer.Management.Trace*, которое содержит объекты трассировки Microsoft SQL Server и Replay, также устаревшее.   
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
-> Вместо этого используйте расширенные события. Дополнительные сведения о [расширенных событиях](../../relational-databases/extended-events/extended-events.md) см. в статьях [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) и [Использование профилировщика XEvent для SSMS](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Вместо этого используйте расширенные события. Дополнительные сведения о [расширенных событиях](../../relational-databases/extended-events/extended-events.md) см. в разделе [Быстрое начало. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) и [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE] 
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для рабочей нагрузки служб Analysis Services не устарел и будет по-прежнему поддерживаться.

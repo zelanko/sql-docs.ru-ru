@@ -1,5 +1,6 @@
 ---
 title: Объект General Statistics (SQL Server) | Документация Майкрософт
+description: Сведения об объекте SQLServer:General Statistics, который предоставляет счетчики для отслеживания общей активности сервера, например количества текущих подключений.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 854345e3985d3254e774071e8e6cc4df36be177b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d146725df4f8c2eaffafb0c46f8062849857ad01
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85775864"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458296"
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, объект General Statistics
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Объект **SQLServer: общая статистика** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, позволяющие наблюдать общую активность сервера, например количество одновременных соединений и количество пользователей в секунду, подключающихся или отключающихся от компьютера, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти показатели полезно использовать в больших системах оперативной обработки транзакций (OLTP), где большое количество клиентов постоянно подключаются и отключаются от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Объект **SQLServer:General Statistics** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, позволяющие наблюдать общую активность сервера, например количество одновременных соединений и количество пользователей в секунду, подключающихся или отключающихся от компьютера, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти показатели полезно использовать в больших системах оперативной обработки транзакций (OLTP), где большое количество клиентов постоянно подключаются и отключаются от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  В следующей таблице описаны счетчики объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Общая статистика**.  
   
-|Счетчики объекта общей статистики сервера SQL Server|Description|  
+|Счетчики объекта общей статистики сервера SQL Server|Описание|  
 |--------------------------------------------|-----------------|  
 |**Активных временных таблиц**|Количество используемых временных таблиц/табличных переменных.|  
 |**Число сбросов соединений в сек.**|Общее число входов в систему из пула соединений.|  

@@ -1,5 +1,5 @@
 ---
-title: DBCC INDEXDEFRAG (Transact-SQL) | Документы Майкрософт
+title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ''
 ms.date: 07/16/2017
 ms.prod: sql
@@ -23,14 +23,15 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: d1894e33de743e8e4b7f4053b7b77746cca3e124
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: ca27b41cffa6ee319acf27e62bc26e1f27a82c44
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85901660"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484303"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Дефрагментирует индексы указанной таблицы или представления.
@@ -54,17 +55,19 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## <a name="arguments"></a>Аргументы  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
+ *database_name* \| *database_id* \| 0  
  База данных, содержащая индекс для дефрагментации. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам [идентификаторов](../../relational-databases/databases/database-identifiers.md).  
   
- *table_name* | *table_id* | *view_name* | *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Таблица или представление, содержащие индекс для дефрагментации. Имена таблиц и представлений должны соответствовать требованиям, предъявляемым к идентификаторам.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  Имя или идентификатор индекса, подлежащего дефрагментации. Если этот аргумент не указан, дефрагментируются все индексы заданной таблицы или представления. Имена индексов должны соответствовать правилам для идентификаторов.  
   
- *partition_number* | 0  
+ *partition_number* \| 0  
  Номер секции индекса, которую следует дефрагментировать. Если этот аргумент не указан или равен 0, дефрагментируются все секции заданного индекса.  
   
  WITH NO_INFOMSGS  

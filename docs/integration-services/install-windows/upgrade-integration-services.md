@@ -16,23 +16,23 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 0b7fd8a71f2636893f157b18630e2773b2f01951
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4f287a9853b27a58128176bfe740a3efc99a9258
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68262793"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86919990"
 ---
 # <a name="upgrade-integration-services"></a>Обновление служб Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Если на компьютере установлены службы [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] или их более поздняя версия, вы можете обновить их до [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
  При обновлении до [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] на компьютере, где установлена одна из предыдущих версий [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] устанавливается параллельно с более ранней версией.  
   
- Вместе с этой параллельной установкой устанавливается несколько версий программы dtexec. Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь (\<диск>:\Program Files\Microsoft SQL Server\\<версия\>\DTS\Binn). Дополнительные сведения о программе dtexec см. в разделе [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Вместе с этой параллельной установкой устанавливается несколько версий программы dtexec. Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь (\<drive>:\Program Files\Microsoft SQL Server\\<версия\>\DTS\Binn). Дополнительные сведения о программе dtexec см. в разделе [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
 > [!NOTE]  
 >  В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все пользователи в группе пользователей имели доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При установке [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]пользователи не имеют доступа к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию эта служба является защищенной. После установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] администратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен запустить средство настройки DCOM (Dcomcnfg.exe), чтобы предоставить конкретным пользователям доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Дополнительные сведения см. в разделе [Службы Integration Services (SSIS)](../../integration-services/service/integration-services-service-ssis-service.md).  

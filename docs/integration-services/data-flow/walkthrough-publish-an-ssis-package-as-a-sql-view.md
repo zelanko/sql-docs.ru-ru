@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: d32d9761-93fb-4020-bf82-231439c6f3ac
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 52c4f92994068e0c5de8afd7233bd53c1244e38d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 410fb5cc9ebfe04b62b6d196e7757f2455234014
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80216903"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920345"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Пошаговое руководство. Публикация пакета служб SSIS в представлении SQL
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В этом пошаговом руководстве приводятся подробные инструкции для публикации пакета служб SSIS в качестве представления SQL в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -164,9 +164,9 @@ ms.locfileid: "80216903"
   
 1.  Запустите среду SQL Server Management Studio.  
   
-2.  Разверните \<**имя компьютера**>, **Базы данных**, \<**база данных, выбранная в мастере**> и **Представления**.  
+2.  Разверните \<**machine name**>, **Базы данных**, \<**database you selected in the wizard**> и **Представления**.  
   
-3.  Щелкните правой кнопкой мыши \<**представление, созданное мастером**> и нажмите кнопку **Выбрать первые 1000 строк**.  
+3.  Щелкните правой кнопкой мыши \<**view created by the wizard**>, созданное мастером, и нажмите кнопку **Выбрать первые 1000 строк**.  
   
 4.  Убедитесь, что это результаты из пакета служб SSIS.  
   

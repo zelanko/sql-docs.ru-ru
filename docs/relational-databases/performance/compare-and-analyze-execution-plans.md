@@ -1,5 +1,6 @@
 ---
 title: Сравнение и анализ планов выполнения | Документация Майкрософт
+description: Сведения о том, как сравнивать и анализировать планы выполнения с помощью среды SQL Server Management Studio. Планы выполнения служат для отображения методов получения данных, используемых оптимизатором запросов.
 ms.custom: ''
 ms.date: 11/21/2018
 ms.prod: sql
@@ -18,12 +19,12 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0689bf7815074048c810a47b5784b7bfa8831b8a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: affab87c017ed63e9843deafff26db682aa93aac
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85655753"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457386"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>Сравнение и анализ планов выполнения
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 242a5c58321ad211a7e27b28b4574433c45ceceb
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293862"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914800"
 ---
 # <a name="transfer-logins-task"></a>Задача «Передача имен входа»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача «Передача имен входа» служит для передачи одного или нескольких имен входа между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -106,10 +106,10 @@ ms.locfileid: "71293862"
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к целевому серверу.  
   
  **LoginsToTransfer**  
  Выберите имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для копирования их с исходного сервера на целевой. Параметры этого свойства приведены в следующей таблице.  

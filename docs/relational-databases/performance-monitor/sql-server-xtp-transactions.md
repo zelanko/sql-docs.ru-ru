@@ -1,5 +1,6 @@
 ---
 title: Транзакции XTP (SQL Server) | Документация Майкрософт
+description: Сведения об объекте производительности транзакций XTP SQL Server, который содержит счетчики, относящиеся к транзакциям выполняющейся в памяти OLTP в SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b8da1956665775cf54da529140a10a8477cd86ad
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 384e2feb7d638a7ff8cad4e22346ba58369cc6aa
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85741526"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458076"
 ---
 # <a name="sql-server-xtp-transactions"></a>XTP-транзакции SQL Server
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85741526"
   
  В этой таблице перечислены счетчики **транзакций XTP SQL Server** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Каскадных прерываний/с**|Количество транзакций, для которых был сделан откат из-за отката зависимостей фиксации (в среднем), в секунду.|  
 |**Зависимостей фиксации принято/с**|Общее число зависимостей фиксации, принятых транзакциями (в среднем) в секунду.|  

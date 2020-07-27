@@ -1,5 +1,6 @@
 ---
 title: Создание структуры плана для параметризованных запросов | Документация Майкрософт
+description: Сведения о создании структуры плана, которой сопоставляется любой запрос заданной параметризованной формы и которая принуждает SQL Server параметризовать такой запрос.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 4a754b2e2d748ebc007918a75e17f3851e4a9dd3
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 070b73d48f0a7c372f0a2eeb17bac930129249b2
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85774229"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457339"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>Создание руководства плана для параметризованных запросов
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]

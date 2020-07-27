@@ -1,5 +1,6 @@
 ---
 title: SQL Server, реплика базы данных | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:Database Replica, который содержит счетчики производительности, сообщающие сведения о базах данных-получателях групп доступности AlwaysOn.
 ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
@@ -15,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: a5f6bdce-2b13-4924-aaeb-b50b57d624d8
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: db892b71ba5e86faf1b45b94cdef12b1850c22a5
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: d164d5d2ad9bba0cbb052941944e3808cf1dc822
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85730839"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458338"
 ---
 # <a name="sql-server-database-replica"></a>SQL Server, реплика базы данных
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект производительности **SQLServer:Database Replica** содержит счетчики производительности, которые сообщают сведения о базах данных-получателях групп доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот объект действителен только на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , на котором размещена вторичная реплика.  
   
-|Имя счетчика|Description|Просмотр в…|  
+|Имя счетчика|Описание|Просмотр в…|  
 |------------------|-----------------|--------------|  
 |**Получено файлов, байт/с**|Объем данных FILESTREAM, полученный вторичной репликой для базы данных-получателя в течение последней секунды.|Вторичная реплика|  
 |**Очередь ожидания применения для журнала**|Число блоков журнала, ожидающих применения к реплике базы данных.|Вторичная реплика|

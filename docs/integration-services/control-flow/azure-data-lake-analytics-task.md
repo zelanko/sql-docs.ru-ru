@@ -12,16 +12,16 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 ms.reviewer: maghan
-ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: da776f4ccddcfaaa6c0f8e6af6363f2ef9a1f13d
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82763665"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86913902"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Задача Azure Data Lake Analytics
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -60,7 +60,7 @@ ms.locfileid: "82763665"
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Введите отправляемый запрос U-SQL непосредственно в окно параметров или нажмите кнопку обзора (...), чтобы ввести запрос U-SQL в диалоговое окно **Ввод запроса U-SQL**.|  
 |**SourceType = FileConnection**|Выберите существующий диспетчер подключений файлов или щелкните <**Новое подключение**>, чтобы создать подключение файла. См. дополнительные сведения о [диспетчере подключения файлов](../../integration-services/connection-manager/file-connection-manager.md) и [редакторе диспетчера подключения файлов](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Выберите существующую переменную или щелкните \<**Создать переменную**>, чтобы создать новую. См. дополнительные сведения о [переменных Integration Services](../../integration-services/integration-services-ssis-variables.md) и [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = Variable**|Выберите существующую переменную или щелкните \<**New variable...**>, чтобы создать новую. См. дополнительные сведения о [переменных Integration Services](../../integration-services/integration-services-ssis-variables.md) и [добавлении переменной](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 | &nbsp; | &nbsp; |
 
 

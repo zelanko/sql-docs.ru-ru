@@ -1,5 +1,6 @@
 ---
 title: Объект зеркального отображения базы данных (SQL Server) | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:Database Mirroring, который содержит счетчики производительности, сообщающие сведения о зеркальном отображении базы данных SQL Server.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: b2239718cae70fc5df05e65e7d310e86efe65efc
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 6c2d3dd59f6e2736938bfc9880e7258cf81dfafb
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85760555"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458036"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, объект Database Mirroring
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Объект производительности **SQLServer:Database Mirroring** содержит счетчики производительности, сообщающие сведения о зеркальном отображении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В следующей таблице перечислены счетчики этого объекта.  
   
-|Имя|Description|  
+|Имя|Описание|  
 |----------|-----------------|  
 |**Получено байт/с**|Число байт, получаемых в секунду.|  
 |**Отправлено байт/с**|Число байт, отправляемых в секунду.|  

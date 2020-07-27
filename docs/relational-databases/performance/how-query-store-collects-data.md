@@ -1,5 +1,6 @@
 ---
 title: Как хранилище запросов собирает данные | Документация Майкрософт
+description: Хранилище запросов SQL Server сохраняет связанные с запросами данные во внутренних таблицах и предоставляет их пользователям с помощью набора представлений.
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23b3d551d11ee09875f49be1bd553adcb9d9759c
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 1c099485550f258c81684bf11c76ab7d57d0830b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86005992"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458426"
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "86005992"
  ![Представления процессов хранилища запросов](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
 **Описания представлений**  
   
-|Представление|Описание|  
+|Просмотр|Описание|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Показывает тексты уникальных запросов к базе данных. Комментарии и пробелы до и после текста запроса игнорируются. Комментарии и пробелы внутри текста учитываются. Каждая инструкция в пакете создает текстовую запись отдельного запроса.|  
 |**sys.query_context_settings**|Показывает уникальные комбинации влияющих на план параметров, при которых выполняются запросы. Тот же текст запроса, выполненного с другими влияющими на план параметрами, создает запись отдельного запроса в хранилище запросов, так как элемент `context_settings_id` является частью ключа запроса.|  

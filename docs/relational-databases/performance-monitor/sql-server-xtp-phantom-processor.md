@@ -1,5 +1,6 @@
 ---
 title: SQL Server XTP Phantom Processor | Документация Майкрософт
+description: Сведения об объекте производительности SQL Server XTP Phantom Processor, который содержит счетчики, относящиеся к подсистеме обработки фантомов механизма In-Memory OLTP.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bb3c619edfc1fae76e8b497c46a882fbfc42ffd2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 1ab23b48d001d9145a06b620a20812f856e699de
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85743171"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457936"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP Phantom Processor
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "85743171"
   
  В этой таблице описываются счетчики объекта **SQL Server XTP Phantom Processor** .  
   
-|Счетчик|Description|  
+|Счетчик|Описание|  
 |-------------|-----------------|  
 |**Число попыток сканирования «пыльных углов»/с (от Phantom)**|Число повторных попыток сканирования из-за конфликтов записи при обработке «пыльных углов», выданное Phantom Processor (в среднем), в секунду Это счетчик очень низкого уровня, не предназначенный для пользователей.|  
 |**Удалено истекших фантомных строк/с**|Число просроченных строк, удаленных фантомными сканированиями (в среднем), в секунду.|  

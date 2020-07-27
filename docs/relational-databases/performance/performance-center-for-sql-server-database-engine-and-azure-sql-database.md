@@ -1,5 +1,6 @@
 ---
 title: Центр производительности
+description: Поиск необходимых сведений о производительности в ядре СУБД SQL Server и Базе данных SQL Azure.
 ms.custom: seo-dt-2019
 ms.date: 12/11/2018
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: e5149d0b1128b2ecb0c934ad9abf3ec7979e532e
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 9a0a4e7305ec54193b933f7360c32ef864f0c6ec
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85758866"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457674"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Центр производительности для базы данных Azure SQL и SQL Server Database Engine
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -66,7 +67,7 @@ ms.locfileid: "85758866"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Оптимизация параллелизма**|[Настройка параметра конфигурации сервера max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **Оптимизация оптимизатора запросов**|[ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[Указание запроса USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Статистика](../../relational-databases/statistics/statistics.md)**|[Условия обновления статистики](../statistics/statistics.md)<br />[Обновить статистику](../../relational-databases/statistics/update-statistics.md)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Диагностика общих проблем с производительностью хэш-индексов для оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Демонстрация повышения производительности выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Создание таблиц в базе данных TempDB и обращение к ним из скомпилированных в собственном коде хранимых процедур](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Диагностика общих проблем с производительностью хэш-индексов для оптимизированных для памяти таблиц](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Демонстрация. Повышение производительности In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md)**|[Интеллектуальная обработка запросов](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>См. также:  

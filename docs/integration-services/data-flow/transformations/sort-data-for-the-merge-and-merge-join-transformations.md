@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8dbc3df45f628c55e0d9e1cbf7f3b05b1a746091
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71297789"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914300"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Сортировка данных для преобразований «Слияние» и «Соединение слиянием»
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]для преобразований «Слияние» и «Соединение слиянием» необходимы отсортированные входные данные. Входные данные должны быть отсортированы физически, а параметры сортировки должны быть установлены на выходы и выходные столбцы источника или вышестоящего преобразования. Если параметры сортировки определяют, что данные отсортированы, но данные в действительности не отсортированы, операция слияния или соединения слиянием может дать непредвиденные результаты.  
@@ -75,7 +75,7 @@ ms.locfileid: "71297789"
   
 5.  Щелкните вкладку **Свойства входов и выходов** .  
   
-6.  Щелкните **Вывод \<имя компонента>** и задайте для свойства **IsSorted** значение **True**.  
+6.  Щелкните **Вывод \<component name>** и задайте для свойства **IsSorted** значение **True**.  
   
     > [!NOTE]  
     >  Если пользователь вручную задаст для свойства **IsSorted** выходных данных значение **True** , а данные не сортированы, то при выполнении пакета в последующих преобразованиях "Соединение слиянием" и "Слияние" могут возникнуть отсутствующие или недопустимые сравнения данных.  

@@ -12,12 +12,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38de30346d867d67770ce9b988d986f5f886c8fa
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: a94d8534dfe028db0d98b8dc2ff585cd7d083026
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85722462"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86484325"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Отслеживание производительности скомпилированных в собственном коде хранимых процедур
 
@@ -27,46 +27,45 @@ ms.locfileid: "85722462"
 ## <a name="using-extended-events"></a>Использование расширенных событий  
  Для трассировки выполнения запроса используйте расширенное событие **sp_statement_completed** . Создайте сеанс с этим событием, при этом можно использовать фильтр в object_id для определенной хранимой процедуры, скомпилированной в собственном коде. Расширенное событие вызывается после выполнения каждого запроса. Время ЦП и время существования, указанные расширенным событием, показывают объем ресурсов ЦП, который потребовался на выполнение запроса, и время его выполнения. Скомпилированная в собственном коде хранимая процедура, которая потребляет значительное время ЦП, может сталкиваться с проблемами производительности.  
   
- **line_number**вместе с **object_id** в расширенном событии можно использовать для анализа запросов. Следующий запрос может использоваться для получения определения процедуры. Номер строки можно использовать для поиска запроса в определении.  
+**line_number**вместе с **object_id** в расширенном событии можно использовать для анализа запросов. Следующий запрос может использоваться для получения определения процедуры. Номер строки можно использовать для поиска запроса в определении.  
   
 ```sql  
 SELECT [definition]
-    from sys.sql_modules
-    where object_id=object_id;
+FROM sys.sql_modules
+WHERE object_id=object_id;
 ```  
-  
-  
+    
 ## <a name="using-data-management-views-and-query-store"></a>Использование динамических административных представлений и хранилища запросов
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)] поддерживают сбор статистики выполнения для скомпилированных в собственном коде хранимых процедур как на уровне процедуры, так и на уровне запроса. Из-за влияния на производительность сбор статистики выполнения по умолчанию не используется.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] поддерживают сбор статистики выполнения для скомпилированных в собственном коде хранимых процедур как на уровне процедуры, так и на уровне запроса. Из-за влияния на производительность сбор статистики выполнения по умолчанию не используется.  
 
 Статистика выполнения отражается в системных представлениях [sys.dm_exec_procedure_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md) и [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md), а также в [хранилище запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md).
 
 ## <a name="procedure-level-execution-statistics"></a>Статистика выполнения на уровне процедур
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [sys.sp_xtp_control_proc_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
+
 ```sql
 EXEC sys.sp_xtp_control_proc_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_PROCEDURE_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** и **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне процедуры с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_PROCEDURE_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне процедуры для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+
 ```sql
-ALTER DATABASE
-    SCOPED CONFIGURATION
-    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="query-level-execution-statistics"></a>Статистика выполнения на уровне запросов
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне запроса с помощью [sys.sp_xtp_control_query_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md).  Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущего экземпляра:
+
 ```sql
 EXEC sys.sp_xtp_control_query_exec_stats 1
 ```
 
-**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне инструкции с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_QUERY_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+**[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]** и **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : включите или отключите сбор статистики для скомпилированных в собственном коде хранимых процедур на уровне инструкции с помощью [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), используя параметр `XTP_QUERY_EXECUTION_STATISTICS`. Следующая инструкция включает сбор статистики выполнения на уровне запроса для всех скомпилированных в собственном коде модулей T-SQL текущей базы данных:
+
 ```sql
-ALTER DATABASE
-    SCOPED CONFIGURATION
-    SET XTP_QUERY_EXECUTION_STATISTICS = ON;
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_QUERY_EXECUTION_STATISTICS = ON;
 ```
 
 ## <a name="sample-queries"></a>Примеры запросов
@@ -77,60 +76,37 @@ ALTER DATABASE
  После сбора статистики следующий запрос возвращает имена и статистику выполнения скомпилированных в собственном коде хранимых процедур в текущей базе данных.  
 
 ```sql
-SELECT
-        object_id,
-        object_name(object_id) as 'object name',
-        cached_time,
-        last_execution_time,  execution_count,
-        total_worker_time,    last_worker_time,
-        min_worker_time,      max_worker_time,
-        total_elapsed_time,   last_elapsed_time,
-        min_elapsed_time,     max_elapsed_time
-    from
-        sys.dm_exec_procedure_stats
-    where
-        database_id = db_id()
-        and
-        object_id in
-            (
-            SELECT object_id
-                from sys.sql_modules
-                where uses_native_compilation=1
-            )
-    order by
-        total_worker_time desc;
+SELECT object_id, object_name(object_id) AS 'object name',
+       cached_time, last_execution_time, execution_count,
+       total_worker_time, last_worker_time,
+       min_worker_time, max_worker_time,
+       total_elapsed_time, last_elapsed_time,
+       min_elapsed_time, max_elapsed_time
+FROM sys.dm_exec_procedure_stats
+WHERE database_id = DB_ID()
+      AND object_id IN (SELECT object_id FROM sys.sql_modules WHERE uses_native_compilation = 1)
+ORDER BY total_worker_time desc;
 ```
 
 Следующий запрос возвращает текст запроса, а также статистику выполнения всех запросов из скомпилированных в собственном коде хранимых процедур в текущей базе данных, для которой были собраны статистические данные. Статистика при этом упорядочивается по общему времени рабочей роли в убывающем порядке.  
 
 ```sql
-SELECT
-        st.objectid,
-        object_name(st.objectid) as 'object name',
+SELECT st.objectid,
+        OBJECT_NAME(st.objectid) AS 'object name',
         SUBSTRING(
             st.text,
             (qs.statement_start_offset/2) + 1,
             ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1
-            ) as 'query text',
-        qs.creation_time,
-        qs.last_execution_time,   qs.execution_count,
-        qs.total_worker_time,     qs.last_worker_time,
-        qs.min_worker_time,       qs.max_worker_time,
-        qs.total_elapsed_time,    qs.last_elapsed_time,
-        qs.min_elapsed_time,      qs.max_elapsed_time
-    FROM
-                    sys.dm_exec_query_stats qs
-        cross apply sys.dm_exec_sql_text(sql_handle) st
-    WHERE
-        st.dbid = db_id()
-        and
-        st.objectid in
-            (SELECT object_id
-                from sys.sql_modules
-                where uses_native_compilation=1
-            )
-    ORDER BY
-        qs.total_worker_time desc;
+            ) AS 'query text',
+        qs.creation_time, qs.last_execution_time, qs.execution_count,
+        qs.total_worker_time, qs.last_worker_time, qs.min_worker_time, 
+        qs.max_worker_time, qs.total_elapsed_time, qs.last_elapsed_time,
+        qs.min_elapsed_time, qs.max_elapsed_time
+FROM sys.dm_exec_query_stats qs
+CROSS APPLY sys.dm_exec_sql_text(sql_handle) st
+WHERE database_id = DB_ID()
+      AND object_id IN (SELECT object_id FROM sys.sql_modules WHERE uses_native_compilation = 1)
+ORDER BY total_worker_time desc;
 ```
 
 ## <a name="query-execution-plans"></a>Планы выполнения запросов

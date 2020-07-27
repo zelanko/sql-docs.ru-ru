@@ -1,5 +1,6 @@
 ---
 title: Средства мониторинга и настройки производительности | Документация Майкрософт
+description: Сведения о средствах мониторинга и настройки SQL Server, а также о том, как выбрать нужное средство в зависимости от типа мониторинга и отслеживаемых событий.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 30cc668487299677bb2874300d660d09d1dedd22
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 13b974b37202a41f333e7d94104eccbee4c72d5c
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85635446"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457672"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Средства контроля и настройки производительности
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "85635446"
   
  Ниже приведены средства контроля и настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Инструмент|Description|  
+|Средство|Описание|  
 |----------|-----------------|  
 |[Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)|Встроенные функции отображают статистику моментального снимка по активности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с момента запуска сервера. Эта статистика хранится в предопределенных счетчиках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Например, счетчик **\@\@CPU_BUSY** содержит количество времени, затраченное ЦП на выполнение кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], счетчик **\@\@CONNECTIONS** содержит число соединений или попыток соединений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а **\@\@PACKET_ERRORS** содержит количество сетевых пакетов в соединениях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)|Инструкции консоли базы данных (DBCC) позволяют просматривать статистику производительности, а также логическую и физическую согласованность базы данных.|  
@@ -70,7 +71,7 @@ ms.locfileid: "85635446"
 ## <a name="windows-monitoring-tools"></a>Средства контроля Windows  
  Кроме того, в операционных системах Windows и Windows Server 2003 имеются следующие средства наблюдения:  
   
-|Инструмент|Description|  
+|Средство|Описание|  
 |----------|-----------------|  
 |Диспетчер задач|Отображает краткий обзор процессов и приложений, запущенных в системе.|  
 |Агент мониторинга сети|Отслеживает сетевой трафик.|  

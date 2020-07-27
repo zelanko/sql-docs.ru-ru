@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e3602a8e21d6d7fd9371331914c6157c5db2ca4
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295133"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920795"
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок потока управления в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -135,7 +135,7 @@ ms.locfileid: "71295133"
   
     -   Чтобы установить точки останова в обработчике события, перейдите на вкладку **Обработчик события** , щелкните правой кнопкой мыши задачу, контейнер "цикл по элементам", "цикл по каждому элементу" или контейнер последовательности и выберите пункт **Изменить точки останова**.  
   
-4.  В диалоговом окне **Задание точек останова \<имя контейнера>** выберите точки останова для включения.  
+4.  В диалоговом окне **Задание точек останова\<container name>** выберите точки останова для включения.  
   
 5.  При необходимости измените тип счетчика попаданий и значение числа попаданий для каждой точки останова.  
   

@@ -39,12 +39,12 @@ ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 296616f71102f5a5c68fe817b409273f6bf9428a
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ebb1f9b6a1d2b9651b26c8649db89c0ca89fc5fa
+ms.sourcegitcommit: b57d98e9b2444348f95c83a24b8eea0e6c9da58d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85999778"
+ms.lasthandoff: 07/21/2020
+ms.locfileid: "86554759"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT — предложение ORDER BY (Transact-SQL)
 
@@ -92,7 +92,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  *order_by_expression*  
  Указывает столбец или выражение, по которому производится сортировка результирующего набора запроса. Столбец сортировки может быть указан с помощью имени или псевдонима столбца или неотрицательного целого числа, представляющего позицию столбца в списке выбора.  
   
@@ -124,7 +126,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  В плане выполнения запроса значение смещения строки отображается в атрибуте **Offset** оператора запроса TOP.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Указывает число строк, возвращаемых после обработки предложения OFFSET. Это значение может быть целочисленной константой или выражением, значение которого больше единицы или равно единице.  
   
 **Применимо к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и выше, а также [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

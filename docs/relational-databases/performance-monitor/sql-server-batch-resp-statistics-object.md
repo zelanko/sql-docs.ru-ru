@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект Batch Resp Statistics | Документация Майкрософт
+description: Сведения об объекте производительности SQLServer:Batch Resp Statistics, который предоставляет счетчики для отслеживания времени ответа пакета SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 447ab09f049a5177a68a1c4a1d3d00239161149a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b28b0d8af863c21f4764f5c7126fca20b18c1ab1
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787375"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458156"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, объект статистики по ответам пакетов
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -26,7 +27,7 @@ ms.locfileid: "85787375"
 В следующей таблице представлены объекты производительности **Batch Resp Statistics** SQL Server.
 
 
-|**Счетчики Batch Resp Statistics SQL Server**|Description|  
+|**Счетчики Batch Resp Statistics SQL Server**|Описание|  
 |-------------|-----------------|  
 |**Batches >=000000ms & \<000001ms**|Количество пакетов SQL, у которых время ответа больше или равно 0 мс, но меньше 1 мс.|
 |**Batches >=000001ms & \<000002ms**|Количество пакетов SQL, у которых время ответа больше или равно 1 мс, но меньше 2 мс.|
@@ -48,7 +49,7 @@ ms.locfileid: "85787375"
 
 Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Элемент|Description|  
+|Элемент|Описание|  
 |----------|-----------------|  
 |**CPU Time:Requests**|Время, затраченное ЦП на запрос.|  
 |**CPU Time:Total(ms)**|Общее время, затраченное ЦП на пакет.|  

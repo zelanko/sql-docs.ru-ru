@@ -12,12 +12,12 @@ ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 05dcd994a1cf2387bfe7e1a1be46e7a95d24249d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 2eb2a150921c613019894e34e2859fa9adcf9137
+ms.sourcegitcommit: edba1c570d4d8832502135bef093aac07e156c95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85723375"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86483722"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Вызов хранимых процедур, скомпилированных в собственном коде, из приложений для доступа к данным
 
@@ -33,17 +33,17 @@ ms.locfileid: "85723375"
 
 ### <a name="sqlclient"></a>SqlClient
 
-- Для SqlClient нет различий между *подготовленным* и *прямым* выполнением. Выполняйте хранимые процедуры с помощью SqlCommand с CommandType = CommandType.StoredProcedure.
+- Для SqlClient нет различий между *подготовленным* и *прямым* выполнением. Выполняйте хранимые процедуры с помощью SqlCommand с `CommandType = CommandType.StoredProcedure`.
 
 - SqlClient не поддерживает подготовленный удаленный вызов процедур (RPC).
 
-- SqlClient не поддерживает получение данных только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой (CommandType.SchemaOnly).
+- SqlClient не поддерживает получение данных только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой (`CommandType.SchemaOnly`).
   - Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
-### <a name="ssnoversion-native-client"></a>Собственный клиент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+### <a name="sql-server-native-client"></a>собственный клиент SQL Server
 
 - Версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client до [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не позволяют получить данные только схемы (обнаружение метаданных) о результирующих наборах, возвращенных скомпилированной в собственном коде хранимой процедурой.
-  - Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
+- Используйте вместо этого процедуру [sp_describe_first_result_set (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).
 
 ### <a name="odbc"></a>ODBC
 
@@ -111,11 +111,11 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 5. Проверьте успешное выполнение программы, запросив содержимое таблиц.
 
     ```sql
-    SELECT * FROM dbo.Ord
+    SELECT * FROM dbo.Ord;
     ```
 
     ```sql
-    SELECT * FROM dbo.Item
+    SELECT * FROM dbo.Item;
     ```
 
 ## <a name="preliminary-transact-sql"></a>Код на Transact-SQL
@@ -124,16 +124,16 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 
 ```sql
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.OrderInsert'))
-  DROP PROCEDURE dbo.OrderInsert  
+DROP PROCEDURE dbo.OrderInsert;  
 GO
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.ItemInsert'))
-  DROP PROCEDURE dbo.ItemInsert  
+DROP PROCEDURE dbo.ItemInsert;  
 GO  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Ord'))
-  DROP TABLE dbo.Ord  
+DROP TABLE dbo.Ord;  
 GO  
 IF EXISTS (SELECT * FROM SYS.OBJECTS WHERE OBJECT_ID=OBJECT_ID('dbo.Item'))
-  DROP TABLE dbo.Item  
+DROP TABLE dbo.Item;  
 GO
 
 CREATE TABLE dbo.Ord  
@@ -141,7 +141,7 @@ CREATE TABLE dbo.Ord
    OrdNo INTEGER NOT NULL PRIMARY KEY NONCLUSTERED,  
    OrdDate DATETIME NOT NULL,   
    CustCode VARCHAR(5) NOT NULL)   
- WITH (MEMORY_OPTIMIZED=ON)  
+ WITH (MEMORY_OPTIMIZED=ON);  
 GO  
   
 CREATE TABLE dbo.Item  
@@ -151,31 +151,29 @@ CREATE TABLE dbo.Item
    ProdCode INTEGER NOT NULL,   
    Qty INTEGER NOT NULL,  
    CONSTRAINT PK_Item PRIMARY KEY NONCLUSTERED (OrdNo,ItemNo))  
-   WITH (MEMORY_OPTIMIZED=ON)  
+   WITH (MEMORY_OPTIMIZED=ON);  
 GO  
   
 CREATE PROCEDURE dbo.OrderInsert(
     @OrdNo INTEGER, @CustCode VARCHAR(5))  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH  
-(   TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
-   LANGUAGE = 'english')  
+   (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = 'english')  
   
   DECLARE @OrdDate datetime = GETDATE();  
   INSERT INTO dbo.Ord (OrdNo, CustCode, OrdDate)
-      VALUES (@OrdNo, @CustCode, @OrdDate);
-END  
+  VALUES (@OrdNo, @CustCode, @OrdDate);
+END;  
 GO  
   
 CREATE PROCEDURE dbo.ItemInsert(
     @OrdNo INTEGER, @ItemNo INTEGER, @ProdCode INTEGER, @Qty INTEGER)
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH  
-(   TRANSACTION ISOLATION LEVEL = SNAPSHOT,  
-   LANGUAGE = N'us_english')  
+   (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english')  
   
   INSERT INTO dbo.Item (OrdNo, ItemNo, ProdCode, Qty)
-      VALUES (@OrdNo, @ItemNo, @ProdCode, @Qty)
+  VALUES (@OrdNo, @ItemNo, @ProdCode, @Qty)
 END  
 GO  
 ```
@@ -435,5 +433,4 @@ int _tmain() {
 ```
 
 ## <a name="see-also"></a>См. также:
-
 [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

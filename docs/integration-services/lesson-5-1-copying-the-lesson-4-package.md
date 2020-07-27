@@ -10,16 +10,16 @@ ms.topic: tutorial
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17a72f7d11a2ed743bbede2852b6336ce808a75d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12fa0d5fc5c96a1ea51d0be762ecf2934ca26497
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295923"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916876"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>Занятие 5-1. Копирование пакета занятия 4
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -45,7 +45,7 @@ ms.locfileid: "71295923"
 
 7.  В окне **Свойства** измените свойство **Имя** на **Занятие 5**.
 
-8.  Установите флажок для свойства **ИД**, щелкните стрелку раскрывающегося списка и выберите пункт **\<Сформировать новый идентификатор>** .
+8.  Установите флажок для свойства **ИД**, щелкните стрелку раскрывающегося списка и выберите пункт **\<Generate New ID>** .
 
 ## <a name="add-the-completed-lesson-4-package"></a>Добавление готового пакета занятия 4
 

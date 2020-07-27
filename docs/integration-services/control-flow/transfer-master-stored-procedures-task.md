@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: cee2dfed374c3f479e32b8d81602eff924287356
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fc3b10cd913f0cf2d270fd228ad4729f12ec0f53
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293850"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916100"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Задача "Передача главных хранимых процедур" перемещает одну или несколько пользовательских хранимых процедур между базами данных **master** в экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы переместить хранимую процедуру из базы данных **master** , владелец процедуры должен быть dbo.  
@@ -107,10 +107,10 @@ ms.locfileid: "71293850"
   
 ### <a name="options"></a>Параметры  
  **SourceConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к исходному серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к исходному серверу.  
   
  **DestinationConnection**  
- Выберите в списке диспетчер подключений SMO или нажмите кнопку **\<Создать подключение...>** , чтобы создать подключение к целевому серверу.  
+ Выберите из списка диспетчер подключений SMO или нажмите кнопку **\<New connection...>** , чтобы создать новое подключение к целевому серверу.  
   
  **IfObjectExists**  
  Выберите, каким способом задача будет обрабатывать пользовательские хранимые процедуры с именами, уже существующими в базе данных **master** на целевом сервере.  

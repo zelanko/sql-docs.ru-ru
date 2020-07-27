@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: b374955ea4a07cd94de88202fe02ffbb572d0a1c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 52368632a7e2d871f91f4e7c60aad0a7f03dbcf9
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71293651"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86923270"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Копирование пакета с помощью SQL Server Data Tools
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   В этом разделе описывается, как создать новый пакет служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] копированием существующего пакета и как обновить свойства **Name** и **GUID** нового пакета.  
@@ -37,7 +37,7 @@ ms.locfileid: "71293651"
   
 3.  Убедитесь, что копируемый пакет выбран в обозревателе решений либо в конструкторе служб SSIS выбрана вкладка, содержащая пакет  
   
-4.  В меню **Файл** выберите команду **Сохранить \<имя пакета> как**.  
+4.  В меню **Файл** выберите команду **Сохранить \<package name> как**.  
   
     > [!NOTE]  
     >  Чтобы команда **Сохранить как** появилась в меню **Файл** , пакет нужно открыть в конструкторе служб SSIS.  
@@ -52,7 +52,7 @@ ms.locfileid: "71293651"
   
 9. При необходимости перейдите на вкладку **Поток управления** и выберите **Свойства**.  
   
-10. В окне "Свойства" щелкните значение свойства идентификатора (ID), а затем выберите **\<Сформировать новый идентификатор>** в раскрывающемся списке.  
+10. В окне "Свойства" щелкните значение свойства идентификатора (ID), а затем выберите в раскрывающемся списке **\<Generate New ID>** .  
   
 11. В меню **Файл** выберите команду **Сохранить выбранные элементы** , чтобы сохранить новый пакет.  
   

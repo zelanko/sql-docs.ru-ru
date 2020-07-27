@@ -1,5 +1,6 @@
 ---
 title: SQL Server, объект Access Methods | Документация Майкрософт
+description: Сведения о счетчиках объекта Access Methods, позволяющих следить за размером данных, индексов и свободного пространства внутри базы данных в SQL Server.
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 296cdb3433ff0e40ea73987ef5a53b985a550f1f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 485e7e4d762b415ad4a0d140a631e99b4c79983b
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787407"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86458462"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -44,7 +45,7 @@ ms.locfileid: "85787407"
   
  В этой таблице приводится описание счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Методы доступа**.  
   
-|Счетчики объекта SQL Server Access Methods|Description|  
+|Счетчики объекта SQL Server Access Methods|Описание|  
 |----------------------------------------|-----------------|  
 |**Пакетов очистки единиц распределения/с**|Количество пакетов в секунду, успешно выполненных фоновой задачей, которая очищает отложенные удаленные единицы распределения.|  
 |**Очисток единиц распределения/с**|Количество единиц распределения в секунду, успешно удаленных фоновой задачей, которая очищает отложенные удаленные единицы распределения. Каждое удаление единицы распределения требует нескольких пакетов.|  

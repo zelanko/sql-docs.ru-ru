@@ -1,5 +1,6 @@
 ---
 title: Просмотр свойств статистики | Документация Майкрософт
+description: Сведения о том, как отобразить текущую статистику оптимизации запросов для таблицы или индексированного представления в SQL Server с помощью SQL Server Management Studio или Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc876283635f3a3015efa957b90cf0d9d938386
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6ab4cc68a4fbc9e737498d68433de2effd9fe805
+ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86001055"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86457258"
 ---
 # <a name="view-statistics-properties"></a>Просмотр свойств статистики
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -74,7 +75,7 @@ ms.locfileid: "86001055"
   
      Следующие данные описывают столбцы, возвращенные в результирующем наборе для заголовка статистики.  
   
-     **Название**  
+     **имя**;  
      Имя объекта статистики.  
   
      **Обновленные возможности**  

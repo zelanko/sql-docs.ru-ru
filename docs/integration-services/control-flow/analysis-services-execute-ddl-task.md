@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9823a3075e1b333bfbe7c0f68e2f5cdedec6c979
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294343"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86899649"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Задача «Выполнение инструкции DDL служб Analysis Services»
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   задача «Выполнение инструкции DDL служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] » запускает инструкции языка DDL, которые могут создавать, удалять или изменять модели интеллектуального анализа данных и многомерные объекты, такие как кубы и измерения. Например, инструкция DDL позволяет создать секцию в кубе **Adventure Works** или удалить измерение в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], образце базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , входящем в состав [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -253,7 +253,7 @@ ms.locfileid: "71294343"
   
 ### <a name="static-options"></a>Статические параметры  
  **Соединение**  
- Выберите проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или диспетчер соединений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из списка или нажмите кнопку \<**Новое соединение...** > и создайте новое соединение с помощью диалогового окна **Добавление диспетчера соединений со службами Analysis Services**.  
+ Выберите проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или диспетчер подключений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в списке или щелкните \<**New connection...**> и создайте подключение с помощью диалогового окна **Добавление диспетчера соединений со службами Analysis Services**.  
   
  **См. также:** [Диалоговое окно "Добавление диспетчера соединений со службами Analysis Services" в справочнике по пользовательскому интерфейсу](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Диспетчер соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -274,13 +274,13 @@ ms.locfileid: "71294343"
   
 #### <a name="sourcetype--file-connection"></a>SourceType = Подключение файла  
  **Source**  
- Выберите "Соединение с файлом" из списка или нажмите кнопку \<**Новое соединение...** > и создайте новое соединение с помощью диалогового окна **Диспетчер соединения файлов**.  
+ Выберите "Соединение с файлом" в списке или щелкните \<**New connection...**> и создайте подключение с помощью диалогового окна **Диспетчер соединения файлов**.  
   
  **См. также:** [Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>SourceType = Переменная  
  **Source**  
- Выберите переменную из списка или нажмите \<**Новая переменная...** > и создайте новую переменную с помощью диалогового окна **Добавление переменной**.  
+ Выберите переменную в списке или щелкните \<**New variable...**> и создайте переменную с помощью диалогового окна **Добавление переменной**.  
   
  **См. также:** [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)  
   

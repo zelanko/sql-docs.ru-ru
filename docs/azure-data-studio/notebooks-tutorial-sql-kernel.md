@@ -8,13 +8,13 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: ''
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 64e5bcfa188707e784d33a6504b120c4ce0ea553
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.date: 07/01/2020
+ms.openlocfilehash: 66d8c464a0f03eb227e9fda50f6b5ad249f828da
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735318"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86920450"
 ---
 # <a name="create-and-run-a-sql-server-notebook"></a>Создание и запуск записной книжки SQL Server
 
@@ -29,60 +29,78 @@ ms.locfileid: "85735318"
   - [Windows](../database-engine/install-windows/install-sql-server.md)
   - [Linux](../linux/sql-server-linux-setup.md)
 
-## <a name="new-notebook"></a>Создание записной книжки
+## <a name="create-a--notebook"></a>Создание записной книжки
 
 Выполните следующие действия, чтобы создать файл записной книжки в Azure Data Studio:
 
 1. В Azure Data Studio подключитесь к своему SQL Server.
 
-2. Выберите раздел **Подключения** в окне **Серверы**. Затем выберите **Создать записную книжку**.
+1. Выберите раздел **Подключения** в окне **Серверы**. Затем выберите **Создать записную книжку**.
 
    ![Открытие записной книжки](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 
-3. Дождитесь, пока будет заполнено поле **Ядро** и задан целевой контекст (**Присоединить к**). Убедитесь, что для параметра **Ядро** задано **SQL**, и укажите **Присоединить к** для своего SQL Server (в данном случае *localhost*).
+1. Дождитесь, пока будет заполнено поле **Ядро** и задан целевой контекст (**Присоединить к**). Убедитесь, что для параметра **Ядро** задано **SQL**, и укажите **Присоединить к** для своего SQL Server (в данном примере *localhost*).
 
    ![Заполнение полей "Ядро" и "Присоединить к"](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
-## <a name="run-a-notebook-cell"></a>Запуск ячейки записной книжки
+Вы можете сохранить записную книжку с помощью команды **Сохранить** или **Сохранить как...** в меню **Файл**. 
 
-Чтобы запустить любую ячейку записной книжки, нажмите расположенную слева от нее кнопку воспроизведения. После того как выполнение ячейки будет завершено, в записной книжке будут показаны результаты.
+Чтобы открыть записную книжку, можно использовать команду **Открыть файл...** в меню **Файл**, выбрать **Открыть файл** на странице **приветствия** или использовать команду **Файл: открыть** в палитре команд.
 
-### <a name="code"></a>Код
+## <a name="change-the-sql-connection"></a>Изменение подключения SQL Server
 
-Добавьте новую ячейку кода, выбрав команду **+Код** на панели инструментов.
+Чтобы изменить подключение к SQL Server для записной книжки, сделайте следующее.
 
-![Панель инструментов записной книжки](media/notebooks-guidance/notebook-toolbar.png)
+1. Выберите меню **Присоединить к** на панели инструментов записной книжки, а затем выберите **Изменить подключение**.
 
-В этом примере создается база данных.
+   ![На панели инструментов записной книжки щелкните меню "Присоединить к"](./media/notebook-tutorial/select-attach-to-1.png)
 
-```sql
-USE master
-GO
+2. Теперь можно выбрать последний сервер, использованный для подключения, или ввести сведения о новом подключении.
 
+   ![Выберите сервер в меню "Присоединить к"](./media/notebook-tutorial/select-attach-to-2.png)
+
+## <a name="run-a-code-cell"></a>Выполнение ячейки кода
+
+Можно создать ячейки, содержащие код SQL, который можно запустить на месте, нажав кнопку **Выполнить ячейку** (скругленная черная стрелка) слева от ячейки. После того как выполнение ячейки будет завершено, в записной книжке будут показаны результаты.
+
+Пример:
+
+1. Добавьте новую ячейку кода, выбрав команду **+Код** на панели инструментов.
+
+   ![Панель инструментов записной книжки](media/notebooks-guidance/notebook-toolbar.png)
+
+1. Скопируйте приведенный ниже пример, вставьте его в ячейку и щелкните **Выполнить ячейку**. В этом примере создается база данных.
+
+   ```sql
+   USE master
+   GO
+   
    -- Drop the database if it already exists
-IF  EXISTS (
-        SELECT name
-        FROM sys.databases
-        WHERE name = N'TestNotebookDB'
-   )
-DROP DATABASE TestNotebookDB
-GO
-
--- Create the database
-CREATE DATABASE TestNotebookDB
-GO
-```
+   IF  EXISTS (
+           SELECT name
+           FROM sys.databases
+           WHERE name = N'TestNotebookDB'
+      )
+   DROP DATABASE TestNotebookDB
+   GO
+   
+   -- Create the database
+   CREATE DATABASE TestNotebookDB
+   GO
+   ```
 
    ![Запуск ячейки записной книжки](media/notebook-tutorial/run-notebook-cell.png)
 
-При выполнении скрипта, возвращающего результат, этот результат можно сохранить в разных форматах.
+## <a name="save-the-result"></a>Сохранение результата
+
+При выполнении скрипта, возвращающего результат, этот результат можно сохранить в разных форматах с помощью панели инструментов, отображаемой над результатом.
 
 - Сохранить в формате CSV
 - Сохранить в формате Excel
 - Сохранить в формате JSON
 - Сохранить в формате XML
 
-В этом случае мы возвращаем результат в виде числа [Пи](../t-sql/functions/pi-transact-sql.md).
+Например, следующий код возвращает результат [PI](../t-sql/functions/pi-transact-sql.md).
 
 ```sql
 SELECT PI() AS PI;
@@ -91,26 +109,10 @@ GO
 
 ![Запуск ячейки записной книжки](media/notebook-tutorial/run-notebook-cell-2.png)
 
-### <a name="text"></a>текст
-
-Добавьте новую текстовую ячейку, выбрав команду **+Текст** на панели инструментов.
-
-![Панель инструментов записной книжки](media/notebooks-guidance/notebook-toolbar.png)
-
-Ячейка перейдет в режим правки, и по мере ввода текста с разметкой Markdown вам будет доступна возможность предпросмотра.
-
-![Ячейка с разметкой Markdown](media/notebooks-guidance/notebook-markdown-cell.png)
-
-Щелкните вне текстовой ячейки, чтобы отобразить текст с разметкой Markdown.
-
-![Текст с разметкой Markdown](media/notebooks-guidance/notebook-markdown-preview.png)
-
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Дополнительные сведения о записных книжках:
 
-- [Использование записных книжек в SQL Server](notebooks-guidance.md)
-
-- [Как управлять записными книжками в Azure Data Studio](notebooks-manage-sql-server.md)
-
+- [Использование записных книжек в Azure Data Studio](notebooks-guidance.md)
+- [Создание и запуск записной книжки Python](notebooks-tutorial-python-kernel.md)
 - [Запуск примера записной книжки с помощью Spark](../big-data-cluster/notebooks-tutorial-spark.md)
