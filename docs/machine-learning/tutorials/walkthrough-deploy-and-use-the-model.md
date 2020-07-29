@@ -2,22 +2,22 @@
 title: Учебник по R. Развертывание модели
 description: Учебник, показывающий, как развернуть модель R в SQL Server для аналитики в базе данных.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0117ff1ccbd90a18c1198c9a46fa60c27d28107d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdf7446497d242d3cc2773daad0adfa8d3a700e3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781782"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Развертывание модели R и ее использование в SQL Server (пошаговое руководство)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 На этом занятии вы узнаете, как развертывать модели R в рабочей среде, вызывая обученную модель из хранимой процедуры. Вы можете вызывать хранимую процедуру из R или любого прикладного языка программирования, поддерживающего [!INCLUDE[tsql](../../includes/tsql-md.md)] (например, C#, Java, Python и т. д.), чтобы с помощью модели составлять прогнозы на основе новых наблюдений.
 

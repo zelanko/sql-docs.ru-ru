@@ -15,12 +15,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azure-sqldw-latest
-ms.openlocfilehash: f56ea55b90613ea657994af6acff7eef271843b4
-ms.sourcegitcommit: 9470c4d1fc8d2d9d08525c4f811282999d765e6e
+ms.openlocfilehash: 5b3a9151d07599661445eb3dfa20c9ef432e0719
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86458434"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243435"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 
@@ -144,9 +144,8 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Ниже приведено несколько примеров того, как можно получить дополнительные аналитические сведения о рабочей нагрузке до и после введения категорий ожидания в хранилище запросов.
 
-||||
-|-|-|-|
 |Предыдущая процедура|Новая процедура|Действие|
+|-|-|-|
 |Высокий уровень ожиданий RESOURCE_SEMAPHORE на базу данных|Высокий уровень ожиданий памяти в хранилище запросов для конкретных запросов|Найдите в хранилище запросов те запросы, которые используют больше всего памяти. Вероятнее всего, эти запросы препятствуют дальнейшей обработке затронутых запросов. Рекомендуется использовать указание запроса MAX_GRANT_PERCENT для этих запросов или затронутых запросов.|
 |Высокий уровень ожиданий LCK_M_X на базу данных|Высокий уровень ожиданий блокировки в хранилище запросов для конкретных запросов|Проверьте текст затронутых запросов и выявите целевые сущности. Найдите в хранилище запросов другие запросы, изменяющие ту же сущность, которые часто выполняются и (или) имеют большую длительность. Найдя такие запросы, рекомендуется изменить логику приложения, чтобы улучшить параллелизм, или использовать менее строгий уровень изоляции.|
 |Высокий уровень ожиданий PAGEIOLATCH_SH на базу данных|Высокий уровень ожиданий ввода-вывода буфера в хранилище запросов для конкретных запросов|Найдите в хранилище запросов запросы с большим числом физических операций чтения. Если они соответствуют запросам с высоким уровнем ожиданий ввода-вывода, рекомендуется ввести индекс для базовой сущности, чтобы выполнять поиск вместо сканирования и этим минимизировать временные затраты ввода-вывода для запросов.|
@@ -168,31 +167,85 @@ INNER JOIN sys.query_store_query_text AS Txt
 
 Функции помогают работать с хранилищем запросов.
 
-|||
-|-|-|
-|[sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)||
+:::row:::
+    :::column:::
+        [sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)
+    :::column-end:::
+:::row-end:::
 
 ### <a name="query-store-catalog-views"></a>Представления каталога хранилища запросов
 
 В представлениях каталога отображаются сведения о хранилище запросов.
 
-|||
-|-|-|
-|[sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|
-|[sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|
-|[sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|
-|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|
+:::row:::
+    :::column:::
+        [sys.database_query_store_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_context_settings (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_plan (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_query (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_query_text (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_runtime_stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_runtime_stats_interval (Transact-SQL)](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 
 ### <a name="query-store-stored-procedures"></a>Хранимые процедуры в хранилище запросов,
 
 Хранимые процедуры служат для настройки хранилища запросов.
 
-|||
-|-|-|
-|[sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|
-|[sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)|[sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)|
-|[sp_query_store_remove_plan (Transct-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
-|sp_query_store_consistency_check &#40;Transct-SQL&#41;||
+:::row:::
+    :::column:::
+        [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_reset_exec_stats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_query_store_force_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_unforce_plan (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_query_store_remove_plan (Transct-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_remove_query (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="key-usage-scenarios"></a><a name="Scenarios"></a> Основные сценарии использования
 

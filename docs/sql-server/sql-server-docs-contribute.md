@@ -2,18 +2,19 @@
 title: Участие в работе над документацией по SQL Server | Документы Майкрософт
 ms.date: 08/13/2018
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: ''
 ms.custom: ''
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d947ae25f6f01740e7c5826a7edf332ff422a9de
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286328"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247387"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Участие в работе над документацией по SQL Server
 
@@ -23,7 +24,7 @@ ms.locfileid: "79286328"
 
 Существуют два основных процесса работы над документацией:
 
-|||
+|Рабочий процесс|Описание|
 |---|---|
 | [Редактирование в браузере](#githubui) | Подходит для быстрого внесения небольших изменений в любую статью. |
 | [Локальное редактирование с помощью средств](#tools) | Подходит для внесения более сложных правок, правок, охватывающих несколько статей, а также в случае частой работы над документацией на сайте docs.microsoft.com. |
@@ -93,7 +94,7 @@ ms.locfileid: "79286328"
 Рассмотрим следующий пример разметки Markdown из включаемого файла **appliesto-ss-asdb-asdw-pdw-md.md**:
 
 ```Markdown
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 ```
 
 Он добавляет следующий текст в начало статьи:

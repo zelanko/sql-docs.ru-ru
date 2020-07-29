@@ -1,29 +1,29 @@
 ---
 title: Справка по azdata bdc spark batch
+titleSuffix: SQL Server big data clusters
 description: Справочная статья по командам azdata bdc spark batch.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.metadata: seo-lt-2019
-ms.date: 12/13/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d141669313a90bd04cda2e54d5a9e9d5a3c68f6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a2921a1855ed02779bc30602c5b87ed4914d11f3
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258634"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243063"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В следующей статье приводятся справочные сведения по командам `bdc spark batch` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-|     |     |
+| Команда | Описание |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Создание пакета Spark.
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | Вывод списка всех пакетов в Spark.
@@ -36,19 +36,32 @@ ms.locfileid: "75258634"
 ```bash
 azdata bdc spark batch create --file -f 
                               [--class-name -c]  
-                              [--arguments -a]  
-                              [--jar-files -j]  
-                              [--py-files -p]  
-                              [--files]  
-                              [--driver-memory]  
-                              [--driver-cores]  
-                              [--executor-memory]  
-                              [--executor-cores]  
-                              [--executor-count]  
-                              [--archives]  
-                              [--queue -q]  
-                              [--name -n]  
-                              [--config]
+                              
+[--arguments -a]  
+                              
+[--jar-files -j]  
+                              
+[--py-files -p]  
+                              
+[--files]  
+                              
+[--driver-memory]  
+                              
+[--driver-cores]  
+                              
+[--executor-memory]  
+                              
+[--executor-cores]  
+                              
+[--executor-count]  
+                              
+[--archives]  
+                              
+[--queue -q]  
+                              
+[--name -n]  
+                              
+[--config]
 ```
 ### <a name="examples"></a>Примеры
 Создание пакета Spark.
@@ -95,7 +108,7 @@ azdata spark batch create --code "2+2"
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-batch-list"></a>azdata bdc spark batch list
@@ -116,16 +129,17 @@ azdata spark batch list
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-batch-info"></a>azdata bdc spark batch info
 Возвращает сведения о пакете Spark с указанным идентификатором.  Идентификатор пакета возвращается командой spark batch create.
 ```bash
 azdata bdc spark batch info --batch-id -i 
-          ```
-### Examples
-Get batch info for batch with ID of 0.
+                            
+```
+### <a name="examples"></a>Примеры
+Получение сведений о пакете с идентификатором 0.
 ```bash
 azdata spark batch info --batch-id 0
 ```
@@ -140,16 +154,17 @@ azdata spark batch info --batch-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-batch-log"></a>azdata bdc spark batch log
 Возвращает записи журнала для пакета Spark с указанным идентификатором.  Идентификатор пакета возвращается командой spark batch create.
 ```bash
 azdata bdc spark batch log --batch-id -i 
-         ```
-### Examples
-Get batch log for batch with ID of 0.
+                           
+```
+### <a name="examples"></a>Примеры
+Получение журнала для пакета с идентификатором 0.
 ```bash
 azdata spark batch log --batch-id 0
 ```
@@ -164,16 +179,17 @@ azdata spark batch log --batch-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-batch-state"></a>azdata bdc spark batch state
 Возвращает состояние пакета Spark с указанным идентификатором.  Идентификатор пакета возвращается командой spark batch create.
 ```bash
 azdata bdc spark batch state --batch-id -i 
-           ```
-### Examples
-Get batch state for batch with ID of 0.
+                             
+```
+### <a name="examples"></a>Примеры
+Получение состояния пакета с идентификатором 0.
 ```bash
 azdata spark batch state --batch-id 0
 ```
@@ -188,16 +204,17 @@ azdata spark batch state --batch-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-bdc-spark-batch-delete"></a>azdata bdc spark batch delete
 Удаляет пакет Spark. Идентификатор пакета возвращается командой spark batch create.
 ```bash
 azdata bdc spark batch delete --batch-id -i 
-            ```
-### Examples
-Delete a batch.
+                              
+```
+### <a name="examples"></a>Примеры
+Удаление пакета.
 ```bash
 azdata spark batch delete --batch-id 0
 ```
@@ -212,7 +229,7 @@ azdata spark batch delete --batch-id 0
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 

@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ac50d0c20f76e78aaa5016f62cefb8c7cc7f075a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 304515dcd288978c0d85ab992312eb2444430bfc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75728585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85773638"
 ---
 # <a name="install-azdata-with-apt"></a>Установка `azdata` с помощью apt
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В этой статье описывается установка `azdata` для работы с кластерами больших данных SQL Server 2019 в Linux. До того как эти диспетчеры пакетов стали доступны, для установки `azdata` требовался `pip`.
 

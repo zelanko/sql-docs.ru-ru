@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: cd6f71f5c42418ab9357a9aaeec9788ae3ea0d65
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 0e9a0b87e0275846b1c1b9535b9485dd1cbae066
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920952"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243428"
 ---
 # <a name="sql-server-express-security"></a>Безопасность SQL Server Express
 
@@ -40,7 +40,7 @@ ms.locfileid: "80920952"
 ## <a name="external-resources"></a>Внешние ресурсы  
 Дополнительные сведения об SQL Server Express см. в следующих ресурсах:  
   
-|||  
+|Ресурс|Описание|
 |-|-|  
 |[Электронная документация по Microsoft SQL Server 2005 Express Edition](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Полная документация по SQL Server 2005, экспресс-выпуск.|  
 |[Пользовательские экземпляры для тех, кто не обладает правами администратора](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) в электронной документации на SQL Server.|Описание создания и развертывания пользовательских экземпляров.|  

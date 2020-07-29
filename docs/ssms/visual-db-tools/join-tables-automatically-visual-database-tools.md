@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: f152af82-bcb6-49ca-af19-48cdb7fc9ac6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: b0f6c9b3ead5073e0983c4f251957bcd8dc76b6c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a98ac8db359d4e47911ce3a2ca97b6cdd5494d90
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224662"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011708"
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>Автоматическое соединение таблиц (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 При добавлении двух или более таблиц в запрос [конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) пытается определить, имеется ли между ними связь. Если это так, конструктор запросов и представлений автоматически помещает строки соединения между прямоугольниками, представляющими таблицы или объекты, структурированные в виде таблиц.  
   
 Конструктор запросов и представлений определяет таблицы как соединенные, если:  

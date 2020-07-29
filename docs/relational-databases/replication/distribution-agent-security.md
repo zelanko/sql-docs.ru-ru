@@ -15,15 +15,15 @@ ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 91b5915324fc95d9199b4ec1d9aaa2ca0fee89d2
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e664b1d96683d33ea9ffdc7cf38a5de0fe72a84e
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85653681"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111058"
 ---
 # <a name="distribution-agent-security"></a>Безопасность агента распространителя
-::: moniker range=">=sql-server-2014||=sqlallproducts-allversions" 
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions" 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 В диалоговом окне **Безопасность агента распространителя** можно указать учетную запись Windows, с которой будет работать агент распространителя. Агент распространителя работает на распространителе для принудительных подписок и на подписчике для подписок по запросу. Учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows также называется *учетной записью процесса*, так как с этой учетной записью работает процесс агента. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
   

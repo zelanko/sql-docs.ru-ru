@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0bed1615cf691129ebec40c763d18d98d8276aff
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 05a4130eada097acc754f4392927db76b8bfc079
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85736520"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113175"
 ---
 # <a name="applock_test-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "85736520"
 APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owner' )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 **'** *database_principal* **'**  
 Пользователь, роль или роль приложения, которым могут быть предоставлены разрешения на доступ к объектам базы данных. Для успешного вызова функции вызывающий ее объект должен быть членом предопределенной роли базы данных *database_principal*, dbo или db_owner.
   

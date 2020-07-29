@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5800bd00faac0c34052a5930cfdb1ccaf86afbcb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6980c7914a10498d2f1d5cc08d60d63d9dd1f0ac
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85895204"
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -124,18 +123,22 @@ ms.locfileid: "75257880"
   
 После выполнения обновляющего скрипта макрос `ESCAPE_NONE` добавляется с токеном. Однако в этом случае необходимо переписать скрипт, чтобы не использовалось вложение, как показано ниже, и добавить макрос `ESCAPE_SQUOTE` , чтобы правильным образом экранировать разделители, которые могут быть переданы в строку замены токена:  
   
-<pre>DECLARE @msgString nvarchar(max)  
-SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))'  
-SET @msgString = QUOTENAME(@msgString,'''')  
-PRINT N'Print ' + @msgString ;</pre>  
+```sql
+DECLARE @msgString nvarchar(max);
+SET @msgString = '$(ESCAPE_SQUOTE(A-MSG))';
+SET @msgString = QUOTENAME(@msgString,'''');
+PRINT N'Print ' + @msgString;
+```
   
 Имейте в виду, что функция QUOTENAME устанавливает символ кавычки.  
   
 ### <a name="c-using-tokens-with-the-escape_none-macro"></a>В. Использование токенов с макросом ESCAPE_NONE  
 Следующий пример является частью скрипта, который извлекает `job_id` из таблицы `sysjobs` и использует токен `JOBID` , чтобы заполнить переменную `@JobID` , которая была объявлена как бинарный тип данных ранее в скрипте. Имейте в виду, что с токеном `ESCAPE_NONE` используется макрос `JOBID` , так как для бинарного типа данных разделители не требуются. После выполнения скрипта обновления не нужно обновлять этот шаг задания.  
   
-<pre>SELECT * FROM msdb.dbo.sysjobs  
-WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID))) ;</pre>  
+```sql
+SELECT * FROM msdb.dbo.sysjobs  
+WHERE @JobID = CONVERT(uniqueidentifier, $(ESCAPE_NONE(JOBID)));
+```
   
 ## <a name="see-also"></a>См. также:  
 [Реализация заданий](../../ssms/agent/implement-jobs.md)  

@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 40e3625aee9da35d2c29d495346386768b41aee8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ffbabe94a55328a4de6bd6c85bcaa5af01b3fa8c
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254972"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999302"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Диалоговое окно «Пространственные индексы» (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Используйте диалоговое окно **Пространственные индексы** для создания индексов для столбцов с типом данных **geometry** или **geography** (*пространственный столбец*), которые не могут быть индексированы с использованием диалогового окна **Индексы/Ключи** . Для каждого пространственного столбца может существовать несколько пространственных индексов, но их следует создавать по очереди.  
   
 Сведения об ограничениях, накладываемых на создание пространственных индексов, см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  

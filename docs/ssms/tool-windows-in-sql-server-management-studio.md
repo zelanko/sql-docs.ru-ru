@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 025a4a9ecb00e9827524652047970db0031dfc43
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 2965cbdec8ad5a0db80ab52c75c14b0e1e32dc75
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75243894"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87236969"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Окна инструментов в среде SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] содержит множество эффективных окон инструментов для всех этапов разработки и администрирования. Некоторые средства можно использовать для любого компонента [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , другие — только для определенных компонентов. В следующей таблице описаны средства, которые могут быть использованы для всех компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|||  
-|-|-|  
-|**Инструмент**|**Назначение**|  
+|Инструмент|Назначение|  
+|-|-|   
 |[Обозреватель объектов](../ssms/object/object-explorer.md)|Обзор серверов, создание и размещение объектов, управление источниками данных и просмотр журналов. Доступ к этому средству осуществляется из меню **Вид** .|  
 |[Обозреватель решений](../ssms/solution/solution-explorer.md)|Хранение и организация скриптов и соответствующих сведений о соединении в проектах, называемых скриптами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Несколько скриптов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно хранить в виде решений и по мере развития скриптов для управления ими использовать систему управления версиями. Доступ к этому средству осуществляется из меню **Вид** .|  
 |[Обозреватель шаблонов](../ssms/template/template-explorer.md)|Создание запросов на основе существующих шаблонов. Также можно создавать пользовательские запросы или изменять существующие шаблоны в соответствии с текущими задачами. Доступ к этому средству осуществляется из меню **Вид** .|  

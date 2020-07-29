@@ -2,22 +2,22 @@
 title: Создание множества моделей с помощью rxExecBy
 description: Используйте функцию rxExecBy из библиотеки RevoScaleR для создания нескольких мини-моделей на основе машинных данных, хранящихся в SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dbba63ae69997c9c5dbdccf49ec590b3f4eba652
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: f4f0da1fdee47d166fe1b06fd8ce6e8ddea64f4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117707"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723847"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>Создание нескольких моделей с помощью rxExecBy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Функция **rxExecBy** библиотеки RevoScaleR поддерживает параллельную обработку нескольких связанных моделей. Вместо того, чтобы обучать одну большую модель на основе данных из нескольких схожих сущностей, специалист по обработке и анализу данных может быстро создать множество связанных моделей, каждая из которых использует данные одной сущности. 
 

@@ -16,12 +16,12 @@ ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 362cb5e43414e6f43453f8efe201d8e4a2369f6d
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 8deea6a37a8aca7791d84d9d32d9735525305913
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85727078"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247257"
 ---
 # <a name="user-defined-functions"></a>Определяемые пользователем функции
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -89,27 +89,111 @@ ms.locfileid: "85727078"
 -   Инструкции `EXECUTE`, вызывающие расширенную хранимую процедуру.  
   
 ### <a name="built-in-system-functions"></a>Встроенные системные функции  
- Следующие недетерминированные встроенные функции могут быть использованы в определяемых пользователем функциях языка Transact-SQL.  
+ Следующие недетерминированные встроенные функции могут быть использованы в определяемых пользователем функциях языка Transact-SQL.
   
-|||  
-|-|-|  
-|CURRENT_TIMESTAMP|@@MAX_CONNECTIONS|  
-|GET_TRANSMISSION_STATUS|@@PACK_RECEIVED|  
-|GETDATE|@@PACK_SENT|  
-|GETUTCDATE|@@PACKET_ERRORS|  
-|@@CONNECTIONS|@@TIMETICKS|  
-|@@CPU_BUSY|@@TOTAL_ERRORS|  
-|@@DBTS|@@TOTAL_READ|  
-|@@IDLE|@@TOTAL_WRITE|  
-|@@IO_BUSY||  
-  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        @@MAX_CONNECTIONS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GET_TRANSMISSION_STATUS
+    :::column-end:::
+    :::column:::
+        @@PACK_RECEIVED
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETDATE
+    :::column-end:::
+    :::column:::
+        @@PACK_SENT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        GETUTCDATE
+    :::column-end:::
+    :::column:::
+        @@PACKET_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CONNECTIONS
+    :::column-end:::
+    :::column:::
+        @@TIMETICKS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CPU_BUSY
+    :::column-end:::
+    :::column:::
+        @@TOTAL_ERRORS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@DBTS
+    :::column-end:::
+    :::column:::
+        @@TOTAL_READ
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IDLE
+    :::column-end:::
+    :::column:::
+        @@TOTAL_WRITE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IO_BUSY
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  Следующие недетерминированные встроенные функции **нельзя** использовать в определяемых пользователем функциях [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-|||  
-|-|-|  
-|NEWID|RAND|  
-|NEWSEQUENTIALID|TEXTPTR|  
-  
+:::row:::
+    :::column:::
+        NEWID
+    :::column-end:::
+    :::column:::
+        RAND
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        NEWSEQUENTIALID
+    :::column-end:::
+    :::column:::
+        TEXTPTR
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  Список детерминированных и недетерминированных встроенных системных функций см. в разделе [Детерминированные и недетерминированные функции](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ##  <a name="schema-bound-functions"></a><a name="SchemaBound"></a> Привязанные к схеме функции  
@@ -130,9 +214,8 @@ ms.locfileid: "85727078"
   
 ##  <a name="more-examples"></a><a name="Tasks"></a> Дополнительные примеры  
   
-|||  
-|-|-|  
-|**Описание задачи**|**Раздел**|  
+|Описание задачи|Раздел|  
+|-|-|    
 |Описывает, как создать определяемую пользователем функцию Transact-SQL.|[Создание определяемых пользователем функций (компонент Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)|  
 |Описывает, как создать функции CLR.|[Создание функций CLR](../../relational-databases/user-defined-functions/create-clr-functions.md)|  
 |Описывает, как создать определяемую пользователем агрегатную функцию.|[Создание пользовательских агрегатных функций](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md)|  

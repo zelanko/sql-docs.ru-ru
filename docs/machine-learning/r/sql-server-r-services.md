@@ -3,21 +3,21 @@ title: Что представляют собой службы SQL Server 2016 R
 titleSuffix: ''
 description: R Services — это компонент SQL Server 2016, который дает возможность выполнять скрипты R с реляционными данными. Вы можете использовать платформы и пакеты с открытым кодом и пакеты Майкрософт R для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 08/12/2019
-ms.topic: overview
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 974562d95ebf756de5f95eca0e89a6d5fc6e958f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486708"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775391"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Что представляют собой службы SQL Server 2016 R Services?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 R Services — это компонент SQL Server 2016, который дает возможность выполнять скрипты R с реляционными данными. Вы можете использовать платформы и пакеты с открытым кодом и [пакеты Майкрософт R](#packages) для прогнозной аналитики и машинного обучения. Скрипты выполняются в базе данных без перемещения данных за пределы SQL Server или по сети. В этой статье объясняются основы SQL Server R Services.
 

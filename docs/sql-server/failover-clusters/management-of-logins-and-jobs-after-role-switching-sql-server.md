@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bf355678b3219fb0bf32ecd1620c00b0e58f346f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 68b46562968cd53b0fb12f13cc82fd0b83f6e192
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75230223"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85729020"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Управление именами входа и заданиями после переключения ролей (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   При развертывании решения по обеспечению высокой доступности или аварийного восстановления для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] важно воспроизвести значимые данные, хранящиеся в этой базе данных, в базе данных **master** или **msdb** . Обычно к таким данным относятся задания базы данных-источника или основной базы данных, а также имена входа пользователей или процессов, которым требуется подключаться к базе данных. Эти данные следует скопировать на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , где размещена база данных-получатель или зеркальная база данных. После переключения ролей рекомендуется по возможности программно воспроизвести эти данные в новой базе данных-источнике или основной базе данных.  
   
 ## <a name="logins"></a>Имена входа  

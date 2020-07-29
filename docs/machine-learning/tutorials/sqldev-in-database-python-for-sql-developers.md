@@ -2,22 +2,22 @@
 title: Python и T-SQL. Разработка модели
 description: Узнайте, как внедрить код Python в хранимые процедуры SQL Server и функции T-SQL.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3bafc3a524ec854dc9bf1669660827d5a6bc80f7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d5cdec0ad291fecf0606650d116f0c7979831c19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785631"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Руководство по Аналитика данных Python для разработчиков SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом руководстве для программистов SQL вы узнаете об интеграции Python путем создания и развертывания решения машинного обучения на основе Python с использованием базы данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) на SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД со [Службами машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка Python.
 

@@ -2,7 +2,6 @@
 title: Соединение с сервером (ядро СУБД)
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -15,18 +14,19 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 49bc9ee786c814da1322e9f44c1b80bf7bc63b23
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: d49edce2cf6c096711fc57903ea6599264ea1932
+ms.sourcegitcommit: d855def79af642233cbc3c5909bc7dfe04c4aa23
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809702"
+ms.lasthandoff: 07/24/2020
+ms.locfileid: "87123068"
 ---
 # <a name="connect-to-server-database-engine"></a>Соединение с сервером (ядро СУБД)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Используйте это диалоговое окно для просмотра или настройки параметров при подключении к [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. В большинстве случаев при подключении в поле **Имя сервера** нужно ввести имя компьютера, на котором расположена база данных, а затем нажать кнопку **Соединить**. При подключении к именованному экземпляру укажите имя компьютера, введите обратную косую черту, а затем — имя экземпляра. Например, `mycomputer\myinstance`. Если выполняется соединение с [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], введите имя компьютера, а после него — **\sqlexpress**.
   
 На возможность подключиться к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]влияют многие факторы. Справочные сведения см. в следующих документах.

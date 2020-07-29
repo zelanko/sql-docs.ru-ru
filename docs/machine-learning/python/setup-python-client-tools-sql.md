@@ -2,22 +2,22 @@
 title: Настройка клиента Python для обработки и анализа данных
 description: Настройте локальную среду Python (Jupyter Notebook или PyCharm) для удаленных подключений к службам машинного обучения SQL Server с помощью Python.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef03354afd3aa2318317ca4c946463a5b7355c12
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1857ba03808c4309f2573a7d8e58801d5f80199d
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117777"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897209"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Настройка клиента обработки и анализа данных для разработки на Python в службах машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Интеграция Python доступна в SQL Server 2017 и более поздних версиях, если включить параметр для Python во время [установки служб машинного обучения (в базе данных)](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -51,9 +51,9 @@ ms.locfileid: "81117777"
 
 1. Скачайте сценарий установки.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) устанавливает версию 9.2.1 пакетов Python Майкрософт. Эта версия соответствует экземпляру SQL Server по умолчанию. 
+   + [https://aka.ms/mls-py](https://aka.ms/mls-py) устанавливает версию 9.2.1 пакетов Python Майкрософт. Эта версия соответствует экземпляру SQL Server по умолчанию. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) устанавливает версию 9.3 пакетов Python Майкрософт. Эту версию лучше использовать в том случае, если удаленный экземпляр SQL Server [привязан к Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) устанавливает версию 9.3 пакетов Python Майкрософт. Эту версию лучше использовать в том случае, если удаленный экземпляр SQL Server [привязан к Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Откройте окно PowerShell с повышенными правами администратора (щелкните правой кнопкой мыши **Запуск от имени администратора**).
 
@@ -79,7 +79,7 @@ ms.locfileid: "81117777"
 
 2. Введите `dir *.exe`, чтобы получить список исполняемых файлов. Вы должны увидеть исполняемые файлы **python.exe**, **pythonw.exe** и **uninstall-anaconda.exe**.
 
-  ![Список исполняемых файлов Python](media/powershell-python-exe.png)
+   ![Список исполняемых файлов Python](media/powershell-python-exe.png)
    
 В системах с несколькими версиями Python не забывайте использовать этот конкретный файл Python.exe, если необходимо загрузить **revoscalepy** и другие пакеты Майкрософт.
 
@@ -94,17 +94,17 @@ ms.locfileid: "81117777"
 
 1. В командной строке PowerShell, по-прежнему находясь в каталоге C:\Program Files\Microsoft\PyForMLS, откройте приложение Jupyter Notebook из папки Scripts:
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  Должна открыться записная книжка в браузере по умолчанию по адресу `https://localhost:8889/tree`.
+   Должна открыться записная книжка в браузере по умолчанию по адресу `https://localhost:8889/tree`.
 
-  Другой способ запуска — дважды щелкнуть файл **jupyter-notebook.exe**. 
+   Другой способ запуска — дважды щелкнуть файл **jupyter-notebook.exe**. 
 
 2. Выберите **Создать**, а затем **Python 3**.
 
-  ![Записная книжка Jupyter с выбранными пунктами "Создать" > "Python 3"](media/jupyter-notebook-new-p3.png)
+   ![Записная книжка Jupyter с выбранными пунктами "Создать" > "Python 3"](media/jupyter-notebook-new-p3.png)
 
 3. Введите и выполните команду `import revoscalepy`, чтобы загрузить одну из библиотек Майкрософт.
 
@@ -112,17 +112,17 @@ ms.locfileid: "81117777"
 
 4. Введите более сложную последовательность инструкций. В этом примере формируется сводная статистика для локального набора данных с помощью метода [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary). Другие функции получают расположение демонстрационных данных и создают объект источника данных для локального XDF-файла.
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 На следующем снимке экрана показаны входные и выходные данные (выходные данные обрезаны для краткости).
 

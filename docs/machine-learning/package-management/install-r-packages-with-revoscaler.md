@@ -2,23 +2,23 @@
 title: Установка пакетов R с помощью RevoScaleR
 description: Узнайте, как использовать функции RevoScaleR для установки пакетов R в SQL Server со Службами машинного обучения или R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 1d5d832d41f6bd087c6e9b334ebeac03728f97b1
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7f2978cd971f2259d7155d9d6c69c32ffe923ee5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117997"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723929"
 ---
 # <a name="use-revoscaler-to-install-r-packages"></a>Установка пакетов R с помощью RevoScaleR
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этой статье описывается, как использовать функции [RevoScaleR](../r/ref-r-revoscaler.md) (версии 9.0.1 и выше) для установки пакетов R в SQL Server со Службами машинного обучения или R Services. Удаленные пользователи без прав администратора могут использовать функции RevoScaleR, чтобы установить пакеты в SQL Server без прямого доступа к серверу.
 

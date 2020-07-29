@@ -9,15 +9,15 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 66719e8a30b9e7f4e42eaba376c73af9eb9868b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 67e54169dab869751a0e63e9e1e4a2d62a23d34c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658855"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722568"
 ---
 # <a name="microsoft-extensibility-sdk-for-java-for-sql-server"></a>Пакет SDK Майкрософт для расширения возможностей Java в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Узнайте, как реализовать программу Java для SQL Server с помощью пакета Microsoft Extensibility SDK для Java. Пакет SDK — это интерфейс для расширения языка Java, который используется для обмена данными с SQL Server и выполнения кода Java из SQL Server.
 

@@ -5,25 +5,25 @@ description: Справочная статья по командам azdata app.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7cb67f55af03fc8c948df6f17ee2924dea12825f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 10885da7ad9033f8060192820e653e688e8e2e93
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74820977"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942956"
 ---
 # <a name="azdata-app"></a>azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-В следующей статье приводятся справочные сведения по командам `app` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md)
+В следующей статье приводятся справочные сведения по командам `sql` в средстве `azdata`. Дополнительные сведения о других командах `azdata` см. в [справочнике по azdata](reference-azdata.md).
 
 ## <a name="commands"></a>Команды
-|     |     |
+| Команда | Описание |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Шаблоны.
 [azdata app init](#azdata-app-init) | Быстрое создание основы нового приложения.
@@ -38,10 +38,14 @@ ms.locfileid: "74820977"
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+                
+[--version -v]  
+                
+[--template -t]  
+                
+[--destination -d]  
+                
+[--url -u]
 ```
 ### <a name="examples"></a>Примеры
 Создание только файла `spec.yaml` приложения.
@@ -81,13 +85,14 @@ azdata app init --name reduce --template ssis
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-app-create"></a>azdata app create
 Создание приложения.
 ```bash
 azdata app create --spec -s 
+                  
 ```
 ### <a name="examples"></a>Примеры
 Создание приложения из каталога, содержащего допустимую спецификацию развертывания spec.yaml.
@@ -105,7 +110,7 @@ azdata app create --spec /path/to/dir/with/spec/yaml
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-app-update"></a>azdata app update
@@ -132,7 +137,7 @@ azdata app update --spec /path/to/dir/with/spec/yaml
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-app-list"></a>azdata app list
@@ -167,7 +172,7 @@ azdata app list
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-app-delete"></a>azdata app delete
@@ -194,7 +199,7 @@ azdata app delete --name reduce --version v1
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-app-run"></a>azdata app run
@@ -202,7 +207,8 @@ azdata app delete --name reduce --version v1
 ```bash
 azdata app run --name -n 
                --version -v  
-               [--inputs]
+               
+[--inputs]
 ```
 ### <a name="examples"></a>Примеры
 Запуск приложения без входных параметров.
@@ -233,7 +239,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 ## <a name="azdata-app-describe"></a>azdata app describe
@@ -241,7 +247,8 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
-                    [--version -v]
+                    
+[--version -v]
 ```
 ### <a name="examples"></a>Примеры
 Описание приложения.
@@ -263,7 +270,7 @@ azdata app describe --name reduce --version v1
 #### `--output -o`
 Формат вывода.  Допустимые значения: json, jsonc, table, tsv.  Значение по умолчанию: json.
 #### `--query -q`
-Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org/).
+Строка запроса JMESPath. Дополнительные сведения и примеры см. в разделе [http://jmespath.org/](http://jmespath.org).
 #### `--verbose`
 Повышение уровня детализации журнала. Чтобы включить полные журналы отладки, используйте параметр --debug.
 

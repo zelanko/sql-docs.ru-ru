@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 61a0a699c7d754d3b21b671da5cd29ea0ec0f240
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 214942feecf0161f373ca588c15510bcd5c0615f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75251456"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85999504"
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Используйте диалоговое окно **Открытие файла** для открытия существующего файла. Это диалоговое окно можно также использовать для повторного открытия уже открытого файла с другими параметрами языковой кодировки.  
   
 Для доступа к этому диалоговому окну выберите пункт **Открыть** в меню **Файл** , а затем выберите **Файл**. Это диалоговое окно отображается также при открытии файлов с помощью других элементов интерфейса, например диалогового окна **Внешние средства** . В меню **Файл** выберите команду **Открыть**и пункт **Решение или проект** , чтобы открыть похожее диалоговое окно **Открытие проекта** .  

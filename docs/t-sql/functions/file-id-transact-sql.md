@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f88f19d26ab7653f3d677862fce8de23e05e9c5b
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c3d6ced05acfdac106897b7fd5abf438d8eac6c7
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85858417"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87111564"
 ---
 # <a name="file_id-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "85858417"
 FILE_ID ( file_name )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 *file_name*  
 Выражение типа **sysname**, представляющее имя файла, для которого будет возвращено значение идентификатора файла (`FILE_ID`).  
   

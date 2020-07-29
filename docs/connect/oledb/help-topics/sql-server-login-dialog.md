@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 ms.author: v-beaziz
 author: bazizi
-ms.openlocfilehash: d35c339798b4385cb903d8a4a83f13184bbf4db3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a05dc6221aee2dbd3b7b97c28e7bfecc9ce325bf
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "72381746"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85987326"
 ---
 # <a name="sql-server-login-dialog-box"></a>Диалоговое окно входа SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -32,7 +32,7 @@ ms.locfileid: "72381746"
 ![Снимок экрана диалогового окна входа SQL Server](../media/sql-server-login-dialog.png)
 
 ## <a name="options"></a>Параметры
-|Параметр|Description|
+|Параметр|Описание|
 |---   |---        |
 |Сервер|Имя экземпляра SQL Server в сети. Выберите имя сервера/экземпляра из списка либо введите его в поле **Server** (Сервер). Также на клиентском компьютере можно создать серверный псевдоним с помощью средства **Диспетчер конфигурации SQL Server** и ввести это имя в поле **Server** (Сервер). <br/><br/>При использовании того же компьютера, на котором установлен SQL Server, можно ввести "(локальный)". Затем вы сможете подключиться к локальному экземпляру SQL Server. Это возможно даже в том случае, если запущена несетевая версия SQL Server.<br/><br/>Дополнительные сведения об именах серверов для разных типов сетей см. в статье [Руководство по установке SQL Server](https://go.microsoft.com/fwlink/?linkid=2067541)|
 |Режим проверки подлинности|Вы можете выбрать из раскрывающегося списка следующие параметры проверки подлинности:<br/><ul><li>`Windows Authentication:` проверка подлинности в SQL Server с использованием учетных данных пользователя Windows, вошедшего в систему.</li><li>`SQL Server Authentication:` проверка подлинности с помощью имени для входа и пароля.</li><li>`Active Directory - Integrated:` встроенная проверка подлинности с помощью идентификатора Azure Active Directory. Этот режим можно также использовать для проверки подлинности Windows в SQL Server.</li><li>`Active Directory - Password:` проверка подлинности по идентификатору и паролю пользователя с использованием идентификатора Azure Active Directory.</li><li>`Active Directory - Universal with MFA support:` встроенная проверка подлинности с использованием идентификатора Azure Active Directory. Этот режим поддерживает Многофакторную идентификацию Microsoft Azure (MFA).</li></ul>|

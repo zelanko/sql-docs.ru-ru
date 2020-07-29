@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: ea3aa222-538d-485f-99dc-01eb02cdcfea
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97d8667e7c6972331471622685d8a0bb97303dcd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fac8e4cdb99d19da39f60585db3f77a27975983a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245728"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011830"
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Параметры ("Среда" — страница "Шрифты и цвета")
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
   
 Изменения цветовой схемы не затрагивают сеанс, в котором эти изменения были сделаны. Чтобы оценить изменения цвета, можно открыть другой экземпляр среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и создать условия, в которых изменения проявятся.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
 **Показать параметры для**  
 Перечисляются все элементы интерфейса пользователя, для которых можно изменить шрифт и цветовую схему. Выбрав элемент из этого списка, можно изменить настройки цвета для элемента, выбранного в списке **Отображаемые элементы**.  
   

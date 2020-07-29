@@ -2,22 +2,22 @@
 title: Сохранение и загрузка объектов R с помощью ODBC
 description: Пакет RevoScaleR содержит функции сериализации и десериализации, призванные значительно повысить производительность и обеспечить более компактное хранение объектов.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 98a14848db4854c0bcb19167e7fcf7d43eca5f2e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: c6f6f8611885a0628d3b2cf719947006a7c5094c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117387"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753355"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Сохранение и загрузка объектов R из SQL Server с помощью ODBC
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Службы R Services SQL Server могут хранить сериализованные объекты R в таблице и затем загружать их оттуда по мере необходимости, при этом им не требуется перезапускать код R или переобучать модель. Такая возможность сохранения объектов R в базе данных крайне важна для таких сценариев, как обучение и сохранение модели, а также последующее ее использование для оценки или анализа.
 
