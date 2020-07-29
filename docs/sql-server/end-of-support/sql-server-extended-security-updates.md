@@ -6,19 +6,19 @@ ms.date: 12/09/2019
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3e585b0314b6306bdff84b07f2d12514ee015936
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488366"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85900548"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Что такое дополнительные обновления системы безопасности SQL Server?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 В этой статье содержатся сведения об использовании службы реестра SQL Server для получения дополнительных обновлений системы безопасности [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. Более подробные сведения о других вариантах см. в статье [SQL Server end of support options](sql-server-end-of-life-overview.md) (Варианты при окончании поддержки SQL Server). 
 

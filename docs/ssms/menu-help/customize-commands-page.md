@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c4e138eb6b530377b76fcb6e6fb21a2694bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: df3c48dcab1ee71f8cfee1932099b034729451e3
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255703"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000412"
 ---
 # <a name="customize-commands-page"></a>Настройка (страница «Команды»)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 В этом диалоговом окне можно вводить и удалять команды панелей инструментов и меню, а также изменять изображения для кнопок на панели инструментов или команд меню. Чтобы открыть страницу **Команды** , в меню **Сервис** выберите команду **Настройка** , а затем выберите **Команды**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
 **Категории**  
 Определяет набор команд, отображаемых в списке **Команды** . Категории команд формируются на основе заголовков меню, предоставляемых инструментами и конструкторами, реализованными в настоящее время в данной среде. Список заголовков динамически меняется, поэтому порядок категорий и заголовков меню изменяется в зависимости от инструмента или конструктора, а также по мере их настройки. Поэтому два меню различных конструкторов могут иметь одинаковое имя, и один заголовок будет отображаться дважды, но будет содержать различные наборы команд.  
   
