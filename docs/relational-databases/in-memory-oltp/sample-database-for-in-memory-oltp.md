@@ -12,12 +12,12 @@ ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4859a35269e0664b07f08db795e3e57a4c8feb70
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 4eaa35280b4f469f6fcf49fe9d73f4b33bfda672
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85735039"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245213"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -465,14 +465,12 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  Моментальный снимок сразу после создания базы данных:  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|По умолчанию|94|  
 |MEMORYCLERK_XTP|DB_ID_5|877|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
-||||
   
  Клерки памяти по умолчанию содержат структуры памяти во всей системе и являются относительно небольшими. Клерк памяти, предназначенный для пользовательской базы данных (в данном случае это база данных с идентификатором 5), составляет примерно 900 МБ.  
   
@@ -490,9 +488,8 @@ WHERE t.type='U'
   
  В таблице ниже приведены результаты выполнения этого запроса для свежей установки образца.  
   
-||||  
-|-|-|-|  
-|**Имя таблицы**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Имя таблицы | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SpecialOfferProduct_inmem|64|3840|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
 |SalesOrderDetail_inmem|15316|663552|  
@@ -500,7 +497,6 @@ WHERE t.type='U'
 |SpecialOffer_inmem|3|8192|  
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
-||||
 
  Как видите, размер таблиц весьма невелик. SalesOrderHeader_inmem занимает примерно 7 МБ, а SalesOrderDetail_inmem — примерно 15 МБ.  
   
@@ -516,14 +512,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|По умолчанию|146|  
 |MEMORYCLERK_XTP|DB_ID_5|7374|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
-||||
 
  Как можно видеть, SQL Server использует чуть меньше 8 ГБ под оптимизированные для памяти таблицы и индексы из образца базы данных.  
   
@@ -538,9 +532,8 @@ ON dms.object_id=t.object_id
 WHERE t.type='U'  
 ```  
   
-||||  
-|-|-|-|  
-|**Имя таблицы**|**memory_allocated_for_table_kb**|**memory_allocated_for_indexes_kb**|  
+| Имя таблицы | memory_allocated_for_table_kb | memory_allocated_for_indexes_kb |
+| ---------- | ----------------------------- | ------------------------------- |
 |SalesOrderDetail_inmem|5113761|663552|  
 |DemoSalesOrderDetailSeed|64|10368|  
 |SpecialOffer_inmem|2|8192|  
@@ -548,7 +541,6 @@ WHERE t.type='U'
 |Product_inmem|111|12032|  
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
-||||
 
  Как видите, общий объем данных составляет примерно 6,5 ГБ. Обратите внимание, что индексы в таблицах SalesOrderHeader_inmem и SalesOrderDetail_inmem имеют тот же размер, что и индексы до вставки заказов на продажу. Размер индексов не изменился, потому что в обеих таблицах используются индексы HASH, а они являются статическими.  
   
@@ -564,14 +556,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|По умолчанию|2261|  
 |MEMORYCLERK_XTP|DB_ID_5|7396|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
-||||
 
  Это ожидаемо: память будет освобождаться при выполнении транзакционной рабочей нагрузки.  
   
@@ -584,14 +574,12 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
-||||  
-|-|-|-|  
-|**type**|**name**|**pages_MB**|  
+| type | name | pages_MB |
+| ---- | ---- | -------- |
 |MEMORYCLERK_XTP|По умолчанию|1863|  
 |MEMORYCLERK_XTP|DB_ID_5|7390|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
 |MEMORYCLERK_XTP|По умолчанию|0|  
-||||
 
 ### <a name="disk-utilization-for-memory-optimized-tables"></a>Использование диска оптимизированными для памяти таблицами  
  Общий размер на диске файлов контрольных точек базы данных в данное время можно узнать, выполнив следующий запрос:  
@@ -616,11 +604,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Размер на диске в МБ**|  
+| Размер на диске в МБ |
+| ------------------ |
 |2312|  
-||
 
  Как видите, существует большая разница между размером файлов контрольных точек на диске, который составляет 2,3 ГБ, и фактическим размером данных, равным почти 30 МБ.  
   
@@ -643,14 +629,12 @@ ORDER BY state, file_type
   
  Для первоначального состояния образца результат будет выглядеть примерно как для сервера с 16 логическими процессорами:  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Размер на диске в МБ**|  
+| state_desc | file_type_desc | count | Размер на диске в МБ |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  Как видите, большая часть объема используется воссозданными файлами данных и разностными файлами. SQL Server предварительно создает одну пару файлов (файл данных и разностный файл) на логический процессор. Кроме того, файлы данных имеют заранее заданный размер в 128 МБ, а разностные файлы — в 8 МБ, чтобы сделать вставку данных в эти файлы более эффективной.  
   
@@ -666,11 +650,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Размер на диске в МБ**|  
+| Размер на диске в МБ |
+| ------------------ |
 |8828|
-||
   
  Дисковый размер приближается к 9 ГБ, что близко к размеру данных в памяти.  
   
@@ -691,14 +673,12 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Размер на диске в МБ**|  
+| state_desc | file_type_desc | count | Размер на диске в МБ |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|1|128|  
 |UNDER CONSTRUCTION|DELTA|1|8|  
-|||||
 
  У нас по-прежнему имеется 16 пар предварительно созданных файлов, готовых по мере закрытия контрольных точек.  
   
@@ -716,11 +696,9 @@ FROM sys.filegroups f JOIN sys.database_files df
 WHERE f.type=N'FX'  
 ```  
   
-||  
-|-|  
-|**Размер на диске в МБ**|  
+| Размер на диске в МБ |
+| ------------------ |
 |11839|
-||
   
  Почти 12 ГБ, что значительно больше чем 9 ГБ, которые мы имели до сброса образца. Связано это с тем, что были запущены слияния файлов контрольных точек, но некоторые цели слияния пока еще не установлены, а некоторые исходные файлы слияний пока еще не были очищены, что видно из нижеследующего.  
   
@@ -739,9 +717,8 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Размер на диске в МБ**|  
+| state_desc | file_type_desc | count | Размер на диске в МБ |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |ACTIVE|DATA|38|5152|  
@@ -750,7 +727,6 @@ ORDER BY state, file_type
 |MERGE TARGET|DELTA|7|56|  
 |MERGED SOURCE|DATA|13|1772|  
 |MERGED SOURCE|DELTA|13|455|  
-|||||
 
  Цели слияния устанавливаются, а исходные файлы слияния удаляются по мере выполнения транзакций в системе.  
   
@@ -773,16 +749,14 @@ GROUP BY state, state_desc, file_type, file_type_desc
 ORDER BY state, file_type  
 ```  
   
-|||||  
-|-|-|-|-|  
-|**state_desc**|**file_type_desc**|**count**|**Размер на диске в МБ**|  
+| state_desc | file_type_desc | count | Размер на диске в МБ |
+| ---------- | -------------- | ----- | --------------- |
 |PRECREATED|DATA|16|2048|  
 |PRECREATED|DELTA|16|128|  
 |UNDER CONSTRUCTION|DATA|2|268|  
 |UNDER CONSTRUCTION|DELTA|2|16|  
 |ACTIVE|DATA|41|5608|  
 |ACTIVE|DELTA|41|328|  
-|||||
 
  В этом случае будет две пары файлов контрольных точек в состоянии "в разработке", а это означает, что несколько пар файлов были перемещены в состояние "в разработке", вероятнее всего, из-за высокого уровня параллелизма в рабочей нагрузке. Нескольким параллельным потокам одновременно потребовалась новая пара файлов, из-за чего пара была переведена из состояния "создана заранее" в состояние "в разработке".  
   

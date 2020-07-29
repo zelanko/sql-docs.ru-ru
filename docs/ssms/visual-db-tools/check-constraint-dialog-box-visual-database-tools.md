@@ -9,20 +9,19 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: cdcfe6cd4f0c48a6774b8e2518968b8c3d1997f2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0566d91cb0dfa5e2df23bb2e245a42fdb5bd73df
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78280932"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85998930"
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>Диалоговое окно «Проверочное ограничение» (визуальные инструменты для баз данных)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Это диалоговое окно выводится, если в конструкторе таблиц щелкнуть правой кнопкой мыши сетку определения таблицы и выбрать пункт **Проверочные ограничения**. Диалоговое окно содержит набор свойств для ограничений, отличных от ограничений уникальности, присоединенных к таблицам базы данных. Свойства, применяемые к ограничениям уникальности, отображаются в диалоговом окне **Индексы/Ключи** .  
   

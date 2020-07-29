@@ -22,12 +22,12 @@ ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f2cda4a044f6980a5998371f1a7b0f70397e259
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 915cf95799a80a0d8841206f4b23b04fba5fec5f
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737985"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112371"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,6 +45,8 @@ ms.locfileid: "85737985"
 PARSENAME ('object_name' , object_piece )
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## <a name="arguments"></a>Аргументы
 
 *«object_name»* — параметр, содержащий имя объекта, из которого будет извлекаться указанный элемент объекта. Данный параметр представляет имя объекта, которое необязательно задано полностью. Если указываются все части имени объекта, то это имя может состоять из четырех частей: имени сервера, имени базы данных, имени схемы и имени объекта.  Каждая часть строки «object_name» имеет тип *sysname* что эквивалентно типу nvarchar (128) или 256 байтам. Если какая-либо часть строки превышает 256 байт, PARSENAME вернет значение NULL для этой части, так как оно не является допустимым значением sysname.

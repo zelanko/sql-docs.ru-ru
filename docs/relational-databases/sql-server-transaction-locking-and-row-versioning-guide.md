@@ -19,12 +19,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b39ab62ed76269869ae8c9327f5aaa0996672fba
-ms.sourcegitcommit: 703968b86a111111a82ef66bb7467dbf68126051
+ms.openlocfilehash: d1323c8736934a46fdb4ef8c4d8752364f8ae38d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86053750"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87239517"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Руководство по блокировке и управлению версиями строк транзакций
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -71,14 +71,62 @@ ms.locfileid: "86053750"
   
  В явной транзакции можно использовать все инструкции языка [!INCLUDE[tsql](../includes/tsql-md.md)], за исключением следующих:  
   
-||||  
-|-|-|-|  
-|ALTER DATABASE|CREATE DATABASE|DROP FULLTEXT INDEX|  
-|ALTER FULLTEXT CATALOG|CREATE FULLTEXT CATALOG|RECONFIGURE|  
-|ALTER FULLTEXT INDEX|CREATE FULLTEXT INDEX|RESTORE|  
-|BACKUP|DROP DATABASE|Хранимые процедуры для работы с полнотекстовыми системами|  
-|CREATE DATABASE|DROP FULLTEXT CATALOG|Хранимая процедура sp_dboption, чтобы настроить параметры базы данных, или любая системная процедура, изменяющая базу данных master внутри явных или неявных транзакций.|  
-  
+:::row:::
+    :::column:::
+        ALTER DATABASE
+    :::column-end:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT INDEX
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        RECONFIGURE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ALTER FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        CREATE FULLTEXT INDEX
+    :::column-end:::
+    :::column:::
+        RESTORE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        BACKUP
+    :::column-end:::
+    :::column:::
+        DROP DATABASE
+    :::column-end:::
+    :::column:::
+        Хранимые процедуры для работы с полнотекстовыми системами
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE DATABASE
+    :::column-end:::
+    :::column:::
+        DROP FULLTEXT CATALOG
+    :::column-end:::
+    :::column:::
+        Хранимая процедура sp_dboption, чтобы настроить параметры базы данных, или любая системная процедура, изменяющая базу данных master внутри явных или неявных транзакций.
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > Инструкцию UPDATE STATISTICS можно использовать внутри явной транзакции. Однако фиксация инструкции UPDATE STATISTICS производится независимо от обрамляющей ее транзакции, поэтому произвести ее откат невозможно.  
   
@@ -90,13 +138,51 @@ ms.locfileid: "86053750"
   
  После установления на соединении режима неявных транзакций экземпляр компонента [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] автоматически запускает транзакцию, если вначале выполняет любую из следующих инструкций:  
   
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|CREATE|GRANT|SELECT|  
-|DELETE|INSERT|TRUNCATE TABLE|  
-|DROP|OPEN|UPDATE|  
-  
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DELETE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+
 -  **Транзакции контекста пакета**  
    Будучи применимой только к множественным активным результирующим наборам (режим MARS), явная или неявная транзакция [!INCLUDE[tsql](../includes/tsql-md.md)], которая запускается в сеансе режима MARS, становится транзакцией контекста пакета. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] автоматически выполняет откат транзакции контекста пакета, если эта транзакция не зафиксирована или выполнен ее откат при завершении пакета.  
   

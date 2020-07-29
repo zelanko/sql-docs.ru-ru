@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 079c2984-0052-4a37-a2b8-4ece56e6b6b5
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e515bcf14eff0ce4d4b6c5913803ee8e322365d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: aa160cf83c8942ef0b5ed2b5b0f5c06add17d6a4
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75252142"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246243"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Создание и присоединение расписаний к заданиям
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -90,9 +89,8 @@ ms.locfileid: "75252142"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|||  
+|Описание|Раздел|  
 |-|-|  
-|**Описание**|**Раздел**|  
 |Описывает создание расписания для задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |Описывает планирование задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Планирование задания](../../ssms/agent/schedule-a-job.md)|  
 |Описывает задание условия простоя ЦП для сервера.|[Установка времени и длительности простоя ЦП (среда SQL Server Management Studio)](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  

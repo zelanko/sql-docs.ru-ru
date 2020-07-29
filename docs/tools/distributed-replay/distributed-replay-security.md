@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 25bc62c6ea0785cf9abb05909fdc2f2563932b07
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 944fc1a9b5769c797ed9fa372e45c17931814983
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151109"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85681540"
 ---
 # <a name="distributed-replay-security"></a>Безопасность распределенного воспроизведения
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Перед установкой и использованием компонента распределенного воспроизведения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ознакомьтесь с важной информацией о безопасности, представленной в этой статье. В этом разделе описываются шаги настройки мер безопасности после установки, необходимые перед началом использования распределенного воспроизведения. В этом разделе также описываются важные соображения по защите данных и важные шаги удаления.  
   

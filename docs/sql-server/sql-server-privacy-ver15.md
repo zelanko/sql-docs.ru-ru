@@ -2,6 +2,7 @@
 title: Приложение к конфиденциальности в SQL Server 2019 | Документация Майкрософт
 ms.date: 09/20/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: mikeray
 ms.custom: ''
 ms.topic: conceptual
@@ -10,16 +11,16 @@ helpviewer_keywords: ''
 author: MsSQLGirl
 ms.author: jukoesma
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: bbb8a21ee63e0a14778ee57874ba0ef385ac6cba
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 393656057ae547c770f37e1e7db4c5b5373ac1bd
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "71150297"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86914681"
 ---
 # <a name="sql-server-2019-privacy-supplement"></a>Приложение к конфиденциальности в SQL Server 2019
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 В этой статье перечислены функции, работающие через Интернет, с помощью которых можно собирать и отправлять в корпорацию Майкрософт анонимные данные по использованию компонентов или данные диагностики. SQL Server может собирать стандартные сведения о компьютере, а также сведения об использовании и производительности. Эти данные могут отправляться в корпорацию Майкрософт и анализироваться в целях улучшения качества, безопасности и надежности продукта. Эта статья служит приложением к общему [заявлению о конфиденциальности Майкрософт](https://go.microsoft.com/fwlink/?LinkId=521839). Классификация данных в этой статье относится только к локальным версиям SQL Server. Она не относится к следующим продуктам.
 

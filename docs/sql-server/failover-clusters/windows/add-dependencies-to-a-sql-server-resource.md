@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e78380d509d2b291c0794cb408909a10622c3f53
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 84633c480003acc62b464c2609d7143051547de9
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74822059"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85897367"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>добавить зависимости к ресурсу SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   В этой статье описывается, как добавлять зависимости к ресурсу экземпляра отказоустойчивого кластера Always On с помощью оснастки "Диспетчер отказоустойчивости кластеров". Оснастка «Диспетчер отказоустойчивости кластеров» — это приложение управления кластером для службы WSFC.  
   
 -   **Перед началом работы**  [Ограничения](#Restrictions), [Предварительные условия](#Prerequisites)  

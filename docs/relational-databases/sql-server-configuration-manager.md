@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e6beaea4-164c-4078-95ae-b9e28b0aefe8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: f9a66712c7547a5fce852c23cdccd57465d794f1
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 429c56bed55931e4e30be6b2730638eb93113bd8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86918823"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245612"
 ---
 # <a name="sql-server-configuration-manager"></a>Диспетчер конфигурации SQL Server
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "86918823"
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] — это средство, предназначенное для управления службами, связанными с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], для настройки сетевых протоколов, которые используются [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], а также для управления конфигурацией подключений с клиентских компьютеров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] устанавливается вместе с SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Диспетчер конфигурации [!INCLUDE[msCoName](../includes/msconame-md.md)] представляет собой оснастку консоли управления (ММС), которую можно открыть из меню "Пуск" или добавить в любой экран консоли управления [!INCLUDE[msCoName](../includes/msconame-md.md)] . [!INCLUDE[msCoName](../includes/msconame-md.md)] Консоль управления (**mmc.exe**) использует файл **SQLServerManager\<version>.msc** (например, **SQLServerManager13.msc** для [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]), чтобы открыть диспетчер конфигурации. Для управления конкретной версией [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] потребуется соответствующая версия диспетчера конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ниже приведены расположения последних пяти версий этого диспетчера при установке Windows на диск C.  
   
-|||  
+|Версия|путь|  
 |-|-|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019|C:\Windows\SysWOW64\SQLServerManager15.msc| 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|  

@@ -2,21 +2,21 @@
 title: Записные книжки Azure Data Studio (Python, R)
 description: Узнайте, как выполнять скрипты Python и R в записных книжках Azure Data Studio с помощью служб машинного обучения SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/09/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4b6bb16013b75765ee5fdf6b1b52ab0bd65de37f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1c5e16667f311c3afff9b2ada9e17c8ffe3751c2
+ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487573"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86916634"
 ---
 # <a name="run-python-and-r-scripts-in-azure-data-studio-notebooks-with-sql-server-machine-learning-services"></a>Запуск скриптов Python и R в записных книжках Azure Data Studio с помощью служб машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Узнайте, как запускать скрипты Python и R в записных книжках [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) с помощью [служб машинного обучения SQL Server](../sql-server-machine-learning-services.md). Azure Data Studio — это кроссплатформенный инструмент для работы с базами данных.
 
@@ -26,11 +26,9 @@ ms.locfileid: "81487573"
 
 - В ней установлен и включен сервер служб машинного обучения SQL Server. Службы машинного обучения можно использовать в Windows, Linux или кластерах больших данных.
 
-    - [Установка служб машинного обучения SQL Server в Windows](sql-machine-learning-services-windows-install.md).
-
-    - [Установка служб машинного обучения SQL Server в Linux](../../linux/sql-server-linux-setup-machine-learning.md).
-
-    - [Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
+  - [Установка служб машинного обучения SQL Server в Windows](sql-machine-learning-services-windows-install.md).
+  - [Установка служб машинного обучения SQL Server в Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+  - [Выполнение скриптов Python и R с помощью служб машинного обучения в кластерах больших данных SQL Server](../../big-data-cluster/machine-learning-services.md).
 
 ## <a name="create-a-sql-notebook"></a>Создание записной книжки SQL
 
@@ -125,5 +123,7 @@ ms.locfileid: "81487573"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
+- [Использование записных книжек в Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
+- [Создание и запуск записной книжки SQL Server](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [Краткое руководство. Выполнение простых скриптов Python с помощью служб машинного обучения SQL Server](../tutorials/quickstart-python-create-script.md)
 - [Краткое руководство. Выполнение простых скриптов R с помощью служб машинного обучения SQL Server](../tutorials/quickstart-r-create-script.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6d8bd652a821b6c5dad42238a1eae6ad97c90a1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3550bd04341d9975870aa18483f2901e845795e0
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509665"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627523"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
   Веб-служба сервера отчетов использует обмен сообщениями по протоколу SOAP для отправки текстовых команд по сети. Эти команды имеют вид XML-текста, передаваемого через Интернет по протоколу HTTP. Использование протокола связи SOAP в веб-службе сервера отчетов позволяет приложениям и компонентам обмениваться данными с сервером отчетов, используя широко признанную открытую инфраструктуру. Стандарт SOAP определен на веб-сайте www.w3.org/TR/SOAP.  

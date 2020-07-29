@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 427f367eac38f2c5899f06c022e614bde80f37fb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 397e41a6ad34203fd16bf19e56f6284f7bb8c94f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246235"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002604"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Работа со столбцами в агрегатных запросах (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) делает некоторые предположения для создания правильного статистического запроса. Например, если при создании статистического запроса помечается столбец данных для вывода, конструктор запросов и представлений автоматически включает этот столбец в предложение GROUP BY, чтобы в итоговых результатах случайно не было отображено содержимое отдельной строки.  
   
 ## <a name="using-group-by"></a>Параметр «Группировать по»  

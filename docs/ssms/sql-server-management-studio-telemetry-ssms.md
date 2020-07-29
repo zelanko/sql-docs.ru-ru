@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5b61b32ab266c4068f610b9138bf3fc8ea364f0e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e9ecc82ab14bf73ab52219301ca5843673b3ba4
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245701"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001583"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Локальный аудит для сбора данных об использовании и данных диагностики в SSMS
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Среда SQL Server Management Studio (SSMS) содержит функции, работающие через Интернет, с помощью которых можно собирать и отправлять в корпорацию Майкрософт анонимные данные об использовании компонентов или данные диагностики. SSMS может собирать стандартные сведения о компьютере, а также сведения об использовании и производительности. Эти данные могут отправляться в корпорацию Майкрософт и использоваться для анализа в целях улучшения качества, безопасности и надежности среды SSMS. Сбор таких сведений, как имена, адреса и другие сведения личного характера, не осуществляется. Дополнительные сведения см. в [заявлении о конфиденциальности Майкрософт](https://privacy.microsoft.com/privacystatement) и [приложении к заявлению о конфиденциальности SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 

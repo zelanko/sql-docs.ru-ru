@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: e2d32824b62cf54132c6168e5f44d93fa0cd6289
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: ff4ab76193c13b03fbd4d7fab05cbf212d1aae4b
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85726155"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247626"
 ---
 # <a name="query-processing-architecture-guide"></a>Руководство по архитектуре обработки запросов
 [!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
@@ -481,13 +481,61 @@ GO
 
 Изменение любого из следующих параметров SET для данного выполнения повлияет на возможность повторного использования планов, так как [!INCLUDE[ssde_md](../includes/ssde_md.md)] выполняет [свертку констант](#ConstantFolding) и эти параметры влияют на результаты таких выражений:
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### <a name="caching-multiple-plans-for-the-same-query"></a>Кэширование нескольких планов для одного запроса 
 Запросы и планы выполнения являются уникально идентифицируемыми в [!INCLUDE[ssde_md](../includes/ssde_md.md)], как отпечатки пальцев.
@@ -671,16 +719,70 @@ sql_handle
 Расширенное событие `sql_statement_recompile` (xEvent) выводит сведения о перекомпиляции на уровне инструкций. Это событие xEvent возникает при перекомпиляции инструкций уровня для любого типа пакета. К таким пакетам относятся хранимые процедуры, триггеры, нерегламентированные пакеты и запросы. Пакеты можно отправлять с помощью различных интерфейсов, включая sp_executesql, динамический язык SQL, методы Prepare и Execute.
 Столбец `recompile_cause` для событий xEvent `sql_statement_recompile` содержит код причины перекомпиляции в виде целого числа. В следующей таблице приведены возможные причины.
 
-|||
-|----|----|  
-|Изменение схемы|Изменение статистики|  
-|Отложенная компиляция|Изменение параметра SET|  
-|Изменение временной таблицы|Изменение удаленного набора строк|  
-|Изменение разрешения `FOR BROWSE`|Изменение среды уведомлений о запросах|  
-|Изменение секционированного представления|Изменение параметров курсора|  
-|`OPTION (RECOMPILE)` запрошено|Очистка параметризованного плана|  
-|Изменение версии базы данных, влияющее на план|Изменение политики форсирования плана для хранилища запросов|  
-|Сбой форсирования плана для хранилища запросов|Отсутствие плана для хранилища запросов|
+:::row:::
+    :::column:::
+        Изменение схемы
+    :::column-end:::
+    :::column:::
+        Изменение статистики
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Отложенная компиляция
+    :::column-end:::
+    :::column:::
+        Изменение параметра SET
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Изменение временной таблицы
+    :::column-end:::
+    :::column:::
+        Изменение удаленного набора строк
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Изменение разрешения `FOR BROWSE`
+    :::column-end:::
+    :::column:::
+        Изменение среды уведомлений о запросах
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Изменение секционированного представления
+    :::column-end:::
+    :::column:::
+        Изменение параметров курсора
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` запрошено
+    :::column-end:::
+    :::column:::
+        Очистка параметризованного плана
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Изменение версии базы данных, влияющее на план
+    :::column-end:::
+    :::column:::
+        Изменение политики форсирования плана для хранилища запросов
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Сбой форсирования плана для хранилища запросов
+    :::column-end:::
+    :::column:::
+        Отсутствие плана для хранилища запросов
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > В выпусках [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], в которых xEvents недоступны, для тех же целей (отслеживание перекомпиляции уровня инструкций) можно использовать событие трассировки [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md).

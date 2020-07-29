@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c6dc23b79346a3e163f896b3f85f120cc9ccc903
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a54e4152a13b1bf1f1b46efb05ff9f8dcd1b72f
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257175"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001930"
 ---
 # <a name="name-not-found-dialog-box"></a>диалоговое окно «Имя не найдено»
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Одно или несколько имен объектов в диалоговом окне не были найдены. Выберите параметр для продолжения.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
 **Исправить сведения и повторить поиск**  
 Выберите, чтобы допустить использование областей **Выберите тип объекта**, **Тип объекта**и **Введите имя объекта** .  
   

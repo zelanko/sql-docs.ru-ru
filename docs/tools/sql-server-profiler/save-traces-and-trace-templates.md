@@ -12,16 +12,16 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 2660ccb2deeaf4b76090b2add2614452dd91cb60
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 084471f17aac4d9f731facaad71c2e265a2c275d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85726909"
 ---
 # <a name="save-traces-and-trace-templates"></a>Сохранение трассировок и шаблонов трассировок
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Сохранение файлов трассировки нужно отличать от сохранения шаблонов трассировок. Сохранение файла трассировки предполагает сохранение собранных данных о событиях в указанном месте. Сохранение шаблона трассировки связано с сохранением определения трассировки (например указанных столбцов данных, классов событий или фильтров).  
   

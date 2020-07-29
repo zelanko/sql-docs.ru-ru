@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e1a6da50988a372514cf613f16896aea966fd153
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9cf4513c4094798f72b6e3f5012fd47afb29bdae
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75245761"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86001624"
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Параметры ("Конструкторы" — страница "Планы обслуживания")
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Диалоговое окно **Параметры** позволяет определить поведение конструктора по умолчанию при добавлении новых фигур на область конструктора. В меню **Сервис** выберите пункт **Параметры**, откройте раздел **Конструкторы**и выберите пункт **Планы обслуживания**.  
   
-## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+## <a name="ui-element-list"></a>Список элементов пользовательского интерфейса  
 **Подключить новую фигуру к выбранной фигуре по умолчанию**  
 Если этот флажок установлен, при добавлении на область конструктора новые фигуры автоматически подключаются к другим фигурам. Если флажок снят, новые фигуры при добавлении не подключаются. Если флажок установлен, доступны следующие флажки.  
   

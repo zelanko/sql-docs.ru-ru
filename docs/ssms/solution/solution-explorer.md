@@ -17,16 +17,16 @@ ms.author: maghan
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
-ms.openlocfilehash: d95b590d4ec0bd9daef6b81822317cfdda0bdad3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ac4584f715da631c13a56fa531334e9da20f6c55
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242843"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243598"
 ---
 # <a name="solution-explorer"></a>Обозреватель решений
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Панель обозревателя решений в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] содержит контейнеры (проекты) для управления такими элементами, как скрипты базы данных, запросы, подключения к данным и файлы. Один или несколько связанных между собой проектов могут быть объединены в контейнер, который называется решением.  
   
 Решение содержит один или несколько проектов, а также файлы и метаданные, которые позволяют определить решение как единое целое. Проект — это набор файлов и относящихся к ним метаданных, например сведений о соединении. Решения и проекты содержат элементы, которые представляют собой скрипты, запросы, сведения о соединениях и файлы, необходимые для создания решения базы данных.  
@@ -52,9 +52,8 @@ ms.locfileid: "75242843"
 ## <a name="related-tasks"></a>Связанные задачи  
 Используйте следующие разделы для начала работы с решениями SQL Server.  
   
-|||  
-|-|-|  
-|**Описание**|**Раздел**|  
+|Описание|Раздел|  
+|-|-|    
 |Описывает, как добавить один или несколько проектов в решение.|[Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Описывает, как создать проект и добавить элементы, например скрипты и соединения.|[Проекты (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Сведения о файлах, используемых средой [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для управления решениями и файлами.|[Файлы для управления решениями и проектами](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

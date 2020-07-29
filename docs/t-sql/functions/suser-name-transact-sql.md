@@ -24,12 +24,12 @@ ms.assetid: ae598d9f-9baa-49b8-b1c1-042854206de4
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63eb298fab5e2c62ac9403325368b008efa95dab
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b62e29885c9e23ae7f391106ce83cdf77c1b8d3
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79526749"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110757"
 ---
 # <a name="suser_name-transact-sql"></a>SUSER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "79526749"
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 _server\_user\_id_  
 Идентификационный номер учетной записи пользователя. Необязательный аргумент _server\_user\_id_ имеет тип **int**. Аргумент _server\_user\_id_ может быть идентификационным номером любого имени для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также пользователя или группы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows с разрешением на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент _server\_user\_id_ не указан, возвращается идентификационное имя для входа текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL.  
   

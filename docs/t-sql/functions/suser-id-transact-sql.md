@@ -23,12 +23,12 @@ ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8ebf42b9f8495690472e57baf6ccde33ef94aefd
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: a9328a48066848228533866547590a2e0e803df2
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85897953"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110777"
 ---
 # <a name="suser_id-transact-sql"></a>Идентификатор SUSER_ID (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "85897953"
 SUSER_ID ( [ 'login' ] )   
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  **'** *login* **'**  
  Имя входа пользователя. Аргумент *login* имеет тип **nchar**. Если в качестве *login* указано значение типа **char**, *login* неявно преобразуется в тип **nchar**. *login* может быть любым именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], пользователем или группой Windows с разрешением на подключение к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если аргумент *login* не задан, то возвращается идентификационный номер имени входа для текущего пользователя. Если параметр содержит слово NULL, то возвращается NULL.  
   
