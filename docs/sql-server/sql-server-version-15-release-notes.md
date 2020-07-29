@@ -10,15 +10,15 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 67e08192643337ec37ef0be3bd603599d25a769d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 7472d3c02c0858935f1221521fc88275789ca261
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80665414"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248093"
 ---
 # <a name="sql-server-2019-release-notes"></a>Заметки о выпуске [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 В статье описаны ограничения и известные проблемы, связанные с [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. Связанные сведения:
 
@@ -83,6 +83,6 @@ ms.locfileid: "80665414"
 
 ## <a name="machine-learning-services"></a>Служба машинного обучения
 
-Сведения о проблемах в Службах машинного обучения SQL Server см. в статье [Known issues in SQL Server Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md) (Известные проблемы в Службах машинного обучения SQL Server).
+Сведения о проблемах в Службах машинного обучения SQL Server см. в статье [Known issues in SQL Server Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md) (Известные проблемы в Службах машинного обучения SQL Server).
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]

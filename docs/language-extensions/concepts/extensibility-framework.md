@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 069736c17191e3583e5a6868c90e640acb6585b2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3e52727922f03a6ae078477b8af6cf0171acd053
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "73658874"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722558"
 ---
 # <a name="extensibility-architecture-in-sql-server-language-extensions"></a>Архитектура расширяемости в расширениях языка SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Сведения об архитектуре расширяемости, используемой для расширений языка SQL Server и позволяющей выполнять внешний код в SQL Server. В SQL Server 2019 поддерживается язык Java. Код выполняется в языковой среде как расширение основного ядра СУБД.
 

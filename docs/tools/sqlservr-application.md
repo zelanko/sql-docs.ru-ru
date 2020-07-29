@@ -2,7 +2,7 @@
 title: Приложение sqlservr
 description: Приложение sqlservr запускает, останавливает, приостанавливает и возобновляет работу экземпляра SQL Server из командной строки.
 ms.custom: seo-lt-2019
-ms.date: 08/01/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -23,16 +23,16 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 56498901eb6f7eed8fa58f73bae58daddb36f874
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 1302360b6ab5175bed5a9776d7de5389c3d40c00
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83150567"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112571"
 ---
 # <a name="sqlservr-application"></a>Приложение sqlservr
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 Приложение **sqlservr** запускает, останавливает, приостанавливает и возобновляет работу экземпляра [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] операциями из командной строки.
 
@@ -86,7 +86,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 |Параметр | Дополнительные сведения|
 |:-----|:-----|
 |**-h** | В более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использовался для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memory_to_reserve*<br/><br>Применяется к более ранним версиям 32-разрядных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в [разделе документации по SQL Server 2014, посвященном параметрам конфигурации памяти сервера](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-g** | *memory_to_reserve*<br/><br>Применяется к более ранним версиям 32-разрядных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Поддерживается вплоть до версии [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Определяет целое число мегабайтов (МБ) памяти, которую [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] оставляет доступной для распределения памяти в пределах процесса [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , но за пределами пула памяти [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Дополнительные сведения см. в [разделе документации по SQL Server 2014, посвященном параметрам конфигурации памяти сервера](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>См. также:

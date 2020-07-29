@@ -1,5 +1,5 @@
 ---
-title: IS_SRVROLEMEMBER (Transact-SQL) | Документы Майкрософт
+title: Функция IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: e1bbd8bbac55c3cf9631f37702504b72bed3d473
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: eb44adf219905a585b922fc280215f1c81465cda
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85784513"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248524"
 ---
 # <a name="is_srvrolemember-transact-sql"></a>Функция IS_SRVROLEMEMBER (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Указывает, является ли данное имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] членом указанной роли сервера.  
@@ -40,19 +41,23 @@ ms.locfileid: "85784513"
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
  **'** *role* **'**  
  Имя проверяемой роли сервера. Аргумент *role* имеет тип **sysname**.  
   
  Допустимыми значениями для параметра *role* являются определяемые пользователем роли сервера, а также следующие предопределенные роли сервера:  
-  
-|||  
-|-|-|  
-|sysadmin|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> таверна|  
-|processadmin||  
+
+- sysadmin
+- serveradmin
+- dbcreator
+- setupadmin  
+- bulkadmin
+- securityadmin  
+- diskadmin
+- таверна  
+- processadmin
   
  **'** *login* **'**  
  Проверяемое имя для входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Аргумент *login* имеет тип **sysname** и значение по умолчанию NULL. Если значение не указано, то результат основан на текущем контексте выполнения. Если параметр содержит слово NULL, то возвращается NULL.  
@@ -60,7 +65,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 ## <a name="return-types"></a>Типы возвращаемых данных  
  **int**  
   
-|Возвращаемое значение|Description|  
+|Возвращаемое значение|Описание|  
 |------------------|-----------------|  
 |0|*login* не является членом роли *role*.<br /><br /> В [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] эта инструкция всегда возвращает 0.|  
 |1|*login* является членом роли *role*.|  

@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 3056ebfc960b26dd3035f1aefd1932151bad207a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8330963e62c3185203c9b25c53785f12ec9fb8be
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247260"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86004945"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Диалоговое окно «Полнотекстовые индексы» (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Это диалоговое окно позволяет создать полнотекстовый индекс для полнотекстового поиска по столбцам, содержащим текстовые данные, в таблицах базы данных. Полнотекстовый индекс зависит от обычного индекса, поэтому необходимо сначала создать его. Обычный индекс должен быть создан для одного столбца со значениями, отличными от NULL; лучше выбрать столбец с небольшими значениями, чем столбец с большими значениями.  
   
 > [!NOTE]

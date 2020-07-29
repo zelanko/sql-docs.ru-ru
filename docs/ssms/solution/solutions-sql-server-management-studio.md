@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: d06a8a05-7201-4055-8cf3-21bcb4e82c25
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f3b747d771968ec78ebd58c5d9e6901a1a56e989
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e964439576d46004fc4f499f74340e5ed1a4a2b
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75242816"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86000782"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Решения (среда SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Решение [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это набор из одного или нескольких взаимосвязанных проектов. Проекты — это контейнеры, используемые разработчиками для организации взаимосвязанных файлов (например, для создания наборов широко используемых скриптов администрирования).  
   
 ## <a name="solution-overview"></a>Общие сведения о решении  

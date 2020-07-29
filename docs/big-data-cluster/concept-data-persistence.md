@@ -9,16 +9,16 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a138a8451211436d55da537b9d8a45d26c534e48
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8a3ca863818d11471b0ae6aadd38458faf8b9daf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "80215751"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85661079"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-in-kubernetes"></a>Сохраняемость данных при использовании кластера больших данных SQL Server в Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [Постоянные тома](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) предоставляют модель подключения для хранилища в Kubernetes. В этой модели способ предоставления хранилища абстрагируется от его использования. Поэтому вы можете подключить собственное хранилище высокого уровня доступности к кластеру больших данных SQL Server. Это позволяет получить полный контроль над типом хранилища, доступностью и производительностью. Kubernetes поддерживает [различные типы решений для хранения данных](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), включая диски и файлы Azure, NFS и локальное хранилище.
 

@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 0be86ddee956542e2637547acc989cf35407f2dd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d9d284d99b6dfddaf8936c36cf06e373a673e46a
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255329"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86003188"
 ---
 # <a name="query-properties-visual-database-tools"></a>Свойства запроса (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Эти свойства отображаются в окне «Свойства» при открытии запроса в конструкторе запросов и представлений. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства».  
   
 > [!NOTE]  

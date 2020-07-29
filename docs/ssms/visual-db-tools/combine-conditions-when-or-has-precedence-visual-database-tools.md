@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 781d6819519b35153564b4032fce867875fb8d1c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9fa5297cdd4e128d9ab800293514b3ee56045ac1
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257115"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "85978323"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>Соединение условий, если приоритет имеет оператор OR (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Чтобы связать условия, оператором OR и дать им приоритет над условиями, связанными оператором AND, необходимо повторить условие, связанное оператором AND, для каждого условия, связанного оператором OR.  
   
 Например, предположим, что нужно найти всех служащих, которые проработали в компании более пяти лет и имеют самую низшую должность или вышли на пенсию. Этот запрос требует трех условий: одного условия, связанного с двумя дополнительными оператором AND:  

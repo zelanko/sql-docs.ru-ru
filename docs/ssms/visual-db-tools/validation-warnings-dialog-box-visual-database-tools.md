@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 09b73a3f3065a7f953441566c71093a5701045ca
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3dd3f15ba7b6b42b95d8789d204bc44c2afb3f7d
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246308"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002665"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>Диалоговое окно «Предупреждения проверки» (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Это диалоговое окно появляется при попытке сохранить изменения с потенциально опасными побочными эффектами или в случае вероятной неудачи операции фиксации базы данных. Это диалоговое окно указывает возможные побочные эффекты или возможные причины неудачи операции фиксации. Диалоговое окно предоставляет возможность продолжить действие или отменить его.  
   
 > [!NOTE]  

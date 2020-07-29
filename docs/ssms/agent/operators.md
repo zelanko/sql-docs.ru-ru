@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: 38e8488f-2669-4cea-b9c3-5f394a663678
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3e5ecdc830550570f43484c61a87e315e9fc7661
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: a500a4c03562d024bb64a65053fe1afc374844c8
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247633"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87246454"
 ---
 # <a name="operators"></a>Операторы
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -122,9 +121,8 @@ ms.locfileid: "75247633"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|||  
+|Задания|Раздел|  
 |-|-|  
-|**Задачи**|**Раздел**|  
 |Задачи, связанные с созданием оператора|[Создание оператора](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
 |Задачи, связанные с назначением предупреждений|[Назначение предупреждений оператору](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Определение реакция на предупреждение (среда SQL Server Management Studio)](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](https://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Назначение предупреждений оператору](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   

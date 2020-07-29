@@ -2,22 +2,22 @@
 title: Установка без доступа к Интернету
 description: Установка компонентов R и Python SQL Server для машинного обучения на изолированных компьютерах, защищенных брандмауэром.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/04/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9bdcec8602a9552fdc7ffac0be3badb26b19646e
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: d51ac079bf06938826bc343b1b3317e558964655
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118257"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247988"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Настройка компонентов R и Python SQL Server для машинного обучения на компьютерах без доступа к Интернету
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 По умолчанию установщики подключаются к сайтам загрузки Майкрософт, чтобы получить необходимые и обновленные компоненты для машинного обучения на SQL Server. Если ограничения брандмауэра не позволяют установщику обратиться к этим сайтам, можно использовать устройство, подключенное к Интернету, для загрузки файлов, пересылки файлов на автономный сервер, а затем запустить программу установки.
 
@@ -215,4 +215,4 @@ Release  | Microsoft R Open | Microsoft R Server |
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-Сведения о незнакомых сообщениях и записях журнала см. в статье [Вопросы и ответы по установке и обновлению — службы машинного обучения](../r/upgrade-and-installation-faq-sql-server-r-services.md).
+Сведения о незнакомых сообщениях и записях журнала см. в статье [Вопросы и ответы по установке и обновлению — службы машинного обучения](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).

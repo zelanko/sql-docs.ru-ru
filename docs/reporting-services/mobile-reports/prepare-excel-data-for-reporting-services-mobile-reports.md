@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ef25e90b8a9deb641a72006faf0a0c903a554ba5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f3a760b0ae100259b8102f303f0747e0da81223e
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79448373"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942326"
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
   
@@ -70,11 +70,11 @@ ms.locfileid: "79448373"
   
 Так как поля с датами используются во многих мобильных отчетах, убедитесь, что ячейки в Excel правильно отформатированы как даты. В некоторых случаях для этого нужно выполнить преобразование. Ниже приведены примеры формул Excel для преобразования ячеек с текстом в ячейки с датами.  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 После преобразования ячейки нужно отформатировать как даты. Для этого выделите все ячейки или весь столбец, а затем откройте **контекстное меню** и выберите **Формат ячеек** > **Дата** в списке **Категория**. Также можно использовать мастер преобразования текста Excel, который преобразует ячейки с текстом в правильно отформатированные даты.  
   

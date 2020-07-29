@@ -9,16 +9,16 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: bc83184b6cac6ab574090f8059e2a79fa9ca69ca
+ms.sourcegitcommit: 591bbf4c7e4e2092f8abda6a2ffed263cb61c585
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152008"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86942794"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>Что такое [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Начиная с версии [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] обеспечивают развертывание масштабируемых кластеров SQL Server, Spark и контейнеров HDFS, работающих в Kubernetes. Эти компоненты работают параллельно, позволяя считывать, записывать и обрабатывать большие данные в Transact-SQL или Spark, благодаря чему вы можете с легкостью объединять и анализировать важные реляционные данные с объемными большими данными.
 
@@ -85,7 +85,7 @@ ms.locfileid: "83152008"
 
 Kubernetes — это оркестратор контейнеров с открытым исходным кодом, который обеспечивает масштабирование развертываний контейнеров в соответствии с потребностями. В следующей таблице описываются основные термины, связанные с Kubernetes:
 
-|||
+|Термин|Описание|
 |:--|:--|
 | **Cluster** | Кластер Kubernetes — это набор компьютеров, которые также называются узлами. Один узел используется для управления кластером и является главным. Остальные считаются рабочими узлами. Главный узел Kubernetes отвечает за распределение рабочей нагрузки между рабочими узлами, а также за мониторинг работоспособности кластера. |
 | **Node** | Узел запускает контейнерные приложения. Это может быть как физический компьютер, так и виртуальная машина. Кластер Kubernetes может включать узлы как физических компьютеров, так и виртуальных машин. |

@@ -14,12 +14,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e31a222a0d8229019e844f2cac64a1a108760779
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 924959b2c5c5b9782a1e73e404644299ba5bd5d8
+ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85717810"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86971522"
 ---
 # <a name="broker-event-category"></a>Категория событий Broker
 
@@ -45,6 +45,6 @@ ms.locfileid: "85717810"
  Также компонент Service Broker поддерживает два события аудита безопасности. Дополнительные сведения об этих событиях см. в статьях [Класс событий Audit Broker Login](../../relational-databases/event-classes/audit-broker-login-event-class.md) и [Класс событий Audit Broker Conversation](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Категория событий «Аудит безопасности»](/bi-reference/trace-events/security-audit-event-category)  
+ [Категория событий «Аудит безопасности»](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   
