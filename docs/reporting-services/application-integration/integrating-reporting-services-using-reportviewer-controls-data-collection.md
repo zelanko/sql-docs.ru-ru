@@ -3,19 +3,19 @@ title: Сбор данных в элементе управления ReportView
 description: ReportViewer собирает анонимные данные об использовании, чтобы понять, как клиенты используют продукт, и позволяет сосредоточиться на улучшениях, наиболее важных для клиентов.
 author: maggiesMSFT
 ms.author: maggies
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-ms.date: 09/18/2018
-ms.openlocfilehash: 078b36034d48dbb4389c69e64d8b8b18d240b24c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.date: 06/03/2020
+ms.openlocfilehash: 22f693824c244e02f313e488a067a0b732b2fa10
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79198181"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423402"
 ---
 # <a name="integrate-reporting-services-using-reportviewer-controls---data-collection"></a>Интеграция служб Reporting Services с помощью элементов управления ReportViewer — сбор данных
 

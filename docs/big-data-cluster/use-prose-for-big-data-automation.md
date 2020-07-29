@@ -2,23 +2,23 @@
 title: Создание кода для задач первичной обработки данных
 titleSuffix: Azure Data Studio
 description: В этой статье описывается применение ускорителя кода PROSE в составе Azure Data Studio для автоматического создания кода для общих задач первичной обработки данных.
-author: MikeRayMSFT
-ms.author: mikeray
+author: dphansen
+ms.author: davidph
 ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
-ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.technology: machine-learning-bdc
+ms.openlocfilehash: 548db45e97fed2a5d955eef947c6d21004d439d2
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67957687"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87243445"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Первичная обработка данных с использованием ускорителя кода PROSE
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Ускоритель кода PROSE создает код Python для задач первичной обработки данных в доступном для чтения формате. Этот код можно без проблем добавлять к написанному вручную коду при работе с записной книжкой в Azure Data Studio. В этой статье приводятся общие сведения об использовании этого ускорителя кода.
 
@@ -113,8 +113,8 @@ builder.learn().code()
 Также нередко требуется выявить закономерности в столбце строк для проведения очистки или группировки. Например, это может потребоваться для столбца, который содержит даты в различных форматах. Чтобы стандартизировать значения, может потребоваться использовать условные инструкции на основе регулярных выражений.
 
 
-|   |Имя                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|Строка|Имя                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Неизвестно        |
 | 2 |Jihoo Spel                |2014           |

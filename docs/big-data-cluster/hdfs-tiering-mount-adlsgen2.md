@@ -5,16 +5,16 @@ description: В этой статье описывается настройка 
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 11/05/2019
+ms.date: 06/29/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 543db5b96f9a2b02d579b7b6686049ff19af99d7
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: b0206ca193e6c03624c0d40d0c66e7474b00a7a0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606526"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730655"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Подключение ADLS 2-го поколения для распределения по уровням HDFS в кластере больших данных
 
@@ -48,7 +48,7 @@ ms.locfileid: "83606526"
 1. В правой панели навигации выберите "Регистрация приложений" и создайте новую регистрацию.
 1. Создайте "веб-приложение" и следуйте указаниям мастера. **Запишите имя созданного здесь приложения**. Его потребуется добавить в учетную запись ADLS в качестве полномочного пользователя. Также обратите внимание на идентификатор клиента приложения в обзоре при выборе приложения.
 1. После создания веб-приложения перейдите в раздел "Сертификаты и секреты", создайте **новый секрет клиента** и выберите длину ключа. **Добавьте** этот секрет.
-1.     Вернитесь на страницу "Регистрация приложений" и нажмите кнопку "Конечные точки", которая находится вверху. **Запишите URL-адрес конечной точки токена OAuth (v2)**
+1. Вернитесь на страницу "Регистрация приложений" и нажмите кнопку "Конечные точки", которая находится вверху. **Запишите URL-адрес конечной точки токена OAuth (v2)**
 1. Теперь вы должны располагать следующими компонентами для OAuth:
 
     - идентификатором клиента приложения для веб-приложения;
@@ -71,13 +71,13 @@ ms.locfileid: "83606526"
 
 **Обратите внимание**, что при вводе учетных данных необходимо удалить все разрывы строк и пробелы между запятыми (","). Формат, который используется ниже, выбран только для удобства чтения.
 
-   ```text
-    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint],
-    fs.azure.account.oauth2.client.id=[Application client ID],
-    fs.azure.account.oauth2.client.secret=[client secret]
-   ```
+```console
+   set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+   fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+   fs.azure.account.oauth2.client.endpoint=[token endpoint],
+   fs.azure.account.oauth2.client.id=[Application client ID],
+   fs.azure.account.oauth2.client.secret=[client secret]
+```
 
 ## <a name="use-access-keys-to-mount"></a>Использование ключа доступа для подключения
 
@@ -94,10 +94,10 @@ ms.locfileid: "83606526"
 
 **Обратите внимание**, что при вводе учетных данных необходимо удалить все разрывы строк и пробелы между запятыми (","). Формат, который используется ниже, выбран только для удобства чтения.
 
-   ```text
-   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
-   fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
-   ```
+```console
+set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
+fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
+```
 
 ## <a name="mount-the-remote-hdfs-storage"></a><a id="mount"></a> Подключение удаленного хранилища HDFS
 

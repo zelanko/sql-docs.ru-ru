@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: cefcabb8efd508a468f9171eb145cd3cf99a3efa
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e76612ed9e9679ef6a46381bdb80af7fc0b0bf08
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255864"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012590"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Открытие конструктора диаграмм баз данных (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Конструктор диаграмм баз данных представляет собой визуальное средство разработки и визуализации базы данных. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
   
 Конструктор диаграмм баз данных автоматически запускается при открытии новой или уже существующей диаграммы.  

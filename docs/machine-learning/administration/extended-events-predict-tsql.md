@@ -2,19 +2,19 @@
 title: Мониторинг T-SQL с использованием расширенных событий
 description: Сведения о том, как использовать расширенные события для мониторинга инструкций T-SQL PREDICT в Службах машинного обучения SQL Server, а также устранять связанные с ними неполадки.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 09/24/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9e891ee16ce664e12f12b16c9deda957d0fa2263
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 4d3be71d304cb17392fcc4ec5a8796588de9d884
+ms.sourcegitcommit: 48d60fe6b6991303a88936fb32322c005dfca2d8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118987"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85352321"
 ---
 # <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>Мониторинг инструкций T-SQL PREDICT с использованием расширенных событий в Службах машинного обучения SQL Server
 

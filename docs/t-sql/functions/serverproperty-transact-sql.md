@@ -23,12 +23,12 @@ ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97979dbef582835c5fcb8a8e3ec04fdf99b5d205
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: ba9181d1b34bf39711dac702a11687b3ca38f604
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86003661"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87113351"
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 
@@ -47,7 +47,9 @@ SERVERPROPERTY ( 'propertyname' )
 > [!IMPORTANT]
 > Номера версий ядра СУБД для SQL Server и базы данных SQL Azure не сравнимы друг с другом; они являются внутренними номерами сборок этих отдельных продуктов. Ядро СУБД базы данных SQL Azure основано на той же базе кода, что и ядро СУБД SQL Server. Что важнее всего, ядро СУБД в базе данных SQL Azure всегда имеет самые новые части ядра СУБД SQL. Версия 12 базы данных SQL Azure более новая, чем версия 15 SQL Server.
 
-## <a name="arguments"></a>Аргументы  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## <a name="arguments"></a>Аргументы
 
 *propertyname*  
 Выражение, содержащее сведения о свойстве, которые необходимо вернуть для сервера. *propertyname* может иметь одно из указанных ниже значений.  

@@ -12,12 +12,12 @@ ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 324d9c27608bd5ee3e93a6987cec7b81407f048a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 11b9af83c6f0c55f71f4176ef431249403c77241
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85650932"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242975"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Поддерживаемые типы данных для выполняющейся в памяти OLTP
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,12 +30,28 @@ ms.locfileid: "85650932"
   
 ## <a name="unsupported-data-types"></a>Неподдерживаемые типы данных  
  Следующие типы данных не поддерживаются:  
-  
-||||  
-|-|-|-|  
-|[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography (Transact-SQL)](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry (Transact-SQL)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
-|[hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)|[xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)|  
-|[sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)|Определяемые пользователем типы|.|  
+
+:::row:::
+    :::column:::
+        [datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)
+
+        [hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
+
+        [sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [geography (Transact-SQL)](../../t-sql/spatial-geography/spatial-types-geography.md)
+
+        [rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)
+
+        Определяемые пользователем типы
+    :::column-end:::
+    :::column:::
+        [geometry (Transact-SQL)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)
+
+        [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## <a name="notable-supported-data-types"></a>Важные поддерживаемые типы данных  
  Большинство типов данных поддерживаются компонентами выполняющейся в памяти OLTP. Обратите внимание на следующие компоненты:  

@@ -2,22 +2,22 @@
 title: Шаблоны решений по обработке и анализу данных
 description: В этой статье описываются шаблоны специальной области знаний, которые демонстрируют практические приемы и предоставляют стандартные блоки для быстрой реализации собственного решения машинного обучения.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d323178152e07726c818971c8c7e8ee297c20af
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: b039af528200782d788394f49e0bd74ed2b54dd4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85728642"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Сценарии и шаблоны решений для обработки и анализа данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этой статье описывается несколько шаблонов решений машинного обучения для SQL Server. Эти шаблоны наглядно демонстрируют рекомендации и предоставляют стандартные блоки для быстрой реализации собственного решения машинного обучения. Каждый шаблон предназначен для решения определенной задачи по обработке и анализе данных для конкретной области или отрасли.
 Каждый шаблон охватывает различные задачи: от подготовки данных и формирования характеристик до обучения модели и оценки. 

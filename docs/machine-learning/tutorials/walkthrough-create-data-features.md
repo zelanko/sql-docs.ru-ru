@@ -2,22 +2,22 @@
 title: Учебник по R. Проектирование признаков
 description: Учебник, показывающий, как создавать признаки данных с помощью функций SQL Server для аналитики в базе данных.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 67d2c0bf73e24bc3f70e94cd6cf7ce94d13e5297
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8ae7adc2285a9888778a1d0d560f36e64bafcef0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115767"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781806"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Создание признаков данных с помощью R и SQL Server (пошаговое руководство)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Проектирование данных — это важная составляющая машинного обучения. Прежде чем использовать данные для прогнозирующего моделирования, их зачастую требуется преобразовать. Если данные не имеют требуемых характеристик, их необходимо создать на основе существующих значений.
 

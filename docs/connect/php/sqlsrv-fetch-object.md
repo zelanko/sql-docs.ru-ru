@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: a457fbc0f87f9ba83170f8235e7ae144f4e86648
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 90d900af5fe86862ad59df61d4640e38797c0a01
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922799"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85893173"
 ---
 # <a name="sqlsrv_fetch_object"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +32,6 @@ ms.locfileid: "80922799"
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, row[, ]offset]]])  
 ```  
   
@@ -81,17 +80,21 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Если возвращается поле без имени, **sqlsrv_fetch_object** отменяет значение поля и выдает предупреждение. Например, рассмотрим эту инструкцию Transact-SQL, которая вставляет значение в таблицу базы данных и извлекает созданный сервером первичный ключ:  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Если результаты, возвращаемые этим запросом, извлекаются с помощью **sqlsrv_fetch_object**, значение, возвращаемое `SELECT SCOPE_IDENTITY()` , отменяется и выдается предупреждение. Чтобы избежать этого, можно указать имя возвращаемого поля в инструкции Transact-SQL. Ниже приведен один из способов указания имени столбца в Transact-SQL.  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="example"></a>Пример  
 Следующий пример извлекает каждую строку результирующего набора в виде объекта PHP. В примере предполагается, что SQL Server и база данных [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) установлены на локальном компьютере. При выполнении примера из командной строки все выходные данные выводятся в консоль.  
   
-```  
+``` 
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
@@ -234,12 +237,16 @@ sqlsrv_close( $conn);
   
 Если возвращается поле без имени, **sqlsrv_fetch_object** отменяет значение поля и выдает предупреждение. Например, рассмотрим эту инструкцию Transact-SQL, которая вставляет значение в таблицу базы данных и извлекает созданный сервером первичный ключ:  
   
-<pre>INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
-SELECT SCOPE_IDENTITY()</pre>  
+```sql
+INSERT INTO Production.ProductPhoto (LargePhoto) VALUES (?);  
+SELECT SCOPE_IDENTITY()
+```
   
 Если результаты, возвращаемые этим запросом, извлекаются с помощью **sqlsrv_fetch_object**, значение, возвращаемое `SELECT SCOPE_IDENTITY()` , отменяется и выдается предупреждение. Чтобы избежать этого, можно указать имя возвращаемого поля в инструкции Transact-SQL. Ниже приведен один из способов указания имени столбца в Transact-SQL.  
   
-`SELECT SCOPE_IDENTITY() AS PictureID`  
+```sql
+SELECT SCOPE_IDENTITY() AS PictureID
+```
   
 ## <a name="see-also"></a>См. также:  
 [Извлечение данных](../../connect/php/retrieving-data.md)  

@@ -18,17 +18,16 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 4161966534f65936bbddc8753cdb116ea5f47e33
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 759aaed19c2ef313712725edaa03b91eb37afcbe
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75246222"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002590"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Работа с данными на панели результатов (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 После запуска запроса или представления результаты отображаются на панели результатов. Теперь с этими результатами можно работать. Например, можно добавить и удалить строки, ввести или изменить данные и легко просмотреть большие наборы результатов.  
   
 Представленные ниже сведения позволят избежать проблем и обеспечить эффективность работы с результирующими наборами.  

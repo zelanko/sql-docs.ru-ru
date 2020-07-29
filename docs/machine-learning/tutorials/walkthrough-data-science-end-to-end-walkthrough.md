@@ -2,22 +2,22 @@
 title: Учебник по R. Разработка модели в SQL
 description: Учебник, показывающий, как создать комплексное решение R для аналитики в базе данных.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 10/11/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 129a109cb85d1e9a9a7784cd7d3963598c6725a5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 24f83b1bae1a550a56c64ffdd8ebc069bbc4d9f9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115837"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85781796"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Руководство по SQL-разработка на языке R для специалистов по анализу данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом учебнике для специалистов по обработке и анализу данных рассказывается, как создать комплексное решение для прогнозного моделирования на основе поддержки функций R в SQL Server 2016 и SQL Server 2017. В этом учебнике используется база данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) на SQL Server. 
 

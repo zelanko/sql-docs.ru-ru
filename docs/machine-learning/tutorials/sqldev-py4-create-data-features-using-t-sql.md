@@ -2,22 +2,22 @@
 title: Python и T-SQL. Характеристики данных
 description: Руководство, в котором показано, как добавлять вычисления в хранимые процедуры для использования в моделях машинного обучения Python.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb7f7b271c49922698058e396b69b91444c5b65a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 98a1ca3b012c5580e55dd6ea963c3869269f7136
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115927"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775338"
 ---
 # <a name="create-data-features-using-t-sql"></a>Создание характеристик данных с помощью T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 После исследования данных вы собрали определенный объем аналитической информации и готовы переходить к *формированию характеристик*. Процесс создания характеристик на основе необработанных данных — важнейший этап расширенного аналитического моделирования.
 

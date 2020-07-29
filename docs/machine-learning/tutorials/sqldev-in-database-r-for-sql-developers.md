@@ -2,22 +2,22 @@
 title: Учебник по R и T-SQL. Разработка модели
 description: Узнайте, как внедрять код на языке программирования R в хранимые процедуры SQL Server и функции T-SQL.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669b2c38d2e8b571ef7e519100b13cf5a63a10d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a27bd044dbdca7a05663080be08ebaff1acb86d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115987"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785605"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Руководство по Аналитика данных R для разработчиков SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом руководстве для программистов на SQL вы узнаете об интеграции R путем создания и развертывания решения машинного обучения на основе R с использованием базы данных [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) в SQL Server. Вы будете использовать T-SQL, SQL Server Management Studio и экземпляр ядра СУБД со [Службами машинного обучения](../install/sql-machine-learning-services-windows-install.md) и поддержкой языка R.
 
