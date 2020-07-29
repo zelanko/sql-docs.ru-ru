@@ -1,7 +1,7 @@
 ---
 title: Установка SQL Server с помощью файла конфигурации | Microsoft Docs
 description: Вы можете использовать программу установки SQL Server, чтобы создать файл конфигурации для развертывания SQL Server в организации с помощью единой конфигурации.
-ms.date: 09/07/2017
+ms.date: 07/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +10,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 800be0666d97ea1503fa5b1a8dd261543d0b4a10
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: b187160fcc25119a5be65207138920969352b4aa
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85899678"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110218"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Установка SQL Server с помощью файла конфигурации
 
@@ -23,7 +23,7 @@ ms.locfileid: "85899678"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки предоставляет возможность создать файл конфигурации на основе системных значений по умолчанию и значений, вводимых во время выполнения. Файл конфигурации может быть использован для развертывания [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на всем предприятии с одной и той же конфигурацией. Стандартизировать установки в ручном режиме на территории предприятия также можно, создав пакетный файл, запускающий файл Setup.exe. 
  
-Эта статья поддерживается для SQL Server 2016 и более поздних версий. Сведения о более ранних версиях SQL Server см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
+Эта статья поддерживается для SQL Server 2016 и более поздних версий. Сведения о более ранних версиях SQL Server см. в разделе [Установка SQL Server 2014 с помощью файла конфигурации](/previous-versions/sql/2014/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014).
  
 Программа установки поддерживает использование файлов конфигурации только через командную строку. Порядок обработки параметров при использовании файла конфигурации описывается ниже.  
   

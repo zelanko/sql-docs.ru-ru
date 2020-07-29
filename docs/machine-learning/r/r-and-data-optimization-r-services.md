@@ -2,22 +2,22 @@
 title: Настройка производительности для данных
 description: Эта статья описывает оптимизацию производительности для скриптов R или Python, выполняемых в SQL Server. Здесь также описаны методы, которые можно использовать для изменения кода R, чтобы повысить производительность и предотвратить возникновение известных проблем.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/15/2018
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d966094277f47d3ef12239c32a75c9a3ecbf88c9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a2438ff265c788753a42bc01119f954359c799ec
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753400"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Производительность служб R Services — оптимизация данных
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Эта статья является третьей в серии. В ней описывается оптимизация производительности для служб R Services на примере двух случаев. Эта статья описывает оптимизацию производительности для скриптов R или Python, выполняемых в SQL Server. Здесь также описаны методы, которые можно использовать для изменения кода R, чтобы повысить производительность и предотвратить возникновение известных проблем.
 

@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 66f60039e21ebefa1ee7eff36b9165f907b4689a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5b9136e9f24447f57bc375a8ff9d8ec83ef17bd9
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254883"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008197"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Панель SQL (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Панель SQL можно использовать для создания собственных инструкций SQL; можно также создать инструкцию на панели критериев или панели диаграмм, и на панели SQL будут созданы инструкции SQL. После того как запрос построен, панель SQL его автоматически обновляет и меняет его формат для удобства чтения.  
   
 Чтобы открыть панель SQL, сначала откройте конструктор запросов и представлений (с объектом базы данных, выбранным в обозревателе серверов в меню **База данных** , выберите пункт **Создать запрос**). Затем в меню **Конструктор запросов** укажите пункт **Панель** и щелкните элемент **SQL**.  

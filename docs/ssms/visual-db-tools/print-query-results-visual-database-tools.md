@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 322572041340f1ed61b003cb424df48f32bb2a0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7cabed9e928dce14f324e7f7b482d2ebed36d8ed
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255384"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86002670"
 ---
 # <a name="print-query-results-visual-database-tools"></a>Печать результатов запроса (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Чтобы распечатать результаты запроса, необходимо скопировать содержимое [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) в другую программу Windows, например в программу подготовки текстов, затем произвести в ней форматирование и распечатать результаты запроса из этой программы.  
   
 Конструктор запросов и представлений копирует результаты запроса в буфер обмена, используя символы табуляции в качестве разделителей между столбцами и символов возврата каретки, а символы новой строки в качестве разделителей между строками.  

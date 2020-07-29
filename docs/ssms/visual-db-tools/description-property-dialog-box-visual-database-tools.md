@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 5972e47097591118fb731f03c1e7f1237dda27e7
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bb550a5981c22128dc5386ee13906855ea5e2477
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75254661"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008317"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Диалоговое окно «Свойства описания» (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Диалоговое окно **Свойства описания** предоставляет текстовое поле, в котором можно ввести подробное описание объектов базы данных — таблиц, столбцов и ограничений внешнего ключа. Это диалоговое окно можно открыть из окна "Свойства" для таких объектов, как таблицы и представления, когда они выбираются в конструкторе, из диалоговых окон для таких объектов, как индексы и проверочные ограничения, а также из вкладки **Свойства столбца** в конструкторе таблиц для столбцов таблиц. Это описание сохраняется как расширенное свойство для данного объекта.  
   
 ## <a name="see-also"></a>См. также:  

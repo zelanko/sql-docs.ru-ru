@@ -11,17 +11,16 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: d0e419703d83e0881912be76c58467db4bc83ceb
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e6e66b277a52282fee2a5fc18cf8fdb39eb77760
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75257997"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86011084"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Это диалоговое окно используется для выбора столбцов для индекса и установки порядка их сортировки. Индекс может использовать один или несколько столбцов, причем каждый столбец может быть отсортирован по возрастанию или убыванию. Чтобы открыть это диалоговое окно, в диалоговом окне **Индексы/Ключи** нажмите кнопку с многоточием для строки **Столбцы** в разделе **Общие** .  
   
 ## <a name="options"></a>Параметры  

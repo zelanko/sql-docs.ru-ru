@@ -21,12 +21,12 @@ ms.assetid: bd721d97-6e23-488b-8c8c-c0453d5b3b86
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3886e6688f6e880a736885b55e5427dc0a98b8d
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 6d1cc88f04a85957f21cb215a19c56efa8dc7d9b
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634530"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87112788"
 ---
 # <a name="set-ansi_defaults-transact-sql"></a>SET ANSI_DEFAULTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -55,14 +55,40 @@ ANSI_DEFAULTS является параметром на стороне серв
   
 При включении (ON) этого параметра включаются следующие параметры ISO.  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_NULL_DFLT_ON|SET IMPLICIT_TRANSACTIONS|  
-|SET ANSI_PADDING|SET QUOTED_IDENTIFIER|  
-|SET ANSI_WARNINGS||  
-|||
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
 В совокупности перечисленные параметры SET стандарта ISO определяют среду обработки запросов на все время сеанса пользователя, выполнения триггера или хранимой процедуры. Однако эти параметры SET не охватывают всех настроек, необходимых для полного соответствия стандарту ISO.  
   
 При работе с индексами для вычисляемых столбцов и индексированных представлений в значение ON должны быть установлены следующие четыре значения по умолчанию: `ANSI_NULLS`, `ANSI_PADDING`, `ANSI_WARNINGS` и `QUOTED_IDENTIFIER`. Кроме них при создании и изменении индексов для вычисляемых столбцов и индексированных представлений должны быть установлены следующие параметры SET: Другие параметры SET: `ARITHABORT` (ON), `CONCAT_NULL_YIELDS_NULL` (ON) и `NUMERIC_ROUNDABORT` (OFF). Дополнительные сведения о необходимых установках параметров SET для индексированных представлений и индексов вычисляемых столбцов см. в разделе [Анализ использования инструкций SET](../../t-sql/statements/set-statements-transact-sql.md#considerations-when-you-use-the-set-statements).  
@@ -71,12 +97,31 @@ ANSI_DEFAULTS является параметром на стороне серв
   
 При выполнении инструкции SET ANSI_DEFAULTS параметр QUOTED_IDENTIFIER устанавливается на стадии синтаксического анализа, а на стадии выполнения устанавливаются следующие параметры:  
   
-|||  
-|-|-|  
-|SET ANSI_NULLS|SET ANSI_WARNINGS|  
-|SET ANSI_NULL_DFLT_ON|SET CURSOR_CLOSE_ON_COMMIT|  
-|SET ANSI_PADDING|SET IMPLICIT_TRANSACTIONS|  
-  
+:::row:::
+    :::column:::
+        SET ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        SET ANSI_WARNINGS
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        SET CURSOR_CLOSE_ON_COMMIT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        SET ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        SET IMPLICIT_TRANSACTIONS
+    :::column-end:::
+:::row-end:::
+
 ## <a name="permissions"></a>Разрешения  
 Необходимо быть членом роли **public**.  
   

@@ -2,22 +2,22 @@
 title: Python и T-SQL. Обучение модели
 description: Учебник по Python, демонстрирующий обучение и сохранение модели с помощью Transact-SQL на сервере SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 87194c1a77964f0e5aef3d0fae008d14cbfb8eb2
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 8d7bc2e2d46cb5b3f0c9619e59ab448e95bf4db2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115807"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775335"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Обучение и сохранение модели Python с помощью T-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Эта статья является частью руководства [Анализ с помощью Python в базе данных для разработчиков SQL](sqldev-in-database-python-for-sql-developers.md). 
 

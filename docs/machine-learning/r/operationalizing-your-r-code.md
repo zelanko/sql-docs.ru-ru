@@ -2,22 +2,22 @@
 title: Развертывание кода на языке R в хранимых процедурах
 description: Внедрите код R в хранимую процедуру SQL Server, чтобы сделать его доступным для любого клиентского приложения, имеющего доступ к базе данных SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/15/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 324cf4446a593175fd5a8cd11b2abc24bff7d2d7
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 9790f5a5d82584bb0d09fda92c1a7048d384e119
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486813"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242330"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Использование кода R с хранимыми процедурами в Службах машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 При использовании функций R и Python в Службах машинного обучения SQL Server наиболее распространенный подход к переносу решений в рабочую среду — внедрение кода в хранимые процедуры. В этой статье перечислены ключевые моменты, которые необходимо учитывать разработчику на SQL при вводе кода R в эксплуатацию с помощью SQL Server.
 
@@ -46,7 +46,7 @@ ms.locfileid: "81486813"
 
 + оценка в реальном времени, оптимизированная для небольших пакетов;
 + оценка одной строки для вызова из приложения;
-+ [собственная оценка](../sql-native-scoring.md) для быстрого пакетного прогнозирования из SQL Server без вызова R.
++ [собственная оценка](../predictions/native-scoring-predict-transact-sql.md) для быстрого пакетного прогнозирования из SQL Server без вызова R.
 
 В этом пошаговом руководстве приведены примеры оценки с помощью хранимой процедуры как в пакетном, так и в построчном режиме:
 

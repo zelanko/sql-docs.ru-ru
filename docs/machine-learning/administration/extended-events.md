@@ -2,22 +2,22 @@
 title: Мониторинг скриптов с использованием расширенных событий
 description: Сведения о том, как использовать расширенные события для мониторинга операций, относящихся к службам машинного обучения SQL Server, панели запуска SQL Server и внешним скриптам заданий Python или R, а также устранять связанные с такими операциями неполадки.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/04/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfc3c95a4184cede01fb077ee232c02458c97cbf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 65ede143baab867d77704ce4e776515d5d7d32de
+ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118907"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87110174"
 ---
 # <a name="monitor-python-and-r-scripts-with-extended-events-in-sql-server-machine-learning-services"></a>Мониторинг скриптов Python и R с использованием расширенных событий в службах машинного обучения SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Сведения о том, как использовать расширенные события для мониторинга операций, относящихся к службам машинного обучения SQL Server, панели запуска SQL Server и внешним скриптам заданий Python или R, а также устранять связанные с такими операциями неполадки.
 
@@ -135,7 +135,7 @@ AND p.name = 'SQLSatellite';
 В следующем примере представлено определение трассировки событий для службы панели запуска:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -158,7 +158,7 @@ AND p.name = 'SQLSatellite';
 В следующем примере представлено определение трассировки событий для исполняемого файла BXLServer.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

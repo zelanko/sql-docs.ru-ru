@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2d6400652dfaac6074f19a343b9a4cf2c0ffbab8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 39b0c100c4ba80a24d0acd7ab2fdebaa32f1b1f7
+ms.sourcegitcommit: 7397706bbbc7296946e92ca9d4de93d4a5313c66
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80920333"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84203241"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Метод getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -79,7 +79,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |ПРИМЕЧАНИЯ|**String**|Примечания по параметру или столбцу.|  
 |COLUMN_DEF|**String**|Значение по умолчанию для столбца.<br /><br /> **Примечание.** Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и только при работе с драйвером JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Этот столбец содержит то же значение, что и столбец **DATA_TYPE**, за исключением типов данных **datetime** и ISO **interval**.<br /><br /> **Примечание.** Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и только при работе с драйвером JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **datetime** и **interval** в стандарте ISO, это поле имеет значение NULL.<br /><br /> **Примечание**. Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и определяются драйвером JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Дополнительный код **datetime** ISO **interval**, если значение **SQL_DATA_TYPE** равно **SQL_DATETIME** или **SQL_INTERVAL**. Для типов данных, отличных от **datetime** и **interval** в стандарте ISO, это поле имеет значение NULL.<br /><br /> **Примечание.** Эти данные доступны только для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и только при работе с драйвером JDBC.|  
 |CHAR_OCTET_LENGTH|**int**|Максимальная длина значений символьных и двоичных параметров или столбцов. Для остальных типов данных имеет значение равное NULL.|  
 |ORDINAL_POSITION|**int**|Для входных или выходных параметров представляет позицию начинающуюся с 1<br /><br /> Для результирующего набора столбцов представляет позицию столбца в результирующем наборе начинающуюся с 1.<br /><br /> Для возвращаемого значения имеет значение равное 0.|  
 |IS_NULLABLE|**String**|Определяет допустимость значений NULL для параметра или столбца.<br /><br /> Может иметь одно из следующих значений.<br /><br /> **Да**: параметр или столбец могут содержать значения NULL.<br /><br /> **Нет**: параметр или столбец не могут содержать значения NULL.<br /><br /> Пустая строка (""). Неизвестна.|  

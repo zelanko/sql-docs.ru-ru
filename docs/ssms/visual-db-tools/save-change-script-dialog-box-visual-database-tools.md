@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: fc9d1639-5efa-44fe-a04f-4d4d0def2833
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: f45d48eb6c0904dcd4c77471a100006b30a06c2d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 04e1ac34a1c16dd5b0936634938f9edb0d8328aa
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75255155"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86010678"
 ---
 # <a name="save-change-script-dialog-box-visual-database-tools"></a>Диалоговое окно "Сохранить скрипт изменений" (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Это диалоговое окно показывает скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] изменений, сделанных со времени последнего сохранения таблицы. Оно также позволяет сохранить скрипт в текстовом файле в выбранном местоположении.  
   
 Открыть это диалоговое окно также можно после совершения несохраненных изменений таблицы в конструкторе таблиц. В меню **Конструктор таблиц** выберите пункт **Создать скрипт изменения**.  

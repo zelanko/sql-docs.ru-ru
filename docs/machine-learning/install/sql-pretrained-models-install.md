@@ -2,22 +2,22 @@
 title: Установка предварительно обученных моделей
 description: Добавление предварительно обученных моделей для анализа тональности и определения характеристик изображений в Службы машинного обучения SQL Server (R или Python) или SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 07/30/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: aa50fd62b3f1d3c1d40f3603b6a0b3fc4182497f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118237"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85771766"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Установка предварительно обученных моделей машинного обучения в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этой статье объясняется, как использовать PowerShell для добавления бесплатных предварительно обученных моделей машинного обучения для *анализа тональности* и *определения характеристик изображений* в экземпляр SQL Server с интегрированными R или Python. Предварительно обученные модели созданы корпорацией Майкрософт и готовы к использованию. Они добавлены в экземпляр в качестве задачи, выполняемой после установки. Дополнительные сведения об этих моделях см. в разделе [Ресурсы](#bkmk_resources) этой статьи.
 

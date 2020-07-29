@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 75346207a2f91744c78db783bf40edd679ebcbb8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fbd00cd0d6bdd06e23ec65ddb73ffbfa65649199
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258343"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86009289"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Многопользовательские среды (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Многопользовательской называется такая среда, в которой к базе данных, с которой работает пользователь, могут подключаться и другие пользователи, которые, кроме того, могут вносить в нее изменения. В результате с некоторыми объектами базы данных могут работать одновременно несколько пользователей. Таким образом, в многопользовательской среде при внесении изменений в базу данных могут отражаться и изменения, сделанные другими пользователями.  
   
 При работе с базами данных в многопользовательской среде основной является проблема прав доступа. Разрешения, которыми обладает пользователь, определяют масштаб действий, который он может выполнять в базе данных. Например, для изменения объектов базы данных нужно иметь соответствующие разрешения на запись. Дополнительные сведения о разрешениях в базе данных см. в документации по базе данных. Дополнительные сведения см. в разделе [Разрешения и визуальные инструменты для баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/permissions-and-visual-database-tools-visual-database-tools.md).  

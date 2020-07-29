@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 52884c4fb103f57e999d7a63d770181cf8cc8999
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 52044ea389e964397b457e2758a312e651eae188
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75224641"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86008902"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Соединение таблиц по нескольким столбцам (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Таблицы можно соединять по нескольким столбцам. То есть можно создать запрос, который будет сопоставлять строки из двух таблиц, только если они удовлетворяют нескольким условиям. Если база данных содержит связь, которая сопоставляет несколько столбцов с внешними ключами в одной таблице первичному ключу из нескольких столбцов в другой, эту связь можно использовать для соединения по нескольким столбцам. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md).  
   
 Даже если база данных не содержит связь с несколькими внешними ключами, соединение можно создать вручную.  
