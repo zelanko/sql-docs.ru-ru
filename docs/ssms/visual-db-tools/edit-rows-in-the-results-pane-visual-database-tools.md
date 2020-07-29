@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
-ms.openlocfilehash: 48cd8bc534413fa340da8f74fc1412fb2d3a96df
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 04ba4bc6804214e4d55fbd03c59a39a9b68951e2
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247224"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86012193"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>изменить строки на панели результатов (визуальные инструменты для баз данных)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 В большинстве случаев данные на [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)можно изменять. Сведения об изменении данных см. в разделах [Правила обновления результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) и [Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)можно изменять.  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>Изменение данных на панели результатов  

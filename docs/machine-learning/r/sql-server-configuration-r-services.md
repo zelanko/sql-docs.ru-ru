@@ -2,22 +2,22 @@
 title: Настройка для использования с языком R
 description: В этой статье содержатся рекомендации по настройке параметров оборудования и сети компьютера, используемого для запуска SQL Server R Services.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 03/29/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 1bfd7de9d7ee576c726a6b4473937cc1d9a294ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81486713"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85730897"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Настройка SQL Server для использования с языком R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Эта статья является второй в серии. В ней описывается оптимизация производительности для служб R Services на примере двух случаев.  В этой статье содержатся рекомендации по настройке параметров оборудования и сети компьютера, который используется для запуска SQL Server R Services. В ней также содержатся сведения о способах настройки экземпляра SQL Server, базы данных и таблиц, используемых в решении. Поскольку использование NUMA в SQL Server размывает границу между оптимизацией оборудования и базы данных, в третьем разделе подробно обсуждается привязка к ЦП и управление ресурсами.
 

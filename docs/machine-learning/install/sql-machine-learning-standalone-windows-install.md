@@ -2,22 +2,22 @@
 title: Установка Machine Learning Server (изолированный)
 description: Настройте изолированный сервер машинного обучения для Python и R. Изолированный сервер, устанавливаемый программой установки SQL Server, функционально эквивалентен версиям Microsoft Machine Learning Server без привязки к языку SQL.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 01/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e614579b3d4e64a73e5896c1be946cdb38d21dcf
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 15280d88b2219587ee63b15e8e98421be2734fab
+ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118317"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85885941"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Установите R Server или сервер машинного обучения (изолированный) с помощью программы установки SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Программа установки SQL Server поддерживает вариант установки автономного сервера машинного обучения **как общего компонента**, то есть за пределами SQL Server. Он называется **сервер машинного обучения (изолированный)** и включает Python и R. 

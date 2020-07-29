@@ -1,7 +1,7 @@
 ---
 title: Политики поддержки для драйвера OLE DB для SQL Server | Документация Майкрософт
 description: Политики поддержки для драйвера OLE DB для SQL Server
-ms.date: 03/18/2020
+ms.date: 05/25/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,15 +10,15 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 3f48aa8c68b364db98d1cd3111c11c6635ee5335
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7e4b77a700d494f1ed8f11a0004c60b37c5cc361
+ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79526829"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "86007041"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>Политики поддержки для драйвера OLE DB для SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,6 +30,7 @@ ms.locfileid: "79526829"
 
 | Версия драйвера | База данных SQL Azure | Хранилище SQL | Управляемый экземпляр SQL Azure | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.4|Да|Да|Да|Да|Да|Да|Да|Да|
 |18.3|Да|Да|Да|Да|Да|Да|Да|Да|
 |18.2|Да|Да|Да|Да|Да|Да|Да|Да|
 |18.1|Да|Да|Да| |Да|Да|Да|Да|
@@ -42,6 +43,7 @@ ms.locfileid: "79526829"
 
 | Версия драйвера | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.4|Да|Да|Да|Да|Да|Да|
 |18.3|Да|Да|Да|Да|Да|Да|
 |18.2|Да|Да|Да|Да|Да|Да|
 |18.1| |Да|Да|Да|Да|Да|
@@ -51,9 +53,6 @@ ms.locfileid: "79526829"
 <sup>1</sup> Поддерживается в Windows Server 2012 с обновлением [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Поддерживается в Windows Server 2012 R2 с [обновлением за апрель 2014 г.](https://go.microsoft.com/fwlink/?linkid=2073785) и обновлением [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>3</sup> Поддерживается в Windows 8.1 с [обновлением за апрель 2014 г.](https://go.microsoft.com/fwlink/?linkid=2073785) и обновлением [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
-
-> [!NOTE]  
-> Использование кодовой страницы UTF-8 в Windows ("Использование Юникода UTF-8 для поддержки языков мира") не поддерживается.
 
 ## <a name="ado-support-policies"></a>Политики поддержки ADO  
 

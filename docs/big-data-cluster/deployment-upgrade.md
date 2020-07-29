@@ -9,16 +9,16 @@ ms.date: 02/13/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 776c54ef7475b1ff7c5679f98e994a1b42784262
-ms.sourcegitcommit: 52925f1928205af15dcaaf765346901e438ccc25
+ms.openlocfilehash: dedae90b5242282fb550ebc59c5a4d98d21506f3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80607839"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764072"
 ---
 # <a name="how-to-upgrade-big-data-clusters-2019"></a>Обновление [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Способ обновления зависит от текущей версии Кластера больших данных SQL Server. Чтобы выполнить обновление поддерживаемого выпуска, включая выпуск для общего распространения (GDR), накопительное обновление (CU) или исправление QFE, можно выполнить обновление на месте. Обновление на месте CTP-версии или версии-кандидата BDC не поддерживается. Необходимо удалить и повторно создать кластер. В следующих разделах описаны шаги для каждого сценария.
 

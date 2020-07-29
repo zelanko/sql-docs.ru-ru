@@ -23,18 +23,17 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61bf9d30ef6e789e56784ac78bf95215f377e85a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5cc337a6a6676e47ac2541d0559829ad4ec6e6ae
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75256114"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87247399"
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -203,9 +202,8 @@ Set oServer = nothing
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|||  
+|Описание|Раздел|  
 |-|-|  
-|**Описание**|**Раздел**|  
 |Описывает создание шага задания с помощью исполняемой программы.|[Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Описывает, как сбросить разрешения агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Настройка пользователя для создания заданий агента SQL Server и управления заданиями](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

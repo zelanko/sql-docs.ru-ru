@@ -2,22 +2,22 @@
 title: Создание моделей на основе секций в R
 description: Узнайте о моделировании, обучении и использовании секционированных данных, создаваемых динамически, с помощью возможностей моделирования на основе секций машинного обучения SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 04/30/2020
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
-ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
+ms.openlocfilehash: bf294501b1cb613bf97b581a30a193469c78b9f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83606686"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756391"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Руководство по Создание моделей на основе секций в R в SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В SQL Server 2019 моделирование на основе секций — это возможность создания и обучения моделей по секционированным данным. Для стратифицированных данных, которые естественным образом сегментируются в определенную классификационную схему, например по географическим регионам, дате и времени, возрасту или полу, вы можете выполнить скрипт для всего набора данных с возможностью моделирования, обучения и оценки по секциям, которые не затрагиваются всеми этими операциями. 
 

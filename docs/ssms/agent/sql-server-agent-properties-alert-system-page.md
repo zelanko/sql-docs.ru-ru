@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 3e6d3bfd-20ee-4593-86cc-f65b1c08c69d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5b870368136055ea2df6e5473c1b33640cea57b8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 17ecd6435258e255538cfedc345a835610f55a97
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75234542"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85755165"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Свойства агента SQL Server (страница «Система предупреждений»)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > Сейчас в [управляемом экземпляре базы данных SQL Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) поддерживается большинство функций агента SQL Server (но не все). Подробные сведения см. в статье [Различия T-SQL между управляемым экземпляром базы данных SQL Azure и SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
@@ -43,7 +42,7 @@ ms.locfileid: "75234542"
 > После изменений системы электронной почты необходимо перезапустить службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы эти изменения вступили в силу.  
   
 **Профиль электронной почты**  
-Устанавливает профиль для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для создания нового профиля вы можете также выбрать пункт **\<новый профиль Database Mail...>** .  
+Устанавливает профиль для использования агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно также выбрать **\<new Database Mail profile...>** , чтобы создать новый профиль.  
   
 **Электронные сообщения на пейджер**  
 Параметры в этом разделе позволяют настроить электронные сообщения, отправляемые на адреса пейджеров для работы с вашей пейджинговой системой.  

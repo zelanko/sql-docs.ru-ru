@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fb0036acec4ec0c416f6fa01ccf99663be741514
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: e97723d6ea047aa86641c9074ff235c682519e7a
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85789465"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87245210"
 ---
 # <a name="maintenance-plans"></a>Планы обслуживания
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -63,9 +63,8 @@ ms.locfileid: "85789465"
 ## <a name="related-tasks"></a>Связанные задачи  
  Используйте следующие разделы для начала работы с планами обслуживания.  
   
-|||  
+|Описание|Раздел|  
 |-|-|  
-|**Описание**|**Раздел**|  
 |Настройте параметр конфигурации сервера **Расширенные хранимые процедуры агента**, чтобы включить расширенные хранимые процедуры агента SQL Server.|[Параметр конфигурации сервера "Agent XP"](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)|
 |Описывает создание плана обслуживания с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].|[Создание плана обслуживания](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)|  
 |Описывает создание плана обслуживания с помощью области конструктора плана обслуживания.|[Создание плана обслуживания (область конструктора планов обслуживания)](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)|  

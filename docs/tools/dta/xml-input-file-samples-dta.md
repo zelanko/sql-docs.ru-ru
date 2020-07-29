@@ -8,20 +8,19 @@ ms.topic: conceptual
 ms.assetid: 1ed28805-a9ae-43ca-92da-101ba0c0c43a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: ee25d62dcfee23facfb8c4aecb87e5880a100d23
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: acfc7ece997debd1ca77ec8441907ab4e99d0dcd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83151735"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85731972"
 ---
 # <a name="xml-input-file-samples-dta"></a>Образцы входных XML-файлов (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 В этом разделе приводятся примеры входных файлов XML-данных, которые можно использовать с программой командной строки **dta** . Это средство — один из пользовательских интерфейсов помощника по настройке ядра СУБД, который позволяет настраивать базы данных для увеличения производительности запросов. Помощник по настройке ядра СУБД анализирует влияние рабочей нагрузки на базу данных или на несколько баз данных. Рабочая нагрузка представляет собой набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемых относительно баз данных, которые необходимо настроить. После завершения анализа влияния рабочей нагрузки помощник по настройке ядра СУБД создает рекомендации по добавлению индексов и индексированных представлений и стратегиям секционирования, направленные на повышение производительности запросов в ваших базах данных.
 
