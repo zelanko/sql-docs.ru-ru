@@ -1,5 +1,5 @@
 ---
-title: Использование улучшенных функций даты и времени (OLE DB) | Документация Майкрософт
+title: Использование улучшенных функций даты и времени (поставщик собственного клиента OLE DB)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,13 +11,14 @@ ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ccf4d9d292e8266cd0839d5480a7f88109bda9f7
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 950f4d25cfdcd4bb8aee320ebfec8b6fd1b9c82b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "85998901"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396514"
 ---
-# <a name="use-enhanced-date-and-time-features-ole-db"></a>Использование улучшенных функций даты и времени (OLE DB)
+# <a name="use-enhanced-date-and-time-features-in-sql-server-native-client-ole-db"></a>Использование улучшенных функций даты и времени в SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В этом образце показывается, как использовать функции даты-времени, представленные в [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. В образце используются четыре новых типа даты и времени (**date**, **time**, **datetime2**и **datetimeoffset**) для выполнения команд с параметрами и получения результирующих наборов строк.  

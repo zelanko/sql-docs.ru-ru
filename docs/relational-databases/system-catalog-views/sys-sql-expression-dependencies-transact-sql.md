@@ -20,15 +20,15 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c66a822991bb347b429b1524f0b04aa768cb38f4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f358296320ebeeefcc6004a59754ba8e8052e789
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833967"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396683"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>Представление каталога sys.sql_expression_dependencies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Содержит по одной строке для каждой именованной зависимости определяемой пользователем сущности в текущей базе данных. Это включает в себя зависимости между скомпилированными в собственном код скалярными определяемыми пользователем функциями и другими [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] модулями. Зависимость между двумя сущностями создается, когда одна сущность, называемая *упоминаемой сущностью*, отображается по имени в сохраненном выражении SQL другой сущности, называемой *ссылающейся сущностью*. Например, если на таблицу ссылается определение представления, это представление, как ссылающаяся сущность, зависит от таблицы или упоминаемой сущности. При удалении таблицы представление становится непригодным для использования.  
   
@@ -73,12 +73,12 @@ ms.locfileid: "82833967"
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Просмотр|Да|Да|  
+|Просмотр|да|да|  
 |Фильтруемый индекс|Да**|Нет|  
 |Статистика фильтрации|Да**|Нет|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Да|Да|  
+|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]***|да|да|  
 |Хранимая процедура CLR|Нет|Да|  
-|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|да|  
 |Определяемая пользователем функция CLR|Нет|Да|  
 |Триггер CLR (DML и DDL)|Нет|Нет|  
 |Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
@@ -123,7 +123,7 @@ GO
   
 ```  
   
-### <a name="b-returning-entities-that-reference-another-entity"></a>Б. Возвращение сущностей, ссылающихся на другую сущность  
+### <a name="b-returning-entities-that-reference-another-entity"></a>Б) Возвращение сущностей, ссылающихся на другую сущность  
  В следующем примере возвращаются сущности, ссылающиеся на таблицу `Production.Product`. Сущности, возвращенные в столбце `referencing_entity_name`, зависят от таблицы `Product`.  
   
 ```  

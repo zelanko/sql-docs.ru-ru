@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c470cf8ea61851b80f04bce716bc7c83c54929b0
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68259786"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396903"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Работа с SSMA для консоли Access (Акцесстоскл)
 Помощник по миграции Microsoft SQL Server (SSMA) для доступа теперь доступен через консольное приложение в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -24,9 +24,8 @@ ms.locfileid: "68259786"
   
 В этом разделе рассматриваются следующие темы:  
   
-|||  
+|Раздел|Описание|  
 |-|-|  
-|**Разделы**|**Описание**|  
 |[Начало работы с SSMA для консоли &#40;Акцесстоскл&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Описание процедуры выполнения консольного приложения.|  
 |[Параметры командной строки в консоли SSMA &#40;Акцесстоскл&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Описание параметров командной строки и параметров для функционирования консольного приложения SSMA.|  
 |[Создание файлов скриптов &#40;Акцесстоскл&#41;](../../ssma/access/creating-script-files-accesstosql.md)|Объясняет, как создать файл скрипта.|  
@@ -38,6 +37,6 @@ ms.locfileid: "68259786"
 |[Создание отчетов &#40;Акцесстоскл&#41;](../../ssma/access/generating-reports-accesstosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;Акцесстоскл&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 [начало работы с SSMA для консоли Access](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

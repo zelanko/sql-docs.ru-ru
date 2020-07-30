@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 104fbedea8199f0a6fb092c3ee1524bbfb4b903f
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b02f1325e97cc27b9ae0457bc964f25150851144
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85787309"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396604"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Интеллектуальная обработка запросов в базах данных SQL
 
@@ -446,6 +446,5 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Центр производительности для базы данных SQL Azure и ядра СУБД SQL Server](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)    
 [Справочник по логическим и физическим операторам Showplan](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
-[Соединения](../../relational-databases/performance/joins.md)    
-[Демонстрация адаптивной обработки запросов](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)       
+[Соединения](../../relational-databases/performance/joins.md)       
 [Демонстрация интеллектуальной обработки запросов](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0022e0e740e9c4268ddf08340029c2e74a101437
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: 77b0617fbaa8ea90388f40e16ed2b61cfd3bb2b8
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922878"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396503"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Урок 2. Подключение с другого компьютера
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "86922878"
     > [!NOTE]  
     > Поскольку диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] является оснасткой консоли управления ( [!INCLUDE[msCoName](../includes/msconame-md.md)] ), а не изолированной программой, при работе в более новых версиях Windows диспетчер конфигурации [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не отображается как приложение. Имя файла содержит число, представляющее номер версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Чтобы открыть диспетчер конфигурации с помощью команды "Выполнить", воспользуйтесь одним из приведенных ниже путей для последних четырех версий (предполагается, что система Windows установлена на диске C).  
   
-    |||  
+    |Версия|путь|  
     |-|-|
     |[!INCLUDE[ssSQL17](../includes/sssql17-md.md)]|C:\Windows\SysWOW64\SQLServerManager14.msc|
     |[!INCLUDE[ssSQL16](../includes/sssql16-md.md)]|C:\Windows\SysWOW64\SQLServerManager13.msc|  

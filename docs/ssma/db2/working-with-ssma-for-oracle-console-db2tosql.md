@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29d8787c-632e-4ff7-9ccc-3f7ad40480ec
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 01aa8586e97677ed8d1071ec4dc2cb65a6aa0436
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 62136073116141c206c36d5fcca8dd5b417de0e4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086193"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396426"
 ---
 # <a name="working-with-ssma-for-oracle-console-db2tosql"></a>Работа с SSMA для консоли Oracle (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Выпуск Помощник по миграции (SSMA) для DB2 теперь доступен через консольное приложение в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -23,9 +23,8 @@ ms.locfileid: "68086193"
   
 В этом разделе рассматриваются следующие темы:  
   
-|||  
+|Раздел|Описание|  
 |-|-|  
-|**Разделы**|**Описание**|  
 |[Начало работы с помощью консоли SSMA для DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md)|Описание процедуры выполнения консольного приложения.|  
 |[Параметры командной строки в консоли SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/command-line-options-in-ssma-console-db2tosql.md)|Описание параметров командной строки и параметров для функционирования консольного приложения SSMA.|  
 |[Создание файлов скриптов &#40;DB2ToSQL&#41;](../../ssma/db2/creating-script-files-db2tosql.md)|Объясняет, как создать файл скрипта.|  
@@ -37,6 +36,6 @@ ms.locfileid: "68086193"
 |[Создание отчетов &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [начало работы с SSMA для консоли DB2](https://msdn.microsoft.com/f245c017-023e-4880-8721-8908d339525e)  
   

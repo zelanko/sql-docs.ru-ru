@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0b52f18f8a7247faae24f266c6d8dba3d6c2ea4c
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: d7fe937b95049788f4b488df2d36451df67c4c09
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293641"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396403"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Сопоставление кодировок MySQL и SQL Server (MySQLToSQL)
 Кодировку (Charset) можно указать для символьных типов данных, выражений и литералов MySQL.  
@@ -77,9 +77,8 @@ ms.locfileid: "84293641"
   
     Сопоставление charset между базой данных MySQL и целевой базой данных на уровне корневого узла метаданных приведено ниже.  
   
-    ||||  
+    |Имя charset|Описание набора символов|Целевой тип charset (по умолчанию)|  
     |-|-|-|  
-    |**Имя charset**|**Описание набора символов**|**Целевой тип charset (по умолчанию)**|  
     |традиционн|Big5 традиционный китайский|NCHAR/NVARCHAR (по умолчанию)|  
     |dec8|Декабрь (Западная Европа)|CHAR/VARCHAR (по умолчанию)|  
     |CP850 определяет кодовую|DOS Западная Европа|CHAR/VARCHAR (по умолчанию)|  
