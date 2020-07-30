@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7add1259778bf189c981d5b302e989bf7bc233c3
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138330"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396564"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры проекта (сопоставление типов) (MySQLToSQL)
 Параметры проекта сопоставления типов позволяют задать сопоставления типов по умолчанию для проекта SSMA.  
@@ -33,7 +33,7 @@ ms.locfileid: "68138330"
 ##### <a name="target-type"></a>Тип целевого объекта  
 Тип данных целевой базы данных для указанного типа данных MySQL.  
   
-##### <a name="add"></a>Добавить  
+##### <a name="add"></a>Add  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
 ##### <a name="edit"></a>Изменить  
@@ -48,9 +48,8 @@ ms.locfileid: "68138330"
 ## <a name="type-mappings"></a>Сопоставления типов  
 В следующей таблице показано сопоставление по умолчанию между исходным и целевым типами данных.  
   
-|||  
+|Тип данных MySQL|Тип данных SQL Server|  
 |-|-|  
-|**Тип данных MySQL**|**Тип данных SQL Server**|  
 |BIGINT|BIGINT|  
 |bigint [*.. 255]|BIGINT|  
 |binary|двоичный файл [1]|  
@@ -70,7 +69,7 @@ ms.locfileid: "68138330"
 |большой двоичный объект [2.. 8000]|varbinary [*]|  
 |BLOB-объект [8001.. *]|varbinary(max)|  
 |bool|bit|  
-|Логическое|bit|  
+|boolean|bit|  
 |char|nchar [1]|  
 |Byte (байт)|двоичный файл [1]|  
 |Byte (байт) [0.. 1]|двоичный файл [1]|  
@@ -86,18 +85,18 @@ ms.locfileid: "68138330"
 |DATETIME|datetime2 [0]|  
 |dec|Decimal|  
 |Dec [*.. 65]|Decimal [*] [0]|  
-|Dec [*.. 65] [\*.. пределах|Decimal [*] [\*]|  
+|Dec [*.. 65] [ \* .. пределах|Decimal [*] [ \* ]|  
 |Decimal|Decimal|  
 |Decimal [*.. 65]|Decimal [*] [0]|  
-|Decimal [*.. 65] [\*.. пределах|Decimal [*] [\*]|  
+|Decimal [*.. 65] [ \* .. пределах|Decimal [*] [ \* ]|  
 |double|float [53]|  
 |double precision|float [53]|  
-|Двойная точность [*.. 255] [\*.. пределах|numeric [*] [\*]|  
-|Double [*.. 255] [\*.. пределах|numeric [*] [\*]|  
+|Двойная точность [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
+|Double [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |fixed|NUMERIC|  
-|Исправлено [*.. 65] [\*.. пределах|numeric [*] [\*]|  
+|Исправлено [*.. 65] [ \* .. пределах|numeric [*] [ \* ]|  
 |FLOAT|float [24]|  
-|float [*.. 255] [\*.. пределах|numeric [*] [\*]|  
+|float [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |float [*.. 53]|float [53]|  
 |INT|INT|  
 |int [*.. 255]|INT|  
@@ -132,13 +131,13 @@ ms.locfileid: "68138330"
 |nchar [2.. 255]|nchar [*]|  
 |NUMERIC|NUMERIC|  
 |numeric [*.. 65]|numeric [*] [0]|  
-|numeric [*.. 65] [\*.. пределах|numeric [*] [\*]|  
+|numeric [*.. 65] [ \* .. пределах|numeric [*] [ \* ]|  
 |nvarchar|nvarchar [1]|  
 |nvarchar [0.. 1]|nvarchar [1]|  
 |nvarchar [2.. 4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
 |real|float [53]|  
-|Real [*.. 255] [\*.. пределах|numeric [*] [\*]|  
+|Real [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |serial|BIGINT|  
 |smallint|smallint|  
 |smallint [*.. 255]|smallint|  
@@ -156,18 +155,18 @@ ms.locfileid: "68138330"
 |bigint без знака [*.. 255]|BIGINT|  
 |неподписанная дек|Decimal|  
 |неподписанный Dec [*.. 65]|Decimal [*] [0]|  
-|неподписанный Dec [*.. 65] [\*.. пределах|Decimal [*] [\*]|  
+|неподписанный Dec [*.. 65] [ \* .. пределах|Decimal [*] [ \* ]|  
 |десятичное число без знака|Decimal|  
 |десятичное число без знака [*.. 65]|Decimal [*] [0]|  
-|десятичное число без знака [*.. 65] [\*.. пределах|Decimal [*] [\*]|  
+|десятичное число без знака [*.. 65] [ \* .. пределах|Decimal [*] [ \* ]|  
 |двойное без знака|float [53]|  
 |Двойная точность без знака|float [53]|  
-|Двойная точность без знака [*.. 255] [\*.. пределах|numeric [*] [\*]|  
-|Double без знака [*.. 255] [\*.. пределах|numeric [*] [\*]|  
+|Двойная точность без знака [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
+|Double без знака [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |фиксированный без знака|NUMERIC|  
-|Фиксированная неподписанная [*.. 65] [\*.. пределах|numeric [*] [\*]|  
+|Фиксированная неподписанная [*.. 65] [ \* .. пределах|numeric [*] [ \* ]|  
 |беззнаковое число без знака|float [24]|  
-|float без знака [*.. 255] [\*.. пределах|numeric [*] [\*]|  
+|float без знака [*.. 255] [ \* .. пределах|numeric [*] [ \* ]|  
 |float без знака [*.. 53]|float [53]|  
 |unsigned int|BIGINT|  
 |целое число без знака [*.. 255]|BIGINT|  
@@ -177,9 +176,9 @@ ms.locfileid: "68138330"
 |медиуминт без знака [*.. 255]|INT|  
 |число без знака|NUMERIC|  
 |число без знака [*.. 65]|numeric [*] [0]|  
-|число без знака [*.. 65] [\*.. пределах|numeric [*] [\*]|  
+|число без знака [*.. 65] [ \* .. пределах|numeric [*] [ \* ]|  
 |вещественное без знака|float [53]|  
-|Вещественная сумма без знака [*.. 255 [[\*.. пределах|numeric [*] [\*]|  
+|Вещественная сумма без знака [*.. 255 [[ \* .. пределах|numeric [*] [ \* ]|  
 |неподписанный smallint|INT|  
 |неподписанный smallint [*.. 255]|INT|  
 |неподписанный tinyint|tinyint|  
@@ -194,7 +193,7 @@ ms.locfileid: "68138330"
 |год [2.. 2]|smallint|  
 |Year [4.. 4]|smallint|  
   
-##### <a name="add"></a>Добавить  
+##### <a name="add"></a>Add  
 Нажмите, чтобы добавить тип данных в список сопоставления.  
   
 ##### <a name="edit"></a>Изменить  

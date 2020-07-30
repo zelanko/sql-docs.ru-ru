@@ -26,15 +26,15 @@ ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0f99e3497a8b1c2061ed54348943f1d087ed29bb
-ms.sourcegitcommit: 08f331b6a5fe72d68ef1b2eccc5d16cb80c6ee39
+ms.openlocfilehash: 11b7ec3592e73d890a6abab1e0d5df39e53eef18
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86977694"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396488"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Обновляет метаданные для указанной не привязанной к схеме хранимой процедуры, определяемой пользователем функции, представления, триггера DML, а также триггера DDL уровня базы данных или сервера в текущей базе данных. Непрерывные метаданные для этих объектов, такие как типы данных параметров, могут устаревать по причине изменений их базовых объектов.
   
@@ -67,7 +67,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  **sp_refreshsqlmodule** должны выполняться при внесении изменений в объекты, лежащие в основе модуля, который влияет на его определение. В противном случае при обращении к модулю или при его вызове могут быть получены непредвиденные результаты. Чтобы обновить представление, можно использовать либо **sp_refreshsqlmodule** , либо **sp_refreshview** с теми же результатами.  
   
  **sp_refreshsqlmodule** не влияет на разрешения, расширенные свойства или параметры SET, связанные с объектом.  
@@ -142,7 +142,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>Б. Обновление триггера DDL уровня базы данных  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>Б) Обновление триггера DDL уровня базы данных  
  В представленном ниже примере обновляется триггер DDL уровня базы данных.  
   
 ```  

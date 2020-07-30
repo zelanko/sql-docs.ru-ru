@@ -16,18 +16,18 @@ helpviewer_keywords:
 - uniqueidentifier data type
 - NEWID function
 ms.assetid: f7014e60-96d5-457e-afc3-72b60ba20c0f
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9324ee324188fd8cf70f97280b5e613ffd1178
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: fff840992f0b24af961acb069268cb41c550da2a
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73843651"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397104"
 ---
 # <a name="newid-transact-sql"></a>NEWID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Создает уникальное значение типа **uniqueidentifier**.  
   
@@ -109,7 +109,7 @@ GO
 ```  
   
 ### <a name="c-using-uniqueidentifier-and-variable-assignment"></a>В. Использование типа uniqueidentifier и присвоение значения переменной  
- В приведенном ниже примере объявляется локальная переменная типа данных **uniqueidentifier** с именем `@myid`. Затем переменной присваивается значение с помощью оператора `SET`.  
+ В приведенном ниже примере объявляется локальная переменная типа данных `@myid`uniqueidentifier**с именем**. Затем переменной присваивается значение с помощью оператора `SET`.  
   
 ```  
 DECLARE @myid uniqueidentifier ;  

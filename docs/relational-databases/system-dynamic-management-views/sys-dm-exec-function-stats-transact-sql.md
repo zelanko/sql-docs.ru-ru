@@ -18,15 +18,15 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02cff18af9c0824d7f28e5685f5fc63a0bf45128
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 25ec8e19343d707fefdda9049428280b1dfddb80
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821257"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396793"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Возвращает статистическую статистику производительности для кэшированных функций. Представление возвращает одну строку для каждого кэшированного плана функции, а время существования строки — до тех пор, пока функция остается в кэше. При удалении функции из кэша соответствующая строка удаляется из этого представления. В этот момент возникает событие трассировки SQL статистики производительности аналогично **sys.dm_exec_query_stats**. Возвращает сведения о скалярных функциях, включая функции в памяти и скалярные функции CLR. Не возвращает сведения о функциях, возвращающих табличное значение.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82821257"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, в которой находится функция.|  
 |**object_id**|**int**|Идентификационный номер объекта функции.|  
-|**type**|**char (2)**|Тип объекта: FN = скалярные функции|  
+|**type**|**char(2)**|Тип объекта: FN = скалярные функции|  
 |**type_desc**|**nvarchar(60)**|Описание типа объекта: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary (64)**|Это можно использовать для сопоставления с запросами в **представлении sys. dm_exec_query_stats** , которые были выполнены в этой функции.|  
 |**plan_handle**|**varbinary (64)**|Идентификатор плана в оперативной памяти. Этот идентификатор является временным и константным, только пока план сохраняется в кэше. Это значение можно использовать с динамическим административным представлением **sys. dm_exec_cached_plans** .<br /><br /> Всегда будет 0x000, когда скомпилированная в собственном режиме функция запрашивает оптимизированную для памяти таблицу.|  
