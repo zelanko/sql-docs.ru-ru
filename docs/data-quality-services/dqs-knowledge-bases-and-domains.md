@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: a4eff5b70e83b92e1c99e1d7c4b1c351dec35b7e
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: c677a999454f307f90b0f0444e67069ce81dfcc3
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85895379"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362507"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Базы знаний и домены DQS
 
@@ -143,10 +143,10 @@ ms.locfileid: "85895379"
   
  Дополнительные сведения о базе знаний и сопоставлении данных см. в разделе [Сопоставление данных](../data-quality-services/data-matching.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В базе знаний и ее доменах вы можете выполнять следующие операции:  
   
-|||  
+|Описание операции|Раздел|  
 |-|-|  
 |Создавать и открывать базу знаний, добавлять в нее знания и выполнять обнаружение.|[Построение базы знаний](../data-quality-services/building-a-knowledge-base.md)|  
 |Выполнять операции импорта и экспорта с доменами и базами знаний.|[Импорт и экспорт набора знаний](../data-quality-services/importing-and-exporting-knowledge.md)|  

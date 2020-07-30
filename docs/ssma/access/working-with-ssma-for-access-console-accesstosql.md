@@ -37,6 +37,6 @@ ms.locfileid: "87396903"
 |[Создание отчетов &#40;Акцесстоскл&#41;](../../ssma/access/generating-reports-accesstosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;Акцесстоскл&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
 [начало работы с SSMA для консоли Access](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

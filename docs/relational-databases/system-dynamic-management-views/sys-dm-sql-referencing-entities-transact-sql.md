@@ -94,16 +94,16 @@ sys.dm_sql_referencing_entities (
   
  Возвращает ошибку, если заданная упоминаемая сущность является пронумерованной хранимой процедурой.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
 |Таблица|Да*|Да|  
-|Представление|Да|Да|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
+|Просмотр|да|да|  
+|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|да|да|  
 |Хранимая процедура CLR|Нет|Да|  
-|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|да|да|  
 |Определяемая пользователем функция CLR|Нет|Да|  
 |Триггер CLR (DML и DDL)|Нет|Нет|  
 |Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
@@ -151,7 +151,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б. Получение списка сущностей, ссылающихся на заданный тип  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б) Получение списка сущностей, ссылающихся на заданный тип  
  В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. `dbo.Flag`Тип также используется в определении нескольких столбцов в `HumanResources.Employee` таблице. Однако, поскольку тип не находится в определении вычисляемого СТОЛБЦА, проверочного ограничения или ограничения по умолчанию в таблице, для таблицы не возвращаются никакие строки `HumanResources.Employee` .  
   
 ```sql  
@@ -172,7 +172,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

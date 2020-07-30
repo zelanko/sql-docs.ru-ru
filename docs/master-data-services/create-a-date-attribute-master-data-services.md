@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: dbf5182a41c9b5c52a73e9d005c768b48cc1fae4
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: cb52caebef0a9c042e3f7a077aa098cdc42b7ff4
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85811839"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363162"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Создание атрибута даты (службы Master Data Services)
 
@@ -75,7 +75,7 @@ ms.locfileid: "85811839"
 ## <a name="to-display-the-time-portion-of-a-datetime-value"></a>Отображение части времени значения типа datetime  
  Чтобы пользовательский интерфейс отображал время из значения типа datetime, необходимо выбрать подходящую маску ввода для этого атрибута. Для этого не подходит ни одна из встроенных масок для атрибутов значения типа Datetime, но вы можете добавить новую маску, которая позволит отобразить значение времени. Для этого добавьте строку в таблицу mdm.tblList базы данных MDS, где будут храниться встроенные маски. Строка должна иметь следующие значения:  
   
-|||  
+|Столбец|Значение|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|Маска ввода|  
@@ -89,7 +89,7 @@ ms.locfileid: "85811839"
   
  Маска ввода — это настраиваемая строка форматирования даты и времени .NET. Дополнительную информацию см. в разделе [Настраиваемые строки формата даты и времени](https://msdn.microsoft.com/library/8kb3ddd4\(v=vs.110\).aspx)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Master Data Services &#40;атрибутов&#41;](../master-data-services/attributes-master-data-services.md)   
  [Измените имя атрибута и тип данных &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [Создание атрибута на основе домена &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   

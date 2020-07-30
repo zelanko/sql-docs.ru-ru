@@ -19,12 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-ms.openlocfilehash: a345e41f42cc70e941e4a87e3510312313d4dc03
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: aad472489192516d367185572d1c9ac67eb78154
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764666"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248782"
 ---
 # <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -33,9 +33,8 @@ ms.locfileid: "85764666"
   
  Это представление каталога аналогично представлению [sys. fulltext_languages &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
-||||  
-|-|-|-|  
-|**Имя столбца**|**Type**|**Описание**|  
+|Имя столбца|Тип|Описание|  
+|-|-|-|   
 |lcid|INT|Код локали Microsoft Windows (LCID) для языка.|  
 |name|sysname|Является либо значением псевдонима в [sys.sysязыках &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) соответствующим значению **LCID**, либо строковым представлением числового LCID.|  
   
@@ -58,7 +57,7 @@ SELECT * FROM sys.fulltext_semantic_languages;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)  
   
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12537c9d-31e4-40b0-a411-cb343abbe96a
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 638a5f791f7997cc96b22bde47f41198a9946133
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 517e672cdb5bb7a6991f83b72f25f937ecbb6359
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882784"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362824"
 ---
 # <a name="importing-and-exporting-knowledge"></a>Импорт и экспорт набора знаний
 
@@ -25,10 +25,10 @@ ms.locfileid: "85882784"
 > [!IMPORTANT]  
 >  Запустив программу DQSInstaller.exe в командной строке, вы можете экспортировать сразу *все* базы знаний на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] в резервный файл служб DQS (.dqsb). Аналогично, запустив программу DQSInstaller.exe в командной строке, вы можете импортировать сразу *все* базы знаний из резервного файла служб DQS (.dqsb) на сервер [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] . Сведения об этом см. в разделе [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md) в руководстве по установке служб DQS.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Вы можете выполнить следующие операции импорта и экспорта.  
   
-|||  
+|Описание операции|Раздел|  
 |-|-|  
 |Экспорт домена из базы знаний в файл данных .dqs.|[Экспорт домена в файл .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md)|  
 |Импорт домена из файла данных .dqs в существующую базу знаний.|[Импорт домена из файла .dqs](../data-quality-services/import-a-domain-from-a-dqs-file.md)|  

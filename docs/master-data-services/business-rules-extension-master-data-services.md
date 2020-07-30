@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: c4d6ad76f68acb72072f04728e55793bad3aa9cd
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: f197ebbd41c32bb8cd8ee7eeae944dddd583f70d
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813678"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362494"
 ---
 # <a name="business-rules-extension-master-data-services"></a>Расширение бизнес-правил (Master Data Services)
 
@@ -64,9 +64,8 @@ CREATE PROCEDURE [usr].[YourAction]
   
  Действия сценариев будут выполняться как mds_br_user со следующими разрешениями.  
   
-|||  
+|Схема|Разрешения|  
 |-|-|  
-|**Схема**|**Разрешения**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
@@ -114,7 +113,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  Выберите команду **Сохранить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Бизнес-правила &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Условия бизнес-правил &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Действия бизнес-правил (службы Master Data Services)](../master-data-services/business-rule-actions-master-data-services.md)  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ececf16131544b0a450d877b5c4ba43c2cd80466
-ms.sourcegitcommit: 205de8fa4845c491914902432791bddf11002945
+ms.openlocfilehash: ff8525e9742009e5a5ada680160f20d5e8063d86
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86970692"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363524"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
@@ -65,9 +65,9 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Эти аргументы можно использовать, только если новые данные добавляются с помощью инструкции PREDICTION JOIN. Если в запросе PREDICTION JOIN аргумент не указан, значение по умолчанию — EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
- \<*table expression*>.  
+ Объект \<*table expression*>.  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Примечания  
  [!INCLUDE[msCoName](../includes/msconame-md.md)]Алгоритм временных рядов не поддерживает прогнозирование с предысторией при использовании инструкции PREDICTION JOIN для добавления новых данных.  
   
  В инструкции PREDICTION JOIN процесс прогнозирования всегда начинается на временном шаге сразу после окончания первоначальной обучающей последовательности. Так происходит даже при добавлении новых данных. Таким образом, параметр *n* и значения параметра *n-start* должны быть целым числом больше 0.  
@@ -147,7 +147,7 @@ ON
   
  Исходные прогнозы:  
   
-||||  
+|Model Region|ReportingDate|Количество|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -155,7 +155,7 @@ ON
   
  Обновленные прогнозы:  
   
-||||  
+|Model Region|ReportingDate|Количество|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
@@ -251,7 +251,7 @@ OR [Model Region] = 'M200 North America'
 > [!NOTE]  
 >  Ключевое слово FLATTENED использовалось в этом примере, чтобы представить результаты в виде таблицы, но, если поставщик поддерживает иерархические наборы строк, ключевое слово FLATTENED можно опустить. Если опустить ключевое слово FLATTENED, запрос вернет два столбца. Первый столбец будет содержать значение, идентифицирующее ряды данных `[Model Region]`, а второй столбец — вложенную таблицу со статистикой.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Расширения интеллектуального анализа данных &#40;Справочник по функциям DMX&#41;](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Примеры запросов модели временных рядов](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
  [Predict (расширения интеллектуального анализа данных)](../dmx/predict-dmx.md)  

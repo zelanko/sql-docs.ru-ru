@@ -33,7 +33,7 @@ ms.locfileid: "87396613"
 |counter_value|**Decimal (38, 10)**|Текущее значение счетчика.||  
 |last_update_time|**Datetime2 (3)**|Метка времени последнего времени обновления значения.||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Динамические административные представления хранилища данных SQL и параллельного хранилища данных &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

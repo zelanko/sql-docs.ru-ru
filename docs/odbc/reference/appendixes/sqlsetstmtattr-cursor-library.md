@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1bdd9b3b559d5cc78a0d44f5280aae347bc8996a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 366af9f48f709ec7414c1efc43000f1b565ff6d6
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300494"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363446"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (библиотека курсоров)
 > [!IMPORTANT]  
@@ -26,15 +26,24 @@ ms.locfileid: "81300494"
  В этом разделе обсуждается использование функции **SQLSetStmtAttr** в библиотеке курсоров. Общие сведения о **SQLSetStmtAttr**см. в разделе [функция SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
  Библиотека курсоров поддерживает следующие атрибуты инструкции с **SQLSetStmtAttr**:  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROWSET_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROWSET_ARRAY_SIZE  
+        SQL_ATTR_SIMULATE_CURSOR  
+        SQL_ATTR_USE_BOOKMARKS  
+    :::column-end:::
+:::row-end:::
+
  Библиотека курсоров поддерживает только значения SQL_CURSOR_FORWARD_ONLY и SQL_CURSOR_STATIC атрибута инструкции SQL_ATTR_CURSOR_TYPE.  
   
  Для однонаправленных курсоров библиотека курсоров поддерживает SQL_CONCUR_READ_ONLY значение атрибута инструкции SQL_ATTR_CONCURRENCY. Для статических курсоров библиотека курсоров поддерживает SQL_CONCUR_READ_ONLY и SQL_CONCUR_VALUES значения атрибута SQL_ATTR_CONCURRENCY инструкции.  

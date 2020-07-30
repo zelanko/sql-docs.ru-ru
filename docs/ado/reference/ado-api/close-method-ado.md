@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
-ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
+ms.openlocfilehash: 939bf1d65c73b2aa83c54c7a5b936e3228719ba5
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2020
-ms.locfileid: "82748915"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87242794"
 ---
 # <a name="close-method-ado"></a>Метод Close (ADO)
 Закрывает открытый объект и все зависимые объекты.  
@@ -37,7 +37,7 @@ object.Close
 ## <a name="remarks"></a>Примечания  
  Используйте метод **Close** , чтобы закрыть [соединение](../../../ado/reference/ado-api/connection-object-ado.md), [запись](../../../ado/reference/ado-api/record-object-ado.md), [набор записей](../../../ado/reference/ado-api/recordset-object-ado.md)или объект [потока](../../../ado/reference/ado-api/stream-object-ado.md) , чтобы освободить все связанные системные ресурсы. Закрытие объекта не приводит к его удалению из памяти; можно изменить параметры свойств и открыть его позже. Чтобы полностью исключить объект из памяти, закройте объект и задайте для переменной объекта значение *Nothing* (в Visual Basic).  
   
-## <a name="connection"></a>Подключение  
+## <a name="connection"></a>Соединение  
  Использование метода **Close** для закрытия объекта **соединения** также закрывает все активные объекты **набора записей** , связанные с соединением. Объект [команды](../../../ado/reference/ado-api/command-object-ado.md) , связанный с закрываемым объектом **соединения** , будет сохранен, но больше не будет связан с объектом **соединения** . то есть свойство [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) будет иметь значение **Nothing**. Кроме того, коллекция [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) объекта **команды** будет очищать все параметры, определяемые поставщиком.  
   
  Позже можно вызвать метод [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) для повторного установления соединения с тем же или другим источником данных. Пока объект **соединения** закрыт, вызов всех методов, требующих открытого соединения с источником данных, приведет к ошибке.  
@@ -53,14 +53,20 @@ object.Close
   
  При использовании метода [clone](../../../ado/reference/ado-api/clone-method-ado.md) для создания копий объекта открытого **набора записей** закрытие исходного или клона не влияет на другие копии.  
   
-## <a name="applies-to"></a>Применяется к  
-  
-|||  
-|-|-|  
-|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
-|[Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
-## <a name="see-also"></a>См. также  
+## <a name="applies-to"></a>Применение  
+
+:::row:::
+    :::column:::
+        [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
+## <a name="see-also"></a>См. также:  
  [Примеры методов Open и Close (Visual Basic)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
  [Пример методов Open и Close (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
  [Пример методов Open и Close (Visual c++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   

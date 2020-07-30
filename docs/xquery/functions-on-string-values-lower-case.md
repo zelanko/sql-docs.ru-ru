@@ -41,7 +41,7 @@ fn:lower-case($arg as xs:string?) as xs:string
 |-|-|
 |*$arg*|Строковое значение для преобразования в нижний регистр.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
@@ -58,7 +58,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>Б. Поиск конкретной символьной строки  
+### <a name="b-search-for-a-specific-character-string"></a>Б) Поиск конкретной символьной строки  
  В этом примере показано использование функции lower-case для выполнения поиска без учета регистра.  
   
 ```  
@@ -122,7 +122,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

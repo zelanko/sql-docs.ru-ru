@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 93bbed557f18c847d62dec3e700023f87324e594
-ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
+ms.openlocfilehash: db2688a46fa785d76a0f1a98483c03eb6e604d33
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85813717"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362462"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Примеры бизнес-правил (службы Master Data Services)
 
@@ -28,9 +28,11 @@ ms.locfileid: "85813717"
   
   
 ## <a name="business-rule-examples"></a>Примеры бизнес-правил  
-Образец модели |Сущность  |Имя бизнес-правила| Описание  
----------|---------|---------|-----------|  
-Customer    | Customer   | Персональные условия оплаты| Задает условия оплаты по умолчанию для заказчиков.          
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Customer | Customer | Персональные условия оплаты | Задает условия оплаты по умолчанию для заказчиков. |
+
 В следующем бизнес-правиле, если значение атрибута CustomerType соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. В противном случае не выполняется никаких действий.  
 ```  
 If  
@@ -42,10 +44,11 @@ Else
 ```  
   
 **--------------------------------------------------**  
-  
-Образец модели  |Сущность  |Имя бизнес-правила|Описание    
----------|---------|---------|---------------  
-Customer     | Customer    | Условия оплаты для организаций | Определяет условия оплаты по умолчанию для организаций.         
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Customer | Customer | Условия оплаты для организаций | Определяет условия оплаты по умолчанию для организаций. |
+
 В следующем бизнес-правиле, если значение атрибута CustomerType соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. В противном случае не выполняется никаких действий.  
 ```  
 If  
@@ -58,10 +61,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Образец модели  |Сущность  |Имя бизнес-правила| Описание    
----------|---------|---------|-----------  
-Продукт     |  Продукт       | DaysToManufacture |Задает диапазон сроков собственного производства.          
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Продукт | Продукт | DaysToManufacture | Задает диапазон сроков собственного производства. |
+
 В следующем бизнес-правиле, если значение атрибута InHouseManufacture соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. В противном случае не выполняется никаких действий.  
 ```  
 If  
@@ -74,10 +78,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Образец модели  |Сущность  |Имя бизнес-правила|Описание    
----------|---------|---------|-------------  
-Продукт     |Продукт         |Обязательные поля| Задает обязательные поля для элементов сущности продукта.           
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Продукт | Продукт | Обязательные поля | Задает обязательные поля для элементов сущности продукта. |
+
 В следующем правиле `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Значения атрибутов не могут быть Null или пустыми.  
 ```  
 If  
@@ -99,10 +104,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Образец модели  |Сущность  |Имя бизнес-правила|Описание    
----------|---------|---------|-----------  
-Продукт     | Продукт        |  Стандартная стоимость| Устанавливает требование, согласно которому стандартная стоимость должна быть больше 0.        
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Продукт | Продукт | Стандартная стоимость | Устанавливает требование, согласно которому стандартная стоимость должна быть больше 0. |
+
 В следующем бизнес-правиле `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -115,10 +121,10 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Образец модели  |Сущность  |Имя бизнес-правила|Описание    
----------|---------|---------|------------  
-Продукт     | Продукт        | Стоимость MSRP FG|Указывает, что для готовой продукции розничная цена производителя и цена продавца должны быть больше 0.           
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Продукт | Продукт | Стоимость MSRP FG | Указывает, что для готовой продукции розничная цена производителя и цена продавца должны быть больше 0. |
   
 В следующем бизнес-правиле, если значение атрибута FinishedGoodIndicator соответствует `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -133,10 +139,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Образец модели  |Сущность  |Имя бизнес-правила|Описание    
----------|---------|---------|------------  
-Продукт     | Продукт        |  Имя по умолчанию| Задает название продукта по умолчанию на основе значений атрибутов Color и Class. Если значение атрибута Color не равно YLO, а значение атрибута Class не равно NA, название по умолчанию — Yellow NA.         
+
+| Образец модели |Сущность | Имя бизнес-правила | Описание |
+|-|-|-|-|
+| Продукт | Продукт | Имя по умолчанию | Задает название продукта по умолчанию на основе значений атрибутов Color и Class. Если значение атрибута Color не равно YLO, а значение атрибута Class не равно NA, название по умолчанию — Yellow NA. |
+
 В следующем бизнес-правиле, если значения атрибутов Color и Class не соответствуют условию правила `is equal` , то `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) применяется к атрибуту Name.  
 ```  
 If  

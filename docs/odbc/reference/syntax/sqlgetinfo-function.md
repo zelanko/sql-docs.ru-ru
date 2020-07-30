@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7ce6c9e6032201f41eae058c9553f9bd61c4f079
-ms.sourcegitcommit: dacd9b6f90e6772a778a3235fb69412662572d02
+ms.openlocfilehash: 9a88eb1a4aff7d166a81bbf6ec64ae2b878fd5fa
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2020
-ms.locfileid: "86279578"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363384"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo, функция
 
@@ -79,7 +79,7 @@ SQLRETURN SQLGetInfo(
 
  Если **SQLGetInfo** возвращает либо SQL_ERROR, либо SQL_SUCCESS_WITH_INFO, связанное значение SQLSTATE можно получить, вызвав **SQLGetDiagRec** с *параметром handletype* SQL_HANDLE_DBC и *маркером* *коннектионхандле*. В следующей таблице перечислены значения SQLSTATE, обычно возвращаемые функцией **SQLGetInfo** , и объясняется каждый из них в контексте этой функции. Нотация "(DM)" предшествует описаниям SQLSTATE, возвращаемым диспетчером драйверов. Код возврата, связанный с каждым значением SQLSTATE, имеет SQL_ERROR, если не указано иное.  
   
-|SQLSTATE|Ошибка|Описание|  
+|SQLSTATE|Error|Описание|  
 |--------------|-----------|-----------------|  
 |01000|Общее предупреждение|Информационное сообщение для конкретного драйвера. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
 |01004|Строковые данные, усеченные справа|Буфер \* *инфовалуептр* недостаточно велик для возврата всех запрошенных сведений. Поэтому данные были усечены. Длина запрошенной информации в неусеченной форме возвращается в **стрингленгсптр*. (Функция возвращает SQL_SUCCESS_WITH_INFO.)|  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetInfo(
 |HYT01|Время ожидания подключения истекло|Время ожидания соединения истекло до ответа источника данных на запрос. Время ожидания соединения задается через **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Драйвер не поддерживает эту функцию|(DM) драйвер, соответствующий *коннектионхандле* , не поддерживает функцию.|  
   
-## <a name="comments"></a>Примечания  
+## <a name="comments"></a>Комментарии  
 
  Типы сведений, определенные в настоящее время, показаны Далее в этом разделе Ожидается, что для использования преимуществ различных источников данных будет определено больше. Диапазон типов данных зарезервирован ODBC. Разработчики драйверов должны зарезервировать значения для собственного использования драйвера из Open Group. **SQLGetInfo** не выполняет преобразование в Юникод или *преобразователь* (см. [приложение A. коды ошибок ODBC](../appendixes/appendix-a-odbc-error-codes.md) *справочника по программированию ODBC*) для определяемого драйвером *инфотипес*. Дополнительные сведения см. в разделе [зависящие от драйвера типы данных, Типы дескрипторов, типы сведений, типы диагностики и атрибуты](../develop-app/driver-specific-data-types-descriptor-information-diagnostic.md). Формат сведений, возвращаемых в \* *инфовалуептр* , зависит от запрашиваемого *инфотипе* . **SQLGetInfo** будет возвращать информацию в одном из пяти различных форматов:  
   
@@ -115,7 +115,7 @@ SQLRETURN SQLGetInfo(
   
  Драйвер должен возвращать значение для каждого типа данных, определенного в следующих таблицах. Если тип сведений не применяется к драйверу или источнику данных, драйвер возвращает одно из значений, перечисленных в следующей таблице.  
 
-|||
+|Тип информации|Значение|
 |-|-|
 |Символьная строка ("Y" или "N")|"N"|
 |Символьная строка (не "Y" или "N")|Пустая строка.|
@@ -124,7 +124,7 @@ SQLRETURN SQLGetInfo(
   
  Например, если источник данных не поддерживает процедуры, **SQLGetInfo** возвращает значения, перечисленные в следующей таблице, для значений *инфотипе* , связанных с процедурами.  
 
-|||
+|инфотипе|Значение|
 |-|-|
 |SQL_PROCEDURES|"N"|
 |SQL_ACCESSIBLE_PROCEDURES|"N"|
@@ -142,29 +142,52 @@ SQLRETURN SQLGetInfo(
 ## <a name="driver-information"></a>Сведения о драйвере  
 
  Следующие значения аргумента *инфотипе* возвращают сведения о драйвере ODBC, такие как число активных инструкций, имя источника данных и уровень соответствия стандартам интерфейса:  
-  
-|||  
-|-|-|  
-|SQL_ACTIVE_ENVIRONMENTS|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
-|SQL_ASYNC_DBC_FUNCTIONS|SQL_FILE_USAGE|  
-|SQL_ASYNC_MODE|SQL_GETDATA_EXTENSIONS|  
-|SQL_ASYNC_NOTIFICATION|SQL_INFO_SCHEMA_VIEWS|  
-|SQL_BATCH_ROW_COUNT|SQL_KEYSET_CURSOR_ATTRIBUTES1|  
-|SQL_BATCH_SUPPORT|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
-|SQL_DATA_SOURCE_NAME|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|  
-|SQL_DRIVER_AWARE_POOLING_SUPPORTED|SQL_MAX_CONCURRENT_ACTIVITIES|  
-|SQL_DRIVER_HDBC|SQL_MAX_DRIVER_CONNECTIONS|  
-|SQL_DRIVER_HDESC|SQL_ODBC_INTERFACE_CONFORMANCE|  
-|SQL_DRIVER_HENV|SQL_ODBC_STANDARD_CLI_CONFORMANCE|  
-|SQL_DRIVER_HLIB|SQL_ODBC_VER|  
-|SQL_DRIVER_HSTMT|SQL_PARAM_ARRAY_ROW_COUNTS|  
-|SQL_DRIVER_NAME|SQL_PARAM_ARRAY_SELECTS|  
-|SQL_DRIVER_ODBC_VER|SQL_ROW_UPDATES|  
-|SQL_DRIVER_VER|SQL_SEARCH_PATTERN_ESCAPE|  
-|SQL_DYNAMIC_CURSOR_ATTRIBUTES1|SQL_SERVER_NAME|  
-|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|SQL_STATIC_CURSOR_ATTRIBUTES1|  
-|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_STATIC_CURSOR_ATTRIBUTES2|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACTIVE_ENVIRONMENTS  
+        SQL_ASYNC_DBC_FUNCTIONS  
+        SQL_ASYNC_MODE  
+        SQL_ASYNC_NOTIFICATION  
+        SQL_BATCH_ROW_COUNT  
+        SQL_BATCH_SUPPORT  
+        SQL_DATA_SOURCE_NAME  
+        SQL_DRIVER_AWARE_POOLING_SUPPORTED  
+        SQL_DRIVER_HDBC  
+        SQL_DRIVER_HDESC  
+        SQL_DRIVER_HENV  
+        SQL_DRIVER_HLIB  
+        SQL_DRIVER_HSTMT  
+        SQL_DRIVER_NAME  
+        SQL_DRIVER_ODBC_VER  
+        SQL_DRIVER_VER  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES1  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES2  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1  
+    :::column-end:::
+    :::column:::
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2  
+        SQL_FILE_USAGE  
+        SQL_GETDATA_EXTENSIONS  
+        SQL_INFO_SCHEMA_VIEWS  
+        SQL_KEYSET_CURSOR_ATTRIBUTES1  
+        SQL_KEYSET_CURSOR_ATTRIBUTES2  
+        SQL_MAX_ASYNC_CONCURRENT_STATEMENTS  
+        SQL_MAX_CONCURRENT_ACTIVITIES  
+        SQL_MAX_DRIVER_CONNECTIONS  
+        SQL_ODBC_INTERFACE_CONFORMANCE  
+        SQL_ODBC_STANDARD_CLI_CONFORMANCE  
+        SQL_ODBC_VER  
+        SQL_PARAM_ARRAY_ROW_COUNTS  
+        SQL_PARAM_ARRAY_SELECTS  
+        SQL_ROW_UPDATES  
+        SQL_SEARCH_PATTERN_ESCAPE  
+        SQL_SERVER_NAME  
+        SQL_STATIC_CURSOR_ATTRIBUTES1  
+        SQL_STATIC_CURSOR_ATTRIBUTES2  
+    :::column-end:::
+:::row-end:::
+
 > [!NOTE]  
 > При реализации **SQLGetInfo**драйвер может повысить производительность, минимизируя количество попыток отправки или запроса информации с сервера.  
   
@@ -172,141 +195,252 @@ SQLRETURN SQLGetInfo(
 
  Следующие значения аргумента *инфотипе* возвращают сведения о продукте СУБД, такие как имя и версия СУБД:  
 
-|||
-|-|-|
-|SQL_DATABASE_NAME|SQL_DBMS_NAME|
-|SQL_DBMS_VER||
-  
+:::row:::
+    :::column:::
+        SQL_DATABASE_NAME  
+        SQL_DBMS_NAME  
+    :::column-end:::
+    :::column:::
+        SQL_DBMS_VER  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="data-source-information"></a>Сведения об источнике данных  
 
  Следующие значения аргумента *инфотипе* возвращают сведения об источнике данных, такие как характеристики курсора и возможности транзакций:  
-  
-|||  
-|-|-|  
-|SQL_ACCESSIBLE_PROCEDURES|SQL_MULT_RESULT_SETS|  
-|SQL_ACCESSIBLE_TABLES|SQL_MULTIPLE_ACTIVE_TXN|  
-|SQL_BOOKMARK_PERSISTENCE|SQL_NEED_LONG_DATA_LEN|  
-|SQL_CATALOG_TERM|SQL_NULL_COLLATION|  
-|SQL_COLLATION_SEQ|SQL_PROCEDURE_TERM|  
-|SQL_CONCAT_NULL_BEHAVIOR|SQL_SCHEMA_TERM|  
-|SQL_CURSOR_COMMIT_BEHAVIOR|SQL_SCROLL_OPTIONS|  
-|SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_TABLE_TERM|  
-|SQL_CURSOR_SENSITIVITY|SQL_TXN_CAPABLE|  
-|SQL_DATA_SOURCE_READ_ONLY|SQL_TXN_ISOLATION_OPTION|  
-|SQL_DEFAULT_TXN_ISOLATION|SQL_USER_NAME|  
-|SQL_DESCRIBE_PARAMETER||  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACCESSIBLE_PROCEDURES  
+        SQL_ACCESSIBLE_TABLES  
+        SQL_BOOKMARK_PERSISTENCE  
+        SQL_CATALOG_TERM  
+        SQL_COLLATION_SEQ  
+        SQL_CONCAT_NULL_BEHAVIOR  
+        SQL_CURSOR_COMMIT_BEHAVIOR  
+        SQL_CURSOR_ROLLBACK_BEHAVIOR  
+        SQL_CURSOR_SENSITIVITY  
+        SQL_DATA_SOURCE_READ_ONLY  
+        SQL_DEFAULT_TXN_ISOLATION  
+        SQL_DESCRIBE_PARAMETER  
+    :::column-end:::
+    :::column:::
+        SQL_MULT_RESULT_SETS  
+        SQL_MULTIPLE_ACTIVE_TXN  
+        SQL_NEED_LONG_DATA_LEN  
+        SQL_NULL_COLLATION  
+        SQL_PROCEDURE_TERM  
+        SQL_SCHEMA_TERM  
+        SQL_SCROLL_OPTIONS  
+        SQL_TABLE_TERM  
+        SQL_TXN_CAPABLE  
+        SQL_TXN_ISOLATION_OPTION  
+        SQL_USER_NAME  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="supported-sql"></a>Поддерживаемые SQL  
 
  Следующие значения аргумента *инфотипе* возвращают сведения о ИНСТРУКЦИЯх SQL, поддерживаемых источником данных. Синтаксис SQL каждого компонента, описываемого этими типами данных, является синтаксисом SQL-92. Эти типы сведений не полностью описывают грамматику SQL-92. Вместо этого они описывают эти части грамматики, для которых источники данных обычно предлагают различные уровни поддержки. В частности, рассматриваются большинство инструкций DDL в SQL-92.  
   
  Приложения должны определить общий уровень поддерживаемой грамматики из типа данных SQL_SQL_CONFORMANCE и использовать другие типы сведений для определения вариантов из указанного уровня соответствия стандартам.  
-  
-|||  
-|-|-|  
-|SQL_AGGREGATE_FUNCTIONS|SQL_DROP_TABLE|  
-|SQL_ALTER_DOMAIN|SQL_DROP_TRANSLATION|  
-|SQL_ALTER_SCHEMA|SQL_DROP_VIEW|  
-|SQL_ALTER_TABLE|SQL_EXPRESSIONS_IN_ORDERBY|  
-|SQL_ANSI_SQL_DATETIME_LITERALS|SQL_GROUP_BY|  
-|SQL_CATALOG_LOCATION|SQL_IDENTIFIER_CASE|  
-|SQL_CATALOG_NAME|SQL_IDENTIFIER_QUOTE_CHAR|  
-|SQL_CATALOG_NAME_SEPARATOR|SQL_INDEX_KEYWORDS|  
-|SQL_CATALOG_USAGE|SQL_INSERT_STATEMENT|  
-|SQL_COLUMN_ALIAS|SQL_INTEGRITY|  
-|SQL_CORRELATION_NAME|SQL_KEYWORDS|  
-|SQL_CREATE_ASSERTION|SQL_LIKE_ESCAPE_CLAUSE|  
-|SQL_CREATE_CHARACTER_SET|SQL_NON_NULLABLE_COLUMNS|  
-|SQL_CREATE_COLLATION|SQL_SQL_CONFORMANCE|  
-|SQL_CREATE_DOMAIN|SQL_OJ_CAPABILITIES|  
-|SQL_CREATE_SCHEMA|SQL_ORDER_BY_COLUMNS_IN_SELECT|  
-|SQL_CREATE_TABLE|SQL_OUTER_JOINS|  
-|SQL_CREATE_TRANSLATION|SQL_PROCEDURES|  
-|SQL_DDL_INDEX|SQL_QUOTED_IDENTIFIER_CASE|  
-|SQL_DROP_ASSERTION|SQL_SCHEMA_USAGE|  
-|SQL_DROP_CHARACTER_SET|SQL_SPECIAL_CHARACTERS|  
-|SQL_DROP_COLLATION|SQL_SUBQUERIES|  
-|SQL_DROP_DOMAIN|SQL_UNION|  
-|SQL_DROP_SCHEMA||  
-  
+
+:::row:::
+    :::column:::
+        SQL_AGGREGATE_FUNCTIONS  
+        SQL_ALTER_DOMAIN  
+        SQL_ALTER_SCHEMA  
+        SQL_ALTER_TABLE  
+        SQL_ANSI_SQL_DATETIME_LITERALS  
+        SQL_CATALOG_LOCATION  
+        SQL_CATALOG_NAME  
+        SQL_CATALOG_NAME_SEPARATOR  
+        SQL_CATALOG_USAGE  
+        SQL_COLUMN_ALIAS  
+        SQL_CORRELATION_NAME  
+        SQL_CREATE_ASSERTION  
+        SQL_CREATE_CHARACTER_SET  
+        SQL_CREATE_COLLATION  
+        SQL_CREATE_DOMAIN  
+        SQL_CREATE_SCHEMA  
+        SQL_CREATE_TABLE  
+        SQL_CREATE_TRANSLATION  
+        SQL_DDL_INDEX  
+        SQL_DROP_ASSERTION  
+        SQL_DROP_CHARACTER_SET  
+        SQL_DROP_COLLATION  
+        SQL_DROP_DOMAIN  
+        SQL_DROP_SCHEMA  
+    :::column-end:::
+    :::column:::
+        SQL_DROP_TABLE  
+        SQL_DROP_TRANSLATION  
+        SQL_DROP_VIEW  
+        SQL_EXPRESSIONS_IN_ORDERBY  
+        SQL_GROUP_BY  
+        SQL_IDENTIFIER_CASE  
+        SQL_IDENTIFIER_QUOTE_CHAR  
+        SQL_INDEX_KEYWORDS  
+        SQL_INSERT_STATEMENT  
+        SQL_INTEGRITY  
+        SQL_KEYWORDS  
+        SQL_LIKE_ESCAPE_CLAUSE  
+        SQL_NON_NULLABLE_COLUMNS  
+        SQL_OJ_CAPABILITIES  
+        SQL_ORDER_BY_COLUMNS_IN_SELECT  
+        SQL_OUTER_JOINS  
+        SQL_PROCEDURES  
+        SQL_QUOTED_IDENTIFIER_CASE  
+        SQL_SCHEMA_USAGE  
+        SQL_SPECIAL_CHARACTERS  
+        SQL_SQL_CONFORMANCE  
+        SQL_SUBQUERIES  
+        SQL_UNION  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="sql-limits"></a>Ограничения SQL  
 
  Следующие значения аргумента *инфотипе* возвращают сведения об ограничениях, применяемых к идентификаторам и предложениям в инструкциях SQL, например к максимальной длине идентификаторов и максимальному числу столбцов в списке выбора. Ограничения могут быть накладываются либо драйвером, либо источником данных.  
-  
-|||  
-|-|-|  
-|SQL_MAX_BINARY_LITERAL_LEN|SQL_MAX_IDENTIFIER_LEN|  
-|SQL_MAX_CATALOG_NAME_LEN|SQL_MAX_INDEX_SIZE|  
-|SQL_MAX_CHAR_LITERAL_LEN|SQL_MAX_PROCEDURE_NAME_LEN|  
-|SQL_MAX_COLUMN_NAME_LEN|SQL_MAX_ROW_SIZE|  
-|SQL_MAX_COLUMNS_IN_GROUP_BY|SQL_MAX_ROW_SIZE_INCLUDES_LONG|  
-|SQL_MAX_COLUMNS_IN_INDEX|SQL_MAX_SCHEMA_NAME_LEN|  
-|SQL_MAX_COLUMNS_IN_ORDER_BY|SQL_MAX_STATEMENT_LEN|  
-|SQL_MAX_COLUMNS_IN_SELECT|SQL_MAX_TABLE_NAME_LEN|  
-|SQL_MAX_COLUMNS_IN_TABLE|SQL_MAX_TABLES_IN_SELECT|  
-|SQL_MAX_CURSOR_NAME_LEN|SQL_MAX_USER_NAME_LEN|  
-  
+
+:::row:::
+    :::column:::
+        SQL_MAX_BINARY_LITERAL_LEN  
+        SQL_MAX_CATALOG_NAME_LEN  
+        SQL_MAX_CHAR_LITERAL_LEN  
+        SQL_MAX_COLUMN_NAME_LEN  
+        SQL_MAX_COLUMNS_IN_GROUP_BY  
+        SQL_MAX_COLUMNS_IN_INDEX  
+        SQL_MAX_COLUMNS_IN_ORDER_BY  
+        SQL_MAX_COLUMNS_IN_SELECT  
+        SQL_MAX_COLUMNS_IN_TABLE  
+        SQL_MAX_CURSOR_NAME_LEN  
+    :::column-end:::
+    :::column:::
+        SQL_MAX_IDENTIFIER_LEN  
+        SQL_MAX_INDEX_SIZE  
+        SQL_MAX_PROCEDURE_NAME_LEN  
+        SQL_MAX_ROW_SIZE  
+        SQL_MAX_ROW_SIZE_INCLUDES_LONG  
+        SQL_MAX_SCHEMA_NAME_LEN  
+        SQL_MAX_STATEMENT_LEN  
+        SQL_MAX_TABLE_NAME_LEN  
+        SQL_MAX_TABLES_IN_SELECT  
+        SQL_MAX_USER_NAME_LEN  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="scalar-function-information"></a>Сведения о скалярной функции  
 
  Следующие значения аргумента *инфотипе* возвращают сведения о скалярных функциях, поддерживаемых источником данных и драйвером. Дополнительные сведения о скалярных функциях см. в [приложении E: скалярные функции](../appendixes/appendix-e-scalar-functions.md).  
-  
-|||  
-|-|-|  
-|SQL_CONVERT_FUNCTIONS|SQL_TIMEDATE_ADD_INTERVALS|  
-|SQL_NUMERIC_FUNCTIONS|SQL_TIMEDATE_DIFF_INTERVALS|  
-|SQL_STRING_FUNCTIONS|SQL_TIMEDATE_FUNCTIONS|  
-|SQL_SYSTEM_FUNCTIONS||  
-  
+
+:::row:::
+    :::column:::
+        SQL_CONVERT_FUNCTIONS  
+        SQL_NUMERIC_FUNCTIONS  
+        SQL_STRING_FUNCTIONS  
+        SQL_SYSTEM_FUNCTIONS  
+    :::column-end:::
+    :::column:::
+        SQL_TIMEDATE_ADD_INTERVALS  
+        SQL_TIMEDATE_DIFF_INTERVALS  
+        SQL_TIMEDATE_FUNCTIONS  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="conversion-information"></a>Сведения о преобразовании  
 
  Следующие значения аргумента *инфотипе* возвращают список типов данных SQL, в которые источник данных может преобразовать указанный тип данных SQL с помощью скалярной функции **Convert** :  
-  
-|||  
-|-|-|  
-|SQL_CONVERT_BIGINT|SQL_CONVERT_LONGVARBINARY|  
-|SQL_CONVERT_BINARY|SQL_CONVERT_LONGVARCHAR|  
-|SQL_CONVERT_BIT|SQL_CONVERT_NUMERIC|  
-|SQL_CONVERT_CHAR|SQL_CONVERT_REAL|  
-|SQL_CONVERT_DATE|SQL_CONVERT_SMALLINT|  
-|SQL_CONVERT_DECIMAL|SQL_CONVERT_TIME|  
-|SQL_CONVERT_DOUBLE|SQL_CONVERT_TIMESTAMP|  
-|SQL_CONVERT_FLOAT|SQL_CONVERT_TINYINT|  
-|SQL_CONVERT_INTEGER|SQL_CONVERT_VARBINARY|  
-|SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_CONVERT_VARCHAR|  
-|SQL_CONVERT_INTERVAL_DAY_TIME||  
-  
+
+:::row:::
+    :::column:::
+        SQL_CONVERT_BIGINT  
+        SQL_CONVERT_BINARY  
+        SQL_CONVERT_BIT  
+        SQL_CONVERT_CHAR  
+        SQL_CONVERT_DATE  
+        SQL_CONVERT_DECIMAL  
+        SQL_CONVERT_DOUBLE  
+        SQL_CONVERT_FLOAT  
+        SQL_CONVERT_INTEGER  
+        SQL_CONVERT_INTERVAL_DAY_TIME  
+        SQL_CONVERT_INTERVAL_YEAR_MONTH  
+    :::column-end:::
+    :::column:::
+        SQL_CONVERT_LONGVARBINARY  
+        SQL_CONVERT_LONGVARCHAR  
+        SQL_CONVERT_NUMERIC  
+        SQL_CONVERT_REAL  
+        SQL_CONVERT_SMALLINT  
+        SQL_CONVERT_TIME  
+        SQL_CONVERT_TIMESTAMP  
+        SQL_CONVERT_TINYINT  
+        SQL_CONVERT_VARBINARY  
+        SQL_CONVERT_VARCHAR  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-types-added-for-odbc-3x"></a>Типы сведений, добавленные для ODBC 3. x  
 
  Для ODBC 3. x были добавлены следующие значения аргумента *инфотипе* :  
-  
-|||  
-|-|-|  
-|SQL_ACTIVE_ENVIRONMENTS|SQL_DRIVER_AWARE_POOLING_SUPPORTED|  
-|SQL_AGGREGATE_FUNCTIONS|SQL_DRIVER_HDESC|  
-|SQL_ALTER_DOMAIN|SQL_DROP_ASSERTION|  
-|SQL_ALTER_SCHEMA|SQL_DROP_CHARACTER_SET|  
-|SQL_ANSI_SQL_DATETIME_LITERALS|SQL_DROP_COLLATION|  
-|SQL_ASYNC_DBC_FUNCTIONS|SQL_DROP_DOMAIN|  
-|SQL_ASYNC_MODE|SQL_DROP_SCHEMA|  
-|SQL_ASYNC_NOTIFICATION|SQL_DROP_TABLE|  
-|SQL_BATCH_ROW_COUNT|SQL_DROP_TRANSLATION|  
-|SQL_BATCH_SUPPORT|SQL_DROP_VIEW|  
-|SQL_CATALOG_NAME|SQL_DYNAMIC_CURSOR_ATTRIBUTES1|  
-|SQL_COLLATION_SEQ|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
-|SQL_CONVERT_INTERVAL_YEAR_MONTH|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|  
-|SQL_CONVERT_INTERVAL_DAY_TIME|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
-|SQL_CREATE_ASSERTION|SQL_INFO_SCHEMA_VIEWS|  
-|SQL_CREATE_CHARACTER_SET|SQL_INSERT_STATEMENT|  
-|SQL_CREATE_COLLATION|SQL_KEYSET_CURSOR_ATTRIBUTES1|  
-|SQL_CREATE_DOMAIN|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
-|SQL_CREATE_SCHEMA|SQL_MAX_ASYNC_CONCURRENT_STATEMENTS|  
-|SQL_CREATE_TABLE|SQL_MAX_IDENTIFIER_LEN|  
-|SQL_CREATE_TRANSLATION|SQL_PARAM_ARRAY_ROW_COUNTS|  
-|SQL_CURSOR_SENSITIVITY|SQL_PARAM_ARRAY_SELECTS|  
-|SQL_DDL_INDEX|SQL_STATIC_CURSOR_ATTRIBUTES1|  
-|SQL_DESCRIBE_PARAMETER|SQL_STATIC_CURSOR_ATTRIBUTES2|  
-|SQL_DM_VER|SQL_XOPEN_CLI_YEAR|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ACTIVE_ENVIRONMENTS  
+        SQL_AGGREGATE_FUNCTIONS  
+        SQL_ALTER_DOMAIN  
+        SQL_ALTER_SCHEMA  
+        SQL_ANSI_SQL_DATETIME_LITERALS  
+        SQL_ASYNC_DBC_FUNCTIONS  
+        SQL_ASYNC_MODE  
+        SQL_ASYNC_NOTIFICATION  
+        SQL_BATCH_ROW_COUNT  
+        SQL_BATCH_SUPPORT  
+        SQL_CATALOG_NAME  
+        SQL_COLLATION_SEQ  
+        SQL_CONVERT_INTERVAL_DAY_TIME  
+        SQL_CONVERT_INTERVAL_YEAR_MONTH  
+        SQL_CREATE_ASSERTION  
+        SQL_CREATE_CHARACTER_SET  
+        SQL_CREATE_COLLATION  
+        SQL_CREATE_DOMAIN  
+        SQL_CREATE_SCHEMA  
+        SQL_CREATE_TABLE  
+        SQL_CREATE_TRANSLATION  
+        SQL_CURSOR_SENSITIVITY  
+        SQL_DDL_INDEX  
+        SQL_DESCRIBE_PARAMETER  
+        SQL_DM_VER  
+    :::column-end:::
+    :::column:::
+        SQL_DRIVER_AWARE_POOLING_SUPPORTED  
+        SQL_DRIVER_HDESC  
+        SQL_DROP_ASSERTION  
+        SQL_DROP_CHARACTER_SET  
+        SQL_DROP_COLLATION  
+        SQL_DROP_DOMAIN  
+        SQL_DROP_SCHEMA  
+        SQL_DROP_TABLE  
+        SQL_DROP_TRANSLATION  
+        SQL_DROP_VIEW  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES1  
+        SQL_DYNAMIC_CURSOR_ATTRIBUTES2  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1  
+        SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2  
+        SQL_INFO_SCHEMA_VIEWS  
+        SQL_INSERT_STATEMENT  
+        SQL_KEYSET_CURSOR_ATTRIBUTES1  
+        SQL_KEYSET_CURSOR_ATTRIBUTES2  
+        SQL_MAX_ASYNC_CONCURRENT_STATEMENTS  
+        SQL_MAX_IDENTIFIER_LEN  
+        SQL_PARAM_ARRAY_ROW_COUNTS  
+        SQL_PARAM_ARRAY_SELECTS  
+        SQL_STATIC_CURSOR_ATTRIBUTES1  
+        SQL_STATIC_CURSOR_ATTRIBUTES2  
+        SQL_XOPEN_CLI_YEAR  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-types-renamed-for-odbc-3x"></a>Типы сведений, переименованные для ODBC 3. x  
 
  Следующие значения аргумента *инфотипе* были переименованы для ODBC 3. x.  
@@ -328,14 +462,22 @@ SQLRETURN SQLGetInfo(
 ## <a name="information-types-deprecated-in-odbc-3x"></a>Нерекомендуемые типы сведений в ODBC 3. x  
 
  Следующие значения аргумента *инфотипе* являются устаревшими в ODBC 3. x. Драйверы ODBC 3. x должны продолжать поддерживать эти типы данных для обеспечения обратной совместимости с приложениями ODBC 2. x. (Дополнительные сведения об этих типах см. в разделе [Поддержка SQLGetInfo](../appendixes/sqlgetinfo-support.md) в приложении G: рекомендации по драйверу для обеспечения обратной совместимости.)  
-  
-|||  
-|-|-|  
-|SQL_FETCH_DIRECTION|SQL_POS_OPERATIONS|  
-|SQL_LOCK_TYPES|SQL_POSITIONED_STATEMENTS|  
-|SQL_ODBC_API_CONFORMANCE|SQL_SCROLL_CONCURRENCY|  
-|SQL_ODBC_SQL_CONFORMANCE|SQL_STATIC_SENSITIVITY|  
-  
+
+:::row:::
+    :::column:::
+        SQL_FETCH_DIRECTION  
+        SQL_LOCK_TYPES  
+        SQL_ODBC_API_CONFORMANCE  
+        SQL_ODBC_SQL_CONFORMANCE  
+    :::column-end:::
+    :::column:::
+        SQL_POS_OPERATIONS  
+        SQL_POSITIONED_STATEMENTS  
+        SQL_SCROLL_CONCURRENCY  
+        SQL_STATIC_SENSITIVITY  
+    :::column-end:::
+:::row-end:::
+
 ## <a name="information-type-descriptions"></a>Описания типов сведений  
 
 В следующей таблице перечислены все типы данных, версия ODBC, в которой они были введены, и описание.  
@@ -372,7 +514,7 @@ SQLRETURN SQLGetInfo(
 |SQL_CREATE_SCHEMA|3.0|Битовая маска SQLUINTEGER, перечисление предложений в инструкции **CREATE SCHEMA** , как определено в SQL-92, поддерживаемое источником данных.<br/><br/>Для определения поддерживаемых предложений используются следующие битовые маски:<br/>SQL_CS_CREATE_SCHEMA<br/>SQL_CS_AUTHORIZATION<br/>SQL_CS_DEFAULT_CHARACTER_SET<br/><br/>Драйвер, совместимый с промежуточным уровнем SQL-92, всегда будет возвращать параметры SQL_CS_CREATE_SCHEMA и SQL_CS_AUTHORIZATION, как поддерживается. Они также должны поддерживаться на уровне ввода SQL-92, но не обязательно как инструкции SQL. Драйвер, совместимый с SQL-92, всегда будет возвращать все эти варианты как поддерживаемые.|
 |SQL_CREATE_TABLE|3.0|Битовая маска SQLUINTEGER, перечисление предложений в операторе **CREATE TABLE** , как определено в SQL-92, поддерживается источником данных.<br/><br/>Уровень соответствия SQL-92 или FIPS, в котором должна поддерживаться эта функция, отображается в круглых скобках рядом с каждой битовой маской.<br/><br/>Для определения поддерживаемых предложений используются следующие битовые маски:<br/>SQL_CT_CREATE_TABLE = поддерживается инструкция CREATE TABLE. (Уровень записи)<br/>SQL_CT_TABLE_CONSTRAINT = поддерживается указание ограничений таблицы (уровень FIPS)<br/>SQL_CT_CONSTRAINT_NAME_DEFINITION = \<constraint name definition> предложение поддерживается для именования столбцов и ограничений таблицы (промежуточный уровень)<br/><br/>Следующие биты указывают возможность создания временных таблиц:<br/>SQL_CT_COMMIT_PRESERVE = удаленные строки сохраняются при фиксации. (Полный уровень)<br/>SQL_CT_COMMIT_DELETE = удаленные строки удаляются при фиксации. (Полный уровень)<br/>SQL_CT_GLOBAL_TEMPORARY = можно создавать глобальные временные таблицы. (Полный уровень)<br/>SQL_CT_LOCAL_TEMPORARY = можно создавать локальные временные таблицы. (Полный уровень)<br/><br/>Следующие биты определяют возможность создания ограничений столбцов.<br/>SQL_CT_COLUMN_CONSTRAINT = поддерживается указание ограничений столбца (уровень FIPS)<br/>SQL_CT_COLUMN_DEFAULT = поддерживается указание значений по умолчанию для столбцов (уровень "FIPS")<br/>SQL_CT_COLUMN_COLLATION = поддерживается задание параметров сортировки столбцов (полный уровень)<br/><br/>Следующие биты задают поддерживаемые атрибуты ограничения, если указано ограничение столбца или таблицы.<br/>SQL_CT_CONSTRAINT_INITIALLY_DEFERRED (полный уровень)<br/>SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE (полный уровень)<br/>SQL_CT_CONSTRAINT_DEFERRABLE (полный уровень)<br/>SQL_CT_CONSTRAINT_NON_DEFERRABLE (полный уровень)|
 |SQL_CREATE_TRANSLATION|3.0|Битовая маска SQLUINTEGER, перечисление предложений в инструкции **CREATE Translation** , как определено в SQL-92, поддерживается источником данных.<br/><br/>Для определения поддерживаемых предложений используется следующая битовая маска:<br/>SQL_CTR_CREATE_TRANSLATION<br/><br/>Встроенный драйвер SQL-92 с поддержкой полного уровня всегда будет возвращать эти параметры, как и поддерживается. Возвращаемое значение "0" означает, что инструкция **CREATE Translation** не поддерживается.|
-|SQL_CREATE_VIEW||3.0|Битовая маска SQLUINTEGER, перечисление предложений в инструкции **Create View** , как определено в SQL-92, поддерживаемое источником данных.<br/><br/>Для определения поддерживаемых предложений используются следующие битовые маски:<br/>SQL_CV_CREATE_VIEW<br/>SQL_CV_CHECK_OPTION<br/>SQL_CV_CASCADED<br/>SQL_CV_LOCAL<br/><br/>Возвращаемое значение "0" означает, что инструкция **Create View** не поддерживается.<br/><br/>Драйвер, совместимый с уровнями ввода SQL-92, всегда будет возвращать параметры SQL_CV_CREATE_VIEW и SQL_CV_CHECK_OPTION, как поддерживается.<br/><br/>Драйвер, совместимый с SQL-92, всегда будет возвращать все эти варианты как поддерживаемые.|
+|SQL_CREATE_VIEW|3.0|Битовая маска SQLUINTEGER, перечисление предложений в инструкции **Create View** , как определено в SQL-92, поддерживаемое источником данных.<br/><br/>Для определения поддерживаемых предложений используются следующие битовые маски:<br/>SQL_CV_CREATE_VIEW<br/>SQL_CV_CHECK_OPTION<br/>SQL_CV_CASCADED<br/>SQL_CV_LOCAL<br/><br/>Возвращаемое значение "0" означает, что инструкция **Create View** не поддерживается.<br/><br/>Драйвер, совместимый с уровнями ввода SQL-92, всегда будет возвращать параметры SQL_CV_CREATE_VIEW и SQL_CV_CHECK_OPTION, как поддерживается.<br/><br/>Драйвер, совместимый с SQL-92, всегда будет возвращать все эти варианты как поддерживаемые.|
 |SQL_CURSOR_COMMIT_BEHAVIOR|1.0|Значение СКЛУСМАЛЛИНТ, указывающее, как операция **фиксации** влияет на курсоры и подготовленные инструкции в источнике данных (поведение источника данных при фиксации транзакции).<br/><br/>Значение этого атрибута будет отражать текущее состояние следующего параметра: SQL_COPT_SS_PRESERVE_CURSORS.<br/>SQL_CB_DELETE = закрывающие курсоры и удалять подготовленные инструкции. Для повторного использования курсора приложение должно повторно подготовиться к работе и заново выполнить инструкцию.<br/>SQL_CB_CLOSE = закрывающие курсоры. Для подготовленных инструкций приложение может вызвать **SQLExecute** для инструкции без повторного вызова **SQLPrepare** . Значение по умолчанию для драйвера SQL ODBC — SQL_CB_CLOSE. Это означает, что при фиксации транзакции драйвер ODBC SQL будет закрывать ваши курсоры.<br/>SQL_CB_PRESERVE = сохранять курсоры в той же позиции, что и до операции **фиксации** . Приложение может продолжить выборку данных, или же можно закрыть курсор и повторно выполнить инструкцию, не переподготавливая ее.|
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|1.0|Значение СКЛУСМАЛЛИНТ, указывающее, как операция **отката** влияет на курсоры и подготовленные инструкции в источнике данных:<br/>SQL_CB_DELETE = закрывающие курсоры и удалять подготовленные инструкции. Для повторного использования курсора приложение должно повторно подготовиться к работе и заново выполнить инструкцию.<br/>SQL_CB_CLOSE = закрывающие курсоры. Для подготовленных инструкций приложение может вызвать **SQLExecute** для инструкции без повторного вызова **SQLPrepare** .<br/>SQL_CB_PRESERVE = сохранять курсоры в той же позиции, что и перед операцией **отката** . Приложение может продолжить выборку данных, или же можно закрыть курсор и повторно выполнить инструкцию, не переподготавливая ее.|
 |SQL_CURSOR_SENSITIVITY|3.0|Значение SQLUINTEGER, указывающее на поддержку чувствительности курсора:<br/>SQL_INSENSITIVE = все курсоры на маркере инструкции показывают результирующий набор, не отражая изменения, внесенные в него любым другим курсором в рамках той же транзакции.<br/>SQL_UNSPECIFIED = не указано, отображаются ли курсоры в маркере инструкции изменения, внесенные в результирующий набор другим курсором в той же транзакции. Курсоры в маркере инструкции могут сделать видимыми ничего, некоторые или все подобные изменения.<br/>SQL_SENSITIVE = курсоры чувствительны к изменениям, внесенным другими курсорами в рамках той же транзакции.<br/><br/>Драйвер, совместимый с уровнями ввода SQL-92, всегда будет возвращать параметр SQL_UNSPECIFIED, как поддерживается.<br/><br/>Драйвер, совместимый с SQL-92, всегда будет возвращать параметр SQL_INSENSITIVE, как поддерживается.|
@@ -534,7 +676,7 @@ else
  Возврат сведений о типах данных источника данных  
  [Функция SQLGetTypeInfo](sqlgettypeinfo-function.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 
  [Справочник по API ODBC](odbc-api-reference.md)  
  [Файлы заголовков ODBC](../install/odbc-header-files.md)

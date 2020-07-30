@@ -41,7 +41,7 @@ fn:upper-case($arg as xs:string?) as xs:string
 |-|-|
 |*$arg*|Строковое значение для преобразования в верхний регистр.|  
   
-## <a name="remarks"></a>Комментарии  
+## <a name="remarks"></a>Remarks  
  Если значение *$arg* пустое, возвращается строка нулевой длины.  
   
 ## <a name="examples"></a>Примеры  
@@ -54,7 +54,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>Б. Поиск конкретной символьной строки  
+### <a name="b-search-for-a-specific-character-string"></a>Б) Поиск конкретной символьной строки  
  В этом примере показано использование функции upper-case для выполнения поиска без учета регистра.  
   
 ```  
@@ -118,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции XQuery для типа данных xml](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

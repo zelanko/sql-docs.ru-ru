@@ -30,13 +30,14 @@ ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc526febaed2fd049fb8fa95fd0b0585933fff9b
-ms.sourcegitcommit: f3321ed29d6d8725ba6378d207277a57cb5fe8c2
+ms.openlocfilehash: 6606da2bec127b6eb70eea0f5e676dd23a974e0d
+ms.sourcegitcommit: 216f377451e53874718ae1645a2611cdb198808a
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "86009838"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87248802"
 ---
-# <a name="using-xml-data-types"></a>Использование типов данных XML
+# <a name="using-xml-data-types-in-sql-server-native-clients"></a>Использование типов данных XML в SQL Server собственных клиентах
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   В версии [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] был введен тип данных **xml**, позволяющий хранить XML-документы и их фрагменты в базе данных [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Тип данных **xml** — это встроенный в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] тип данных, несколько напоминающий другие встроенные типы данных, такие как **int** и **varchar**. Как и другие встроенные типы данных, тип данных **xml** можно использовать как тип столбца при создании таблицы, как тип переменной, параметра, тип возвращаемого функцией значения, а также в инструкциях CAST и CONVERT.  
@@ -158,7 +159,7 @@ ms.locfileid: "86009838"
   
  Для каждой схемы XML область действия ограничивается именем каталога, именем схемы, именем коллекции схем и URI-идентификатором целевого пространства имен. Кроме того, задан новый идентификатор GUID с именем DBSCHEMA_XML_COLLECTIONS. Количество ограничений и столбцы с ограничениями для набора строк схемы SS_XMLSCHEMA определены следующим образом.  
   
-|Идентификатор GUID|Количество ограничений|Столбцы с ограничениями|  
+|GUID|Количество ограничений|Столбцы с ограничениями|  
 |----------|----------------------------|------------------------|  
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
@@ -168,7 +169,7 @@ ms.locfileid: "86009838"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Набор свойств DBPROPSET_SQLSERVERPARAMETER  
  Для поддержки типа данных **XML** с помощью OLE DB в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственном клиенте реализован новый набор свойств DBPROPSET_SQLSERVERPARAMETER, который содержит следующие значения.  
   
-|Имя|Тип|Описание|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Имя каталога (базы данных), где определена коллекция схем XML. Часть идентификатора трехкомпонентного имени SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Имя схемы XML в коллекции схемы XML. Часть идентификатора трехкомпонентного имени SQL.|  
@@ -177,7 +178,7 @@ ms.locfileid: "86009838"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Набор свойств DBPROPSET_SQLSERVERCOLUMN  
  Для поддержки создания таблиц в интерфейсе **ITableDefinition** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client добавляет три новых столбца в набор свойств DBPROPSET_SQLSERVERCOLUMN.  
   
-|Имя|Тип|Описание|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя каталога, где хранится схема XML. Для других типов столбцов это свойство содержит пустую строку.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Для типизированных столбцов XML данное свойство содержит строку, представляющую имя схемы XML, задающей этот столбец.|  
@@ -268,7 +269,7 @@ ms.locfileid: "86009838"
   
  Согласно стандарту XML, XML-документы в кодировке UTF-16 должны начинаться с метки порядка следования байтов (BOM); в UTF-16 это код символа 0xFEFF. При работе с привязкой SQL_C_BINARY [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client не требует и не добавляет спецификацию, так как кодировка подразумевается привязкой. Целью является предоставить возможности для наиболее простого взаимодействия с другими обработчиками XML и хранилищами данных. В этом случае в XML с кодировкой UTF-16 нужно включить метку порядка байтов, и приложение может не заботиться о том, какова на самом деле кодировка данных, потому что большинство обработчиков XML (в том числе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) выяснят кодировку по нескольким первым байтам данных. XML-данные, полученные от [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента с помощью привязок SQL_C_BINARY, всегда кодируются в кодировке UTF – 16 с помощью BOM и без внедренного объявления кодировки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [ISSCommandWithParameters (OLE DB)](../../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

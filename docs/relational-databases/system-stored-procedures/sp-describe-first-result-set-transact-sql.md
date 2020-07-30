@@ -18,15 +18,15 @@ ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e3696f537cc538e011d3d037e82e54ed892da35
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831185"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394388"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Возвращает метаданные для первого возможного результирующего набора [!INCLUDE[tsql](../../includes/tsql-md.md)] пакета. Возвращает пустой результирующий набор, если пакет не вернул результатов. Вызывает ошибку, если [!INCLUDE[ssDE](../../includes/ssde-md.md)] не может определить метаданные для первого запроса, который будет выполнен при выполнении статического анализа. Динамическое административное представление [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) возвращает одну и ту же информацию.  
   
@@ -158,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Наиболее распространенные примеры  
   
-#### <a name="a-simple-example"></a>A. Простой пример  
+#### <a name="a-simple-example"></a>А) Простой пример  
  В следующем примере описывается результирующий набор, возвращаемый одним запросом.  
   
 ```  
@@ -175,7 +175,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>Б. Примеры режима просмотра  
+#### <a name="b-browse-mode-examples"></a>Б) Примеры режима просмотра  
  В следующих трех примерах показаны ключевые различия между разными режимами просмотра сведений. В результаты запроса включены только столбцы, относящиеся к теме.  
   
  В примере используется значение 0, которое указывает, что возврата сведений не происходит.  
@@ -206,7 +206,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
 |is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
-|1|2|а|dbo|t|а|1|  
+|1|2|a|dbo|t|a|1|  
   
  В примере используется значение 2, которое показывает, что анализ выполняется так же, как и при подготовке курсора.  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Результат: \< неизвестное имя столбца> **varchar (20) NULL**  
+ Результат: \<Unknown Column Name> **varchar (20) NULL**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Для имен столбцов принудительно обеспечивается соответствие с помощью присвоения псевдонимов  
  Аналогично предыдущему, но имена столбцов идентичны благодаря присвоению псевдонимов.  
@@ -398,7 +398,7 @@ N'
   
  Result: **int NULL** , так как dbo. T1. a и S1. T1. a имеют тип **int** и разную допустимость значений NULL.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

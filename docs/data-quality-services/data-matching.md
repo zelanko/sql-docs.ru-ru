@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 0bc33f9fd40a29ab2da19d682fcbdbbb6cd40206
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: faa4c6066af0d7c516434176817d8c7f49672be5
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85882557"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363059"
 ---
 # <a name="data-matching"></a>Сопоставление данных
 
@@ -70,10 +70,10 @@ ms.locfileid: "85882557"
   
  Вы можете экспортировать результаты процесса сопоставления в таблицу SQL Server или CSV-файл. Экспортировать результаты сопоставления вы можете в двух форматах: первый — совпадающие и несовпадающие записи; второй — «выжившие» записи, которые содержат только «выжившую» запись для кластера, и несовпадающие результаты. При использовании правила выживания записей, если одна и та же запись определена как «выжившая» для нескольких кластеров, она будет экспортирована только один раз.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Можно выполнять следующие задачи, связанные с сопоставлением в службах DQS.  
   
-|||  
+|Описание задачи|Раздел|  
 |-|-|  
 |Создание и тестирование правил сопоставления в политике сопоставления|[Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md)|  
 |Запуск сопоставления в проекте служб DQS|[Запуск проекта сопоставления](../data-quality-services/run-a-matching-project.md)|  

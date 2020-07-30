@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d7da3f994ed0741ef7ca6bcbe4d6003eea981c7
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68105300"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363414"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -48,7 +48,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |---------------|------------------|  
 |String1 имеет нулевую длину|ноль (0)|  
 |String1 содержит значение NULL|неопределенный|  
-|String2 имеет нулевую длину|start|  
+|String2 имеет нулевую длину|запуск|  
 |String2 содержит значение NULL|неопределенный|  
 |Значение String2 не найдено|ноль (0)|  
 |начало больше Len(String2)|ноль (0)|  
@@ -95,9 +95,8 @@ from [Adventure Works]
   
  В следующей таблице показаны полученные результаты.  
   
-|||  
+|Поле в мерах|Результаты|  
 |-|-|  
-||Результаты|  
 |в строке нижнего регистра найдены символы в нижнем регистре|16|  
 |в строке нижнего регистра найдены символы в верхнем регистре|16|  
 |искомая строка пуста|0|  

@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3ee57d716cbb93f855e1fd78d41bff62a681eb6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8c18a77cfd843a6bb7b70494e62dcb9efc4582
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81306166"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363394"
 ---
 # <a name="level-2-interface-conformance"></a>Соответствие интерфейса уровня 2
 Уровень соответствия интерфейсов уровня 2 включает в себя функции уровня соответствия интерфейсов уровня 1 и следующие функции:  
   
-|||  
+|Номер функции|Описание|  
 |-|-|  
 |201|Используйте имена из трех частей в таблицах и представлениях базы данных. (Дополнительные сведения см. в разделе Поддержка именования, состоящие из двух частей, 101 в разделе [соответствие интерфейса уровня 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
 |202|Опишите динамические параметры, вызвав **SQLDescribeParam**.|  

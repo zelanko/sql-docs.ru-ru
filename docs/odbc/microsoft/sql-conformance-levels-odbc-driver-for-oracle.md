@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e283bbc13f0d0dda055b047b027f7b9816502df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 969296e377d398615ad95cf1337c3f9f97d5eb5c
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300684"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87363404"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Уровень соответствия SQL (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -32,42 +32,94 @@ ms.locfileid: "81300684"
 -   Левые и правые внешние объединения  
   
 -   Числовые функции:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Abs|Журнал|round|tan|  
-    |Ceiling|Log10|second|truncate|  
-    |Cos|Mod|подписывание||  
-    |Exp|Pi|sin||  
-    |Этаж|Мощный|sqrt||  
-  
+
+    :::row:::
+        :::column:::
+            Abs  
+            Ceiling  
+            Cos  
+            Exp  
+            Этаж  
+        :::column-end:::
+        :::column:::
+            Журнал  
+            Log10  
+            Mod  
+            Pi  
+            Питание  
+        :::column-end:::
+        :::column:::
+            round  
+            second  
+            подписывание  
+            sin  
+            sqrt  
+        :::column-end:::
+        :::column:::
+            tan  
+            truncate  
+        :::column-end:::
+    :::row-end:::
+    
 -   Функции для работы с датами:  
-  
-    |||||  
-    |-|-|-|-|  
-    |CURDATE|DayOfWeek|MonthName|second|  
-    |куртиме|День года|minute|week|  
-    |дайнаме|Час|now|year|  
-    |DayOfMonth|Месяц|квартал||  
-  
+
+    :::row:::
+        :::column:::
+            CURDATE  
+            куртиме  
+            дайнаме  
+            DayOfMonth  
+        :::column-end:::
+        :::column:::
+            DayOfWeek  
+            День года  
+            Час  
+            Месяц  
+        :::column-end:::
+        :::column:::
+            MonthName  
+            minute  
+            now  
+            квартал  
+        :::column-end:::
+        :::column:::
+            second  
+            week  
+            year  
+        :::column-end:::
+    :::row-end:::
+
 -   Строковые функции:  
-  
-    |||||  
-    |-|-|-|-|  
-    |Ascii|Слева|right|укасе|  
-    |Char|Длина|RTRIM||  
-    |Concat|Ltrim|SOUNDEX||  
-    |Lcase|Replace|substring||  
-  
+
+    :::row:::
+        :::column:::
+            Ascii  
+            Char  
+            Concat  
+            Lcase  
+        :::column-end:::
+        :::column:::
+            Левый  
+            Длина  
+            Ltrim  
+            Заменить  
+        :::column-end:::
+        :::column:::
+            right  
+            RTRIM  
+            SOUNDEX  
+            substring  
+        :::column-end:::
+        :::column:::
+            укасе  
+        :::column-end:::
+    :::row-end:::
+
 -   Функция преобразования типа:  
-  
-    ||  
-    |-|  
-    |Convert|  
-  
+
+    Convert  
+
 -   Системные функции:  
   
-    ||  
-    |-|  
-    |ифнулл|  
-    |User (Пользователь)|
+    ифнулл  
+    Пользователь

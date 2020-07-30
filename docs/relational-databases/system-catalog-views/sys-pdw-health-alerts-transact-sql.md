@@ -10,26 +10,26 @@ ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2e3ab735a19342e1ecc1a941a185832edae61262
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: f28f48d8530111e2de12bbb6f075b69147ad1cff
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627453"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87396050"
 ---
 # <a name="syspdw_health_alerts-transact-sql"></a>sys. pdw_health_alerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Хранит свойства для различных предупреждений, которые могут возникать в системе; Это таблица каталога для оповещений.  
   
-|Имя столбца|Тип данных|Описание|Диапазон|  
+|Имя столбца|Тип данных|Description|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |alert_id|**int**|Уникальный идентификатор предупреждения.<br /><br /> Ключ для этого представления.|NOT NULL|  
 |component_id|**int**|Идентификатор компонента, к которому применяется это оповещение. Компонент является общим идентификатором компонента, например "источник питания", и не зависит от установки. См. раздел [sys. pdw_health_components &#40;&#41;Transact-SQL ](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |alert_name|**nvarchar(255)**|Имя оповещения.|NOT NULL|  
 |state|**nvarchar(32)**|Состояние оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> Рабочего<br /><br /> "Неработающий"<br /><br /> Пониженной функциональности<br /><br /> Ошибок|  
 |severity|**nvarchar(32)**|Серьезность оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> Извещен<br /><br /> !<br /><br /> План|  
-|тип|**nvarchar(32)**|Тип оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> StatusChange — состояние устройства изменилось.<br /><br /> Threshold — значение превысило пороговое значение.|  
+|type|**nvarchar(32)**|Тип оповещения.|NOT NULL<br /><br /> Возможные значения:<br /><br /> StatusChange — состояние устройства изменилось.<br /><br /> Threshold — значение превысило пороговое значение.|  
 |description|**nvarchar(4000)**|Описание оповещения.|NOT NULL|  
 |condition|**nvarchar(255)**|Используется, если Type = threshold. Определяет, как вычисляется пороговое значение оповещения.|NULL|  
 |status|**nvarchar(32)**|Состояние оповещения|NULL|  
