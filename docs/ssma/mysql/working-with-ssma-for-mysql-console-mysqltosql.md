@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: c7687b678e755f508f363fa1b327950232038c04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbff8b99dffebdc32e3d4d7e681eccc451899016
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090844"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394957"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Работа с консолью SSMA для MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Помощник по миграции (SSMA) для MySQL теперь можно получить с помощью консольного приложения в командной строке. Файлы скрипта образуют входные данные для приложения для выполнения команд. Как консольное приложение, SSMA обеспечивает взаимодействие на уровне сценариев, сокращает цикл миграции и масштабирует усилия по миграции.  
@@ -23,9 +23,8 @@ ms.locfileid: "68090844"
   
 В этом разделе рассматриваются следующие темы:  
   
-|||  
+|Раздел|Описание|  
 |-|-|  
-|**Разделы**|**Описание**|  
 |[Начало работы с SSMA для консоли MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Описание процедуры выполнения консольного приложения.|  
 |[Параметры командной строки в консоли SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Описание параметров командной строки и параметров для функционирования консольного приложения SSMA.|  
 |[Создание файлов скриптов &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Объясняет, как создать файл скрипта.|  
@@ -37,6 +36,6 @@ ms.locfileid: "68090844"
 |[Создание отчетов &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Содержит краткие сведения об устранении проблем с миграцией.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Начало работы с консолью SSMA для MySQL](getting-started-with-ssma-for-mysql-console-mysqltosql.md)  
   

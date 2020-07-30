@@ -13,12 +13,12 @@ ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 5eaf0970f5bc7d3aef49e83906a32295e9138cd9
-ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
+ms.openlocfilehash: 844d602168c063c90034469466ade816431481d4
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84293581"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395169"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Преобразование схем Oracle (OracleToSQL)
 После подключения к Oracle, подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и настройки параметров проекта и сопоставления данных можно преобразовать объекты базы данных Oracle в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты базы данных.  
@@ -34,9 +34,8 @@ ms.locfileid: "84293581"
 ## <a name="conversion-results"></a>Результаты преобразования  
 В следующей таблице показано, какие объекты Oracle преобразуются, а также итоговые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объекты.  
   
-|||  
-|-|-|  
 |Объекты Oracle|Результирующие SQL Server объекты|  
+|-|-|  
 |Функции|Если функция может быть напрямую преобразована в [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA создает функцию.<br /><br />В некоторых случаях функция должна быть преобразована в хранимую процедуру. В этом случае SSMA создает хранимую процедуру и функцию, которая вызывает хранимую процедуру.|  
 |Процедуры|Если процедуру можно преобразовать непосредственно в [!INCLUDE[tsql](../../includes/tsql-md.md)] , SSMA создает хранимую процедуру.<br /><br />В некоторых случаях хранимая процедура должна вызываться в автономной транзакции. В этом случае SSMA создает две хранимые процедуры: одну, которая реализует процедуру, и другую, которая используется для вызова хранимой процедуры.|  
 |Пакеты|SSMA создает набор хранимых процедур и функций, Объединенных аналогичными именами объектов.|  
@@ -117,6 +116,6 @@ ms.locfileid: "84293581"
 ## <a name="next-step"></a>Следующий шаг  
 Следующим шагом процесса миграции является [Загрузка преобразованных объектов в SQL Server](loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Перенос баз данных Oracle в SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

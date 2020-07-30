@@ -21,15 +21,15 @@ ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e90e93d0c56d96cc88b5be0eeed8680bf29c83cf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 484ae60390202e09625166a266c3972d927086f9
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834128"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395149"
 ---
 # <a name="sysquery_store_runtime_stats-transact-sql"></a>sys. query_store_runtime_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Содержит сведения о статистике выполнения запроса в среде выполнения.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "82834128"
 |**min_log_bytes_used**|**bigint**|Минимальное число байтов в журнале базы данных, используемом планом запроса, в пределах интервала статистической обработки.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|
 |**max_log_bytes_used**|**bigint**|Максимальное число байтов в журнале базы данных, используемое планом запроса, в пределах интервала статистической обработки.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|
 |**stdev_log_bytes_used**|**float**|Стандартное отклонение числа байтов в журнале базы данных, используемого планом запроса, в пределах интервала статистической обработки.<br/>**Примечание.** Хранилище данных SQL Azure всегда будет возвращать ноль (0).|  
-|**avg_tempdb_space_used**|**float**|Среднее число операций чтения страниц для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**last_tempdb_space_used**|**bigint**|Последнее число операций чтения страниц для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**min_tempdb_space_used**|**bigint**|Минимальное число операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**max_tempdb_space_used**|**bigint**|Максимальное количество операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
-|**stdev_tempdb_space_used**|**float**|Число чтений страниц стандартное отклонение для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] ) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|
+|**avg_tempdb_space_used**|**float**|Среднее число операций чтения страниц для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**last_tempdb_space_used**|**bigint**|Последнее число операций чтения страниц для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**min_tempdb_space_used**|**bigint**|Минимальное число операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**max_tempdb_space_used**|**bigint**|Максимальное количество операций чтения страниц для плана запроса в пределах интервала статистической обработки. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
+|**stdev_tempdb_space_used**|**float**|Число чтений страниц стандартное отклонение для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|
 |**avg_page_server_io_reads**|**float**|Среднее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
 |**last_page_server_io_reads**|**bigint**|Последнее число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
 |**min_page_server_io_reads**|**bigint**|Минимальное число операций чтения ввода-вывода сервера на странице для плана запроса в пределах интервала агрегирования. (выражается числом считанных 8 КБ страниц).<br><br/>**Применимо к:** Масштабирование базы данных SQL Azure</br>**Примечание.** Хранилище данных SQL Azure, база данных SQL Azure, MI (без масштабирования) всегда возвращает ноль (0).|
@@ -116,7 +116,7 @@ ms.locfileid: "82834128"
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [sys. query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Хранимые процедуры хранилища запросов &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)    
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   (Хранимые процедуры хранилища запросов (Transact-SQL))  
  [Рекомендации по хранилищу запросов](../../relational-databases/performance/best-practice-with-the-query-store.md)   
   

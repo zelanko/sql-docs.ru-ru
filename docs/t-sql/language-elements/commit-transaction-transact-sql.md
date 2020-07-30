@@ -29,15 +29,15 @@ ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d30d04f709a4caac5f3ec266f1130737264029f3
-ms.sourcegitcommit: c8e1553ff3fdf295e8dc6ce30d1c454d6fde8088
+ms.openlocfilehash: c8ead92fb3a4f44bee96cdf12dc8bddc164fe310
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86922961"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395404"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Отмечает успешное завершение явной или неявной транзакции. Если значение @@TRANCOUNT равно 1, то инструкция COMMIT TRANSACTION делает все изменения, произведенные с начала транзакции, постоянной частью базы данных, освобождает ресурсы транзакции и уменьшает значение параметра @@TRANCOUNT до 0. Если значение @@TRANCOUNT больше 1, инструкция COMMIT TRANSACTION уменьшает значение @@TRANCOUNT только на 1 и оставляет транзакцию активной.  
   

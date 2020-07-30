@@ -18,15 +18,15 @@ ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: 65b65c0ff721742c1bccbd6998d358797bd6d10b
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83152135"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87393961"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Выводит количество строк, зарезервированное место на диске и место на диске, которое используется таблицей, индексированным представлением или очередью компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] в текущей базе данных, либо выводит место на диске, зарезервированное и используемое всей базой данных.  
   
@@ -60,7 +60,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
  Аргумент *mode* может иметь следующие значения:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |ALL|Возвращает статистику хранилища объекта или базы данных, включая локальную и удаленную части.|  
 |LOCAL_ONLY|Возвращает статистику хранилища только для локальной части объекта или базы данных. Если объект или база данных не включены в Stretch, возвращает ту же статистику, что и значение @mode = ALL.|  
@@ -97,7 +97,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**процессу**|**varchar (18)**|Общий объем пространства, выделенный объектам в базе данных.|  
-|**данные**|**varchar (18)**|Общий объем пространства, используемый данными.|  
+|**data**|**varchar (18)**|Общий объем пространства, используемый данными.|  
 |**index_size**|**varchar (18)**|Общий объем пространства, используемый индексами.|  
 |**использующ**|**varchar (18)**|Общий объем пространства, зарезервированный для объектов в базе данных, но пока не используемый.|  
   
@@ -109,7 +109,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|Размер текущей базы данных в мегабайтах. **database_size** включает файлы данных и журналов.|  
 |**unallocated space**|**varchar (18)**|Место в базе данных, не зарезервированное для объектов базы данных.|  
 |**процессу**|**varchar (18)**|Общий объем пространства, выделенный объектам в базе данных.|  
-|**данные**|**varchar (18)**|Общий объем пространства, используемый данными.|  
+|**data**|**varchar (18)**|Общий объем пространства, используемый данными.|  
 |**index_size**|**varchar (18)**|Общий объем пространства, используемый индексами.|  
 |**использующ**|**varchar (18)**|Общий объем пространства, зарезервированный для объектов в базе данных, но пока не используемый.|  
   
@@ -120,7 +120,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**name**|**nvarchar(128)**|Имя объекта, для которого были запрошены сведения об используемом пространстве.<br /><br /> Имя схемы объекта не возвращается. Если имя схемы является обязательным, используйте динамические административные представления [sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) или [sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) для получения эквивалентных сведений о размере.|  
 |**сквоз**|**char (20)**|Количество существующих строк в таблице. Если объект указан как очередь компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], этот столбец указывает число сообщений в очереди.|  
 |**процессу**|**varchar (18)**|Общий объем зарезервированного пространства для объекта *objname*.|  
-|**данные**|**varchar (18)**|Общий объем пространства, занятого данными в *objname*.|  
+|**data**|**varchar (18)**|Общий объем пространства, занятого данными в *objname*.|  
 |**index_size**|**varchar (18)**|Общий объем пространства, используемый индексами объекта *objname*.|  
 |**использующ**|**varchar (18)**|Общий объем пространства, зарезервированного для объекта *objname* , но еще не использованных.|  
  
@@ -137,7 +137,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**процессу**|**varchar (18)**|Общий объем пространства, выделенный объектам в базе данных.|  
-|**данные**|**varchar (18)**|Общий объем пространства, используемый данными.|  
+|**data**|**varchar (18)**|Общий объем пространства, используемый данными.|  
 |**index_size**|**varchar (18)**|Общий объем пространства, используемый индексами.|  
 |**использующ**|**varchar (18)**|Общий объем пространства, зарезервированный для объектов в базе данных, но пока не используемый.|
 
@@ -157,7 +157,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**database_size**|**varchar (18)**|Размер текущей базы данных в мегабайтах. **database_size** включает файлы данных и журналов. Если база данных содержит MEMORY_OPTIMIZED_DATA файловую группу, то сюда входит общий размер всех файлов контрольных точек в файловой группе.|
 |**unallocated space**|**varchar (18)**|Место в базе данных, не зарезервированное для объектов базы данных. Если база данных содержит MEMORY_OPTIMIZED_DATA файловую группу, то она включает общий размер на диске файлов контрольных точек с состоянием, СОЗДАНным в файловой группе.|  
 |**процессу**|**varchar (18)**|Общий объем пространства, выделенный объектам в базе данных.|  
-|**данные**|**varchar (18)**|Общий объем пространства, используемый данными.|  
+|**data**|**varchar (18)**|Общий объем пространства, используемый данными.|  
 |**index_size**|**varchar (18)**|Общий объем пространства, используемый индексами.|  
 |**использующ**|**varchar (18)**|Общий объем пространства, зарезервированный для объектов в базе данных, но пока не используемый.|
 |**xtp_precreated**|**varchar (18)**|Общий размер файлов контрольных точек с СОЗДАНным состоянием в КБ. Это подсчитывает нераспределенное пространство в базе данных в целом. Возвращает значение NULL, если база данных не имеет memory_optimized_data файловой группы, имеющей по крайней мере один контейнер. *Этот столбец включается, только если @include_total_xtp_storage = 1*.| 
@@ -191,7 +191,7 @@ EXEC sp_spaceused N'Purchasing.Vendor';
 GO  
 ```  
   
-### <a name="b-displaying-updated-space-information-about-a-database"></a>Б. Вывод обновленных сведений о занимаемом месте на диске для базы данных  
+### <a name="b-displaying-updated-space-information-about-a-database"></a>Б) Вывод обновленных сведений о занимаемом месте на диске для базы данных  
  В следующем примере приводятся итоговые сведения об использовании места на диске текущей базой данных с применением необязательного параметра `@updateusage`, чтобы получить достоверные текущие значения.  
   
 ```sql  
@@ -249,9 +249,9 @@ GO
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys. indexes &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [sys.allocation_units (Transact-SQL)](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys. Objects &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. partitions &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

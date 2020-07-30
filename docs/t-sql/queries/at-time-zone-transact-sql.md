@@ -16,16 +16,16 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current||=azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: a315658aa6d4278e12dbccd13bfa4817dec36976
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: e27399d2decb00317895017f8a375deb89581d05
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807880"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395089"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Преобразует аргумент *inputdate* в соответствующее значение *datetimeoffset* в целевом часовом поясе. Если аргумент *inputdate* предоставляется без сведений о смещении, функция применяет смещение часового пояса, предполагая, что *inputdate* находится в целевом часовом поясе. Если аргумент *inputdate* предоставляется как значение *datetimeoffset*, предложение **AT TIME ZONE** преобразует его в целевой часовой пояс с помощью правил преобразования часовых поясов.  
 

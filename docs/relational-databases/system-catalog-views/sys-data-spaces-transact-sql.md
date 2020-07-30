@@ -20,15 +20,15 @@ ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab7be8ba4aba0241b45800b77e28b44e168ab182
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df3dd7f9680860455ec6291e8ba4a945f4db2043
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823424"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394059"
 ---
 # <a name="sysdata_spaces-transact-sql"></a>sys.data_spaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Содержит по одной строке для каждого пространства данных. Это может быть файловая группа, схема секционирования или файловая группа данных FILESTREAM.  
   
@@ -36,20 +36,20 @@ ms.locfileid: "82823424"
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Имя пространства данных, уникальное внутри базы данных.|  
 |data_space_id|**int**|Номер идентификатора пространства данных, уникальный внутри базы данных.|  
-|тип|**char (2)**|Тип пространства данных:<br /><br /> FG = файловая группа<br /><br /> FD = файловая группа данных FILESTREAM<br /><br /> FX = файловая группа таблиц, оптимизированных для памяти<br /><br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> PS = схема секционирования|  
+|type|**char(2)**|Тип пространства данных:<br /><br /> FG = файловая группа<br /><br /> FD = файловая группа данных FILESTREAM<br /><br /> FX = файловая группа таблиц, оптимизированных для памяти<br /><br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> PS = схема секционирования|  
 |type_desc|**nvarchar(60)**|Описание типа пространства данных:<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **Область применения**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и более поздних версий.<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = пространство данных по умолчанию. Это пространство данных используется по умолчанию, если файловая группа или схема секционирования не задана в инструкции CREATE TABLE или CREATE INDEX.<br /><br /> 0 = не является пространством данных по умолчанию.|  
 |is_system|**bit**|**Область применения**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версий.<br /><br /> 1 = пространство данных используется для фрагментов полнотекстового индекса.<br /><br /> 0 = пространство данных не используется для фрагментов полнотекстового индекса.|  
   
 ## <a name="permissions"></a>Разрешения  
- Требуется членство в роли public.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Требуется членство в роли public. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
  [Пространства данных &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-spaces-transact-sql.md)   
- [Представления каталога &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. destination_data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-destination-data-spaces-transact-sql.md)   
- [sys. FILEGROUP &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.filegroups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
  [sys. partition_schemes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-schemes-transact-sql.md)   
  [Запросы к системному каталогу SQL Server вопросы и ответы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

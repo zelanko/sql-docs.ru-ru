@@ -18,15 +18,15 @@ ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2352266477c04ebc242ffa0b2eeb934d0187a2b
-ms.sourcegitcommit: 768f046107642f72693514f51bf2cbd00f58f58a
+ms.openlocfilehash: 8fe0c77173c617bc4f1003c31724af5dca32af28
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87113092"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394269"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Эта функция возвращает строку, возникающую в результате объединения двух или более строковых значений в сквозной форме. (Сведения о добавлении разделяющего значения во время объединения см. в описании функции [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md).)
   

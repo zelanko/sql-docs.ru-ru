@@ -18,15 +18,15 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a57bf4acff6f8d0d08f86852de5ecc0411211c67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11a3bae7cc6cbf025370a947c8fa3194f978d419
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68104392"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87394525"
 ---
 # <a name="sp_set_session_context-transact-sql"></a>sp_set_session_context (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Задает пару "ключ-значение" в контексте сеанса.  
   
@@ -42,13 +42,13 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @key= ] Н'кэй "  
+ [ @key =] Н'кэй '  
  Заданный ключ типа **sysname**. Максимальный размер ключа составляет 128 байт.  
   
- [ @value= ] значений  
+ [ @value =] "значение"  
  Значение для указанного ключа типа **sql_variant**. При установке значения NULL освобождается память. Максимальный размер 8 000 байт.  
   
- [ @read_only= ] {0 | 1}  
+ [ @read_only =] {0 | 1}  
  Флаг типа **bit**. Если значение равно 1, то в этом логическом подключении нельзя снова изменить значения для указанного ключа. При значении 0 (по умолчанию) значение может быть изменено.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -75,7 +75,7 @@ SELECT SESSION_CONTEXT(N'language');
 EXEC sys.sp_set_session_context @key = N'user_id', @value = 4, @read_only = 1;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CURRENT_TRANSACTION_ID &#40;Transact-SQL&#41;](../../t-sql/functions/current-transaction-id-transact-sql.md)   
  [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)   
  [Безопасность на уровне строк](../../relational-databases/security/row-level-security.md)   

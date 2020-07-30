@@ -20,15 +20,15 @@ ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2f4aa79f2c93e1c78c895f0e3d47e3114df20a8c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1a3015ae1482c695eb02bf6026c8a4fa0dc6ba47
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834469"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87395985"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>Представления каталога схем — sys. schemas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Содержит по одной строке для каждой схемы базы данных.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82834469"
 Каждая схема имеет владельца. Владелец является [субъектом](../../relational-databases/security/authentication-access/principals-database-engine.md)безопасности.
   
 ## <a name="permissions"></a>Разрешения  
- Необходимо быть членом роли **public**.  Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Необходимо быть членом роли **public**. Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>См. также  
 [Субъекты](../../relational-databases/security/authentication-access/principals-database-engine.md)
