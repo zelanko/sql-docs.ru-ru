@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39d90da404fd6bc230a3308c76b48fdc26da2b8f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5420d49b6e5d165168610d002424e3a3b9499748
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73595819"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411060"
 ---
 # <a name="rotate-enclave-enabled-keys"></a>Смена ключей с поддержкой анклава
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 Смена ключа в Always Encrypted — это процесс замены существующего главного ключа столбца или ключа шифрования столбца новым ключом. В этой статье описываются варианты использования и рассматриваются вопросы, связанные со сменой ключей для [Always Encrypted с безопасным анклавом](always-encrypted-enclaves.md), когда в качестве ключа с поддержкой анклава выступает исходный и (или) целевой (новый) ключ. Общие рекомендации и процессы управления ключами Always Encrypted см. в статье [Общие сведения об управлении ключами для Always Encrypted](overview-of-key-management-for-always-encrypted.md). 
 

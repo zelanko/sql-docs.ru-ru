@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 13c6c2a0f4b2b96911a05b0ec9d8fdd2325ffa9b
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 0222df74a33fabb535354403bbf7cc550898708f
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85759185"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362501"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -98,9 +98,8 @@ ms.locfileid: "85759185"
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
-|||  
+|Описание задачи|Раздел|  
 |-|-|  
-|**Описание задачи**|**Раздел**|  
 |Включение и настройка расширения буферного пула.|[ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Изменение конфигурации расширения буферного пула|[ALTER SERVER CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Просмотр конфигурации расширения буферного пула|[sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  

@@ -29,12 +29,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eade5e3328993176f8795d27e511902a42468192
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: 724290f48b0f33d586a797629766b36bae49ddb6
+ms.sourcegitcommit: 75f767c7b1ead31f33a870fddab6bef52f99906b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85764870"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87332643"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Типы данных XPath (SQLXML 4.0)
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -91,8 +91,8 @@ ms.locfileid: "85764870"
 |Тип данных XDR|Эквивалентный<br /><br /> тип данных XPath|Использованное преобразование SQL Server|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|Н/Д|NoneEmployeeID|  
-|Логическое|Логическое|CONVERT(bit, EmployeeID)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
+|boolean|boolean|CONVERT(bit, EmployeeID)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|число|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|строка|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|н/д (в XPath нет типа данных, эквивалентного типу fixed14.4 XDR)|CONVERT(money, EmployeeID)|  
 |Дата|строка|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -126,12 +126,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  Как показано в следующей таблице, это то же самое преобразование, которое применялось для других выражений XPath (например, литералов или составных выражений).  
   
-||||||  
-|-|-|-|-|-|  
-||Х неизвестен|X является **строкой**|X является **числом**|X является **логическим**|  
-|string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
-|number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN (X) > 0|X != 0|-|  
+|   | Х неизвестен | X является строкой | X является числом | X является логическим |
+| - | ------------ | ----------- | ----------- | ------------ |
+| **string(X)** |CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
+| **number(X)** |CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
+| **boolean(X)** |-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -150,7 +149,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
   
  К строке добавляется префикс «E-», а результат затем сравнивается с `N'E-1'`.  
   
-### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б. Несколько преобразований типов данных в запросе XPath  
+### <a name="b-perform-several-data-type-conversions-in-an-xpath-query"></a>Б) Несколько преобразований типов данных в запросе XPath  
  Рассмотрим этот запрос XPath, заданный для схемы XSD с заметками:`OrderDetail[@UnitPrice * @OrderQty > 98]`  
   
  Этот запрос XPath возвращает все элементы, которые **\<OrderDetail>** соответствуют предикату `@UnitPrice * @OrderQty > 98` . Если **UnitPrice** помечена **фиксированным** типом данных 14,4 в схеме с заметками, то этот предикат эквивалентен выражению SQL:  

@@ -10,16 +10,16 @@ ms.topic: conceptual
 author: rpsqrd
 ms.author: ryanpu
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d774df3329c6c9e49e9e1bd9a86dbeaf30ac5765
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 425fdeb973918744b4aeab423629939a2a84f97a
+ms.sourcegitcommit: 620a868e623134ad6ced6728ce9d03d7d0038fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79287148"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87411390"
 ---
 # <a name="plan-for-host-guardian-service-attestation"></a>Планирование аттестации службы защиты узла
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 При использовании [Always Encrypted с безопасными анклавами](always-encrypted-enclaves.md) необходимо, чтобы в рамках процесса [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] клиентское приложение обращалось к доверенному анклаву. Если речь идет об анклаве безопасности на основе виртуализации (VBS), это требование предполагает проверку допустимости кода в анклаве и подлинности компьютера, на котором размещается [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. В процессе удаленной аттестации эта задача реализуется за счет ввода третьей стороны, которая может проверять подлинность (и при необходимости конфигурацию) компьютера [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]. Прежде чем [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)] сможет использовать анклав для выполнения запроса, он должен предоставить службе аттестации сведения об операционной среде для получения сертификата работоспособности. Затем этот сертификат отправляется клиенту для независимой проверки подлинности в службе аттестации. После того как клиент установит отношение доверия с сертификатом работоспособности, он будет обращаться к надежному анклаву VBS и создаст запрос, который будет использовать этот анклав.
 

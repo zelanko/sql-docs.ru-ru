@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 162cf9d1f062d69daf671ed0bf8962b9ddb7ddf9
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: bb2cfc1df70f22f3e0fb90cd3d9cf552e6e01d60
+ms.sourcegitcommit: 99f61724de5edf6640efd99916d464172eb23f92
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85680971"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87362244"
 ---
 # <a name="manage-the-database-engine-services"></a>Управление службами компонента Database Engine
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -56,20 +56,53 @@ ms.locfileid: "85680971"
  Поскольку диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является оснасткой консоли управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] , а не изолированной программой, при работе в Windows 8.0 диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отображается как приложение. Чтобы открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , введите в чудо-кнопке **Поиск** в области **Приложения**значение **SQLServerManager12.msc** (для [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]), **SQLServerManager11.msc** (для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) или **SQLServerManager10.msc** (для[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) и нажмите клавишу **ВВОД**.  
   
 ## <a name="in-this-section"></a>В этом разделе  
-  
-|||  
-|-|-|  
-|[Требования безопасности к службам управления](../../database-engine/configure-windows/security-requirements-for-managing-services.md)|[Отключение автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|[Изменение стартовой учетной записи службы для SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)|  
-|[Запуск SQL Server при наличии и отсутствии сети](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)|[Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)|  
-|[Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)|[Изменение пароля учетных записей, используемых SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)|  
-|[Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md)|[Настройка журналов ошибок SQL Server](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)|  
-|[Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)|[Изменение режима проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md)|  
-|[Запуск SQL Server в однопользовательском режиме](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)|[cлужба «Модуль записи SQL»](../../database-engine/configure-windows/sql-writer-service.md)|  
-|[Запустите SQL Server с минимальной конфигурацией](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)|[Рассылка сообщения о завершении работы (командная строка)](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)|  
-|[Подключение к другому компьютеру (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)|[Вход в экземпляр SQL Server (командная строка)](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)|  
-|[Настройка автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)|[Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Требования безопасности к службам управления](../../database-engine/configure-windows/security-requirements-for-managing-services.md)
+
+        [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+
+        [Настройка разрешений файловой системы для доступа к компоненту ядра СУБД](../../database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)
+
+        [Запуск SQL Server при наличии и отсутствии сети](../../database-engine/configure-windows/run-sql-server-with-or-without-a-network.md)
+
+        [Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)
+
+        [Параметры запуска службы Database Engine](../../database-engine/configure-windows/database-engine-service-startup-options.md)
+
+        [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
+
+        [Запуск SQL Server в однопользовательском режиме](../../database-engine/configure-windows/start-sql-server-in-single-user-mode.md)
+
+        [Запустите SQL Server с минимальной конфигурацией](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)
+    :::column-end:::
+    :::column:::
+        [Подключение к другому компьютеру (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-connect-to-another-computer.md)
+
+        [Настройка автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)
+
+        [Отключение автоматического запуска экземпляра SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)
+
+        [Изменение стартовой учетной записи службы для SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-change-the-service-startup-account.md)
+
+        [Настройка параметров запуска сервера (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)
+
+        [Изменение пароля учетных записей, используемых SQL Server (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/scm-services-change-the-password-of-the-accounts-used.md)
+
+        [Настройка журналов ошибок SQL Server](../../database-engine/configure-windows/scm-services-configure-sql-server-error-logs.md)
+    :::column-end:::
+    :::column:::
+        [Изменение режима проверки подлинности сервера](../../database-engine/configure-windows/change-server-authentication-mode.md)
+
+        [cлужба «Модуль записи SQL»](../../database-engine/configure-windows/sql-writer-service.md)
+
+        [Рассылка сообщения о завершении работы (командная строка)](../../database-engine/configure-windows/broadcast-a-shutdown-message-command-prompt.md)
+
+        [Вход в экземпляр SQL Server (командная строка)](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)
+    :::column-end:::
+:::row-end:::
+
 ## <a name="related-content"></a>См. также  
  [Настройка агента SQL Server](../../ssms/agent/configure-sql-server-agent.md)  
   

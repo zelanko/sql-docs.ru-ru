@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7814090b688f362737e7cd045bca9edd32c34bcb
-ms.sourcegitcommit: f7ac1976d4bfa224332edd9ef2f4377a4d55a2c9
+ms.openlocfilehash: 3326dab096a1b275bc06bfb0949eeb88b2d4fe30
+ms.sourcegitcommit: df1f0f2dfb9452f16471e740273cd1478ff3100c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85883634"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87397175"
 ---
 # <a name="oracle-publishing-overview"></a>Oracle Publishing Overview  
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "85883634"
 
 -   Публикация данных в Oracle и из Oracle имеет следующие ограничения:  
 
-  |       | 2016 или более ранние версии |2017 или более поздние версии |
+  |Сценарий| 2016 или более ранние версии |2017 или более поздние версии |
   |-------|-------|--------|
   |Репликация из Oracle |Поддержка только Oracle 10g или более ранних версий |Поддержка только Oracle 10g или более ранних версий |
   |Репликация в Oracle |Версии до Oracle 12c |Не поддерживается |
